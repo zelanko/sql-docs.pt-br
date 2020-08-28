@@ -3,7 +3,7 @@ description: Cursores dinâmicos
 title: Cursores dinâmicos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f646a608c8cbc25e16c5200f8271c133a62d3457
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8ce85233cec96af3d804652225b4d14698287db
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806156"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991347"
 ---
 # <a name="dynamic-cursors"></a>Cursores dinâmicos
 Cursores dinâmicos detectam todas as alterações feitas nas linhas no conjunto de resultados, independentemente de as alterações ocorrerem de dentro do cursor ou de outros usuários fora do cursor. Todas as instruções INSERT, Update e Delete feitas por todos os usuários são visíveis por meio do cursor. O cursor dinâmico pode detectar quaisquer alterações feitas nas linhas, na ordem e nos valores do conjunto de resultados depois que o cursor for aberto. As atualizações feitas fora do cursor não ficam visíveis até que sejam confirmadas (a menos que o nível de isolamento da transação do cursor esteja definido como "não confirmado").  

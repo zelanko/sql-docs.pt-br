@@ -3,7 +3,7 @@ description: 'Etapa 3: Preencher a caixa de listagem de campos'
 title: 'Etapa 3: preencher a caixa de listagem de campos | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3a7378cfdce29094f5ae4271b9fe7bff7516753
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: acb2572accc19937f7f4ad278fc01aa0e5760a8a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452788"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979517"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Etapa 3: Preencher a caixa de listagem de campos
 Para preencher a caixa de listagem campos, insira o seguinte código no manipulador de eventos de clique de `lstMain` :  

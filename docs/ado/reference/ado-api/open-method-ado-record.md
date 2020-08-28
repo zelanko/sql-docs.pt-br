@@ -3,7 +3,7 @@ description: Método Open (Registro do ADO)
 title: Método Open (registro ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 980e7c840cfb19077c6f4f1d1041d1f1eb8acf64
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1ad606821e423892d49feb49a0920c7aea9056aa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773795"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990337"
 ---
 # <a name="open-method-ado-record"></a>Método Open (Registro do ADO)
 Abre um objeto de [registro](./record-object-ado.md) existente ou cria um novo item representado pelo **registro**, como um arquivo ou diretório.  

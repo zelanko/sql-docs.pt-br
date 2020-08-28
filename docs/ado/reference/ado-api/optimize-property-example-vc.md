@@ -3,7 +3,7 @@ description: Exemplo da propriedade Optimize (VC++)
 title: Exemplo da propriedade Optimize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8000fd53dbc6342ecb9a41b9c66b398d8bbae84b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 85cfa464710579db5872155a0e27bcc57ccdda94
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773615"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990247"
 ---
 # <a name="optimize-property-example-vc"></a>Exemplo da propriedade Optimize (VC++)
 Este exemplo demonstra a propriedade de **otimização** dinâmica do objeto [Field](./field-object.md) . O campo **zip** da tabela **autores** no banco de dados **pubs** não está indexado. Definir a propriedade [Optimize](./optimize-property-dynamic-ado.md) como **true** no campo **zip** autoriza o ADO a criar um índice que melhora o desempenho do método [Find](./find-method-ado.md) .  

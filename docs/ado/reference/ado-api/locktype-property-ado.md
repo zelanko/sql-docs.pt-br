@@ -3,7 +3,7 @@ description: Propriedade LockType (ADO)
 title: Propriedade LockType (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9211ec3b9c6213ffab8cfc07c8bcf89559240ae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 74e86b054ac9d63527cc0f142ee50aa81acbe4b4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774575"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990687"
 ---
 # <a name="locktype-property-ado"></a>Propriedade LockType (ADO)
 Indica o tipo de bloqueios colocados em registros durante a edição.  

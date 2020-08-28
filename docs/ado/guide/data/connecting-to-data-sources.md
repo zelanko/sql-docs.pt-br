@@ -3,7 +3,7 @@ description: Conectando-se a fontes de dados
 title: Conectando-se a fontes de dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1de885a14dd2647df08ae6245f64a629d706796d
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 988eef3a3eb706480e50f0feb6d2fe363b4faabd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806320"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991517"
 ---
 # <a name="connecting-to-data-sources"></a>Conectando-se a fontes de dados
 Um objeto de **conexão** ADO representa uma sessão exclusiva com uma fonte de dados, incluindo um DBMS, um repositório de arquivos ou um arquivo de texto delimitado por vírgula. No caso de um sistema de banco de dados cliente/servidor, a conexão ADO pode ser uma conexão de rede real com o servidor.  

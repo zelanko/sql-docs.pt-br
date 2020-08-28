@@ -3,7 +3,7 @@ description: Provedores necessários para data shaping
 title: Provedores necessários para o Shaping de dados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e17ebe5f5e8deab776b88ce66df8636a28212394
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd2829c49adb318ae80eeefd2ec2913fd8620d2b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452938"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979797"
 ---
 # <a name="required-providers-for-data-shaping"></a>Provedores necessários para data shaping
 A formatação de dados normalmente requer dois provedores. O provedor de serviços, o [Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fornece a funcionalidade de formatação de dados e um provedor de dados, como o provedor de OLE DB para SQL Server, fornece linhas de dados para preencher o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)moldado.  

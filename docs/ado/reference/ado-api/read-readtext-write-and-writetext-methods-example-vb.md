@@ -3,7 +3,7 @@ description: Exemplo dos métodos Read, ReadText, Write e WriteText (VB)
 title: Exemplo dos métodos Read, ReadText, Write e WriteText (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32bc949827c943352808cb4981ef4f436e1b27d2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 83d15c287946bbd952a8ea37438e6862296901e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772655"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989887"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Exemplo dos métodos Read, ReadText, Write e WriteText (VB)
 Este exemplo demonstra como ler o conteúdo de uma caixa de texto em um [fluxo](./stream-object-ado.md) de texto e em um **fluxo**binário. Outras propriedades e métodos mostrados incluem [Position](./position-property-ado.md), [size](./size-property-ado-parameter.md), [charset](./charset-property-ado.md)e [SetEOS](./seteos-method.md).  

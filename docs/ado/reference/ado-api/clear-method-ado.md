@@ -3,7 +3,7 @@ description: Método Clear (ADO)
 title: Método Clear (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b7ed940248230d1c7b74f6782abcb555a538021
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d78980c1baee5aed1280f69c0d5224622a217ea0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776265"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975467"
 ---
 # <a name="clear-method-ado"></a>Método Clear (ADO)
 Remove todos os objetos de [erro](./error-object.md) da coleção de [erros](./errors-collection-ado.md) .  

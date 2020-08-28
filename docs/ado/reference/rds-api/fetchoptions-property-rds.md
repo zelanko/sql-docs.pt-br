@@ -3,7 +3,7 @@ description: Propriedade FetchOptions (RDS)
 title: Propriedade FetchOptions (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ce3ed45c6ed45f0fdd4ac6f84db9895faec6d21
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5608c03744ff632adb4b5e8b9f4da32797bfe8ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768275"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982207"
 ---
 # <a name="fetchoptions-property-rds"></a>Propriedade FetchOptions (RDS)
 Indica o tipo de busca assíncrona.  

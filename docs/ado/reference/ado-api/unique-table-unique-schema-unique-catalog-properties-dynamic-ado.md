@@ -3,7 +3,7 @@ description: Tabela exclusiva, esquema exclusivo, propriedades de catálogo excl
 title: Controlar alterações na tabela base do conjunto de registros (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bd5979526e453e33674441ebd4e433f2a7ad6f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 50a17938a2e1cffd3cc0bf76d3cc3758358318d2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777035"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988157"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabela exclusiva, esquema exclusivo, propriedades de catálogo exclusivas – dinâmico (ADO)
 Permite que você controle precisamente as modificações em uma tabela base específica em um [conjunto de registros](./recordset-object-ado.md) que foi formado por uma operação de junção em várias tabelas base.  
