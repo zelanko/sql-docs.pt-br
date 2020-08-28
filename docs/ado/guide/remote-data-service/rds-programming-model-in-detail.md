@@ -3,7 +3,7 @@ description: Modelo de programação do RDS em detalhes
 title: Modelo de programação de RDS em detalhes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 310bcdad8358120a47cf01ec6734325ca5fa425d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: af1b575f642159cad84d0ce833bb783cf2363701
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759656"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977967"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo de programação do RDS em detalhes
 Veja a seguir os principais elementos do modelo de programação RDS:  

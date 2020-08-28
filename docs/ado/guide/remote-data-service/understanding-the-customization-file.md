@@ -3,7 +3,7 @@ description: Noções básicas sobre o arquivo de personalização
 title: Noções básicas sobre o arquivo de personalização | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759864"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977387"
 ---
 # <a name="understanding-the-customization-file"></a>Noções básicas sobre o arquivo de personalização
 Cada cabeçalho de seção no arquivo de personalização consiste em colchetes (**[]**) contendo um tipo e um parâmetro. Os quatro tipos de seção são indicados pelas cadeias de caracteres literais **Connect**, **SQL**, **UserList**ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador especificado pelo usuário ou nada.  
@@ -45,7 +45,7 @@ identifier
 |Parte|Descrição|  
 |----------|-----------------|  
 |**connect**|Uma cadeia de caracteres literal que modifica uma cadeia de conexão.|  
-|**sql**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
+|**SQL**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
 |**UserList**|Uma cadeia de caracteres literal que modifica os direitos de acesso de um usuário específico.|  
 |**logs**|Uma cadeia de caracteres literal que especifica um arquivo de log que registra erros operacionais.|  
 |**default**|Uma cadeia de caracteres literal que será usada se nenhum identificador for especificado ou encontrado.|  

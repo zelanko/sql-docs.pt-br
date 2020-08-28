@@ -3,7 +3,7 @@ description: Exemplo da propriedade Sort (VB)
 title: Exemplo da Propriedade Sort (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49964c5dc3f9f6402c853f4adddabd798db4b2f0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 47cae7b3aabda7192467bf4dd746ac9a083b404a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777445"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989027"
 ---
 # <a name="sort-property-example-vb"></a>Exemplo da propriedade Sort (VB)
 Este exemplo usa a propriedade [Sort](./sort-property.md) do objeto [Recordset](./recordset-object-ado.md) para reordenar as linhas de um **conjunto de registros** derivado da tabela ***autores*** do banco de dados ***pubs*** . Uma rotina de utilitário secundário imprime cada linha.  

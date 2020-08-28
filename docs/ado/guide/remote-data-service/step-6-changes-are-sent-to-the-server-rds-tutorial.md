@@ -3,7 +3,7 @@ description: 'Etapa 6: As alterações são enviadas ao servidor (Tutorial RDS)'
 title: 'Etapa 6: as alterações são enviadas ao servidor (tutorial RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0056f965e36fb1fadd3d7f8c08c2514ee2593d46
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 33a80f1cf59ff314236e69085c7625521d6f721f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758996"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977467"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Etapa 6: As alterações são enviadas ao servidor (Tutorial RDS)
 Se o objeto **Recordset** for editado, quaisquer alterações (ou seja, linhas adicionadas, alteradas ou excluídas) poderão ser enviadas de volta ao servidor.  

@@ -3,7 +3,7 @@ description: Método Requery
 title: Método Requery | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8b9a5d3ab52fdbd3e219104ce3553cd69753a40
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 12f60b295d569119a356631dc445bd034916665a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777685"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989547"
 ---
 # <a name="requery-method"></a>Método Requery
 Atualiza os dados em um objeto de [conjunto de registros](./recordset-object-ado.md) executando novamente a consulta na qual o objeto se baseia.  

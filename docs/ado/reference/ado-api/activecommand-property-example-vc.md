@@ -3,7 +3,7 @@ description: Exemplo da propriedade ActiveCommand (VC++)
 title: Exemplo da propriedade ActiveCommand (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09dabe4cdb4e897bd7b9d0916bbe1e057cbbd02f
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 5f625a10ce53681bb79bec55bcbb22643ae74642
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759926"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977047"
 ---
 # <a name="activecommand-property-example-vc"></a>Exemplo da propriedade ActiveCommand (VC++)
 Este exemplo demonstra a propriedade [ActiveCommand](./activecommand-property-ado.md) .  

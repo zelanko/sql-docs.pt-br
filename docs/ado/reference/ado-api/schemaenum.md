@@ -3,7 +3,7 @@ description: SchemaEnum
 title: SchemaEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2bcbe9bd3c3f4408be7d228c9edae4da20929f69
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777535"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989257"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Especifica o tipo de **conjunto de registros** de esquema que o método [OpenSchema](./openschema-method.md) recupera.  

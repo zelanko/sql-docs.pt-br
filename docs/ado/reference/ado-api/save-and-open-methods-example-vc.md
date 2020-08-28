@@ -3,7 +3,7 @@ description: Exemplo dos métodos Save e Open (VC + +)
 title: Exemplo dos métodos Save e Open (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3feab164032044d954a0ff90f909c210dc851743
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 547916d25655a34883072f39701f3ac9b1a5df45
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777585"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989347"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Exemplo dos métodos Save e Open (VC + +)
 Esses três exemplos demonstram como os métodos [Save](./save-method.md) e **Open** podem ser usados juntos.  

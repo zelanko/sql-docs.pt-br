@@ -3,7 +3,7 @@ description: Métodos ADO
 title: Métodos ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7702a90afe7ef4c96b1cc4bd01bd45e774a0bacc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 13e126f070f188e47582227fabf4a1e37d6901a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771795"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976367"
 ---
 # <a name="ado-methods"></a>Métodos ADO
 
@@ -45,7 +45,7 @@ ms.locfileid: "88771795"
 |[DeleteRecord](./deleterecord-method-ado.md)|Exclui um arquivo ou diretório e todos os seus subdiretórios.|  
 |[Execute (comando ADO)](./execute-method-ado-command.md)|Executa a consulta, a instrução SQL ou o procedimento armazenado especificado na propriedade **CommandText** .|  
 |[Executar (conexão ADO)](./execute-method-ado-connection.md)|Executa a consulta especificada, a instrução SQL, o procedimento armazenado ou o texto específico do provedor.|  
-|[Considerar](./find-method-ado.md)|Pesquisa um **conjunto de registros** para a linha que satisfaz os critérios especificados.|  
+|[Localizar](./find-method-ado.md)|Pesquisa um **conjunto de registros** para a linha que satisfaz os critérios especificados.|  
 |[Liberar](./flush-method-ado.md)|Força o conteúdo do **fluxo** restante no buffer do ADO para o objeto subjacente ao qual o **fluxo** está associado.|  
 |[Método get_OLEDBCommand](./get-oledbcommand-method.md)|Retorna o comando OLEDB subjacente, primeiro propagando todas as informações de parâmetro definidas no comando ADO para o comando OLEDB.|  
 |[GetChildren](./getchildren-method-ado.md)|Retorna um **conjunto de registros** cujas linhas representam os arquivos e subdiretórios no diretório representado por esse **registro**.|  

@@ -3,7 +3,7 @@ description: 'Registro (Visual C++ índice de sintaxe com #import)'
 title: 'Registro (Visual C++ índice de sintaxe com #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 695d32db5bb25d62767686cd4dbf739443afef5d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e34b64a6d1587f7b47e354d715791a017a28393b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772485"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989837"
 ---
 # <a name="record-visual-c-syntax-index-with-import"></a>Registro (Visual C++ índice de sintaxe com #import)
 ## <a name="methods"></a>Métodos  

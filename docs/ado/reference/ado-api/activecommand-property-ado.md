@@ -3,7 +3,7 @@ description: Propriedade ActiveCommand (ADO)
 title: Propriedade ActiveCommand (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e8c969c8e611c8e2bff76dc045a28a9c6d6ab96
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: df737543e8cc09735c7da413b89406b6f2385079
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759936"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977147"
 ---
 # <a name="activecommand-property-ado"></a>Propriedade ActiveCommand (ADO)
 Indica o objeto de [comando](./command-object-ado.md) que criou o objeto [Recordset](./recordset-object-ado.md) associado.  
