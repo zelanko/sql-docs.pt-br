@@ -3,7 +3,7 @@ description: Exemplo dos métodos GetObjectOwner e SetObjectOwner (VC++)
 title: Exemplo dos métodos GetObjectOwner e SetObjectOwner (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fee370cc44c224146a4f3f61cf0d0307fa7fdd90
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b838342c76c7d8757e98f98dfcf3aaf058178277
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770535"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984547"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Exemplo dos métodos GetObjectOwner e SetObjectOwner (VC++)
 Este exemplo demonstra os métodos [GetObjectOwner](./getobjectowner-method-adox.md) e [SetObjectOwner](./setobjectowner-method.md) . Esse código pressupõe a existência da contabilidade do grupo (consulte o [exemplo de métodos groups and Users Append, ChangePassword Methods (VC + +)](./groups-and-users-append-changepassword-methods-example-vc.md) para ver como adicionar esse grupo ao sistema). O proprietário da tabela Categorias é definido como contabilidade.  

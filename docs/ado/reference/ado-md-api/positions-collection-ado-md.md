@@ -3,7 +3,7 @@ description: Coleção Positions (ADO MD)
 title: Coleção Positions (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d52b99182f34b5cefec46d210821dbcfb18388c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bf3e0d66d5b483e065fee725dc9a46d12a6a03ac
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777875"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986027"
 ---
 # <a name="positions-collection-ado-md"></a>Coleção Positions (ADO MD)
 Contém os objetos [Position](./position-object-ado-md.md) que definem um ponto em um eixo.  

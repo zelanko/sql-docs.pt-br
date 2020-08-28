@@ -3,7 +3,7 @@ description: Propriedade FormattedValue (ADO MD)
 title: Propriedade FormattedValue (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba8b3469d017b79027670cb4de9f8b3761c8dcc7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5905b4aba040505c60fa78721718b3ab03c51622
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778125"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986697"
 ---
 # <a name="formattedvalue-property-ado-md"></a>Propriedade FormattedValue (ADO MD)
 Indica a exibição formatada de um valor de [célula](./cell-object-ado-md.md) .  

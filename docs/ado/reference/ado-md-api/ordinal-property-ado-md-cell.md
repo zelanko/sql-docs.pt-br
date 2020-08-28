@@ -3,7 +3,7 @@ description: Propriedade Ordinal (Célula do ADO MD)
 title: Propriedade ordinal (célula ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0217267b73a449e40beff1134b3cdcc744246f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b4d14b2cdfc61fd76221a2071f15593807b5f1ba
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777925"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986217"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Propriedade Ordinal (Célula do ADO MD)
 Identifica exclusivamente uma [célula](./cell-object-ado-md.md) pela sua posição em um células.  

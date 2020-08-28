@@ -3,7 +3,7 @@ description: Propriedade Item (conjunto de células do ADO MD)
 title: Propriedade Item (ADO MD células) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 997777e853a54ae56175b4b5795087e67079813b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778065"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986597"
 ---
 # <a name="item-property-ado-md-cellset"></a>Propriedade Item (conjunto de células do ADO MD)
 Recupera uma célula de um [células](./cellset-object-ado-md.md) usando suas coordenadas.  
@@ -55,7 +55,6 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>Comentários  
  O argumento *Positions* especifica qual célula retornar. Você pode especificar a célula pela posição ordinal ou pela posição ao longo de cada eixo. Ao especificar a célula por posição ao longo de cada eixo, você pode especificar o valor numérico da posição ou os nomes dos membros de cada posição.  
   
  A posição ordinal é um número que identifica exclusivamente uma célula dentro do **células**. Conceitualmente, as células são numeradas em um **células** como se o **células** fosse uma matriz *p*-dimensional, em que *p* é o número de eixos. As células são tratadas em ordem linha-principal. Abaixo está a fórmula para calcular o número ordinal de uma célula:  
