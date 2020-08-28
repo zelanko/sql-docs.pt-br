@@ -3,7 +3,7 @@ description: Método CreateRecordset (RDS)
 title: Método createrecordset (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768615"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982517"
 ---
 # <a name="createrecordset-method-rds"></a>Método CreateRecordset (RDS)
 Cria um [conjunto de registros](../ado-api/recordset-object-ado.md)vazio e desconectado.  
@@ -50,7 +50,7 @@ object.CreateRecordset(ColumnInfos)
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |Nome|Nome do cabeçalho da coluna.|  
-|Type|Inteiro do tipo de dados.|  
+|Tipo|Inteiro do tipo de dados.|  
 |Tamanho|O número inteiro da largura em caracteres, independentemente do tipo de dados.|  
 |Nulidade|$True.|  
 |Escala (opcional)|Esse atributo opcional define a escala para campos numéricos. Se esse valor não for especificado, os valores numéricos serão truncados para uma escala de três. A precisão não é afetada, mas o número de dígitos após o ponto decimal será truncado para três.|  

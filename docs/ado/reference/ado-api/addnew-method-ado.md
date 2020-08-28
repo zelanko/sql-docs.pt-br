@@ -3,7 +3,7 @@ description: Método AddNew (ADO)
 title: Método AddNew (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e16fb5d00ed38a0adbbb28b9c13e34f75f26236
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4695d1cf70328adad910d5b2b34e6b346b8049a4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760228"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976797"
 ---
 # <a name="addnew-method-ado"></a>Método AddNew (ADO)
 Cria um novo registro para um objeto [Recordset](./recordset-object-ado.md) atualizável.  

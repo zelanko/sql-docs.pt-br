@@ -1,7 +1,7 @@
 ---
 description: Propriedade Server (RDS)
 title: Propriedade do servidor (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c7d2c095c9f10e95df54849ce729ffdcbbca135
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 43a92ce6f71d8c9ad4cca25f1c657150b28bde27
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767515"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981257"
 ---
 # <a name="server-property-rds"></a>Propriedade Server (RDS)
 Indica o nome do Serviços de Informações da Internet (IIS) e o protocolo de comunicação.  

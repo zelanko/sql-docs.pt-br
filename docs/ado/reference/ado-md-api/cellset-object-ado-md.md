@@ -3,7 +3,7 @@ description: Objeto Cellset (ADO MD)
 title: Objeto células (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 411ed21d5fecf5c9791a5d96aac60724e7446958
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778305"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987147"
 ---
 # <a name="cellset-object-ado-md"></a>Objeto Cellset (ADO MD)
 Representa os resultados de uma consulta multidimensional. É uma coleção de células selecionadas de cubos ou outros células.  
@@ -33,7 +33,6 @@ Representa os resultados de uma consulta multidimensional. É uma coleção de c
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Comentários  
  Não há nenhuma noção de uma célula atual em um células. Em vez disso, a propriedade [Item](./item-property-ado-md-cellset.md) recupera um objeto [Cell](./cell-object-ado-md.md) específico do células. Os argumentos da propriedade **Item** determinam qual célula é recuperada. Você pode especificar o valor ordinal exclusivo de uma célula. Você também pode recuperar células usando seus números de posição ao longo de cada eixo do células. Para obter mais informações sobre como recuperar células, consulte a propriedade [Item](./item-property-ado-md-cellset.md) .  
   
  Com as coleções, métodos e propriedades de um objeto **células** , você pode fazer o seguinte:  

@@ -3,7 +3,7 @@ description: Método Delete (Conjunto de registros ADO)
 title: Método Delete (conjunto de registros ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b494885b6dafc7b91b76c37ac1817ac198335360
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a43aa64d970865b8de706fc4297bba9fd0d18786
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444148"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974087"
 ---
 # <a name="delete-method-ado-recordset"></a>Método Delete (Conjunto de registros ADO)
 Exclui o registro atual ou um grupo de registros.  

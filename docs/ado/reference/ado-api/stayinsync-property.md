@@ -3,7 +3,7 @@ description: Propriedade StayInSync
 title: Propriedade StayInSync | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8da28769a68cf95e727e61114235e76218f1bae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9677a776273e83ad31fecde3a7ea436138d3784e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777245"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988617"
 ---
 # <a name="stayinsync-property"></a>Propriedade StayInSync
 Indica, em um objeto [Recordset](./recordset-object-ado.md) hierárquico, se a referência aos registros filho subjacentes (ou seja, o *capítulo*) é alterada quando a posição da linha pai é alterada.  

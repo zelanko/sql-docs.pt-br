@@ -3,7 +3,7 @@ description: 'Índice de sintaxe ADO for Visual C++ com #import'
 title: 'ADO para índice de sintaxe Visual C++ com #import | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8189af2c578600df66a16fd0f41ac259dbbe68d6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d60cb7594592133eb19f7a9aa42ad25fb1fc1a38
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771825"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976357"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>Índice de sintaxe ADO for Visual C++ com #import
 Esse índice é uma referência cruzada para a referência da linguagem ADO com base em Microsoft Visual C++ e na diretiva **#import** .  

@@ -3,7 +3,7 @@ description: Exemplo da propriedade StayInSync (VB)
 title: Exemplo da propriedade StayInSync (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e96d32355fa31d79933b23620002f96d23eb7da
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7a8a6eb8fb9d6be9433e11f641c6b29367680ba5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777265"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988637"
 ---
 # <a name="stayinsync-property-example-vb"></a>Exemplo da propriedade StayInSync (VB)
 Este exemplo demonstra como a propriedade [StayInSync](./stayinsync-property.md) facilita o acesso a linhas em um [conjunto de registros](./recordset-object-ado.md)hierárquico.  

@@ -3,7 +3,7 @@ description: Exemplo da propriedade Type (Propriedade) (VC++)
 title: Exemplo da propriedade Type (Propriedade) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10da6786a5a41e6329b8af6c7a745a00fa0a4cbe
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dec09d7c382bad1234da377cbedc204161a95885
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777055"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988227"
 ---
 # <a name="type-property-example-property-vc"></a>Exemplo da propriedade Type (Propriedade) (VC++)
 Este exemplo demonstra a propriedade [Type](./type-property-ado.md) . É um modelo de um utilitário para listar os nomes e tipos de uma coleção, como [Propriedades](./properties-collection-ado.md), [campos](./fields-collection-ado.md), etc.  

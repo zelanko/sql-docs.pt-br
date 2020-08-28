@@ -3,7 +3,7 @@ description: 'Campo (Visual C++ índice de sintaxe com #import)'
 title: 'Campo (Visual C++ índice de sintaxe com #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c73bc04ebb334927ec7247afa1e38a598e9dc76e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d9c7abe0375f02d0bb0250d283acca2d5ca1a37
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443748"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973217"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Campo (Visual C++ índice de sintaxe com #import)
 ## <a name="methods"></a>Métodos  

@@ -3,7 +3,7 @@ description: Interface ADORecordsetConstruction
 title: Interface ADORecordsetConstruction | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c17ccfe0a31714d5e2b3945960a4ff3d2ad55d1e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ecf8f8e12f8d12a3382e7b67b13e8bb12fb69ac9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776635"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976217"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interface ADORecordsetConstruction
 A interface **ADORecordsetConstruction** é usada para construir um objeto **Recordset** ado de um objeto **conjunto de linhas** OLE DB em um aplicativo C/C++.  

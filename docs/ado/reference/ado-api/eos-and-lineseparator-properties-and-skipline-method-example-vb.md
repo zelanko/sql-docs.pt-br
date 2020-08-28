@@ -3,7 +3,7 @@ description: Exemplo das propriedades EOS e LineSeparator e do método Skipize (
 title: Propriedades do EOS e LineSeparator e o exemplo do método Skipe (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3265cf082790da2b9be844bd58b7af466cb45a18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6c4bf73832513a09960d221be42c879a3755e29
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444018"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973758"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Exemplo das propriedades EOS e LineSeparator e do método Skipize (VB)
 Este exemplo demonstra como manipular fluxos de texto uma linha por vez. É mostrado o efeito de alterar o separador de linha do retorno de carro/avanço (**adCRLF**) padrão para o simples avanço (**adLF**) ou retorno de carro (**adCR**).  

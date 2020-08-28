@@ -3,7 +3,7 @@ description: Método Append (ADO)
 title: Método Append (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87c4c1b9842dbd104a69ff4ba6a90eae2d7b1369
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84969b95751726579bdc7d4a61aee311b95b6108
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776505"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976077"
 ---
 # <a name="append-method-ado"></a>Método Append (ADO)
 Anexa um objeto a uma coleção. Se a coleção for de [campos](./fields-collection-ado.md), um novo objeto de [campo](./field-object.md) poderá ser criado antes de ser anexado à coleção.  
