@@ -3,7 +3,7 @@ description: Cláusulas COMPUTE de forma de intervenção
 title: Cláusulas de computação de forma intermediária | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49393765bfedc832f49fef103ba1076b277277fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8a4be3fb7f70ba41e24cd757da34e7272e51f87c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805891"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980437"
 ---
 # <a name="intervening-shape-compute-clauses"></a>Cláusulas COMPUTE de forma de intervenção
 É válido inserir uma ou mais cláusulas de computação entre o pai e o filho em um comando de forma com parâmetros, como no exemplo a seguir:  

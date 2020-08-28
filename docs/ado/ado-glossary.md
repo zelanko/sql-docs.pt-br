@@ -3,7 +3,7 @@ description: Termos do glossário do ADO
 title: Termos do glossário do ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805556"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980847"
 ---
 # <a name="ado-glossary-terms"></a>Termos do glossário do ADO
 Este tópico define os termos relevantes para o ADO.
@@ -138,7 +138,7 @@ Este tópico define os termos relevantes para o ADO.
  hierarquia em geral, uma hierarquia é uma estrutura classificada com níveis de nível superior e subordinado. No ADO, os **conjuntos de registros** hierárquicos são usados para representar a relação pai-filho entre um registro e um capítulo. Além disso, os objetos ADO, **Record** e **Stream** podem ser usados para acessar estruturas hierárquicas de árvore, como uma pasta e documentos. ADO MD também inclui objetos de **hierarquia** para representar uma relação entre os níveis de uma dimensão em um cubo OLAP. Consulte também conjuntos de registros hierárquicos, relação pai-filho, capítulo, árvore.
 
 ## <a name="i-l"></a>I-L
- ISAPI (interface de programação de aplicativo de servidor da Internet) um conjunto de funções para servidores da Internet, como um servidor Windows NT® Server/Windows 2000 executando o Microsoft® Serviços de Informações da Internet (IIS).
+ ISAPI (interface de programação de aplicativo de servidor da Internet) um conjunto de funções para servidores da Internet, como um servidor Windows NT &reg; Server/windows 2000 executando o Microsoft &reg; serviços de informações da Internet (IIS).
 
  Chave uma coluna ou colunas em uma tabela que identifica exclusivamente uma linha; geralmente usado para indexar uma tabela.
 

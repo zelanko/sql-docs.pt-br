@@ -3,7 +3,7 @@ description: Exemplo da propriedade Clustered (VB)
 title: Exemplo da propriedade Clustered (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1992c8c5796052e46719c34ecbc43d6b94553b6e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c8e0d1b03b4aa56d0db19d1d692f459bc7d9f613
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771135"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985177"
 ---
 # <a name="clustered-property-example-vb"></a>Exemplo da propriedade Clustered (VB)
 Este exemplo demonstra a propriedade [clusterizada](./clustered-property-adox.md) de um [índice](./index-object-adox.md). Observe que os bancos de dados do Microsoft Jet não dão suporte a índices clusterizados, portanto, este exemplo retornará **false** para a propriedade **clusterizada** de todos os índices no banco de dados **Northwind** .  
