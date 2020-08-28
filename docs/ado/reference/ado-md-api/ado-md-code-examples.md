@@ -3,7 +3,7 @@ description: Exemplos de código do ADO MD
 title: Exemplos de código de ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a75ef0e885b6d90f2b305d5737e6b70a2bf0b92
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 05d2521bef0502b5567c5a5f6d2c5006fb356f97
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776755"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987577"
 ---
 # <a name="ado-md-code-examples"></a>Exemplos de código do ADO MD
 Use os exemplos de código a seguir para aprender a usar o ADO MD objetos, métodos e propriedades. Esses exemplos são um subconjunto dos aplicativos de exemplo instalados com Microsoft SQL Server serviços OLAP para SQL Server 7,0.  

@@ -3,7 +3,7 @@ description: Exemplo das propriedades Filter e RecordCount (VB)
 title: Exemplo das propriedades Filter e RecordCount (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3bf78308afe6a48a071daa8a68a0a3cfaecd907c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7cee9fa6460366dd727c2eb1c6ce26c43286ea51
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775295"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973037"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Exemplo das propriedades Filter e RecordCount (VB)
 Este exemplo abre um [conjunto de registros](./recordset-object-ado.md) na tabela publishers no banco de dados ***pubs*** . Em seguida, ele usa a propriedade [Filter](./filter-property.md) para limitar o número de registros visíveis a esses Publicadores em um país/região específico. A propriedade **RecordCount** é usada para mostrar a diferença entre os conjuntos de registros filtrados e sem filtro.  

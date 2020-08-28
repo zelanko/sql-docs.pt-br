@@ -3,7 +3,7 @@ description: Exemplos das propriedades Attributes e Name (VB)
 title: Exemplo de propriedades Attributes e Name (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fb0d90d8e6fd5a999d3596af600c140c75e9617
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2740ed58b5592c0f57519de12c9a518af024c3e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776455"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975967"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Exemplos das propriedades Attributes e Name (VB)
 Este exemplo exibe o valor da propriedade [Attributes](./attributes-property-ado.md) para objetos [Connection](./connection-object-ado.md), [Field](./field-object.md)e [Property](./property-object-ado.md) . Ele usa a propriedade [Name](./name-property-ado.md) para exibir o nome de cada **campo** e objeto de **Propriedade** .  

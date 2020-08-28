@@ -3,7 +3,7 @@ description: Exemplo da propriedade Count (VC++)
 title: Exemplo da propriedade Count (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bd196830ad1212d495778d037c915b2f4d86874
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e379098c00931e56e81c22d111e698571e033e5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775645"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974497"
 ---
 # <a name="count-property-example-vc"></a>Exemplo da propriedade Count (VC++)
 Este exemplo demonstra a propriedade [Count](./count-property-ado.md) com duas coleções no banco de dados ***Employee*** . A propriedade Obtém o número de objetos em cada coleção e define o limite superior para loops que enumeram essas coleções.  

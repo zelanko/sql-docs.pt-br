@@ -3,7 +3,7 @@ description: Coleção Fields (ADO)
 title: Coleção Fields (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d94803ecbe53addb2efb7ef738863bc6541a5801
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6f16fd27e7bee9d3f9e922de4db625b897266a61
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775375"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973117"
 ---
 # <a name="fields-collection-ado"></a>Coleção Fields (ADO)
 Contém todos os objetos de [campo](./field-object.md) de um [conjunto de registros](./recordset-object-ado.md) ou objeto de [registro](./record-object-ado.md) .  
