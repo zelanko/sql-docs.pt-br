@@ -25,12 +25,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc348a82811998366494fd2f9464209f44d12204
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd9c5fc213462de6c1d4f7ddae0b3948957ffa0e
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422920"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042539"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char e varchar (Transact-SQL)
 
@@ -178,10 +178,17 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>Confira também
 
 [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
+
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+
 [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)
-[Conversão de Tipo de Dados&#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)
-[Tipos de Dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
-[Estimar o Tamanho de um Banco de Dados](../../relational-databases/databases/estimate-the-size-of-a-database.md)
-[Suporte para Ordenação e Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
-[Conjuntos de Caracteres de Byte Único e Multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)
+
+[Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)
+
+[Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+
+[Estimar o tamanho de um banco de dados](../../relational-databases/databases/estimate-the-size-of-a-database.md)
+
+[Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
+
+[Conjuntos de caracteres multibyte e de byte único](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

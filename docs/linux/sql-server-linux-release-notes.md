@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c66ddc41fab7366d6419e1906a5bff2ce1b2d12
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882704"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042369"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas sobre a versão do SQL Server 2017 em Linux
 
@@ -654,7 +654,7 @@ Para começar, confira os seguintes guias de início rápido:
 - [Instalação no Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalação no SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Instalar no Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Executar no Docker](quickstart-install-connect-ubuntu.md)
+- [Executar no Docker](quickstart-install-connect-docker.md)
 - [Provisionar uma VM SQL no Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Executar e conectar – Nuvem](quickstart-install-connect-clouds.md)
 
