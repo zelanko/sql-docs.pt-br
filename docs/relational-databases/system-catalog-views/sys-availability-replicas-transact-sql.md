@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1ed78e1cce742ce508237b7e04187927cf931cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01a82400b668243b48047e7118f7b7b0c4095a60
+ms.sourcegitcommit: d7accd198ee94e9d87eca8ed86fdb70bc60819e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486493"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385967"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ Se a instância de servidor local não puder falar com o cluster de failover WSF
 |**group_id**|**uniqueidentifier**|A ID exclusiva do grupo de disponibilidade ao qual a réplica pertence.|  
 |**replica_metadata_id**|**int**|ID do objeto de metadados local para réplicas de disponibilidade no Mecanismo de Banco de Dados.|  
 |**replica_server_name**|**nvarchar(256)**|O nome de servidor da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda essa réplica e, para uma instância não padrão, seu nome de instância.|  
-|**owner_sid**|**varbinary (85)**|O SID (identificador de segurança) registrado para essa instância de servidor para o proprietário externo dessa réplica de disponibilidade.<br /><br /> NULL para réplicas de disponibilidade não locais.|  
+|**owner_sid**|**varbinary(85)**|O SID (identificador de segurança) registrado para essa instância de servidor para o proprietário externo dessa réplica de disponibilidade.<br /><br /> NULL para réplicas de disponibilidade não locais.|  
 |**endpoint_url**|**nvarchar(128)**|Representação de cadeia de caracteres do ponto de extremidade de espelhamento de banco de dados especificado pelo usuário usado pelas conexões entre réplicas primária e secundária para sincronização de dados. Para obter informações sobre a sintaxe das URLs de ponto de extremidade, veja [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).<br /><br /> NULL = Não é possível se comunicar com o cluster de failover WSFC.<br /><br /> Para alterar esse ponto de extremidade, use a opção ENDPOINT_URL da instrução [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**availability_mode**|**tinyint**|O modo de disponibilidade da réplica. Pode ser:<br /><br /> 0 &#124; confirmação assíncrona. A réplica primária pode confirmar transações sem esperar que a réplica secundária grave o log no disco.<br /><br /> 1 &#124; confirmação síncrona. A réplica primária espera para confirmar uma determinada transação até que a réplica secundária tenha gravado a transação em disco.<br /><br />4 somente &#124; configuração. A réplica primária envia metadados de configuração do grupo de disponibilidade para a réplica de forma síncrona. Os dados do usuário não são transmitidos para a réplica. Disponível no SQL Server 2017 CU1 e posterior.<br /><br /> Para obter mais informações, consulte [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).|  
 |**availability_mode_desc**|**nvarchar(60)**|Descrição do ** \_ modo de disponibilidade**, um de:<br /><br /> confirmação assíncrona \_<br /><br /> \_confirmação síncrona<br /><br /> \_somente configuração<br /><br /> Para alterar esse modo de disponibilidade de uma réplica de disponibilidade, use a opção AVAILABILITY_MODE da instrução [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br/><br>Você não pode alterar o modo de disponibilidade de uma réplica \_ somente para configuração. Você não pode alterar uma \_ réplica somente de configuração para uma réplica secundária ou primária. |  
@@ -57,6 +57,8 @@ Se a instância de servidor local não puder falar com o cluster de failover WSF
 |**modify_date**|**datetime**|A data da última modificação da réplica.<br /><br /> NULL = Réplica não nesta instância de servidor.|  
 |**backup_priority**|**int**|Representa a prioridade especificada pelo usuário para executar backups nesta réplica em relação às outras réplicas no mesmo grupo de disponibilidade. O valor é um número inteiro no intervalo de 0..100.<br /><br /> Para obter mais informações, confira [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Ponto de extremidade de conectividade (URL) da réplica de disponibilidade somente leitura. Para obter informações, veja [Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
+|**seeding_mode**|**tinyint**|Um destes: </br></br> 0: manual </br></br> 1: automático|
+|**seeding_mode_desc**|**nvarchar(60)**|Descreve o modo de propagação. </br></br> MANUAL </br></br> AUTOMATIC|
   
 ## <a name="security"></a>Segurança  
   
