@@ -23,15 +23,16 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a08f64df5f50fda1f23f4e3b30add9e96e0670e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3b12f7bc4dc5cf9328d26c0f81a827731d28c234
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447648"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283827"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Retorna os erros que ocorrem em nós de computação do polybase.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "88447648"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|ID numérica exclusiva associada ao erro.|Exclusivo em todos os erros de consulta no sistema|  
 |source|`nvarchar(255)`|Descrição do thread ou processo de origem||  
-|type|`nvarchar(255)`|Tipo de erro.||  
+|tipo|`nvarchar(255)`|Tipo de erro.||  
 |create_time|`datetime`|A hora da ocorrência de erro||  
 |compute_node_id|`int`|Identificador do nó de computação específico|Consulte compute_node_id de [Sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificador da consulta do polybase, se houver.||  

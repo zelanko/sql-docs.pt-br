@@ -23,15 +23,16 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e13b8a3a6514548b05b3663a4a785128e23c80d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62591df1ce4a2a048c544b219f7efcc3fe18aa61
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454898"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283649"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Contém informações sobre os nós usados com o gerenciamento de dados do polybase. Ele lista uma linha por nó.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "88454898"
 |Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ID numérica exclusiva associada ao nó. Chave para esta exibição.|Exclusivo entre o cluster de escala horizontal, independentemente do tipo.|  
-|type|**nvarchar(32)**|Tipo do nó.|"COMPUTE", "HEAD"|  
+|tipo|**nvarchar(32)**|Tipo do nó.|"COMPUTE", "HEAD"|  
 |name|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de comprimento apropriado.|  
 |address|**nvarchar(32)**|Endereço IP deste nó.|Intervalo de Endereços IP|  
   

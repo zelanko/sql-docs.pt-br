@@ -23,15 +23,15 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1dd32f2bd3a810e01dc7bf50347b0a23a884796
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a47f820de618400e3772f3816ebe245682120a0f
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398612"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283647"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Contém informações sobre todos os trabalhos concluindo as etapas de DMS.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88398612"
 |dms_step_index|`int`|Etapa no plano DMS que esse trabalho está executando.|Consulte [Sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|Nó no qual o trabalho está sendo executado.|Consulte [Sys. dm_exec_compute_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|type|`nvarcha(32)`|||  
+|tipo|`nvarcha(32)`|||  
 |status|`nvarchar(32)`|Status desta etapa|' Pendente ', ' em execução ', ' Concluído ', ' falha ', ' UndoFailed ', ' PendingCancel ', ' cancelado ', ' desfeito ', ' anulado '|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  

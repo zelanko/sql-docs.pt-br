@@ -21,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32df69f207de0e1c604c10d58f4d28b4a3a34aa5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99a85cb9c329752e35f720ec97dabbb417498d3d
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454838"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283627"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -55,9 +55,6 @@ Retorna informações sobre o estado atual do pool de recursos externos, a confi
 ## <a name="permissions"></a>Permissões
 
 Requer a permissão `VIEW SERVER STATE`.
-
-> [!NOTE]
-> O SQL Serviços de Machine Learning 2019 para Linux não oferece suporte à capacidade de definir a afinidade de CPU.
 
 ## <a name="see-also"></a>Consulte Também  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
