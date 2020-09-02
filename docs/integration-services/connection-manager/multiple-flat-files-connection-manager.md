@@ -59,7 +59,7 @@ ms.locfileid: "88484681"
   
  \<*path*>|\<*path*>  
   
- Você também pode especificar vários arquivos usando curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor da propriedade **ConnectionString** pode ser definido como C:\\\*.txt.  
+ Você também pode especificar vários arquivos usando curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor da propriedade **ConnectionString** pode ser definido como C:\\*.txt.  
   
  Se um gerenciador de conexões de Vários Arquivos Simples se referir a vários arquivos, todos os arquivos deverão ter o mesmo formato.  
   
