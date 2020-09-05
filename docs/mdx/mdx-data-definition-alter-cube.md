@@ -9,21 +9,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 470a71cb88a6ea35ddadcc53e83fe60ebd369bbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494889"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480604"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definição de dados MDX – ALTER CUBE
 
 
-  Altera a estrutura de um cubo especificado, geralmente usado para oferecer suporte ao write-back de dimensão. Para obter mais informações sobre como usar write-back em um aplicativo, consulte esta postagem de blog: [criando um aplicativo de write-back com Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Altera a estrutura de um cubo especificado, geralmente usado para oferecer suporte ao write-back de dimensão. Para obter mais informações sobre como usar write-back em um aplicativo, consulte esta postagem de blog: [criando um aplicativo de write-back com Analysis Services (blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
   
  Observe que os write-backs de dimensão simultâneos podem resultar em um deadlock, onde o primeiro write-back é bloqueado de uma confirmação devido ao bloqueio compartilhado mantido pelo segundo write-back. Nenhum erro é gerado nessa situação, mas nenhuma operação pode avançar. Por fim, os dois write-backs expiram e as alterações são revertidas.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

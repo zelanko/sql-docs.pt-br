@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bfaa5eb1d111b29de1354a48f779c5d628e041dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f98afd4445d135ba7437f42c7f71355e265217c
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88342242"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480335"
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
 
@@ -94,7 +94,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 |Desfazer uma ação por meio de reversão de uma transação (somente administradores).|[Inverter uma transação &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>Recursos externos  
- Postagem do blog, [Transactions, Validation Issue and Staging table cleanup](https://go.microsoft.com/fwlink/p/?LinkId=615374)(Transações, problemas de validação e limpeza de tabela de preparo), no msdn.com.  
+ Postagem do blog, [Transactions, Validation Issue and Staging table cleanup](https://techcommunity.microsoft.com/t5/sql-server-integration-services/transactions-validation-issue-and-staging-table-cleanup/ba-p/388209)(Transações, problemas de validação e limpeza de tabela de preparo), no msdn.com.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   

@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9958fa6e7efe7b3bc42dd04aebc295f1ee2d0944
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476988"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480666"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipulação de dados MDX – UPDATE CUBE
 
 
-  A instrução UPDATE CUBE é usada para fazer write-back de dados para qualquer célula em um cubo que é agregado a seu pai usando a agregação SUM. Para obter mais explicações e um exemplo, consulte "compreendendo as alocações" nesta postagem de blog: [criando um aplicativo de write-back com Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
+  A instrução UPDATE CUBE é usada para fazer write-back de dados para qualquer célula em um cubo que é agregado a seu pai usando a agregação SUM. Para obter mais explicações e um exemplo, consulte "compreendendo as alocações" nesta postagem de blog: [criando um aplicativo de write-back com Analysis Services (blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
   
 ## <a name="syntax"></a>Sintaxe  
   
