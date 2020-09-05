@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812821"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480311"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
 
@@ -65,14 +65,14 @@ ms.locfileid: "85812821"
   
 ## <a name="comparing-administrator-types"></a>Comparando tipos de administrador  
   
-|Tipo de administrador|Description|  
+|Tipo de administrador|Descrição|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Superusuário|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Pode ser um superusuário com base em permissões de área funcional atribuídas explicitamente ou em permissões herdadas de um grupo.<br /><br /> Tem, automaticamente, todas as permissões para todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.|  
 |Administrador de modelo|Pode ser um administrador de modelo com base nas permissões de administrador atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Tem automaticamente todas as permissões para todos os objetos e membros no modelo específico.|  
 |Administrador de entidade|Pode ser um administrador de entidade com base nas permissões de administrador atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Tem automaticamente todas as permissões para todos os objetos e membros na entidade específica.<br /><br /> Poderá aprovar os conjuntos de alterações pendentes se as alterações de entidade exigirem aprovação.|  
   
 ## <a name="external-resources"></a>Recursos externos  
- Postagem do blog, [Aprimoramentos de Segurança](https://go.microsoft.com/fwlink/p/?LinkId=615376), em msdn.com.  
+ Postagem do blog, [Aprimoramentos de Segurança](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay), em msdn.com.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   

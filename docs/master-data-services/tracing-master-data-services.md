@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: e471a3ab0f6d2ce120ae5b20cd07ef71891dadc9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812669"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480405"
 ---
 # <a name="tracing-master-data-services"></a>Rastreamento (Master Data Services)
 
@@ -70,6 +70,6 @@ ms.locfileid: "85812669"
     |Mensagem|O corpo da mensagem do rastreamento|  
   
 ## <a name="external-resources"></a>Recursos externos  
- Postagem de blog, [Troubleshooting Logging Improvement (Aperfeiçoamento da Solução de Problemas de Log)](https://go.microsoft.com/fwlink/p/?LinkId=615377), no msdn.com.  
+ Postagem de blog, [Troubleshooting Logging Improvement (Aperfeiçoamento da Solução de Problemas de Log)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214), no msdn.com.  
   
   

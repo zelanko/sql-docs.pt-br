@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487912"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480388"
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
 
@@ -127,7 +127,7 @@ ms.locfileid: "88487912"
 |Valor é data/hora|Somente os valores que têm um tipo de dados de data/hora do SQL Server serão válidos. Isso inclui datetime, time, date etc.|Operando de exemplo: N/A<br /><br /> Valores válidos: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Valores inválidos: March 213, 2006|  
 |Valor está em|Somente os valores que estão no conjunto do operando serão válidos.<br /><br /> Para inserir os valores no conjunto, clique na caixa de texto do operando, insira o primeiro valor, pressione Enter, insira o segundo valor, repita o procedimento para tantos valores quanto você deseja inserir no conjunto e clique novamente na caixa de texto do operando. O DQS adicionará uma vírgula entre os valores do conjunto. Se você inserir uma cadeia de caracteres com vírgulas e nenhum retorno de carro (por exemplo, "A1, B1"), o DQS considerará essa cadeia de caracteres um único valor no conjunto.|Operando de exemplo: [A1, B1]<br /><br /> Valores válidos: A1, B1<br /><br /> Valores inválidos: AA, 11|  
 |Valor não está em|Somente os valores que não estão no conjunto do operando serão válidos.|Operando de exemplo: [A1, B1]<br /><br /> Valores válidos: AA, 11<br /><br /> Valores inválidos: A1, B1|  
-|Padrão de correspondências de valor|Somente os valores que correspondem ao padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.<br /><br /> Algumas letras (A...Z) podem ser usadas como um padrão para qualquer letra, sem diferenciação entre maiúsculas e minúsculas. Qualquer dígito (0...9) pode ser usado como um padrão para qualquer dígito. Qualquer caractere especial, exceto uma letra ou um dígito, pode ser usado como um padrão para si mesmo. Os colchetes, [], definem correspondência opcional.|Operando de exemplo: AA:000 (um padrão de *quaisquer* dois caracteres seguidos de dois-pontos (:), seguidos novamente de *quaisquer* três dígitos.<br /><br /> Valores válidos: AB:012, df:257<br /><br /> Valores inválidos: abc:123, FJ-369<br /><br /> Para obter mais informações sobre as regras do padrão no DQS e exemplos, consulte [Correspondência de padrão nas regras de domínio do DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|Padrão de correspondências de valor|Somente os valores que correspondem ao padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.<br /><br /> Algumas letras (A...Z) podem ser usadas como um padrão para qualquer letra, sem diferenciação entre maiúsculas e minúsculas. Qualquer dígito (0...9) pode ser usado como um padrão para qualquer dígito. Qualquer caractere especial, exceto uma letra ou um dígito, pode ser usado como um padrão para si mesmo. Os colchetes, [], definem correspondência opcional.|Operando de exemplo: AA:000 (um padrão de *quaisquer* dois caracteres seguidos de dois-pontos (:), seguidos novamente de *quaisquer* três dígitos.<br /><br /> Valores válidos: AB:012, df:257<br /><br /> Valores inválidos: abc:123, FJ-369<br /><br /> Para obter mais informações sobre as regras do padrão no DQS e exemplos, consulte [Correspondência de padrão nas regras de domínio do DQS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/pattern-matching-in-dqs-domain-rules/ba-p/388103).|  
 |Valor não corresponde ao padrão|Somente os valores que não correspondem ao padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.|Operando de exemplo: A1 (o valor não deve corresponder a um padrão de *qualquer* caractere seguido de *qualquer* dígito.)<br /><br /> Valores válidos: AB1, A, A:5<br /><br /> Valores inválidos: B7, c9|  
 |Valor contém o padrão|Somente valores contendo o padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.|Operando de exemplo: AA-12 (o valor contém um padrão de *quaisquer* dois caracteres seguidos de um hífen (-), seguidos novamente de *quaisquer* dois dígitos.)<br /><br /> Valores válidos: AAA-01, ab-975<br /><br /> Valor inválido: A7, AA-6, C-45, aa;98|  
 |Valor não contém o padrão|Somente os valores que não contêm o padrão de caracteres do operando serão válidos.|Operando de exemplo: AB-12 (o valor não deve conter um padrão de *quaisquer* dois caracteres seguidos de um hífen (-), seguidos novamente de *quaisquer* dois dígitos.)<br /><br /> Valores válidos: A7, AA-6, C-45, aa;98<br /><br /> Valor inválido: AAA-01, ab-975|  
