@@ -8621,7 +8621,7 @@
                     - name: Objetos com suporte no Assistente para Gerar Scripts
                       href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: Editores de texto e consulta
-                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                  href: 'https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15'
                   items:
                     - name: Editor de XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
