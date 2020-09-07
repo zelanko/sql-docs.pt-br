@@ -21,21 +21,21 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9cc403c5ec91d06fbe3a5e6356e1554e463ffd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14f329396794d3bfd0384a4888e705e9e31a498b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426658"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862089"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Cria uma tabela externa e, em seguida, exporta, em paralelo, os resultados de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para o Hadoop ou o Azure Storage Blob.  
+  Cria uma tabela externa e exporta, em paralelo, os resultados de uma instrução SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] para o Hadoop ou o Armazenamento de Blobs do Azure.
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
 
 ```syntaxsql
   
@@ -61,163 +61,142 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
     SELECT <select_criteria>  
 ```
 
-## <a name="arguments"></a>Argumentos  
- [ [ *database_name*. [ *schema_name* ]. ] | *schema_name* . ] *table_name*  
- O nome de uma a três partes da tabela a ser criado no banco de dados. Para uma tabela externa, apenas os metadados da tabela são armazenados no banco de dados relacional.  
+## <a name="arguments"></a>Argumentos
+ **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*** é o nome de uma a três partes da tabela a ser criada no banco de dados. Para uma tabela externa, apenas os metadados da tabela são armazenados no banco de dados relacional. 
 
- LOCATION = '*hdfs_folder*'  
- Especifica o local em que gravar os resultados da instrução SELECT na fonte de dados externa. O local é um nome de pasta e, opcionalmente, pode incluir um caminho relativo à pasta raiz do Cluster do Hadoop ou do Azure Storage Blob.  O PolyBase criará o caminho e a pasta, caso ela ainda não exista.  
+ **LOCATION =  '*hdfs_folder*'** especifica o local em que serão gravados os resultados da instrução SELECT na fonte de dados externa. O local é um nome de pasta e pode incluir um caminho relativo à pasta raiz do cluster Hadoop ou Armazenamento de Blobs. O PolyBase criará o caminho e a pasta, se estes ainda não existirem.
 
- Os arquivos externos são gravados em *hdfs_folder* e nomeados *QueryID_date_time_ID.format*, em que *ID* é um identificador incremental e *format* é o formato de dados exportados. Por exemplo, QID776_20160130_182739_0.orc.  
+Os arquivos externos são gravados em *hdfs_folder* e nomeados *QueryID_date_time_ID.format*, em que *ID* é um identificador incremental e *format* é o formato de dados exportados. Um exemplo é QID776_20160130_182739_0.orc.
 
- DATA_SOURCE = *external_data_source_name*  
- Especifica o nome do objeto de fonte de dados externa que contém o local em que os dados externos são ou serão armazenados. O local é um Cluster do Hadoop ou um Azure Storage Blob. Para criar uma fonte de dados externa, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ **DATA_SOURCE = *external_data_source_name*** especifica o nome do objeto de fonte de dados externa que contém o local onde os dados externos estão ou serão armazenados. O local é um cluster Hadoop ou um armazenamento de Blob do Azure. Para criar uma fonte de dados externa, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
- FILE_FORMAT = *external_file_format_name*  
- Especifica o nome do objeto de formato de arquivo externo que contém o formato do arquivo de dados externo. Para criar um formato de arquivo externo, use [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+ **FILE_FORMAT = *external_file_format_name*** especifica o nome do objeto de formato de arquivo externo que contém o formato para o arquivo de dados externo. Para criar um formato de arquivo externo, use [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
- Opções de rejeição  
- As opções de rejeição não se aplicam ao momento da execução desta instrução CREATE EXTERNAL TABLE AS SELECT. Em vez disso, elas são especificadas aqui, de modo que o banco de dados possa usá-las mais tarde ao importar dados da tabela externa. Posteriormente, quando a instrução CREATE TABLE AS SELECT selecionar dados da tabela externa, o banco de dados usará as opções de rejeição para determinar o número ou percentual de linhas que podem falhar ao serem importadas antes que a importação seja interrompida.  
+ As **opções REJECT** não se aplicam no momento em que a instrução CREATE EXTERNAL TABLE AS SELECT é executada. Em vez disso, elas são especificadas aqui, de modo que o banco de dados possa usá-las mais tarde ao importar dados da tabela externa. Posteriormente, quando a instrução CREATE TABLE AS SELECT selecionar dados da tabela externa, o banco de dados usará as opções de rejeição para determinar o número ou percentual de linhas que podem falhar ao serem importadas antes que a importação seja interrompida.
 
- REJECT_VALUE = *reject_value*  
- Especifica o valor ou percentual de linhas que podem falhar ao serem importadas antes que o banco de dados interrompa a importação.  
+   - **REJECT_VALUE = *reject_value*** especifica o valor ou o percentual de linhas cuja importação pode falhar antes que o banco de dados interrompa a importação.
 
- REJECT_TYPE = **value** | percentage  
- Esclarece se a opção REJECT_VALUE é especificada como um valor literal ou um percentual.  
+   - **REJECT_TYPE = **value** | percentage** esclarece se a opção REJECT_VALUE é especificada como um valor literal ou um percentual.
 
- value  
- REJECT_VALUE é um valor literal, não um percentual.  O banco de dados interromperá a importação de linhas do arquivo de dados externo quando o número de linhas com falha exceder *reject_value*.  
+      - **Value** será usado se REJECT_VALUE for um valor literal, não um percentual. O banco de dados interromperá a importação de linhas do arquivo de dados externo quando o número de linhas com falha exceder *reject_value*.
 
- Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = value, o banco de dados interromperá a importação de linhas após a falha na importação de 5 linhas.  
+        Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = value, o banco de dados interromperá a importação de linhas após a falha na importação de cinco linhas.
 
- percentage  
- REJECT_VALUE é um percentual, não um valor literal. O banco de dados interromperá a importação de linhas do arquivo de dados externo quando o *percentual* de linhas com falha exceder *reject_value*. O percentual de linhas com falha é calculado em intervalos.  
+      - **Percentage** será usado se REJECT_VALUE for um percentual, não um valor literal. O banco de dados interromperá a importação de linhas do arquivo de dados externo quando o *percentual* de linhas com falha exceder *reject_value*. O percentual de linhas com falha é calculado em intervalos.
 
- REJECT_SAMPLE_VALUE = *reject_sample_value*  
- Obrigatório quando REJECT_TYPE = percentage. Isso especifica o número de linhas na tentativa de importação antes que o banco de dados calcule novamente o percentual de linhas com falha.  
+   - **REJECT_SAMPLE_VALUE = *reject_sample_value*** é necessário quando REJECT_TYPE = percentage e especifica o número de linhas para tentar importar antes que o banco de dados recalcule o percentual de linhas com falha.
 
- Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o banco de dados calculará o percentual de linhas com falha depois de tentar importar 1.000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value*, o banco de dados tentará carregar outras 1.000 linhas. O banco de dados continuará calculando novamente o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.  
+      Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o banco de dados calculará o percentual de linhas com falha depois de tentar importar 1.000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value*, o banco de dados tentará carregar outras 1.000 linhas. O banco de dados continuará calculando novamente o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.
 
-> [!NOTE]  
->  Como o banco de dados calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value*.  
+     > [!NOTE]
+     >  Como o banco de dados calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value*.
 
- Exemplo:  
+     **Exemplo:**
 
- Este exemplo mostra como as três opções REJECT interagem. Por exemplo, se REJECT_TYPE = percentage, REJECT_VALUE = 30 e REJECT_SAMPLE_VALUE = 100, o seguinte cenário poderá ocorrer:  
+     Este exemplo mostra como as três opções REJECT interagem. Por exemplo, se REJECT_TYPE = percentage, REJECT_VALUE = 30 e REJECT_SAMPLE_VALUE = 100, o seguinte cenário poderá ocorrer:
 
--   O banco de dados tenta carregar as primeiras 100 linhas; 25 falharão e 75 serão bem-sucedidas.  
-  
--   O percentual de linhas com falha é calculado como 25%, que é menor que o valor de rejeição de 30%. Portanto, não é necessário interromper a carga.  
-  
--   O banco de dados tenta carregar as próximas 100 linhas; agora, 25 são bem-sucedidas e 75 falham.  
-  
--   O percentual de linhas com falha é recalculado como 50%. O percentual de linhas com falha excedeu o valor de rejeição de 30%.  
-  
--   A carga falha com 50% de linhas com falha após a tentativa de carregar 200 linhas, que é maior que o limite de 30% especificado.  
-  
+     - O banco de dados tenta carregar as primeiras 100 linhas, das quais 25 falham e 75 são bem-sucedidas.
+     - O percentual de linhas com falha é calculado como 25%, que é menor do que o valor de rejeição de 30%. Portanto, não há necessidade de interromper o carregamento.
+     - O banco de dados tenta carregar as próximas 100 linhas. Desta vez, 25 foram bem-sucedidos e 75 falharam.
+     - O percentual de linhas com falha é recalculado como 50%. O percentual de linhas com falha excedeu o valor de rejeição de 30%.
+     - A carga falha com 50% de linhas com falha após a tentativa de carregar 200 linhas, que é maior que o limite de 30% especificado.
 
- WITH *common_table_expression*  
- Especifica um conjunto de resultados nomeado temporário, conhecido como uma CTE (expressão de tabela comum). Para obter mais informações, confira [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ **WITH *common_table_expression*** especifica um conjunto de resultados nomeado temporário, conhecido como CTE (expressão de tabela comum). Para saber mais, confira [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md) 
 
- SELECT \<select_criteria> Popula a nova tabela com os resultados de uma instrução SELECT. *select_criteria* é o corpo da instrução SELECT que determina quais dados serão copiados para a nova tabela. Para obter informações sobre as instruções SELECT, confira [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ **SELECT \<select_criteria>** preenche a nova tabela com os resultados de uma instrução SELECT. *select_criteria* é o corpo da instrução SELECT que determina quais dados serão copiados para a nova tabela. Para obter informações sobre as instruções SELECT, confira [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).
 
-## <a name="permissions"></a>Permissões  
- Para executar esse comando, o **usuário de banco de dados** precisa de todas estas permissões ou associações:  
+## <a name="permissions"></a>Permissões
 
--   Permissão **ALTER SCHEMA** no esquema local que conterá a nova tabela ou associação à função de banco de dados fixa **db_ddladmin**.  
-  
--   Permissão **CREATE TABLE** ou associação à função de banco de dados fixa **db_ddladmin**.  
-  
--   Permissão **SELECT** em todos os objetos referenciados no *select_criteria*.  
-  
+ Para executar esse comando, o *usuário de banco de dados* precisa de todas estas permissões ou associações:
 
- O logon precisa de todas estas permissões:  
+- Permissão **ALTER SCHEMA** no esquema local que conterá a nova tabela ou associação à função de banco de dados fixa **db_ddladmin**.
+- Permissão **CREATE TABLE** ou associação à função de banco de dados fixa **db_ddladmin**.
+- Permissão **SELECT** em todos os objetos referenciados no *select_criteria*.
 
--   Permissão **ADMINISTER BULK OPERATIONS**  
-  
--   Permissão **ALTER ANY EXTERNAL DATA SOURCE**  
-  
--   Permissão **ALTER ANY EXTERNAL FILE FORMAT**  
-  
--   O logon deve ter permissão de gravação para leitura e gravação na pasta externa no Cluster Hadoop ou no Azure Storage Blob.  
+ O logon precisa de todas estas permissões:
 
- > [!IMPORTANT]  
- >  A permissão ALTER ANY EXTERNAL DATA SOURCE concede a qualquer entidade de segurança a capacidade de criar e modificar qualquer objeto de fonte de dados externa e, portanto, isso também concede a capacidade de acessar todas as credenciais no escopo do banco de dados no banco de dados. Essa permissão precisa ser considerada como altamente privilegiada e, portanto, ser concedida somente para entidades de segurança confiáveis no sistema.
+- **ADMINISTER BULK OPERATIONS**
+- **ALTER ANY EXTERNAL DATA SOURCE**
+- **ALTER ANY EXTERNAL FILE FORMAT**
+- Permissão de **Gravação** para ler e gravar na pasta externa no cluster Hadoop ou no Armazenamento de Blobs.
 
-## <a name="error-handling"></a>Tratamento de erros  
- Quando CREATE EXTERNAL TABLE AS SELECT exporta dados para um arquivo delimitado por texto, não há nenhum arquivo de rejeição para linhas com falha na exportação.  
+ > [!IMPORTANT]
+ >  A permissão ALTER ANY EXTERNAL DATA SOURCE concede a qualquer entidade de segurança a capacidade de criar e modificar qualquer objeto de fonte de dados externa. Portanto, também concede a capacidade de acessar todas as credenciais com escopo de banco de dados no banco de dados. Essa permissão precisa ser considerada altamente privilegiada e deve ser concedida apenas a entidades confiáveis no sistema.
 
- Ao criar a tabela externa, o banco de dados tenta se conectar ao cluster Hadoop externo ou ao Azure Storage Blob. Se a conexão falhar, o comando falhará e a tabela externa não será criada. Pode levar um minuto ou mais para que o comando falhe, pois o banco de dados tenta a conexão novamente pelo menos três vezes.  
+## <a name="error-handling"></a>Tratamento de erros
+ Quando CREATE EXTERNAL TABLE AS SELECT exporta dados para um arquivo delimitado por texto, não há nenhum arquivo de rejeição para linhas com falha na exportação.
 
- Se a instrução CREATE EXTERNAL TABLE AS SELECT for cancelada ou falhar, o banco de dados fará uma tentativa única de remover novos arquivos e pastas já criados na fonte de dados externa.  
+ Quando você cria a tabela externa, o banco de dados tenta se conectar ao cluster Hadoop externo ou ao Armazenamento de Blobs. Se a conexão falhar, o comando falhará e a tabela externa não será criada. Pode levar alguns minutos ou mais para o comando falhar porque o banco de dados tenta estabelecer a conexão novamente pelo menos três vezes.
 
- O banco de dados relatará os erros de Java ocorridos na fonte de dados externa durante a exportação de dados.  
+ Se a instrução CREATE EXTERNAL TABLE AS SELECT for cancelada ou falhar, o banco de dados fará uma tentativa única de remover novos arquivos e pastas já criados na fonte de dados externa.
 
-##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> Comentários gerais  
- Após a conclusão da instrução CETAS, execute consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] na tabela externa. Essas operações importarão dados para o banco de dados durante a consulta, a menos que você faça a importação usando a instrução CREATE TABLE AS SELECT.  
+ O banco de dados relatará os erros de Java ocorridos na fonte de dados externa durante a exportação de dados.
 
- O nome da tabela externa e a definição são armazenados nos metadados do banco de dados. Os dados são armazenados na fonte de dados externa.  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> Comentários gerais
+ Após a conclusão da instrução CREATE EXTERNAL TABLE AS SELECT, você pode executar consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] na tabela externa. Essas operações importarão dados para o banco de dados durante a consulta, a menos que você faça a importação usando a instrução CREATE TABLE AS SELECT.
 
- Os arquivos externos são nomeados *QueryID_date_time_ID.format*, em que *ID* é um identificador incremental e *formato* é o formato de dados exportados. Por exemplo, QID776_20160130_182739_0.orc.  
+ O nome da tabela externa e a definição são armazenados nos metadados do banco de dados. Os dados são armazenados na fonte de dados externa.
 
- A instrução CETAS sempre cria uma tabela não particionada, mesmo se a tabela de origem está particionada.  
+ Os arquivos externos são nomeados *QueryID_date_time_ID.format*, em que *ID* é um identificador incremental e *formato* é o formato de dados exportados. Um exemplo é QID776_20160130_182739_0.orc.
 
- Para planos de consulta, criados com EXPLAIN, o banco de dados usa essas operações do plano de consulta para tabelas externas:  
+ A instrução CREATE EXTERNAL TABLE AS SELECT sempre cria uma tabela não particionada, mesmo que a tabela de origem seja particionada.
 
--   Movimentação de ordem aleatória externa  
-  
--   Movimentação de difusão externa  
-  
--   Movimentação de partição externa  
-  
+ Para planos de consulta, criados com EXPLAIN, o banco de dados usa essas operações do plano de consulta para tabelas externas:
 
- **APLICA-SE A:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Como pré-requisito para a criação de uma tabela externa, o administrador do dispositivo precisa configurar a conectividade do Hadoop. Para obter mais informações, consulte Configurar a conectividade com os dados externos (Analytics Platform System) na documentação do APS que pode ser baixada [aqui](https://www.microsoft.com/download/details.aspx?id=48241).  
+- Movimentação de ordem aleatória externa
+- Movimentação de difusão externa
+- Movimentação de partição externa
 
-## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
- Como os dados da tabela externa residem fora do banco de dados, as operações de backup e restauração apenas funcionarão em dados armazenados no banco de dados. Isso significa que apenas os metadados serão copiados em backup e restaurados.  
+ **Aplica-se a:** Parallel Data Warehouse
 
- O banco de dados não verifica a conexão com a fonte de dados externa ao restaurar um backup de banco de dados que contém uma tabela externa. Se a fonte original não estiver acessível, a restauração de metadados da tabela externa ainda terá êxito, mas as operações SELECT na tabela externa falharão.  
+Como pré-requisito para a criação de uma tabela externa, o administrador do dispositivo precisa configurar a conectividade do Hadoop. Para saber mais, confira "Configurar conectividade para dados externos (Analytics Platform System)" na documentação do Analytics Platform System, que pode ser baixada do [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=48241).
 
- O banco de dados não assegura a consistência dos dados entre o banco de dados e os dados externos. Você, o cliente, é o único responsável por manter a consistência entre os dados externos e o banco de dados.  
+## <a name="limitations-and-restrictions"></a>Limitações e restrições
+ Como os dados da tabela externa residem fora do banco de dados, as operações de backup e restauração apenas funcionarão em dados armazenados no banco de dados. Consequentemente, apenas os metadados serão copiados em backup e restaurados.
 
- Não há compatibilidade com as operações DML (linguagem de manipulação de dados) em tabelas externas. Por exemplo, não é possível usar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] atualizar, inserir ou excluir[!INCLUDE[tsql](../../includes/tsql-md.md)] para modificar os dados externos.  
+ O banco de dados não verifica a conexão com a fonte de dados externa ao restaurar um backup de banco de dados que contém uma tabela externa. Se a fonte original não estiver acessível, a restauração de metadados da tabela externa ainda terá êxito, mas as operações SELECT na tabela externa falharão.
 
- CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW e DROP VIEW são as únicas operações DDL (linguagem de definição de dados) permitidas em tabelas externas.  
+ O banco de dados não assegura a consistência dos dados entre o banco de dados e os dados externos. Você, o cliente, é o único responsável por manter a consistência entre os dados externos e o banco de dados.
 
- O PolyBase pode consumir um máximo de 33 mil arquivos por pasta durante a execução de 32 consultas simultâneas do PolyBase. O número máximo inclui arquivos e subpastas em cada pasta do HDFS. Se o grau de simultaneidade é menor que 32, um usuário pode executar consultas do PolyBase em pastas do HDFS que contêm mais de 33 mil arquivos. A [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que os usuários do Hadoop e do PolyBase mantenham os caminhos de arquivo curtos e não usem mais do que 30 mil arquivos por pasta do HDFS. Quando há muitos arquivos referenciados, ocorre uma exceção de memória insuficiente da JVM.  
+ Não há compatibilidade com as operações DML (linguagem de manipulação de dados) em tabelas externas. Por exemplo, não é possível usar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] atualizar, inserir ou excluir[!INCLUDE[tsql](../../includes/tsql-md.md)] para modificar os dados externos.
 
- [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) não tem nenhum efeito sobre esta instrução CREATE EXTERNAL TABLE AS SELECT. Para obter um comportamento semelhante, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
+ CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW e DROP VIEW são as únicas operações DDL (linguagem de definição de dados) permitidas em tabelas externas.
 
- Quando CREATE EXTERNAL TABLE AS SELECT seleciona um RCFile, os valores da coluna no RCFile não devem conter o caractere de barra vertical '|'.  
+ O PolyBase pode consumir um máximo de 33 mil arquivos por pasta durante a execução de 32 consultas simultâneas do PolyBase. O número máximo inclui arquivos e subpastas em cada pasta do HDFS. Se o grau de simultaneidade é menor que 32, um usuário pode executar consultas do PolyBase em pastas do HDFS que contêm mais de 33 mil arquivos. Recomendamos que os usuários do Hadoop e do PolyBase mantenham os caminhos de arquivo curtos e não usem mais do que 30 mil arquivos por pasta do HDFS. Quando há muitos arquivos referenciados, ocorre uma exceção de memória insuficiente da JVM.
+
+ [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) não tem nenhum efeito sobre esta instrução CREATE EXTERNAL TABLE AS SELECT. Para obter um comportamento semelhante, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).
+
+ Quando CREATE EXTERNAL TABLE AS SELECT seleciona um RCFile, os valores da coluna no RCFile não devem conter o caractere de barra vertical "|".
 
 Usar CREATE EXTERNAL TABLE AS SELECT para arquivos Parquet ou ORC causará erros que poderão incluir registros rejeitados quando os seguintes caracteres estiverem presentes nos dados:
 
 - |
-- “ (caractere de aspas)
+- " (caractere de aspas)
 - /r/n
 - /r
 - /n
 
 Para usar CREATE EXTERNAL TABLE AS SELECT que contenha esses caracteres, primeiro você deve aplicar essa instrução aos dados de arquivos de texto delimitados, que você pode converter em Parquet ou ORC usando uma ferramenta externa.
 
-## <a name="locking"></a>Bloqueio  
- Usa um bloqueio compartilhado no objeto SCHEMARESOLUTION.  
+## <a name="locking"></a>Bloqueio
+ Usa um bloqueio compartilhado no objeto SCHEMARESOLUTION.
 
-##  <a name="examples"></a><a name="Examples"></a> Exemplos  
+##  <a name="examples"></a><a name="Examples"></a> Exemplos
 
-### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>a. Criar uma tabela do Hadoop usando CETAS (CREATE EXTERNAL TABLE AS SELECT)  
- O exemplo a seguir cria uma nova tabela externa chamada `hdfsCustomer`, usando as definições de coluna e os dados da tabela de origem `dimCustomer`.  
+### <a name="a-create-a-hadoop-table-by-using-create-external-table-as-select"></a>a. Criar uma tabela do Hadoop usando CREATE EXTERNAL TABLE AS SELECT
 
- A definição de tabela é armazenada no banco de dados e os resultados da instrução SELECT são exportados para o arquivo '/pdwdata/customer.tbl' na fonte de dados externa do Hadoop *customer_ds*. O arquivo é formatado de acordo com o formato de arquivo externo *customer_ff*.  
+ O exemplo a seguir cria uma tabela externa chamada `hdfsCustomer`, que usa as definições de coluna e os dados da tabela de origem `dimCustomer`.
 
- O nome do arquivo é gerado pelo banco de dados e contém a ID de consulta para facilitar o alinhamento do arquivo com a consulta que o gerou.  
+ A definição de tabela é armazenada no banco de dados e os resultados da instrução SELECT são exportados para o arquivo '/pdwdata/customer.tbl' na fonte de dados externa do Hadoop *customer_ds*. O arquivo é formatado de acordo com o formato de arquivo externo *customer_ff*.
 
- O caminho `hdfs://xxx.xxx.xxx.xxx:5000/files/` que precede o diretório Customer já deve existir. No entanto, se o diretório Customer não existir, o banco de dados criará o diretório.  
+ O nome do arquivo é gerado pelo banco de dados e contém a ID de consulta para facilitar o alinhamento do arquivo com a consulta que o gerou.
 
-> [!NOTE]  
->  Este exemplo especifica 5000. Se a porta não for especificada, o banco de dados usará 8020 como a porta padrão.  
+ O caminho `hdfs://xxx.xxx.xxx.xxx:5000/files/` que precede o diretório Customer já deve existir. Se o diretório Customer não existir, o banco de dados o criará.
 
- O local e o nome de arquivo do Hadoop resultantes serão `hdfs:// xxx.xxx.xxx.xxx:5000/files/Customer/ QueryID_YearMonthDay_HourMinutesSeconds_FileIndex.txt.`.  
+> [!NOTE]
+>  Este exemplo especifica 5000. Se a porta não for especificada, o banco de dados usará 8020 como a porta padrão.
+
+ O local e o nome de arquivo do Hadoop resultantes serão `hdfs:// xxx.xxx.xxx.xxx:5000/files/Customer/ QueryID_YearMonthDay_HourMinutesSeconds_FileIndex.txt.`.
 
 ```  
   
@@ -230,11 +209,12 @@ WITH (
 ) AS SELECT * FROM dimCustomer;  
 ```
 
-### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>B. Usar uma Dica de Consulta com CREATE EXTERNAL TABLE AS SELECT (CETAS)  
- Essa consulta mostra a sintaxe básica para uso de uma dica de consulta de junção com a instrução CETAS. Depois que a consulta é enviada, o banco de dados usa a estratégia de junção hash para gerar o plano de consulta. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [Cláusula OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
+### <a name="b-use-a-query-hint-with-create-external-table-as-select"></a>B. Usar uma dica de consulta com CREATE EXTERNAL TABLE AS SELECT
 
-> [!NOTE]  
->  Este exemplo especifica 5000. Se a porta não for especificada, o banco de dados usará 8020 como a porta padrão.  
+ Essa consulta mostra a sintaxe básica para o uso de uma dica de junção de consulta com a instrução CREATE EXTERNAL TABLE AS SELECT. Depois que a consulta é enviada, o banco de dados usa a estratégia de junção hash para gerar o plano de consulta. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [Cláusula OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).
+
+> [!NOTE]
+>  Este exemplo especifica 5000. Se a porta não for especificada, o banco de dados usará 8020 como a porta padrão.
 
 ```  
   
@@ -251,15 +231,14 @@ ON ( T1.CustomerKey = T2.CustomerKey )
 OPTION ( HASH JOIN );  
 ```
 
-## <a name="see-also"></a>Consulte Também  
- [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
- [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
- [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
- [CREATE TABLE &#40;SQL Data Warehouse do Azure, Parallel Data Warehouse&#41;](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)   
- [CREATE TABLE AS SELECT &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+## <a name="see-also"></a>Confira também
+ - [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)
+ - [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)
+ - [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)
+ - [CREATE TABLE &#40;SQL Data Warehouse do Azure, Parallel Data Warehouse&#41;](~/t-sql/statements/create-table-azure-sql-data-warehouse.md)
+ - [CREATE TABLE AS SELECT &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+ - [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)
+ - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
 
-  
 
 

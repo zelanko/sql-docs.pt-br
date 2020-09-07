@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 48a599580206e17131c28ecad757f11669851751
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435435"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991857"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -63,7 +63,7 @@ Baixe a versão mais recente dos componentes de conectividade para Excel aqui: [
 
 -   Se o computador já tiver uma versão de 32 bits do Office, então será necessário instalar a versão de 32 bits dos componentes. Também é necessário executar o pacote do SSIS no modo de 32 bits ou executar a versão de 32 bits do Assistente de importação e de exportação.
 
--   Se você tiver uma assinatura do Office 365, talvez você veja uma mensagem de erro quando você executar o instalador. O erro indica que não é possível instalar o download lado a lado com os componentes do tipo clicar para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
+-   Se você tem uma assinatura do Microsoft 365, talvez veja uma mensagem de erro ao executar o instalador. O erro indica que não é possível instalar o download lado a lado com os componentes do tipo clicar para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

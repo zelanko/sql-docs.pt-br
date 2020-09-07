@@ -2,7 +2,7 @@
 description: CREATE EXTERNAL LIBRARY (Transact-SQL) – SQL Server
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) – SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a625b369deeeae69475c94350b30f68b4cc8e5cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 244a70115f293b3723359cbb3966db37d240c186
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426708"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042470"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -148,7 +148,9 @@ WITH ( LANGUAGE = <language> )
 
 **library_name**
 
-As bibliotecas são adicionadas ao banco de dados no escopo do usuário. Os nomes de bibliotecas devem ser exclusivos no contexto de um usuário ou proprietário específico. Por exemplo, dois usuários **RUser1** e **RUser2** podem individual e separadamente carregar a biblioteca do R `ggplot2`. No entanto, se **RUser1** quiser carregar uma versão mais recente do `ggplot2`, a segunda instância deve ter um nome diferente ou deve substituir a biblioteca existente. 
+As bibliotecas carregadas na instância podem ser públicas ou particulares. Se a biblioteca for criada por um membro de `dbo`, a biblioteca será pública e poderá ser compartilhada com todos os usuários. Caso contrário, a biblioteca será particular somente para esse usuário.
+
+Os nomes de bibliotecas devem ser exclusivos no contexto de um usuário ou proprietário específico. Por exemplo, dois usuários **RUser1** e **RUser2** podem individual e separadamente carregar a biblioteca do R `ggplot2`. No entanto, se **RUser1** quiser carregar uma versão mais recente do `ggplot2`, a segunda instância deve ter um nome diferente ou deve substituir a biblioteca existente.
 
 Os nomes de biblioteca não podem ser atribuídos arbitrariamente; o nome da biblioteca deve ter o mesmo nome necessário para carregar a biblioteca no script externo.
 
@@ -228,6 +230,8 @@ Para a linguagem Python, o pacote em um arquivo .whl ou .zip deve estar preparad
 A instrução `CREATE EXTERNAL LIBRARY` carrega os bits de biblioteca no banco de dados. A biblioteca é instalada quando um usuário executa um script externo usando [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) e chama o pacote ou a biblioteca.
 
 As bibliotecas carregadas na instância podem ser públicas ou particulares. Se a biblioteca for criada por um membro de `dbo`, a biblioteca será pública e poderá ser compartilhada com todos os usuários. Caso contrário, a biblioteca será particular somente para esse usuário.
+
+Vários pacotes, chamados de *pacotes do sistema*, são pré-instalados em uma instância SQL. Os pacotes do sistema não podem ser adicionados, atualizados nem removidos pelo usuário.
 
 ## <a name="permissions"></a>Permissões
 

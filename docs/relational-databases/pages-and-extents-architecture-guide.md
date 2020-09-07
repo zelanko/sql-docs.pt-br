@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8640f7adc7e5da1e5095e44d16d201396c0924
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482543"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991847"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,14 +88,23 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem dois tipos de exten
 * Extensões **uniformes** que pertencem a um único objeto; todas as oito páginas na extensão podem ser usadas apenas pelo objeto proprietário.
 * Extensões **mistas** compartilhadas por até oito objetos. Cada uma das oito páginas da extensão pode pertencer a um objeto diferente.
 
-Até, e incluindo, o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não aloca extensões inteiras a tabelas com quantidades pequenas de dados. Uma nova tabela ou índice geralmente aloca páginas de extensões mistas. Quando a tabela ou o índice cresce até adquirir oito páginas, é alternado para usar extensões uniformes para alocações subsequentes. Se um índice for criado em uma tabela existente que tiver linhas suficientes para gerar oito páginas no índice, todas as alocações para o índice estarão em extensões uniformes. No entanto, começando com o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o padrão para todas as alocações no banco de dados é de extensões uniformes.
+![Extensões Uniformes e Mistas](../relational-databases/media/extents.gif)
 
-![Extensões](../relational-databases/media/extents.gif)
+Até, e incluindo, o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não aloca extensões inteiras a tabelas com quantidades pequenas de dados. Uma nova tabela ou índice geralmente aloca páginas de extensões mistas. Quando a tabela ou o índice cresce até adquirir oito páginas, é alternado para usar extensões uniformes para alocações subsequentes. Se um índice for criado em uma tabela existente que tiver linhas suficientes para gerar oito páginas no índice, todas as alocações para o índice estarão em extensões uniformes. 
+
+A partir do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o padrão para a maioria das alocações em um banco de dados de usuário e tempdb é usar extensões uniformes, exceto para alocações pertencentes às primeiras oito páginas de uma [cadeia de IAM](#IAM). As alocações para bancos de dados mestre, msdb e de modelo ainda mantêm o comportamento anterior. 
 
 > [!NOTE]
 > Até, e incluindo, o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o sinalizador de rastreamento 1118 pode ser usado para alterar a alocação padrão para sempre usar extensões uniformes. Para obter mais informações sobre este sinalizador de rastreamento, consulte [DBCC TRACEON – Sinalizadores de rastreamento](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> Começando com o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], a funcionalidade fornecida pelo sinalizador de rastreamento 1118 é habilitada automaticamente para o TempDB. Para bancos de dados de usuário, esse comportamento é controlado pela opção `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, com o valor padrão definido como OFF, e o sinalizador de rastreamento 1118 não tem nenhum efeito. Para obter mais informações, veja [Opções ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> A partir do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], a funcionalidade fornecida pelo FT 1118 é habilitada automaticamente para o tempdb. Para bancos de dados de usuário, esse comportamento é controlado pela opção `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, com o valor padrão definido como OFF, e o sinalizador de rastreamento 1118 não tem nenhum efeito. Para obter mais informações, veja [Opções ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+
+A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a função do sistema `sys.dm_db_database_page_allocations` pode relatar informações de alocação de página para um banco de dados, uma tabela, um índice e uma partição.
+
+> [!IMPORTANT]
+> A função do sistema `sys.dm_db_database_page_allocations` não está documentada e está sujeita a alterações. A compatibilidade não é garantida. 
+
+A partir do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], a função do sistema [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) é disponibilizada e retorna informações sobre uma página em um banco de dados. A função retorna uma linha que contém as informações do cabeçalho da página, incluindo object_id, index_id e partition_id. Essa função substitui a necessidade de usar `DBCC PAGE` na maioria dos casos.
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Gerenciando alocações de extensão e espaço livre 
 
@@ -141,7 +150,7 @@ Uma nova página PFS, GAM ou SGAM é adicionada ao arquivo de dados para cada in
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## <a name="managing-space-used-by-objects"></a>Gerenciando o espaço usado por objetos 
+## <a name="managing-space-used-by-objects"></a><a name="IAM"></a> Como gerenciar o espaço usado por objetos 
 
 Uma página **IAM** mapeia as extensões em uma parte de 4 GB de um arquivo de banco de dados usada por uma unidade de alocação. Uma unidade de alocação deve ser de um dos três tipos:
 
@@ -149,10 +158,10 @@ Uma página **IAM** mapeia as extensões em uma parte de 4 GB de um arquivo de b
     Mantém uma partição de um heap ou um índice.
 
 - LOB_DATA   
-   Contém tipos de dados de LOB (objeto grande), como varchar (max), varbinary (max) e xml.
+   Contém tipos de dados de LOB (Objeto Grande), como VARCHAR(max), VARBINARY(max) e XML.
 
 - ROW_OVERFLOW_DATA   
-   Mantém dados de comprimento variável armazenados em colunas varchar, nvarchar, varbinary ou sql_variant que excedem o limite de tamanho de linha de 8.060 bytes. 
+   Mantém dados de comprimento variáveis armazenados em colunas VARCHAR, NVARCHAR, VARBINARY OU SQL_VARIANT que excedem o limite de tamanho de linha de 8.060 bytes. 
 
 Cada partição de um heap ou um índice contém pelo menos uma unidade de alocação de IN_ROW_DATA. Também pode conter uma unidade de alocação do LOB_DATA ou ROW_OVERFLOW_DATA, dependendo do esquema do heap ou índice.
 
@@ -160,10 +169,10 @@ Uma página IAM cobre um intervalo de 4 GB em um arquivo e tem a mesma cobertura
 
 ![iam_pages](../relational-databases/media/iam-pages.gif)
 
-As páginas IAM são alocadas conforme exigido para cada unidade de alocação e ficam localizadas aleatoriamente no arquivo. A exibição de sistema, sys.system_internals_allocation_units, aponta para a primeira página IAM de uma unidade de alocação. Todas as páginas IAM para aquela unidade de alocação são vinculadas em uma cadeia.
+As páginas IAM são alocadas conforme exigido para cada unidade de alocação e ficam localizadas aleatoriamente no arquivo. A exibição do sistema `sys.system_internals_allocation_units` aponta para a primeira página de IAM de uma unidade de alocação. Todas as páginas de IAM dessa unidade de alocação são vinculadas em uma cadeia de IAM.
 
 > [!IMPORTANT]
-> A exibição de sistema `sys.system_internals_allocation_units` é destinada apenas para uso interno e está sujeita a alterações. A compatibilidade não é garantida. Esta exibição não está disponível no Banco de Dados SQL do Azure. 
+> A exibição de sistema `sys.system_internals_allocation_units` é destinada apenas para uso interno e está sujeita a alterações. A compatibilidade não é garantida. Esse modo de exibição não está disponível em [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
@@ -192,5 +201,6 @@ O intervalo entre as páginas DCM e BCM é o mesmo que o intervalo entre as pág
 ## <a name="see-also"></a>Consulte Também
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [Heaps &#40;Tabelas sem índices clusterizados&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)     
 [Lendo Páginas](../relational-databases/reading-pages.md)   
 [Gravando Páginas](../relational-databases/writing-pages.md)   

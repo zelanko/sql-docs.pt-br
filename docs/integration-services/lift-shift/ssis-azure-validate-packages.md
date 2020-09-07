@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 0012b7d1122de32834d6d71b2a32bbec45369c49
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 41985e8d39de843c8319ac3ac5622c4cb8b4aa51
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916149"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195132"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Validar pacotes SSIS (SQL Server Integration Services) implantados no Azure
 
@@ -67,7 +67,7 @@ As seguintes origens e destinos de terceiros não são compatíveis:
 
 -   Origem e destino da Oracle por Attunity
 -   Origem e destino do Teradata por Attunity
--   Origem e destino do SAP BI
+-   Origem e destino do SAP BW
 
 ## <a name="validate-tasks-and-components"></a>Validar tarefas e componentes
 

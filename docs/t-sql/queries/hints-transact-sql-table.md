@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445350"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062325"
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,10 +72,9 @@ ms.locfileid: "88445350"
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
-[ NOEXPAND ] {   
-    INDEX  ( index_value [ ,...n ] )   
-  | INDEX =  ( index_value )      
-  | FORCESEEK [( index_value ( index_column_name  [ ,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ] 
   | FORCESCAN  
   | FORCESEEK  
   | HOLDLOCK   
@@ -90,7 +89,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT   
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -145,15 +144,15 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 É recomendável usar vírgulas entre dicas de tabela.  
   
 > [!IMPORTANT]  
->  A separação de dicas com espaços em vez de vírgulas não é mais um recurso aceito: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> A separação de dicas com espaços em vez de vírgulas não é mais um recurso aceito: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
 Especifica que qualquer exibição indexada não será expandida para acessar tabelas subjacentes quando o otimizador de consulta processar a consulta. O otimizador de consulta trata a exibição como uma tabela com índice clusterizado. NOEXPAND aplica-se apenas a exibições indexadas. Para obter mais informações, confira [Usando NOEXPAND](#using-noexpand).  
   
-INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
-A sintaxe de INDEX() especifica os nomes ou as IDs de um ou mais índices a serem usados pelo otimizador de consulta ao processar a instrução. A alternativa INDEX = sintaxe especifica um único valor de índice. Apenas uma dica de índice por tabela pode ser especificada.  
+INDEX  **(** _<index\_value>_ [ **,** ... _n_ ] ) | INDEX =  ( _<index\_value>_ **)**  
+A sintaxe de INDEX() especifica os nomes ou as IDs de um ou mais índices a serem usados pelo otimizador de consulta ao processar a instrução. A sintaxe `INDEX =` alternativa especifica um único valor de índice. Apenas uma dica de índice por tabela pode ser especificada.  
   
-Se existir um índice clusterizado, INDEX(0) forçará uma verificação de índice clusterizado e INDEX(1) forçará uma verificação ou busca de índice clusterizado. Na ausência de índices clusterizados, INDEX(0) forçará uma verificação de tabela e INDEX(1) será interpretado como um erro.  
+Se houver um índice clusterizado, `INDEX(0)` forçará uma verificação de índice clusterizado, e `INDEX(1)` forçará uma verificação ou busca de índice clusterizado. Se não existir nenhum índice clusterizado, `INDEX(0)` forçará uma verificação de tabela, e `INDEX(1)` será interpretado como um erro.  
   
  Se forem usados vários índices em uma única lista de índices, as duplicatas serão ignoradas e os demais índices listados serão usados para recuperar as linhas da tabela. A ordem dos índices na dica de índice é importante. Uma dica de vários índices também impõe o uso de AND de índice e o otimizador de consulta aplicará tantas condições quantas forem possíveis em cada índice acessado. Se a coleção de índices com dica não incluir todas as colunas referidas pela consulta, uma busca será executada para recuperar as colunas restantes depois que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] recuperar todas as colunas indexadas.  
   
@@ -181,7 +180,7 @@ Especifica a inserção de um valor padrão da coluna de tabela, se houver algum
   
 Para obter um exemplo que usa essa dica em uma instrução INSERT... SELECT * FROM OPENROWSET(BULK...), confira [Manter valores nulos ou usar os valores padrão durante a importação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
+FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... _n_ ] **))** ]  
 Especifica que o otimizador de consulta usará apenas uma operação de busca de índice como o caminho de acesso aos dados na tabela ou exibição. 
 
 > [!NOTE]
@@ -234,7 +233,7 @@ Para tabelas e índices particionados, FORCESCAN é aplicado após a eliminaçã
 A dica FORCESCAN tem as restrições a seguir:  
 -   A dica não pode ser especificada para uma tabela que é o destino de uma instrução INSERT, UPDATE ou DELETE.  
 -   A dica não pode ser usada com mais de uma dica de índice.  
--   A dica impede que o otimizador considere índices espaciais ou XML na tabela.  
+-   A dica impede que o Otimizador de Consulta considere índices espaciais ou XML na tabela.  
 -   A dica não pode ser especificada para uma fonte de dados remotos.  
 -   A dica não pode ser especificada em combinação com a dica FORCESEEK.  
   
@@ -331,9 +330,9 @@ LEFT JOIN dbo.[Order History] AS oh
     ON c.customer_id=oh.customer_id;  
 ```  
   
-SPATIAL_WINDOW_MAX_CELLS = *integer*  
+SPATIAL_WINDOW_MAX_CELLS = *<integer\_value>*  
 **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
-Especifica o número máximo de células para usar para fazer um mosaico de geometria ou objeto de geografia. *number* é um valor entre 1 e 8192.  
+Especifica o número máximo de células para usar para fazer um mosaico de geometria ou objeto de geografia. *<integer\_value>* é um valor entre 1 e 8192.  
   
 Esta opção permite ajustar o tempo de execução de consulta ajustando o intercâmbio entre o tempo de execução de filtro primário e secundário. Um número maior reduz o tempo de execução de filtro secundário, mas aumenta hora de filtro de execução primária e um número menor diminui tempo de execução de filtro primário, mas aumenta a execução de filtro secundária. Para dados espaciais mais densos, um número mais alto deve gerar um tempo de execução mais rápido dando uma aproximação melhor com o filtro primário e reduzindo o tempo de execução de filtro secundário. Para dados mais esparsos, um número inferior diminuirá o tempo de execução de filtro primário.  
   
@@ -390,12 +389,12 @@ SELECT StartDate, ComponentID FROM Production.BillOfMaterials
 GO  
 ```  
   
-O otimizador de consulta não considerará uma dica de índice se as opções SET não tiverem os valores necessários para índices filtrados. Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+O Otimizador de Consulta não considerará uma dica de índice se as opções SET não tiverem os valores necessários para índices filtrados. Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Usando NOEXPAND  
-NOEXPAND aplica-se somente a *exibições indexadas*. Uma exibição indexada é uma exibição com um índice clusterizado exclusivo criado nela. Se uma consulta tiver referências a colunas presentes em uma exibição indexada e em tabelas base, e o otimizador de consulta determinar que o uso da exibição indexada oferece o melhor método para a execução da consulta, o otimizador de consulta usará o índice na exibição. Essa funcionalidade é chamada de *correspondência de exibição indexada*. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, o uso automático de uma exibição indexada pelo otimizador de consulta era compatível apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+NOEXPAND aplica-se somente a *exibições indexadas*. Uma exibição indexada é uma exibição com um índice clusterizado exclusivo criado nela. Se uma consulta tiver referências a colunas presentes em uma exibição indexada e em tabelas base, e o otimizador de consulta determinar que o uso da exibição indexada oferece o melhor método para a execução da consulta, o otimizador de consulta usará o índice na exibição. Essa funcionalidade é chamada de *correspondência de exibição indexada*. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, o uso automático de uma exibição indexada pelo Otimizador de Consulta era compatível apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [Recursos com suporte nas edições do SQL Server 2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md) e [Recursos com suporte nas edições do SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
-No entanto, para que o otimizador considere exibições indexadas para correspondência ou uso de uma exibição indexada que é referenciada com a dica NOEXPAND, as seguintes opções SET devem ser definidas como ON.  
+No entanto, para que o Otimizador de Consulta considere exibições indexadas para correspondência ou use uma exibição indexada que é referenciada com a dica NOEXPAND, as opções SET a seguir devem ser definidas como ON.  
 
 > [!NOTE]
 > O [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] é compatível com o automático de exibições indexadas sem especificar a dica NOEXPAND.
@@ -411,13 +410,13 @@ No entanto, para que o otimizador considere exibições indexadas para correspon
 
 Além disso, a opção NUMERIC_ROUNDABORT deve ser definida como OFF.  
   
- Para forçar o otimizador a usar um índice para uma exibição indexada, especifique a opção NOEXPAND. Essa dica poderá ser usada apenas se a exibição também estiver nomeada na consulta. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece uma dica para forçar o uso de uma exibição indexada específica em uma consulta que não nomeie a exibição diretamente na cláusula FROM. No entanto, o otimizador de consulta considera o uso de exibições indexadas, mesmo que elas não sejam referenciadas diretamente na consulta. O SQL Server apenas criará automaticamente as estatísticas em uma exibição indexada quando uma dica de tabela NOEXPAND for usada. A omissão dessa dica pode resultar em avisos de plano de execução sobre as estatísticas ausentes que não podem ser resolvidas com a criação manual de estatísticas. Durante a otimização da consulta, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará as estatísticas de exibição que foram criadas automaticamente ou manualmente quando a consulta referenciar a exibição diretamente e a dica NOEXPAND for usada.    
+ Para forçar o Otimizador de Consulta a usar um índice em uma exibição indexada, especifique a opção NOEXPAND. Essa dica poderá ser usada apenas se a exibição também estiver nomeada na consulta. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fornece uma dica para forçar o uso de uma exibição indexada específica em uma consulta que não nomeia a exibição diretamente na cláusula FROM. No entanto, o Otimizador de Consulta considera o uso de exibições indexadas, mesmo que elas não sejam referenciadas diretamente na consulta. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] criará automaticamente somente as estatísticas em uma exibição indexada quando uma dica de tabela NOEXPAND for usada. A omissão dessa dica pode resultar em avisos de plano de execução sobre as estatísticas ausentes que não podem ser resolvidas com a criação manual de estatísticas. Durante a otimização de consulta, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usará as estatísticas de exibição que foram criadas de forma automática ou manual quando a consulta referenciar a exibição diretamente e a dica NOEXPAND for usada.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Usando uma dica de tabela como uma dica de consulta  
  As *dicas de tabela* também podem ser especificadas como dicas de consulta usando a cláusula OPTION (TABLE HINT). É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md). Para consultas ad hoc, especifique essas dicas apenas como dicas de tabela. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="permissions"></a>Permissões  
- As dicas KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS requerem permissões ALTER na tabela.  
+ As dicas KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS requerem permissões `ALTER` na tabela.  
   
 ## <a name="examples"></a>Exemplos  
   

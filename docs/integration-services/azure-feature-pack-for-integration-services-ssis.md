@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb40e52398faac830e740f8aa57a3412559149cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe5c1f52cb17b721efb1d3083a0679040d858343
+ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457851"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942319"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack do Azure para o Integration Services (SSIS)
 
@@ -232,4 +232,4 @@ Esta é uma versão de hotfix lançada somente para o SQL Server 2019.
 #### <a name="bugfixes"></a>Correções de bugs
 
 1. Em determinados casos, o teste de conexão do Data Lake Storage Gen2 apresenta problemas de funcionamento com a mensagem de erro "Tentativa de acessar um elemento como um tipo incompatível com a matriz"
-1. Retorno do suporte para emulador de armazenamento do Azure
+1. Retorno do suporte para Emulador de Armazenamento do Azure

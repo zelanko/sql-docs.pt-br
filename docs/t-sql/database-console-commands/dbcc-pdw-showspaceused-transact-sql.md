@@ -13,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5f8274b7d73bb0119b165b1cfbe65473b499d55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb279fea42cd37af2c0e215f8dcd66ddecb766cc
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479814"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042449"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
@@ -51,7 +51,7 @@ Requer a permissão VIEW SERVER STAT.
   
 ## <a name="result-sets"></a>Conjuntos de resultados
 
-Este é o conjunto de resultados de todas as tabelas.
+Este é o conjunto de resultados de todas as tabelas.  Antes da criação de um cache para uma tabela do Synapse replicada, o resultado do DBCC reflete o tamanho total da tabela round robin subjacente de cada distribuição.  Depois que o cache é criado, o resultado reflete o tamanho total das tabelas round robin e do cache.   
   
 |Coluna|Tipo de Dados|DESCRIÇÃO|  
 |------------|---------------|-----------------|  
@@ -71,7 +71,7 @@ Este é o conjunto de resultados de uma tabela.
 |index_space|BIGINT|Espaço usado para índices, em KB.||  
 |unused_space|BIGINT|O espaço que faz parte do espaço reservado e não é usado, em KB.||  
 |pdw_node_id|INT|O nó de computação que é usado para relatar o uso do espaço.||  
-|distribution_id|INT|A distribuição que é usada para relatar o uso do espaço.|O valor é -1 para tabelas replicadas.|  
+|distribution_id|INT|A distribuição que é usada para relatar o uso do espaço.|Para Parallel Data Warehouse, seu valor é -1 para tabelas replicadas.|  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>a. Sintaxe básica do DBCC PDW_SHOWSPACEUSED  

@@ -2,7 +2,7 @@
 description: Dicas (Transact-SQL) – consulta
 title: Dicas de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/02/2019
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,17 +56,17 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: a28e03cd2fb0d5af501f386f9b3a39f7045fd2a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28dd70e39079b8c49d38ea0e165224c0d88b7cdd
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459185"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195100"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-As dicas de consulta especificam que as dicas indicadas devem ser usadas em toda a consulta. Elas afetam todos os operadores na instrução. Se UNION estiver envolvida na consulta principal, só a última consulta envolvendo uma operação UNION poderá ter a cláusula OPTION. As dicas de consulta são especificadas como parte da [cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md). O Erro 8622 ocorrerá se uma ou mais dicas de consulta fizerem com que o otimizador de consulta não gere um plano válido.  
+As dicas de consulta especificam que as dicas mencionadas são usadas no escopo de uma consulta. Elas afetam todos os operadores na instrução. Se UNION estiver envolvida na consulta principal, só a última consulta envolvendo uma operação UNION poderá ter a cláusula OPTION. As dicas de consulta são especificadas como parte da [cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md). O Erro 8622 ocorrerá se uma ou mais dicas de consulta fizerem com que o otimizador de consulta não gere um plano válido.  
   
 > [!CAUTION]  
 > Como o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleciona, normalmente, o melhor plano de execução para uma consulta, recomendamos usar dicas apenas como último recurso para desenvolvedores e administradores de banco de dados experientes.  
@@ -86,38 +86,38 @@ As dicas de consulta especificam que as dicas indicadas devem ser usadas em toda
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-<query_hint > ::=   
+<query_hint> ::=   
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   
   | { LOOP | MERGE | HASH } JOIN   
   | EXPAND VIEWS   
-  | FAST number_rows   
+  | FAST <integer_value>   
   | FORCE ORDER   
   | { FORCE | DISABLE } EXTERNALPUSHDOWN
   | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
-  | MAX_GRANT_PERCENT = percent  
-  | MIN_GRANT_PERCENT = percent  
-  | MAXDOP number_of_processors   
-  | MAXRECURSION number   
+  | MAX_GRANT_PERCENT = <numeric_value>  
+  | MIN_GRANT_PERCENT = <numeric_value>  
+  | MAXDOP <integer_value>   
+  | MAXRECURSION <integer_value>   
   | NO_PERFORMANCE_SPOOL   
-  | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
+  | OPTIMIZE FOR ( @variable_name { UNKNOWN | = <literal_constant> } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
-  | QUERYTRACEON trace_flag   
+  | QUERYTRACEON <integer_value>   
   | RECOMPILE  
   | ROBUST PLAN   
-  | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  
-  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE HINT ( <use_hint_name> [ , ...n ] )
+  | USE PLAN N'<xml_plan>'  
+  | TABLE HINT ( <exposed_object_name> [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
-[ NOEXPAND ] {   
-    INDEX ( index_value [ ,...n ] ) | INDEX = ( index_value )  
-  | FORCESEEK [( index_value ( index_column_name [,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ]  
   | FORCESCAN  
   | HOLDLOCK   
   | NOLOCK   
@@ -131,12 +131,33 @@ As dicas de consulta especificam que as dicas indicadas devem ser usadas em toda
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT  
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
   | XLOCK  
 }  
+
+<use_hint_name> ::=
+{ 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'
+  | 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'
+  | 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'
+  | 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'
+  | 'DISABLE_DEFERRED_COMPILATION_TV'
+  | 'DISABLE_INTERLEAVED_EXECUTION_TVF'
+  | 'DISABLE_OPTIMIZED_NESTED_LOOP'
+  | 'DISABLE_OPTIMIZER_ROWGOAL'
+  | 'DISABLE_PARAMETER_SNIFFING'
+  | 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'
+  | 'DISABLE_TSQL_SCALAR_UDF_INLINING'
+  | 'DISALLOW_BATCH_MODE'
+  | 'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'
+  | 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'
+  | 'FORCE_DEFAULT_CARDINALITY_ESTIMATION'
+  | 'FORCE_LEGACY_CARDINALITY_ESTIMATION'
+  | 'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'
+  | 'QUERY_PLAN_PROFILE' 
+}
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -158,12 +179,13 @@ Especifica que as exibições indexadas são expandidas. Também especifica que 
   
 Esta dica de consulta desabilita o uso direto de exibições indexadas e índices em exibições indexadas no plano de consulta.  
   
-A exibição indexada permanecerá condensada se houver uma referência direta à exibição no bloco SELECT da consulta. A exibição também permanecerá condensada se você especificar WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX(index\_value_ [ **,** _...n_ ] ) ). Para obter mais informações sobre a dica de consulta NOEXPAND, confira [Usando NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
+> [!NOTE]
+> A exibição indexada permanecerá condensada se houver uma referência direta à exibição no bloco SELECT da consulta. A exibição também permanecerá condensada se você especificar WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX( _<index\_value>_ [ **,** _...n_ ] ) ). Para obter mais informações sobre a dica de consulta NOEXPAND, confira [Usando NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
 A dica afetará apenas as exibições no bloco SELECT das instruções, incluindo as exibições nas instruções INSERT, UPDATE, MERGE e DELETE.  
   
-FAST _number\_rows_  
-Especifica que a consulta é otimizada para recuperação rápida das primeiras _number\_rows_. Esse resultado é um inteiro não negativo. Depois que as primeiras _number\_rows_ são retornadas, a consulta continua a execução e produz seu conjunto de resultados completo.  
+FAST _<integer\_value>_  
+Especifica que a consulta é otimizada para recuperação rápida do primeiro número de linhas de _<integer\_value>_ . Esse resultado é um inteiro não negativo. Depois que o primeiro número de linhas de _<integer\_value>_ é retornado, a consulta continua a execução e produz seu conjunto de resultados completo.  
   
 FORCE ORDER  
 Especifica que a ordem de junção indicada pela sintaxe de consulta é preservada durante a otimização da consulta. Usar FORCE ORDER não afeta o possível comportamento de reversão de função do otimizador de consulta.  
@@ -190,21 +212,21 @@ KEEPFIXED PLAN
 Força o otimizador de consulta a não recompilar uma consulta devido às alterações nas estatísticas. Especificar KEEPFIXED PLAN garantirá que uma consulta seja recompilada apenas se o esquema das tabelas subjacentes for alterado ou se **sp_recompile** for executado nessas tabelas.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
   
 Impede a consulta de usar um índice columnstore otimizado para memória não clusterizado. Se a consulta contiver a dica de consulta para evitar o uso do índice columnstore e uma dica de índice para usar um índice columnstore, as dicas entrarão em conflito e a consulta retornará um erro.  
   
-MAX_GRANT_PERCENT = _percent_     
+MAX_GRANT_PERCENT = <numeric_value>     
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
-O tamanho máximo de concessão de memória em PERCENT. É garantido que a consulta não excederá esse limite. O limite real poderá ser inferior se a configuração do Resource Governor for mais baixa que o valor especificado por esta dica. Os valores válidos estão entre 0,0 e 100,0.  
+O tamanho máximo de concessão de memória em PERCENT do limite de memória configurado. É garantido que a consulta não excederá esse limite. O limite real poderá ser inferior se a configuração do Resource Governor for mais baixa que o valor especificado por esta dica. Os valores válidos estão entre 0,0 e 100,0.  
   
-MIN_GRANT_PERCENT = _percent_        
+MIN_GRANT_PERCENT = <numeric_value>        
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
-Tamanho mínimo de concessão de memória em PERCENT = % do limite padrão. É garantido que a consulta obtenha o MAX (memória necessária, mínima concedida) porque é preciso pelo menos a memória necessária para iniciar uma consulta. Os valores válidos estão entre 0,0 e 100,0.  
+O tamanho mínimo de concessão de memória em PERCENT do limite de memória configurado. É garantido que a consulta obtenha `MAX(required memory, min grant)` porque é preciso pelo menos a memória necessária para iniciar uma consulta. Os valores válidos estão entre 0,0 e 100,0.  
  
-MAXDOP _number_      
+MAXDOP <integer_value>      
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Substitui a opção de configuração de **grau máximo de paralelismo** de **sp_configure**. Também substitui o Resource Governor para a consulta que especifica essa opção. A dica de consulta MAXDOP pode exceder o valor configurado com sp_configure. Se MAXDOP exceder o valor configurado com o Resource Governor, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará o valor de MAXDOP do Resource Governor, descrito em [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). Todas as regras semânticas usadas com a opção de configuração **max degree of parallelism** são aplicáveis ao usar a dica de consulta MAXDOP. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
@@ -212,7 +234,7 @@ Substitui a opção de configuração de **grau máximo de paralelismo** de **sp
 > [!WARNING]     
 > Se MAXDOP estiver definido como 0, o servidor escolherá o máximo grau de paralelismo.  
   
-MAXRECURSION _number_     
+MAXRECURSION <integer_value>     
 Especifica o número máximo de recursões permitidas para esta consulta. _number_ é um inteiro não negativo entre 0 e 32.767. Quando 0 é especificado, nenhum limite é aplicado. Se essa opção não for especificada, o limite padrão para o servidor será de 100.  
   
 Quando o número especificado ou padrão de limite de MAXRECURSION é atingido durante a execução da consulta, a consulta é encerrada e um erro é retornado.  
@@ -226,7 +248,7 @@ NO_PERFORMANCE_SPOOL
   
 Impede que um operador de spool seja adicionado aos planos de consulta (exceto para os planos em que o spool é necessário para assegurar uma semântica de atualização válida). O operador de spool pode reduzir o desempenho em alguns cenários. Por exemplo, o spool usa o tempdb e a contenção do tempdb pode ocorrer se há várias consultas simultâneas em execução com as operações de spool.  
   
-OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = <literal_constant> }_ [ **,** ..._n_ ] )     
 Instrui o otimizador de consulta a usar um valor específico para uma variável local quando a consulta é compilada e otimizada. O valor é usado somente durante a otimização da consulta e não durante sua execução.  
   
 _\@variable\_name_  
@@ -254,10 +276,14 @@ Especifica as regras de parametrização que o otimizador de consulta do [!INCLU
   
 SIMPLE instrui o otimizador de consulta a tentar parametrização simples. FORCED instrui o otimizador de consulta a tentar a parametrização forçada. Para obter mais informações, consulte [Parametrização forçada no Guia de arquitetura de processamento de consulta](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) e [Parametrização simples no Guia de arquitetura de processamento de consulta](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
 
-QUERYTRACEON trace_flag    
-Essa opção permite habilitar um sinalizador de rastreamento que afeta o plano somente durante uma compilação de consulta única. Assim como outras opções de nível de consulta, você pode usá-la junto com guias de plano para corresponder ao texto de uma consulta que está sendo executada em sessão e aplicar automaticamente um sinalizador de rastreamento que afetará o plano quando essa consulta estiver sendo compilada. A opção QUERYTRACEON só é compatível com os sinalizadores de rastreamento do otimizador de consulta documentados na tabela da seção “Mais informações” e em [Sinalizadores de Rastreamento](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). No entanto, essa opção não retornará nenhum erro ou aviso se um número de sinalizador de rastreamento sem suporte for usado. Se o sinalizador de rastreamento especificado não for um que afete um plano de execução de consulta, a opção será silenciosamente ignorada.
+QUERYTRACEON <integer_value>    
+Essa opção permite habilitar um sinalizador de rastreamento que afeta o plano somente durante uma compilação de consulta única. Assim como outras opções de nível de consulta, você pode usá-la junto com guias de plano para corresponder ao texto de uma consulta que está sendo executada em sessão e aplicar automaticamente um sinalizador de rastreamento que afetará o plano quando essa consulta estiver sendo compilada. A opção QUERYTRACEON só tem suporte para sinalizadores de rastreamento do Otimizador de Consulta. Para obter mais informações, consulte [Sinalizadores de rastreamento](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-Mais de um sinalizador de rastreamento poderá ser especificado na cláusula OPTION se QUERYTRACEON trace_flag_number for duplicado com números de sinalizador de rastreamento diferentes.
+> [!NOTE]  
+> Usar essa opção não retornará nenhum erro ou aviso se um número de sinalizador de rastreamento sem suporte for usado. Se o sinalizador de rastreamento especificado não for um que afete um plano de execução de consulta, a opção será silenciosamente ignorada.
+
+> [!NOTE]  
+> Para usar mais de um sinalizador de rastreamento em uma consulta, especifique uma dica QUERYTRACEON para cada número de sinalizador de rastreamento diferente.
 
 RECOMPILE  
 Instrui o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a gerar um plano novo e temporário para a consulta e descartar esse plano imediatamente depois que a consulta conclui a execução. O plano de consulta gerado não substitui um plano armazenado em cache quando a mesma consulta é executada sem a dica RECOMPILE. Sem especificar RECOMPILE, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena em cache os planos de consulta e reutiliza-os. Ao compilar planos de consulta, a dica de consulta RECOMPILE usa os valores atuais de todas as variáveis locais na consulta. Se a consulta estiver em um procedimento armazenado, os valores atuais são passados para quaisquer parâmetros.  
@@ -349,12 +375,12 @@ A lista de todos os nomes de USE HINT compatíveis pode ser consultada usando a 
 > [!IMPORTANT] 
 > Algumas dicas USE HINT podem entrar em conflito com os sinalizadores de rastreamento habilitados no nível global ou no nível da sessão, ou com as definições de configurações de escopo do banco de dados. Nesse caso, a dica no nível da consulta (USE HINT) sempre terá precedência. Se um USE HINT estiver em conflito com outra dica de consulta ou com um sinalizador de rastreamento habilitado no nível da consulta (como por QUERYTRACEON), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um erro ao tentar executar a consulta. 
 
-<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
+<a name="use-plan"></a> USE PLAN N' _<xml\_plan>_ '  
  Força o otimizador de consulta a usar um plano de consulta existente para uma consulta especificada por **'** _xml\_plan_ **'** . USE PLAN não pode ser especificado com instruções INSERT, UPDATE, MERGE ou DELETE.  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Aplica a dica de tabela especificada à tabela ou à exibição que corresponde ao _exposed\_object\_name_. É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md).  
+TABLE HINT **(** _<exposed\_object\_name>_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Aplica a dica de tabela especificada à tabela ou visualização que corresponde a _exposed\_object\_name_. É recomendável usar uma dica de tabela como uma dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md).  
   
- _exposed\_object\_name_ pode ser uma das seguintes referências:  
+ _<exposed\_object\_name>_ pode ser uma das seguintes referências:  
   
 -   Quando um alias é usado para a tabela ou exibição na cláusula [FROM](../../t-sql/queries/from-transact-sql.md) da consulta, _exposed\_object\_name_ é o alias.  
   
@@ -362,17 +388,18 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  Quando você especifica _exposed\_object\_name_ sem especificar também uma dica de tabela, todos os índices especificados na consulta como parte de uma tabela para o objeto são desconsiderados. O otimizador de consulta, em seguida, determina o uso do índice. Você pode usar essa técnica para eliminar o efeito de uma dica de tabela INDEX quando não puder modificar a consulta original. Consulte o exemplo J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) \| INDEX = ( _index\_value_ ) \| FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } É a dica de tabela a ser aplicada para a tabela ou exibição que corresponde a *exposed_object_name* como uma dica de consulta. Para obter uma descrição dessas dicas, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { NOEXPAND [ , INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) ] \| INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) \| FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS = _<integer\_value>_ \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK }    
+É a dica a ser aplicada à tabela ou exibição que corresponde a *exposed_object_name* como uma dica de consulta. Para obter uma descrição dessas dicas, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Para obter mais informações, consulte Comentários.  
+ Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Para saber mais, confira a [seção de Comentários](#remarks).  
   
 > [!CAUTION]
-> A especificação de FORCESEEK com parâmetros limita o número de planos que podem ser considerados pelo otimizador mais do que a especificação de FORCESEEK sem parâmetros. Isso pode resultar em um erro "Não é possível gerar o plano" em mais casos. Em uma versão futura, as modificações internas no otimizador talvez permitam a consideração de mais planos.  
+> Especificar FORCESEEK com parâmetros limita mais o número de planos que podem ser considerados pelo Otimizador de Consulta em comparação à especificação FORCESEEK sem parâmetros. Isso pode resultar em um erro "Não é possível gerar o plano" em mais casos. Em uma versão futura, as modificações internas no Otimizador de Consulta poderão permitir que mais planos sejam considerados.  
   
 ## <a name="remarks"></a>Comentários  
  Dicas de consultas não podem ser especificadas em uma instrução INSERT, exceto quando uma cláusula SELECT for usada dentro da instrução.  
   
- Só podem ser especificadas dicas de consulta na consulta de nível superior, e não em subconsultas. Quando uma dica de tabela é especificada como uma dica de consulta, a dica pode ser especificada na consulta de nível superior ou em uma subconsulta. No entanto, o valor especificado para _exposed\_object\_name_ na cláusula TABLE HINT deve corresponder exatamente ao nome exposto na consulta ou subconsulta.  
+ Só podem ser especificadas dicas de consulta na consulta de nível superior, e não em subconsultas. Quando uma dica de tabela é especificada como uma dica de consulta, a dica pode ser especificada na consulta de nível superior ou em uma subconsulta. No entanto, o valor especificado para _<exposed\_object\_name>_ na cláusula TABLE HINT deve corresponder exatamente ao nome exposto na consulta ou subconsulta.  
   
 ## <a name="specifying-table-hints-as-query-hints"></a>Especificando dicas de tabela como dicas de consulta  
  É recomendável usar a dica de tabela INDEX, FORCESCAN ou FORCESEEK como dica de consulta apenas no contexto de um [guia de plano](../../relational-databases/performance/plan-guides.md). Os guias de plano são úteis quando não é possível modificar a consulta original, por exemplo, por se tratar de um aplicativo de terceiros. A dica de consulta especificada na guia de plano é adicionada à consulta antes de ela ser compilada e otimizada. Para consultas ad hoc, use a cláusula TABLE HINT apenas ao testar instruções de guia de plano. Para todas as demais consultas ad hoc, é recomendável especificar essas dicas apenas como dicas de tabela.  
@@ -383,14 +410,12 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 -   Exibições  
 -   Exibições indexadas  
 -   Expressões de tabela comuns (a dica deve ser especificada na instrução SELECT cujo conjunto de resultados popula a expressão de tabela comum)  
--   Exibições de gerenciamento dinâmico  
+-   DMVs (exibições de gerenciamento dinâmico)
 -   Subconsultas nomeadas  
   
 Você pode especificar as dicas de tabela INDEX, FORCESCAN e FORCESEEK como dicas de consulta para uma consulta que não tenha dicas de tabela. Você também pode usá-las para substituir as dicas existente INDEX, FORCESCAN ou FORCESEEK na consulta, respectivamente. 
 
 Dicas de tabela diferentes de INDEX, FORCESCAN e FORCESEEK não são permitidas como dicas de consulta, a não ser que a consulta possua uma cláusula WITH que especifique a dica de tabela. Nesse caso, uma dica correspondente também deve ser especificada como uma dica de consulta. Especifique a dica correspondente como uma dica de consulta usando TABLE HINT na cláusula OPTION. Essa especificação preserva a semântica da consulta. Por exemplo, se a consulta contiver a dica de tabela NOLOCK, a cláusula OPTION no parâmetro **\@hints** do guia de plano também precisará conter a dica NOLOCK. Consulte o exemplo K. 
-
-O Erro 8072 ocorre em alguns cenários. Um deles é quando você especifica uma dica de tabela diferente de INDEX, FORCESCAN ou FORCESEEK usando TABLE HINT na cláusula OPTION sem uma dica de consulta correspondente. O segundo cenário é o oposto. Esse erro indica que a cláusula OPTION pode modificar a semântica da consulta, e a consulta falhará.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -599,6 +624,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (TABLE HINT (e, NOLOCK))';  
 GO  
 ```  
+
 ### <a name="l-using-use-hint"></a>L. Usando USE HINT  
  O exemplo a seguir usa as dicas de consulta RECOMPILE e USE HINT. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
@@ -608,6 +634,7 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
+
 ### <a name="m-using-querytraceon-hint"></a>M. Usar a QUERYTRACEON HINT  
  O exemplo a seguir usa as dicas de consulta QUERYTRACEON. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Você pode habilitar todos os hotfixes que afetam o plano controlados pelo sinalizador de rastreamento 4199 para uma consulta específica usando a seguinte consulta:
   
@@ -624,7 +651,6 @@ SELECT * FROM Person.Address
 WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 ```
-
 
 ## <a name="see-also"></a>Consulte Também  
 [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   

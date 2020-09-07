@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c231fef9f3700e5d131d15916dfbfe3e100751a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362826"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901000"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 
@@ -168,14 +168,14 @@ As contas de serviço gerenciado, as contas de serviço gerenciado de grupo e as
 
 - <a name="GMSA"></a> **Contas de serviços gerenciados de grupo**
 
-  Uma conta de serviço gerenciado de grupo é uma MSA para vários servidores. O Windows gerencia uma conta de serviço para os serviços executados em um grupo de servidores. O Active Directory atualiza automaticamente a senha da conta de serviço gerenciado de grupo sem reiniciar os serviços. Você pode configurar os serviços do SQL Server para usar uma entidade da conta de serviço gerenciado de grupo. Começando no SQL Server 2014, o SQL Server dá suporte a contas de serviço gerenciado de grupo para instâncias autônomas, e o SQL Server 2016 e posteriores a instâncias de cluster de failover e grupos de disponibilidade.
+  Uma gMSA (conta de serviço gerenciada de grupo) é um MSA para vários servidores. O Windows gerencia uma conta de serviço para os serviços executados em um grupo de servidores. O Active Directory atualiza automaticamente a senha da conta de serviço gerenciado de grupo sem reiniciar os serviços. Você pode configurar os serviços do SQL Server para usar uma entidade da conta de serviço gerenciado de grupo. Começando no SQL Server 2014, o SQL Server dá suporte a contas de serviço gerenciado de grupo para instâncias autônomas, e o SQL Server 2016 e posteriores a instâncias de cluster de failover e grupos de disponibilidade.
 
-  Para usar uma conta de serviço gerenciado de grupo para o SQL Server 2014 ou posterior, o sistema operacional precisa ser o Windows Server 2012 R2 ou posterior. Servidores com o Windows Server 2012 R2 requerem que o [KB 2998082](https://support.microsoft.com/kb/2998082) seja aplicado de forma que os serviços possam fazer logon sem interrupção imediatamente após uma alteração de senha.
+  Para usar uma gMSA no SQL Server 2014 ou posterior, o sistema operacional deve ser o Windows Server 2012 R2 ou posterior. Servidores com o Windows Server 2012 R2 requerem que o [KB 2998082](https://support.microsoft.com/kb/2998082) seja aplicado de forma que os serviços possam fazer logon sem interrupção imediatamente após uma alteração de senha.
 
   Para obter mais informações, consulte [Group Managed Service Accounts (Contas de serviço gerenciado de grupo)](https://technet.microsoft.com/library/hh831782.aspx)
 
   > [!NOTE]
-  > A conta de serviço gerenciado de grupo deve ser criada no Active Directory pelo administrador de domínio antes que a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa usá-la para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+  > A gMSA deve ser criada no Active Directory pelo administrador de domínio antes que a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa usá-la para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 - <a name="VA_Desc"></a>**Virtual Accounts**
 

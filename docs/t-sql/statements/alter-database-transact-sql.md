@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1feac396ec7a51a82f9070890fc17adf4cdecb57
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467324"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042379"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -602,7 +602,7 @@ Quando SERVICE_OBJECTIVE não for especificado, o banco de dados secundário ser
 ELASTIC_POOL (name = \<elastic_pool_name>) Quando ELASTIC_POOL não for especificado, o banco de dados secundário não será criado em um pool elástico. Quando ELASTIC_POOL for especificado, o banco de dados secundário será criado no pool especificado.
 
 > [!IMPORTANT]
-> O usuário que executa o comando ADD SECONDARY precisa ser DBManager no servidor primário, ter associação a db_owner no banco de dados local e DBManager no servidor secundário.
+> O usuário que executa o comando ADD SECONDARY precisa ser DBManager no servidor primário, ter associação a db_owner no banco de dados local e DBManager no servidor secundário. O endereço IP do cliente deve ser adicionado à lista de permissões nas regras de firewall para os servidores primário e secundário. No caso de diferentes endereços IP de cliente, o mesmo endereço IP de cliente adicionado no servidor primário também deve ser adicionado ao secundário. Essa é uma etapa que precisa ser executada antes da execução do comando ADD SECONDARY para iniciar a replicação geográfica.
 
 REMOVE SECONDARY ON SERVER \<partner_server_name> Remove o banco de dados secundário com replicação geográfica especificado do servidor especificado. O comando é executado no banco de dados mestre no servidor que hospeda o banco de dados primário.
 

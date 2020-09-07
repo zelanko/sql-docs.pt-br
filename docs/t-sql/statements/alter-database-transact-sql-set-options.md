@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778545"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900959"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -753,13 +753,13 @@ ATIVADO
 Habilita o Repositório de Consultas.
 
 OFF      
-Desabilita o Repositório de Consultas. OFF é o valor padrão. FORCED é opcional. FORCED anula todas as tarefas em execução em segundo plano do Repositório de Consultas e ignora a liberação síncrona quando o Repositório de Consultas é desativado. Faz com que o Repositório de Consultas seja desligado o mais rápido possível. Desliga efetivamente o Repositório de Consultas imediatamente. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 introduz FORCED.
+Desabilita o Repositório de Consultas. OFF é o valor padrão. FORCED é opcional. FORCED anula todas as tarefas em execução em segundo plano do Repositório de Consultas e ignora a liberação síncrona quando o Repositório de Consultas é desativado. Faz com que o Repositório de Consultas seja desligado o mais rápido possível. FORCED aplica-se a CU6 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e builds posteriores.
 
 > [!NOTE]  
 > O Repositório de Consultas não pode ser desabilitado no banco de dados individual do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e no Pool Elástico. Executar `ALTER DATABASE [database] SET QUERY_STORE = OFF` retornará o aviso `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
-Remove o conteúdo do Repositório de Consultas.
+Remove dados relacionados a consulta do Repositório de Consultas. ALL é opcional. ALL remove dados relacionados a consulta e metadados da Repositório de Consultas.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 Descreve o modo de operação do Repositório de Consultas.

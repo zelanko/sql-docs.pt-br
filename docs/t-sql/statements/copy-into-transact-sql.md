@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602201"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901567"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versão prévia)
 
@@ -432,6 +432,15 @@ O comando COPY estará em disponibilidade geral no final deste ano civil (2020).
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Há alguma limitação quanto ao número ou ao tamanho dos arquivos?
 Não há limitações quanto ao número ou tamanho dos arquivos; no entanto, para obter o melhor desempenho, recomendamos que os arquivos tenham pelo menos 4 MB.
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Há alguma limitação quanto ao uso de COPY em workspaces do Synapse (versão prévia)?
+
+A autenticação com MSI (Identidade de Serviço Gerenciada) não é compatível com a instrução COPY nem com PolyBase (inclusive quando usada em pipelines). Você pode receber uma mensagem de erro semelhante a:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: Identidade de Serviço Gerenciada não habilitada neste servidor. Habilite a Identidade de Serviço Gerenciada e tente novamente.*
+
+A autenticação com MSI é necessária quando a conta de armazenamento está associada a uma VNet. Você deverá usar a inserção BCP/Cópia em massa para carregar dados em vez de COPY ou PolyBase se a conta de armazenamento estiver conectada a uma VNet.
+
+Essa limitação é aplicável apenas a pools de SQL pertencentes a um workspace do Synapse (versão prévia). Habilitaremos o suporte a MSI em workspaces do Synapse em uma versão futura. 
 
 Envie comentários ou problemas para a seguinte lista de distribuição: sqldwcopypreview@service.microsoft.com
 

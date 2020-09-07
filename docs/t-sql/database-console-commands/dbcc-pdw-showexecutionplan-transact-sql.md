@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b83bba2f706b88e6a11e8efb50aaf5be4c52c152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a221857278cdd2e8b88d8f6f13084b4def9d3c88
+ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417622"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942299"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 
@@ -46,7 +46,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 
 ## <a name="arguments"></a>Argumentos  
  *distribution_id*  
- Identificador da distribuição que está executando o plano de consulta. Este é um número inteiro e não pode ser NULL. Usado ao direcionar ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ Identificador da distribuição que está executando o plano de consulta. Este é um número inteiro e não pode ser NULL. O valor deve estar entre 1 e 60. Usado ao direcionar ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
  *pdw_node_id*  
  Identificador do nó que está executando o plano de consulta. Este é um número inteiro e não pode ser NULL. Usado ao direcionar a um dispositivo.  
