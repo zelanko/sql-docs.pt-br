@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Agent [WMI]
 - WMI Provider for Server Events, about WMI Provider for Server Events
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2218ed2c3eedafd1c6cab44096eaf356f0a8d492
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: df2e36110a9e4a52a3587644b96994bc040442e8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888176"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89519713"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Compreendendo o Provedor WMI para eventos do servidor
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

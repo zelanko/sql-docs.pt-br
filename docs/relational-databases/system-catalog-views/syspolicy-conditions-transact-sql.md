@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 598c25263761041693d99a2c72526a2333c50e1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05389c23d73c80af8544696977daf3edd04a4042
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88374922"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89518851"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88374922"
 |condition_id|**int**|Identificador desta condição. Cada condição representa uma coleção de uma ou mais expressões de condição.|  
 |name|**sysname**|O nome da condição.|  
 |date_created|**datetime**|Data e hora em que a condição foi criada.|  
-|descrição|**nvarchar(max)**|A descrição da condição. A coluna de descrição é opcional e pode ser NULL.|  
+|description|**nvarchar(max)**|A descrição da condição. A coluna de descrição é opcional e pode ser NULL.|  
 |created_by|**sysname**|Logon que criou a condição.|  
 |modified_by|**sysname**|Logon que modificou a condição mais recentemente. É NULL se nunca foi modificada.|  
 |date_modified|**datetime**|Data e hora em que a condição foi criada. É NULL se nunca foi modificada.|  
@@ -51,7 +51,7 @@ ms.locfileid: "88374922"
  Requer a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
