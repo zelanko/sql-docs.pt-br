@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a0803ef58ede892cec17937cb4c38895de6cf53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425858"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480872"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
 
@@ -189,7 +189,7 @@ ms.locfileid: "88425858"
   
 -   Artigo técnico e exemplo, [O "Distribuidor de Dados Equilibrado" para SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), em sqlcat.com.  
   
--   Postagem do blog, [Solução de problemas de desempenho do pacote SSIS](https://go.microsoft.com/fwlink/?LinkId=238156), no blogs.msdn.com.  
+-   Postagem do blog, [Solução de problemas de desempenho do pacote SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553), no blogs.msdn.com.  
   
  **Vídeos**  
   

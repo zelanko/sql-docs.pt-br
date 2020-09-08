@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysarticles system table
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 174d8adeaced4a98639e8474184ba3e1359f79cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 26666dab768a1d029231e81936e7b581a918836d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485392"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517679"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88485392"
 |**del_cmd**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar exclusões com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**descrição**|**nvarchar(255)**|A entrada descritiva para o artigo.|  
 |**dest_table**|**sysname**|O nome da tabela de destino.|  
-|**sem**|**int**|A ID do procedimento armazenado, usado para particionamento horizontal.|  
+|**filter**|**int**|A ID do procedimento armazenado, usado para particionamento horizontal.|  
 |**filter_clause**|**ntext**|A cláusula WHERE do artigo, usada para filtragem horizontal.|  
 |**ins_cmd**|**nvarchar(255)**|O tipo de comando de replicação usado ao replicar inserções com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**name**|**sysname**|O nome associado ao artigo, exclusivo dentro da publicação.|  
@@ -60,7 +60,7 @@ ms.locfileid: "88485392"
  [Tabelas de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_addarticle ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changearticle ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  
   
   

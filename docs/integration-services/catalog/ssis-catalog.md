@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e507742ac9da235499749ed2345b25cfa11d87e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2050734b89c8b5ae74aa40316c9b1f980705dc3
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484894"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480278"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
 
@@ -40,7 +40,7 @@ ms.locfileid: "88484894"
   
  Para manter o banco de dados **SSISDB** , é recomendado que você aplique políticas empresariais padrão para gerenciar os bancos de dados de usuários. Para obter informações sobre como criar planos de manutenção, consulte [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- O catálogo **SSISDB** e o banco de dados **SSISDB** dão suporte ao Windows PowerShell. Para obter mais informações sobre como usar o SQL Server com Windows PowerShell, consulte [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Para obter exemplos de como usar o Windows PowerShell para concluir tarefas como implantar um projeto, consultar a entrada de blog, [SSIS e PowerShell no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)em blogs.msdn.com.  
+ O catálogo **SSISDB** e o banco de dados **SSISDB** dão suporte ao Windows PowerShell. Para obter mais informações sobre como usar o SQL Server com Windows PowerShell, consulte [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Para obter exemplos de como usar o Windows PowerShell para concluir tarefas como implantar um projeto, consultar a entrada de blog, [SSIS e PowerShell no SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)em blogs.msdn.com.  
   
  Para obter mais informações sobre como exibir dados de operações, consulte [Monitorar pacote em execução e outras operações](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
@@ -360,7 +360,7 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
   
     ```  
   
-     Para obter mais exemplos de como usar o Windows PowerShell e o namespace <xref:Microsoft.SqlServer.Management.IntegrationServices>, confira a entrada de blog [SSIS e o PowerShell no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) em blogs.msdn.com. Para obter uma visão geral do namespace e dos exemplos de códigos, consulte a entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)em blogs.msdn.com.  
+     Para obter mais exemplos de como usar o Windows PowerShell e o namespace <xref:Microsoft.SqlServer.Management.IntegrationServices>, confira a entrada de blog [SSIS e o PowerShell no SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015) em blogs.msdn.com. Para obter uma visão geral do namespace e dos exemplos de códigos, consulte a entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)em blogs.msdn.com.  
 
 ## <a name="catalog-properties-dialog-box"></a>Caixa de diálogo Propriedades do Catálogo
   Use a caixa de diálogo de Propriedades do Catálogo para configurar o catálogo do SSISDB. As propriedades do catálogo definem como dados confidenciais são criptografados, como dados de operações e de controle de versão de projeto são retidos, e quando o tempo limite de operações de validação expira. O catálogo do SSISDB é um armazenamento e ponto de administração central para projetos, pacotes, parâmetros e ambientes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -677,8 +677,8 @@ O SSISDB não é compatível com a delegação restrita. Em um ambiente de salto
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
--   Entrada de blog, [SSIS e PowerShell no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), em blogs.msdn.com.  
+-   Entrada de blog, [SSIS e PowerShell no SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015), em blogs.msdn.com.  
   
--   Entrada de blog, [Digas de controle de acesso ao catálogo do SSIS](https://go.microsoft.com/fwlink/?LinkId=246669), em blogs.msdn.com.  
+-   Entrada de blog, [Digas de controle de acesso ao catálogo do SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057), em blogs.msdn.com.  
   
 -   Entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)em blogs.msdn.com.  
