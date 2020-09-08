@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 92b7abe9bee2ac7d8d7058f2fcc03a551b64e200
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd8b8d0ecf3e7be9a8a68710c32e15b65497e173
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765483"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480960"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS (Armazenamento de Blob Remoto) [SQL Server]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "85765483"
  O RBS inclui um provedor FILESTREAM que permite usar o RBS para armazenar BLOBs em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso deseje usar o RBS para armazenar BLOBs em uma solução de armazenamento diferente, utilize um provedor RBS de terceiros desenvolvido para essa solução de armazenamento ou desenvolva um provedor RBS personalizado usando a API do RBS. Um provedor de exemplo que armazena BLOBs no sistema de arquivos NTFS está disponível como um recurso de aprendizagem em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190).  
   
 ## <a name="rbs-security"></a>Segurança do RBS  
- O blog da equipe do SQL Remote Blob Storage é uma boa fonte de informações sobre esse recurso. O modelo de segurança do RBS é descrito na postagem em [Modelo de Segurança do RBS](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx).  
+ O blog da equipe do SQL Remote Blob Storage é uma boa fonte de informações sobre esse recurso. O modelo de segurança do RBS é descrito na postagem em [Modelo de Segurança do RBS](https://docs.microsoft.com/archive/blogs/sqlrbs/rbs-security-model).  
   
 ### <a name="custom-providers"></a>Provedores personalizados  
  Quando você usa um provedor personalizado para armazenar BLOBs fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certifique-se de proteger os BLOBs armazenados com permissões e opções de criptografia apropriadas para a mídia de armazenamento usada pelo provedor personalizado.  
@@ -89,7 +89,7 @@ Se suas políticas de segurança exigem diferentes propriedades de chave (por ex
  Os exemplos do RBS disponíveis em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) demonstram como desenvolver um aplicativo RBS, e como desenvolver e instalar um provedor RBS personalizado.  
   
  **Blog do RBS**  
- O [blog do RBS](https://go.microsoft.com/fwlink/?LinkId=210315) fornece informações adicionais para ajudá-lo a compreender, implantar e manter o RBS.  
+ O [blog do RBS](https://docs.microsoft.com/archive/blogs/sqlrbs/) fornece informações adicionais para ajudá-lo a compreender, implantar e manter o RBS.  
   
 ##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> Script de rotação de chaves  
  Este exemplo cria um procedimento armazenado denominado `sp_rotate_rbs_symmetric_credential_key` para substituir a chave simétrica do repositório de credenciais do RBS usada atualmente  

@@ -21,15 +21,15 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce343447b770a5a8f0cd0c1499c3b8ff236adf17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26b2b996402be1ddd2297cf61dce827a905980df
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426738"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283708"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
 Cria um objeto de formato de arquivo externo definindo dados externos armazenados no Hadoop, no Armazenamento de Blobs do Azure, no Azure Data Lake Storage ou para os fluxos de entrada e de saída associados a Fluxos Externos. Criar um formato de arquivo externo é um pré-requisito para criar uma tabela externa. Ao criar um formato de arquivo externo, você especificará o layout real dos dados referenciados por uma tabela externa.  
   

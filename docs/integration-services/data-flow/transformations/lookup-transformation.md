@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477690"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480898"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
 
@@ -172,7 +172,7 @@ ms.locfileid: "88477690"
  Ao selecionar uma opção na caixa de listas **Especificar como lidar com linhas com entradas sem-correspondência** , as linhas serão tratadas como erros. A opção **Erro** na página **Saída de Erro** estará disponível.  
   
 ### <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
+ Entrada de blog, [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) (em inglês) em blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>Editor da Transformação Pesquisa (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor da Transformação Pesquisa** para selecionar um gerenciador de conexões. Se você selecionar um gerenciador de conexões OLE DB, também poderá selecionar uma consulta, tabela ou exibição para gerar o conjunto de dados de referência.  
@@ -219,7 +219,7 @@ ms.locfileid: "88477690"
  Visualize os resultados usando a caixa de diálogo **Visualizar Resultados da Consulta** . Esta opção exibe até 200 linhas.  
   
 ### <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
+ Entrada de blog, [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) (em inglês) em blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>Editor da Transformação Pesquisa (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor da Transformação Pesquisa** para especificar a junção entre a tabela de origem e a tabela de referência, e para selecionar as colunas de pesquisa a partir da tabela de referência.  
@@ -276,7 +276,7 @@ ms.locfileid: "88477690"
  Mapeie colunas de entrada para parâmetros usando a caixa de diálogo **Definir Parâmetros da Consulta** .  
   
 ### <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (em inglês) em blogs.msdn.com  
+ Entrada de blog, [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) (em inglês) em blogs.msdn.com  
   
 ## <a name="see-also"></a>Consulte Também  
  [Transformação Pesquisa Difusa](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

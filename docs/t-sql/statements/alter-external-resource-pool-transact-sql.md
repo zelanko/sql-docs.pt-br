@@ -18,19 +18,19 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c77608f7b09c591fd5bdee3e5f24685d9887b51c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6279d5eae855c87e7f93cb47e3b2fb55bfcc2dba
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479091"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283469"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Altera um pool externo do Resource Governor que especifica os recursos que podem ser usados por processos externos. 
 
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Para o [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] no [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], o pool externo controla `rterm.exe`, `BxlServer.exe` e outros processos gerados por eles.
 ::: moniker-end
 
@@ -41,8 +41,24 @@ Para [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Sintaxe
-
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ```syntaxsql
+ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
+[ WITH (
+    [ MAX_CPU_PERCENT = value ]
+    [ [ , ] MAX_MEMORY_PERCENT = value ]
+    [ [ , ] MAX_PROCESSES = value ]
+    )
+]
+[ ; ]
+  
+<CPU_range_spec> ::=
+{ CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
+```  
+::: moniker-end
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+ ```syntaxsql
+
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]
@@ -61,7 +77,8 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 <CPU_range_spec> ::=
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
-  
+::: moniker-end 
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
@@ -70,6 +87,18 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 É o nome de um pool de recursos externo definido pelo usuário existente ou do pool de recursos externo padrão criado quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado.
 "default" deve estar entre aspas duplas ("") ou colchetes ([]) quando usado com `ALTER EXTERNAL RESOURCE POOL` para evitar conflito com `DEFAULT`, que é uma palavra reservada do sistema.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+MAX_CPU_PERCENT =*value*  
+Especifica a média máxima de largura de banda de CPU que todas as solicitações no pool de recursos podem receber quando há contenção de CPU. *value* é um inteiro. O intervalo permitido para *value* é de 1 a 100.
+
+MAX_MEMORY_PERCENT =*value*  
+Especifica a memória total de servidor que pode ser usada por solicitações nesse pool de recursos externos. *value* é um inteiro. O intervalo permitido para *value* é de 1 a 100.
+
+MAX_PROCESSES =*value*  
+Especifica o número máximo de processos permitidos para o pool de recursos externos. Especifique 0 para definir um limite ilimitado para o pool, que é associado posteriormente apenas pelos recursos do computador.
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 Especifica a média máxima de largura de banda de CPU que todas as solicitações no pool de recursos podem receber quando há contenção de CPU. *value* é um inteiro. O intervalo permitido para *value* é de 1 a 100.
 
@@ -83,7 +112,7 @@ Especifica a memória total de servidor que pode ser usada por solicitações ne
 
 MAX_PROCESSES =*value*  
 Especifica o número máximo de processos permitidos para o pool de recursos externos. Especifique 0 para definir um limite ilimitado para o pool, que é associado posteriormente apenas pelos recursos do computador.
-
+::: moniker-end
 ## <a name="remarks"></a>Comentários
 
 O [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa o pool de recursos quando você executa a instrução [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md).
@@ -98,7 +127,20 @@ Requer a permissão `CONTROL SERVER`.
 ## <a name="examples"></a>Exemplos
 
 A instrução a seguir altera um pool externo restringindo o uso da CPU a 50% e a memória máxima a 25% da memória disponível no computador.
-  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"  
+```sql
+ALTER EXTERNAL RESOURCE POOL ep_1
+WITH (
+    MAX_CPU_PERCENT = 50
+    , MAX_MEMORY_PERCENT = 25
+);
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (
@@ -110,9 +152,7 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
-
-> [!NOTE]
-> Os Serviços de Machine Learning do SQL 2019 para Linux não dão suporte à capacidade de definir a afinidade de CPU.
+::: moniker-end
 
 ## <a name="see-also"></a>Confira também
 

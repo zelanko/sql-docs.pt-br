@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99ea39318e06ba7fbaa6cf3e1147382bb1184a83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2124351357d52e3389d0db1e58874ffcb46275d6
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351842"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480688"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Servidor e Catálogo do SSIS (Integration Services)
 
@@ -39,7 +39,7 @@ ms.locfileid: "88351842"
 ## <a name="high-availability"></a>Alta disponibilidade  
  Como outros bancos de dados de usuários, o banco de dados **SSISDB** é compatível com espelhamento de banco de dados e replicação. Para obter mais informações sobre espelhamento e replicação, veja [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- Você também pode fornecer alta disponibilidade do SSISDB e de seu conteúdo utilizando o SSIS e grupos de disponibilidade Always On. Para obter mais informações, confira [AlwaysOn para Catálogo SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Veja também essa postagem no blog de Matt Masson, [SSIS com Always On](https://go.microsoft.com/fwlink/?LinkId=255873), em blogs.msdn.com.  
+ Você também pode fornecer alta disponibilidade do SSISDB e de seu conteúdo utilizando o SSIS e grupos de disponibilidade Always On. Para obter mais informações, confira [AlwaysOn para Catálogo SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Veja também essa postagem no blog de Matt Masson, [SSIS com Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091), em blogs.msdn.com.  
   
 ##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> Servidor do Integration Services no SQL Server Management Studio  
  Quando você conecta a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que hospeda o banco de dados do **SSISDB** , vê os seguintes objetos no Pesquisador de Objetos:  
@@ -61,6 +61,6 @@ ms.locfileid: "88351842"
 -   [Executar pacotes do SSIS (Integration Services)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog, [SSIS com Always On](https://go.microsoft.com/fwlink/?LinkId=255873), em blogs.msdn.com.  
+ Entrada de blog, [SSIS com Always On](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091), em blogs.msdn.com.  
   
   

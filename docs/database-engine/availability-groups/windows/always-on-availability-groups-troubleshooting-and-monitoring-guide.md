@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 096e416b5abaf7e6c148cba469cd4f7453be092e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922430"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480481"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Monitorar e solucionar problemas de grupos de disponibilidade
  Este guia ajuda você a começar a monitorar Grupos de Disponibilidade Always On e solucionar alguns dos problemas comuns em grupos de disponibilidade. Ele fornece o conteúdo original, bem como uma página inicial com informações úteis que são publicadas em outros lugares. Embora este guia não aborde completamente todos os problemas que podem ocorrer no vasto campo dos grupos de disponibilidade, ele pode indicar a direção correta para sua análise de causa raiz e para a solução de problemas. 
@@ -73,6 +73,6 @@ ms.locfileid: "82922430"
 
 ## <a name="next-steps"></a>Próximas etapas  
  [Blog da equipe do Always On do SQL Server](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
+ [Blogs dos engenheiros do CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
   
   

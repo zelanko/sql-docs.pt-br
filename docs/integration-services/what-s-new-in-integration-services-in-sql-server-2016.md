@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456864"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480815"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novidades do Integration Services no SQL Server 2016
 
@@ -363,7 +363,7 @@ A versão mais recente do Feature Pack do Azure inclui a tarefa de Upload do Azu
  O Destino de Processamento de Dimensões não funciona para modelos de tabela com o nível de compatibilidade do SQL 2016.  A Tarefa Processamento do Analysis Services e o Destino de Processamento de Partições são tudo o que você precisa para o processamento de tabelas. 
 
 ####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> Suporte para R Services interno  
- O SSIS já dá suporte aos serviços do R internos no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode usar o SSIS não apenas para extrair dados e carregar a saída da análise, mas para compilar, executar e periodicamente treinar novamente modelos do R. Para obter mais informações, consulte a postagem de blog a seguir. [Operacionalizar seu projeto de aprendizado de máquina usando o SQL Server 2016 SSIS e os Serviços do R](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
+ O SSIS já dá suporte aos serviços do R internos no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode usar o SSIS não apenas para extrair dados e carregar a saída da análise, mas para compilar, executar e periodicamente treinar novamente modelos do R. Para obter mais informações, consulte a postagem de blog a seguir. [Operacionalizar seu projeto de aprendizado de máquina usando o SQL Server 2016 SSIS e os Serviços do R](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296). 
 
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> Saída de validação de XML avançada na Tarefa XML  
  Valide documentos XML e obtenha saída de erros completa habilitando a propriedade **ValidationDetails** da tarefa XML. Antes da disponibilidade da propriedade **ValidationDetails** , a validação do XML pela tarefa XML retornava apenas um resultado true ou false, sem informações sobre erros ou suas localizações. Agora, quando você define **ValidationDetails** como true, o arquivo de saída contém informações detalhadas sobre cada erro, incluindo o número de linha e a posição. Você pode usar essas informações para entender, localizar e corrigir erros em documentos XML. Para obter mais informações, consulte [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
