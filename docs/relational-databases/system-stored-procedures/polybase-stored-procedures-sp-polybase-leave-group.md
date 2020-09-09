@@ -12,20 +12,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_polybase_leave_group
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 82bcad58a97fa41938f127c0a814c312c4e22ec9
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2ce2e2ad16277c6ae5e21939976ede8ac89c8843
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052702"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546242"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Remove uma instância de SQL Server de um grupo polybase para cálculo de expansão. 
  
- A instância de SQL Server deve ter o recurso de [Guia do polybase](../../relational-databases/polybase/polybase-guide.md) instalado.  O polybase permite a integração de fontes de dados não SQL Server, como o Hadoop e o armazenamento de BLOBs do Azure. Consulte também [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
+ A instância de SQL Server deve ter o recurso de  [Guia do polybase](../../relational-databases/polybase/polybase-guide.md) instalado.  O polybase permite a integração de fontes de dados não SQL Server, como o Hadoop e o armazenamento de BLOBs do Azure. Consulte também [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +57,7 @@ EXEC sp_polybase_leave_group ;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Introdução ao polybase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

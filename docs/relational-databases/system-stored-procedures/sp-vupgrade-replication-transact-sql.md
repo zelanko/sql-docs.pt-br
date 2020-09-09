@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d8630a02b31f7589a54cf8b9428f4fbb6a1980be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 76af37a788db667d1fc7e39976a63d04feb72a29
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480918"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547826"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

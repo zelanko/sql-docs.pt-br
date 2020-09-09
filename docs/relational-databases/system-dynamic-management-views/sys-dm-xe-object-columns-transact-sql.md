@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c8d615d2c2de89262c0c760c56431e77b6e06086
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e381833a5869f20364b7797bb86a1c4e06fed81
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498266"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546340"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88498266"
 |column_value|**nvarchar(256)**|Exibe valores estáticos associados à coluna de objeto. Permite valor nulo.|  
 |funcionalidades|**int**|Um bitmap que descreve as capacidades desta coluna. Permite valor nulo.|  
 |capabilities_desc|**nvarchar(256)**|Uma descrição dos recursos desta coluna de objeto. Este valor pode ser um dos seguintes:<br /><br /> Mandatory. O valor deve ser definido ao associar o objeto pai a uma sessão de evento.<br /><br /> Permite valor nulo.|  
-|descrição|**nvarchar (3072)**|A descrição desta coluna de objeto. Permite valor nulo.|  
+|description|**nvarchar (3072)**|A descrição desta coluna de objeto. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  

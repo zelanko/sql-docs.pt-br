@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_distribution_agent_properties
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 07898bbe042d3539778317d5ea886a1043b95dc3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 276e56e28c7455949fcf12b32f684365c20c618f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891572"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547626"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,19 +44,19 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, sem padrão.  
   
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
   
-`[ @property = ] 'property'`É a propriedade de publicação a ser alterada. a *Propriedade* é **sysname**, sem padrão.  
+`[ @property = ] 'property'` É a propriedade de publicação a ser alterada. a *Propriedade* é **sysname**, sem padrão.  
   
-`[ @value = ] 'value'`É o novo valor da propriedade. o *valor* é **nvarchar (524)**, com um padrão de NULL.  
+`[ @value = ] 'value'` É o novo valor da propriedade. o *valor* é **nvarchar (524)**, com um padrão de NULL.  
   
  Esta tabela descreve as propriedades do trabalho do Agente de Distribuição que podem ser alteradas e restrições nos valores dessas propriedades.  
   
@@ -73,7 +73,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_providerstring**||Cadeia de conexão específica de provedor OLE DB que identifica a fonte de dados. *Essa propriedade só é válida para Assinantes não SQL Server.*|  
 |**subscriber_security_mode**|**1**|Autenticação do Windows.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
 ||**0**|Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Farão|  
+|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Farão|  
 ||**1**|Servidor de fontes de dados ODBC|  
 ||**3**|Provedor OLE DB|  
 |**SubscriptionStreams**||Denota o número de conexões permitido pelo Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. *Sem suporte para não-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Assinantes, Publicadores Oracle ou assinaturas ponto a ponto.*|  
@@ -93,7 +93,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** no distribuidor podem executar **sp_MSchange_distribution_agent_properties**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_addpushsubscription_agent ](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addsubscription ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
   
   

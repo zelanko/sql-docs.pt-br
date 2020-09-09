@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1b041e0bb17e0c290225ecb951fe26d95ab07770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486435"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546816"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ select * from sys.configurations where value != value_in_use
 
 Se o valor for igual à alteração da opção de configuração que você fez, mas o **value_in_use** não for o mesmo, o comando RECONFIGURE não será executado ou terá falhado ou o mecanismo do servidor deverá ser reiniciado.
 
-Há opções de configuração nas quais o valor e a value_in_use podem não ser iguais e esse é um comportamento esperado. Por exemplo: 
+Há opções de configuração nas quais o valor e a value_in_use podem não ser iguais e esse é um comportamento esperado. Por exemplo:
 
 "Max Server Memory (MB)"-o valor padrão configurado de 0 será exibido como value_in_use = 2147483647 "min Server Memory (MB)"-o valor padrão configurado de 0 pode aparecer como value_in_use = 8 (32 bits) ou 16 (64 bits). 
 

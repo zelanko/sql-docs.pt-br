@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_indexes catalog view
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2dcbefc1a9ea50841a7807002e31d236130eb038
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1ceda15c69bd989172ad3fbb05e8c696fd9750aa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88400402"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546691"
 ---
 # <a name="sysxml_indexes-transact-sql"></a>sys.xml_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88400402"
 |-----------------|---------------|-----------------|  
 |**\<inherited columns>**||Herda colunas de [Sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
 |**using_xml_index_id**|**int**|NULL = Índice XML primário.<br /><br /> Nonnull = Índice XML secundário.<br /><br /> Nonnull é uma referência de autojunção ao índice XML primário.|  
-|**secondary_type**|**Char (1)**|Descrição do tipo de índice secundário:<br /><br /> P = Índice XML secundário PATH<br /><br /> V = Índice XML secundário VALUE<br /><br /> R = Índice XML secundário PROPERTY<br /><br /> NULL = Índice XML primário|  
+|**secondary_type**|**char(1)**|Descrição do tipo de índice secundário:<br /><br /> P = Índice XML secundário PATH<br /><br /> V = Índice XML secundário VALUE<br /><br /> R = Índice XML secundário PROPERTY<br /><br /> NULL = Índice XML primário|  
 |**secondary_type_desc**|**nvarchar(60)**|Descrição do tipo de índice secundário:<br /><br /> PATH = Índice XML secundário PATH<br /><br /> VALUE = Índice XML secundário VALUE<br /><br /> PROPERTY = Índices xml secundários PROPERTY.<br /><br /> NULL = Índice XML primário|  
 |**xml_index_type**|**tinyint**|Tipo de índice:<br /><br /> 0 = Índice XML primário<br /><br /> 1 = Índice XML secundário<br /><br /> 2 = Índice XML seletivo<br /><br /> 3 = Índice XML seletivo secundário|  
 |**xml_index_type_description**|**nvarchar(60)**|Descrição de tipo de índice:<br /><br /> PRIMARY_XML<br /><br /> Índice XML secundário<br /><br /> Índice XML seletivo<br /><br /> Índice XML seletivo secundário|  

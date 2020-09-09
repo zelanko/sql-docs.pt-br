@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobs system table
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb1e7125dd953fe4904c963f888ae9c11c400df9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454723"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545783"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88454723"
 |**descrição**|**nvarchar(512)**|Descrição do trabalho.|  
 |**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
 |**category_id**|**int**|ID da categoria de trabalho.|  
-|**owner_sid**|**varbinary (85)**|SID (número de identificação de segurança) do proprietário do trabalho.|  
+|**owner_sid**|**varbinary(85)**|SID (número de identificação de segurança) do proprietário do trabalho.|  
 |**notify_level_eventlog**|**int**|**Bitmask** que indica em quais circunstâncias um evento de notificação deve ser registrado no log de aplicativos do Microsoft Windows:<br /><br /> **0** = nunca<br /><br /> **1** = quando o trabalho é executado com sucesso<br /><br /> **2** = quando o trabalho falha<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  
 |**notify_level_email**|**int**|Bitmask indicando sob quais circunstâncias um email de notificação deve ser enviado quando um trabalho é concluído:<br /><br /> **0** = nunca<br /><br /> **1** = quando o trabalho é executado com sucesso<br /><br /> **2** = quando o trabalho falha<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  
 |**notify_level_netsend**|**int**|Bitmask indicando sob quais circunstâncias uma mensagem de rede deve ser enviada quando um trabalho é concluído:<br /><br /> **0** = nunca<br /><br /> **1** = quando o trabalho é executado com sucesso<br /><br /> **2** = quando o trabalho falha<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  

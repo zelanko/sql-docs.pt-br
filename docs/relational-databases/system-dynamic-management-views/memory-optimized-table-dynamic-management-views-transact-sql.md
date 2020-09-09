@@ -11,15 +11,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cbcc1bfb022f213295f5c3c37d78be4935fbf48
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: b99bf0b996b94ebe96033a2d5a25a5e189cd65ca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442521"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546666"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>Exibições de gerenciamento dinâmico da tabela com otimização de memória (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

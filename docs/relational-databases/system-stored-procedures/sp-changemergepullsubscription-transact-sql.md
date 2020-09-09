@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 39cb33678b853feadbbb20a88669f0b48a3d444a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474421"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546199"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +75,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||URL que representa o local do Replication Listener para sincronização da Web.|  
 |**merge_job_login**||Logon para a conta do Windows na qual o agente é executado.|  
 |**merge_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
-|**prioridade**||Disponível somente para compatibilidade com versões anteriores; Execute [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) no Publicador em vez de modificar a prioridade de uma assinatura.|  
+|**priority**||Disponível somente para compatibilidade com versões anteriores; Execute [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) no Publicador em vez de modificar a prioridade de uma assinatura.|  
 |**publisher_login**||ID do logon usado no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**publisher_password**||A senha (criptografada) usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**publisher_security_mode**|**0**|Use a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Publicador.|  

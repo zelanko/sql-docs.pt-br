@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8edccbecb7d5a44b2fc8a5eed2297498c0f94bae
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480966"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547824"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +89,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |6|O Operador de Comparação especificado não é válido.|  
 |7|O Operador Lógico especificado não é válido.|  
 |9|O Identificador de Rastreamento especificado não é válido.|  
-|13|Memória insuficiente. Retornado quando não há memória suficiente para executar a ação especificada.|  
+|13|Sem memória. Retornado quando não há memória suficiente para executar a ação especificada.|  
 |16|A função não é válida para este rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -112,7 +112,7 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

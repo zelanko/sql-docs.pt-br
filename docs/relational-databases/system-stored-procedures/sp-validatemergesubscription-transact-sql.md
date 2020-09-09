@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergesubscription
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 37fef06e747e3b0ee870f4781e42bab7c6d63d28
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c7e58bf0e1d1f02f331bf102dc02346556cc570d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480890"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545883"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

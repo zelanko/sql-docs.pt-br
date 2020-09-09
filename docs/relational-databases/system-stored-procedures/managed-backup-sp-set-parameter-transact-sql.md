@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8341c09305f6e02317d5b49a9e8239d18213b242
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dfb0a9ddbdec9ebe94dd3bda4307a5fdf31e1c29
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498069"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546261"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  A seção opcional que descreve as práticas recomendadas que o usuário deve saber ao executar a instrução ou a rotina.  
   
 ## <a name="security"></a>Segurança  

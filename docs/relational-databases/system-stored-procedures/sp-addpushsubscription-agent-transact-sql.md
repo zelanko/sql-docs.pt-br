@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d4ea11d1169244d8fb7d15d2b26e377e44fd645e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6102d0721f00713c797c1e78b830d6804dc3dd4d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489606"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546237"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -108,7 +108,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**2**|Sob demanda|  
 |**4**|Diariamente|  
 |**8**|Semanalmente|  
-|**16**|Mensal|  
+|**16**|Mensalmente|  
 |**32**|Relativo ao mês|  
 |**64** (padrão)|Iniciar automaticamente|  
 |**128**|Recorrente|  

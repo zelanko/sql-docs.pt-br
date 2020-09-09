@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_index_xml procedure
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a5f266f35096a57ef60f2c9b356639ad66cc36fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7bc4e0df3bfcffa7bdfd84b681c33ed179af75b9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447006"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546049"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
  [Argumentos e propriedades de procedimentos armazenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
  [Procedimentos armazenados de índice espacial](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
- [Visão geral dos índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
+ [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [Noções básicas do XQuery](../../xquery/xquery-basics.md)   
  [Referência de linguagem do XQuery](../../xquery/xquery-language-reference-sql-server.md)  

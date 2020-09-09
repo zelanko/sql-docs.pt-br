@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f03bffcfefbe20386885523aaf75419e56c87dd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 02b97900b86eac3c4fb5ffc61b7cf6922d4800e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464611"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546306"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -95,7 +95,7 @@ sp_addpublication [ @publication = ] 'publication'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**native**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas. *Não há suporte para Publicadores Oracle*.|  
-|**espaço**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. _Para um Publicador Oracle, o_ **caractere** _é válido somente para replicação de instantâneo_.|  
+|**character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. _Para um Publicador Oracle, o_ **caractere** _é válido somente para replicação de instantâneo_.|  
 |**simultâneas**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas, mas não bloqueia as tabelas durante o instantâneo. Com suporte somente para publicações transacionais. *Não há suporte para Publicadores Oracle*.|  
 |**concurrent_c**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas, mas não bloqueia as tabelas durante o instantâneo. Com suporte somente para publicações transacionais.|  
 |**instantâneo do banco de dados**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas de um instantâneo do banco de dados. Os instantâneos do banco de dados não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
@@ -333,7 +333,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_addlogreader_agent ](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_addpublication_snapshot ](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changepublication ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_droppublication ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_replicationdboption ](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

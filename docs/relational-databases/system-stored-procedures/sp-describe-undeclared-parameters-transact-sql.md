@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: b93ecf05c0a4b48417240db1b9bf22e1104149a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f1e2134b008d07a12043c4b1bd4fbf6dc0986d90
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489425"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546138"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -170,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Dedução simples  
   
-     Se E ( \@ p) = \@ p e TT ( \@ p) existirem, ou seja, se \@ p for diretamente um argumento para uma das expressões listadas no início da etapa 2, o algoritmo de dedução de tipo deduzirá o tipo de dados de \@ p para ser TT ( \@ p). Por exemplo:   
+     Se E ( \@ p) = \@ p e TT ( \@ p) existirem, ou seja, se \@ p for diretamente um argumento para uma das expressões listadas no início da etapa 2, o algoritmo de dedução de tipo deduzirá o tipo de dados de \@ p para ser TT ( \@ p). Por exemplo:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -218,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  O tipo de dados que produz o menor número de conversões implícitas em E ( \@ p) é selecionado. Se um tipo de dados específico produzir um tipo de dados para E ( \@ p) diferente de TT ( \@ p), o algoritmo de dedução de tipo considerará que isso é uma conversão implícita extra do tipo de dados de E ( \@ p) a TT ( \@ p).  
   
-     Por exemplo:   
+     Por exemplo:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -226,7 +226,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Nesse caso, E ( \@ p) é Col_Int + \@ p e TT ( \@ p) é **int**. **int** é escolhido para \@ p porque ele não produz conversões implícitas. Qualquer outra escolha de tipo de dados gera uma conversão implícita pelo menos.  
   
-2.  Se houver vários tipos de dados ligados ao menor número de conversões, o tipo de dados com a precedência mais alta será usada. Por exemplo  
+2.  Se houver vários tipos de dados ligados ao menor número de conversões, o tipo de dados com a precedência mais alta será usada. Por exemplo,  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

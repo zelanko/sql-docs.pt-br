@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalogs
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2ad2cc153d4bc9fb7e95c88cb97401387e4d4a39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7bb5699f2600e6265507366907988ff0628defea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481218"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546095"
 ---
 # <a name="sp_help_fulltext_catalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;FULLTEXTCATALOGPROPERTY &#40;Transact-SQL ](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_fulltext_catalog ](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_fulltext_catalogs_cursor ](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

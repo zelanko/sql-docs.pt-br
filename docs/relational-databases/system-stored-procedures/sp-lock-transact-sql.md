@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_lock
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f8fee809f67de959c7d168ceaac2016b5cddddd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6af5955121813edaf0580c1c3204f8337d1deade
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481135"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545956"
 ---
 # <a name="sp_lock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,10 +100,10 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
- [&#41;&#40;Transact-SQL de DB_NAME ](../../t-sql/functions/db-name-transact-sql.md)   
- [KILL &#40;&#41;Transact-SQL ](../../t-sql/language-elements/kill-transact-sql.md)   
- [&#41;&#40;Transact-SQL de OBJECT_NAME ](../../t-sql/functions/object-name-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_who ](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
+ [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)  

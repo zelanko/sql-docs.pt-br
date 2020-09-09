@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c0bb164d77ba4c505207e56897ecc17f8644821
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488857"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545785"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88488857"
 |**schedule_uid**|**uniqueidentifier**|Identificador exclusivo da agenda do trabalho. Este valor é usado para identificar uma agenda para trabalhos distribuídos.|  
 |**originating_server_id**|**int**|ID do servidor mestre do qual a agenda de trabalho foi originada.|  
 |**name**|**sysname (nvarchar (128))**|Nome definido pelo usuário para a agenda de trabalho. Este nome deve ser exclusivo em um trabalho.|  
-|**owner_sid**|**varbinary (85)**|O Microsoft Windows *security_identifier* do usuário ou grupo que possui a agenda de trabalho.|  
+|**owner_sid**|**varbinary(85)**|O Microsoft Windows *security_identifier* do usuário ou grupo que possui a agenda de trabalho.|  
 |**habilitado**|**int**|O status da agenda de trabalho:<br /><br /> **0** = não habilitado.<br /><br /> **1** = habilitado.<br /><br /> Se o agendamento não estiver habilitado, nenhum trabalho será executado nele.|  
 |**freq_type**|**int**|A frequência com que um trabalho é executado para esta agenda.<br /><br /> **1** = somente uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, em relação a **freq_interval**<br /><br /> **64** = é executado quando o serviço de SQL Server Agent é iniciado<br /><br /> **128** = é executado quando o computador está ocioso|  
 |**freq_interval**|**int**|Dias em que o trabalho é executado. Depende do valor de **freq_type**. O valor padrão é **0**, o que indica que **freq_interval** não é usado. Consulte a tabela abaixo para obter os possíveis valores e seus efeitos.|  
