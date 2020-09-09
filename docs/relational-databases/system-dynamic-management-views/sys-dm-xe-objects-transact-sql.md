@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0df750dd3f582e712c41a01ce1406586b2cecf6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498271"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536877"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "88498271"
  |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|O nome do objeto. o nome é exclusivo dentro de um pacote para um tipo de objeto específico. Não permite valor nulo.|  
-|object_type|**nvarchar(60)**|O tipo do objeto. object_type é um dos seguintes:<br /><br /> event<br /><br /> ação<br /><br /> destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Não permite valor nulo.|  
+|object_type|**nvarchar(60)**|O tipo do objeto. object_type é um dos seguintes:<br /><br /> event<br /><br /> ação<br /><br /> destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> tipo<br /><br /> Não permite valor nulo.|  
 |package_guid|**uniqueidentifier**|A GUID para o pacote que expõe esta ação. Há uma relação muitos para uma com sys.dm_xe_packages.package_id. Não permite valor nulo.|  
-|descrição|**nvarchar(256)**|Uma descrição da ação. a descrição é definida pelo autor do pacote. Não permite valor nulo.|  
+|description|**nvarchar(256)**|Uma descrição da ação. a descrição é definida pelo autor do pacote. Não permite valor nulo.|  
 |funcionalidades|**int**|Um bitmap que descreve as funcionalidades do objeto. Permite valor nulo.|  
 |capabilities_desc|**nvarchar(256)**|Lista todas as funcionalidades do objeto. Permite valor nulo.<br /><br /> **Recursos que se aplicam a todos os tipos de objeto**<br /><br /> -<br />                                **Privado**. O único objeto disponível para uso interno e que não pode ser acessado via CREATE/ALTER EVENT SESSION DDL. Audite eventos e destinos nesta categoria além de um número pequeno de objetos usados internamente.<br /><br /> ===============<br /><br /> **Recursos de eventos**<br /><br /> -<br />                                **No_block**. O evento está em um caminho de código crítico que não pode ser bloqueado por nenhuma razão. Eventos com essa capacidade não podem ser adicionados a nenhuma sessão de evento que especifique NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Recursos que se aplicam a todos os tipos de objeto**<br /><br /> -<br />                                **Process_whole_buffers**. O destino consome buffers de eventos de uma vez, em vez de evento após evento.<br /><br /> -<br />                        **Singleton**. Somente uma instância do destino pode existir em um processo. Embora várias sessões de evento possam referenciar o mesmo destino singleton, há realmente só uma instância e essa instância visualizará cada evento exclusivo somente uma vez. Isso será importante se o destino for adicionado a várias sessões que coletam o mesmo evento.<br /><br /> -<br />                                **Síncrono**. O destino é executado no thread que está gerando o evento, antes de o controle ser retornado à linha de código de chamada.|  
 |type_name|**nvarchar(60)**|O nome para objetos pred_source e pred_compare. Permite valor nulo.|  

@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_tranhash dynamic management view
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c38860b17b3d0b9530f4751c90cd61acf5212823
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 35bb540ff2b73a44de324a51937552ae7cc3ec56
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481839"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536876"
 ---
 # <a name="sysdm_repl_tranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre transações sendo replicadas em uma publicação transacional.  
   
-|column_name|data_type|descrição|  
+|column_name|data_type|description|  
 |------------------|----------------|-----------------|  
 |**buckets**|**bigint**|Número de partições de memória na tabela hash.|  
 |**hashed_trans**|**bigint**|Número de transações confirmadas replicadas no lote atual.|  
