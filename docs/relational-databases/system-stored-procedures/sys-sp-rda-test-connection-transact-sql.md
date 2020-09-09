@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a49ec06172f7e28828566383137ed2d165c1e89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 031e3abe622a4a15fa9656e65bce80b5eaf27365
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246485"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540393"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,23 +43,23 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @database_name= N '*db_name*'  
+ @database_name = N '*db_name*'  
  O nome do banco de dados de SQL Server habilitado para Stretch. Esse parâmetro é opcional.  
   
- @server_address= N '*azure_server_fully_qualified_address*'  
+ @server_address = N '*azure_server_fully_qualified_address*'  
  O endereço totalmente qualificado do servidor do Azure.  
   
 -   Se você fornecer um valor para ** \@ database_name**, mas o banco de dados especificado não estiver habilitado para Stretch, você precisará fornecer um valor para ** \@ server_address**.  
   
 -   Se você fornecer um valor para ** \@ database_name**e o banco de dados especificado estiver habilitado para Stretch, você não precisará fornecer um valor para ** \@ server_address**. Se você fornecer um valor para ** \@ server_address**, o procedimento armazenado o ignorará e usará o servidor do Azure existente já associado ao banco de dados habilitado para Stretch.  
   
- @azure_username= N '*azure_username*  
+ @azure_username = N '*azure_username*  
  O nome de usuário para o servidor remoto do Azure.  
   
- @azure_password= N '*azure_password*'  
+ @azure_password = N '*azure_password*'  
  A senha do servidor remoto do Azure.  
   
- @credential_name= N '*credential_name*'  
+ @credential_name = N '*credential_name*'  
  Em vez de fornecer um nome de usuário e senha, você pode fornecer o nome de uma credencial armazenada no banco de dados habilitado para Stretch.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

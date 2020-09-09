@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_errors system table
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab4195f63afdda44bb5e4abff1e27f8738903ea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5afa86de5a33eab4f7e77da1c825619a738381de
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473177"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540250"
 ---
 # <a name="msrepl_errors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88473177"
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|A ID de tipo de origem do erro.|  
 |**source_name**|**nvarchar (100)**|O nome de origem do erro.|  
-|**error_code**|**sysname**|O código do erro.|  
+|**error_code**|**sysname**|O código de erro.|  
 |**error_text**|**ntext**|A mensagem de erro.|  
 |**xact_seqno**|**varbinary(16)**|O número de sequência do log de transações inicial do lote de execução com falha. Usado somente por Distribution Agents, esse é o número de sequência do log de transações da primeira transação do lote de execução com falha.|  
 |**command_id**|**int**|A ID de comando do lote de execução com falha. Usado somente por Distribution Agents, essa é a ID de comando do primeiro comando do lote de execução com falha.|  
