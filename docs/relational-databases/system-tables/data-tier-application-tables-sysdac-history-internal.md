@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7f89db526d638a6e934e8db7ac791875b467e487
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480838"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544621"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabelas de aplicativo da camada de dados – sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88480838"
 |**dac_object_type_name**|**varchar (8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = instância DAC<br /><br /> **entrar**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Código que identifica o status atual da ação:<br /><br /> **0** = pendente<br /><br /> **1** = êxito<br /><br /> **2** = falha|  
 |**action_status_name**|**varchar (11)**|Status atual da ação:<br /><br /> **pendente**<br /><br /> **êxito**<br /><br /> **recuperação**|  
-|**Necessário**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
+|**Necessária**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nome do objeto antes que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**dac_object_name_posttran**|**sysname**|Nome do objeto depois que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] que implementa uma ação em um banco de dados ou logon.|  

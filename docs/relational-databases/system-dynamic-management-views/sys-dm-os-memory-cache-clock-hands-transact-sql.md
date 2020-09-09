@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_clock_hands dynamic management view
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 688cafb3413d1252113ecb226daef76d2e730d1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 921a2c9e1b2f40c308c4f93b291d57ea1c39ef7f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397952"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543860"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88397952"
 |**name**|**nvarchar(256)**|Nome do cache. Não permite valor nulo.|  
 |**tipo**|**nvarchar(60)**|Tipo de armazenamento de cache. Pode haver vários caches do mesmo tipo. Não permite valor nulo.|  
 |**clock_hand**|**nvarchar(60)**|Tipo de mão. Ele é um dos seguintes:<br /><br /> Externo<br /><br /> Interna<br /><br /> Não permite valor nulo.|  
-|**clock_status**|**nvarchar(60)**|Status do relógio. Ele é um dos seguintes:<br /><br /> Suspenso<br /><br /> Executando<br /><br /> Não permite valor nulo.|  
+|**clock_status**|**nvarchar(60)**|Status do relógio. Ele é um dos seguintes:<br /><br /> Suspenso<br /><br /> Em execução<br /><br /> Não permite valor nulo.|  
 |**rounds_count**|**bigint**|Número de varreduras feitas no cache para remover entradas. Não permite valor nulo.|  
 |**removed_all_rounds_count**|**bigint**|Número de entradas removidas por todas as varreduras. Não permite valor nulo.|  
 |**updated_last_round_count**|**bigint**|Número de entradas atualizadas durante a última varredura. Não permite valor nulo.|  

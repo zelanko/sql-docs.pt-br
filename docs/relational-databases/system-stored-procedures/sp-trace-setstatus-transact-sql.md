@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setstatus
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 464bf489f8e0d62ea0096b917b29d1bcc099c811
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23d74214176d70ef2d71e04b1d758b4e40fac808
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480916"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543000"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**1**|Erro desconhecido.|  
 |**8**|O status especificado não é válido.|  
 |**9**|O Identificador de Rastreamento especificado não é válido.|  
-|**13**|Memória insuficiente. Retornado quando não há memória suficiente para executar a ação especificada.|  
+|**13**|Sem memória. Retornado quando não há memória suficiente para executar a ação especificada.|  
   
  Se o rastreamento já estiver no estado especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará **0**.  
   
@@ -81,10 +81,10 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_trace_generateevent ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_trace_setfilter ](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

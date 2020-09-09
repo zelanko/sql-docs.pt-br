@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2455a2d6ccf3c17c1cd60e159ce429af681dca4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493198"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541702"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help_fulltext_system_components
   
 -   **separador**  
   
--   **sem**  
+-   **filter**  
   
 -   **manipulador de protocolo**  
   
@@ -70,10 +70,10 @@ sp_help_fulltext_system_components
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Tipo de componente. Um dos seguintes:<br /><br /> filtro<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**ComponentName**|**sysname**|Nome do componente.|  
-|**clsid**|**uniqueidentifier**|Identificador de classe do componente.|  
+|**CLSID**|**uniqueidentifier**|Identificador de classe do componente.|  
 |**FullPath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é um membro da função de servidor fixa **ServerAdmin** .|  
 |**version**|**nvarchar(30)**|A versão do componente.|  
-|**fabricante**|**sysname**|Nome do fabricante do componente.|  
+|**manufacturer**|**sysname**|Nome do fabricante do componente.|  
   
  O conjunto de resultados a seguir será retornado somente se existir um ou mais de um catálogo de texto completo que use *component_type*.  
   
@@ -138,7 +138,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir ou alterar filtros registrados e separadores de palavras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
- [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Os procedimentos armazenados de pesquisa de texto completo e de semântica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

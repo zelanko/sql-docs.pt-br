@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartMode property
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 608214cf9d4eca2601c0f8bee7b82570ec936ea6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f662597bf67837678690928810875f62e5d75e04
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418752"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542753"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propriedade StartMode (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ object.StartMode [= value]
  Sistema  
  Valor = 1. Serviço iniciado pelo método **IoInitSystem** . Esta opção só é válida para serviços de driver.  
   
- Automático  
+ Automática  
  Valor = 2. Serviço a ser iniciado automaticamente pelo gerenciador de controle de serviço durante a inicialização do sistema.  
   
  Manual  

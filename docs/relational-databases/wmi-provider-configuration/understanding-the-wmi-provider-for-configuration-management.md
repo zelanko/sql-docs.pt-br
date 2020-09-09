@@ -11,18 +11,18 @@ ms.topic: reference
 helpviewer_keywords:
 - WMI Provider for Configuration Management, operations supported
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 643cfdcca57bc6427cf92f2ca96f1c9e4716ced9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8f915756b2d2e0e340c296e767738f8589fb5a5d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888220"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542769"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>Compreendendo o provedor WMI para gerenciamento de configuração
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece o provedor WMI para o gerenciamento de configuração. Isto permite que você use a WMI (Instrumentação de Gerenciamento do Windows) para gerenciar serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], configurações de rede de cliente e servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aliases de servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os serviços, as configurações de rede e os aliases são representados por objetos WMI no namespace root\Microsoft\SqlServer\ComputerManagement*NN* do computador. Depois que uma conexão for estabelecida com o provedor WMI no computador especificado, os serviços, as configurações de rede e os aliases poderão ser consultados usando WQL ou uma linguagem de script.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece o provedor WMI para o gerenciamento de configuração. Isto permite que você use a WMI (Instrumentação de Gerenciamento do Windows) para gerenciar serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], configurações de rede de cliente e servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aliases de servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os serviços, as configurações de rede e os aliases são representados por objetos WMI no namespace root\Microsoft\SqlServer\ComputerManagement*NN* do computador. Depois que uma conexão for estabelecida com o provedor WMI no computador especificado, os serviços, as configurações de rede e os aliases poderão ser consultados usando WQL ou uma linguagem de script.  
   
  O Provedor WMI é um provedor de instância. Ele fornece instâncias das [classes WMI](../../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md) e oferece suporte às operações assíncronas a seguir.  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c09007256e5c336ecfa2ad62c45623fe2c0e5ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725722"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543169"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @session_id = ] session_id`Especifica uma sessão de agente. *session_id* é **int** sem padrão.  
+`[ @session_id = ] session_id` Especifica uma sessão de agente. *session_id* é **int** sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -70,6 +70,6 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
  Somente os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição no distribuidor ou no banco de dados de assinatura no assinante podem executar **sp_replmonitorhelpmergesessiondetail**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 231f0f8438fa4aa98f97286be5766a5e6aa9dd73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e69ed7bc99077962489a81e44484fb2a90b33b70
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322727"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543795"
 ---
 # <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

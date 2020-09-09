@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480974"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544720"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,11 +60,11 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**RECEBER**|Nome de um alias.|  
 |**GLOBAL TEMPORARY**|Nome de uma tabela temporária disponível no sistema.|  
 |**LOCAL TEMPORARY**|Nome de uma tabela temporária disponível somente para o trabalho atual.|  
-|**FORNEÇA**|Nome de um sinônimo.|  
+|**SYNONYM**|Nome de um sinônimo.|  
 |**TABELA DO SISTEMA**|Nome de uma tabela do sistema.|  
 |**EXIBIÇÃO DO SISTEMA**|Nome de uma exibição do sistema.|  
-|**TABELA**|Nome de uma tabela de usuário.|  
-|**EXIBIÇÃO**|Nome de uma exibição.|  
+|**TABLE**|Nome de uma tabela de usuário.|  
+|**VIEW**|Nome de uma exibição.|  
   
 `[ @fUsePattern = ] 'fUsePattern'` Determina se os caracteres **_**, **%** , **[** e **]** são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
   

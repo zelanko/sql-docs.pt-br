@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474470"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541880"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +114,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**status**|**active**|Publicação com status ativo.|  
 ||**inactive**|Publicação com status inativo.|  
 |**sync_mode**|**nativo** ou<br /><br /> **bcp nativo**|Saída de programa de cópia em massa em modo nativo de todas as tabelas é usada para o instantâneo inicial.|  
-||**espaço**<br /><br /> ou **caractere bcp**|Saída de programa de cópia em massa em modo de caractere de todas as tabelas é usada para o instantâneo inicial, que é exigido de todos os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+||**character**<br /><br /> ou **caractere bcp**|Saída de programa de cópia em massa em modo de caractere de todas as tabelas é usada para o instantâneo inicial, que é exigido de todos os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Observação: depois de usar partition_groups, se você voltar a usar **SetupBelongs**e definir **use_partition_groups = false** em **changemergearticle**, isso poderá não ser refletido corretamente depois que um instantâneo for obtido. Os gatilhos que são gerados através do instantâneo são compatíveis com grupos de partição.<br /><br /> A solução alternativa para esse cenário é definir o status como inativo, modificar o **use_partition_groups**e, em seguida, definir status como ativo.|**true**|A publicação usa partições pré-computadas.|  
 ||**false**|A publicação não usa partições pré-computadas.|  
 |**validate_subscriber_info**||Lista as funções que estão sendo usadas para recuperar informações do Assinante. Depois, valida o critério de filtro dinâmico que está sendo usado pelo Assinante para verificar se as informações serão particionadas consistentemente.|  

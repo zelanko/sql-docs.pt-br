@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 95bd2aa7491b15b2e16172b0761c6dccc8eb5818
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edabb8a59a672c3ebfe04a799df7901b402fb5b3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446928"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543173"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88446928"
   Converte um usuário do banco de dados que foi mapeado para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um usuário do banco de dados independente com senha. Em um banco de dados independente, use este procedimento para remover dependências na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o banco de dados está instalado. **sp_migrate_user_to_contained** separa o usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon original, para que as configurações como senha e idioma padrão possam ser administradas separadamente para o banco de dados independente. **sp_migrate_user_to_contained** pode ser usado antes de mover o banco de dados independente para uma instância diferente do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para eliminar dependências nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons da instância atual.  
   
 > [!NOTE]
-> Tenha cuidado ao usar o **sp_migrate_user_to_contained**, pois você não poderá reverter o efeito. Esse procedimento só é usado em um banco de dados independente. Para obter mais informações, consulte [bancos de dados independentes](../../relational-databases/databases/contained-databases.md).  
+> Tenha cuidado ao usar o **sp_migrate_user_to_contained**, pois você não poderá reverter o efeito. Esse procedimento só é usado em um banco de dados independente. Para obter mais informações, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   

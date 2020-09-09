@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62591df1ce4a2a048c544b219f7efcc3fe18aa61
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: f92655d1b489ddaf35ec8085d68a2059781ecb48
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283649"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542142"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
 

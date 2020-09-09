@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f17a4cc00724bab836c74ed1622d383d3969b16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ef61a0c08d1ddc2e3a268571521b4da47cee90f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419860"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543945"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88419860"
 |**attach_query_result_as_file**|**bit**|Quando o valor é 0, os resultados da consulta são incluídos no corpo da mensagem de email, depois do conteúdo do corpo. Quando o valor é 1, os resultados são retornados como um anexo.|  
 |**query_result_header**|**bit**|Quando o valor for 1, os resultados da consulta continham cabeçalhos de coluna. Quando o valor for 0, os resultados da consulta não incluirão cabeçalhos de coluna.|  
 |**query_result_width**|**int**|O parâmetro **query_result_width** da mensagem.|  
-|**query_result_separator**|**Char (1)**|O caractere usado para separar as colunas na saída da consulta.|  
+|**query_result_separator**|**char(1)**|O caractere usado para separar as colunas na saída da consulta.|  
 |**exclude_query_output**|**bit**|O parâmetro **exclude_query_output** da mensagem. Para obter mais informações, consulte [sp_send_dbmail &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|O parâmetro **append_query_error** da mensagem. 0 indica que o Database Mail não deverá enviar a mensagem de email se houver um erro na consulta.|  
 |**send_request_date**|**datetime**|A data e a hora em que a mensagem foi colocada na fila de email.|  

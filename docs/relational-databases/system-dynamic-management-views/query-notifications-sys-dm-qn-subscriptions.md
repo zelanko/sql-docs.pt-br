@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455086"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542361"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificações de consulta-sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88455086"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID de uma assinatura.|  
 |**database_id**|**int**|ID do banco de dados no qual a consulta de notificação foi executada. Esse banco de dados armazena informações relativas a essa assinatura.|  
-|**sid**|**varbinary (85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
+|**SIDs**|**varbinary(85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
 |**object_id**|**int**|ID da tabela interna que armazena informações sobre parâmetros de assinatura.|  
 |**created**|**datetime**|Data e hora em que a assinatura foi criada.|  
 |**timeout**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: a hora de acionamento real pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser acionada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acionamento ocorrerá no momento em que a alteração foi feita.|  
@@ -43,7 +43,7 @@ ms.locfileid: "88455086"
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
-|De|Para|Por|Type|  
+|De|Para|Ativado|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Muitos para um|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Muitos para um|  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6114d52b0db23d04c3b8cf001b0881dbc38844a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749286"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543146"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,13 +46,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados publicado. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicado. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação para a qual os atributos de limite de monitoramento estão sendo alterados. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação para a qual os atributos de limite de monitoramento estão sendo alterados. a *publicação* é **sysname**, sem padrão.  
   
-`[ @publication_type = ] publication_type`Se o tipo de publicação. *publication_type* é **int**e pode ser um desses valores.  
+`[ @publication_type = ] publication_type` Se o tipo de publicação. *publication_type* é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Publicação de mesclagem.|  
 |NULL (padrão)|A replicação tenta determinar o tipo de publicação.|  
   
-`[ @metric_id = ] metric_id`É a ID da métrica de limite de publicação que está sendo alterada. *metric_id* é **int**, com um valor padrão de NULL e pode ser um desses valores.  
+`[ @metric_id = ] metric_id` É a ID da métrica de limite de publicação que está sendo alterada. *metric_id* é **int**, com um valor padrão de NULL e pode ser um desses valores.  
   
 |Valor|Nome da métrica|  
 |-----------|-----------------|  
@@ -75,13 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  Você deve especificar *metric_id* ou *thresholdmetricname*. Se *thresholdmetricname* for especificado, *METRIC_ID* deverá ser nulo.  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'`É o nome da métrica de limite de publicação que está sendo alterada. *thresholdmetricname* é **sysname**, com um valor padrão de NULL. Você deve especificar *thresholdmetricname* ou *metric_id*. Se *metric_id* for especificado, *THRESHOLDMETRICNAME* deverá ser nulo.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` É o nome da métrica de limite de publicação que está sendo alterada. *thresholdmetricname* é **sysname**, com um valor padrão de NULL. Você deve especificar *thresholdmetricname* ou *metric_id*. Se *metric_id* for especificado, *THRESHOLDMETRICNAME* deverá ser nulo.  
   
-`[ @value = ] value`É o novo valor da métrica de limite de publicação. o *valor* é **int**, com um valor padrão de NULL. Se for **NULL**, o valor da métrica não será atualizado.  
+`[ @value = ] value` É o novo valor da métrica de limite de publicação. o *valor* é **int**, com um valor padrão de NULL. Se for **NULL**, o valor da métrica não será atualizado.  
   
-`[ @shouldalert = ] shouldalert`É se um alerta for gerado quando uma métrica de limite de publicação for atingida. *ShouldAlert* é **bit**, com um padrão de NULL. Um valor de **1** significa que um alerta é gerado e um valor de **0** significa que um alerta não é gerado.  
+`[ @shouldalert = ] shouldalert` É se um alerta for gerado quando uma métrica de limite de publicação for atingida. *ShouldAlert* é **bit**, com um padrão de NULL. Um valor de **1** significa que um alerta é gerado e um valor de **0** significa que um alerta não é gerado.  
   
-`[ @mode = ] mode`É se a métrica de limite de publicação estiver habilitada. o *modo* é **tinyint**, com um padrão de **1**. Um valor de **1** significa que o monitoramento dessa métrica está habilitado e um valor de **2** significa que o monitoramento dessa métrica está desabilitado.  
+`[ @mode = ] mode` É se a métrica de limite de publicação estiver habilitada. o *modo* é **tinyint**, com um padrão de **1**. Um valor de **1** significa que o monitoramento dessa métrica está habilitado e um valor de **2** significa que o monitoramento dessa métrica está desabilitado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -93,6 +93,6 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  Somente os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição podem executar **sp_replmonitorchangepublicationthreshold**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

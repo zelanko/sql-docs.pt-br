@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributiondb
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9d9290b02c149889a488452d71ae800134d38f00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d5c1cb17767cf61b49345b93f7c5ee5ebfbc9d27
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786964"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543454"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'`É o banco de dados a ser solto. o *banco de dados* é **sysname**, sem padrão.  
+`[ @database = ] 'database'` É o banco de dados a ser solto. o *banco de dados* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -59,10 +59,10 @@ sp_dropdistributiondb [ @database= ] 'database'
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_dropdistributiondb**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Desabilitar publicação e distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [&#41;&#40;Transact-SQL de sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changedistributiondb](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpdistributiondb](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [Desabilitar a publicação e a distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [&#41;&#40;Transact-SQL de sp_adddistributiondb ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changedistributiondb ](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

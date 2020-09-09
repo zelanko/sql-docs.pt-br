@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, classes
 - classes [WMI]
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 044fbfcaefe52f897842684d4224222232577d21
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 82389cf3b4880f0c52a74b76bca60ad90de48ce6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888256"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542755"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Provedor WMI para classes de gerenciamento de configuração
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

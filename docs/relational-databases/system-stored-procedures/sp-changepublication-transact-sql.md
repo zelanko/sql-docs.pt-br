@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a86eec0b939a579d01c36d8c9739f8d9251636
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481490"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543715"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -108,7 +108,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**status**|**active**|Dados de Publicação estão imediatamente disponíveis para os Assinantes quando a publicação é criada. Sem suporte para Publicadores Oracle.|  
 ||**inactive**|Dados de Publicação não estão disponíveis para os Assinantes quando a publicação é criada. Sem suporte para Publicadores Oracle.|  
 |**sync_method**|**native**|Usa saída de cópia em massa do modo nativo de todas as tabelas ao sincronizar assinaturas.|  
-||**espaço**|Usa saída de cópia em massa do modo de caractere de todas as tabelas ao sincronizar assinaturas.|  
+||**character**|Usa saída de cópia em massa do modo de caractere de todas as tabelas ao sincronizar assinaturas.|  
 ||**simultâneas**|Usa saída de programa de cópia em massa do modo nativo de todas as tabelas, mas não bloqueia as tabelas durante o processo de geração de instantâneo. Não válido para replicação de instantâneo.|  
 ||**concurrent_c**|Usa saída de programa de cópia em massa do modo de caractere de todas as tabelas, mas não bloqueia as tabelas durante o processo de geração de instantâneo. Não válido para replicação de instantâneo.|  
 |**TaskId**||Essa propriedade foi preterida e não tem mais suporte.|  

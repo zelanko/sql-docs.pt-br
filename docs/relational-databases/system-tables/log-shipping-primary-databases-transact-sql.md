@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_primary_databases system table
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf0c1f654514ba0fb29bf7a4081b98753af7e441
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ae5bde1d9d9abde1d1bbf6ddabc0b29e378414e0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454696"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540914"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88454696"
 |**last_backup_file**|**nvarchar (500)**|O caminho absoluto de backup de log de transações mais recente.|  
 |**last_backup_date**|**datetime**|A hora e a data da última operação de backup de log.|  
 |**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** e **sp_help_log_shipping_secondary_primary** Use essa coluna para controlar a exibição das configurações do monitor no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> 0 = ao invocar um desses dois procedimentos armazenados, o usuário não especificou um valor explícito para o parâmetro ** \@ monitor_server** .<br /><br /> 1 = Um valor explícito foi especificado pelo usuário.|  
-|**backup_compression**|**tinyint**|Indica se a configuração de envio de logs substitui o comportamento da compactação de backup no nível do servidor.<br /><br /> 0 = Desabilitado. Os backups de log nunca são compactados, independentemente das configurações de compactação de backup configuradas pelo servidor.<br /><br /> 1 = Habilitado. Os backups de log são sempre compactados, independentemente das configurações de compactação de backup configuradas pelo servidor.<br /><br /> 2 = usa a configuração de servidor para a [exibição ou configurar a opção de configuração de servidor padrão de compactação de backup](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) Server-Configuration Option. Este é o valor padrão.<br /><br /> Há suporte para a compactação de backup somente na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**backup_compression**|**tinyint**|Indica se a configuração de envio de logs substitui o comportamento da compactação de backup no nível do servidor.<br /><br /> 0 = Desabilitado. Os backups de log nunca são compactados, independentemente das configurações de compactação de backup configuradas pelo servidor.<br /><br /> 1 = Habilitado. Os backups de log são sempre compactados, independentemente das configurações de compactação de backup configuradas pelo servidor.<br /><br /> 2 = usa a configuração de servidor para a [exibição ou configurar a opção de configuração de servidor padrão de compactação de backup](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) Server-Configuration Option. Esse é o valor padrão.<br /><br /> Há suporte para a compactação de backup somente na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

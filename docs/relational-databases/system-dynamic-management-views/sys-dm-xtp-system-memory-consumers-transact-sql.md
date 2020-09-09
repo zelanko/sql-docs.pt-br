@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4dbecba15c5f60c0b3818739ccd842d5a31a66a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e998b531c867d78bbf27bff516aaecda6f7f9f88
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322592"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543767"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

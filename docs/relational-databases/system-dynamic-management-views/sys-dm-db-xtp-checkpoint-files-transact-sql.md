@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c4579fa8c2b891644e462ffd896e67862be8ca
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: eb13f60dd50a324795b705b3b99d6cf842a23869
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442585"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542263"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "87442585"
   
  Um grupo de arquivos com otimização de memória usa internamente arquivos somente de acréscimo para armazenar linhas inseridas e excluídas para tabelas na memória. Existem dois tipos de arquivos. Um arquivo de dados contém linhas inseridas enquanto um arquivo Delta contém referências a linhas excluídas. 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]é substancialmente diferente das versões mais recentes e é discutido no tópico em [SQL Server 2014](#bkmk_2014).  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] é substancialmente diferente das versões mais recentes e é discutido no tópico em [SQL Server 2014](#bkmk_2014).  
   
  Para obter mais informações, consulte [criando e gerenciando armazenamento para objetos com otimização de memória](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior   
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior  
  A tabela a seguir descreve as colunas do `sys.dm_db_xtp_checkpoint_files` , começando com **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|A ID do contêiner (representado como um arquivo com o tipo FILESTREAM em sys.database_files) da qual fazem parte os dados ou o arquivo delta. Junções com file_id em [Sys. database_files &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID do contêiner, do qual a raiz, os dados ou o arquivo Delta fazem parte. Une-se com file_guid na tabela sys. database_files.|  
@@ -70,7 +70,7 @@ ms.locfileid: "87442585"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  A tabela a seguir descreve as colunas para `sys.dm_db_xtp_checkpoint_files` , para **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|A ID do contêiner (representado como um arquivo com o tipo FILESTREAM em sys.database_files) da qual fazem parte os dados ou o arquivo delta. Junções com file_id em [Sys. database_files &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|O GUID do contêiner do qual fazem parte os dados ou o arquivo delta.|  

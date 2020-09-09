@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ebf0d2071d0687535479d8899c6f7c9b0f6b1eec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a41b93878178bd47574acc7ae11da69e11c76016
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720193"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543089"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados publicado. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados publicado. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @publication_type = ] publication_type`Se o tipo de publicação. *publication_type* é **int**e pode ser um desses valores.  
+`[ @publication_type = ] publication_type` Se o tipo de publicação. *publication_type* é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -77,6 +77,6 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
  Somente os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição podem executar **sp_replmonitorhelppublicationthresholds**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

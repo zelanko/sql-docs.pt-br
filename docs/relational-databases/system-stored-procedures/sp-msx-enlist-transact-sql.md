@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_enlist
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 024aa764c6df0fa4e42a006cb6b6d855c32e3573
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9435c4b8628bb119b0ac81126e50e37a67650532
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481141"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541610"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +71,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_msx_defect ](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#41;&#40;Transact-SQL de xp_cmdshell ](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
   
   

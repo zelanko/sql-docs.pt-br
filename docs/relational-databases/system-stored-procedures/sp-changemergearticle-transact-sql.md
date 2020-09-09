@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 994efc8752017757bbced6df16fed2b6a4955eb1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469720"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541881"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|A filtragem para o artigo gera partições não sobrepostas exclusivas de cada assinatura.<br /><br /> Observação: se você especificar um valor de **3** para **partition_options**, pode haver apenas uma única assinatura para cada partição de dados nesse artigo. Se uma segunda assinatura for criada na qual o critério de filtragem da nova assinatura for resolvido para a mesma partição como a assinatura existente, a assinatura existente será cancelada.|  
 |**pre_creation_command**|**nenhum**|Se a tabela já existir no Assinante, nenhuma ação será tomada.|  
 ||**delete**|Emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.|  
-||**drop**|Cancela a tabela antes de recriá-la.|  
+||**suspensa**|Cancela a tabela antes de recriá-la.|  
 ||**truncar**|Trunca a tabela de destino.|  
 |**processing_order**||**int** que indica a ordem de processamento dos artigos em uma publicação de mesclagem.|  
 |**pub_identity_range**||**bigint** que especifica o tamanho do intervalo alocado a um assinante com uma assinatura de servidor se o artigo tiver **identityrangemanagementoption** definido como **auto** ou **auto_identity_range** definido como **true**. Esse intervalo de identidade é reservado para um Assinante de republicação para ser alocado a seus próprios Assinantes. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -241,7 +241,7 @@ sp_changemergearticle [ @publication = ] 'publication'
  [Exibir e modificar propriedades do artigo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [&#41;&#40;Transact-SQL de sp_addmergearticle ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropmergearticle ](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

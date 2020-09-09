@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9bd9412dd63c8fa167fde614992b255508eea6b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9bd8cf3735ecc240a0d99929fc0ef1c40d931887
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473365"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541035"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  Mescla os dados e arquivos delta no intervalo válido para gerar um único arquivo de dados e delta. Esse procedimento não honra a política de mesclagem.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485999"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543325"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -106,7 +106,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome da coluna|Tipo de dados|Descrição|  
         |-----------------|---------------|-----------------|  
         |**Identidade**|**nvarchar (** 128 **)**|Nome da coluna cujo tipo de dados é declarado como identidade.|  
-        |**Semente**|**numeric**|O valor inicial para a coluna de identidade.|  
+        |**Seed**|**numeric**|O valor inicial para a coluna de identidade.|  
         |**Incremento**|**numeric**|Incremento a ser usado para obter valores nesta coluna.|  
         |**Não para replicação**|**int**|A propriedade IDENTITY não é imposta quando um logon de replicação, como **sqlrepl**, insere dados na tabela:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -198,7 +198,7 @@ GO
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpuser ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [ Objetos desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

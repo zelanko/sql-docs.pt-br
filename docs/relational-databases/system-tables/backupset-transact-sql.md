@@ -18,15 +18,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492832"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544659"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88492832"
 |**last_media_number**|**smallint**|Número de mídia da mídia em que conjunto de backup é encerrado. Pode ser NULL.|  
 |**catalog_family_number**|**tinyint**|Número de família da mídia que contém o início do diretório de conjunto de backup. Pode ser NULL.|  
 |**catalog_media_number**|**smallint**|Número de mídia da mídia que contém o início do diretório de conjunto de backup. Pode ser NULL.|  
-|**propostas**|**int**|Posição de backup usada na operação de restauração para localizar o conjunto de backup e arquivos apropriados. Pode ser NULL. Para obter mais informações, consulte arquivo em [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Posição de backup usada na operação de restauração para localizar o conjunto de backup e arquivos apropriados. Pode ser NULL. Para obter mais informações, consulte arquivo em [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Data e hora de vencimento do conjunto de backup. Pode ser NULL.|  
 |**software_vendor_id**|**int**|Número de identificação do fornecedor de software que escreve o cabeçalho de mídia de backup. Pode ser NULL.|  
 |**name**|**nvarchar(128)**|Nome do conjunto de backup. Pode ser NULL.|  
@@ -65,7 +65,7 @@ ms.locfileid: "88492832"
 |**database_creation_date**|**datetime**|Data e hora em que o banco de dados foi originalmente criado. Pode ser NULL.|  
 |**backup_start_date**|**datetime**|Data e hora em que a operação de backup foi iniciada. Pode ser NULL.|  
 |**backup_finish_date**|**datetime**|Data e hora em que a operação de backup foi concluída. Pode ser NULL.|  
-|**tipo**|**Char (1)**|Tipo de backup. Pode ser:<br /><br /> D = Banco de dados<br /><br /> I = Banco de dados diferencial<br /><br /> L = Log<br /><br /> G = Arquivo ou grupo de arquivos<br /><br /> G = Arquivo diferencial<br /><br /> P = Parcial<br /><br /> Q = Parcial diferencial<br /><br /> Pode ser NULL.|  
+|**tipo**|**char(1)**|Tipo de backup. Pode ser:<br /><br /> D = Banco de dados<br /><br /> I = Banco de dados diferencial<br /><br /> L = Log<br /><br /> G = Arquivo ou grupo de arquivos<br /><br /> G = Arquivo diferencial<br /><br /> P = Parcial<br /><br /> Q = Parcial diferencial<br /><br /> Pode ser NULL.|  
 |**sort_order**|**smallint**|Ordem de classificação do servidor que está executando a operação de backup. Pode ser NULL. Para obter mais informações sobre ordens de classificação e agrupamentos, consulte [suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**code_page**|**smallint**|Página de código do servidor que está executando a operação de backup. Pode ser NULL. Para obter mais informações sobre páginas de código, consulte [agrupamento e suporte a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**compatibility_level**|**tinyint**|Configuração de nível de compatibilidade para o banco de dados. Pode ser:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Pode ser NULL.<br /><br /> Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  

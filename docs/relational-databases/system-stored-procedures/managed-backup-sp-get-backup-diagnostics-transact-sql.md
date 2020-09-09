@@ -19,21 +19,21 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 54e81df3d503b5c520ed812fefec8601d4979cd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: efd884b6e757ab81cf01eda00b0322ef3ec5c701
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481598"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543676"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Retorna Eventos Estendidos registrados pelo Smart Admin.  
   
- Use este procedimento armazenado para monitorar eventos estendidos registrados pelo administrador inteligente. os [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] eventos são registrados nesse sistema e podem ser examinados e monitorados usando esse procedimento armazenado.  
+ Use este procedimento armazenado para monitorar eventos estendidos registrados pelo administrador inteligente. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] os eventos são registrados nesse sistema e podem ser examinados e monitorados usando esse procedimento armazenado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_gc_cycle_stats dynamic management view
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1a18919675522753775c91712105b1193c4f0aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cd3e4fef0d6d02508ff8b6cd917b1a02a08585e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475024"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542239"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

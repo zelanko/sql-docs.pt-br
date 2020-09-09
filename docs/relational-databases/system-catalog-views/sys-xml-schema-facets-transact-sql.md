@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_facets catalog view
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f5ffbbe4105f9c20222d0673412a22c5a789191d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2c6f72406c552bae440a57e7f1f19490e62d1b49
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419890"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544904"
 ---
 # <a name="sysxml_schema_facets-transact-sql"></a>sys.xml_schema_facets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specification_details catalog view
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7130cda8c6c43b8bde1edda58d04c6d3fff0e5d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8bc8e09e9f48a7fc37b1ba0f1d308f3e17fde46
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402352"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542607"
 ---
 # <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88402352"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR auditoria de servidor &#40;&#41;Transact-SQL ](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

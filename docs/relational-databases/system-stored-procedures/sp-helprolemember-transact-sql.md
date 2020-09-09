@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 360b700d6fe123c3a87ddb45878a3806e5671bee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bbfec9641e543b4774a8d8d6f7a288bd2fe23c8a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464176"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541693"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|Nome da função no banco de dados atual.|  
 |**MemberName**|**sysname**|Nome de um membro de **DbRole.**|  
-|**MemberSID**|**varbinary (85)**|Identificador de segurança de **MemberName.**|  
+|**MemberSID**|**varbinary(85)**|Identificador de segurança de **MemberName.**|  
   
 ## <a name="remarks"></a>Comentários  
  Se o banco de dados contiver funções aninhadas, **MemberName** poderá ser o nome de uma função. **sp_helprolemember** não mostra a associação obtida por meio de funções aninhadas. Por exemplo, se User1 for um membro da Role1, e a Role1 for um membro da Role2, `EXEC sp_helprolemember 'Role2'` retornará a Role1, mas não os membros da Role1 (User1 neste exemplo). Para retornar associações aninhadas, você deve executar **sp_helprolemember** repetidamente para cada função aninhada.  
@@ -71,8 +71,8 @@ EXEC sp_helprolemember 'Sales';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addrolemember ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_droprolemember ](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helprole ](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpsrvrolemember ](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   

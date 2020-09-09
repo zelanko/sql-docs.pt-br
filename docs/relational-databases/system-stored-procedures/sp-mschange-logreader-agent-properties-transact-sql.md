@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_logreader_agent_properties
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 76a3f657600ed2f8f545dd95c1ba85fa682d51c4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 816e44b73d36cd0fef11147b0202d861f577232c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891564"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543193"
 ---
 # <a name="sp_mschange_logreader_agent_properties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,25 +45,25 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`É o modo de segurança usado pelo agente ao se conectar ao Publicador. *publisher_security_mode* é **smallint**, sem padrão.  
+`[ @publisher_security_mode = ] publisher_security_mode` É o modo de segurança usado pelo agente ao se conectar ao Publicador. *publisher_security_mode* é **smallint**, sem padrão.  
   
  **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.  
   
  **1** especifica a autenticação do Windows.  
   
-`[ @publisher_login = ] 'publisher_login'`É o logon usado ao conectar-se ao Publicador. *publisher_login* é **sysname**, sem padrão. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for nulo e *publisher_security_mode* for **1**, a conta do Windows especificada em *job_login* será usada durante a conexão com o Publicador.  
+`[ @publisher_login = ] 'publisher_login'` É o logon usado ao conectar-se ao Publicador. *publisher_login* é **sysname**, sem padrão. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for nulo e *publisher_security_mode* for **1**, a conta do Windows especificada em *job_login* será usada durante a conexão com o Publicador.  
   
-`[ @publisher_password = ] 'publisher_password'`É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, sem padrão.  
+`[ @publisher_password = ] 'publisher_password'` É a senha usada ao conectar-se ao Publicador. *publisher_password* é **sysname**, sem padrão.  
   
-`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, sem padrão. *Isso não pode ser alterado para um não-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Editor.*  
+`[ @job_login = ] 'job_login'` É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, sem padrão. *Isso não pode ser alterado para um não-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Editor.*  
   
-`[ @job_password = ] 'job_password'`É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão.  
+`[ @job_password = ] 'job_password'` É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão.  
   
-`[ @publisher_type = ] 'publisher_type'`Especifica o tipo de Publicador quando o Publicador não estiver em execução em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* é **sysname**e pode ser um dos valores a seguir.  
+`[ @publisher_type = ] 'publisher_type'` Especifica o tipo de Publicador quando o Publicador não estiver em execução em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* é **sysname**e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -76,7 +76,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Comentários  
  **sp_MSchange_logreader_agent_properties** é usado na replicação transacional.  
   
- Você deve especificar todos os parâmetros ao executar **sp_MSchange_logreader_agent_properties**. Execute [sp_helplogreader_agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) para retornar as propriedades atuais do trabalho agente de leitor de log.  
+ Você deve especificar todos os parâmetros ao executar **sp_MSchange_logreader_agent_properties**. Execute [sp_helplogreader_agent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) para retornar as propriedades atuais do trabalho agente de leitor de log.  
   
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   

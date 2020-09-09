@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_instances_internal
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5677f92a5a7cb4a74b72bb45d058ad4c198442fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ccda567989211074c8d151de7f2b3936ccd2b69
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480810"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544602"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Tabelas de aplicativo da camada de dados – sysdac_instances_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88480810"
 |instance_name|**sysname**|Nome da instância do DAC especificada quando a instância foi implantada.|  
 |type_name|**sysname**|Nome do DAC especificado quando o pacote do DAC foi criado.|  
 |type_version|**nvarchar (64)**|Versão do DAC especificado quando o pacote do DAC foi criado.|  
-|descrição|**nvarchar(4000)**|Uma descrição do DAC escrita quando o pacote do DAC foi criado.|  
+|description|**nvarchar(4000)**|Uma descrição do DAC escrita quando o pacote do DAC foi criado.|  
 |type_stream|**varbinary(max)**|Um fluxo de bits que contém a representação codificada dos objetos lógicos, como tabelas e exibições, contidos no DAC.|  
 |date_created|**datetime**|Data e hora em que a instância do DAC foi criada.|  
 |created_by|**sysname**|Logon que criou a instância do DAC|  

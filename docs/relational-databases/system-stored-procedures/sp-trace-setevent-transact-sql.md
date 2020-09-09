@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480952"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542974"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -303,9 +303,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 |58|**OwnerID**|Tipo o objeto que possui o bloqueio. Apenas para eventos de bloqueio.|  
 |59|**ParentName**|Nome do esquema que contém o objeto.|  
 |60|**IsSystem**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> **1** = sistema<br /><br /> **0** = usuário.|  
-|61|**Desvio**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|  
+|61|**Deslocamento**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|  
 |62|**SourceDatabaseID**|ID do banco de dados no qual a origem do objeto existe.|  
-|63|**SqlHandle**|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser passado para **Sys. dm_exec_sql_text ()** para recuperar o texto SQL associado.|  
+|63|**SqlHandle**|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser passado a **sys.dm_exec_sql_text()** para recuperar o texto SQL associado.|  
 |64|**SessionLoginName**|O nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **Login1** e executar uma instrução como **Login2**, **SessionLoginName** irá exibir **Login1**, enquanto que **LoginName** exibirá **Login2**. Esta coluna de dados exibe logons tanto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quanto do Windows.|  
   
  **[ @on =]** *em*  
@@ -336,7 +336,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |4|A coluna especificada não é válida.|  
 |9|O identificador de rastreamento especificado não é válido.|  
 |11|A coluna especificada é usada internamente e não pode ser removida.|  
-|13|Memória insuficiente. Retornado quando não há memória suficiente para executar a ação especificada.|  
+|13|Sem memória. Retornado quando não há memória suficiente para executar a ação especificada.|  
 |16|A função não é válida para este rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
