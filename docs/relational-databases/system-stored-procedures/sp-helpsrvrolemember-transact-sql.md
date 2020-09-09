@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: be34b5879a21824e5e0b92fbe3187fce039d6ffa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 189e26484ced5c955db570ad2d5f4cbe4a36e78c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489239"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535087"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nome da função de servidor|  
 |MemberName|**sysname**|Nome de um membro de ServerRole|  
-|MemberSID|**varbinary (85)**|Identificador de segurança de MemberName|  
+|MemberSID|**varbinary(85)**|Identificador de segurança de MemberName|  
   
 ## <a name="remarks"></a>Comentários  
  Use sp_helprolemember para exibir os membros de uma função de banco de dados.  
@@ -88,8 +88,8 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_helprole ](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helprolemember ](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

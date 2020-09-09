@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6892f15293c66e36afe7108047a7e81539559fc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464225"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535183"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**status**|**int**|Status da assinatura:<br /><br /> **0** = todos os trabalhos estão aguardando para iniciar<br /><br /> **1** = um ou mais trabalhos estão sendo iniciados<br /><br /> **2** = todos os trabalhos foram executados com êxito<br /><br /> **3** = pelo menos um trabalho está em execução<br /><br /> **4** = todos os trabalhos estão agendados e ociosos<br /><br /> **5** = pelo menos um trabalho está tentando ser executado após uma falha anterior<br /><br /> **6** = pelo menos um trabalho falhou ao ser executado com êxito|  
 |**subscriber_type**|**int**|O tipo de Assinante.|  
 |**subscription_type**|**int**|O tipo de assinatura:<br /><br /> **0** = enviar por push<br /><br /> **1** = pull<br /><br /> **2** = ambos|  
-|**prioridade**|**float (8)**|Número que indica a prioridade da assinatura.|  
+|**priority**|**float (8)**|Número que indica a prioridade da assinatura.|  
 |**sync_type**|**tinyint**|Tipo de sincronização da Assinatura.|  
 |**descrição**|**nvarchar(255)**|Descrição breve da assinatura de mesclagem.|  
 |**merge_jobid**|**binary(16)**|ID do trabalho do Agente de Mesclagem.|  

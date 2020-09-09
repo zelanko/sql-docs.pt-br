@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3ef0707d0e2f2770a241ad22be567fed16ad9e3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8c13030b1232a01aac14ac936323c05c540ab1f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783032"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536518"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,13 +43,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação associada. a *publicação* é **sysname**, com um padrão de NULL. Se **todas**, todas as assinaturas de todas as publicações para o assinante especificado serão canceladas. a *publicação* é um parâmetro necessário.  
+`[ @publication = ] 'publication'` É o nome da publicação associada. a *publicação* é **sysname**, com um padrão de NULL. Se **todas**, todas as assinaturas de todas as publicações para o assinante especificado serão canceladas. a *publicação* é um parâmetro necessário.  
   
-`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, com um valor padrão de NULL. Se **todas as**assinaturas, todos os artigos de cada publicação e assinante especificados forem removidos. Use **tudo** para publicações que permitem atualização imediata.  
+`[ @article = ] 'article'` É o nome do artigo. o *artigo* é **sysname**, com um valor padrão de NULL. Se **todas as**assinaturas, todos os artigos de cada publicação e assinante especificados forem removidos. Use **tudo** para publicações que permitem atualização imediata.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante que terá suas assinaturas descartadas. o *assinante* é **sysname**, sem padrão. Se **todas**, todas as assinaturas de todos os assinantes forem descartadas.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante que terá suas assinaturas descartadas. o *assinante* é **sysname**, sem padrão. Se **todas**, todas as assinaturas de todos os assinantes forem descartadas.  
   
-`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
+`[ @destination_db = ] 'destination_db'` É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -73,8 +73,8 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="see-also"></a>Consulte Também  
  [Excluir uma assinatura push](../../relational-databases/replication/delete-a-push-subscription.md)   
- [&#41;&#40;Transact-SQL de sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changesubstatus](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_addsubscription ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changesubstatus ](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsubscription ](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

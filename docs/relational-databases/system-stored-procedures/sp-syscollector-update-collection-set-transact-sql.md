@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 00285e7f1e170a671cd38149098e485c90f710db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fd55d65173d190d1c28708bfae46b10eaa0030a4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485655"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534828"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -180,7 +180,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [&#41;&#40;Transact-SQL de syscollector_collection_sets ](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
  [ Agendas dedbo.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
