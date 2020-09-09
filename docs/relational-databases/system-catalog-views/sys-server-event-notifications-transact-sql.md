@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e6a8decda6dd98ad4c6bda353c70884d0f0c84c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c9d10906885eefeb6be66d8f353fd7a553c57288
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377212"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551404"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88377212"
 |**modify_date**|**datetime**|Data em que o objeto foi modificado pela última vez com o uso de uma instrução ALTER.|  
 |**service_name**|**nvarchar(256)**|Nome do serviço de destino para o qual a notificação é enviada.|  
 |**broker_instance**|**nvarchar(128)**|O agente de serviço no qual o serviço de destino nomeado está definido.|  
-|**creator_sid**|**varbinary (85)**|SID do logon que está executando a instrução que cria a notificação de eventos. NULL se WITH FAN_IN não estiver especificado na definição de notificação de eventos.|  
+|**creator_sid**|**varbinary(85)**|SID do logon que está executando a instrução que cria a notificação de eventos. NULL se WITH FAN_IN não estiver especificado na definição de notificação de eventos.|  
 |**principal_id**|**int**|ID da entidade do servidor à qual isto pertence.|  
   
 ## <a name="permissions"></a>Permissões  
