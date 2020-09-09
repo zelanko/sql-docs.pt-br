@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 197715e613e35e71068723fe90f2643e2373817e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d89340dfb073548378e8d4a9eb4929f836a2bbb9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489571"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529706"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -96,7 +96,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|Uma vez|  
 |**4**|Diariamente|  
 |**8**|Semanalmente|  
-|**10**|Mensal|  
+|**10**|Mensalmente|  
 |**20**|Mensalmente, relativo ao intervalo de frequência|  
 |**40**|Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent inicia|  
 |NULL (padrão)||  

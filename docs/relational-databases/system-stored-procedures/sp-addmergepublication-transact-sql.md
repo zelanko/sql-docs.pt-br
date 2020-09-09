@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 346b335063238d118412e8a2951ced67ed685756
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c3b3b78cc80f441ed340c4732e9b5d43a8af10e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489629"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529756"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,7 +90,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**nativo** (padrão)|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas.|  
-|**espaço**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. Necessário para dar suporte a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes e não.|  
+|**character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. Necessário para dar suporte a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes e não.|  
   
 `[ @allow_push = ] 'allow_push'` Especifica se as assinaturas push podem ser criadas para a publicação fornecida. *allow_push* é **nvarchar (5)**, com um padrão true, que permite assinaturas push na publicação.  
   
@@ -247,7 +247,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [&#41;&#40;Transact-SQL de sp_changemergepublication ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropmergepublication ](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
