@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba819cdb8b3e9108fbae3e6405a87b78964931a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 64bbce5c077d6752c97fd5791d5820e9cc4a2857
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447244"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539045"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_depends [ @objname = ] '<object>'
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
 |**tipo**|**nvarchar (16)**|Tipo do item.|  
-|**atualizações**|**nvarchar (7)**|Caso o item seja atualizado.|  
+|**atualizado**|**nvarchar (7)**|Caso o item seja atualizado.|  
 |**Selecione**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
 |**column**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
   
@@ -106,7 +106,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

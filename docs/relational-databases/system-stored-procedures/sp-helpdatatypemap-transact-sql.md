@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 266098010f7da11f431c3bb334761209c7049cba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fb7ee524e2b9849c9c8a348cd6c8a9de7fb74e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474097"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538756"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ffb85633adfe9b8aceb05a5188e67e951d6be190
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aef0f508cc4d3c3034fe49c7e46762f3b9bb2645
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473149"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537840"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88473149"
 |subscriber_type|**int**|O tipo de assinante:<br /><br /> **1** = global.<br /><br /> **2** = local.<br /><br /> **3** = anônimo.|  
 |subscription_type|**int**|O tipo de assinatura:<br /><br /> **0** = enviar por push.<br /><br /> **1** = pull.<br /><br /> **2** = anônimo.|  
 |sync_type|**tinyint**|O tipo de sincronização:<br /><br /> **1** = automático.<br /><br /> **2** = sem sincronização.|  
-|descrição|**nvarchar(255)**|Uma descrição breve da assinatura.|  
+|description|**nvarchar(255)**|Uma descrição breve da assinatura.|  
 |priority|**real**|Especifica a prioridade da assinatura e permite a implementação de resolução de conflito com base em prioridade. É igual a **0, 0** para todas as assinaturas locais ou anônimas.|  
 |recgen|**bigint**|O número da última geração recebida.|  
 |recguid|**uniqueidentifier**|A ID exclusiva da última geração recebida.|  

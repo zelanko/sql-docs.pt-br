@@ -19,14 +19,14 @@ helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 77aafe21c2aa67b55d7c2d9319ab2699585c697c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 643257fb35e042979353b8918f0381525b497cf7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475493"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539760"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>Exibições do aplicativo da camada de dados-dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88475493"
 |instance_name|**sysname**|Nome da instância do DAC especificada quando o DAC foi implantado.|  
 |type_name|**sysname**|Nome do DAC especificado quando o pacote do DAC foi criado.|  
 |type_version|**nvarchar (64)**|Versão do DAC especificado quando o pacote do DAC foi criado.|  
-|descrição|**nvarchar(4000)**|Uma descrição do DAC escrita quando o pacote do DAC foi criado.|  
+|description|**nvarchar(4000)**|Uma descrição do DAC escrita quando o pacote do DAC foi criado.|  
 |type_stream|**varbinary(max)**|Fluxo que contém uma representação codificada dos objetos lógicos, como tabelas e exibições, contidos no DAC.|  
 |date_created|**datetime**|Data e hora em que a instância do DAC foi criada.|  
 |created_by|**sysname**|Logon que criou a instância do DAC.|  

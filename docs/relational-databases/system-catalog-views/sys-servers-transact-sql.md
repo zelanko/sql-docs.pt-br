@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f588f0c472432cc4dc68819d32ee57cf65a59358
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455186"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539561"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88455186"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID local do servidor vinculado.|  
 |**name**|**sysname**|Quando **server_id** = 0, o valor retornado é o nome do servidor.<br /><br /> Quando **server_id** > 0, o valor retornado é o nome local do servidor vinculado.|  
-|**remessa**|**sysname**|Nome de produto do servidor vinculado. Um valor de "SQL Server" indica outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**product**|**sysname**|Nome de produto do servidor vinculado. Um valor de "SQL Server" indica outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**operador**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.<br /><br />Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] o, o valor "sqlncli" é mapeado para o [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) por padrão. Em versões anteriores, o valor "SQLNCLI" é mapeado para o [provedor de OLE DB de SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Propriedade de conexão da fonte de dados OLE DB.|  
 |**local**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  

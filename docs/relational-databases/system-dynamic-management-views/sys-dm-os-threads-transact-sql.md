@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80986f9bce91034d8950915f5048e3f4ee895f57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adb5a15510d5139481d05e2d9673817c265d2cc9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474818"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539284"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88474818"
 |stack_bytes_used|**int**|Número de bytes ativamente usados no thread.|  
 |affinity|**bigint**|Máscara de CPU na qual este thread está sendo executado. Isso depende do valor configurado pela instrução **ALTER Server Configuration Set Process Affinity** Statement. Pode ser diferente do agendador em caso de afinidade flexível.|  
 |Prioridade|**int**|Valor de prioridade deste thread.|  
-|Local|**int**|LCID de localidade em cache do thread.|  
+|Locale|**int**|LCID de localidade em cache do thread.|  
 |Token|**varbinary (8)**|Identificador de token de representação em cache para o thread.|  
 |is_impersonating|**int**|Indica se esse thread está usando a representação do Win32.<br /><br /> 1 = O thread está usando credenciais de segurança que são diferentes do padrão do processo. Isso indica que o thread está representando uma entidade diferente daquela que criou o processo.|  
 |is_waiting_on_loader_lock|**int**|Status do sistema operacional indicando se o thread está aguardando o bloqueio de carregador.|  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364b8c255054d10d8ae7ee10d1231ade99615bde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489990"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539422"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88489990"
 |host_process_id|**int**|ID do processo do programa cliente que iniciou a sessão. O valor é NULL para sessões internas. Permite valor nulo.|  
 |client_version|**int**|Versão de protocolo TDS da interface usada pelo cliente para conexão com o servidor. O valor é NULL para sessões internas. Permite valor nulo.|  
 |client_interface_name|**nvarchar(32)**|Nome da biblioteca/driver que está sendo usado pelo cliente para se comunicar com o servidor. O valor é NULL para sessões internas. Permite valor nulo.|  
-|security_id|**varbinary (85)**|Identificador de segurança do Microsoft Windows associado ao logon. Não permite valor nulo.|  
+|security_id|**varbinary(85)**|Identificador de segurança do Microsoft Windows associado ao logon. Não permite valor nulo.|  
 |login_name|**nvarchar(128)**|Nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual a sessão está sendo executada atualmente. Para o nome de logon original que criou a sessão, consulte original_login_name. Pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome de logon autenticado ou um nome de usuário de domínio autenticado do Windows. Não permite valor nulo.|  
 |nt_domain|**nvarchar(128)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Domínio de Windows do cliente se a sessão estiver usando Autenticação do Windows ou uma conexão confiável. Esse valor é NULL para sessões internas e usuários que não têm domínio. Permite valor nulo.|  
 |nt_user_name|**nvarchar(128)**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Nome do usuário do Windows do cliente se a sessão estiver usando Autenticação do Windows ou uma conexão confiável. Esse valor é NULL para sessões internas e usuários que não têm domínio. Permite valor nulo.|  
@@ -80,7 +80,7 @@ ms.locfileid: "88489990"
 |deadlock_priority|**int**|Configuração de DEADLOCK_PRIORITY da sessão. Não permite valor nulo.|  
 |row_count|**bigint**|Número de linhas retornadas na sessão até este ponto. Não permite valor nulo.|  
 |prev_error|**int**|ID do último erro retornado na sessão. Não permite valor nulo.|  
-|original_security_id|**varbinary (85)**|Identificador de segurança do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows associada a original_login_name. Não permite valor nulo.|  
+|original_security_id|**varbinary(85)**|Identificador de segurança do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows associada a original_login_name. Não permite valor nulo.|  
 |original_login_name|**nvarchar(128)**|Nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que o cliente usou para criar esta sessão. Pode ser um nome de logon autenticado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um nome de usuário de domínio autenticado pelo Windows ou um usuário do banco de dados independente. Observe que a sessão pode ter passado por muitas alternâncias de contexto implícitas ou explícitas após a conexão inicial. Por exemplo, se [Execute as](../../t-sql/statements/execute-as-transact-sql.md) for usado. Não permite valor nulo.|  
 |last_successful_logon|**datetime**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Hora do último logon efetuado com êxito para original_login_name antes de a sessão atual ter sido iniciada.|  
 |last_unsuccessful_logon|**datetime**|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Hora da última tentativa de logon para original_login_name antes de a sessão atual ter sido iniciada.|  

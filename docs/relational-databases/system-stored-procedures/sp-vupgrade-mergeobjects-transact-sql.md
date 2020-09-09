@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_vupgrade_mergeobjects
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da875b534164230609015492e88b10986808c5de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4df6f9a1f945de42836dd624010a313081955054
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480888"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538498"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

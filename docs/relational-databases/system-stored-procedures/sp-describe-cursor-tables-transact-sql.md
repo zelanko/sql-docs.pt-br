@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 01e7850faa83e6d8854b5ac1a0138cd4363adf4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eec1a0d9d8e61613558e0f34b13080a67ba5335b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447238"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538983"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

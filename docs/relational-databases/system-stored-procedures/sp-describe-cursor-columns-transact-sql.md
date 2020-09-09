@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3d16e5f12f10d744fa1faa6b7b7858f1363dca5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 75d0de65b91c41cdaf006e4c56918c3861123b9c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447240"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539001"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: fd3db96c34d6a6ca8f6f08fc76fac73a4c4d79a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d819bde874fb5e81a7b6b670ebdeca61d18f127c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486399"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539646"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Banco de Dados SQL do Azure)
 
@@ -42,7 +42,7 @@ ms.locfileid: "88486399"
 |Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome do banco de dados. Se a conexão falhar e o usuário não especificou um nome de banco de dados, essa coluna ficará em branco.|  
-|**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. Para eventos agregados, a hora é sempre um múltiplo de 5 minutos. Por exemplo: <br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. Para eventos agregados, a hora é sempre um múltiplo de 5 minutos. Por exemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Data e hora UTC do término do intervalo de agregação. Para eventos agregados, **End_time** sempre é exatamente 5 minutos depois do **start_time** correspondente na mesma linha. Para eventos que não são agregados, **start_time** e **end_time** igual a data e hora UTC reais do evento.|  
 |**event_category**|**nvarchar (64)**|O componente de alto nível que gerou este evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obter uma lista de valores possíveis.|  
 |**event_type**|**nvarchar (64)**|O tipo do evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obter uma lista de valores possíveis.|  

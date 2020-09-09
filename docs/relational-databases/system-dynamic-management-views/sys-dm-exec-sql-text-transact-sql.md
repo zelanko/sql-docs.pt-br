@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89f03e4acfa124189bbabd59bebdc2eb7869fdc9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95db0c9386b8c3f1befda89c68635e37f32a1eb5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489943"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539410"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +78,7 @@ Os *plan_handle* podem ser obtidos nos seguintes objetos de gerenciamento dinâm
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**DBID**|**smallint**|ID do banco de dados.<br /><br /> Para instruções SQL preparadas e ad hoc, a ID do banco de dados no qual as instruções foram compiladas.|  
-|**ObjectID**|**int**|ID do objeto.<br /><br /> É NULL para instruções SQL ad hoc e preparadas.|  
+|**objectid**|**int**|ID do objeto.<br /><br /> É NULL para instruções SQL ad hoc e preparadas.|  
 |**number**|**smallint**|Para um procedimento armazenado numerado, esta coluna retorna o número do procedimento armazenado. Para obter mais informações, consulte [Sys. numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> É NULL para instruções SQL ad hoc e preparadas.|  
 |**criptografados**|**bit**|1 = O texto SQL é criptografado.<br /><br /> 0 = O texto SQL não é criptografado.|  
 |**text**|**nvarchar (Max** **)**|Texto da consulta SQL.<br /><br /> É NULL para objetos criptografados.|  

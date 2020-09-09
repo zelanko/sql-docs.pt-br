@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01fc666444891836011b80e77492b1cdebbefff5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751671"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538634"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'`É o nome do banco de dados. *dbname* é **sysname**, com um valor padrão de NULL. Quando for NULL, o banco de dados atual será usado.  
+`[ @dbname = ] 'dbname'` É o nome do banco de dados. *dbname* é **sysname**, com um valor padrão de NULL. Quando for NULL, o banco de dados atual será usado.  
   
-`[ @type = ] type`É o tipo de replicação para o qual os objetos de banco de dados estão sendo removidos. o *tipo* é **nvarchar (5)** e pode ser um dos valores a seguir.  
+`[ @type = ] type` É o tipo de replicação para o qual os objetos de banco de dados estão sendo removidos. o *tipo* é **nvarchar (5)** e pode ser um dos valores a seguir.  
   
 |||  
 |-|-|  
-|**tran**|Remove objetos de publicação de replicação transacional.|  
+|**transação**|Remove objetos de publicação de replicação transacional.|  
 |**Mescle**|Remove objetos de publicação de replicação de mesclagem.|  
 |**ambos** (padrão)|Remove todos os objetos de publicação de replicação.|  
   
@@ -83,7 +83,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Desabilitar publicação e distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [Desabilitar a publicação e a distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

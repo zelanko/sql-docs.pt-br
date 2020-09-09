@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droparticle
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a7616e6c58400d67be184b0634ea749692b30292
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fdd166ab6d4826df8757877b8679ef2864de37dd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489461"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538980"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +82,7 @@ sp_droparticle [ @publication= ] 'publication'
  [Excluir um artigo](../../relational-databases/replication/publish/delete-an-article.md)   
  [Adicionar e remover artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [&#41;&#40;Transact-SQL de sp_addarticle ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changearticle ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helparticlecolumns ](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

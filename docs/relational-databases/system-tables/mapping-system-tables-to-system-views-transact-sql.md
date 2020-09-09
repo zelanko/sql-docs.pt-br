@@ -15,14 +15,14 @@ helpviewer_keywords:
 - mapping system tables to system views [SQL Server]
 - system tables [SQL Server], mapping to catalog views
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 84493da61303f1ac383eb009e07198d495a9846d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0770074106a8d8dcbf0744297f7e6fa84b556420
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460357"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538287"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>Mapeando tabelas do sistema para exibições do sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "88460357"
 |sysopentapes|[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)|Exibição de gerenciamento dinâmico|  
 |sysperfinfo|[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)|Exibição de gerenciamento dinâmico|  
 |sysprocesses|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)<br /><br /> [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)<br /><br /> [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|Exibição de gerenciamento dinâmico<br /><br /> Exibição de gerenciamento dinâmico<br /><br /> Exibição de gerenciamento dinâmico|  
-|sysremotelogins|[sys. remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|Exibição de catálogo|  
-|sysservers|[sys. Servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|Exibição de catálogo|  
+|sysremotelogins|[sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)|Exibição de catálogo|  
+|sysservers|[sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|Exibição de catálogo|  
   
  A tabela a seguir mapeia as tabelas ou funções de sistema que estão em todos os bancos de dados do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] para suas exibições e funções de sistemas correspondentes no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88460357"
 |sysreferences|[sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)|Exibição de catálogo|  
 |systypes|[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|Exibição de catálogo|  
 |sysusers|[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|Exibição de catálogo|  
-|sysfulltextcatalogs|[sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|Exibição de catálogo|  
+|sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|Exibição de catálogo|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

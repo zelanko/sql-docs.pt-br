@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7b0b7486de9709b0cfb4fc9ab20b8c8dd2da0f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01f3c79cf6097f3e916d7faa5e77e508b75015e8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399172"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539414"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88399172"
 |-|-|-|  
 |**Nome da coluna**|**Tipo**|**Descrição**|  
 |*class*|**int**|1 = Objeto ou coluna (inclui módulos, XPs, exibições, sinônimos e tabelas).<br /><br /> 4 = Entidade do Banco de Dados<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (Índice de Texto Completo)<br /><br /> 12 = Gatilho DDL do Banco de Dados<br /><br /> 19 = Rota<br /><br /> 30 = Especificação de Auditoria|  
-|*class_desc*|**nvarchar(120)**|Descrição da classe da entidade. Um dos seguintes para corresponder à classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **)**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROTA**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class_desc*|**nvarchar(120)**|Descrição da classe da entidade. Um dos seguintes para corresponder à classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **)**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|ID da entidade.<br /><br /> Se *classe* = 1, então object_id<br /><br /> Se *Class* = 4, sys. database_principals. principal_id.<br /><br /> Se *Class* = 5, então sys. assemblies. assembly_id.<br /><br /> Se *Class* = 6, em seguida, sys. types. user_type_id.<br /><br /> Se *Class* = 7, sys. indexes. index_id.<br /><br /> Se *Class* = 12, sys. Triggers. object_id.<br /><br /> Se *Class* = 19, sys. routes. route_id.<br /><br /> Se *Class* = 30, então sys. database_audit_specifications. database_specification_id.|  
 |*statement_line_number*|**int**|Se a classe for um módulo, retornará o número da linha no qual o uso não contido está localizado.  Caso contrário, o valor será nulo.|  
 |*statement_ offset_begin*|**int**|Se a classe for um módulo, indicará, em bytes, começando com 0, a posição inicial onde uso não contido começa. Caso contrário, o valor de retorno será nulo.|  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - sample applications [WMI]
 - managed code [WMI]
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a863d0c6130821c9a495b8e92332342e90005689
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ac51d05e79b11f35b264db4f23e5107f8de89b97
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888186"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539930"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Exemplo: Usando o provedor de eventos de WMI com o .NET Framework
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
