@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.plan_guides catalog view
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e37b5da28e5c4f00cc9a6e0f2faedcfcf104e3b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8aacbeebf50eae1a6e20d35262dbdc054f1429d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490185"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550469"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88490185"
 |**plan_guide_id**|**int**|Identificador exclusivo do guia de plano no banco de dados.|  
 |**name**|**sysname**|Nome do guia de plano.|  
 |**create_date**|**datetime**|Date e hora de criação do guia de plano.|  
-|**modify_date**|**Horário**|Data da última modificação do guia de plano.|  
+|**modify_date**|**Datetime**|Data da última modificação do guia de plano.|  
 |**is_disabled**|**bit**|1 = Guia de plano desabilitado.<br /><br /> 0 = Guia de plano habilitado.|  
 |**query_text**|**nvarchar(max)**|Texto da consulta na qual o guia de plano é criado.|  
 |**scope_type**|**tinyint**|Identifica o escopo do guia de plano.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  

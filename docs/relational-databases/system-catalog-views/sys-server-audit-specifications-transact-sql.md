@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specifications catalog view
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8490c652c2927e0b3587607adf0364c693839dbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 20ee22c169ef624b70ca2790bf5fef5e4ff4e532
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419970"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550370"
 ---
 # <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "88419970"
 |-----------------|---------------|-----------------|  
 |**name**|**Sysname**|O nome da especificação de servidor.|  
 |**server_specification_id**|**Int**|ID do **server_specification**.|  
-|**create_date**|**Horário**|Data de criação da especificação de servidor de auditoria.|  
-|**modified_date**|**Horário**|Data da última alteração feita na especificação de auditoria de servidor.|  
+|**create_date**|**Datetime**|Data de criação da especificação de servidor de auditoria.|  
+|**modified_date**|**Datetime**|Data da última alteração feita na especificação de auditoria de servidor.|  
 |**is_state_enabled**|**tinyint**|Estado da especificação de auditoria:<br /><br /> 0-DESABILITADO<br /><br /> 1-HABILITADO|  
 |**audit_GUID**|**uniqueidentifier**|GUID da auditoria que contém essa especificação. Usada durante a enumeração das especificações de auditoria do servidor membro durante inicialização do servidor.|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88419970"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR auditoria de servidor &#40;&#41;Transact-SQL ](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
