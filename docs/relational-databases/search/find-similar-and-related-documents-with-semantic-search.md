@@ -36,7 +36,7 @@ ms.locfileid: "88498575"
 > [!IMPORTANT]  
 >  As colunas de destino devem ter a indexação de texto completo e semântica habilitada.  
   
-###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>Exemplo: localizar os principais documentos semelhantes a outro documento  
  O exemplo a seguir recuperar os 10 principais candidatos que são semelhantes ao candidato especificado por *\@CandidateID* da tabela HumanResources.JobCandidate no banco de dados de exemplo AdventureWorks2012.  
   
 ```scr  
