@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f98a4ea55123cbb3b74d476e13768b9aa5d9231
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f4b3e0c2ca3a310406326b9bcf3dd12841707625
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447143"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548053"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ sp_execute handle OUTPUT
 >  *bound_param* deve corresponder às declarações feitas pelo valor de*parâmetros* de sp_prepare e pode estar no formato * @name = valor* ou *valor*.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_prepare &#40;&#41;Transact SQL ](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
   
   

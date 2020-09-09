@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464457"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548207"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,14 +62,14 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||Fornecido para compatibilidade com versões anteriores. Use **dest_table**.|  
 |**dest_table**||Nova tabela de destino.|  
 |**destination_owner**||Nome do proprietário do objeto de destino.|  
-|**sem**||Novo procedimento armazenado a ser usado para filtrar a tabela (filtragem horizontal). O padrão é NULO. Não pode ser alterado para publicações em replicação ponto a ponto.|  
+|**filter**||Novo procedimento armazenado a ser usado para filtrar a tabela (filtragem horizontal). O padrão é NULO. Não pode ser alterado para publicações em replicação ponto a ponto.|  
 |**fire_triggers_on_snapshot**|**true**|Gatilhos de usuário replicados são executados quando o instantâneo inicial é aplicado.<br /><br /> Observação: para que os gatilhos sejam replicados, o valor de bitmask de *schema_option* deve incluir o valor **0x100**.|  
 ||**false**|Gatilhos de usuário replicados não são executados quando o instantâneo inicial é aplicado.|  
 |**identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
 |**ins_cmd**||Instrução INSERT a ser executada; caso contrário, será construída do log.|  
 |**pre_creation_cmd**||Comando de pré-criação que pode descartar, excluir ou truncar a tabela de destino antes que a sincronização seja aplicada.|  
 ||**nenhum**|Não usa um comando.|  
-||**drop**|Descarta a tabela de destino.|  
+||**suspensa**|Descarta a tabela de destino.|  
 ||**delete**|Exclui a tabela de destino.|  
 ||**truncar**|Trunca a tabela de destino.|  
 |**pub_identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
@@ -195,7 +195,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **sem**  
+-   **filter**  
   
 -   **ins_cmd**  
   
@@ -240,8 +240,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [Exibir e modificar propriedades do artigo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [&#41;&#40;Transact-SQL de sp_addarticle ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_articlecolumn ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_droparticle ](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helparticlecolumns ](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   

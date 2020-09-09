@@ -15,16 +15,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6ebfac02130a40d7c8ad091c1825fcc0655913bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474884"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548462"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Banco de Dados SQL do Azure)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88474884"
 |função|**tinyint**|Função de replicação geográfica, uma das:<br /><br /> 0 = primário. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|O tipo secundário, um de:<br /><br /> 0 = nenhuma conexão direta é permitida para o banco de dados secundário e o banco de dados não está disponível para acesso de leitura.<br /><br /> 2 = todas as conexões são permitidas para o banco de dados no repl secundário; vo para acesso somente leitura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Não<br /><br /> Tudo|  
+|secondary_allow_connections_desc|**nvarchar(256)**|Não<br /><br /> Todos|  
 |last_commit|**datetimeoffset**|A hora da última transação confirmada no banco de dados. Se for recuperado no banco de dados primário, ele indica a hora da última confirmação no banco de dados primário. Se for recuperado no banco de dados secundário, ele indica a hora da última confirmação no banco de dados secundário. Se for recuperado no banco de dados secundário quando o primário do link de replicação estiver inativo, ele indicará até que ponto o secundário foi pego.|
   
 > [!NOTE]  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a47f820de618400e3772f3816ebe245682120a0f
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: c14c26591e16c423564acafd9aeb33be6940002f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283647"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548537"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]

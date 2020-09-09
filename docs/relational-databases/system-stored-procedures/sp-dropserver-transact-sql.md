@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropserver
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 25633b3ac05efe1cd28270cfc8a98e4ec5bb099b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6bb8e372ffa6a9bea01052f4185040dd9942157
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464308"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549782"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ sp_dropserver 'ACCOUNTS', 'droplogins';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_addserver ](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropremotelogin ](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpremotelogin ](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   

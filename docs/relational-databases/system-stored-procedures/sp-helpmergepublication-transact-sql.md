@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e16d7669dd827d1d58bf02851ced72bd89ee804d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1042543ba82dcbd4bc7376acf6943a838506b6fa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464201"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549586"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |id|**int**|Ordem sequencial da publicação na lista de conjunto de resultados.|  
 |name|**sysname**|Nome da publicação.|  
-|descrição|**nvarchar(255)**|Descrição da publicação.|  
+|description|**nvarchar(255)**|Descrição da publicação.|  
 |status|**tinyint**|Indica quando os dados da publicação estão disponíveis.|  
 |retenção|**int**|O tempo para salvar metadados sobre alterações para artigos na publicação. As unidades desse período de tempo podem ser dias, semanas, meses ou anos. Para obter informações sobre unidades, consulte a coluna retention_period_unit.|  
 |sync_mode|**tinyint**|O modo de sincronização dessa publicação:<br /><br /> **0** = programa de cópia em massa nativo (utilitário**bcp** )<br /><br /> **1** = cópia em massa de caractere|  
@@ -130,7 +130,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar as propriedades da publicação](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [&#41;&#40;Transact-SQL de sp_addmergepublication ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changemergepublication ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropmergepublication ](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

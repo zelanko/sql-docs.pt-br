@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_disable_collector
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e8f3e60112ed2f7e96d95652d370dac5fca44b80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3453a78c8d5edde0db4e087af4bc2501e3b4232a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463977"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549499"
 ---
 # <a name="sp_syscollector_disable_collector-transact-sql"></a>sp_syscollector_disable_collector (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ EXEC dbo.sp_syscollector_disable_collector;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
   
   

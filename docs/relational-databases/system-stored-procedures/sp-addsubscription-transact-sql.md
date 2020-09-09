@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1cf622748da040060681dac848273238f73c66a5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918932"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548317"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -96,7 +96,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|nenhuma|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas.<br /><br /> Observação: essa opção foi preterida. Use, em vez disso, suporte a replicação.|  
+|nenhum|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas.<br /><br /> Observação: essa opção foi preterida. Use, em vez disso, suporte a replicação.|  
 |automatic (padrão)|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
 |suporte de replicação só|Fornece geração automática no Assinante de procedimentos armazenados personalizados de artigo e gatilhos que oferecem suporte a assinaturas de atualização, se apropriado. Presume que o Assinante já tem o esquema e os dados iniciais para as tabelas publicadas. Ao configurar uma topologia de replicação transacional ponto a ponto, verifique se os dados em todos os nós na topologia são idênticos. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Sem suporte para assinaturas em publicações não SQL Server.*|  
 |initialize with backup|Esquema e dados iniciais para tabelas publicadas são obtidos de um backup do banco de dados de publicação. Presume que o Assinante tem acesso a um backup do banco de dados de publicação. O local do backup e o tipo de mídia para o backup são especificados por *BackupDeviceName* e *backupdevicetype*. Ao usar essa opção, uma topologia de replicação transacional ponto a ponto não precisa ser desativada durante a configuração.<br /><br /> *Sem suporte para assinaturas em publicações não SQL Server.*|  
@@ -137,7 +137,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|true|O Distribution Agent não envia transações originadas no Assinante de volta ao Assinante. Usado com replicação transacional bidirecional. Para obter mais informações, consulte [replicação transacional bidirecional](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|true|O Distribution Agent não envia transações originadas no Assinante de volta ao Assinante. Usado com replicação transacional bidirecional. Para obter mais informações, consulte [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|O Distribution Agent envia transações originadas no Assinante de volta ao Assinante.|  
 |NULL (padrão)|Automaticamente definido como verdadeiro para um Assinante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e falso para um assinante não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -150,7 +150,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |2|Sob demanda|  
 |4|Diariamente|  
 |8|Semanalmente|  
-|16|Mensal|  
+|16|Mensalmente|  
 |32|Relativo ao mês|  
 |64 (padrão)|Iniciar automaticamente|  
 |128|Recorrente|  
@@ -281,7 +281,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0 (padrão)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Farão|  
+|0 (padrão)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Farão|  
 |1|Servidor de fontes de dados ODBC|  
 |2|Banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet |  
 |3|Provedor OLE DB|  
@@ -323,10 +323,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Criar uma assinatura para um assinante não SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [&#41;&#40;Transact-SQL de sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_changesubstatus](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropsubscription](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addpushsubscription_agent ](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changesubstatus ](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropsubscription ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsubscription ](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

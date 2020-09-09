@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0125bee2811495eefc015e6be65d30b398edeaf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481167"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549657"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ sp_help_proxy
 |**credential_identity**|**sysname**|O nome de domínio de Microsoft Windows e o nome de usuário para a credencial associada ao proxy.|  
 |**habilitado**|**tinyint**|Se esse proxy está habilitado. { **0** = não habilitado, **1** = habilitado}|  
 |**descrição**|**nvarchar(1024)**|A descrição para esse proxy.|  
-|**user_sid**|**varbinary (85)**|A identificação de segurança do Windows do usuário do Windows para esse proxy.|  
+|**user_sid**|**varbinary(85)**|A identificação de segurança do Windows do usuário do Windows para esse proxy.|  
 |**credential_id**|**int**|O identificador para a credencial associada a esse proxy.|  
 |**credential_identity_exists**|**int**|Especifica se credential_identity existe. {0 = não existe, 1 = existe}|  
   

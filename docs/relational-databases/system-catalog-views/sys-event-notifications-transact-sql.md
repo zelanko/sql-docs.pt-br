@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.event_notifications catalog view
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 100faecd43b0a76bea9aa11aa8bdff3055aa7f5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7051716ff8b401c04f1be90ec92d4a154dd0d68
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486378"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548773"
 ---
 # <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88486378"
 |**service_name**|**nvarchar(256)**|Nome do serviço de destino para o qual a notificação é enviada.|  
 |**broker_instance**|**nvarchar(128)**|Instância de agente para a qual a notificação é enviada.|  
 |**principal_id**|**int**|ID da entidade de banco de dados que é o proprietário desta notificação de eventos.|  
-|**creator_sid**|**varbinary (85)**|SID do logon que criou a notificação de eventos.<br /><br /> Será NULL se a opção FAN_IN não for especificada.|  
+|**creator_sid**|**varbinary(85)**|SID do logon que criou a notificação de eventos.<br /><br /> Será NULL se a opção FAN_IN não for especificada.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2196e6fbbbd0089c7e65592bfc4ebfd17bb14239
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469372"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549714"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**INSERT**|Operação de trabalho que insere um trabalho inteiro ou atualiza um trabalho existente. Esta operação inclui todas as etapas de trabalho e agendas, se aplicável.|  
 |**RE-ENLIST**|Operação de servidor que faz com que o servidor de destino reenvie suas informações de inscrição, incluindo o intervalo de sondagem e o fuso horário do domínio multisservidor. O servidor de destino também baixa os detalhes do **MSXOperator** .|  
 |**SET-POLL**|Operação de servidor que define o intervalo, em segundos, para que os servidores de destino sondem o domínio multisservidor. Se especificado, o *valor* será interpretado como o valor de intervalo necessário e poderá ser um valor de **10** a **28.800**.|  
-|**Comece**|Operação de trabalho que solicita o início da execução do trabalho.|  
+|**INICIAR**|Operação de trabalho que solicita o início da execução do trabalho.|  
 |**DEIXAR**|Operação de trabalho que solicita a parada da execução do trabalho.|  
 |**SYNC-TIME**|Operação de servidor que faz com que o servidor de destino sincronize seu relógio de sistema com o domínio multisservidor. Como esta é uma operação cara, execute-a de maneira limitada e infrequente.|  
 |**UPDATE**|Operação de trabalho que atualiza apenas as informações de **sysjobs** de um trabalho, não as etapas ou agendas de trabalho. É chamado automaticamente pelo **sp_update_job**.|  
