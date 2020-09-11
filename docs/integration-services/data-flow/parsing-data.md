@@ -185,7 +185,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
 |minutos|Adicionar 00:00.|  
 |Hora|Adicione 00:00:00.|  
 |Dia|Adicione 01 para o dia do mês.|  
-|Month|Adicione 01 para o mês do ano.|  
+|Mês|Adicione 01 para o mês do ano.|  
   
  Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   

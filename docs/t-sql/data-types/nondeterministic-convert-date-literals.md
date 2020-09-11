@@ -143,7 +143,7 @@ Conversão de dados de caractere não Unicode entre ordenações também é cons
 
 
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Definir um idioma de sessão](../../relational-databases/collations/set-a-session-language.md)
 - [tipos de dados e funções de data e hora (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)

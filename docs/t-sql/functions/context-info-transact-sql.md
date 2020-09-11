@@ -44,7 +44,7 @@ CONTEXT_INFO()
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Retornar valor
 O valor **context_info**.
   
 Se **context_info** não foi definido:
@@ -70,7 +70,7 @@ SELECT CONTEXT_INFO();
 GO  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   
