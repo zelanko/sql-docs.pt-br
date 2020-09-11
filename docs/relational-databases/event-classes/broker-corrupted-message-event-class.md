@@ -47,7 +47,7 @@ ms.locfileid: "88456008"
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|O nome do usuário proprietário da conexão que gerou este evento.|6|Sim|  
 |**ObjectName**|**nvarchar**|O nome do serviço do outro lado da conversa e a cadeia de caracteres de conexão que o banco de dados remoto usou para se conectar a esse banco de dados.|34|Não|  
-|**RoleName**|**nvarchar**|A função do ponto de extremidade que recebe essa mensagem. Um dos seguintes valores:<br /><br /> **initiator**: o ponto de extremidade receptor é o iniciador da conversa.<br /><br /> **target**: o ponto de extremidade receptor é o destino da conversa.|38|Não|  
+|**RoleName**|**nvarchar**|A função do ponto de extremidade que recebe essa mensagem. Um dos valores a seguir.<br /><br /> **initiator**: o ponto de extremidade receptor é o iniciador da conversa.<br /><br /> **target**: o ponto de extremidade receptor é o destino da conversa.|38|Não|  
 |**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**Gravidade**|**int**|A severidade do erro que fez com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descartasse a mensagem.|29|Não|  
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  

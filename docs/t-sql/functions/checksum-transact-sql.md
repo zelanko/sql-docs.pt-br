@@ -106,7 +106,7 @@ GO
   
 A criação do índice na coluna computada materializa a coluna de soma de verificação e todas as alterações no valor de `ProductName` serão propagadas para a coluna de soma de verificação. Como alternativa, podemos criar um índice diretamente na coluna que desejamos indexar. No entanto, para valores de chave longos, um índice normal provavelmente não terá o mesmo desempenho que um índice de soma de verificação.
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

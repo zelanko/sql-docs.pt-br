@@ -32,7 +32,7 @@ ms.locfileid: "88457269"
 |Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar os dados brutos. Os valores possíveis são **Nome do arquivo** (0) e **Nome do arquivo da variável** (1). O valor padrão é **Nome do arquivo** (0).|  
-|FileName|String|O caminho e o nome do arquivo do arquivo de origem.|  
+|FileName|Cadeia de caracteres|O caminho e o nome do arquivo do arquivo de origem.|  
   
  A saída e as colunas de saída da fonte Arquivo Bruto não têm nenhuma propriedade personalizada.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88457269"
 |Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|Um valor que especifica se a propriedade FileName contém um nome de arquivo ou o nome de uma variável que contenha um nome de arquivo. As opções são **Nome do arquivo** (0) e **Nome do arquivo da variável** (1).|  
-|FileName|String|O nome do arquivo no qual o destino Arquivo Bruto grava.|  
+|FileName|Cadeia de caracteres|O nome do arquivo no qual o destino Arquivo Bruto grava.|  
 |WriteOption|Inteiro (enumeração)|Um valor que especifica se o destino Arquivo Bruto exclui um arquivo existente de mesmo nome. As opções são **Criar sempre** (0), **Criar uma vez** (1), **Truncar e acrescentar** (3) e **Acrescentar** (2). O valor padrão dessa propriedade é **Criar sempre** (0).|  
   
 > [!NOTE]  
