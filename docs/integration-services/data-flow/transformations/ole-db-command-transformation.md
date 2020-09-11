@@ -48,7 +48,7 @@ ms.locfileid: "88477618"
   
  Essa transformação tem uma entrada, uma saída comum e uma saída de erro.  
   
-## <a name="logging"></a>Registrando em log  
+## <a name="logging"></a>Logging  
  Você poderá fazer log das chamadas que a transformação Comando OLE DB fizer a provedores de dados externos. Você pode usar esse recurso de log para solucionar problemas de conexões e comandos das fontes de dados externos executados pela transformação Comando OLE DB. Para fazer log das chamadas que a transformação Comando OLE DB fizer aos provedores de dados externos, habilite o log do pacote e selecione o evento **Diagnóstico** no nível de pacote. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  

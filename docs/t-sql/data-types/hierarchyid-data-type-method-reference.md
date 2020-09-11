@@ -91,7 +91,7 @@ Replicação bidirecional inclui replicação transacional com assinaturas de at
 -   Filtros de colunas não podem filtrar colunas **hierarchyid** que não permitem valor nulo: as inserções do Assinante falharão, porque não há nenhum valor padrão para a coluna **hierarchyid** no Publicador.  
 -   Há suporte para a filtragem de linha, desde que o filtro não inclua uma coluna **hierarchyid**.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [Referência de método de tipo de dados hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

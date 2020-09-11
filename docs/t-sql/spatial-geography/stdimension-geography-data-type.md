@@ -70,6 +70,6 @@ FROM @temp;
 |Polygon|2|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos do OGC em instâncias de geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos do OGC em instâncias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

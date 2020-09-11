@@ -35,7 +35,7 @@ Este artigo aborda considerações especiais sobre a atualização de um banco d
 
 A implantação de um pacote de DAC também pode resultar na criação ou na remoção de objetos de metadados para chaves mestras de coluna ou chaves de criptografia de coluna do Always Encrypted.
 
-## <a name="performance-considerations"></a>Considerações sobre o desempenho
+## <a name="performance-considerations"></a>Considerações sobre desempenho
 Para executar operações de criptografia, uma ferramenta usada para implantar um DACPAC precisa mover os dados para fora do banco de dados. A ferramenta cria tabelas com a configuração de criptografia desejada no banco de dados, carrega todos os dados das tabelas originais, executa as operações de criptografia solicitadas, carrega os dados nas novas tabelas e, em seguida, troca as tabelas originais pelas novas tabelas. A execução de operações criptográficas pode levar muito tempo. Durante esse tempo, o banco de dados não estará disponível para gravar transações. 
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
