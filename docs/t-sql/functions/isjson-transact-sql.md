@@ -41,7 +41,7 @@ ISJSON ( expression )
  *expressão*  
  A cadeia de caracteres a ser testada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Retornará 1 se a cadeia de caracteres contiver um JSON válido, caso contrário, retornará 0. Retornará nulo se a *expressão* for nula.  
   
  Não retorna erros.  

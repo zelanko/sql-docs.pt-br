@@ -1,5 +1,5 @@
 ---
-description: Estendendo o fluxo de dados com o componente Script
+description: Extending the Data Flow with the Script Component
 title: Estender o fluxo de dados com o componente Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
