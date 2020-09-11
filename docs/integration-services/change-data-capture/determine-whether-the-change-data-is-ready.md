@@ -91,7 +91,7 @@ ms.locfileid: "88496210"
   
  Na seguinte tabela, a primeira coluna mostra os valores retornados da tarefa Executar SQL pela consulta Transact-SQL. A segunda coluna mostra como os outros componentes respondem a estes valores.  
   
-|Valor retornado|Significado|Resposta|  
+|Valor Retornado|Significado|Resposta|  
 |------------------|-------------|--------------|  
 |0|Indica que os dados de alteração não estão prontos.<br /><br /> Não há nenhum registro de captura de dados de alteração posterior ao ponto final do intervalo selecionado.|A execução continua com o componente que implementa um atraso. Em seguida, o controle retorna para o contêiner Loop For, que continua a verificar a tarefa Executar SQL contanto que o valor retornado seja 0.|  
 |1|Pode indicar que os dados de alteração não foram capturados para o intervalo completo ou que foram excluídos. Isso é tratado como uma condição de erro.<br /><br /> Não há nenhum registro de captura de dados de alteração anterior ao ponto inicial do intervalo selecionado|A execução continua com o componente opcional que armazena o erro.|  
