@@ -43,7 +43,7 @@ A ID do agente de trabalho do Trabalhador do Scale Out. O *WorkerAgentId* é **u
 O nome da propriedade. O *PropertyName* é **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-O valor da propriedade. O *PropertyValue* é **nvarchar(max)**.
+O valor da propriedade. O *PropertyValue* é **nvarchar(max)** .
 
 ## <a name="remarks"></a>Comentários
 Os nomes de propriedade válidos são **DisplayName**, **Description** e **Tags**.
