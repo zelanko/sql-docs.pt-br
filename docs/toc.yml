@@ -9045,7 +9045,7 @@
               href: ssms/scripting/database-engine-scripting.md
               items:
                 - name: Editores de texto e consulta
-                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                  href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
                 - name: Editor de Consultas do Mecanismo de Banco de Dados
                   href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                 - name: Editor de XML
