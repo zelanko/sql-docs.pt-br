@@ -1,4 +1,5 @@
 ---
+description: Membros SQLServerNClob
 title: Membros SQLServerNClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80f495051aabf5ecf3d020fc749cfdb4ddfd4c5f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3e23a4a5e9a4cb2d2c2a7ecd93db8615e814652c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354452"
 ---
 # <a name="sqlservernclob-members"></a>Membros SQLServerNClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80923535"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[gratuito](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|Esse método libera o objeto **NCLOB** e os recursos que ele contém.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Recupera o valor **NCLOB** designado pelo objeto **java.sql.NClob** como um fluxo ASCII.|  
@@ -43,7 +44,7 @@ ms.locfileid: "80923535"
 |[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|Recupera a posição do caractere do objeto **java.sql.NClob** ou da subcadeia de caracteres especificada no **java.sql.NClob** com base na posição inicial.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|Recupera um fluxo a ser usado para gravar caracteres ASCII no valor **NCLOB** que o objeto **java.sql.NClob** em questão representa, começando na posição especificada.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|Recupera um fluxo a ser usado para gravar um fluxo de caracteres Unicode no valor **NCLOB** que o objeto **java.sql.NClob** em questão representa, começando na posição especificada.|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Grava a **String** especificada em **NCLOB**, começando na posição especificada.|  
+|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Grava a **String** especificada em **NCLOB** começando na posição especificada.|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlservernclob.md)|Trunca o valor **NCLOB** no comprimento especificado.|  
   
 ## <a name="inherited-methods"></a>Métodos herdados  

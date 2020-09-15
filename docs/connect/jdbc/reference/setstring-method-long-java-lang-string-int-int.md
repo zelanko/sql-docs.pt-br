@@ -1,4 +1,5 @@
 ---
+description: Método setString (long, java.lang.String, int, int)
 title: Método setString (long, java.lang.String, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ad0f8e51b0663c771c1ee519ac318a13264aa7e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 12b594a7cfd5133abde253123525161cc0d63273
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355192"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>Método setString (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ public int setString(long pos,
                      int len)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *pos*  
   
  A posição em que a gravação deve ser iniciada no CLOB.  
@@ -54,7 +55,7 @@ public int setString(long pos,
   
  O número de caracteres a serem gravados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  O número de caracteres gravados.  
   
 ## <a name="exceptions"></a>Exceções  
