@@ -1,4 +1,5 @@
 ---
+description: Ajuda F1 da janela Propriedades (Management Studio)
 title: Ajuda F1 da janela Propriedades (Management Studio)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +24,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: d6cbc1291e5370053f0cf1ebf70265f02187e449
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f38ebd07eedcfe8ece4cc904def24186b76b7a8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317442"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ajuda F1 da janela Propriedades (Management Studio)
 
