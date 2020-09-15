@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c8636dad789915289ef0f08c7355c5f443a7a87a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457606"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480498"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "86457606"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Para iniciar o Orientador de Otimização do Mecanismo de Banco de Dados do Editor de Consultas do SQL Server Management Studio  
   
-1.  Abra um arquivo de script do [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, veja [Editores de Consultas e de Texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
+1.  Abra um arquivo de script do [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, veja [Editores de Consultas e de Texto &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
   
 2.  Selecione uma consulta no script do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou selecione todo o script, clique com o botão direito do mouse na seleção e escolha **Analisar Consulta no Orientador de Otimização do Mecanismo de Banco de Dados**. A interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados abre e importa o script como uma carga de trabalho de arquivo XML. Você pode especificar um nome de sessão e opções de ajuste para ajustar as consultas selecionadas no [!INCLUDE[tsql](../../includes/tsql-md.md)] como sua carga de trabalho.  
   
@@ -180,7 +180,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
 > [!NOTE]  
 >  Não há suporte para pausar o Orientador de Otimização do Mecanismo de Banco de Dados. Se você clicar no botão de barra de ferramentas **Iniciar Análise** depois de clicar no botão **Parar Análise** ou **Parar Análise (com Recomendações)** , o Orientador de Otimização do Mecanismo de Banco de Dados iniciará uma nova sessão de ajuste.  
   
-##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>Para ajustar um banco de dados usando uma tabela ou arquivo de carga de trabalho como entrada  
+#### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>Para ajustar um banco de dados usando uma tabela ou arquivo de carga de trabalho como entrada  
   
 1.  Determine os recursos de banco de dados (índices, exibições indexadas, particionamento) que o Orientador de Otimização do Mecanismo de Banco de Dados deve considerar para adição, remoção ou retenção durante a análise.  
   
@@ -195,7 +195,6 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
      O formato para especificar uma tabela é  
   
     ```  
-  
     database_name.schema_name.table_name  
     ```  
   
@@ -235,7 +234,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
   
  Para obter mais informações sobre sintaxe e exemplos do utilitário **dta** , consulte [dta Utility](../../tools/dta/dta-utility.md).  
   
-##### <a name="to-tune-a-database-by-using-the-plan-cache"></a>Para ajustar um banco de dados usando o cache de plano  
+#### <a name="to-tune-a-database-by-using-the-plan-cache"></a>Para ajustar um banco de dados usando o cache de plano  
   
 1.  Especifique a opção **-ip** . Os primeiros 1.000 eventos de cache de plano para bancos de dados selecionados são analisados.  
   
@@ -257,7 +256,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
     dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
-##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Para ajustar um banco de dados usando uma carga de trabalho e configurações padrão do utilitário dta  
+#### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Para ajustar um banco de dados usando uma carga de trabalho e configurações padrão do utilitário dta  
   
 1.  Determine os recursos de banco de dados (índices, exibições indexadas, particionamento) que o Orientador de Otimização do Mecanismo de Banco de Dados deve considerar para adição, remoção ou retenção durante a análise.  
   
@@ -273,7 +272,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
   
      As quatro opções mostradas aqui (nome de banco de dados, carga de trabalho, tipo de conexão e nome de sessão) são obrigatórias.  
   
-##### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>Para ajustar um banco de dados remoto ou uma instância nomeada para uma duração específica  
+#### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>Para ajustar um banco de dados remoto ou uma instância nomeada para uma duração específica  
   
 1.  Determine os recursos de banco de dados (índices, exibições indexadas, particionamento) que o Orientador de Otimização do Mecanismo de Banco de Dados deve considerar para adição, remoção ou retenção durante a análise.  
   
@@ -288,7 +287,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
   
      em que `-S` especifica uma instância e um nome de servidor remoto (ou uma instância nomeada no servidor local), e `-D` especifica o nome do banco de dados que você deseja ajustar. A opção `-it` especifica o nome da tabela de carga de trabalho, `-U` e `-P` especificam a ID e a senha de logon para o banco de dados remoto, `-s` especifica o nome da sessão de ajuste e `-A` especifica a duração da sessão de ajuste em minutos. Por padrão, o utilitário **dta** usa uma duração de ajuste de 8 horas. Se quiser que o Orientador de Otimização do Mecanismo de Banco de Dados ajuste uma carga de trabalho por tempo ilimitado, especifique **0** (zero) na opção `-A` .  
   
-##### <a name="to-tune-a-database-using-an-xml-input-file"></a>Para ajustar um banco de dados que usa um arquivo de entrada XML  
+#### <a name="to-tune-a-database-using-an-xml-input-file"></a>Para ajustar um banco de dados que usa um arquivo de entrada XML  
   
 1.  Determine os recursos de banco de dados (índices, exibições indexadas, particionamento) que o Orientador de Otimização do Mecanismo de Banco de Dados deve considerar para adição, remoção ou retenção durante a análise.  
   
@@ -311,7 +310,7 @@ Consulte [Ajustar o Banco de Dados Usando Cargas de Trabalho do Repositório de 
   
  O esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está disponível na instalação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na seguinte localização:  
   
- C:\Arquivos de Programas\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
+ `C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd` 
   
  O esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] também está disponível online neste [site da Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
@@ -415,7 +414,7 @@ database_name.owner_name.table_name
  Limita o tempo para a sessão de ajuste atual. Fornecer mais tempo para o ajuste melhora a qualidade das recomendações. Para garantir as melhores recomendações, não selecione essa opção.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] consome recursos do sistema durante a análise. Use **Limitar tempo de ajuste** para parar o ajuste antes de períodos de carga de trabalho pesada antecipada no servidor que está sendo ajustado.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)] consome recursos do sistema durante a análise. Use **Limitar tempo de ajuste** para parar o ajuste antes de períodos de carga de trabalho pesada antecipada no servidor que está sendo ajustado.  
   
  **Opções Avançadas**  
  Use a caixa de diálogo **Opções de Ajuste Avançado** para configurar o espaço de máximo, o máximo de colunas de chave e recomendações de índice online.  
@@ -518,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [Utilitário dta](../../tools/dta/dta-utility.md)  
-  
+ [Utilitário dta](../../tools/dta/dta-utility.md)    
+ [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
   

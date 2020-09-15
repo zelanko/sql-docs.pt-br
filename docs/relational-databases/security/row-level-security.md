@@ -2,7 +2,7 @@
 title: Segurança em nível de linha | Microsoft Docs
 description: Saiba como a Segurança em Nível de Linha permite que você use o contexto de execução ou a associação de grupo para controlar o acesso às linhas em uma tabela de banco de dados no SQL Server.
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000530"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392184"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
 
@@ -256,7 +256,6 @@ GRANT SELECT ON security.fn_securitypredicate TO Sales1;
 GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
 ```
 
-
 Agora teste o predicado de filtragem selecionando-o a partir da tabela Vendas como cada usuário.
 
 ```sql
@@ -272,6 +271,7 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
+
 O gerente deve ver todas as seis linhas. Os usuários Vendas1 e Vendas2 deverão ver apenas suas próprias vendas.
 
 Altere a política de segurança para desabilitar a política específica.
@@ -298,18 +298,26 @@ DROP SCHEMA Security;
 
 ### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Cenários de uso de Segurança em Nível de Linha em uma tabela externa do Azure Synapse
 
-Esse pequeno exemplo cria três usuários e uma tabela externa com seis linhas. Em seguida, ele cria uma função com valor de tabela embutida e uma política de segurança para a tabela externa. O exemplo mostra como as instruções select são filtrados para os diversos usuários.
+Esse pequeno exemplo cria três usuários e uma tabela externa com seis linhas. Em seguida, ele cria uma função com valor de tabela embutida e uma política de segurança para a tabela externa. O exemplo mostra como as instruções select são filtrados para os diversos usuários. 
 
-Crie três contas de usuário que demonstrem os diferentes recursos de acesso.
+### <a name="prerequisites"></a>Pré-requisitos
+
+1. É necessário ter um pool de SQL. Confira [Criar um pool de SQL do Synapse](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. O servidor que hospeda o pool de SQL precisa ser registrado no AAD, e você precisa ter uma conta de armazenamento do Azure com permissões de Colaborador do Blog de Armazenamento. Siga as etapas descritas [aqui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. Crie um sistema de arquivos para a sua conta do Armazenamento do Azure. Use o Gerenciador de Armazenamento para ver sua conta de armazenamento. Clique com o botão direito do mouse em contêineres e selecione *Criar sistema de arquivos*.  
+
+Depois de preparar os pré-requisitos, crie três contas de usuário que demonstrarão diferentes funcionalidades de acesso.
 
 ```sql
-CREATE LOGIN Manager WITH PASSWORD = 'somepassword'
+--run in master
+CREATE LOGIN Manager WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales1 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales1 WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales2 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
+--run in master and your SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;
@@ -330,12 +338,12 @@ CREATE TABLE Sales
 Preencha a tabela com seis linhas de dados, mostrando três pedidos para cada representante de vendas.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -343,15 +351,15 @@ SELECT * FROM Sales;
 Crie uma tabela externa do Azure Synapse na tabela de Vendas criada.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
 
 CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
 
-CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<file_system_name@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
   
-CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='RLSExtTabletest.tbl', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
+CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
 
@@ -363,7 +371,21 @@ GRANT SELECT ON Sales_ext TO Sales2;
 GRANT SELECT ON Sales_ext TO Manager;
 ```
 
-Crie uma política de segurança na tabela externa usando a função na sessão A como um predicado de filtro. O estado deve ser definido como ON para habilitar a política.
+Crie um esquema e uma função com valor de tabela embutida; talvez você já tenha concluído isso no exemplo A. A função retorna 1 quando uma linha da coluna SalesRep é igual ao usuário que executa a consulta (`@SalesRep = USER_NAME()`) ou se o usuário que executa a consulta é o usuário Gerente (`USER_NAME() = 'Manager'`).
+
+```sql
+CREATE SCHEMA Security;  
+GO  
+  
+CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+    RETURNS TABLE  
+WITH SCHEMABINDING  
+AS  
+    RETURN SELECT 1 AS fn_securitypredicate_result
+WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+```
+
+Crie uma política de segurança na tabela externa usando a função com valor de tabela embutida como um predicado de filtro. O estado deve ser definido como ON para habilitar a política.
 
 ```sql
 CREATE SECURITY POLICY SalesFilter_ext

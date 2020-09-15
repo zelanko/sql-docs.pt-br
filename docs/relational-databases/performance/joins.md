@@ -18,73 +18,90 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915838"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511308"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa operações de classificação, interseção, união e diferença usando classificação de memória e a tecnologia de junção de hash. Usando esse tipo de plano de consulta, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte o particionamento vertical de tabela, algumas vezes denominada armazenamento colunar.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa operações de classificação, interseção, união e diferença usando classificação de memória e a tecnologia de junção de hash. Usando esse tipo de plano de consulta, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao particionamento de tabela vertical.   
 
-O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emprega quatro tipos de operações de junção:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa operações de junção lógica, conforme determinado pela sintaxe do [!INCLUDE[tsql](../../includes/tsql-md.md)]:
+-   Junção interna
+-   Junção externa esquerda
+-   Junção externa direita
+-   Junção externa completa
+-   União cruzada
+
+> [!NOTE]
+> Para obter mais informações sobre a sintaxe de junção, confira a [Cláusula FROM mais JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emprega quatro tipos de operações de junção física para realizar as operações de junção lógica:    
 -   Junções de Loops Aninhados     
 -   Junções de mesclagem   
 -   Junções de hash   
--   Junções adaptáveis (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
+-   Junções adaptáveis (a partir do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 ## <a name="join-fundamentals"></a><a name="fundamentals"></a> Conceitos básicos de junção
 Usando junções, é possível recuperar dados de duas ou mais tabelas com base em relações lógicas entre as tabelas. Junções indicam como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deveria usar dados de uma tabela para selecionar as linhas em outra tabela.    
 
 Uma condição de junção define o modo como duas tabelas são relacionadas em uma consulta por:    
 -   Especificando a coluna de cada tabela a ser usada para a junção. Uma condição de junção típica especifica uma chave estrangeira de uma tabela e sua chave associada na outra tabela.    
--   Especificando um operador lógico (por exemplo, = ou <>) a ser usado na comparação de valores das colunas.    
+-   Especificando um operador lógico (por exemplo, = ou <>) a ser usado na comparação de valores das colunas.   
 
-Junções internas podem ser especificadas nas cláusulas `FROM` ou `WHERE`. Junções externas podem ser especificadas apenas na cláusula `FROM`. As condições de junção combinam-se com as condições de pesquisa `WHERE` e `HAVING` para controlar as linhas selecionadas das tabelas base referenciadas na cláusula `FROM`.    
+As junções são expressas logicamente por meio da seguinte sintaxe do [!INCLUDE[tsql](../../includes/tsql-md.md)]:
+-   INNER JOIN
+-   LEFT [ OUTER ] JOIN
+-   RIGHT [ OUTER ] JOIN
+-   FULL [ OUTER ] JOIN
+-   CROSS JOIN
 
-Especificar as condições de junção na cláusula `FROM` ajuda a separá-las de qualquer outro critério de pesquisa que possa ser especificado em uma cláusula `WHERE` e é o método recomendado para a especificação de junções. Uma sintaxe de junção de cláusula ISO FROM simplificada é:
+As **junções internas** podem ser especificadas nas cláusulas `FROM` ou `WHERE`. As **junções externas** e as **uniões cruzadas** podem ser especificadas apenas na cláusula `FROM`. As condições de junção combinam-se com as condições de pesquisa `WHERE` e `HAVING` para controlar as linhas selecionadas das tabelas base referenciadas na cláusula `FROM`.    
+
+Especificar as condições de junção na cláusula `FROM` ajuda a separá-las de qualquer outro critério de pesquisa que possa ser especificado em uma cláusula `WHERE` e é o método recomendado para a especificação de junções. Uma sintaxe de junção de cláusula ISO `FROM` simplificada é:
 
 ```
-FROM first_table join_type second_table [ON (join_condition)]
+FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-*join_type* especifica que tipo de junção é executado: uma junção interna, externa ou cruzada. *join_condition* define o predicado a ser avaliado para cada par de linhas unidas. O exemplo a seguir é de uma especificação de junção de cláusula FROM:
+*join_type* especifica que tipo de junção é executado: uma junção interna, externa ou cruzada. *join_condition* define o predicado a ser avaliado para cada par de linhas unidas. O seguinte exemplo refere-se a uma especificação de junção da cláusula `FROM`:
 
 ```sql
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
-     ON (ProductVendor.BusinessEntityID = Vendor.BusinessEntityID)
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
+     ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-O exemplo a seguir é uma instrução SELECT simples que usa esta junção:
+O seguinte exemplo refere-se a uma instrução `SELECT` simples que usa esta junção:
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
     ON (Purchasing.ProductVendor.BusinessEntityID = Purchasing.Vendor.BusinessEntityID)
 WHERE StandardPrice > $10
   AND Name LIKE N'F%'
 GO
 ```
 
-A seleção retorna o produto e as informações de fornecedor para qualquer combinação de partes fornecidas por uma empresa cujo nome começa com a letra F e o preço do produto é maior que $10.   
+A instrução `SELECT` retorna as informações de produto e de fornecedor para qualquer combinação de partes fornecidas por uma empresa cujo nome começa com a letra F e o preço do produto é maior que US$ 10.   
 
-Quando várias tabelas são referenciadas em uma única consulta, todas as referências de coluna devem ser inequívocas. No exemplo anterior, a tabela ProductVendor e a tabela Vendor têm ambas uma coluna denominada BusinessEntityID. Qualquer nome de coluna que seja duplicado entre duas ou mais tabelas referenciadas na consulta deve ser qualificado com o nome da tabela. Todas as referências às colunas Vendor no exemplo são qualificadas.   
+Quando várias tabelas são referenciadas em uma única consulta, todas as referências de coluna devem ser inequívocas. No exemplo anterior, as tabelas `ProductVendor` e `Vendor` têm uma coluna chamada `BusinessEntityID`. Qualquer nome de coluna que seja duplicado entre duas ou mais tabelas referenciadas na consulta deve ser qualificado com o nome da tabela. Todas as referências às colunas `Vendor` no exemplo estão qualificadas.   
 
-Quando um nome de coluna não está duplicado em duas ou mais tabelas usadas na consulta, a referências a ele não precisam ser qualificadas com o nome da tabela. Isso é mostrado no exemplo anterior. Por vezes a instrução SELECT é difícil de compreender, pois não há nada que indique a tabela que forneceu cada coluna. A legibilidade da consulta será aprimorada se todas as colunas estiverem qualificadas com seus nomes de tabela. A legibilidade é aperfeiçoada se aliases de tabela são usados, principalmente quando os nomes de tabelas precisam ser qualificados com nomes de proprietários e de banco de dados. O exemplo seguinte é o mesmo, exceto que aliases de tabela foram atribuídos e as colunas foram qualificadas com aliases de tabela para aperfeiçoar a legibilidade:
+Quando um nome de coluna não está duplicado em duas ou mais tabelas usadas na consulta, a referências a ele não precisam ser qualificadas com o nome da tabela. Isso é mostrado no exemplo anterior. Às vezes, uma cláusula `SELECT` é difícil de ser compreendida, pois não há nada que indique a tabela que forneceu cada coluna. A legibilidade da consulta será aprimorada se todas as colunas estiverem qualificadas com seus nomes de tabela. A legibilidade é aperfeiçoada se aliases de tabela são usados, principalmente quando os nomes de tabelas precisam ser qualificados com nomes de proprietários e de banco de dados. O exemplo seguinte é o mesmo, exceto que aliases de tabela foram atribuídos e as colunas foram qualificadas com aliases de tabela para aperfeiçoar a legibilidade:
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
 FROM Purchasing.ProductVendor AS pv 
-JOIN Purchasing.Vendor AS v
+INNER JOIN Purchasing.Vendor AS v
     ON (pv.BusinessEntityID = v.BusinessEntityID)
 WHERE StandardPrice > $10
     AND Name LIKE N'F%';
 ```
 
-Os exemplos anteriores especificaram as condições de junção na cláusula FROM, que é o método preferencial. A seguinte consulta contém a mesma condição de junção especificada na cláusula WHERE:
+Os exemplos anteriores especificaram as condições de junção na cláusula `FROM`, que é o método preferencial. A seguinte consulta contém a mesma condição de junção especificada na cláusula `WHERE`:
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
@@ -94,13 +111,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-A lista de seleção para uma junção pode fazer referência a todas as colunas nas tabelas unidas ou a qualquer subconjunto de colunas. A lista de seleção não precisa conter colunas de todas as tabelas na junção. Por exemplo, em uma junção de três tabelas, somente uma tabela pode ser usada para ligar uma das tabelas à terceira e, nenhuma das colunas da tabela do meio, precisa ser referenciada na lista de seleção.   
+A lista `SELECT` para uma junção pode referenciar todas as colunas nas tabelas unidas ou qualquer subconjunto das colunas. A lista `SELECT` não precisa conter colunas de todas as tabelas na junção. Por exemplo, em uma junção de três tabelas, somente uma tabela pode ser usada para ligar uma das tabelas à terceira e, nenhuma das colunas da tabela do meio, precisa ser referenciada na lista de seleção. Isso também é chamado de **antisemijunção**.  
 
 Embora as condições de junção tenham comparações de igualdade (=), outros operadores relacionais ou de comparação podem ser especificados, como também outros predicados. Para obter mais informações, veja [Operadores de comparação &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) e [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
 
-Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processa junções, o mecanismo de consulta escolhe o método mais eficaz (entre várias possibilidades) de processamento da junção. A execução física de várias junções pode usar muitas otimizações diferentes e portanto não pode ser prevista de maneira confiável.   
+Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processa as junções, o otimizador de consulta escolhe o método mais eficaz (entre várias possibilidades) de processamento da junção. Isso inclui a escolha do tipo mais eficiente de junção física, a ordem na qual as tabelas serão unidas e, até mesmo, o uso de tipos de operações de junção lógica que não podem ser expressas diretamente com a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)], como **semijunções** e **antisemijunções**. A execução física de várias junções pode usar muitas otimizações diferentes e portanto não pode ser prevista de maneira confiável. Para obter mais informações sobre as semijunções e as antisemijunções, confira [Referência de operadores lógicos e físicos do plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
 
-Colunas usadas em uma condição de junção não precisam ter o mesmo nome ou ter o mesmo tipo de dados. Entretanto, se os tipos de dados não forem idênticos, eles deverão ser compatíveis, ou do tipo que o SQL Server possa converter implicitamente. Se o tipo de dados não puder ser convertido implicitamente, a condição de junção deverá converter explicitamente o tipo de dados usando a função `CAST`. Para obter mais informações sobre conversões implícitas e explícitas, veja [Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
+Colunas usadas em uma condição de junção não precisam ter o mesmo nome ou ter o mesmo tipo de dados. Entretanto, se os tipos de dados não forem idênticos, eles precisarão ser compatíveis ou ser tipos que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa converter implicitamente. Se o tipo de dados não puder ser convertido implicitamente, a condição de junção deverá converter explicitamente o tipo de dados usando a função `CAST`. Para obter mais informações sobre conversões implícitas e explícitas, veja [Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
 
 A maioria das consultas que usam uma junção pode ser regravada usando uma subconsulta (uma consulta aninhada dentro de outra consulta) e a maioria das subconsultas pode ser regravada como junções. Para obter mais informações sobre subconsultas, veja [Subconsultas](../../relational-databases/performance/subqueries.md).   
 
@@ -356,3 +373,4 @@ Os resultados não facilitam a distinção de um NULL nos dados de um NULL que r
 [Conversão de tipo de dados &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subconsultas](../../relational-databases/performance/subqueries.md)      
 [Junções adaptáveis](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[Cláusula FROM mais JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)

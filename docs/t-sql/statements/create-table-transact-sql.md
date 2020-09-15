@@ -2,7 +2,7 @@
 description: CREATE TABLE (Transact-SQL)
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
-ms.date: 02/24/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -44,15 +44,16 @@ helpviewer_keywords:
 - CREATE TABLE statement
 - number of columns per table
 - maximum number of bytes per row
+- data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 380d8d9dcd7d2812251203a91caaa2b9d056d616
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 96dcd0aff5874db3f025496b1067d5d3d111b3a9
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862448"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511258"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -237,14 +238,19 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
           ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
-    ]
+    ]   
+    [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
+        , RETENTION_PERIOD = {
+                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }
+                          }) ]
 }
   
 <table_stretch_options> ::=
 {  
     [ FILTER_PREDICATE = { null | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
- }
+ }   
   
 <index_option> ::=
 {
@@ -762,7 +768,8 @@ SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table
 
 Habilitará o controle de versão do sistema da tabela se o tipo de dados, a restrição de nulidade e os requisitos de restrição de chave primária forem atendidos. Se o argumento `HISTORY_TABLE` não for usado, o sistema gerará uma nova tabela de histórico correspondendo ao esquema da tabela atual no mesmo grupo de arquivos da tabela atual, criando um vínculo entre as duas tabelas e permitindo que o sistema registre o histórico de cada registro da tabela atual na tabela de histórico. O nome desta tabela de histórico será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Por padrão, a tabela de histórico é **PAGE** compactado. Se o argumento `HISTORY_TABLE` for usado para criar um vínculo e usar uma tabela de histórico existente, o vínculo será criado entre a tabela atual e a tabela especificada. Se a tabela atual estiver particionada, a tabela de histórico será criada no grupo de arquivos padrão porque a configuração de particionamento não será replicada automaticamente da tabela atual para a tabela de histórico. Se o nome de uma tabela de histórico estiver especificado durante a criação da tabela de histórico, você deverá especificar o nome do esquema e da tabela. Ao criar um link para uma tabela de histórico existente, você pode optar por executar uma verificação de consistência de dados. Essa verificação de consistência de dados garante que os registros existentes não se sobreponham. A execução da verificação de consistência dos dados é o padrão. Use esse argumento junto com os argumentos `PERIOD FOR SYSTEM_TIME` e `GENERATED ALWAYS AS ROW { START | END }` para habilitar o controle de versão do sistema em uma tabela. Para saber mais, veja [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) } **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
+REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
 
 Cria a nova tabela com o Stretch Database habilitado ou desabilitado. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -793,6 +800,23 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Aplica-se a**: [!INCLUDE[ssN
    Essa operação incorre em custos de transferência de dados e não pode ser cancelada.
 
 - Especifique `PAUSED` para pausar ou adiar a migração de dados. Para obter mais informações, veja [Pausar e retomar a migração de dados – Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
+
+DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
+            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }    
+**Aplica-se a:** *somente* ao SQL do Azure no Edge
+
+Habilita a limpeza baseada em política de retenção de dados antigos em tabelas de um banco de dados. Para obter mais informações, confira [Habilitar e desabilitar a retenção de dados](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Os parâmetros a seguir precisam ser especificados para que a retenção de dados seja habilitada. 
+
+- FILTER_COLUMN = { column_name }  
+Especifica a coluna que deve ser usada para determinar se as linhas da tabela são obsoletas ou não. Os tipos de dados a seguir são permitidos na coluna de filtro.
+  - Data
+  - Datetime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+  Especifica a política de período de retenção para a tabela. O período de retenção é especificado como uma combinação de um valor inteiro positivo e a unidade de parte de data.   
 
 MEMORY_OPTIMIZED **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). A Instância Gerenciada de SQL do Azure não dá suporte a tabelas com otimização de memória.
 
@@ -1573,6 +1597,20 @@ Lidando com um objeto do sistema no [!INCLUDE[ssSDSfull](../../includes/sssdsful
 SELECT * FROM tempdb.sys.objects;
 SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
+```   
+
+### <a name="w-enable-data-retention-policy-on-a-table"></a>W. Habilitar a política de retenção de dados em uma tabela
+
+O exemplo a seguir cria uma tabela com a retenção de dados habilitada e um período de retenção igual a 1 semana. Este exemplo só se aplica ao **SQL do Azure no Edge**.
+
+```sql
+CREATE TABLE [dbo].[data_retention_table] 
+(
+  [dbdatetime2] datetime2(7), 
+  [product_code] int, 
+  [value] char(10)
+) 
+WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
 ## <a name="next-steps"></a>Próximas etapas

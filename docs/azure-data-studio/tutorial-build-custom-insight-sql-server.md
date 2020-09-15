@@ -1,20 +1,20 @@
 ---
-title: 'Tutorial: Criar um widget de insight personalizado'
+title: Criar um widget de insight personalizado
 description: Este tutorial demonstra como criar widgets de insights personalizados e adicioná-los aos painéis de banco de dados e de servidor no Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745749"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283747"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Criar um widget de insight personalizado
 
@@ -104,7 +104,7 @@ Nesta etapa, execute um script SQL para consultar as sessões ativas atuais.
 
 7. Salve o arquivo *Configurações do Usuário* e abra o painel do banco de dados *TutorialDB* para ver o widget de sessões ativas:
 
-   ![insight de activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![painel de insights da activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>Adicionar detalhes ao insight personalizado
 
@@ -159,7 +159,7 @@ Nesta etapa, execute um script SQL para consultar as sessões ativas atuais.
 
 7. Salve o arquivo *Configurações do Usuário* e abra o painel do banco de dados *TutorialDB*. Clique no botão de reticências (...) ao lado de *Meu Widget* para mostrar os detalhes:
 
-    ![insight de activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![detalhes do insight da activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 Neste tutorial, você aprendeu a:

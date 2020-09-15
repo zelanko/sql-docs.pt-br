@@ -2,7 +2,7 @@
 title: Opções ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Saiba mais sobre como definir opções de banco de dados, como Ajuste Automático, criptografia, Repositório de Consultas em um SQL Server e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 06/22/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,6 +22,7 @@ helpviewer_keywords:
 - snapshot isolation framework option
 - checksums [SQL Server]
 - Automatic tuning
+- " Data Retention Policy"
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: c7e35b474e33da25b2d323d4af4aced5c4fe50f1
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900959"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511298"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -115,6 +116,7 @@ SET
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
 }
 ;
 
@@ -305,6 +307,10 @@ SET
 
 <temporal_history_retention> ::=
     TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<data_retention_policy> ::=
+    DATA_RETENTION { ON | OFF }
+
 ```
 
 ## <a name="arguments"></a>Argumentos
@@ -504,6 +510,17 @@ Quando GLOBAL é especificado e um cursor não é definido como LOCAL ao ser cri
 O cursor é implicitamente desalocado somente na desconexão. Para saber mais, confira [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md).
 
 Você pode determinar o status dessa opção examinando a coluna `is_local_cursor_default` na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Também é possível determinar o status examinando a propriedade `IsLocalCursorsDefault` da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
+
+**\<data_retention_policy> ::=**
+
+**Aplica-se ao**: *somente* ao SQL do Azure no Edge
+
+DATA_RETENTION { ON | OFF }   
+ATIVADO    
+Habilita a limpeza baseada na política de retenção de dados em um banco de dados.
+
+OFF   
+Desabilita a limpeza baseada na política de retenção de dados em um banco de dados.
 
 **\<database_mirroring>**     
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]

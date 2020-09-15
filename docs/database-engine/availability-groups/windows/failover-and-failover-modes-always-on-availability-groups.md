@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395051"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424426"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modos de failover (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87395051"
   Dentro do contexto de um grupo de disponibilidade, as funções primária e secundária das réplicas de disponibilidade, normalmente, são intercambiáveis em um processo conhecido como *failover*. Existem três formas de failover: failover automático (sem perda de dados), failover manual planejado (sem perda de dados) e failover manual forçado (com possível perda de dados), geralmente chamado de *failover forçado*. Os failovers automáticos e manuais planejados preservam todos os seus dados. Um grupo de disponibilidade faz failover no nível da réplica de disponibilidade. Ou seja, um grupo de disponibilidade realiza failover em uma de suas réplicas secundárias (o *destino de failover*atual).  
   
 > [!NOTE]  
->  Problemas no nível do banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados, à exclusão de um banco de dados ou à corrupção de um log de transações não causam o failover do grupo de disponibilidade.  
+>   A menos que a [Detecção de Integridade no Nível do Banco de Dados](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) esteja configurada, os problemas no nível do banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados, à exclusão de um banco de dados ou a um log de transações corrompido não causam o failover de um grupo de disponibilidade.  
   
  Durante o failover, o destino de failover assume a função primária, recupera seus bancos de dados e os coloca online como os novos bancos de dados primários. A réplica primária anterior, quando disponível, alterna para a função secundária, e seus bancos de dados se tornam bancos de dados secundários. Potencialmente, essas funções podem ser alternadas (ou usar um destino de failover diferente) como resposta a várias falhas ou por razões administrativas.  
   

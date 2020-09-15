@@ -13,19 +13,19 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 50bb122223d9b2727f2d87fb076ac00fd46d0943
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4fa27efd21d091726fa55d069706252e6f049e1
+ms.sourcegitcommit: b9871e6cffb4c2c65d1f27f797630c43fc02cfb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463898"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90101126"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL Data Warehouse procedimentos armazenados
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] fornece procedimentos internos que você pode usar para executar operações relacionadas a funções de banco de dados. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] inclui os seguintes procedimentos de sistema:  
   
-##  <a name="sp_datatype_info_90-40sql-data-warehouse41"></a><a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+<a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
  [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   

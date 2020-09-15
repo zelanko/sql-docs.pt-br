@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062325"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288218"
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -307,13 +307,19 @@ READUNCOMMITTED e NOLOCK não podem ser especificados para tabelas modificadas p
 Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
-> Se você receber a mensagem de erro 601 ao especificar READUNCOMMITTED, resolva-a como se fosse um erro de deadlock (1205) e envie novamente a instrução.  
+> Se você receber a [mensagem de erro 601](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999) ao especificar READUNCOMMITTED, resolva-a como se fosse um erro de deadlock ([mensagem de erro 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)) e envie novamente a instrução.  
   
 REPEATABLEREAD  
 Especifica que um exame é executado com a mesma semântica de bloqueio de uma transação que está sendo executada no nível de isolamento SERIALIZABLE. Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 ROWLOCK  
-Especifica que bloqueios de linha serão usados quando os bloqueios de página ou de tabela forem usados normalmente. Quando especificados em transações que operam no nível de isolamento SNAPSHOT, os bloqueios de linha não serão usados a menos que ROWLOCK seja combinado com outras dicas de tabela que requerem bloqueios, como UPDLOCK e HOLDLOCK.  
+Especifica que bloqueios de linha serão usados quando os bloqueios de página ou de tabela forem usados normalmente. Quando especificados em transações que operam no nível de isolamento SNAPSHOT, os bloqueios de linha não serão usados a menos que ROWLOCK seja combinado com outras dicas de tabela que requerem bloqueios, como UPDLOCK e HOLDLOCK. ROWLOCK não pode ser usado com uma tabela que tenha um índice columnstore clusterizado. O exemplo a seguir retorna o [erro 651](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999) ao aplicativo.  
+
+```sql 
+UPDATE [dbo].[FactResellerSalesXL_CCI] WITH (ROWLOCK)
+SET UnitPrice = 50
+WHERE ProductKey = 150;
+```  
   
 SERIALIZABLE  
 É equivalente a HOLDLOCK. Torna bloqueios compartilhados mais restritivos ao mantê-los até que uma transação seja concluída, em vez de liberar o bloqueio compartilhado assim que a tabela ou página de dados requerida não seja mais necessária, quer a transação tenha sido concluída ou não. A verificação é executada com a mesma semântica da transação que está sendo executada no nível de isolamento SERIALIZABLE. Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
@@ -321,11 +327,11 @@ SERIALIZABLE
 SNAPSHOT  
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior. 
   
-A tabela com otimização de memória é acessada no isolamento SNAPSHOT. O SNAPSHOT pode ser usado apenas com tabelas com otimização de memória (não com tabelas com base em disco). Para obter mais informações, confira [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+A tabela com otimização de memória é acessada no isolamento SNAPSHOT. SNAPSHOT só pode ser usado com tabelas com otimização de memória (não com tabelas baseadas em disco), conforme visto no exemplo a seguir. Para obter mais informações, confira [Introdução às tabelas com otimização de memória](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 ```sql 
-SELECT * FROM dbo.Customers AS c   
-WITH (SNAPSHOT)   
+SELECT * 
+FROM dbo.Customers AS c WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
     ON c.customer_id=oh.customer_id;  
 ```  

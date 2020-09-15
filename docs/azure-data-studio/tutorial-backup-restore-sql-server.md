@@ -6,17 +6,17 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a7d3ca36634e449dd26dfdb0df75f09608d25f51
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765795"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283687"
 ---
-# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Fazer backup e restaurar bancos de dados usando o Azure Data Studio
+# <a name="tutorial-backup-and-restore-databases-using-azure-data-studio"></a>Tutorial: Fazer backup e restaurar bancos de dados usando o Azure Data Studio
 
 Neste tutorial, você aprenderá a usar o Azure Data Studio para:
 > [!div class="checklist"]
@@ -36,16 +36,16 @@ Este tutorial requer a conexão com um banco de dados do SQL Server. O Banco de 
 
 ## <a name="back-up-a-database"></a>Fazer o backup de um banco de dados
 
-1. Abra o painel do banco de dados do TutorialDB (abra a barra lateral **SERVIDORES** (**CTRL+G**), expanda **Bancos de Dados**, clique com o botão direito do mouse em **TutorialDB** e selecione **Gerenciar**).
+1. Abra o painel do banco de dados do TutorialDB (abra a barra lateral **SERVIDORES** [**CTRL + G**], expanda **Bancos de Dados**, use o botão direito do mouse para selecionar **TutorialDB** e escolha **Gerenciar**).
 
-2. Abra a caixa de diálogo **Fazer backup do banco de dados** (clique em **Backup** no widget **Tarefas**).
+2. Abra a caixa de diálogo **Fazer backup do banco de dados** (selecione **Backup** no widget **Tarefas**).
 
    ![Widget de tarefas](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. Este tutorial usa as opções de backup padrão, sendo assim, clique em **Backup**.
+3. Este tutorial usa as opções de backup padrão; portanto, selecione **Backup**.
    ![caixa de diálogo de backup](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-Após você clicar em **Backup**, a caixa de diálogo **Fazer backup do banco de dados** desaparece e o processo de backup é iniciado.
+Após a seleção de **Backup**, a caixa de diálogo **Fazer backup do banco de dados** desaparece e o processo de backup é iniciado.
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>Exibir o status e o script de backup
 
@@ -53,26 +53,26 @@ Após você clicar em **Backup**, a caixa de diálogo **Fazer backup do banco de
 
    ![Histórico de tarefas](./media/tutorial-backup-restore-sql-server/task-history.png)
 
-2. Para exibir o script de backup no editor, clique com o botão direito do mouse em **Backup do banco de dados bem-sucedido** e selecione **Script**.
+2. Para ver o script de backup no editor, use o botão direito do mouse para selecionar **Backup do banco de dados bem-sucedido** e escolha **Script**.
 
    ![script de backup](./media/tutorial-backup-restore-sql-server/task-script.png)
 
 ## <a name="restore-a-database-from-a-backup-file"></a>Restaurar um banco de dados usando um arquivo de backup
 
-1. Abra a barra lateral **SERVIDORES** (**CTRL+G**), clique com o botão direito do mouse em seu servidor e selecione **Gerenciar**.
+1. Abra a barra lateral **SERVIDORES** (**CTRL + G**), use o botão direito do mouse para selecionar seu servidor e escolha **Gerenciar**.
 
-2. Abra a caixa de diálogo **Restaurar banco de dados** (clique em **Restaurar** no widget **Tarefas**).
+2. Abra a caixa de diálogo **Restaurar banco de dados** (selecione **Restaurar** no widget **Tarefas**).
 
-   ![Tarefa de restauração](media/tutorial-backup-restore-sql-server/tasks-restore.png)
+   ![Restauração de tarefa](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
 3. Selecione **Arquivo de backup** no campo **Restaurar de**.
 
-4. Clique nas reticências (...) no campo **Caminho do arquivo de backup** e selecione o arquivo de backup mais recente do *TutorialDB*.
+4. Selecione as reticências (...) no campo **Caminho do arquivo de backup** e selecione o arquivo de backup mais recente do *TutorialDB*.
 
 5. Digite **TutorialDB_Restored** no campo **Banco de dados de destino** na seção **Destino** para restaurar o arquivo de backup para um novo banco de dados. Em seguida, selecione **Restaurar**.
 
-   ![restaurar](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![Restaurar backup](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. Para exibir o status da operação de restauração, pressione **CTRL+T** para abrir o **Histórico de Tarefas**.
 
-   ![restaurar](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![Restauração de tarefa do histórico](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
