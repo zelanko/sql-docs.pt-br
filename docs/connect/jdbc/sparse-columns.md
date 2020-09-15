@@ -1,4 +1,5 @@
 ---
+description: Colunas esparsas
 title: Colunas esparsas | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6767ff420defc32bf91559e11878672012de626b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 406f4fea8df9a3c410f126f5a766aeb2e1ad4bb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396292"
 ---
 # <a name="sparse-columns"></a>Colunas esparsas
 
@@ -35,7 +36,7 @@ Conjuntos de coluna são colunas computadas que retornam todas as colunas espars
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 Este exemplo demonstra como detectar conjuntos de colunas. Ele também mostra como analisar a saída XML de um conjunto de colunas para obter os dados das colunas esparsas.
 
