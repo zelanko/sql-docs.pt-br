@@ -1,4 +1,5 @@
 ---
+description: Assistência ao usuário no SQL Server Management Studio
 title: Assistência ao usuário no SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6fe67dc138f9c3661732f1c1cbbf5038d9013f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 26b2ecf32bb6c7a683f0321f342258b44ff4d214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417832"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistência ao usuário no SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,11 +28,11 @@ A assistência ao usuário está disponível no [!INCLUDE[ssManStudioFull](../in
 ## <a name="the-help-interface"></a>A interface da Ajuda  
 O **Conteúdo** e o **Índice** fornecem funcionalidade e uma interface já familiar aos usuários do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . As outras opções são:  
   
--   **Como Fazer**  
+-   **Como faço para**  
   
     Fornece um conjunto hierárquico de páginas vinculadas que contêm tópicos úteis relacionados a tarefas comuns do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . O conteúdo é organizado por componente e tarefa, por exemplo, tópicos de replicação etc.  
   
--   **Pesquisar**  
+-   **Pesquisa**  
   
     Pesquisa tópicos, com ou sem filtros predefinidos. A pesquisa no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é feita em uma página separada com guias. Os usuários podem refinar as pesquisas com um ou mais filtros predefinidos de tipo de tópico, linguagem ou tecnologia. Por padrão, a Pesquisa não usa nenhum dos filtros predefinidos, e só os tópicos são pesquisados nas coleções instaladas.  
   
@@ -71,7 +72,7 @@ A Ajuda do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também fornec
   
 2.  Na área **Ao carregar conteúdo da Ajuda** , selecione uma opção online.  
   
-3.  Na lista **Pesquisar estes provedores** , selecione os provedores que você deseja pesquisar e desmarque aqueles não serão utilizados.  
+3.  Na lista **Pesquisar estes provedores**, selecione os provedores que você deseja pesquisar e desmarque aqueles não serão utilizados.  
   
 4.  Se **Comunidade Codezone** for um de seus provedores de pesquisa selecionados, na lista **Comunidade Codezone** , selecione e desmarque os itens conforme necessário.  
   
@@ -79,9 +80,9 @@ A Ajuda do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também fornec
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Para pesquisar no MSDN Online e nas comunidades relacionadas ao SQL Server da página de pesquisa  
   
-1.  No menu **Ajuda** , clique em **Pesquisar**.  
+1.  No menu **Ajuda**, clique em **Pesquisar**.  
   
-2.  Insira seus termos de pesquisa na caixa de texto **Pesquisar** e depois clique em **Pesquisar**.  
+2.  Insira seus termos de pesquisa na caixa **Pesquisar** e depois clique em **Pesquisar**.  
   
 Independentemente de você executar ou não uma pesquisa que usa os filtros disponíveis (tecnologia, linguagem e tipo de tópico), sua pesquisa será executada em todos os provedores de pesquisa selecionados.  
   

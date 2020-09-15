@@ -1,4 +1,5 @@
 ---
+description: Operações de backup e restauração para o Reporting Services
 title: Operações de backup e restauração para o Reporting Services | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
-ms.openlocfilehash: f5d2aad7b0a306dd4bd2c8e64b7a49581c8fb5d2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31ec98b4fa474ab97b3cac37f49ae885f04d1414
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68264970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418662"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operações de backup e restauração para o Reporting Services
 

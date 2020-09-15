@@ -1,4 +1,5 @@
 ---
+description: Adicionar um front-end da Web do Reporting Services a um farm
 title: Adicionar um front-end da Web do Reporting Services a um farm | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
@@ -8,17 +9,17 @@ ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ec887dcd7d75ef2521258aaa4f37341b05467fc2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc2b1eaee352b34333be5a166168161194e1f03d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63225601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418622"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Adicionar um front-end da Web do Reporting Services a um farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] O modo SharePoint inclui componentes necessários para servidores de aplicativos e WFE (servidores de front-end da Web). Este tópico aborda a instalação de componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necessárias para um servidor de WFE, inclusive as páginas de aplicativo usadas por recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como assinaturas, alertas de dados e [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. A instalação primária do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necessária para um WFE é instalar o suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint 2016.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 -   Você deve ser um administrador local para executar a Instalação do SQL Server.  
   

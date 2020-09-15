@@ -1,4 +1,5 @@
 ---
+description: Conectar ao SQL Server ou ao Banco de Dados SQL do Azure
 title: Conectar ao SQL Server ou ao Banco de Dados SQL do Azure
 ms.custom: seo-lt-2019
 ms.date: 01/28/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d489dac9355a573473063d1cafb32d42ed5fd98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2530029b43a4b01d8b6fce8b321f0c9b66a6a852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417932"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Conectar ao SQL Server ou ao Banco de Dados SQL do Azure
 
@@ -26,7 +27,7 @@ O [SSMS (SQL Server Management Studio)](../download-sql-server-management-studio
   
 ## <a name="connecting-to-a-server"></a>Conectando a um servidor  
 
-1. Em **Pesquisador de Objetos**, clique em **Conectar > Mecanismo de Banco de Dados...** .
+1. Em **Pesquisador de Objetos**, clique em **Conectar > Mecanismo de Banco de Dados...**.
 
    ![conectar](../media/connect-to-server/connect-db-engine.png)
 
@@ -55,7 +56,7 @@ O [SSMS (SQL Server Management Studio)](../download-sql-server-management-studio
 ## <a name="see-also"></a>Consulte Também
 
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
-[Baixar o SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+[Baixar o SSMS (SQL Server Management Studio)](../download-sql-server-management-studio-ssms.md)
 
 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
 [Serviços de Integração](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  

@@ -1,4 +1,5 @@
 ---
+description: Abrir um modelo
 title: Abrir um modelo
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 419f3d4fe4d91165782e10e3dc638b8488ea05e5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 730963488d34750ead61fe2662eb8201f91b30e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417852"
 ---
 # <a name="open-a-template"></a>Abrir um modelo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,5 +46,5 @@ Se a abertura de um modelo iniciar uma nova janela do editor, a janela será abe
   
 ## <a name="see-also"></a>Consulte Também  
 [Explorador de Modelos](../../ssms/template/template-explorer.md)  
-[Substituir parâmetros do modelo](../../ssms/template/replace-template-parameters.md)  
+[Substituir Parâmetros do Modelo](../../ssms/template/replace-template-parameters.md)  
   

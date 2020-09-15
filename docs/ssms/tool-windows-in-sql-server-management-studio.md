@@ -1,4 +1,5 @@
 ---
+description: Janelas de ferramentas no SQL Server Management Studio
 title: Janelas de ferramentas no SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ec93cc023145e051115318c67c644ea98403663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417842"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Janelas de ferramentas no SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

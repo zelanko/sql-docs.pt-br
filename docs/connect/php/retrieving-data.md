@@ -1,4 +1,5 @@
 ---
+description: Recuperando dados
 title: Recuperação de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 050197fe67724dba3ab2cb3c0de53661487b9ef5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 35a9d9131b7c1cb382ab4e64baa26809d58c90d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414422"
 ---
 # <a name="retrieving-data"></a>Recuperando dados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,13 +70,13 @@ Você pode ver quantas linhas estão em um conjunto de resultados se especificar
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |---------|---------------|  
 |[Recuperando dados como um fluxo](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Fornece uma visão geral de como transmitir dados do servidor e fornece links para casos de uso específicos.|  
 |[Usando parâmetros direcionais](../../connect/php/using-directional-parameters.md)|Descreve como usar parâmetros direcionais ao chamar um procedimento armazenado.|  
 |[Especificando um tipo de cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Demonstra como criar um conjunto de resultados com linhas que você pode acessar em qualquer ordem.|  
 |[Como recuperar tipos de data e hora como cadeias de caracteres usando o driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Descreve como recuperar tipos de data e hora como cadeias de caracteres usando o driver SQLSRV.|  
-|[Como recuperar tipos de data e hora como objetos Datetime PHP usando o driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Descreve como recuperar tipos de data e hora como objetos usando o driver PDO_SQLSRV.|  
+|[Como recuperar tipos de data e hora como objetos DateTime do PHP usando o driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Descreve como recuperar tipos de data e hora como objetos usando o driver PDO_SQLSRV.|  
 |[Formatar cadeias de caracteres decimais com o Driver SQLSRV](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Demonstra como formatar valores decimais ou monetários usando o driver SQLSRV.|  
 |[Formatar cadeias de caracteres decimais com o Driver PDO_SQLSRV](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Demonstra como formatar valores decimais ou monetários usando o driver PDO_SQLSRV.|  
   

@@ -1,4 +1,5 @@
 ---
+description: Abrir diagramas de banco de dados (Visual Database Tools)
 title: Abrir diagramas de banco de dados
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 07ea1f96ac38a99a13aa9957960ae523e5f10609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 17c86c408ca67a6d4eea656850b6126a55dbe2f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417752"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Abrir diagramas de banco de dados (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ Você pode abrir diagramas de banco de dados para exibir ou editar a estrutura d
   
 2.  Clique duas vezes no nome do diagrama de banco de dados a ser aberto.  
   
-    -ou-  
+    - ou -  
   
     Clique com o botão direito do mouse no nome do diagrama de banco de dados que você pretende abrir e selecione **Criar Diagrama de Banco de Dados**.  
   

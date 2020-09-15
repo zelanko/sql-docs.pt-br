@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_commit
 title: sqlsrv_commit | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a219e0e9c1fd11a7a99fb941eca571fb59800a2a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0d42500c2764815ade1a2bf2292320f4b8745e88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413962"
 ---
 # <a name="sqlsrv_commit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,10 +43,10 @@ Confirma a transação atual na conexão especificada e retorna a conexão para 
 sqlsrv_commit( resource $conn )  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$conn*: a conexão em que a transação está ativa.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Um valor booliano: **true** se a transação foi confirmada com êxito. Caso contrário, **false**.  
   
 ## <a name="example"></a>Exemplo  

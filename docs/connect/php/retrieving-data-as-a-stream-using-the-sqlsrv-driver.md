@@ -1,4 +1,5 @@
 ---
+description: Recuperando dados como um fluxo usando o driver SQLSRV
 title: Recuperação de dados como um fluxo usando o driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4a9ac475c19560b005299410f59e5a45a94197e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cceb378b0571ff1fb6b3505abd1f6d8f4535a5cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414442"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Recuperando dados como um fluxo usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ As etapas a seguir resumem como recuperar dados como um fluxo:
   
 3.  Use [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) para recuperar um campo da linha. Especifique que os dados devem ser recuperados como um fluxo usando **SQLSRV_PHPTYPE_STREAM(<encoding>)** como o terceiro parâmetro na chamada de função. Esta tabela lista as constantes usadas para especificar as codificações e suas descrições:  
   
-    |Constante SQLSRV|DESCRIÇÃO|  
+    |Constante SQLSRV|Descrição|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|Os dados são retornados do servidor como um fluxo de bytes brutos, sem codificação ou conversão.|  
     |SQLSRV_ENC_CHAR|Os dados são retornados em caracteres de 8 bits conforme especificado na página de código da localidade do Windows definida no sistema. Todos os caracteres multibyte ou caracteres não mapeados nessa página de código são substituídos por um caractere de ponto de interrogação (?) de byte único.|  
@@ -42,7 +43,7 @@ As etapas a seguir resumem como recuperar dados como um fluxo:
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |---------|---------------|  
 |[Tipos de dados com suporte a fluxo usando o driver SQLSRV](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Lista os tipos de dados do SQL Server que podem ser recuperados como fluxos.|  
 |[Como recuperar dados de caractere como um fluxo usando o driver SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Demonstra como recuperar dados de caractere como um fluxo.|  

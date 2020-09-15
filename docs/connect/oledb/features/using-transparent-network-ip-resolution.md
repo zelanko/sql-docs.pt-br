@@ -1,4 +1,5 @@
 ---
+description: Como usar a resolução IP de rede transparente
 title: Como usar a resolução IP de rede transparente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/02/2020
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: chris-rossi
 ms.author: v-chross
-ms.openlocfilehash: 50ab8a6895feeff177dfd31aa90fa3b94e38fae4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: adaad0f80d6304c855af22f134d24f0d3f23d301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415012"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Como usar a resolução IP de rede transparente
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

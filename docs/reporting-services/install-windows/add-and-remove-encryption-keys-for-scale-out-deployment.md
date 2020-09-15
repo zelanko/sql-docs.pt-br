@@ -1,4 +1,5 @@
 ---
+description: Adicionar e remover chaves de criptografia para implantação em expansão
 title: Adicionar e remover chaves de criptografia para implantação escalável | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70dde30aeade9841a317bc8a2b9db418ba5ccd79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418612"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Adicionar e remover chaves de criptografia para implantação em expansão
   É possível executar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um modelo de implantação de expansão com a configuração de vários servidores de relatório para usarem um banco de dados do servidor de relatório compartilhado. A associação em uma implantação de expansão tem como base o fato de o servidor de relatório armazenar uma chave de criptografia no banco de dados do servidor de relatório. Você pode controlar a associação de implantação de expansão pela adição ou remoção de chaves de criptografia para instâncias específicas do servidor de relatório. Se estiver removendo nós da implantação, você poderá os removê-los em qualquer ordem. Se estiver adicionando nós a uma implantação, você deverá unir quaisquer novas instâncias de um servidor de relatório que já faça parte da implantação.  
@@ -62,6 +63,6 @@ ms.locfileid: "73593857"
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

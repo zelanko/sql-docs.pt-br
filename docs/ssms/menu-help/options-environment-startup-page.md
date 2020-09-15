@@ -1,4 +1,5 @@
 ---
+description: Opções (Ambiente – página de Inicialização)
 title: " Página de opções do SQL Server ‒ Ambiente ‒ Inicialização"
 ms.date: 11/05/2018
 ms.prod: sql
@@ -7,12 +8,12 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b817bb058373fb86c417f3622bde516d10dfb81a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 85d0b99d0929f7fb7ae642c5b0673fdc7b9b185b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417902"
 ---
 # <a name="options-environment---startup-page"></a>Opções (Ambiente – página de Inicialização)
 
