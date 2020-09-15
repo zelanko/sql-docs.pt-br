@@ -1,4 +1,5 @@
 ---
+description: Conectar ao Servidor (página Propriedades da Conexão) Mecanismo de Banco de Dados
 title: Conectar ao Servidor (página Propriedades da Conexão) Mecanismo de Banco de Dados
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370842"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar ao Servidor (página Propriedades da Conexão) Mecanismo de Banco de Dados
 
@@ -44,7 +45,7 @@ Insira o número de segundos a esperar que uma conexão seja estabelecida antes 
 **Tempo limite de execução**  
 Digite o tempo em segundos que se deve esperar antes que a execução de uma tarefa seja concluída no servidor. O valor padrão é zero segundo, o que indica que não há nenhum tempo limite.  
   
-**Criptografar conexão**  
+**Criptografar a conexão**  
 Força a criptografia da conexão.  
   
 **Usar cor personalizada**  
@@ -68,12 +69,12 @@ Tenta estabelecer uma conexão usando os valores listados.
 **Opções**  
 Clique para alterar a caixa de diálogo e ocultar as opções de conexão de servidor adicionais, como lembrar a senha.  
   
-**Test**  
+**Teste**  
 Ao registrar o [!INCLUDE[ssDE](../../includes/ssde_md.md)] em **Servidores Registrados**, clique para testar a conexão.  
   
 **Salvar**  
 Salve as configurações em **Servidores Registrados**.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Caixa de diálogo Propriedades da conexão](../../ssms/f1-help/connection-properties-dialog-box.md)  
+[caixa de diálogo Propriedades da conexão](../../ssms/f1-help/connection-properties-dialog-box.md)  
   

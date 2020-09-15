@@ -1,4 +1,5 @@
 ---
+description: Criar um servidor de gerenciamento central e grupo de servidor
 title: Criar um servidor central de gerenciamento
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: da2c3891f86476b75d47711415baeaca85813043
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d0d43fe140f2165b19cb38a6c8d7391428a14e93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370837"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Criar um servidor de gerenciamento central e grupo de servidor
 
@@ -68,7 +69,7 @@ Este tópico descreve como designar uma instância do [!INCLUDE[ssNoVersion](../
   
 6.  Clique em **Testar**para testar a conexão.  
   
-7.  Clique em **Save** (Salvar). A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecerá na pasta **Servidores Centrais de Gerenciamento** .  
+7.  Clique em **Salvar**. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecerá na pasta **Servidores Centrais de Gerenciamento** .  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>Criar um novo grupo de servidores e adicionar servidores ao grupo  
   

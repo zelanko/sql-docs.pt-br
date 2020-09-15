@@ -1,4 +1,5 @@
 ---
+description: Conectar ao Servidor (página Logon) Mecanismo de Banco de Dados
 title: Conectar ao Servidor (página Logon) Mecanismo de Banco de Dados
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: ed86ffb259b01a31fefca17eedefd8f4f4dab1a9
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f379f4f2124bfbee734aa629f02c3a7fbe34f249
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370819"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Conectar ao Servidor (página Logon) Mecanismo de Banco de Dados
 

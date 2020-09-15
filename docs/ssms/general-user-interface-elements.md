@@ -1,4 +1,5 @@
 ---
+description: Elementos gerais da interface de usuário
 title: Elementos gerais da interface de usuário
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aba6becbf3ef8ceb2804f068ab6e1d848728b366
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68517b526b042ad2085cc539b90ff769bb72e712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371082"
 ---
 # <a name="general-user-interface-elements"></a>Elementos gerais da interface de usuário
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 O **Editor**, a janela **Propriedades** e a **Caixa de ferramentas** são alguns dos elementos básicos de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
-[Caixa de diálogo Sobre](../ssms/about-dialog-box.md)  
+[caixa de diálogo Sobre](../ssms/about-dialog-box.md)  
 Descreve a caixa de diálogo que fornece informações sobre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e sobre o computador em que ele está sendo executado.  
   
 [Navegador da Web do SQL Server Management Studio](../ssms/sql-server-management-studio-web-browser.md)  

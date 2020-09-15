@@ -1,4 +1,5 @@
 ---
+description: Painel Detalhes do Pesquisador de Objetos
 title: Painel Detalhes do Pesquisador de Objetos
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370782"
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,12 +43,12 @@ Detalhes do Pesquisador de Objetos inclui uma barra de ferramentas que contém o
 |ícone|Ação|  
 |--------|----------|  
 |**Voltar**|Move para os itens anteriores exibidos em Detalhes do Pesquisador de Objetos. Executa novamente uma pesquisa quando a exibição anterior é o resultado de uma operação de pesquisa.|  
-|**Avançar**|Move para a próxima tela depois que uma operação **Voltar** é selecionada.|  
+|**Encaminhar**|Move para a próxima tela depois que uma operação **Voltar** é selecionada.|  
 |**Operante**|Move para o objeto ou a pasta pai.|  
 |**Sincronizar**|Define o foco de Pesquisador de Objetos para o objeto selecionado em Detalhes do Pesquisador de Objetos.|  
 |**Filter**|Quando disponível, mostra um subconjunto configurável de objetos.|  
 |**Atualizar**|Atualiza a exibição em Detalhes do Pesquisador de Objetos.|  
-|**Pesquisar**|Fornece uma área para inserir um termo de pesquisa para objetos de banco de dados específicos.|  
+|**Pesquisa**|Fornece uma área para inserir um termo de pesquisa para objetos de banco de dados específicos.|  
   
 ### <a name="column-header-selections"></a>Seleções de cabeçalho de coluna  
 Detalhes do Pesquisador de Objetos possui colunas selecionáveis. Você pode clicar com o botão direito do mouse em qualquer cabeçalho de coluna e pode verificar os itens que deseja exibir. Suas seleções serão persistentes entre os diferentes objetos pelos quais você navega. As seleções de cada usuário são preservadas quando você sai do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e o reinicia.  
