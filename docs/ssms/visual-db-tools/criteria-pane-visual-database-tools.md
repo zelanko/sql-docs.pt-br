@@ -1,4 +1,5 @@
 ---
+description: Painel de Critérios (Visual Database Tools)
 title: Painel de Critérios
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6f1df4856844b162560f562e487f970dc1974d04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4738edd7c0db3522547bba26cd637a132f6630bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314752"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Painel de Critérios (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,9 +67,9 @@ Se o painel Critérios não estiver visível, clique com o botão direito do mou
 |Ordem de classificação|SELECT, INSERT FROM|Especifica a prioridade de classificação das colunas de dados utilizadas para classificar o conjunto de resultados. Quando você altera a ordem de classificação de uma coluna de dados, a ordem de classificação de todas as outras colunas também é atualizada.|  
 |Group By|SELECT, INSERT FROM, MAKE TABLE|Especifica que a coluna de dados associada está sendo utilizada para criar uma consulta de agregação. Essa coluna de grade será exibida somente se você tiver escolhido **Group By** no menu **Ferramentas** ou tiver adicionado uma cláusula GROUP BY no painel SQL.<br /><br />Por padrão, o valor dessa coluna é definido como **Group By**e a coluna se torna parte da cláusula GROUP BY.<br /><br />Quando você se move para uma célula nessa coluna e seleciona uma função de agregação para ser aplicada à coluna de dados associada, por padrão, a expressão resultante é adicionada como uma coluna de saída para o conjunto de resultados.|  
 |Critérios|Todos|Especifica um critério de pesquisa (filtro) para a coluna de dados associada. Insira um operador (o padrão é “=”) e o valor a ser pesquisado. Insira os valores de texto entre aspas simples.<br /><br />Se a coluna de dados associada fizer parte de uma cláusula GROUP BY, a expressão inserida será utilizada para uma cláusula HAVING.<br /><br />Se você inserir valores para mais de uma célula na coluna da grade **Criteria**, os critérios de pesquisa resultantes serão vinculados automaticamente a um AND lógico.<br /><br />Para especificar várias expressões de critério de pesquisa para uma única coluna de banco de dados, por exemplo, (fname > 'A') AND (fname < 'M'), adicione a coluna de dados duas vezes ao painel Critérios e insira valores separados na coluna da grade **Criteria** para cada instância da coluna de dados.|  
-|Or...|Todos|Especifica uma expressão de critério de pesquisa adicional para a coluna de dados, vinculada a expressões anteriores com um OR lógico. Você pode adicionar mais colunas de grade **Or...** pressionando a tecla TAB na coluna **Or...** mais à direita.|  
+|Ou...|Todos|Especifica uma expressão de critério de pesquisa adicional para a coluna de dados, vinculada a expressões anteriores com um OR lógico. Você pode adicionar mais colunas de grade **Or...** pressionando a tecla TAB na coluna **Or...** mais à direita.|  
 |Acrescentar|INSERT FROM|Especifica o nome da coluna de dados de destino da coluna de dados associada. Quando você cria uma consulta Insert From, o Designer de Consulta e Exibição tenta corresponder a origem a uma coluna de dados de destino apropriada. Se o Designer de Consulta e Exibição não puder escolher uma correspondência, você deverá fornecer o nome da coluna.|  
-|New Value|UPDATE, INSERT INTO|Especifica o valor a ser colocado na coluna associada. Insira um valor literal ou uma expressão.|  
+|Novo valor|UPDATE, INSERT INTO|Especifica o valor a ser colocado na coluna associada. Insira um valor literal ou uma expressão.|  
   
 ## <a name="see-also"></a>Consulte Também  
 [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

@@ -1,4 +1,5 @@
 ---
+description: Compreender a propriedade do diagrama de banco de dados (Visual Database Tools)
 title: Compreender a propriedade do diagrama de banco de dados
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 170851e58273695a588b9359ba07460eab6d6884
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3da1122dcb61b50db189ec798f091496621cbfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312682"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Compreender a propriedade do diagrama de banco de dados (Visual Database Tools)
 
@@ -40,4 +41,4 @@ Pontos de destaque sobre propriedade de diagrama:
 ## <a name="see-also"></a>Consulte Também
 
 [Trabalhar com diagramas de banco de dados](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Configurar o designer de diagramas de bancos de dados](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)
+[Configurar o Designer de Diagramas de Banco de Dados](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)

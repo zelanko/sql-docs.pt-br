@@ -1,4 +1,5 @@
 ---
+description: Alterar o local padrão dos projetos
 title: Alterar o local padrão dos projetos
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9a8d18ca192d6e85f518c557d325c60df677392a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6cc0a71ae839ec4b22a8310ab4b6b164518954db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316152"
 ---
 # <a name="change-the-default-location-for-projects"></a>Alterar o local padrão dos projetos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

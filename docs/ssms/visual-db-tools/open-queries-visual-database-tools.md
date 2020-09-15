@@ -1,4 +1,5 @@
 ---
+description: Abrir consultas (Visual Database Tools)
 title: Abrir consultas
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 19383e88eef156c2cfa5f87be4326fd1906e986b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f527e1c96fa5dbfb8a9a4a7a7511421cc2d17bbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313932"
 ---
 # <a name="open-queries-visual-database-tools"></a>Abrir consultas (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Você pode abrir uma consulta existente no Designer de Consulta e Exibição usando o comando **Abrir** .  
+ Você pode abrir uma consulta existente no Designer de Exibição e Consulta usando o comando **Abrir**.  
   
 ### <a name="to-open-a-query-in-all-panes"></a>Para abrir uma consulta em todos os painéis  
   

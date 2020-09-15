@@ -1,4 +1,5 @@
 ---
+description: Janela de Saída no SQL Server Management Studio
 title: Janela de Saída do SSMS
 ms.custom: seo-lt-2019
 ms.date: 08/09/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 88cda0f8a0ead013e09bdc656cc4a129870a5125
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98a7e2695c2327e26043ef9bf3e4f1578e7abfe6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316962"
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>Janela de Saída no SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86001827"
 
 A tabela a seguir fornece uma visão geral dos tipos de mensagens associados a cada canal de saída.
 
-|Canal|DESCRIÇÃO|
+|Canal|Descrição|
 |-----------|---------------|  
 |**Telemetria**|Telemetria é o fluxo de [dados de uso de recursos anônimos](sql-server-management-studio-ssms.md) coletados pela Microsoft. Esses eventos podem ser úteis para a manutenção de um registro próprio do uso do SSMS. A Telemetria pode ajudar a identificar quais nós do Pesquisador de Objetos foram expandidos e quais comandos foram executados durante uma sessão do SSMS em que a Janela de Saída estava aberta.|
 |**Pesquisador de Objetos**|Como saída, esse canal fornece o texto da consulta e tempo decorrido das consultas SQL necessárias para expandir os nós no Pesquisador de Objetos. Cada consulta registra um evento Iniciar Consulta e um evento Encerrar Consulta. Cada evento tem um carimbo de data/hora e o URN associado à entidade sendo consultada. O [URN](https://technet.microsoft.com/library/microsoft.sqlserver.management.smo.urn(v=sql.90).aspx) refere-se ao SQL Management Object subjacente e consiste em uma hierarquia estilo XPath. Por exemplo, o URN de uma tabela denominada "Table1" no banco de dados "Db" no servidor "MyServer" seria "Server[@Name='MyServer']/Database[@Name='Db']/Table[/@Name='Table1']". A expansão de um nó no Pesquisador de Objetos poderia executar várias dessas consultas com parâmetros diferentes. O evento Encerrar Consulta conterá o tempo decorrido da consulta juntamente com o texto TSQL. Você poderá considerar esses dados de consulta úteis para uma análise de desempenho do servidor em casos em que o Pesquisador de Objetos estiver excepcionalmente lento para expandir um nó específico. **Observação:** nem todo nó no Pesquisador de Objetos fornece esse nível de detalhe da consulta ao expandir.|

@@ -1,4 +1,5 @@
 ---
+description: Arguments for External Tools
 title: Arguments for External Tools
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23c2680b2043ff35e882e801a684f8aeb9503b21
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4cf19970c7c742701248c362806bc823d38cf8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314952"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +27,7 @@ Argumentos são variáveis para as quais o ambiente do Studio fornece valores pa
   
 A tabela a seguir relaciona os argumentos de ferramentas externas.  
   
-|Nome|Argumento|DESCRIÇÃO|  
+|Nome|Argumento|Descrição|  
 |--------|------------|---------------|  
 |**Caminho de item**|$(ItemPath)|O nome completo do arquivo da fonte atual (definido como unidade + caminho + nome de arquivo). Em branco se estiver ativa uma janela que não seja de fonte.|  
 |**Diretório do item**|$(ItemDir)|O diretório da fonte atual (definido como unidade + caminho). Em branco se estiver ativa uma janela que não seja de fonte.|  

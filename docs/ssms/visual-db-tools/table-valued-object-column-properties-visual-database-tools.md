@@ -1,4 +1,5 @@
 ---
+description: Propriedades de (coluna) de objeto com valor de tabela (Visual Database Tools)
 title: Propriedades do Objeto com Valor de Tabela (Coluna)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d64ccb277d9016cd94b5613529e2d1c322162a73
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f33c6df2e1acfa5c014b6739acd61c4d0153631c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312702"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Propriedades de (coluna) de objeto com valor de tabela (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Essas propriedades aparecem quando uma coluna de objeto com valor de tabela é selecionada no painel **Diagrama** do Designer de Consulta e Exibição.  
+ Essas propriedades aparecem quando uma coluna de objeto com valor de tabela é selecionada no painel **Diagrama** do Designer de Exibição e Consulta.  
   
 > [!NOTE]  
 > As propriedades desse tópico são classificadas por categoria e não em ordem alfabética.  

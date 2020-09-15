@@ -1,4 +1,5 @@
 ---
+description: Usar a Caixa de Ferramentas
 title: Usar a Caixa de Ferramentas
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1bf323be4adf219bcf00dbf48fb6c40433b3611d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f1337cc28109bf1fce2d65b9a0bd46a2302e01db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88315252"
 ---
 # <a name="use-the-toolbox"></a>Usar a Caixa de Ferramentas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

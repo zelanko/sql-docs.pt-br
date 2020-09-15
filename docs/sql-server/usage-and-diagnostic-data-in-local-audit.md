@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a8162132f884c1bda7ea673eedbbceffa604e44
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812626"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362500"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoria local para coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
 
@@ -78,12 +78,12 @@ Crie uma nova pasta (diretório da auditoria local) em que a auditoria local gra
   >[!NOTE] 
   >Configure o caminho do diretório da auditoria local fora do caminho de instalação do SQL Server para evitar que a funcionalidade de auditoria e a aplicação de patches causem problemas com o SQL Server.
 
-  ||Decisão de design|Recomendação|  
-  |------|-----------------|----------|  
-  |![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Disponibilidade de espaço |Com uma carga de trabalho moderada com cerca de 10 bancos de dados, planeje ter cerca de 2 MB de espaço em disco por banco de dados por instância.|  
-|![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Diretórios separados | Crie um diretório para cada instância. Por exemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para uma instância do SQL Server chamada `MSSQLSERVER`. Isso simplifica o gerenciamento de arquivos.
-|![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Pastas separadas |Use uma pasta específica para cada serviço. Por exemplo, para um determinado nome de instância, tenha uma pasta para o mecanismo de banco de dados. Se uma instância do Analysis Services usar o mesmo nome de instância, crie uma pasta separada para o Analysis Services. Ter instâncias do Mecanismo de Banco de Dados e do Analysis Services configuradas para a mesma pasta fará com que a auditoria local grave no mesmo arquivo de log para as duas instâncias.| 
-|![Caixa de seleção](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Conceder permissões para a conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|Habilite acesso para **Listar Conteúdo da Pasta**, **Ler** e **Gravar** à conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|
+|Decisão de design|Recomendação|  
+|-----------------|----------|  
+|Disponibilidade de espaço |Com uma carga de trabalho moderada com cerca de 10 bancos de dados, planeje ter cerca de 2 MB de espaço em disco por banco de dados por instância.|  
+|Diretórios separados | Crie um diretório para cada instância. Por exemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para uma instância do SQL Server chamada `MSSQLSERVER`. Isso simplifica o gerenciamento de arquivos.
+|Pastas separadas |Use uma pasta específica para cada serviço. Por exemplo, para um determinado nome de instância, tenha uma pasta para o mecanismo de banco de dados. Se uma instância do Analysis Services usar o mesmo nome de instância, crie uma pasta separada para o Analysis Services. Ter instâncias do Mecanismo de Banco de Dados e do Analysis Services configuradas para a mesma pasta fará com que a auditoria local grave no mesmo arquivo de log para as duas instâncias.| 
+|Conceder permissões para a conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|Habilite acesso para **Listar Conteúdo da Pasta**, **Ler** e **Gravar** à conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>Conceder permissões para a conta de logon do serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server
@@ -143,7 +143,7 @@ Depois de concluir as etapas de pré-configuração, você pode ativar a auditor
 
 1. Clique com o botão direito do mouse em **UserRequestedLocalAuditDirectory** e selecione *Modificar*. 
 
-1. Para ativar a auditoria local, digite o caminho da auditoria local, por exemplo, *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* .
+1. Para ativar a auditoria local, digite o caminho da auditoria local, por exemplo, *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
  
     Para desativar a auditoria local, esvazie o valor em **UserRequestedLocalAuditDirectory**.
 
@@ -155,8 +155,8 @@ O Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server deve re
 
 1. Navegue até o serviço apropriado. 
 
-    - Para o Mecanismo de Banco de Dados, use **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server (*nome da instância*)** .     
-    - Para o Analysis Services, use **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services (*nome da instância*)** .
+    - Para o Mecanismo de Banco de Dados, use **Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server (*nome da instância*)**.     
+    - Para o Analysis Services, use **Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Analysis Services (*nome da instância*)**.
     - Para o Integration Services, 
         - Para o SQL 2016, use *Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services 13.0*.
         - Para o SQL 2017, use *Serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server Integration Services 14.0*.
@@ -214,9 +214,9 @@ As colunas listadas abaixo representam a ordem da saída de arquivos da auditori
 |querySetVersion | Versão de um grupo de definições de consulta | 1.0.0.0 
 |traceName | Categorias de rastreamentos: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Um identificador da consulta | SQLServerProperties.002 
-|data   | A saída das informações coletadas em queryIdentifier como uma saída de uma consulta T-SQL, sessão XE ou do aplicativo |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) – 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64 bits) no Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hipervisor)\n"}],
+|data   | A saída das informações coletadas em queryIdentifier como uma saída de uma consulta T-SQL, sessão XE ou do aplicativo |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |Consulta| Se aplicável, a definição da consulta T-SQL relacionada com o queryIdentifier que produz os dados.        Este componente não é carregado pelo serviço do Programa de Aperfeiçoamento da Experiência do Usuário do SQL Server. Ele está incluído na auditoria local apenas como uma referência para os clientes.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | A duração necessária para a consulta com a seguinte categoria de rastreamento para executar: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|queryTimeInTicks | A duração necessária para que a consulta com a seguinte categoria de rastreamento seja executada: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Categorias de rastreamento 
 Atualmente, coletamos as seguintes categorias de rastreamento: 

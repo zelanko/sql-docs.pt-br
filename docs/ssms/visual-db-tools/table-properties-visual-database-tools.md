@@ -1,4 +1,5 @@
 ---
+description: Propriedades da tabela (Visual Database Tools)
 title: Propriedades da tabela
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e5b8873d5387bf80159c8687310b2116f16874b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c82638c23213db41aece277812522eb40a52e66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312812"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriedades da tabela (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,14 +60,14 @@ Expande para mostrar propriedades para **Coluna de identidade**, **Indexável**e
 **Coluna de identidade**  
 Mostra a coluna usada como a coluna de identidade da tabela. Para alterar a coluna de identidade, escolha a partir da lista suspensa. Apenas colunas de um tipo de dados numérico serão exibidas na lista.  
   
-**É Indexável**  
+**Indexável**  
 Mostra se a tabela pode ser indexada. Se a tabela não for indexável pode ser porque você não é o proprietário da tabela ou porque a tabela contém colunas com tipos de dados de texto, ntext ou imagem.  
   
 **É Replicável**  
 Mostra se a tabela é replicada em outro local.  
   
 **Categoria de especificação espaço de dados regular**  
-Expande para mostrar propriedades para **(Tipo de Espaço de Dados)** , **Grupo de Arquivos ou Nome do Esquema de Partição**e **Lista de Colunas de Partição**.  
+Expande para mostrar propriedades para **(Tipo de Espaço de Dados)**, **Grupo de Arquivos ou Nome do Esquema de Partição**e **Lista de Colunas de Partição**.  
   
 **(Tipo de Espaço de Dados)**  
 Mostra se essa tabela é armazenada usando um grupo de arquivos ou esquema de partição.  
@@ -84,5 +85,5 @@ Mostra a coluna usada pelo Microsoft SQL Server como a coluna ROWGUID da tabela.
 Fornece uma lista suspensa da qual você pode escolher o grupo de arquivos para colunas que têm tipos de dados de texto ou de imagem. Se a tabela é armazenada usando-se um esquema de partição, deixe esse espaço em branco.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Criar tabelas](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Projetar tabelas](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Tipos de consulta permitidos (Visual Database Tools)
 title: Tipos de Consulta com Suporte
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,12 +23,12 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6fa2d2e5502bc47d0631263b0b42c254fead0bfc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3253aef57da9eb34ddd87b17aa9a0e690fd866b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312353"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Tipos de consulta permitidos (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,6 +54,6 @@ Além das consultas, que você pode criar usando os painéis gráficos, pode ins
 Quando você criar consultas que usam instruções SQL que não podem ser representadas nos painéis gráficos, o Designer de Consulta e Exibição escurece esses painéis para indicar que eles não refletem a consulta que você está criando. Porém, os painéis escurecidos ainda estão ativos e, em muitas casos, você pode fazer alterações na consulta nesses painéis. Se as alterações que você fizer resultarem em uma consulta que pode ser representada nos painéis gráficos, esses painéis não são mais escurecidos.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Tópicos de instruções sobre como criar consultas e exibições](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Tipos de consultas](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Tópicos de instruções de como criar consultas e exibições](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tipos de Consultas](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
