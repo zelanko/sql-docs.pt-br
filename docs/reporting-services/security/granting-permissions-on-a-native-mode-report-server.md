@@ -1,4 +1,5 @@
 ---
+description: Conceder permissões em um servidor de relatório no modo nativo
 title: Conceder permissões em um servidor de relatório no modo nativo | Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be6b0825244dee9f80f88a1b211eee5881d2a96a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 82fba1144cdb970d97b8aac4938fd7c3e8fe0980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373292"
 ---
 # <a name="grant-permissions-on-a-native-mode-report-server"></a>Conceder permissões em um servidor de relatório no modo nativo
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa autorização com base em funções e um subsistema de autenticação para determinar quem pode executar operações e acessar itens em um servidor de relatório. A autorização com base em funções é categorizada nas funções do conjunto de ações que um usuário ou grupo pode executar. A autenticação se baseia na Autenticação interna do Windows ou em um módulo de autenticação personalizado fornecido por você. É possível utilizar funções predefinidas ou personalizadas com qualquer tipo de autenticação.

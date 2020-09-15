@@ -1,4 +1,5 @@
 ---
+description: Método SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
 title: Método SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af40d79d876edb8f0448bd5abaef5c173a6edce9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca1e82757c5e194fc0c9e1b723b7a929a2c93837
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373332"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>Método de ConfigurationSetting – SetDatabaseConnection
   Define a conexão do banco de dados do servidor de relatório para um banco de dados do servidor de relatório específico.  
@@ -39,7 +40,7 @@ public void BackupEncryptionKey(string Server,
     string UserName, string Password, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *Servidor*  
  O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado para hospedar o banco de dados do servidor de relatório.  
   

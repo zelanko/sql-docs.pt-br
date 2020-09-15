@@ -1,4 +1,5 @@
 ---
+description: Propriedade RSWindowsExtendedProtectionLevel
 title: Propriedade RSWindowsExtendedProtectionLevel | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7854821a9f43bc234490d915ff75339e250f6c39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4098d19c86ab6940aebd254ba08a196ae880dc5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373042"
 ---
 # <a name="rswindowsextendedprotectionlevel-property"></a>Propriedade RSWindowsExtendedProtectionLevel
-  Retorna um valor de cadeia de caracteres que indica o nível de proteção para o qual o servidor de relatório está configurado para oferecer suporte. Essa propriedade é somente leitura.  
+  Retorna um valor de cadeia de caracteres que indica o nível de proteção para o qual o servidor de relatório está configurado para oferecer suporte. Esta propriedade é somente para leitura.  
   
 ## <a name="syntax"></a>Sintaxe  
   

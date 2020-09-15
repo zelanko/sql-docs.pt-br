@@ -1,4 +1,5 @@
 ---
+description: Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório
 title: Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed7a08a8f109da6151ffba2efed9df4263f2db5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373362"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório
   Este tópico fornece uma referência das permissões no SharePoint que podem ser usadas para conceder acesso a operações do servidor de relatório para um servidor de relatório executado em modo integrado do SharePoint. Se você estiver criando níveis de permissão personalizados, este tópico poderá ajudá-lo a escolher as permissões a serem usadas.  
@@ -34,15 +35,22 @@ ms.locfileid: "65570690"
 |Visitante|**V**|  
   
  As permissões que não afetam um servidor de relatórios não são listadas. Todas as permissões para personalização são excluídas deste artigo de referência. Embora seja possível incluir itens de servidor de relatório em um site personalizado, o servidor de relatório não trata diretamente de solicitações ou operações personalizadas.  
-  
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013.|  
-  
+
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint  
+    :::column-end:::
+    :::column:::
+        SharePoint 2010 e SharePoint 2013  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="list-permissions"></a>Permissões de lista  
  As permissões que você define na biblioteca que contém os itens de servidor de relatório determinam como os usuários acessam esses itens.  
   
-|Permissão|DESCRIÇÃO|F|C|V|Operação do servidor de relatório|  
+|Permissão|Descrição|F|C|V|Operação do servidor de relatório|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gerenciar Listas|Criar e excluir listas, adicionar ou remover colunas em uma lista e adicionar ou remover exibições públicas de uma lista.|X|||Criar uma pasta em uma biblioteca do SharePoint durante uma operação de publicação usando uma ferramenta de criação. Esta permissão também é exigida para o gerenciamento de históricos de relatórios.|  
 |Adicionar Itens|Adicionar itens a listas e documentos a bibliotecas de documentos, além de adicionar comentários a discussões na Web.|X|X||Adicionar relatórios, modelos de relatórios, fontes de dados compartilhados e recursos (arquivos de imagem externos) às bibliotecas do SharePoint. Crie fontes de dados compartilhados. Gerar modelos de relatórios utilizando fontes de dados compartilhados. Iniciar o Construtor de Relatórios e criar um novo relatório ou carregar um modelo no Construtor de Relatórios.|  
@@ -59,14 +67,14 @@ ms.locfileid: "65570690"
 ## <a name="site-permissions"></a>Permissões de site  
  As permissões de site determinam o acesso a operações de servidor de relatório não diretamente relacionadas a itens armazenados em uma biblioteca específica. Os exemplos incluem a criação e o gerenciamento de agendas compartilhadas, que podem ser usadas por itens em várias bibliotecas, e a configuração da Web Part do Visualizador de Relatórios, que pode ser usada em todo um site.  
   
-|Permissão|DESCRIÇÃO|F|C|V|Operação do servidor de relatório|  
+|Permissão|Descrição|F|C|V|Operação do servidor de relatório|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gerenciar Permissões|Criar e gerenciar níveis de permissão no site e atribuir permissões a usuários e grupos.|X|||Você pode alterar permissões para todos os itens e operações do servidor de relatório. Você pode definir a segurança de itens de modelo.|  
 |Gerenciar Site|Executar todas as tarefas de administração do site, bem como gerenciar conteúdos.|X|||Criar, alterar e excluir agendas compartilhadas.|  
 |Adicionar e Personalizar Páginas|Adicionar, alterar ou excluir páginas HTML ou de Web Part e editar o site usando um editor compatível com [!INCLUDE[winSPServ](../../includes/winspserv-md.md)].|X|||Adicionar ou remover uma Web Part do Visualizador de Relatórios.|  
 |Procurar Informações sobre o Usuário|Exibir informações sobre os usuários do site.|X|X|X|Procurar relatórios e outros itens em sites, bibliotecas e pastas diferentes. Publicar relatórios e outros itens em uma biblioteca.|  
 |Enumerar Permissões|Enumerar permissões no site, na lista, pasta, no documento ou item de lista.|X|||Ler permissões para todos os itens de servidor de relatório. Exibir um relatório de clickthrough que usa um modelo de relatório que contém configurações de segurança de item de modelo.|  
-|Gerenciar Alertas|Gerenciar alertas para todos os usuários do site.|X|||Criar, alterar e excluir qualquer assinatura em um site.|  
+|Gerenciar alertas|Gerenciar alertas para todos os usuários do site.|X|||Criar, alterar e excluir qualquer assinatura em um site.|  
 |Usar Interfaces Remotas|Usar as interfaces SOAP, Web DAV ou SharePoint Designer para acessar o site.|X|X|X|Usado para chamar o ponto de extremidade do proxy do URL para o servidor de relatório.|  
 |Aberto|Abrir um site, uma lista ou pasta para acessar itens nesse contêiner.|X|X|X|Ler propriedades de agendas e de itens.|  
   

@@ -1,4 +1,5 @@
 ---
+description: Concedendo permissões para itens do servidor de relatório em um site do SharePoint
 title: Conceder permissões em itens de servidor de relatório em um site do SharePoint | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2dfaece778331dd84a3d24283d11c5721180ef2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373352"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concedendo permissões para itens do servidor de relatório em um site do SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornece recursos de segurança internos que podem ser usados para permitir acesso a itens do servidor de relatório acessados nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões a usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e um servidor de relatório. Você pode usar permissões existentes para carregar definições de relatório e outros documentos, exibir relatórios, criar assinaturas e gerenciar itens.  
@@ -56,7 +57,7 @@ ms.locfileid: "65580033"
  Um administrador de servidor ou de coleção de sites pode definir opções que determinar se outros proprietários de site podem definir permissões. Dependendo do nível de permissões que você tem, talvez você não possa criar nem personalizar os grupos do SharePoint nem os níveis de permissão.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Usando níveis de permissão e grupos predefinidos do SharePoint  
- As recomendações na documentação do produto [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sugerem que você use os grupos padrão do SharePoint (que são *Nome do site* **Proprietários**, *Nome do site* **Membros** e *Nome do site* **Visitantes**) e atribua permissões no nível do site. A maioria dos usuários aos quais você atribui permissões deve ser membros dos grupos *Visitantes* do **nome do site** ou *Membros* do **nome do site**. As permissões no site pai são herdadas ao longo da hierarquia de site. Você pode dividir a herança de permissão por itens específicos que exigem restrições adicionais.  
+ As recomendações na documentação do produto [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] sugerem que você use os grupos padrão do SharePoint (que são *Nome do site* **Proprietários**, *Nome do site* **Membros** e *Nome do site* **Visitantes**) e atribua permissões no nível do site. A maioria dos usuários aos quais você atribui permissões deve ser membros dos grupos *Visitantes do * **nome do site** ou *Membros do * **nome do site**. As permissões no site pai são herdadas ao longo da hierarquia de site. Você pode dividir a herança de permissão por itens específicos que exigem restrições adicionais.  
   
  Os seguintes grupos do SharePoint têm os seguintes níveis de permissão predefinidos:  
   

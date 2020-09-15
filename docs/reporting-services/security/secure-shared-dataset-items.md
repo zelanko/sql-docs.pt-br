@@ -1,4 +1,5 @@
 ---
+description: Proteger itens de conjuntos de dados compartilhados
 title: Proteger itens de conjuntos de dados compartilhados | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80cfeba2128e82c6254ba962e91c6c51461ff955
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373212"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger itens de conjuntos de dados compartilhados
   Em um servidor de relatório, itens de conjuntos de dados compartilhados podem ser usados por vários relatórios. Você pode proteger conjuntos de dados compartilhados para controlar o grau de acesso concedido aos usuários. Por padrão, apenas usuários que são membros do grupo interno **Administradores** podem exibir conjuntos de dados compartilhados, modificar propriedades, habilitar o cache, criar planos de atualização do cache e excluir os itens. Todos os outros usuários devem ter atribuições de função criadas para eles que permitam acesso a um conjunto de dados compartilhado.  
@@ -40,7 +41,7 @@ ms.locfileid: "65570681"
 |Selecione esta tarefa|Para conceder permissão aos usuários para|Funções padrão que incluem a tarefa|  
 |----------------------|---------------------------------|-----------------------------------------|  
 |Exibir relatórios|Exibir o item do conjunto de dados compartilhado na hierarquia de pastas. Sem essa tarefa, o item não estará visível para os usuários e eles talvez não percebam que o conjunto de dados está disponível.|Navegador<br /><br /> Gerenciador de Conteúdo<br /><br /> Construtor de Relatórios<br /><br /> Meus Relatórios|  
-|Gerenciar relatórios|Exibir as propriedades que especificam o nome, a descrição e as informações de conexão. Essa tarefa também é usada para exibir um item de conjunto de dados compartilhado na hierarquia de pastas. Se você escolher essa tarefa, poderá omitir a tarefa "Exibir relatórios".|Gerenciador de Conteúdo<br /><br /> Publicador<br /><br /> Meus Relatórios|  
+|Gerenciar relatórios|Exibir as propriedades que especificam o nome, a descrição e as informações de conexão. Essa tarefa também é usada para exibir um item de conjunto de dados compartilhado na hierarquia de pastas. Se você escolher essa tarefa, poderá omitir a tarefa "Exibir relatórios".|Gerenciador de Conteúdo<br /><br /> Publisher<br /><br /> Meus Relatórios|  
 |Relatórios de consumo|Exibir a definição do conjunto de dados compartilhado.|Gerenciador de Conteúdo<br /><br /> Construtor de Relatórios|  
 |Definir segurança em itens|Criar e modificar atribuições de função que controlam o acesso ao conjunto de dados compartilhado. Essa tarefa deve ser usada com as tarefas "Exibir relatórios" ou "Gerenciar relatórios". Se não for, não terá nenhum efeito porque o usuário não pode selecionar o item.|Gerenciador de Conteúdo|  
   

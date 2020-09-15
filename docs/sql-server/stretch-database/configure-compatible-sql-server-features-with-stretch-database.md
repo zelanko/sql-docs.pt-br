@@ -1,4 +1,5 @@
 ---
+description: Configurar recursos do SQL Server compatíveis com o Stretch Database
 title: Configurar recursos do SQL Server compatíveis
 ms.date: 03/14/2017
 ms.service: sql-server-stretch-database
@@ -8,15 +9,15 @@ ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d558dad38492bcd9ce2bad0eb00a887a2225de33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c1f4df1bd0df0eeb444b009574c4b1a7800d119
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373282"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Configurar recursos do SQL Server compatíveis com o Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
 Siga etapas simples para configurar os seguintes recursos do SQL Server para trabalhar com o Stretch Database.
