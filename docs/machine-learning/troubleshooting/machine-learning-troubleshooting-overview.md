@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 036f4a7b604825f09dc884594e17c50396d84c0e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 732a4c1c37367a6faa78dd3da9919fd1cec2f774
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253626"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178853"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>Como solucionar problemas de aprendizado de máquina no SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Use este artigo como um ponto de partida para solucionar problemas encontrados ao usar o machine learning do SQL Server.
 

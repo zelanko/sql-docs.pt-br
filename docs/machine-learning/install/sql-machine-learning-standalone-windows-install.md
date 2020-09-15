@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885942"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178653"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalar o R Server (autônomo) ou o Machine Learning Server (autônomo) usando a instalação do SQL Server
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 A Instalação do SQL Server inclui uma opção de **recurso compartilhado** para instalar um servidor de aprendizado de máquina autônomo executado fora do SQL Server. Ele é chamado **Machine Learning Server (autônomo)** e inclui R e Python. 
@@ -226,7 +226,7 @@ Uma IDE de desenvolvimento não é instalada como parte da instalação. Para ob
 Os desenvolvedores do R podem começar com alguns exemplos simples e aprender os fundamentos de como o R funciona com o SQL Server. Para a próxima etapa, confira os links a seguir:
 
 + [Início Rápido: Executar o R no T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Análise interna no banco de dados para desenvolvedores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Análise interna no banco de dados para desenvolvedores de R](../tutorials/r-taxi-classification-introduction.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Os desenvolvedores do Python podem aprender a usar o Python com o SQL Server seguindo estes tutoriais:

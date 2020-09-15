@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1857ba03808c4309f2573a7d8e58801d5f80199d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93c36fbfc42ac35d973068d551ecf61ed30791fa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897210"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173734"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurar um cliente de ciência de dados para desenvolvimento em Python nos Serviços de Machine Learning do SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 A integração do Python está disponível no SQL Server 2017 e posterior, quando você inclui a opção do Python em uma [instalação de Serviços de Machine Learning (no banco de dados)](../install/sql-machine-learning-services-windows-install.md). 
 

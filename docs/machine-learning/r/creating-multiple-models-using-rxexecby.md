@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4f0da1fdee47d166fe1b06fd8ce6e8ddea64f4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a8e216069b831e14e4888aced79013ab5b55770
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723846"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173702"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Criar vários modelos usando rxExecBy
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 A função **rxExecBy** no RevoScaleR dá suporte ao processamento paralelo de vários modelos relacionados. Em vez de treinar um modelo grande com base em dados de várias entidades semelhantes, um cientista de dados pode criar rapidamente muitos modelos relacionados, cada um usando dados específicos de uma única entidade. 
 

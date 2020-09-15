@@ -1,6 +1,6 @@
 ---
 title: Pacote revoscalepy do Python
-description: O revoscalepy é um pacote de Python da Microsoft que dá suporte à computação distribuída, a contextos de computação remota e a algoritmos de ciência de dados de alto desempenho. O pacote está incluído nos Serviços de Machine Learning do SQL Server.
+description: O revoscalepy é um pacote de Python da Microsoft que dá suporte à computação distribuída, a contextos de computação remota e a algoritmos de ciência de dados de alto desempenho.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c5932a335dc1789256932f327ba9dab58c6afaf7
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406179"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178593"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (pacote de Python nos Serviços de Machine Learning do SQL Server)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 O **revoscalepy** é um pacote de Python da Microsoft que dá suporte à computação distribuída, a contextos de computação remota e a algoritmos de ciência de dados de alto desempenho. O pacote está incluído nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md).
 
@@ -105,7 +105,7 @@ Na execução local, normalmente, você executa um script Python na linha de com
 
 Quando você estiver pronto para encapsular o script Python dentro de um procedimento armazenado, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), recomendamos reescrever o código como uma única função que tenha entradas e saídas claramente definidas. 
 
-As entradas e as saídas precisam ser quadros de dados **Pandas**. Quando isso for feito, você poderá chamar o procedimento armazenado em qualquer cliente que dê suporte a T-SQL, passar com facilidade consultas SQL como entradas e salvar os resultados em tabelas SQL. Para obter um exemplo, confira [Saiba mais sobre a análise do Python no banco de dados para desenvolvedores do SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+As entradas e as saídas precisam ser quadros de dados **Pandas**. Quando isso for feito, você poderá chamar o procedimento armazenado em qualquer cliente que dê suporte a T-SQL, passar com facilidade consultas SQL como entradas e salvar os resultados em tabelas SQL. Para obter um exemplo, confira [Saiba mais sobre a análise do Python no banco de dados para desenvolvedores do SQL](../tutorials/python-taxi-classification-introduction.md).
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>Como usar o revoscalepy com o microsoftml
 

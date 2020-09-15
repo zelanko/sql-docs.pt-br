@@ -9,15 +9,15 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a4f2c9c30c1655df531ca9b455ecfad3d9c75c7e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 32b546107697dffdf3c77ea292b7b68c5c7dc9b5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247995"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179814"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>Inserir dados de uma tabela SQL em um dataframe Pandas do Python
-[!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Este artigo descreve como inserir dados SQL em um dataframe [Pandas](https://pandas.pydata.org/) usando o pacote [pyodbc](../../connect/python/pyodbc/python-sql-driver-pyodbc.md) no Python. As linhas e colunas de dados contidos no dataframe podem ser usadas para explorar ainda mais os dados.
 

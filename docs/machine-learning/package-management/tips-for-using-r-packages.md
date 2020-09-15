@@ -9,16 +9,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ad2650317958ffd43b0f4b910585d429249115b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 67071e8a13f0f7935064daa6dabdd857a3644d92
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730544"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178916"
 ---
 # <a name="tips-for-using-r-packages"></a>Dicas para usar pacotes de R
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Este artigo fornece dicas úteis sobre o uso de pacotes do R no SQL Server. Essas dicas são para DBAs que não estão familiarizados com o R e desenvolvedores do R experientes que não estão familiarizados com o acesso ao pacote em uma Instância do SQL Server.
 

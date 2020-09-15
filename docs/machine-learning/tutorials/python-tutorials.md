@@ -9,15 +9,15 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f93fc25139a69f80afa15840d254c33d2195b335
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f417a92a00b290f06326433b24b73137a0a424fa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730448"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178543"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>Tutoriais do Python para aprendizado de máquina do SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Este artigo descreve os tutoriais e guias de início rápido do Python para os [Serviços de Machine Learning no SQL Server](../sql-server-machine-learning-services.md) e nos [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
@@ -39,7 +39,7 @@ Este artigo descreve os tutoriais e guias de início rápido de Python para os [
 | [Prever aluguel de esqui com regressão linear](python-ski-rental-linear-regression.md) | Use Python e regressão linear para prever o número de locações de esqui. Use notebooks no Azure Data Studio para preparar dados e treinar o modelo e o T-SQL para implantação de modelo. |
 | [Categorizar clientes usando cluster K-means](python-clustering-model.md) | Use Python para desenvolver e implantar um modelo de cluster K-means para categorizar os clientes. Use notebooks no Azure Data Studio para preparar dados e treinar o modelo e o T-SQL para implantação de modelo. |
 | [Criar um modelo usando revoscalepy](use-python-revoscalepy-to-create-model.md) | Demonstra como executar código de um cliente de Python remoto usando o SQL Server como contexto de computação. O tutorial cria um modelo usando **rxLinMod** da biblioteca **revoscalepy**. |
-| [Análise de dados do Python para desenvolvedores de SQL](sqldev-in-database-python-for-sql-developers.md) | Este passo a passo de ponta a ponta demonstra o processo de criação de uma solução completa em Python usando T-SQL. |
+| [Análise de dados do Python para desenvolvedores de SQL](python-taxi-classification-introduction.md) | Este passo a passo de ponta a ponta demonstra o processo de criação de uma solução completa em Python usando T-SQL. |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | Tutorial | Descrição |

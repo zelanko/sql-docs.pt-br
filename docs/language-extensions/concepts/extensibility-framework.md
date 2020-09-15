@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e52727922f03a6ae078477b8af6cf0171acd053
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 44f32695e91c3c273b024b9f8d7259c59b43014d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722556"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180303"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Arquitetura de extensibilidade nas Extensões de Linguagem do SQL Server
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Saiba mais sobre a arquitetura de extensibilidade usada para as Extensões de Linguagem do SQL Server, que permite executar código externo no SQL Server. No SQL Server 2019, há suporte para Java. O código é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
 
-## <a name="background"></a>Segundo plano
+## <a name="background"></a>Tela de fundo
 
 A finalidade da estrutura de extensibilidade é oferecer uma interface entre o SQL Server e as linguagens externas, como Java. Executando uma linguagem confiável dentro de uma estrutura segura gerenciada pelo SQL Server, os administradores de banco de dados podem manter a segurança enquanto permitem que os cientistas de dados acessem dados empresariais.
 
@@ -90,4 +90,4 @@ Os protocolos de comunicação entre componentes e plataformas de dados são des
 
 ## <a name="next-steps"></a>Próximas etapas
 
-+ [O que são Extensões de Linguagem?](../language-extensions-overview.md)
++ [O que são Extensões de linguagem?](../language-extensions-overview.md)

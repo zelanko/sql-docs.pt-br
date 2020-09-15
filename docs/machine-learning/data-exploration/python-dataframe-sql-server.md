@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: fe671dd00e844fe4789801a67a7ab4fc1c4be94b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6ea7df0bf0e869e1ed70357b0f3aaa4517187254
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242370"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179808"
 ---
 # <a name="insert-python-dataframe-into-sql-table"></a>Inserir um dataframe do Python em uma tabela SQL
-[!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Este artigo descreve como inserir um dataframe do [Pandas](https://pandas.pydata.org/) em um Banco de Dados SQL usando o pacote [pyodbc](../../connect/python/pyodbc/python-sql-driver-pyodbc.md) no Python.
 

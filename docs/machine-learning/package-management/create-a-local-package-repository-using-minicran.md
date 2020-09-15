@@ -10,15 +10,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a980e356496e3e2e1cdbc5010e8f1c6f7ec7d8c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf93d618ad03122cc7eecf641573d70b2b72158e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783509"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173508"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Criar um repositório local de pacotes do R usando o miniCRAN
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Este artigo descreve como instalar pacotes do R offline usando o [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) para criar um repositório local de pacotes e dependências. O **miniCRAN** identifica e baixa os pacotes e dependências em uma única pasta que você copia para outros computadores para instalação offline do pacote do R.
 
