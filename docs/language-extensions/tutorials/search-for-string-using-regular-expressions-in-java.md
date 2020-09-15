@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 669903c59b3fd732418ba5fec94c963675679ea7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dab5079ab3c0447b0895bbc3642f23884317f3c4
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722538"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180485"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Tutorial: Pesquisar uma cadeia de caracteres usando regex (expressões regulares) em Java
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Este tutorial mostra como usar [Extensões de Linguagem do SQL Server](../language-extensions-overview.md) e criar uma classe Java que recebe duas colunas (ID e texto) do SQL Server e uma expressão regular (regex) como um parâmetro de entrada. A classe retorna duas colunas de volta para SQL Server (ID e texto).
 

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7516d23ade89b4d82858c209f46498207f06cde5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea886eed26a2f88711d1405b5130570c09c87d6c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882129"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180483"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Instalar os Serviços de Machine Learning do SQL Server com R e Python em uma máquina virtual do Azure
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Aprenda como instalar o Python e o R com os Serviços de Machine Learning do SQL Server em uma máquina virtual no Azure. Isso elimina as tarefas de instalação e configuração para Serviços de Machine Learning.
 

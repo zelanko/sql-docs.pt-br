@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 569daf4b395e40d9bcaf444aace9565cd9fd3822
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8b384e62220d15c53ddd500adc8260cf6a1b9d8a
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247515"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216739"
 ---
 # <a name="planning-for-reporting-services"></a>Planejamento para o Reporting Services
   Use estes tópicos para entender melhor o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Aprenda a instalar e configurar o ambiente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para melhor atender às suas necessidades.  
@@ -24,7 +24,7 @@ ms.locfileid: "87247515"
   
  [Planejar a implantação de relatório e design de relatório | Reporting Services](https://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
- [Exibir relatórios do Reporting Services em dispositivos Microsoft Surface e Apple iOS](https://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
+ [Exibir relatórios do Reporting Services em dispositivos Microsoft Surface e Apple iOS](https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)  
   
  ![Pequeno ícone de pasta de arquivos](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Pequeno ícone de pasta de arquivos") **Configuração do Reporting Services**  
  [Servidor de Relatório do Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
