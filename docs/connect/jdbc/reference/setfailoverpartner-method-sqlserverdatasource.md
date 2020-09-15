@@ -1,4 +1,5 @@
 ---
+description: Método setFailoverPartner (SQLServerDataSource)
 title: Método setFailoverPartner (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 58604614f5f5025e0e0982f7d191868e3baf23e0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c90a6cd4850ad746bafde4646cd459fbcff3e825
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431878"
 ---
 # <a name="setfailoverpartner-method-sqlserverdatasource"></a>Método setFailoverPartner (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80922335"
 public void setFailoverPartner(java.lang.String serverName)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *serverName*  
   
  Uma **cadeia de caracteres** que contém o nome do servidor de failover.  

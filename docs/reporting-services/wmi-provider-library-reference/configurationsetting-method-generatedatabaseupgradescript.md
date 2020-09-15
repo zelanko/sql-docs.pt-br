@@ -1,4 +1,5 @@
 ---
+description: Método GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)
 title: Método GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ffd8985175c7ad2d8acacc95d85bd15ccba1e34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 85bf6fb0c0dc459fa7626ed9ca5e09f5886c2836
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423210"
 ---
 # <a name="configurationsetting-method---generatedatabaseupgradescript"></a>Método de ConfigurationSetting – GenerateDatabaseUpgradeScript
   Gera um script que pode ser usado para atualizar o banco de dados do servidor de relatório para o esquema do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
@@ -39,7 +40,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
     out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *Databasename*  
  Uma cadeia de caracteres que contém o nome do banco de dados do servidor de relatório a ser atualizado.  
   

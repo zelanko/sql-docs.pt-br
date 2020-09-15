@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Abrir Arquivo
 title: Caixa de diálogo Abrir Arquivo
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 214942feecf0161f373ca588c15510bcd5c0615f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6d9c0a9d83f0004c534f3548cb114f06de2861f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423040"
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
+ Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  
   
 Para acessar essa caixa de diálogo, selecione **Abrir** no menu **Arquivo** e escolha **Arquivo**. Essa caixa de diálogo também é exibida quando você abre arquivos de outros elementos, como a caixa de diálogo **Ferramentas Externas** . No menu **Arquivo** , selecione **Abrir**e escolha **Projeto/Solução** para abrir a caixa de diálogo **Abrir Projeto** semelhante.  
   
@@ -36,7 +37,7 @@ Localize a pasta de projeto existente nesse menu suspenso. A seleção de uma pa
 **Área de Trabalho**  
 Exibe os arquivos e pastas localizadas na área de trabalho.  
   
-**Meus Projetos**  
+**Meus projetos**  
 Exibe os arquivos e pastas na pasta **Projetos** dos usuários.  
   
 **Meu Computador**  
@@ -74,7 +75,7 @@ Fornece opções para organizar e exibir o conteúdo do item selecionado na caix
 **Miniaturas**  
 Exibe miniaturas de itens no painel de exibição.  
   
-**Lado a lado**  
+**Blocos**  
 Exibe arquivos e pastas como ícones grandes.  
   
 **Ícones**  

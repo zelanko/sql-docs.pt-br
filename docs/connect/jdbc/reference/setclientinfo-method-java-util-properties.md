@@ -1,4 +1,5 @@
 ---
+description: Método setClientInfo (java.util.Properties)
 title: Método setClientInfo (java.util.Properties) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d89d266af2ef2409fb0a1a06c4768a0f2c387ce7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 44c70b1f1a8bd88065ecee03cb85aa0ed7502208
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432188"
 ---
 # <a name="setclientinfo-method-javautilproperties"></a>Método setClientInfo (java.util.Properties)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80920912"
 public void setClientInfo (java.util.Properties properties)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *properties*  
   
  Um objeto Properties que contém a lista das propriedades information do cliente para definir.  

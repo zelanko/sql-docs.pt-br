@@ -1,4 +1,5 @@
 ---
+description: Definindo o namespace Item para o método GetProperties
 title: Definindo o namespace de item para o método GetProperties | Microsoft Docs
 Description: Saiba como recuperar propriedades com base no caminho ou na ID de um item usando o método GetProperties e o cabeçalho SOAP ItemNamespaceHeader.
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc0dee4442b18913521deb97c0c9655188f64631
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc0d61726a885b6a2422a4fe048121e65b8642f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423240"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Definindo o namespace Item para o método GetProperties
   Você pode usar o cabeçalho SOAP <xref:ReportService2010.ItemNamespaceHeader> no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para recuperar propriedades de item baseadas em dois identificadores de item diferentes: o caminho completo do item ou a ID do item.  
@@ -120,6 +121,6 @@ class Sample
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Usar cabeçalhos SOAP do Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [Usando cabeçalhos SOAP do Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   

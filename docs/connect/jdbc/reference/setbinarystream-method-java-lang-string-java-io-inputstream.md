@@ -1,4 +1,5 @@
 ---
+description: Método setBinaryStream (java.lang.String, java.io.InputStream)
 title: Método setBinaryStream para o fluxo de entrada | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339c8277-2d08-4094-9fa9-26c8ad3e7348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96f64182f3bab275f69952a030580000dbfb1c3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ce6bfbecdd30409a7bb3b5fe4cf11ebd7039d149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432448"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream"></a>Método setBinaryStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ public void setBinaryStream(java.lang.String parameterName,
                             java.io.InputStream x)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *parameterName*  
   
  Uma **Cadeia de Caracteres** que contém o nome do parâmetro.  

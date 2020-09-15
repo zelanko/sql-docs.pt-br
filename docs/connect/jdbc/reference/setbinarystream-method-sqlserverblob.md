@@ -1,4 +1,5 @@
 ---
+description: Método setBinaryStream (SQLServerBlob)
 title: Método setBinaryStream (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9d4dd274fd77de831f2ea7484cc759ab4cb771d7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dc75a5c48e9e1ce4efeefe646bceeb0d601b0f3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432428"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>Método setBinaryStream (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80928834"
 public java.io.OutputStream setBinaryStream(long pos)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Pos*  
   
  A posição em que a gravação deve ser iniciada no valor BLOB)  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um fluxo de saída.  
   
 ## <a name="exceptions"></a>Exceções  

@@ -1,4 +1,5 @@
 ---
+description: Método setBoolean (SQLServerPreparedStatement)
 title: Método setBoolean (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9742112df6732618eeef07c477af98ff033368fc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ada97b16611f6e1579faf25baba05efb9f6c962c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432388"
 ---
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>Método setBoolean (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public final void setBoolean(int n,
                              boolean x)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *n*  
   
  Um **int** que indica o número do parâmetro.  

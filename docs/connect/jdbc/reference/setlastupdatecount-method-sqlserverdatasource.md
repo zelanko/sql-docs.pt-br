@@ -1,4 +1,5 @@
 ---
+description: Método setLastUpdateCount (SQLServerDataSource)
 title: Método setLastUpdateCount (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5487631a-1107-4169-84ca-b77fd09bea66
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 930950a4aeffd733615be312808892bb10a82a31
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 599fb48870e16ef2adb54c821451d6f3e4895b67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431748"
 ---
 # <a name="setlastupdatecount-method-sqlserverdatasource"></a>Método setLastUpdateCount (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80925789"
 public void setLastUpdateCount(boolean lastUpdateCount)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *lastUpdateCount*  
   
  **true** se lastUpdateCount estiver habilitado. Caso contrário, **false**.  

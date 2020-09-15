@@ -1,4 +1,5 @@
 ---
+description: Método updateFloat (java.lang.String, float)
 title: Método updateFloat (java.lang.String, float) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4563da01d0d00ddaa0aca3fff551691083bd1353
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0badf170e0f4df3f354a78bda87ef83e65b253af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431358"
 ---
 # <a name="updatefloat-method-javalangstring-float"></a>Método updateFloat (java.lang.String, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public void updateFloat(java.lang.String columnName,
                         float x)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  

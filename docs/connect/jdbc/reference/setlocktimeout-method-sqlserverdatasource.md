@@ -1,4 +1,5 @@
 ---
+description: Método setLockTimeout (SQLServerDataSource)
 title: Método setLockTimeout (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 10dca5aa-1851-4326-9ae9-7a8430d12d11
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8143233de52f1272cf63a31f79ed280cf5124a9a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 37b43e351f2b44ed4376acb60150bca0eed516ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431738"
 ---
 # <a name="setlocktimeout-method-sqlserverdatasource"></a>Método setLockTimeout (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80925765"
 public void setLockTimeout(int lockTimeout)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *lockTimeout*  
   
  Um valor **int** que contém o número de milissegundos de espera.  

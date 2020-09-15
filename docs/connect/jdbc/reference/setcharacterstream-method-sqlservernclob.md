@@ -1,4 +1,5 @@
 ---
+description: Método setCharacterStream (SQLServerNClob)
 title: Método setCharacterStream (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a84aac6a02e3fabac2774a41ab8dfc8e99af8b25
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c954ae12be7f7f5a2e494fc7c809b9428ae2bcc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432208"
 ---
 # <a name="setcharacterstream-method-sqlservernclob"></a>Método setCharacterStream (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,12 +30,12 @@ ms.locfileid: "80927200"
 public java.io.Writer setCharacterStream(long pos)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *pos*  
   
  A posição em que a gravação no valor **NCLOB** deve ser iniciada; a primeira posição é 1.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto Writer que representa o fluxo no qual os caracteres Unicode codificados podem ser gravados.  
   
 ## <a name="exceptions"></a>Exceções  

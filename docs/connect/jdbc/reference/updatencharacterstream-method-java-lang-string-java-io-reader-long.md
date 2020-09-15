@@ -1,4 +1,5 @@
 ---
+description: Método updateNCharacterStream (java.lang.String, java.io.Reader, long)
 title: Cadeia de caracteres do método updateNCharacterStream - Reader - long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0582672a9203e8efbae1de9767ff4c24a10919f9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9619cbfa343af4dee48a459a9a69981e3ea7511f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431298"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>Método updateNCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
                                     long length)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnLabel*  
   
  Uma **Cadeia de Caracteres** que contém o rótulo da coluna.  
@@ -50,7 +51,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ## <a name="remarks"></a>Comentários  
  Esse método updateNCharacterStream é especificado pelo método updateNCharacterStream na interface java.sql.ResultSet.  
   
- Esse método passa caracteres Unicode de um objeto Reader para as colunas **nchar**, **nvarchar(max)** , **ntext** e **xml** selecionadas. O uso em outras colunas de tipo de dados lançará uma exceção.  
+ Esse método passa caracteres Unicode de um objeto Reader para as colunas **nchar**, **nvarchar(max)**, **ntext** e **xml** selecionadas. O uso em outras colunas de tipo de dados lançará uma exceção.  
   
  Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   

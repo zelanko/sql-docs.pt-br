@@ -1,4 +1,5 @@
 ---
+description: Método setCharacterStream (int, java.io.Reader)
 title: Método setCharacterStream (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b8d4e1f7-14fc-4590-af98-1eda30d2ca6d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4987a452d0f4d4985dbcaacf53b265aa7d8f1c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cd2b09810329bc79f74616fc964eb18c2efd803
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432318"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>Método setCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ public final void setCharacterStream(int parameterIndex,
                               java.io.Reader reader)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *parameterIndex*  
   
  Um **int** que indica o número do parâmetro.  

@@ -1,4 +1,5 @@
 ---
+description: Método setLogWriter (SQLServerDataSource)
 title: Método setLogWriter (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c4f6e80a84c24ac8666c9cd02ec1df42625c3add
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3f38105acc725f392c91adf193e658ed3ad05ff6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431718"
 ---
 # <a name="setlogwriter-method-sqlserverdatasource"></a>Método setLogWriter (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,8 +35,8 @@ ms.locfileid: "80925750"
 public void setLogWriter(java.io.PrintWriter out)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *out*  
+#### <a name="parameters"></a>Parâmetros  
+ *obre*  
   
  Um objeto PrintWriter.  
   

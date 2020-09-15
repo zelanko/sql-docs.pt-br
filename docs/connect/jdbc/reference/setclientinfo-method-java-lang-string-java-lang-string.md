@@ -1,4 +1,5 @@
 ---
+description: Método setClientInfo (java.lang.String, java.lang.String)
 title: Método setClientInfo (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8d050831-8305-48a8-bd22-207932111040
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 177b92c12ba9daa410de1e65cc3a38b8744f4149
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c5a9dfe96f5ff660ff2a57a3d0af19b01e56765
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432198"
 ---
 # <a name="setclientinfo-method-javalangstring-javalangstring"></a>Método setClientInfo (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ public void setClientInfo (java.lang.String name,
                            java.lang.String value)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *name*  
   
  Uma cadeia de caracteres que contém o nome da propriedade de informações do cliente a ser recuperada.  

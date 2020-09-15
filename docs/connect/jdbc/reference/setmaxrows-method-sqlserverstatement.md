@@ -1,4 +1,5 @@
 ---
+description: Método setMaxRows (SQLServerStatement)
 title: Método setMaxRows (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0dbecd7bd953c43980b307e6737ea1390511fa1a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 544eb34b40bc81afbed34809f3348c5649c3d0be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431758"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>Método setMaxRows (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80925777"
 public final void setMaxRows(int max)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *max*  
   
  Um **int** que indica o número máximo de linhas ou 0 se não houver limite.  

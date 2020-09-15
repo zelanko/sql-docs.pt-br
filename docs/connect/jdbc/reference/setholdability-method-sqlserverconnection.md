@@ -1,4 +1,5 @@
 ---
+description: Método setHoldability (SQLServerConnection)
 title: Método setHoldability (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9250d30222ce537013959e1433d45f6cb2245a39
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7111094bf78e1fa1408ce163d764e52f30274c33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431788"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>Método setHoldability (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80922263"
 public void setHoldability(int nNewHold)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *nNewHold*  
   
  Um valor **int** que contém um dos seguintes níveis de suspensão:  

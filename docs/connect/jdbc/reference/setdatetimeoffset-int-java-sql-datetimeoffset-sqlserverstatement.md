@@ -1,4 +1,5 @@
 ---
+description: setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
 title: setDateTimeOffset(int, java.sql.DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a45711b4f3007f0f3c91f271542784386db99379
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 219e9a2b275065af96c39d0b66094297e427aa40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431988"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80927540"
 public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *parameterIndex*  
   
  Índice da coluna a ser definido.  
@@ -44,7 +45,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 ## <a name="remarks"></a>Comentários  
  O formato de DateTimeOffset é "AAAA-MM-DD HH-MM-SS[.nnnnnnn] [+][-] HH:MM". Use a tabela a seguir para referência.  
   
-|Tipo SQL|Insert|  
+|Tipo SQL|Inserir|  
 |--------------|------------|  
 |DATETIME|Pode inserir apenas: "AAAA-MM-DD hh:mm:ss[.nnn]"|  
 |smalldatetime|Pode inserir apenas: "AAAA-MM-DD hh:mm:ss"|  

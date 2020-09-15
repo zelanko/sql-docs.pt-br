@@ -1,4 +1,5 @@
 ---
+description: Método setInt (SQLServerPreparedStatement)
 title: Método setInt (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5e46b129-9fe1-469f-b2e8-7ce7fb832996
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 805029884b1fdc51bda3d07038839eff4941ffdc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d20e24bc8aeadcd61e684f282efc1c89cc28d325
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431768"
 ---
 # <a name="setint-method-sqlserverpreparedstatement"></a>Método setInt (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public final void setInt(int n,
                          int value)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *n*  
   
  Um **int** que indica o número do parâmetro.  

@@ -1,4 +1,5 @@
 ---
+description: Método de ConfigurationSetting – GetDatabaseVersionDisplayName
 title: Método GetDatabaseVersionDisplayName (WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 598bc82d266bfff12f085275a03598f2caf6fc48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423220"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Método de ConfigurationSetting – GetDatabaseVersionDisplayName
   Obtém o nome para exibição para uma determinada cadeia de caracteres da versão do banco de dados do servidor de relatório.  
@@ -30,7 +31,7 @@ Public Sub GetDatabaseVersionDisplayName(Version As String, DisplayName As Strin
 public void GetDatabaseVersionDisplayName(string Version, string DisplayName, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *Versão*  
  Uma cadeia de caracteres que contém a cadeia de caracteres de versão para um banco de dados do servidor de relatório.  
   

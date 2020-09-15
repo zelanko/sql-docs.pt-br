@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_fetch_object
 title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426298"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +43,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$ctorParams* [OPCIONAL] uma matriz que contém valores passados para o construtor da classe especificada com o parâmetro *$className*. Se o construtor da classe especificada aceitar valores de parâmetro, o parâmetro *$ctorParams* deverá ser usado ao chamar **sqlsrv_fetch_object**.  
   
-*row* [OPCIONAL]: um dos valores a seguir, especificando a linha a ser acessada em um conjunto de resultados que use um cursor rolável. (Se *row* for especificado, *$className* e *$ctorParams* deverão ser especificados explicitamente, mesmo que você especifique null para *$className* e *$ctorParams*.)  
+*row* [OPCIONAL]: Um dos valores a seguir, especificando a linha a ser acessada em um conjunto de resultados que usa um cursor rolável. (Se *row* for especificado, *$className* e *$ctorParams* deverão ser especificados explicitamente, mesmo que você especifique null para *$className* e *$ctorParams*.)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -233,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-A variável **sqlsrv_fetch_object** sempre retorna dados de acordo com os [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obter informações sobre como especificar o tipo de dados do PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+A variável **sqlsrv_fetch_object** sempre retorna dados de acordo com os [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obter informações sobre como especificar o tipo de dados do PHP, confira [Como: especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Se um campo sem nome for retornado, **sqlsrv_fetch_object** descartará o valor do campo e emitirá um aviso. Por exemplo, considere esta instrução Transact-SQL que insere um valor em uma tabela de banco de dados e recupera a chave primária gerada pelo servidor:  
   

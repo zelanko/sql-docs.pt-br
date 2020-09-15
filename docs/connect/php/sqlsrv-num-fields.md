@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_num_fields
 title: sqlsrv_num_fields | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1155a01de68a9c4d45fc2c7e4e6660c581c3bb7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 81f279d758f6dcb212fd20306fb09cb0222a2832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426208"
 ---
 # <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,10 +36,10 @@ Recupera o número de campos em um conjunto de resultados ativo. Essa função p
 sqlsrv_num_fields( resource $stmt)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$stmt*: a instrução na qual o conjunto de resultados de destino está ativo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Um valor inteiro que representa o número de campos no conjunto de resultados ativo. Se ocorrer um erro, será retornado o valor booliano **false** .  
   
 ## <a name="example"></a>Exemplo  

@@ -1,4 +1,5 @@
 ---
+description: Método SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
 title: Método SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e2b3e3c1d3d9fc5193a8c87c2aa96f9ff2d3ba2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1d746ec97ef320cb9527d3a4be4dc3011c7b875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423100"
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>Método de ConfigurationSetting – SetEmailConfiguration
   Configura a extensão de entrega de email usada pelo servidor de relatório para enviar email.  
@@ -39,9 +40,9 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
    out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *SendUsingSMTPServer*  
- Um valor Booleano que indica se o servidor deve usar o servidor SMTP para enviar email. Este valor só pode ser definido como true. O valor padrão é falso.  
+ Um valor Booleano que indica se o servidor deve usar o servidor SMTP para enviar email. Este valor só pode ser definido como true. O valor padrão é false.  
   
  *SMTPServer*  
  Uma cadeia de caracteres que contém o nome ou o endereço IP de um servidor SMTP.  

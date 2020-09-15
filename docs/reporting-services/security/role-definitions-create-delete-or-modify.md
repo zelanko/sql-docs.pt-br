@@ -1,4 +1,5 @@
 ---
+description: Criar, excluir ou modificar uma função (Management Studio)
 title: Criar, excluir ou modificar uma função (Management Studio) | Microsoft Docs
 ms.date: 05/07/2019
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f079b7b16f485b92c60952d082281a1dba52d024
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a238f4421c86edea0d03ab52c1b739520f646222
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423230"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Definições de função – Criar, excluir ou modificar
 

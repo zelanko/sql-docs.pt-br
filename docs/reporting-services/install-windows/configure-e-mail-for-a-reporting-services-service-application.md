@@ -1,4 +1,5 @@
 ---
+description: Configurar o email para um serviço de aplicativo do Reporting Services
 title: Configurar o email para um aplicativo de serviço do Reporting Services | Microsoft Docs
 ms.date: 05/10/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1025ea1de1e349e640b285174ffab694f791fd21
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 689bb92eabac3b909291845cb44bdf951f4f7977
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68221642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427098"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Configurar o email para um serviço de aplicativo do Reporting Services
 

@@ -1,4 +1,5 @@
 ---
+description: Método ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
 title: Método ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fccf663b91dfba2c7b68da1c882c6c6f701e42f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bdd6cc584b43ee72c43eec7abc1ad50398f1b2eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423170"
 ---
 # <a name="configurationsetting-method---listsslcertificatebindings"></a>Método de ConfigurationSetting – ListSSLCertificateBindings
   Retorna uma lista de certificados TLS/SSL instalados no computador.  
