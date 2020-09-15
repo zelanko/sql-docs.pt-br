@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 155df0fc52ffc390a0bf528fb2a907751dbbfe6b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 556fc5e4c785345ede475dcadb2c5673489a279f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916892"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939313"
 ---
 # <a name="schedule-properties-reports-page"></a>Propriedades da Agenda (página Relatórios)
   Use a página de propriedades de agenda do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] em [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] para exibir uma lista de todos os relatórios que usam a agenda compartilhada específica. As agendas podem ser usadas para atualizar instantâneos de relatório, gerar histórico de relatório, engatilhar uma assinatura ou terminar uma cópia armazenada em cache do relatório. Para descobrir como a agenda é usada, exiba a propriedade e as informações de assinatura do relatório.  
@@ -47,7 +47,7 @@ ms.locfileid: "86916892"
  [Agendas](../../reporting-services/subscriptions/schedules.md)   
  [Servidor de Relatório na ajuda F1 do Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Conectar-se a um servidor de relatório no Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Configurar as propriedades gerais de um relatório (Gerenciador de Relatórios)](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [Configurar as propriedades gerais de um relatório (Gerenciador de Relatórios)](https://docs.microsoft.com/sql/reporting-services/reports/configure-execution-properties-for-a-report-report-manager)  
   
   
 

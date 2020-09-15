@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 562b1584a86c290d294c2fc3117a9485e45211e8
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632796"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807070"
 ---
 # <a name="connecting-with-bcp"></a>Conectando com bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -149,3 +149,4 @@ Usado com as opções format e -f format_file, gera um arquivo em formato basead
 ## <a name="see-also"></a>Consulte Também
 
 [Conectando com **sqlcmd**](connecting-with-sqlcmd.md)  
+[Notas de Versão](release-notes-tools.md)

@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: Saiba como usar a pontuação nativa com a função PREDICT T-SQL a fim de gerar valores de previsão para novas entradas de dados quase em tempo real.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/26/2020
+ms.date: 07/29/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 9335e8e9979b09aad070de7bd55c1e61a04488fa
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 762d272661fd9bfaa61781391e42d3d9919d78c1
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242336"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442907"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>Pontuação nativa usando a função T-SQL PREDICT com o machine learning do SQL
 

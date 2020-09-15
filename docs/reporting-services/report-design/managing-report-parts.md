@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: a1c8b7ee7baed3008dece84d1a2f7f0f4e28e8f9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689680"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934251"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
   Partes de relatório podem ser reutilizadas em relatórios paginados por vários usuários e em vários relatórios. Os usuários podem pesquisar partes de relatório no servidor e adicioná-las a um relatório.  Também podem ser informados de atualizações para a parte de relatório no servidor e republicar novas versões de uma parte de relatório. Essas ações de criação de relatório podem ser afetadas e controladas pelas permissões de segurança dos serviços de relatório.  Este tópico revisa as propriedades de parte de relatório e o comportamento depois que elas estão no servidor.  
@@ -90,7 +90,6 @@ ms.locfileid: "83689680"
 ## <a name="see-also"></a>Consulte Também  
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Solução de problemas de partes de relatório (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

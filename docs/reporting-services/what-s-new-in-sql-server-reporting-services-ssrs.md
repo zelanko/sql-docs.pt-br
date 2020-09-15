@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b44e664d75735a6283d12f218b904fbdd07ad481
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248545"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396528"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novidades do SQL Server Reporting Services (SSRS)
 
@@ -233,9 +233,8 @@ A nova versão do SSDT inclui os modelos de projeto para [!INCLUDE[ssRSCurrent](
 
 **Nova Interface do Usuário do Construtor de Relatórios:** A principal interface de usuário do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] agora tem uma aparência moderna com elementos de interface do usuário simplificados.  
 
-|||  
-|-|-|  
 |Novo|Previous|  
+|-|-|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
 **Painel de Parâmetros Personalizados:** Agora você pode personalizar o painel de parâmetros. Usando a superfície de design no Construtor de Relatórios, você pode arrastar um parâmetro para uma coluna e linha específica no painel de parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel. Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  

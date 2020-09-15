@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 21f02918ca00e272292b0f88557677848dae0aab
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 196e542698af55c3469a1851b3f7b315d9410f8d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681485"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939226"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , um ponteiro do medidor indica o valor atual do medidor.   
@@ -44,12 +44,12 @@ ms.locfileid: "84681485"
  Você pode especificar uma extremidade de agulha que possa ser desenhada acima ou abaixo do ponteiro apenas em um ponteiro radial. Todos os estilos de extremidade de agulha são desenhados usando gradações internas que não podem ser modificadas. A exceção é o estilo **RoundedDark** , em que você pode especificar uma cor de gradiente e o estilo de gradiente.  
   
 ##  <a name="setting-a-snapping-interval"></a><a name="SettingSnappingInterval"></a> Como definir um intervalo de ajuste  
- Um intervalo de ajuste define o múltiplo para o qual os valores são arredondados. Por padrão, o medidor apontará para o valor exato do campo especificado no painel de dados. No entanto, talvez você queira arredondar o valor exato para cima ou para baixo de forma que o ponteiro se ajuste a um intervalo predefinido. Por exemplo, se o valor em seu medidor for 34,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 35. Se o valor em seu medidor for 31,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 30. Para obter mais informações, consulte [Definir um intervalo de ajuste em um medidor (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2).  
+ Um intervalo de ajuste define o múltiplo para o qual os valores são arredondados. Por padrão, o medidor apontará para o valor exato do campo especificado no painel de dados. No entanto, talvez você queira arredondar o valor exato para cima ou para baixo de forma que o ponteiro se ajuste a um intervalo predefinido. Por exemplo, se o valor em seu medidor for 34,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 35. Se o valor em seu medidor for 31,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 30. Para obter mais informações, consulte [Definir um intervalo de ajuste em um medidor (Construtor de Relatórios e SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs).  
   
 ##  <a name="specifying-an-image-as-a-pointer-on-a-radial-gauge"></a><a name="SpecifyingImage"></a> Especificando uma imagem como um ponteiro em um medidor radial  
  Além da lista interna dos estilos de ponteiro, é possível especificar uma imagem como um ponteiro. Isso é muito efetivo quando você usa uma imagem para substituir um estilo de ponteiro de agulha existente. A imagem é sobreposta no ponteiro, mas toda a funcionalidade de ponteiro é aplicável. As opções de cor e de gradação não são aplicáveis quando uma imagem é usada no ponteiro.  
   
- Caso a forma da imagem do ponteiro seja irregular, você deve definir a cor como transparente para ocultar as áreas da imagem que não devem ser exibidas no medidor. Quando você define uma cor transparente, o medidor transpõe a imagem no ponteiro existente e corta a imagem para que apenas a forma do ponteiro seja exibida. O medidor redimensiona a imagem para ajustar o tamanho do ponteiro. Quando você especificar uma imagem de um ponteiro, todos os ponteiros subsequentes adicionados acima do medidor serão desenhados abaixo da imagem. Por esse motivo, é melhor não especificar uma imagem para o ponteiro caso haja vários ponteiros no medidor. Para saber mais, confira [Especificar uma imagem como um ponteiro em um medidor (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
+ Caso a forma da imagem do ponteiro seja irregular, você deve definir a cor como transparente para ocultar as áreas da imagem que não devem ser exibidas no medidor. Quando você define uma cor transparente, o medidor transpõe a imagem no ponteiro existente e corta a imagem para que apenas a forma do ponteiro seja exibida. O medidor redimensiona a imagem para ajustar o tamanho do ponteiro. Quando você especificar uma imagem de um ponteiro, todos os ponteiros subsequentes adicionados acima do medidor serão desenhados abaixo da imagem. Por esse motivo, é melhor não especificar uma imagem para o ponteiro caso haja vários ponteiros no medidor. 
   
 ## <a name="see-also"></a>Consulte Também  
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
