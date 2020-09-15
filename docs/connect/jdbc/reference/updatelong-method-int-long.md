@@ -1,4 +1,5 @@
 ---
+description: Método updateLong (int, long)
 title: Método updateLong (int, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f6363288-1415-4b25-8bb3-c34d6211c6d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 27e572b5019a8c1a85e3c1bac5a8f4d5e5dd962c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3192996be9b61f0fb8a8e5d47cc453f36e403c73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353352"
 ---
 # <a name="updatelong-method-int-long"></a>Método updateLong (int, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public void updateLong(int index,
                        long x)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *index*  
   
  Um **int** que indica o índice de coluna.  

@@ -1,4 +1,5 @@
 ---
+description: Método updateDate (int, java.sql.Date)
 title: Método updateDate (int, java.sql.Date) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c5fb1292-a5cf-4cdd-8c4a-d1679944a6d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 172589af18c3643caba2b082a997f2d16f0f3c97
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: af27898aa87cdebcff9ffaa232e92bf4af230d47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353692"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>Método updateDate (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public void updateDate(int index,
                        java.sql.Date x)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *index*  
   
  Um **int** que indica o índice de coluna.  

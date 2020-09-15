@@ -1,4 +1,5 @@
 ---
+description: Método updateNCharacterStream (java.lang.String, java.io.Reader)
 title: Método updateNCharacterStream (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 504d7d06-0227-45e1-8b01-899c3e6006e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bef97b138835f7d019ae44cba9b4d175b52c9547
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4a7df65888a1f56173f1820f0528bdd323a463c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353292"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader"></a>Método updateNCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
                                   java.io.Reader reader)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnLabel*  
   
  Uma **Cadeia de Caracteres** que contém o rótulo da coluna.  
