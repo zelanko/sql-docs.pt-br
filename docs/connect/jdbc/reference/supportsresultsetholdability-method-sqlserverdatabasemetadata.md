@@ -1,4 +1,5 @@
 ---
+description: Método supportsResultSetHoldability (SQLServerDatabaseMetaData)
 title: Método supportsResultSetHoldability (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0ea690a65d4373ea2a287c22ae9b48d40216c76
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0ed1388fd8e3d137fbaae9d7bc8b66235a8a5fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353992"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>Método supportsResultSetHoldability (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80919430"
 public boolean supportsResultSetHoldability(int holdability)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *colocação em espera*  
   
  Um **int** que indica a suspensão do conjunto de resultados, que pode ser um dos seguintes valores:  
@@ -43,7 +44,7 @@ public boolean supportsResultSetHoldability(int holdability)
   
  ResultSet.CLOSE_CURSORS_AT_COMMIT  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se houver suporte. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
