@@ -1,4 +1,5 @@
 ---
+description: Comece executando o Assistente para Habilitar o Banco de Dados para Alongamento
 title: Comece executando o Assistente para Habilitar o Banco de Dados para Alongamento
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -21,15 +22,15 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454347"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Comece executando o Assistente para Habilitar o Banco de Dados para Alongamento
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Para configurar um banco de dados para o Stretch Database, execute o Assistente para Habilitar o Banco de Dados para Alongamento.  Este artigo descreve as informações que você precisa inserir, bem como as escolhas que você deve fazer no assistente.  
@@ -62,7 +63,7 @@ Tabelas com várias linhas aparecem na parte superior da lista classificada. Ant
   
  ![Página de seleção de tabelas do assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-2.png "Página de seleção de tabelas do assistente do Stretch Database")  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |(sem título)|Marque a caixa de seleção nessa coluna para habilitar a tabela selecionada para Stretch.|  
 |**Nome**|Especifica o nome da coluna no banco de dados.|  
@@ -169,7 +170,7 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
  ![Página de resumo do assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Página de resumo do assistente do Stretch Database")  
   
 ##  <a name="results"></a><a name="Results"></a> Resultados  
- Revise os resultados.  
+ Examine os resultados.  
   
  Para monitorar o status da migração de dados, veja [Monitorar e solucionar problemas de migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
@@ -188,7 +189,7 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
   
 -   [Pausar e retomar a migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [Gerenciar e solucionar problemas no Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [Gerenciar e solucionar problemas do Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [Fazer backup de bancos de dados habilitados para Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Método supportsNonNullableColumns (SQLServerDatabaseMetaData)
 title: Método supportsNonNullableColumns (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7c32ea64-460e-4636-8a3b-07c8abeed687
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 124cfc279c11d09ee7d1696e17d8a6cf943409b1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6f7ef982726532c66448cd5dd5fd46219db8fba0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450298"
 ---
 # <a name="supportsnonnullablecolumns-method-sqlserverdatabasemetadata"></a>Método supportsNonNullableColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

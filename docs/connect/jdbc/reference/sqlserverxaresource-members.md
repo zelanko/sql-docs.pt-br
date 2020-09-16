@@ -1,4 +1,5 @@
 ---
+description: Membros SQLServerXAResource
 title: Membros de SQLServerXAResource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6d41f89ce541d6bb6497ad0702511c303704a41b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0f772627bf8fb2265bfc95d25416d0f64f39601
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458145"
 ---
 # <a name="sqlserverxaresource-members"></a>Membros SQLServerXAResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80925666"
   
 ## <a name="fields"></a>Campos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|Usado para permitir transações XA estritamente acopladas, que possuem diferentes IDs de transação de ramificação XA (XIDs), mas que têm a mesma ID de transação global (GTRID).|  
   
@@ -39,7 +40,7 @@ ms.locfileid: "80925666"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|Confirma a transação global especificada pelo objeto Xid fornecido.|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|Termina o trabalho executado em nome de uma ramificação de transação.|  

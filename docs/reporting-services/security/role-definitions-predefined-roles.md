@@ -1,4 +1,5 @@
 ---
+description: Definições de função – funções predefinidas
 title: Definições de função – funções predefinidas | Microsoft Docs
 ms.date: 06/10/2020
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454518"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definições de função – funções predefinidas
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  
@@ -55,7 +56,7 @@ ms.locfileid: "84716733"
 ### <a name="content-manager-tasks"></a>Tarefas do gerenciador de conteúdo  
  A tabela a seguir relaciona as tarefas incluídas na função **Gerenciador de Conteúdo**:  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Criar relatórios vinculados|Criar relatórios vinculados com base em um relatório não vinculado.|  

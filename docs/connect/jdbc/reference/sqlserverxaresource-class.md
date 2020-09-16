@@ -1,4 +1,5 @@
 ---
+description: Classe SQLServerXAResource
 title: Classe SQLServerXAResource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: df957b79-536f-4db7-b6ac-3d59343559fc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 048b9a2a69b33bccc60b35ab70bd954751237605
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8126ecb70b0985845536d6d023937df6bbd344ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458188"
 ---
 # <a name="sqlserverxaresource-class"></a>Classe SQLServerXAResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

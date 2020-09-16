@@ -1,4 +1,5 @@
 ---
+description: Método updateBytes (java.lang.String, byte)
 title: Método updateBytes (java.lang.String, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2471b9c8d3aa33882b0494842011386043e16d78
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 566d105fd5b7fcb1dde0cb6616c02884afcc5758
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458061"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>Método updateBytes (java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public void updateBytes(java.lang.String columnName,
                         byte[] x)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  

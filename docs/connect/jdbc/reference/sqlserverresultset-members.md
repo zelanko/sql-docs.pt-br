@@ -1,4 +1,5 @@
 ---
+description: Membros de SQLServerResultSet
 title: Membros SQLServerResultSet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17d15be7b332d899aa35a0ce7c3d7c2b9cac1edf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458208"
 ---
 # <a name="sqlserverresultset-members"></a>Membros de SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80927131"
   
 ## <a name="fields"></a>Campos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Usado para especificar um tipo de simultaneidade otimista de leitura/gravação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem bloqueios de linha.|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Usado para especificar um tipo de simultaneidade otimista de leitura/gravação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem bloqueios de linha.|  
@@ -40,13 +41,13 @@ ms.locfileid: "80927131"
   
 ## <a name="inherited-fields"></a>Campos herdados  
   
-|Classe herdada de:|DESCRIÇÃO|  
+|Classe herdada de:|Descrição|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT, CONCUR_READ_ONLY, CONCUR_UPDATABLE, FETCH_FORWARD, FETCH_REVERSE, FETCH_UNKNOWN, HOLD_CURSORS_OVER_COMMIT, TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|Move o cursor para a linha especificada no objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) em questão.|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|Move o cursor para depois da última linha do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
@@ -105,7 +106,7 @@ ms.locfileid: "80927131"
 |[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|Move o cursor para a última linha no objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|Move o cursor para a posição de cursor lembrada, geralmente a linha atual.|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|Move o cursor para a linha de inserção.|  
-|[next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Move o cursor uma linha para baixo a partir da posição atual.|  
+|[avançar](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Move o cursor uma linha para baixo a partir da posição atual.|  
 |[Anterior](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|Move o cursor para a linha anterior no objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|Atualiza a linha atual com seu valor mais recente no banco de dados.|  
 |[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|Move o cursor de acordo com um número de linhas fornecido em relação à linha atual, em uma direção positiva ou negativa.|  

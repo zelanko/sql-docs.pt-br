@@ -1,4 +1,5 @@
 ---
+description: Método updateShort (java.lang.String, short)
 title: Método updateShort (java.lang.String, short) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1e596e99-11ce-4a57-b247-e40078922036
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e516f930d5482b84ffff4827b0ae93225fc8c5a3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5346d765c12f11b855dfb1a50693158d8c5a247e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450058"
 ---
 # <a name="updateshort-method-javalangstring-short"></a>Método updateShort (java.lang.String, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public void updateShort(java.lang.String columnName,
                         short x)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  

@@ -1,4 +1,5 @@
 ---
+description: Método de ConfigurationSetting – GenerateDatabaseCreationScript
 title: Método de ConfigurationSetting – GenerateDatabaseCreationScript | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bcbcf0fde93dbba2e1d664ef7768232355ba5de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d827c26e316280c1946f90bc35d69427fc672df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454508"
 ---
 # <a name="configurationsetting-method---generatedatabasecreationscript"></a>Método de ConfigurationSetting – GenerateDatabaseCreationScript
   Gera um SQL Script que pode ser usado para criar um banco de dados do servidor de relatório.  
@@ -38,7 +39,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
     Boolean IsSharePointMode, out string Script, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *Databasename*  
  Uma cadeia de caracteres que contém o nome do banco de dados do servidor de relatório a ser criado.  
   

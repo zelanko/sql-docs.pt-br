@@ -1,4 +1,5 @@
 ---
+description: Conectando-se com criptografia
 title: Conectando-se com criptografia | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4cb802a7173a58e02626ec7b3242a36e7ec92465
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1f60a186626514ed5532cc2ffc0fa4ffd1af0674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438458"
 ---
 # <a name="connecting-with-encryption"></a>Conectando-se com criptografia
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

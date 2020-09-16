@@ -1,4 +1,5 @@
 ---
+description: Versão de amostra do Azure Key Vault 6.2.2
 title: Versão de amostra do Azure Key Vault 6.2.2 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d65c78ac09a8e967f0f9d8c04ccc917e97aa2361
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b32fdaac01c257bc8b009f6cba1f40a92e1c21d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438488"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Versão de amostra do Azure Key Vault 6.2.2
 

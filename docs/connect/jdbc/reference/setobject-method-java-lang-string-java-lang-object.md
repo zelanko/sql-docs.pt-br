@@ -1,4 +1,5 @@
 ---
+description: Método setObject (java.lang.String, java.lang.Object)
 title: Método setObject (java.lang.String, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 14b84409-5510-4642-a83b-732d8511c5b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8cc0f284b504cf0ea0a8d757ed626de360ac7ed
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d36ad130ad7a4e6b076b5ee1acba20690cfd316a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458492"
 ---
 # <a name="setobject-method-javalangstring-javalangobject"></a>Método setObject (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public void setObject(java.lang.String sCol,
                       java.lang.Object o)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
@@ -52,7 +53,7 @@ public void setObject(java.lang.String sCol,
   
  Esse método converte o parâmetro especificado para um CHAR se um NULL for dado, antes de enviá-lo ao banco de dados. Se o parâmetro for declarado como binário, varbinary ou um tipo SQL de imagem, uma exceção será lançada quando a instrução for executada.  
   
- No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 e versões posteriores, o comportamento desse método foi modificado pela propriedade de conexão **sendTimeAsDatetime** ([Configuração das propriedades de conexão](../../../connect/jdbc/setting-the-connection-properties.md)) e [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 e versões posteriores, o comportamento desse método foi modificado pela propriedade de conexão **sendTimeAsDatetime** ([Definir as propriedades de conexão](../../../connect/jdbc/setting-the-connection-properties.md)) e [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
  Para mais informações, confira [Como configurar a maneira como os valores de java.sql.Time são enviados ao servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   

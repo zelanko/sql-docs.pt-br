@@ -1,4 +1,5 @@
 ---
+description: Membros de SQLServerConnection
 title: Membros de SQLServerConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7000c8737d8d950968a9074e092a88c738941e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 75a3670a0f7e958f1976e387acdaa02a8449d202
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458278"
 ---
 # <a name="sqlserverconnection-members"></a>Membros de SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,19 +28,19 @@ ms.locfileid: "80921060"
   
 ## <a name="fields"></a>Campos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|Usado para especificar o nível de isolamento da transação de instantâneo.|  
   
 ## <a name="inherited-fields"></a>Campos herdados  
   
-|Classe herdada de:|DESCRIÇÃO|  
+|Classe herdada de:|Descrição|  
 |---------------------------|-----------------|  
 |java.sql.Connection|TRANSACTION_NONE, TRANSACTION_READ_COMMITTED, TRANSACTION_READ_UNCOMMITTED, TRANSACTION_REPEATABLE_READ, TRANSACTION_SERIALIZABLE|  
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|Limpa todos os avisos relatados para o objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Libera imediatamente o banco de dados do objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) em questão e os recursos do JDBC, em vez de aguardar que eles sejam liberados automaticamente.|  

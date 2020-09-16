@@ -1,4 +1,5 @@
 ---
+description: Desabilitar Banco de Dados de Stretch e retornar dados remotos
 title: Desabilitar Banco de Dados de Stretch e retornar dados remotos
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 80974811f45a88b740aa8d84ea9ac67c2c2c1c07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed34730c85a8d492bb40e3013ea5a9a05fc01d90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454363"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Desabilitar Banco de Dados de Stretch e retornar dados remotos
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Para desabilitar o Stretch Database de uma tabela, selecione **Stretch** para uma tabela no SQL Server Management Studio. Então, selecione uma das seguintes opções.  

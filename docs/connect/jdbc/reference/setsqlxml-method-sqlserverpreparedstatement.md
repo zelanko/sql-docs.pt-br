@@ -1,4 +1,5 @@
 ---
+description: Método setSQLXML (SQLServerPreparedStatement)
 title: Método setSQLXML (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 70bbdde0-75f7-4169-88c5-dbbe2c4bcd03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 945608bd7088046db0f7023e5fbae21d55f33142
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 352f46f4cbe8387aaffbf0eb0f13d6046c1db5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458288"
 ---
 # <a name="setsqlxml-method-sqlserverpreparedstatement"></a>Método setSQLXML (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ public final void setSQLXML(int parameterIndex,
                             java.sql.SQLXML xmlObject)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *parameterIndex*  
   
  Um **int** que indica o índice do parâmetro.  

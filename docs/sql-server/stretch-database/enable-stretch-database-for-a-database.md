@@ -1,4 +1,5 @@
 ---
+description: Enable Stretch Database for a database
 title: Enable Stretch Database for a database
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86ef68956fd948e485b221514dad588af40f4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454375"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Para configurar um banco de dados para o Stretch Database, selecione **Tarefas | Stretch | Habilitar** para um banco de dados no SQL Server Management Studio a fim de abrir o assistente **Habilitar Banco de Dados para Stretch** . Você também pode usar o Transact-SQL de modo a habilitar o Stretch Database para um banco de dados.  
@@ -138,7 +139,7 @@ GO
   
 -   [Pausar e retomar a migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [Gerenciar e solucionar problemas no Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [Gerenciar e solucionar problemas do Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [Fazer backup de bancos de dados habilitados para Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   

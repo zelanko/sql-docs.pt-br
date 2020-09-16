@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2020
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235fdf00922453b90979f5f8d5b6c720b7dac3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449961"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +36,13 @@ Recupera metadados para os campos de uma instrução preparada. Para obter infor
 sqlsrv_field_metadata( resource $stmt)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$stmt*: um recurso de instrução para o qual os metadados de campo são pesquisados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Uma **matriz** de matrizes ou **false**. A matriz consiste em uma matriz para cada campo no conjunto de resultados. Cada submatriz tem chaves, conforme descrito na tabela a seguir. Se ocorrer um erro na recuperação de metadados do campo, será retornado **false** .  
   
-|Chave|DESCRIÇÃO|  
+|Chave|Descrição|  
 |-------|---------------|  
 |Nome|Nome da coluna correspondente ao campo.|  
 |Type|Valor numérico que corresponde a um tipo SQL.|  
@@ -58,7 +59,7 @@ A tabela a seguir fornece mais informações sobre as chaves para cada submatriz
 |binary|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
-|date|SQL_TYPE_DATE (91)|10/10|0/0||  
+|Data|SQL_TYPE_DATE (91)|10/10|0/0||  
 |DATETIME|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
@@ -76,7 +77,7 @@ A tabela a seguir fornece mais informações sobre as chaves para cada submatriz
 |SMALLINT|SQL_SMALLINT (5)|||2 bytes|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
 |sql_variant|SQL_SS_VARIANT (-150)|||variável|  
-|text|SQL_LONGVARCHAR (-1)|||2 GB|  
+|texto|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 bytes|  
 |TINYINT|SQL_TINYINT (-6)|||1 byte|  

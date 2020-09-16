@@ -1,4 +1,5 @@
 ---
+description: Construtor SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, booliano)
 title: Construtor SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -13,12 +14,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 95217b384788ea78bd389948930ba34f580036ec
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0a0ee96aa32378e69f01fb8865cd773c30287416
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450468"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>Construtor SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, booliano)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public SQLServerException(java.lang.Object obj,
             
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *obj*  
   
  O buffer de E/S que gerou a exceção.

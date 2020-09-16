@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
 title: Caixa de diálogo Índices Espaciais
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ffbabe94a55328a4de6bd6c85bcaa5af01b3fa8c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e8da73314062051bf93da1fba6912612b20e1a9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446020"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Use a caixa de diálogo **Índices Espaciais** em colunas de tipo de dados de **geometria** ou **geografia** (*colunas espaciais*), que não podem ser indexadas usando a caixa de diálogo **Índice/Chaves** . Cada coluna espacial pode ter mais de um índice espacial, mas eles devem ser criados um de cada vez.  
+ Use a caixa de diálogo **Índices Espaciais** em colunas de tipo de dados de **geometria** ou **geografia** (*colunas espaciais*), que não podem ser indexadas usando a caixa de diálogo **Índice/Chaves**. Cada coluna espacial pode ter mais de um índice espacial, mas eles devem ser criados um de cada vez.  
   
 Para obter informações sobre restrições de criação de índices espaciais, consulte [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md).  
   

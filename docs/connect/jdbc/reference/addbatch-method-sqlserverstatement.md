@@ -1,4 +1,5 @@
 ---
+description: Método addBatch (SQLServerStatement)
 title: Método addBatch (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 95924a8b-a43c-4133-aff6-1d712e60e234
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 180c9cf6976bdea44e7c6a4f23a3b35abdcd94ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 07db37fbc737d5ab83762b6f9b57f09fb09012ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438278"
 ---
 # <a name="addbatch-method-sqlserverstatement"></a>Método addBatch (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80923004"
 public void addBatch(java.lang.String sql)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sql*  
   
  Uma **String** que contém uma instrução SQL.  

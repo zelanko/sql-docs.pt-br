@@ -1,4 +1,5 @@
 ---
+description: Método setPortNumber (SQLServerDataSource)
 title: Método setPortNumber (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e533001c334f9f448a39f31cbfc34ef93f46f08d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbf1cccfab3cef60193cc9b45921c203821cbfca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458478"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>Método setPortNumber (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80920765"
 public void setPortNumber(int portNumber)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *portNumber*  
   
  Um valor **int** que contém o número da porta.  

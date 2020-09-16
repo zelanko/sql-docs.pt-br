@@ -1,4 +1,5 @@
 ---
+description: Tratando metadados com o JDBC Driver
 title: Como tratar metadados com o JDBC Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 859932404e14a9ab1216665d211e1b6734ca9726
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 633629005eef8e9a47f616637e646886666f2200
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438418"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>Tratando metadados com o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "80924685"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Como usar metadados de banco de dados](../../connect/jdbc/using-database-metadata.md)|Descreve como recuperar informações de metadados sobre o banco de dados conectado atualmente.|  
 |[Como usar metadados do conjunto de resultados](../../connect/jdbc/using-result-set-metadata.md)|Descreve como recuperar informações de metadados sobre o conjunto de resultados atual.|  

@@ -1,4 +1,5 @@
 ---
+description: Método setPassword (SQLServerDataSource)
 title: Método setPassword (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0db06631-5e68-488c-a9f1-6e5052c0759d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c8338bf88ae4787ef6cf6b2a6783525da5a10504
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9b7ad411decdc4321af8a8c657a4637225fa2884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458489"
 ---
 # <a name="setpassword-method-sqlserverdatasource"></a>Método setPassword (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80920775"
 public void setPassword(java.lang.String password)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *password*  
   
  Uma **String** que contém a senha.  

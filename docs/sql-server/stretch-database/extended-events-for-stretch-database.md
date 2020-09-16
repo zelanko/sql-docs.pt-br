@@ -1,4 +1,5 @@
 ---
+description: Eventos Estendidos para o Stretch Database
 title: Eventos Estendidos para o Stretch Database
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -8,15 +9,15 @@ ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02fe62db4f59916f5b97624c4b4560a33738d761
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454336"
 ---
 # <a name="extended-events-for-stretch-database"></a>Eventos Estendidos para o Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
 O Stretch Database fornece um conjunto de eventos estendidos para solução de problemas.  
@@ -81,5 +82,5 @@ stretch_table_validation_error|Relata a conclusão da validação para uma tabel
 stretch_unprovision_table_start|Relata o início do cancelamento do provisionamento da tabela de ampliação  
   
 ## <a name="see-also"></a>Consulte Também  
-[Gerenciar e solucionar problemas no Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+[Gerenciar e solucionar problemas do Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 

@@ -1,4 +1,5 @@
 ---
+description: Método supportsSchemasInDataManipulation (SQLServerDatabaseMetaData)
 title: Método supportsSchemasInDataManipulation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 812dc551-c718-494e-80d9-75732464c8ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8f1c2c73c6397b2618798ddf4d32cdbedf9fa59a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 074ea237792e5f61cef517a42323d2e937823e51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450238"
 ---
 # <a name="supportsschemasindatamanipulation-method-sqlserverdatabasemetadata"></a>Método supportsSchemasInDataManipulation (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

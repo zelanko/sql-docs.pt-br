@@ -1,4 +1,5 @@
 ---
+description: Suporte ao conjunto de caracteres nacionais
 title: Suporte ao conjunto de caracteres nacionais | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ceb2d12ba3d062b3ba592eb6baa93fe93223907
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 394d81f28921bfc4e68204778ed6fcdf1e2fb9e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438338"
 ---
 # <a name="national-character-set-support"></a>Suporte ao conjunto de caracteres nacionais
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

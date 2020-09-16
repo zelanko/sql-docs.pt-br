@@ -1,4 +1,5 @@
 ---
+description: Classe SQLServerException
 title: Classe SQLServerException | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af5ef257-7cf6-4db3-b1ee-07d22d82bef1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2ed370fdb002563203ffbc403bda54acef688af
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b096f1b41cc817b216cea9ff3618e7731abd5003
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450477"
 ---
 # <a name="sqlserverexception-class"></a>Classe SQLServerException
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

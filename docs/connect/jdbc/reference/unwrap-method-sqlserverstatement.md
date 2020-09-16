@@ -1,4 +1,5 @@
 ---
+description: Método unwrap (SQLServerStatement)
 title: Método unwrap (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5b0ff575d60235658fe29621ac935cea713362dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 792bd67690453bbef4ac77dae8910b103eab2957
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458058"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>Método unwrap (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,12 +30,12 @@ ms.locfileid: "80926082"
 public <T> T unwrap(Class<T> iface)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *iface*  
   
  Uma classe do tipo **T** que define uma interface.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto que implementa a interface especificada.  
   
 ## <a name="exceptions"></a>Exceções  

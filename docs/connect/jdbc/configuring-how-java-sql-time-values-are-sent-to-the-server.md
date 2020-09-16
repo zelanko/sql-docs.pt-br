@@ -1,4 +1,5 @@
 ---
+description: Configuração de como os valores de java.sql.Time são enviados ao servidor
 title: Configurando como os valores java.sql.Time são enviados ao servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1aa775d7b9d2b4778cfded5be1f5ffe16aca736
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a360def7656fb270267372d5b226b68d30aeaf57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438468"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuração de como os valores de java.sql.Time são enviados ao servidor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Se você usar um objeto java.sql.Time ou o tipo java.sql.Types.TIME do JDBC para definir um parâmetro, poderá configurar como o valor java.sql.Time é enviado ao servidor; como um tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]time**ou um tipo**datetime**do**.  
+  Se você usar um objeto java.sql.Time ou o tipo java.sql.Types.TIME do JDBC para definir um parâmetro, poderá configurar como o valor java.sql.Time é enviado ao servidor; como um tipo  **time** ou um tipo **datetime** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Esse cenário se aplica ao usar um dos seguintes métodos:  
   
@@ -40,9 +41,9 @@ ms.locfileid: "80922521"
   
  Você pode modificar de forma programática o valor da propriedade de conexão **sendTimeAsDatetime** com [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- As versões de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores à [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] não dão suporte o tipo de dados **time**. Dessa forma, os aplicativos que utilizam o java.sql.Time geralmente armazenam os valores de java.sql.Time como tipos de dados **datetime** ou **smalldatetime** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ As versões de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores à [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] não dão suporte o tipo de dados **time**. Dessa forma, os aplicativos que utilizam o java.sql.Time geralmente armazenam os valores de java.sql.Time como tipos de dados **datetime** ou **smalldatetime do ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Se quiser usar os tipos de dados **datetime** e **smalldatetime**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao trabalhar com valores java.sql.Time values, você deverá definir a propriedade de conexão **sendTimeAsDatetime** como **true**. Se quiser usar o tipo de dados **time** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao trabalhar com valores java.sql.Time, você deverá definir a propriedade de conexão **sendTimeAsDatetime** para **false**.  
+ Se quiser usar os tipos de dados **datetime** e **smalldatetime**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao trabalhar com valores java.sql.Time values, você deverá definir a propriedade de conexão **sendTimeAsDatetime** como **true**. Se quiser usar o tipo de dados **time do ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao trabalhar com valores java.sql.Time, você deverá definir a propriedade de conexão **sendTimeAsDatetime** para **false**.  
   
  Esteja ciente de que, ao enviar valores java.sql.Time para um parâmetro cujo tipo de dados também pode armazenar a data, as datas padrão serão diferentes dependendo de se o valor java.sql.Time é enviado como um valor **datetime** (1/1/1970) ou **time** (1/1/1900). Para obter mais informações sobre conversões de dados ao enviar dados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Usando dados de data e hora](https://go.microsoft.com/fwlink/?LinkID=145211).  
   

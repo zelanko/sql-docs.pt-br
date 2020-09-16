@@ -1,4 +1,5 @@
 ---
+description: Desinstalar o Construtor de Relatórios
 title: Desinstalar o Construtor de Relatórios | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed8c8eb56d23d03ab77aa7bf7cc3ce3e0553e614
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e92f5eafad039858022a915fd0006ea3130a2c75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65502651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446039"
 ---
 # <a name="uninstall-report-builder"></a>Desinstalar o Construtor de Relatórios
 

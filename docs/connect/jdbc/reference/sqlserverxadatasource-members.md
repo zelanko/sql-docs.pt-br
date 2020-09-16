@@ -1,4 +1,5 @@
 ---
+description: Membros de SQLServerXADataSource
 title: Membros de SQLServerXADataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0cae969212f6bff5b0f8c2e51190927a1f3a7c1f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ed2d2515dc742eca0ece6036dbf0b06dd9a9530c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458193"
 ---
 # <a name="sqlserverxadatasource-members"></a>Membros de SQLServerXADataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80926934"
   
 ## <a name="constructors"></a>Construtores  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[SQLServerXADataSource ()](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|Inicializa uma nova instância da classe [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md).|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80926934"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|(Herdado de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Retorna o valor da propriedade de conexão **applicationIntent**.|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|(Herdado de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Retorna o nome do aplicativo.|  

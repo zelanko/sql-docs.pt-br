@@ -1,4 +1,5 @@
 ---
+description: Conformidade do JDBC 4.3 com o JDBC Driver
 title: Conformidade com JDBC 4.3 para o driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 099664892564a6b38e270f934cb3208029fdd05f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e4ce01ec71649549166aa6a3d2f33d9dbb157e08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438348"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>Conformidade do JDBC 4.3 com o JDBC Driver
 
@@ -28,7 +29,7 @@ A partir da versão 6.4, o Microsoft JDBC Driver para SQL Server passou a ser co
 
 Com o Microsoft JDBC Driver 7.0 para SQL Server, agora o driver é compatível com JAVA 10 e oferece suporte às APIs mencionadas abaixo. O driver gera `SQLFeatureNotSupportedException` para outros métodos não implementados das especificações do JDBC 4.3.
 
-|Nova API|DESCRIÇÃO|Implementação notável|  
+|Nova API|Descrição|Implementação notável|  
 |-----------------|-----------------|-------------------------------|  
 |void java.sql.connection.beginRequest()|Indica para o driver que uma solicitação, uma unidade de trabalho independente, está sendo inicializada nessa conexão. Para obter mais detalhes, confira [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Salva os valores dos campos de conexão modificáveis por meio de métodos públicos da API: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
 |void java.sql.connection.endRequest()|Indica para o driver que uma solicitação, uma unidade de trabalho independente, foi concluída. Para obter mais detalhes, confira [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Fecha as instruções criadas durante a unidade de trabalho e reverte todas as transações em aberto. O método também reverte as alterações nos campos de conexão listados acima.|

@@ -1,4 +1,5 @@
 ---
+description: Método setStatementPoolingCacheSize (SQLServerDataSource)
 title: Método setStatementPoolingCacheSize (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 289449c287a13ebb63451cf87472bbaaaba8263c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 07f2ab026fa0432124b554d31e52cf179ddaceea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450778"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverdatasource"></a>Método setStatementPoolingCacheSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80924435"
 public void setStatementPoolingCacheSize(boolean statementPoolingCacheSize);  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *statementPoolingCacheSize*  
   
  O novo valor da propriedade de conexão **statementPoolingCacheSize**.  

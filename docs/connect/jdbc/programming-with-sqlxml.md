@@ -1,4 +1,5 @@
 ---
+description: Programando com SQLXML
 title: Como programar com SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6571c9592514bb0f29c796ae5a671363f3214ca7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67766bb505750a4fbaaa1081dcf1d0441a44166e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438318"
 ---
 # <a name="programming-with-sqlxml"></a>Programando com SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -50,14 +51,14 @@ ms.locfileid: "80920634"
   
 |Nome do método|Objeto SQLXML de getter<br /><br /> (pode ser lido)|Objeto SQLXML de setter<br /><br /> (gravável)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|Sem suporte|Suportado|  
-|CallableStatement.setObject()|Sem suporte|Suportado|  
-|PreparedStatement.setSQLXML()|Sem suporte|Suportado|  
-|PreparedStatement.setObject()|Sem suporte|Suportado|  
-|ResultSet.updateSQLXML()|Sem suporte|Suportado|  
-|ResultSet.updateObject()|Sem suporte|Suportado|  
-|ResultSet.getSQLXML()|Suportado|Sem suporte|  
-|CallableStatement.getSQLXML()|Suportado|Sem suporte|  
+|CallableStatement.setSQLXML()|Sem suporte|Com suporte|  
+|CallableStatement.setObject()|Sem suporte|Com suporte|  
+|PreparedStatement.setSQLXML()|Sem suporte|Com suporte|  
+|PreparedStatement.setObject()|Sem suporte|Com suporte|  
+|ResultSet.updateSQLXML()|Sem suporte|Com suporte|  
+|ResultSet.updateObject()|Sem suporte|Com suporte|  
+|ResultSet.getSQLXML()|Com suporte|Sem suporte|  
+|CallableStatement.getSQLXML()|Com suporte|Sem suporte|  
   
  Como mostrado na tabela acima, os métodos SQLXML de setter não funcionarão com os objetos SQLXML que podem ser lidos; da mesma forma, os métodos de getter não funcionarão com os objetos SQLXML que podem ser escritos.  
   
