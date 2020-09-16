@@ -1,29 +1,31 @@
 ---
 title: Gerenciar indicadores
 description: A janela Indicadores de um editor de códigos permite que você crie links para localizações no código. Saiba como criar, excluir, ativar e desabilitar indicadores e como usá-los para navegar pelo código.
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b75287c722757e6bb6f12a7eb282b7f141a9483
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 61053e087f572e586bfd37e20a2efa6e659dabfd
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122597"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093544"
 ---
 # <a name="manage-bookmarks"></a>Gerenciar indicadores
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Quando estiver trabalhando em um editor de códigos, a janela **Indicadores** permite criar links com linhas específicas de código dentro de seu documento. Você pode exibir essa janela no menu **Exibir** .  
+
+Quando estiver trabalhando em um editor de códigos, a janela **Indicadores** permite criar links com linhas específicas de código dentro de seu documento. Você pode exibir essa janela no menu **Exibir** .  
   
  Para criar e navegar pelos indicadores, clique nos botões localizados na barra de ferramentas **TextEditor** na parte superior da janela **Indicadores** . Você pode adicionar e remover indicadores, pode ativá-los ou desabilitá-los e organizá-los em pastas. Alguns comandos também estão disponíveis no menu de atalho na janela **Indicadores** . Para adicionar ou remover um indicador, posicione o ponto de inserção na linha desejada do Editor e clique em **Alternar um indicador**. Para ativar um indicador, marque sua caixa de seleção na janela **Indicadores** ; para desabilitar (sem remover) um indicador, desmarque sua caixa de seleção.  
   

@@ -3,7 +3,7 @@ title: Especificar um filtro de ponto de interrupção
 description: Saiba como implementar um filtro de ponto de interrupção para limitar o ponto de interrupção a funcionar somente quando a depuração estiver ativada em computadores, processos de sistema operacional e threads especificados.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 943168cc640f2a3373ed1baec1018962bf64123d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d6e2a3540ea758fa394ad0ebcdcd28777bf4237b
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122797"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901585"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar um filtro de ponto de interrupção
 

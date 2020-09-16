@@ -3,21 +3,21 @@ title: Converter o código R para SQL
 description: Migre o código R para um procedimento armazenado do SQL Server para implantação de soluções e acesso a dados relacionais no SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 47a96a6bf233a1d8f7fe70df6ab537a31fd2e896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009ce927481a455478e170cbe075e920d72571f3
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723884"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288291"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Converter código R para execução em instâncias do SQL Server (no banco de dados)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este artigo fornece diretrizes de alto nível sobre como modificar o código R para trabalhar no SQL Server. 
 
@@ -121,7 +121,6 @@ O quanto você altera o seu código depende de você pretender enviar o código 
 
 + Consulte um desenvolvedor de banco de dados para determinar maneiras de melhorar o desempenho usando recursos do SQL Server como as [tabelas com otimização de memória](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables) ou, se você tiver a Edição Enterprise, o [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor).
 
-    Para obter mais informações, confira [Dicas e truques de otimização do SQL Server para serviços analíticos](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
 ### <a name="step-3-prepare-for-deployment"></a>Etapa 3. Preparar para a implantação
 
@@ -135,7 +134,7 @@ O quanto você altera o seu código depende de você pretender enviar o código 
 
 + Se o código for relativamente simples, você poderá inseri-lo sem modificações a uma função do T-SQL definida pelo usuário, conforme descrito nestes exemplos:
 
-    + [Engenharia de recursos usando T-SQL e R](../tutorials/sqldev-create-data-features-using-t-sql.md)
+    + [Engenharia de recursos usando T-SQL e R](../tutorials/r-taxi-classification-create-features.md)
 
 + Se o código for mais complexo, use o pacote do R **sqlrutils** para converter seu código. Este pacote foi criado para ajudar os usuários de R experientes a escreverem um código de procedimento armazenado de boa qualidade. 
 
@@ -165,6 +164,6 @@ Para exibir exemplos de como uma solução de R pode ser implantada no SQL Serve
 
 + [Criar um modelo preditivo para negócios de aluguel de esqui usando o R e o SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [Análise interna no banco de dados para o desenvolvedor de SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) Demonstra como é possível tornar seu código R mais modular encapsulando-o em procedimentos armazenados
++ [Análise interna no banco de dados para o desenvolvedor de SQL](../tutorials/r-taxi-classification-introduction.md) Demonstra como é possível tornar seu código R mais modular encapsulando-o em procedimentos armazenados
 
 + [Solução de ciência de dados de ponta a ponta](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) Inclui uma comparação de engenharia de recursos em R e no T-SQL

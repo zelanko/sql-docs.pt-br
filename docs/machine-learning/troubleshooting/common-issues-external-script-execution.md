@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 597b656c3f235ae59a22f7e85bf54dcc25fb1873
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253617"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570281"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Solucionar problemas com o serviço do Launchpad e a execução do script externo no SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este artigo fornece diretrizes para solucionar problemas que envolvem o serviço confiável do Launchpad do SQL Server. O serviço do Launchpad é compatível com a execução do script externo para R e para Python. Vários problemas podem impedir que o Launchpad inicie, incluindo problemas de configuração, alterações ou protocolos de rede ausentes.  
-
-Se encontrar problemas não abordados aqui, você poderá postar perguntas no [Fórum do Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
 
 ## <a name="determine-whether-launchpad-is-running"></a>Determinar se o Launchpad está em execução
 
@@ -240,6 +238,6 @@ Como alternativa, você deverá habilitar a notação 8dot3 no volume em que o S
 
 [Coleta de dados para a solução de problemas de aprendizado de máquina](data-collection-ml-troubleshooting-process.md)
 
-[Perguntas frequentes sobre atualização e instalação](upgrade-and-installation-faq-sql-server-r-services.md)
+[Instalar os Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md)
 
 [Solucionar problemas de conexões de mecanismo de banco de dados](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

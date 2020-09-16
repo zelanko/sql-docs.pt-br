@@ -3,20 +3,20 @@ title: Criar fluxos de trabalho SSIS e SSRS com R
 description: Cenários de integração que combinam os Serviços de Machine Learning do SQL Server e R Services, SSRS (SQL Server Reporting Services) e SSIS (SQL Server Integration Services).
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/17/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680366"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288276"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Criar fluxos de trabalho SSIS e SSRS com R no SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este artigo explica como usar o script incorporado de R e Python usando as funcionalidades de ciência de dados e de linguagem dos Serviços de Machine Learning do SQL Server com dois recursos importantes do SQL Server: SSIS (SQL Server Integration Services) e SSRS (SQL Server Reporting Services). As bibliotecas de R e Python no SQL Server fornecem funções estatísticas e preditivas. O SSIS e o SSRS fornecem transformação e visualizações de ETL coordenadas, respectivamente. Este artigo explica como colocar todos esses recursos juntos neste padrão de fluxo de trabalho:
 
@@ -192,19 +192,6 @@ No Designer SSIS, pressione F5 para executar o pacote. Será exibido um resultad
 Embora R possa criar gráficos e visualizações interessantes, ele não é bem integrado com fontes de dados externas, significando que cada gráfico deve ser produzido individualmente. O compartilhamento também pode ser difícil.
 
 Usando o [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], é possível executar operações complexas em R por meio de procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)], que podem ser facilmente consumidos por uma variedade de ferramentas de relatório empresariais, incluindo o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o Power BI.
-
-### <a name="ssrs-example"></a>Exemplo de SSRS
-
-[R Graphics Device para Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/)
-
-Este projeto CodePlex fornece o código para ajudar você a criar um item de relatório personalizado que renderiza a saída de gráficos de R como uma imagem que pode ser usada nos relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  Usando o item de relatório personalizado, é possível:
-
-+ Publicar gráficos e plotagens criados usando o R Graphics Device para painéis do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
-
-+ Passar parâmetros [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para gráficos de R
-
-> [!NOTE]
-> Para esse exemplo, o código compatível com o R Graphics Device para Reporting Services deve estar instalado no servidor do Reporting Services, bem como no Visual Studio. Também são necessárias a compilação e a configuração manuais.
 
 ## <a name="next-steps"></a>Próximas etapas
 
