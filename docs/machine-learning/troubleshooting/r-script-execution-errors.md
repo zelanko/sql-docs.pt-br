@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebcedf2adc48fad6668b30d9c34d21b7557879dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253625"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569906"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Erros comuns de script R no SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este artigo documenta vários erros comuns de script ao executar o código R no SQL Server. A lista não é completa. Existem muitos pacotes e os erros podem variar entre as diferentes versões do mesmo pacote.
-
-Se você encontrar erros de script não abordados aqui, poste-os no [fórum do Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR). Este fórum é compatível com os componentes do machine learning usados em vários produtos do machine learning do SQL.
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>O script válido falha no T-SQL ou nos procedimentos armazenados
 
@@ -100,6 +98,6 @@ Se houver diversas variáveis a serem excluídas, sugerimos salvar os nomes das 
 
 [Coleta de dados para a solução de problemas de aprendizado de máquina](data-collection-ml-troubleshooting-process.md)
 
-[Perguntas frequentes sobre atualização e instalação](upgrade-and-installation-faq-sql-server-r-services.md)
+[Instalar os Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md)
 
 [Solucionar problemas de conexões de mecanismo de banco de dados](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

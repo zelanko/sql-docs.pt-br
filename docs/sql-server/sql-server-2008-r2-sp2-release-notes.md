@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111017"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570305"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ Modo de exibição de gerenciamento dinâmico (DMV) adicionado **sys.dm_db_stats
 ## <a name="20-before-you-install"></a>2.0 Antes da instalação  
 Para saber mais sobre como instalar atualizações do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , veja a [Documentação de serviços do SQL Server 2008 R2](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Para obter informações gerais sobre como iniciar e instalar o SQL Server 2008 R2, consulte o Leiame do SQL Server 2008 R2. O documento Leiame está disponível na mídia de instalação. Você também pode encontrar mais informações nos [Fóruns do SQL Server](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
+Para obter informações gerais sobre como iniciar e instalar o SQL Server 2008 R2, consulte o Leiame do SQL Server 2008 R2. O documento Leiame está disponível na mídia de instalação.
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Escolha o arquivo correto para baixar e instalar  
 Use a tabela a seguir para determinar qual arquivo baixar e instalar. Verifique se você tem os requisitos de sistema corretos antes de instalar o service pack. Os requisitos de sistemas são fornecidos nas páginas de download vinculadas na tabela.  

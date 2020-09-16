@@ -2,7 +2,7 @@
 title: Snippets de código Transact-SQL
 description: Você pode usar trechos de código Transact-SQL para ajudar a escrever seu código. Veja aqui uma lista de tarefas de snippet com links para artigos que as descrevem.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: markingmyname
@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b2986e68cf58afaab0d0254f29ca6b0124af126
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a70d930b53ac4c43428f2bb0dbe0da26ab5fbfc1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246206"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480691"
 ---
 # <a name="transact-sql-code-snippets"></a>Snippets de código Transact-SQL
 
@@ -35,4 +35,4 @@ Um snippet [!INCLUDE[tsql](../../includes/tsql-md.md)].code é um modelo que con
   
 ## <a name="see-also"></a>Consulte Também
 
-[Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)
+[Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
