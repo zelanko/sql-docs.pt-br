@@ -2,7 +2,7 @@
 title: 'SQL Server 2019: Requisitos de software e de hardware'
 description: Uma lista de requisitos de hardware, de software e de sistema operacional para instalar e executar o SQL Server 2019.
 ms.custom: sqlfreshmay19
-ms.date: 02/19/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 0a8b1dc044dba9fc7ee8fef3623b82405bd9e109
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c3513b7209cc5f79aa26486540c236ac7b7dca1c
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245631"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288318"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019: Requisitos de hardware e software
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -113,11 +113,11 @@ A tabela a seguir mostra quais edições do SQL Server 2019 são compatíveis co
 | Windows Server 2016 Datacenter    |    Sim     |    Sim    |    Sim   | Sim |   Sim   |
 | Windows Server 2016 Standard      |    Sim     |    Sim    |    Sim   | Sim |   Sim   |
 | Windows Server 2016 Essentials    |    Sim     |    Sim    |    Sim   | Sim |   Sim   |
-| Windows 10 Enterprise             |    Não      |    Sim    |    Sim   | Não  |   Sim   |
+| Windows 10 IoT Enterprise         |    Não      |    Sim    |    Sim   | Não  |   Sim   |
+| Windows 10 Enterprise             |    Não      |    Sim    |    Sim   | Não  |   Sim   |
 | Windows 10 Professional           |    Não      |    Sim    |    Sim   | Não  |   Sim   |
 | Windows 10 Home                   |    Não      |    Sim    |    Sim   | Não  |   Sim   |
 | &nbsp; | &nbsp; |
-
 
 ### <a name="server-core-support"></a>Suporte do Server Core
 
@@ -151,13 +151,13 @@ Para obter mais informações sobre a instalação do SQL Server no Server Core,
   
 |**Recurso**|**Requisito de espaço em disco**|  
 |-----------------|--------------------------------|  
-|O[!INCLUDE[ssDE](../../includes/ssde-md.md)] e arquivos de dados, Replicação, Pesquisa de Texto Completo e Data Quality Services|1\.480 MB|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] (como acima) com os Serviços de R (no banco de dados)|2\.744 MB|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] (como acima) com o Serviço de Consulta PolyBase para Dados Externos|4\.194 MB|  
+|O[!INCLUDE[ssDE](../../includes/ssde-md.md)] e arquivos de dados, Replicação, Pesquisa de Texto Completo e Data Quality Services|1.480 MB|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] (como acima) com os Serviços de R (no banco de dados)|2.744 MB|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] (como acima) com o Serviço de Consulta PolyBase para Dados Externos|4.194 MB|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e arquivos de dados|698 MB|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|967 MB|  
 |[!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)] (Autônomo)|280 MB|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] – SharePoint|1\.203 MB|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] – SharePoint|1.203 MB|  
 |Suplemento[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products|325 MB|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|121 MB|  
 |Conectividade das ferramentas de cliente|328 MB|  
@@ -165,7 +165,7 @@ Para obter mais informações sobre a instalação do SQL Server no Server Core,
 |Componentes cliente (exceto os componentes dos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as ferramentas do Integration Services)|445 MB|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|280 MB|  
 |Componentes dos Manuais Online do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para exibir e gerenciar o conteúdo da ajuda*|27 MB|  
-|Todos os recursos|8\.030 MB|  
+|Todos os recursos|8.030 MB|  
   
  *O requisito de espaço em disco para o conteúdo dos Manuais Online baixado é de 200 MB.  
   

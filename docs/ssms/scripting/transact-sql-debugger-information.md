@@ -3,7 +3,7 @@ title: Informações do depurador Transact-SQL
 description: Saiba como exibir a saída do depurador Transact-SQL, que inclui informações como pilhas de chamadas, threads, pontos de interrupção, código, variáveis e comandos.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 853c11d1cf08a24168d21f0d20cedc74c2ea4004
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243732"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88902104"
 ---
 # <a name="transact-sql-debugger---information"></a>Depurador do Transact-SQL – Informações
 

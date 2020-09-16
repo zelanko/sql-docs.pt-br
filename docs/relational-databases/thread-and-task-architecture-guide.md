@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485568"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076801"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ O Microsoft Windows usa um sistema de prioridade numérica que varia de 1 a 31 p
 
 Por padrão, cada instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem prioridade 7, conhecida como a prioridade normal. Esse padrão fornece aos threads do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uma prioridade alta o bastante para obter recursos de CPU suficientes sem prejudicar outros aplicativos. 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 A opção de configuração [aumento de prioridade](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) pode ser usada para aumentar a prioridade dos threads de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para 13. Isso é conhecido como prioridade alta. Essa configuração fornece aos threads uma prioridade mais alta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do que a maioria dos outros aplicativos. Portanto, os threads do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] geralmente serão expedidos sempre que estiverem prontos para execução e não haverá preempção de threads de outros aplicativos. Isso pode melhorar o desempenho quando um servidor estiver executando apenas instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e nenhum outro aplicativo. No entanto, caso uma operação com uso intensivo de memória ocorra no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], outros aplicativos provavelmente não terão uma prioridade alta o suficiente para a preempção do thread [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 Se você estiver executando várias instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um computador, e aumentar a prioridade apenas para algumas das instâncias, o desempenho de qualquer instância que estiver sendo executada na prioridade normal poderá ser prejudicado. Além disso, o desempenho de outros aplicativos e componentes no servidor poderá piorar se o aumento de prioridade for ativado. Portanto, ele só deveria ser usado em condições estritamente controladas.
+
 
 ## <a name="hot-add-cpu"></a>Inclusão de CPU a quente
 Inclusão de CPU a quente é a capacidade de adicionar dinamicamente CPUs a um sistema em execução. A inclusão de CPUs pode ocorrer fisicamente, pela adição de um novo hardware; logicamente, pelo particionamento do hardware online; ou virtualmente, através de uma camada de virtualização. Começando com o [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte à adição de CPU a quente.

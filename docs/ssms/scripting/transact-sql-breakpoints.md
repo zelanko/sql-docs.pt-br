@@ -3,7 +3,7 @@ title: Pontos de interrupção Transact-SQL
 description: Ao depurar, você poderá usar pontos de interrupção para pausar a execução quando necessário. Veja aqui uma lista de tarefas de ponto de interrupção com links para artigos que as descrevem.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoints
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4013fea38f42ff997ebf07e74d3adee2c4896b45
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4e6744d8296272dab3b8c774f57e2d60e3ac5858
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246166"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901495"
 ---
 # <a name="transact-sql-breakpoints"></a>Pontos de interrupção Transact-SQL
 
