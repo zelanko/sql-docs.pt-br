@@ -1,4 +1,5 @@
 ---
+description: Método getSchemas ()
 title: Método getSchemas () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c7951e25fd7dfbd089b21be066cfefd9828c231
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8918b4806972ff6cf1cbb08250149049ecbec6b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434668"
 ---
 # <a name="getschemas-method-"></a>Método getSchemas ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public java.sql.ResultSet getSchemas()
   
  O conjunto de resultados retornado pelo método getSchemas contém as seguintes informações:  
   
-|Nome|Type|DESCRIÇÃO|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema.|  
 |TABLE_CATALOG|**Cadeia de caracteres**|O nome de catálogo para o esquema.|  

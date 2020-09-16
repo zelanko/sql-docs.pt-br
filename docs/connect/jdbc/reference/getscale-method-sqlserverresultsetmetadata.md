@@ -1,4 +1,5 @@
 ---
+description: Método getScale (SQLServerResultSetMetaData)
 title: Método getScale (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 923fbc9738f0b5bac9a4ded9c20a0a015ab377ae
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1c36a67dc80a078308344105f2c1091a0d25f90d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434758"
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>Método getScale (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80921801"
 public int getScale(int column)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *column*  
   
  Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um **int** que indica a escala da coluna.  
   
 ## <a name="exceptions"></a>Exceções  

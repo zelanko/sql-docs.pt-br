@@ -1,4 +1,5 @@
 ---
+description: Método getSubString (SQLServerClob)
 title: Método getSubString (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5409040a5f7bb8cf7c03923da8ff976e4ab08ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bd407745df5e07ae2265105f990aa9df2a4ec963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434308"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Método getSubString (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public java.lang.String getSubString(long pos,
                                      int length)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *pos*  
   
  O primeiro caractere da subcadeia a ser extraído. O primeiro caractere está na posição 1.  
@@ -44,7 +45,7 @@ public java.lang.String getSubString(long pos,
   
  O número de caracteres consecutivos a serem copiados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Uma **cadeia de caracteres** que é a subcadeia de caracteres especificada no CLOB.  
   
 ## <a name="exceptions"></a>Exceções  

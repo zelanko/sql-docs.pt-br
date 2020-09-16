@@ -1,4 +1,5 @@
 ---
+description: Método getShort (int) (SQLServerResultSet)
 title: Método getShort (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 64c4eea3ad1663e6a5f83880de056d9e81ffe4ad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 88ee4597295faded9dd48a6ce52d200cc3dca3a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434618"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>Método getShort (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public short getShort(int columnIndex)
   
  Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor **short**.  
   
 ## <a name="exceptions"></a>Exceções  

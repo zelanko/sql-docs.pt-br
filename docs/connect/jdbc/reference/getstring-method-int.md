@@ -1,4 +1,5 @@
 ---
+description: Método getString (int)
 title: Método getString (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f3fce8bf-8d6e-476f-aa6d-992daa79b899
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92344de125e7711858d6a365eac1bdcadd109cef
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8fc361542deac77a38db7244654b68cb780eceff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434398"
 ---
 # <a name="getstring-method-int"></a>Método getString (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80926254"
 public java.lang.String getString(int index)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *index*  
   
  Um **int** que indica o índice do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor de **String**.  
   
 ## <a name="exceptions"></a>Exceções  

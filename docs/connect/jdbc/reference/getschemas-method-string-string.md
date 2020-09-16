@@ -1,4 +1,5 @@
 ---
+description: Método getSchemas (String, String)
 title: Método getSchemas (String, String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0c96bed6c22706a03983849387662e811584b2c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a3b421ae475d6c161396380073d1d8336b7f1b26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434638"
 ---
 # <a name="getschemas-method-string-string"></a>Método getSchemas (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ public ResultSet getSchemas(java.lang.String catalog,
   
  O conjunto de resultados retornado pelo método getSchemas contém as seguintes informações:  
   
-|Nome|Type|DESCRIÇÃO|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema.|  
 |TABLE_CATALOG|**Cadeia de caracteres**|O nome de catálogo para o esquema.|  

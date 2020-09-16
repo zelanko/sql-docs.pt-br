@@ -1,4 +1,5 @@
 ---
+description: Método getSchemas (SQLServerDatabaseMetaData)
 title: Método getSchemas (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d26ea46d-a9f5-40ed-af56-2b10a0364882
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b35a5593be0329e98d98ab2d34d17cd19b940b7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 300f70741ea32c53bf7f7b5dcb5184795e669aee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434648"
 ---
 # <a name="getschemas-method-sqlserverdatabasemetadata"></a>Método getSchemas (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80921735"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[Método getSchemas &#40;&#41;](../../../connect/jdbc/reference/getschemas-method.md)|Recupera os nomes de esquema disponíveis no banco de dados atual.|  
 |[Método getSchemas &#40;String, String&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|Recupera os nomes de esquemas que estão disponíveis no banco de dados atual usando o nome de catálogo especificado e o nome de esquema.|  

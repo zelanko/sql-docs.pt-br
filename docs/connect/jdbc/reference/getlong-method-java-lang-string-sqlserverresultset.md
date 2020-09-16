@@ -1,4 +1,5 @@
 ---
+description: Método getLong (java.lang.String) (SQLServerResultSet)
 title: Método getLong (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd99d5d2db3f0d76ac9bfc5bc6ec3294c052e0fd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4833ee58132d416339572cf8dd681b7991649b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435738"
 ---
 # <a name="getlong-method-javalangstring-sqlserverresultset"></a>Método getLong (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80921351"
 public long getLong(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor **long**.  
   
 ## <a name="exceptions"></a>Exceções  

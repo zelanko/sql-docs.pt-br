@@ -1,4 +1,5 @@
 ---
+description: Método getEncrypt (SQLServerDataSource)
 title: Método getEncrypt (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7edee23f7111b55a6d34ac6ae10bf3720879fc01
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 09beeea5d623e50d5fcdbf562151631cbc67124d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436128"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>Método getEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

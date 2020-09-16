@@ -1,4 +1,5 @@
 ---
+description: Método getDefaultTransactionIsolation (SQLServerDatabaseMetaData)
 title: Método getDefaultTransactionIsolation (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 58be916063f1bd0893285c6c893241e3ec4e699f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bc7cc565754df2676de7f19968227bc719ff3063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436258"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>Método getDefaultTransactionIsolation (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

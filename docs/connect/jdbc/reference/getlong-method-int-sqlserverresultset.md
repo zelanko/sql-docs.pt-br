@@ -1,4 +1,5 @@
 ---
+description: Método getLong (int) (SQLServerResultSet)
 title: Método getLong (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2d1beec5-fc50-4563-81da-835e4b392874
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 612ec1ace3c4bbad209782a2794200c94abe4677
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a092748cccacd2a4984e8466aa14ed68206aac65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435788"
 ---
 # <a name="getlong-method-int-sqlserverresultset"></a>Método getLong (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public long getLong(int columnIndex)
   
  Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor **long**.  
   
 ## <a name="exceptions"></a>Exceções  

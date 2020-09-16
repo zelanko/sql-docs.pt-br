@@ -1,4 +1,5 @@
 ---
+description: Método getInt (java.lang.String)
 title: Método getInt (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1705812f-1f04-4e84-b6c8-d164dded47b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 667d415989f0af00d0c97f1a5cda1defab41bcc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f7151bc6caaf4bc53ba2c2da27276ee5ae55b8aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435838"
 ---
 # <a name="getint-method-javalangstring"></a>Método getInt (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80921486"
 public int getInt(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor **int**.  
   
 ## <a name="exceptions"></a>Exceções  

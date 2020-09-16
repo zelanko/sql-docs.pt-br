@@ -1,4 +1,5 @@
 ---
+description: Método getExtraNameCharacters (SQLServerDatabaseMetaData)
 title: Método getExtraNameCharacters (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 346876c1da1322535b7f9802e2e2a9b82064ab5c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7701c2fe192e5f60acf78c2e59e562c8688e6d40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436098"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>Método getExtraNameCharacters (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

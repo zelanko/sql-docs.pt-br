@@ -1,4 +1,5 @@
 ---
+description: Método getDate (SQLServerResultSet)
 title: Método getDate (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: efb17208-4cd3-4aa8-a39b-e169b414758c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07b6321a5bcc695438b171dc0406afecd7d729f8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ea91922c0327aeb901c5ab78857e378eba8d3c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436268"
 ---
 # <a name="getdate-method-sqlserverresultset"></a>Método getDate (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80920015"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[Método getDate (int)](../../../connect/jdbc/reference/getdate-method-int-sqlserverresultset.md)|Recupera o valor do índice da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um objeto java.sql.Date na linguagem de programação Java.|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar-sqlserverresultset.md)|Recupera o valor do índice da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um objeto java.sql.Date na linguagem de programação Java, usando o objeto Calendar fornecido.|  

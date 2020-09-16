@@ -1,4 +1,5 @@
 ---
+description: Método getShort (java.lang.String)
 title: Método getShort (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7ab0b9ece4fb9f251d7d07033c1867c242235f0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dae7ef1fcf670b509f329a752fe8869d24a4da12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434528"
 ---
 # <a name="getshort-method-javalangstring"></a>Método getShort (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80924150"
 public short getShort(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor **short**.  
   
 ## <a name="exceptions"></a>Exceções  

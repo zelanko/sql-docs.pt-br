@@ -1,4 +1,5 @@
 ---
+description: Método getObject (int, java.util.Map) (SQLServerResultSet)
 title: Método getObject (int, java.util.Map) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: df85a514-ab43-4bf6-98dd-f7f37fad1850
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2281e7700b6785311404d6814c6d3b31b6e7c4d5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ab41981f6140dc0c197f66c2cf7fcb7133e7ad29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435188"
 ---
 # <a name="getobject-method-int-javautilmap-sqlserverresultset"></a>Método getObject (int, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public java.lang.Object getObject(int i,
                                   java.util.Map map)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *i*  
   
  Um **int** que indica o índice de coluna.  

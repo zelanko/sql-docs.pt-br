@@ -1,4 +1,5 @@
 ---
+description: Método getObject (java.lang.String, java.util.Map)
 title: Método getObject (java.lang.String, java.util.Map) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b8443f62768f73fb93ff0518c89327845edf2df
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 58b1857781baea98e3dca98c00a69b20284a3235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435118"
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>Método getObject (java.lang.String, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public java.lang.Object getObject(java.lang.String sCol,
                                   java.util.Map m)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  

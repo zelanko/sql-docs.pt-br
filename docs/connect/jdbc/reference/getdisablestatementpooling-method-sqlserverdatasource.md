@@ -1,4 +1,5 @@
 ---
+description: Método getDisableStatementPooling (SQLServerDataSource)
 title: Método getDisableStatementPooling (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7e250d21fe2b8b9cd46a15989ff1178c5512cb81
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 902cceb335ea1f4f5a5858ae3bc80354002ba77b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436218"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverdatasource"></a>Método getDisableStatementPooling (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

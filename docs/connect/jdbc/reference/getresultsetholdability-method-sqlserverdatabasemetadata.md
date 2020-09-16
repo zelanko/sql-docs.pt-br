@@ -1,4 +1,5 @@
 ---
+description: Método getResultSetHoldability (SQLServerDatabaseMetaData)
 title: Método getResultSetHoldability (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f0bd6283-83ab-4a0a-b825-ec4cdccf03e1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 137f2388f940bfbf17038af3288dea6c8b944e26
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d302a290ce0dcc88d6d27c2b3e01570cf596633e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434838"
 ---
 # <a name="getresultsetholdability-method-sqlserverdatabasemetadata"></a>Método getResultSetHoldability (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

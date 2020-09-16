@@ -1,4 +1,5 @@
 ---
+description: Método getMoreResults (int)
 title: Método getMoreResults (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db242def83e840e3518aa4036a66f823585f80b2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73d18f6319d0ddfbe362a21742e99c27e3637691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435398"
 ---
 # <a name="getmoreresults-method-int"></a>Método getMoreResults (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80906132"
 public final boolean getMoreResults(int mode)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *mode*  
   
  Um **int** que indica como tratar objetos do conjunto de resultados abertos no momento. Deve ser uma das constantes a seguir:  
@@ -45,7 +46,7 @@ public final boolean getMoreResults(int mode)
   
  CLOSE_ALL_RESULTS  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se o resultado retornado for um conjunto de resultados. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  

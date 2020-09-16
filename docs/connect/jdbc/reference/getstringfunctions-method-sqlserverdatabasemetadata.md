@@ -1,4 +1,5 @@
 ---
+description: Método getStringFunctions (SQLServerDatabaseMetaData)
 title: Método getStringFunctions (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cdcb1fb60f03b88339b9d6a0f16a29c3482862b1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 915d532fc516252da38e61f0af8c818856ac5b4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434318"
 ---
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>Método getStringFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

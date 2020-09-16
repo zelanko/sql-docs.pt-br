@@ -1,4 +1,5 @@
 ---
+description: Método getPooledConnection (java.lang.String, java.lang.String)
 title: Método getPooledConnection (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6639af253faf9c47d55f6252d2cbd176c440356a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cd257553cf6d46b2317e0b4353f199e96c5b54ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434978"
 ---
 # <a name="getpooledconnection-method-javalangstring-javalangstring"></a>Método getPooledConnection (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
                                                       java.lang.String password)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *user*  
   
  Uma **String** que contém o nome do usuário.  
@@ -44,7 +45,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
   
  Uma **String** que contém a senha.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).  
   
 ## <a name="exceptions"></a>Exceções  
@@ -57,6 +58,6 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
  [getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)   
  [Métodos SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   
  [Membros SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   
- [Classe SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
+ [SQLServerConnectionPoolDataSource Class](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
   

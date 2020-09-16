@@ -1,4 +1,5 @@
 ---
+description: Método getPrecision (SQLServerParameterMetaData)
 title: Método getPrecision (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dbca77be55cd855f2e293324d6cd7c4ca5471b7e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b0af3f0f87c32038b8d6b16839993de5ae6aa056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434948"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>Método getPrecision (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80925213"
 public int getPrecision(int param)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *param*  
   
  Um **int** que indica o índice do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um **int** que indica a precisão do parâmetro designado.  
   
 ## <a name="exceptions"></a>Exceções  

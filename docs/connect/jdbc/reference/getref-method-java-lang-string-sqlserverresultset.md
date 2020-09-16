@@ -1,4 +1,5 @@
 ---
+description: Método getRef (java.lang.String) (SQLServerResultSet)
 title: Método getRef (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 83c60c5d-7a69-498b-be9c-bbdbfafec157
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7cce1ff00f5dcda9d832ec9c3945d75c750d97c9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26140d2e8db9be4ca0113799fa6d367db3f41a0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434868"
 ---
 # <a name="getref-method-javalangstring-sqlserverresultset"></a>Método getRef (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.sql.Ref getRef(java.lang.String colName)
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto Ref.  
   
 ## <a name="exceptions"></a>Exceções  
