@@ -1,26 +1,28 @@
 ---
 title: Abrir um editor (SQL Server Management Studio)
 description: Saiba como abrir os editores de Consulta do Mecanismo de Banco de Dados, MDX, DMX e XML/A no SQL Server Management Studio.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122559"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093464"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir um editor (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Este tópico descreve como abrir o editor [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query, MDX, DMX ou XML/A no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando aberta, cada janela de editor aparece como uma guia no painel central do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+
+Este tópico descreve como abrir o editor [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query, MDX, DMX ou XML/A no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando aberta, cada janela de editor aparece como uma guia no painel central do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dá suporte a quatro editores: o Editor de Consulta do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para editar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , os editores DMX e MDX para editar scripts que usam essas linguagens e o editor XML/A para editar scripts XML/A ou arquivos XML. Quaisquer dos editores também podem ser usados para editar arquivos de texto.  
@@ -81,6 +83,4 @@ ms.locfileid: "87122559"
   
 -   A janela **Gerenciador de Modelos** aparece no painel direito.  
   
--   Clique duas vezes em um modelo para abrir uma janela de Consulta do Mecanismo de Banco de Dados com o texto do modelo. Por exemplo, para abrir um modelo CREATE DATABASE, abra a pasta **Modelos do SQL Server** , abra a pasta **Bancos de Dados** e clique duas vezes em **criar banco de dados**.  
-  
-  
+-   Clique duas vezes em um modelo para abrir uma janela de Consulta do Mecanismo de Banco de Dados com o texto do modelo. Por exemplo, para abrir um modelo CREATE DATABASE, abra a pasta **Modelos do SQL Server** , abra a pasta **Bancos de Dados** e clique duas vezes em **criar banco de dados**.

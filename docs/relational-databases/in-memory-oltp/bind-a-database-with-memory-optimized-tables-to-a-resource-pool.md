@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e976cd81fb6d52e320ec18ea1c661a25f71baa07
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b51ae675af9c37cf7a347830520f0782d801cfea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723376"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537725"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associar um banco de dados com tabelas com otimização de memória a um pool de recursos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

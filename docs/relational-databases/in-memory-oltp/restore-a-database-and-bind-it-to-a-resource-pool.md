@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6a04204d4c3b5c637b4c3aac324bfe4b02265b39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f5035a7dd7818e14ec594d04edabad138242527
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722349"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546919"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>Restaurar um banco de dados e associá-lo a um pool de recursos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

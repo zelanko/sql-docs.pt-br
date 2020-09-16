@@ -3,7 +3,7 @@ title: Janela Lista de Erros
 description: Saiba como usar a Lista de Erros para ver os erros e avisos que o IntelliSense gera quando você edita os scripts Transact-SQL.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4755c439edafb5f38740e12f6ec57abf468bc01a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ce203349f36ecf05d934903518ec0f783d12537
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247340"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901409"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Depurador do Transact-SQL – Janela Lista de Erros
 

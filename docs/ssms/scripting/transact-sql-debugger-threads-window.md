@@ -3,7 +3,7 @@ title: Janela Threads
 description: Saiba mais sobre a janela Threads, que exibe informações sobre o thread do Mecanismo de Banco de Dados que está sendo depurado. As informações são exibidas somente no modo de depuração.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27a1b4f5673b959d378bd70122e334e3a4629bad
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bdc8d20024999e51509fdc45c054123667b94ee8
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248004"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901819"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Depurador do Transact-SQL – janela Threads
 
