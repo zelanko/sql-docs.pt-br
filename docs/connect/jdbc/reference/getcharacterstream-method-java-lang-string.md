@@ -1,4 +1,5 @@
 ---
+description: Método getCharacterStream (java.lang.String)
 title: Método getCharacterStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b01b2aa7972404318ff4b229a999218be49e812
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 114600f9c39a06347c1153716816a45cf05e1b37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436848"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>Método getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80911672"
 public java.io.Reader getCharacterStream(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto Reader.  
   
 ## <a name="exceptions"></a>Exceções  

@@ -1,4 +1,5 @@
 ---
+description: Método getClientInfo (java.lang.String)
 title: Método getClientInfo (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e8e632c4-d6cc-4c5e-b6ad-873579343b19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82dee3b10241abf2cfb014d4617d2ae2c5588eae
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d3db1e2b164ee4f9b49b5c4c1919c0a1ce713e16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436728"
 ---
 # <a name="getclientinfo-method-javalangstring"></a>Método getClientInfo (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,12 +30,12 @@ ms.locfileid: "80907449"
 public java.lang.String getClientInfo (java.lang.String name)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *name*  
   
  Uma String que contém o nome da propriedade information do cliente a ser recuperado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Uma String que contém o valor da propriedade information do cliente a ser recuperado.  
   
 ## <a name="exceptions"></a>Exceções  

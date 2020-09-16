@@ -1,4 +1,5 @@
 ---
+description: Método getConnection (SQLServerStatement)
 title: Método getConnection (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6f341d0b-265a-415e-abe5-8f408fedbb21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 27dc32cbcd49ceba6b0bc2bf31f84d5f3938d9e1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c02cb5ed37a38883433f7f6fa37905e8098e8dab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436498"
 ---
 # <a name="getconnection-method-sqlserverstatement"></a>Método getConnection (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

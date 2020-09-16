@@ -1,4 +1,5 @@
 ---
+description: Método getCharacterStream (long, long)
 title: Método getCharacterStream (long, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 66cb3ba13b24747075f85b32c8dd75854f6b57cd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 104cd4516a21e7679d54aaf0d95b9aaabb9ec760
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436788"
 ---
 # <a name="getcharacterstream-method-long-long"></a>Método getCharacterStream (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ public java.io.Reader getCharacterStream(long pos,
                                          long length)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *pos*  
   
  Um **long** que indica o deslocamento do primeiro caractere do valor parcial a ser recuperado.  
@@ -39,7 +40,7 @@ public java.io.Reader getCharacterStream(long pos,
   
  Um **long** que indica o comprimento, em caracteres, do valor parcial a ser recuperado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto Reader que contém os dados **Clob**.  
   
 ## <a name="exceptions"></a>Exceções  

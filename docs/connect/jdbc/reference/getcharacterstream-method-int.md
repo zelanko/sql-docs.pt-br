@@ -1,4 +1,5 @@
 ---
+description: Método getCharacterStream (int)
 title: Método getCharacterStream (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db007b56cd917eb67aa4e0fdbbb46598865a8d16
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fae765e165eaefd67caf5f07e32c4d61f479c74a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436858"
 ---
 # <a name="getcharacterstream-method-int"></a>Método getCharacterStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.io.Reader getCharacterStream(int columnIndex)
   
  Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto Reader.  
   
 ## <a name="exceptions"></a>Exceções  

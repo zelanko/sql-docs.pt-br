@@ -1,4 +1,5 @@
 ---
+description: Método getClob (int)
 title: Método getClob (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 34858e03-5b93-40b1-bf21-13ad7cc7a55e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 217204fd88021e6610724d94386a6cdb23493683
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e3b4102c14fc5ec667ae7834e15a62a6bad07a4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436698"
 ---
 # <a name="getclob-method-int"></a>Método getClob (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80901393"
 public java.sql.Clob getClob(int index)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *index*  
   
  Um **int** que indica o índice do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto Clob.  
   
 ## <a name="exceptions"></a>Exceções  

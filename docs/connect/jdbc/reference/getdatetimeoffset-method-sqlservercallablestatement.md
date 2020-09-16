@@ -1,4 +1,5 @@
 ---
+description: Método getDateTimeOffset (SQLServerCallableStatement)
 title: Método getDateTimeOffset (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7d9d7b05-582a-41df-b2c4-ec4a64d49752
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b98b2c84e3bfcaacf3176f534d9c0e1757f6e95
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3ddb8dae2480f4fbeb7c4d4c8713648fec1de08a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436298"
 ---
 # <a name="getdatetimeoffset-method-sqlservercallablestatement"></a>Método getDateTimeOffset (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80917842"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[getDateTimeOffset(int)](../../../connect/jdbc/reference/getdatetimeoffset-method-int.md)|Recupera o valor do parâmetro designado como um objeto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) na linguagem de programação Java, considerando o índice do parâmetro.|  
 |[getDateTimeOffset(String)](../../../connect/jdbc/reference/getdatetimeoffset-method-string.md)|Recupera o valor do parâmetro designado como um objeto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) na linguagem de programação Java, considerando o índice do parâmetro.|  

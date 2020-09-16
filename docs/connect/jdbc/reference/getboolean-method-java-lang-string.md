@@ -1,4 +1,5 @@
 ---
+description: Método getBoolean (java.lang.String)
 title: Método getBoolean (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c9ee851f-1827-42f5-a50a-bdef3e323a5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e840b3fab0a3786976282eb6606f8bee9a5747dc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fc6cc6df290a005e89eaf76c866c84d2358928bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437048"
 ---
 # <a name="getboolean-method-javalangstring"></a>Método getBoolean (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80926389"
 public boolean getBoolean(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor **booliano**.  
   
 ## <a name="exceptions"></a>Exceções  

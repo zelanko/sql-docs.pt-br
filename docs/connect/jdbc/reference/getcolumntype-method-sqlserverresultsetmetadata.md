@@ -1,4 +1,5 @@
 ---
+description: Método getColumnType (SQLServerResultSetMetaData)
 title: Método getColumnType (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 959d313d8dcf2db894b1cd66052dfbb9f074ed0a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e1afcca7432eeb60edd96dbcedfbb34add2c174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436628"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>Método getColumnType (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80923403"
 public int getColumnType(int column)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *column*  
   
  Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um **int** que indica o tipo de JDBC, conforme definido em java.sql.Types.  
   
 ## <a name="exceptions"></a>Exceções  

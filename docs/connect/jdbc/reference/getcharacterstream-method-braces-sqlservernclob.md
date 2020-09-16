@@ -1,4 +1,5 @@
 ---
+description: Método getCharacterStream () (SQLServerNClob)
 title: Método getCharacterStream () (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 71fac2e8febc9959dc6790d06f1eac097895476f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ac9c32b83f48b79c8c0dd8ccaaacb9c9dc294309
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436808"
 ---
 # <a name="getcharacterstream-method--sqlservernclob"></a>Método getCharacterStream () (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ public java.io.Reader getCharacterStream()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto Reader que contém os dados **NCLOB**.  
   
 ## <a name="remarks"></a>Comentários  
