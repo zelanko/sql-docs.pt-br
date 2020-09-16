@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6bdded00e9f4cc9fb5048bf242c0333cb88f186f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728026"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778515"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Depurar e diagnosticar aplicativos Spark no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Servidor de Histórico do Spark
 
@@ -210,6 +210,6 @@ O Servidor de Histórico do Spark tem os seguintes problemas conhecidos:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-* [Introdução aos Clusters de Big Data do SQL Server](../big-data-cluster/deploy-get-started.md)
+* [Introdução aos Clusters de Big Data do SQL Server](./deploy-get-started.md)
 * Definir configurações do Spark
 * [Definir configurações do Spark](/azure/hdinsight/spark/apache-spark-settings/)

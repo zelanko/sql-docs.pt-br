@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 72b9d67488e43a9d87ed52243b20fb49219887c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e66adad7e724f0ed18c53693c4c56567fb9d8e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722640"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713794"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Caixas de diálogo do SQL Server Profiler
 
@@ -52,7 +52,7 @@ Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Rastr
 |---|---
 |Coluna**Eventos**|Especifique os eventos do rastreamento marcando ou desmarcando a caixa de seleção na coluna de eventos. Os**Eventos** são organizados por categoria de evento. As classes de evento especificadas no modelo são selecionadas automaticamente. Para obter mais informações, confira [Referência de classe de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Colunas de dados|Especifique as colunas de dados do rastreamento marcando a caixa correspondente ao evento e a coluna de dados necessária. Por padrão, todas as colunas de dados pertinentes são marcadas para cada evento incluído no rastreamento.  
-|Filtros|Especifique os filtros clicando no cabeçalho da coluna de dados e digitando os critérios de filtro. As colunas de dados filtrados são indicadas por um ícone de filtro à esquerda do rótulo da coluna na caixa de diálogo **Editar Filtro** . Para obter mais informações, consulte [SQL Server Profiler - Editar Filtro](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
+|Filtros|Especifique os filtros clicando no cabeçalho da coluna de dados e digitando os critérios de filtro. As colunas de dados filtrados são indicadas por um ícone de filtro à esquerda do rótulo da coluna na caixa de diálogo **Editar Filtro** . Para obter mais informações, consulte [SQL Server Profiler - Editar Filtro](?view=sql-server-ver15).  
 |**Mostrar todos os eventos**|Mostra todos os eventos disponíveis. Por padrão, somente as linhas selecionadas na grade **Seleção de Eventos** são exibidas. Desmarque essa caixa para ocultar todos os eventos não selecionados na grade **Seleção de Eventos** .  
 |**Mostrar todas as colunas**|Mostra todas as colunas de dados disponíveis. Por padrão, somente colunas de dados selecionadas são exibidas. Desmarque essa caixa para ocultar todas as colunas de dados não selecionadas na grade **Seleção de Eventos** .  
 |**Filtros de coluna**|Abre a caixa de diálogo **Editar Filtro** . Você pode usar essa caixa de diálogo para editar filtros de coluna de dados.  
@@ -279,5 +279,4 @@ Use a caixa de diálogo **Selecionar Nome do Modelo** para selecionar um modelo 
 ## <a name="see-also"></a>Confira também 
 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [Monitoramento de desempenho e atividade de servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
-  
   

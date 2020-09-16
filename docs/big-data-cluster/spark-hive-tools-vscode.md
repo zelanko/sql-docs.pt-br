@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d92479dbc8cc705e263b0828926bc2a5e86312b6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255924"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778445"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Enviar trabalhos do Spark em clusters de Big Data do SQL Server no Visual Studio Code
 
@@ -31,7 +31,7 @@ Os itens a seguir são necessários para concluir as etapas neste artigo:
 - Um cluster de Big Data do SQL Server. Confira [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). O Mono é necessário apenas para Linux e macOS.
-- [Configurar o ambiente interativo do PySpark para Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
+- [Configurar o ambiente interativo do PySpark para Visual Studio Code](/azure/hdinsight/set-up-pyspark-interactive-environment).
 - Um diretório local chamado **SQLBDCexample**.  Este artigo usa **C:\SQLBDC\SQLBDCexample**.
 
 ## <a name="install-spark--hive-tools"></a>Instalar Ferramentas do Spark & Hive

@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3afc39516bc50a6a4f1a2fb7ad67d7b0c3602e7e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457485"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713734"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lição 3: uso do utilitário de prompt de comando dta
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,19 +36,19 @@ A utilização da funcionalidade de entrada XML do Orientador de Otimização do
   
  Essa tarefa descreve a inicialização do utilitário **dta**, a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho usando o prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload) da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados  
   
-O tutorial usa o banco de dados de exemplo AdventureWorks2017. Por motivos de segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
+O tutorial usa o banco de dados de exemplo AdventureWorks2017. Por motivos de segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](../../samples/adventureworks-install-configure.md).  
   
-As tarefas a seguir descrevem a abertura de um prompt de comando, a inicialização do utilitário de prompt de comando **dta** , a exibição da Ajuda sobre a sintaxe e o ajuste de uma carga de trabalho simples, MyScript.sql, que você criou em [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+As tarefas a seguir descrevem a abertura de um prompt de comando, a inicialização do utilitário de prompt de comando **dta** , a exibição da Ajuda sobre a sintaxe e o ajuste de uma carga de trabalho simples, MyScript.sql, que você criou em [Ajustando uma carga de trabalho](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
 
 ## <a name="prerequisites"></a>Pré-requisitos 
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
 - Instalar o [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Baixar o [Banco de dados de exemplo do AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)
+- Baixar o [Banco de dados de exemplo do AdventureWorks2017.](../../samples/adventureworks-install-configure.md)
 
 
-Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > Este tutorial destina-se a um usuário familiarizado com o uso de SQL Server Management Studio e com as tarefas básicas de administração de banco de dados. 
@@ -84,7 +84,7 @@ Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Rest
 
   ![como usar o CMD com o DTA](media/dta-tutorials/dta-cmd.png)
   
-3.  Depois que o Orientador de Otimização do Mecanismo de Banco de Dados termina de ajustar a carga de trabalho, exibe uma mensagem que indica que a sessão de ajuste foi concluída com êxito. Você pode exibir os resultados do ajuste, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para abrir os arquivos MySession2OutputScript.sql e MySession2Output.xml. Como alternativa, você também pode abrir a sessão de ajuste MySession2 na GUI do Orientador de Otimização do Mecanismo de Banco de Dados e exibir suas recomendações e relatórios da mesma forma que fez em [Exibindo recomendações de ajuste](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) e [Exibindo relatórios de ajuste](../../tools/dta/lesson-1-3-viewing-tuning-reports.md).  
+3.  Depois que o Orientador de Otimização do Mecanismo de Banco de Dados termina de ajustar a carga de trabalho, exibe uma mensagem que indica que a sessão de ajuste foi concluída com êxito. Você pode exibir os resultados do ajuste, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para abrir os arquivos MySession2OutputScript.sql e MySession2Output.xml. Como alternativa, você também pode abrir a sessão de ajuste MySession2 na GUI do Orientador de Otimização do Mecanismo de Banco de Dados e exibir suas recomendações e relatórios da mesma forma que fez em [Exibindo recomendações de ajuste](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) e [Exibindo relatórios de ajuste](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
   
  
 ## <a name="after-you-finish-this-tutorial"></a>Depois de você concluir este tutorial  
@@ -97,4 +97,3 @@ Para retornar ao início do tutorial, confira [Tutorial: Orientador de Otimizaç
   
 ## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Mecanismo de Banco de Dados](../../relational-databases/database-engine-tutorials.md)  
-    

@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
-author: arob98
-ms.author: angrobe
-ms.openlocfilehash: 73a57d6ea391d0b1d98c2f86b4c983771d4e2208
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 26cbdea53547f30a59dc6953d7bf68bddc712164
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808114"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807041"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Etapa 3: Prova de conceito da conexão ao SQL usando pyodbc
 

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ec828e6aa1df2ad38c7a3f831d9f8432dc681b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfbac9d60a1cdda4d4fe1ab1628088890e35be5a
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681861"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713784"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -186,7 +186,6 @@ ms.locfileid: "85681861"
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Fórum do SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Uso do Distributed Replay para teste de carga do SQL Server – Parte 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)   
- [Usando o Distributed Replay para teste de carga do SQL Server – Parte 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)  
-  
+ [Uso do Distributed Replay para teste de carga do SQL Server – Parte 2](/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)   
+ [Usando o Distributed Replay para teste de carga do SQL Server – Parte 1](/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)  
   

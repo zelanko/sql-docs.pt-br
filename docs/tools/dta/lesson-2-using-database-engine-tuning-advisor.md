@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 385171c8465a06595a65c02ff457d003ce723a7f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: bd60220151fb8f389ac7c82c1bdb0f10cf46bba1
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458682"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713804"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lição 2: uso do Orientador de Otimização do Mecanismo de Banco de Dados
 
@@ -30,12 +30,12 @@ O Orientador de Otimização do Mecanismo de Banco de Dados permite gerenciar se
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
-- Instalar o [SQL Server Management Studio.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+- Instalar o [SQL Server Management Studio.](../../ssms/download-sql-server-management-studio-ssms.md)
 - Instalar o [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Baixar o [Banco de dados de exemplo do AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
+- Baixar o [Banco de dados de exemplo do AdventureWorks2017.](../../samples/adventureworks-install-configure.md?view=sql-server-2017)
 
 
-Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > Este tutorial destina-se a um usuário familiarizado com o uso de SQL Server Management Studio e com as tarefas básicas de administração de banco de dados. 
@@ -147,5 +147,4 @@ Você explorou a guia **Relatórios** da sessão de ajuste MySession na interfac
  ## <a name="next-lesson"></a>Próxima lição  
 [Lição 3: Como usar o utilitário de prompt de comando do DTA](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
    
-  
   

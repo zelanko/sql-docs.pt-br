@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7e46d5bd2ad1fcb300c16ce3883f7b03f493fcdc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661083"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765935"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar o Serviço de Kubernetes do Azure para implantações de cluster de Big Data do SQL Server
 
@@ -46,7 +46,7 @@ Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI d
    - 24 ou mais discos anexados em todos os nós
 
    > [!TIP]
-   > A infraestrutura do Azure oferece várias opções de tamanho para VMs. Confira [aqui](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) para seleções na região que você planeja implantar.
+   > A infraestrutura do Azure oferece várias opções de tamanho para VMs. Confira [aqui](/azure/virtual-machines/windows/sizes) para seleções na região que você planeja implantar.
 
 ## <a name="create-a-resource-group"></a>Criar um grupo de recursos
 
@@ -110,7 +110,7 @@ Escolha a versão mais recente disponível para o cluster. Registre o número de
 
 ## <a name="create-a-kubernetes-cluster"></a>Criar um cluster do Kubernetes
 
-1. Crie um cluster do Kubernetes no AKS com o comando [az aks create](https://docs.microsoft.com/cli/azure/aks). O exemplo a seguir cria um cluster do Kubernetes chamado *kubcluster* com um nó de agente do Linux de tamanho **Standard_L8s**.
+1. Crie um cluster do Kubernetes no AKS com o comando [az aks create](/cli/azure/aks). O exemplo a seguir cria um cluster do Kubernetes chamado *kubcluster* com um nó de agente do Linux de tamanho **Standard_L8s**.
 
    Antes de executar o script, substitua `<version number>` pelo número de versão identificado na etapa anterior.
 
@@ -149,7 +149,7 @@ Escolha a versão mais recente disponível para o cluster. Registre o número de
 
 ## <a name="connect-to-the-cluster"></a>Conectar-se ao cluster
 
-1. Para configurar o kubectl para se conectar ao cluster do Kubernetes, execute o comando [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). Esta etapa baixa as credenciais e configura a CLI do kubectl para usá-las.
+1. Para configurar o kubectl para se conectar ao cluster do Kubernetes, execute o comando [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). Esta etapa baixa as credenciais e configura a CLI do kubectl para usá-las.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,9 +165,9 @@ Escolha a versão mais recente disponível para o cluster. Registre o número de
 
 Se você tiver problemas ao criar um Serviço de Kubernetes do Azure com os comandos anteriores, tente as seguintes resoluções:
 
-- Verifique se você instalou a [CLI do Azure mais recente](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Verifique se você instalou a [CLI do Azure mais recente](/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Experimente as mesmas etapas usando um grupo de recursos e um nome de cluster diferentes.
-- Veja a [documentação detalhada de solução de problemas do AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
+- Veja a [documentação detalhada de solução de problemas do AKS](/azure/aks/troubleshooting).
 
 ## <a name="next-steps"></a>Próximas etapas
 

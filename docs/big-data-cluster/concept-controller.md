@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5a294bf705e4caf4a79c0f67ce925187e24c0f00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8fd56c7b3c3177f1ae08c9b2c5d821d1c2552f70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730703"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765675"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>O que o controlador em um cluster de Big Data do SQL Server?
 
@@ -57,7 +57,7 @@ Toda a comunicação com o serviço do controlador é conduzida por meio de uma 
 A autenticação no ponto de extremidade de serviço do controlador está usando uma identidade do Active Directory ou baseada em nome de usuário e senha. Essas credenciais são provisionadas no momento da inicialização do cluster usando a entrada para variáveis de ambiente `AZDATA_USERNAME` e `AZDATA_PASSWORD`.
 
 > [!NOTE]
-> Você deve fornecer uma senha que esteja em conformidade com os [Requisitos de complexidade de senha do SQL Server](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
+> Você deve fornecer uma senha que esteja em conformidade com os [Requisitos de complexidade de senha do SQL Server](../relational-databases/security/password-policy.md?view=sql-server-2017).
 
 ## <a name="next-steps"></a>Próximas etapas
 

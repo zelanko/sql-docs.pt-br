@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942758"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765735"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -26,14 +26,14 @@ No [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] em diante, os [!INCLU
 
 Use Clusters de Big Data do SQL Server para:
 
-- [Implantar clusters escalonáveis](../big-data-cluster/deploy-get-started.md) de contêineres do SQL Server, do Spark e do HDFS em execução no Kubernetes. 
+- [Implantar clusters escalonáveis](./deploy-get-started.md) de contêineres do SQL Server, do Spark e do HDFS em execução no Kubernetes. 
 - Ler, gravar e processar Big Data do Transact-SQL ou do Spark.
 - Combine e analise facilmente dados relacionais de valor elevado com Big Data de volume grande.
 - Consultar fontes de dados externas.
 - Armazenar Big Data no HDFS gerenciado por SQL Server.
 - Consultar dados de várias fontes de dados externas por meio do cluster.
 - Usar os dados para IA, aprendizado de máquina e outras tarefas de análise.
-- [Implantar e executar aplicativos](../big-data-cluster/concept-application-deployment.md) em [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- [Implantar e executar aplicativos](./concept-application-deployment.md) em [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
 - Virtualizar dados com o [PolyBase](../relational-databases/polybase/polybase-guide.md). Consulte dados de SQL Server externos, Oracle, Teradata, MongoDB e fontes de dados ODBC com tabelas externas.
 - Forneça alta disponibilidade para a instância mestra do SQL Server e todos os bancos de dados usando a tecnologia de grupo de disponibilidade Always On.
 
