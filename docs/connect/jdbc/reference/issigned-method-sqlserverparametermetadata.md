@@ -1,4 +1,5 @@
 ---
+description: Método isSigned (SQLServerParameterMetaData)
 title: Método isSigned (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ad996e3572f4a77d3547ec93c0e2c13262799aba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 749f5ffca4043a6f4f5fe7341680863e39735fa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433388"
 ---
 # <a name="issigned-method-sqlserverparametermetadata"></a>Método isSigned (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80925045"
 public boolean isSigned(int param)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *param*  
   
  Um **int** que indica o índice do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se o parâmetro designado puder conter números assinados. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  

@@ -1,4 +1,5 @@
 ---
+description: Método getTimestamp (java.lang.String)
 title: Método getTimestamp (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4d5174db-365c-4476-9472-7871578ef34c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c2c6530e6df31502841ad931852f317a2e838b7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3cd94238727f91e166f1cb6981bb4c4e0d35f742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434108"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>Método getTimestamp (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80924514"
 public java.sql.Timestamp getTimestamp(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
@@ -48,7 +49,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
 ## <a name="remarks"></a>Comentários  
  Esse método getTimestamp é especificado pelo método getTimestamp na interface java.sql.CallableStatement.  
   
- Esse método só retorna valores das colunas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**e**smalldatetime**do**.  
+ Esse método só retorna valores das colunas **datetime** e **smalldatetime** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [getTimestamp Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

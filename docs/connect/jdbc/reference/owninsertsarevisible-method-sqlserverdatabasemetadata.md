@@ -1,4 +1,5 @@
 ---
+description: Método ownInsertsAreVisible (SQLServerDatabaseMetaData)
 title: Método ownInsertsAreVisible (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e3b1c7dc9d7d358d11b56540e00771f7219388d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33857f57f9a0d02d45720011623a73eac981e4ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433078"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>Método ownInsertsAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80914543"
 public boolean ownInsertsAreVisible(int type)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *tipo*  
   
  Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
@@ -57,7 +58,7 @@ public boolean ownInsertsAreVisible(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se as inserções estiverem visíveis. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  

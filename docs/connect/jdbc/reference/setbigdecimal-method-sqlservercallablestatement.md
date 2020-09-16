@@ -1,4 +1,5 @@
 ---
+description: Método setBigDecimal (SQLServerCallableStatement)
 title: Método setBigDecimal (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 327a455a8763d44173d56591ed0a89871b353f74
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cfc53c301f011250c9e90b92e24020cae7732e05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432508"
 ---
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>Método setBigDecimal (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public void setBigDecimal(java.lang.String sCol,
                           java.math.BigDecimal bd)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  

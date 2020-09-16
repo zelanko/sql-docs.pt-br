@@ -1,4 +1,5 @@
 ---
+description: Método isWritable (SQLServerResultSetMetaData)
 title: Método isWritable (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f199ae0fea034ed83e0b633939b2224e531e9f8c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 56f7d240f82209c46414e40d1c7b6518f198239e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433268"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>Método isWritable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80915044"
 public boolean isWritable(int column)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *column*  
   
  Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se as gravações forem bem-sucedidos na coluna. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  

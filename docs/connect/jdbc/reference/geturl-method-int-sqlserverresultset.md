@@ -1,4 +1,5 @@
 ---
+description: Método getURL (int) (SQLServerResultSet)
 title: Método getURL (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5d0b665c-e1a7-43f7-88c3-db432773de7d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8dec0c47a9a5954d934dc8ba8a687af76cb319f2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0c4ac5b133229ac93311695ec26d4b257206da86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433888"
 ---
 # <a name="geturl-method-int-sqlserverresultset"></a>Método getURL (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public java.net.URL getURL(int columnIndex)
   
  Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto URL.  
   
 ## <a name="exceptions"></a>Exceções  

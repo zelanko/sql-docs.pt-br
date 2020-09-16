@@ -1,4 +1,5 @@
 ---
+description: Interface ISQLServerResultSet
 title: Interface ISQLServerResultSet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eeaa9b486fc818464b6bc2f2b57552bb1f18a744
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9af7454de26296b406138c4a23bb1ba48ab6be12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433468"
 ---
 # <a name="isqlserverresultset-interface"></a>Interface ISQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

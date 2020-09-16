@@ -1,4 +1,5 @@
 ---
+description: Método isAutoIncrement (SQLServerResultSetMetaData)
 title: Método isAutoIncrement (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 028b8d61-9557-4c9f-b732-29e87a962de8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 314336220393eb05dab17164e33516c3740f24b7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: acd4543069969d4e4a15b0399e6c68873e5cc280
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433648"
 ---
 # <a name="isautoincrement-method-sqlserverresultsetmetadata"></a>Método isAutoIncrement (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80909802"
 public boolean isAutoIncrement(int column)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *column*  
   
  Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se a coluna for numerada automaticamente. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  

@@ -1,4 +1,5 @@
 ---
+description: Método setAsciiStream (SQLServerNClob)
 title: Método setAsciiStream (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 78eaf123b4d483a519c815f5063ce5f5af0caf21
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 20bed6696e28abdc57ec420c5b728a4978ddb44c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432548"
 ---
 # <a name="setasciistream-method-sqlservernclob"></a>Método setAsciiStream (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,12 +30,12 @@ ms.locfileid: "80915812"
 public java.io.OutputStream setAsciiStream(long pos)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *pos*  
   
  A posição em que a gravação no objeto **NCLOB** deve ser iniciada; a primeira posição é 1.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto OutputStream que representa o fluxo no qual os caracteres ASCII codificados podem ser gravados.  
   
 ## <a name="exceptions"></a>Exceções  

@@ -1,4 +1,5 @@
 ---
+description: Método isClosed (SQLServerResultSet)
 title: Método isClosed (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1eaefb2873e0a9cfd12ebdd289b2a7005ef0e3d9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c83e158dcb94f6fdf5b3ef2e9d1eedc5880e3d93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433578"
 ---
 # <a name="isclosed-method-sqlserverresultset"></a>Método isClosed (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: Método rollback (java.sql.Savepoint)
 title: Método rollback (java.sql.Savepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e1ac014ddeee1d3763dc3cebe720751c4c1ec94
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a25a2721efee6586e8571854f2ce6cea8ee8179
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432708"
 ---
 # <a name="rollback-method-javasqlsavepoint"></a>Método rollback (java.sql.Savepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80903879"
 public void rollback(java.sql.Savepoint s)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *s*  
   
  O objeto SavePoint a ser revertido.  

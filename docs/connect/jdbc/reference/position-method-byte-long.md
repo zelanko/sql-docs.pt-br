@@ -1,4 +1,5 @@
 ---
+description: Método position (byte[], long)
 title: Método position (byte[], long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 938254b8076d78ebd1ac768d130904077828aa03
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 81248632dfff287d349a627dd4a82499e80d1d64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433058"
 ---
 # <a name="position-method-byte-long"></a>Método position (byte[], long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public long position(byte[] bPattern,
                      long start)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *bPattern*  
   
  O padrão a ser pesquisado.  
@@ -44,7 +45,7 @@ public long position(byte[] bPattern,
   
  O índice inicial no qual pesquisar.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um valor **long** da posição em que o padrão foi localizado ou -1 se não foi localizado.  
   
 ## <a name="exceptions"></a>Exceções  

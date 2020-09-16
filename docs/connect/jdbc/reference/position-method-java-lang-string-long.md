@@ -1,4 +1,5 @@
 ---
+description: Método position (java.lang.String, long)
 title: Método position (java.lang.String, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 432ee4fccc21a57130e1bccad9c43b50e2b992ba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6529acba826fb4e76c3c6f6612eacccc63ee7a30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433038"
 ---
 # <a name="position-method-javalangstring-long"></a>Método position (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public long position(java.lang.String searchstr,
                      long start)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *searchstr*  
   
  A subcadeia de caracteres pela qual pesquisar.  
@@ -44,7 +45,7 @@ public long position(java.lang.String searchstr,
   
  A posição em que a pesquisa deve ser iniciada; a primeira posição é 1.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  A posição em que a subcadeia de caracteres aparece ou -1 se ela não estiver presente; a primeira posição é 1.  
   
 ## <a name="exceptions"></a>Exceções  

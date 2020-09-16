@@ -1,4 +1,5 @@
 ---
+description: Interface ISQLServerDataSource
 title: Interface ISQLServerDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1d8df253dad8f8315ba2744f8234f20a1b11d52
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dce7958853170b8a72e86cdc0cae1b61e32ef666
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433498"
 ---
 # <a name="isqlserverdatasource-interface"></a>Interface ISQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

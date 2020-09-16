@@ -1,4 +1,5 @@
 ---
+description: Método getURL (SQLServerDatabaseMetaData)
 title: Método getURL (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 526eb87409eaf08c8947e1a85c4e4ef68247daff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7371c5aa585c7ffc9ec434e8c0dbc5ae6ecc4d89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433868"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>Método getURL (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: Método getUDTs (SQLServerDatabaseMetaData)
 title: Método getUDTs (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 610218dd7b1439e5e032bfc0a8f53893f6894f32
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4d7649cc14a972f364b6fd10e6d6d728f4bb2ffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433938"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>Método getUDTs (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

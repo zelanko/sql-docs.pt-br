@@ -1,4 +1,5 @@
 ---
+description: Método prepareCall (SQLServerConnection)
 title: Método prepareCall (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 265b024c-898a-4bd0-98b5-f06076717b9e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fea25c7db1ea37fee00f2cd347f005fcfd8a4790
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f98a826147b744ea77f22035cea7f5658c371a26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432928"
 ---
 # <a name="preparecall-method-sqlserverconnection"></a>Método prepareCall (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80913946"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[prepareCall (java.lang.String)](../../../connect/jdbc/reference/preparecall-method-java-lang-string.md)|Cria um objeto SQLServerCallableStatement para chamar procedimentos armazenados de bancos de dados.|  
 |[prepareCall (java.lang.String, int, int)](../../../connect/jdbc/reference/preparecall-method-java-lang-string-int-int.md)|Cria um objeto SQLServerCallableStatement que gera os objetos [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) com tipo e simultaneidade fornecidos.|  

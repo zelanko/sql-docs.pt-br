@@ -1,4 +1,5 @@
 ---
+description: Método prepareStatement (SQLServerConnection)
 title: Método prepareStatement (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2bd4afa0d0ed4f25b570c084dd0c6baabdcf488
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33ff50a91a7fd66191665a335a6e462adb9eb632
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432868"
 ---
 # <a name="preparestatement-method-sqlserverconnection"></a>Método prepareStatement (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80913882"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[prepareStatement (java.lang.String)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|Cria um objeto [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) para enviar instruções SQL com parâmetros ao banco de dados.|  
 |[prepareStatement (java.lang.String, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int.md)|Cria um objeto [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) para enviar instruções SQL com parâmetros ao banco de dados e que tem a capacidade de recuperar as chaves geradas automaticamente.|  

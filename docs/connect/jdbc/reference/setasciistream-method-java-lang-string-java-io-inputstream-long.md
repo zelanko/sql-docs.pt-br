@@ -1,4 +1,5 @@
 ---
+description: Método setAsciiStream (java.lang.String, java.io.InputStream, long)
 title: Método setAsciiStream para bytes de fluxo de entrada – long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8987f123ee71713200d7a51a41001602b8071ed3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbf55e2de65e6f3d4fd09d1ccd8305100e837f66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432588"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>Método setAsciiStream (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ public final void setAsciiStream(java.lang.String parameterName,
                                 long length)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *parameterName*  
   
  Uma **String** que contém o nome do parâmetro.  

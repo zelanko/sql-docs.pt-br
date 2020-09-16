@@ -1,4 +1,5 @@
 ---
+description: Método position (java.lang.String, long) (SQLServerNClob)
 title: Método position (java.lang.String, long) (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 46d4beec-831a-449f-98b6-322a80cc499a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe0bf76df2f2350b76ad6f817b621d01ae2410dc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a16db92eb2181cfe6db2ee9e6b1c3039acb6df93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433048"
 ---
 # <a name="position-method-javalangstring-long-sqlservernclob"></a>Método position (java.lang.String, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ public long position(java.lang.String searchstr,
               long start)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *searchstr*  
   
  A subcadeia de caracteres pela qual pesquisar.  
@@ -39,7 +40,7 @@ public long position(java.lang.String searchstr,
   
  A posição em que a pesquisa deve ser iniciada; a primeira posição é 1.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  A posição em que a subcadeia de caracteres aparece; ou -1 se ela não estiver presente. A primeira posição é 1.  
   
 ## <a name="exceptions"></a>Exceções  

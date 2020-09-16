@@ -1,4 +1,5 @@
 ---
+description: Método getURL (int)
 title: Método getURL (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 75d03ced-3614-4997-9abd-24642b1d1aae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe82c5de9932eb7279e07c5eed3b1644c6c57462
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f21b85039805f6b636b79be05fa0eb7a4f105abb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433878"
 ---
 # <a name="geturl-method-int"></a>Método getURL (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80910686"
 public java.net.URL getURL(int n)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *n*  
   
  Um **int** que indica o índice do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto URL.  
   
 ## <a name="exceptions"></a>Exceções  

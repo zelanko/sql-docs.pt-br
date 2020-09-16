@@ -1,4 +1,5 @@
 ---
+description: Método getTimestamp (int, java.util.Calendar)
 title: Método getTimestamp (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a86f7c3b9483257a38095adfff6969c04d43fb4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cfc800130418505067f50eb0de5dc3679a57a137
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434148"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>Método getTimestamp (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public java.sql.Timestamp getTimestamp(int index,
                                        java.util.Calendar cal)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *index*  
   
  Um **int** que indica o índice do parâmetro.  
@@ -53,7 +54,7 @@ public java.sql.Timestamp getTimestamp(int index,
 ## <a name="remarks"></a>Comentários  
  Esse método getTimestamp é especificado pelo método getTimestamp na interface java.sql.CallableStatement.  
   
- Esse método só retorna valores das colunas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**e**smalldatetime**do**.  
+ Esse método só retorna valores das colunas **datetime** e **smalldatetime** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [getTimestamp Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

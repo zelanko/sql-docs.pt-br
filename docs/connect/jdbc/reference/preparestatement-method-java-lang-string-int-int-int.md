@@ -1,4 +1,5 @@
 ---
+description: Método prepareStatement (java.lang.String, int, int, int)
 title: Método prepareStatement (java.lang.String, int, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0629ee8020c6b1be5f8273c16fe814cf05e922b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 644b5e0f1ff37ba3e955b0f74096d47df10bd01a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432918"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>Método prepareStatement (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
                                                    int nHold)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sql*  
   
  Uma **String** contendo uma instrução SQL.  
@@ -54,7 +55,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
   
  Um **int** que indica a suspensão do conjunto de resultados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto PreparedStatement.  
   
 ## <a name="exceptions"></a>Exceções  

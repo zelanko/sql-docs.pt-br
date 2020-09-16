@@ -1,4 +1,5 @@
 ---
+description: Método isWrapperFor (SQLServerDataSource)
 title: Método isWrapperFor (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4173a8266ca71462f6b0b08e5728db1e7060d144
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bcd792e3029a1591eaa05f88de80569e750429e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433318"
 ---
 # <a name="iswrapperfor-method-sqlserverdatasource"></a>Método isWrapperFor (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,12 +30,12 @@ ms.locfileid: "80924490"
 public boolean isWrapperFor(Class iface)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *iface*  
   
  Uma **classe** que define uma interface.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se esse objeto implementar a interface ou encapsular um objeto que implementa a interface. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
