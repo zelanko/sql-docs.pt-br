@@ -3,7 +3,7 @@ title: Gerar Scripts
 description: Saiba como usar o Assistente para Gerar e Publicar Scripts para criar scripts Transact-SQL para vários objetos e como usar o menu Gerar Script como no Pesquisador de Objetos para gerar scripts para objetos individuais ou múltiplos.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123117"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901340"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Gerar scripts (SQL Server Management Studio)
 
@@ -67,7 +67,7 @@ Use o painel **Detalhes do Pesquisador de Objetos** para gerar um script para v�
 
 4. Abra o painel **Detalhes do Pesquisador de Objetos** selecionando **F7**ou abrindo o menu **Exibição** e selecionando **Detalhes do Pesquisador de Objetos**.
 
-    ![Pesquisador de Objetos](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![Menu de exibição](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. Clique com o botão esquerdo do mouse em um dos objetos dos quais você deseja gerar um script.
 
@@ -75,4 +75,4 @@ Use o painel **Detalhes do Pesquisador de Objetos** para gerar um script para v�
 
 7. Clique com o botão direito do mouse em um dos objetos selecionados e selecione **Gerar Script \<object type> como**.
 
-    ![Pesquisador de Objetos](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![Detalhes](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

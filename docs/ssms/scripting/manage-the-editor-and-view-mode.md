@@ -1,11 +1,8 @@
 ---
 title: Gerenciar o editor e o modo de exibição
 description: 'Saiba como selecionar um dos dois modos de exibição do SQL Server Management Studio: Modo de Documentos com Guias e modo de Interface de Vários Documentos. Saiba também sobre exibições divididas, quebra automática de linha, modo Espaço virtual, exibição de números de linhas, modo de Tela Inteira e Ocultar Tudo Automaticamente.'
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -20,20 +17,26 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122578"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093420"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gerenciar o editor e o modo de exibição
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  O Editor fornece várias maneiras para controlar a exibição do código.  
-  
+
+O Editor fornece várias maneiras para controlar a exibição do código.  
+
 ## <a name="changing-the-view-mode"></a>Alterando o modo de exibição  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] possui um modo de exibição denominado **Documentos com Guias**, que permite abrir vários editores e documentos simultaneamente e acessá-los por guias no topo do editor. Como alternativa, você pode abrir o ambiente do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no modo interface de documentos múltiplos (MDI), que une as janelas sem guias e permite organizar as janelas lado a lado, minimizá-las etc.  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] possui um modo de exibição denominado **Documentos com Guias**, que permite abrir vários editores e documentos simultaneamente e acessá-los por guias no topo do editor. Como alternativa, você pode abrir o ambiente do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no modo interface de documentos múltiplos (MDI), que une as janelas sem guias e permite organizar as janelas lado a lado, minimizá-las etc.  
   
 #### <a name="to-switch-between-view-modes"></a>Para alternar entre modos de exibição  
   

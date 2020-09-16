@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 636bc0ebcfbd85f9da38ecff6cd1ff4a966164c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ed269ebe81cb70feff22fd0d2c3e3bf006ccbc9c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715350"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537988"
 ---
 # <a name="the-memory-optimized-filegroup"></a>O grupo de arquivos com otimização de memória
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -6,18 +6,18 @@ ms.date: 01/24/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf8f2a6c80dbaf13c6e47ca835c7dc3c3e0d4d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f430d2be5a9b1af495b296f59c172e16401c01eb
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897066"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901118"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Protocolos para propriedades de MSSQLSERVER (guia Avançado)
 
@@ -27,8 +27,8 @@ Use a guia **Avançado** na caixa de diálogo **Protocolos para Propriedades de 
 
 > [!IMPORTANT]  
 > O Windows não habilita a **Proteção Estendida** por padrão. Para obter informações sobre como habilitar a **Proteção Estendida**, confira o seguinte:
-> - [Proteção Estendida do Windows \<extendedProtection\>](https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
-> - [Visão geral sobre a Proteção Estendida para Autenticação](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
+> - [Proteção Estendida do Windows \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
+> - [Visão geral sobre a Proteção Estendida para Autenticação](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
 Para obter mais informações sobre como configurar outros serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma descrição completa da **Proteção Estendida**, consulte informações mais recentes em [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).
 
@@ -53,4 +53,3 @@ Uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode
 ## <a name="see-also"></a>Consulte Também
 
 [Proteção estendida para autenticação com o Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
-

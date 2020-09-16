@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882356"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042831"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solução de problemas: o grupo de disponibilidade excedeu o RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85882356"
   
  Além disso, é útil verificar os dois objetos de desempenho, `SQL Server:Availability Replica > Flow Control Time (ms/sec)` e `SQL Server:Availability Replica > Flow Control/sec`. A multiplicação desses dois valores mostra quanto tempo, no último segundo, foi gasto aguardando a limpeza do controle de fluxo. Quanto maior o tempo de espera do controle de fluxo, menor será a taxa de envio.  
   
- As métricas a seguir são úteis para diagnosticar a taxa de transferência e latência da rede. Você pode usar outras ferramentas do Windows, como **ping.exe** e [Monitor de Rede](https://www.microsoft.com/download/details.aspx?id=4865) para avaliar a utilização e a latência da rede.  
+ As métricas a seguir são úteis para diagnosticar a taxa de transferência e latência da rede. Você pode usar outras ferramentas do Windows, como **ping.exe** e [Monitor de Rede](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7) para avaliar a utilização e a latência da rede.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

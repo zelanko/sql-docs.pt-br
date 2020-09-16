@@ -3,7 +3,7 @@ title: Janela de saída
 description: Saiba como usar a Janela de Saída para exibir mensagens de status e outras saídas do depurador do SQL Server Management Studio e de outras ferramentas.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Output Window [Transact-SQL]
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93cf1e703e7a8610ecf2bc8de841c00b7b2b3397
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c576971d8e28d14926b4b3fa8b5a250aa94a4e16
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247326"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901158"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Depurador do Transact-SQL – janela de Saída
 
