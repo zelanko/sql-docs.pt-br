@@ -1,4 +1,5 @@
 ---
+description: Classe SQLServerResultSet
 title: Classe SQLServerResultSet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 32212ca1ced5d042d23efdf9f0f67d43bd6643ff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f39b678960c18d0b9f4956ed05523ddcb0da965d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467068"
 ---
 # <a name="sqlserverresultset-class"></a>Classe SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

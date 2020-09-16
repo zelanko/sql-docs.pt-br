@@ -1,4 +1,5 @@
 ---
+description: Combinar condições quando AND tem precedência (Visual Database Tools)
 title: Combinar condições quando AND tiver precedência
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: e5f7932ecfedaace610bb9adc1e76825c8797e0a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ad323d3efdbb760b315c16d94752d8c658fdab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468472"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Combinar condições quando AND tem precedência (Visual Database Tools)
 
@@ -33,7 +34,7 @@ Por exemplo, imagine que você deseja localizar funcionários que estão na empr
   
 -   Os funcionários com data de contratação anterior há cinco anos AND com um nível de trabalho de 100.  
   
-    -ou-  
+    - ou -  
   
 -   Funcionários com um nível de trabalho de 200.  
   
@@ -62,7 +63,7 @@ Por exemplo, imagine que você deseja localizar funcionários que estão na empr
   
 ## <a name="see-also"></a>Consulte Também
 
-[Combinar condições quando OR tiver precedência](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Combinar condições quando OR tem precedência](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [Convenções para combinar condições de pesquisa no painel Critérios](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Regras para inserir valores de pesquisa](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
 [Especificar critérios de pesquisa](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

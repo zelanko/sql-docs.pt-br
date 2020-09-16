@@ -1,4 +1,5 @@
 ---
+description: Membros SQLServerXAConnection
 title: Membros SQLServerXAConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1d465b21146d656fe04e25dd3ce08356af93b501
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9b0c1f613cfa44859c51bf4429939e93c157d75a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462538"
 ---
 # <a name="sqlserverxaconnection-members"></a>Membros SQLServerXAConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80926991"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|(Herdado de [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) Registra o ouvinte de evento fornecido de forma que ele seja notificado quando um evento ocorrer no objeto Connection.|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|(Herdado de [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) Fecha a conexão física que o objeto Connection representa.|  

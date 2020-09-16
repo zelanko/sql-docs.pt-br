@@ -1,4 +1,5 @@
 ---
+description: Método updateBlob (SQLServerResultSet)
 title: Método updateBlob (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee17a330526c099394145b95b127091ccc1f7fee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 31cf98c8237267915a137bdba720ac586795ff2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462288"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>Método updateBlob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80924765"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|Atualiza a coluna designada com um valor java.sql.Blob.|  
 |[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|Atualiza a coluna designada usando o fluxo de entrada especificado.|  

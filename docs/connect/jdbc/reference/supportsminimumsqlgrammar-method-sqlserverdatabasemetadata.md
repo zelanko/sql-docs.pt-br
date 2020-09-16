@@ -1,4 +1,5 @@
 ---
+description: Método supportsMinimumSQLGrammar (SQLServerDatabaseMetaData)
 title: Método supportsMinimumSQLGrammar (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 40f5d727-1ce7-414d-867d-589ead7b2a29
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8264270a9021af6a509bc0a75f3477d37985994
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c663d4a6104cf503901640e9e019bf06c1d5d37c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467005"
 ---
 # <a name="supportsminimumsqlgrammar-method-sqlserverdatabasemetadata"></a>Método supportsMinimumSQLGrammar (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

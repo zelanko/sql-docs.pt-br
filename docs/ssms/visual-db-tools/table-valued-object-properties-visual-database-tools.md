@@ -1,4 +1,5 @@
 ---
+description: Propriedades de objeto com valor de tabela (Visual Database Tools)
 title: Propriedades do Objeto com Valor de Tabela
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9e21318c245ab43b288ac4784289a62673e7e94a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2606f055597438aa852c787c45c9c489cd4e5743
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468286"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriedades de objeto com valor de tabela (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Essas propriedades aparecem na janela Propriedades quando você seleciona um objeto com valor de tabela no **Designer de Consulta e Exibição**. O objeto com valor de tabela pode ser uma exibição, sinônimo, tabela derivada ou função com valor de tabela. A menos que indicado em contrário, essas propriedades são somente leitura na janela **Propriedades** .  
+ Essas propriedades aparecem na janela Propriedades quando você seleciona um objeto com valor de tabela no **Designer de Exibição e Consulta**. O objeto com valor de tabela pode ser uma exibição, sinônimo, tabela derivada ou função com valor de tabela. A menos que indicado em contrário, essas propriedades são somente leitura na janela **Propriedades** .  
   
 > [!NOTE]  
 > As propriedades desse tópico são classificadas por categoria e não em ordem alfabética.  
@@ -50,6 +51,6 @@ Mostra o nome das colunas incluídas no objeto com valor de tabela selecionado. 
 **Nome completo**  
 Mostra o nome do objeto com valor de tabela selecionado, inclusive informações adicionais como o esquema ou fonte de dados do objeto.  
   
-**Parâmetro**  
+**Lista de parâmetros**  
 Mostra os parâmetros definidos para a função com valor de tabela selecionada. Para definir um valor para os parâmetros, clique em Lista de parâmetros e então clique nas reticências (...) à direita da propriedade. Digite os valores na caixa de diálogo de Parâmetros de função. Essa propriedade só está disponível quando é selecionada uma função com valor de tabela.  
   

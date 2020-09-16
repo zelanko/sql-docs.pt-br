@@ -1,4 +1,5 @@
 ---
+description: Método setNull (java.lang.String, int, java.lang.String)
 title: Método setNull (java.lang.String, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 16ff77f9-7928-415c-abf6-97ed59e3e396
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 377434a126d512b4d2b61bcdb1f9478605b6e943
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8c4d7666b4b743428ce2f81c7d84cd3b7caeca47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458612"
 ---
 # <a name="setnull-method-javalangstring-int-javalangstring"></a>Método setNull (java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +37,7 @@ public void setNull(java.lang.String sCol,
                     java.lang.String sTypeName)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  

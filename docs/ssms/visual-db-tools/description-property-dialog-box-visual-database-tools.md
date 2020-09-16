@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Propriedade de Descrição (Visual Database Tools)
 title: Caixa de diálogo Propriedade de Descrição
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: bb550a5981c22128dc5386ee13906855ea5e2477
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9533af32aae8478687601600973f65b7516c77a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462808"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Caixa de diálogo Propriedade de Descrição (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

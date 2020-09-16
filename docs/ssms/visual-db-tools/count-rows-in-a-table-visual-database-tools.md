@@ -1,4 +1,5 @@
 ---
+description: Contar linhas em uma tabela (Visual Database Tools)
 title: Contar linhas em uma tabela
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 34a37d382d7176f1f1e602aa45a559299d7d43ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4aef31efc3b7636d56d9a4cd1ba1cf07aa22830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462844"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Contar linhas em uma tabela (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ Os procedimentos para todos os três tipos de contas são semelhantes.
   
     O Designer de Consulta e Exibição preenche automaticamente o termo **Contagem** na coluna **Agrupar por** no painel de critérios e atribui um alias de coluna à coluna que você está resumindo. Você pode substituir esse alias gerado automaticamente por outro que tenha mais significado. Para obter mais detalhes, veja [Criar aliases de coluna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
-4.  Executa a consulta.  
+4.  Executar a consulta.  
   
 ### <a name="to-count-all-the-rows-that-meet-a-condition"></a>Para contar todas as linhas que atendam uma condição  
   
@@ -68,7 +69,7 @@ Os procedimentos para todos os três tipos de contas são semelhantes.
   
 6.  Na coluna **Filtro** para a coluna de dados a ser pesquisada, insira o critério da pesquisa.  
   
-7.  Executa a consulta.  
+7.  Executar a consulta.  
   
 ### <a name="to-count-the-values-in-a-column"></a>Para contar os valores em uma coluna.  
   
@@ -85,7 +86,7 @@ Os procedimentos para todos os três tipos de contas são semelhantes.
     > [!NOTE]  
     > Para contar apenas valores exclusivos, escolha **Distinção de Contagem**.  
   
-5.  Executa a consulta.  
+5.  Executar a consulta.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

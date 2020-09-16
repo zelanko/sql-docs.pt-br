@@ -1,4 +1,5 @@
 ---
+description: Copiar tabelas de diagramas de um banco de dados para outro (Visual Database Tools)
 title: Copiar tabelas de diagramas de um banco de dados para outro
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e92b18a5efee8082689d5e77e8ab9cdd91464de1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b75d0d2c3429f5649e1034ea9eb4f922ca995652
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468463"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>Copiar tabelas de diagramas de um banco de dados para outro (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

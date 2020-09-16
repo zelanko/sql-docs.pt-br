@@ -1,4 +1,5 @@
 ---
+description: Método updateRef (SQLServerResultSet)
 title: Método updateRef (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1d80d9e1-4f58-4cc2-9ed6-786fdf3e2660
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a3760308e5cca34600ac80d47dd29f0c83020ae
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e7403280bd00f3b42e0ad0a50d0b4baf11fee452
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466878"
 ---
 # <a name="updateref-method-sqlserverresultset"></a>Método updateRef (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80919692"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[updateRef (int, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-int-java-sql-ref.md)|Atualiza a coluna designada com um valor de java.sql.Ref, considerando o índice da coluna.|  
 |[updateRef (java.lang.String, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-java-lang-string-java-sql-ref.md)|Atualiza a coluna designada com um valor de java.sql.Ref, considerando o nome da coluna.|  

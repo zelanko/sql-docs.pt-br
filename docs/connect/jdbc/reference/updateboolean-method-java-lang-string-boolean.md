@@ -1,4 +1,5 @@
 ---
+description: Método updateBoolean (java.lang.String, boolean)
 title: Método updateBoolean (java.lang.String, boolean) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5fed9ebb-d9a3-4d1a-9212-1057a603c4e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1319bb034c4ce7d88a7145d97a2b6d71d3b92bc3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82972a7974e19075bae174ee84f9d4aaa6533883
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462266"
 ---
 # <a name="updateboolean-method-javalangstring-boolean"></a>Método updateBoolean (java.lang.String, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public void updateBoolean(java.lang.String columnName,
                           boolean x)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  

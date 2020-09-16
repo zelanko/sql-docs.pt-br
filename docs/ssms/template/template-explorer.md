@@ -1,4 +1,5 @@
 ---
+description: Explorador de Modelos
 title: Explorador de Modelos
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +20,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 3720799e0af4dbd7d01b6703be87bd9ac16b0587
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5fcf7040cbf7b0dc3982164ca6574f2c048ed28c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468505"
 ---
 # <a name="template-explorer"></a>Explorador de Modelos
 
@@ -48,5 +49,5 @@ Use os tópicos a seguir como introdução rápida a modelos
 |**Descrição**|**Tópico**|  
 |-------------------|-------------|  
 |Descreve como incorporar o código de um modelo em uma janela de editor de códigos.|[Abrir um modelo](../../ssms/template/open-a-template.md)|  
-|Descreve como substituir valores de parâmetros de modelo depois de abrir um modelo em um editor de códigos.|[Substituir parâmetros do modelo](../../ssms/template/replace-template-parameters.md)|  
+|Descreve como substituir valores de parâmetros de modelo depois de abrir um modelo em um editor de códigos.|[Substituir Parâmetros do Modelo](../../ssms/template/replace-template-parameters.md)|  
   

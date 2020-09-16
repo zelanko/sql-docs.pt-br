@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_free_stmt
 title: sqlsrv_free_stmt | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fb937b9477be3a18f14960c3ed9d142aacbe7452
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8984bd68e56e0ccf4d8bb29f54da9c8369812a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466739"
 ---
 # <a name="sqlsrv_free_stmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,10 +36,10 @@ Libera todos os recursos associados à instrução especificada. A instrução n
 sqlsrv_free_stmt( resource $stmt)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$stmt*: a instrução a ser fechada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 O valor booliano **true** , a menos que a função seja chamada com um parâmetro inválido. Se a função for chamada com um parâmetro inválido, **false** será retornado.  
   
 > [!NOTE]  

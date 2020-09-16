@@ -1,4 +1,5 @@
 ---
+description: Propriedade de ConfigurationSetting – VirtualDirectoryReportServer
 title: Propriedade de ConfigurationSetting – VirtualDirectoryReportServer | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 162106619fce4a8868064abd42687041203221bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 61cf5bf938292b3a6a3be42afd166e6f395cef4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468900"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportserver"></a>Propriedade de ConfigurationSetting – VirtualDirectoryReportServer
   Retorna o diretório virtual para o aplicativo do servidor de relatório. Somente leitura.  

@@ -1,4 +1,5 @@
 ---
+description: Como o Designer de Consulta e Exibição representa junções (Visual Database Tools)
 title: Como o designer de exibição e de consultas representa junções
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51c94c3d0cd6f5e86d8d6ed35e0ebf81606ecfdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462790"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Como o Designer de Consulta e Exibição representa junções (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Se as tabelas forem unidas, o [Designer de Consulta e Exibição](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) representará a junção graficamente no [painel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) e pelo uso da sintaxe SQL no [painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+ Se as tabelas forem unidas, o [Designer de Exibição e Consulta](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) representará a junção graficamente no [painel Diagrama](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) e pelo uso da sintaxe SQL no [painel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 ## <a name="diagram-pane"></a>Painel Diagrama  
 No painel Diagrama, o Designer de Consulta e Exibição exibe uma linha de junção entre as colunas de dados envolvidas na junção. O Designer de Consulta e Exibição exibe uma linha de junção para cada condição de junção. Por exemplo, a ilustração seguinte mostra uma linha de junção entre duas tabelas unidas:  

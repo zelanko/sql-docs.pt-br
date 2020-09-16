@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Cores (Visual Database Tools)
 title: Caixa de diálogo Cor
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6bea7a1e8a660bd9f33112e1bbf8dc737621a8ef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98ac865345b0d5e71f1823fcb49d48c729dcb160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468481"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Caixa de diálogo Cores (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,13 +40,13 @@ A matriz de cores mostra a paleta de cores. Para definir uma cor personalizada, 
 Barra de luminosidade  
 Arraste o controle deslizante para alterar a luminosidade ou as tonalidades relativas a claro e escuro de uma cor. O valor numérico correspondente aparece em **Luminosidade**.  
   
-**Color**  
+**Cor**  
 Exibe a cor atualmente selecionada.  
   
-**Hue**  
+**Matiz**  
 Valor de matiz da cor selecionada.  
   
-**Saturação**  
+**Sat**  
 Valor de saturação da cor selecionada.  
   
 **Luminosidade**  

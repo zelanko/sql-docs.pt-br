@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Excluir Tabela (Visual Database Tools)
 title: Caixa de diálogo Excluir Tabela
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 806ad42b0b519b974367cef3429d1ba9c947caa4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 623c8991b18c5c95b39b1278680189b49bbbd6ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462824"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Caixa de diálogo Excluir Tabela (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

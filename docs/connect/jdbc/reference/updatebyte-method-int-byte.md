@@ -1,4 +1,5 @@
 ---
+description: Método updateByte (int, byte)
 title: Método updateByte (int, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e635d789-9218-488e-a213-2e3e09635acc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8231a88407334a4d4c72018d9fe1a4f178b20c8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 00a7eea10e4ded2bcac76b0825f6ba33722d5795
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462239"
 ---
 # <a name="updatebyte-method-int-byte"></a>Método updateByte (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public void updateByte(int index,
                        byte x)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *index*  
   
  Um **int** que indica o índice de coluna.  

@@ -1,4 +1,5 @@
 ---
+description: Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório
 title: Usar a segurança interna no Windows SharePoint Services para itens de servidor de relatório | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d57768a580b4343fbe1e6ee2919a8161013371a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74129105d15b437578fa1088d112a4594e2a8b7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469006"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório
   O SharePoint fornece recursos de segurança interna que você pode usar para acessar itens do servidor de relatório nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões de site e de lista aos usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o SharePoint e um servidor de relatório.  
@@ -25,7 +26,7 @@ ms.locfileid: "65579416"
 ## <a name="securable-items"></a>Itens protegíveis  
  As permissões definidas no site ou na biblioteca podem ser usadas para conceder acesso a itens do servidor de relatórios. Entretanto, se você quiser proteger itens individuais, pode definir permissões nos seguintes tipos de conteúdo:  
   
-|Tipo de arquivo|DESCRIÇÃO|  
+|Tipo de arquivo|Descrição|  
 |---------------|-----------------|  
 |.rdl|Um arquivo de definição de relatório que define o layout do relatório e os comandos usados para recuperar dados. Uma definição de relatório usa informações de conexão da fontes de dados para recuperar dados quando o relatório é processado. Se a definição do relatório determinar um relatório ad hoc criado no Construtor de Relatórios, o relatório fará par com um arquivo de modelo de relatório (.smdl) que define o escopo na exploração de dados do relatório renderizado.|  
 |.smdl|Um arquivo de modelo de relatório que descreve estruturas de dados e como elas se relacionam. Ele é usado para criar e executar relatórios do Construtor de Relatórios.|  

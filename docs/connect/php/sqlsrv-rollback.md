@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_rollback
 title: sqlsrv_rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8253ad826b8537768aaf01331a60ceacb65edbe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4cde5b4e805b6dc55830c2ad396f181f2e1f642c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466716"
 ---
 # <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,10 +43,10 @@ Reverte a transação atual na conexão especificada e retorna a conexão para o
 sqlsrv_rollback( resource $conn)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$conn*: a conexão em que a transação está ativa.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Um valor booliano: **true** se a transação foi revertida com êxito. Caso contrário, **false**.  
   
 ## <a name="example"></a>Exemplo  

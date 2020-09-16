@@ -1,4 +1,5 @@
 ---
+description: Criar e gerenciar atribuições de função
 title: Criar e gerenciar atribuições de função | Microsoft Docs
 ms.date: 05/07/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3b7b88e9342c818645e0a9e1430cc5fe5c9400c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468985"
 ---
 # <a name="create-and-manage-role-assignments"></a>Criar e gerenciar atribuições de função
 

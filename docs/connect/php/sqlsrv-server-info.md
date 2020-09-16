@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_server_info
 title: sqlsrv_server_info | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0831addcaec34e24d12f3b775125f7414e302b8f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7eaf032b121dc3e93cb13f001cbebd3eaa75b796
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466684"
 ---
 # <a name="sqlsrv_server_info"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +36,13 @@ Retorna informações sobre o servidor. É necessário estabelecer uma conexão 
 sqlsrv_server_info( resource $conn)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$conn*: o recurso de conexão pelo qual o cliente e o servidor estão conectados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Uma matriz associativa com as seguintes chaves:  
   
-|Chave|DESCRIÇÃO|  
+|Chave|Descrição|  
 |-------|---------------|  
 |CurrentDatabase|O banco de dados de destino no momento.|  
 |SQLServerVersion|A versão do SQL Server.|  
