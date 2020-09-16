@@ -2,19 +2,19 @@
 title: Extensão de implantação de aplicativo
 titleSuffix: SQL Server big data clusters
 description: Implante um script do Python ou R como um aplicativo nos Clusters de Big Data do SQL Server.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6698e3beee1df32f6b88fcde2c034f60a4e56f21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728870"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680591"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Como usar o Visual Studio Code para implantar aplicativos nos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -155,7 +155,7 @@ Se clicar em `Links`, verá que pode acessar o `swagger.json` do aplicativo impl
 
 ![Swagger](media/vs-extension/swagger.png)
 
-Confira [Consumir aplicativos em clusters de Big Data](big-data-cluster-consume-apps.md) para obter mais informações.
+Confira [Consumir aplicativos em clusters de Big Data](app-consume.md) para obter mais informações.
 
 ### <a name="app-run"></a>Execução do Aplicativo
 
@@ -199,7 +199,7 @@ Para excluir um aplicativo, basta clicar no botão de Lixeira ao lado do aplicat
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Explore como integrar os aplicativos implantados no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em seus próprios aplicativos em [Consumir aplicativos em clusters de Big Data](big-data-cluster-consume-apps.md) para obter mais informações. Você também pode consultar os exemplos adicionais em [Exemplos de Implantação de Aplicativo](https://aka.ms/sql-app-deploy) para fazer experimentos com a extensão.
+Explore como integrar os aplicativos implantados no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] em seus próprios aplicativos em [Consumir aplicativos em clusters de Big Data](app-consume.md) para obter mais informações. Você também pode consultar os exemplos adicionais em [Exemplos de Implantação de Aplicativo](https://aka.ms/sql-app-deploy) para fazer experimentos com a extensão.
 
 Para obter mais informações sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], confira [O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 

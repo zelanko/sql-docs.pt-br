@@ -1,4 +1,5 @@
 ---
+description: Opções (Pesquisador de Objetos – Comandos do SQL Server)
 title: Opções (Pesquisador de Objetos – Comandos do SQL Server)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fed6267ca26a01003b9115d9179e9d4d2dce5f97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bb1c05534ef2ce73caeccd4f6f1bf4fee3d10063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497369"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Opções (Pesquisador de Objetos – Comandos do SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

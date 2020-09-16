@@ -1,4 +1,5 @@
 ---
+description: 'Passo a passo: Adicionando e alterando um diagrama de banco de dados'
 title: Adicionando e alterando um diagrama de banco de dados
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,18 +15,18 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 41ecd01badd21d8c3198dfb661d63b7d14753d76
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 87ff469370e58c261e762cf9c4d6c604488ccfb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479910"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Este passo a passo ilustra como criar e modificar um diagrama de banco de dados e fazer alterações no banco de dados por meio do componente de diagramas de banco de dados. Você verá como adicionar tabelas a diagramas, criar relações entre tabelas, criar restrições e índices em colunas, e alterar o nível das informações exibidas em cada tabela.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Para concluir este passo a passo, você precisará de:  
   
 -   Acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
@@ -79,9 +80,9 @@ Para concluir este passo a passo, você precisará de:
   
     |**Nome da Coluna**|**Tipo de Dados**|**Permitir Nulos**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|verificado|  
-    |**T1col2**|**varchar(50)**|verificado|  
-    |**T1col3**|**float**|verificado|  
+    |**T1col1**|**int**|checked|  
+    |**T1col2**|**varchar(50)**|checked|  
+    |**T1col3**|**float**|checked|  
   
 4.  Clique com o botão direito do mouse em `T1col1` e selecione **Definir Chave Primária**.  
   
@@ -123,8 +124,8 @@ Você pode adicionar restrições de verificação e fazer relações entre tabe
     |**Nome da Coluna**|**Tipo de Dados**|**Permitir Nulos**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|não verificado|  
-    |**T2col2**|**varchar(50)**|verificado|  
-    |**T2col3**|**xml**|verificado|  
+    |**T2col2**|**varchar(50)**|checked|  
+    |**T2col3**|**xml**|checked|  
   
     > [!NOTE]  
     > As colunas no lado da chave primária de uma relação de chave estrangeira devem participar de uma Chave Primária ou de uma Restrição Exclusiva.  

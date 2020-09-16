@@ -1,4 +1,5 @@
 ---
+description: Visual Database Tools
 title: Visual Database Tools
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: fb0bf5db131baadbb63bd7fdb29e6279821f2e9d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3aa6e8eccd1bfec881fc01759860bfd79699c834
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479914"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
 
@@ -29,5 +30,5 @@ Execute as seguintes tarefas para começar a usar o Visual Database Tools:
 |**Descrição**|**Tópico**|  
 |-------------------|-------------|  
 |Descreve a ferramenta de diagrama de banco de dados.|[Projetar diagramas de banco de dados](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
-|Descreve a ferramenta de design de tabela visual.|[Criar tabelas](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
-|Descreve o designer de consulta visual.|[Tópicos de instruções sobre como criar consultas e exibições](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 
+|Descreve a ferramenta de design de tabela visual.|[Projetar tabelas](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
+|Descreve o designer de consulta visual.|[Tópicos de instruções de como criar consultas e exibições](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 

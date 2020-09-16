@@ -1,4 +1,5 @@
 ---
+description: Método unwrap (SQLServerXADataSource)
 title: Método unwrap (SQLServerXADataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b1ef2e7b05361ece8e54847b3c4d0d1df5ace08
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 373017cd635b8094a00ea19d6291ea5e158af1a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478428"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>Método unwrap (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,12 +30,12 @@ ms.locfileid: "80926076"
 public <T> T unwrap(Class<T> iface)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *iface*  
   
  Uma classe do tipo **T** que define uma interface.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto que implementa a interface especificada.  
   
 ## <a name="exceptions"></a>Exceções  

@@ -1,4 +1,5 @@
 ---
+description: Organizar tabelas em diagramas (Visual Database Tools)
 title: Organizar Tabelas em Diagramas
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 7cb133b36d804a3d5a32906e2de735df20fb113f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eba464a7648151d24945e755c1f6432f12a699cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497257"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Organizar tabelas em diagramas (Visual Database Tools)
 

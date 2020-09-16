@@ -1,4 +1,5 @@
 ---
+description: Stretch Database
 title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -10,15 +11,15 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2338cfe80dafb68eefaba3d6302d4afc84a585c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497987"
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   O Stretch Database migra seus dados frios de forma transparente e segura para a nuvem do Microsoft Azure.  
@@ -47,7 +48,7 @@ ms.locfileid: "81488335"
   
 -   Se a tabela contiver dados quentes e frios, será possível especificar uma função de filtro para selecionar as linhas a serem migradas.
 
-**Você não precisa alterar as consultas e os aplicativos cliente existentes.** Você continua a ter acesso direto aos dados locais e remotos, mesmo durante a migração de dados. Há uma pequena quantidade de latência para consultas remotas, mas você só encontra essa latência ao consultar os dados frios.
+**Você não precisa alterar as consultas existentes e aplicativos cliente.** Você continua a ter acesso direto aos dados locais e remotos, mesmo durante a migração de dados. Há uma pequena quantidade de latência para consultas remotas, mas você só encontra essa latência ao consultar os dados frios.
 
 **O Stretch Database garante que nenhum dado será perdido** caso ocorra uma falha durante a migração. Ele também tem uma lógica de repetição para lidar com problemas de conexão que podem ocorrer durante a migração. Um modo de exibição de gerenciamento dinâmico fornece o status da migração.
 
@@ -73,9 +74,9 @@ ms.locfileid: "81488335"
  Use o Supervisor do Stretch Database, um recurso do Supervisor de Atualização do SQL Server 2016, para identificar os bancos de dados e tabelas candidatos ao Stretch Database. Para obter mais informações, veja [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md). Para saber mais sobre os possíveis problemas de bloqueio, veja [Limitações do Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
 
 ## <a name="test-drive-stretch-database"></a>Faça o test drive do Stretch Database  
- **Faça o test drive do Stretch Database com o banco de dados de exemplo AdventureWorks.** . Para obter o banco de dados de exemplo AdventureWorks, baixe pelo menos o arquivo de banco de dados e o arquivo de exemplos e scripts [aqui](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). Depois de você restaurar o banco de dados de exemplo para uma instância do SQL Server 2016, descompacte o arquivo de exemplos e abra o arquivo Stretch DB Samples da pasta Stretch DB. Execute os scripts neste arquivo para verificar o espaço usado por seus dados antes e depois de habilitar o Stretch Database, para acompanhar o andamento da migração de dados e para confirmar que você pode continuar a consultar os dados existentes e a inserir novos dados durante e após a migração de dados.  
+ **Faça o test drive do Stretch Database com o banco de dados de exemplo AdventureWorks** . Para obter o banco de dados de exemplo AdventureWorks, baixe pelo menos o arquivo de banco de dados e o arquivo de exemplos e scripts [aqui](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). Depois de você restaurar o banco de dados de exemplo para uma instância do SQL Server 2016, descompacte o arquivo de exemplos e abra o arquivo Stretch DB Samples da pasta Stretch DB. Execute os scripts neste arquivo para verificar o espaço usado por seus dados antes e depois de habilitar o Stretch Database, para acompanhar o andamento da migração de dados e para confirmar que você pode continuar a consultar os dados existentes e a inserir novos dados durante e após a migração de dados.  
   
 ## <a name="next-step"></a>Próxima etapa  
- **Identifique bancos de dados e tabelas que são candidatos a Stretch Database.** Baixe o Assistente de Migração de Dados e execute uma avaliação para identificar bancos de dados e tabelas candidatos ao Stretch Database. Para obter mais informações, veja [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
+ **Identifique bancos de dados e tabelas que são candidatos para o Stretch Database.** Baixe o Assistente de Migração de Dados e execute uma avaliação para identificar bancos de dados e tabelas candidatos ao Stretch Database. Para obter mais informações, veja [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
   

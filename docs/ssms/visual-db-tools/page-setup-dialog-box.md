@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Configurar Página
 title: Caixa de diálogo Configurar Página
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b395ad0cb0d570f74f84937ee78cb7118a5f8404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 698e9022fc5fbb4b3ba5d33a13c7495b7d96c118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491668"
 ---
 # <a name="page-setup-dialog-box"></a>Caixa de diálogo Configurar Página
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Você pode personalizar o layout da sua página selecionando opções na caixa de diálogo **Configurar Página** . A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  
+ Você pode personalizar o design da sua página selecionando opções na caixa de diálogo **Configurar Página**. A disponibilidade de algumas opções depende das linguagens instaladas e habilitadas para edição.  
   
 ## <a name="paper"></a>Papel  
 **Tamanho**  
@@ -38,19 +39,19 @@ Imprime um documento com a borda menor do papel no topo da página.
 Imprime um documento com a borda maior do papel no topo da página.  
   
 ## <a name="margins-inches"></a>Margens (polegadas)  
-Left (à esquerda)  
+Esquerda  
 Define a distância entre a borda esquerda da página e a borda esquerda das linhas sem-recuo alinhadas à esquerda.  
   
-Right  
+Direita  
 Define a distância entre a borda direita da página e a borda direita das linhas sem-recuo alinhadas à direita.  
   
 TOP  
 Define a distância entre a parte superior da página e a parte superior da primeira linha na página.  
   
-Inferior  
+Menor  
 Define a distância entre a parte inferior da página e a parte inferior da última linha na página.  
   
-## <a name="other"></a>Outros  
+## <a name="other"></a>Outro  
 **Visualização**  
 O quadro de visualização exibe os efeitos das configurações selecionadas.  
   

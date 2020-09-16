@@ -1,4 +1,5 @@
 ---
+description: Restaurar bancos de dados habilitados para Stretch (Stretch Database)
 title: Restaurar bancos de dados habilitados para Stretch
 ms.date: 07/06/2016
 ms.service: sql-server-stretch-database
@@ -8,15 +9,15 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8cef37be62e91b608852a4b5867d5917e72e8742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492593"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurar bancos de dados habilitados para Stretch (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Restaure um banco de dados de backup, quando necessário, para se recuperar de muitos tipos de falhas, erros e desastres.
@@ -38,7 +39,7 @@ O serviço SQL Server Stretch Database no Azure tira instantâneos de todos os d
 
 Para restaurar um banco de dados dinâmico do Azure em um ponto específico anterior por meio do portal do Azure, siga o procedimento a seguir.
 
-1. Faça logon no [Azure portal][].
+1. Faça logon no [Portal do Azure][].
 2. No lado esquerdo da tela, selecione **PROCURAR** e **Bancos de Dados SQL**.
 3. Navegue até o banco de dados e selecione-o.
 4. Na parte superior da folha do banco de dados, clique em **Restaurar**.
@@ -50,7 +51,7 @@ O serviço SQL Server Stretch Database no Azure tira um instantâneo de banco de
 
 Para restaurar um banco de dados do Azure excluído no ponto em que ele foi excluído usando o portal do Azure, siga os procedimentos a seguir.
 
-1. Faça logon no [Azure portal][].
+1. Faça logon no [Portal do Azure][].
 2. No lado esquerdo da tela, selecione **PROCURAR** e **SQL Servers**.
 3. Navegue até o servidor e selecione-o.
 4. Role para baixo até Operações na folha do servidor e clique no bloco **Bancos de Dados Excluídos** .

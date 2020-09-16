@@ -1,4 +1,5 @@
 ---
+description: Atalhos de teclado do SQL Server Management Studio
 title: Atalhos de teclado do SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 14bc7634ab3b8b3ad54f8544dc694bb955bd55ce
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 07d226897f2d3dd23d8f4a8a91d0ad7153df4519
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497294"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Atalhos de teclado do SQL Server Management Studio
 
@@ -34,7 +35,7 @@ ms.locfileid: "86001615"
 O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o esquema do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] com atalhos de teclado baseados no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. O [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  
   
 > [!NOTE]  
->  Para exibir somente os cabeçalhos, clique em **Recolher Tudo** na parte superior dessa página.  
+>   Para exibir somente os cabeçalhos, clique em **Recolher Tudo** na parte superior dessa página.  
   
 ## <a name="menu-activation-keyboard-shortcuts"></a>Atalhos de teclado de ativação do menu  
   
@@ -59,7 +60,7 @@ O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usu
 |Fechar a janela filho MDI atual|CTRL+F4|CTRL+F4|  
 |Fecha um menu ou caixa de diálogo, cancela uma operação em andamento ou enfatiza a janela do documento atual|ESC|ESC|  
 |Imprimir|CTRL+P|CTRL+P|  
-|Sair|ALT+F4|ALT+F4|  
+|Fechar|ALT+F4|ALT+F4|  
 |Alternar para o modo de tela inteira|SHIFT+ALT+ENTER|SHIFT+ALT+ENTER|  
 |Fechar a janela da ferramenta atual|SHIFT+ESC|SHIFT+ESC|  
 |Alternar as próximas janelas filho MDI|CTRL+F6|CTRL+TAB|  
@@ -129,16 +130,16 @@ O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usu
 |Move o cursor para o fim da linha, estendendo a seleção de coluna.|SHIFT+ALT+END|Sem equivalente|  
 |Selecionar o texto abaixo linha por linha a partir do cursor|SHIFT+ SETA PARA BAIXO|SHIFT+ SETA PARA BAIXO|  
 |Move o cursor uma linha para baixo, estendendo a seleção de coluna|SHIFT+ Ctrl+Shift+Del||  
-|Move o cursor um caractere para a esquerda e estende a seleção|SHIFT+SETA PARA A ESQUERDA|Sem equivalente|  
+|Move o cursor um caractere para a esquerda e estende a seleção|SHIFT+SETA PARA ESQUERDA|Sem equivalente|  
 |Move o cursor um caractere para a esquerda e estende a seleção de coluna|SHIFT+ALT+SETA PARA ESQUERDA|Sem equivalente|  
-|Move o cursor um caractere para a direita e estende a seleção|SHIFT+SETA PARA A DIREITA|Sem equivalente|  
+|Move o cursor um caractere para a direita e estende a seleção|SHIFT+SETA PARA DIREITA|Sem equivalente|  
 |Move o cursor um caractere para a direita e estende a seleção de coluna|SHIFT+ALT+SETA PARA DIREITA|Sem equivalente|  
 ||||  
 |Selecionar o texto acima linha por linha a partir do cursor|SHIFT+SETA PARA CIMA|SHIFT+SETA PARA CIMA|  
 |Mover o cursor uma linha acima, estendendo a seleção|SHIFT+ALT+SETA PARA CIMA|SHIFT+ALT+SETA PARA CIMA|  
 |Estender a seleção uma página para cima|SHIFT+ PAGE UP|SHIFT+ PAGE UP|  
 |Estender a seleção uma página abaixo|SHIFT+ PAGE DOWN|SHIFT+ PAGE DOWN|  
-|Selecionar todo o documento atual|Ctrl+A|Ctrl+A|  
+|Selecionar todo o documento atual|Ctrl+A|CTRL+A|  
 |Selecionar a palavra que contém o cursor ou a palavra mais próxima|CTRL+W|CTRL+W|  
 |Selecionar o local atual no editor, de volta ao local anterior no editor|CTRL+=|CTRL+=|  
 |Estender a seleção até a parte superior da janela atual|CTRL+SHIFT+ PAGE UP|CTRL+SHIFT+ PAGE UP|  
@@ -187,9 +188,9 @@ O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usu
 |Restaurar a edição desfeita anteriormente|CTRL+SHIFT+Z<br /><br /> ou<br /><br /> CTRL+Y<br /><br /> ou<br /><br /> ALT+SHIFT+BACKSPACE|CTRL+SHIFT+Z<br /><br /> ou<br /><br /> CTRL+Y<br /><br /> ou<br /><br /> ALT+SHIFT+BACKSPACE|  
 |Salvar o item selecionado|Ctrl+S|Ctrl+S|  
 |Salvar tudo|CTRL+SHIFT+S|CTRL+SHIFT+S|  
-|Feche|CTRL+F4|CTRL+F4|  
+|Fechar|CTRL+F4|CTRL+F4|  
 |Imprimir|CTRL+P|CTRL+P|  
-|Sair|ALT+F4|ALT+F4|  
+|Fechar|ALT+F4|ALT+F4|  
 |Abrir o arquivo atual em um navegador|CTRL+SHIFT+W|Sem equivalente|  
 |Excluir todo o texto do arquivo atual|CTRL+SHIFT+DEL|CTRL+SHIFT+DEL|  
 |Exibir a caixa de diálogo **Ir Para Linha**|CTRL+G|CTRL+G|  
@@ -324,7 +325,7 @@ O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usu
   
 |Ação|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Alternar para o modo de tela inteira|SHIFT+ALT+ENTER|SHIFT+ALT+ENTER|  
+|Alternar o modo tela inteira|SHIFT+ALT+ENTER|SHIFT+ALT+ENTER|  
 |Mover para o próximo painel de uma exibição de painel dividida de um documento|F6|F6|  
 |Move para o documento anterior no editor ou designer|CTRL+SHIFT+F6<br /><br /> CTRL+SHIFT+TAB|CTRL+SHIFT+F6<br /><br /> CTRL+SHIFT+TAB|  
 |Mover para o painel anterior de um documento na exibição de painel dividido|SHIFT+F6|SHIFT+F6|  
@@ -362,7 +363,7 @@ O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usu
   
 |Ação|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Exibir a caixa de diálogo **Localizar**|Ctrl+F|Ctrl+F|  
+|Exibir a caixa de diálogo **Localizar**|Ctrl+F|CTRL+F|  
 |Exibir a guia **Em Arquivos** da caixa de diálogo **Localizar** .|||  
 |Exibe a definição do símbolo selecionado.|F12|Sem equivalente|  
 |Exibe a lista de referências do símbolo selecionado.|SHIFT+F12|Sem equivalente|  
@@ -387,7 +388,7 @@ O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usu
 |Recortar (exclui o item selecionado e o coloca na área de transferência)|CTRL+X<br /><br /> ou<br /><br /> SHIFTRLT+DELETE|CTRL+X<br /><br /> ou<br /><br /> SHIFT+DELETE|  
 |Recorta todas as linhas selecionadas ou a linha atual se nada for selecionada.|CTRL+L<br /><br /> ou<br /><br /> Ctrl+Shift+L|Sem equivalente|  
 |Copiar na área de transferência|CTRL+C<br /><br /> ou<br /><br /> CTRL+INSERT|CTRL+C<br /><br /> ou<br /><br /> CTRL+INSERT|  
-|Colar da área de transferência no ponto de inserção|Ctrl+V<br /><br /> ou<br /><br /> SHIFT+INSERT|Ctrl+V<br /><br /> ou<br /><br /> SHIFT+INSERT|  
+|Colar da área de transferência no ponto de inserção|CTRL+V<br /><br /> ou<br /><br /> SHIFT+INSERT|CTRL+V<br /><br /> ou<br /><br /> SHIFT+INSERT|  
 |Cola um item do Anel da Área de Transferência no ponto de inserção e automaticamente seleciona o item colado|CTRL+SHIFT+V<br /><br /> ou<br /><br /> CTRL+enseSHIFT+INSERT|Sem equivalente|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>Atalhos de teclado do Visualizador de Log  
@@ -454,9 +455,9 @@ O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usu
 |Mover o controle selecionado para a esquerda em incrementos de 8 na superfície de design|SETA PARA A ESQUERDA|Sem equivalente|  
 |Mover o controle selecionado para a direita em incrementos de 8 na superfície de design|SETA PARA A DIREITA|Sem equivalente|  
 |Mover o controle selecionado para cima em incrementos de 8 na superfície de design|SETA PARA CIMA|Sem equivalente|  
-|Aumenta a altura do controle selecionado em incrementos de 8|SHIFT+DOWN ARROW|Sem equivalente|  
-|Reduz a largura do controle selecionado em incrementos de 8|SHIFT+SETA PARA A ESQUERDA|Sem equivalente|  
-|Aumenta a largura do controle selecionado em incrementos de 8|SHIFT+SETA PARA A DIREITA|Sem equivalente|  
+|Aumenta a altura do controle selecionado em incrementos de 8|SHIFT+SETA PARA BAIXO|Sem equivalente|  
+|Reduz a largura do controle selecionado em incrementos de 8|SHIFT+SETA PARA ESQUERDA|Sem equivalente|  
+|Aumenta a largura do controle selecionado em incrementos de 8|SHIFT+SETA PARA DIREITA|Sem equivalente|  
 |Diminui a altura do controle selecionado em incrementos de 8|SHIFT+SETA PARA CIMA|Sem equivalente|  
 |Move o controle seguinte na página.|TAB|Sem equivalente|  
 |Move o controle anterior na página.|SHIFT+TAB|Sem equivalente|  

@@ -1,4 +1,5 @@
 ---
+description: Conectar a qualquer componente do SQL Server a partir do SQL Server Management Studio
 title: Conectar-se a qualquer componente do SQL Server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 2fb4150c0c1d659feebac2047094b479b7027087
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497413"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Conectar a qualquer componente do SQL Server a partir do SQL Server Management Studio
 

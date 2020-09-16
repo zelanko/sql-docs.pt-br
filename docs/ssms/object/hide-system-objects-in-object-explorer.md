@@ -1,4 +1,5 @@
 ---
+description: Ocultar objetos do sistema no Pesquisador de Objetos
 title: Ocultar objetos do sistema no Pesquisador de Objetos
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05864efb35ecd5fcd49e8f8b90cd8093984a9f78
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9546305b749a7c97637d9b45c35c86fa1ac7b2fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480185"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>Ocultar objetos do sistema no Pesquisador de Objetos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

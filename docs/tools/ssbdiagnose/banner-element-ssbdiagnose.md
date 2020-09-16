@@ -1,4 +1,5 @@
 ---
+description: Elemento Banner (ssbdiagnose)
 title: Elemento Banner
 diagnose: In SQL Server, the Banner element identifies which utility generated the ssbdiagnose output XML file.
 ms.prod: sql
@@ -15,19 +16,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: bc2a4c5da5db899289b05845eaef1564437ef8c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dae521477b4255c6e4f697631960d4647e736f01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484939"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
 
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Identifica qual utilitário gerou o arquivo XML de saída **ssbdiagnose** .  
+ Identifica qual utilitário gerou o arquivo XML de saída **ssbdiagnose**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +42,7 @@ Identifica qual utilitário gerou o arquivo XML de saída **ssbdiagnose** .
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |**title**|Identifica qual utilitário gerou o arquivo de saída XML **ssbdiagnose** .|  
 |**product**|Identifica qual produto gerou o arquivo de saída XML **ssbdiagnose** .|  
@@ -49,7 +50,7 @@ Identifica qual utilitário gerou o arquivo XML de saída **ssbdiagnose** .
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

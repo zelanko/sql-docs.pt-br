@@ -1,4 +1,5 @@
 ---
+description: Dados de demonstração de chegadas de voos de companhias aéreas para tutoriais de Python e R do SQL Server
 title: Dados de demonstração de voo de companhia aérea para tutoriais
 Description: Crie um banco de dados que contenha um conjunto de dados de companhia aérea em R e Python. Esse conjunto de dados é usado em tutoriais de R e Python para os Serviços de Machine Learning do SQL Server.
 ms.prod: sql
@@ -9,15 +10,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484069"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de chegadas de voos de companhias aéreas para tutoriais de Python e R do SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Neste exercício, crie um banco de dados do SQL Server para armazenar dados importados de conjuntos internos de demonstração de linhas aéreas em R ou Python. As distribuições do R e Python fornecem dados equivalentes, que podem ser importados para um banco de dados do SQL Server usando o Management Studio.
 
@@ -25,7 +26,7 @@ Para concluir este exercício, você deve ter o [SQL Server Management Studio](h
 
 Os tutoriais e guias de início rápido que usam esse conjunto de dados incluem o seguinte:
 
-+  [Criar um modelo de Python usando revoscalepy](use-python-revoscalepy-to-create-model.md)
++  [Criar um modelo Python usando revoscalepy](use-python-revoscalepy-to-create-model.md)
 
 ## <a name="create-the-database"></a>Criar o banco de dados
 
@@ -65,4 +66,4 @@ Como uma etapa de validação, execute uma consulta para confirmar se os dados f
 
 Na lição a seguir, você criará um modelo de regressão linear com base nesses dados.
 
-+ [Criar um modelo de Python usando revoscalepy](use-python-revoscalepy-to-create-model.md)
++ [Criar um modelo Python usando revoscalepy](use-python-revoscalepy-to-create-model.md)

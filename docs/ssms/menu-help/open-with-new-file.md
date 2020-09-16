@@ -1,4 +1,5 @@
 ---
+description: Abrir com (Novo Arquivo)
 title: Abrir com (Novo Arquivo)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1ac269ba2768195448927375b4cbde5713f15f2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491922"
 ---
 # <a name="open-with-new-file"></a>Abrir com (Novo Arquivo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ Para remover um programa, selecione o programa e, depois, clique em **Remover**.
 Para especificar um editor padrão (e opções de codificação de linguagem, se aplicável) para o tipo de arquivo selecionado, escolha um programa da lista sob **Selecionar um programa para abrir** e, depois, clique em **Definir como Padrão**. Na próxima vez em que você abrir esse tipo de arquivo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o documento será aberto no novo editor padrão.  
   
 > [!NOTE]  
-> Na lista de programas sob **Selecionar um programa para abrir**, o nome do editor padrão para o tipo de arquivo selecionado é seguido por **(Padrão)** .  
+> Na lista de programas sob **Selecionar um programa para abrir**, o nome do editor padrão para o tipo de arquivo selecionado é seguido por **(Padrão)**.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Como associar extensões de arquivo a um Editor de Códigos](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

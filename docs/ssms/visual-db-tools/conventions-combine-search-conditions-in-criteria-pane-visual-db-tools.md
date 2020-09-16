@@ -1,4 +1,5 @@
 ---
+description: Convenções para combinar critérios de pesquisa no painel de Critérios (Visual Database Tools)
 title: Convenções para combinar condições de pesquisa no painel Critérios
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 78fcb406bc6526a90f15fe2771352ac269fb8ab2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ae92bc88f3b18dcd195d857c1ccc975d116880f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491709"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenções para combinar critérios de pesquisa no painel de Critérios (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: Remover tabelas dos diagramas de banco de dados (Visual Database Tools)
 title: Remover tabelas de diagramas de banco de dados
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 40d205f0f1f638814b8b2c91efaf18c26473eda8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 04b59c0b9b35ab344451b689bfdd3771337a43d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491603"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Remover tabelas dos diagramas de banco de dados (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ Você pode remover uma tabela de seu diagrama de banco de dados. A remoção de 
   
 2.  Clique com o botão direito do mouse na tabela e escolha **Remover tabela do diagrama** no menu de atalho.  
   
-    -ou-  
+    - ou -  
   
     Pressione a tecla ESC.  
   

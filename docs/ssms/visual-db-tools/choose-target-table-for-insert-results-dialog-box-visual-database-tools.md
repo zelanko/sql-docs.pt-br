@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Escolher Tabela de Destino para Inserir Resultados (Visual Database Tools)
 title: Caixa de diálogo Escolher Tabela de Destino para Inserir Resultados
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 559b55405c8eef2d84e4f628dddb2328e844a5c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 362da7d0648339ecf253dbbb8e267c131378df7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491714"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Caixa de diálogo Escolher Tabela de Destino para Inserir Resultados (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

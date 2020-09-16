@@ -1,4 +1,5 @@
 ---
+description: Política de suporte do SSMS (SQL Server Management Studio)
 title: Política de suporte do SSMS (SQL Server Management Studio)
 ms.date: 11/13/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ea616a92f1760252087bc6a8e27bec3fe2d24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497264"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Política de suporte do SSMS (SQL Server Management Studio)
 
@@ -43,4 +44,4 @@ Fase de serviço com **Suporte Completo**: ao executar a versão mais recente do
 
 
 > [!NOTE]
-> A versão mais recente do branch atual está sempre na fase de serviço de **Suporte Completo**. Essa instrução de suporte significa que, se você encontrar uma falha de código que exija uma atualização crítica, deverá ter a versão do branch atual mais recente instalada para receber um conserto.
+> A versão mais recente do branch atual está sempre na fase de serviço de **Suporte Completo**. Essa instrução do suporte significa que, se você encontrar um defeito de código que requeira uma atualização crítica, será necessário ter a versão do branch atual mais recente instalada para receber uma correção.

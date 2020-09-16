@@ -1,4 +1,5 @@
 ---
+description: Como usar Always Encrypted com enclaves seguros com o JDBC Driver
 title: Como usar Always Encrypted com enclaves seguros com o JDBC Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2020
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
-ms.openlocfilehash: 8933d01f8c1bb0e028927b1c0f97f064a369bb8e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8035e1d5890bf51d80341f740436d586053d4e90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487917"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver"></a>Como usar Always Encrypted com enclaves seguros com o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

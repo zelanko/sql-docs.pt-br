@@ -1,4 +1,5 @@
 ---
+description: Método supportsFullOuterJoins (SQLServerDatabaseMetaData)
 title: Método supportsFullOuterJoins (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 836f1f45-59ed-4a34-9809-2000d3062576
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e19b7567c341d9474b168e7ea991124d99b16723
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b6b1c7256d0f10c375d333b094b3c0e5177c1a26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478518"
 ---
 # <a name="supportsfullouterjoins-method-sqlserverdatabasemetadata"></a>Método supportsFullOuterJoins (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

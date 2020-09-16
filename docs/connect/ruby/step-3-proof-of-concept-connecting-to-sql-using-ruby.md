@@ -1,4 +1,5 @@
 ---
+description: 'Etapa 3: Prova de conceito da conexão ao SQL usando Ruby'
 title: 'Etapa 3: Prova de conceito da conexão com o SQL usando o Ruby | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/22/2020
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0431ce7aaa9c7e40196c689591b7d56ec5d42ef
-ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
+ms.openlocfilehash: 3553f57191dc462067fc48dc1cf2394437912240
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484769"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Etapa 3: Prova de conceito da conexão ao SQL usando Ruby
 
-Este exemplo deve ser considerado apenas uma prova de conceito.  O código de exemplo está simplificado para fins de clareza e não necessariamente representa as melhores práticas recomendadas pela Microsoft.  
+Este exemplo só deve ser considerado como uma prova de conceito.  O código de exemplo está simplificado para fins de clareza e não necessariamente representa as melhores práticas recomendadas pela Microsoft.  
   
 ## <a name="step-1--connect"></a>Etapa 1:  Conectar  
   
@@ -56,7 +57,7 @@ No exemplo de código, A função [TinyTds::Result](https://github.com/rails-sql
   
 ## <a name="step-3--insert-a-row"></a>Etapa 3:  Inserir uma linha  
   
-Neste exemplo, você verá como executar uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) com segurança e passar parâmetros que protegem seu aplicativo contra o valor [injeção de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+Neste exemplo, você verá como executar uma instrução [INSERT](../../t-sql/statements/insert-transact-sql.md) com segurança, passar parâmetros que protegem seu aplicativo contra o valor [injeção de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
 Para usar o TinyTDS com o Azure, recomendamos a execução de várias `SET` instruções para alterar o modo como a sessão atual lida com informações específicas. Instruções `SET` recomendadas são fornecidas no código de exemplo. Por exemplo, `SET ANSI_NULL_DFLT_ON` permitirá novas colunas criadas para permitir valores nulos, mesmo que o status de nulidade da coluna não seja declarado explicitamente.  
   

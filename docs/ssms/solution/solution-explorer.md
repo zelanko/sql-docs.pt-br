@@ -1,4 +1,5 @@
 ---
+description: Gerenciador de Soluções
 title: Gerenciador de Soluções
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: ac4584f715da631c13a56fa531334e9da20f6c55
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b1c98d1e8cdf0525da76e65ef7481def4e3feb0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491763"
 ---
 # <a name="solution-explorer"></a>Gerenciador de Soluções
 

@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Índices – Chaves (Visual Database Tools)
 title: Índices – caixa de diálogo Chaves
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f251517d488324028af33e2749955cbb91c1193e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 16d6c66945d46ecf2b82410d7ae573a450238922
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85980561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484999"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices – Chaves (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ Quando expandida, mostra as informações para **Criar como Clusterizado**.
 Faça com que a chave ou índice fiquem clusterizados. Somente um índice clusterizado é permitido em uma tabela. Os dados de uma tabela são armazenados na ordem do índice clusterizado. Para obter mais informações, consulte [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md) e [Criar índices não clusterizados](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Especificação de Espaço de Dados**  
-Quando expandida, mostra informações de **(Tipo de Espaço de Dados)** , **Grupo de arquivos ou Nome de esquema de partição**e **Lista de Colunas da Partição**.  
+Quando expandida, mostra informações de **(Tipo de Espaço de Dados)**, **Grupo de arquivos ou Nome de esquema de partição**e **Lista de Colunas da Partição**.  
   
 **(Tipo de Espaço de Dados)**  
 Indica se o índice ou a chave pertence a um grupo de arquivo ou esquema de partição.  

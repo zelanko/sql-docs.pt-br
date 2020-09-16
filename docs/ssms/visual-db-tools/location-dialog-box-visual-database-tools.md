@@ -1,4 +1,5 @@
 ---
+description: Caixa de diálogo Local (Visual Database Tools)
 title: Caixa de diálogo Local
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a628be0f00cd2d4a90a139ba6217a663d2780c9f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 60a5e8df466b4d8e797b0b9c6adad9d588bf7404
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497099"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Caixa de diálogo Local (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ Localize a pasta que você quer dessa lista. As subpastas da pasta selecionada s
 **Área de Trabalho**  
 Exibe os arquivos e pastas localizadas na área de trabalho.  
   
-**Meus Projetos**  
+**Meus projetos**  
 Exibe os arquivos e as pastas no local **Meus Projetos** .  
   
 **Meu Computador**  

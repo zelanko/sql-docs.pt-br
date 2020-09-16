@@ -1,4 +1,5 @@
 ---
+description: Personalizar o volume de informações exibidas em diagramas (Visual Database Tools)
 title: Personalizar o volume de informações exibidas em diagramas
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51b2f7092e09043487e867aea70ef4e00438f989
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ec512eeb7d07876e78cb3c450f86a8b3b728ecb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497151"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizar o volume de informações exibidas em diagramas (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ As opções são:
   
 -   Nomes de coluna  
   
--   simétricas  
+-   Chaves  
   
 -   Apenas nome  
   

@@ -1,4 +1,5 @@
 ---
+description: Método DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting)
 title: Método DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e86c1964a4ece26115116b8e21c763caaab797b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6dea15e9dfe817d13b7a1178406b45ab4d8321f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497949"
 ---
 # <a name="configurationsetting-method---deleteencryptedinformation"></a>Método de ConfigurationSetting – DeleteEncryptedInformation
   Exclui as informações criptografadas do banco de dados do servidor de relatório.  
@@ -35,7 +36,7 @@ Public Sub DeleteEncryptedInformation(ByRef HRESULT As Int32, ByRef ExtendedErro
 public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedErrors);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   

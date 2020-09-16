@@ -1,4 +1,5 @@
 ---
+description: Membros SQLServerClob
 title: Membros SQLServerClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d69a32f3822a82d2395d51a375fedf0867b3f3e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c08ab28a64ddbb463f8a86d2d5a8a66f14f1ca82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478568"
 ---
 # <a name="sqlserverclob-members"></a>Membros SQLServerClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "80909584"
   
 ## <a name="constructors"></a>Construtores  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|Inicializa uma nova instância da classe SQLServerClob.|  
   
@@ -37,7 +38,7 @@ ms.locfileid: "80909584"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[gratuito](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|Esse método libera o objeto CLOB e os recursos que ele contém.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|Materializa o Clob como um fluxo de ASCII.|  

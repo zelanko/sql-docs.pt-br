@@ -1,4 +1,5 @@
 ---
+description: Consultar com parâmetros (Visual Database Tools)
 title: Consulta com Parâmetros
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: fd07a135a52ab90837cbcbe9ba32f2a0bb4561f6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2ddd13ce6d354656cd16d37ab0b2a864cb87084f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491648"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Consultar com parâmetros (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

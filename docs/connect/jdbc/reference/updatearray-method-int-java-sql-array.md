@@ -1,4 +1,5 @@
 ---
+description: Método updateArray (int, java.sql.Array)
 title: Método updateArray (int, java.sql.Array) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 464f7e3f-3e8a-4b2d-aebd-1c040583d52c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c4ff7bb163935eb9c10b14b1c3e3c3b2c988171
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4456f4f39b8eeda140dd929039ec4e91001f6c5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478439"
 ---
 # <a name="updatearray-method-int-javasqlarray"></a>Método updateArray (int, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
 title: Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 608c24801a19e003751d6455f86cd11e4c053719
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 715885ea3eaaa3601c56ddf296c91cf579dd4c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497372"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ Os relatórios personalizados podem ser executados no contexto de um nó selecio
 |------------------|-------------|  
 |**ObjectName**|**Cadeia de caracteres**|  
 |**ObjectTypeName**|**Cadeia de caracteres**|  
-|**Filtrado**|**Booliano**|  
+|**Filtered**|**Booliano**|  
 |**ServerName**|**Cadeia de caracteres**|  
 |**FontName**|**Cadeia de caracteres**|  
 |**DatabaseName**|**Cadeia de caracteres**|  

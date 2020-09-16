@@ -1,4 +1,5 @@
 ---
+description: Propriedades de Coluna (Visual Database Tools)
 title: Propriedades de coluna
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56bb24bbf28a07da1ade12eecea0e0db5b2badbd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480071"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ Mostra o tipo de dados da coluna selecionada. Para obter mais informações, con
 **Incremento de Identidade**  
 Mostra o incremento a ser adicionado à **Semente de Identidade** para cada linha seguinte da coluna de identidade. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
-**Semente de Identidade**  
+**Propagação de Identidade**  
 Mostra o valor da semente atribuído à primeira linha da tabela para a coluna de identidade. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **É Identidade**  
@@ -158,7 +159,7 @@ Mostra se a coluna selecionada é a coluna de identidade para a tabela. Para alt
 **Incremento de Identidade**  
 Mostra o incremento que será adicionado à **Semente de Identidade** para cada linha seguinte. Se essa célula for deixada em branco, o valor 1 será atribuído como padrão. Para editar essa propriedade, digite o valor novo diretamente.  
   
-**Semente de Identidade**  
+**Propagação de Identidade**  
 Mostra o valor atribuído à primeira linha da tabela. Se essa célula for deixada em branco, o valor 1 será atribuído como padrão. Para editar essa propriedade, digite o valor novo diretamente.  
   
 **É Determinístico**  
@@ -167,7 +168,7 @@ Mostra se o tipo de dados da coluna selecionada pode ser determinado com certeza
 **É publicado por DTS**  
 Mostra se a coluna é publicada por DTS.  
   
-**É Indexável**  
+**Indexável**  
 Mostra se a coluna selecionada pode ser indexada. Por exemplo, colunas calculadas não determinísticas não podem ser indexadas.  
   
 **É Publicado por Mesclagem**  

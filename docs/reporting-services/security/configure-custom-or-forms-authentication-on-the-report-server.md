@@ -1,4 +1,5 @@
 ---
+description: Configurar autenticação personalizada ou de formulários no servidor de relatório
 title: Configurar a autenticação personalizada ou de formulários no servidor de relatório | Microsoft Docs
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 196b326a9854242369efbdc6c697d292a1eb6e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492619"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurar autenticação personalizada ou de formulários no servidor de relatório
 
@@ -48,7 +49,7 @@ Além disso, se você desejar usar a autenticação de Formulários ou uma exten
     </Authentication>
     ```
 
-4.  Cole-a nas entradas existentes de \<**Authentication**>.
+4.  Cole-a nas entradas existentes para \<**Authentication**>.
 
      Observe que não é possível usar **Personalizada** com outros tipos de autenticação.
 

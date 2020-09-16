@@ -1,4 +1,5 @@
 ---
+description: Noções básicas sobre níveis de isolamento
 title: Noções básicas sobre níveis de isolamento | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab8517345f60e0b747e2693e3c07c5ea9db0b0fa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 758012112df2bce1b0a7624834bfde3c3c4ece10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488039"
 ---
 # <a name="understanding-isolation-levels"></a>Noções básicas sobre níveis de isolamento
 

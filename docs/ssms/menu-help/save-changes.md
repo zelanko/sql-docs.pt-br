@@ -1,4 +1,5 @@
 ---
+description: Salvar alterações
 title: Salvar alterações
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1d354aeffc15a65ebe8ec1f4bac8ddaa494b2a9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e1afa0c385c6670670a256ada69b446548cd5db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491920"
 ---
 # <a name="save-changes"></a>Salvar alterações
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Avisa que as alterações nos itens listados não serão salvas a menos que você clique em **Sim**.  
+ Avisa que as alterações nos itens listados não serão salvas a menos que você clique em **Sim**.  
   
 Esta caixa de diálogo pode aparecer quando você estiver fechando soluções, planos de manutenção ou outros arquivos abertos.  
   

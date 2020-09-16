@@ -1,4 +1,5 @@
 ---
+description: Dimensionar automaticamente tabelas selecionadas em diagramas (Visual Database Tools)
 title: Dimensionar Automaticamente Tabelas Selecionadas em Diagramas
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 1fb6867d6fed1501744d8604c166c5c371273751
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4cba19047348e90d8389fe3aef2dcba3c1402cae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497220"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Dimensionar automaticamente tabelas selecionadas em diagramas (Visual Database Tools)
 
