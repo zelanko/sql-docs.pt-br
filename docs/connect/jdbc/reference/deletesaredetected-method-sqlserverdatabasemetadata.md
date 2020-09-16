@@ -1,4 +1,5 @@
 ---
+description: Método deletesAreDetected (SQLServerDatabaseMetaData)
 title: Método deletesAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 14b55815be8aebaecd539fcc2c73675ef9b42534
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8aeb74dd819817d743d5929cb2f1e6e74bb77339
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437908"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Método deletesAreDetected (SQLServerDatabaseMetaData)
 
@@ -34,7 +35,7 @@ ms.locfileid: "80922186"
 public boolean deletesAreDetected(int type)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *tipo*  
   
  Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
@@ -57,7 +58,7 @@ public boolean deletesAreDetected(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se uma lacuna substituir a linha excluída. **false** se a linha excluída for removida.  
   
  Ao usar o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método retorna **true** para cursores de TYPE_SS_SCROLL_KEYSET e **false** para todos os outros tipos de conjunto de resultados.  

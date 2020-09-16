@@ -1,4 +1,5 @@
 ---
+description: Método executeUpdate (java.lang.String, int[])
 title: Método executeUpdate (java.lang.String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7b3d5b60-4285-4047-b13e-106754ca0d98
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24afa57d67f19cc9f37e5980ccd9b2179f2b0ac5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ce46b5979b1d958e6e896fc32b03e45f591be289
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437628"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>Método executeUpdate (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public final int executeUpdate(java.lang.String sql,
                                int[] columnIndexes)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sql*  
   
  Uma **String** que contém uma instrução SQL.  
@@ -44,7 +45,7 @@ public final int executeUpdate(java.lang.String sql,
   
  Uma matriz de ints que indica os índices de coluna das chave geradas automaticamente que devem ser disponibilizados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um **int** que indica o número de linhas afetadas ou 0 se uma instrução DDL estiver sendo usada.  
   
 ## <a name="exceptions"></a>Exceções  

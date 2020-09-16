@@ -1,4 +1,5 @@
 ---
+description: Método execute (java.lang.String, int[])
 title: Método execute (java.lang.String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7195d5c5bf4efb593e53dea6e5404cc8adb70830
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 95c18d95e6014afc78fc53b8a37f3cd4d3509fd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437768"
 ---
 # <a name="execute-method-javalangstring-int"></a>Método execute (java.lang.String, int[])
 
@@ -34,7 +35,7 @@ public final boolean execute(
     int[] columnIndexes)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 *sql*
 
 Uma **String** que contém uma instrução SQL.
@@ -43,7 +44,7 @@ Uma **String** que contém uma instrução SQL.
 
 Uma matriz de **int**s que indica os índices de coluna das chaves geradas automaticamente que devem ser disponibilizados.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor de retorno
 **true** se o primeiro resultado for um conjunto de resultados. Caso contrário, **false**.
   
 ## <a name="exceptions"></a>Exceções

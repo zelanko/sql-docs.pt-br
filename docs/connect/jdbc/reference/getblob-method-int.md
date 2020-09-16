@@ -1,4 +1,5 @@
 ---
+description: Método getBlob (int)
 title: Método getBlob (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c93bec37060ebdb7850ff2b678d7a68fce35e3a0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be2b5a9109042b03f2a248bd41225de5faddec83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437138"
 ---
 # <a name="getblob-method-int"></a>Método getBlob (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80921627"
 public java.sql.Blob getBlob(int index)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *index*  
   
  Um **int** que indica o índice do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto Blob.  
   
 ## <a name="exceptions"></a>Exceções  

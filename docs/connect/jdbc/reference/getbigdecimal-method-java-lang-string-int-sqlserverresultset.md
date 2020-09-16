@@ -1,4 +1,5 @@
 ---
+description: Método getBigDecimal (java.lang.String, int) (SQLServerResultSet)
 title: Método getBigDecimal (java.lang.String, int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 572a1799-c232-400f-b8d8-37a5719a8d5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db42729446b2007a730c5fda795cf628eea0fc5f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 16cd3731dc9c6cef484d2cceb0bbced908ef391e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437298"
 ---
 # <a name="getbigdecimal-method-javalangstring-int-sqlserverresultset"></a>Método getBigDecimal (java.lang.String, int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName,
                                           int scale)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
@@ -47,7 +48,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName,
   
  Um **int** que indica o número de dígitos à direita da vírgula decimal.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto BigDecimal.  
   
 ## <a name="exceptions"></a>Exceções  

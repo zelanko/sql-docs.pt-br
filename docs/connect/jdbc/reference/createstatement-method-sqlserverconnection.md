@@ -1,4 +1,5 @@
 ---
+description: Método createStatement (SQLServerConnection)
 title: Método createStatement (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6d043ba9-b8ec-41d3-bb22-ad2c4aebda6f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbb140326ad7a3657d529ae2d15998f133d6c561
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67053001f47251af6b076403eaf003225ef6eafd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437918"
 ---
 # <a name="createstatement-method-sqlserverconnection"></a>Método createStatement (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80927654"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[createStatement ()](../../../connect/jdbc/reference/createstatement-method.md)|Cria um objeto SQLServerStatement para enviar instruções SQL ao banco de dados.|  
 |[createStatement (int, int)](../../../connect/jdbc/reference/createstatement-method-int-int.md)|Cria um objeto SQLServerStatement que gera objetos SQLServerResultSet com o tipo e a simultaneidade fornecidos.|  

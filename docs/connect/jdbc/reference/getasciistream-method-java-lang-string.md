@@ -1,4 +1,5 @@
 ---
+description: Método getAsciiStream (java.lang.String)
 title: Método getAsciiStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55709acd48aec185d06a09acd48951424cf8cc90
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3bea88a4c4ebab5845358b827a077a6915311cda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437408"
 ---
 # <a name="getasciistream-method-javalangstring"></a>Método getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80925427"
 public java.io.InputStream getAsciiStream(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto InputStream.  
   
 ## <a name="exceptions"></a>Exceções  

@@ -1,4 +1,5 @@
 ---
+description: Método executeQuery (java.lang.String)
 title: Método executeQuery (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: edb099aaa88887f96a3a05369373035588f25b74
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cff547cf27a6ef796e31383e524872717943b860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437698"
 ---
 # <a name="executequery-method-javalangstring"></a>Método executeQuery (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80922035"
 public final java.sql.ResultSet executeQuery(java.lang.String sql)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sql*  
   
  Uma **String** que contém uma instrução SQL.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto SQLServerResultSet.  
   
 ## <a name="exceptions"></a>Exceções  

@@ -1,4 +1,5 @@
 ---
+description: Método dataDefinitionIgnoredInTransactions (SQLServerDatabaseMetaData)
 title: O banco de dados ignora a instrução de definição de dados na transação | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00f8a8dda595f1ffdd01e19c99709e9d334f9f4b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 24e1135b8fa251050026a1c88bd5bb8f01421ef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437868"
 ---
 # <a name="datadefinitionignoredintransactions-method-sqlserverdatabasemetadata"></a>Método dataDefinitionIgnoredInTransactions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

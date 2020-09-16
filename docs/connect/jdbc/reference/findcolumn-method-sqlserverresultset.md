@@ -1,4 +1,5 @@
 ---
+description: Método findColumn (SQLServerResultSet)
 title: Método findColumn (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56e01d155c90e5e57dc9c2add6f8fd3540892596
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e6fb05e1d128abfb4d81c20081ff458254aa5c09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437578"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>Método findColumn (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80920946"
 public int findColumn(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **String** que contém o nome da coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um **int** que indica o índice de coluna.  
   
 ## <a name="exceptions"></a>Exceções  

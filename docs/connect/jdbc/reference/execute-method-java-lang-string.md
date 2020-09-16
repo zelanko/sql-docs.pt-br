@@ -1,4 +1,5 @@
 ---
+description: Método execute (java.lang.String)
 title: Método execute (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1715a24f6104a6542d3c2847345adb438620a618
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0375eb9dd2d9252ed914fa554beb54faa7e345ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437748"
 ---
 # <a name="execute-method-javalangstring"></a>Método execute (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "80922093"
 public final boolean execute(java.lang.String sql)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sql*  
   
  Uma **String** que contém uma instrução SQL.  
   
-## <a name="return-value"></a>Valor retornado  
- **true**  se a instrução retornar como um conjunto de resultados. **false** se ela retornar uma contagem de atualizações ou nenhum resultado.  
+## <a name="return-value"></a>Valor de retorno  
+ **true ** se a instrução retornar como um conjunto de resultados. **false** se ela retornar uma contagem de atualizações ou nenhum resultado.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

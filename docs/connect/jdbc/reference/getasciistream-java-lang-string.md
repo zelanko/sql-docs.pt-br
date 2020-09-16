@@ -1,4 +1,5 @@
 ---
+description: getAsciiStream (java.lang.String)
 title: getAsciiStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 630b659f-eb36-4277-b04e-9a2e6134f795
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b03ac1fd1ebf0ee5efa7084f401b09077b2d4f2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8176e432a802416dc0ea41756425862f86c74e20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437428"
 ---
 # <a name="getasciistream-javalangstring"></a>getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80925450"
 public final java.io.InputStream getAsciiStream(java.lang.String paramName)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *paramName*  
   
  Uma **String** que indica o nome do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto InputStream.  
   
 ## <a name="exceptions"></a>Exceções  

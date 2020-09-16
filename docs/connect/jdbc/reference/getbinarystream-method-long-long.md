@@ -1,4 +1,5 @@
 ---
+description: Método getBinaryStream (long, long)
 title: Método getBinaryStream (long, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 70ad7dfb297e1ec1b3d34f657f48a67f16debab5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a641fb117fe1dc091aa04f6343f69dac70d95c22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437198"
 ---
 # <a name="getbinarystream-method-long-long"></a>Método getBinaryStream (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80921697"
 public java.io.InputStream getBinaryStream(long pos, long length)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *pos*  
   
  O deslocamento para o primeiro byte do valor parcial ser recuperado.  
@@ -38,7 +39,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
   
  O comprimento em bytes do valor parcial a ser recuperado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um fluxo de entrada que contém os dados do BLOB.  
   
 ## <a name="exceptions"></a>Exceções  

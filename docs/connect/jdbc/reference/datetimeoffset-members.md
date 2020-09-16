@@ -1,4 +1,5 @@
 ---
+description: Membros DateTimeOffset
 title: Membros DateTimeOffset | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca2de23d6ddbd3bdebb900d4f840846c52d47154
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9361169363af84b701e6e963d844645072874d39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437858"
 ---
 # <a name="datetimeoffset-members"></a>Membros DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "80922192"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Compara este objeto **DateTimeOffset** com outro objeto **DateTimeOffset** com base no tempo em GMT dele.|  
 |[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|Compara este objeto **DateTimeOffset** com outro **Object**.|  

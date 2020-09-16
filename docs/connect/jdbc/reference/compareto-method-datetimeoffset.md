@@ -1,4 +1,5 @@
 ---
+description: Método compareTo (DateTimeOffset)
 title: Método compareTo (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac80b43813106f1de991da5114b2473871222a68
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2d4673597255819521bc5becf48a92908ea1330a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437998"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Método compareTo (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,13 +30,13 @@ ms.locfileid: "80923575"
 public int compareTo(DateTimeOffset other)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  Um valor [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) que você deseja comparar com a instância atual.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  A tabela a seguir descreve o valor de retorno do método:  
   
-|Valor retornado|DESCRIÇÃO|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0|Os dois objetos **DateTimeOffset** representam o mesmo momento.|  
 |número negativo|Esse objeto **DateTimeOffset** representa um momento anterior a *outro*.|  

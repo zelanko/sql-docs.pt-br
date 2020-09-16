@@ -1,4 +1,5 @@
 ---
+description: Método execute (java.lang.String) (SQLServerStatement)
 title: Método execute (java.lang.String) (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98adf628c3cc84442d34d6f1f07431a3c5918a31
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d45ec2af1a578d3d2495ff924ea5f3278fbeca6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437788"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>Método execute (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80922084"
 public boolean execute(java.lang.String sql)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sql*  
   
  Uma **String** que contém uma instrução SQL.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se o primeiro resultado for um conjunto de resultados. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  

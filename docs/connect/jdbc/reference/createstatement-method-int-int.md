@@ -1,4 +1,5 @@
 ---
+description: Método createStatement (int, int)
 title: Método createStatement (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7e260135aa251012edfa98a08d4db3c358c17c51
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fda0c8b6055cca6692c37596872c3c7ebae12f81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437928"
 ---
 # <a name="createstatement-method-int-int"></a>Método createStatement (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ public java.sql.Statement createStatement(int resultSetType,
                                           int resultSetConcurrency)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *resultSetType*  
   
  O valor **int** que representa o tipo do conjunto de resultados.  
@@ -44,7 +45,7 @@ public java.sql.Statement createStatement(int resultSetType,
   
  O valor **int** que representa o tipo de simultaneidade do conjunto de resultados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  O objeto Statement.  
   
 ## <a name="exceptions"></a>Exceções  

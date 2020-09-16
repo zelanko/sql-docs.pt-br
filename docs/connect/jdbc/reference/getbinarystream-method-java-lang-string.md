@@ -1,4 +1,5 @@
 ---
+description: Método getBinaryStream (java.lang.String)
 title: Método getBinaryStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cee701502468d1067ef188c82d29d6af56e031a7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8d0887b6cd8770310304596606ace6bba321465c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437248"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>Método getBinaryStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80928733"
 public java.io.InputStream getBinaryStream(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto InputStream.  
   
 ## <a name="exceptions"></a>Exceções  

@@ -1,4 +1,5 @@
 ---
+description: Método cancelRowUpdates (SQLServerResultSet)
 title: Método cancelRowUpdates (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa52d0bec78b1ca085da043ef526e50a0cb41caa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 32e5333f571ff9375bdbdc61e9743d29a57cedfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438178"
 ---
 # <a name="cancelrowupdates-method-sqlserverresultset"></a>Método cancelRowUpdates (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

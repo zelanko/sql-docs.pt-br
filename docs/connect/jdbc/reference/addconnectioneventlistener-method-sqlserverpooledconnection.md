@@ -1,4 +1,5 @@
 ---
+description: Método addConnectionEventListener (SQLServerPooledConnection)
 title: Método addConnectionEventListener (SQLServerPooledConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 142830a8-8d4e-48ca-911d-85bf195ca4fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3481ae6f7a6c257c3fd438b4166339cf9507f136
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f0fbbcfd24d4dee568745f727c027d5ea8fda0d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438238"
 ---
 # <a name="addconnectioneventlistener-method-sqlserverpooledconnection"></a>Método addConnectionEventListener (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80922980"
 public void addConnectionEventListener(javax.sql.ConnectionEventListener listener)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *listener*  
   
  Um objeto ConnectionEventListener.  

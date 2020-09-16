@@ -1,4 +1,5 @@
 ---
+description: Método executeUpdate (java.lang.String) (SQLServerStatement)
 title: Método executeUpdate (java.lang.String) (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 85e7c3a2-f2da-49bf-9d90-5fd246fd60e1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6432cd0d09dac50857a0bd1da16a3ded92bb09c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0805963e2172a570801d09912539f312fbfcad78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437708"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>Método executeUpdate (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80924260"
 public int executeUpdate(java.lang.String sql)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sql*  
   
  Uma **String** que contém a instrução SQL.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um **int** que indica o número de linhas afetadas ou 0 se uma instrução DDL estiver sendo usada.  
   
 ## <a name="exceptions"></a>Exceções  
