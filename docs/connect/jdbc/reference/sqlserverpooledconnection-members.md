@@ -1,4 +1,5 @@
 ---
+description: Membros SQLServerPooledConnection
 title: Membros SQLServerPooledConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25371fdc7146d74a2796bf06963592515fd400a1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01d38c05ff999c808d4d3f2b574a739acbb9efc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472118"
 ---
 # <a name="sqlserverpooledconnection-members"></a>Membros SQLServerPooledConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80923469"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|Registra o ouvinte de evento fornecido de forma que ele seja notificado quando um evento ocorrer no objeto [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|Fecha a conexão física que o objeto [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) representa.|  

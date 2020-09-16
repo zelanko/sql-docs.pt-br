@@ -1,4 +1,5 @@
 ---
+description: Métodos MSReportServer_ConfigurationSetting
 title: Métodos MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b10f33a795a1c91db07f6cc97b091c8f68b34475
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7b51e79a99f47886627f6479f58b7a2980629d88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472604"
 ---
 # <a name="msreportserver_configurationsetting-methods"></a>Métodos MSReportServer_ConfigurationSetting
   A classe MSReportServer_ConfigurationSetting do Provedor WMI do servidor de relatório fornece os métodos públicos a seguir.  
   
 ## <a name="public-methods"></a>Métodos públicos  
   
-|||  
+|Método|Descrição|  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|Efetua backup da chave de criptografia para a instância. A chave de criptografia é armazenada criptografada com uma senha.|  
 |[Método CreateSSLCertificateBinding &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|Cria uma associação de certificado TLS/SSL.|  

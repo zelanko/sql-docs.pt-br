@@ -1,4 +1,5 @@
 ---
+description: Método updatesAreDetected (SQLServerDatabaseMetaData)
 title: Método updatesAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cb541175-d3a5-4bca-b327-64e2270c0df1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4fa6361afd8e1f262f1accbdb377fccf9ae701c6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dfe6dd98bc6cc5b3a4dd0e5c972fd2b1e2b7c198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478288"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>Método updatesAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80919663"
 public boolean updatesAreDetected(int type)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *tipo*  
   
  Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
@@ -57,7 +58,7 @@ public boolean updatesAreDetected(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  **true** se for possível detectar a atualização de linha. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  

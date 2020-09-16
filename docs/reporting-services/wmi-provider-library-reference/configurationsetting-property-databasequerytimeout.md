@@ -1,4 +1,5 @@
 ---
+description: Propriedade DatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
 title: Propriedade DatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8149c0954195796ce71a48e022a2f7bc83471601
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5772326704b5e5fd6861b6185dab75cefdf42d1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472628"
 ---
 # <a name="configurationsetting-property---databasequerytimeout"></a>Propriedade de ConfigurationSetting – DatabaseQueryTimeout
   Especifica o número de segundos que devem decorrer antes de o servidor de relatório assumir que o comando falhou ou demorou demais para executar. O servidor de relatório está cronometrando a consulta no catálogo de SQL, não uma fonte de dados para o relatório. Leitura/gravação.  

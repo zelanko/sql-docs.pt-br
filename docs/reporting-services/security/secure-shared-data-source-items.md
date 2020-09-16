@@ -1,4 +1,5 @@
 ---
+description: Proteger itens de fontes de dados compartilhadas
 title: Proteger itens de fonte de dados compartilhada | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cf25b5dd7eac661f5ee77e2328a322601b0d3c8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472638"
 ---
 # <a name="secure-shared-data-source-items"></a>Proteger itens de fontes de dados compartilhadas
   Você pode definir a segurança em um item fonte de dados compartilhada para habilitar ou desabilitar o acesso a ele.  
