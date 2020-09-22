@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4deccd8bcfd4650a8f670969d1ec112f9f99d08d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447459"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990236"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -45,16 +45,16 @@ ms.locfileid: "88447459"
 |group_name|**sysname** |Para solicitações que utilizam recursos, group_name é o nome do grupo de carga de trabalho sob o qual a solicitação está sendo executada.  Se a solicitação não utilizar recursos, group_name será NULL.</br>Aplica-se a: SQL Data Warehouse do Azure|
 |classifier_name|**sysname**|Para solicitações que utilizam recursos, o nome do classificador usado para atribuir recursos e importância.||
 |resource_allocation_percentage|**decimal (5, 2)**|A quantidade percentual de recursos alocados para a solicitação.</br>Aplica-se a: SQL Data Warehouse do Azure|
-|result_cache_hit|**decimal**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se a: SQL Data Warehouse do Azure| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
+|result_cache_hit|**int**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se a: SQL Data Warehouse do Azure| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores inteiros negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
 ||||
   
 ## <a name="remarks"></a>Comentários 
  Para obter informações sobre o máximo de linhas retidas por essa exibição, consulte a seção de metadados no tópico [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
- O result_cache_hit é um bitmask do uso de uma consulta do cache do conjunto de resultados.  Esta coluna pode ser a [| (OR-bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produto de um ou mais destes valores:  
+O valor inteiro negativo na coluna result_cache_hit é um valor de bitmap de todos os motivos aplicados pelos quais o conjunto de resultados de uma consulta não pode ser armazenado em cache.  Esta coluna pode ser a [| (OR-bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produto de um ou mais dos seguintes valores:  
   
-|Valor hex (Decimal)|Descrição|  
-|-----------|-----------------|  
+|Valor            |Descrição  |  
+|-----------------|-----------------|  
 |**1**|Impacto no cache do conjunto de resultados|  
 |**0x00** (**0**)|Erro de cache do conjunto de resultados|  
 |-**0x01** (**-1**)|O cache do conjunto de resultados está desabilitado no banco de dados.|  
@@ -63,8 +63,10 @@ ms.locfileid: "88447459"
 |-**0x08** (**-8**)|O cache do conjunto de resultados está desabilitado devido a predicados de segurança em nível de linha.|  
 |-**0x10** (**-16**)|O cache do conjunto de resultados está desabilitado devido ao uso da tabela do sistema, da tabela temporária ou da tabela externa na consulta.|  
 |-**0x20** (**-32**)|O cache do conjunto de resultados está desabilitado porque a consulta contém constantes de tempo de execução, funções definidas pelo usuário ou funções não determinísticas.|  
-|-**0x40** (**-64**)|O cache do conjunto de resultados está desabilitado devido ao tamanho estimado do conjunto de resultados >10 GB.|  
-|-**0x80** (**-128**)|O cache do conjunto de resultados está desabilitado porque o conjunto de resultados contém linhas com tamanho grande (>64 KB).|  
+|-**0x40**(**-64**)|O cache do conjunto de resultados está desabilitado devido ao tamanho estimado do conjunto de resultados >10 GB.|  
+|-**0x80**(**-128**) |O cache do conjunto de resultados está desabilitado porque o conjunto de resultados contém linhas com tamanho grande (>64 KB).|  
+|-**0x100**(**-256**) |O cache do conjunto de resultados está desabilitado devido ao uso de mascaramento de dados dinâmicos granulares.|  
+
   
 ## <a name="permissions"></a>Permissões
 

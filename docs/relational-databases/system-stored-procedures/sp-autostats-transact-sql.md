@@ -19,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c34e314e08f206ebfcf34956e7b4555f91166a3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548272"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989929"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Nome do Índice**|**varchar(60)**|Nome do índice ou das estatísticas.|  
+|**Nome do Índice**|**sysname**|Nome do índice ou das estatísticas.|  
 |**AUTOSTATS**|**varchar (3)**|Valor atual da opção AUTO_UPDATE_STATISTICS.|  
 |**Última Atualização**|**datetime**|Data da atualização mais recente das estatísticas.|  
   
