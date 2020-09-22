@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa461859dcc7d2adc359139e4740ea9272161bf8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397562"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989933"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *to_lsn*  
  O valor LSN que representa o ponto de extremidade superior do intervalo LSN a ser incluído no conjunto de resultados. *to_lsn* é **binary (10)**.  
   
- Somente as linhas no [capture_instance CDC. &#91;&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) alterar a tabela com um valor de **_ $ start_lsn** menor ou igual a *from_lsn* ou igual a *to_lsn* são incluídos no conjunto de resultados.  
+ Somente as linhas na [capture_instance CDC. &#91;&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) alterar a tabela com um valor de **_ $ start_lsn** maior ou igual a *from_lsn* e menor ou igual a *to_lsn* são incluídos no conjunto de resultados.  
   
  <row_filter_option>:: = {ALL | todas as atualizações antigas}  
  Opção que rege o conteúdo das colunas de metadados, assim como as linhas retornadas no conjunto de resultados.  
