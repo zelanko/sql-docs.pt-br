@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0febaf92d4bdc58ce4e714391c8d4789158a986f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 9ac1ddf48ec23f72fcfd500988c9eb05ce0b94ab
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392784"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688102"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "86392784"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     FOR SERVER AUDIT audit_name   
@@ -99,7 +98,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>a. Auditar SELECT e INSERT em uma tabela para qualquer entidade de segurança do banco de dados 
  O exemplo a seguir cria uma auditoria de servidor chamada `Payrole_Security_Audit` e, em seguida, uma especificação de auditoria de banco de dados chamada `Payrole_Security_Audit` que audita instruções `SELECT` e `INSERT` pelo usuário `dbo`, para a tabela `HumanResources.EmployeePayHistory` no banco de dados `AdventureWorks2012`.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.  
@@ -126,7 +125,7 @@ GO
 ### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. Faça a auditoria de qualquer DML (INSERT, UPDATE ou DELETE) em _todos_ os objetos no esquema _vendas_ para uma função de banco de dados específica  
  O exemplo a seguir cria uma auditoria de servidor denominada `DataModification_Security_Audit` e, em seguida, uma especificação de auditoria de banco de dados chamada `Audit_Data_Modification_On_All_Sales_Tables` que audita instruções `INSERT`, `UPDATE` e `DELETE` por usuários em uma nova função de banco de dados `SalesUK`, para todos os objetos no esquema `Sales` no banco de dados `AdventureWorks2012`.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.

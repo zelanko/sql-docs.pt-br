@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ce08b332255d43f1912454c7695b36998578a4b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e1e705930e31cec8fa6b7b4913e3643cc25227e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544272"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688210"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
   
  Quando você usar AFFINITY NAMANODE = (NUMA_node_range_spec), o pool de recursos terá uma afinidade com os agendadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeados para CPUs físicas que correspondem ao nó NUMA especificado ou ao intervalo de nós. Você pode usar a seguinte consulta Transact-SQL para descobrir o mapeamento entre a configuração NUMA física e as IDs de agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
 FROM sys.dm_os_nodes AS osn  
 INNER JOIN sys.dm_os_schedulers AS sc 
@@ -144,7 +144,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mantém todas as configurações padrão de pool de recursos no pool `default`, exceto para `MAX_CPU_PERCENT`, que é alterado para `25`.  
   
-```  
+```sql  
 ALTER RESOURCE POOL "default"  
 WITH  
      ( MAX_CPU_PERCENT = 25);  
@@ -157,7 +157,7 @@ GO
   
 **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
-```  
+```sql  
 ALTER RESOURCE POOL Pool25  
 WITH(   
      MIN_CPU_PERCENT = 5,  
@@ -171,7 +171,6 @@ WITH(
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -26,12 +26,12 @@ ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 488d2833727f68ec5df9f9ccc9f0ef36b019c7ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d2ba9047673e7f43202ec74f577e039d3b769abe
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422770"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570625"
 ---
 # <a name="has_dbaccess-transact-sql"></a>HAS_DBACCESS (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88422770"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 HAS_DBACCESS ( 'database_name' )  
 ```  
   
@@ -68,7 +68,7 @@ HAS_DBACCESS ( 'database_name' )
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir testa se o usuário atual tem acesso ao banco de dados `AdventureWorks2012`.  
   
-```  
+```sql  
 SELECT HAS_DBACCESS('AdventureWorks2012');  
 GO  
 ```  
@@ -76,7 +76,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir testa se o usuário atual tem acesso ao banco de dados `AdventureWorksPDW2012`.  
   
-```  
+```sql  
 SELECT HAS_DBACCESS('AdventureWorksPDW2012');  
 GO  
 ```  

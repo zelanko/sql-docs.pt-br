@@ -24,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 20e92d37c2476663bfe203a5b83a1ca7b8a0f536
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37580f0069d4621f759d258e238ba3f8cf2d7d14
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479182"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688072"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -133,7 +133,7 @@ ALTER CERTIFICATE certificate_name
   
 ### <a name="a-removing-the-private-key-of-a-certificate"></a>a. Removendo a chave privada de um certificado  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping04   
     REMOVE PRIVATE KEY;  
 GO  
@@ -141,7 +141,7 @@ GO
   
 ### <a name="b-changing-the-password-that-is-used-to-encrypt-the-private-key"></a>B. Alterando a senha usada para criptografar a chave privada  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping11   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hkjdskghFDGGG4%',  
     ENCRYPTION BY PASSWORD = '34958tosdgfkh##38');  
@@ -150,7 +150,7 @@ GO
   
 ### <a name="c-importing-a-private-key-for-a-certificate-that-is-already-present-in-the-database"></a>C. Importando uma chave privada para um certificado que já está existe no banco de dados  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping13   
     WITH PRIVATE KEY (FILE = 'c:\importedkeys\Shipping13',  
     DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
@@ -159,7 +159,7 @@ GO
   
 ### <a name="d-changing-the-protection-of-the-private-key-from-a-password-to-the-database-master-key"></a>D. Alterando a proteção da chave privada de uma senha para a chave mestra de banco de dados  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping15   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hk000eEnvjkjy#F%');  
 GO  

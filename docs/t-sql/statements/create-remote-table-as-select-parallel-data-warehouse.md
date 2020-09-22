@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 841c8a62a90b6d14a1ee4d20bce7b57be097e9b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a45d59e3891e08f2ae5c5b5d64258b5ebcc371a8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304942"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688323"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -30,7 +30,6 @@ ms.locfileid: "88304942"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
@@ -138,7 +137,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ### <a name="a-creating-a-remote-table"></a>a. Criando uma tabela remota  
  Este exemplo cria uma tabela remota SMP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamada `MyOrdersTable` no banco de dados `OrderReporting` e o esquema `Orders`. O banco de dados `OrderReporting` está em um servidor chamado `SQLA` que escuta na porta padrão 1433. A conexão com o servidor usa as credenciais do usuário `David`, cuja senha é `e4n8@3`.  
   
-```  
+```sql  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  
 AS SELECT <select_criteria>;  
@@ -147,7 +146,7 @@ AS SELECT <select_criteria>;
 ### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. Consultando a DMV sys.dm_pdw_dms_workers para obter o status da cópia de tabela remota  
  Esta consulta mostra como exibir o status da cópia de uma cópia de tabela remota.  
   
-```  
+```sql  
 SELECT * FROM sys.dm_pdw_dms_workers   
 WHERE type = 'PARALLEL_COPY_READER';  
 ```  
@@ -155,7 +154,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. Usando uma dica de junção de consulta com CREATE REMOTE TABLE  
  Essa consulta mostra a sintaxe básica para uso de uma dica de consulta de junção com CREATE REMOTE TABLE. Depois que a consulta é enviada para o nó de Controle, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], em execução nos nós de Computação, aplicará a estratégia de junção hash ao gerar o plano de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [Cláusula OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
-```  
+```sql  
 USE ssawPDW;  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  

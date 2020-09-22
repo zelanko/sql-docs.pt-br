@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7c5fa05a31a3087970a12acbe8d6a69a6a647ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ac369044de3cbc01e3087e7f3619950ebcaa8010
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472238"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570572"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>Permissões de ponto de extremidade GRANT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>a. Concedendo a permissão VIEW DEFINITION em um ponto de extremidade  
  O exemplo a seguir concede a permissão `VIEW DEFINITION` no ponto de extremidade `Mirror7` para o logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Concedendo a permissão TAKE OWNERSHIP com GRANT OPTION  
  O exemplo a seguir concede a permissão `TAKE OWNERSHIP` no ponto de extremidade `Shipping83` para o usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` com `GRANT OPTION`.  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     WITH GRANT OPTION;  

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3cb79af34c03699225a291b3da6cab7602922da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e0b6c3ae3d269b8617d3d032c8aa2d947c211834
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549361"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688772"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,6 @@ ms.locfileid: "89549361"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 CREATE RULE [ schema_name . ] rule_name   
 AS condition_expression  
 [ ; ]  
@@ -105,7 +104,7 @@ AS condition_expression
 ### <a name="a-creating-a-rule-with-a-range"></a>a. Criando uma regra com um intervalo  
  O exemplo a seguir cria uma regra que restringe o intervalo de inteiros inserido na coluna ou colunas às quais essa regra está associada.  
   
-```  
+```sql  
 CREATE RULE range_rule  
 AS   
 @range>= $1000 AND @range <$20000;  
@@ -114,7 +113,7 @@ AS
 ### <a name="b-creating-a-rule-with-a-list"></a>B. Criando uma regra com uma lista  
  O exemplo a seguir cria uma regra que restringe os valores reais digitados na coluna ou colunas (às quais essa regra está associada) somente para aqueles listados na regra.  
   
-```  
+```sql  
 CREATE RULE list_rule  
 AS   
 @list IN ('1389', '0736', '0877');  
@@ -123,7 +122,7 @@ AS
 ### <a name="c-creating-a-rule-with-a-pattern"></a>C. Criando uma regra com um padrão  
  O exemplo a seguir cria uma regra para seguir o padrão de quaisquer dois caracteres seguidos de um hífen (`-`), qualquer número de caracteres ou nenhum caractere, e que termina com um número inteiro de `0` a `9`.  
   
-```  
+```sql  
 CREATE RULE pattern_rule   
 AS  
 @value LIKE '__-%[0-9]'  

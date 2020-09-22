@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa1828f1a6c684c0028ed3ada229aca3811a88a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a8ba9a6a1dbc0f1c6e6c6312c627f83335bbe09
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541470"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688227"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,6 @@ WITH
 {  
    ( MAXDOP = max_degree_of_parallelism )  
 }  
-  
 ```  
   
 
@@ -180,14 +179,14 @@ Ao contrário de REORGANIZE em tabelas de usuário, REORGANIZE em uma fila sempr
 ### <a name="a-making-a-queue-unavailable"></a>a. Tornando uma fila não disponível  
  O exemplo a seguir torna a fila `ExpenseQueue` não disponível para receber mensagens.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
 ### <a name="b-changing-the-activation-stored-procedure"></a>B. Alterando o procedimento armazenado de ativação  
  O exemplo a seguir altera o procedimento armazenado que a fila inicia. O procedimento armazenado executa como o usuário que executou a instrução `ALTER QUEUE`.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = new_stored_proc,  
@@ -197,14 +196,14 @@ ALTER QUEUE ExpenseQueue
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. Alterando o número de leitores da fila  
  O exemplo a seguir define como `7` o número máximo de instâncias de procedimento armazenado que o [!INCLUDE[ssSB](../../includes/sssb-md.md)] inicia para essa fila.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
 ### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D. Alterando o procedimento armazenado de ativação e a conta EXECUTE AS  
  O exemplo a seguir altera o procedimento armazenado que o [!INCLUDE[ssSB](../../includes/sssb-md.md)] inicia. O procedimento armazenado executa como o usuário `SecurityAccount`.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
@@ -214,7 +213,7 @@ ALTER QUEUE ExpenseQueue
 ### <a name="e-setting-the-queue-to-retain-messages"></a>E. Definindo a fila para reter mensagens  
  O exemplo a seguir define a fila para reter mensagens. A fila retém todas as mensagens enviadas para ou dos serviços que a utilizam, até terminar a conversa que contém a mensagem.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;  
 ```  
   
@@ -231,7 +230,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
  O exemplo a seguir recompila índices de fila  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
@@ -241,7 +240,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
  O exemplo a seguir reorganiza índices de fila  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
@@ -249,7 +248,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   

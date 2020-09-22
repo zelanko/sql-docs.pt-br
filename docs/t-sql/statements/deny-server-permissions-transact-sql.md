@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 50377ed7b719eee6a135af5db6161d9eed824915
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67833e662688b6de418fc6d7db169f1107866035
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426618"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688610"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>Permissões de servidor DENY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -155,7 +155,7 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>a. Negando a permissão CONNECT SQL a um logon do SQL Server e a entidades de segurança aos quais o logon a concedeu novamente  
  O exemplo a seguir nega a permissão `CONNECT SQL` para o logon de `Annika` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e para os principais aos quais ela concedeu a permissão.  
   
-```  
+```sql  
 USE master;  
 DENY CONNECT SQL TO Annika CASCADE;  
 GO  
@@ -164,7 +164,7 @@ GO
 ### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. Negando a permissão CREATE ENDPOINT a um logon do SQL Server usando a opção AS  
  O exemplo a seguir nega a permissão `CREATE ENDPOINT` ao usuário `ArifS`. O exemplo usa a opção `AS` para especificar `MandarP` como a entidade de segurança da qual a entidade de segurança em execução deriva a autoridade para tanto.  
   
-```  
+```sql  
 USE master;  
 DENY CREATE ENDPOINT TO ArifS AS MandarP;  
 GO  

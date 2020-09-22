@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddbf9a7d6d6ce28764c572d22fd5829ce4f46ada
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9aa2c82f83e20017778a9e5096977dedeb38646d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538108"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688592"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,6 @@ AS select_statement
 ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
 [;]  
-
 ``` 
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -120,7 +119,7 @@ AS <select_statement>
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma exibição que contém todos os funcionários e suas datas de contratação, denominadas `EmployeeHireDate`. São concedidas permissões para a exibição, mas os requisitos serão alterados para selecionar funcionários cujas datas de contratação sejam anteriores a uma determinada data. Então, `ALTER VIEW` é usado para substituir a exibição.  
   
-```  
+```sql 
 USE AdventureWorks2012 ;  
 GO  
 CREATE VIEW HumanResources.EmployeeHireDate  
@@ -129,12 +128,11 @@ SELECT p.FirstName, p.LastName, e.HireDate
 FROM HumanResources.Employee AS e JOIN Person.Person AS  p  
 ON e.BusinessEntityID = p.BusinessEntityID ;  
 GO  
-  
 ```  
   
  A exibição deve ser alterada para incluir apenas os funcionários que foram contratados antes de `2002`. Se ALTER VIEW não for usado, mas em vez disso a exibição for descartada e recriada, a instrução GRANT usada anteriormente e quaisquer outras instruções que lidem com permissões pertencentes a essa exibição deverão ser inseridas novamente.  
   
-```  
+```sql  
 ALTER VIEW HumanResources.EmployeeHireDate  
 AS  
 SELECT p.FirstName, p.LastName, e.HireDate  
@@ -142,7 +140,6 @@ FROM HumanResources.Employee AS e JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID  
 WHERE HireDate < CONVERT(DATETIME,'20020101',101) ;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

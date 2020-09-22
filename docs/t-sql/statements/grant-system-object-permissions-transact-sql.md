@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abfc897a88941c6220235616a3476dae7ea6c1e9
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496685"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570591"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>Permissões de objeto do sistema GRANT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  A consulta a seguir retorna informações sobre permissões de objetos do sistema:  
   
-```  
+```sql  
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -81,7 +81,7 @@ GO
 ### <a name="a-granting-select-permission-on-a-view"></a>a. Concedendo a permissão SELECT em uma exibição  
  O exemplo a seguir concede a permissão de logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Sylvester1` para selecionar uma exibição que lista logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois, o exemplo concede a permissão adicional necessária para exibir metadados nos logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não sejam de propriedade do usuário.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. Concedendo a permissão EXECUTE em um procedimento armazenado estendido  
  O exemplo a seguir concede a permissão `EXECUTE` em `xp_readmail` para `Sylvester1`.  
   
-```  
+```sql  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  
 GO  
 ```  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23ff7a537598cde913635d427bdbd58388e16803
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444612"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570533"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>Permissões de servidor GRANT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>a. Concedendo uma permissão a um logon  
  O exemplo a seguir concede a permissão `CONTROL SERVER` o logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `TerryEminhizer`.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Concedendo uma permissão que possui a permissão GRANT  
  O exemplo a seguir concede `ALTER ANY EVENT NOTIFICATION` ao logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `JanethEsteves` com o direito para conceder essa permissão a outro logon.  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -168,7 +168,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. Concedendo uma permissão a uma função de servidor  
  O exemplo seguinte cria duas funções de servidor nomeadas `ITDevAdmin` and `ITDevelopers`. Concede a permissão `ALTER ANY DATABASE` à função de servidor definida pelo usuário `ITDevAdmin` inclusive a opção `WITH GRANT` de forma que a função de servidor `ITDevAdmin` pode reatribuir a permissão `ALTER ANY DATABASE`. O exemplo concede a permissão `ITDevelopers` para usar a permissão `ALTER ANY DATABASE` da função de servidor `ITDevAdmin`.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa614b7b0496c1547f85106758f6ff5d7dd2835a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb9a8dbb4b67a514d56febaed13a33d7f7eb2a8a
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444743"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688642"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "88444743"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expression  
 ```  
   
@@ -84,7 +83,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>a. Criando uma coleção de esquema XML no banco de dados  
  O exemplo a seguir cria uma coleção de esquema XML `ManuInstructionsSchemaCollection`. A coleção tem apenas um namespace de esquema.  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -176,7 +175,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Especificando vários namespaces de esquema em uma coleção de esquemas  
  Você pode especificar vários esquemas XML ao criar uma coleção de esquema XML. Por exemplo:  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->    
@@ -188,7 +187,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
   
  O exemplo a seguir cria a coleção de esquema XML `ProductDescriptionSchemaCollection` que inclui dois namespaces de esquema XML.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -234,7 +233,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importando um esquema que não especifica um namespace de destino  
  Se um esquema que não contém um atributo **targetNamespace** for importado em uma coleção, seus componentes serão associados ao namespace de destino da cadeia de caracteres vazia, conforme mostrado no exemplo a seguir. Observe que a não associação de um ou mais esquemas importados na coleção faz com que vários componentes de esquema (possivelmente não relacionados) sejam associados ao namespace padrão da cadeia de caracteres vazia.  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
@@ -254,7 +253,7 @@ WHERE  sys.xml_schema_namespaces.name='';
 ### <a name="d-using-an-xml-schema-collection-and-batches"></a>D. Usando uma coleção de esquemas XML e lotes  
  Uma coleção de esquemas não pode ser referenciada no mesmo lote em que é criada. Se você tentar referenciar uma coleção no mesmo lote em que foi criada, receberá um erro informando que a coleção não existe. O exemplo a seguir funciona; entretanto, se você remover `GO` e tentar referenciar a coleção de esquemas XML para digitar uma variável `xml` no mesmo lote, será retornado um erro.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION mySC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="string"/>  

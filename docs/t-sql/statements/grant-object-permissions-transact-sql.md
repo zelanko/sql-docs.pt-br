@@ -17,12 +17,12 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cca05a701f7ec0255536c496ae5288cd1105835
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1282bdd6c1bfb103a42336fc62289d1949bda07c
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472258"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570583"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>Permissões GRANT do objeto (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -160,7 +160,7 @@ PRIVILEGES
 ### <a name="a-granting-select-permission-on-a-table"></a>a. Concedendo a permissão SELECT em uma tabela  
  O exemplo a seguir concede a permissão `SELECT` ao usuário `RosaQdM` na tabela `Person.Address` do banco de dados `AdventureWorks2012`.  
   
-```  
+```sql  
 GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -168,7 +168,7 @@ GO
 ### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>B. Concedendo a permissão EXECUTE em um procedimento armazenado  
  O exemplo a seguir concede a permissão `EXECUTE` no procedimento armazenado `HumanResources.uspUpdateEmployeeHireInfo` para uma função de aplicativo chamada `Recruiting11`.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
@@ -178,7 +178,7 @@ GO
 ### <a name="c-granting-references-permission-on-a-view-with-grant-option"></a>C. Concedendo a permissão REFERENCES em uma exibição com GRANT OPTION  
  O exemplo a seguir concede a permissão `REFERENCES` na coluna `BusinessEntityID` na exibição `HumanResources.vEmployee` para o usuário `Wanida` com `GRANT OPTION`.  
   
-```  
+```sql  
 GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida WITH GRANT OPTION;  
 GO  
@@ -187,7 +187,7 @@ GO
 ### <a name="d-granting-select-permission-on-a-table-without-using-the-object-phrase"></a>D. Concedendo a permissão SELECT em uma tabela sem usar a frase OBJECT  
  O exemplo a seguir concede a permissão `SELECT` ao usuário `RosaQdM` na tabela `Person.Address` do banco de dados `AdventureWorks2012`.  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -195,7 +195,7 @@ GO
 ### <a name="e-granting-select-permission-on-a-table-to-a-domain-account"></a>E. Concedendo a permissão SELECT em uma tabela a uma conta de domínio  
  O exemplo a seguir concede a permissão `SELECT` ao usuário `AdventureWorks2012\RosaQdM` na tabela `Person.Address` do banco de dados `AdventureWorks2012`.  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO [AdventureWorks2012\RosaQdM];  
 GO  
 ```  
@@ -203,7 +203,7 @@ GO
 ### <a name="f-granting-execute-permission-on-a-procedure-to-a-role"></a>F. Concedendo a permissão EXECUTE em um procedimento a uma função  
  O seguinte exemplo cria uma função e concede a permissão `EXECUTE` à função no procedimento `uspGetBillOfMaterials` do banco de dados `AdventureWorks2012`.  
   
-```  
+```sql  
 CREATE ROLE newrole ;  
 GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;  
 GO  

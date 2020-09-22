@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5356c811b9e1e0118e7080afa91491066b6c434
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2985351da1e1b0f1c0215df95c3e61440773e9c3
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549366"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688444"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,8 +92,8 @@ AS PARTITION partition_function_name
 ### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>a. Criando um esquema de partição que mapeia cada partição para um grupo de arquivos diferente  
  O exemplo a seguir cria uma função de partição para dividir uma tabela ou índice em quatro partições. Então, será criado um esquema de partição que especifica os grupos de arquivos que conterão cada uma das quatro partições. Este exemplo supõe que os grupos de arquivos já existam no banco de dados.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  
@@ -112,8 +112,8 @@ TO (test1fg, test2fg, test3fg, test4fg);
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. Criando um esquema de partição que mapeia várias partições para o mesmo grupo de arquivos  
  Se todas as partições forem mapeadas para o mesmo grupo de arquivos, use a palavra-chave ALL. Porém, se várias, mas nem todas as partições forem mapeadas para o mesmo grupo de arquivos, o nome do grupo de arquivos deverá ser repetido, como mostrado no exemplo a seguir.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF2 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF2 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS2  
@@ -132,8 +132,8 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. Criando um esquema de partição que mapeia todas as partições para o mesmo grupo de arquivos  
  O exemplo a seguir cria a mesma função de partição que nos exemplos anteriores e será criado um esquema de partição que mapeia todas as partições para o mesmo grupo de arquivos.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF3 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF3 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS3  
@@ -144,8 +144,8 @@ ALL TO ( test1fg );
 ### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>D. Criando um esquema de partição que especifica um grupo de arquivos 'NEXT USED'  
  O exemplo a seguir cria a mesma função de partição que nos exemplos anteriores e será criado um esquema de partição que lista mais grupos de arquivos do que há partições criadas pela função de partição associada.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF4 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF4 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS4  
@@ -164,8 +164,8 @@ O esquema de partição 'myRangePS4' foi criado com êxito. 'test5fg' está marc
 
  O exemplo a seguir cria uma função de partição para dividir uma tabela ou índice em quatro partições. Um esquema de partição é então criado, que especifica que todas as partições são criadas no grupo de arquivos PRIMARY.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  

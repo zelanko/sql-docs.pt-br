@@ -22,12 +22,12 @@ ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01c91665b213de4a6dceb2b5711474e30d632d47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9215ff6f4be0118f83c422451697fda52efef229
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364372"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570701"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ LEFT ( character_expression , integer_expression )
 ### <a name="a-using-left-with-a-column"></a>a. Usando LEFT com uma coluna  
  O exemplo a seguir retorna os cinco caracteres mais à esquerda do nome de cada produto na tabela `Product` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT LEFT(Name, 5)   
 FROM Production.Product  
 ORDER BY ProductID;  
@@ -79,7 +79,7 @@ GO
 ### <a name="b-using-left-with-a-character-string"></a>B. Usando LEFT com uma cadeia de caracteres  
  O exemplo a seguir usa `LEFT` para retornar os dois caracteres mais à esquerda da cadeia de caracteres `abcdefg`.  
   
-```  
+```sql  
 SELECT LEFT('abcdefg',2);  
 GO  
 ```  
@@ -98,7 +98,7 @@ ab
 ### <a name="c-using-left-with-a-column"></a>C. Usando LEFT com uma coluna  
  O exemplo a seguir retorna os cinco caracteres mais à esquerda do nome de cada produto.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LEFT(EnglishProductName, 5)   
@@ -109,7 +109,7 @@ ORDER BY ProductKey;
 ### <a name="d-using-left-with-a-character-string"></a>D. Usando LEFT com uma cadeia de caracteres  
  O exemplo a seguir usa `LEFT` para retornar os dois caracteres mais à esquerda da cadeia de caracteres `abcdefg`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;  

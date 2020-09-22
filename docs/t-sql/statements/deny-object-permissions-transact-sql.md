@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8be1d18c6caae4751ab1168f99aa7b5192510185
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fae275453fd14afacc700150c93cc6a091141a11
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444703"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688619"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>Permissões de objeto DENY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ Os exemplos a seguir usam o banco de dados AdventureWorks.
 ### <a name="a-denying-select-permission-on-a-table"></a>a. Negação da permissão SELECT em uma tabela  
  O exemplo a seguir nega a permissão `SELECT` ao usuário `RosaQdM` na tabela `Person.Address`.  
   
-```  
+```sql  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -153,7 +153,7 @@ GO
 ### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. Negação da permissão EXECUTE em um procedimento armazenado  
  O exemplo a seguir nega a permissão `EXECUTE` no procedimento armazenado `HumanResources.uspUpdateEmployeeHireInfo` para uma função de aplicativo chamada `Recruiting11`.  
   
-```  
+```sql  
 DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO   
@@ -162,7 +162,7 @@ GO
 ### <a name="c-denying-references-permission-on-a-view-with-cascade"></a>C. Negação da permissão REFERENCES em uma exibição com CASCADE  
  O exemplo a seguir nega a permissão `REFERENCES` na coluna `BusinessEntityID` na exibição `HumanResources.vEmployee` para o usuário `Wanida` com `CASCADE`.  
   
-```  
+```sql  
 DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida CASCADE;  
 GO  

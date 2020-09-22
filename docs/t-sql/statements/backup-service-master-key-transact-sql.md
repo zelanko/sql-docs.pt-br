@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab250d113fd9baf0be65dce5c9b305c40c6ebc40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc800323e28e603b5a66d9f18d2516c9e5121e89
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496958"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688535"
 ---
 # <a name="backup-service-master-key-transact-sql"></a>BACKUP SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "88496958"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'   
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
@@ -65,7 +64,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ## <a name="examples"></a>Exemplos  
  No exemplo seguinte, a chave mestra do serviço tem seu backup feito para um arquivo.  
   
-```  
+```sql  
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
 ```  
   

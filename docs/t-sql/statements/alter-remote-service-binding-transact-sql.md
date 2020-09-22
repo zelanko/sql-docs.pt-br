@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e188fe5043c69faea7535267db70dc107fde3874
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 47c4e18c28a5377fa487e0d4d4e8b9be4cf58acc
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540701"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688242"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "89540701"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 ALTER REMOTE SERVICE BINDING binding_name   
    WITH [ USER = <user_name> ] [ , ANONYMOUS = { ON | OFF } ]   
 [ ; ]  
@@ -69,7 +68,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir altera a associação de serviço remoto `APBinding` para criptografar mensagens usando os certificados da conta `SecurityAccount`.  
   
-```  
+```sql  
 ALTER REMOTE SERVICE BINDING APBinding  
     WITH USER = SecurityAccount ;  
 ```  

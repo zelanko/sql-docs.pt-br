@@ -21,12 +21,12 @@ ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8c251486ae982abda531bd443db95c57a1b99900
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c16003a3d265bbebc613c6a7eacd798f5c00da6d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479212"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688782"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88479212"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
@@ -75,7 +74,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### <a name="a-changing-the-password-of-a-credential"></a>a. Alterando a senha de uma credencial  
  O exemplo a seguir altera o segredo armazenado em uma credencial chamada `Saddles`. A credencial contém o logon do Windows `RettigB` e sua senha. A nova senha é adicionada à credencial que usa a cláusula SECRET.  
   
-```  
+```sql  
 ALTER CREDENTIAL Saddles WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -84,7 +83,7 @@ GO
 ### <a name="b-removing-the-password-from-a-credential"></a>B. Removendo a senha de uma credencial  
  O exemplo a seguir remove a senha de uma credencial chamada `Frames`. A credencial contém o logon do Windows `Aboulrus8` e uma senha. Depois que a instrução for executada, a credencial terá uma senha NULL porque a opção SECRET não é especificada.  
   
-```  
+```sql  
 ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  

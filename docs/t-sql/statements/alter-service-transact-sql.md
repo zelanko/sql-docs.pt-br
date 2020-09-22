@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 08a4d8ad8ab23f1bfa618049462506c140090135
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c6a9ed30e92358d269fa4d6c0e270bd4a16e3bdb
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547769"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688127"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "89547769"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER SERVICE service_name   
    [ ON QUEUE [ schema_name . ]queue_name ]   
    [ ( < opt_arg > [ , ...n ] ) ]  
@@ -77,7 +76,7 @@ ALTER SERVICE service_name
 ### <a name="a-changing-the-queue-for-a-service"></a>a. Alterando a fila para um serviço  
  O exemplo a seguir altera o serviço `//Adventure-Works.com/Expenses` para usar a fila `NewQueue`.  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE NewQueue ;  
 ```  
@@ -85,7 +84,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### <a name="b-adding-a-new-contract-to-the-service"></a>B. Adicionando um novo contrato ao serviço  
  O exemplo a seguir altera o serviço `//Adventure-Works.com/Expenses` para permitir caixas de diálogo no contrato `//Adventure-Works.com/Expenses`.  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
@@ -93,7 +92,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### <a name="c-adding-a-new-contract-to-the-service-dropping-existing-contract"></a>C. Adicionando um novo contrato ao serviço, descartando um contrato existente  
  O exemplo a seguir altera o serviço `//Adventure-Works.com/Expenses` para permitir caixas de diálogo no contrato `//Adventure-Works.com/Expenses/ExpenseProcessing` e para não permitir caixas de diálogo no contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseProcessing],   
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  

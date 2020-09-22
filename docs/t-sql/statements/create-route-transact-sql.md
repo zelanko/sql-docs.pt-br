@@ -28,12 +28,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c8b24889e99f5f0f3cdbaaad377a2d4e99f2da3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5eea276766b848033fc0fd8cd7487e7451c779ca
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549326"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688339"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -45,7 +45,6 @@ ms.locfileid: "89549326"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
 WITH    
@@ -73,7 +72,7 @@ WITH
  BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  Especifica o banco de dados que hospeda o serviço de destino. O parâmetro *broker_instance_identifier* deve ser o identificador de instância do agente para o banco de dados remoto, que pode ser obtido com a execução ad seguinte consulta no banco de dados selecionado:  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID()  
@@ -93,7 +92,7 @@ Especifica o endereço de rede para essa rota. O *next_hop_address* especifica u
   
  O *port_number* especificado precisa corresponder ao número da porta do ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -114,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  O *port_number* especificado precisa corresponder ao número da porta do ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. Isso pode ser obtido executando a seguinte consulta no banco de dados selecionado:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -145,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>a. Criando uma rota TCP/IP com o uso de um nome DNS  
  O exemplo a seguir cria uma rota para o serviço `//Adventure-Works.com/Expenses`. A rota especifica que as mensagens para esse serviço passam pelo TCP na porta `1234` do host identificado com o nome DNS `www.Adventure-Works.com`. O servidor de destino entrega as mensagens na chegada para a instância de corretor identificada pelo identificador exclusivo `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql 
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -156,7 +155,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. Criando uma rota TCP/IP com o uso de um nome NetBIOS  
  O exemplo a seguir cria uma rota para o serviço `//Adventure-Works.com/Expenses`. A rota especifica que as mensagens para esse serviço passam pelo TCP na porta `1234` do host identificado com o nome NetBIOS `SERVER02`. Na chegada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino entrega a mensagem à instância de banco de dados identificada pelo identificador exclusivo `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH   
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -167,7 +166,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="c-creating-a-tcpip-route-by-using-an-ip-address"></a>C. Criando uma rota TCP/IP com o uso de um endereço IP  
  O exemplo a seguir cria uma rota para o serviço `//Adventure-Works.com/Expenses`. A rota especifica que as mensagens para esse serviço passam pelo TCP na porta `1234` do host identificado com o endereço IP `192.168.10.2`. Na chegada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino entrega a mensagem à instância do agente identificada pelo identificador exclusivo `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -178,7 +177,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="d-creating-a-route-to-a-forwarding-broker"></a>D. Criando uma rota para um agente de encaminhamento  
  O exemplo a seguir cria uma rota para o corretor de encaminhamento no servidor `dispatch.Adventure-Works.com`. Como o nome de serviço e o identificador de instância do agente não são especificados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa essa rota para serviços que não têm nenhuma outra rota definida.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     ADDRESS = 'TCP://dispatch.Adventure-Works.com' ;   
@@ -187,7 +186,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="e-creating-a-route-to-a-local-service"></a>E. Criando uma rota para um serviço local  
  O exemplo a seguir cria uma rota para o serviço `//Adventure-Works.com/LogRequests` na mesma instância que a rota.  
   
-```  
+```sql  
 CREATE ROUTE LogRequests  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/LogRequests',  
@@ -197,7 +196,7 @@ CREATE ROUTE LogRequests
 ### <a name="f-creating-a-route-with-a-specified-lifetime"></a>F. Criando uma rota com um tempo de vida especificado  
  O exemplo a seguir cria uma rota para o serviço `//Adventure-Works.com/Expenses`. O tempo de vida para a rota é de `259200` segundos, que é igual a 72 horas.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -208,7 +207,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="g-creating-a-route-to-a-mirrored-database"></a>G. Criando uma rota para um banco de dados espelhado  
  O exemplo a seguir cria uma rota para o serviço `//Adventure-Works.com/Expenses`. O serviço é hospedado em um banco de dados espelho. Um dos bancos de dados espelhados está localizado no endereço `services.Adventure-Works.com:1234` e o outro, no endereço `services-mirror.Adventure-Works.com:1234`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -220,7 +219,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="h-creating-a-route-that-uses-the-service-name-for-routing"></a>H. Criando uma rota que usa o nome do serviço para roteamento  
  O exemplo a seguir cria uma rota que usa o nome de serviço para determinar o endereço de rede ao qual a mensagem será enviada. Observe que uma rota que especifica `'TRANSPORT'` como o endereço de rede tem prioridade menor de correspondência que outras rotas.  
   
-```  
+```sql  
 CREATE ROUTE TransportRoute  
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  
