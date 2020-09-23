@@ -21,12 +21,12 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330053f10b6b57b184d2be26d4181997ed19ba7b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: af4e3e3739475ff3beac61802606499874fdff58
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543939"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117001"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
@@ -77,7 +77,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  O diagrama a seguir mostra um histograma com seis etapas: A área à esquerda do primeiro valor do limite superior corresponde à primeira etapa.  
   
- ![Histograma](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histograma")  
+ ![Histograma](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "Histograma")  
   
  Para cada etapa do histograma:  
   
