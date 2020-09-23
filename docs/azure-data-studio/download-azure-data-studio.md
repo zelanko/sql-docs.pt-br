@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 8/12/2020
-ms.openlocfilehash: 2e4906ebe22b28a15eb20a182198e6c74853eb18
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.date: 9/22/2020
+ms.openlocfilehash: d75fba602fb4abe03cd5ee89a5c31dd355fd3fc7
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042727"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914778"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Baixar e instalar o Azure Data Studio
 
@@ -27,11 +27,11 @@ Baixe e instale a versão mais recente:
 
 |Plataforma|Baixar|Data de liberação| Versão |
 |:---|:---|:---|:---|
-| Windows | [Instalador do usuário (recomendado)](https://go.microsoft.com/fwlink/?linkid=2138608)<br>[Instalador do sistema](https://go.microsoft.com/fwlink/?linkid=2138704)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2138705) | 12 de agosto de 2020 | 1.21.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2138609) | 12 de agosto de 2020 | 1.21.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | 12 de agosto de 2020| 1.21.0 |
+| Windows | [Instalador do usuário (recomendado)](https://go.microsoft.com/fwlink/?linkid=2142210)<br>[Instalador do sistema](https://go.microsoft.com/fwlink/?linkid=2142135)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2142211) | 22 de setembro de 2020 | 1.22.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2142136) | 22 de setembro de 2020 | 1.22.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2142214)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2142213)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2142212) | 22 de setembro de 2020| 1.22.0 |
 
-Para obter detalhes sobre a versão mais recente, confira as [notas sobre a versão](./release-notes-azure-data-studio.md?view=sql-server-ver15).
+Para obter detalhes sobre a versão mais recente, confira as [notas sobre a versão](./release-notes-azure-data-studio.md).
 
 ## <a name="get-azure-data-studio-for-windows"></a>Obter o Azure Data Studio para Windows
 
@@ -41,32 +41,32 @@ O *instalador do usuário* é recomendado porque não exige privilégios de admi
 
 **Instalador do usuário** (recomendado)
 
-1. Baixe e execute o [instalador do *usuário* do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2138608).
+1. Baixe e execute o [instalador do *usuário* do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2142210).
 2. Inicie o aplicativo [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **Instalador do sistema**
 
-1. Baixe e execute o [instalador do *sistema* do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2138704).
+1. Baixe e execute o [instalador do *sistema* do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2142135).
 2. Inicie o aplicativo [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **arquivo zip**
 
-1. Baixe o [.zip do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2138705).
+1. Baixe o [.zip do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2142211).
 2. Procure o arquivo baixado e extraia-o.
 3. Execute `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## <a name="get-azure-data-studio-for-macos"></a>Obter o Azure Data Studio para macOS
 
-1. Baixe o [[!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=2138609).
+1. Baixe o [[!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=2142136).
 2. Para expandir o conteúdo do zip, clique duas vezes nele.
 3. Para disponibilizar o Azure Data Studio no *Launchpad*, arraste *Azure Data Studio.app* para a pasta *Aplicativos*.
 
 ## <a name="get-azure-data-studio-for-linux"></a>Obter o Azure Data Studio para Linux
 
 1. Baixe o [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux usando um dos instaladores ou os arquivos tar.gz:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2142214)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2142213)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2142212)
 1. Para extrair o arquivo e iniciar o [!INCLUDE[name-sos](../includes/name-sos-short.md)], abra uma nova janela do terminal e digite os seguintes comandos:
 
    **Instalação do Debian:**
@@ -194,15 +194,15 @@ Caso deseje mover as configurações personalizadas, os atalhos de teclado ou os
 
 1. Abra as Configurações clicando na engrenagem na parte inferior esquerda e clicando em **Configurações.**
 
-   ![abrir configurações](./media/download/open-settings.png)
+   ![configurações de edição no Azure Data Studio](./media/download/open-settings.png)
 
 2. Clique com o botão direito do mouse na guia **Configurações de Usuário** na parte superior e clique em **Revelar no Explorer**
 
-   ![revelar no Explorer](./media/download/reveal-in-explorer.png)
+   ![inicie o explorador, que levará você ao sistema de arquivos local](./media/download/reveal-in-explorer.png)
 
 3. Copie todos os arquivos dessa pasta e salve em uma localização fácil de localizar na unidade local, como a pasta Documentos.
 
-   ![copiar configurações](./media/download/copy-settings.png)
+   ![use os arquivos e copie para seu local](./media/download/copy-settings.png)
 
 4. Na nova versão do Azure Data Studio, siga as etapas 1 e 2 e, em seguida, para a etapa 3, cole o conteúdo salvo na pasta. Você também pode copiar manualmente as configurações, as associações de teclas ou os snippets de código em suas respectivas localizações.
 

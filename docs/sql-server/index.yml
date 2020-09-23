@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: b65a616e3a4ab3911f746347a1ae5e6f74490b49
-  ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+  ms.openlocfilehash: 31d0046c3a81b84c926a99efce80816c5ef42a88
+  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 08/07/2020
-  ms.locfileid: "87934132"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "90915486"
 landingContent:
 - title: SQL no Azure
   linkLists:
@@ -22,7 +22,7 @@ landingContent:
     links:
     - text: Banco de dados individual do Banco de Dados SQL do Azure
       url: /azure/sql-database/sql-database-single-database
-    - text: Instância Gerenciada de SQL do Azure
+    - text: Instância Gerenciada do Azure SQL
       url: /azure/sql-database/sql-database-managed-instance
     - text: Azure Synapse Analytics (SQL DW)
       url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
@@ -58,6 +58,8 @@ landingContent:
       url: ../azure-data-studio/what-is.md
     - text: SQL Server no Linux
       url: ../linux/sql-server-linux-overview.md
+    - text: SQL Server para Azure Arc (versão prévia)
+      url: azure-arc/overview.md
   - linkListType: quickstart
     links:
     - text: Conexão e consulta (SSMS)
