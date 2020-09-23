@@ -23,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cae6d8b524e12a959ec373549a7be0af75aa16b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 657a3c207fb3e6928e183890ae5bc97b19da7387
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445732"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116667"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88445732"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 OBJECTPROPERTY ( id , property )   
 ```  
   
@@ -172,7 +172,7 @@ OBJECTPROPERTY ( id , property )
 ## <a name="remarks"></a>Comentários  
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] supõe que *object_id* esteja no contexto do banco de dados atual. Uma consulta que referencia uma *object_id* em outro banco de dados retornará NULL ou resultados incorretos. Por exemplo, na consulta a seguir, o contexto do banco de dados atual é o banco de dados mestre. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentará retornar o valor de propriedade da *object_id* especificada nesse banco de dados, em vez do banco de dados especificado na consulta. A consulta retorna resultados incorretos porque a exibição `vEmployee` não está no banco de dados mestre.  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
@@ -190,7 +190,7 @@ GO
 ### <a name="a-verifying-that-an-object-is-a-table"></a>a. Verificando se um objeto é uma tabela  
  O exemplo a seguir testa se `UnitMeasure` é uma tabela no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') = 1  
@@ -200,13 +200,12 @@ ELSE IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') = 0
 ELSE IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') IS NULL  
    PRINT 'ERROR: UnitMeasure is not a valid object.';  
 GO  
-  
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Verificando se uma função definida pelo usuário de valor escalar é determinística  
  O exemplo a seguir testa se a função `ufnGetProductDealerPrice` de valor escalar definida pelo usuário, que retorna um valor de **money** é determinística.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID('dbo.ufnGetProductDealerPrice'), 'IsDeterministic');  
@@ -223,7 +222,7 @@ GO
 ### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: Localizando objetos que pertencem a um esquema específico  
  O exemplo a seguir retorna todas as tabelas no esquema dbo.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT name, object_id, type_desc  
@@ -238,7 +237,7 @@ GO
 ### <a name="d-verifying-that-an-object-is-a-table"></a>D: Verificando se um objeto é uma tabela  
  O exemplo a seguir testa se `dbo.DimReseller` é uma tabela no banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF OBJECTPROPERTY (OBJECT_ID(N'dbo.DimReseller'),'ISTABLE') = 1  

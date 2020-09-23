@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147737"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116572"
 ---
 # <a name="statistics"></a>Estatísticas
 
@@ -61,7 +61,7 @@ Mais detalhadamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 O diagrama a seguir mostra um histograma com seis etapas: A área à esquerda do primeiro valor do limite superior corresponde à primeira etapa.
   
-![Histograma](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histograma") 
+![Histograma](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "Histograma") 
   
 Para cada etapa do histograma acima:
 -   A linha em negrito representa o valor do limite superior (*range_high_key*) e o número de vezes que ele ocorre (*equal_rows*)  

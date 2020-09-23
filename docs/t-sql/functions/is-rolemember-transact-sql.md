@@ -21,12 +21,12 @@ ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0df369f34c1993132ff6df45b1495c81f6ef6665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 856265d1ba66eb2cfae29b12ec23b432cb4c8e3f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417372"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116724"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,6 @@ ms.locfileid: "88417372"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )  
 ```  
   
@@ -88,7 +87,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir indica se o usuário atual é membro da função de banco de dados fixa `db_datareader`.  
   
-```  
+```sql  
 IF IS_ROLEMEMBER ('db_datareader') = 1  
    print 'Current user is a member of the db_datareader role'  
 ELSE IF IS_ROLEMEMBER ('db_datareader') = 0  

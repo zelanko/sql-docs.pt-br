@@ -22,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b99cb9371269b70dc36eae6361f2d6a805da774
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368552"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115043"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversão de tipo de dados (Mecanismo de Banco de Dados)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ Embora o gráfico acima ilustre todas as conversões explícitas e implícitas p
 Por exemplo, o script a seguir define uma variável do tipo `varchar`, atribui um valor do tipo `int` à variável e, em seguida, seleciona uma concatenação da variável com uma cadeia de caracteres.
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.'
 ```
@@ -74,7 +74,7 @@ O valor `int` de `1` é convertido em um `varchar`, portanto, a instrução `SEL
 O exemplo a seguir mostra um script semelhante com uma variável `int`:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.'
 ```
@@ -87,7 +87,7 @@ Nesse caso, a instrução `SELECT` gera o seguinte erro:
 Para avaliar a expressão `@notastring + ' is not a string.'`, o SQL Server segue as regras de precedência de tipo de dados para concluir a conversão implícita antes que o resultado da expressão possa ser calculado. Como `int` tem uma precedência mais alta do que `varchar`, o SQL Server tenta converter a cadeia de caracteres em um inteiro e falha porque essa cadeia de caracteres não pode ser convertida em um inteiro. Se a expressão fornecer uma cadeia de caracteres que pode ser convertida, a instrução terá sucesso, como no exemplo a seguir:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```

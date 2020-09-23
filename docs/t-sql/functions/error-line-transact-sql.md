@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 928cdcd92ceb2bfc6ace1be7d5cd6b1c785d5f48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c914c69646f99fdcb3ff4a214d37faa61feef3b6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366262"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116729"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 
@@ -68,7 +68,7 @@ Em blocos CATCH aninhados, `ERROR_LINE` retorna o número de linha do erro espec
 ### <a name="a-using-error_line-in-a-catch-block"></a>a. Usando ERROR_LINE em um bloco CATCH  
 Este exemplo de código a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. `ERROR_LINE` retorna o número de linha em que ocorreu o erro.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. Usando ERROR_LINE em um bloco CATCH com um procedimento armazenado  
 Este exemplo mostra um procedimento armazenado que gera um erro de divisão por zero. `ERROR_LINE` retorna o número de linha em que ocorreu o erro.  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. Usando ERROR_LINE em um bloco CATCH com outras ferramentas de tratamento de erros  
 Este exemplo de código a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. `ERROR_LINE` retorna o número de linha em que ocorreu o erro e informações sobre o erro propriamente dito.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

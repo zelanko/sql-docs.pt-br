@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 095ba81db2c432b33ceb1795582cff3b9ef559c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b47a991aa2500236aec9d80d2ae4c51144619f90
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309942"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116039"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88309942"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 FULLTEXTSERVICEPROPERTY ('property')  
 ```  
   
@@ -66,7 +65,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir verifica se somente binários assinados são carregados e o valor de retorno indica que esta verificação não está sendo feita.  
   
-```  
+```sql  
 SELECT fulltextserviceproperty('VerifySignature');  
 ```  
   
@@ -79,7 +78,7 @@ SELECT fulltextserviceproperty('VerifySignature');
   
  Saiba que para definir a verificação de assinatura novamente para seu valor padrão, 1, você pode usar a seguinte instrução `sp_fulltext_service`:  
   
-```  
+```sql  
 EXEC sp_fulltext_service @action='verify_signature', @value=1;  
 GO  
 ```  

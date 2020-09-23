@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ceee96130e9ec4fef0f50b493944f71d68e6eff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ac2905d7466b8a2aa3e8a823ab25f89d98ae96f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479675"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115200"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,6 @@ Esta função descriptografa dados criptografados. Para fazer isso, ele primeiro
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 DecryptByKeyAutoAsymKey ( akey_ID , akey_password   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }   
@@ -89,7 +88,7 @@ Requer a permissão `VIEW DEFINITION` na chave simétrica e a permissão `CONTRO
 ## <a name="examples"></a>Exemplos
 Este exemplo mostra como `DECRYPTBYKEYAUTOASYMKEY` pode simplificar o código de descriptografia. Esse código deve ser executado em um banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que ainda não tenha uma chave mestra de banco de dados.  
 
-```  
+```sql  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdMlk979438teag$$ds987yghn)(*&4fdg^';  

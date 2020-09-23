@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6e8c856b81bd4ff4ab03c988af1edf6a8b3ac43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83213da53228a39b3642f9563aecd5d365d02355
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467999"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116047"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ Retorna informações sobre propriedades de catálogo de texto completo no [!INC
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')  
 ```  
   
@@ -88,7 +87,7 @@ A população de texto completo poderá falhar. Ela poderá falhar se você rest
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir retorna o número de itens indexados de texto completo de um catálogo de texto completo chamado `Cat_Desc`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT fulltextcatalogproperty('Cat_Desc', 'ItemCount');  

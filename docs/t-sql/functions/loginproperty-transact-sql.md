@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c3014a8d57602dc80b7faeec26dbc85d43f91c44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0daf074f9aff7c9e27c5b06744048ebc6af2e5ed
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479609"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116003"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +49,7 @@ ms.locfileid: "88479609"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 LOGINPROPERTY ( 'login_name' , 'property_name' )  
 ```  
   
@@ -125,7 +124,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>a. Verificando se um logon deve alterar sua senha  
  O exemplo a seguir verifica se o logon `John3` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve alterar sua senha na próxima vez que se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
 GO  
 ```  
@@ -133,7 +132,7 @@ GO
 ### <a name="b-checking-whether-a-login-is-locked-out"></a>B. Verificando se um logon está bloqueado  
  O exemplo a seguir verifica se o logon `John3` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está bloqueado.  
   
-```  
+```sql  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  
 GO  
 ```  

@@ -22,12 +22,12 @@ ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0dfabccec3d2d5e914a31c4464ff71c1136b685
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb8aca979735819200d8b03c2c2f77a30f2c8398
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417572"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115611"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---- ---- ----  
 1.0  .0   1.0  
 ```  
@@ -68,7 +68,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 A função `ABS` pode produzir um erro de estouro quando o valor absoluto de um número excede o maior número que o tipo de dados especificado pode representar. Por exemplo, o tipo de dados `int` tem um intervalo de valor entre `-2,147,483,648` e `2,147,483,647`. O cálculo do valor absoluto para o inteiro com sinal `-2,147,483,648` causará um erro de estouro porque seu valor absoluto excede o limite positivo do intervalo do tipo de dados `int`.
   
 ```sql
-DECLARE @i int;  
+DECLARE @i INT;  
 SET @i = -2147483648;  
 SELECT ABS(@i);  
 GO  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cc63fcaa6e7419a37005817f3121a2b8851dc749
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68ad50b69fefd541e083ecab096732d549d171d1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363792"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116015"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Funções lógicas – CHOOSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88363792"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  
   
@@ -62,7 +61,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 
  O exemplo a seguir retorna o terceiro item da lista de valores fornecida.  
  
-```  
+```sql 
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
   
@@ -80,7 +79,7 @@ Developer
 
  O exemplo a seguir retorna uma cadeia de caracteres simples com base no valor da coluna `ProductCategoryID`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductCategoryID, CHOOSE (ProductCategoryID, 'A','B','C','D','E') AS Expression1  
@@ -106,7 +105,7 @@ ProductCategoryID Expression1
   
  O exemplo a seguir retorna a estação em que um funcionário foi contratado. A função MONTH é usada para retornar o valor do mês da coluna `HireDate`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, HireDate, CHOOSE(MONTH(HireDate),'Winter','Winter', 'Spring','Spring','Spring','Summer','Summer',   

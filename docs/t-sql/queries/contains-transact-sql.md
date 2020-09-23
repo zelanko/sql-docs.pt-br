@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 04e11f27d26a7979dfc84b29d7c7de1b02eb02ab
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552561"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115429"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 
@@ -181,7 +181,7 @@ CONTAINS (
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -193,7 +193,7 @@ WHERE CONTAINS(Description, @SearchWord);
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -256,7 +256,7 @@ Especifica uma correspondência para uma palavra ou frase exata. Exemplos de ter
   
  Por padrão, a condição de proximidade personalizada retorna qualquer linha que contém os termos especificados independentemente da distância interveniente e independentemente da ordem deles. Por exemplo, para corresponder à consulta seguinte, um documento precisaria conter `term1` e "`term3 term4`" em qualquer lugar, em qualquer ordem, simplesmente:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR(term1,"term3 term4")')  
 ```  
   
@@ -270,13 +270,13 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  Por exemplo, a consulta a seguir pesquisa `AA` e `BB`, em qualquer ordem, dentro de uma distância máxima de cinco.  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB),5)')  
 ```  
   
  A cadeia de caracteres `AA one two three four five BB` será uma correspondência. No seguinte exemplo, a consulta especifica três termos de pesquisa, `AA`, `BB` e `CC`, dentro de uma distância máxima de cinco:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')  
 ```  
   
@@ -304,7 +304,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  Por exemplo, a condição de proximidade a seguir pesquisa as palavras "`Monday`"", `Tuesday`" e "`Wednesday`" na ordem especificada independentemente da distância entre eles:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')  
 ```  
   
@@ -468,7 +468,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'Performance'  
 SELECT Description   
 FROM Production.ProductDescription   

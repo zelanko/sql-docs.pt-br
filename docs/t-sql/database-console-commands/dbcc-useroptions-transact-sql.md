@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 0b5e147a87e6559d1d3bd2782d46bf09a783297a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a80a6bdaa75d01f63f22244f93225a9b32ba93d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417552"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115559"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ Retorna as opções SET ativas (definidas) para a conexão atual.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql
+```syntaxsql
 DBCC USEROPTIONS  
 [ WITH NO_INFOMSGS ]  
 ```  
@@ -52,8 +52,7 @@ Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC USEROPTIONS retorna uma coluna para o nome da opção SET e uma coluna para o valor da opção (valores e entradas podem variar):
 
-```sql
-
+```
 Set Option                   Value`  
 ---------------------------- ---------------------------`  
 textsize                     64512 

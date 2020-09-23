@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 78ff3df45fd3d835d273d2f00f4d7ddf65170a62
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a9650958d90712f659d4adade529049ad4a4775
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88311502"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115034"
 ---
 # <a name="parse-database-engine"></a>Parse (Mecanismo de Banco de Dados)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ hierarchyid::Parse ( input )
 CAST ( input AS hierarchyid )  
 ```  
   
-```sql
+```csharp
 -- CLR syntax  
 static SqlHierarchyId Parse ( SqlString input )   
 ```  
@@ -67,7 +67,7 @@ Se o método Parse receber um valor que não for uma representação de cadeia d
 O exemplo de código a seguir usa `ToString` para converter um valor **hierarchyid** em uma cadeia de caracteres e `Parse` para converter um valor de cadeia de caracteres em uma **hierarchyid**.
   
 ```sql
-DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
+DECLARE @StringValue AS NVARCHAR(4000), @hierarchyidValue AS hierarchyid  
 SET @StringValue = '/1/1/3/'  
 SET @hierarchyidValue = 0x5ADE  
   
@@ -87,7 +87,7 @@ hierarchyidRepresentation    StringRepresentation
 ### <a name="b-clr-example"></a>B. Exemplo de CLR  
 O seguinte snippet de código chama o método Parse():
   
-```sql
+```csharp
 string input = "/1/2/";  
 SqlHierarchyId.Parse(input);  
 ```  

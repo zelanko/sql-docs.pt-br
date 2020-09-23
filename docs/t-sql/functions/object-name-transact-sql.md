@@ -25,12 +25,12 @@ ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3386f37e4888ee8b0734d60d87359314a7bc9325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5909334c6a31279760ebb8a91d3b4f7f1841accb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459651"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115174"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  Por padrão, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] considera que *object_id* está no contexto do banco de dados atual. Uma consulta que faz referência a um *object_id* em outro banco de dados retorna NULL ou resultados incorretos. Por exemplo, na consulta a seguir o contexto do banco de dados atual é [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta retornar um nome de objeto para a identificação do objeto especificado naquele banco de dados em vez do banco de dados especificado na cláusula FROM da consulta. Portanto, informações incorretas são retornadas.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_NAME(object_id)  
@@ -82,7 +82,7 @@ GO
   
  Você pode resolver nomes de objeto no contexto de outro banco de dados especificando uma identificação de banco de dados. O exemplo a seguir especifica a identificação de banco de dados para o banco de dados `master` na função `OBJECT_SCHEMA_NAME` e retorna os resultados corretos.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
@@ -95,7 +95,7 @@ GO
 ### <a name="a-using-object_name-in-a-where-clause"></a>a. Usando OBJECT_NAME em uma cláusula WHERE  
  O exemplo a seguir retorna colunas da exibição de catálogo `sys.objects` para o objeto especificado por `OBJECT_NAME` na cláusula `WHERE` da instrução `SELECT`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyID INT;  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-returning-the-object-schema-name-and-object-name"></a>B. Retornando o nome do esquema do objeto e o nome do objeto  
  O exemplo a seguir retorna o nome de esquema do objeto, nome de objeto e texto de SQL para todos os planos de consulta em cache que não sejam instruções ad hoc ou preparadas.  
   
-```  
+```sql  
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -124,7 +124,7 @@ GO
 ### <a name="c-returning-three-part-object-names"></a>C. Retornando nomes de objetos de três partes  
  O exemplo a seguir retorna o banco de dados, esquema e nome de objeto juntamente com todas as outras colunas na exibição de gerenciamento dinâmico `sys.dm_db_index_operational_stats` de todos os objetos em todos os bancos de dados.  
   
-```  
+```sql  
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -140,7 +140,7 @@ GO
 ### <a name="d-using-object_name-in-a-where-clause"></a>D. Usando OBJECT_NAME em uma cláusula WHERE  
  O exemplo a seguir retorna colunas da exibição de catálogo `sys.objects` para o objeto especificado por `OBJECT_NAME` na cláusula `WHERE` da instrução `SELECT`. O número do seu objeto (274100017, no exemplo a seguir) será diferente.  Para testar este exemplo, pesquise um número válido de objeto executando `SELECT name, object_id FROM sys.objects;` no banco de dados.)  
   
-```  
+```sql  
 SELECT name, object_id, type_desc  
 FROM sys.objects  
 WHERE name = OBJECT_NAME(274100017);  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15b156950ff752e96dc332c4071dbc748013aa3f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459888"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116155"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,6 @@ Verifica a alocação e a integridade estrutural de todas as tabelas e exibiçõ
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 DBCC CHECKFILEGROUP   
 [  
     [ ( { filegroup_name | filegroup_id | 0 }   
@@ -156,7 +155,7 @@ DBCC CHECKFILEGROUP retorna o seguinte conjunto de resultados (os valores podem 
 -   Exceto quando ESTIMATEONLY ou NO_INFOMSGS é especificado.  
 -   Para o banco de dados atual, se nenhum banco de dados estiver especificado, se todas as opções estiverem especificadas ou não (exceto NOINDEX).  
   
-```sql
+```
 DBCC results for 'master'.  
 DBCC results for 'sys.sysrowsetcolumns'.  
 There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.  
@@ -174,12 +173,12 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 Se NO_INFOMSGS estiver especificado, DBCC CHECKFILEGROUP retornará:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
  Se ESTIMATEONLY estiver especificado, DBCC CHECKFILEGROUP retornará (os valores podem variar):  
 
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)
 -------------------------------------------------   
 15  
@@ -202,8 +201,7 @@ Exige associação à função de servidor fixa **sysadmin** ou à função de b
 ### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>a. Verificando o grupo de arquivos PRIMARY de um banco de dados  
 O exemplo a seguir verifica o grupo de arquivos primário do banco de dados atual.
   
-```sql  
-  
+```sql
 DBCC CHECKFILEGROUP;  
 GO  
 ```  
@@ -211,7 +209,7 @@ GO
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. Verificando o grupo de arquivos PRIMARY de AdventureWorks sem índices não clusterizados  
 O exemplo a seguir verifica o grupo de arquivos primário do banco de dados `AdventureWorks2012` (excluindo os índices não clusterizados) especificando o número de identificação do grupo de arquivos primário e `NOINDEX`.
   
-```sql  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKFILEGROUP (1, NOINDEX);  
@@ -221,7 +219,7 @@ GO
 ### <a name="c-checking-the-primary-filegroup-with-options"></a>C. Verificando o grupo de arquivos PRIMARY com opções  
 O exemplo a seguir verifica o grupo de arquivos primário do banco de dados `master` e especifica a opção `ESTIMATEONLY`.
   
-```sql  
+```sql
 USE master;  
 GO  
 DBCC CHECKFILEGROUP (1)  

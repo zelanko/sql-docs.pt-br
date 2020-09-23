@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8d383cc1530835635cc4c25957c25221a653dbfa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02eaf8552bdbd25788d5a436230b58e3d14d6f9e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417272"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116659"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "88417272"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name  
    [ OVER (<over_order_by_clause>) ]  
 ```  
@@ -174,7 +173,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
  Os exemplos a seguir usam uma sequência chamada `CountBy1` em um esquema chamado `Test`. Execute a seguinte instrução para criar a sequência `Test.CountBy1`. Os exemplos C e E usam o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], portanto, a sequência `CountBy1` é criada naquele banco de dados.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
   
@@ -190,7 +189,7 @@ GO
 ### <a name="a-using-a-sequence-in-a-select-statement"></a>a. Usando uma sequência em uma instrução select  
  O exemplo a seguir cria uma sequência chamada `CountBy1`, que aumenta em incrementos de um cada vez que é utilizada.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1 AS FirstUse;  
 SELECT NEXT VALUE FOR Test.CountBy1 AS SecondUse;  
 ```  
@@ -208,10 +207,10 @@ SecondUse
 ### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>B. Definindo uma variável como o próximo valor de sequência  
  O exemplo a seguir demonstra três modos de definir uma variável como o próximo valor de um número de sequência.  
   
-```  
-DECLARE @myvar1 bigint = NEXT VALUE FOR Test.CountBy1  
-DECLARE @myvar2 bigint ;  
-DECLARE @myvar3 bigint ;  
+```sql  
+DECLARE @myvar1 BIGINT = NEXT VALUE FOR Test.CountBy1  
+DECLARE @myvar2 BIGINT ;  
+DECLARE @myvar3 BIGINT ;  
 SET @myvar2 = NEXT VALUE FOR Test.CountBy1 ;  
 SELECT @myvar3 = NEXT VALUE FOR Test.CountBy1 ;  
 SELECT @myvar1 AS myvar1, @myvar2 AS myvar2, @myvar3 AS myvar3 ;  
@@ -220,7 +219,7 @@ GO
   
 ### <a name="c-using-a-sequence-with-a-ranking-window-function"></a>C. Usando uma sequência com uma função de janela de classificação  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
   
@@ -233,16 +232,16 @@ GO
 ### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. Usando a função NEXT VALUE FOR na definição de uma restrição padrão  
  Há compatibilidade com o uso da função **NEXT VALUE FOR** na definição de uma restrição padrão. Para obter um exemplo de como usar **NEXT VALUE FOR** em uma instrução **CREATE TABLE**, veja o exemplo C em [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md). O exemplo a seguir usa `ALTER TABLE` para adicionar uma sequência como um padrão em uma tabela atual.  
   
-```  
+```sql
 CREATE TABLE Test.MyTable  
 (  
-    IDColumn nvarchar(25) PRIMARY KEY,  
-    name varchar(25) NOT NULL  
+    IDColumn NVARCHAR(25) PRIMARY KEY,  
+    name VARCHAR(25) NOT NULL  
 ) ;  
 GO  
   
 CREATE SEQUENCE Test.CounterSeq  
-    AS int  
+    AS INT  
     START WITH 1  
     INCREMENT BY 1 ;  
 GO  
@@ -265,10 +264,10 @@ GO
 ### <a name="e-using-the-next-value-for-function-in-an-insert-statement"></a>E. Usando uma função NEXT VALUE FOR em uma instrução INSERT  
  O exemplo a seguir cria uma tabela chamada `TestTable` e usa a função `NEXT VALUE FOR` para inserir uma linha.  
   
-```  
+```sql  
 CREATE TABLE Test.TestTable  
-     (CounterColumn int PRIMARY KEY,  
-    Name nvarchar(25) NOT NULL) ;   
+     (CounterColumn INT PRIMARY KEY,  
+    Name NVARCHAR(25) NOT NULL) ;   
 GO  
   
 INSERT Test.TestTable (CounterColumn,Name)  
@@ -277,13 +276,12 @@ GO
   
 SELECT * FROM Test.TestTable;   
 GO  
-  
 ```  
   
 ### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. Usando a função NEXT VALUE FOR com SELECT ... INTO  
  O exemplo a seguir usa a instrução `SELECT ... INTO` para criar uma tabela chamada `Production.NewLocation` e usa a função `NEXT VALUE FOR` para numerar cada linha.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;   
 GO  
   
@@ -299,7 +297,7 @@ GO
 ### <a name="f-granting-permission-to-execute-next-value-for"></a>F. Concedendo permissão para executar NEXT VALUE FOR  
  O exemplo a seguir concede a permissão **UPDATE** a uma permissão `AdventureWorks\Larry` nomeada pelo usuário para executar `NEXT VALUE FOR` usando a sequência `Test.CounterSeq`.  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   

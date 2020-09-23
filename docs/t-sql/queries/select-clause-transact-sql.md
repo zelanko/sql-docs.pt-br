@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 265e4692930874fb7458a4dd7e193ec1c0851c18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 84099c48344e27070433483eeac829640c3ce4c2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459084"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115904"
 ---
 # <a name="select-clause-transact-sql"></a>Cláusula SELECT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "88459084"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   
 <select_list>   
@@ -122,13 +121,13 @@ SELECT [ ALL | DISTINCT ]
   
  O exemplo a seguir seleciona os valores para a coluna `Location`, definida como tipo `point`, da tabela `Cities`, invocando um método de tipo denominado `Distance`:  
   
-```  
+```sql
 CREATE TABLE dbo.Cities (  
-     Name varchar(20),  
-     State varchar(20),  
-     Location point );  
+     Name VARCHAR(20),  
+     State VARCHAR(20),  
+     Location POINT);  
 GO  
-DECLARE @p point (32, 23), @distance float;  
+DECLARE @p POINT (32, 23), @distance FLOAT;  
 GO  
 SELECT Location.Distance (@p)  
 FROM Cities;  

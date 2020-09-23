@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b8b4c308530099bb54bf7a447adb46b6faac7e5a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a76fab0c7e0b7e15beb0eb094de4aa66e1644b2e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422850"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115001"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -106,14 +106,14 @@ No [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as camadas Premium e Comercial
 O exemplo a seguir executa `DBCC INPUTBUFFER` em uma segunda conexão enquanto uma transação longa é executada em uma conexão anterior.
   
 ```sql
-CREATE TABLE dbo.T1 (Col1 int, Col2 char(3));  
+CREATE TABLE dbo.T1 (Col1 INT, Col2 CHAR(3));  
 GO  
-DECLARE @i int = 0;  
+DECLARE @i INT = 0;  
 BEGIN TRAN  
 SET @i = 0;  
 WHILE (@i < 100000)  
 BEGIN  
-INSERT INTO dbo.T1 VALUES (@i, CAST(@i AS char(3)));  
+INSERT INTO dbo.T1 VALUES (@i, CAST(@i AS CHAR(3)));  
 SET @i += 1;  
 END;  
 COMMIT TRAN;  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4083ba966aa24b8ec093e27afaeea80b267b939e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ccc9a860218a6fa39596faaee78908eedf6907a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459712"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115990"
 ---
 # <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,7 @@ ms.locfileid: "88459712"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 KEY_NAME ( ciphertext | key_guid )   
 ```  
   
@@ -59,7 +58,7 @@ KEY_NAME ( ciphertext | key_guid )
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>a. Exibindo o nome de uma chave simétrica com o uso de key_guid  
  O banco de dados **master** contém uma chave simétrica chamada ##MS_ServiceMasterKey##. O exemplo a seguir obtém o GUID dessa chave da exibição de gerenciamento dinâmico sys.symmetric_keys, o atribui a uma variável e, em seguida, passa essa variável para a função KEY_NAME para demonstrar como retornar o nome que corresponde ao GUID.  
   
-```  
+```sql  
 USE master;  
 GO  
 DECLARE @guid uniqueidentifier ;  
@@ -72,7 +71,7 @@ SELECT KEY_NAME(@guid) AS [Name of Key];
 ### <a name="b-displaying-the-name-of-a-symmetric-key-using-the-cipher-text"></a>B. Exibindo o nome de uma chave simétrica com o uso de texto codificado  
  O exemplo a seguir demonstra o processo inteiro da criação de uma chave simétrica e do preenchimento de dados em uma tabela. O exemplo mostra como KEY_NAME retorna o nome da chave quando passou o texto criptografado.  
   
-```  
+```sql 
 -- Create a symmetric key  
 CREATE SYMMETRIC KEY TestSymKey   
    WITH ALGORITHM = AES_128,  
@@ -82,8 +81,8 @@ CREATE SYMMETRIC KEY TestSymKey
 GO  
 -- Create a table for the demonstration  
 CREATE TABLE DemoKey  
-(IDCol int IDENTITY PRIMARY KEY,  
-SecretCol varbinary(256) NOT NULL)  
+(IDCol INT IDENTITY PRIMARY KEY,  
+SecretCol VARBINARY(256) NOT NULL)  
 GO  
 -- Open the symmetric key if not already open  
 OPEN SYMMETRIC KEY TestSymKey   
@@ -100,15 +99,14 @@ GO
 SELECT * FROM DemoKey;  
 GO  
 -- Decrypt the data  
-DECLARE @ciphertext varbinary(256);  
+DECLARE @ciphertext VARBINARY(256);  
 SELECT @ciphertext = SecretCol  
 FROM DemoKey WHERE IDCol = 1 ;  
 SELECT CAST (  
 DECRYPTBYKEY( @ciphertext)  
-AS varchar(100) ) AS SecretText ;  
+AS VARCHAR(100) ) AS SecretText ;  
 -- Use KEY_NAME to view the name of the key  
 SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
