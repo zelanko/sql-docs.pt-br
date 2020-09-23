@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a221857278cdd2e8b88d8f6f13084b4def9d3c88
-ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
+ms.openlocfilehash: 52fdb12c425f8d6e3faf9fb0f0ee3ce1a1c76195
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942299"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076811"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 
@@ -31,17 +31,18 @@ Depois que forem esclarecidos os problemas de desempenho das consultas de SMP do
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
-Sintaxe do SQL Data Warehouse do Azure:
+Sintaxe para [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]:
 
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
-[;]  
+[ ; ]  
 ```  
-Sintaxe do Parallel Data Warehouse do Azure:
+
+Sintaxe para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
   
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
-[;]  
+[ ; ]  
 ```  
 
 ## <a name="arguments"></a>Argumentos  

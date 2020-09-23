@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d2643557229b64961217d9a5b5b3c4f784bff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360692"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076663"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Referência do Transact-SQL (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ Por exemplo, este tópico é aplicável a todas as versões e tem o rótulo a se
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-No próximo exemplo, o rótulo a seguir indica um tópico que é aplicável apenas ao SQL Data Warehouse do Azure e ao Parallel Data Warehouse.
+No próximo exemplo, o rótulo a seguir indica um tópico que é aplicável apenas ao Azure Synapse Analytics e ao Parallel Data Warehouse.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 Em alguns casos, o tópico é utilizado por um produto ou serviço, mas nem todos os argumentos são compatíveis. Nesse caso, seções **Aplica-se a** adicionais são inseridas em descrições de argumento apropriado no corpo do tópico.  
  
-## <a name="get-help-from-the-msdn-forum"></a>Obtenha ajuda do Fórum do MSDN  
-Para obter ajuda online, consulte o [Fórum do MSDN Transact-SQL](https://social.msdn.microsoft.com/Forums/home).  
+## <a name="get-help-from-microsoft-q--a"></a>Obtenha ajuda do P e R da Microsoft  
+Para obter ajuda online, confira o [Fórum do Transact-SQL de P e R da Microsoft](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
  
 ## <a name="see-other-language-references"></a>Consulte outras referências de linguagem
 Os documentos do SQL incluem essas outras referências de linguagem:

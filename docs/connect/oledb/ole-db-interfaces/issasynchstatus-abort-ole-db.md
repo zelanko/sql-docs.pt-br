@@ -1,6 +1,6 @@
 ---
 title: ISSAsynchStatus::Abort (Driver do OLE DB) | Microsoft Docs
-description: ISSAsynchStatus::Abort (OLE DB)
+description: Saiba como o método ISSAsynchStatus::Abort cancela uma operação de execução assíncrona no Driver do OLE DB para SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - Abort method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e3c6e3ba45774362834c8a8391f5658670e01434
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbbef11ae17029500a6910e5b28c121f6312dce2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244324"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862201"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,18 +64,18 @@ HRESULT Abort(
  O parâmetro *hChapter* não é DB_NULL_HCHAPTER ou *eOperation* não é DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus::Abort** foi chamado em um objeto de fonte de dados no qual **IDBInitialize::Initialize** não foi chamado ou não foi concluído.  
+ `ISSAsynchStatus::Abort` foi chamado em um objeto de fonte de dados no qual `IDBInitialize::Initialize` não foi chamado ou não foi concluído.  
   
- **ISSAsynchStatus::Abort** foi chamado em um objeto de fonte de dados no qual **IDBInitialize::Initialize** foi chamado, mas, subsequentemente, foi cancelado antes da inicialização ou seu tempo limite foi atingido. O objeto de fonte de dados permanece não inicializado.  
+ `ISSAsynchStatus::Abort` foi chamado em um objeto de fonte de dados no qual `IDBInitialize::Initialize` foi chamado, mas foi cancelado antes da inicialização ou atingiu o tempo limite. O objeto de fonte de dados permanece não inicializado.  
   
- **ISSAsynchStatus::Abort** foi chamado em um conjunto de linhas no qual **ITransaction::Commit** ou **ITransaction::Abort** foi chamado anteriormente, e o conjunto de linhas não sobreviveu à operação de confirmação ou anulação e está em um estado zumbi.  
+ `ISSAsynchStatus::Abort` foi chamado em um conjunto de linhas no qual `ITransaction::Commit` ou `ITransaction::Abort` foi chamado anteriormente, e o conjunto de linhas não sobreviveu à operação de confirmação ou anulação e está em um estado zumbi.  
   
- **ISSAsynchStatus::Abort** foi chamado em um conjunto de linhas cancelado de forma assíncrona em sua fase de inicialização. O conjunto de linhas está em um estado zumbi.  
+ `ISSAsynchStatus::Abort` foi chamado em um conjunto de linhas cancelado de forma assíncrona em sua fase de inicialização. O conjunto de linhas está em um estado zumbi.  
   
 ## <a name="remarks"></a>Comentários  
- Anular a inicialização de um conjunto de linhas ou objeto de fonte de dados pode deixar o conjunto de linhas ou o objeto de fonte de dados em um estado zumbi, de modo que todos os métodos diferentes de **IUnknown** retornam E_UNEXPECTED. Quando isso acontece, a única ação possível para o consumidor é liberar o conjunto de linhas ou objeto de fonte de dados.  
+ Anular a inicialização de um conjunto de linhas ou objeto de fonte de dados pode deixar o conjunto de linhas ou o objeto de fonte de dados em um estado zumbi, de modo que todos os métodos diferentes de `IUnknown` retornam E_UNEXPECTED. Quando isso acontece, a única ação possível para o consumidor é liberar o conjunto de linhas ou objeto de fonte de dados.  
   
- Chamar **ISSAsynchStatus::Abort** e atribuir um valor a *eOperation* diferente de DBASYNCHOP_OPEN retorna S_OK. Isso não significa que a operação tenha sido concluída ou cancelada.  
+ Chamar `ISSAsynchStatus::Abort` e atribuir um valor a *eOperation* diferente de DBASYNCHOP_OPEN retorna S_OK. Esse valor não significa que a operação tenha sido concluída ou cancelada.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Executando operações assíncronas](../../oledb/features/performing-asynchronous-operations.md)  

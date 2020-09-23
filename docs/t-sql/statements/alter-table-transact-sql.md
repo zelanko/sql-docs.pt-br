@@ -58,15 +58,15 @@ helpviewer_keywords:
 - data retention policy
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5fa8a9f667ff94d05dbfd67e4115b599042f57
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 701b4240ccf6dedd79ce9de7baf22b3ae295baab
+ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511264"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90013689"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -175,18 +175,12 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
-            | DATA_DELETION =
-                  {
-                     OFF 
-                  | ON
-                      ( FILTER_COLUMN = column_name
-                         , RETENTION_PERIOD =
-                          {
-                           INFINITE | number {DAY | DAYS | WEEK | WEEKS
-                            | MONTH | MONTHS | YEAR | YEARS }
-                          }
-                        )
-                  }  
+            | DATA_DELETION =  OFF | ON  
+                      [(    
+                         [ FILTER_COLUMN = column_name ],   
+                         [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                              | MONTH | MONTHS | YEAR | YEARS }}]    
+                      )]
           )
 
     | REBUILD
@@ -806,8 +800,12 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEK
 
 Especifica a retenção finita ou infinita para dados históricos em tabela temporais. Se omitido, será presumida retenção infinita.
 
-SET (DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
-            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }  ) **Aplica-se ao:** *somente* ao SQL do Azure no Edge
+SET (DATA_DELETION =  OFF | ON  
+            [( [ FILTER_COLUMN = column_name ],    
+                [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
+            )]    
+          )   
+**Aplica-se a:** *somente* ao SQL do Azure no Edge
 
 Habilita a limpeza baseada em política de retenção de dados antigos em tabelas de um banco de dados. Para obter mais informações, confira [Habilitar e desabilitar a retenção de dados](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Os parâmetros a seguir precisam ser especificados para que a retenção de dados seja habilitada. 
 
@@ -820,7 +818,7 @@ Especifica a coluna que deve ser usada para determinar se as linhas da tabela s�
   - DateTimeOffset
 
 - RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
-  Especifica a política de período de retenção para a tabela. O período de retenção é especificado como uma combinação de um valor inteiro positivo e a unidade de parte de data. 
+Especifica a política de período de retenção para a tabela. O período de retenção é especificado como uma combinação de um valor inteiro positivo e a unidade de parte de data. 
 
 SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

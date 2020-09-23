@@ -2,7 +2,7 @@
 title: Notas sobre a versão do JDBC Driver
 description: Este artigo lista as versões do Microsoft JDBC Driver for SQL Server. Para cada versão de lançamento, as alterações são nominadas e descritas.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,90 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f07f4e5f6e833419b922dd6f8e6d7b58becf96b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793294"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062305"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Notas sobre a versão do Microsoft JDBC Driver para SQL Server
 
 Este artigo lista as versões do _Microsoft JDBC Driver para SQL Server_. Para cada versão de lançamento, as alterações são nominadas e descritas.
+
+## <a name="84"></a><a id="84"></a> 8.4
+
+**[![Baixar](../../ssms/media/download-icon.png) Baixar o Microsoft JDBC Driver 8.4 para SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)**  
+**[![Baixar](../../ssms/media/download-icon.png) Baixar o Microsoft JDBC Driver 8.4 para SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)**  
+
+Número de versão: 8.4.1  
+Lançado: 27 de agosto de 2020
+
+Se precisar baixar o driver em um idioma diferente daquele detectado para você, será possível usar esses links diretos.  
+Para o driver em um arquivo zip: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)  
+Para o driver em um arquivo tar.gz: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)  
+
+### <a name="compliance"></a>Conformidade
+
+| Alteração de conformidade | Detalhes |
+| :---------------- | :------ |
+| Baixe as atualizações mais recentes do JDBC Driver 8.4. | &bull; &nbsp; [GitHub, 8.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Totalmente em conformidade com a especificação 4.2 de API do JDBC. | Os jars no pacote 8.4 são denominados de acordo com a compatibilidade da versão do Java.<br/><br/>Por exemplo, o arquivo mssql-jdbc-8.4.1.jre14.jar do pacote 8.4 precisa ser usado com o Java 14. |
+| Compatível com JDK (Java Development Kit) versão 14.0, 11.0 e 1.8. | O Microsoft JDBC Driver 8.4 para SQL Server agora é compatível com o JDK (Java Development Kit), versão 14.0, além do JDK 11.0 e 1.8. |
+| &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Versões
+
+Número de versão: 8.4.1  
+Lançado: 27 de agosto de 2020  
+Problemas corrigidos:  
+
+- Correção de um problema com o `SQLServerConnectionPoolProxy` não ser compatível com `delayLoadingLobs`
+- Correção de um problema potencial `NullPointerException` com `delayLoadingLobs`
+- Corrigido um problema com a descriptografia de chaves de criptografia de coluna ao usar o repositório de certificados do Windows
+
+Número de versão: 8.4.0  
+Lançado: 31 de julho de 2020  
+
+### <a name="support-for-jdk-14"></a>Suporte para JDK 14
+
+O Microsoft JDBC Driver 8.4 para SQL Server agora é compatível com o JDK (Java Development Kit), versão 14.0, além do JDK 11.0 e 1.8.
+
+### <a name="added-support-for-authentication-to-azure-key-vault-using-managed-identity"></a>Adicionado suporte para autenticação para Azure Key Vault usando a Identidade Gerenciada
+
+| Adição de tipo de autenticação | Detalhes |
+| :---------- | :------ |
+| O Microsoft JDBC Driver 8.4 para SQL Server agora dá suporte à autenticação para Azure Key Vault usando a Identidade Gerenciada. | Confira [Como usar Always Encrypted com o JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="extended-support-for-bulk-copy-for-azure-data-warehouse"></a>Suporte estendido para cópia em massa para o Data Warehouse do Azure
+
+| Alterações de cópia em massa para o Data Warehouse do Azure | Detalhes |
+| :------------------- | :------ |
+| O Microsoft JDBC Driver 8.4 adiciona uma propriedade de conexão, `sendTemporalDataTypesAsStringForBulkCopy`. Essa propriedade booliana é TRUE por padrão. | Confira [Como usar cópia em massa com o JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-azure-sql-dns-caching"></a>Adicionado suporte para armazenamento em cache de DNS do Azure SQL
+
+| Cache DNS | Detalhes |
+| :------------------- | :------ |
+| O Microsoft JDBC Driver 8.4 para SQL Server agora dá suporte ao cache DNS em SQL Servers do Azure. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+### <a name="added-backwards-compatibility-for-streaming-lob-objects"></a>Adicionada compatibilidade com versões anteriores para streaming de objetos LOB
+
+| Streaming de LOB | Detalhes |
+| :------------------- | :------ |
+| O Microsoft JDBC Driver 8.4 para SQL Server adiciona uma propriedade de conexão, `delayLoadingLobs`. | Configurar `delayLoadingLobs` como FALSE fará com que todos os objetos LOB recuperados do ResultSet não sejam transmitidos. Isso significa que o driver carregará todo o objeto LOB na memória de uma vez, semelhante a como o driver funcionava antes da versão 6.4. |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-client-certificate-authentication-for-loopback-scenarios"></a>Adicionado suporte para autenticação de certificado do cliente para cenários de loopback
+
+| Autenticação de certificado do cliente | Detalhes |
+| :------------------- | :------ |
+| O Microsoft JDBC Driver 8.4 para SQL Server adicionou um novo método de autenticação chamado autenticação de certificado de cliente para cenários de loopback. | Confira [Autenticação de certificado do cliente para cenários de loopback](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
+
+## <a name="previous-releases"></a>Versões anteriores
 
 ## <a name="82"></a><a id="82"></a> 8.2
 
@@ -41,6 +115,23 @@ Para o driver em um arquivo tar.gz: [Chinês (Simplificado)](https://go.microsof
 | Totalmente em conformidade com a especificação 4.2 de API do JDBC. | Os jars no pacote 8.2 são denominados de acordo com a compatibilidade da versão do Java.<br/><br/>Por exemplo, o arquivo mssql-jdbc-8.2.2.jre11.jar do pacote 8.2 precisa ser usado com o Java 11. |
 | Compatível com JDK (Java Development Kit) versão 13.0, 11.0 e 1.8. | O Microsoft JDBC Driver 8.2 para SQL Server agora é compatível com o JDK (Java Development Kit), versão 13.0, além do JDK 11.0 e 1.8. |
 | &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Versões
+
+Número de versão: 8.2.2  
+Lançado: 24 de março de 2020  
+Problemas corrigidos:  
+
+- Adicionada uma opção para configurar a lista de pontos de extremidade confiáveis do Azure Key Vault
+
+Número de versão: 8.2.1  
+Lançado: 26 de fevereiro de 2020  
+Problemas corrigidos:  
+
+- Corrigido um problema potencial de `NullPointerException` ao recuperar dados como o tipo `java.time.LocalTime` ou `java.time.LocalDate` com `SQLServerResultSet.getObject()`
+
+Número de versão: 8.2.0  
+Lançado: 31 de janeiro de 2020  
 
 ### <a name="support-for-jdk-13"></a>Suporte para JDK 13
 
@@ -79,8 +170,6 @@ O Microsoft JDBC Driver 8.2 para SQL Server agora é compatível com o JDK (Java
 | Ao usar o Always Encrypted com enclaves seguros com o Java 8. | Os usuários devem incluir o Provedor BouncyCastle como uma dependência OU mapear/carregar um provedor de segurança que dá suporte ao algoritmo de assinatura RSASSA-PSS. |
 | &nbsp; | &nbsp; |
 
-## <a name="previous-releases"></a>Versões anteriores
-
 ## <a name="a-id74-741"></a><a id="74"> 7.4.1
 
 **[![Baixar](../../ssms/media/download-icon.png) Baixar o Microsoft JDBC Driver 7.4.1 para SQL Server (exe com extração automática)](https://go.microsoft.com/fwlink/?linkid=2122712)**  
@@ -101,6 +190,17 @@ Para o driver em um arquivo tar.gz: [Chinês (Simplificado)](https://go.microsof
 | Totalmente em conformidade com a especificação 4.2 de API do JDBC. | Os jars no pacote 7.4 são denominados de acordo com a compatibilidade da versão do Java.<br/><br/>Por exemplo, o arquivo mssql-jdbc-7.4.1.jre11.jar do pacote 7.4 precisa ser usado com o Java 11. |
 | Compatível com JDK (Java Development Kit) versão 12.0, 11.0 e 1.8. | O Microsoft JDBC Driver 7.4 para SQL Server é agora compatível com o JDK (Java Development Kit), versão 12.0, além do JDK 11.0 e 1.8. |
 | &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Versões
+
+Número de versão: 7.4.1  
+Lançado: 2 de agosto de 2019  
+Problemas corrigidos:  
+
+- Novas implementações de API `equals()` e `hashCode()` revertidas de `SQLServerDataTable` e `SQLServerDataColumn`, pois a alteração da API interrompeu a compatibilidade com versões anteriores
+
+Número de versão: 7.4.0  
+Lançado: 31 de julho de 2019  
 
 ### <a name="support-for-jdk-12"></a>Suporte para JDK 12
 
@@ -160,18 +260,28 @@ Para o driver em um arquivo tar.gz: [Chinês (Simplificado)](https://go.microsof
 | Compatível com JDK (Java Development Kit) versão 11.0, além de JDK 1.8. | O Microsoft JDBC Driver 7.2 para SQL Server é agora compatível com o JDK (Java Development Kit), versão 11.0, além do JDK 1.8. |
 | &nbsp; | &nbsp; |
 
-> [!NOTE]
-> Foi detectado um problema com a análise de instrução do SQL no JDBC Driver 7.2, RTW (Release To Web), lançado em 31 de janeiro de 2019. A alteração foi revertida, e novos jars (versão 7.2.1) foram lançados em 11 de fevereiro de 2019.
->
-> Outra atualização foi feita no driver para corrigir problemas com ActivityIDs que não estavam sendo limpas adequadamente. Os novos jars (versão 7.2.2) foram lançados em 16 de abril de 2019.
->
-> É recomendável atualizar seus projetos a fim de usar os jars da versão 7.2.2. Para saber mais, confira as notas sobre a versão para o [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) e [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
+### <a name="releases"></a>Versões
 
-### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Autenticação da _Identidade de Serviço Gerenciada_ (MSI) do Active Directory
+Número de versão: 7.2.2  
+Lançado: 16 de abril de 2019  
+Problemas corrigidos:  
+
+- Corrigidos problemas em que ActivityIDs não eram limpas adequadamente
+
+Número de versão: 7.2.1  
+Lançado: 11 de fevereiro de 2019  
+Problemas corrigidos:  
+
+- Corrigidos problemas de análise com determinadas consultas parametrizadas
+
+Número de versão: 7.2.0  
+Lançado: 31 de janeiro de 2019  
+
+### <a name="active-directory-_managed-identity_-msi-authentication"></a>Autenticação de _Identidade Gerenciada_ do Active Directory (MSI)
 
 | Alteração da MSI | Detalhes |
 | :--------- | :------ |
-| Dá suporte ao modo de autenticação da Identidade de Serviço Gerenciada (MSI) do Active Directory. | Esse modo de autenticação aplica-se aos Recursos do Azure com suporte para o recurso "Identidade" habilitado.<br/><br/>Ambos os tipos de Identidades de Serviço Gerenciada (MSI) têm suporte do driver para adquirir o **accessToken** a fim de estabelecer uma conexão segura. |
+| Dá suporte ao modo de autenticação da Identidade Gerenciada (MSI) do Active Directory. | Esse modo de autenticação aplica-se aos Recursos do Azure com suporte para o recurso "Identidade" habilitado.<br/><br/>Ambos os tipos de Identidades Gerenciadas (MSI) têm suporte do driver para adquirir o **accessToken** a fim de estabelecer uma conexão segura. |
 | Confira mais detalhes e um aplicativo de exemplo para usar esse modo de autenticação. | Confira [Como se conectar usando a autenticação do Azure Active Directory](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
@@ -363,6 +473,23 @@ Para o driver em um arquivo exe com extração automática: [Chinês (Simplifica
 Para o driver em um arquivo tar.gz: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40a)  
 
 O Microsoft JDBC Driver 6.2 para SQL Server está totalmente em conformidade com as especificações 4.1 e 4.2 do JDBC. Os jars no pacote 6.2 são denominados de acordo com a compatibilidade da versão do Java. Por exemplo, recomendamos que o arquivo mssql-jdbc-6.2.2.jre8.jar do pacote 6.2 seja usado com o Java 8.
+
+### <a name="releases"></a>Versões
+
+Número de versão: 6.2.2  
+Lançado: 3 de outubro de 2017  
+Problemas corrigidos:  
+
+- Atualizada a dependência do ADAL4J para a versão 1.2.0 e a dependência do Azure Key Vault para a versão 1.0.0
+
+Número de versão: 6.2.1  
+Lançado: 14 de julho de 2017  
+Problemas corrigidos:  
+
+- Corrigido um problema ao executar consultas sem parâmetros usando `preparedStatement`
+
+Número de versão: 6.2.0  
+Lançado: 30 de junho de 2017  
 
 > [!NOTE]  
 > Foi encontrado um problema com a melhoria do armazenamento em cache de metadados na RTW do JDBC 6.2, lançada em 29 de junho de 2017. A melhoria foi revertida e novos jars (versão 6.2.1) foram lançados em 17 de julho de 2017.

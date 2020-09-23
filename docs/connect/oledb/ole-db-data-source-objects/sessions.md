@@ -1,6 +1,6 @@
 ---
 title: Sessões (driver do OLE DB)
-description: Sessões no OLE DB Driver for SQL Server
+description: Saiba como usar o Driver do OLE DB para SQL Server para se conectar a um banco de dados do SQL Server. Uma sessão representa uma única conexão com uma instância do SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - OLE DB Driver for SQL Server, sessions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ba9d1dcfbc3ac57d9f24ba78e992443d6d7d6453
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0187f42ab9389f18d35d4f400c2ea494a6d6dcd4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244931"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862481"
 ---
 # <a name="sessions"></a>Sessões
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

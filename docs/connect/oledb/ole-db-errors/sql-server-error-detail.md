@@ -1,6 +1,6 @@
 ---
-title: Detalhes do erro do SQL Server | Microsoft Docs
-description: Detalhes de erros do SQL Server
+title: Detalhes do erro do SQL Server (Driver do OLE DB)
+description: Saiba mais sobre a interface de erro específica do provedor ISQLServerErrorInfo no Driver do OLE DB para SQL Server, que retorna detalhes sobre um erro do SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - IErrorInfo interface
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6488a8f266a9d72f4f7522a2428a9a38c2027f42
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f532b124fa23a65a71480b4bcb1bf31272a3081e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998297"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862225"
 ---
 # <a name="sql-server-error-detail"></a>Detalhes de erros do SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver do OLE DB para SQL Server define a interface de erro específica do provedor [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). A interface retorna mais detalhes sobre um erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e é valiosa em caso de falha na execução de comandos ou em operações do conjunto de linhas.  
+  O Driver do OLE DB para SQL Server define a interface de erro específica do provedor [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15). A interface retorna mais detalhes sobre um erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e é valiosa em caso de falha na execução de comandos ou em operações do conjunto de linhas.  
   
  Há dois modos de obter acesso à interface **ISQLServerErrorInfo**.  
   

@@ -1,6 +1,6 @@
 ---
 title: Níveis de isolamento (Driver do OLE DB) | Microsoft Docs
-description: Níveis de isolamento (OLE DB)
+description: Saiba como um consumidor do Driver do OLE DB para SQL Server pode controlar o nível de isolamento de transação para uma conexão.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - isolation levels [OLE DB]
 - transactions [OLE DB]
 - OLE DB Driver for SQL Server, transactions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 60fce8b96ff116f1c1e92a75e1335a33207d36d3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 87b3a348a7219eda5868223b167b2ecf851c2079
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244093"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861879"
 ---
 # <a name="isolation-levels-ole-db"></a>Níveis de isolamento (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

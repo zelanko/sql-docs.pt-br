@@ -1,4 +1,5 @@
 ---
+description: Parâmetro do método getDate (java.lang.String)
 title: Parâmetro do método getDate (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 435e6eaf5e6078fc2d61a359d6e8a40323e59b67
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9ec829f3f4f5717b0a493c69f6b5c4733a2fc1fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436338"
 ---
 # <a name="getdate-method-javalangstring"></a>Método getDate (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.locfileid: "80922704"
 public java.sql.Date getDate(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um objeto Date.  
   
 ## <a name="exceptions"></a>Exceções  
@@ -48,7 +49,7 @@ public java.sql.Date getDate(java.lang.String sCol)
 ## <a name="remarks"></a>Comentários  
  Esse método getDate é especificado pelo método getDate na interface java.sql.CallableStatement.  
   
- Esse método retorna uma parte de data válida de um tipo de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**ou**smalldatetime**do**, com a parte de hora definida como a linha de base de hora do Java de 00:00 (meia-noite).  
+ Esse método retorna uma parte de data válida de um tipo de dados  **datetime** ou **smalldatetime** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com a parte de hora definida como a linha de base de hora do Java de 00:00 (meia-noite).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método getDate &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

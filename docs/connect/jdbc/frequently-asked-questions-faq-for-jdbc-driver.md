@@ -2,7 +2,7 @@
 title: Perguntas frequentes sobre o JDBC Driver
 description: Esta página fornece respostas para as perguntas frequentes sobre o Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 835b8850d68b49f1701767e314d08c843bd77fc3
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728313"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042416"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Perguntas frequentes sobre o JDBC Driver
 
@@ -36,6 +36,15 @@ Confira mais detalhes na página [Matriz de suporte do Microsoft JDBC Driver par
 Os arquivos do JDBC Driver que estão disponíveis no repositório do GitHub para o Microsoft JDBC Driver são a essência do JDBC Driver e estão sob a licença de software livre, listada no repositório. Os pacotes de driver na [Página de download da Microsoft](download-microsoft-jdbc-driver-for-sql-server.md) incluem bibliotecas adicionais para autenticação integrada no Windows e para habilitar transações XA com o JDBC Driver. Essas bibliotecas adicionais estão sob a licença incluída com o pacote que pode ser baixado.
 
 **O que devo saber ao atualizar meu driver?**  
+O Microsoft JDBC Driver 8.4 é compatível com as especificações JDBC 4.2 e 4.3 (parcialmente) e inclui três bibliotecas de classe JAR no pacote de instalação da seguinte maneira:
+
+| JAR                        | Especificação do JDBC            | Versão do JDK |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-8.4.1.jre14.jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 14.0    |
+| mssql-jdbc-8.4.1.jre11.jar | JDBC 4.3 (parcialmente) e 4.2 | JDK 11.0    |
+| mssql-jdbc-8.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 O Microsoft JDBC Driver 8.2 é compatível com as especificações JDBC 4.2 e 4.3 (parcialmente) e inclui três bibliotecas de classe JAR no pacote de instalação da seguinte maneira:
 
 | JAR                        | Especificação do JDBC            | Versão do JDK |
@@ -155,7 +164,7 @@ O driver dá suporte ao uso de rastreamento (ou registro em log) para ajudar a r
 Essas versões de driver não estão disponíveis para download, pois não têm mais suporte. Estamos aperfeiçoando continuamente o suporte à conectividade com Java. Portanto, é altamente recomendável que você trabalhe com a versão mais recente do Microsoft JDBC driver.
 
 **Estou usando o JRE 1.4. Qual driver é compatível com o JRE 1.4?**  
-Os clientes que estão usando produtos SAP e precisam do suporte ao JRE 1.4 podem entrar em contato com o [SAPService Marketplace](https://service.sap.com/) para obter o Microsoft JDBC Driver 1.2.
+Os clientes que estão usando produtos SAP e precisam do suporte ao JRE 1.4 podem entrar em contato com o [SAP Service Marketplace](https://service.sap.com/) para obter o Microsoft JDBC Driver 1.2.
 
 **O driver pode se comunicar usando algoritmos validados pelos FIPS?**  
 O Microsoft JDBC Driver não contém nenhum algoritmo de criptografia. Se o cliente utilizar sistema operacional, aplicativos e algoritmos JVM considerados aceitáveis de acordo com os Federal Information Processing Standards (FIPS) e configurar o driver para usar esses algoritmos, o driver usa somente os algoritmos designados para comunicação.

@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901000"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042792"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 
@@ -264,7 +264,7 @@ Dependendo da configuração do serviço, a conta de serviço para um serviço o
 
 ### <a name="windows-privileges-and-rights"></a><a name="Windows"></a> Privilégios e direitos do Windows
 
-A conta atribuída para iniciar um serviço precisa da **permissão Iniciar, parar e pausar** para o serviço. O programa de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui automaticamente essa permissão. Primeiro instale as Ferramentas de Administração de Servidor Remoto. Consulte o artigo sobre as [Ferramentas de Administração de Servidor Remoto para Windows 7](https://www.microsoft.com/download/details.aspx?id=7887).
+A conta atribuída para iniciar um serviço precisa da **permissão Iniciar, parar e pausar** para o serviço. O programa de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui automaticamente essa permissão. Primeiro instale as Ferramentas de Administração de Servidor Remoto. Consulte o artigo sobre as [Ferramentas de Administração de Servidor Remoto para Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 
 A tabela a seguir mostra as permissões que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicita para os SIDs por serviço ou para os grupos locais do Windows usados pelos componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 

@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindParam | Microsoft Docs
+title: PDOStatement::bindParam
+description: Referência de API para a função PDOStatement::bindParam no Driver do Microsoft PDO_SQLSRV para PHP para SQL Server.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 245cdc56e47c87bc5c31435e1967ecb74a8c05bc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918766"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646606"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,18 +30,18 @@ Associa um parâmetro a um espaço reservado nomeado ou de ponto de interrogaç�
 bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $driver_options]]]);  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 $*parameter*: um identificador do parâmetro (misto). Para uma instrução que usa espaços reservados nomeados, um nome de parâmetro (:name). Para uma instrução preparada usando a sintaxe de ponto de interrogação, esse será o índice de base 1 do parâmetro.  
   
 &$*variable*: o nome (misto) da variável do PHP a ser associada ao parâmetro da instrução SQL.  
   
-$*data_type*: uma constante PDO::PARAM_* opcional (inteiro). O padrão é PDO::PARAM_STR.  
+$*data_type*: uma constante PDO::PARAM_* (inteiro) opcional. O padrão é PDO::PARAM_STR.  
   
 $*length*: um comprimento opcional (inteiro) do tipo de dados. Você pode especificar PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE para indicar o tamanho padrão ao usar PDO::PARAM_INT ou PDO::PARAM_BOOL in $*data_type*.  
   
 $*driver_options*: as opções específicas do driver (mistas). Por exemplo, você poderia especificar PDO::SQLSRV_ENCODING_UTF8 para associar a coluna a uma variável como uma cadeia de caracteres codificada em UTF-8.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 TRUE se for bem-sucedido; caso contrário, FALSE.  
   
 ## <a name="remarks"></a>Comentários  

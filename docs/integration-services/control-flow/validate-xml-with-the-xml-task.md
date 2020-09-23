@@ -2,7 +2,7 @@
 description: Validate XML with the XML Task
 title: Validar XML com a Tarefa XML | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2dd292ea05ae40ff5cd19a1a8e8de55f9f0b9095
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5009a7a1c0b51feb555223294e1cc4cb5ff490f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349252"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570343"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -121,7 +121,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Veja o resultado no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] da consulta do segundo exemplo mostrada no texto anterior.  
   
- ![Consulta para agrupar erros de XML no Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Consulta para agrupar erros de XML no Management Studio")  
+ ![Consulta para agrupar erros de XML no Management Studio](../../integration-services/control-flow/media/query-for-xml-errors.png "Consulta para agrupar erros de XML no Management Studio")  
   
 ## <a name="see-also"></a>Consulte Também  
  [XML Task](../../integration-services/control-flow/xml-task.md)   

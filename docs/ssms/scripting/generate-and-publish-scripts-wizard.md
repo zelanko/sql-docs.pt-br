@@ -3,7 +3,7 @@ title: Assistente para Gerar e Publicar Scripts
 description: Saiba como usar o Assistente para Gerar e Publicar Scripts para criar scripts a fim de transferir um banco de dados entre instâncias de banco de dados. As instâncias podem ser instâncias do Mecanismo de Banco de Dados do SQL Server ou do Banco de Dados SQL do Azure.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e6b5619628bd9974a2b690fc9c8472543d3ca12
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122611"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901371"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
 
@@ -128,7 +128,7 @@ Use esta página para especificar se você deseja que o assistente salve scripts
 
 **Salvar Scripts em uma Localização Específica** – salve um ou mais arquivos de script Transact-SQL em uma localização especificada.
 
-![Salvar](media/generate-and-publish-scripts-wizard/save.png)
+![Salvar como notebook](media/generate-and-publish-scripts-wizard/save.png)
 
 - **[Salvar como bloco de anotações](../../azure-data-studio/notebooks-guidance.md)** – Salve o script em um ou mais arquivos .sql. Selecione o botão Procurar ( **…** ) para especificar um nome e uma localização para o arquivo.
 
@@ -222,7 +222,7 @@ Use essa página para especificar como você deseja que esse assistente gere scr
 
 ### <a name="summary-page"></a><a name="Summary"></a> Página de Resumo
 
-![Resumo](media/generate-and-publish-scripts-wizard/summary.png)
+![Resumo do GS](media/generate-and-publish-scripts-wizard/summary.png)
 
 Essa página resume as opções selecionadas nesse assistente. Para alterar uma opção, selecione **Anterior**. Para começar a gerar scripts que serão salvos ou publicados, selecione **Avançar**.
 

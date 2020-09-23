@@ -2,10 +2,9 @@
 title: Melhores práticas com o Repositório de Consultas | Microsoft Docs
 description: Conheça as melhores práticas para usar o Repositório de Consultas do SQL Server com sua carga de trabalho, como usar o SQL Server Management Studio e a Análise de Desempenho de Consultas mais recentes.
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 09/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970077"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042808"
 ---
 # <a name="best-practices-with-query-store"></a>Melhores prática com o Repositório de Consultas
 
@@ -421,7 +420,7 @@ Planos de execução fazem referência a objetos usando nomes de três partes, c
 
 Se você renomear um banco de dados, a imposição do plano falhará, causando recompilação em todas as execuções de consulta subsequentes.
 
-## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> Usar sinalizadores de rastreamento em servidores críticos
+## <a name="using-query-store-in-mission-critical-servers"></a><a name="Recovery"></a> Como usar o Repositório de Consultas em servidores críticos
 
 Os sinalizadores de rastreamento globais 7745 e 7752 podem ser usados para melhorar a disponibilidade dos bancos de dados usando o Repositório de Consultas. Para obter mais informações, confira [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -432,7 +431,10 @@ Os sinalizadores de rastreamento globais 7745 e 7752 podem ser usados para melho
 > No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e em versões posteriores, o mecanismo controla esse comportamento e o sinalizador de rastreamento 7752 não tem nenhum efeito.
 
 > [!IMPORTANT]
-> Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho just-in-time no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as correções de escalabilidade de desempenho na [KB 4340759](https://support.microsoft.com/help/4340759) assim que possível.
+> Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho just-in-time no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as melhorias de escalabilidade de desempenho em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) assim que possível. Sem esses aprimoramentos, quando o banco de dados está sob cargas de trabalho pesadas, pode ocorrer contenção de spinlock e o desempenho do servidor pode ficar lento. Em particular, você pode ver uma contenção pesada no spinlock `QUERY_STORE_ASYNC_PERSIST` ou no spinlock `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Após a aplicação dessa melhoria, o Repositório de Consultas não causará mais contenção de spinlock.
+
+> [!IMPORTANT]
+> Se você está usando o Repositório de Consultas para obter informações de carga de trabalho just-in-time no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], planeje instalar a melhoria de escalabilidade de desempenho em [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 assim que possível. Sem essa melhoria, quando o banco de dados está sob cargas de trabalho ad-hoc pesadas, o Repositório de Consultas pode usar uma grande quantidade de memória e o desempenho do servidor pode ficar lento. Após a aplicação dessa melhoria, Repositório de Consultas impõe limites internos à quantidade de memória que seus diversos componentes podem usar e pode alterar automaticamente o modo de operação para somente leitura até que memória suficiente tenha sido retornada para o [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Observe que os limites de memória interna do Repositório de Consultas não são documentados porque estão sujeitos a alterações.  
 
 ## <a name="see-also"></a>Confira também
 

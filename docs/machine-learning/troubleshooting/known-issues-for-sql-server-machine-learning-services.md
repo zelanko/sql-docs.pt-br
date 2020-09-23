@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2142e67f7e758b6e949b160842adc954390b42db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495013"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemas conhecidos nos Serviços de Machine Learning do SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este artigo descreve problemas ou limitações conhecidos com os componentes do Python e do R que são fornecidos nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) e no [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 
 ## <a name="setup-and-configuration-issues"></a>Problemas de instalação e de configuração
 
-Para obter uma descrição dos processos e ver as perguntas comuns relacionadas à instalação inicial e à configuração, confira [Perguntas frequentes sobre atualização e instalação](upgrade-and-installation-faq-sql-server-r-services.md). Ali estão contidas informações sobre atualizações, instalação lado a lado e instalação de novos componentes de R ou Python.
+Para obter uma descrição dos processos relacionados à instalação inicial e à configuração, confira [Instalar Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md). Ali estão contidas informações sobre atualizações, instalação lado a lado e instalação de novos componentes de R ou Python.
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1. Resultados inconsistentes em computações do MKL devido a uma variável de ambiente ausente
 

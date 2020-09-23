@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564656"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027287"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 
@@ -84,7 +84,7 @@ Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carregar um cer
 
 - A Conta de Serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter a permissão necessária para acessar o certificado TLS.
 
-- A hora do sistema atual deve ser posterior à propriedade **Válido de** do certificado e anterior à propriedade Válido para do certificado.
+- A hora do sistema atual deve ser posterior à propriedade **Válido de** do certificado e anterior à propriedade **Válido até** do certificado.
 
 - O certificado deve ser significativo para a autenticação do servidor. Isso exige a propriedade **Uso Avançado de Chave** do certificado para especificar a **Autenticação do Servidor (1.3.6.1.5.5.7.3.1)** .
 

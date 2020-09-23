@@ -1,7 +1,8 @@
 ---
-title: Como recuperar parâmetros de E/S usando o SQLSRV Driver | Microsoft Docs
+title: Como recuperar parâmetros de E/S usando o driver SQLSRV
+description: Este tópico descreve como recuperar parâmetros de entrada e saída usando procedimentos armazenados e o Driver do Microsoft SQLSRV para PHP para SQL Server
 ms.custom: ''
-ms.date: 04/12/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2bad5942e98271638b4b929d55c54c1562629e44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916072"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680681"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Como recuperar parâmetros de entrada e de saída usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916072"
 Este tópico demonstra como usar o driver SQLSRV para chamar um procedimento armazenado no qual um parâmetro foi definido como parâmetro de entrada/saída e como recuperar os resultados. Ao recuperar um parâmetro de saída ou de entrada/saída, todos os resultados retornados pelo procedimento armazenado devem ser consumidos antes que o valor do parâmetro retornado esteja acessível.  
   
 > [!NOTE]  
-> Variáveis que são inicializadas ou atualizadas para **null**, **DateTime**ou tipos de fluxo não podem ser usadas como parâmetros de saída.  
+>  Variáveis que são inicializadas ou atualizadas para **null**, **DateTime**ou tipos de fluxo não podem ser usadas como parâmetros de saída.  
   
 ## <a name="example-1"></a>Exemplo 1
 O exemplo a seguir chama um procedimento armazenado que subtrai horas de férias usadas das horas de férias disponíveis de um funcionário especificado. A variável que representa as horas de férias usadas, *$vacationHrs*, é passada para o procedimento armazenado como um parâmetro de entrada. Depois de atualizar as horas de férias disponíveis, o procedimento armazenado usa o mesmo parâmetro para retornar o número de horas de férias restantes.  
@@ -152,7 +153,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Consulte Também  
-[Como especificar a direção do parâmetro usando o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Como especificar a direção do parâmetro com o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 

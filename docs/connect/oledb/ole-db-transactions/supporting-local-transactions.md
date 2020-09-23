@@ -1,6 +1,6 @@
 ---
-title: Dando suporte a transações locais | Microsoft Docs
-description: Transações locais no OLE DB Driver para SQL Server
+title: Como dar Suporte a transações locais (Driver do OLE DB)
+description: Saiba como o Driver do OLE DB para SQL Server dá suporte a transações locais e como usar o ITransactionLocal para obter um controle mais preciso sobre o escopo da transação local.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - ITransactionLocal interface
 - OLE DB Driver for SQL Server, transactions
 - local transactions [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 13e0337ff4ccc8a6797d9fdd23a61d637a37688b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5923c9f475a20fe31963b907f9e7cc76ef68bb04
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011240"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861889"
 ---
 # <a name="supporting-local-transactions"></a>Dando suporte a transações locais
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

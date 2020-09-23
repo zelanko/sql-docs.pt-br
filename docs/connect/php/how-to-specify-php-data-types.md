@@ -1,7 +1,8 @@
 ---
-title: 'Como fazer: Especificar Tipos de Dados PHP | Microsoft Docs'
+title: Como especificar tipos de dados do PHP
+description: Saiba como especificar tipos de dados do PHP ao recuperar dados usando os Drivers da Microsoft para PHP para SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8453b2cd2db36ed2c69b8ada941bcde0050a0759
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9a47fd479449a8725c2e8a86d960ef020d1ee1ba
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915792"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680671"
 ---
-# <a name="how-to-specify-php-data-types"></a>Como fazer: Especificar tipos de dados do PHP
+# <a name="how-to-specify-php-data-types"></a>Como especificar tipos de dados do PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Ao usar o driver PDO_SQLSRV, você pode especificar o tipo de dados do PHP ao recuperar dados do servidor com PDOStatement::bindColumn e PDOStatement::bindParam. Consulte [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) e [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) para obter mais informações.  
@@ -109,7 +110,7 @@ A recuperação do quarto campo (*Comments*) como um fluxo tem fins de demonstra
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Como: Recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[Como: Recuperar parâmetros de entrada e de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Como recuperar parâmetros de entrada e de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

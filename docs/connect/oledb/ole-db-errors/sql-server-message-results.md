@@ -1,6 +1,6 @@
 ---
-title: Resultados da mensagem do SQL Server | Microsoft Docs
-description: Resultados da mensagem do SQL Server
+title: Resultados da mensagem de SQL Server (Driver do OLE DB)
+description: Saiba mais sobre instruções do Transact-SQL que não geram conjuntos de linhas ou uma contagem do Driver do OLE DB para SQL Server e seus valores retornados esperados.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, errors
 - errors [OLE DB], SQL Server message results
 - OLE DB error handling, SQL Server message results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: dfebd7443b24d09e6bf7696caba5449c1890e0d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc3701313f920eead650435ca40538ad8a4b6ef0
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998283"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862502"
 ---
 # <a name="sql-server-message-results"></a>Resultados da mensagem do SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  As seguintes instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] não geram conjuntos de linhas do OLE DB Driver for SQL Server nem uma contagem de linhas afetadas quando executadas:  
+As seguintes instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] não geram conjuntos de linhas do Driver do OLE DB para SQL Server nem uma contagem de linhas afetadas quando executadas:  
   
 -   PRINT  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85998283"
   
  O Driver do OLE DB para SQL Server retorna S_OK e tem uma ou mais mensagens informativas disponíveis após a execução de várias instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou a execução do consumidor de uma função de membro do Driver do OLE DB para SQL Server.  
   
- O consumidor do OLE DB Driver for SQL Server que permite a especificação dinâmica do texto da consulta deve verificar as interfaces de erro após a execução de cada função de membro, independentemente do valor do código de retorno, da presença ou ausência de uma referência de interface **IRowset** ou **IMultipleResults** retornada ou de uma contagem de linhas afetadas.  
+O consumidor do Driver do OLE DB para SQL Server tem permissão para especificação dinâmica do texto da consulta. O consumidor deve verificar as interfaces de erro depois de _cada_ execução de função membro. Ele sempre deve executar essas verificações, independentemente do valor do código de retorno, da contagem de linhas afetadas e de se uma referência de interface a um `IRowset` ou `IMultipleResults` é retornada ou não.
   
 ## <a name="see-also"></a>Consulte Também  
  [Erros](../../oledb/ole-db-errors/errors.md)  

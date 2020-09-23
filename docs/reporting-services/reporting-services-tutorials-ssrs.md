@@ -1,5 +1,6 @@
 ---
 title: Tutoriais do Reporting Services | Microsoft Docs
+description: Saiba mais sobre as funcionalidades do SSRS (SQL Server 2016 Reporting Services) ou posterior, do SSDT (SQL Server Data Tools) e do Construtor de Relatórios com alguns dados de exemplo.
 ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1b1a5d1e888c2038895415b5fdbf9eb05b3f224
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7c942dc04762be846837bf124da480b36c4b69c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79486528"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246624"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Tutoriais de Reporting Services (SSRS)
 
@@ -43,4 +44,4 @@ Esses tutoriais introduzem você a uma variedade de visualizações que você po
 
 * [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases)
 * [Amostras do Reporting Services no wiki do TechNet](https://go.microsoft.com/fwlink/?LinkId=198283)
-* [TechNet WIKI: exemplos do SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)
+* [TechNet Wiki: Amostras do SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)

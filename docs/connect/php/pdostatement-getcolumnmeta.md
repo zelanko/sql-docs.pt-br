@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::getColumnMeta | Microsoft Docs
+title: PDOStatement::getColumnMeta
+description: Referência de API para a função PDOStatement::getColumnMeta no Driver do Microsoft PDO_SQLSRV para PHP para SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fafc4b7bfcd72db1898e0a76b2ff43b3638f1f49
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925294"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645071"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,22 +30,22 @@ Recupera metadados para uma coluna.
 array PDOStatement::getColumnMeta ( $column );  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
-*$conn*: (Inteiro) o número da coluna, com base em zero, cujos metadados que você deseja recuperar.  
+#### <a name="parameters"></a>Parâmetros  
+*$conn*: (inteiro) o número da coluna, com base em zero, cujos metadados você deseja recuperar.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Uma matriz associativa (chave e valor) que contém os metadados da coluna. Consulte a seção de comentários para obter uma descrição dos campos na matriz.  
   
 ## <a name="remarks"></a>Comentários  
 A tabela a seguir descreve os campos na matriz retornada por getColumnMeta.  
   
-|NAME|VALUES|  
+|NOME|VALUES|  
 |--------|----------|  
 |native_type|Especifica o tipo do PHP para a coluna. Sempre cadeia de caracteres.|  
 |driver:decl_type|Especifica o tipo do SQL usado para representar o valor da coluna no banco de dados. Se a coluna no conjunto de resultados é o resultado de uma função, esse valor não é retornado por PDOStatement::getColumnMeta.|  
 |sinalizadores|Especifica os sinalizadores definidos para essa coluna. Sempre 0.|  
 |name|Especifica o nome da coluna no banco de dados.|  
-|tabela|Especifica o nome da tabela que contém a coluna no banco de dados. Sempre em branco.|  
+|table|Especifica o nome da tabela que contém a coluna no banco de dados. Sempre em branco.|  
 |len|Especifica o comprimento da coluna.|  
 |precisão|Especifica a precisão numérica dessa coluna.|  
 |pdo_type|Especifica o tipo desta coluna, conforme representado pelas constantes PDO::PARAM_ *. Sempre PDO::PARAM_STR (2).|  

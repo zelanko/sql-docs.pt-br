@@ -1,7 +1,7 @@
 ---
 title: Instalar o Microsoft ODBC Driver for SQL Server (macOS)
 description: Saiba como instalar o Microsoft ODBC Driver for SQL Server em clientes macOS para permitir a conectividade com o banco de dados.
-ms.date: 03/05/2020
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24ddbbd8adaa646005c8e5ea3c945cb3ab164d48
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488514"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569816"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Instalar o Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -70,7 +70,14 @@ O driver precisa carregar o arquivo de recurso para funcionar. Esse arquivo é d
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-Caso não possa estabelecer uma conexão com o SQL Server usando o driver ODBC, confira o artigo sobre problemas conhecidos em [Solução de problemas de conexão](known-issues-in-this-version-of-the-driver.md#connectivity).
+Alguns usuários encontram um problema ao tentarem se conectar depois de instalarem o Driver do ODBC e receberem um erro como: `"[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)"`. Talvez o unixODBC não esteja configurado corretamente para localizar drivers registrados. Nesses casos, a criação de alguns links simbólicos pode resolver o problema.
+
+```bash
+sudo ln -s /usr/local/etc/odbcinst.ini /etc/odbcinst.ini
+sudo ln -s /usr/local/etc/odbc.ini /etc/odbc.ini
+```
+
+Para casos adicionais em que você não pode estabelecer uma conexão com o SQL Server usando o driver ODBC, confira o artigo sobre problemas conhecidos em [Solução de problemas de conexão](known-issues-in-this-version-of-the-driver.md#connectivity).
 
 ## <a name="next-steps"></a>Próximas etapas
 

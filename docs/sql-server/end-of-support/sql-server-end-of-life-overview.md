@@ -1,20 +1,20 @@
 ---
 title: Opções de fim do suporte
 description: Conheça as diferentes opções disponíveis para os produtos do SQL Server que atingiram o fim do suporte, como SQL Server 2005, SQL Server 2008 e SQL Server 2008 R2.
-ms.date: 12/18/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112107"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200293"
 ---
 # <a name="sql-server-end-of-support-options"></a>Opções de fim do suporte do SQL Server 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -80,7 +80,7 @@ Requisitos de hardware:
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 Atualizações de versão e edição compatíveis:
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -165,7 +165,7 @@ Caso deseje descarregar a manutenção, reduzir os custos e eliminar a necessida
 
 - **Custo**: o banco de dados individual pode ser econômico, pois o hardware, o software e a manutenção são descarregados e você pode pagar pelo uso por segundo ou por hora. 
 - **Flexibilidade**: o banco de dados individual é particularmente adequado a aplicativos projetados para a nuvem quando a produtividade do desenvolvedor e o rápido tempo para comercialização das soluções são críticos ou que precisam fornecer acesso externo.  
-- **Recursos comuns**: os recursos do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usados com mais frequência estão disponíveis, mas não são tantos como para uma Instância Gerenciada do Banco de Dados SQL do Azure.  
+- **Recursos comuns**: os recursos do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usados com mais frequência estão disponíveis, mas não são tantos como para a Instância Gerenciada de SQL.  
 - **Implantação rápida**: você pode implantar rapidamente um banco de dados individual. 
 - **Escalabilidade**: você pode escalar ou reduzir verticalmente de maneira rápida e fácil conforme necessário para a sua empresa, fornecendo benefícios adicionais de economia. 
 - **Disponibilidade**: o custo do serviço inclui armazenamento e alta disponibilidade, com 99,995% de disponibilidade garantida.  
@@ -177,7 +177,7 @@ Caso deseje descarregar a manutenção, reduzir os custos e eliminar a necessida
 ### <a name="considerations"></a>Considerações
 
 - **Opções de migração limitadas**:  você só pode migrar um banco de dados individual por vez, em vez de uma instância inteira.   
-- **Limitação de recursos**:  embora os recursos do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usados com mais frequência estejam disponíveis, o conjunto de recursos para um banco de dados individual não é tão completo quanto para uma instância gerenciada do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+- **Limitação de recursos**:  embora os recursos do Banco de Dados SQL do Azure usados com mais frequência estejam disponíveis, o conjunto de recursos para um banco de dados individual não é tão completo quanto para a Instância Gerenciada de SQL do Azure ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Diferenças do Transact-SQL**:  há algumas diferenças do T-SQL ([!INCLUDE[tsql](../../includes/tsql-md.md)]) entre um banco de dados individual e um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local. 
 - **Limitações de tamanho**:  Um banco de dados individual tem um tamanho máximo de banco de dados de 100 TB, em comparação com um tamanho de 524 PB para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Tempo de manutenção**: não há nenhuma garantia do tempo de manutenção exato, embora ele seja quase transparente. 
@@ -197,9 +197,9 @@ Ferramentas:
 - [Assistente de migração de dados](../../dma/dma-overview.md)
 - [Serviço de Migração do Banco de Dados](/azure/dms/dms-overview)
 
-## <a name="azure-sql-database-managed-instance"></a>Instância gerenciada do Banco de Dados SQL do Azure
+## <a name="sql-managed-instance"></a>Instância Gerenciada de SQL
 
-Caso deseje aproveitar o descarregamento da manutenção e do custo, mas acha o conjunto de recursos de um banco de dados individual do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] muito limitado, faça a migração para a [Instância Gerenciada do Banco de Dados SQL do Azure](/azure/sql-database/sql-database-managed-instance). Uma instância gerenciada é parecida com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local, sem a necessidade de se preocupar com aspectos como falha de hardware ou aplicação de patch. A instância gerenciada é uma coleção de bancos de dados do sistema e de usuário com um conjunto compartilhado de recursos prontos para lift-and-shift e que podem ser usados para a maioria das migrações para a nuvem. Essa opção é melhor para novos aplicativos ou aplicativos locais existentes que desejam usar os recursos estáveis e mais recentes do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e que são migrados para a nuvem com o mínimo de alterações. 
+Caso deseje aproveitar o descarregamento da manutenção e do custo, mas considera o conjunto de recursos de um banco de dados individual do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] muito limitado, faça a migração para a [Instância Gerenciada de SQL](/azure/sql-database/sql-database-managed-instance). Uma instância gerenciada é parecida com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local, sem a necessidade de se preocupar com aspectos como falha de hardware ou aplicação de patch. A Instância Gerenciada é uma coleção de bancos de dados do sistema e de usuário com um conjunto compartilhado de recursos prontos para lift-and-shift e pode ser usada para a maioria das migrações para a nuvem. Essa opção é melhor para novos aplicativos ou aplicativos locais existentes que desejam usar os recursos estáveis e mais recentes do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e que são migrados para a nuvem com o mínimo de alterações. 
 
 ### <a name="benefits"></a>Benefícios
 
@@ -225,10 +225,10 @@ Caso deseje aproveitar o descarregamento da manutenção e do custo, mas acha o 
 
 ### <a name="resources"></a>Recursos
 
-[Visão geral da Instância Gerenciada do Banco de Dados SQL do Azure](/azure/sql-database/sql-database-managed-instance)       
+[Visão geral da Instância Gerenciada de SQL](/azure/sql-database/sql-database-managed-instance)       
 [Como escolher uma opção do SQL do Azure](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [Comparação de recursos do Banco de Dados SQL](/azure/sql-database/sql-database-features)       
-[Migrar o SQL Server para uma instância gerenciada](/azure/sql-database/sql-database-managed-instance-migrate)       
+[Migrar o SQL Server para a Instância Gerenciada de SQL do Azure](/azure/sql-database/sql-database-managed-instance-migrate)       
 [Processo de migração mais amplo](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 Ferramentas:

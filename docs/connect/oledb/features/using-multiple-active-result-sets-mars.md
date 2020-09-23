@@ -1,6 +1,6 @@
 ---
 title: Usando MARS (vários conjuntos de resultados ativos) | Microsoft Docs
-description: Usando MARS (vários conjuntos de resultados ativos)
+description: Saiba como o suporte para conjunto de resultados ativos múltiplos simplifica o design de aplicativos no SQL Server para o OLTP in-memory e o Driver do OLE DB.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Multiple Active Result Sets
 - OLE DB Driver for SQL Server, MARS
 - MARS [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f1fd5ebcdfcf87e8feee0d2ee2accf26d9b85f95
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f9657fed2495ce5543c3fef776e6be3f0851dd88
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006836"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860160"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Usando MARS (vários conjuntos de resultados ativos)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

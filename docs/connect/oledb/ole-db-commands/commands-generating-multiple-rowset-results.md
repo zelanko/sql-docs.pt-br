@@ -1,6 +1,6 @@
 ---
 title: Comandos que geram resultados de vários conjuntos de linhas (Driver do OLE DB) | Microsoft Docs
-description: Comandos que geram resultados de vários conjuntos de linhas
+description: Saiba como o Driver do OLE DB para SQL Server retorna vários conjuntos de linhas para instruções SQL em lote e quando procedimentos armazenados implementam instruções SQL em lote.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, multiple rowsets
 - commands [OLE DB]
 - multiple-rowset results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f24f338252ab788cd395147c0a9a1cfdcd94162a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 93c2d5ec6f5965edc56fea26b8474d3b8926a0cb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942751"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860152"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que geram resultados de vários conjuntos de linhas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

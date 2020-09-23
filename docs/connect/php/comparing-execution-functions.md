@@ -1,7 +1,8 @@
 ---
-title: Comparação das funções de execução | Microsoft Docs
+title: Como comparar funções de execução
+description: Este tópico lista as diferentes funções de execução de consulta ao usar os Drivers da Microsoft para PHP para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68575f3a0227c6400ed5d927ff603b66bd6f440d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33d7ebe420dd59d4f659dbe2ce6c784b49b89d04
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925865"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680741"
 ---
 # <a name="comparing-execution-functions"></a>Comparando funções de execução
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +40,7 @@ Se estiver usando o driver PDO_SQLSRV, é possível executar uma consulta com um
 ## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)
+[Referência do driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
 [Guia de programação do Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

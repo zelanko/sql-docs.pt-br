@@ -2,7 +2,7 @@
 title: Requisitos do sistema para Microsoft Drivers for PHP
 description: Os Microsoft Drivers for PHP for SQL Server dão suporte a uma grande variedade de versões do PHP, de sistemas operacionais e de versões do SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
-ms.reviewer: carlrab
 ms.author: v-daenge
-ms.openlocfilehash: 0537f39c83239e148541a4739ccdfb83c8f5e6c9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e0ae11dd3a13ac8b2071943c49ef1ae4b8c400f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635698"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540460"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos do sistema para os Microsoft Drivers for PHP for SQL Server
 
@@ -47,30 +46,18 @@ Para obter informações sobre como baixar e instalar os últimos binários est�
 
 Caso esteja baixando a versão Windows do driver em uma versão de 64 bits do Windows, o instalador de ODBC de 64 bits instalará os drivers de 32 bits e de 64 bits. Caso tenha uma versão de 32 bits do Windows, use o instalador ODBC x86. Em plataformas não Windows, somente as versões de 64 bits do driver estão disponíveis.
 
-|Versão do driver PHP para SQL Server &#8594;<br />&#8595; Versão do ODBC Driver|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
+|Versão do driver PHP &#8594;<br />&#8595; Versão do driver ODBC|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|ODBC Driver 17+ |S|S|S|S| | | |
-|ODBC Driver 13.1|S|S|S|S|S|S| |
-|ODBC Driver 13  | | | | | |S| |
-|ODBC Driver 11  |S|S|S|S|S|S|S|
+|ODBC Driver 17+ |Sim|Sim|Sim|Sim|   |   |   |
+|ODBC Driver 13.1|Sim|Sim|Sim|Sim|Sim|Sim|   |
+|ODBC Driver 13  |   |   |   |   |   |Sim|   |
+|ODBC Driver 11  |Sim|Sim|Sim|Sim|Sim|Sim|Sim|
 
 Caso esteja usando o driver SQLSRV, o [sqlsrv_client_info](sqlsrv-client-info.md) retornará informações sobre qual versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server está sendo usada pelo [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Se estiver usando o driver PDO_SQLSRV, use [PDO::getAttribute](pdo-getattribute.md) para descobrir a versão.
 
 ## <a name="sql-server"></a>SQL Server
 
-Para obter informações sobre como usar o PHP com o Banco de Dados SQL do Microsoft Azure, confira [Como se conectar ao Banco de Dados SQL do Azure](connecting-to-microsoft-azure-sql-database.md).
-
-|Versão do driver PHP para SQL Server &#8594;<br />&#8595; Versão do SQL Server|5.8|5.6|5,3|5.2|4.3|4,0|3.2|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Banco de Dados SQL do Azure (todas as opções de implantação)        |S|S|S|S| | | |
-|Azure SQL Synapse  |S|S|S|S| | | |
-|SQL Server 2019           |S|S|S|S| | | |
-|Microsoft SQL Server 2017           |S|S|S|S| | | |
-|SQL Server 2016           |S|S|S|S|S| | |
-|SQL Server 2014           |S|S|S|S|S|S|S|
-|SQL Server 2012           |S|S|S|S|S|S|S|
-|SQL Server 2008 R2        | |S|S|S|S|S|S|
-|SQL Server 2008           | | | | |S|S|S|
+Confira [versões de banco de dados com suporte](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility) para saber detalhes sobre quais versões do SQL Server têm suporte.
 
 ## <a name="operating-systems"></a>Sistemas operacionais
 

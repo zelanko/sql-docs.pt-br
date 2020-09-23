@@ -1,6 +1,6 @@
 ---
 title: Aprimoramentos de data e hora (OLE DB) | Microsoft Docs
-description: Melhorias de data e hora (OLE DB)
+description: Estes artigos descrevem como o Driver do OLE DB para SQL Server dá suporte a novos tipos de dados de data e hora. Confira uma visão geral e exemplos.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9d3d00493790eed66865d8c3cd393a71b7246776
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd0f564a68f0b296008907f8620cd870c0e5ca7d
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004472"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862037"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Melhorias de data e hora (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86004472"
  [Alterações de cópia em massa para tipos avançados de data e hora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md)  
  Descreve aprimoramentos de data/hora para dar suporte a operações de cópia em massa.  
   
- [Suporte da API do OLE DB para aprimoramentos de data e hora](../../oledb/ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md)  
+ [Suporte da API do OLE DB para melhorias de data e hora](../../oledb/ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md)  
  Descreve as APIs OLE DB que dão suporte a recursos de data/hora aprimorados.  
   
  [Comparações de IRowsetFind](../../oledb/ole-db-date-time/comparability-for-irowsetfind.md)  

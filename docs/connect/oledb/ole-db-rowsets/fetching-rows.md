@@ -1,6 +1,6 @@
 ---
 title: Como efetuar fetch de linhas (Driver do OLE DB) | Microsoft Docs
-description: Buscar linhas usando a interface IRowset
+description: Saiba como os consumidores no Driver do OLE DB para SQL Server usar a interface IRowset para buscar linhas, obter dados de linhas e gerenciar linhas.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - IRowset interface
 - OLE DB Driver for SQL Server, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2d803da7e8930eccb66843a025cb3426f5af62f5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 992ec376a8f881dc06a72a5c9d6502faae9f9cc3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244187"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862466"
 ---
 # <a name="fetching-rows"></a>Buscando linhas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

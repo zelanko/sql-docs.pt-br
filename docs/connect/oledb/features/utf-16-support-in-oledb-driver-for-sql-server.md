@@ -1,6 +1,6 @@
 ---
 title: Compatibilidade de UTF-16 com OLE DB Driver para SQL Server| Microsoft Docs
-description: Suporte ao UTF-16 no OLE DB Driver for SQL Server
+description: Saiba mais sobre o suporte a UTF-16 no Driver do OLE DB para SQL Server e quando ele adiciona um ponto de código substituto alto ao buffer.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 71b4298fa3e843e6e9a15dce638f2f068fe5d4b3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f00b9f0ac10c812743cac0bf4222fd2136710b42
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007241"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861778"
 ---
 # <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>Suporte ao UTF-16 no OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

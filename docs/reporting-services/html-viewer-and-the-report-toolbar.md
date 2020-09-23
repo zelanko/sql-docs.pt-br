@@ -1,5 +1,6 @@
 ---
 title: Visualizador de HTML e a barra de ferramentas de relatório | Microsoft Docs
+description: Saiba mais sobre o Visualizador de HTML e a barra de ferramentas de relatório e como exibir relatórios sob demanda conforme eles são solicitados pelo servidor de relatório.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b413cf8f3fd5b8e85a94e5ed26add2717dcc2376
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503070"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396473"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizador de HTML e a barra de ferramentas de relatório
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um Visualizador de HTML usado para exibir relatórios sob demanda à medida que são solicitados no servidor de relatório. O Visualizador de HTML fornece uma estrutura para exibir relatórios em HTML. Ele inclui uma barra de ferramentas de relatório, uma seção de parâmetros, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório no Visualizador de HTML inclui recursos que você pode usar para trabalhar com seu relatório, incluindo opções de exportação para que seja possível exibir seu relatório em formatos diferentes de HTML. A seção de parâmetros e o mapa do documento aparecem somente quando você abre relatórios configurados para usar parâmetros e um controle do mapa do documento.  
@@ -34,7 +35,7 @@ ms.locfileid: "65503070"
   
  A tabela a seguir descreve recursos geralmente usados da barra de ferramentas de relatório. Cada recurso é identificado pelo controle que você usa para acessá-lo.  
   
-|Use este ícone ou controle||Para|  
+|Ícone ou controle|Nome|Descrição|  
 |------------------------------|-|--------|  
 |![Controles de navegação de página](../reporting-services/media/htmlviewer-pagenav.gif "Controles de navegação de página")|**Controles de navegação de página**|Abrir a primeira ou a última página de um relatório, percorrer o relatório página por página e abrir uma página específica no relatório. Para exibir uma página específica, digite o número da página e pressione ENTER.|  
 |![Controles de exibição de página](../reporting-services/media/htmlviewer-pagesize.gif "Controles de exibição de página")|**Controles de exibição de página**|Aumentar ou reduzir o tamanho da página do relatório. Além das alterações com base em percentual, você pode selecionar **Largura da Página** para ajustar o comprimento horizontal de uma página de relatório na janela do navegador ou **Página Inteira** para ajustar o comprimento vertical de um relatório na janela do navegador. Uma opção **Zoom** tem suporte no [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 e versões posteriores.|  
@@ -52,7 +53,7 @@ ms.locfileid: "65503070"
   
  Os formatos de exportação a seguir são incluídos em uma instalação de servidor de relatório padrão. A lista de formatos de exportação disponíveis pode conter itens diferentes dos listados aqui.  
   
-|Formato de exportação|DESCRIÇÃO|  
+|Formato de exportação|Descrição|  
 |-------------------|-----------------|  
 |XML|Exiba um relatório em sintaxe XML. Relatórios exibidos em XML são abertos em uma nova janela do navegador.|  
 |CSV|Exiba um relatório em um formato delimitado por vírgula. O relatório é aberto em um aplicativo associado ao tipo de arquivo CSV.|  
@@ -63,7 +64,7 @@ ms.locfileid: "65503070"
 |Arquivo TIFF|Exiba o relatório no visualizador TIFF padrão. Para alguns clientes do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows, esse é o Visualizador de Imagens e Fax do Windows. Selecione esse formato para exibir um relatório em layout orientado a página.|  
 |Word|Exiba o relatório no [!INCLUDE[msCoName](../includes/msconame-md.md)] Word, um arquivo .docx.|  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  Parâmetros são valores usados para selecionar determinados dados (especificamente, eles são usados para concluir uma consulta que seleciona os dados para o seu relatório ou para filtrar o conjunto de resultados). Parâmetros geralmente usados em relatórios incluem datas, nomes e IDs. Quando você especifica um valor para um parâmetro, o relatório contém somente os dados que correspondem ao valor; por exemplo, dados de funcionário com base em um parâmetro de ID de Funcionário. Parâmetros correspondem a campos no relatório. Depois de especificar um parâmetro, clique em **Exibir Relatório** para obter os dados.  
   
  O autor do relatório define os valores de parâmetro que são válidos para cada relatório. Um administrador de relatório também pode definir valores de parâmetro. Para descobrir quais valores de parâmetro são válidos para seu relatório, pergunte ao designer de relatórios ou ao administrador.  

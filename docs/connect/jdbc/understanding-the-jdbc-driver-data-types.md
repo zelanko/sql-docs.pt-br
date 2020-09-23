@@ -1,5 +1,6 @@
 ---
-title: Noções básicas sobre os tipos de dados do JDBC Driver | Microsoft Docs
+title: Noções básicas sobre os tipos de dados do JDBC Driver
+description: Saiba mais sobre os tipos de dados JDBC e como o Microsoft JDBC Driver para SQL Server converte esses tipos em tipos de bancos de dados.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15ecca3277dcba3cd2235da9bff9a8d9fc2e4f6f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48090db2e671fdfb1fb076645b06c9315b32bdd5
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920274"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410908"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Noções básicas sobre os tipos de dados do JDBC Driver
 
@@ -29,7 +30,7 @@ Os tópicos nesta seção descrevem como usar os tipos de dados básicos e avan�
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-| Tópico                                                                                                                                            | DESCRIÇÃO                                                                                                                                                                                                                                                          |
+| Tópico                                                                                                                                            | Descrição                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Como usar tipos de dados básicos](../../connect/jdbc/using-basic-data-types.md)                                                                           | Descreva os tipos de dados básicos do JDBC. Inclui exemplos de como trabalhar com os tipos de dados usando conjuntos de resultados, consultas parametrizadas e procedimentos armazenados.                                                                                                        |
 | [Configurando como os valores de java.sql.Time são enviados ao servidor](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | Descreve como o JDBC Driver gera datas.                                                                                                                                                                                                                       |

@@ -2,7 +2,7 @@
 title: Pooling de conexão com reconhecimento de driver no driver ODBC
 description: Aprenda sobre os aprimoramentos feitos no pool de conexões com reconhecimento de driver no Microsoft ODBC Driver for SQL Server no Windows.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922081"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288071"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pooling de conexão com reconhecimento de driver no driver ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
   
 -   Se houver uma diferença em qualquer uma das palavras-chave de conexão a seguir entre a cadeia de conexão e uma cadeia de conexão em pool, uma conexão em pool não será usada.  
   
-    |Palavra-chave|ODBC Driver 13|ODBC Driver 11|
+    |Palavra-chave|ODBC Driver 17/13|ODBC Driver 11|
     |-|-|-|
     |`Address`|Sim|Sim|
     |`AnsiNPW`|Sim|Sim|
@@ -68,7 +68,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
     
 - Se houver uma diferença em qualquer um dos atributos de conexão a seguir entre a cadeia de conexão e uma cadeia de conexão em pool, uma conexão em pool não será usada.  
   
-    |Atributo|ODBC Driver 13|ODBC Driver 11|  
+    |Atributo|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Sim|Sim|
     |`SQL_ATTR_PACKET_SIZE`|Sim|Sim|
@@ -94,7 +94,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
   
      Essas palavras-chave de conexão não são consideradas quando o Gerenciador de Driver tenta corresponder a conexão a uma conexão no pool. (Mesmo se você alterar um desses parâmetros, uma conexão existente poderá ser reutilizada. O driver redefinirá as opções conforme a necessidade.) Esses atributos podem ser redefinidos no lado do cliente sem fazer uma chamada de rede extra.  
   
-    |Palavra-chave|ODBC Driver 13|ODBC Driver 11|  
+    |Palavra-chave|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`AutoTranslate`|Sim|Sim|
     |`Description`|Sim|Sim|
@@ -108,7 +108,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
   
      Se você alterar um dos atributos de conexão a seguir, uma conexão existente poderá ser reutilizada.  O driver redefinirá o valor conforme a necessidade. O driver pode redefinir esses atributos no lado do cliente sem fazer uma chamada de rede extra.  
   
-    |Atributo|ODBC Driver 13|ODBC Driver 11|  
+    |Atributo|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |Todos os atributos de instrução|Sim|Sim|
     |`SQL_ATTR_AUTOCOMMIT`|Sim|Sim|

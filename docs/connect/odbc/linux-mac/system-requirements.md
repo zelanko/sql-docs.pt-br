@@ -2,7 +2,7 @@
 title: Requisitos do sistema (ODBC Driver for SQL Server)
 description: Este artigo lista os requisitos do sistema do ODBC Driver para sistemas operacionais SQL Server em Linux e macOS.
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 74b7bf1680dd956dfca85917939ad24a3559d7de
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391741"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934455"
 ---
 # <a name="system-requirements-linux-and-macos"></a>Requisitos do sistema (Linux e macOS)
 
@@ -36,28 +36,28 @@ A compatibilidade de versão do SQL dos drivers do Linux e do macOS é igual à 
 
 As versões 17, 13.1 e 13 dos drivers Linux e macOS são compatíveis com a arquitetura x64 dos seguintes sistemas operacionais:
 
-|Sistema operacional com suporte     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
-|-------------------------------|----|----|----|----|----|----|----|--|
-|Apple OS X 10.11 (El Capitan)  | |S|S|S|S|S|S|S|
-|Apple macOS 10.12 (Sierra)     | |S|S|S|S|S|S|S|
-|Apple macOS 10.13 (High Sierra)|S|S|S|S|S|S|S|S|
-|Apple macOS 10.14 (Mojave)     |S|S|S| | | | | |
-|Apple macOS 10.15 (Catalina)   |S| | | | | | | |
-|Alpine Linux 3.11              |S| | | | | | | |
-|Debian Linux 8                 | |S|S|S|S|S|S|S|
-|Debian Linux 9                 |S|S|S|S|S|S|S|S|
-|Debian Linux 10                |S|S| | | | | | |
-|Oracle Linux 8                 |S| | | | | | | |
-|RedHat Enterprise Linux 6      |S|S|S|S|S|S|S|S|
-|RedHat Enterprise Linux 7      |S|S|S|S|S|S|S|S|
-|RedHat Enterprise Linux 8      |S|S| | | | | | |
-|SUSE Linux Enterprise Server 11<sup>1</sup>|S|S|S|S|S|S|S|S|
-|SUSE Linux Enterprise Server 12|S|S|S|S|S|S|S|S|
-|SUSE Linux Enterprise Server 15|S|S|S| | | | | |
-|Ubuntu Linux 14.04             | |S|S|S|S|S|S|S|
-|Ubuntu Linux 16.04             |S|S|S|S|S|S|S|S|
-|Ubuntu Linux 18.04             |S|S|S|S| | | | |
-|Ubuntu Linux 19.10             |S| | | | | | | |
+|Versão do driver&nbsp;&#8594;<br />&#8595; Sistema operacional     |17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
+|-------------------------------|----|----|----|----|----|----|----|----|---|
+|Apple OS X 10.11 (El Capitan)  |    |    |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|Apple macOS 10.12 (Sierra)     |    |    |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|Apple macOS 10.13 (High Sierra)|Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|Apple macOS 10.14 (Mojave)     |Sim |Sim |Sim |Sim |    |    |    |    |   |
+|Apple macOS 10.15 (Catalina)   |Sim |Sim |    |    |    |    |    |    |   |
+|Alpine Linux 3.11              |Sim |Sim |    |    |    |    |    |    |   |
+|Debian Linux 8                 |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|Debian Linux 9                 |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|Debian Linux 10                |Sim |Sim |Sim |    |    |    |    |    |   |
+|Oracle Linux 8                 |Sim |Sim |    |    |    |    |    |    |   |
+|RedHat Enterprise Linux 6      |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|RedHat Enterprise Linux 7      |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|RedHat Enterprise Linux 8      |Sim |Sim |Sim |    |    |    |    |    |   |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|SUSE Linux Enterprise Server 12|Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|SUSE Linux Enterprise Server 15|Sim |Sim |Sim |Sim |    |    |    |    |   |
+|Ubuntu Linux 14.04             |    |    |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|Ubuntu Linux 16.04             |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim |Sim|
+|Ubuntu Linux 18.04             |Sim |Sim |Sim |Sim |Sim |    |    |    |   |
+|Ubuntu Linux 20.04             |Sim |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> O Driver ODBC 17 dá suporte apenas ao SUSE Linux Enterprise Server 11 SP4
 

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf08045adba7298d5a5b8e261c406915b44effe0
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: a200917a21e664a21b4186ca1d643bfb0e275869
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411634"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179969"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapeamentos de tipo de dados entre o R e o SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Para soluções do R executadas no recurso de integração do R nos Serviços de Machine Learning do SQL Server, examine a lista de tipos de dados não compatíveis e as conversões de tipo de dados que podem ser executadas implicitamente quando os dados são passados entre as bibliotecas do R e o SQL Server.
 
@@ -136,19 +136,20 @@ outputDataSet <- inputDataSet'
 
 **Resultados**
 
-||||||
+|Linha \#|C1|C2|C3|C4|
 |-|-|-|-|-|
-||C1|C2|C3|C4|
 |1|1|Olá|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|2|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 Observe o uso da função `str` em R para obter o esquema dos dados de saída. A função retorna as seguintes informações:
 
-<code>'data.frame':2 obs. of  4 variables:</code>
-<code> $ c1: int  1 -11</code>
-<code> $ c2: Factor w/ 2 levels "Hello","world": 1 2</code>
-<code> $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1</code>
-<code> $ cR: num  4 2</code>
+```output
+'data.frame':2 obs. of  4 variables:
+ $ c1: int  1 -11
+ $ c2: Factor w/ 2 levels "Hello","world": 1 2
+ $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1
+ $ cR: num  4 2
+```
 
 A partir disso, você pode ver que as seguintes conversões de tipo de dados foram realizadas implicitamente como parte dessa consulta:
 

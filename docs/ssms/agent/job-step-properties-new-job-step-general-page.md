@@ -1,4 +1,5 @@
 ---
+description: Propriedades da etapa de trabalho – Nova etapa de trabalho (página Geral)
 title: Novas propriedades da etapa de trabalho (Página geral)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44b333c1865046f779581265fb49186810f8944c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c16c9895eb6fdcec859a20651f9912b78ee9946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497553"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriedades da etapa de trabalho – Nova etapa de trabalho (página Geral)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
+> Atualmente, na [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira [Diferenças entre o T-SQL da Instância Gerenciada de SQL do Azure e o SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obter detalhes.
 
 Use esta página para ver e alterar as propriedades ou para definir uma nova etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -54,7 +55,7 @@ Carregue o comando de um arquivo.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado para a Área de Transferência.  
   
 **Colar**  
@@ -74,7 +75,7 @@ Especifique o [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic S
 **JScript**  
 Especifique JScript como a linguagem para a etapa de trabalho.  
   
-**Outros**  
+**Outras**  
 Digite o nome da linguagem para etapas de trabalho escritas em outra linguagem de criação de scripts.  
   
 **Abrir**  
@@ -83,7 +84,7 @@ Carregue o comando de um arquivo.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -99,7 +100,7 @@ Carregue o comando de um arquivo.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -112,7 +113,7 @@ Carregue o script de um arquivo.
 **Selecionar tudo**  
 Selecione o texto do script.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -122,7 +123,7 @@ Cole o conteúdo da área de transferência.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -132,7 +133,7 @@ Cole o conteúdo da área de transferência.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -145,7 +146,7 @@ O banco de dados a ser usado para a etapa de trabalho.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -155,7 +156,7 @@ Cole o conteúdo da área de transferência.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -165,7 +166,7 @@ Cole o conteúdo da área de transferência.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -181,7 +182,7 @@ Carregue o comando de um arquivo.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  
@@ -200,7 +201,7 @@ Carregue o comando de um arquivo.
 **Selecionar tudo**  
 Selecione o texto do comando.  
   
-**Copy**  
+**Cópia**  
 Copie o texto selecionado.  
   
 **Colar**  

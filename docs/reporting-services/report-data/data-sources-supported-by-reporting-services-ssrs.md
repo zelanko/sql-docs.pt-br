@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458948"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988432"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Fontes de dados com suporte no Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera dados de relatório de fontes de dados por meio de uma camada de dados modular e extensível que usa extensões de processamento de dados. Para recuperar dados de relatório de uma fonte de dados, você deve selecionar uma extensão de processamento de dados que dá suporte ao tipo de fonte de dados, à versão do software em execução na fonte de dados e à plataforma da fonte de dados ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 bits ou 64 bits).  
@@ -157,7 +157,7 @@ ms.locfileid: "86458948"
   
  Caso você use o designer de consulta em modo gráfico, a consulta é analisada e, possivelmente, reescrita. Um designer de consulta com base em texto também está disponível para gravar consultas. Use o designer de consultas com base em texto quando quiser controlar a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] exata usada em uma consulta.   
   
- A recuperação de dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do SQL Data Warehouse e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é semelhante, mas há alguns requisitos que se aplicam apenas ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Para obter mais informações, consulte [Tipo de conexão do SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ A recuperação de dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do SQL Data Warehouse e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é semelhante, mas há alguns requisitos que se aplicam apenas ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Para obter mais informações, confira [Tipo de conexão do SQL do Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   

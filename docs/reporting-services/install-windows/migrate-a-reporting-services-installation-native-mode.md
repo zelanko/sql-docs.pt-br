@@ -1,4 +1,5 @@
 ---
+description: Migrar uma instalação do Reporting Services (Modo Nativo)
 title: Migrar uma instalação do Reporting Services (Modo Nativo) | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -6,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454572"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
 
@@ -265,7 +266,7 @@ Se você modificou os arquivos RSReportServer.config ou RSWebApplication.config 
 
 ## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Grupo de Serviços do Windows e ACLs de segurança
 
- No [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], há um grupo de serviços, o grupo de Serviços Windows do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], usado para criar ACLs de segurança para todos os arquivos, pastas e chaves do registro instalados com o SQL Server Reporting Services. Este nome de grupo do Windows aparece no formato SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>.  
+ No [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], há um grupo de serviços, o grupo de Serviços Windows do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], usado para criar ACLs de segurança para todos os arquivos, pastas e chaves do registro instalados com o SQL Server Reporting Services. Este nome de grupo do Windows é exibido no formato SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>.  
 
 ## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Verificar a implantação
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455629"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396685"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
 
@@ -40,7 +40,7 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
   
  **Tabela 1**  
   
-||Credenciais com suporte|Modo clássico de Autenticação do Windows|\* Autenticação de declarações|  
+|Tipo de recuperação|Credenciais com suporte|Modo clássico de Autenticação do Windows|\* Autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
 ||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Sim|Não|  
@@ -51,7 +51,7 @@ Use as informações deste tópico para criar uma fonte de dados. Para obter ins
   
  **Tabela 2**  
   
-||Credenciais com suporte|Modo clássico de Autenticação do Windows|\* Autenticação de declarações|  
+|Tipo de recuperação|Credenciais com suporte|Modo clássico de Autenticação do Windows|\* Autenticação de declarações|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de farm local do SharePoint|Autenticação do Windows (integrada) ou token de usuário do SharePoint|Sim|Sim|  
 ||Armazenado, Prompt, Nenhum (com credenciais do Windows)<br /><br /> Não há suporte para credenciais armazenadas e de prompt com credenciais que não sejam do Windows.|Não|Não|  

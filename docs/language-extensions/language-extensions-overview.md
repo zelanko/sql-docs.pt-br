@@ -4,24 +4,27 @@ titleSuffix: ''
 description: As Extensões de Linguagem é um recurso do SQL Server usado para executar código externo. No SQL Server 2019, há suporte para Java. Os dados relacionais podem ser usados no código externo usando a estrutura de extensibilidade.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 08/19/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f5ef0b9dd1023f662850e6e680507f5bf4041051
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921051"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645917"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>O que são Extensões de Linguagem do SQL Server?
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 As Extensões de Linguagem é um recurso do SQL Server usado para executar código externo. Os dados relacionais podem ser usados no código externo usando a [estrutura de extensibilidade](concepts/extensibility-framework.md).
 
 No SQL Server 2019, há suporte para Java. O runtime do Java padrão é o Zulu Open JRE. Você também pode usar outro Java JRE ou SDK.
+
+> [!NOTE]
+> Para executar o Python ou o R no SQL Server, confira a documentação do [Serviços de Machine Learning](../machine-learning/sql-server-machine-learning-services.md).
 
 ## <a name="what-you-can-do-with-language-extensions"></a>O que você pode fazer com as Extensões de Linguagem
 

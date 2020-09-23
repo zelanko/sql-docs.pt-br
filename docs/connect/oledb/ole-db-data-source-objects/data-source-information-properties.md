@@ -1,6 +1,6 @@
 ---
 title: Propriedades de informações da fonte de dados (Driver do OLE DB) | Microsoft Docs
-description: Propriedades de informações da fonte de dados
+description: Aprenda sobre as propriedades de informações da fonte de dados para o conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERDATASOURCEINFO no Driver do OLE DB para SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data source properties [OLE DB]
 - information properties [OLE DB]
 - OLE DB data source properties [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e68103f98e9a1de3902206876cd95c48b22ff7cb
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 866d4edb2aaece799a25f5f95d176b3702cbb476
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977783"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862428"
 ---
 # <a name="data-source-information-properties"></a>Propriedades de informações da fonte de dados
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

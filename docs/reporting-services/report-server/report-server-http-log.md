@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c1f270bb3f26cada3944979ee32019737dcb13e3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547998"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392072"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
   O log HTTP do servidor de relatório mantém um registro de cada solicitação HTTP e resposta manipuladas pelo servidor de relatório. Como os erros de estouro e tempo limite de solicitação não atingem o servidor de relatório, eles não são registrados no arquivo de log.  
@@ -26,7 +26,7 @@ ms.locfileid: "84547998"
 ## <a name="viewing-log-information"></a>Exibir informações do log  
  O log é um arquivo de texto ASCII. Você pode usar qualquer editor de texto para exibir o arquivo. O log HTTP do servidor de relatório é equivalente ao arquivo de log estendido W3C em IIS e usa campos similares para que você possa usar os visualizadores do arquivo de log IIS existente para ler o arquivo de log HTTP do servidor de relatório. A tabela a seguir fornece informações adicionais sobre o arquivo de log HTTP:  
   
-|||  
+|Informações do arquivo de log|Descrição|  
 |-|-|  
 |Nome do arquivo|Por padrão, o nome do arquivo é ReportServerService_HTTP_\<timestamp>.log. Você pode personalizar o prefixo do nome do arquivo modificando o atributo HttpTraceFileName no arquivo ReportingServicesService.exe.config. O carimbo de data e hora é baseado em UTC (Tempo Universal Coordenado).|  
 |Local do arquivo|O arquivo está localizado em \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles.|  

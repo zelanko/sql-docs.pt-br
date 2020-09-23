@@ -1,6 +1,6 @@
 ---
-title: Encontrando mais informações sobre o OLE DB Driver for SQL Server | Microsoft Docs
-description: Onde encontrar mais informações sobre o OLE DB Driver for SQL Server
+title: Encontrar mais informações sobre o OLE DB Driver for SQL Server
+description: Use estes recursos para obter mais informações sobre o Driver do OLE DB para SQL Server e outros tipos de programação de acesso a dados.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - MSOLEDBSQL, additional resources
 - OLE DB Driver for SQL Server, additional resources
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: aec9888c6d362fede8cd1991f05892315982eb11
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7f0beae794a4958a74b0ffa1b80b72bc41b0a396
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986445"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480601"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Encontrar mais informações sobre o OLE DB Driver for SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85986445"
  [Central de Desenvolvedores de Armazenamento e Acesso a Dados](https://go.microsoft.com/fwlink?linkid=4173)  
  Este site fornece artigos técnicos, código de exemplo e outros recursos para o OLE DB Driver for SQL Server e outras tecnologias de acesso a dados.  
   
- [Blog de Acesso a Dados](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog de Acesso a Dados](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
  Este site de blog fornece informações sobre tecnologias de acesso a dados e permite que você interaja diretamente com membros da equipe de produto.  
   
  [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  

@@ -1,5 +1,6 @@
 ---
-title: Método updateAsciiStream (java.io.InputStream, long) | Microsoft Docs
+description: Método updateAsciiStream (java.lang.String, java.io.InputStream, long)
+title: Método updateAsciiStream (java.lang.String, java.io.InputStream, long)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d426e8b9-62b7-49f8-9863-8697fd3a7085
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33a0686a891a592f37a8ebd57f341df35db48894
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8f4161f8ad8d6c09f95688e9566fcd3481986777
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478418"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-long"></a>Método updateAsciiStream (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ public void updateAsciiStream(java.lang.String columnName,
                               long length)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  

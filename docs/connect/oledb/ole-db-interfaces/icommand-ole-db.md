@@ -1,6 +1,6 @@
 ---
 title: ICommand (driver do OLE DB) | Microsoft Docs
-description: Interface ICommand (OLE DB)
+description: Saiba mais sobre o comportamento do método ICommand::execute específico do Driver do OLE DB para SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - ICommand [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 90c9822736ab27a3432c65940f912421a1f9bb85
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf787628804f3597fa724c0ab6313a450e365d58
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244506"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861901"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,11 @@ ms.locfileid: "87244506"
   Este artigo discute o comportamento do OLE DB específico do Driver do OLE DB para SQL Server.  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
- Inserir dados maiores do que o tamanho de uma coluna normalmente resulta em um erro. No entanto, existem situações em que S_OK será retornado, mas *dwStatus* será definido como DBSTATUS_S_TRUNCATED. Isso geralmente ocorre quando os dados são inseridos com parâmetros e a coluna não é grande o suficiente para armazenar os dados e **ICommandWithParameters::SetParameterInfo** não foi chamado.  
+ Inserir dados maiores do que o tamanho de uma coluna normalmente resulta em um erro. Porém, há situações em que S_OK é retornado e `dwStatus` é definido como DBSTATUS_S_TRUNCATED. Aqui estão alguns cenários em que isso normalmente ocorre:
+
+- Ao inserir dados com parâmetros  
+- Quando a coluna não é grande o suficiente para conter os dados  
+- Quando `ICommandWithParameters::SetParameterInfo` não foi chamado  
   
 ## <a name="see-also"></a>Consulte Também  
  [Interfaces do &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)

@@ -1,6 +1,6 @@
 ---
 title: Conjuntos de linhas e cursores do SQL Server (Driver do OLE DB)
-description: Conjuntos de linha e cursores do SQL Server
+description: Saiba como o SQL Server retorna os conjuntos de resultados para os consumidores e as diferenças entre os conjuntos de resultados padrão e os cursores de servidor do Driver do OLE DB para SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], cursors
 - properties [OLE DB]
 - cursors [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbcac0300b3abe337e39bccb84a78f74e0de61bb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244147"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859974"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de linha e cursores do SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a50f4a4a81267d8bb515fd4890d1d3fe66fb75a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ddea06e3cfb348ef6355f95137ce93ea459dced
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715551"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042787"
 ---
 # <a name="mirroring-states-sql-server"></a>Estados de espelhamento (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85715551"
 |estado de espelhamento|Descrição|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. O servidor principal está enviando registros de log para o servidor espelho, que está aplicando as alterações ao banco de dados espelho para rolá-lo adiante.<br /><br /> No início de uma sessão de espelhamento de banco de dados, o banco de dados está no estado SYNCHRONIZING. O servidor principal está servindo o banco de dados e o espelho está tentando manter-se atualizado.|  
-|SYNCHRONIZED|Quando o servidor espelho torna-se suficientemente atualizado com relação ao servidor principal, o estado de espelhamento muda para SYNCHRONIZED. O banco de dados permanece nesse estado enquanto o servidor principal continua enviando alterações para o servidor espelho e o servidor espelho continua aplicando as alterações ao banco de dados espelho.<br /><br /> Se a segurança da transação for definida como FULL, suporte ao failover automático e ao failover manual no estado SYNCHRONIZED, não haverá perda de dados após um failover.<br /><br /> Se a segurança da transação for off, sempre será possível alguma perda de dados, mesmo no estado SYNCHRONIZED.|  
+|SYNCHRONIZED|Quando o servidor espelho torna-se suficientemente atualizado com relação ao servidor principal, o estado de espelhamento muda para SYNCHRONIZED. O banco de dados permanece nesse estado enquanto o servidor principal continua enviando alterações para o servidor espelho e o servidor espelho continua aplicando as alterações ao banco de dados espelho.<br /><br /> Se a segurança da transação for definida como FULL, suporte ao failover automático e ao failover manual no estado SYNCHRONIZED, não haverá perda de dados após um failover.<br /><br /> Se a segurança da transação for off, sempre será possível alguma perda de dados, mesmo no estado SYNCHRONIZED.<br /><br /> No SQL Server Management Studio, o status do banco de dados será exibido como restaurando. Para o status real, consulte a coluna `mirroring_state_desc` em [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) |  
 |SUSPENDED|A cópia espelhada do banco de dados não está disponível. O banco de dados principal está sendo executado sem enviar nenhum log ao servidor espelho, uma condição conhecida como *execução exposta*. Esse é o estado após um failover.<br /><br /> Uma sessão também pode se tornar SUSPENDED como resultado de erros de reversão ou se o administrador pausar a sessão.<br /><br /> SUSPENDED é um estado persistente que sobrevive a desligamentos e inicializações do parceiro.|  
 |PENDING_FAILOVER|Esse estado é encontrado apenas no servidor principal após um failover ter começado, mas o servidor não tiver feito a transição para a função espelho.<br /><br /> Quando o failover é iniciado, o banco de dados principal vai para o estado PENDING_FAILOVER, termina rapidamente quaisquer conexões de usuário e assume em seguida a função espelho.|  
 |DISCONNECTED|O parceiro perdeu comunicação com o outro parceiro.|  

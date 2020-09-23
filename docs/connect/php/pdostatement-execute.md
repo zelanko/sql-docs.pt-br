@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::execute | Microsoft Docs
+title: PDOStatement::execute
+description: Referência de API para a função PDOStatement::execute no Driver do Microsoft PDO_SQLSRV para PHP para SQL Server.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5d6918a70217e7b98100bdc514edf65622e30b1a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 71b9592a35fcc28b302c7aadb1ca5de0c75c3d6c
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909022"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645117"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,10 +30,10 @@ Executa uma instrução.
 bool PDOStatement::execute ([ $input ] );  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$input*: (opcional) uma matriz associativa contendo os valores para os marcadores de parâmetro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 true se for bem-sucedido; caso contrário, false.  
   
 ## <a name="remarks"></a>Comentários  

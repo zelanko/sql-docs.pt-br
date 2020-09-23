@@ -2,7 +2,7 @@
 title: Notas sobre a versão dos Microsoft Drivers for PHP
 description: Esta página discute o que foi alterado em cada versão do Microsoft Drivers for PHP for SQL Server.
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 09/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2dc190e617ce9a9ffc3c45a623cb82a78411046
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 90b9a9174f849ac8ec8cb0c1c9674395d5b38325
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633852"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027267"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notas de versão dos Microsoft Drivers for PHP for SQL Server
 
@@ -51,7 +51,7 @@ Esta versão se aplica somente ao Linux e ao macOS.
 - Número da versão: 5.8.1
 - Lançado: 15 de abril de 2020
 
-## <a name="whats-new-in-581"></a>Novidades na versão 5.8.1
+### <a name="whats-new-in-581"></a>Novidades na versão 5.8.1
 
 | Novo item | Detalhes |
 | :------- | :------ |
@@ -70,7 +70,7 @@ Esta versão se aplica somente ao Linux e ao macOS.
 - Número da versão: 5.8.0
 - Lançado: 31 de janeiro de 2020
 
-## <a name="whats-new-in-58"></a>Novidades na versão 5.8
+### <a name="whats-new-in-58"></a>Novidades na versão 5.8
 
 | Novo item | Detalhes |
 | :------- | :------ |
@@ -102,7 +102,7 @@ Esta versão se aplica somente ao Linux e ao macOS.
 - Número da versão: 5.6.1
 - Lançado: 19 de março de 2019
 
-## <a name="whats-new-in-561"></a>Novidades na versão 5.6.1
+### <a name="whats-new-in-561"></a>Novidades na versão 5.6.1
 
 | Novo item | Detalhes |
 | :------- | :------ |
@@ -121,7 +121,7 @@ Esta versão se aplica somente ao Linux e ao macOS.
 - Número da versão: 5.6.0
 - Lançado: 21 de fevereiro de 2019
 
-## <a name="whats-new-in-56"></a>Novidades na versão 5.6
+### <a name="whats-new-in-56"></a>Novidades na versão 5.6
 
 | Novo item | Detalhes |
 | :------- | :------ |
@@ -148,7 +148,7 @@ Esta versão se aplica somente ao Linux e ao macOS.
 - Número da versão: 5.3.0
 - Lançado: 20 de julho de 2018
 
-## <a name="whats-new-in-53"></a>Novidades na versão 5.3
+### <a name="whats-new-in-53"></a>Novidades na versão 5.3
 
 - Suporte para Microsoft ODBC Driver 17.2 em todas as plataformas
 - Suporte para macOS High Sierra (requer o Driver ODBC 17 e superior)
@@ -166,7 +166,7 @@ Esta versão se aplica somente ao Linux e ao macOS.
 - Número da versão: 5.2.0
 - Lançado: 23 de março de 2018
 
-## <a name="whats-new-in-52"></a>Novidades na versão 5.2
+### <a name="whats-new-in-52"></a>Novidades na versão 5.2
 
 - Suporte para PHP 7.2.1 e superior no Windows, além do 7.2.0 e superior em outras plataformas
 - Suporte para Microsoft ODBC Driver 17
@@ -191,7 +191,7 @@ Esta versão se aplica somente ao Linux e ao macOS.
 - Número da versão: 4.3.0
 - Lançado: 6 de julho de 2017
 
-## <a name="whats-new-in-43"></a>Novidades na versão 4.3
+### <a name="whats-new-in-43"></a>Novidades na versão 4.3
 
 - Suporte para PHP 7.1
 - Suporte para macOS Sierra e macOS El Capitan
@@ -206,14 +206,14 @@ Esta versão se aplica somente ao Linux e ao macOS.
 ## <a name="40"></a>4,0
 
 ![baixar](../../ssms/media/download-icon.png) [Baixar pacote do Windows](https://go.microsoft.com/fwlink/?linkid=2120448)  
-[Tag de versão do GitHub (pacotes para Linux e macOS estão disponíveis aqui)](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
+[Tag de versão do GitHub](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
 
 ### <a name="version-information"></a>Informações da versão
 
 - Número da versão: 4,0
 - Lançado: 1º de julho de 2016
 
-## <a name="whats-new-in-40"></a>Novidades na versão 4.0
+### <a name="whats-new-in-40"></a>Novidades na versão 4.0
 
 - Suporte para PHP 7.0  
 - Suporte completo de 64 bits
@@ -222,14 +222,14 @@ Esta versão se aplica somente ao Linux e ao macOS.
 ## <a name="32"></a>3.2
 
 ![baixar](../../ssms/media/download-icon.png) [Baixar pacote do Windows](https://go.microsoft.com/fwlink/?linkid=2120449)  
-[Tag de versão do GitHub (pacotes para Linux e macOS estão disponíveis aqui)](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
+[Tag de versão do GitHub](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
 
 ### <a name="version-information"></a>Informações da versão
 
 - Número da versão: 3.2
 - Lançado: 9 de março de 2015
 
-## <a name="whats-new-in-32"></a>Novidades na versão 3.2
+### <a name="whats-new-in-32"></a>Novidades na versão 3.2
 
 - Suporte para PHP 5.6  
 - Inclui as atualizações mais recentes para versões anteriores do PHP 5.5 e 5.4  
@@ -237,19 +237,24 @@ Esta versão se aplica somente ao Linux e ao macOS.
 
 ## <a name="31"></a>3.1
 
-[Tag de versão do GitHub (pacotes para Linux e macOS estão disponíveis aqui)](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
+![baixar](../../ssms/media/download-icon.png) [Baixar pacote do Windows](https://go.microsoft.com/fwlink/?linkid=2143027)  
+[Tag de versão do GitHub](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
 
 ### <a name="version-information"></a>Informações da versão
 
 - Número da versão: 3.1
 - Lançado: 12 de dezembro de 2014
 
-## <a name="whats-new-in-31"></a>Novidades na versão 3.1
+### <a name="whats-new-in-31"></a>Novidades na versão 3.1
 
 - Suporte para PHP 5.5  
 - Exige o Microsoft ODBC Driver 11 for SQL Server. As versões anteriores exigem o SQL Native Client.  
 
-## <a name="whats-new-in-30"></a>Novidades na versão 3.0  
+## <a name="30"></a>3.0
+
+![baixar](../../ssms/media/download-icon.png) [Baixar pacote do Windows](https://go.microsoft.com/fwlink/?linkid=2143026)  
+
+### <a name="whats-new-in-30"></a>Novidades na versão 3.0  
 
 - Suporte para PHP 5.4.  O PHP 5.2 não tem suporte na versão 3 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - A opção de conexão AttachDBFileName é adicionada. Para obter mais informações, consulte [Connection Options](connection-options.md).  
@@ -259,7 +264,9 @@ Esta versão se aplica somente ao Linux e ao macOS.
 - Suporte para cursores do lado do cliente (armazenando em cache um conjunto de resultados na memória). Para obter mais informações, confira [Tipos de cursor &#40;Driver SQLSRV&#41;](cursor-types-sqlsrv-driver.md) e [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](cursor-types-pdo-sqlsrv-driver.md).
 - O atributo PDO::ATTR_EMULATE_PREPARES foi adicionado. Para obter mais informações, confira [PDO::prepare](pdo-prepare.md).  
 
-## <a name="whats-new-in-20"></a>Novidades na versão 2.0
+## <a name="20"></a>2.0
+
+### <a name="whats-new-in-20"></a>Novidades na versão 2.0
 
 Na versão 2.0, foi adicionado suporte para o driver PDO_SQLSRV. Para obter mais informações, consulte [Referência do driver PDO_SQLSRV](pdo-sqlsrv-driver-reference.md).  
 

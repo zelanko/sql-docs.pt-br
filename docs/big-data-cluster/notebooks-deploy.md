@@ -1,7 +1,7 @@
 ---
 title: 'Implantar: notebook do Azure Data Studio'
 titleSuffix: SQL Server Big Data Clusters
-description: Use um notebook do Azure Data Studio para implantar um cluster de Big Data.
+description: Saiba como usar o código e a documentação em um notebook no Azure Data Studio para implantar um cluster de Big Data do SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 67cbd034cd2b5fc36b9f98bbfb2f8bbc43f1598e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6e85889a3a1118ab60595a9b0c6bd614b6071829
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85699965"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772435"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Implantar um cluster de Big Data do SQL Server com o notebook do Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "85699965"
 
 O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fornece uma extensão para o Azure Data Studio que inclui notebooks de implantação. Um notebook de implantação inclui documentação e código que você pode usar no Azure Data Studio para criar um cluster de Big Data do SQL Server.
 
-Implementados inicialmente como um projeto de software livre, os [notebooks](../azure-data-studio/notebooks-guidance.md) foram implementados no [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). Você pode usar markdown de texto nas células de texto e um dos kernels disponíveis para escrever código nas células de código.
+Implementados inicialmente como um projeto de software livre, os [notebooks](../azure-data-studio/notebooks-guidance.md) foram implementados no [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Você pode usar markdown de texto nas células de texto e um dos kernels disponíveis para escrever código nas células de código.
 
 Você pode usar notebooks para implantar clusters de Big Data para o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -37,7 +37,7 @@ Além disso, a implantação do cluster de Big Data do SQL Server 2019 também r
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [CLI do Azure (se estiver implantando no Azure)](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
+* [CLI do Azure (se estiver implantando no Azure)](/cli/azure/install-azure-cli?view=azure-cli-latest)
 
 ## <a name="launch-the-notebook"></a>Iniciar o notebook
 

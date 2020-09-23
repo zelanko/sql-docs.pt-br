@@ -1,4 +1,5 @@
 ---
+description: Proteger Meus Relatórios
 title: Proteger Meus Relatórios | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aba081c02ca027a861ab6c7680e038bac7a18304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498029"
 ---
 # <a name="secure-my-reports"></a>Proteger Meus Relatórios
   O recurso Meus Relatórios fornece um workspace gerenciado pelo usuário para trabalhar com relatórios. Para funcionar conforme pretendido, a pasta Meus Relatórios requer permissões menos restritivas do que as outras pastas que estão disponíveis para uso geral. Os usuários que têm permissões apenas para exibir e executar relatórios em outras pastas podem precisar de um conjunto maior de permissões para gerenciar suas pastas Meus Relatórios e seu próprio conteúdo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma atribuição de função especializada e uma definição de função para essa finalidade.  
@@ -32,7 +33,7 @@ ms.locfileid: "65570695"
   
  Uma atribuição de função de **Meus Relatórios** consiste nos seguintes elementos:  
   
--   A pasta Meus Relatórios do usuário, que está localizada na pasta Pastas dos Usuários\\ *\<username>* \Meus Relatórios.  
+-   A pasta Meus Relatórios do usuário, localizada em Pastas dos Usuários\\ *\<username>* \pasta Meus Relatórios.  
   
 -   A conta de usuário, que é determinada quando a pasta Meus Relatórios é ativada. Uma pasta é ativada quando o usuário clica em uma pasta Meus Relatórios no Gerenciador de Relatórios ou publica um relatório em uma pasta Meus Relatórios a partir do Designer de Relatórios. Essa pasta também é ativada quando o usuário solicita propriedades no link Meus Relatórios.  
   

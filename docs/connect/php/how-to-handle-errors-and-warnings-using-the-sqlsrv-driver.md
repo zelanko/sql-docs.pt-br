@@ -1,7 +1,8 @@
 ---
-title: Como tratar erros e avisos usando o driver SQLSRV | Microsoft Docs
+title: Como tratar erros e avisos usando odriver SQLSRV
+description: Saiba como tratar erros e avisos ao usar o Driver do Microsoft SQLSRV para PHP para SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0605fc5a0fc27abfbcd15c22d5553587eecb0349
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ebb3ef454e23ad181bfee856a5b09d01b20632e9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916249"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680641"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Como tratar erros e avisos usando odriver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -200,7 +201,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como configurar o tratamento de erro e de avisos usando o driver SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+[Como configurar o tratamento de erros e avisos usando o driver SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

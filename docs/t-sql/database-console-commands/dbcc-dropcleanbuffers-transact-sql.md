@@ -26,12 +26,12 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f756dda5a0fc09eaad4e20fb6436a8fb5957fb2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c820f664d6d8b56453c39f117d373f44312f898e
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468242"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076741"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
@@ -42,12 +42,12 @@ Remove todos os buffers limpos do pool de buffers e os objetos de columnstore do
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe
-Sintaxe do SQL Server:
+Sintaxe para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-Sintaxe do SQL Warehouse do Azure e do Parallel Data Warehouse:
+Sintaxe para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
@@ -77,14 +77,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Permissões  
-
-Aplica-se a: SQL Server, Parallel Data Warehouse 
-
-- Exige associação à função de servidor fixa **sysadmin** .  
-
-Aplica-se a: SQL Data Warehouse do Azure
-
-- Requer associação à função de servidor fixa DB_OWNER.  
+Exige associação na função de servidor fixa `sysadmin` para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+Exige associação na função de servidor fixa `DB_OWNER` para [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

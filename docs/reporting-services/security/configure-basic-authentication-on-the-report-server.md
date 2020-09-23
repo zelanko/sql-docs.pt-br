@@ -1,4 +1,5 @@
 ---
+description: Configurar autenticação básica no Servidor de Relatório
 title: Configurar a autenticação Básica no servidor de relatório | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492636"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar autenticação básica no Servidor de Relatório
   Por padrão, o Reporting Services aceita solicitações que especificam a autenticação Negotiate e NTLM. Se a sua implantação inclui aplicativos cliente ou navegadores que usam autenticação Básica, adicione a autenticação Básica à lista de tipos suportados. Além disso, para usar o Construtor de Relatórios, você deve habilitar o acesso Anônimo aos arquivos do Construtor de Relatórios.  
@@ -63,13 +64,13 @@ ms.locfileid: "81625865"
           </AuthenticationTypes>  
     ```  
   
-4.  Cole-a nas entradas existentes de \<**Authentication**>.  
+4.  Cole-a nas entradas existentes para \<**Authentication**>.  
   
      Se você estiver usando vários tipos de autenticação, adicione apenas o elemento **RSWindowsBasic** , mas não exclua as entradas para **RSWindowsNegotiate**, **RSWindowsNTLM**ou **RSWindowsKerberos**.  
   
      Observe que não é possível usar **Personalizada** com outros tipos de autenticação.  
   
-5.  Substitua os valores vazios de \<**Realm**> ou \<**DefaultDomain**> por valores válidos para seu ambiente.  
+5.  Substitua valores vazios de \<**Realm**> ou \<**DefaultDomain**> por valores válidos para o seu ambiente.  
   
 6.  Salve o arquivo.  
   

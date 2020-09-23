@@ -2,7 +2,7 @@
 title: Dependências de recurso do Microsoft JDBC Driver
 description: Saiba mais sobre as dependências que o Microsoft JDBC Driver for SQL Server tem e como atendê-las.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 8/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a08c60322ba4cb75bef804eafb9a3e68e7df5de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9e7c01c160848e5a0067db9d37b7e2dbe220386f
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631196"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042429"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Dependências de recurso do Microsoft JDBC Driver para SQL Server
 
@@ -45,20 +45,20 @@ Os projetos específicos que exigem qualquer um dos recursos anteriores precisam
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.2.jre11</version>
+    <version>8.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.4</version>
+    <version>1.6.5</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.7.0</version>
+    <version>1.7.4</version>
 </dependency>
 ```
 
@@ -68,26 +68,26 @@ Os projetos específicos que exigem qualquer um dos recursos anteriores precisam
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.2.jre11</version>
+    <version>8.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.4</version>
+    <version>1.6.5</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.7.0</version>
+    <version>1.7.4</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 
@@ -95,6 +95,7 @@ Os projetos específicos que exigem qualquer um dos recursos anteriores precisam
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Trabalhando com o provedor do Azure Key Vault:
 
+- JDBC driver versão 8.4.1 – versões de dependência: Azure Key Vault (versão 1.2.4), Adal4j (versão 1.6.5), Client-Runtime-for-AutoRest (1.7.4) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-7.0.md))
 - JDBC Driver versão 8.2.2 – versões de dependência: Azure Key Vault (versão 1.2.2), Adal4j (versão 1.6.4), Client-Runtime-for-AutoRest (1.7.0) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-7.0.md))
 - Versão do JDBC Driver 7.4.1 – versões de dependência: Azure Key Vault (versão 1.2.1), Adal4j (versão 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-7.0.md))
 - Versão do JDBC Driver 7.2.2 – versões de dependência: Azure Key Vault (versão 1.2.0), Azure-Keyvault-Webkey (versão 1.2.0), Adal4j (versão 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e suas dependências ([aplicativo de exemplo](azure-key-vault-sample-version-7.0.md))
@@ -110,7 +111,8 @@ Os projetos específicos que exigem qualquer um dos recursos anteriores precisam
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Trabalhando com a autenticação do Azure Active Directory:
 
-- JDBC Driver versão 8.2.2 – versões de dependência: Adal4j (versão 1.6.4), Client-Runtime-for-AutoRest (1.7.0) e suas dependências. Nessa versão do driver, 'sqljdbc_auth.dll' foi renomeado para 'mssql-jdbc_auth-\<versão>-\<arch>.dll'.
+- JDBC Driver versão 8.4.1 – versões de dependência: Adal4j (versão 1.6.5), Client-Runtime-for-AutoRest (1.7.4) e suas dependências.
+- JDBC Driver versão 8.2.2 – versões de dependência: Adal4j (versão 1.6.4), Client-Runtime-for-AutoRest (1.7.0) e suas dependências. Nessa versão do driver, 'sqljdbc_auth.dll' foi renomeado como 'mssql-jdbc_auth-\<version>-\<arch>.dll'.
 - Versão do JDBC Driver 7.4.1 – versões de dependência: Adal4j (versão 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e suas dependências
 - Versão do JDBC Driver 7.2.2 – versões de dependência: Adal4j (versão 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e suas dependências
 - Versão do JDBC Driver 7.0.0 – versões de dependência: Adal4j (versão 1.6.0) e suas dependências
@@ -122,7 +124,7 @@ Da verão 6.4.0 do driver em diante, os aplicativos não exigem necessariamente 
 
 Nos *sistemas operacionais Windows*, o driver busca o sqljdbc_auth.dll por padrão e não exige a instalação do tíquete Kerberos ou das dependências de biblioteca do Azure. Se o sqljdbc_auth.dll não estiver disponível, o driver buscará o tíquete Kerberos para autenticação no Active Directory como ocorre em outros sistemas operacionais.
 
-Começando na versão do driver 8.2.2, 'sqljdbc_auth.dll' foi renomeado para 'mssql-jdbc_auth-\<versão>-\<arch>.dll'. Por ex.: 'mssql-jdbc_auth-8.2.2.x64.dll'.
+Do driver versão 8.2.2 em diante, 'sqljdbc_auth.dll' foi renomeado como 'mssql-jdbc_auth-\<version>-\<arch>.dll'. Por ex.: 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
 Você pode obter um [aplicativo de exemplo](connecting-using-azure-active-directory-authentication.md) que usa esse recurso.
 

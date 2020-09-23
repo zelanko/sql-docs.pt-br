@@ -2,7 +2,7 @@
 title: Como usar cópia em massa com o JDBC Driver
 description: A classe SQLServerBulkCopy permite que você grave soluções de carregamento de dados em Java que oferecem vantagens significativas de desempenho em relação às APIs JDBC padrão.
 ms.custom: ''
-ms.date: 07/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3af2624e46e6e61516ce015760544de3ca112e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245005"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042209"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Como usar cópia em massa com o JDBC Driver
 
@@ -357,6 +357,36 @@ public class BulkCopyMultiple {
  Operações de cópia em massa podem ser executadas como operações isoladas ou como parte de uma transação de várias etapas. Essa última opção permite executar mais de uma operação de cópia em massa dentro da mesma transação, bem como executar outras operações de banco de dados (como inserções, atualizações e exclusões), podendo ainda confirmar ou reverter toda a transação.  
   
  Por padrão, uma operação de cópia em massa é executada como uma operação isolada. A operação de cópia em massa ocorre de forma não transacionada, sem a oportunidade de revertê-la novamente. Se você precisar reverter toda ou parte da cópia em massa quando ocorrer um erro, poderá usar uma transação gerenciada `SQLServerBulkCopy` ou executar a operação de cópia em massa dentro de uma transação existente.  
+
+## <a name="extended-bulk-copy-for-azure-data-warehouse"></a>Cópia em massa estendida para o Azure Data Warehouse
+
+A versão do Driver v8.4.1 adiciona uma nova propriedade de conexão, `sendTemporalDataTypesAsStringForBulkCopy`. Essa propriedade booliana é `true` por padrão.
+
+Essa propriedade de conexão, quando definida como `false`, enviará os tipos de dados **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME** e **TIME** como os respectivos tipos, em vez de enviá-los com Cadeia de caracteres.
+
+O envio dos tipos de dados temporais como seus respectivos tipos permite que o usuário envie dados para essas colunas para o Azure Synapse Analytics (SQL DW), o que não era possível antes devido ao driver converter os dados em uma cadeia de caracteres. O envio de dados de cadeia de caracteres para colunas temporais funciona para o SQL Server porque o SQL Server executaria a conversão implícita para nós, mas isso não acontece com o Azure Synapse Analytics (SQL DW).
+
+Além disso, mesmo sem definir essa cadeia de conexão como 'false', da **v8.4.1** em diante, os tipos de dados **MONEY** e **SMALLMONEY** serão enviados como os tipos de dados **MONEY** / **SMALLMONEY**, em vez de **DECIMAL**, que também permite que esses tipos de data sejam copiados em massa para o Azure Synapse Analytics (SQL DW).
+
+### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Limitações da cópia em massa estendida para o Azure Data Warehouse
+
+Atualmente, há duas limitações:
+
+1. Com essa propriedade de conexão definida como `false`, o driver aceitará apenas o formato literal da cadeia de caracteres padrão de cada tipo de dados temporal, por exemplo:
+
+    `DATE: YYYY-MM-DD`
+
+    `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+
+    `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+
+    `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+
+    `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+
+    `TIME: hh:mm:ss[.nnnnnnn]`
+
+2. Com essa propriedade de conexão definida como `false`, o tipo de coluna especificado para cópia em massa deve respeitar o gráfico de mapeamento de tipo de dados de [aqui](../../connect/jdbc/using-basic-data-types.md). Por exemplo, os usuários anteriores podiam especificar `java.sql.Types.TIMESTAMP` para copiar dados em massa em uma coluna de `DATE`, porém, com esse recurso habilitado, eles devem especificar `java.sql.Types.DATE` para executar o mesmo.
   
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>Executando uma operação de cópia em massa não transacionada
 
@@ -648,6 +678,15 @@ public class BulkCopyCSV {
     }
 }
 ```  
+
+### <a name="bulk-copy-with-delimiters-as-data-in-csv-file"></a>Cópia em massa com delimitadores como dados no arquivo CSV
+
+O Driver versão 8.4.1 adiciona uma API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`. Quando definido como true, as seguintes regras são aplicadas:
+
+- Cada campo pode ou não ser colocado entre aspas duplas.
+- Se os campos não estiverem entre aspas duplas, as aspas duplas poderão não aparecer dentro dos campos.
+- Os campos que contêm aspas duplas e delimitadores devem ser colocados entre aspas duplas.
+- Se as aspas duplas forem usadas para incluir campos, uma aspa dupla que aparece dentro de um campo deverá ser ignorada precedendo-a com outra aspa dupla.
 
 ### <a name="bulk-copy-with-always-encrypted-columns"></a>Cópia em massa com colunas Always Encrypted  
 

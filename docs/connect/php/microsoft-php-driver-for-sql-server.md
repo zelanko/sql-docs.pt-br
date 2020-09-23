@@ -1,5 +1,5 @@
 ---
-title: Drivers da Microsoft para PHP para SQL Server | Microsoft Docs
+title: Drivers da Microsoft para PHP para SQL Server
 description: Os Microsoft Drivers for PHP for SQL Server habilitam a integração com o SQL Server para aplicativos PHP por meio de extensões PHP.
 ms.custom: ''
 ms.date: 03/26/2018
@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 894361044f45d294ad19f7057c57aa741bb0d454
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486732"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680531"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Drivers da Microsoft para PHP para SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Os Drivers da Microsoft para PHP para SQL Server habilitam a integração com o SQL Server para aplicativos PHP. Os drivers são extensões para PHP que permitem a leitura e a gravação de dados do SQL Server de dentro de scripts PHP. Os drivers fornecem interfaces para acessar dados em Bancos de Dados SQL do Azure e em todas as edições do SQL Server 2005 e posteriores (incluindo Express Editions). Os drivers usam recursos PHP, incluindo fluxos PHP, para ler e gravar objetos grandes.  
+Os Drivers da Microsoft para PHP para SQL Server habilitam a integração com o SQL Server para aplicativos PHP. Os drivers são extensões para PHP que permitem a leitura e a gravação de dados do SQL Server de dentro de scripts PHP. Os drivers fornecem interfaces para acessar dados no Banco de Dados SQL do Azure e em todas as edições do SQL Server 2005 e posterior (incluindo Express Editions). Os drivers usam recursos PHP, incluindo fluxos PHP, para ler e gravar objetos grandes.  
   
 ## <a name="getting-started"></a>Introdução  
 * [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento em PHP](step-1-configure-development-environment-for-php-development.md)  

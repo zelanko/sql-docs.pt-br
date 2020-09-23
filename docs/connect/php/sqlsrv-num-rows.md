@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_num_rows | Microsoft Docs
+title: sqlsrv_num_rows
+description: Referência de API para a função sqlsrv_num_rows no Driver do Microsoft SQLSRV para PHP para SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3478580ae0670036e64ae6774f420485aec30ef3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52366287eb25cb9932e8e80c97abc1c97ddbbcae
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926416"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435129"
 ---
 # <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,10 +33,10 @@ Informa o número de linhas em um conjunto de resultados.
 sqlsrv_num_rows( resource $stmt )  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$stmt*: o conjunto de resultados cujas linhas serão contadas.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 **false** se houve um erro ao calcular o número de linhas. Caso contrário, representa o número de linhas no conjunto de resultados.  
   
 ## <a name="remarks"></a>Comentários  

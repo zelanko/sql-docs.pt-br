@@ -1,4 +1,5 @@
 ---
+description: Conceder acesso ao usuário a um servidor de relatório
 title: Conceder acesso ao usuário a um servidor de relatório | Microsoft Docs
 ms.date: 05/6/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0eb38550a0fc9e395b651783af4d449626de1d63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373882"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Conceder acesso ao usuário a um servidor de relatório
 
@@ -61,7 +62,7 @@ Revise a lista a seguir antes de adicionar usuários a um servidor de relatório
 
 4. Selecione **Adicionar grupo ou usuário**.
 
-5. Em **Grupo ou usuário**, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>.
+5. Em **Grupo ou usuário**, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<conta\>.
 
     > [!NOTE]
     > Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.
@@ -87,7 +88,7 @@ Revise a lista a seguir antes de adicionar usuários a um servidor de relatório
     > [!NOTE]
     > Se um item atualmente herdar a segurança de um item pai, selecione **Personalizar segurança** na barra de ferramentas para alterar as configurações de segurança. Em seguida, selecione **Adicionar grupo ou usuário**.
 
-6. Em **Grupo ou usuário**, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<account\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.
+6. Em **Grupo ou usuário**, insira uma conta de usuário ou grupo de domínio do Windows neste formato: \<domain>\\<conta\>. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.
 
 7. Selecione uma ou mais definições de função que descrevem como o usuário ou grupo deve acessar o item e, em seguida, selecione **OK**.
 

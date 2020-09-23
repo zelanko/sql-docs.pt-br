@@ -1,6 +1,6 @@
 ---
-title: Tipo de conexão do SQL Azure | Microsoft Docs
-description: A extensão de dados para conexão do SQL Azure dá suporte a parâmetros com vários valores, agregações de servidor e credenciais gerenciadas separadamente da cadeia de conexão.
+title: Tipo de conexão do SQL do Azure | Microsoft Docs
+description: A extensão de dados para conexão do SQL do Azure dá suporte a parâmetros com vários valores, agregações de servidor e credenciais gerenciadas separadamente da cadeia de conexão.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -9,14 +9,14 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081765"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988467"
 ---
-# <a name="sql-azure-connection-type-ssrs"></a>Tipo de conexão do SQL Azure (SSRS)
+# <a name="azure-sql-connection-type-ssrs"></a>Tipo de conexão do SQL do Azure (SSRS)
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] é um banco de dados relacional hospedado baseado em nuvem, baseado nas tecnologias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para incluir dados de um cubo do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no seu relatório, é necessário ter um conjunto de dados baseado na fonte de dados do relatório do tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Esse tipo de fonte de dados interna é baseado na extensão de dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Use esse tipo de fonte de dados para se conectar a e recuperar dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

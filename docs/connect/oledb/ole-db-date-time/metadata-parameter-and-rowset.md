@@ -1,6 +1,6 @@
 ---
 title: Parâmetro e metadados de conjunto de linhas (driver do OLE DB)
-description: Parâmetro e metadados de conjunto de linhas
+description: Saiba mais sobre o tipo de DBBINDING e membros de tipo relacionados aos aprimoramentos de data e hora do Driver do OLE DB para SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a3356134c542cf90c194924a8fbfc44b357c7123
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5f48366cc887d2c06c3f230cf6bf8f84d767b798
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244878"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862021"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadados – parâmetro e conjunto de linhas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,7 +1,8 @@
 ---
-title: Registro de atividades em log | Microsoft Docs
+title: Log de atividades
+description: Saiba como configurar diferentes combinações de opções de log ao usar os Drivers da Microsoft para PHP para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5486f32894b04a211be26bd7c55d58294ad36367
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922853"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680541"
 ---
 # <a name="logging-activity"></a>Registrando atividades em log
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** pode ser um dos seguintes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |---------|---------------|  
 |0|O registro em log está desabilitado (é o padrão se nada estiver definido).|  
 |-1|Especifica que erros, avisos e notificações são registrados em log.|  
@@ -61,10 +62,10 @@ Você pode ativar o registro em log usando a função [sqlsrv_configure](../../c
   
 A tabela a seguir descreve as constantes que podem ser usadas como o valor para a configuração **LogSubsystems** :  
   
-|Valor (inteiro equivalente entre parênteses)|DESCRIÇÃO|  
+|Valor (inteiro equivalente entre parênteses)|Descrição|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Ativa o registro em log de todos os subsistemas.|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|Desativa o registro em log. Esse é o padrão.|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|Desativa o registro em log. Este é o padrão.|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|Ativa o registro em log da atividade de inicialização.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Ativa o registro em log da atividade de conexão.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Ativa o registro em log da atividade de instrução.|  
@@ -92,10 +93,10 @@ Depois de ativar o registro em log, você deve especificar o que registrar. Voc�
   
 A tabela a seguir descreve as constantes que podem ser usadas como o valor para a configuração **LogSeverity** :  
   
-|Valor (inteiro equivalente entre parênteses)|DESCRIÇÃO|  
+|Valor (inteiro equivalente entre parênteses)|Descrição|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que erros, avisos e notificações são registrados em log.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros serão registrados em log. Esse é o padrão.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros serão registrados em log. Este é o padrão.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Especifica que os avisos serão registrados em log.|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que as notificações serão registradas em log.|  
   

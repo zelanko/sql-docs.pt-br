@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
+ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286460"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282389"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Página Propriedades Avançadas do Servidor – Servidor de Relatórios do Power BI e Reporting Services
 
@@ -51,7 +51,17 @@ Para abrir essa página, inicie o SQL Server Management Studio, conecte-se a uma
 
 (Servidor de Relatórios do Power BI [janeiro de 2020], somente Reporting Services 2019 e posteriores)
 
-Define valores de cabeçalho para todas as URLs correspondentes ao padrão regex especificado. Os usuários podem atualizar o valor CustomHeaders com um XML válido para definir valores de cabeçalho para as URLs de solicitação selecionadas. Os administradores podem adicionar qualquer número de cabeçalhos ao XML. Por padrão, não há nenhum cabeçalho personalizado e o valor está em branco. 
+Define valores de cabeçalho para todas as URLs correspondentes ao padrão regex especificado. Os usuários podem atualizar o valor CustomHeaders com um XML válido para definir valores de cabeçalho para as URLs de solicitação selecionadas. Os administradores podem adicionar qualquer número de cabeçalhos ao XML. Por padrão, no Reporting Services 2019, não há cabeçalho personalizado e o valor está em branco. Por padrão, desde janeiro de 2020, o valor no Servidor de Relatórios do Power BI é:
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > Muitos cabeçalhos podem afetar o desempenho. 
@@ -184,7 +194,7 @@ O nome da função usado ao criar políticas de segurança nas pastas de usuári
 (Somente Servidor de Relatórios do Power BI) Define o endereço da sua instância de servidor do Office Online para exibir pastas de trabalho do Excel.
 
 ### <a name="rdlxreporttimetout"></a>RDLXReportTimetout
-Valor de tempo limite de processamento de relatório RDLX *(relatórios do Power View em um servidor SharePoint)* , em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, relatórios no namespace não expirarão durante o processamento. O valor padrão é **1800**.
+Valor de tempo limite de processamento de relatório RDLX *(relatórios do Power View em um servidor SharePoint)*, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, relatórios no namespace não expirarão durante o processamento. O valor padrão é **1800**.
 
 ### <a name="requireintune"></a>RequireIntune
 (Servidor de Relatórios do Power BI, somente Reporting Services 2017 e posteriores) Solicita que o Intune acesse os relatórios da organização por meio do aplicativo móvel do Power BI. *O padrão é False.*

@@ -2,7 +2,7 @@
 title: Introdução aos controles do Visualizador de Relatórios
 description: Os controles do Visualizador de Relatórios podem ser usados para integrar relatórios de RDL do Reporting Services a aplicativos de WebForms e WinForms.
 ms.custom: seo-lt-2019
-ms.date: 06/03/2020
+ms.date: 09/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943189"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569956"
 ---
-# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrando o Reporting Services usando os controles do Visualizador de Relatórios – Introdução
+# <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrar o Reporting Services usando os controles do Visualizador de Relatórios – Introdução
 
 Os controles do Visualizador de Relatórios podem ser usados para integrar relatórios de RDL do Reporting Services a aplicativos de WebForms e WinForms. Para obter informações detalhadas sobre atualizações recentes, consulte o [log de mudanças](changelog.md).
 
-## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>Adicionando o controle do Visualizador de Relatórios a um novo projeto Web
+## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>Adicionar o controle do Visualizador de Relatórios a um novo projeto Web
 
 1. Crie um novo **Site ASP.NET vazio** ou abra um projeto ASP.NET existente.
 
-    ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    Você pode usar o .NET Framework 4.6 ou qualquer versão mais recente.
+
+    ![Captura de tela da criação de um Site ASP.NET Vazio.](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project-4-6.png)
 
 2. Instale o pacote NuGet do controle do Visualizador de Relatórios por meio do **Console do gerenciador de pacotes NuGet**.
 
@@ -73,7 +75,7 @@ A página final deve ser semelhante à mostrada a seguir.
 </html>
 ```
 
-## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>Atualizando um projeto existente para usar o controle do Visualizador de Relatórios
+## <a name="update-an-existing-project-to-use-the-report-viewer-control"></a>Atualizar um projeto existente para usar o controle do Visualizador de Relatórios
 
 Certifique-se de atualizar todas as referências de assembly para a versão *15.0.0.0*, incluindo o web.config do projeto e todas as páginas .aspx que referenciam o controle do visualizador.
 
@@ -87,7 +89,7 @@ Certifique-se de atualizar todas as referências de assembly para a versão *15.
   -->
 <configuration>
   <system.web>
-    <compilation debug="true" targetFramework="4.5.2">
+    <compilation debug="true" targetFramework="4.6">
       <assemblies>
         <!-- All assemblies updated to version 15.0.0.0. -->
         <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
@@ -104,7 +106,7 @@ Certifique-se de atualizar todas as referências de assembly para a versão *15.
           type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
-    <httpRuntime targetFramework="4.5.2"/>
+    <httpRuntime targetFramework="4.6"/>
     <httpHandlers>
       <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
@@ -135,18 +137,20 @@ Certifique-se de atualizar todas as referências de assembly para a versão *15.
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>Adicionando o controle do Visualizador de Relatórios a um novo projeto do Windows Forms
+## <a name="add-the-report-viewer-control-to-a-new-windows-forms-project"></a>Adicionar o controle do Visualizador de Relatórios a um novo projeto do Windows Forms
 
 1. Crie um novo **Aplicativo do Windows Forms** ou abra um projeto existente.
 
-    ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    Você pode usar o .NET Framework 4.6 ou qualquer versão mais recente.
+    
+    ![Captura de tela da criação de um Aplicativo Windows Forms.](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project-4-6.png)
 
 2. Instale o pacote NuGet do controle do Visualizador de Relatórios por meio do **Console do gerenciador de pacotes NuGet**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Adicione um novo controle do código ou [adicione o controle à caixa de ferramentas](#adding-control-to-visual-studio-toolbar).
+3. Adicione um novo controle do código ou [adicione o controle à caixa de ferramentas](#add-the-control-to-visual-studio-toolbar).
 
     ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -174,7 +178,7 @@ Certifique-se de atualizar todas as referências de assembly para a versão *15.
 
 Se for definir a altura do controle do visualizador como 100%, o elemento pai precisará ter uma altura definida ou todos os ancestrais precisarão ter alturas de percentual.
 
-### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>Definir a altura de todos os ancestrais como 100%
+### <a name="set-the-height-of-all-the-ancestors-to-100"></a>Definir a altura de todos os ancestrais como 100%
 
 ```html
 <!DOCTYPE html>
@@ -199,7 +203,7 @@ Se for definir a altura do controle do visualizador como 100%, o elemento pai pr
 </html>
 ```
 
-### <a name="setting-the-parents-height-attribute"></a>Definir o atributo de altura do pai
+### <a name="set-the-parents-height-attribute"></a>Definir o atributo de altura do pai
 
 Para obter mais informações sobre tamanhos de percentual do visor, consulte [Tamanhos de percentual do visor](http://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
@@ -221,7 +225,7 @@ Para obter mais informações sobre tamanhos de percentual do visor, consulte [T
 </html>
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Adicionando um controle à barra de ferramentas do Visual Studio
+## <a name="add-the-control-to-visual-studio-toolbar"></a>Adicionar o controle à barra de ferramentas do Visual Studio
 
 O controle do Visualizador de Relatórios agora é fornecido como um pacote NuGet e não é exibido na caixa de ferramentas do Visual Studio por padrão. É possível adicionar o controle à caixa de ferramentas manualmente.
 
@@ -229,15 +233,15 @@ O controle do Visualizador de Relatórios agora é fornecido como um pacote NuGe
 
 2. Remova o controle do Visualizador de Relatórios listado na caixa de ferramentas.
 
-    ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![Captura de tela da exclusão do controle ReportViewer.](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
 3. Clique com o botão direito do mouse em qualquer lugar da caixa de ferramentas e, em seguida, selecione **Escolher Itens…** .
 
-    ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![Captura de tela da opção Escolher itens na caixa de ferramentas.](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
 4. Nos **Componentes do .NET Framework**, selecione **Procurar**.
 
-    ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![Captura de tela do botão Procurar na caixa de diálogo Componentes do .NET Framework.](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
 5. Selecione o **Microsoft.ReportViewer.WinForms.dll** ou o **Microsoft.ReportViewer.WebForms.dll** do pacote NuGet instalado.
 
@@ -246,7 +250,7 @@ O controle do Visualizador de Relatórios agora é fornecido como um pacote NuGe
 
 6. O novo controle deverá ser exibido na caixa de ferramentas. Em seguida, você poderá movê-lo para outra guia na caixa de ferramentas, se desejar.
 
-    ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![Captura de tela do novo controle ReportViewer na caixa de ferramentas.](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
 ## <a name="common-issues"></a>Problemas comuns
     
@@ -264,12 +268,11 @@ Estes são os links para artigos do site NuGet.org sobre as versões WebForm e W
 - Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
 
 
-## <a name="feedback"></a>Comentários
+## <a name="forum-feedback"></a>Comentários do fórum
 
-Informe a equipe sobre problemas nos [Fóruns do Reporting Services](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
+Informe a equipe sobre problemas nos [Fóruns do Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html).
 
 ## <a name="see-also"></a>Confira também
 
 [Coleta de dados no controle do Visualizador de Relatórios](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-Mais perguntas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
 

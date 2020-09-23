@@ -1,7 +1,7 @@
 ---
 title: 'Gerenciar: Notebooks do Azure Data Studio'
 titleSuffix: SQL Server Big Data Clusters
-description: Use um notebook do Azure Data Studio para gerenciar e solucionar problemas de um cluster de Big Data.
+description: Use um notebook no Azure Data Studio para gerenciar e solucionar problemas de Clusters de Big Data do SQL Server.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5a1f176cba1212b305f4f2f3b2031e7882d692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660399"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778525"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Gerenciar Clusters de Big Data do SQL Server com notebooks do Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "85660399"
 
 O [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fornece uma extensão para o Azure Data Studio que inclui notebooks. Um notebook fornece a documentação e o código que você pode usar no Azure Data Studio para gerenciar Clusters de Big Data para o SQL Server 2019.
 
-Originalmente implementados como um projeto de open-source, os [notebooks](../azure-data-studio/notebooks-guidance.md) foram incorporados no [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). Você pode usar markdown de texto nas células de texto e um dos kernels disponíveis para escrever código nas células de código.
+Originalmente implementados como um projeto de open-source, os [notebooks](../azure-data-studio/notebooks-guidance.md) foram incorporados no [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Você pode usar markdown de texto nas células de texto e um dos kernels disponíveis para escrever código nas células de código.
 
 Você pode usar notebooks para implantar clusters de Big Data para o [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

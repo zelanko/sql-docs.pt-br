@@ -7,26 +7,26 @@ ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: ulvii
-ms.author: v-ulibra
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886273"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807018"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial de instalação de Linux e macOS para Drivers da Microsoft para PHP para SQL Server
-As instruções a seguir consideram um ambiente limpo e mostram como instalar o PHP 7.x, o driver ODBC da Microsoft, o servidor Web do Apache e os Microsoft Drivers for PHP for SQL Server no Ubuntu 16.04, 18.04 e 19.10, no RedHat 7 e 8, no Debian 8, 9 e 10, no Suse 12 e 15, no Alpine 3.11 e no macOS 10.13, 10.14 e 10.15. Essas instruções aconselham a instalar os drivers usando PECL, mas também é possível baixar os binários predefinidos na página de projetos do GitHub [Drivers da Microsoft para PHP e para SQL Server](https://github.com/Microsoft/msphpsql/releases) e instalá-los seguindo as instruções em [Como carregar os Drivers da Microsoft para PHP e para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obter uma explicação do carregamento da extensão e por que não adicionamos as extensões ao php.ini, confira a seção sobre [carregar os drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+As instruções a seguir pressupõem a existência de um ambiente limpo e mostram como instalar o PHP 7.x, o Microsoft ODBC Driver, o servidor Web Apache e os Drivers da Microsoft para PHP para SQL Server no Ubuntu 16.04, 18.04 e 20.04, no Red Hat 7 e 8, no Debian 8, 9 e 10, no SUSE 12 e 15, no Alpine 3.11 e no macOS 10.13, 10.14 e 10.15. Essas instruções aconselham a instalar os drivers usando PECL, mas também é possível baixar os binários predefinidos na página de projetos do GitHub [Drivers da Microsoft para PHP e para SQL Server](https://github.com/Microsoft/msphpsql/releases) e instalá-los seguindo as instruções em [Como carregar os Drivers da Microsoft para PHP e para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obter uma explicação do carregamento da extensão e por que não adicionamos as extensões ao php.ini, confira a seção sobre [carregar os drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 Estas instruções instalam o PHP 7.4 por padrão usando `pecl install`. Talvez seja necessário executar primeiro `pecl channel-update pecl.php.net`. Observe que algumas distribuições compatíveis com Linux têm como padrão o PHP 7.1 ou anterior que não é compatível com a versão mais recente dos drivers PHP para SQL Server. Confira as observações no início de cada seção para instalar o PHP 7.2 ou 7.3.
 
 As instruções para instalar o Gerenciador de Processos do PHP FastCGI e o PHP-FPM no Ubuntu também estão incluídas. Isso será necessário caso esteja usando o servidor Web nginx em vez do Apache.
 
-## <a name="contents-of-this-page"></a>Conteúdo desta página:
+## <a name="contents-of-this-page"></a>Conteúdo desta página
 
-- [Como instalar os drivers no Ubuntu 16.04, 18.04 e 19.10](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [Como instalar os drivers no Ubuntu 16.04, 18.04 e 20.04](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [Como instalar os drivers com PHP-FPM no Ubuntu](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [Como instalar os drivers no Red Hat 7 e 8](#installing-the-drivers-on-red-hat-7-and-8)
 - [Como instalar os drivers no Debian 8, 9 e 10](#installing-the-drivers-on-debian-8-9-and-10)
@@ -34,7 +34,7 @@ As instruções para instalar o Gerenciador de Processos do PHP FastCGI e o PHP-
 - [Como instalar os drivers no Alpine 3.11](#installing-the-drivers-on-alpine-311)
 - [Como instalar os drivers no macOS High Sierra, no Mojave e no Catalina](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1910"></a>Como instalar os drivers no Ubuntu 16.04, 18.04 e 19.10
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>Como instalar os drivers no Ubuntu 16.04, 18.04 e 20.04
 
 > [!NOTE]
 > Para instalar o PHP 7.2 ou 7.3, substitua o 7.4 por 7.2 ou por 7.3 nos comandos a seguir.

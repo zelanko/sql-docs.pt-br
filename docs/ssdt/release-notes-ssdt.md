@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 212cf0c286ec0f55a76d16c27a66fac6a6f1f5e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003949"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195122"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas sobre a versão para o SSDT (SQL Server Data Tools)
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6,&nbsp; SSDT para VS 2017
+
+_Lançamento:_ &nbsp; 31 de agosto de 2020  
+_Número de build:_ &nbsp; 14.0.16222.0  
+_SSDT para Visual Studio 2017._
+
+### <a name="whats-new"></a>Novidades
+
+| Novo item | Detalhes |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Correção de um problema em que o botão **Visualização** não funciona na origem do OLE DB ao se conectar a uma fonte de dados do SSAS (SQL Server Analysis Services). |
+| Integration Services (SSIS) | Corrigido um problema em que remover uma entrada ou saída de um componente de fluxo de dados antes de remover o caminho associado pode causar um erro COMException. |
+| Integration Services (SSIS) | Corrigido um problema em que a tarefa de processamento do SSAS não pode se conectar a um workspace do Power BI e atualizar seus modelos. |
+| Integration Services (SSIS) | Corrigido um problema em que o Visual Studio trava ao depurar a tarefa/componente de script ao usar o runtime x64 e ter o SQL Server 2017 como destino. |
+| Integration Services (SSIS) | Corrigido um problema em que o assistente de importação/exportação falha ao selecionar um driver do MySQL em alguns ambientes. |
+| Integration Services (SSIS) | Corrigidos alguns problemas relacionados à acessibilidade e ao alto DPI. |
+| Integration Services (SSIS) | Permitir que os usuários ignorem a validação ao abrir pacotes, o que melhora o desempenho. Para obter mais informações, confira [Acelerar a abertura de pacotes do SSIS no SSDT](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099). |
+| Integration Services (SSIS) | Bloquear a implantação para o Azure-SSIS quando a versão do servidor de destino não for SQL Server 2017. |
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+| Problema conhecido | Detalhes |
+| :---------- | :------ |
+| A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. | Esse problema se aplica somente à depuração. As operações de salvar, implantar e executar por meio do DTExec.exe ou do catálogo do SSIS não são afetadas. |
+| O Power Query Source pode não ser compatível com OData v4 quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
+| O Power Query Source pode não ser compatível com o uso de ODBC para se conectar ao Oracle quando SSIS e SSAS estiverem instalados na mesma instância do Visual Studio. | &nbsp; |
+| A Fonte do Power Query não está localizada. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1595nbsp-ssdt-for-vs-2017"></a>15.9.5,&nbsp; SSDT para VS 2017
 
@@ -640,7 +669,7 @@ _SSDT para Visual Studio 2015._
 
 **Projetos do AS**
 - Correções de desempenho significativas feitas para melhorar a experiência ao confirmar as alterações de medida DAX e outras edições no modelo.
-- Correção de diversos problemas com a integração do Power Query em projetos do Analysis Services usando modelos de tabela de nível de compatibilidade 1400.
+- Correção de diversos problemas com a integração do Power Query em projetos do Analysis Services usando modelos tabulares de nível de compatibilidade 1400.
 - Correção de um problema em projetos multidimensionais no VS2017 somente quando o designer do Design Aggregation não conseguir carregar.
 - Correção de um problema ao arrastar um item no diagrama DSV multidimensional do Analysis Services que poderia causar falha no 2017 VS.
 - Correção de um problema em projetos AS em que a caixa de diálogo Implantar nem sempre estava em primeiro plano na parte superior do Visual Studio.
@@ -989,7 +1018,7 @@ _Para o SQL Server 2016._
 **Atualizações e correções**
 * **Ferramentas de banco de dados:**
     * De agora em diante o SSDT nunca desabilitará a TDE (Transparent Data Encryption) em um banco de dados. Anteriormente, uma vez que a opção de criptografia padrão nas configurações do banco de dados do projeto era desabilitada, a criptografia seria desligada. Com essa correção, a criptografia pode ser habilitada, mas nunca desabilitada durante a publicação. 
-    * Aumento na contagem de novas tentativas e na resiliência para conexões de BD do SQL do Azure durante a conexão inicial.
+    * Aumento na contagem de novas tentativas e na resiliência para conexões de Banco de Dados SQL do Azure durante a conexão inicial.
     * Se o grupo de arquivos padrão não for PRIMARY, ocorrerá falha ao importar/publicar no Azure V12. Agora, essa configuração é ignorada durante a publicação.
     * Foi corrigido um problema em que ao exportar um banco de dados com um objeto com o Identificador entre Aspas ativado, a validação de exportação poderia falhar em alguns casos.
     * Foi corrigido um problema em que a opção TEXTIMAGE_ON era incorretamente adicionada para criações de tabela Hekaton, nas quais isso não é permitido.

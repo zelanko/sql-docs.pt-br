@@ -1,22 +1,22 @@
 ---
-title: Formatação de cadeias de caracteres decimais e valores monetários (driver SQLSRV) | Microsoft Docs
+title: Formatação de cadeias de caracteres decimais e valores monetários (driver SQLSRV)
+description: Saiba como usar as opções FormatDecimals e DecimalPlaces para formatar valores decimais ou monetários ao usar o Driver do Microsoft SQLSRV para PHP para SQL Server.
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265141"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680721"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formatação de cadeias de caracteres decimais e valores monetários (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

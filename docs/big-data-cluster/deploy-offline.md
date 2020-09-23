@@ -1,7 +1,7 @@
 ---
 title: Implantação offline
 titleSuffix: SQL Server big data clusters
-description: Saiba como executar uma implantação offline de um cluster de Big Data do SQL Server.
+description: Saiba como executar uma implantação offline de um Cluster de Big Data do SQL Server 2019 e como carregar imagens de contêiner para um repositório privado.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
+ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423155"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89875555"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Executar uma implantação offline de um cluster de Big Data do SQL Server
 
@@ -80,7 +80,6 @@ As seguintes imagens de contêiner de cluster de Big Data são necessárias para
 - **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**

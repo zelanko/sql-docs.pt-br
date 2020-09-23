@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
+ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244319"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468341"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Lição 1: Criar um projeto do Servidor de Relatório (Reporting Services)
 
@@ -36,7 +36,8 @@ Criar relatórios com o Designer de Relatórios significa que você cria um proj
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > No VS, se você não vir o Reporting Services na coluna esquerda, adicione o Designer de Relatórios ao instalar a carga de trabalho do SSDT. No menu **Ferramentas**, selecione **Obter Ferramentas e Funcionalidades...**  e selecione **SQL Server Data Tools** nas cargas de trabalho exibidas. Se você não vir os objetos de serviços de relatórios na coluna central, adicione as extensões do Reporting Services. No menu **Ferramentas**, selecione **Extensões e Atualizações** > **Online**. Na coluna central, selecione **Projetos do Microsoft Reporting Services** > **Baixar** nas extensões exibidas. Para SSDT, confira [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
+    > No VS, se você não vir o Reporting Services na coluna esquerda, adicione o Designer de Relatórios ao instalar a carga de trabalho do SSDT. No menu **Ferramentas**, selecione **Obter Ferramentas e Funcionalidades...**  e selecione **SQL Server Data Tools** nas cargas de trabalho exibidas. Se você não vir os objetos de serviços de relatórios na coluna central, adicione as extensões do Reporting Services. No menu **Ferramentas**, selecione **Extensões e Atualizações** > **Online**. Na coluna central, selecione **Projetos do Microsoft Reporting Services** > **Baixar** nas extensões exibidas. Para SSDT, confira [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md). No Visual Studio 2019, se as etapas anteriores não funcionaram, tente instalar a [extensão do Projeto do Microsoft Reporting Service](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
+
 
 3. Selecione o ícone **Projeto do Servidor de Relatório** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;na coluna central da caixa de diálogo **Novo Projeto**.
 
@@ -68,4 +69,4 @@ Até agora, você criou o projeto de relatório do Tutorial e o relatório Pedid
 - Criar um conjunto de dados a partir da fonte de dados.
 - Criar e formatar o layout do relatório.
 
-Continue com a [Lição 2: Especificar informações sobre conexão &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
+Continue na [Lição 2: especificar informações da conexão &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
