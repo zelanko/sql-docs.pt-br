@@ -21,12 +21,12 @@ ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b11654f4fe05491dbbe2add54ba4539de45e24cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db662ad2feeb4b41f56c549f9ff8e1f8c1c94752
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459788"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114816"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) alfa
 ## <a name="examples"></a>Exemplos  
 A primeira parte deste exemplo compara os valores `SOUNDEX` de duas cadeias de caracteres muito similares. Para uma ordenação Latin1_General, `DIFFERENCE` retorna um valor `4`. A segunda parte do exemplo compara os valores `SOUNDEX` de duas cadeias de caracteres muito diferentes e, para uma ordenação Latin1_General, `DIFFERENCE` retorna um valor `0`.  
   
-```  
+```sql  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
 SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
 GO  
