@@ -1,5 +1,6 @@
 ---
-title: 'Como fazer: Enviar dados como um fluxo | Microsoft Docs'
+title: Como enviar dados como um fluxo
+description: Saiba como usar fluxos para enviar objetos grandes ao banco de dados usando os Drivers SQLSRV e PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2d986336a369698b107b2437beae322d91508fb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915942"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411431"
 ---
-# <a name="how-to-send-data-as-a-stream"></a>Como fazer: Enviar dados como um fluxo
+# <a name="how-to-send-data-as-a-stream"></a>Como enviar dados como um fluxo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 O [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aproveita os fluxos PHP para enviar objetos grandes para o servidor. Os exemplos neste tópico demonstram como enviar dados como fluxo. O primeiro exemplo usa o driver SQLSRV para demonstrar o comportamento padrão, que é enviar todos os dados do fluxo no momento da execução da consulta. O segundo exemplo usa o driver SQLSRV para demonstrar como enviar até oito quilobytes (8 KB) de fluxo de dados por vez para o servidor.  

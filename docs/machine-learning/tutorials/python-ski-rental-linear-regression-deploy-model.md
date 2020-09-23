@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de Python para prever os aluguéis de esqui em um banco de dados com o aprendizado de máquina do SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 08/06/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 030a172d35800becce17f804f67973368581fc05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07c62ab016f7db61d3619b19bb194bee1109651e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730489"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173400"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Tutorial do Python: implantar um modelo de regressão linear com o aprendizado de máquina do SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de regressão linear desenvolvido em Python em um banco de dados do SQL Server que usa os Serviços de Machine Learning ou os Clusters de Big Data.
@@ -50,12 +50,12 @@ Na [parte três](python-ski-rental-linear-regression-train-model.md), você apre
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>Criar o procedimento armazenado que gera o modelo
 
-Agora, usando os scripts Python que você desenvolveu, crie um procedimento armazenado **generate_rental_py_model** que treina e gera o modelo de regressão linear usando LinearRegression da Scikit-learn.
+Agora, usando os scripts Python que você desenvolveu, crie o procedimento armazenado **generate_rental_py_model** para treinar e gerar o modelo de regressão linear usando LinearRegression de scikit-learn.
 
 Execute a instrução do T-SQL a seguir no Azure Data Studio para criar o procedimento armazenado para treinar o modelo.
 
 ```sql
--- Stored procedure that trains and generates a Python model using the rental_data and a decision tree algorithm
+-- Stored procedure that trains and generates a Python model using the rental_data and a linear regression algorithm
 DROP PROCEDURE IF EXISTS generate_rental_py_model;
 go
 CREATE PROCEDURE generate_rental_py_model (@trained_model varbinary(max) OUTPUT)

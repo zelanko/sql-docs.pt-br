@@ -1,5 +1,6 @@
 ---
-title: Noções básicas sobre o controle de simultaneidade | Microsoft Docs
+title: Entendendo o controle de simultaneidade
+description: Saiba mais sobre o controle de simultaneidade e como preservar a integridade do banco de dados ao desenvolver um aplicativo de vários usuários com o JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 520abf20b52f15458ac36d7a2e617a04970eb66a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925339"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435303"
 ---
 # <a name="understanding-concurrency-control"></a>Entendendo o controle de simultaneidade
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80925339"
 ## <a name="remarks"></a>Comentários  
  O driver JDBC oferece suporte aos seguintes tipos de simultaneidade:  
   
-|Tipo de simultaneidade|Características|Bloqueios de linha|DESCRIÇÃO|  
+|Tipo de simultaneidade|Características|Bloqueios de linha|Descrição|  
 |----------------------|---------------------|---------------|-----------------|  
 |CONCUR_READ_ONLY|Somente leitura|Não|Não são permitidas atualizações pelo cursor e não é mantido nenhum bloqueio nas linhas que compõem o conjunto de resultados.|  
 |CONCUR_UPDATABLE|Gravação de leitura otimista|Não|O banco de dados assumir contenção de linha é improvável, mas possível. A integridade de linha é verificada com uma comparação de carimbo de data e hora.|  
@@ -39,7 +40,7 @@ ms.locfileid: "80925339"
 ## <a name="result-sets-that-are-not-updateable"></a>Conjuntos de resultados que não são atualizáveis  
  Um conjunto de resultados atualizável é um conjunto de resultados no qual linhas podem ser inseridas, atualizadas e excluídas. Nos casos seguintes, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode criar um cursor atualizável. A exceção gerada é "O conjunto de resultados não é atualizável".  
   
-|Causa|DESCRIÇÃO|Medida|  
+|Causa|Descrição|Medida|  
 |-----------|-----------------|------------|  
 |A instrução não é criada usando a sintaxe do JDBC 2.0 (ou posterior)|O JDBC 2.0 introduziu novos métodos para criar instruções. Se a sintaxe do JDBC 1.0 for usada, o conjunto de resultados seguirá o padrão somente leitura.|Especifique o tipo de conjunto de resultados e simultaneidade ao criar a instrução.|  
 |A instrução é criada usando TYPE_SCROLL_INSENSITIVE|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um cursor de instantâneo estático. Ele é desconectado das linhas de tabela subjacentes para ajudar a proteger o cursor de atualizações de linha feitas por outros usuários.|Use TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC ou TYPE_FORWARD_ONLY com CONCUR_UPDATABLE para evitar criar um cursor estático.|  

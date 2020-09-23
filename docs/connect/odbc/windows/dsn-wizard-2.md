@@ -1,7 +1,8 @@
 ---
+description: Tela 2 do Assistente de Fonte de Dados (ODBC Driver for SQL Server)
 title: Tela 2 do Assistente de Fonte de Dados (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: e2e6b323428b1ad8ae188ea65bf10382651d3d71
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1e18939ab9d3f2e86452dd3f1847971157ca92c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462205"
 ---
 # <a name="data-source-wizard-screen-2"></a>Tela 2 do Assistente de Fonte de Dados
 
@@ -43,19 +44,23 @@ Especifica que o driver autentique-se com o SQL Server usando uma ID de logon e 
 
 ### <a name="with-active-directory-interactive-authentication"></a>Com autenticação interativa do Active Directory
 
-Especifica que o driver autentique-se com o SQL Server usando o modo interativo do Azure Active Directory, fornecendo uma ID de logon. Isso fará com que a caixa de diálogo de aviso da Autenticação do Azure apareça.
+Especifica que o driver autentique-se com o SQL Server usando o modo interativo do Azure Active Directory, fornecendo uma ID de logon. Essa opção acionará a caixa de diálogo de prompt da Autenticação do Azure.
+
+### <a name="with-managed-identity-authentication"></a>Com autenticação de Identidade Gerenciada
+
+Especifica que o driver se autentica com o SQL Server usando uma Identidade Gerenciada.
 
 ### <a name="login-id"></a>ID de Logon
 
-Especifica a ID de logon que o driver usará ao se conectar ao SQL Server se uma das opções **Com a Autenticação do SQL Server usando uma ID de logon e senha inseridos pelo usuário**, **Com a Autenticação de senha do Active Directory usando uma ID de logon e senha inseridos pelo usuário** e **Com a Autenticação interativa do Active Directory usando uma ID de logon inserida pelo usuário** estiver selecionada. Isso se aplica apenas à conexão estabelecida para determinar as configurações padrão do servidor; não se aplica às conexões seguintes feitas com o uso da fonte de dados após sua criação.
+Especifica a ID de logon que o driver usará ao se conectar ao SQL Server se uma das opções **Com a Autenticação do SQL Server usando uma ID de logon e senha inseridos pelo usuário**, **Com a Autenticação de senha do Active Directory usando uma ID de logon e senha inseridos pelo usuário** e **Com a Autenticação interativa do Active Directory usando uma ID de logon inserida pelo usuário** estiver selecionada. Se a opção **Com autenticação de Identidade Gerenciada** estiver selecionada, especifique a ID do objeto da identidade gerenciada ou deixe em branco para usar a identidade padrão. Esse campo se aplica apenas à conexão estabelecida para determinar as configurações padrão do servidor; ele não se aplica às conexões subsequentes feitas com o uso da fonte de dados após sua criação, exceto ao usar a autenticação de Identidade Gerenciada.
 
 ### <a name="password"></a>Senha
 
-Especifica a senha que o driver usará ao se conectar ao SQL Server se uma das opções **Com a Autenticação do SQL Server usando uma ID de logon e senha inseridos pelo usuário** e **Com a Autenticação de senha do Active Directory usando uma ID de logon e senha inseridos pelo usuário** estiver selecionada. Isso se aplica apenas à conexão estabelecida para determinar as configurações padrão do servidor; não se aplica às conexões seguintes feitas com o uso da nova fonte de dados.
+Especifica a senha que o driver usará ao se conectar ao SQL Server se uma das opções **Com a Autenticação do SQL Server usando uma ID de logon e senha inseridos pelo usuário** e **Com a Autenticação de senha do Active Directory usando uma ID de logon e senha inseridos pelo usuário** estiver selecionada. Esse campo se aplica apenas à conexão estabelecida para determinar as configurações padrão do servidor; ele não se aplica às conexões subsequentes feitas com o uso da nova fonte de dados.
 
 As caixas **ID de logon** e **Senha** serão desabilitadas se uma entre as opções **Com a Autenticação Integrada do Windows** e **Com a Autenticação integrada do Active Directory** estiver selecionada.
 
-### <a name="next"></a>Próximo
+### <a name="next"></a>Avançar
 
 Prossegue para a próxima tela do assistente.
 

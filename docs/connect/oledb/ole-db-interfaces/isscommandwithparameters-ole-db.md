@@ -1,6 +1,6 @@
 ---
 title: ISSCommandWithParameters (Driver do OLE DB)
-description: ISSCommandWithParameters (OLE DB)
+description: Saiba como a interface ISSCommandWithParameters dá suporte ao XML do SQL Server e aos tipos definidos pelo usuário no Driver do OLE DB para SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - ISSCommandWithParameters interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: bf289aefc600b0bf7772574af91fc43272347457
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0415e6ed7e7749f91f8654027865cfca8ab8c3f2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244217"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862149"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

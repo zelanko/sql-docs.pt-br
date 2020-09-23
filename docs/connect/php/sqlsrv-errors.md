@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_errors | Microsoft Docs
+title: sqlsrv_errors
+description: Referência da API para a função sqlsrv_errors no Driver SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ffd866d5e4493fe327dfb29b54d2fadda8cda3be
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c0922e0ec7f3072b15b61f76908116bb86f4fe04
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928212"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435189"
 ---
 # <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +55,7 @@ Independentemente da configuração, os avisos só podem ser recuperados chamand
 sqlsrv_errors( [int $errorsAndOrWarnings] )  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$errorsAndOrWarnings*[OPCIONAL]: uma constante predefinida. Esse parâmetro pode assumir um dos valores listados na tabela a seguir:  
   
 |Valor|Descrição|  
@@ -65,14 +66,14 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
   
 Se nenhum valor de parâmetro for fornecido, serão retornados os erros e avisos gerados pela última chamada para a função **sqlsrv** .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Uma **matriz** de matrizes ou **null**. Cada **matriz** na **matriz** retornada contém três pares chave-valor. A tabela a seguir lista cada função e sua descrição:  
   
 |Chave|Descrição|  
 |-------|---------------|  
 |SQLSTATE|Para erros originados no driver ODBC, o SQLSTATE retornado pelo ODBC. Para obter informações sobre valores de SQLSTATE para ODBC, consulte [Códigos de erro ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Para erros originados nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], um SQLSTATE IMSSP.<br /><br />Para avisos originados nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], um SQLSTATE 01SSP.|  
-|código|Para erros originados no SQL Server, o código de erro nativo do SQL Server.<br /><br />Para erros originados no driver ODBC, o código de erro retornado pelo ODBC.<br /><br />Para erros originados nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], o código de erro do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Para obter mais informações, consulte [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
-|message|Uma descrição do erro.|  
+|code|Para erros originados no SQL Server, o código de erro nativo do SQL Server.<br /><br />Para erros originados no driver ODBC, o código de erro retornado pelo ODBC.<br /><br />Para erros originados nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], o código de erro do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Para obter mais informações, consulte [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
+|mensagem|Uma descrição do erro.|  
   
 Os valores da matriz também podem ser acessados com as chaves numéricas 0, 1 e 2. Se nenhum erro ou aviso ocorrer, será retornado **null** .  
   

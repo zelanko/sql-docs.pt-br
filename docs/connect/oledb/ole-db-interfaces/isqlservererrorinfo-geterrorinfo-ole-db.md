@@ -1,6 +1,6 @@
 ---
 title: ISQLServerErrorInfo::GetErrorInfo (driver do OLE DB) | Microsoft Docs
-description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
+description: Saiba como o método ISQLServerErrorInfo::GetErrorInfo retorna um ponteiro para uma estrutura SSERRORINFO do Driver do OLE DB para SQL Server com detalhes de erro do SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - GetErrorInfo method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 89a6bab95fa43deb3536e25a7cb99610413b1848
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6c025b5832299867be8b611756b5e15d54109c2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244435"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860085"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,7 @@ SSERRORINFO;
  Os ponteiros nos endereços de referência da estrutura na cadeia de caracteres retornada no argumento *ppErrorStrings*.  
   
 ## <a name="see-also"></a>Consulte Também  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

@@ -15,20 +15,27 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742039"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396075"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorar assinaturas do Reporting Services
   Você pode monitorar assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da interface do usuário, do Windows PowerShell ou arquivos de log. As opções disponíveis para monitoramento dependem de qual modo de servidor de relatório está em execução.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint.|  
-  
+**[!INCLUDE[applies](../../includes/applies-md.md)]**
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo  
+    :::column-end:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint  
+    :::column-end:::
+:::row-end:::
+
  **Neste artigo:**  
   
 -   [Interface do usuário de modo nativo](#bkmk_native_mode)  
@@ -48,15 +55,15 @@ ms.locfileid: "80742039"
 |------------|-----------------|  
 |Nova assinatura|Aparece quando você cria a assinatura.|  
 |Inativo|Aparece quando uma assinatura não pode ser processada. Para saber mais, confira "Gerenciar assinaturas inativas" posteriormente neste artigo.|  
-|Concluído: \<*number*> processados de um total de \<*number*>; \<*number*> erros.|Mostra o status de uma execução de assinatura controlada por dados; essa mensagem é proveniente do Processador de Agendamento e Entrega.|  
-|\<*number*> processados|O número de notificações que o Processador de Agendamento e Entrega entregou com êxito ou que não está mais tentando entregar. Quando uma entrega controlada por dados for concluída, o número de notificações processadas deve ser igual ao número total de notificações geradas.|  
-|\<*number*> total|O número total de notificações geradas para a última entrega para a assinatura.|  
-|\<*number*> erro|O número de notificações que o Processador de Agendamento e Entrega não pôde entregar ou que não está mais tentando entregar.|  
+|Concluído: \<*number*> processado(s) de um total de \<*number*>; \<*number*> erros.|Mostra o status de uma execução de assinatura controlada por dados; essa mensagem é proveniente do Processador de Agendamento e Entrega.|  
+|\<*number*> processado(s)|O número de notificações que o Processador de Agendamento e Entrega entregou com êxito ou que não está mais tentando entregar. Quando uma entrega controlada por dados for concluída, o número de notificações processadas deve ser igual ao número total de notificações geradas.|  
+|\<*number*> no total|O número total de notificações geradas para a última entrega para a assinatura.|  
+|\<*number*> erro(s)|O número de notificações que o Processador de Agendamento e Entrega não pôde entregar ou que não está mais tentando entregar.|  
 |Falha ao enviar mensagem: falha no transporte ao se conectar ao servidor.|Indica que o servidor de relatório não se conectou ao servidor de email; essa mensagem é emitida pela extensão de entrega de email.|  
 |O arquivo \<*filename*> foi gravado em \<path>.|Indica que a entrega no local de compartilhamento de arquivos teve êxito; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
 |Erro desconhecido ao gravar o arquivo.|Indica que a entrega no local de compartilhamento de arquivos não teve êxito; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
 |Falha ao conectar-se à pasta de destino, \<path>. Verifique se a pasta de destino ou o compartilhamento de arquivos existe.|Indica que a pasta especificada não foi localizada; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
-|O arquivo \<filename> não pôde ser gravado em \<path>. Tentando repetir.|Indica que o arquivo não pôde ser atualizado com uma versão mais recente; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
+|Não foi possível gravar o arquivo \<filename> em \<path>. Tentando repetir.|Indica que o arquivo não pôde ser atualizado com uma versão mais recente; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
 |Falha ao gravar o arquivo \<filename>: \<message>|Indica que a entrega no local de compartilhamento de arquivos não teve êxito; esta mensagem é emitida pela extensão de entrega do compartilhamento de arquivos.|  
 |\<custom status messages>|Mensagens de status sobre êxito e falha de entrega, fornecidas pelas extensões de entrega. Se você estiver usando uma extensão de entrega personalizada ou de terceiros, poderão ser fornecidas mensagens de status adicionais.|  
   
@@ -95,9 +102,8 @@ ms.locfileid: "80742039"
 ### <a name="sharepoint-uls-log-files"></a>Arquivos de log do SharePoint ULS  
  As informações relacionadas a assinaturas são gravadas no log do SharePoint ULS. Para obter mais informações sobre como configurar eventos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o log do ULS, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  A seguir está um exemplo de entrada de log ULS relacionado a assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-||||||||  
-|-|-|-|-|-|-|-|  
 |Data|Processo|Área|Categoria|Nível|Correlation|Mensagem|  
+|-|-|-|-|-|-|-|  
 |5/21/2019 14:34:06:15|Pool de Aplicativos: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensão de email do servidor de relatório|Inesperado|(vazio)|**Erro ao enviar email.** Exceção: System.Net.Mail.SmtpException: Caixa de correio não disponível. A resposta do servidor foi: 5.7.1 O cliente não tem permissões para enviar como esse remetente no System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) em System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) em System.Net.Mail.SmtpClient.Send(MailMessage message) em Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Use o PowerShell para monitorar assinaturas  

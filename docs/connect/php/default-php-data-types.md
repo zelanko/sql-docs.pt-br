@@ -1,7 +1,8 @@
 ---
-title: Tipos de Dados PHP padrão | Microsoft Docs
+title: Tipos de dados PHP padrão
+description: Este tópico lista todos os tipos de dados PHP padrão com os tipos de dados do SQL Server correspondentes ao usar o Driver SQLSRV da Microsoft para PHP para SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1e1cf91baf80fd6298eaaca9c9e12a0b5858d9f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928024"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680783"
 ---
 # <a name="default-php-data-types"></a>Tipos de dados padrão do PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ Quando dados são retornados usando o driver PDO_SQLSRV, o tipo de dados é int 
   
 O restante deste tópico aborda os tipos de dados padrão usando o driver SQLSRV.  
   
-A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está sendo recuperado do servidor), o tipo de dados padrão do PHP (o tipo de dados no qual os dados são convertidos) e a codificação padrão para fluxos e cadeias de caracteres. Para obter detalhes sobre como especificar tipos de dados ao recuperar dados do servidor, confira [Como especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md).  
+A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está sendo recuperado do servidor), o tipo de dados padrão do PHP (o tipo de dados no qual os dados são convertidos) e a codificação padrão para fluxos e cadeias de caracteres. Para obter detalhes sobre como especificar tipos de dados ao recuperar dados do servidor, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 |Tipo do SQL Server|Tipo padrão do PHP|Codificação padrão|  
 |-------------------|--------------------|--------------------|  
@@ -77,7 +78,7 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
   
 3.  Os dados são retornados do servidor como um fluxo de bytes brutos, sem codificação ou conversão.  
 
-4.  Tipos de data e hora podem ser recuperados como cadeias de caracteres. Para obter mais informações, confira [Como recuperar um tipo de data e hora como cadeias de caracteres usando o driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
+4.  Tipos de data e hora podem ser recuperados como cadeias de caracteres. Para obter mais informações, consulte [Como recuperar um tipo de data e hora como cadeias de caracteres usando o driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
 
 5.  Esse é um tipo herdado que é mapeado para o tipo varbinary(max).
 

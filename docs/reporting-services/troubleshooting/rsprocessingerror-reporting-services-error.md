@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8a3ab7a079106cf009bbae82a1116a93499e0d71
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487212"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396829"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
     
 ## <a name="details"></a>Detalhes  
   
-|||  
+|Categoria|Valor|  
 |-|-|  
 |Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|rsProcessingError|  
@@ -71,7 +71,7 @@ ms.locfileid: "81487212"
   
 -   Se você estiver exibindo um relatório no servidor de relatório e estiver conectado como administrador local no servidor de relatório, poderá exibir a pilha de chamadas clicando com o botão direito do mouse na página e selecionando **Exibir Código-Fonte**. Informações adicionais são fornecidas na pilha de chamadas.  
   
--   Se você estiver conectado como um administrador local no servidor de relatórios, pesquise por `ReportProcessingException`no arquivo de log. As entradas de log contêm mais informações. Normalmente, o arquivo de log do servidor de relatório está localizado em \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+-   Se você estiver conectado como um administrador local no servidor de relatórios, pesquise por `ReportProcessingException`no arquivo de log. As entradas de log contêm mais informações. Normalmente, o arquivo de log do servidor de relatório fica localizado em \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Falha ao carregar o assembly de host de expressão  
  Assemblies personalizados devem ter uma assinatura de nome forte e o atributo AllowPartiallyTrustedCallers definido. Para obter mais informações, consulte [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) e [Understanding Security Policies](../../reporting-services/extensions/secure-development/understanding-security-policies.md).  
@@ -97,11 +97,11 @@ ms.locfileid: "81487212"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Não é possível comparar tipos de dados para um filtro  
  Em uma equação de filtro, a expressão de filtro que define o que filtrar e o valor do filtro devem ser do mesmo tipo de dados a ser comparado. Se ocorrer um dos seguintes erros, modifique a expressão do campo ou o valor do filtro de forma que os tipos de dados se correspondam:  
   
--   O processamento do *\<report item type>* para o *\<report item name>* não pode ser executado. Não é possível comparar dados dos tipos *\<type>* e *\<type>* . Verifique o tipo de dados retornado pelo *\<report item name>* .  
+-   Não é possível executar o processamento de *\<report item type>* para o *\<report item name>* . Não é possível comparar os tipos de dados *\<type>* e *\<type>* . Verifique o tipo de dados retornado pelo *\<report item name>* .  
   
 -   Falha ao avaliar o *\<property name>* .  
   
--   Falha ao avaliar o *\<property name>* . Isso referencia um campo de conjunto de dados que tem um erro: *\<error string>* .  
+-   Falha ao avaliar o *\<property name>* . Isso se refere a um campo de conjunto de dados que tem um erro: *\<error string>* .  
   
  Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -110,13 +110,13 @@ ms.locfileid: "81487212"
   
  Você também pode passar o nome de um escopo específico para uma função de agregação. O escopo pode se referir ao nome de um conjunto de dados, uma região de dados ou ao nome de um escopo superior na hierarquia de dados. Isso se aplica às seguintes mensagens:  
   
--   O ' *\<nome do item de relatório>* ' do *\<tipo de item de relatório>* tem um escopo inválido " *\<nome do escopo>* ". O escopo deve ser o escopo atual ou estar contido no escopo atual.  
+-   O *\<report item type>* " *\<report item name>* " tem um escopo inválido " *\<scope name>* ". O escopo deve ser o escopo atual ou estar contido no escopo atual.  
   
--   A expressão *\<property name>* do ' *\<report item name>* ' do *\<report item type>* tem um parâmetro de escopo que não é válido para uma função de agregação. O parâmetro de escopo deve ser definido para uma constante de cadeia de caracteres que seja igual ao nome de um grupo que a contenha, ao nome de uma região de dados que a contenha ou ao nome de um conjunto de dados.  
+-   A expressão *\<property name>* para o *\<report item type>* " *\<report item name>* " tem um parâmetro de escopo inválido para uma função de agregação. O parâmetro de escopo deve ser definido para uma constante de cadeia de caracteres que seja igual ao nome de um grupo que a contenha, ao nome de uma região de dados que a contenha ou ao nome de um conjunto de dados.  
   
  Para funções de agregação que calculam os totais de execução (**Previous**, **RunningValue**ou **RowNumber**), você pode especificar um parâmetro de escopo que seja um nome de grupo de linha ou de coluna, mas não ambos. Isso se aplica à seguinte mensagem de erro:  
   
--   As funções de agregação **Previous**, **RunningValue** ou **RowNumber** usadas nas células de dados do ' *\<report item name>* ' do *\<report item type>* referenciam escopos de agrupamento nas colunas e linhas do *\<report item type>* . Os parâmetros de escopo de todas as funções de agregação **Previous**, **RunningValue** ou **RowNumber** em um *\<report item type>* podem referenciar agrupamentos de linhas ou agrupamentos de colunas de dados, mas não ambos.  
+-   As funções de agregação **Previous**, **RunningValue** ou **RowNumber** usadas nas células de dados do *\<report item type>* " *\<report item name>* " fazem referência aos escopos de agrupamento tanto nas colunas quanto nas linhas do *\<report item type>* . Os parâmetros de escopo de todas as funções de agregação **Previous**, **RunningValue** ou **RowNumber** em um *\<report item type>* podem referenciar agrupamentos de linhas ou agrupamentos de colunas de dados, mas não ambos.  
   
  Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

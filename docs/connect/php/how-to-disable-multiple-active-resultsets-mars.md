@@ -1,7 +1,8 @@
 ---
-title: Como desabilitar MARS (vários conjuntos de resultados ativos) | Microsoft Docs
+title: Como desabilitar MARS (conjuntos de resultados ativos múltiplos)
+description: Saiba como desabilitar o suporte a Conjuntos de resultados ativos múltiplos usando os Drivers da Microsoft para PHP para SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2fb65eee416fd82ae36b020049d318a2c5d2333d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 544d64a8c81342fbb3592371098a5e2ddec60ee5
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916322"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680691"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>Como desabilitar vários conjuntos de resultados ativos (MARS)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

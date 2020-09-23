@@ -1,7 +1,8 @@
 ---
-title: PDO::lastInsertId | Microsoft Docs
+title: PDO::lastInsertId
+description: Referência da API para a função PDO::lastInsertId no Driver PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d63244d93ab8fcbf2cbc6957dc3ddfcef435bb27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 004125e217b1e2bf79ef26dc9ebffae2877890b2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919153"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646726"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,10 +30,10 @@ Retorna o identificador para a linha inserida mais recentemente em uma tabela no
 string PDO::lastInsertId ([ $name = NULL ] );  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 $*name*: uma cadeia de caracteres opcional que permite especificar um nome de sequência. 
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Se nenhum nome de sequência for fornecido, uma cadeia de caracteres do identificador da linha adicionada mais recentemente.
 Se um nome de sequência for fornecido, uma cadeia de caracteres do identificador da sequência adicionada mais recentemente.
 Se uma chamada de método falhar, será retornada uma cadeia de caracteres vazia.

@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_client_info | Microsoft Docs
+title: sqlsrv_client_info
+description: A referência de API da função sqlsrv_errors no Driver SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d17d3a49a241ee1ff042fceb3602b1d84f2cca9b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5d1ebcbe7a022d438e1e7e10c42098127496c1f7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920115"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411182"
 ---
 # <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,15 +36,15 @@ Retorna informações sobre a conexão e a pilha do cliente.
 sqlsrv_client_info( resource $conn)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$conn*: o recurso de conexão pelo qual o cliente está conectado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Uma matriz associativa com chaves descritas na tabela abaixo, ou **false** , se o recurso de conexão for nulo.  
   
 **Para versões 3.2 e 3.1 do PHP para SQL Server**:  
   
-|Chave|DESCRIÇÃO|  
+|Chave|Descrição|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|Versão do ODBC (xx.yy)|  
@@ -52,7 +53,7 @@ Uma matriz associativa com chaves descritas na tabela abaixo, ou **false** , se 
   
 **Para versões 3.0 e 2.0 do PHP para SQL Server**:  
   
-|Chave|DESCRIÇÃO|  
+|Chave|Descrição|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 2.0)|  
 |DriverODBCVer|Versão do ODBC (xx.yy)|  

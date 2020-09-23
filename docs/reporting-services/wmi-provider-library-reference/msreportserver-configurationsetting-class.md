@@ -1,4 +1,5 @@
 ---
+description: Classe MSReportServer_ConfigurationSetting
 title: Classe MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7b535ba8ce57cad4ddf1a43d2bfda97e4a26e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454423"
 ---
 # <a name="msreportserver_configurationsetting-class"></a>Classe MSReportServer_ConfigurationSetting
   Representa os parâmetros de instalação e de runtime de uma instância de servidor de relatório. Esses parâmetros são armazenados no arquivo de configuração para o servidor de relatório.  
@@ -38,7 +39,7 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## <a name="thread-safety"></a>Segurança de thread  
+## <a name="thread-safety"></a>Acesso thread-safe  
  Qualquer membro público estático (**Compartilhado** no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) desse tipo é seguro para operações com vários threads. Não há garantia de que qualquer membro da instância seja seguro para threads.  
   
 ## <a name="example"></a>Exemplo  

@@ -1,6 +1,6 @@
 ---
 title: Criar objetos RxSqlServerData
-description: 'Tutorial 2 do RevoScaleR: Como criar objetos de dados usando a linguagem R no SQL Server.'
+description: 'Saiba como usar funções do RevoScaleR com os dados do SQL Server. Este tutorial é uma continuação da criação do banco de dados: adição de tabelas e carregamento de dados.'
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728609"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178803"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Criar objetos de dados do SQL Server usando RxSqlServerData (tutorial do SQL Server e do RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este é o tutorial 2 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
@@ -145,7 +145,7 @@ O pacote **RevoScaleR** contém funções específicas para os tipos de fonte de
     
     Após uma pequena pausa, supondo que não haja nenhum problema com a cadeia de conexão, você deve ver resultados como estes:
   
-    *Total de linhas gravadas: 10000, Tempo total: 0,466* *linhas lidas: 10000, Total de linhas processadas: 10000, Tempo total da parte: 0,577 segundo*
+    *Total de linhas gravadas: 10000, Tempo total: 0,466* *Linhas lidas: 10000, Total de linhas processadas: 10000, Tempo total da parte: 0,577 segundo*
   
 5. Atualize a lista de tabelas. Para verificar se cada variável tem os tipos de dados corretos e se foi importada com êxito, você também pode clicar com o botão direito do mouse na tabela em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e selecione **Selecionar as Primeiras 1000 Linhas**.
 

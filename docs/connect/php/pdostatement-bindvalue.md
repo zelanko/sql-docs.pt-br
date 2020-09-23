@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindValue | Microsoft Docs
+title: PDOStatement::bindValue
+description: Referência da API para a função PDOStatement::bindValue no Driver PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: adb07064c6252978b343415fc1758c0b2f5da5f5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ebb895ac26aaff16ef4fb0d51a56243a9401e4d1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921021"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645357"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,14 +30,14 @@ Associa um valor a um espaço reservado nomeado ou de ponto de interrogação na
 bool PDOStatement::bindValue($parameter, $value[, $data_type]);  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 $*parameter*: um identificador do parâmetro (misto). Para uma instrução que usa espaços reservados nomeados, um nome de parâmetro (:name). Para uma instrução preparada usando a sintaxe de ponto de interrogação, esse será o índice de base 1 do parâmetro.
   
 $*value*: o valor (misto) a ser associado ao parâmetro.  
   
 $*data_type*: o tipo de dados (inteiro) opcional representado por uma constante PDO::PARAM_*. O padrão é PDO::PARAM_STR.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 TRUE se for bem-sucedido; caso contrário, FALSE.  
   
 ## <a name="remarks"></a>Comentários  

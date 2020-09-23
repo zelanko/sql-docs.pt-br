@@ -1,6 +1,6 @@
 ---
-title: Programação no Driver do OLE DB para SQL Server | Microsoft Docs
-description: Programação no OLE DB Driver for SQL Server
+title: Programação no OLE DB Driver for SQL Server
+description: Saiba mais sobre a programação de aplicativos usando o Driver do OLE DB para SQL Server, que implementa a API do OLE DB para permitir que os aplicativos se conectem ao banco de dados.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OLE DB
 - OLE DB Driver for SQL Server
 - OLE DB Driver for SQL Server, OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: db35ada2ace8a5fedad05b56ce9784b51c239523
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4e72dc1e1ea82df68d3dc766e460e7a433d78a43
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012849"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861821"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Programação no OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

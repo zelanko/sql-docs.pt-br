@@ -1,6 +1,6 @@
 ---
 title: API de cópia em massa para inserção em lote no JDBC
-description: O Microsoft JDBC Driver para SQL Server dá suporte ao uso da API de Cópia em Massa para operações de inserção em lote para o Data Warehouse do Azure.
+description: O Microsoft JDBC Driver para SQL Server dá suporte ao uso da Cópia em Massa em operações de inserção em lote no Data Warehouse do Azure para carregar os dados mais rapidamente no banco de dados.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633984"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943014"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Como usar a API de cópia em massa para a operação de inserção em lote
 
@@ -71,7 +71,7 @@ Se a consulta falhar devido a erros não relacionados ao "SQL Server”, o drive
 
 ## <a name="example"></a>Exemplo
 
-Abaixo há um código de exemplo que demonstra o caso de uso para uma operação de inserção em lote no DW do Azure de mil linhas, para ambos os cenários (regular versus API de Cópia em Massa).
+Confira abaixo um código de exemplo que demonstra o caso de uso de uma operação de inserção em lote no Azure Synapse Analytics (SQL DW) de mil linhas nos dois cenários (normal x API de Cópia em Massa).
 
 ```java
     public static void main(String[] args) throws Exception

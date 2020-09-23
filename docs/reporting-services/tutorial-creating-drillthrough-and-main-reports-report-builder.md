@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Criando relatórios principais e de detalhamento (Construtor de Relatórios) | Microsoft Docs'
+description: 'Saiba como criar dois tipos de relatórios paginados do Reporting Services: um de detalhamento e um principal.'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73637980"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238377"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
 Este tutorial ensina como criar dois tipos de relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : um relatório de detalhamento e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. 
@@ -36,7 +37,7 @@ Você deve ter acesso a uma instância do [!INCLUDE[ssASnoversion](../includes/s
 Para obter mais informações sobre os requisitos gerais, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. Criar um relatório detalhado no Assistente de Tabela ou Matriz  
-Na caixa de diálogo Introdução, crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**. Há dois modos disponíveis no assistente: design de relatório e design de conjunto de dados compartilhado. Neste tutorial, você usará o modo design de relatório.  
+Na caixa de diálogo Introdução , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**. Há dois modos disponíveis no assistente: design de relatório e design de conjunto de dados compartilhado. Neste tutorial, você usará o modo design de relatório.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
@@ -63,7 +64,7 @@ Uma conexão de dados contém as informações necessárias para estabelecer con
   
 4.  Em **Selecione um tipo de conexão**, selecione **Microsoft SQL Server Analysis Services**e clique em **Compilar**.  
   
-5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
 6.  Em **Nome do servidor**, digite o nome de um servidor em que uma instância do Analysis Services está instalada.  
   
@@ -206,7 +207,7 @@ Depois de criar grupos, é possível adicionar e formatar linhas onde os valores
   
     A tabela é adicionada à superfície de design.  
   
-3.  Para visualizar o relatório, clique em **Executar (!)** .  
+3.  Para visualizar o relatório, clique em **Executar (!)**.  
   
 ## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. Formatar dados como moeda  
 Aplique a formatação de moeda aos campos de valor de vendas no relatório detalhado.  
@@ -261,7 +262,7 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 2.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-3.  Digite **Vendas e Devoluções por Categoria:** .  
+3.  Digite **Vendas e Devoluções por Categoria:**.  
   
 4.  Clique com o botão direito do mouse em **Criar Espaço Reservado**.  
   
@@ -322,7 +323,7 @@ Por padrão, os parâmetros estão visíveis, o que não é apropriado para este
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
     **Sites e Servidores Recentes** lista as bibliotecas no site do SharePoint.  
   
@@ -333,7 +334,7 @@ Por padrão, os parâmetros estão visíveis, o que não é apropriado para este
     > [!NOTE]  
     > Você salvará o relatório principal no mesmo local. Se desejar salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, você deverá atualizar o caminho da ação **Ir para o relatório** no relatório principal.  
   
-7.  Clique em **Save** (Salvar).  
+7.  Clique em **Salvar**.  
   
 ## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. Criar um novo relatório no Assistente de Tabela ou Matriz  
 Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**.  
@@ -361,7 +362,7 @@ Você adicionará uma fonte de dados inserida ao relatório principal.
   
 4.  Em **Selecione um tipo de conexão**, selecione **Microsoft SQL Server Analysis Services**e clique em **Compilar**.  
   
-5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
 6.  Em **Nome do servidor**, digite o nome de um servidor em que uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] está instalada.  
   
@@ -539,7 +540,7 @@ Para habilitar o detalhamento, especifique uma ação em uma caixa de texto no r
   
 2.  Clique com o botão direito do mouse na célula que contém Product_Category_Name e clique em **Propriedades da Caixa de Texto**.  
   
-3.  Clique na guia **Ação** .  
+3.  Clique na guia **Ações**.  
   
 4.  Selecione **Ir para relatório**.  
   
@@ -587,7 +588,7 @@ Use indicadores para mostrar o estado de quantidades e vendas dos canais Online 
   
 4.  Clique no tipo **3 Sinais** e em **OK**.  
   
-5.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)** . Selecione `Net_QTY`.  
+5.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)**. Selecione `Net_QTY`.  
   
 6.  Repita as etapas 2 a 5 para a célula `[Sum(Net QTY)]` no grupo de linhas `[Product_Category_Name]` dentro de **Total**.  
   
@@ -599,7 +600,7 @@ Use indicadores para mostrar o estado de quantidades e vendas dos canais Online 
   
 3.  Clique no tipo **3 Sinais** e em **OK**.  
   
-4.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)** . Selecione `Net_Sales`.  
+4.  Clique com o botão direito do mouse no indicador e, no painel Dados do Medidor, clique na seta para baixo ao lado de **(Não especificado)**. Selecione `Net_Sales`.  
   
 5.  Repita as etapas 1 a 4 para a célula `[Sum(Net_Sales)]` no grupo de linhas `[Product_Category_Name]` dentro de **Total**.  
   
@@ -627,7 +628,7 @@ Adicione um título ao relatório principal.
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas de Categorias de Produtos de 2009: Categoria Online e Revendedor:** .  
+2.  Digite **Vendas de Categorias de Produtos de 2009: Categoria Online e Revendedor:**.  
   
 3.  Selecione o texto que você digitou.  
   
@@ -659,7 +660,7 @@ Salve o relatório principal em uma biblioteca do SharePoint.
     > [!IMPORTANT]  
     > Salve o relatório principal no mesmo local onde você salvou o relatório detalhado. Para salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, confirme se a ação **Ir para o relatório** no relatório principal aponta para o local correto do relatório de detalhamento.  
   
-7.  Clique em **Save** (Salvar).  
+7.  Clique em **Salvar**.  
   
 ## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. Executar os relatórios principal e de detalhamento  
 Execute o relatório principal e clique nos valores da coluna de categorias de produto para executar o relatório detalhado.  

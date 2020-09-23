@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial do R: Criar grafos e gráficos'
-description: Tutorial mostrando como criar grafos e plotagens usando funções de linguagem do R no SQL Server.
+description: Aprenda técnicas para gerar gráficos e mapas usando o R com os dados do SQL Server. Crie um histograma simples e desenvolva um gráfico de mapa mais complexo.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 06/13/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781818"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178423"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Criar gráficos e plotagens usando o SQL e o R (instruções passo a passo)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Nesta parte do tutorial, você aprende técnicas para gerar plotagens e mapas usando o R com os dados do SQL Server. Você cria um histograma simples e, em seguida, desenvolve um gráfico de mapa mais complexo.
 
@@ -89,7 +89,7 @@ Normalmente, os servidores de banco de dados bloqueiam o acesso à Internet. Iss
 
     + A linha que começa com `googmap` gera um mapa com as coordenadas especificadas no centro.
 
-3. Alterne para o contexto de computação do SQL Server e renderize os resultados encapsulando a função de gráfico em [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) como mostrado aqui. A função rxExec faz parte do pacote **RevoScaleR** e dá suporte à execução de funções do R arbitrárias no contexto de computação remota.
+3. Alterne para o contexto de computação do SQL Server e renderize os resultados encapsulando a função de gráfico em [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) como mostrado aqui. A função rxExec é parte do pacote **RevoScaleR** e dá suporte à execução de funções do R arbitrárias no contexto de computação remota.
 
     ```R
     rxSetComputeContext(sqlcc)

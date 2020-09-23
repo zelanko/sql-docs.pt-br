@@ -1,7 +1,8 @@
 ---
-title: Conectar-se ao Banco de Dados SQL do Microsoft Azure | Microsoft Docs
+title: Conectar-se ao Banco de Dados SQL do Microsoft Azure
+description: Saiba mais sobre como acessar o Banco de Dados SQL do Azure usando os Drivers da Microsoft para PHP para SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 75622982-1815-4d96-906c-a0494c8a0b53
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df827223baa67f71d13115971ac4068e07e31268
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c86294763db06cd5d64a3c32cc5982adba0fe470
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907292"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680661"
 ---
 # <a name="connecting-to-microsoft-azure-sql-database"></a>Conectar-se ao Banco de Dados SQL do Microsoft Azure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Para obter mais informações sobre como se conectar a Bancos de Dados SQL do Azure, confira [Como acessar o Banco de Dados SQL do Azure por meio de PHP](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
+Confira mais informações sobre como se conectar a um Banco de Dados SQL do Azure em [Como acessar o Banco de Dados SQL do Azure por meio de PHP](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
   

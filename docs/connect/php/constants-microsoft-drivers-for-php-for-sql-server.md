@@ -1,5 +1,6 @@
 ---
-title: Constantes (Drivers da Microsoft para PHP para SQL Server) | Microsoft Docs
+title: Constantes (Drivers da Microsoft para PHP para SQL Server)
+description: Saiba mais sobre as constantes definidas nos Drivers SQLSRV e PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c54021d6165d0fbf221c7af1c4f10235efb55820
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 771a14e8705af72f57571503c2dba9012c2e9879
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928077"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435258"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (Drivers da Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,14 +50,14 @@ O atributo PDO::SQLSRV_ATTR_ENCODING pode ser passado para [PDOStatement::setAtt
   
 Os valores disponíveis para passar para PDO::SQLSRV_ATTR_ENCODING são  
   
-|Constante do driver PDO_SQLSRV|DESCRIÇÃO|  
+|Constante do driver PDO_SQLSRV|Descrição|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|Os dados são um fluxo de bytes brutos do servidor sem realizar a codificação ou a conversão.<br /><br />Não é válido para PDO::setAttribute.|  
 |PDO::SQLSRV_ENCODING_SYSTEM|Os dados são caracteres de 8 bits conforme especificado na página de código da localidade do Windows definida no sistema. Todos os caracteres multibyte ou caracteres não mapeados nessa página de código são substituídos por um caractere de ponto de interrogação (?) de byte único.|  
 |PDO::SQLSRV_ENCODING_UTF8|Os dados estão na codificação UTF-8. Essa é a codificação padrão.|  
 |PDO::SQLSRV_ENCODING_DEFAULT|Usa PDO::SQLSRV_ENCODING_SYSTEM se especificado durante a conexão.<br /><br />Use a codificação da conexão se for especificado em uma instrução prepare.|  
   
-### <a name="query-timeout"></a>Tempo-limite da consulta  
+### <a name="query-timeout"></a>Tempo Limite da Consulta  
 O atributo PDO::SQLSRV_ATTR_QUERY_TIMEOUT é qualquer inteiro não negativo que representa o período limite, em segundos. Zero (0) é o padrão e significa sem tempo limite.  
   
 Você pode especificar o atributo PDO::SQLSRV_ATTR_QUERY_TIMEOUT com [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), [PDO::setAttribute](../../connect/php/pdo-setattribute.md) e [PDO::prepare](../../connect/php/pdo-prepare.md).  
@@ -71,7 +72,7 @@ Você pode modificar o comportamento padrão de formatação de decimais com os 
 
 ### <a name="handling-date-and-time-fetches"></a>Como processar buscas de data e hora
 
-O PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE Especifica quando recuperar tipos de data e hora como objetos [DateTime do PHP](http://php.net/manual/en/class.datetime.php). Se for deixado como false, o comportamento padrão será retorná-los como cadeias de caracteres. Esse atributo podem ser definidos no nível da conexão ou da instrução, com [PDO::setAttribute](../../connect/php/pdo-setattribute.md) ou [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), mas o atributo de instrução substituirá o atributo de conexão correspondente. Para saber mais, confira [Como recuperar tipos de data e hora como objetos DateTime PHP usando o driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+O PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE Especifica quando recuperar tipos de data e hora como objetos [DateTime do PHP](http://php.net/manual/en/class.datetime.php). Se for deixado como false, o comportamento padrão será retorná-los como cadeias de caracteres. Esse atributo podem ser definidos no nível da conexão ou da instrução, com [PDO::setAttribute](../../connect/php/pdo-setattribute.md) ou [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), mas o atributo de instrução substituirá o atributo de conexão correspondente. Para obter mais informações, confira [Como recuperar tipos de data e hora como objetos DateTime PHP usando o driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 As seções a seguir listam as constantes usadas pelo driver SQLSRV.  
@@ -79,7 +80,7 @@ As seções a seguir listam as constantes usadas pelo driver SQLSRV.
 ### <a name="err-constants"></a>Constantes ERR  
 A tabela a seguir lista as constantes usadas para especificar se [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) retorna erros, avisos ou ambos.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Retorna erros e avisos gerados na última chamada da função **sqlsrv** . Esse é o valor padrão.|  
 |SQLSRV_ERR_ERRORS|Retorna erros gerados na última chamada da função **sqlsrv** .|  
@@ -88,7 +89,7 @@ A tabela a seguir lista as constantes usadas para especificar se [sqlsrv_errors]
 ### <a name="fetch-constants"></a>Constantes FETCH  
 A tabela a seguir lista as constantes usadas para especificar o tipo de matriz retornada por [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
-|Constante SQLSRV|DESCRIÇÃO|  
+|Constante SQLSRV|Descrição|  
 |-------------------|---------------|  
 |SQLSRV_FETCH_ASSOC|**sqlsrv_fetch_array** retorna a próxima linha de dados como matriz associativa.|  
 |SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** retorna a próxima linha de dados como matriz com as chaves numéricas e associativas. Esse é o valor padrão.|  
@@ -99,7 +100,7 @@ Esta seção lista as constantes usadas para alterar as configurações de regis
   
 A tabela a seguir apresenta as constantes que podem ser usadas como o valor para a configuração **LogSubsystems** :  
   
-|Constante SQLSRV (inteiro equivalente entre parênteses)|DESCRIÇÃO|  
+|Constante SQLSRV (inteiro equivalente entre parênteses)|Descrição|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Ativa o registro em log de todos os subsistemas.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Ativa o registro em log da atividade de conexão.|  
@@ -110,7 +111,7 @@ A tabela a seguir apresenta as constantes que podem ser usadas como o valor para
   
 A tabela a seguir apresenta as constantes que podem ser usadas como o valor para a configuração **LogSeverity** :  
   
-|Constante SQLSRV (inteiro equivalente entre parênteses)|DESCRIÇÃO|  
+|Constante SQLSRV (inteiro equivalente entre parênteses)|Descrição|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que erros, avisos e notificações serão registrados em log.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros serão registrados em log.|  
@@ -120,7 +121,7 @@ A tabela a seguir apresenta as constantes que podem ser usadas como o valor para
 ### <a name="nullable-constants"></a>Constantes que permitem valor nulo  
 A tabela a seguir lista as constantes que você pode usar para determinar se uma coluna permite ou não valor nulo ou se essas informações não estão disponíveis. Você pode comparar o valor da chave **Nullable** retornada por [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) para determinar o status da coluna que permite valor nulo.  
   
-|Constante SQLSRV (inteiro equivalente entre parênteses)|DESCRIÇÃO|  
+|Constante SQLSRV (inteiro equivalente entre parênteses)|Descrição|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_NULLABLE_YES (0)|A coluna permite valor nulo.|  
 |SQLSRV_NULLABLE_NO (1)|A coluna não permite valor nulo.|  
@@ -129,7 +130,7 @@ A tabela a seguir lista as constantes que você pode usar para determinar se uma
 ### <a name="param-constants"></a>Constantes PARAM  
 A lista a seguir contém as constantes para especificar a direção do parâmetro ao chamar [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
-|Constante SQLSRV|DESCRIÇÃO|  
+|Constante SQLSRV|Descrição|  
 |-------------------|---------------|  
 |SQLSRV_PARAM_IN|Indica um parâmetro de entrada.|  
 |SQLSRV_PARAM_INOUT|Indica um parâmetro bidirecional.|  
@@ -143,12 +144,12 @@ A tabela a seguir apresenta as constantes usadas para descrever tipos de dados d
 |SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|Datetime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
-|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|Fluxo|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** e **SQLSRV_PHPTYPE_STRING** aceitam um parâmetro que especifica a codificação do fluxo. A tabela a seguir contém as constantes SQLSRV que são parâmetros aceitáveis e uma descrição da codificação correspondente.  
   
-|Constante SQLSRV|DESCRIÇÃO|  
+|Constante SQLSRV|Descrição|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Os dados são retornados do servidor como um fluxo de bytes brutos, sem codificação ou conversão.|  
 |SQLSRV_ENC_CHAR|Os dados são retornados em caracteres de 8 bits conforme especificado na página de código da localidade do Windows definida no sistema. Todos os caracteres multibyte ou caracteres não mapeados nessa página de código são substituídos por um caractere de ponto de interrogação (?) de byte único.<br /><br />Essa é a codificação padrão.|  

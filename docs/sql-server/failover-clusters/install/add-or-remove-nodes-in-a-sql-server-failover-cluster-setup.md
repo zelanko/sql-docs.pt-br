@@ -1,6 +1,6 @@
 ---
-title: Adicionar e remover nós do cluster de failover
-description: Este artigo mostra como adicionar ou remover nós em uma instância existente de cluster de failover do SQL Server.
+title: Adicionar e remover nós da instância de cluster de failover
+description: Este artigo mostra como adicionar ou remover nós em uma instância existente de cluster de failover Always On do SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
@@ -18,35 +18,37 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9ae9ae1f58bf615362e16ebffef8926437c99a9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9162dba1861193bba542feb51bc4c793c2c7d011
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900504"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435576"
 ---
-# <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Adicionar ou remover nós em um cluster de failover do SQL Server (instalação)
+# <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Adicionar ou remover nós em uma instância de cluster de failover (instalação)
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Use este procedimento para gerenciar nós em uma instância de cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+ Use este procedimento para gerenciar nós em uma instância de cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Para atualizar ou remover um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você deve ter privilégios de administrador local com permissão para fazer logon como um serviço em todos os nós do cluster de failover. Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
+ Para atualizar ou remover uma FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você deve ter privilégios de administrador local com permissão para fazer logon como um serviço em todos os nós do WSFC (cluster de failover do Windows Server) subjacente. Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
   
- Para adicionar um nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , é necessário executar a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no nó a ser adicionado à instância do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Não execute a instalação no nó ativo.  
+ Para adicionar um nó a uma FCI existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], é necessário executar a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no nó a ser adicionado à instância do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Não execute a instalação no nó ativo.  
   
- Para remover um nó de um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , é necessário executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no nó a ser removido da instância do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Para remover um nó de uma FCI existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], é necessário executar a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no nó a ser removido da instância do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Para exibir as etapas de procedimentos para adicionar ou remover nós, selecione uma das seguintes operações:  
   
--   [Adicionar um nó a um cluster de failover existente do SQL Server](#Add)  
+-   [Adicionar um nó a uma instância de cluster de failover Always On existente](#Add)  
   
--   [Remover um nó de um cluster de failover existente do SQL Server](#Remove)  
+-   [Remover um nó de uma instância de cluster de failover Always On existente](#Remove)  
   
 > [!IMPORTANT]  
->  A letra da unidade do sistema operacional para locais de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ser igual em todos os nós adicionados ao cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+>  A letra da unidade do sistema operacional para locais de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ser igual em todos os nós adicionados à instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="add-node"></a><a name="Add"></a> Adicionar nó  
   
-#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>Para adicionar um nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster-instance"></a>Para adicionar um nó a uma instância de cluster de failover [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, navegue para a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
@@ -66,7 +68,7 @@ ms.locfileid: "85900504"
   
 8.  Na página Configuração do Nó do Cluster, use a caixa suspensa para especificar o nome da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que será modificada durante esta operação de Instalação.  
   
-9. Na página Configuração do Servidor – Contas de Serviço, especifique as contas de logon dos serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação. Para instalações de cluster de failover, as informações de nome da conta e de tipo de inicialização serão pré-populadas nesta página com base nas configurações fornecidas para o nó ativo. Você deve fornecer senhas para cada conta. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. Na página Configuração do Servidor – Contas de Serviço, especifique as contas de logon dos serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação. Para instalações de instância de cluster de failover, as informações de nome da conta e de tipo de inicialização serão pré-preenchidas nessa página com base nas configurações fornecidas para o nó ativo. Você deve fornecer senhas para cada conta. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Observação de segurança** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -86,7 +88,7 @@ ms.locfileid: "85900504"
   
 ##  <a name="remove-node"></a><a name="Remove"></a> Remover nó  
   
-#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>Para remover um nó de um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster-instance"></a>Para remover um nó de uma instância de cluster de failover [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em setup.exe. Para instalar a partir de um compartilhamento de rede, navegue para a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   

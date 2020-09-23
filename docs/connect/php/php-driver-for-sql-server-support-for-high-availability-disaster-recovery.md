@@ -1,4 +1,5 @@
 ---
+description: Suporte a alta disponibilidade e recuperação de desastre nos Drivers da Microsoft para PHP para SQL Server
 title: Suporte para alta disponibilidade e recuperação de desastre para os Drivers da Microsoft para PHP e para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19c042e784185e2dbbc3415732f3ab05be04e097
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e0386a6aba186924ee345bd9d5b470bd0bd6c56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477998"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Suporte a alta disponibilidade e recuperação de desastres
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

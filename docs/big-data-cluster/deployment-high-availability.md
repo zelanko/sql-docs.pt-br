@@ -5,16 +5,16 @@ description: Saiba como implantar o cluster de Big Data do SQL Server com alta d
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279454"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790262"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implantar o cluster de Big Data do SQL Server com alta disponibilidade
 
@@ -133,6 +133,9 @@ Para determinadas operações, como definir configurações em nível de servido
 
 > [!IMPORTANT]
 > O ponto de extremidade exposto para conexões da instância do SQL Server tem suporte apenas para autenticação SQL, mesmo em clusters em que o Active Directory está habilitado. Por padrão, durante uma implantação de cluster de Big Data, o logon do `sa` é desabilitado e um novo logon do `sysadmin` é provisionado com base nos valores fornecidos no momento da implantação para as variáveis de ambiente `AZDATA_USERNAME` e `AZDATA_PASSWORD`.
+
+> [!IMPORTANT]
+> A DDL do grupo de disponibilidade contido é exclusivamente autogerenciada no BDC. Qualquer tentativa (de usuário externo) de descartar a disponibilidade contida ou o ponto de extremidade de espelhamento de banco de dados não tem suporte e pode resultar em um estado de BDC irrecuperável.
 
 Aqui está um exemplo que mostra como expor esse ponto de extremidade e então adicionar o banco de dados criado com um fluxo de trabalho de restauração ao grupo de disponibilidade. Instruções semelhantes para configurar uma conexão com a instância mestra do SQL Server aplicam-se quando você deseja alterar as configurações de servidor com `sp_configure`.
 

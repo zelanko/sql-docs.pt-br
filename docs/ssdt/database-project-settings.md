@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518846"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934107"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
 
@@ -87,7 +87,7 @@ As configurações da tabela a seguir aplicam-se a todas as configurações dest
 |Campo|Valor padrão|Descrição|  
 |---------|-----------------|---------------|  
 |Plataforma de Destino|Microsoft SQL Server 2012|Especifica a versão do SQL Server de destino deste projeto de banco de dados.|  
-|Habilitar a verificação estendida do Transact\-SQL para objetos comuns.|Não habilitado quando você cria um novo projeto.<br /><br />Habilitado quando você cria um projeto no Pesquisador de Objetos do SQL Server conectado ao SQL Azure, importa um banco de dados do SQL Azure para o projeto ou altera a plataforma de destino do projeto para o SQL Azure.|Quando essa opção está habilitada, são relatados os erros encontrados no projeto que não passaram na verificação do Compilador do SQL Server. Se você alterar a plataforma de destino para o SQL Azure, a verificação estendida será habilitada. A opção não será desmarcada se você alterar a plataforma de destino.<br /><br />Você pode habilitar essa opção para outras versões do SQL Server, mas a validação é limitada aos bancos de dados parcialmente independentes do Microsoft SQL Server 2012 e SQL Azure. Não há suporte para toda a sintaxe Transact\-SQL em todas as versões do SQL Server.<br /><br />Para saber mais, confira [Verificação Estendida Transact-SQL](#bkmk_evf) mais adiante neste tópico|  
+|Habilitar a verificação estendida do Transact\-SQL para objetos comuns.|Não habilitado quando você cria um novo projeto.<br /><br />Habilitado quando você cria um projeto no Pesquisador de Objetos do SQL Server conectado ao SQL Azure, importa um Banco de Dados SQL do Azure em um projeto ou altera a plataforma de destino do projeto para o SQL Azure.|Quando essa opção está habilitada, são relatados os erros encontrados no projeto que não passaram na verificação do Compilador do SQL Server. Se você alterar a plataforma de destino para o SQL Azure, a verificação estendida será habilitada. A opção não será desmarcada se você alterar a plataforma de destino.<br /><br />Você pode habilitar essa opção para outras versões do SQL Server, mas a validação é limitada aos bancos de dados parcialmente independentes do Microsoft SQL Server 2012 e SQL Azure. Não há suporte para toda a sintaxe Transact\-SQL em todas as versões do SQL Server.<br /><br />Para saber mais, confira [Verificação Estendida Transact-SQL](#bkmk_evf) mais adiante neste tópico|  
 |Tipos de saída|||  
 |Aplicativo da camada de dados (arquivo .dacpac)|Habilitado e bloqueado. A saída da compilação de um projeto de banco de dados sempre produz um pacote .dacpac quando o projeto é compilado.|Se você estiver usando a versão do SQL Server Data Tools (SSDT) que tem a opção "Criar arquivo .dacpac de nível baixo adicional (v2.0)", marque-a se quiser que o pacote seja compatível com o SQL Server Management Studio ou o Portal de Gerenciamento do SQL Azure. Você pode implantar um pacote .dacpac diretamente do SSDT, mas somente poderá implantar uma versão 2.0 do arquivo .dacpac por meio do SQL Server Management Studio quando o SQL Server Data Tools for lançado.|  
 |Criar Script (Arquivo .sql)||Especifica se um script CREATE .sql completo é gerado para todos os objetos do projeto e colocado na pasta bin\debug quando o projeto é compilado. É possível criar um script de atualização incremental usando o comando **Publicação de Projeto** ou o utilitário de Comparação do SQL.|  
@@ -132,7 +132,7 @@ Recursos que não têm suporte para validação no momento incluindo:
 -   Ordenação de metadados do SQL Azure (o Serviço do compilador usa a ordenação de metadados do banco de dados parcialmente independente do SQL Server 2012 - Latin1_General_100_CI_AS_KS_WS_SC.  
   
 ### <a name="enablingdisabling-extended-verification"></a>Habilitar/Desabilitar a Verificação Estendida Transact-SQL  
-A Verificação Estendida Transact-SQL é habilitada por padrão em um projeto de banco de dados que é criado diretamente de um banco de dados do SQL Azure ou em um projeto cuja plataforma de destino é configurada para o SQL Azure. Recomenda-se que a Verificação Estendida seja usada durante o desenvolvimento para SQL Azure ou em um banco de dados com escopo de aplicativo direcionado para SQL Server 2012. Para obter mais informações sobre bancos de dados com escopo de aplicativo, consulte [Bancos de dados parcialmente independentes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+A Verificação Estendida do Transact-SQL é habilitada por padrão em um projeto de banco de dados que é criado diretamente de um Banco de Dados SQL do Azure ou em um projeto cuja plataforma de destino esteja configurada para o SQL Azure. Recomenda-se que a Verificação Estendida seja usada durante o desenvolvimento para SQL Azure ou em um banco de dados com escopo de aplicativo direcionado para SQL Server 2012. Para obter mais informações sobre bancos de dados com escopo de aplicativo, consulte [Bancos de dados parcialmente independentes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 O recurso de Verificação Estendida também pode ser usado durante o desenvolvimento de um banco de dados para SQL Server 2008/R2 a fim de ter compatibilidade com o Microsoft SQL Server 2012 e o SQL Azure.  
   
@@ -151,7 +151,7 @@ O recurso de Verificação Estendida também pode ser usado durante o desenvolvi
   
 2.  Em **Propriedades**, altere a propriedade **Verificação Estendida T-SQL** para **False**.  
   
-![Propriedades do Arquivo](../ssdt/media/ssdt-evf.gif "Propriedades do Arquivo")  
+    ![Propriedades do Arquivo](../ssdt/media/ssdt-evf.gif "Propriedades do Arquivo")  
   
 ### <a name="special-considerations-for-collations"></a>Considerações especiais para ordenações  
 Para obter mais informações sobre ordenações em bancos de dados parcialmente independentes, consulte [Ordenações de bancos de dados independentes](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  

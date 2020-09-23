@@ -1,6 +1,6 @@
 ---
 title: Propriedades e comportamentos do conjunto de linhas (Driver do OLE DB)
-description: Propriedades e comportamentos do conjunto de linhas no Driver do OLE DB para SQL Server
+description: Estas são as propriedades de conjunto de linhas do Driver do OLE DB para SQL Server, incluindo o nome e a descrição da propriedade.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, rowsets
 - properties [OLE DB]
 - OLE DB rowsets, properties
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244165"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859998"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriedades e comportamentos do conjunto de linhas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

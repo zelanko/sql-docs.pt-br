@@ -1,7 +1,8 @@
 ---
-title: PDO::quote | Microsoft Docs
+title: PDO::quote
+description: Referência da API para a função PDO::quote no Driver PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db661eea0ea4b3b46e3a73f7e1f4609267bbae41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919065"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645520"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,10 +30,10 @@ Processa uma cadeia de caracteres para uso em uma consulta, colocando a cadeia d
 string PDO::quote( $string[, $parameter_type ] )  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
-$*string*: a cadeia de caracteres a ser colocada entre aspas.  
+#### <a name="parameters"></a>Parâmetros  
+$*string*: a cadeia de caracteres a ser cotada.  
   
-$*parameter_type*: um símbolo opcional (inteiro) indicando o tipo de dados.  O padrão é PDO::PARAM_STR.  
+$*parameter_type*: um símbolo opcional (inteiro) que indica o tipo de dados.  O padrão é PDO::PARAM_STR.  
 
 Novas constantes PDO foram introduzidas no PHP 7.2 para adicionar suporte para [cadeias de caracteres Unicode e não Unicode de associação](https://wiki.php.net/rfc/extended-string-types-for-pdo). As cadeias de caracteres Unicode podem ser colocadas entre aspas com um N como prefixo (ou seja, N"cadeia de caracteres" em vez de "cadeia de caracteres").
 
@@ -42,7 +43,7 @@ Novas constantes PDO foram introduzidas no PHP 7.2 para adicionar suporte para [
 
 Com a versão 5.8.0 será possível usar essas constantes com PDO::quote.
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Uma cadeia de caracteres entre aspas que pode ser passada para uma instrução SQL, ou false em caso de falha.  
   
 ## <a name="remarks"></a>Comentários  

@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial do R: Implantar modelo'
-description: Tutorial mostrando como implantar um modelo do R no SQL Server para análise no banco de dados.
+description: Saiba como implantar modelos do R em um ambiente de produção chamando um modelo treinado de um procedimento armazenado.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781780"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179737"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implantar o modelo do R e usá-lo no SQL Server (passo a passo)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Nesta lição, saiba como implantar modelos do R em um ambiente de produção chamando um modelo treinado de um procedimento armazenado. Você pode invocar o procedimento armazenado no R ou em uma linguagem de programação de aplicativo que dá suporte ao [!INCLUDE[tsql](../../includes/tsql-md.md)] (como C#, Java, Python e assim por diante) e usar o modelo a fim de fazer previsões sobre novas observações.
 
@@ -228,6 +228,6 @@ Agora que você já sabe como trabalhar usando dados do [!INCLUDE[ssNoVersion](.
 Também pode ser útil explorar estes exemplos e recursos adicionais:
 
 + [Cenários de ciência de dados e modelos da solução](data-science-scenarios-and-solution-templates.md)
-+ [Análise avançada no banco de dados](sqldev-in-database-r-for-sql-developers.md)
++ [Análise avançada no banco de dados](r-taxi-classification-introduction.md)
 + [Guias de instruções do Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 + [Recursos adicionais do Machine Learning Server](https://docs.microsoft.com//machine-learning-server/resources-more)

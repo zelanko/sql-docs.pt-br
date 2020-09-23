@@ -1,5 +1,6 @@
 ---
-title: 'Como fazer: Conectar em uma porta especificada | Microsoft Docs'
+title: Como se conectar a uma porta especificada
+description: Saiba como se conectar a um banco de dados configurado em uma porta específica usando os Drivers SQLSRV e PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44df1e9c8809fed016a5c041d34f0f46cae83654
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b55f12bbfe4bbe255af2d62c2ed0c5ab3f968e98
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916492"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435237"
 ---
-# <a name="how-to-connect-on-a-specified-port"></a>Como fazer: Conectar em uma porta especificada
+# <a name="how-to-connect-on-a-specified-port"></a>Como se conectar a uma porta especificada
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Este tópico descreve como se conectar ao SQL Server em uma porta especificada com os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -52,5 +53,5 @@ Este tópico descreve como se conectar ao SQL Server em uma porta especificada c
 
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[Referência do driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

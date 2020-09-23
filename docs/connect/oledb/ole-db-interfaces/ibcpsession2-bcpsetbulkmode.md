@@ -1,6 +1,6 @@
 ---
 title: IBCPSession2::BCPSetBulkMode (driver do OLE DB) | Microsoft Docs
-description: Usar IBCPSession2::BCPSetBulkMode para criar uma cópia em massa de uma consulta ou de uma tabela
+description: Saiba como usar o método IBCPSession2::BCPSetBulkMode para criar uma cópia em massa de uma consulta ou de uma tabela no Driver do OLE DB para SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7dede556c75be45eddf23dbbe327ab1367023b1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b04ede3efe3d77119a4aaadbc904f32a7c51a201
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244532"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860203"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

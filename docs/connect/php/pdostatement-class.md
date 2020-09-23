@@ -1,7 +1,8 @@
 ---
-title: Classe PDOStatement | Microsoft Docs
+title: Classe PDOStatement
+description: Referência da API para a classe PDOStatement no Driver PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3345f8444de728821fd537384194c259ffe4e29d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6172e4c86786f57a2ddd30cb6c4f04a687802ea2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907933"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646596"
 ---
 # <a name="pdostatement-class"></a>Classe PDOStatement
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -72,7 +73,7 @@ A classe PDOStatement contém os seguintes métodos:
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
-[PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md) 
+[Referência do driver PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md) 
 
 [Visão geral dos Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 

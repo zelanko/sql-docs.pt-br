@@ -1,4 +1,5 @@
 ---
+description: Proteger relatórios e recursos
 title: Proteger relatórios e recursos | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dc9ee5a8bcdf2afd2ca02703eed1a6d0b782587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454488"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger relatórios e recursos
   É possível definir a segurança de relatórios e recursos individuais para controlar o nível de acesso que os usuários têm a esses itens. Por padrão, somente os usuários que são membros do grupo interno de **Administradores** podem executar relatórios, exibir recursos, modificar propriedades e excluir os itens. Todos os outros usuários devem ter atribuições de função que permitam o acesso a um relatório ou recurso.  
@@ -51,7 +52,7 @@ ms.locfileid: "65570622"
   
 2.  O relatório é publicado em um servidor de relatórios ou de outra forma disponibilizado de modo que o valor de parâmetro de relatório possa ser controlado pela URL de uma página da Web.  
   
-3.  Um invasor cria um link para a página da Web ou o servidor de relatório, especificando o valor do parâmetro no formato “javascript:\<malicious script here>” e envia esse link a outra pessoa em um ataque de atração.  
+3.  Um invasor cria um link para a página da Web ou o servidor de relatório, especificando o valor do parâmetro no formato "javascript:\<malicious script here>" e envia esse link a outra pessoa em um ataque de atração.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Atenuando ataques de injeção de script em um hiperlink de um relatório ou documento publicado  
  Relatórios podem conter hiperlinks inseridos no valor da propriedade Action de um item de relatório ou parte de um item de relatório. Hiperlinks podem ser associados a dados que recuperados de uma fonte de dados externa quando o relatório é processado. Se um usuário mal-intencionado modificar os dados subjacentes, o hiperlink pode correr o risco de explorações de script. Se um usuário clicar no link no relatório publicado ou exportado, o script mal-intencionado pode ser executado.  

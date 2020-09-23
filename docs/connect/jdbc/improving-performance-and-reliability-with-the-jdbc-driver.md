@@ -2,7 +2,7 @@
 title: Melhorando o desempenho e a confiabilidade com o JDBC Driver
 description: Conheça várias técnicas para melhorar o desempenho do aplicativo e a confiabilidade ao usar o Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: bc04a90569974acbc99dcb66680d66289db1c0d1
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728481"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565374"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Melhorando o desempenho e a confiabilidade com o JDBC Driver
 
@@ -37,6 +37,7 @@ Os tópicos nesta seção descrevem várias técnicas para melhorar o desempenho
 |[Colunas esparsas](../../connect/jdbc/sparse-columns.md)|Aborda o suporte do JDBC Driver para colunas esparsas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Metadados de instrução em cache preparados para o JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Discute as técnicas para aprimorar o desempenho com consultas de instrução preparadas.|
 |[Como usar a API de cópia em massa para a operação de inserção em lote](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Descreve como habilitar a API de cópia em massa para operações de inserção em lote e seus benefícios.|
+|[Não enviar parâmetros de cadeia de caracteres como Unicode](../../connect/jdbc/setting-the-connection-properties.md)|Ao trabalharem com dados **CHAR**, **VARCHAR** e **LONGVARCHAR**, os usuários podem definir a propriedade de conexão **sendStringParametersAsUnicode** como `false` para obter um ganho de desempenho ideal.|
 
 ## <a name="see-also"></a>Confira também
 

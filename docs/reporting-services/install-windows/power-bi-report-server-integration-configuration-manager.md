@@ -1,4 +1,5 @@
 ---
+description: Integração de servidor de relatório do Power BI (Configuration Manager)
 title: Integração do Servidor de Relatórios do Power BI (Gerenciador de Configurações) | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
@@ -6,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265638"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991860"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integração de servidor de relatório do Power BI (Configuration Manager)
 
@@ -25,7 +26,7 @@ Além de uma conexão de Internet ativa para que você possa navegar até o serv
 
 - **Azure Active Directory:** sua organização deve usar o Azure Active Directory, que fornece gerenciamento de identidades e diretórios para serviços e aplicativos Web do Azure. Para obter mais informações, confira [O que é Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Office 365 e o Microsoft Intune.   Não há suporte para locatários virais no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Microsoft 365 e o Microsoft Intune.   Não há suporte para locatários virais no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - O usuário que executando a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] precisa ser um membro do locatário do Azure AD, um administrador de sistema do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e um administrador de sistema para o banco de dados de catálogo ReportServer.
 
@@ -112,7 +113,7 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 1. Os usuários visualizam relatórios no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] e na primeira vez que clicarem para fixar um item de relatório do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Eles serão redirecionados para a página de logon do Azure AD. Eles também poderão entrar por meio da página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]Minhas configurações**do**. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obter mais informações, consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
+2. Eles serão redirecionados para a página de logon do Azure AD. Eles também poderão entrar por meio da página  **Minhas configurações** do [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Quando os usuários entram no locatário gerenciado do Azure, uma relação é estabelecida entre a sua conta do Azure e as permissões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obter mais informações, consulte [Minhas Configurações para integração do Power BI &#40;portal da Web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. Um token de segurança do usuário é retornado para o servidor de relatório.
 

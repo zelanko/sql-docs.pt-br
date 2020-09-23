@@ -1,5 +1,5 @@
 ---
-title: Bibliotecas de conexão para Bancos de Dados do Microsoft SQL | Microsoft Docs
+title: Bibliotecas de conexão para Banco de Dados Microsoft SQL | Microsoft Docs
 description: Fornece links para download de módulos que permitem a conexão ao Microsoft SQL Server e ao Banco de Dados SQL do Azure de uma ampla variedade de linguagens de programação do cliente.
 author: David-Engel
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: f6f75adc047f39ae3e0e0c21143f64cf57d2803a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244047"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988507"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexão para bancos de dados do Microsoft SQL
+# <a name="connection-modules-for-microsoft-sql-database"></a>Módulos de conexão para bancos de dados do Microsoft SQL
 
 Este artigo fornece links de download para módulos de conexão ou *drivers* que seus programas cliente podem usar para interagir com o [Microsoft SQL Server](../relational-databases/database-features.md) e com o gêmeo dele na nuvem, o [Banco de Dados SQL do Azure](/azure/sql-database/). Os drivers estão disponíveis para uma variedade de linguagens de programação, em execução nos seguintes sistemas operacionais:
 
@@ -50,7 +50,7 @@ Este artigo destina seções separadas para esses dois tipos de drivers de conex
 
 ## <a name="drivers-for-orm-access"></a>Drivers para acesso de ORM
 
-A tabela a seguir lista exemplos de estruturas de ORM (mapeamento relacional de objeto) que os aplicativos cliente usam para se conectar aos bancos de dados do Microsoft SQL.
+A tabela a seguir lista exemplos de estruturas de ORM (mapeamento relacional de objeto) que os aplicativos cliente usam para se conectar aos Bancos de Dados do Microsoft SQL.
 
 | Linguagem | Download do driver de ORM |
 | :------- | :------------------ |

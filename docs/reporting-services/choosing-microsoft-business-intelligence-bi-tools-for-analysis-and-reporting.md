@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: 0d8bdd09fd1ae946c78aeb4860d1d5cfd89eabb8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4a0c1c88e890ed7aa92a50a83eff795a83f42e9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245145"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395294"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análise e relatório com ferramentas de BI (business intelligence) da Microsoft
 
@@ -28,9 +28,8 @@ A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
   
-|Cargas de trabalho|Usuário|||Ferramentas de BI|||  
+|Cargas de trabalho|Usuário|Ferramenta de BI&nbsp;baseada no Excel|Ferramenta de BI&nbsp;baseada no SharePoint|Ferramenta de BI&nbsp;baseada no SharePoint&nbsp;Online|Ferramenta de BI&nbsp;baseada no&nbsp;Power BI|Ferramenta de BI&nbsp;baseada no SQL&nbsp;Server|  
 |---------------|----------|-|-|--------------|-|-|  
-|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**BI de autoatendimento**|Analista/usuário final||||||  
 |Descubra facilmente, e acesse dados públicos e corporativos||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Catálogo de Dados do Azure](https://azure.microsoft.com/services/data-catalog/)||  
 |Crie modelos de dados avançados||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  

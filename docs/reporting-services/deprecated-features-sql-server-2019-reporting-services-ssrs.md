@@ -1,7 +1,7 @@
 ---
 title: Recursos preteridos no SQL Server 2019 Reporting Services | Microsoft Docs
-description: Este artigo descreve os recursos que serão preteridos na próxima versão do SQL Server Reporting Services.
-ms.date: 11/21/2019
+description: Este artigo descreve os recursos do SQL Server 2019 Reporting Services que serão preteridos na próxima versão do SQL Server Reporting Services.
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: eaa7edebe99a7c444fe1bfa23971317517399ea2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3e48ab45f34e583dbbeca883a64d04dc965b018
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320270"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283811"
 ---
 # <a name="deprecated-features-in-sql-server-2019-reporting-services"></a>Recursos preteridos no SQL Server 2019 Reporting Services
 
@@ -42,6 +42,7 @@ O SQL Server Reporting Services dá suporte aos recursos a seguir na próxima ve
 | Servidor de relatório | Relatórios Móveis e Publicador de Relatórios Móveis | Os relatórios do Power BI no Servidor de Relatórios do Power BI oferecem capacidades móveis. |
 | Servidor de relatório | Formatos de renderização XLS e DOC | Os formatos XLSX e DOCX estão disponíveis e têm suporte. |
 | Servidor de relatório | Feed de Dados Atom | O suporte a feed oData está disponível para conjuntos de relatórios compartilhados no SSRS e Servidor de Relatórios do Power BI. |
+| Servidor de relatório | Fixar no Power BI | O suporte a relatórios paginados já está disponível diretamente no serviço do Power BI.  |
 
 ## <a name="see-also"></a>Confira também
 

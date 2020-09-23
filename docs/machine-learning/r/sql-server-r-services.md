@@ -4,20 +4,21 @@ titleSuffix: ''
 description: O R Services é um recurso do SQL Server 2016 que oferece a capacidade de executar scripts do R usando dados relacionais. Você pode usar pacotes e estruturas de software livre, bem como os pacotes do R da Microsoft para análise preditiva e aprendizado de máquina. Os scripts são executados no banco de dados sem mover dados para fora do SQL Server ou pela rede. Este artigo explica os conceitos básicos do SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/12/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 974562d95ebf756de5f95eca0e89a6d5fc6e958f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fabca5748849e0dd2e708ae02c11dc8f028a14d
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775395"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898829"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>O que é o SQL Server 2016 R Services?
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 O R Services é um recurso do SQL Server 2016 que oferece a capacidade de executar scripts do R usando dados relacionais. Você pode usar pacotes e estruturas de software livre, bem como os [pacotes do R da Microsoft](#packages) para análise preditiva e aprendizado de máquina. Os scripts são executados no banco de dados sem mover dados para fora do SQL Server ou pela rede. Este artigo explica os conceitos básicos do SQL Server R Services.
 
@@ -41,7 +42,7 @@ Você pode usar o R Services para criar e treinar o aprendizado de máquina e os
 
 Exemplos do tipo de previsões nas quais você pode usar SQL Server R Services incluem:
 
-|||
+|Tipo de previsão|Exemplo|
 |-|-|
 |Classificação/Categorização|Dividir automaticamente os comentários dos clientes em categorias positivas e negativas|
 |Regressão/Prever valores contínuos|Prever o preço de residências com base em tamanho e localização|
@@ -58,9 +59,18 @@ Há duas maneiras de executar scripts do R no R Services:
 
 <a name="version"></a>
 
-## <a name="r-version"></a>Versão do R
+## <a name="r-versions"></a>Versões do R
 
-A versão R 3.2.2 está incluída no R Services do SQL Server 2016. Para as versões mais recentes de R, use os [Serviços de Machine Learning para SQL Server 2017 e posterior](../sql-server-machine-learning-services.md).
+Confira a seguir as listas das versões do runtime do R incluídas nos Serviços R do SQL Server 2016.
+
+Versão do SQL Server | Versões padrão do runtime do R |
+|-|-|
+| SQL Server 2016 RTM – CU13 para SP2 | 3.2.2 |
+| CU14 para SP2 do SQL Server 2016 e posterior | 3.2.2 e 3.5.2 |
+
+A CU (atualização cumulativa) 14 para SP (Service Pack) 2 do SQL Server 2016 e posterior inclui runtimes do R mais recentes. Saiba mais em [Alterar a versão do runtime de linguagem padrão](../install/change-default-language-runtime-version.md).
+
+Para outras versões do R ou para executar o Python, use os [Serviços de Machine Learning para SQL Server 2017 e posterior](../sql-server-machine-learning-services.md).
 
 <a name="packages"></a>
 
@@ -89,7 +99,7 @@ Você pode usar pacotes e estruturas de software livre, além dos pacotes corpor
 
     + Início Rápido: [Criar e executar scripts do R simples no SQL Server](../tutorials/quickstart-r-create-script.md)
     + Início Rápido: [Criar e treinar um modelo preditivo em R](../tutorials/quickstart-r-train-score-model.md)
-    + Tutorial: [Usar o R no T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): Explorar dados, executar engenharia de recursos, treinar e implantar modelos e fazer previsões (série de cinco partes)
+    + Tutorial: [Usar o R no T-SQL](../tutorials/r-taxi-classification-introduction.md): Explorar dados, executar engenharia de recursos, treinar e implantar modelos e fazer previsões (série de cinco partes)
     + Tutorial: [Usar o R Services em ferramentas do R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explorar dados, criar grafos e gráficos, executar engenharia de recursos, treinar e implantar modelos e fazer previsões (série de seis partes)
 
 ## <a name="next-steps"></a>Próximas etapas

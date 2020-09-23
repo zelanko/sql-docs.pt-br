@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetch | Microsoft Docs
+title: PDOStatement::fetch
+description: Referência da API para a função PDOStatement::fetch no Driver PDO_SQLSRV da Microsoft para PHP do SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f1c5684ac655d0fa2b653138ff55042e9266048
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 338d871e7e0cbbfa2da04d04d33fe672f85d8083
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928605"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645103"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,23 +30,23 @@ Recupera uma linha de um conjunto de resultados.
 mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset]]] );  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 $*fetch_style*: um símbolo (inteiro) opcional especificando o formato dos dados da linha. Consulte a seção Comentários para obter a lista de valores possíveis para $*fetch_style*. O padrão é PDO::FETCH_BOTH. $*fetch_style* no método de busca substituirá o $*fetch_style* especificado no método PDO::query.  
   
 $*cursor_orientation*: um símbolo (inteiro) opcional que indica a linha a ser recuperada quando a instrução prepare especifica `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Consulte a seção Comentários para obter a lista de valores possíveis para $*cursor_orientation*. Consulte [PDO::prepare](../../connect/php/pdo-prepare.md) para obter um exemplo usando um cursor rolável.  
   
 $*cursor_offset*: um símbolo (inteiro) opcional que especifica a linha a ser buscada quando$*cursor_orientation* é PDO::FETCH_ORI_ABS ou PDO::FETCH_ORI_REL e PDO::ATTR_CURSOR é PDO::CURSOR_SCROLL.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Um valor misto que retorna uma linha ou false.  
   
 ## <a name="remarks"></a>Comentários  
 O cursor é avançado automaticamente quando a busca é chamada. A tabela a seguir contém a lista de possíveis valores de $*fetch_style*.  
   
-|$*fetch_style*|DESCRIÇÃO|  
+|$*fetch_style*|Descrição|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Especifica uma matriz indexada pelo nome da coluna.|  
-|PDO::FETCH_BOTH|Especifica uma matriz indexada pelo nome da coluna e ordem com base em zero. Esse é o padrão.|  
+|PDO::FETCH_BOTH|Especifica uma matriz indexada pelo nome da coluna e ordem com base em zero. Este é o padrão.|  
 |PDO::FETCH_BOUND|Retorna true e atribui os valores conforme especificado por [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md).|  
 |PDO::FETCH_CLASS|Cria uma instância e mapeia as colunas para propriedades nomeadas.<br /><br />Chame [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) antes de chamar a busca.|  
 |PDO::FETCH_INTO|Atualiza uma instância da classe solicitada.<br /><br />Chame [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) antes de chamar a busca.|  
@@ -57,9 +58,9 @@ Se o cursor estiver no fim do conjunto de resultados (a última linha foi recupe
   
 Se o cursor for rolável (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), a busca moverá o cursor dentro do limite do conjunto de resultados. A tabela a seguir contém a lista de possíveis valores de $*cursor_orientation*.  
   
-|$*cursor_orientation*|DESCRIÇÃO|  
+|$*cursor_orientation*|Descrição|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|Recupera a próxima linha. Esse é o padrão.|  
+|PDO::FETCH_ORI_NEXT|Recupera a próxima linha. Este é o padrão.|  
 |PDO::FETCH_ORI_PRIOR|Recupera a linha anterior.|  
 |PDO::FETCH_ORI_FIRST|Recupera a primeira linha.|  
 |PDO::FETCH_ORI_LAST|Recupera a última linha.|  

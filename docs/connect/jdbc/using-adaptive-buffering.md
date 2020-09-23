@@ -1,4 +1,5 @@
 ---
+description: Como usar o buffer adaptável
 title: Usar o buffer adaptável | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44b4b01798ac0bf37ce6e8deaadd2d0f02d9e5d4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487937"
 ---
 # <a name="using-adaptive-buffering"></a>Como usar o buffer adaptável
 
@@ -54,7 +55,7 @@ Porém, com o driver JDBC versão 2.0, os aplicativos podem usar o método [isWr
 
 Quando valores grandes são lidos uma vez usando os métodos get\<Type>Stream e as colunas ResultSet e os parâmetros CallableStatement OUT são acessados na ordem retornada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o buffer adaptável minimiza o uso de memória do aplicativo ao processar os resultados. Ao usar buffer adaptável:
 
-- Os métodos get\<Type>Stream definidos nas classes [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) retornam fluxos somente leitura por padrão, embora os fluxos possam ser reiniciados se estiver marcado pelo aplicativo. Se o aplicativo desejar `reset` o fluxo, primeiro precisará chamar o método `mark` naquele fluxo.
+- Os métodos get\<Type>Stream definidos nas classes [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) retornam fluxos de leitura única por padrão, embora os fluxos possam ser reiniciados caso estejam marcados pelo aplicativo. Se o aplicativo desejar `reset` o fluxo, primeiro precisará chamar o método `mark` naquele fluxo.
 
 - Os métodos get\<Type>Stream definidos nas classes [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) e [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) retornam fluxos que sempre podem ser reposicionados para a posição de início do fluxo sem chamar o método `mark`.
 
@@ -69,11 +70,11 @@ Os desenvolvedores devem seguir estas diretrizes importantes para minimizar o us
 
 - Evite usar a propriedade da cadeia de conexão **selectMethod=cursor** para permitir que o aplicativo processe um conjunto de resultados muito grande. O recurso de buffer adaptável permite que os aplicativos processem conjuntos de resultados somente encaminhamento e somente leitura muito grandes sem usar um cursor de servidor. Observe que, quando você define **selectMethod=cursor**, todos os conjuntos de resultados somente avanço e somente leitura gerados por aquela conexão são afetados. Em outras palavras, se o aplicativo processar conjuntos de resultados curtos habitualmente com alguns linhas, criar, ler e fechar um cursor de servidor para cada conjunto de resultados usará mais recursos nos lados do cliente e do servidor do que seria o caso quando **selectMethod** não está definido como **cursor**.
 
-- Leia os valores de texto grande ou binários como fluxos usando os métodos getAsciiStream, getBinaryStream ou getCharacterStream em vez dos métodos getBlob ou getClob. Da versão 1.2 em diante, a classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) oferece novos métodos get\<Type>Stream para este propósito.
+- Leia os valores de texto grande ou binários como fluxos usando os métodos getAsciiStream, getBinaryStream ou getCharacterStream em vez dos métodos getBlob ou getClob. Da versão 1.2 em diante, a classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) oferece novos métodos get\<Type>Stream para esse propósito.
 
-- Verifique se as colunas com valores potencialmente grandes são colocadas por último na lista de colunas em uma instrução SELECT e se os métodos get\<Type>Stream do [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) são usados para acessar as colunas na ordem em que são selecionadas.
+- Verifique se as colunas com valores potencialmente grandes são colocadas por último na lista de colunas em uma instrução SELECT e se os métodos get\<Type>Stream de [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) são usados para acessar as colunas na ordem em que são selecionadas.
 
-- Verifique se os parâmetros OUT com valores potencialmente grandes são declarados por último na lista de parâmetros no SQL usada para criar [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Além disso, verifique se os métodos get\<Type>Stream do [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) são usados para acessar os parâmetros OUT na ordem em que eles são declarados.
+- Verifique se os parâmetros OUT com valores potencialmente grandes são declarados por último na lista de parâmetros no SQL usada para criar [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Além disso, verifique se os métodos get\<Type>Stream de [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) são usados para acessar os parâmetros OUT na ordem em que eles são declarados.
 
 - Evite executar mais de uma instrução na mesma conexão simultaneamente. Executar outra instrução antes de processar os resultados da instrução anterior pode fazer os resultados não processados serem armazenados em buffer na memória do aplicativo.
 
@@ -89,7 +90,7 @@ Além disso, a lista a seguir fornece algumas recomendações para conjuntos de 
 
 - Para conjuntos de resultados roláveis, ao buscar um bloco de linhas, o driver sempre lê na memória o número de linhas indicado pelo método [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), até mesmo quando o buffer adaptável está habilitado. Se rolar causar um OutOfMemoryError, você poderá reduzir o número de linhas buscadas chamando o método [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) para definir o tamanho da busca como um número menor de linhas, até mesmo 1 linha, se necessário. Se isto não impedir um OutOfMemoryError, evite incluir colunas muito grandes em conjuntos de resultados roláveis.
 
-- Para conjuntos de resultados roláveis, ao buscar um bloco de linhas, o driver geralmente lê na memória o número de linhas indicado pelo método [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), até mesmo quando o buffer adaptável está habilitado na conexão. Se chamar o método [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) resultar em um OutOfMemoryError, você poderá reduzir o número de linhas buscadas chamando o método [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) para definir o tamanho da busca como um número menor de linhas, até mesmo 1 linha, se necessário. Você também pode forçar o driver a não armazenar em buffer nenhuma linha chamando o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) do objeto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) com o parâmetro "**adaptive**" antes de executar a instrução. Como o conjunto de resultados não é rolável, se o aplicativo acessar um valor de coluna grande usando um dos métodos get\<Type>Stream, o driver descartará o valor assim que ele for lido pelo aplicativo, da mesma maneira que faz para os conjuntos de resultados somente leitura somente avanço.
+- Para conjuntos de resultados roláveis, ao buscar um bloco de linhas, o driver geralmente lê na memória o número de linhas indicado pelo método [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), até mesmo quando o buffer adaptável está habilitado na conexão. Se chamar o método [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) resultar em um OutOfMemoryError, você poderá reduzir o número de linhas buscadas chamando o método [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) para definir o tamanho da busca como um número menor de linhas, até mesmo 1 linha, se necessário. Você também pode forçar o driver a não armazenar em buffer nenhuma linha chamando o método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) do objeto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) com o parâmetro "**adaptive**" antes de executar a instrução. Como não é possível rolar pelo conjunto de resultados, se o aplicativo acessar um valor de coluna grande usando um dos métodos get\<Type>Stream, o driver descartará o valor assim que ele for lido pelo aplicativo, da mesma maneira que faz com os conjuntos de resultados somente leitura e somente avanço.
 
 ## <a name="see-also"></a>Confira também
 

@@ -1,6 +1,6 @@
 ---
 title: Suporte a SPN (Nome da Entidade de Serviço) em conexões de cliente | Microsoft Docs
-description: Suporte a SPN (Nome da Entidade de Serviço) em conexões de cliente
+description: Saiba mais sobre como o SQL Server dá suporte ao nome da entidade de serviço em conexões de cliente. Confira os cenários de uso mais comuns.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,17 +12,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, SPNs
 - OLE DB, SPNs
 - SPNs [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c1cfc2ff97c29f7ee22f6b4050634c95ae6a846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007261"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195142"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Suporte a SPN (Nome da entidade de serviço) em conexões com o cliente
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -47,7 +48,7 @@ ms.locfileid: "86007261"
 ## <a name="usage"></a>Uso  
  A tabela a seguir descreve os cenários mais comuns nos quais os aplicativos cliente podem habilitar a autenticação segura.  
   
-|Cenário|DESCRIÇÃO|  
+|Cenário|Descrição|  
 |--------------|-----------------|  
 |Um aplicativo herdado não especifica um SPN.|Este cenário de compatibilidade garante que não haverá nenhuma alteração de comportamento para aplicativos desenvolvidos para versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se nenhum SPN for especificado, o aplicativo confiará nos SPNs gerados e não terá nenhum conhecimento de qual método de autenticação será usado.|  
 |Um aplicativo cliente que usa a versão atual do OLE DB Driver for SQL Server especifica um SPN na cadeia de conexão como um usuário do domínio ou uma conta de computador, como um SPN específico da instância ou uma cadeia de caracteres definida pelo usuário.|A palavra-chave **ServerSPN** pode ser usada em um provedor, uma inicialização ou uma cadeia de conexão para fazer o seguinte:<br /><br /> – Especificar a conta usada pela instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uma conexão. Isto simplifica o acesso à autenticação Kerberos. Se um KDC (Centro de Distribuição de Chaves) Kerberos estiver presente e a conta correta for especificada, a autenticação Kerberos provavelmente será mais usada que NTLM. O KDC normalmente reside no mesmo computador que o controlador de domínio.<br /><br /> – Especificar um SPN para pesquisar a conta de serviço para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], são gerados dois SPNs padrão que podem ser usados para essa finalidade. Não há garantia de que estas chaves estejam presentes no Active Directory. Entretanto, nesta situação, a autenticação Kerberos não é garantida.<br /><br /> – Especificar um SPN que será usado para pesquisar a conta de serviço para a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta poderá ser qualquer cadeia de caracteres definida pelo usuário que mapeia para a conta de serviço. Neste caso, a chave deve ser registrada manualmente no KDC e deve satisfazer as regras para um SPN definido pelo usuário.<br /><br /> A palavra-chave **FailoverPartnerSPN** pode ser usada para especificar o SPN para o servidor de parceiro de failover. O intervalo de conta e valores de chave do Active Directory é igual aos valores que você pode especificar para o servidor principal.|  
@@ -89,7 +90,7 @@ ms.locfileid: "86007261"
   
  A sintaxe que os SPNs usam em cadeia de conexão ou atributos de conexão é a seguinte:  
   
-|Sintaxe|DESCRIÇÃO|  
+|Sintaxe|Descrição|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|O SPN padrão gerado pelo provedor para uma instância padrão quando um protocolo diferente de TCP é usado.<br /><br /> *fqdn* é um nome de domínio totalmente qualificado.|  
 |MSSQLSvc/*fqdn*:*port*|O SPN padrão gerado pelo provedor quando o protocolo TCP é usado.<br /><br /> *port* é um número de porta TCP.|  

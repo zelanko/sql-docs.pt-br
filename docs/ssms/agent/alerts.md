@@ -1,4 +1,5 @@
 ---
+description: Alertas
 title: Alertas
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,19 +24,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 338493592a01031542d316df2c454bb09ff9b68d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7fa31500bd90ab993f58a2e27e1a41c937ad0370
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320262"
 ---
 # <a name="alerts"></a>Alertas
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
-> No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
+> No momento, na [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira detalhes nas [Diferenças entre o T-SQL da Instância Gerenciada de SQL do Azure e o SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Eventos são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inseridos no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent lê o log de aplicativos e compara os eventos gravados ali com os alertas que você definiu. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent encontra uma correspondência, ele dispara um alerta, que é uma resposta automatizada a um evento. Além de monitorar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent também pode monitorar condições de desempenho e eventos do Windows Management Instrumentation (WMI).  
   
@@ -99,7 +100,7 @@ O tipo do evento determina os parâmetros utilizados para especificar o evento p
   
     O limite do alerta e o comportamento que o alerta produz. O limite é um número. O comportamento é um **dos seguintes: cai abaixo**, **torna-se igual a**ou **sobe acima de um número especificado como Valor**. O **Valor** é um número que descreve o contador de condição de desempenho. Por exemplo, para definir que ocorra um alerta para o objeto de desempenho **SQLServer:Locks** quando **Tempo de Espera de Bloqueio** exceder 30 minutos, você deve escolher **sobe acima** e **especificar 30 como valor**.  
   
-    Outro exemplo: você pode especificar que ocorra um alerta para o objeto de desempenho **SQLServer:Transactions** quando o espaço livre em **tempdb** cair abaixo de 1000 KB. Para definir isso, bastaria escolher o contador **Espaço livre em tempdb (KB)** , **cai abaixo**e um **Valor** de **1000**.  
+    Outro exemplo: você pode especificar que ocorra um alerta para o objeto de desempenho **SQLServer:Transactions** quando o espaço livre em **tempdb** cair abaixo de 1000 KB. Para definir isso, bastaria escolher o contador **Espaço livre em tempdb (KB)**, **cai abaixo**e um **Valor** de **1000**.  
   
     > [!NOTE]  
     > Os dados de desempenho são amostrados periodicamente, o que pode levar a uma pequena demora (alguns segundos) entre o limite a ser atingido e a ocorrência do alerta de desempenho.  

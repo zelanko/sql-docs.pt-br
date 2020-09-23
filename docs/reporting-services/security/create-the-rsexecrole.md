@@ -1,4 +1,5 @@
 ---
+description: Criar o RSExecRole
 title: Criar a RSExecRole | Microsoft Docs
 ms.date: 06/12/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08895328856056d01b927a8c80962ff0b90570f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492629"
 ---
 # <a name="create-the-rsexecrole"></a>Criar o RSExecRole
 
@@ -71,7 +72,7 @@ ms.locfileid: "67140482"
   
 12. Clique em **OK**. A caixa de diálogo **Selecionar Objetos** é exibida.  
   
-13. Clique em **Tipos de Objetos**.  
+13. Clique em **Tipos de Objeto**.  
   
 14. Clique em **Procedimentos Armazenados Estendidos**.  
   
@@ -122,7 +123,7 @@ ms.locfileid: "67140482"
   
 10. Clique em **OK**.  
   
-11. Clique em **Tipos de Objetos**.  
+11. Clique em **Tipos de Objeto**.  
   
 12. Clique em **Procedimentos Armazenados**.  
   
@@ -164,7 +165,7 @@ ms.locfileid: "67140482"
   
 21. Clique em **OK**.  
   
-22. Clique em **Tipos de Objetos**.  
+22. Clique em **Tipos de Objeto**.  
   
 23. Clique em **Tabelas**.  
   
@@ -216,7 +217,7 @@ ms.locfileid: "67140482"
   
 8.  Em Banco de Dados, selecione o banco de dados de servidor de relatório.  
   
-9.  Clique em **Avançar** e conclua o assistente.  
+9.  Clique em **Próximo** e conclua o assistente.  
   
 10. Clique em **Chaves de Criptografia**.  
   
@@ -267,6 +268,6 @@ GO
 [Movendo os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
 [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[Fazer backup e restaurar as chaves de criptografia do Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+[Fazer backup e restaurar as chave de criptografia do Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
 Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

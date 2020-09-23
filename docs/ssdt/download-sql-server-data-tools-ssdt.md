@@ -13,18 +13,18 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: eed51327477f40aa4e093d9b28cbaa641bfd4a86
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86278996"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480528"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Baixe o SSDT (SQL Server Data Tools) para Visual Studio
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-O **SSDT (SQL Server Data Tools)** é uma moderna ferramenta de desenvolvimento para criar bancos de dados relacionais do SQL Server, Bancos de Dados SQL do Azure, modelos de dados do AS (Analysis Services), pacotes do IS (Integration Services) e relatórios do RS (Reporting Services). Com o SSDT, você pode projetar e implantar qualquer tipo de conteúdo do SQL Server com a mesma facilidade com que desenvolve um aplicativo no Visual Studio.
+O **SSDT (SQL Server Data Tools)** é uma ferramenta de desenvolvimento moderna para criar bancos de dados relacionais do SQL Server, bancos de dados SQL do Azure, modelos de dados do AS (Analysis Services), pacotes do IS (Integration Services) e relatórios do RS (Reporting Services). Com o SSDT, você pode projetar e implantar qualquer tipo de conteúdo do SQL Server com a mesma facilidade com que desenvolve um aplicativo no Visual Studio.
 
 ## <a name="ssdt-for-visual-studio-2019"></a>SSDT para Visual Studio 2019
 
@@ -79,10 +79,10 @@ O instalador lista instâncias disponíveis do Visual Studio para adicionar as f
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT para VS 2017 (instalador autônomo)
 
-:::image type="icon" source="media/download.png" border="false"::: **[Baixar o SSDT para Visual Studio 2017 (15.9.5)](https://go.microsoft.com/fwlink/?linkid=2131035)**
+:::image type="icon" source="media/download.png" border="false"::: **[Baixar o SSDT para Visual Studio 2017 (15.9.6)](https://go.microsoft.com/fwlink/?linkid=2139376)**
 
 > [!IMPORTANT]
-> * Antes de instalar o SSDT para Visual Studio 2017 (15.9.5), desinstale as extensões *Projetos do Analysis Services* e *Projetos do Reporting Services* caso já estejam instaladas e feche todas as instâncias do VS. 
+> * Antes de instalar o SSDT para Visual Studio 2017 (15.9.6), desinstale as extensões *Projetos do Analysis Services* e *Projetos do Reporting Services* caso já estejam instaladas e feche todas as instâncias do VS. 
 > * O componente de caixa de entrada Origem do Power Query para SQL Server 2017 foi removido. Agora, anunciamos a Origem do Power Query para SQL Server 2017 e 2019 como componente pronto para uso, que pode ser baixado [aqui](https://www.microsoft.com/download/details.aspx?id=100619).
 > * Para criar pacotes usando os conectores Oracle e Teradata e direcionar uma versão anterior do SQL Server antes do SQL 2019, além do [Microsoft Oracle Connector para SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) e [Microsoft Teradata Connector para SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), você também precisa instalar a versão correspondente do Microsoft Connector para Oracle e Teradata do Attunity.
 >    * [Microsoft Connector versão 5.0 para Oracle e Teradata da Attunity direcionado ao SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -102,17 +102,17 @@ O SSDT para Visual Studio 2017 tem os mesmos [requisitos de sistema](https://doc
 
 Esta versão do **SSDT para VS 2017** pode ser instalada nos seguintes idiomas:
 
-* [Chinês (simplificado)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
-* [Chinês (tradicional)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
-* [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
-* [Francês](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
-* [Alemão](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
-* [Italiano](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
-* [Japonês](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
-* [Coreano](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
-* [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
-* [Russo](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
-* [Espanhol](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
+* [Chinês (simplificado)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
+* [Chinês (tradicional)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
+* [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
+* [Francês](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
+* [Alemão](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
+* [Italiano](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
+* [Japonês](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
+* [Coreano](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
+* [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
+* [Russo](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
+* [Espanhol](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>Considerações e limitações
 
@@ -166,7 +166,7 @@ Para baixar e instalar o SSDT para o Visual Studio 2015 ou uma versão mais anti
 
 * [Fórum do MSDN do SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [Blog da equipe do SSDT](https://blogs.msdn.com/b/ssdt/)
+* [Blog da equipe do SSDT](https://docs.microsoft.com/archive/blogs/ssdt/)
 
 * [Referência DACFx API](https://msdn.microsoft.com/library/dn645454.aspx)
 

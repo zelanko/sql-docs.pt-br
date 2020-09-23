@@ -1,5 +1,6 @@
 ---
-title: Metadados de instrução em cache preparados para o JDBC Driver | Microsoft Docs
+title: Metadados de instrução em cache preparados para o JDBC Driver
+description: Saiba como o JDBC Driver para SQL Server armazena em cache as instruções preparadas para melhorar o desempenho ao minimizar as chamadas para o banco de dados e como você pode controlar o comportamento dele.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8918be02b5dbb0e6decf49bc315b0ebd8c83e369
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67b35e04ede8608d222c8fc31d89bfd01b093ba7
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923762"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435393"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Metadados de instrução em cache preparados para o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ Outra alteração que foi introduzida na versão 6.1.6-preview é que, antes dis
 
  **SQLServerConnection**
  
-|Novo método|DESCRIÇÃO|  
+|Novo método|Descrição|  
 |-----------|-----------------|  
 |int getDiscardedServerPreparedStatementCount()|Retorna o número das ações atuais de cancelamento de preparação de instruções preparadas pendentes.|
 |void closeUnreferencedPreparedStatementHandles()|Força o cancelamento da preparação de solicitações para as instruções preparadas descartadas pendentes a serem executadas.|
@@ -48,14 +49,14 @@ Outra alteração que foi introduzida na versão 6.1.6-preview é que, antes dis
 
  **SQLServerDataSource**
  
-|Novo método|DESCRIÇÃO|  
+|Novo método|Descrição|  
 |-----------|-----------------|  
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|Se essa configuração for false, a primeira execução de uma instrução preparada chamará sp_executesql e não preparará uma instrução. Assim que a segunda execução ocorrer, ela chamará sp_prepexec e configurará efetivamente um identificador de instrução preparada. As execuções subsequentes chamarão sp_execute. Isso elimina a necessidade de sp_unprepare no fechamento da instrução preparada se a instrução é executada apenas uma vez.|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|Se essa configuração retornar false, a primeira execução de uma instrução preparada chamará sp_executesql e não preparará uma instrução. Assim que a segunda execução ocorrer, ela chamará sp_prepexec e configurará efetivamente um identificador de instrução preparada. As execuções subsequentes chamarão sp_execute. Isso elimina a necessidade de sp_unprepare no fechamento da instrução preparada se a instrução é executada apenas uma vez.|
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Essa configuração controla quantas ações de descarte de instruções preparadas pendentes (sp_unprepare) podem estar pendentes por conexão antes que uma chamada para limpar os identificadores pendentes no servidor seja executada. Se a configuração for < = 1, ações de cancelamento de preparação serão executadas imediatamente no fechamento da instrução preparada. Se o valor for definido como {@literal >} 1, essas chamadas serão agrupadas em lote para evitar a sobrecarga de chamar sp_unprepare com muita frequência|
 |int getServerPreparedStatementDiscardThreshold()|Essa configuração controla quantas ações de descarte de instruções preparadas pendentes (sp_unprepare) podem estar pendentes por conexão antes que uma chamada para limpar os identificadores pendentes no servidor seja executada. Se a configuração for < = 1, ações de cancelamento de preparação serão executadas imediatamente no fechamento da instrução preparada. Se o valor for definido como {@literal >} 1, essas chamadas serão agrupadas em lote para evitar a sobrecarga de chamar sp_unprepare com muita frequência.|
 
-## <a name="prepared-statement-metatada-caching"></a>Cache de metadados da instrução preparada
+## <a name="prepared-statement-metadata-caching"></a>Armazenamento em cache de metadados de instruções preparadas
 Com a versão 6.3.0-preview, o Microsoft JDBC Driver para SQL Server passa a ser compatível com o cache de instruções preparadas. Antes da v6.3.0-preview, se um usuário executasse uma consulta que já tivesse sido preparada e armazenada no cache, chamar a mesma consulta novamente não resultaria na preparação dela. Agora, o driver pesquisa a consulta no cache, localiza o identificador e executa-o com sp_execute.
 O cache de metadados de **instrução** preparado está desabilitado por padrão. Para habilitá-lo, você precisa chamar o seguinte método no objeto de conexão:
 
@@ -69,7 +70,7 @@ Por exemplo: `connection.setStatementPoolingCacheSize(10)`
 
  **SQLServerConnection**
  
-|Novo método|DESCRIÇÃO|  
+|Novo método|Descrição|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean value)|Define o pool de instruções como true ou false.|
 |boolean getDisableStatementPooling()|Retorna true se o pool de instruções está desabilitado.|
@@ -80,7 +81,7 @@ Por exemplo: `connection.setStatementPoolingCacheSize(10)`
 
  **SQLServerDataSource**
  
-|Novo método|DESCRIÇÃO|  
+|Novo método|Descrição|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean disableStatementPooling)|Define o pool de instruções como true ou false|
 |boolean getDisableStatementPooling()|Retorna true se o pool de instruções está desabilitado.|

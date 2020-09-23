@@ -1,7 +1,7 @@
 ---
 title: Persistência de dados no Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Saiba mais sobre como a persistência de dados funciona em um cluster de Big Data do SQL Server 2019.
+description: Saiba como os volumes persistentes fornecem um modelo de plug-in para armazenamento no Kubernetes. Saiba também como funciona a persistência de dados em um cluster de Big Data do SQL Server 2019.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661075"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765685"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistência de dados com o cluster de Big Data do SQL Server em Kubernetes
 
@@ -28,7 +28,7 @@ Um cluster de Big Data do SQL Server consume esses volumes persistentes usando [
 
 Estes são alguns aspectos importantes a serem considerados quando você estiver planejando a configuração de armazenamento para seu cluster de Big Data:
 
-- Para uma implantação de cluster de Big Data bem-sucedida, verifique se você tem o número necessário de volumes persistentes disponíveis. Se você estiver realizando a implantação em um cluster do AKS (Azure Kubernetes Service) e estiver usando uma classe de armazenamento interna (`default` ou `managed-premium`), ela dará suporte ao provisionamento dinâmico para os volumes persistentes. Portanto, você não precisa pré-criar os volumes persistentes, mas deve garantir que os nós de trabalho disponíveis no cluster do AKS possam anexar tantos discos quanto o número de volumes persistentes que são necessários para a implantação. Dependendo do [tamanho da VM](https://docs.microsoft.com/azure/virtual-machines/linux/sizes) especificado para os nós de trabalho, cada nó pode anexar determinado número de discos. Para um cluster de tamanho padrão (sem alta disponibilidade), são necessários, no mínimo, 24 discos. Se você estiver habilitando a alta disponibilidade ou expandindo qualquer pool, verifique se você tem, no mínimo, dois volumes persistentes por cada réplica adicional, independentemente do recurso que você está expandindo.
+- Para uma implantação de cluster de Big Data bem-sucedida, verifique se você tem o número necessário de volumes persistentes disponíveis. Se você estiver realizando a implantação em um cluster do AKS (Azure Kubernetes Service) e estiver usando uma classe de armazenamento interna (`default` ou `managed-premium`), ela dará suporte ao provisionamento dinâmico para os volumes persistentes. Portanto, você não precisa pré-criar os volumes persistentes, mas deve garantir que os nós de trabalho disponíveis no cluster do AKS possam anexar tantos discos quanto o número de volumes persistentes que são necessários para a implantação. Dependendo do [tamanho da VM](/azure/virtual-machines/linux/sizes) especificado para os nós de trabalho, cada nó pode anexar determinado número de discos. Para um cluster de tamanho padrão (sem alta disponibilidade), são necessários, no mínimo, 24 discos. Se você estiver habilitando a alta disponibilidade ou expandindo qualquer pool, verifique se você tem, no mínimo, dois volumes persistentes por cada réplica adicional, independentemente do recurso que você está expandindo.
 
 - Se o provisionador de armazenamento para a classe de armazenamento que você está fornecendo na configuração não der suporte ao provisionamento dinâmico, você precisará pré-criar os volumes persistentes. Por exemplo, o provisionador `local-storage` não habilita o provisionamento dinâmico. Confira este [script de exemplo](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) para obter diretrizes sobre como proceder em um cluster do Kubernetes implantado com `kubeadm`.
 

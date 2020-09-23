@@ -1,6 +1,6 @@
 ---
 title: Usando MSDeploy com o provedor do dbSqlPackage
-description: Saiba mais sobre o provedor DbSqlPackage obsoleto do MSDeploy. Veja parâmetros, exemplos e ferramentas de publicação de banco de dados do SQL Azure e do SQL Server.
+description: Saiba mais sobre o provedor DbSqlPackage obsoleto do MSDeploy. Confira parâmetros, exemplos e ferramentas de publicação alternativas do SQL Server e do Banco de Dados SQL do Azure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899746"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934081"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usando MSDeploy com o provedor do dbSqlPackage
 
-O **DbSqlPackage** é um provedor do **MSDeploy** que permite interagir com bancos de dados do SQL Server/SQL Azure. O **DbSqlPackage** dá suporte às seguintes ações:  
+O **DbSqlPackage** é um provedor do **MSDeploy** que permite interagir com o SQL Server e o Banco de Dados SQL do Azure. O **DbSqlPackage** dá suporte às seguintes ações:  
   
--   **Extrair**: cria um arquivo de instantâneo de banco de dados (.dacpac) de bancos de dados do SQL Server ou do SQL Azure.  
+-   **Extrair**: cria um arquivo (.dacpac) de instantâneo de um banco de dados do SQL Server dinâmico ou do Banco de Dados SQL do Azure.  
   
 -   **Publicar**: atualiza um esquema de banco de dados incrementalmente para que corresponda ao esquema de um arquivo .dacpac de origem.  
   
@@ -57,7 +57,7 @@ O provedor **dbSqlPackage** usa uma entrada que é uma cadeia de conexão válid
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**N/A**|*input* é uma cadeia de conexão válida do SQL Server ou do SQL Azure ou um caminho para um arquivo .dacpac no disco.<br /><br />**OBSERVAÇÃO:** as únicas propriedades de cadeia de conexão com suporte ao usar uma cadeia de conexão como fonte de entrada são *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* e *ConnectionTimeout*.|  
   
-Se sua fonte de entrada for uma cadeia de conexão para um banco de dados SQL Server/SQL Azure ativo, o **dbSqlPackage** extrairá um instantâneo de banco de dados (na forma de um arquivo .dacpac) em um banco de dados SQL Server/SQL Azure ativo.  
+Se a sua fonte de entrada for uma cadeia de conexão com o SQL Server/Banco de Dados SQL do Azure, o **dbSqlPackage** extrairá um instantâneo do banco de dados (na forma de um arquivo .dacpac) no SQL Server/Banco de Dados SQL do Azure.  
   
 Os parâmetros de **Origem** são:  
   

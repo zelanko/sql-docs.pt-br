@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f82420b687c3714c75b69e778c1bcc881aad8e82
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742092"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396105"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Desabilitar ou pausar o processamento de relatório e assinatura  
-Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste artigo abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com ambos os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As seguintes tabelas resumem os métodos e os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] compatíveis:  
+Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste artigo abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com ambos os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As seguintes tabelas resumem os métodos e os modos de servidor compatíveis do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
 ##  <a name="in-this-article"></a><a name="bkmk_top"></a> Neste artigo  
   
-||Modo de servidor com suporte|  
+|Abordagem|Modo de servidor com suporte|  
 |-|---------------------------|  
 |[Habilitar e desabilitar assinaturas](#bkmk_disable_subscription)|nativo|  
 |[Pausar uma agenda compartilhada](#bkmk_pause_schedule)|Modo nativo e do SharePoint|  

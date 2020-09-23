@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::getAttribute | Microsoft Docs
+title: PDOStatement::getAttribute
+description: Referência da API para a função PDOStatement::getAttribute no Driver PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
-ms.date: 07/13/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 41d0cca3-8556-4573-bb90-8e9402d9379f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a401cded16dc139e5efc70129ceb0d66fd68dcd6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 07cc46717dafe973dee05647f1d08134d858c58e
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923454"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646746"
 ---
 # <a name="pdostatementgetattribute"></a>PDOStatement::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,10 +30,10 @@ Recupera o valor de um atributo PDOStatement predefinido ou de um atributo de dr
 mixed PDOStatement::getAttribute( $attribute );  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 $*attribute*: um inteiro, uma das constantes PDO::ATTR_* ou PDO::SQLSRV_ATTR_\*. Atributos compatíveis são os aqueles que você pode definir com [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), PDO::SQLSRV_ATTR_DIRECT_QUERY (para obter mais informações, veja [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)), PDO::ATTR_CURSOR e PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE (para obter mais informações, veja [Tipos de cursor [Driver PDO_SQLSRV]](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)).  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Em caso de sucesso, retorna um valor (misto) para um atributo PDO predefinido ou um atributo de driver personalizado. Retorna null em caso de falha.  
   
 ## <a name="remarks"></a>Comentários  

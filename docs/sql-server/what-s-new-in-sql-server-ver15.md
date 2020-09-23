@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923395"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864247"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novidades no [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -262,7 +262,7 @@ Esta versão apresenta novos recursos para melhorar operações de arquivo.
 
 | Novo recurso ou atualização | Detalhes |
 |:---|:---|
-|Dá suporte a bancos de dados de instância gerenciada do Banco de Dados SQL do Azure| Hospede [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] em uma instância gerenciada. Confira [Instalação e configuração do [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Suporte para bancos de dados da Instância Gerenciada de SQL do Azure| Hospede o [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] na Instância Gerenciada de SQL do Azure. Confira [Instalação e configuração do [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
 |Novos controles HTML| Os controles HTML substituem todos os componentes do Silverlight anteriores. Dependência do Silverlight removida.|
 | &nbsp; | &nbsp; |
 

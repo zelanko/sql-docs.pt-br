@@ -2,19 +2,19 @@
 title: Usar Always Encrypted com o ODBC Driver
 description: Saiba como desenvolver aplicativos ODBC usando Always Encrypted e o Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886293"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288178"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Como usar o recurso Always Encrypted com o ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -41,7 +41,7 @@ Configure o Sempre Criptografado em seu banco de dados. Isso envolve o provision
 A maneira mais fácil de habilitar a criptografia de parâmetro e a descriptografia de colunas criptografadas do conjunto de resultados é definindo o valor da palavra-chave da cadeia de conexão `ColumnEncryption` como **Habilitado**. Veja a seguir o exemplo de uma cadeia de conexão que habilita Always Encrypted:
 
 ```
-SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
+SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 O Always Encrypted pode também ser habilitado na configuração de DSN, usando a mesma chave e valor (que serão substituídos pela configuração de cadeia de conexão, se presente) ou por meio de programação com o atributo de pré-conexão `SQL_COPT_SS_COLUMN_ENCRYPTION`. Defini-lo dessa maneira substitui o valor definido na cadeia de conexão ou DSN:
@@ -309,6 +309,8 @@ Esta seção descreve as otimizações de desempenho internas no ODBC Driver for
 
 Se o Always Encrypted estiver habilitado para uma conexão, o driver por padrão chamará [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum valor de parâmetro) para o SQL Server. Este procedimento armazenado analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados e, se for o caso, retorna as informações relacionadas à criptografia para cada parâmetro para permitir ao driver criptografá-los. O comportamento acima garante um alto nível de transparência para o aplicativo cliente: O aplicativo (e o desenvolvedor do aplicativo) não precisa estar ciente de quais consultas acessam colunas criptografadas, desde que os valores que se destinam às colunas criptografadas sejam passados para o driver nos parâmetros.
 
+A partir da versão 17.6, o driver também armazena em cache os metadados de criptografia para instruções preparadas, melhorando o desempenho por meio da permissão de chamadas subsequentes para `SQLExecute`, de modo a não exigir uma viagem de ida e volta adicional para recuperar metadados de criptografia.
+
 ### <a name="per-statement-always-encrypted-behavior"></a>Comportamento do Always Encrypted por instrução
 
 Para controlar o impacto no desempenho da recuperação de metadados de criptografia para consultas parametrizadas, é possível alterar o comportamento do Always Encrypted para consultas individuais se ele tiver sido habilitado na conexão. Assim, você pode garantir que `sys.sp_describe_parameter_encryption` seja invocado apenas para consultas que você sabe que têm parâmetros que se destinam a colunas criptografadas. No entanto, observe que, ao fazer isso, você reduzirá a transparência da criptografia: se você criptografar colunas adicionais no seu banco de dados, poderá precisar alterar o código do aplicativo para alinhá-lo a alterações de esquema.
@@ -330,6 +332,8 @@ Se a maioria das consultas de um aplicativo cliente acessa colunas criptografada
 - Defina o atributo `SQL_SOPT_SS_COLUMN_ENCRYPTION` como `SQL_CE_DISABLED` em instruções que não acessam nenhuma coluna criptografada. Isso desabilita a chamada de `sys.sp_describe_parameter_encryption` e as tentativas de descriptografar todos os valores no conjunto de resultados.
     
 - Defina o atributo `SQL_SOPT_SS_COLUMN_ENCRYPTION` como `SQL_CE_RESULTSETONLY` em instruções que não têm parâmetros que exigem criptografia, mas que recuperam dados de colunas criptografadas. Isso desabilita a chamada `sys.sp_describe_parameter_encryption` e a criptografia do parâmetro. Resultados contendo colunas criptografadas continuam sendo descriptografados.
+
+- Use instruções preparadas para consultas que serão executadas mais de uma vez; prepare a consulta com `SQLPrepare` e salve o identificador de instrução, reutilizando-o com `SQLExecute` cada vez que for executado. Essa é a abordagem preferencial para haver bom desempenho mesmo quando não há colunas criptografadas e permite que o driver aproveite os metadados armazenados em cache.
 
 ## <a name="always-encrypted-security-settings"></a>Configurações de segurança do Always Encrypted
 
@@ -395,7 +399,7 @@ O driver oferece suporte à autenticação no Azure Key Vault usando os seguinte
 
 Para permitir que o driver use CMKs armazenadas no AKV para criptografia de coluna, use as seguintes palavras-chave somente de cadeia de conexão:
 
-|Tipo de Credencial| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
+|Tipo de Credencial|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
 |-|-|-|-|
 |Nome de usuário/senha| `KeyVaultPassword`|Nome UPN|Senha|
 |ID do cliente/segredo| `KeyVaultClientSecret`|ID do Cliente|Segredo|
@@ -408,13 +412,13 @@ As cadeias de conexão a seguir mostram como autenticar no Azure Key Vault com o
 **ClientID/Segredo**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
 **Nome de usuário/senha**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
 **Identidade Gerenciada (atribuída pelo sistema)**
@@ -596,7 +600,7 @@ Ao usar o utilitário **bcp**: para controlar a configuração `ColumnEncryption
 
 A tabela a seguir fornece um resumo das ações ao operar em uma coluna criptografada:
 
-|`ColumnEncryption`|Direção BCP|Descrição|
+|<code>ColumnEncryption</code>|Direção BCP|Descrição|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (para o cliente)|Recupera o texto cifrado. O tipo de dados observado é **varbinary(max)** .|
 |`Enabled`|OUT (para o cliente)|Recupera texto não criptografado. O driver descriptografará os dados da coluna.|
@@ -641,7 +645,7 @@ Veja [Migrar dados confidenciais protegidos por Always Encrypted](../../relation
 
 |Campo IPD|Tamanho/tipo|Valor Padrão|Descrição|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 bytes)|0|Quando 0 (padrão): a decisão de criptografar esse parâmetro é determinada pela disponibilidade de metadados de criptografia.<br><br>Quando for diferente de zero: se os metadados de criptografia estão disponíveis para esse parâmetro, eles são criptografados. Caso contrário, a solicitação falha com erro [CE300] [Microsoft][ODBC Driver 13 for SQL Server]A criptografia obrigatória foi especificada para um parâmetro, mas nenhum metadado de criptografia foi fornecido pelo servidor.|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 bytes)|0|Quando 0 (padrão): a decisão de criptografar esse parâmetro é determinada pela disponibilidade de metadados de criptografia.<br><br>Quando for diferente de zero: se os metadados de criptografia estão disponíveis para esse parâmetro, eles são criptografados. Caso contrário, a solicitação falha com o erro [CE300] [Microsoft][ODBC Driver 17 for SQL Server]A criptografia obrigatória foi especificada para um parâmetro, mas nenhum metadado de criptografia foi fornecido pelo servidor.|
 
 ### <a name="bcp_control-options"></a>Opções bcp_control
 

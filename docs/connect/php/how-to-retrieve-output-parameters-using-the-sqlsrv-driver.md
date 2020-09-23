@@ -1,5 +1,6 @@
 ---
-title: Como recuperar parâmetros de saída usando o driver SQLSRV | Microsoft Docs
+title: Como recuperar parâmetros de saída usando o driver SQLSRV
+description: Saiba como usar e recuperar parâmetros de saída em um procedimento armazenado com o Driver do Microsoft SQLSRV para PHP para SQL Server.
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3ac42280791083d5443b1bf004908a301971e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916012"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410952"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Como recuperar parâmetros de saída usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80916012"
 Este tópico demonstra como chamar um procedimento armazenado no qual um parâmetro foi definido como parâmetro de saída. Ao recuperar um parâmetro de saída ou de entrada/saída, todos os resultados retornados pelo procedimento armazenado devem ser consumidos antes que o valor do parâmetro retornado esteja acessível.  
   
 > [!NOTE]  
-> Variáveis que são inicializadas ou atualizadas para **null**, **DateTime**ou tipos de fluxo não podem ser usadas como parâmetros de saída.  
+>  Variáveis que são inicializadas ou atualizadas para **null**, **DateTime**ou tipos de fluxo não podem ser usadas como parâmetros de saída.  
   
 Pode ocorrer truncamento de dados quando tipos de fluxo como SQLSRV_SQLTYPE_VARCHAR('max') são usados como parâmetros de saída. Não há suporte para tipos de fluxos como parâmetros de saída. Para tipos que não são de fluxo, poderá ocorrer truncamento de dados se o comprimento do parâmetro de saída não for especificado ou se o comprimento especificado não for grande o suficiente para o parâmetro de saída.  
   
@@ -150,7 +151,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Consulte Também  
-[Como especificar a direção do parâmetro usando o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Como especificar a direção do parâmetro com o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [Como recuperar parâmetros de entrada e de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
 

@@ -1,4 +1,5 @@
 ---
+description: Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
 title: Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a54cd6367cea9caf2f72ec7412d15e878233a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423260"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Método de ConfigurationSetting – GenerateDatabaseRightsScript
   Gera um Script SQL que pode ser usado para conceder direitos de usuário ao banco de dados do servidor de relatório e a outros bancos de dados necessários para a execução de um servidor de relatório. O chamador deve se conectar ao servidor de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executar o script.  
@@ -39,7 +40,7 @@ public void GenerateDatabaseRightsScript(string UserName, string DatabaseName, b
 out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *UserName*  
  O nome de usuário ou o identificador de segurança (SID) do Windows do usuário ao qual o script concederá direitos.  
   

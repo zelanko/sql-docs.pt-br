@@ -1,5 +1,6 @@
 ---
-title: PDO::query | Microsoft Docs
+title: PDO::query
+description: Referência da API para a função PDO::query no Driver PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 809ced4a32081375ebd98c61f7429c22e06cb90a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dfceb71c40b7214d9570a62c7ff65925b4f19849
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919164"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410942"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,12 +30,12 @@ Executa uma consulta SQL e retorna um conjunto de resultados como um objeto PDOS
 PDOStatement PDO::query ($statement[, $fetch_style);  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$statement*: a instrução SQL que você quer executar.  
   
 *$fetch_style*: as instruções opcionais sobre como executar a consulta. Para obter mais detalhes, consulte a seção Comentários. $*fetch_style* em PDO::query pode ser substituído por *$fetch_style* em PDO::fetch.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
 Se a chamada for bem-sucedida, o PDO::query retornará um objeto PDOStatement. Se a chamada falhar, PDO::query gerará um objeto PDOException ou retornará false, dependendo da configuração de PDO::ATTR_ERRMODE.  
   
 ## <a name="exceptions"></a>Exceções  
@@ -47,7 +48,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT também afeta o comportamento de PDO::exec, veja 
   
 Você pode especificar as seguintes opções para $*fetch_style*.  
   
-|Estilo|DESCRIÇÃO|  
+|Estilo|Descrição|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Consultas de dados na coluna especificada. A primeira coluna na tabela é a coluna 0.|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|Cria uma instância de uma classe e atribui nomes de coluna a propriedades da classe. Se o construtor de classe aceitar um ou mais parâmetros, você poderá passar também uma *arglist*.|  

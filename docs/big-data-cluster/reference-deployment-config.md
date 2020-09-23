@@ -1,7 +1,7 @@
 ---
 title: Arquivo de configuração de implantação
 titleSuffix: SQL Server Big Data Clusters
-description: Referência para um arquivo de configuração de implantação de cluster de Big Data.
+description: Saiba mais sobre um arquivo JSON que documenta a estrutura de um arquivo de configuração de implantação de Cluster de Big Data do SQL Server 2019.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 2/19/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3a94fb34110401c16b81bd05993e2cf85d2fdc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 174ef6dd8131e9b13aab6d701693ab78a988327b
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752111"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807439"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Referência do arquivo de configuração de implantação para clusters de Big Data
 

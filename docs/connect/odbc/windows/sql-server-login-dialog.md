@@ -1,5 +1,6 @@
 ---
-title: Caixa de diálogo Logon do SQL Server (ODBC) | Microsoft Docs
+title: Caixa de diálogo Logon do SQL Server (ODBC)
+description: A caixa de diálogo de logon do SQL Server pode aparecer quando um aplicativo faz uma conexão ODBC sem especificar informações suficientes para se conectar ao banco de dados.
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 35a9c6b6c254d6ed7c3283aedba15e65b6114579
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920122"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898809"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Caixa de diálogo Logon do SQL Server (ODBC)
 
@@ -39,6 +40,7 @@ Selecione um dos seguintes modos de autenticação:
 - **Senha do Active Directory** com ID de logon e senha
 - Autenticação **Integrada do Active Directory** usando a conta do usuário autenticado atualmente
 - Autenticação **Interativa do Active Directory** com ID de logon
+- Autenticação **Identidade de Serviço Gerenciada** com a Identidade Gerenciada
 
 Confira [Tela 2 do Assistente de fonte de dados](../../../connect/odbc/windows/dsn-wizard-2.md) para obter mais informações sobre os modos de autenticação.
 
@@ -48,7 +50,7 @@ Se você usar uma conexão confiável, poderá especificar um SPN (nome de entid
 
 ### <a name="login-id"></a>ID de Logon
 
-Especifica a ID de logon do SQL Server ou do Azure Active Directory a ser usada para a conexão se **Modo de Autenticação** está definido como **SQL Server** ou **Senha do Active Directory** ou **Active Directory Interativo**. Caso contrário, a caixa **ID de Logon** será desabilitada.
+Especifica a ID de logon do SQL Server ou do Azure Active Directory a ser usada para a conexão se o **Modo de Autenticação** estiver definido como **SQL Server**, **Senha do Active Directory**, **Active Directory Interativo** ou **Identidade de Serviço Gerenciada**. Caso contrário, a caixa **ID de Logon** será desabilitada.
 
 ### <a name="password"></a>Senha
 

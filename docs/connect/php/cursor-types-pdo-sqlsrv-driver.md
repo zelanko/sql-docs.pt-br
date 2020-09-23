@@ -1,7 +1,8 @@
 ---
-title: Tipos de cursor (Driver PDO_SQLSRV) | Microsoft Docs
+title: Tipos de cursor (Driver PDO_SQLSRV)
+description: Saiba mais sobre vários cursores do lado do servidor e do cliente e como os usuários podem especificar o tipo de cursor ao usar o Driver PDO_SQLSRV da Microsoft para PHP para SQL Server.
 ms.custom: ''
-ms.date: 05/03/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c33d1dffef3e2a7cfd6b981f8bfb0087969e88b7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7660f71ba8a288840210734b85ac551a0770fc81
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928059"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680581"
 ---
 # <a name="cursor-types-pdo_sqlsrv-driver"></a>Tipos de cursor (Driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

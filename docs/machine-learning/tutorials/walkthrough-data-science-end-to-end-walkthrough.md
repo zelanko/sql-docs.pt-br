@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial do R: Desenvolver um modelo no SQL'
-description: Tutorial mostrando como criar uma solução do R de ponta a ponta para análise no banco de dados.
+description: Saiba como criar uma solução de ponta a ponta para modelagem preditiva com base no suporte a recursos do R no SQL Server 2016 ou SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/11/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781794"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179738"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desenvolvimento de SQL para cientistas de dados do R
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Neste tutorial para cientistas de dados, saiba como criar uma solução de ponta a ponta para modelagem preditiva com base no suporte a recursos do R no SQL Server 2016 ou SQL Server 2017. Este tutorial usa um banco de dados [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) no SQL Server. 
 

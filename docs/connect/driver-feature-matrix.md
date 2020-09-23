@@ -2,19 +2,19 @@
 title: Matriz de suporte de recursos de driver
 description: Saiba quais recursos populares têm suporte nos drivers para SQL Server e onde encontrar informações sobre eles.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: a879b3784b19de4e7d30e1af213953b8e592abf9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947886"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823351"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matriz de suporte de recursos de driver para Microsoft SQL Server
 
@@ -60,8 +60,8 @@ Queremos que todos os drivers deem suporte a todos os recursos e façam esforço
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Sim](odbc/using-always-encrypted-with-the-odbc-driver.md) | [Sim](odbc/using-always-encrypted-with-the-odbc-driver.md) | [Sim](jdbc/using-always-encrypted-with-the-jdbc-driver.md) |
 | [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Sim](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [Sim](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [Sim](jdbc/using-always-encrypted-with-the-jdbc-driver.md) | |
 | [Autenticação do Token de Acesso do Azure Active Directory](/azure/active-directory/develop/access-tokens) | [Sim](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Sim](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Sim](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) | [Sim](oledb/features/using-azure-active-directory.md) |
-| [Autenticação de Senha do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) |  [Sim](odbc/using-azure-active-directory.md) | [Sim](odbc/using-azure-active-directory.md)<sup>[1](#note1)</sup> | [Sim](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sim](oledb/features/using-azure-active-directory.md) |
-| [Autenticação integrada do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](odbc/using-azure-active-directory.md) | | [Sim](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sim](oledb/features/using-azure-active-directory.md) |
+| [Autenticação de Senha do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) |  [Sim](odbc/using-azure-active-directory.md) | [Sim](odbc/using-azure-active-directory.md) | [Sim](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sim](oledb/features/using-azure-active-directory.md) |
+| [Autenticação integrada do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](odbc/using-azure-active-directory.md) | [Sim](odbc/using-azure-active-directory.md) | [Sim](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sim](oledb/features/using-azure-active-directory.md) |
 | [Autenticação Interativa (MFA) do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](odbc/using-azure-active-directory.md) | | | [Sim](oledb/features/using-azure-active-directory.md) |
 | [Autenticação de Identidade Gerenciada do Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Sim](odbc/using-azure-active-directory.md) | [Sim](odbc/using-azure-active-directory.md) | [Sim](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sim](oledb/features/using-azure-active-directory.md) |
 | [Autenticação da Entidade de Serviço do Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
@@ -75,14 +75,14 @@ Queremos que todos os drivers deem suporte a todos os recursos e façam esforço
 | [Resolução IP de Rede Transparente](odbc/using-transparent-network-ip-resolution.md) | [Sim](odbc/using-transparent-network-ip-resolution.md) | [Sim](odbc/using-transparent-network-ip-resolution.md) | [Sim](jdbc/setting-the-connection-properties.md) | [Sim](oledb/features/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-| <a id="table3"></a>Recurso | [Drivers para PHP para SQL Server no Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Drivers para PHP para SQL Server em Linux e macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[2](#note2)</sup> |
+| <a id="table3"></a>Recurso | [Drivers para PHP para SQL Server no Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Drivers para PHP para SQL Server no Linux e macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> |
 | :-- | :-- | :-- | :-- | :-- |
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Sim](php/using-always-encrypted-php-drivers.md) | [Sim](php/using-always-encrypted-php-drivers.md) | | Sim |
 | [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Sim](php/always-encrypted-secure-enclaves.md) | [Sim](php/always-encrypted-secure-enclaves.md) | | Sim |
 | [Autenticação do Token de Acesso do Azure Active Directory](/azure/active-directory/develop/access-tokens) | [Sim](php/azure-active-directory.md) | [Sim](php/azure-active-directory.md) | [Sim](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Sim |
-| [Autenticação de Senha do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](php/azure-active-directory.md) | [Sim](php/azure-active-directory.md)<sup>[1](#note1)</sup> | [Sim](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Sim |
-| [Autenticação integrada do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Sim<sup>[3](#note3)</sup> |
-| [Autenticação Interativa (MFA) do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Sim<sup>[3](#note3)</sup> |
+| [Autenticação de Senha do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](php/azure-active-directory.md) | [Sim](php/azure-active-directory.md) | [Sim](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Sim |
+| [Autenticação integrada do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](php/azure-active-directory.md) | [Sim](php/azure-active-directory.md) | | Sim |
+| [Autenticação Interativa (MFA) do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Sim<sup>[2](#note2)</sup> |
 | [Autenticação de Identidade Gerenciada do Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Sim](php/azure-active-directory.md) | [Sim](php/azure-active-directory.md) | [Sim](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Sim |
 | [Autenticação da Entidade de Serviço do Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
 | [Autenticação Integrada do Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Sim](php/how-to-connect-using-windows-authentication.md) | [Sim](odbc/linux-mac/using-integrated-authentication.md) | | Sim |
@@ -95,11 +95,9 @@ Queremos que todos os drivers deem suporte a todos os recursos e façam esforço
 | [Resolução IP de Rede Transparente](odbc/using-transparent-network-ip-resolution.md) | [Sim](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Sim](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Sim](odbc/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<a id="note1"></a><sup>1</sup> Não há suporte para a autenticação federada do Active Directory sem sincronização de hash de senha ou autenticação de passagem no Linux e macOS.
+<a id="note1"></a><sup>1</sup> Como esses drivers dependem do Microsoft ODBC Driver for SQL Server, também deve ser usada uma versão desse driver que dê suporte ao recurso.
 
-<a id="note2"></a><sup>2</sup> Como esses drivers dependem do Microsoft ODBC Driver for SQL Server, também deve ser usada uma versão desse driver que dá suporte ao recurso.
-
-<a id="note3"></a><sup>3</sup> Somente no Windows.
+<a id="note2"></a><sup>2</sup> Somente no Windows.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

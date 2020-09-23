@@ -27,14 +27,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
-ms.date: 01/23/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8bec01c994df45975ac42faa25f0fb389443eb82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61d00005973755588012d0e7e1d9f4be9327fa08
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998541"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076751"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 
@@ -42,7 +42,7 @@ ms.locfileid: "85998541"
 
 > Para usar o bcp no Linux, confira [Instalar o sqlcmd e bcp no Linux](../linux/sql-server-linux-setup-tools.md).
 >
-> Para obter informações detalhadas sobre como usar o bcp com o SQL Data Warehouse do Azure, confira [Carregar dados com o bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+> Para obter informações detalhadas sobre como usar o bcp com o SQL Data Warehouse do Azure, confira [Carregar dados com o bcp](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
 O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário. O utilitário **bcp** pode ser usado para importar grande número de novas linhas para tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou para exportar dados de tabelas para arquivos de dados. Exceto quando usado com a opção **queryout** , o utilitário não requer conhecimento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar dados para uma tabela, você deve usar um arquivo de formato criado para aquela tabela ou entender a estrutura da tabela e os tipos de dados válidos para suas colunas.  
 
@@ -53,16 +53,16 @@ O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre
 
 ## <a name="download-the-latest-version-of-bcp-utility"></a>Baixe a versão mais recente do utilitário bcp
 
-**[![download](../ssdt/media/download.png) Baixar os Utilitários de Linha de Comando 15 da Microsoft para SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![download](../ssdt/media/download.png) Baixar os Utilitários de Linha de Comando 15 da Microsoft para SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Baixar bcp para x64](../ssdt/media/download.png) Baixar Utilitários de Linha de Comando 15 da Microsoft para SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![Baixar bcp para x86](../ssdt/media/download.png) Baixar Utilitários de Linha de Comando 15 da Microsoft para SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 As ferramentas de linha de comando estão em GA (disponibilidade geral), no entanto, elas estão sendo lançadas com o pacote do instalador para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ### <a name="version-information"></a>Informações sobre versão
 
-Número da versão: 15.0 <br>
-Número de build: 15.0.1300.359<br>
-Data de lançamento: 13 de março de 2019
+Número da versão: 15.0.2 <br>
+Número de build: 15.0.2000.5<br>
+Data de lançamento: 11 de setembro de 2020
 
 A nova versão do SQLCMD é compatível com a autenticação do Azure AD, incluindo a compatibilidade com a MFA (Autenticação Multifator) para os recursos do Banco de Dados SQL, do SQL Data Warehouse e do Always Encrypted.
 O novo BCP é compatível com a autenticação do Azure AD, incluindo suporte à MFA (autenticação multifator) para Banco de Dados SQL e o SQL Data Warehouse.
@@ -71,9 +71,9 @@ O novo BCP é compatível com a autenticação do Azure AD, incluindo suporte à
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
-Esse componente exige o [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) e o [Microsoft Driver ODBC 17 para SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+Esse componente exige o [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) e o [Microsoft Driver ODBC 17 para SQL Server](https://aka.ms/downloadmsodbcsql).
 
-Para verificar a versão do BCP, execute o comando `bcp /v` e confirme se a 15.0.1300.359 ou superior está em uso.
+Para verificar a versão do BCP, execute o comando `bcp /v` e confirme se a 15.0.2000.5 ou posterior está em uso.
 
 <table><th>Sintaxe</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -124,7 +124,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  Você também pode especificar explicitamente o nome de banco de dados com **-d**.  
 
- **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
+ **in** *data_file* \| **out** *data_file* \| **queryout** *data_file* \| **format nul**  
  Especifica a direção da cópia em massa, do seguinte modo:  
   
 - **in**<a name="in"></a> copia de um arquivo em uma tabela ou exibição de banco de dados.  
@@ -163,7 +163,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Para obter mais informações, veja [Usar o formato de caractere para importar ou exportar dados &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
- **-C** { **ACP** | **OEM** | **RAW** | *code_page* }<a name="C"></a>   
+ **-C** { **ACP** \| **OEM** \| **RAW** \| *code_page* }<a name="C"></a>   
  Especifica a página de código dos dados no arquivo de dados. *code_page* só será relevante se os dados contiverem colunas **char**, **varchar**ou **text** com valores de caractere maiores que 127 ou menores que 32.  
   
 > [!NOTE]
@@ -215,7 +215,7 @@ Especifica que o valor, ou valores, de identidade no arquivo de dados importado 
 
 **-G**<a name="G"></a>
 
- Essa opção é usada pelo cliente para conectar-se com o Banco de Dados SQL do Azure ou com o SQL Data Warehouse do Azure para especificar que o usuário seja autenticado usando a autenticação do Azure Active Directory. A opção -G exige a [versão 14.0.3008.27 ou posterior](https://go.microsoft.com/fwlink/?LinkID=825643). Para determinar a versão, execute bcp -v. Para obter mais informações, confira [Usar a Autenticação do Azure Active Directory para a autenticação no Banco de Dados SQL ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+ Essa opção é usada pelo cliente para conectar-se com o Banco de Dados SQL do Azure ou com o SQL Data Warehouse do Azure para especificar que o usuário seja autenticado usando a autenticação do Azure Active Directory. A opção -G exige a [versão 14.0.3008.27 ou posterior](https://go.microsoft.com/fwlink/?LinkID=825643). Para determinar a versão, execute bcp -v. Para obter mais informações, confira [Usar a Autenticação do Azure Active Directory para a autenticação no Banco de Dados SQL ou SQL Data Warehouse](/azure/sql-database/sql-database-aad-authentication). 
 
 > [!IMPORTANT]
 > A opção **- G** só se aplica ao Banco de Dados SQL e ao Azure Data Warehouse.
@@ -260,7 +260,7 @@ Especifica que o valor, ou valores, de identidade no arquivo de dados importado 
 
    A autenticação interativa do Azure AD para o Banco de Dados SQL do Azure e o SQL Data Warehouse permite que você use um método interativo compatível com a autenticação multifator. Para obter mais informações, confira [Autenticação interativa do Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
-   O Azure AD interativo requer **bcp** [versão 15.0.1000.34](#download-the-latest-version-of-bcp-utility) ou posterior, bem como [ODBC versão 17.2 ou posterior](https://www.microsoft.com/download/details.aspx?id=56567).  
+   O Azure AD interativo requer **bcp** [versão 15.0.1000.34](#download-the-latest-version-of-bcp-utility) ou posterior, bem como [ODBC versão 17.2 ou posterior](https://aka.ms/downloadmsodbcsql).  
 
    Para habilitar a autenticação interativa, forneça a opção -G com o nome de usuário (-U) apenas, sem uma senha.
 
@@ -278,7 +278,7 @@ Especifica que o valor, ou valores, de identidade no arquivo de dados importado 
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
-   Se os usuários convidados existirem em um Azure AD específico e fizerem parte de um grupo que existe no banco de dados SQL que tenha permissões para executar o comando bcp, seu alias de usuário convidado será usado (por exemplo, *keith0@adventureworks.com* ).
+   Se houver usuários convidados em um Azure AD específico e eles fizerem parte de um grupo existente do Banco de Dados SQL que tenha permissões de banco de dados para executar o comando bcp, o alias de usuário convidado deles será usado (por exemplo, *keith0@adventureworks.com* ).
   
 **-h** _**"load hints**_[ ,... *n*] **"** <a name="h"></a> Especifica a dica ou dicas a serem usadas durante uma importação em massa de dados em uma tabela ou exibição.  
   
@@ -415,7 +415,7 @@ Executa a operação de cópia em massa usando os tipos de dados nativos (banco 
  **-v**<a name="v"></a>  
  Relata o número de versão e os direitos autorais do utilitário **bcp** .  
   
- **-V** (**80** | **90** | **100** | **110** | **120** | **130)<a name="V"></a>  
+ **-V** (**80** \| **90** \| **100** \| **110** \| **120** \| **130**)<a name="V"></a>  
  Executa a operação de cópia em massa usando tipos de dados de uma versão anterior do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essa opção não solicita informações para cada campo; ela usa os valores padrão.  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -444,7 +444,7 @@ Executa a operação de cópia em massa usando os tipos de dados nativos (banco 
 
 ## <a name="remarks"></a>Comentários<a name="remarks"></a>
 
-- O utilitário **bcp** 13.0 é instalado quando você instala as ferramentas do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se as ferramentas forem instaladas para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e para uma versão anterior do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dependendo do valor na variável de ambiente PATH, talvez você esteja usando o cliente **bcp** anterior em vez do cliente **bcp** 13.0. Essa variável de ambiente define o conjunto de diretórios usado pelo Windows para pesquisar por arquivos executáveis. Para descobrir qual versão você está usando, execute o comando **bcp /v** ou **bcp -v** no Prompt de Comando do Windows. Para obter informações sobre como definir o caminho de comando na variável de ambiente PATH, confira [Variáveis de Ambiente](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) ou pesquise Variáveis de Ambiente na Ajuda do Windows.
+- O utilitário **bcp** 13.0 é instalado quando você instala as ferramentas do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se as ferramentas forem instaladas para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e para uma versão anterior do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dependendo do valor na variável de ambiente PATH, talvez você esteja usando o cliente **bcp** anterior em vez do cliente **bcp** 13.0. Essa variável de ambiente define o conjunto de diretórios usado pelo Windows para pesquisar por arquivos executáveis. Para descobrir qual versão você está usando, execute o comando **bcp /v** ou **bcp -v** no Prompt de Comando do Windows. Para obter informações sobre como definir o caminho de comando na variável de ambiente PATH, confira [Variáveis de Ambiente](/windows/win32/shell/user-environment-variables) ou pesquise Variáveis de Ambiente na Ajuda do Windows.
 
     Para verificar se a versão mais recente do utilitário bcp está em execução, você precisa remover as versões mais antigas do utilitário bcp.
 
@@ -464,7 +464,7 @@ Executa a operação de cópia em massa usando os tipos de dados nativos (banco 
 
 - Para obter informações sobre quando as operações de inserção de linhas executadas por importações em massa são registradas no log de transações, veja [Pré-requisitos para log mínimo em importação em massa](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
 
-- [Usar caracteres especiais adicionais](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
+- [Usar caracteres especiais adicionais](/windows-server/administration/windows-commands/set_1#remarks)
 
     Os caracteres <, >, |, &, ^ são especiais do Shell de comando e devem ser precedidos pelo caractere de escape (^) ou colocados entre aspas quando usados na cadeia de caracteres (por exemplo, "StringContaining&Symbol"). Se você usar aspas para incluir uma cadeia de caracteres que contenha um dos caracteres especiais, as aspas serão definidas como parte do valor da variável de ambiente.
 
@@ -758,9 +758,5 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 - [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
 - [Arquivos de formato para importação ou exportação de dados &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-
-## <a name="feedback"></a>Comentários
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Fórum das ferramentas de cliente do SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

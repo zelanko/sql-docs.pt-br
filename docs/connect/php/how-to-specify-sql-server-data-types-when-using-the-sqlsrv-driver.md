@@ -1,7 +1,8 @@
 ---
-title: Como especificar tipos de dados do SQL Server usando o Driver SQLSRV | Microsoft Docs
+title: Como especificar tipos de dados do SQL Server usando o Driver SQLSRV
+description: Saiba como especificar os tipos de dados do SQL Server com a matriz *$params* opcional em instruções preparadas ou consultas diretas ao usar o Driver SQLSRV para PHP
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce7e541486412d6c309fdbf1a9fe6d155e38f5a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0720c14429aa4088d906a2063feeb34057065682
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922875"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680564"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Como especificar tipos de dados do SQL Server usando o Driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ As etapas a seguir resumem como especificar o tipo de dados do SQL Server ao env
   
 3.  Crie a matriz *$params* a ser usada na preparação ou na execução da consulta. Observe que, ao especificar o tipo de dados do SQL Server, cada elemento da matriz *$params* também deve ser uma matriz.  
   
-4.  Especifique o tipo de dados do SQL Server desejado usando a constante **SQLSRV_SQLTYPE_&#42;** adequada como o quarto parâmetro em cada submatriz da matriz *$params*. Para obter uma lista completa das constantes **SQLSRV_SQLTYPE_&#42;** , confira a seção SQLTYPEs de [Constantes &#40;Microsoft Drivers para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Por exemplo, no código a seguir, *$changeDate*, *$rate*e *$payFrequency* são especificados respectivamente com os tipos do SQL Server **datetime**, **money**e **tinyint** na matriz *$params* . Como nenhum tipo do SQL Server é especificado para *$employeeId* , que é inicializado como um inteiro, é usado o tipo padrão do SQL Server **integer** .  
+4.  Especifique o tipo de dados do SQL Server desejado usando a constante **SQLSRV_SQLTYPE_&#42;** adequada como o quarto parâmetro em cada submatriz da matriz *$params*. Para obter uma lista completa das constantes **SQLSRV_SQLTYPE_&#42;**, confira a seção SQLTYPEs de [Constantes &#40;Microsoft Drivers para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Por exemplo, no código a seguir, *$changeDate*, *$rate*e *$payFrequency* são especificados respectivamente com os tipos do SQL Server **datetime**, **money**e **tinyint** na matriz *$params* . Como nenhum tipo do SQL Server é especificado para *$employeeId* , que é inicializado como um inteiro, é usado o tipo padrão do SQL Server **integer** .  
   
     ```  
     $employeeId = 5;  
@@ -143,5 +144,5 @@ sqlsrv_close($conn);
 
 [Convertendo tipos de dados](../../connect/php/converting-data-types.md)
 
-[Como enviar e recuperar dados UTF-8 usando o suporte interno a UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
+[Como fazer: Enviar e recuperar dados UTF-8 usando o suporte interno a UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
   

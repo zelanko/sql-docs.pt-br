@@ -5,16 +5,16 @@ description: Saiba como atualizar Clusters de Big Data do SQL Server em um domí
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243067"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076658"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory Domain Services
 
@@ -31,9 +31,16 @@ Para habilitar a autenticação do AD (Active Directory), o BDC cria automaticam
 
 Para criar automaticamente todos os objetos necessários no Active Directory Domain Services, o BDC precisa de uma conta do AD durante a implantação. Essa conta precisa ter permissões para criar usuários, grupos e contas de computadores dentro da UO fornecida.
 
-As etapas a seguir pressupõem que você já tenha um controlador de domínio do Active Directory Domain Services. Se você não tem um controlador de domínio, o [guia](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) a seguir inclui etapas que podem ser úteis.
+>[!IMPORTANT]
+>Dependendo da política de expiração de senha definida no Controlador de Domínio, as senhas dessas contas podem expirar. A política de expiração padrão é de 42 dias. Não há mecanismo para girar credenciais para todas as contas no BDC, portanto, o cluster se tornará inoperante assim que o período de expiração for atingido. Para solucionar esse problema, atualize a política de expiração das contas de serviço BDC para “A senha nunca expira” no controlador de domínio. Essa ação pode ser realizada antes ou depois do horário de expiração. No último caso, o Active Directory reativará as senhas expiradas.
+>
+>A imagem a seguir mostra onde definir essa propriedade em Usuários e Computadores do Active Directory.
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Definir política de expiração de senha":::
 
 Para obter uma lista de contas e grupos do AD, confira [Objetos do Active Directory gerados automaticamente](active-directory-objects.md).
+
+As etapas a seguir pressupõem que você já tenha um controlador de domínio do Active Directory Domain Services. Se você não tem um controlador de domínio, o [guia](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) a seguir inclui etapas que podem ser úteis.
 
 ## <a name="create-ad-objects"></a>Criar objetos do AD
 
@@ -180,6 +187,9 @@ A integração com o AD requer os seguintes parâmetros. Adicione esses parâmet
 
 - **Parâmetro opcional** `security.activeDirectory.realm`: na maioria dos casos, o realm é igual ao nome de domínio. Para casos em que eles não são iguais, use esse parâmetro para definir o nome do realm (por exemplo, `CONTOSO.LOCAL`). O valor fornecido para esse parâmetro precisa ser totalmente qualificado.
 
+  > [!IMPORTANT]
+  > No momento, o BDC não oferece suporte a uma configuração em que o nome de domínio do Active Directory seja diferente do nome **NETBIOS** do domínio do Active Directory.
+
 - `security.activeDirectory.domainDnsName`: nome do domínio DNS que será usado para o cluster (por exemplo, `contoso.local`).
 
 - `security.activeDirectory.clusterAdmins`: esse parâmetro usa um grupo do AD. O escopo do grupo do AD precisa ser universal ou global. Os membros desse grupo terão a função de cluster *bdcAdmin*, que fornecerá permissões de administrador no cluster. Isso significa que eles têm [permissões `sysadmin` no SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [permissões `superuser` no HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) e permissões de administrador quando conectados ao ponto de extremidade do controlador.
@@ -192,6 +202,9 @@ A integração com o AD requer os seguintes parâmetros. Adicione esses parâmet
 Os grupos do AD dessa lista são mapeados para a função de cluster de Big Data *bdcUser* e precisam receber acesso ao SQL Server (confira [Permissões do SQL Server](../relational-databases/security/permissions-hierarchy-database-engine.md)) ou ao HDFS (confira [Guia de permissões do HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). Quando conectados ao ponto de extremidade do controlador, esses usuários só poderão listar os pontos de extremidade disponíveis no cluster usando o comando *azdata bdc endpoint list*.
 
 Para obter detalhes sobre como atualizar os grupos do AD para essas configurações, confira [Gerenciar o acesso ao cluster de Big Data no modo do Active Directory](manage-user-access.md).
+
+  >[!TIP]
+  >Para habilitar a experiência de navegação HDFS quando conectado ao SQL Server mestre no Azure Data Studio, um usuário com a função bdcUser deve receber permissões de VIEW SERVER STATE, pois o Azure Data Studio usa a DMV *sys.dm_cluster_endpoints* a fim de obter o ponto de extremidade do gateway Knox necessário para se conectar ao HDFS.
 
   >[!IMPORTANT]
   >Crie esses grupos no AD antes do início da implantação. Se o escopo de qualquer um desses grupos do AD for o local do domínio, a implantação falhará.
@@ -263,7 +276,7 @@ A tabela abaixo mostra o modelo de autorização para o gerenciamento de aplicat
   >[!NOTE]
   >O Active Directory exige que os nomes das contas sejam limitados a 20 caracteres. O cluster BDC precisa usar oito dos caracteres para distinguir pods e StatefulSets. Isso deixa 12 caracteres como limite para o prefixo da conta
 
-[Verifique o escopo do grupo do AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) para determinar se ele é DomainLocal.
+[Verifique o escopo do grupo do AD](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) para determinar se ele é DomainLocal.
 
 Se ainda não tiver inicializado o arquivo de configuração de implantação, você poderá executar esse comando para obter uma cópia da configuração. Os exemplos abaixo usam o perfil `kubeadm-prod`; o mesmo se aplica a `openshift-prod`.
 
@@ -422,7 +435,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Antes da versão SQL Server CU5 2019, somente um BDC por domínio (Active Directory) era permitido. A habilitação de vários BDCs por domínio está disponível da versão CU5 em diante.
 
-- Nenhum dos grupos do AD especificados nas configurações de segurança pode estar com escopo DomainLocal. Para verificar o escopo de um grupo do AD, siga [estas instruções](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+- Nenhum dos grupos do AD especificados nas configurações de segurança pode estar com escopo DomainLocal. Para verificar o escopo de um grupo do AD, siga [estas instruções](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
 - A conta do AD que pode ser usada para fazer logon no BDC é permitida no mesmo domínio que foi configurado para o BDC. Não há suporte para a habilitação de logons em outro domínio confiável.
 

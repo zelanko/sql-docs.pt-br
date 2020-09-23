@@ -2,7 +2,7 @@
 title: Implantando o JDBC Driver
 description: Saiba como você pode redistribuir e implantar o Microsoft JDBC Driver para SQL Server com seu aplicativo e quais arquivos são necessários.
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 08365944acd071f21b3b4fadf950c23b65c6cfe5
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728362"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565414"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implantando o JDBC Driver
 
@@ -51,7 +51,7 @@ Para desempacotar o arquivo tar, mova-o para o diretório onde você deseja que 
 
 ## <a name="legalities-of-driver-redistribution"></a>Legalidades de redistribuição de driver
 
-As versões 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 e 8.2 do JDBC Driver são redistribuíveis. Confira a cláusula sobre _Código Distribuível_ nos contratos de licença.
+As versões 6.0, 6.2, 6.4, 7.0, 7.2, 7.4, 8.2 e 8.4 do JDBC Driver são redistribuíveis. Confira a cláusula sobre _Código Distribuível_ nos contratos de licença.
 
 As versões 4.x do JDBC Driver são antigas e obsoletas. O suporte para as versões 4.x expirou antes de 2018.
 

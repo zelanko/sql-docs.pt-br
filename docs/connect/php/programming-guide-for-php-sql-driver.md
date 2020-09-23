@@ -1,5 +1,6 @@
 ---
-title: Guia de programação para o Microsoft Drivers para PHP para SQL Server | Microsoft Docs
+title: Guia de programação para o Microsoft Drivers para PHP para SQL Server
+description: Saiba como começar com a programação PHP usando os Drivers da Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1221d85e40fc3bd8e05137a808f0873a404179a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 352e42c226d20aa4df09fbb5251b633a56ad0516
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915662"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410922"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Guia de programação para o Microsoft Drivers para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +25,7 @@ Esta seção contém tópicos que o ajudarão a desenvolver aplicativos com os [
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |---------|---------------|  
 |[Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)|Descreve as opções e os procedimentos para se conectar ao SQL Server.|  
 |[Comparando funções de execução](../../connect/php/comparing-execution-functions.md)|Compara as funções usadas para executar uma consulta examinando diferentes casos de uso para cada uma. Especificamente, este documento compara a execução de uma única consulta com a execução de uma consulta preparada várias vezes.|  

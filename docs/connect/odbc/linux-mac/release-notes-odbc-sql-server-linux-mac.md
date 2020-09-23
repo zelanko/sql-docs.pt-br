@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922204"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899526"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de versão para o Microsoft ODBC Driver for SQL Server em Linux e macOS
 
@@ -36,6 +36,18 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+
+## <a name="176-july-2020"></a>17.6, julho de 2020
+
+| Novo item | Detalhes |
+| :------- | :------ |
+| Há suporte para novas distribuições. | Ubuntu 20.04 |
+| Suporte para autenticação federada | Confira [Como usar o Azure Active Directory](../using-azure-active-directory.md). |
+| Cache de metadados para instruções preparadas | Confira [Como usar o Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Atributo de conexão SQL_COPT_SS_AUTOBEGINTXN para controlar se BEGIN TRANSACTION automático ocorre após ROLLBACK ou COMMIT | Confira [Atributos e palavras-chave da cadeia de conexão e DSN](../dsn-connection-string-attribute.md). |
+| Correções de bugs. | [Correções de bugs](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2, abril de 2020 (somente Alpine Linux)
 
@@ -91,7 +103,7 @@ Ao usar Always Encrypted com enclaves seguros e o Azure Key Vault, os compriment
 | Novo item | Detalhes |
 | :------- | :------ |
 | Há suporte para novas distribuições. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
-| Modo de autenticação de Identidade de Serviço Gerenciada do Azure Active Directory (atribuída pelo usuário e pelo sistema). | Veja [Usando o Azure Active Directory com o Driver ODBC](../using-azure-active-directory.md). |
+| Modo de autenticação de Identidade Gerenciada do Azure Active Directory (atribuída pelo usuário e pelo sistema). | Veja [Usando o Azure Active Directory com o Driver ODBC](../using-azure-active-directory.md). |
 | Capacidade de transmitir parâmetros de entrada em relação a colunas Always Encrypted. | Para obter mais informações, confira [Limitações do driver ODBC ao usar Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Transações distribuídas XA. | Veja [Usando Transações XA](../use-xa-with-dtc.md).<br/><br/>XA é o acrônimo de _eXtended Architecture_, que é um padrão para a execução de uma transação global que acessa mais de um sistema de armazenamento de dados do lado do servidor. |
 | &nbsp; | &nbsp; |

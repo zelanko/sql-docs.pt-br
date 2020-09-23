@@ -1,4 +1,5 @@
 ---
+description: Gerenciar etapas de trabalho
 title: Gerenciar etapas de trabalho
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -25,18 +26,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ddcd4cde0412590e051a1d2f34ebce10435b2e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480292"
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
+> No momento, na [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira detalhes nas [Diferenças entre o T-SQL da Instância Gerenciada de SQL do Azure e o SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Uma etapa de trabalho é uma ação que o trabalho realiza em um banco de dados ou servidor. Todo trabalho deve ter, pelo menos, uma etapa de trabalho. As etapas de trabalho podem ser:  
   
@@ -81,7 +82,7 @@ Ao usar um programa executável ou um comando de sistema operacional como etapa 
   
 -   O código de saída do processo retornado, se o comando teve êxito.  
   
--   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. Para um programa externo, esse é o nome do programa e os argumentos para o programa, por exemplo: **C:\Arquivos de Programas\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   O comando a ser executado. Para executar um comando de sistema operacional, trata-se do próprio comando. No caso de um programa externo, é o nome do programa e os argumentos para o programa; por exemplo: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     > É necessário fornecer o caminho completo para o executável, caso este não esteja localizado em um diretório especificado no caminho de sistema ou no caminho para o usuário em cujo nome a etapa de trabalho é executada.  
@@ -211,7 +212,7 @@ Para obter mais informações sobre como criar etapas de trabalho que executam p
 |Descreve como criar e executar uma etapa de trabalho do script ActiveX.|[Create an ActiveX Script Job Step](../../ssms/agent/create-an-activex-script-job-step.md)|  
 |Descreve como criar e definir etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executem comandos e consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](../../ssms/agent/create-an-analysis-services-job-step.md)|  
 |Descreve qual ação o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve realizar se uma falha ocorrer durante a execução do trabalho.|[Set Job Step Success or Failure Flow](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
-|Descreve como exibir detalhes de etapa de trabalho na caixa de diálogo Propriedades da Etapa de Trabalho.|[Exibir informações de etapas de trabalho](../../ssms/agent/view-job-step-information.md)|  
+|Descreve como exibir detalhes de etapa de trabalho na caixa de diálogo Propriedades da Etapa de Trabalho.|[View Job Step Information](../../ssms/agent/view-job-step-information.md)|  
 |Descreve como excluir um log de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Consulte Também  

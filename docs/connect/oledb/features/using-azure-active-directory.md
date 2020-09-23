@@ -1,5 +1,6 @@
 ---
-title: Como usar o Azure Active Directory | Microsoft Docs for SQL Server
+title: Como usar o Azure Active Directory
+description: Saiba mais sobre os métodos de autenticação do Azure Active Directory disponíveis no Driver do Microsoft OLE DB para SQL Server que permitem a conexão com os bancos de dados SQL do Azure.
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 9c3586c8b51495ed3c49dd88f9f85a2b60d09aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e4591d74ba5e11b65cc3ede83533d72a11dbec96
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007253"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899056"
 ---
 # <a name="using-azure-active-directory"></a>Como usar o Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ Na versão 18.2.1 e posteriores, o Driver do Microsoft OLE DB para SQL Server pe
 
 A versão 18.3 adiciona suporte para os seguintes métodos de autenticação:
 - Autenticação interativa do Azure Active Directory
-- Autenticação do MSI do Azure Active Directory
+- Autenticação de Identidade Gerenciada do Azure Active Directory
 
 > [!NOTE]
 > O uso dos seguintes modos de autenticação **não** é compatível com o uso de `DataTypeCompatibility` (ou sua propriedade correspondente) definida como `80`:
@@ -39,12 +40,12 @@ A versão 18.3 adiciona suporte para os seguintes métodos de autenticação:
 > - Autenticação do Azure Active Directory usando token de acesso
 > - Autenticação integrada do Azure Active Directory
 > - Autenticação interativa do Azure Active Directory
-> - Autenticação do MSI do Azure Active Directory
+> - Autenticação de Identidade Gerenciada do Azure Active Directory
 
 ## <a name="connection-string-keywords-and-properties"></a>Palavras-chave e propriedades da cadeia de conexão
 As seguintes palavras-chave da cadeia de conexão foram introduzidas para dar suporte à autenticação do Azure Active Directory:
 
-|Palavras-chave da cadeia de conexão|Propriedades da conexão|DESCRIÇÃO|
+|Palavras-chave da cadeia de conexão|Propriedade Connection|Descrição|
 |---               |---                |---        |
 |Token de acesso|SSPROP_AUTH_ACCESS_TOKEN|Especifica um token de acesso para autenticar no Azure Active Directory. |
 |Autenticação|SSPROP_AUTH_MODE|Especifica método de autenticação a ser usado.|
@@ -118,7 +119,7 @@ Esta seção mostra exemplos de palavras-chave de cadeia de conexão novas e exi
 ### <a name="azure-active-directory-authentication-using-an-access-token"></a>Autenticação do Azure Active Directory usando um token de acesso
 
 - Usando `IDataInitialize::GetDataSource`:
-    > Provider=MSOLEDBSQL;Data Source=[servidor];Initial Catalog=[banco de dados];**Access Token=[token de acesso]** ;Use Encryption for Data=true
+    > Provider=MSOLEDBSQL;Data Source=[servidor];Initial Catalog=[banco de dados];**Access Token=[token de acesso]**;Use Encryption for Data=true
 - Usando `DBPROP_INIT_PROVIDERSTRING`:
     > O fornecimento de um token de acesso por meio de `DBPROP_INIT_PROVIDERSTRING` não é um procedimento compatível
 
@@ -129,7 +130,7 @@ Esta seção mostra exemplos de palavras-chave de cadeia de conexão novas e exi
 - Usando `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[servidor];Database=[banco de dados];**Authentication=ActiveDirectoryInteractive**;UID=[nome de usuário];Encrypt=yes
 
-### <a name="azure-active-directory-msi-authentication"></a>Autenticação do MSI do Azure Active Directory
+### <a name="azure-active-directory-managed-identity-authentication"></a>Autenticação de Identidade Gerenciada do Azure Active Directory
 
 - Usando `IDataInitialize::GetDataSource`:
     - Identidade gerenciada atribuída ao usuário:

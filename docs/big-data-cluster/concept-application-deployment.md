@@ -1,7 +1,7 @@
 ---
 title: O que é a implantação de aplicativos?
 titleSuffix: SQL Server Big Data Clusters
-description: Este artigo descreve a implantação de aplicativos em Clusters de Big Data do SQL Server 2019.
+description: Saiba como a implantação de aplicativo fornece interfaces para criar, gerenciar e executar aplicativos em um cluster de Big Data do SQL Server 2019.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215445"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765325"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>O que é a implantação de aplicativos em um cluster de Big Data?
 
@@ -57,7 +57,7 @@ Quando um aplicativo é executado, o Serviço de Kubernetes do aplicativo execut
 
 O SQL Server 2019 CU5 habilita o suporte para a implantação de Clusters de Big Data no Red Hat OpenShift, bem como um modelo de segurança atualizado para o BDC, para que contêineres com privilégios não sejam mais necessários. Além de não privilegiados, os contêineres são executados como um usuário não raiz por padrão em todas as novas implantações usando o SQL Server 2019 CU5.
 
-No momento do lançamento do CU5, a etapa de configuração dos aplicativos implantados com interfaces de [implantação de aplicativo](concept-application-deployment.md) ainda será executada como usuário *raiz*. Isso é necessário porque, durante a instalação, são instalados mais pacotes que o aplicativo usará. Outro código de usuário implantado como parte do aplicativo será executado como usuário de baixo privilégio. 
+No momento do lançamento do CU5, a etapa de configuração dos aplicativos implantados com interfaces de [implantação de aplicativo]() ainda será executada como usuário *raiz*. Isso é necessário porque, durante a instalação, são instalados mais pacotes que o aplicativo usará. Outro código de usuário implantado como parte do aplicativo será executado como usuário de baixo privilégio. 
 
 Além disso, a funcionalidade **CAP_AUDIT_WRITE** é uma funcionalidade opcional necessária para permitir o agendamento de aplicativos SSIS que usam trabalhos cron. Quando o arquivo de especificação YAML do aplicativo especifica uma agenda, o aplicativo será disparado por meio de um trabalho cron, que requer a funcionalidade adicional.  Como alternativa, o aplicativo pode ser disparado sob demanda com *azdata app run* por meio de uma chamada do serviço Web, que não requer a funcionalidade CAP_AUDIT_WRITE. 
 
@@ -78,18 +78,18 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>Como trabalhar com a Implantação de Aplicativos
 
 As duas interfaces principais da implantação de aplicativos são: 
-- [Interface de linha de comando `azdata`](big-data-cluster-create-apps.md)
+- [Interface de linha de comando `azdata`](app-create.md)
 - [Extensão do Azure Data Studio e Visual Studio Code](app-deployment-extension.md)
 
-Também é possível executar um aplicativo usando um serviço Web RESTful. Para obter mais informações, confira [Consumir aplicativos em clusters de Big Data](big-data-cluster-consume-apps.md).
+Também é possível executar um aplicativo usando um serviço Web RESTful. Para obter mais informações, confira [Consumir aplicativos em clusters de Big Data](app-consume.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Para saber mais sobre como criar e executar aplicativos em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], confira o seguinte:
 
-- [Implantar aplicativos usando o azdata](big-data-cluster-create-apps.md)
+- [Implantar aplicativos usando o azdata](app-create.md)
 - [Implantar aplicativos usando a extensão Implantação de Aplicativos](app-deployment-extension.md)
-- [Consumir aplicativos em clusters de Big Data](big-data-cluster-consume-apps.md)
+- [Consumir aplicativos em clusters de Big Data](app-consume.md)
 
 Para saber mais sobre o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], confira a visão geral a seguir:
 

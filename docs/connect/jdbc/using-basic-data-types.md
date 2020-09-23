@@ -2,7 +2,7 @@
 title: Usar tipos de dados JDBC básicos
 description: O Microsoft JDBC Driver for SQL Server usa tipos de dados JDBC básicos para converter tipos de dados do SQL Server em um formato que possa ser compreendido pelo Java.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 08/24/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728380"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807000"
 ---
 # <a name="using-basic-data-types"></a>Como usar tipos de dados básicos
 
@@ -35,9 +35,9 @@ A tabela a seguir lista os mapeamentos padrão entre o [!INCLUDE[ssNoVersion](..
 | bit                | BIT                                                | booleano                      |
 | char               | CHAR                                               | String                       |
 | date               | DATE                                               | java.sql.Date                |
-| DATETIME           | timestamp                                          | java.sql.Timestamp           |
+| datetime<sup>3</sup>          | timestamp                               | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
-| datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
+| datetimeoffset<sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET         | microsoft.sql.DateTimeOffset |
 | decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
@@ -53,7 +53,7 @@ A tabela a seguir lista os mapeamentos padrão entre o [!INCLUDE[ssNoVersion](..
 | SMALLINT           | SMALLINT                                           | short                        |
 | SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
-| time               | TIME (1)                                           | java.sql.Time (1)            |
+| time               | TIME<sup>1</sup>                                   | java.sql.Time<sup>1</sup>            |
 | timestamp          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
@@ -67,9 +67,11 @@ A tabela a seguir lista os mapeamentos padrão entre o [!INCLUDE[ssNoVersion](..
 | geometria           | VARBINARY                                          | byte[]                       |
 | geografia          | VARBINARY                                          | byte[]                       |
   
-(1) para usar java.sql.Time com o tipo time de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve definir a propriedade de conexão **sendTimeAsDatetime** como false.  
+<sup>1</sup> Para usar java.sql.Time com o tipo time do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve definir a propriedade de conexão **sendTimeAsDatetime** como false.  
   
-(2) Você pode acessar programaticamente os valores de **datetimeoffset** com [DateTimeOffset Class](reference/datetimeoffset-class.md).  
+<sup>2</sup> Você pode acessar programaticamente os valores de **datetimeoffset** com [DateTimeOffset Class](reference/datetimeoffset-class.md).  
+  
+<sup>3</sup> Observe que os valores java.sql.Timestamp não podem mais ser usados para comparar valores de uma coluna datetime no SQL Server 2016. Essa limitação se deve a uma alteração no lado do servidor que converte datetime em datetime2 de modo diferente, resultando em valores não justos. A solução alternativa para esse problema é alterar as colunas datetime para datetime2(3), usar String em vez de java.sql.Timestamp ou alterar o nível de compatibilidade do banco de dados para 120 ou menos.
   
 As seções a seguir fornecem exemplos de como é possível usar o JDBC Driver e os tipos de dados básicos. Para obter exemplos mais detalhados sobre como usar os tipos de dados básicos em um aplicativo Java, veja [Amostra de tipos e dados básicos](basic-data-types-sample.md).  
   
@@ -90,7 +92,7 @@ Se tiver que recuperar dados de uma fonte de dados e souber o tipo de dados que 
 
 ## <a name="updating-data-by-data-type"></a>Atualizando dados por tipo de dados
 
-Se você tiver que atualizar o valor de um campo em uma fonte de dados, use um dos métodos update\<Tipo> da classe SQLServerResultSet. No exemplo a seguir, o método [updateInt](reference/updateint-method-sqlserverresultset.md) é usado junto com o método [updateRow](reference/updaterow-method-sqlserverresultset.md) para atualizar os dados na fonte de dados:  
+Se você tiver que atualizar o valor de um campo em uma fonte de dados, use um dos métodos update\<Type> da classe SQLServerResultSet. No exemplo a seguir, o método [updateInt](reference/updateint-method-sqlserverresultset.md) é usado junto com o método [updateRow](reference/updaterow-method-sqlserverresultset.md) para atualizar os dados na fonte de dados:  
   
 [!code[JDBC#UsingBasicDataTypes3](codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -99,7 +101,7 @@ Se você tiver que atualizar o valor de um campo em uma fonte de dados, use um d
   
 ## <a name="updating-data-by-parameterized-query"></a>Atualizando dados por consulta parametrizada
 
-Se você tiver que atualizar dados em uma fonte de dados usando uma consulta parametrizada, poderá definir o tipo de dados dos parâmetros usando um dos métodos set\<Type> da classe [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), também conhecida como *métodos setter*. No exemplo a seguir, o método [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) é usado para pré-compilar a consulta parametrizada e o método [setString](reference/setstring-method-sqlserverpreparedstatement.md) é usado para definir o valor da cadeia de caracteres do parâmetro antes de o método [executeUpdate](reference/executeupdate-method.md) ser chamado.  
+Se você tiver que atualizar dados em uma fonte de dados usando uma consulta parametrizada, poderá definir o tipo de dados dos parâmetros usando um dos métodos set\<Type> da classe [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), também conhecidos como *métodos setter*. No exemplo a seguir, o método [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) é usado para pré-compilar a consulta parametrizada e o método [setString](reference/setstring-method-sqlserverpreparedstatement.md) é usado para definir o valor da cadeia de caracteres do parâmetro antes de o método [executeUpdate](reference/executeupdate-method.md) ser chamado.  
   
 [!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
@@ -107,7 +109,7 @@ Confira mais informações sobre consultas parametrizadas em [Como usar uma inst
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Passando parâmetros para um procedimento armazenado
 
-Se você tiver que passar parâmetros de tipo em um procedimento armazenado, poderá definir os parâmetros através de índice ou pode nomear usando um dos métodos set\<Type> da classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). No exemplo a seguir, o método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) é usado para configurar a chamada ao procedimento armazenado e o método [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) é usado para definir o parâmetro para a chamada antes de o método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) ser chamado.  
+Se você tiver que passar parâmetros de tipo em um procedimento armazenado, poderá definir os parâmetros por índice ou nome usando um dos métodos set\<Type> da classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). No exemplo a seguir, o método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) é usado para configurar a chamada ao procedimento armazenado e o método [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) é usado para definir o parâmetro para a chamada antes de o método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) ser chamado.  
   
 [!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
