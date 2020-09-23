@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cdefe46b9e2baa546b76375af4c6a2272fe1f584
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5db6206cd555705ec5b167dc023f585293f45bf8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445912"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111232"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (Mecanismo de Banco de Dados)
 
@@ -33,12 +33,12 @@ Retorna a raiz da árvore hierárquica. GetRoot() é um método estático.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 hierarchyid::GetRoot ( )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 static SqlHierarchyId GetRoot ( )   
 ```  

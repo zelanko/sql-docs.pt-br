@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0220753aecbefe19f01b4d0c76151ead8935e57f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f2c8332aabe8c6583cd76429aaf1679417a956d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445750"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111113"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "88445750"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
   
@@ -75,7 +74,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
   
  Instrução A:  
   
-```  
+```sql  
 SELECT GROUPING_ID(A,B)  
 FROM T   
 GROUP BY CUBE(A,B)   
@@ -83,7 +82,7 @@ GROUP BY CUBE(A,B)
   
  Instrução B:  
   
-```  
+```sql  
 SELECT 3 FROM T GROUP BY ()  
 UNION ALL  
 SELECT 1 FROM T GROUP BY A  
@@ -98,7 +97,7 @@ SELECT 0 FROM T GROUP BY A,B
 ### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>a. Usando GROUPING_ID para identificar níveis de agrupamento  
  O exemplo a seguir retorna a contagem de funcionários por `Name` e `Title`, `Name,` e o total da empresa no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. `GROUPING_ID()` é usado para criar um valor para cada linha na coluna `Title` que identifica o nível de agregação.  
   
-```  
+```sql  
 SELECT D.Name  
     ,CASE   
     WHEN GROUPING_ID(D.Name, E.JobTitle) = 0 THEN E.JobTitle  
@@ -122,7 +121,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle);
 #### <a name="simple-example"></a>Exemplo simples  
  No código a seguir, para retornar somente as linhas com uma contagem de funcionários por título, remova os caracteres de comentário de `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Para retornar somente as linhas com uma contagem de funcionários por departamento, remova os caracteres de comentário de `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
   
-```  
+```sql  
 SELECT D.Name  
     ,E.JobTitle  
     ,GROUPING_ID(D.Name, E.JobTitle) AS 'Grouping Level'  
@@ -157,9 +156,9 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
 #### <a name="complex-example"></a>Exemplo complexo  
  O exemplo a seguir usa `GROUPING_ID()` para filtrar um conjunto de resultados que contém vários níveis de agrupamento por nível de agrupamento. Um código semelhante pode ser usado para criar uma exibição com vários níveis de agrupamento e um procedimento armazenado que chama a exibição passando um parâmetro para filtrá-la por nível de agrupamento. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
-DECLARE @Grouping nvarchar(50);  
-DECLARE @GroupingLevel smallint;  
+```sql  
+DECLARE @Grouping NVARCHAR(50);  
+DECLARE @GroupingLevel SMALLINT;  
 SET @Grouping = N'CountryRegionCode Total';  
   
 SELECT @GroupingLevel = (  
@@ -249,14 +248,14 @@ ORDER BY
 #### <a name="rollup-example"></a>Exemplo de ROLLUP  
  Neste exemplo, todos os níveis de agrupamento não aparecem como no exemplo de CUBE a seguir. Se a ordem das colunas na lista `ROLLUP` for alterada, os valores de nível na coluna `Grouping Level` também terão de ser alterados. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,DATEPART(mm,OrderDate) AS N'Month'  
     ,DATEPART(dd,OrderDate) AS N'Day'  
     ,SUM(TotalDue) AS N'Total Due'  
-    ,CAST(GROUPING(DATEPART(dd,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(mm,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(yyyy,OrderDate))AS char(1))   
+    ,CAST(GROUPING(DATEPART(dd,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(mm,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(yyyy,OrderDate)) AS CHAR(1))   
      AS N'Bit Vector(base-2)'  
     ,GROUPING_ID(DATEPART(yyyy,OrderDate)  
         ,DATEPART(mm,OrderDate)  
@@ -330,14 +329,14 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
  Diferentemente de `ROLLUP` no exemplo anterior, `CUBE` gera a saída de todos os níveis de agrupamento. Se a ordem das colunas na lista `CUBE` for alterada, os valores de nível na coluna `Grouping Level` também terão de ser alterados. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,DATEPART(mm,OrderDate) AS N'Month'  
     ,DATEPART(dd,OrderDate) AS N'Day'  
     ,SUM(TotalDue) AS N'Total Due'  
-    ,CAST(GROUPING(DATEPART(dd,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(mm,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(yyyy,OrderDate))AS char(1))   
+    ,CAST(GROUPING(DATEPART(dd,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(mm,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(yyyy,OrderDate)) AS CHAR(1))   
         AS N'Bit Vector(base-2)'  
     ,GROUPING_ID(DATEPART(yyyy,OrderDate)  
         ,DATEPART(mm,OrderDate)  

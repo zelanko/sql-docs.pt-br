@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 567f303b2ebd78fab3f6803ad2490ca1dc059e2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dfc426af5cc72e072cab1908930d265dc1cf91c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88311252"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111148"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ Para mostrar a instrução executada que retornou os resultados exibidos por DBC
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC OUTPUTBUFFER retorna o seguinte (os valores podem variar):
   
-```sql
+```
 Output Buffer                                                              
 ------------------------------------------------------------------------   
 01fb8028:  04 00 01 5f 00 00 00 00 e3 1b 00 01 06 6d 00 61  ..._.........m.a  

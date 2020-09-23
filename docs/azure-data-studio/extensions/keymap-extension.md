@@ -3,18 +3,18 @@ title: Criar uma extensão de mapa de teclas
 description: Este tutorial demonstra como criar uma extensão de mapa de teclas para adicionar uma funcionalidade personalizada ao Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
 ms.topic: how-to
 author: markingmyname
 ms.author: maghan
-ms.custom: seodec18
+ms.reviewer: alayu
+ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 45aeb2a27b74f62af711843db6d3cb1727bb093d
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284824"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111665"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Criar uma extensão de mapa de teclas do Azure Data Studio
 

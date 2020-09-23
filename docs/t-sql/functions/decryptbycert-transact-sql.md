@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 73564c7c5a06e778d6f3c602b0cb61e9cc56dfda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 849826f084126d5b0ccc6c25896b642ce8c7f5f0
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422790"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111164"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ Essa função usa a chave privada de um certificado para descriptografar dados c
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
 ```  
@@ -72,8 +71,8 @@ Essa função descriptografa dados com a chave privada de um certificado. As tra
 ## <a name="examples"></a>Exemplos  
 Este exemplo seleciona linhas de `[AdventureWorks2012].[ProtectedData04]` marcadas como dados originalmente criptografados pelo certificado `JanainaCert02`. Primeiro o exemplo descriptografa a chave privada do certificado `JanainaCert02` com a senha do certificado `pGFD4bb925DGvbd2439587y`. Em seguida, o exemplo descriptografa o texto cifrado com essa chave privada. O exemplo converte os dados descriptografados de **varbinary** em **nvarchar**.  
 
-```  
-SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
+```sql  
+SELECT CONVERT(NVARCHAR(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  
 FROM [AdventureWorks2012].[ProtectedData04]   
 WHERE Description   
