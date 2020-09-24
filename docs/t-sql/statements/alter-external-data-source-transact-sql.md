@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d90bacf17953eee4874343fadf2e9daf97a8664
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: a47daa3926f8b6718a459aab203b0e902bf7dafd
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688416"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024473"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
-  Modifica uma fonte de dados externa usada para criar uma tabela externa. A fonte de dados externa pode ser o Hadoop ou o WASBS (Armazenamento de Blobs do Azure) para SQL SERVER e o WASBS (Armazenamento de Blobs do Azure) ou o ABFSS/ADL (Azure Data Lake Storage) para o SQL Data Warehouse do Azure. 
+  Modifica uma fonte de dados externa usada para criar uma tabela externa. A fonte de dados externa pode ser o Hadoop ou o WASBS (Armazenamento de Blobs do Azure) para SQL SERVER e o WASBS (Armazenamento de Blobs do Azure) ou o ABFSS/ADL (Azure Data Lake Storage) para o [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
 
 ## <a name="syntax"></a>Sintaxe  
 
@@ -52,7 +52,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
         [, CREDENTIAL = credential_name ] 
 
 -- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
--- Applies to: Azure SQL Data Warehouse
+-- Applies to: Azure Synapse Analytics
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         [LOCATION = '<location prefix>://<location path>']
@@ -64,7 +64,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION = '<prefix>://<path>[:<port>]' Fornece o protocolo de conectividade, o caminho e a porta para a fonte de dados externa. Confira [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport) para opções de localização válidas.
 
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Não se aplica ao SQL Data Warehouse do Azure) Especifica a localização do Gerenciador de Recursos do Hadoop. Quando especificado, o otimizador de consulta pode escolher pré-processar os dados para uma consulta do PolyBase usando os recursos de computação do Hadoop. Essa é uma decisão baseada em custo. Chamado de pushdown de predicado, isso pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL e, portanto, melhorar o desempenho da consulta.
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Não se aplica a [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]) Especifica a localização do Gerenciador de Recursos do Hadoop. Quando especificado, o otimizador de consulta pode escolher pré-processar os dados para uma consulta do PolyBase usando os recursos de computação do Hadoop. Essa é uma decisão baseada em custo. Chamado de pushdown de predicado, isso pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL e, portanto, melhorar o desempenho da consulta.
 
  CREDENTIAL = Credential_Name Especifica a credencial nomeada. Confira [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -102,7 +102,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
     ;
 ```
 
- O exemplo a seguir altera a credencial para uma LOCATION nova. Esse exemplo é uma fonte de dados externa criada para o SQL Data Warehouse do Azure. 
+ O exemplo a seguir altera a credencial para uma LOCATION nova. Este exemplo é uma fonte de dados externa criada para o [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
 
 ```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET

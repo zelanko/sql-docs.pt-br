@@ -1,7 +1,7 @@
 ---
 title: Instalar o azdata com o zypper
-titleSuffix: SQL Server big data clusters
-description: Saiba como instalar a ferramenta azdata para instalar e gerenciar Clusters de Big Data com o zypper.
+titleSuffix: ''
+description: Saiba como instalar a ferramenta azdata com o zypper.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2445fecc554ff9f7816bbf75483ab49bbee542c1
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 8fdde8b6229bd2fc98005025e17efe97104d2fc1
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733488"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914885"
 ---
 # <a name="install-azdata-with-zypper"></a>Instalar o `azdata` com o zypper
 
@@ -44,7 +44,7 @@ Para distribuições do Linux com o `zypper`, há um pacote para o `azdata-cli`.
 1. Criar informações sobre o repositório do local
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
 1. Instalar
@@ -80,3 +80,5 @@ Remover o pacote do seu sistema
 ## <a name="next-steps"></a>Próximas etapas
 
 Para obter mais informações sobre clusters de Big Data, confira [O que são [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Usar o azdata com [serviços de dados habilitados o Azure Arc](/azure/azure-arc/data/)

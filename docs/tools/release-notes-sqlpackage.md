@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353093"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989429"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas sobre a versão do SqlPackage.exe
 
@@ -34,6 +34,41 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="186-sqlpackage"></a>sqlpackage 18.6
+
+|Plataforma|Baixar|Data de liberação|Versão|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2143544)|18 de setembro de 2020|18.6|15.0.4897.1|
+|.NET Core para macOS |[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2143659)|18 de setembro de 2020| 18.6|15.0.4897.1|
+|.NET Core para Linux |[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2143497)|18 de setembro de 2020| 18.6|15.0.4897.1|
+|.NET Core para Windows |[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2143496)|18 de setembro de 2020| 18.6|15.0.4897.1|
+
+### <a name="features"></a>Recursos
+| Recurso | Detalhes |
+| :------ | :------ |
+| Plataforma | A versão do sqlpackage para .NET Core foi atualizada para o .NET Core 3.1 |
+| Always Encrypted | Suporte adicionado para importação e exportação de enclave seguro para SQL Server 2019 |
+| Implantação | Suporte adicionado para desconsideração da captura de dados de alterações habilitada ao exportar do Banco de Dados SQL do Azure |
+| Implantação | Adicionado suporte para a opção de índice OPTIMIZE_FOR_SEQUENTIAL_KEY no Banco de Dados SQL do Azure |
+| Implantação | Adicionado suporte para colunas de identidade para o SQL Data Warehouse do Azure | 
+| Ajuda | Mostrar a versão do sqlpackage na ajuda (/?) e dar suporte ao parâmetro /version | 
+
+### <a name="fixes"></a>Correções
+| Recurso | Detalhes |
+| :------ | :------ | 
+| Implantação | Foi corrigido um script de implantação incorreto gerado ao direcionar a Instância Gerenciada do Banco de Dados SQL do Azure como um usuário não sysadmin  | 
+| Implantação | Corrigido o carregamento de colaboradores de implantação ao executar ações de script | 
+| Ajuda | Gerar o tempo decorrido correto como saída no sqlpackage quando a operação demorar mais de 1 dia | 
+| Implantação | Corrigido o registro do dacpac ao implantar para o .NET Core | 
+| Implantação | Corrigida a manipulação do parâmetro /accessToken (/at) pelo sqlPackage no .NET Core | 
+| Implantação | Permitir instruções ALTER TABLE em procedimentos armazenados como instruções de nível não superior | 
+| Implantação | Corrigida a validação do SQL Data Warehouse do Azure de exibições materializadas como não diferenciadoras de maiúsculas e minúsculas | 
+
+### <a name="known-issues"></a>Problemas conhecidos
+| Recurso | Detalhes |
+| :------ | :------ |
+| Implantação | O recurso de gerenciamento de carga de trabalho do SQL Data Warehouse do Azure (grupos de carga de trabalho e classificadores de carga de trabalho) ainda não é compatível | 
 
 ## <a name="1851-sqlpackage"></a>sqlpackage 18.5.1
 
@@ -133,7 +168,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Plataforma | GA .NET Core do sqlpackage para macOS, Linux e Windows. | 
 | Segurança | Remova a assinatura de código SHA1. |
 | Implantação | Adicione suporte para novas edições de banco de dados do Azure: GeneralPurpose, BusinessCritical e Hiperescala |
-| Implantação | Adicione suporte à Instância Gerenciada para usuários e grupos do AAD. |
+| Implantação | Adicione suporte à Instância Gerenciada para usuários e grupos do Azure Active Directory. |
 | Implantação | Suporte ao parâmetro /AccessToken para sqlpackage no .NET Core. |
 | &nbsp; | &nbsp; |
 

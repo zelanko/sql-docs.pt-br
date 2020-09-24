@@ -1,26 +1,25 @@
 ---
 title: Instalar o azdata
-titleSuffix: SQL Server big data clusters
-description: Saiba como instalar a ferramenta azdata para instalar e gerenciar Clusters de Big Data.
+titleSuffix: ''
+description: Saiba como instalar a ferramenta azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 408dec76480a36ff2280926147b948859fa7088d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 7939aa1575aaeec8edff33a9a9f7101a1014abc2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733489"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914940"
 ---
 # <a name="install-azdata"></a>Instalar `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-`azdata` é um utilitário de linha de comando escrito em Python para inicializar e gerenciar o cluster de Big Data por meio de APIs REST. 
+`azdata` é um utilitário de linha de comando escrito em Python para inicializar e gerenciar serviços de dados por meio de APIs REST. 
 
 ## <a name="find-latest-version"></a>Localizar a versão mais recente
 
@@ -42,4 +41,6 @@ Para localizar sua versão instalada e ver se você precisar atualizá-la, execu
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre clusters de Big Data, confira [O que são [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+Usar o azdata com clusters de Big Data. Para isso, confira [O que são [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Usar o azdata com [serviços de dados habilitados o Azure Arc](/azure/azure-arc/data/)

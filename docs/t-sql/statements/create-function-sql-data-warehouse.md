@@ -1,6 +1,6 @@
 ---
-description: CREATE FUNCTION (SQL Data Warehouse)
-title: CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs
+description: CREATE FUNCTION (Azure Synapse Analytics)
+title: CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2715fe9bd9586105a498660c146e252669268aba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d9466a41f8b8d6e8f1743e74f55a3b29ca6c79b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426648"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024328"
 ---
-# <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
+# <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Cria uma função definida pelo usuário no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Uma função definida pelo usuário é uma rotina [!INCLUDE[tsql](../../includes/tsql-md.md)] que aceita parâmetros, executa uma ação, como um cálculo complexo, e retorna o resultado dessa ação como um valor. O valor retornado deve ser um valor escalar (único). Use essa instrução para criar uma rotina reutilizável que possa ser usada destas maneiras:  

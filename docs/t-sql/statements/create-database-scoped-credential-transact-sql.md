@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72f2f72300982473696132d327881a2f2b867dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426828"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024363"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Especifica o nome da credencial no escopo do banco de dados que está sendo criada. *credential_name* não pode começar com a tecla jogo da velha (#). As credenciais de sistema começam com ##.
 
-IDENTITY **='** _identity\_name_ **'** Especifica o nome da conta a ser usada ao se conectar fora do servidor. Para importar um arquivo do armazenamento de Blobs do Azure usando uma chave compartilhada, o nome de identidade deve ser `SHARED ACCESS SIGNATURE`. Para carregar dados no SQL DW, qualquer valor válido pode ser usado para a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+IDENTITY **='** _identity\_name_ **'** Especifica o nome da conta a ser usada ao se conectar fora do servidor. Para importar um arquivo do armazenamento de Blobs do Azure usando uma chave compartilhada, o nome de identidade deve ser `SHARED ACCESS SIGNATURE`. Para carregar dados no SQL DW, qualquer valor válido pode ser usado para a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Ao usar o Kerberos (Windows Active Directory ou MIT KDC), não use o nome de domínio no argumento IDENTITY. Ele deve ser apenas o nome da conta.
 
 > [!NOTE]
 > WITH IDENTITY não será necessário se o contêiner no armazenamento de Blobs do Azure estiver habilitado para acesso anônimo. Para obter um exemplo de como consultar o armazenamento de Blobs do Azure, confira [Importar dados em uma tabela de um arquivo armazenado no Armazenamento de Blobs do Azure](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
@@ -121,7 +121,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. Como criar uma credencial no escopo do banco de dados para a conectividade do PolyBase com o Azure Data Lake Storage
 
-O exemplo a seguir cria uma credencial no escopo do banco de dados que pode ser usada para criar uma [fonte de dados externa](../../t-sql/statements/create-external-data-source-transact-sql.md), que pode ser usada pelo PolyBase no SQL Data Warehouse do Azure.
+O exemplo a seguir cria uma credencial no escopo do banco de dados que pode ser usada para criar uma [fonte de dados externa](../../t-sql/statements/create-external-data-source-transact-sql.md), que pode ser usada pelo PolyBase no [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
 O Azure Data Lake Store usa um Aplicativo do Azure Active Directory para Autenticação de Serviço.
 [Crie um aplicativo AAD](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) e documente seu client_id, o OAuth_2.0_Token_EndPoint e a Chave antes de tentar criar uma credencial no escopo do banco de dados.

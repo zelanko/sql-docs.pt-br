@@ -1,7 +1,7 @@
 ---
 title: Instalar o azdata com o yum
-titleSuffix: SQL Server big data clusters
-description: Saiba como instalar a ferramenta azdata para instalar e gerenciar clusters de Big Data com o yum.
+titleSuffix: ''
+description: Saiba como instalar a ferramenta azdata com o yum.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f343d4d6b46c581d0f633aa2c7eb79ef9b5c536c
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: eae81ccee65899335b161b3a32fbb260d0a8517a
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733490"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914897"
 ---
 # <a name="install-azdata-with-yum"></a>Instalar o `azdata` com o yum
 
@@ -41,13 +41,13 @@ Para distribuições do Linux com o `yum`, há um pacote para o `azdata-cli`. O 
    Para um cliente RHEL 7, execute:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
   
    Para um cliente RHEL 8, execute:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
 1. Instalar com o comando `yum install`
@@ -88,3 +88,5 @@ sudo yum update azdata-cli
 ## <a name="next-steps"></a>Próximas etapas
 
 Para obter mais informações sobre clusters de Big Data, confira [O que são [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Usar o azdata com [serviços de dados habilitados o Azure Arc](/azure/azure-arc/data/)

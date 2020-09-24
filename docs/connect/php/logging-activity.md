@@ -2,7 +2,7 @@
 title: Log de atividades
 description: Saiba como configurar diferentes combinações de opções de log ao usar os Drivers da Microsoft para PHP para SQL Server
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 0d5da2aa33741e0c93b067bd942958ca70137d0b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680541"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024504"
 ---
 # <a name="logging-activity"></a>Registrando atividades em log
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Por padrão, os erros e avisos gerados pelos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] não são registrados em log. Este tópico discute como configurar o registro de atividades em log.  
+Por padrão, os erros e os avisos gerados pelo [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] não são registrados no log do sistema PHP. Este tópico discute como configurar a atividade de registro em log do driver. Para obter mais informações de como definir as configurações de tratamento de erro de PHP que não são específicos dos drivers, confira a [Documentação do PHP](https://www.php.net/manual/en/errorfunc.configuration.php).  
   
 ## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Registrando atividades em log usando o driver PDO_SQLSRV  
-A única configuração disponível para o driver PDO_SQLSRV é a entrada pdo_sqlsrv.log_severity no arquivo php.ini.  
+A única configuração de registro em log disponível específica do driver PDO_SQLSRV é a entrada pdo_sqlsrv.log_severity no arquivo php.ini.  
   
 Adicione o seguinte ao final do arquivo php.ini:  
   
@@ -53,7 +53,7 @@ O PHP lê o arquivo de configuração na inicialização e armazena os dados em 
 Para ativar o registro em log, você pode usar a função [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) ou alterar o arquivo php.ini. Você pode registrar em log a atividade de inicializações, conexões, instruções ou funções de erro. Você também pode especificar se deseja registrar em log erros, avisos, notificações ou todos os três.  
   
 > [!NOTE]  
-> Você pode configurar o local do arquivo de log no arquivo php.ini.  
+> Você pode configurar o local do arquivo de log no arquivo php.ini. Confira a [Documentação do PHP](https://www.php.net/manual/en/errorfunc.configuration.php) para obter mais detalhes.  
   
 ### <a name="turning-logging-on"></a>Ativando o registro em log  
 Você pode ativar o registro em log usando a função [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) para especificar um valor para a configuração **LogSubsystems**. Por exemplo, a seguinte linha de código configura o driver para registrar em log a atividade de conexões:  
@@ -65,7 +65,7 @@ A tabela a seguir descreve as constantes que podem ser usadas como o valor para 
 |Valor (inteiro equivalente entre parênteses)|Descrição|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Ativa o registro em log de todos os subsistemas.|  
-|SQLSRV_LOG_SYSTEM_OFF (0)|Desativa o registro em log. Este é o padrão.|  
+|SQLSRV_LOG_SYSTEM_OFF (0)|Desativa o registro em log. Esse é o padrão.|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|Ativa o registro em log da atividade de inicialização.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Ativa o registro em log da atividade de conexão.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Ativa o registro em log da atividade de instrução.|  
@@ -96,7 +96,7 @@ A tabela a seguir descreve as constantes que podem ser usadas como o valor para 
 |Valor (inteiro equivalente entre parênteses)|Descrição|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que erros, avisos e notificações são registrados em log.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros serão registrados em log. Este é o padrão.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que os erros serão registrados em log. Esse é o padrão.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Especifica que os avisos serão registrados em log.|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que as notificações serão registradas em log.|  
   

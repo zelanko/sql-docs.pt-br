@@ -23,12 +23,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 59a754655eff7c701a91013e686e7ff1105a4cfe
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 8a0f2d13c26e6b19b30e551560d11be58ff71e48
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283697"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990049"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -95,7 +95,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
-A média máxima de largura de banda de CPU que todas as solicitações no pool de recursos podem receber quando há contenção de CPU. *value* é um inteiro. O intervalo permitido para *value* é de 1 a 100.
+A largura de banda média máxima da CPU para todas as solicitações que o pool de recursos externo poderá receber quando houver uma contenção de CPU. *value* é um inteiro. O intervalo permitido para *value* é de 1 a 100.
 
 
 MAX_MEMORY_PERCENT =*value*  
@@ -107,7 +107,7 @@ O número máximo de processos permitidos para o pool de recursos externo. 0 = u
 
 ::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
-A média máxima de largura de banda de CPU que todas as solicitações no pool de recursos podem receber quando há contenção de CPU. *value* é um inteiro. O intervalo permitido para *value* é de 1 a 100.
+A largura de banda média máxima da CPU para todas as solicitações que o pool de recursos externo poderá receber quando houver uma contenção de CPU. *value* é um inteiro. O intervalo permitido para *value* é de 1 a 100.
 
 AFFINITY {CPU = AUTO | ( <CPU_range_spec>) | NUMANODE = (\<NUMA_node_range_spec>)} Anexa o pool de recursos externos a CPUs específicas.
 

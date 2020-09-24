@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb9080044b0ded77b023d6700be4bba7fd260b2b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549412"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024374"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +103,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -301,7 +301,7 @@ Nesse contexto, default não é uma palavra-chave. É um identificador do grupo 
 ##  <a name="general-remarks"></a><a name="GenRemarks"></a> Comentários gerais  
 Um índice columnstore pode ser criado em uma tabela temporária. Quando a tabela for removida ou a sessão encerrada, o índice também será removido.  
 
-Um índice columnstore clusterizado ordenado pode ser criado em colunas de qualquer tipo de dados com suporte no SQL Data Warehouse do Azure, exceto por colunas de cadeia de caracteres.  
+Um índice columnstore clusterizado e ordenado poderá ser criado em colunas de todos os tipos de dados compatíveis com o [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], exceto em colunas de cadeia de caracteres.  
  
 ## <a name="filtered-indexes"></a>Índices filtrados  
 Índice filtrado é um índice não clusterizado otimizado, adequado a consultas que selecionam uma pequena porcentagem de linhas de uma tabela. Ele usa um predicado de filtro para indexar uma parte dos dados na tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta, além de reduzir custos de armazenamento e de manutenção.  

@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f7889af18a605ae5c6b02c8eaaac573fec1abc
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: df52bae9824dabc0a3c40ac9f301f2429c54e930
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688832"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990183"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -145,7 +145,7 @@ CREATE USER user_name
 > A funcionalidade de administrador do Azure AD para a Instância Gerenciada de SQL do Azure após a criação foi alterada. Para obter mais informações, confira [Nova funcionalidade de administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 CREATE USER user_name   
     [ { { FOR | FROM } { LOGIN login_name }   
@@ -344,7 +344,7 @@ Ao criar o usuário no banco de dados da Instância Gerenciada de SQL, o login_n
   
  Ao usar os usuários do banco de dados independente em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure o acesso usando uma regra de firewall no nível de banco de dados, em vez de uma regra de firewall de nível de servidor. Para obter mais informações, veja [sp_set_database_firewall_rule &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-Para os usuários de banco de dados independente [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], o SSMS é compatível com a Autenticação Multifator. Para saber mais, confira [Suporte do SSMS para MFA do Azure AD com o Banco de Dados SQL e o SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+Para os usuários de banco de dados independente [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], o SSMS é compatível com a Autenticação Multifator. Para obter mais informações, confira [Suporte do SSMS para MFA do Azure AD com o Banco de Dados SQL e o [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
 ### <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY USER no banco de dados.  

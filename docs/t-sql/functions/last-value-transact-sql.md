@@ -2,7 +2,7 @@
 description: LAST_VALUE (Transact-SQL)
 title: LAST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/20/2015
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f8dba37244085035a95512c3e1430435bd3ee90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 288b8213bba3623895c8c600f9b398c6e4f608b2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417292"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90915039"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88417292"
   
 ```syntaxsql
   
-LAST_VALUE ( [ scalar_expression ] )   
+LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
   
@@ -47,6 +47,14 @@ LAST_VALUE ( [ scalar_expression ] )
 ## <a name="arguments"></a>Argumentos
  *scalar_expression*  
  É o valor a ser retornado. *scalar_expression* pode ser uma coluna, subconsulta ou outra expressão que resulta em um único valor. Outras funções analíticas não são permitidas.  
+  
+ [ IGNORE NULLS | RESPECT NULLS ]     
+ **Aplica-se ao**: SQL do Azure no Edge
+
+ IGNORE NULLS – ignore os valores nulos no conjunto de dados ao computar o último valor em uma partição.     
+ RESPEITAR NULOS – respeitar valores nulos no conjunto de dados ao computar o último valor em uma partição.     
+ 
+  Para obter mais informações, confira [Como inserir valores ausentes](/azure/azure-sql-edge/imputing-missing-values/).
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo.  
@@ -154,4 +162,6 @@ BusinessEntityID Quarter     SalesYear   QuotaThisQuarter      DifferenceFromFir
   
 ```  
   
-  
+## <a name="see-also"></a>Consulte Também  
+
+ [First_Value &#40;Transact-SQL&#41;](first-value-transact-sql.md)  

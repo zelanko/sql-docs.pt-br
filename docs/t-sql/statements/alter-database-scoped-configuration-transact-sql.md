@@ -3,7 +3,7 @@ title: ALTER DATABASE SCOPED CONFIGURATION
 description: Habilita várias definições de configuração de banco de dados no nível do banco de dados individual.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 09/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: f395ef15f82b4975a3df677abea227e181835e83
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b3710606df63baaf85134be47fb0fe1643c72f3
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537080"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565081"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -153,7 +153,7 @@ Especifica a configuração **MAXDOP (grau máximo de paralelismo)** padrão que
 Para definir essa opção no nível da instância, confira [Configurar a opção max degree of parallelism de configuração do servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 > [!NOTE]
-> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a configuração de **grau máximo de paralelismo** em nível de servidor é sempre definida como 0. MAXDOP pode ser configurado para cada banco de dados, conforme descrito no artigo atual. Para obter recomendações sobre como configurar o MAXDOP de forma ideal, consulte a seção [Recursos Adicionais](#additional-resources).
+> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a configuração no escopo do banco de dados MAXDOP para novos bancos de dados de pool único e elástico é definida como 8 por padrão. MAXDOP pode ser configurado para cada banco de dados, conforme descrito no artigo atual. Para obter recomendações sobre a configuraração ideal do MAXDOP, confira a seção [Recursos Adicionais](#additional-resources).
 
 > [!TIP]
 > Para fazer isso no nível da consulta, use o **MAXDOP**, [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md).    

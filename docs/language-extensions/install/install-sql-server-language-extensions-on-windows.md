@@ -4,17 +4,17 @@ titleSuffix: ''
 description: Saiba como instalar o recurso Extensões de Linguagem no SQL Server no Windows executando o assistente de instalação do SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 11/06/2019
+ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62a4b97216f990d207070e76eaf38d12154757bf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173552"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989847"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Instalar Extensões de Linguagem do SQL Server no Windows
 
@@ -150,8 +150,11 @@ Se você não instalou o Zulu Open JRE padrão incluído com o SQL Server e não
 2. Conceder permissões AppContainer
 
     ```cmd
-    icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
+    
+    > [!NOTE]
+    > O comando acima concede permissões para a SID **S-1-15-2-1** do computador, que é equivalente a **TODOS OS PACOTES DE APLICATIVOS** em uma versão em inglês do Windows. Como alternativa, é possível usar `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` em uma versão em inglês do Windows.
     
 ## <a name="enable-script-execution"></a>Habilitar a execução do script
 

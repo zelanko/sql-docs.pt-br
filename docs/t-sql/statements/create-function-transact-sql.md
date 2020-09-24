@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e27905c6e0d2d5c5f51e2e07d34f68c7fb03cf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c576e23b52c4e9f34e803474a67967440b4cd2e
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541414"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024495"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -73,7 +73,7 @@ Cria uma função definida pelo usuário no [!INCLUDE[ssNoVersion](../../include
 > [!NOTE]
 >
 > - A integração do CLR do .NET Framework ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é discutida neste tópico. A integração CLR não se aplica ao [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-> - Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], confira [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
+> - Para o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], confira [CREATE FUNCTION ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-function-sql-data-warehouse.md).
 
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728490"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989813"
 ---
 # <a name="backup-encryption"></a>Criptografia de backup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,14 @@ ms.locfileid: "85728490"
 > É muito importante fazer backup do certificado ou da chave assimétrica e, preferencialmente, em um local diferente do arquivo de backup usado para criptografar. Sem o certificado ou a chave assimétrica, você não pode restaurar o backup, tornando o arquivo de backup inutilizável.  
   
  **Restaurar o backup criptografado:** a restauração do SQL Server não requer que nenhum parâmetro de criptografia seja especificado durante as restaurações. Requer que o certificado ou a chave assimétrica usada para criptografar o arquivo de backup esteja disponível na instância em que você está fazendo a restauração. A conta de usuário que executa a restauração deve ter as permissões **VIEW DEFINITION** no certificado ou na chave. Se você estiver restaurando o backup criptografado para uma instância diferente, verifique se o certificado está disponível nessa instância.  
-  
- Se você estiver restaurando um backup de um banco de dados criptografado TDE, o certificado TDE deverá estar disponível na instância para a qual você estiver restaurando.  
+A sequência para restaurar um banco de dados criptografado para um novo local é:
+
+1. [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md) no banco de dados antigo
+1. [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) no banco de dados mestre do novo local
+1. [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md) do certificado de backup do banco de dados antigo importado para um local no novo servidor
+1. [Restaurar um banco de dados em um novo local (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
+
+ Se você estiver restaurando um backup de um banco de dados criptografado TDE, o certificado TDE deverá estar disponível na instância para a qual você estiver restaurando. Para obter mais informações, veja [Mover um banco de dados protegido por TDE para outro SQL Server](../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).
   
 ##  <a name="benefits"></a><a name="Benefits"></a> Benefícios  
   

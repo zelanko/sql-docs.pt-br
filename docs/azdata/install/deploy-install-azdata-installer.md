@@ -1,7 +1,7 @@
 ---
 title: Instalar o azdata com o Windows Installer
-titleSuffix: SQL Server big data clusters
-description: Saiba como instalar a ferramenta azdata para instalar e gerenciar Clusters de Big Data do SQL Server com o instalador.
+titleSuffix: ''
+description: Saiba como instalar a ferramenta azdata com o instalador.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 60d3b60f98a93cb6b724cd569fb2871adec3f1ce
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: a33e43386c44ec2ab60166ef57a502fc592c8d73
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733484"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914960"
 ---
 # <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>Instalar o `azdata` para gerenciar [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] com o Windows Installer
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-Este artigo descreve como instalar `azdata` para Clusters de Big Data do SQL Server 2019 no Windows. Antes que a instalação do Windows estivesse disponível, a instalação do `azdata` exigiu `pip`.
+Este artigo descreve como instalar o `azdata` no Windows. Antes que a instalação do Windows estivesse disponível, a instalação do `azdata` exigiu `pip`.
 
 >Para Linux (Ubuntu), confira [Instalar o `azdata` com o instalador](./deploy-install-azdata-linux-package.md).
 
@@ -70,3 +70,5 @@ O programa a ser desinstalado chama-se `Azdata CLI`. Selecione este aplicativo e
 ## <a name="next-steps"></a>Próximas etapas
 
 Para obter mais informações sobre clusters de Big Data, confira [O que são [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md)
+
+Usar o azdata com [serviços de dados habilitados o Azure Arc](/azure/azure-arc/data/)

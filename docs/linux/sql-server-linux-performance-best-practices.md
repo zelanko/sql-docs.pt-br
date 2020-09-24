@@ -4,16 +4,16 @@ description: Este artigo fornece diretrizes e melhores práticas de desempenho p
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/14/2017
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b2a4f55908f249d9f574d392dea26932648e58d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887830"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989909"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Melhores práticas de desempenho e diretrizes de configuração para o SQL Server em Linux
 
@@ -85,7 +85,7 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>Configurações de kernel para espaço de endereço virtual
 
-A configuração padrão de **vm.max_map_count** (que é 65536) pode não ser alta o suficiente para uma instalação do SQL Server. Altere esse valor (que é um limite superior) para 256K.
+A configuração padrão de **vm.max_map_count** (que é 65536) pode não ser alta o suficiente para uma instalação do SQL Server. Por esse motivo, altere o valor de **vm.max_map_count** para 262144 para uma implantação do SQL Server e confira a seção [Configurações propostas do Linux usando um perfil MSSQL ajustado](#proposed-linux-settings-using-a-tuned-mssql-profile) para obter ajustes adicionais para esses parâmetros de kernel. O valor máximo para vm.max_map_count é 2147483647.
 
 ```bash
 sysctl -w vm.max_map_count=262144
@@ -112,7 +112,7 @@ vm.dirty_ratio = 80
 vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
-# For , use
+# For multi-instance SQL deployments, use
 # vm.transparent_hugepages=madvice
 vm.max_map_count=1600000
 net.core.rmem_default = 262144
@@ -152,12 +152,12 @@ Use o atributo **noatime** com qualquer sistema de arquivos usado para armazenar
 A maioria das instalações do Linux deve ter essa opção ativada por padrão. Para a experiência de desempenho mais consistente, recomendamos deixar essa opção de configuração habilitada. No entanto, em caso de atividade de paginação de alta memória em implantações do SQL Server com várias instâncias, por exemplo, ou de execução do SQL Server com outros aplicativos que demandam memória no servidor, sugerimos que você teste o desempenho dos aplicativos após executar o comando a seguir 
 
 ```bash
-echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 ou modificar o perfil tuned mssql com a linha
 
 ```bash
-vm.transparent_hugepages=madvice
+vm.transparent_hugepages=madvise
 ```
 e torne o perfil mssql ativo após a modificação
 ```bash

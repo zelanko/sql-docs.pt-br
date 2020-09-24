@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos azdata bdc spark status.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 88e27fbb3be178696a053d345027cb2f958684a9
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: da13babdf51bc1b4f7e1afa297e7712994932c64
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733447"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914568"
 ---
 # <a name="azdata-bdc-spark-status"></a>azdata bdc spark status
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Aplica-se ao `azdata`
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
+O artigo a seguir fornece referência para os comandos **sql** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Comandos
-| Comando | Descrição |
+
+|Comando|Descrição|
 | --- | --- |
 [azdata bdc spark status show](#azdata-bdc-spark-status-show) | Status do serviço do Spark.
 ## <a name="azdata-bdc-spark-status-show"></a>azdata bdc spark status show
@@ -64,4 +65,7 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](../install/deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
+
+Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata](..\install\deploy-install-azdata.md).
+

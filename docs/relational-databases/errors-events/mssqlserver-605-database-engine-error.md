@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5537f7629fce9ebe17b686b149839b7f317695fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecaa9b760ccbfa0bf0538b4b069f45c166cd0111
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470879"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989959"
 ---
 # <a name="mssqlserver_605"></a>MSSQLSERVER_605
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ Um nível de gravidade 12 indica um possível erro transitório; ou seja, ele oc
   
 -   O sistema operacional prematuramente notifica o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de que uma operação de E/S foi concluída; a mensagem de erro é exibida mesmo que os dados não estejam corrompidos.  
   
-Executar uma consulta com a dica de otimização NOLOCK ou definir o nível de isolamento da transação como READ UNCOMMITTED. Quando uma consulta que não usa NOLOCK ou READ UNCOMMITTED tenta ler dados que estão sendo movidos ou alterados por outro usuário, ocorre um erro 605. Para verificar se é um erro 605 transitório, reexecute a consulta posteriormente. Para saber mais, confira o artigo [235880](https://support.microsoft.com/kb/235880/en-us) da base de dados: "Você recebe uma mensagem de erro 'Erro 605' quando executa uma consulta com a dica de otimização NOLOCK ou define o nível de isolamento da transação como READ UNCOMMITTED no SQL Server."  
+ - Executar uma consulta com a dica de otimização NOLOCK ou definir o nível de isolamento da transação como READ UNCOMMITTED. Quando uma consulta que não usa nível de isolamento da transação NOLOCK ou READ UNCOMMITTED tenta ler dados que estão sendo movidos ou alterados por outro usuário, ocorre um erro 605. Para verificar se é um erro 605 transitório, reexecute a consulta posteriormente. 
   
 Em geral, se o erro ocorreu durante o acesso aos dados, mas as operações DBCC CHECKDB subsequentes foram concluídas com êxito, provavelmente o erro 605 era transitório.  
   

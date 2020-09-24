@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos notebook de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a5b30abf0fc8df71a3d791e0bd3927ccbe1e81b1
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: dc3021cfe40259fdbcff7fab00ef6a7e80e4a2ad
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89733554"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914415"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Aplica-se ao `azdata`
 
-O artigo a seguir fornece referência para os comandos `notebook` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
+O artigo a seguir fornece referência para os comandos **sql** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Comandos
-| Comando | Descrição |
+
+|Comando|Descrição|
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | Exibir um notebook.  Opção para parar no primeiro erro de execução de célula.
 [azdata notebook run](#azdata-notebook-run) | Executar um notebook.  A execução é interrompida no primeiro erro.
@@ -111,4 +112,7 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](../install/deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
+
+Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata](..\install\deploy-install-azdata.md).
+

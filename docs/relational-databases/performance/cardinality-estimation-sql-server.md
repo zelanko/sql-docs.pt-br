@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3806092674dde608bed9a962bcf939ac0379b374
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 571d611fe49e590d65f0f9749660844328f6c9c1
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457696"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990169"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
 
@@ -85,7 +85,7 @@ GO
   
 Para um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 ou superior, a ativação do [sinalizador de rastreamento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) força o sistema a usar a CE versão 70.  
   
-**CE herdada:** para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 e superior, a CE versão 70 pode ser ativada usando o nível do banco de dados com [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**CE herdada:** Para obter um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 e acima, a versão 70 do CE poderá ser ativada no nível do banco de dados usando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 

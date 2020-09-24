@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
 ms.date: 07/06/2020
-ms.openlocfilehash: 3d162630d029fcde31275ce4d09cfe05bdf78c36
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714244"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989439"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -68,6 +68,13 @@ Crie um script SQL que gera as diferenças de dois arquivos .dacpac:
 ```
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
+
+Exibe a versão do SqlPackage:
+
+```
+sqlpackage.exe /Version
+ ```
+
 
 ## <a name="extract-parameters-and-properties"></a>Extrair parâmetros e propriedades
 Uma ação Extrair em SqlPackage.exe cria um esquema de um banco de dados ativo do SQL Server ou do Banco de Dados SQL do Azure para um pacote DACPAC (arquivo .dacpac). Por padrão, os dados não são incluídos no arquivo .dacpac. Para incluir os dados, utilize a [ação Exportar](#export-parameters-and-properties). 

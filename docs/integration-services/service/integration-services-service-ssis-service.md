@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487699"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990382"
 ---
 # <a name="integration-services-service-ssis-service"></a>Serviço do Integration Services (Serviço SSIS)
 
@@ -368,16 +368,14 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 6.  Reinicie o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-### <a name="connecting-by-using-a-local-account"></a>Conectando-se através de uma conta local  
- Se você estiver trabalhando em uma conta local do Windows em um computador cliente, só poderá se conectar ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um computador remoto se houver uma conta local com o mesmo nome e senha e os direitos apropriados no computador remoto.  
+### <a name="connecting-by-using-a-local-account"></a>Conectando-se através de uma conta local
+
+Se você estiver trabalhando em uma conta local do Windows em um computador cliente, só poderá se conectar ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um computador remoto se houver uma conta local com o mesmo nome e senha e os direitos apropriados no computador remoto.  
   
-### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Por padrão, o serviço SSIS não oferece suporte para delegação  
-Por padrão, o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não oferece suporte para delegação de credenciais ou o que às vezes é conhecido como salto duplo. Nesse cenário, você está trabalhando em um computador cliente, o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está em execução em um segundo computador e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução em um terceiro computador. Primeiro, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] passa com sucesso as credenciais do computador cliente para o segundo computador no qual o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está em execução. Em seguida, no entanto, o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não pode delegar suas credenciais do segundo computador para o terceiro computador no qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução.
+### <a name="ssis-windows-service-doesnt-support-delegation"></a>O serviço SSIS do Windows não dá suporte à delegação
 
-Você pode habilitar a delegação de credenciais concedendo o direito **Confiar neste usuário para delegação a qualquer serviço (apenas Kerberos)** para a conta de serviço do SQL Server, que inicia o serviço do Integration Services (ISServerExec.exe) como um processo filho. Antes de conceder esse direito, considere se ele atende aos requisitos de segurança de sua organização.
+O SSIS não dá suporte à delegação de credenciais, também chamada de salto duplo. Neste cenário, você está trabalhando em um computador cliente, o SSIS é instalado em um segundo computador e o SQL Server é instalado em um terceiro computador. Embora o SSMS passe suas credenciais do computador cliente para o segundo computador (no qual o SSIS está em execução) com êxito, o SSIS não pode delegar suas credenciais do segundo computador para o terceiro computador (no qual o SQL Server está em execução).
 
-Para obter mais informações, consulte [Getting Cross Domain Kerberos and Delegation working with SSIS Package (Obtendo entre Kerberos do domínio e delegação de trabalhar com o pacote do SSIS)](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/).
- 
 ## <a name="configure-the-firewall"></a>Configurar o firewall
   
  O sistema de firewall do Windows ajuda a impedir o acesso não autorizado a recursos do computador em uma conexão de rede. Para acessar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] por meio desse firewall, você precisa configurar o firewall para habilitar o acesso.  

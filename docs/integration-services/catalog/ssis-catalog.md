@@ -2,7 +2,7 @@
 description: Catálogo do SSIS
 title: Catálogo do SSIS | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2018
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c2050734b89c8b5ae74aa40316c9b1f980705dc3
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8a821c49ba80ce3e51c4a12f0c0d7dee660384d3
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480278"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990379"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
 
@@ -450,21 +450,19 @@ Para executar o **Trabalho de Manutenção do Servidor SSIS**, o SSIS cria o log
     ```  
   
 2.  Se você estiver restaurando o banco de dados SSISDB para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o catálogo do SSISDB nunca foi criado, crie a chave assimétrica e o logon da chave assimétrica e conceda permissão UNSAFE para o logon.  
-  
+
     ```  
-    Create Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey  
-           FROM Executable File = 'C:\Program Files\Microsoft SQL Server\110\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
-  
+    Create Asymmetric Key MS_SQLEnableSystemAssemblyLoadingKey  
+           FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
+
+    Encontre o valor de `YourSQLServerDefaultCompatibilityLevel` em uma [lista de níveis de compatibilidade padrão do SQL Server](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments).
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os procedimentos armazenados CLR exigem que permissões de UNSAFE sejam concedidas ao logon porque o logon exige acesso adicional a recursos restritos, como a API do Microsoft Win32. Para obter mais informações sobre a permissão de código UNSAFE, consulte [Criando um assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
-  
+    [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os procedimentos armazenados CLR exigem que permissões de UNSAFE sejam concedidas ao logon porque o logon exige acesso adicional a recursos restritos, como a API do Microsoft Win32. Para obter mais informações sobre a permissão de código UNSAFE, consulte [Criando um assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+
     ```  
-    Create Login MS_SQLEnableSystemAssemblyLoadingUser  
-           FROM Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey   
-  
-           Grant unsafe Assembly to MS_SQLEnableSystemAssemblyLoadingUser  
-  
+    Create Login ##MS_SQLEnableSystemAssemblyLoadingUser## FROM Asymmetric Key MS_SQLEnableSystemAssemblyLoadingKey   
+    Grant Unsafe Assembly to ##MS_SQLEnableSystemAssemblyLoadingUser##    
     ```  
   
 3.  Restaure o banco de dados SSISDB do backup usando a caixa de diálogo **Restaurar Banco de Dados** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte estes tópicos:  

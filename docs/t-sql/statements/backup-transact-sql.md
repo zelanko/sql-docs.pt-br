@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: afcf2e560b5fd4300c02ddf6bcc548ef68fdc05b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480852"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024565"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -309,7 +309,7 @@ ENCRYPTION Usado para especificar a criptografia de um backup. Você pode especi
 - `TRIPLE_DES_3KEY`
 - `NO_ENCRYPTION`
 
-Se você optar pela criptografia, também precisará especificar o criptografador usando as opções do criptografador:
+Se você decidir criptografar o backup, também precisará especificar o criptografador usando as opções do criptografador:
 
 - `SERVER CERTIFICATE` = Encryptor_Name
 - `SERVER ASYMMETRIC KEY` = Encryptor_Name
@@ -1209,7 +1209,7 @@ Por exemplo:
 
 Requer a permissão **BACKUP DATABASE** ou a associação à função de banco de dados fixa **db_backupoperator**. O banco de dados mestre não pode ser submetido a backup simplesmente por um usuário normal que tenha sido adicionado à função de banco de dados fixa **db_backupoperator**. O banco de dados mestre somente pode ser submetido a backup pela **SA**, pelo administrador da malha ou pelos membros da função de servidor fixa **sysadmin**.
 
-Requer uma conta do Windows que tenha permissão para acessar, criar e gravar no diretório de backup. O nome de conta do Windows e a senha também precisam ser armazenados no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Para adicionar essas credenciais de rede a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o procedimento armazenado [sp_pdw_add_network_credentials – SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+Requer uma conta do Windows que tenha permissão para acessar, criar e gravar no diretório de backup. O nome de conta do Windows e a senha também precisam ser armazenados no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Para adicionar essas credenciais de rede ao [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o procedimento armazenado [sp_pdw_add_network_credentials – [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
 
 Para obter mais informações sobre o gerenciamento de credenciais no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], confira a seção [Segurança](#Security).
 
@@ -1222,14 +1222,14 @@ Erros de BACKUP DATABASE nas seguintes condições:
 - O banco de dados não existe.
 - O diretório de destino já existe no compartilhamento de rede.
 - O compartilhamento de rede de destino não está disponível.
-- O compartilhamento de rede de destino não tem espaço suficiente para o backup. O comando BACKUP DATABASE não confirma a existência de espaço em disco suficiente antes de iniciar o backup, possibilitando a geração de um erro de falta de espaço em disco durante a execução de BACKUP DATABASE. Quando ocorrer falta de espaço em disco suficiente, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] reverterá o comando BACKUP DATABASE. Para diminuir o tamanho do banco de dados, execute [DBCC SHRINKLOG (SQL Data Warehouse do Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
+- O compartilhamento de rede de destino não tem espaço suficiente para o backup. O comando BACKUP DATABASE não confirma a existência de espaço em disco suficiente antes de iniciar o backup, possibilitando a geração de um erro de falta de espaço em disco durante a execução de BACKUP DATABASE. Quando ocorrer falta de espaço em disco suficiente, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] reverterá o comando BACKUP DATABASE. Para diminuir o tamanho do banco de dados, execute [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - Tentativa de iniciar um backup em uma transação.
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>Comentários gerais
 
-Antes de executar um backup de banco de dados, use [DBCC SHRINKLOG (SQL Data Warehouse do Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) para diminuir o tamanho do banco de dados.
+Antes de executar um backup do banco de dados, use [DBCC SHRINKLOG ([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) para diminuir o tamanho do banco de dados. 
 
 Um backup do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] é armazenado como um conjunto de vários arquivos no mesmo diretório.
 
@@ -1288,9 +1288,9 @@ O acesso da rede ao diretório de backup baseia-se na segurança de compartilham
 > [!IMPORTANT]
 > Para reduzir os riscos de segurança para seus dados, é recomendável designar uma conta do Windows exclusivamente para a finalidade de executar operações de backup e restauração. Permita que essa conta tenha permissões para o local de backup e não tenha para nenhum outro lugar.
 
-Você precisa armazenar o nome de usuário e a senha no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] executando o procedimento armazenado [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md). O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] usa o Gerenciador de Credenciais do Windows para armazenar e criptografar os nomes de usuário e as senhas no nó de controle e nos nós de computação. As credenciais não são submetidas a backup com o comando BACKUP DATABASE.
+Você precisa armazenar o nome de usuário e a senha no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] executando o procedimento armazenado [sp_pdw_add_network_credentials – [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md). O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] usa o Gerenciador de Credenciais do Windows para armazenar e criptografar os nomes de usuário e as senhas no nó de controle e nos nós de computação. As credenciais não são submetidas a backup com o comando BACKUP DATABASE.
 
-Para remover as credenciais de rede do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], confira [sp_pdw_remove_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
+Para remover as credenciais de rede do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], confira [sp_pdw_remove_network_credentials – [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
 Para listar todas as credenciais de rede armazenadas no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use a exibição de gerenciamento dinâmico [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
 

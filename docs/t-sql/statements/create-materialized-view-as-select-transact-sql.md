@@ -38,18 +38,18 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a63931e71983b0ae5bba99fb13081cc75c93b2cd
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444826"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024525"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Este artigo explica a instrução criar CREATE MATERIALIZED VIEW AS SELECT T-SQL no SQL Data Warehouse do Azure para o desenvolvimento de soluções. O artigo também fornece exemplos de códigos.
+Este artigo explica a instrução CREATE MATERIALIZED VIEW AS SELECT T-SQL no [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] para o desenvolvimento de soluções. O artigo também fornece exemplos de códigos.
 
 Uma Exibição Materializada persiste os dados retornados da consulta de definição de exibição e é atualizada automaticamente conforme os dados são alterados nas tabelas subjacentes.   Ela melhora o desempenho de consultas complexas (normalmente consultas com junções e agregações) e oferece operações simples de manutenção.   Com seu recurso de correspondência automática do plano de execução, uma exibição materializada não precisa ser referenciada na consulta para o otimizador considerar a exibição na substituição.  Essa capacidade permite que os engenheiros de dados implementem as exibições materializadas como um mecanismo para melhorar o tempo de resposta de consulta sem precisar alterar as consultas.  
   
@@ -131,7 +131,7 @@ ALTER TABLE SWITCH não tem suporte em tabelas referenciadas em exibições mate
 |STDEV(a) é especificado por usuários na lista SELECT de uma definição de exibição materializada, em que 'a' é uma expressão.|SUM(a), COUNT_BIG(a), SUM(square(a))|Adicionado automaticamente pela criação da exibição materializada.  Não é necessária nenhuma ação do usuário. |
 | | | |
 
-Uma vez criadas, as exibições materializadas são visíveis no SQL Server Management Studio na pasta de exibições da instância do SQL Data Warehouse do Azure.
+Depois de criadas, as exibições materializadas ficam visíveis no SQL Server Management Studio na pasta de exibições da instância do [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
 Os usuários podem executar [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) e [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) para determinar o espaço que está sendo consumido por uma exibição materializada.  
 
@@ -156,6 +156,6 @@ Requer 1) REFERENCES e a permissão CREATE VIEW OU 2) a permissão CONTROL no es
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[Exibições do sistema com suporte no SQL Data Warehouse do Azure](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[Instruções T-SQL com suporte no SQL Data Warehouse do Azure](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[Exibições do catálogo do [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] e do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[Exibições do sistema com suporte no Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Instruções T-SQL com suporte no Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

@@ -1,29 +1,30 @@
 ---
 title: azdata bdc hdfs mount reference
 titleSuffix: SQL Server big data clusters
-description: Use este artigo de referência para entender os comandos SQL na ferramenta azdata, especificamente os comandos bdc hdfs mount.
+description: Artigo de referência para comandos bdc hdfs mount de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bf0742083b458fb0d8280199a0afaeb44a05958a
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: acee94a5b2826b0386f22480901101688a220a16
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733449"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914841"
 ---
 # <a name="azdata-bdc-hdfs-mount"></a>azdata bdc hdfs mount
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Aplica-se ao `azdata`
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
+O artigo a seguir fornece referência para os comandos **sql** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Comandos
-| Comando | Descrição |
+
+|Comando|Descrição|
 | --- | --- |
 [azdata bdc hdfs mount create](#azdata-bdc-hdfs-mount-create) | Criar montagens de repositórios remotos no HDFS.
 [azdata bdc hdfs mount delete](#azdata-bdc-hdfs-mount-delete) | Excluir montagens de repositórios remotos no HDFS.
@@ -144,4 +145,7 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](../install/deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
+
+Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata](..\install\deploy-install-azdata.md).
+

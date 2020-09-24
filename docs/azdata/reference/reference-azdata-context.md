@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos de contexto.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3506d3ab1b2fad9d07496d1041773d26aae6d68
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1d48ef786389c5ef32b1f3fd49c88b0a9d3aac18
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733435"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914733"
 ---
 # <a name="azdata-context"></a>azdata context
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Aplica-se ao `azdata`
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
+O artigo a seguir fornece referência para os comandos **sql** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Comandos
-| Comando | Descrição |
+
+|Comando|Descrição|
 | --- | --- |
 [azdata context list](#azdata-context-list) | Lista os contextos disponíveis no perfil do usuário.
 [azdata context delete](#azdata-context-delete) | Exclui o contexto com o namespace fornecido do perfil do usuário.
@@ -60,7 +61,7 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-context-delete"></a>azdata context delete
 Se o contexto excluído estiver ativo, o usuário precisará definir um novo contexto ativo. Para ver contextos disponíveis para definir ou excluir `azdata context list`
 ```bash
-azdata context delete --namespace -n 
+azdata context delete --namespace -ns 
                       
 ```
 ### <a name="examples"></a>Exemplos
@@ -69,7 +70,7 @@ Exclui contextNamespace do perfil do usuário.
 azdata context delete -n contextNamespace
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
-#### `--namespace -n`
+#### `--namespace -ns`
 Namespace do contexto que você gostaria de excluir.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
@@ -85,7 +86,7 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-context-set"></a>azdata context set
 Para ver contextos disponíveis para definir `azdata context list`. Se nenhum contexto estiver listado, você precisará fazer logon para criar um contexto em seu perfil do usuário `azdata login`. Aquilo em que você fizer logon será o seu contexto ativo. Se você fizer logon em várias entidades, poderá alternar entre os contextos ativos com este comando. Para ver seu contexto ativo no momento `azdata context list --active`
 ```bash
-azdata context set --namespace -n 
+azdata context set --namespace -ns 
                    
 ```
 ### <a name="examples"></a>Exemplos
@@ -94,7 +95,7 @@ Define contextNamespace como o contexto ativo no perfil do usuário.
 azdata context set -n contextNamespace
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
-#### `--namespace -n`
+#### `--namespace -ns`
 Namespace do contexto que você gostaria de definir.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
@@ -110,4 +111,7 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](../install/deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
+
+Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata](..\install\deploy-install-azdata.md).
+

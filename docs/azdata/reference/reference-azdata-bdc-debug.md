@@ -1,36 +1,37 @@
 ---
 title: azdata bdc debug reference
 titleSuffix: SQL Server big data clusters
-description: Use este artigo de referência para entender os comandos SQL na ferramenta azdata, especificamente os comandos bdc debug.
+description: Artigo de referência para comandos bdc debug de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e9d1f561666bf6aefdef6abf4b1daf568a5a89d8
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: fe9f79373bd26ab4b010c63487ffa38de44dae3b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733467"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914580"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Aplica-se ao `azdata`
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
+O artigo a seguir fornece referência para os comandos **sql** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Comandos
-| Comando | Descrição |
+
+|Comando|Descrição|
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copiar logs.
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | Dispara o despejo de memória.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
 Copiar os logs de depuração do cluster de Big Data – a configuração do Kubernetes é necessária em seu sistema.
 ```bash
-azdata bdc debug copy-logs --namespace -n 
+azdata bdc debug copy-logs --namespace -ns 
                            [--container -c]  
                            
 [--target-folder -d]  
@@ -44,7 +45,7 @@ azdata bdc debug copy-logs --namespace -n
 [--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
-#### `--namespace -n`
+#### `--namespace -ns`
 Nome do cluster de Big Data, usado para namespaces de Kubernetes.
 ### <a name="optional-parameters"></a>Parâmetros opcionais
 #### `--container -c`
@@ -73,13 +74,13 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
 Dispara o despejo de memória e copia-o do contêiner; é necessário realizar a configuração do Kubernetes no sistema.
 ```bash
-azdata bdc debug dump --namespace -n 
+azdata bdc debug dump --namespace -ns 
                       [--container -c]  
                       
 [--target-folder -d]
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
-#### `--namespace -n`
+#### `--namespace -ns`
 Nome do cluster de Big Data, usado para namespaces de Kubernetes.
 ### <a name="optional-parameters"></a>Parâmetros opcionais
 #### `--container -c`
@@ -100,4 +101,7 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](../install/deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
+
+Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata](..\install\deploy-install-azdata.md).
+

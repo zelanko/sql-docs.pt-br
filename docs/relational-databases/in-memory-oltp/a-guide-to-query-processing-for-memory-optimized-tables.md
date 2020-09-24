@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247068"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989899"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -273,35 +273,31 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Observe que o operador Hash Match não tem suporte para agregação. Desse modo, todas as agregações em procedimentos armazenados compilados nativamente usam o operador Stream Aggregate, mesmo se o plano para a mesma consulta no [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado usar o operador Hash Match.|  
   
 ## <a name="column-statistics-and-joins"></a>Junções e estatísticas de coluna  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém estatísticas sobre valores nas colunas de chave do índice para ajudar a fazer uma estimativa do custo de determinadas operações, como buscas de índice e verificação de índice. (O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também criará estatísticas em colunas de chave não índice se você criá-las explicitamente ou se o otimizador de consulta criá-los em resposta a uma consulta com um predicado.) A principal métrica na estimativa de custo é o número de linhas processadas por um único operador. Observe que para tabelas baseadas em disco, o número de páginas acessadas por um operador específico é significativo na estimativa de custo. No entanto, como a contagem de páginas não é importante para tabelas com otimização de memória (sempre será zero), este documento se concentra na contagem de linhas. A estimativa é iniciada com os operadores de verificação e busca de índice no plano e depois é estendida para incluir os outros operadores, como o de junção. O número estimado de linhas a serem processadas por um operador de junção é baseado na estimativa dos operadores subjacentes de índice, busca e verificação. Para obter acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória, você pode observar o plano de execução real ver a diferença entre as contagens de linhas estimadas e reais dos operadores no plano.  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém estatísticas sobre valores nas colunas de chave do índice para ajudar a fazer uma estimativa do custo de determinadas operações, como buscas de índice e verificação de índice. (O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também criará estatísticas em colunas de chave não índice se você criá-las explicitamente ou se o otimizador de consulta criá-los em resposta a uma consulta com um predicado.) A principal métrica na estimativa de custo é o número de linhas processadas por um único operador. Observe que para tabelas baseadas em disco, o número de páginas acessadas por um operador específico é significativo na estimativa de custo. No entanto, como a contagem de páginas não é importante para tabelas com otimização de memória (sempre será zero), este documento se concentra na contagem de linhas. A estimativa é iniciada com os operadores de verificação e busca de índice no plano e depois é estendida para incluir os outros operadores, como o de junção. O número estimado de linhas a serem processadas por um operador de junção é baseado na estimativa dos operadores subjacentes de índice, busca e verificação. Para obter acesso do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a tabelas com otimização de memória, você pode observar o plano de execução real ver a diferença entre as contagens de linhas estimadas e reais dos operadores no plano.  
   
- Para o exemplo na figura 1:  
+Para o exemplo na figura 1:  
   
--   A verificação de índice clusterizado em Customer estimou 91; real 91.  
+- A verificação de índice clusterizado em Customer estimou 91; real 91.  
+- A verificação de índice não clusterizado em CustomerID estimou 830; real 830.  
+- O operador Merge Join estimou 815; real 830.  
   
--   A verificação de índice não clusterizado em CustomerID estimou 830; real 830.  
+As estimativas para as verificações de índice são precisas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém a contagem de linhas para tabelas baseadas em disco. As estimativas para verificação de índice e tabela inteira sempre são precisas. A avaliação para a junção é bastante precisa também.  
   
--   O operador Merge Join estimou 815; real 830.  
+Se essas estimativas forem alteradas, as considerações de custo para diferentes alternativas de plano também serão alteradas. Por exemplo, se um dos lados da junção tiver uma contagem de linhas estimada de 1 ou apenas algumas linhas, usar as junções de loops aninhados é menos dispendioso. Considere a consulta a seguir.  
   
- As estimativas para as verificações de índice são precisas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém a contagem de linhas para tabelas baseadas em disco. As estimativas para verificação de índice e tabela inteira sempre são precisas. A avaliação para a junção é bastante precisa também.  
-  
- Se essas estimativas forem alteradas, as considerações de custo para diferentes alternativas de plano também serão alteradas. Por exemplo, se um dos lados da junção tiver uma contagem de linhas estimada de 1 ou apenas algumas linhas, usar as junções de loops aninhados é menos dispendioso.  
-  
- Veja a seguir o plano para a consulta;  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- Depois de excluir todas as linhas, menos uma na tabela Customer:  
+Depois de excluir todas as linhas, exceto uma na tabela `Customer`, o plano de consulta a seguir é gerado:  
   
- ![Estatísticas e junções de coluna.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Junções e estatísticas de coluna.")  
+![Estatísticas e junções de coluna.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Junções e estatísticas de coluna.")  
   
- Em relação a esse plano de consulta:  
+Em relação a esse plano de consulta:  
   
--   O Hash Match foi substituído por um operador de junção físico Nested Loops.  
-  
--   A verificação de índice completo em IX_CustomerID foi substituída por uma busca de índice. Isso resultou na verificação de 5 linhas, em vez das 830 linhas exigidas para a verificação de índice completo.  
+- O Hash Match foi substituído por um operador de junção físico Nested Loops.  
+- A verificação de índice completo em IX_CustomerID foi substituída por uma busca de índice. Isso resultou na verificação de 5 linhas, em vez das 830 linhas exigidas para a verificação de índice completo.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

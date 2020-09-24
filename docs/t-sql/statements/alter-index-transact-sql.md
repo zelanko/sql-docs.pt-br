@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce5edfba05262da83060030aa00117a81e730e24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d7d731d320c51b70bf73ea76361f9dba283ea38c
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544334"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024485"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -149,7 +149,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```syntaxsql
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -663,7 +663,7 @@ Quando `ALL` for especificado, os índices relacionais, clusterizados e não clu
 Para obter mais informações, veja [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
 
 > [!IMPORTANT]
-> Para uma tabela do SQL Data Warehouse do Azure com um índice columnstore clusterizado ordenado, o `ALTER INDEX REORGANIZE` não reclassificará os dados. Para reclassificar os dados, use `ALTER INDEX REBUILD`.
+> Para uma tabela do [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] com um índice columnstore clusterizado ordenado, `ALTER INDEX REORGANIZE` não reclassifica os dados. Para reclassificar os dados, use `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Desabilitando índices  
 A desabilitação de um índice impede o acesso do usuário ao índice, e, para índices clusterizados, aos dados da tabela subjacente. A definição de índice permanece no catálogo do sistema. A desabilitação de um índice não clusterizado ou clusterizado em uma exibição exclui fisicamente os dados do índice. A desabilitação de um índice clusterizado impede o acesso aos dados, mas eles permanecem inalterados na árvore B até que o índice seja descartado ou recriado. Para exibir o status de um índice habilitado ou desabilitado, consulte a coluna **is_disabled** na exibição do catálogo **sys.indexes**.  

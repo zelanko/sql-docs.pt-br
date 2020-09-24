@@ -1,7 +1,7 @@
 ---
 title: Instalar azdata usando pip
-titleSuffix: SQL Server big data clusters
-description: Saiba como instalar a ferramenta azdata para instalar e gerenciar clusters de Big Data com o pip.
+titleSuffix: ''
+description: Saiba como instalar a ferramenta azdata com o pip.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 51faf26a6414854ad3b2b1c2d205304e9b3dfb36
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 6bf2bbff5f1d048895515f18b600cd05acd8ae6f
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733481"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914944"
 ---
 # <a name="install-azdata-with-pip"></a>Instalar `azdata` com `pip`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
 Este artigo descreve como instalar a ferramenta `azdata` no Windows ou Linux usando `pip`.
 
@@ -26,7 +26,7 @@ Para Windows e Linux (distribuição Ubuntu), você pode instalar com um [gerenc
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> Pré-requisitos
 
-`azdata` é um utilitário de linha de comando escrito em Python que permite aos administradores de cluster inicializar e gerenciar o cluster de Big Data por meio de APIs REST. A versão mínima do Python necessária é v3.5. `pip` é necessário para baixar e instalar a ferramenta `azdata`. As instruções a seguir fornecem exemplos para o Windows e o Ubuntu. Para instalar o Python em outras plataformas, confira a [Documentação do Python](https://wiki.python.org/moin/BeginnersGuide/Download).
+`azdata` é um utilitário de linha de comando escrito em Python que permite aos administradores de cluster inicializar e gerenciar dados por meio de APIs REST. A versão mínima do Python necessária é v3.5. `pip` é necessário para baixar e instalar a ferramenta `azdata`. As instruções a seguir fornecem exemplos para o Windows e o Ubuntu. Para instalar o Python em outras plataformas, confira a [Documentação do Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 Além disso, instale e atualize a versão mais recente do pacote de Python `requests`:
 
 ```bash
@@ -143,3 +143,5 @@ Para instalar o `azdata` no macOS ou no OS X, conclua estas etapas. Para cada et
 ## <a name="next-steps"></a>Próximas etapas
 
 Para obter mais informações sobre clusters de Big Data, confira [O que são [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Usar o azdata com [serviços de dados habilitados o Azure Arc](/azure/azure-arc/data/)

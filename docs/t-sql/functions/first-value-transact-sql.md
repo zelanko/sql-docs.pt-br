@@ -2,7 +2,7 @@
 description: FIRST_VALUE (Transact-SQL)
 title: FIRST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/10/2016
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,25 +20,25 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87c0804ba925600aabe2ac0487befd8cf5bf9363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db390dda473d997343de46f9b37a4ab4865ca347
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445778"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90915025"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Retorna o primeiro valor em um conjunto ordenado de valores no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Retorna o primeiro valor em um conjunto ordenado de valores.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-FIRST_VALUE ( [scalar_expression ] )   
-    OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )  
+FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
+    OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )
   
 ```  
   
@@ -47,6 +47,14 @@ FIRST_VALUE ( [scalar_expression ] )
 ## <a name="arguments"></a>Argumentos
  *scalar_expression*  
  É o valor a ser retornado. *scalar_expression* pode ser uma coluna, subconsulta ou outra expressão arbitrária que resulta em um único valor. Outras funções analíticas não são permitidas.  
+
+ [ IGNORE NULLS | RESPECT NULLS ]     
+ **Aplica-se ao**: SQL do Azure no Edge
+
+ IGNORE NULLS – ignore os valores nulos no conjunto de dados ao computar o último valor em uma partição.     
+ RESPEITAR NULOS – respeitar valores nulos no conjunto de dados ao computar o último valor em uma partição.     
+ 
+  Para obter mais informações, confira [Como inserir valores ausentes](/azure/azure-sql-edge/imputing-missing-values/).
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. *rows_range_clause* limita ainda mais as linhas dentro da partição com a especificação de pontos iniciais e finais. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -126,5 +134,5 @@ Accounts Receivable Specialist      Walton                    62            Poe
   
 ## <a name="see-also"></a>Consulte Também  
  [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
-  
+ [Last_Value &#40;Transact-SQL&#41;](last-value-transact-sql.md)  
+
