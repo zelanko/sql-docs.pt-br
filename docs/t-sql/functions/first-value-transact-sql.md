@@ -20,12 +20,12 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db390dda473d997343de46f9b37a4ab4865ca347
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 3b4d115487f15c8af7083b9006cf2724d6b81011
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90915025"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114839"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +70,7 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 ### <a name="a-using-first_value-over-a-query-result-set"></a>a. Usando FIRST_VALUE sobre um conjunto de resultados da consulta  
  O exemplo seguinte usa FIRST_VALUE para retornar o nome do produto que é o menos caro em uma determinada categoria de produto.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, ListPrice,   
@@ -102,7 +102,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
 ### <a name="b-using-first_value-over-partitions"></a>B. Usando FIRST_VALUE sobre partições  
  O exemplo a seguir usa FIRST_VALUE para retornar o funcionário com o menor número de horas de férias comparado a outros funcionários com o mesmo cargo. A cláusula PARTITION BY particiona os funcionários por cargo e a função FIRST_VALUE é aplicada independentemente a cada partição. A cláusula ORDER BY especificada na cláusula OVER determina a ordem lógica na qual a função FIRST_VALUE é aplicada às linhas em cada partição. A cláusula ROWS UNBOUNDED PRECEDING especifica que o ponto de partida da janela é a primeira linha de cada partição.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT JobTitle, LastName, VacationHours,   
