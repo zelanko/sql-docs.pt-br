@@ -5,16 +5,16 @@ description: Saiba como atualizar Clusters de Big Data do SQL Server em um domí
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 92c170e16a05d67f21931479f82f5edb1856b12f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076658"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90687712"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory Domain Services
 
@@ -24,12 +24,31 @@ Este documento explica como implantar um BDC (cluster de Big Data) do SQL Server
 
 >[!Note]
 >Antes do lançamento do SQL Server 2019 CU5, havia uma restrição nos Clusters de Big Data que especificava que apenas um cluster podia ser implantado em um domínio do Active Directory. Essa restrição foi removida na versão CU5. Confira [Conceito: implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory](active-directory-deployment-background.md) para obter detalhes sobre as novas funcionalidades. Os exemplos deste artigo foram ajustados para acomodar os dois casos de uso de implantação.
+>
 
 ## <a name="background"></a>Segundo plano
 
-Para habilitar a autenticação do AD (Active Directory), o BDC cria automaticamente os usuários, os grupos, as contas de computadores e os SPNs (nomes da entidade de serviço) de que os diversos serviços do cluster. Para fornecer alguma independência a essas contas e permitir a definição de escopos para as permissões, durante a implantação, escolha uma UO (unidade organizacional) em que todos os objetos do AD relacionados ao BDC serão criados. Crie essa UO antes da implantação do cluster.
+Para habilitar a autenticação do AD (Active Directory), o BDC cria automaticamente os usuários, os grupos, as contas de computadores e os SPNs (nomes da entidade de serviço) de que os diversos serviços do cluster. Para fornecer alguma independência a essas contas e permitir a definição de escopos para as permissões, sugerimos a criação de uma UO (unidade organizacional) antes da implantação do cluster. Todos os objetos do AD relacionados ao BDC serão criados durante a implantação. 
 
-Para criar automaticamente todos os objetos necessários no Active Directory Domain Services, o BDC precisa de uma conta do AD durante a implantação. Essa conta precisa ter permissões para criar usuários, grupos e contas de computadores dentro da UO fornecida.
+## <a name="pre-requisites"></a>Pré-requisitos
+
+### <a name="organizational-unit-ou"></a>OU (Unidade Organizacional)
+Uma UO (unidade organizacional) é uma subdivisão dentro de um Active Directory na qual se coloca usuários, grupos e até mesmo outras unidades organizacionais. É possível usar as unidades organizacionais da visão global para espelhar a estrutura funcional ou comercial de uma organização. Este artigo criará uma UO chamada `bdc` como um exemplo. 
+
+>[!NOTE]
+>A UO (unidade organizacional) representa limites administrativos e permite que os clientes controlem o escopo de autoridade dos administradores de dados. 
+
+
+Você pode seguir [Princípios de Design de UO](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) para decidir a melhor estrutura ao trabalhar com UOs em sua organização. 
+
+### <a name="ad-account-for-bdc-domain-service-account"></a>Conta no AD para a conta de serviço de domínio do BDC
+
+Para poder criar automaticamente todos os objetos necessários no Active Directory, o BDC precisa de uma conta do AD que tenha permissões específicas para criar usuários, grupos e contas de computador dentro da UO (unidade organizacional) fornecida. Este artigo explicará como configurar a permissão dessa conta do AD. Usamos uma chamada de Conta do AD `bdcDSA` como um exemplo neste artigo.
+
+### <a name="auto-generated-active-directory-objects"></a>Objetos do Active Directory gerados automaticamente
+A implantação do BDC gera automaticamente nomes de contas e grupos. Cada uma das contas representa um serviço no BDC e será gerenciada pelo BDC durante o tempo de vida em que o cluster BDC estiver em uso. Essas contas são proprietárias dos SPNs (Nomes da Entidade de Serviço) necessários para cada serviço.  Para obter uma lista completa de contas, grupos e serviços gerados automaticamente pelo AD que eles gerenciaram, confira [Objetos do Active Directory gerados automaticamente](active-directory-objects.md).
+
+
 
 >[!IMPORTANT]
 >Dependendo da política de expiração de senha definida no Controlador de Domínio, as senhas dessas contas podem expirar. A política de expiração padrão é de 42 dias. Não há mecanismo para girar credenciais para todas as contas no BDC, portanto, o cluster se tornará inoperante assim que o período de expiração for atingido. Para solucionar esse problema, atualize a política de expiração das contas de serviço BDC para “A senha nunca expira” no controlador de domínio. Essa ação pode ser realizada antes ou depois do horário de expiração. No último caso, o Active Directory reativará as senhas expiradas.
@@ -38,16 +57,16 @@ Para criar automaticamente todos os objetos necessários no Active Directory Dom
 >
 >:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Definir política de expiração de senha":::
 
-Para obter uma lista de contas e grupos do AD, confira [Objetos do Active Directory gerados automaticamente](active-directory-objects.md).
 
 As etapas a seguir pressupõem que você já tenha um controlador de domínio do Active Directory Domain Services. Se você não tem um controlador de domínio, o [guia](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) a seguir inclui etapas que podem ser úteis.
+
 
 ## <a name="create-ad-objects"></a>Criar objetos do AD
 
 Faça o seguinte antes de implantar um BDC com a integração do AD:
 
-1. Crie uma UO (unidade organizacional) em que todos os objetos do AD do BDC serão armazenados. Como alternativa, você pode escolher uma UO existente durante a implantação.
-1. Crie uma conta do AD para o BDC (ou use uma conta existente) e forneça a essa conta do AD do BDC as permissões corretas.
+1. Crie uma UO (unidade organizacional) na qual todos os objetos do AD relacionados do BDC serão armazenados. Como alternativa, você pode escolher uma UO existente durante a implantação.
+1. Crie uma conta do AD para o BDC (ou use uma conta existente) e forneça para essa conta do AD do BDC as permissões corretas dentro da UO (unidade organizacional).
 
 ### <a name="create-a-user-in-ad-for-bdc-domain-service-account"></a>Crie um usuário no AD para a conta de serviço de domínio do BDC
 
