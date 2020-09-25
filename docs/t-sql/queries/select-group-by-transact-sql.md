@@ -33,12 +33,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdb2964f3881f5f31c451860d4330c05c3c346a0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 9368fcb80240ddf1520ef1ac0f4d145d20d10ab2
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115839"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226910"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GROUP BY
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse 
+-- Syntax for Azure Synapse Analytics 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -288,11 +288,11 @@ GROUP BY ALL:
 - Falhará em colunas que têm o atributo FILESTREAM.
   
 ### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
-Aplica-se a: SQL Data Warehouse do Azure e Parallel Data Warehouse
+Aplicável a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 A dica de consulta DISTRIBUTED_AGG força o sistema de MPP (processamento paralelo massivo) a redistribuir uma tabela em uma coluna específica antes de executar uma agregação. Somente uma coluna na cláusula GROUP BY pode ter uma dica de consulta DISTRIBUTED_AGG. Depois que a consulta for concluída, a tabela redistribuída será descartada. A tabela original não é alterada.  
 
-OBSERVAÇÃO:  A dica de consulta DISTRIBUTED_AGG é fornecida para fins de compatibilidade com versões anteriores do Parallel Data Warehouse e não melhora o desempenho na maioria das consultas. Por padrão, o MPP já redistribui os dados conforme o necessário para melhorar o desempenho das agregações. 
+OBSERVAÇÃO:  A dica de consulta DISTRIBUTED_AGG é fornecida para fins de compatibilidade com versões anteriores do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] e não aprimora o desempenho na maioria das consultas. Por padrão, o MPP já redistribui os dados conforme o necessário para melhorar o desempenho das agregações. 
   
 ## <a name="general-remarks"></a>Comentários gerais
 
@@ -315,7 +315,7 @@ Valores NULL:
   
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições
 
-Aplica-se a: SQL Server (começando com o 2008) e SQL Data Warehouse do Azure
+Aplica-se a: SQL Server (começando com o 2008) e [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
 ### <a name="maximum-capacity"></a>Capacidade máxima
 
@@ -416,7 +416,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>Exemplos: SQL Data Warehouse e Parallel Data Warehouse  
+## <a name="examples-azure-synapse-analytics-and-parallel-data-warehouse"></a>Exemplos: Azure Synapse Analytics e Parallel Data Warehouse  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. Uso básico da cláusula GROUP BY  
  O exemplo a seguir localiza a quantidade total de todas as vendas em cada dia. Uma linha que contém a soma de todas as vendas é retornada para cada dia.  

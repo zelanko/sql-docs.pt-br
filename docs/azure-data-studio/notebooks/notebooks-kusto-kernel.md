@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: ab2f062e6dd712e7f001556bb60c10c9ea4fad83
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942218"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226956"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Criar e executar um notebook do Kusto (KQL) (versão prévia)
 
@@ -38,7 +38,7 @@ As seguintes etapas mostram como criar um arquivo de notebook no Azure Data Stud
 
 1. No Azure Data Studio, conecte-se ao cluster do Azure Data Explorer.
 
-2. Navegue até o painel **Conexões** e, na janela **Servidores**, clique com o botão direito do mouse no banco de dados do Kusto e selecione *Novo Notebook*.
+2. Navegue até o painel **Conexões** e, na janela **Servidores**, clique com o botão direito do mouse no banco de dados do Kusto e selecione *Novo Notebook*. Você também pode ir para **Arquivo** > **Novo Notebook**.
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="Abrir notebook":::
 
@@ -103,6 +103,12 @@ Se você executar um script que retorna um resultado, poderá salvar esse result
 ```
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Salvar resultado":::
+
+## <a name="limitations-and-considerations"></a>Limitações e considerações
+
+- Você precisa escolher um banco de dados para o cluster do Azure Data Explorer antes de executar uma consulta Kusto.
+- Se você deixar o cluster do Azure Data Explorer ocioso por muito tempo, ele poderá se desconectar.
+    - Solução alternativa: Desconecte-se do cluster e reconecte-se.
 
 ## <a name="next-steps"></a>Próximas etapas
 

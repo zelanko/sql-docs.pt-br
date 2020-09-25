@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63770bce9243775e8c9c218371f016a23555b146
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548998"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227292"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -483,6 +483,9 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. Usar MERGE para executar INSERT ou UPDATE em uma tabela de borda de destino em um banco de dados de grafo
 
 Neste exemplo, você cria tabelas de nó `Person` e `City` e uma tabela de borda `livesIn`. Você usa a instrução MERGE na borda `livesIn` para inserir uma nova linha se a borda ainda não existir entre um `Person` e `City`. Se a borda já existir, você apenas atualizará o atributo StreetAddress na borda `livesIn`.
+
+> [!NOTE]
+> O exemplo a seguir aplica-se ao SQL Server começando com o 2019.
 
 ```sql
 -- CREATE node and edge tables

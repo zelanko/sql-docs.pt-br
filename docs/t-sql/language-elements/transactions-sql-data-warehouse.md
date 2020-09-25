@@ -1,6 +1,6 @@
 ---
-description: Transações (SQL Data Warehouse)
-title: Transações (SQL Data Warehouse) | Microsoft Docs
+title: Transações (Azure Synapse Analytics)
+description: Uma transação é um grupo de uma ou mais instruções de banco de dados que são totalmente confirmadas ou totalmente revertidas.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688351"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227457"
 ---
-# <a name="transactions-sql-data-warehouse"></a>Transações (SQL Data Warehouse)
+# <a name="transactions-azure-synapse-analytics"></a>Transações (Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Uma transação é um grupo de uma ou mais instruções de banco de dados que são totalmente confirmadas ou totalmente revertidas. Cada transação tem ACID (atomicidade, consistência, isolamento e durabilidade). Se a transação tiver êxito, todas as instruções dentro dela serão confirmadas. Se a transação falhar, ou seja, se pelo menos uma das instruções no grupo falhar, todo o grupo será revertido.  
@@ -93,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Não é possível reverter uma transação depois que uma instrução COMMIT é emitida porque as modificações nos dados tornaram-se permanentes no banco de dados.  
   
- Os comandos [CREATE DATABASE &#40;SQL Data Warehouse do Azure&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) não podem ser usados dentro de uma transação explícita.  
+ Os comandos [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) não podem ser usados dentro de uma transação explícita.  
   
  O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] não tem nenhum mecanismo de compartilhamento de transação. Isso significa que em um determinado momento, somente uma sessão pode estar executando o trabalho em uma transação no sistema.  
   
@@ -114,8 +115,7 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. Revertendo uma transação  
  O exemplo a seguir mostra o efeito da reversão de uma transação.  Neste exemplo, a instrução ROLLBACK reverterá a instrução INSERT, mas a tabela criada ainda continuará a existir.  
   
-
-```sql
+```sql  
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

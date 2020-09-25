@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea50c64985b67dfbc4221f65dc1f4cc5daaab721
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478644"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227270"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 
@@ -65,10 +65,10 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [Banco de Dados SQL<br />Instância Gerenciada](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -737,13 +737,13 @@ RESTORE DATABASE Sales
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -956,8 +956,8 @@ Requer a permissão `CREATE ANY DATABASE`.
 Exige uma conta do Windows que tem permissão para acessar e ler por meio do diretório de backup. O nome de conta do Windows e a senha também precisam ser armazenados no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 - Para verificar se as credenciais já estão nesse local, use [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
-- Para adicionar ou atualizar as credenciais, use [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
-- Para remover credenciais do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_pdw_remove_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
+- Para adicionar ou atualizar as credenciais, use [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+- Para remover credenciais do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
 ## <a name="error-handling"></a>Tratamento de erros
 
@@ -980,13 +980,13 @@ Após uma restauração, o banco de dados de usuário terá o nível de compatib
 
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restaurar para um dispositivo com um número maior de nós de computação
 
-Execute [DBCC SHRINKLOG (SQL Data Warehouse do Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) depois de restaurar um banco de dados de um dispositivo menor até o maior, pois a redistribuição aumentará o log de transações.
+Execute [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) depois de restaurar um banco de dados de um dispositivo menor até o maior, pois a redistribuição aumentará o log de transações.
 
 A restauração de um backup em um dispositivo com um número maior de nós de Computação aumenta o tamanho do banco de dados alocado proporcionalmente ao número de nós de Computação.
 
 Por exemplo, ao restaurar um banco de dados de 60 GB de um dispositivo de 2 nós (30 GB por nó) em um dispositivo de 6 nós, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] cria um banco de dados de 180 GB (6 nós com 30 GB por nó) no dispositivo de 6 nós. Inicialmente, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaura o banco de dados em dois nós para que isso corresponda à configuração de origem e, em seguida, redistribui os dados para todos os seis nós.
 
-Após a redistribuição, cada nó de Computação conterá menos dados reais e mais espaço livre do que cada nó de Computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado for maior do que o necessário, use [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) para reduzir os tamanhos de arquivos de banco de dados.
+Após a redistribuição, cada nó de Computação conterá menos dados reais e mais espaço livre do que cada nó de Computação no dispositivo de origem menor. Use o espaço adicional para adicionar mais dados ao banco de dados. Se o tamanho do banco de dados restaurado for maior do que o necessário, use [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) para reduzir os tamanhos de arquivos de banco de dados.
 
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições
 
@@ -1038,6 +1038,6 @@ RESTORE HEADERONLY
 Use as informações de cabeçalho para verificar o conteúdo de um backup ou para garantir que o dispositivo de restauração de destino é compatível com o dispositivo de backup de origem antes de tentar restaurar o backup.
 
 ## <a name="see-also"></a>Consulte Também
-[BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
+[BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)     
 
 ::: moniker-end

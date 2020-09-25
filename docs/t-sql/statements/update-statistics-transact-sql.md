@@ -22,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 422dfd6eee199f1b1fa2732bf5bf14759a071787
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c338ebb3f64dc1752c4e68e33f6954e554d6d4e6
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547650"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227420"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +73,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
@@ -211,8 +211,8 @@ Aproveite soluções como a [Desfragmentação de índice adaptável](https://gi
 ### <a name="determining-the-last-statistics-update"></a>Determinando a última atualização das estatísticas  
  Para determinar quando as estatísticas foram atualizadas pela última vez, use a função [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) .  
   
-### <a name="pdw--sql-data-warehouse"></a>PDW/SQL Data Warehouse  
- Não há suporte para a sintaxe a seguir no PDW/SQL Data Warehouse  
+### <a name="pdw--azure-synapse-analytics"></a>PDW/Azure Synapse Analytics  
+ A sintaxe a seguir não têm suporte no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
 ```syntaxsql
 UPDATE STATISTICS t1 (a,b);   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471149"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210621"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,21 +29,23 @@ ms.locfileid: "88471149"
   
  **Neste tópico**  
   
--   **Antes de começar:**  
+   - **Antes de começar:**  
   
      [Limitações e restrições](#Restrictions)  
   
      [Pré-requisitos](#Prerequisites)  
   
--   **Procedimentos:**  
+   - **Procedimentos:**  
   
      [Recompilar bancos de dados do sistema](#RebuildProcedure)  
   
      [Recriar o banco de dados de recursos](#Resource)  
   
-     [Criar um novo banco de dados msdb](#CreateMSDB)  
+     [Criar um novo banco de dados msdb](#CreateMSDB) 
+
+     [Recompilar o banco de dados tempdb](#RebuildTempdb)  
   
--   **Acompanhamento:**  
+   - **Acompanhamento:**  
   
      [Solução de problemas de erros de recriação](#Troubleshoot)  
   
@@ -55,15 +57,15 @@ ms.locfileid: "88471149"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Execute as tarefas a seguir antes de recriar os bancos de dados do sistema para garantir que os bancos de dados possam ser restaurados para suas configurações atuais.  
   
-1.  Registre todos os valores de configuração em todo o servidor.  
+1. Registre todos os valores de configuração em todo o servidor.  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  Registre todos os hotfixes aplicados à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à ordenação atual. Você deve reaplicar esses hotfixes depois de recriar os bancos de dados do sistema.  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -74,7 +76,7 @@ ms.locfileid: "88471149"
   
 3.  Registre o local atual de todos os arquivos de log e de dados nos bancos de dados do sistema. A recriação do bancos de dados do sistema instala todos os bancos de dados do sistema em seu local original. Se você tiver movido os arquivos de log ou de dados do banco de dados do sistema para um local diferente, mova os arquivos novamente.  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -158,6 +160,7 @@ ms.locfileid: "88471149"
 6.  Na página **Pronto para Reparar** , clique em **Reparar**. A página Concluído indica que a operação foi concluída.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Criar um novo banco de dados msdb  
+
  Se o banco de dados **msdb** estiver danificado e você não tiver um backup do banco de dados **msdb** , poderá criar um novo **msdb** usando o script **instmsdb** .  
   
 > [!WARNING]  
@@ -186,6 +189,33 @@ ms.locfileid: "88471149"
 9. Recrie o conteúdo de usuário armazenado no banco de dados **msdb** , como, por exemplo, trabalhos, alerta etc.  
   
 10. Faça um backup do banco de dados **msdb** .  
+
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Recompilar o banco de dados Tempdb  
+
+Se o banco de dados **tempdb** estiver danificado e o mecanismo de banco de dados falhar ao iniciar, você poderá recompilar **tempdb** sem a necessidade de recompilar todos os bancos de dados do sistema.
+  
+1. Renomeie os arquivos Tempdb.mdf e Templog.ldf atuais, se não estiverem ausentes. 
+1. Inicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um prompt de comando usando o comando a seguir. 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   Para um nome de instância padrão, use MSSQLSERVER. Para a instância nomeada, use MSSQL$<instance_name>. O sinalizador de rastreamento 4022 desabilita a execução dos procedimentos armazenados de inicialização. O -mSQLCMD permite que somente [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) se conecte ao servidor (confira [Outras opções de inicialização](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options))
+
+   > [!Note] 
+   > Verifique se a janela do prompt de comando permanece aberta depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado. Fechar a janela do prompt de comando encerrará o processo.
+
+1. Conecte-se ao servidor usando **sqlcmd** e use o procedimento armazenado a seguir para redefinir o status do banco de dados tempdb.
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. Desligue o servidor pressionando CTRL + C na janela do prompt de comando
+
+1. Reinicie o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isso cria um conjunto de arquivos de banco de dados tempdb e recupera o banco de dados tempdb.
+
   
 ##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Solução de problemas de erros de recriação  
  Erros de sintaxe e outros erros em tempo de execução são exibidos na janela do prompt de comando. Examine os erros de sintaxe a seguir na instrução da Instalação:  

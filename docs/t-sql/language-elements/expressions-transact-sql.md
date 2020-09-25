@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6e54c2e820794e3346842d748c4bc0c7384b9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361162"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227211"
 ---
 # <a name="expressions-transact-sql"></a>Expressões (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88361162"
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Expression in a SELECT statement  
 <expression> ::=   
@@ -132,7 +132,7 @@ GO
   
  A expressão `1+2` é avaliada como `3` em cada linha do conjunto de resultados. Embora a expressão `ProductID` gere um valor exclusivo em cada linha de conjunto de resultados, cada linha tem apenas um valor para `ProductID`.  
  
-- O SQL Data Warehouse do Azure aloca uma quantidade máxima fixa de memória para cada thread, de modo que nenhum thread possa usar toda a memória.  Parte dessa memória é usada para armazenar expressões de consultas.  Se uma consulta tiver muitas expressões e sua memória necessária exceder o limite interno, o mecanismo não a executará.  Para evitar esse problema, os usuários podem alterar a consulta em várias consultas com um número menor de expressões em cada uma. Por exemplo, você tem uma consulta com uma longa lista de expressões na cláusula WHERE: 
+- O [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] aloca uma quantidade máxima fixa de memória para cada thread, de modo que nenhum thread possa usar toda a memória.  Parte dessa memória é usada para armazenar expressões de consultas.  Se uma consulta tiver muitas expressões e sua memória necessária exceder o limite interno, o mecanismo não a executará.  Para evitar esse problema, os usuários podem alterar a consulta em várias consultas com um número menor de expressões em cada uma. Por exemplo, você tem uma consulta com uma longa lista de expressões na cláusula WHERE: 
 
 ```sql
 DELETE FROM dbo.MyTable 

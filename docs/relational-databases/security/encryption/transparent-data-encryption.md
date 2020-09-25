@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380879"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227043"
 ---
 # <a name="transparent-data-encryption-tde"></a>Criptografia de Dados Transparente (TDE)
 
@@ -119,7 +119,7 @@ GO
 As operações de criptografia e descriptografia são agendadas em threads em segundo plano pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para ver o status dessas operações, use as exibições do catálogo e de gerenciamento dinâmico na tabela mostrada posteriormente neste artigo.
 
 > [!CAUTION]
-> Arquivos de banco de dados de backup que têm o TDE habilitado também são criptografados com a chave de criptografia do banco de dados. Como resultado, quando você restaura esses backups, o certificado que protege a chave de criptografia do banco de dados deve estar disponível. Portanto, além de fazer backup do banco de dados, mantenha os backups dos certificados do servidor. Ocorre perda de dados se os certificados não estão mais disponíveis.
+> Arquivos de backup para banco de dados que têm a TDE habilitada também são criptografados com a chave de criptografia do banco de dados. Como resultado, quando você restaura esses backups, o certificado que protege a chave de criptografia do banco de dados deve estar disponível. Portanto, além de fazer backup do banco de dados, mantenha os backups dos certificados do servidor. Ocorre perda de dados se os certificados não estão mais disponíveis.
 >
 > Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 

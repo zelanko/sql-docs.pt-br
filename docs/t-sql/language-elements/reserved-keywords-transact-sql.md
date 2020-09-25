@@ -19,19 +19,19 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c0264ccc6e2f083b61b4c80c98248be80e33675
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417102"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227350"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Palavras-chave reservadas (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa palavras-chave reservadas para definir, manipular e acessar bancos de dados. As palavras-chave reservadas fazem parte da gramática da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)] usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para analisar e compreender as instruções e os lotes [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora seja sintaticamente possível usar as palavras-chave reservadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como identificadores e nomes de objeto em scripts [!INCLUDE[tsql](../../includes/tsql-md.md)], você só pode fazer isso usando identificadores delimitados.  
   
- A tabela abaixo lista [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e palavras-chave reservadas ao SQL Data Warehouse do Azure.  
+ A tabela a seguir lista palavras-chave reservadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
 
 :::row:::
     :::column:::
@@ -716,7 +716,7 @@ ms.locfileid: "88417102"
 :::row-end:::
 
   
-A tabela abaixo lista as palavras-chave reservadas que são exclusivas do **SQL Data Warehouse do Azure**.
+A tabela a seguir lista as palavras-chave reservadas que são exclusivas do **[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]** .
   
 :::row:::
     :::column:::

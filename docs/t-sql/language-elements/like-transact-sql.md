@@ -32,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8886fbf2a94df7fd338572f2156e66ee6fc50ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41702e9236ba7e3a7f065363998ff27e41aa5c64
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467650"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227500"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,12 +55,12 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
 ```  
 >[!NOTE]
-> No momento, ESCAPE e STRING_ESCAPE não têm suporte no SQL Data Warehouse do Azure ou com o Parallel Data Warehouse.
+> Atualmente, não há suporte para ESCAPE e STRING_ESCAPE no [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] nem no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

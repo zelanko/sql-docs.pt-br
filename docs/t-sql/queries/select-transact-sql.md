@@ -26,12 +26,12 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 575cff8e61661fc9fccb973b7ab83f455c2ec074
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d3bc17bec08636983f5a8c85395da758720a3e0
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422440"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227200"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ SELECT [ ALL | DISTINCT ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
 SELECT <select_criteria>  
@@ -191,7 +191,7 @@ SELECT <select_criteria>
 > Por exemplo, suponha que você tenha um índice clusterizado em uma exibição e a exibição exclui algumas linhas de tabela e lista de colunas SELECT da exibição usa um CONVERT que altera um tipo de dados de *varchar* para *integer*. Nessa situação, CONVERT pode ser executado antes da execução da cláusula WHERE. Isso é um tanto incomum. Geralmente, há uma maneira de modificar a exibição para evitar a sequência diferente, se isso é importante em seu caso. 
 
 ## <a name="permissions"></a>Permissões  
- A seleção de dados exige a permissão **SELECT** na tabela ou exibição, que pode ser herdada de um escopo superior, como a permissão **SELECT** no esquema ou a permissão **CONTROL** na tabela. Ou exige a associação à função de banco de dados fixa **db_datareader** ou **db_owner** ou à função de servidor fixa **sysadmin**. A criação de uma nova tabela com **SELECTINTO** também exige a permissão **CREATETABLE** e a permissão **ALTERSCHEMA** no esquema que possui a nova tabela.  
+ A seleção de dados exige a permissão **SELECT** na tabela ou exibição, que pode ser herdada de um escopo superior, como a permissão **SELECT** no esquema ou a permissão **CONTROL** na tabela. Ou exige a associação à função de banco de dados fixa **db_datareader** ou **db_owner** ou à função de servidor fixa **sysadmin**. A criação de uma nova tabela com **SELECT INTO** também exige a permissão **CREATE TABLE** e a permissão **ALTER SCHEMA** no esquema que tem a nova tabela.  
   
 ## <a name="examples"></a>Exemplos:   
 O exemplo a seguir usa o banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].

@@ -10,12 +10,12 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3959d2bbf06cbb5ab106cc805e37f700d3be624f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357512"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226876"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -23,12 +23,12 @@ ms.locfileid: "88357512"
 Renomeia uma tabela criada pelo usuário no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renomeia uma tabela criada pelo usuário, uma coluna em uma tabela ou um banco de dados criado pelo usuário em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
-> Para renomear um banco de dados no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE (SQL Data Warehouse do Azure](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Para renomear um banco de dados no Banco de Dados SQL do Azure, use a instrução [ALTER DATABASE (Banco de Dados SQL do Azure)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Para renomear um banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o procedimento armazenado [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+> Para renomear um banco de dados no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true). Para renomear um banco de dados no Banco de Dados SQL do Azure, use a instrução [ALTER DATABASE (Banco de Dados SQL do Azure)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). Para renomear um banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o procedimento armazenado [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
 
 ## <a name="syntax"></a>Sintaxe
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -61,7 +61,7 @@ Altere o nome de uma tabela definida pelo usuário. Especifique a tabela a ser r
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **APLICA-SE AO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Altere o nome de um banco de dados definido pelo usuário de *database_name* para *new_database_name*. Não é possível renomear um banco de dados para qualquer um destes nomes de banco de dados reservados[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Altere o nome de um banco de dados definido pelo usuário de *database_name* para *new_database_name*. Não é possível renomear um banco de dados para qualquer um dos seguintes [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]nomes de banco de dados reservados:
 
 - master
 - modelo
@@ -93,7 +93,7 @@ Não é possível renomear uma tabela externa, índices ou exibições. Em vez d
 
 ### <a name="cannot-rename-a-table-in-use"></a>Não é possível renomear uma tabela em uso
 
-Não é possível renomear uma tabela ou um banco de dados enquanto ele está em uso. A renomeação de uma tabela exige um bloqueio exclusivo na tabela. Se a tabela estiver em uso, você precisará encerrar as sessões que usam a tabela. Para terminar uma sessão, use o comando KILL. Use KILL com cuidado, pois quando uma sessão for terminada, qualquer trabalho não confirmado será revertido. As sessões no SQL Data Warehouse são prefixadas com 'SID'. Inclua o ‘SID’ e o número da sessão ao invocar o comando KILL. Este exemplo exibe uma lista de sessões ativas ou ociosas e, em seguida, termina a sessão 'SID1234'.
+Não é possível renomear uma tabela ou um banco de dados enquanto ele está em uso. A renomeação de uma tabela exige um bloqueio exclusivo na tabela. Se a tabela estiver em uso, você precisará encerrar as sessões que usam a tabela. Para terminar uma sessão, use o comando KILL. Use KILL com cuidado, pois quando uma sessão for terminada, qualquer trabalho não confirmado será revertido. As sessões no [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] são prefixadas por 'SID'. Inclua o ‘SID’ e o número da sessão ao invocar o comando KILL. Este exemplo exibe uma lista de sessões ativas ou ociosas e, em seguida, termina a sessão 'SID1234'.
 
 ### <a name="rename-column-restrictions"></a>Renomear restrições de coluna
 
@@ -156,7 +156,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **APLICA-SE AO:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-É importante se lembrar de que não é possível renomear uma tabela enquanto ela está em uso. Uma renomeação de uma tabela exige um bloqueio exclusivo na tabela. Se a tabela estiver em uso, você precisará encerrar a sessão usando a tabela. Para terminar uma sessão, use o comando KILL. Use KILL com cuidado, pois quando uma sessão for terminada, qualquer trabalho não confirmado será revertido. As sessões no SQL Data Warehouse são prefixadas com 'SID'. Será necessário incluir o ‘SID’ e o número da sessão ao invocar o comando KILL. Este exemplo exibe uma lista de sessões ativas ou ociosas e, em seguida, termina a sessão 'SID1234'.
+Não é possível renomear uma tabela enquanto ela estiver em uso. Uma renomeação de uma tabela exige um bloqueio exclusivo na tabela. Se a tabela estiver em uso, você precisará encerrar a sessão usando a tabela. Para terminar uma sessão, use o comando KILL. Use KILL com cuidado, pois quando uma sessão for terminada, qualquer trabalho não confirmado será revertido. As sessões no [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] são prefixadas por 'SID'. Será necessário incluir o ‘SID’ e o número da sessão ao invocar o comando KILL. Este exemplo exibe uma lista de sessões ativas ou ociosas e, em seguida, termina a sessão 'SID1234'.
 
 ```sql
 -- View a list of the current sessions

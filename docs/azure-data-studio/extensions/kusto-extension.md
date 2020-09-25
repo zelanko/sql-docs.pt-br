@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: eed9e8681ac8b4d0b9bbbe8c8e4f7d7104900bd1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111652"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226821"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Extensão do Kusto (KQL) para o Azure Data Studio (versão prévia)
 
@@ -125,6 +125,12 @@ As configurações das extensões se parecem com esta:
 A [extensão do SandDance](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) com a extensão do Kusto (KQL) no Azure Data Studio reúne visualizações interativas avançadas. No conjunto de resultados da consulta do KQL, selecione o botão **Visualizador** para iniciar o [SandDance](https://sanddance.js.org/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Visualização do SandDance":::
+
+## <a name="limitations-and-considerations"></a>Limitações e considerações
+
+- Você precisa escolher um banco de dados para o cluster do Azure Data Explorer antes de executar uma consulta Kusto.
+- Se você deixar o cluster do Azure Data Explorer ocioso por muito tempo, ele poderá se desconectar.
+    - Solução alternativa: Desconecte-se do cluster e reconecte-se.
 
 ## <a name="next-steps"></a>Próximas etapas
 

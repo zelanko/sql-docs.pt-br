@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59a6ff65e25878aefe08cfd87bf1f9e36da7366b
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942336"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227319"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Configurar uma avaliação do SQL sob demanda para uma instância do SQL Server habilitada para o Azure Arc
 
@@ -37,7 +37,7 @@ Você pode habilitar a Avaliação do SQL para suas instâncias do SQL Server se
 
    ![Seleção da Avaliação do SQL](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. Especifique um diretório de trabalho no computador de coleta de dados. Durante a coleta e a análise, os dados são armazenados temporariamente nessa pasta. Se a pasta não existir, ela será criada automaticamente.
+1. Especifique um diretório de trabalho no computador de coleta de dados. Por padrão, `C:\sql_assessment\work_dir` será usado. Durante a coleta e a análise, os dados são armazenados temporariamente nessa pasta. Se a pasta não existir, ela será criada automaticamente.
 
 1. Clique em __Baixar script de configuração__ e copie o script baixado para o computador de destino.
 
@@ -76,3 +76,5 @@ O Microsoft Monitoring Agent examina a pasta de trabalho a cada 15 minutos procu
 ## <a name="next-steps"></a>Próximas etapas
 
 Confira o documento do SQL Server em [Pré-requisitos de avaliações sob demanda do hub de serviços](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) para obter mais informações.
+
+Para obter suporte abrangente da Avaliação do SQL sob demanda, uma assinatura de suporte Premier ou Unificado é necessária. Confira [Suporte Premier do Azure](https://azure.microsoft.com/support/plans/premier) para obter detalhes.
