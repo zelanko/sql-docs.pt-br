@@ -1,5 +1,6 @@
 ---
 title: Criar um repositório com miniCRAN
+titleSuffix: SQL machine learning
 description: Saiba como instalar pacotes do R offline usando o pacote miniCRAN para criar um repositório local de pacotes e dependências.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,12 +11,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: bf93d618ad03122cc7eecf641573d70b2b72158e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 685d82d043d3041c375b9d1fe67962b698e8723a
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173508"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227112"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Criar um repositório local de pacotes do R usando o miniCRAN
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]

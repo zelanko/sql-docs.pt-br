@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550550"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227111"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -115,7 +115,7 @@ Se um banco de dados não estiver `ONLINE` , ou `AUTO_CLOSE` estiver definido co
 |**is_federation_member**|**bit**|Indica se o banco de dados é membro de uma federação.<br /> **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|Indica se o banco de dados está ampliado.<br /> 0 = o banco de dados não está habilitado para Stretch.<br /> 1 = o banco de dados está habilitado para Stretch.<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /> Saiba mais em [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |**is_mixed_page_allocation_on**|**bit**|Indica se as tabelas e os índices no banco de dados podem alocar páginas iniciais de extensões mistas.<br /> 0 = tabelas e índices no banco de dados sempre alocam páginas iniciais de extensões uniformes.<br /> 1 = tabelas e índices no banco de dados podem alocar páginas iniciais de extensões mistas.<br /> Para obter mais informações, consulte a `SET MIXED_PAGE_ALLOCATION` opção de [Opções ALTER DATABASE SET &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )|  
-|**is_temporal_retention_enabled**|**bit**|Indica se a tarefa de limpeza da política de retenção temporal está habilitada.<br /><br />1 = a retenção temporal está habilitada<br />0 = retenção temporal desabilitada<br />**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_temporal_history_retention_enabled**|**bit**|Indica se a tarefa de limpeza da política de retenção temporal está habilitada.<br /><br />1 = a retenção temporal está habilitada<br />0 = retenção temporal desabilitada<br />**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|A configuração de agrupamento do catálogo:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|A configuração de agrupamento do catálogo:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**physical_database_name**|**nvarchar(128)**|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o nome físico do banco de dados. Para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , uma ID comum para os bancos de dados em um servidor. <br />**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|

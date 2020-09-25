@@ -5,16 +5,16 @@ description: O R Services é um recurso do SQL Server 2016 que oferece a capacid
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/06/2020
-ms.topic: how-to
+ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0fabca5748849e0dd2e708ae02c11dc8f028a14d
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: f19c86fe5b61b46a95db7988657b1e5ed833f9fd
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898829"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227086"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>O que é o SQL Server 2016 R Services?
 
