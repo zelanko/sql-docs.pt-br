@@ -4,39 +4,118 @@ titleSuffix: SQL Server big data clusters
 description: Artigo de referência para comandos sql de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9965c6805cb8e12e6a5a2990a43bb7bf7c937fe1
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 01e6cd577892a1d6738afdc1fdf3b2518a23a5f3
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733434"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914410"
 ---
 # <a name="azdata-sql"></a>azdata sql
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Aplica-se ao `azdata`
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md).
+O artigo a seguir fornece referência para os comandos **sql** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Comandos
-| Comando | Descrição |
+
+|Comando|Descrição|
 | --- | --- |
-[azdata sql shell](#azdata-sql-shell) | A CLI do Banco de Dados SQL permite que o usuário interaja com o SQL Server por meio de T-SQL.
-[azdata sql query](#azdata-sql-query) | O comando de consulta permite a execução de uma consulta T-SQL.
+[azdata sql shell](#azdata-sql-shell) | A CLI do SQL permite que o usuário interaja com o SQL Server e com o SQL do Azure por meio de T-SQL.
+[azdata sql query](#azdata-sql-query) | A CLI do SQL permite que o usuário interaja com o SQL Server e com o SQL do Azure por meio de T-SQL.
 ## <a name="azdata-sql-shell"></a>azdata sql shell
-A CLI do Banco de Dados SQL permite que o usuário interaja com o SQL Server por meio de T-SQL.
+A CLI do SQL permite que o usuário interaja com o SQL Server e com o SQL do Azure por meio de T-SQL.
 ```bash
-azdata sql shell 
+azdata sql shell [--username -u] 
+                 [--database -d]  
+                 
+[--server -s]  
+                 
+[--integrated -e]  
+                 
+[--mssqlclirc]  
+                 
+[--row-limit]  
+                 
+[--less-chatty]  
+                 
+[--auto-vertical-output]  
+                 
+[--encrypt -n]  
+                 
+[--trust-server-certificate -c]  
+                 
+[--connect-timeout -l]  
+                 
+[--application-intent -k]  
+                 
+[--multi-subnet-failover -m]  
+                 
+[--packet-size]  
+                 
+[--dac-connection -a]  
+                 
+[--input-file -i]  
+                 
+[--output-file]  
+                 
+[--enable-sqltoolsservice-logging]  
+                 
+[--prompt]
 ```
 ### <a name="examples"></a>Exemplos
 Exemplo de linha de comando para iniciar a experiência interativa.
 ```bash
 azdata sql shell
 ```
+Exemplo de linha de comando usando um servidor, usuário e banco de dados fornecidos
+```bash
+azdata sql shell --server localhost --username sa --database master         
+```
+### <a name="optional-parameters"></a>Parâmetros Opcionais
+#### `--username -u`
+Nome de usuário para se conectar ao banco de dados.
+#### `--database -d`
+Nome do banco de dados ao qual se conectar.
+#### `--server -s`
+Nome ou endereço da instância do SQL Server.
+#### `--integrated -e`
+Usar a autenticação integrada no Windows.
+#### `--mssqlclirc`
+Local do arquivo de configuração mssqlclirc.
+#### `--row-limit`
+Definir o limite para o prompt do limite de linha. Usar 0 para desabilitar o prompt.
+#### `--less-chatty`
+Ignorar a introdução na inicialização e o adeus ao sair.
+#### `--auto-vertical-output`
+Alternar automaticamente para o modo de saída vertical se o resultado for mais largo do que a largura do terminal.
+#### `--encrypt -n`
+O SQL Server usará a criptografia SSL para todos os dados se o servidor tiver um certificado instalado.
+#### `--trust-server-certificate -c`
+O canal será criptografado enquanto ignora a passagem pela cadeia de certificados para validar a confiança.
+#### `--connect-timeout -l`
+Tempo em segundos para aguardar por uma conexão com o servidor antes de encerrar a solicitação.
+#### `--application-intent -k`
+Declara o tipo de carga de trabalho de aplicativo ao se conectar a um banco de dados em um Grupo de Disponibilidade do SQL Server.
+#### `--multi-subnet-failover -m`
+Se o aplicativo estiver se conectando aos AG (grupos de disponibilidade) AlwaysOn em sub-redes diferentes, essa configuração fornecerá detecção e conexão mais rápidas ao servidor ativo no momento.
+#### `--packet-size`
+O tamanho em bytes dos pacotes de rede usados para se comunicar com o SQL Server.
+#### `--dac-connection -a`
+Conecta-se ao SQL Server com uma conexão de administrador dedicada.
+#### `--input-file -i`
+Identifica o arquivo que contém um lote de instruções SQL ou procedimentos armazenados.
+#### `--output-file`
+Especifica o arquivo que recebe a saída de uma consulta.
+#### `--enable-sqltoolsservice-logging`
+Habilita o log de diagnóstico para o SqlToolsService.
+#### `--prompt`
+Formato do prompt (padrão: \d>
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -49,21 +128,35 @@ Cadeia de caracteres de consulta JMESPath. Confira [http://jmespath.org/](http:/
 #### `--verbose`
 Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 ## <a name="azdata-sql-query"></a>azdata sql query
-O comando de consulta permite a execução de uma consulta T-SQL.
+A CLI do SQL permite que o usuário interaja com o SQL Server e com o SQL do Azure por meio de T-SQL.
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q 
+                 [--database -d]  
+                 
+[--username -u]  
+                 
+[--server -s]  
+                 
+[--integrated -e]
 ```
 ### <a name="examples"></a>Exemplos
-Selecionar a lista de nomes de tabelas.  O banco de dados usa o mestre como padrão.
+Exemplo de linha de comando para selecionar a lista de nomes de tabelas.
 ```bash
-azdata sql query "SELECT name FROM SYS.TABLES"
+azdata sql query --server localhost --username sa --database master -q "SELECT name FROM SYS.TABLES"
 ```
-### <a name="required-parameters"></a>Parâmetros obrigatórios
-#### `--database -d`
-Banco de dados nos quais executar a consulta.  O padrão é o mestre.
+### <a name="required-parameters"></a>Parâmetros Exigidos
 #### `-q`
 A consulta de T-SQL a ser executada.
+### <a name="optional-parameters"></a>Parâmetros Opcionais
+#### `--database -d`
+Nome do banco de dados ao qual se conectar.
+`master`
+#### `--username -u`
+Nome de usuário para se conectar ao banco de dados.
+#### `--server -s`
+Nome ou endereço da instância do SQL Server.
+#### `--integrated -e`
+Usar a autenticação integrada no Windows.
 ### <a name="global-arguments"></a>Argumentos globais
 #### `--debug`
 Aumente o detalhamento do log para mostrar todos os logs de depuração.
@@ -78,4 +171,7 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md). Para obter mais informações sobre como instalar a ferramenta `azdata`, confira [Instalar azdata para gerenciar clusters de Big Data do SQL Server 2019](../install/deploy-install-azdata.md).
+Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
+
+Para saber mais sobre como instalar a ferramenta **azdata**, confira [Instalar azdata](..\install\deploy-install-azdata.md).
+

@@ -3,31 +3,29 @@ title: Atualizar runtimes do Python e do R (associação)
 description: Atualize os runtimes do Python e do R nos Serviços de Machine Learning do SQL Server ou no SQL Server R Services usando sqlbindr.exe para associação ao Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009372"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990109"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Atualizar os runtimes do Python e do R com a associação nos Serviços de Machine Learning do SQL Server
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-Este artigo descreve como usar um processo de instalação chamado **associação** para atualizar os runtimes do R ou do Python no [SQL Server 2016 R Services](../r/sql-server-r-services.md) ou nos [Serviços de Machine Learning do SQL Server 2017](../sql-server-machine-learning-services.md).
+Este artigo descreve como usar um processo de instalação chamado **associação** para atualizar os runtimes do R ou do Python no [SQL Server 2016 R Services](../r/sql-server-r-services.md) ou nos [Serviços de Machine Learning do SQL Server 2017](../sql-server-machine-learning-services.md). Você pode obter as [versões mais recentes do Python e do R](#version-map) por meio da *associação* ao [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 > [!IMPORTANT]
 > Este artigo descreve um método antigo para atualizar os runtimes do R e do Python, chamado de *associação*. Se você tiver instalado a **CU (Atualização Cumulativa) 14 ou posterior para o SP (Services Pack) 2 do SQL Server 2016** ou a **CU 22 ou posterior para o SQL Server 2017**, confira como [alterar o runtime de linguagem R ou Python padrão para uma versão posterior](change-default-language-runtime-version.md) em vez disso.
 
-Você pode obter as [versões mais recentes do Python e do R](#version-map) por meio da *associação* ao Microsoft Machine Learning Server. A versão se aplica aos Serviços de Machine Learning do SQL Server (no banco de dados) e aos SQL Server R Services (no banco de dados).
-
 ## <a name="what-is-binding"></a>O que é associação?
 
-A associação é um processo de instalação que altera o conteúdo das pastas **R_SERVICES** e **PYTHON_SERVICES** com executáveis, bibliotecas e ferramentas mais recentes do [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+A associação é um processo de instalação que substitui o conteúdo das pastas **R_SERVICES** e **PYTHON_SERVICES** com executáveis, bibliotecas e ferramentas mais recentes do [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 Os componentes carregados incluídos com o modelo de serviço foram alterados. As atualizações de serviço correspondem à [Linha do tempo de suporte para Microsoft R Server & Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) no [Ciclo de vida moderno](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 

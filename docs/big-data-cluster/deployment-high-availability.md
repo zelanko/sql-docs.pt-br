@@ -5,22 +5,22 @@ description: Saiba como implantar o cluster de Big Data do SQL Server com alta d
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790262"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990009"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implantar o cluster de Big Data do SQL Server com alta disponibilidade
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Como Clusters de Big Data do SQL Server estão no Kubernetes como aplicativos em contêineres e usam recursos como conjuntos com estado e armazenamento persistente, essa infraestrutura tem monitoramento de integridade, detecção de falha e mecanismos de failover internos que os componentes do cluster utilizam para manter a integridade do serviço. Para maior confiabilidade, você também pode configurar a instância mestra do SQL Server ou o nó de nome do HDFS e serviços compartilhados do Spark para implantar com réplicas adicionais em uma configuração de alta disponibilidade. O monitoramento, a detecção de falhas e o failover automático são gerenciados por um serviço de gerenciamento de cluster de Big Data, ou seja, o serviço de controle. Esse serviço é fornecido sem a intervenção do usuário – tudo, desde a configuração do grupo de disponibilidade e da configuração dos pontos de extremidade de espelhamento de banco de dados, à adição do bancos de dados ao grupo de disponibilidade ou à coordenação de failover e atualização. 
+Como Clusters de Big Data do SQL Server estão no Kubernetes como aplicativos em contêineres e usam recursos como conjuntos com estado e armazenamento persistente, essa infraestrutura tem monitoramento de integridade, detecção de falha e mecanismos de failover internos que os componentes do cluster utilizam para manter a integridade do serviço. Para proporcionar maior confiabilidade, você também pode configurar a instância mestra do SQL Server e/ou o nó de nome do HDFS e serviços compartilhados do Spark para implantar com réplicas adicionais em uma configuração de alta disponibilidade. O monitoramento, a detecção de falha e o failover automático são gerenciados pelo serviço de gerenciamento de cluster de Big Data, ou seja, o serviço de controle. Esse serviço é fornecido sem a intervenção do usuário – tudo, desde a configuração do grupo de disponibilidade e da configuração dos pontos de extremidade de espelhamento de banco de dados, à adição do bancos de dados ao grupo de disponibilidade ou à coordenação de failover e atualização. 
 
 A imagem a seguir representa como um grupo de disponibilidade é implantado em um Cluster de Big Data do SQL Server:
 
@@ -32,7 +32,7 @@ Aqui estão alguns dos recursos que os grupos de disponibilidade habilitam:
 - Todos os bancos de dados são adicionados automaticamente ao grupo de disponibilidade, incluindo todos os bancos de dados do usuário e do sistema, como `master` e `msdb`. Essa funcionalidade fornece um modo de exibição do sistema único entre as réplicas do grupo de disponibilidade. Bancos de dados de modelo adicionais (`model_replicatedmaster` e `model_msdb`) são usadas para propagar a parte replicada dos bancos de dados do sistema. Além desses bancos de dados, você verá bancos de dados `containedag_master` e `containedag_msdb` caso conecte-se diretamente à instância. Os bancos de dados do `containedag` representam o `master` e o `msdb` dentro do grupo de disponibilidade.
 
   > [!IMPORTANT]
-  > No momento da versão do SQL Server CU1 2019, somente os bancos de dados criados como resultado de uma instrução CREATE DATABASE são adicionados automaticamente ao grupo de disponibilidade. Os bancos de dados criados na instância como resultado de outros fluxos de trabalho, como anexar banco de dados, ainda não foram adicionados ao grupo de disponibilidade e o administrador de cluster de Big Data precisaria fazer isso manualmente. Confira a seção [Conectar à instância do SQL Server](#instance-connect) para obter instruções. Antes da versão do SQL Server 2019 CU2, os bancos de dados criados como resultado de uma instrução RESTORE tinham o mesmo comportamento e exigiam a adição manual dos bancos de dados ao grupo de disponibilidade contido.
+  > Os bancos de dados criados na instância como resultado de outros fluxos de trabalho, como anexar banco de dados, não são adicionados automaticamente ao grupo de disponibilidade, e o administrador de cluster de Big Data precisaria fazer isso manualmente. Confira a seção [Conectar à instância do SQL Server](#instance-connect) para obter instruções sobre como habilitar um ponto de extremidade temporário no banco de dados mestre de instância SQL Server. Antes da versão do SQL Server 2019 CU2, os bancos de dados criados como resultado de uma instrução RESTORE tinham o mesmo comportamento e exigiam a adição manual dos bancos de dados ao grupo de disponibilidade contido.
   >
 - Bancos de dados de configuração do polybase não são incluídos no grupo de disponibilidade porque eles incluem metadados em nível de instância específicos de cada réplica.
 - Um ponto de extremidade externo é provisionado automaticamente para conectar-se a bancos de dados dentro do grupo de disponibilidade. Esse ponto de extremidade `master-svc-external` desempenha a função do ouvinte do grupo de disponibilidade.
@@ -201,13 +201,17 @@ Aqui está um exemplo que mostra como expor esse ponto de extremidade e então a
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-Os problemas e as limitações conhecidos de grupos de disponibilidade para o SQL Server mestre no cluster de Big Data:
+Esses são problemas e limitações conhecidos de grupos de disponibilidade contidos para o SQL Server mestre no cluster de Big Data:
 
-- Antes do SQL Server 2019 CU2, os bancos de dados criados como resultado de fluxos de trabalho que não `CREATE DATABASE` e `RESTORE DATABASE` como `CREATE DATABASE FROM SNAPSHOT` não são adicionados automaticamente ao grupo de disponibilidade. [Conecte-se à instância](#instance-connect) e adicione o banco de dados ao grupo de disponibilidade manualmente.
+- A configuração de alta disponibilidade deve ser criada quando o cluster de Big Data é implantado. Não é possível habilitar a configuração de alta disponibilidade com grupos de disponibilidade após a implantação. Neste momento, a única configuração habilitada é para réplicas de confirmação síncrona.
+
+> [!WARNING]
+> A atualização do modo de sincronização para confirmação assíncrona em qualquer uma das réplicas na confirmação de quorum resultará em uma configuração inválida para alta disponibilidade. A execução nessa configuração envolve um risco de perda de dados, pois, no caso de eventos de falha que afetem a réplica primária, não há um failover automático disparado e o usuário deve aceitar o risco de perda de dados ao emitir o failover manual.
+
 - Para restaurar com êxito um banco de dados habilitado para TDE de um backup criado em outro servidor, você deve garantir que os [certificados necessários](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) sejam restaurados no mestre de instância do SQL Server, bem como no mestre AG contido. Confira [aqui](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) para obter um exemplo de como fazer backup e restaurar os certificados.
 - Determinadas operações, como a execução de definições de configuração do servidor com `sp_configure`, exigem uma conexão com o banco de dados `master` de instância do SQL Server, não com o grupo de disponibilidade `master`. Você não pode usar o ponto de extremidade primário correspondente. Siga [as instruções](#instance-connect) para expor um ponto de extremidade e conectar-se à instância do SQL Server e executar `sp_configure`. Você só pode usar a autenticação do SQL ao expor manualmente o ponto de extremidade para conectar-se ao banco de dados `master` da instância do SQL Server.
-- A configuração de alta disponibilidade deve ser criada quando o cluster de Big Data é implantado. Não é possível habilitar a configuração de alta disponibilidade com grupos de disponibilidade após a implantação.
-- Embora o banco de dados msdb contido esteja incluído no grupo de disponibilidade e os trabalhos do SQL Agent sejam replicados nele, os trabalhos não são disparados por agendamento. A solução alternativa é [se conectar a cada uma das instâncias do SQL Server](#instance-connect) e criar os trabalhos no msdb da instância. Do SQL Server CU2 2019 em diante, somente os trabalhos criados em cada uma das réplicas na instância mestra são compatíveis.
+- Embora o banco de dados msdb contido esteja incluído no grupo de disponibilidade e os trabalhos do SQL Agent sejam replicados nele, os trabalhos são executados apenas por agendamento na réplica primária.
+- Antes do SQL Server 2019 CU2, os bancos de dados criados como resultado de fluxos de trabalho que não `CREATE DATABASE` e `RESTORE DATABASE` como `CREATE DATABASE FROM SNAPSHOT` não são adicionados automaticamente ao grupo de disponibilidade. [Conecte-se à instância](#instance-connect) e adicione o banco de dados ao grupo de disponibilidade manualmente.
 
 ## <a name="next-steps"></a>Próximas etapas
 
