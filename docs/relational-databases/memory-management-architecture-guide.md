@@ -11,16 +11,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
+- PMO
+- Partitioned Memory Objects
+- cmemthread
+- AWE
+- SPA, Single Page Allocator
+- MPA, Multi Page Allocator
+- memory allocation, SQL Server
+- memory pressure, SQL Server
+- stack size, SQL Server
+- buffer manager, SQL Server
+- buffer pool, SQL Server
+- resource monitor, SQL Server
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243683"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116219"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 
@@ -62,7 +74,7 @@ Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornec
 |Privilégio do SO (sistema operacional) de bloquear páginas na memória (permite o bloqueio de memória física, evitando a paginação do SO da memória bloqueada). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edições Standard, Enterprise e Developer: necessárias para o processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar o mecanismo AWE. A memória alocada pelo mecanismo AWE não pode passar pelo page out. <br> A concessão desse privilégio sem a ativação de AWE não tem nenhum efeito no servidor. | Utilizada somente quando necessário, ou seja, se houver sinais de que o processo sqlservr está sendo paginado. Neste caso, o erro 17890 será reportado no log de erros, que se assemelha ao exemplo a seguir:`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> Versões de 32 bits não estão disponíveis a partir do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
-<sup>2</sup> /3gb é um parâmetro de inicialização do sistema operacional. Para saber mais, visite a Biblioteca MSDN.  
+<sup>2</sup> /3gb é um parâmetro de inicialização do sistema operacional.  
 <sup>3</sup> WOW64 (Windows on Windows 64) é um modo em que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de 32 bits é executado em um sistema operacional de 64 bits.  
 <sup>4</sup>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] A Edição Standard dá suporte a até 128 GB. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition é compatível com o limite máximo do sistema operacional.  
 <sup>5</sup> Observe que a opção sp_configure awe enabled estava presente no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de 64 bits, mas é ignorada.    
@@ -76,7 +88,7 @@ Ao usar o AWE e o privilégio Páginas Bloqueadas na Memória, você pode fornec
 ## <a name="changes-to-memory-management-starting-with-sssql11"></a>Alterações no gerenciamento de memória a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), a alocação de memória era feita usando cinco mecanismos diferentes:
--  O **SPA (alocador de página única)** , incluindo somente as alocações de memória que eram menores ou iguais a 8 KB no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As opções de configuração *max server memory (MB)* e *min server memory (MB)* determinavam os limites de memória física que o SPA consumia. O pool de buffers era simultaneamente o mecanismo do SPA e o maior consumidor de alocações de uma página.
+-  O **SPA (alocador de página única)** , incluindo somente as alocações de memória que eram menores ou iguais a 8 KB no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As opções de configuração *max server memory (MB)* e *min server memory (MB)* determinavam os limites de memória física que o SPA consumia. O Pool de Buffers era simultaneamente o mecanismo do SPA e o maior consumidor de alocações de uma página.
 -  O **Alocador de várias páginas (MPA)** , para as alocações de memória que solicitam mais de 8 KB.
 -  O **Alocador de CLR**, incluindo os heaps SQL CLR e suas alocações globais que são criadas durante a inicialização do CLR.
 -  As alocações de memória para as **[pilhas de thread](../relational-databases/memory-management-architecture-guide.md#stacksizes)** no processo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -311,14 +323,27 @@ O tipo de proteção de página usado é um atributo do banco de dados que cont�
 A proteção de página interrompida , apresentada no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, é principalmente um modo de detectar páginas corrompidas devido a falhas de energia. Por exemplo, uma falha de energia inesperada pode deixar apenas parte de uma página gravada no disco. Quando a proteção de página interrompida é usada, um padrão de assinatura de 2 bits específico para cada setor de 512 bytes na página de banco de dados de 8 KB (quilobytes) é salvo e armazenado no cabeçalho da página do banco de dados, quando a página é gravada em disco. Quando a página for lida pelo disco, os bits desativados armazenados no cabeçalho da página serão comparados às informações do setor da página real. O padrão de assinatura alterna entre os binários 01 e 10 com cada gravação, de modo que seja sempre possível informar quando apenas uma parte dos setores realizou essa operação no disco: se um bit estiver com estado inválido quando a página tiver sido lida posteriormente, a página terá sido gravada incorretamente e uma página interrompida será detectada. A detecção de página interrompida usa recursos mínimos; porém, não detecta todos os erros provocados por falhas de hardware de disco. Para obter informações sobre como configurar a detecção de página interrompida, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 #### <a name="checksum-protection"></a>Proteção de soma de verificação  
-A proteção de soma de verificação, apresentada no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], fornece uma verificação de integridade de dados mais resistente. Uma soma de verificação é calculada para os dados de cada página gravada e armazenada no cabeçalho da página. Sempre que uma página com uma soma de verificação armazenada é lida no disco, o Mecanismo de Banco de Dados recalcula a soma de verificação dos dados na página e gera o erro 824 se a nova soma de verificação for diferente da soma de verificação armazenada. A proteção de soma de verificação pode capturar mais erros que a proteção de página interrompida porque é afetada por todo byte da página, porém, é um recurso moderadamente intensivo. Quando a soma de verificação for habilitada, os erros causados por falta de energia e falha de hardware ou firmware poderão ser detectados sempre que o gerenciador de buffer ler uma página do disco. Para obter informações sobre como configurar a soma de verificação, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
+A proteção de soma de verificação, apresentada no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], fornece uma verificação de integridade de dados mais resistente. Uma soma de verificação é calculada para os dados de cada página gravada e armazenada no cabeçalho da página. Sempre que uma página com uma soma de verificação armazenada é lida no disco, o Mecanismo de Banco de Dados recalcula a soma de verificação dos dados na página e gera o erro 824 se a nova soma de verificação for diferente da soma de verificação armazenada. A proteção de soma de verificação pode capturar mais erros que a proteção de página interrompida porque é afetada por todo byte da página, porém, tem faz um uso moderadamente intensivo de recursos. Quando a soma de verificação for habilitada, os erros causados por falta de energia e falha de hardware ou firmware poderão ser detectados sempre que o gerenciador de buffer ler uma página do disco. Para obter informações sobre como configurar a soma de verificação, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 > [!IMPORTANT]
-> Quando um usuário ou banco de dados do sistema é atualizado para o [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ou posterior, o valor de [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) (NONE ou TORN_PAGE_DETECTION) é retido. Recomendamos o uso de CHECKSUM.
+> Quando um usuário ou banco de dados do sistema é atualizado para o [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ou posterior, o valor de [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) (NONE ou TORN_PAGE_DETECTION) é retido. Recomendamos enfaticamente o uso de CHECKSUM.
 > TORN_PAGE_DETECTION pode usar menos recursos, mas fornece um subconjunto mínimo da proteção CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Compreendendo o Non-uniform Memory Access
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reconhece o NUMA (Non-uniform Memory Access) e tem um bom desempenho em hardware de NUMA sem configuração especial. Devido ao aumento da velocidade de clock e do número de processadores, fica muito difícil reduzir a latência de memória exigida para usar este poder de processamento adicional. Para evitar isto, fornecedores de hardware fornecem caches de L3 grandes, mas esta é apenas uma solução limitada. A arquitetura NUMA oferece uma solução escalonável para esse problema. O[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foi projetado para tirar proveito de computadores baseados em NUMA sem exigir nenhuma mudança de aplicativo. Para obter mais informações, confira [Como configurar o SQL Server para usar o Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+
+## <a name="dynamic-partition-of-memory-objects"></a>Partição dinâmica de objetos de memória
+Os alocadores de heap, chamados de objetos de memória no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], permitem que [!INCLUDE[ssde_md](../includes/ssde_md.md)] aloque memória partindo do heap. Eles podem ser acompanhados usando a DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). CMemThread é um tipo de objeto de memória thread-safe que permite alocações de memória simultâneas de vários threads. Para um acompanhamento correto, os objetos CMemThread dependem de constructos de sincronização (um mutex) para garantir que apenas um thread esteja atualizando informações críticas por vez. 
+
+> [!NOTE]
+> O tipo de objeto CMemThread é utilizado em toda a base de código [!INCLUDE[ssde_md](../includes/ssde_md.md)] para muitas alocações diferentes e pode ser particionado globalmente, por nó ou por CPU.   
+
+No entanto, o uso de mutexes poderá levar à contenção se muitos threads estiverem alocando do mesmo objeto de memória de maneira altamente simultânea. Sendo assim, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem o conceito de PMOs (objetos de memória particionada) e cada partição é representada por um só objeto CMemThread. O particionamento de um objeto de memória é definido estaticamente e não pode ser alterado após a criação. Como os padrões de alocação de memória variam amplamente com base em aspectos como o uso de hardware e de memória, é impossível chegar ao padrão de particionamento perfeito. Na grande maioria dos casos, usar uma partição é suficiente, mas em alguns cenários isso pode levar à contenção, que pode ser impedida apenas com um objeto de memória altamente particionado. Não é desejável particionar cada objeto de memória, pois mais partições podem resultar em outras ineficiências e aumentar a fragmentação de memória.
+
+> [!NOTE]
+> Antes de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o sinalizador de rastreamento 8048 podia ser usado para forçar um PMO baseado em nó a se tornar um PMO baseado em CPU. Começando no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 e no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], esse comportamento é dinâmico e é controlado pelo mecanismo.
+
+Começando no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 e no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o [!INCLUDE[ssde_md](../includes/ssde_md.md)] pode detectar dinamicamente a contenção em um objeto CMemThread específico e promover o objeto a uma implementação feita por nó ou por CPU. Uma vez promovido, o PMO permanece promovido até que o processo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seja reiniciado. A contenção de CMemThread pode ser detectada pela presença de grandes esperas de CMEMTHREAD na DMW [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) e observando as colunas *contention_factor*, *partition_type*, *exclusive_allocations_count* e *waiting_tasks_count* da DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).
 
 ## <a name="see-also"></a>Consulte Também
 [Opções Server Memory de configuração do servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

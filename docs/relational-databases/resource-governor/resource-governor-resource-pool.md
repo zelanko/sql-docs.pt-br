@@ -1,5 +1,5 @@
 ---
-title: Pool de recursos do Resource Governor | Microsoft Docs
+title: Pool de recursos do Administrador de Recursos
 description: O Resource Governor do SQL Server especifica limites quanto à quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar dentro do pool de recursos.
 ms.custom: ''
 ms.date: 10/20/2017
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bfc4c3eb6562c6424ecff4cfa8f311afe0a3510c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fa28f69fea78c3ccf09b0b41357ab156ed72c608
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457810"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115673"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de recursos do Administrador de Recursos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,11 +35,13 @@ ms.locfileid: "86457810"
   
 -   **CAP_CPU_PERCENT**  
   
-     Essas configurações são um limite rígido na largura de banda de CPU para todas as solicitações no pool de recursos. As cargas de trabalho associadas com o pool podem usar a capacidade da CPU acima do valor de MAX_CPU_PERCENT quando ela está disponível, mas não acima do valor de CAP_CPU_PERCENT. Usando o exemplo anterior, suponha que o departamento de Marketing esteja sendo cobrado pelo uso do recurso. Eles querem uma cobrança previsível e não querem pagar por mais de 30 por cento da CPU. Isso pode ser feito definindo o CAP_CPU_PERCENT para 30 para o pool de recursos de Marketing.  
+     A configuração CAP_CPU_PERCENT é um limite rígido da largura de banda de CPU para todas as solicitações no pool de recursos. As cargas de trabalho associadas com o pool podem usar a capacidade da CPU acima do valor de MAX_CPU_PERCENT quando ela está disponível, mas não acima do valor de CAP_CPU_PERCENT. Usando o exemplo anterior, suponha que o departamento de Marketing esteja sendo cobrado pelo uso do recurso. Eles querem uma cobrança previsível e não querem pagar por mais de 30 por cento da CPU. Isso pode ser feito definindo o CAP_CPU_PERCENT para 30 para o pool de recursos de Marketing.  
   
 -   **MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT**  
   
-     Essas configurações são a quantidade mínima e máxima de memória reservada para o pool de recursos que não pode ser compartilhada com outros pools de recursos. A memória referenciada aqui é memória de concessão de execução da consulta, não memória do pool de buffers (por exemplo, páginas de índice e de dados). Ao definir um valor mínimo de memória para um pool, você garante que o percentual de memória especificada esteja disponível para todas as solicitações que possam ser executadas nesse pool de recursos. Este é um diferenciador importante comparado com MIN_CPU_PERCENT, porque, nesse caso, a memória poderá permanecer no pool de recursos determinado mesmo quando o pool não tiver nenhuma solicitação nos grupos de cargas de trabalho que pertencem a este pool. Portanto, é crucial que você seja muito cuidadoso ao usar essa configuração, pois essa memória não estará disponível para uso por nenhum outro pool, mesmo quando não houver solicitações ativas. Definir um valor máximo de memória para um pool significa que, quando as solicitações estiverem em execução nesse pool, elas nunca obterão mais do que essa porcentagem de memória total.  
+     Essas configurações são a quantidade mínima e máxima de memória reservada para o pool de recursos que não pode ser compartilhada com outros pools de recursos. Para bancos de dados sem tabelas com otimização de memória, a memória referenciada aqui é memória de concessão de execução da consulta, não memória do pool de buffers (por exemplo, páginas de índice e de dados). Ao definir um valor mínimo de memória para um pool, você garante que o percentual de memória especificada esteja disponível para todas as solicitações que possam ser executadas nesse pool de recursos. Este é um diferenciador importante comparado com MIN_CPU_PERCENT, porque, nesse caso, a memória poderá permanecer no pool de recursos determinado mesmo quando o pool não tiver nenhuma solicitação nos grupos de cargas de trabalho que pertencem a este pool. Portanto, é crucial que você tenha cuidado ao usar essa configuração, pois essa memória não estará disponível para uso por nenhum outro pool, mesmo quando não houver solicitações ativas. Definir um valor máximo de memória para um pool significa que, quando as solicitações estiverem em execução nesse pool, elas nunca obterão mais do que essa porcentagem de memória total.
+
+     Para controlar a memória para tabelas com otimização de memória com o Resource Governor, associe o banco de dados a um pool de recursos separado. Para obter mais informações, confira [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).
   
 -   **AFFINITY**  
   
@@ -47,7 +49,7 @@ ms.locfileid: "86457810"
   
 -   **MIN_IOPS_PER_VOLUME e MAX_IOPS_PER_VOLUME**  
   
-     Essas configurações são as operações de E/S mínima e máxima por segundo (IOPS) por volume de disco para um pool de recursos. Você pode usar essas configurações para controlar as E/S físicas emitidas para threads de usuário para um determinado pool de recursos. Por exemplo, o departamento de Vendas produz vários relatórios de fim de mês em lotes grandes. As consultas nesses lotes podem gerar E/Ss que podem saturar o volume de disco e afetar o desempenho de outras cargas de trabalho de prioridade mais alta no banco de dados. Para isolar essa carga de trabalho, o MIN_IOPS_PER_VOLUME é definido como 20 e o MAX_IOPS_PER_VOLUME é definido como 100 para o pool de recursos do departamento de Vendas, que controla o nível de E/S que pode emitido para a carga de trabalho.  
+     Essas configurações são as operações de E/S mínima e máxima por segundo (IOPS) por volume de disco para um pool de recursos. Você pode usar essas configurações para controlar as E/S físicas emitidas para threads de usuário para um determinado pool de recursos. Por exemplo, o departamento de Vendas produz vários relatórios de fim de mês em lotes grandes. As consultas nesses lotes podem gerar E/Ss que podem saturar o volume de disco e afetar o desempenho de outras cargas de trabalho de prioridade mais alta no banco de dados. Para isolar essa carga de trabalho, o MIN_IOPS_PER_VOLUME é definido como 20 e o MAX_IOPS_PER_VOLUME é definido como 100 para o pool de recursos do departamento de Vendas, que controla o nível de E/S que pode ser emitido para a carga de trabalho.  
   
 Ao configurar CPU ou Memória, a soma dos valores MIN de todos os pools não pode ultrapassar 100% dos recursos do servidor. Além disso, ao configurar CPU ou memória, os valores MAX e CAP podem ser definidos em qualquer lugar no intervalo entre MIN e 100 por cento inclusive.  
   
@@ -110,7 +112,7 @@ O pool padrão é o primeiro pool definido previamente pelo usuário. Antes de q
   
 **Pool externo**  
   
-Os usuários podem definir um pool externo para definir recursos para os processos externos. Para Serviços de R, isso controla especificamente o `rterm.exe`, `BxlServer.exe` e outros processos gerados por eles.  
+Os usuários podem definir um pool externo para definir recursos para os processos externos. Para Serviços de R, isso controla especificamente `rterm.exe`, `BxlServer.exe` e outros processos gerados por eles.  
   
 **Pools de recursos definidos pelo usuário**  
   
@@ -118,7 +120,7 @@ Os pools de recursos definidos pelo usuário são aqueles que você cria para ca
   
 ## <a name="resource-pool-tasks"></a>Tarefas do pool de recursos  
   
-|Descrição da tarefa|Tópico|  
+|Descrição da tarefa|Artigo|  
 |----------------------|-----------|  
 |Descreve como criar um pool de recursos.|[Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)|  
 |Descreve como alterar as configurações do pool de recursos.|[Alterar configurações do pool de recursos](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  

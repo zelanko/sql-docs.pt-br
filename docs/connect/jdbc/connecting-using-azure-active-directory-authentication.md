@@ -2,7 +2,7 @@
 title: Conectando-se usando a autenticação do Azure Active Directory
 description: Saiba mais sobre como desenvolver aplicativos Java que usam o recurso de autenticação do Azure Active Directory com o Microsoft JDBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 09/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899011"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117132"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conectando-se usando a autenticação do Azure Active Directory
 
@@ -33,7 +33,7 @@ As propriedades de conexão para dar suporte à Autenticação do Azure Active D
     * **ActiveDirectoryIntegrated**
         * Compatível desde a versão do driver **v6.0**, o `authentication=ActiveDirectoryIntegrated` pode ser usado para se conectar a um Banco de Dados SQL/SQL Data Warehouse do Azure usando a autenticação integrada. Para usar esse modo de autenticação, você precisa federar o ADFS (Serviços de Federação do Active Directory) local com o Azure Active Directory na nuvem. Depois de configurado, você pode se conectar adicionando a biblioteca nativa 'mssql-jdbc_auth-\<version>-\<arch>.dll' ao caminho da classe de aplicativo no sistema operacional Windows ou configurar um tíquete Kerberos para suporte de autenticação multiplataforma. Você poderá acessar o Banco de Dados SQL do Azure/Data Warehouse do SQL sem ser solicitado a fornecer credenciais quando estiver conectado a um computador ingressado no domínio.
     * **ActiveDirectoryPassword**
-        * Compatível desde a versão do driver **v6.0**, o `authentication=ActiveDirectoryPassword` pode ser usado para se conectar a um Banco de Dados SQL/SQL Data Warehouse do Azure usando um nome e uma senha de entidade de segurança do Azure AD.
+        * Com suporte desde a versão do driver **v6.0**, o `authentication=ActiveDirectoryPassword` pode ser usado para se conectar a um Data Warehouse/Banco de Dados SQL do Azure usando um nome de usuário e uma senha do Azure AD.
     * **SqlPassword**
         * Use `authentication=SqlPassword` para se conectar a um SQL Server usando as propriedades userName/user e password.
     * **NotSpecified**
@@ -113,7 +113,7 @@ Para obter mais informações, confira [Definir tíquete Kerberos no Windows, Li
 > [!NOTE]
 >  Se você estiver usando uma versão mais antiga do driver, marque este [link](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) para as respectivas dependências que serão necessárias para usar esse modo de autenticação. 
 
-O exemplo a seguir mostra como usar o modo `authentication=ActiveDirectoryIntegrated`. Execute este exemplo em um computador ingressado no domínio que seja federado com o Azure Active Directory. Um usuário de banco de dados independente representando sua entidade de segurança do Azure AD ou um dos grupos aos quais você pertence deve existir no banco de dados e deve ter a permissão CONNECT. 
+O exemplo a seguir mostra como usar o modo `authentication=ActiveDirectoryIntegrated`. Execute este exemplo em um computador ingressado no domínio que seja federado com o Azure Active Directory. Um usuário de banco de dados independente representando seu usuário do Azure AD ou um dos grupos aos quais você pertence deve existir no banco de dados e precisa ter a permissão CONNECT. 
 
 Antes de compilar e executar o exemplo, no computador cliente (no qual você deseja executar o exemplo), baixe a biblioteca [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) e suas dependências e as inclua no caminho de build do Java
 

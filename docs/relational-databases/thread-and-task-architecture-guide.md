@@ -2,7 +2,7 @@
 title: Guia de arquitetura de thread e tarefa | Microsoft Docs
 description: Saiba mais sobre a arquitetura de threads e tarefas no SQL Server, incluindo o agendamento de tarefas, a inclusão de CPU a quente e as práticas recomendadas para usar computadores com mais de 64 CPUs.
 ms.custom: ''
-ms.date: 07/06/2020
+ms.date: 09/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
+- task scheduling
+- working threads
+- Large Deficit First scheduling
+- LDF scheduling
+- scheduling, SQL Server
+- tasks, SQL Server
+- threads, SQL Server
+- quantum, SQL Server
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076801"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114594"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guia de arquitetura de threads e tarefas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +67,14 @@ O número de threads de trabalho gerados para cada tarefa depende:
 Um **agendador**, também conhecido como Agendador SOS, gerencia threads de trabalho que exigem tempo de processamento para realizar trabalho em nome das tarefas. Cada agendador é mapeado para um CPU (processador individual). O tempo que um trabalho pode permanecer ativo em um agendador é chamado de quantum do sistema operacional, com um máximo de 4 ms. Depois que o tempo do quantum expirar, um trabalho dedica seu tempo para outros trabalhos que precisam acessar os recursos da CPU e altera seu estado. Essa cooperação entre os trabalhos para maximizar o acesso aos recursos da CPU é chamada de **agendamento cooperativo**, também conhecido como agendamento não preemptivo. Por sua vez, a alteração no estado de trabalho é propagada para a tarefa associada a esse trabalho e para a solicitação associada à tarefa. Para sabe mais sobre os estados de trabalho, confira [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Para saber mais sobre agendadores, confira [sys.dm_os_schedulers ](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
 Em resumo, uma **solicitação** poderá gerar uma ou mais **tarefas** para concluir unidades de trabalho. Cada tarefa será atribuída a um **thread de trabalho** responsável pela conclusão da tarefa. Cada thread de trabalho deverá ter um agendamento (feito em um **agendador**) para obter uma execução ativa da tarefa. 
+
+> [!NOTE]
+> Considere o cenário a seguir.   
+> -  O Trabalho 1 é uma tarefa de execução longa, por exemplo, uma consulta de leitura usando leitura antecipada em tabelas baseadas na memória. O Trabalho 1 descobre que suas páginas de dados necessárias já estão no Pool de Buffers, portanto, ele não precisa esperar por operações de E/S e pode consumir seu quantum completo antes de ser suspenso.   
+> -  O Trabalho 2 está executando tarefas mais curtas, de menos de milissegundos, e precisa ser suspenso antes que seu quantum completo seja esgotado.     
+>
+> Nesse cenário e até [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o Trabalho 1 tem permissão para, basicamente, monopolizar o agendador tendo mais tempo de quantum em geral.   
+> Começando no [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o agendamento cooperativo inclui o agendamento LDF (Large Deficit First ou Déficit grande primeiro). Com o agendamento LDF, os padrões de uso do quantum são monitorados e um thread de trabalho não monopoliza um agendador. No mesmo cenário, o Trabalho 2 tem permissão para consumir o quantum repetidamente antes que o Trabalho 1 tenha acesso a mais quantum, evitando assim que o Trabalho 1 monopolize o agendador em um padrão hostil.
 
 ### <a name="scheduling-parallel-tasks"></a>Como agendar tarefas paralelas
 Imagine um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configurado com um MaxDOP 8, bem como a afinidade da CPU configurada para 24 CPUs (agendadores) em nós NUMA 0 e 1. Os agendadores de 0 a 11 pertencerão ao nó NUMA 0, os agendadores de 12 a 23 pertencerão ao nó NUMA 1. Um aplicativo enviará a seguinte consulta (solicitação) para o [!INCLUDE[ssde_md](../includes/ssde_md.md)]:
@@ -228,8 +244,8 @@ Esta é uma opção avançada e deve ser alterada somente por um administrador d
 > [!NOTE]
 > [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] para as cargas de trabalho do Analysis Services NÃO está preterido e o suporte a ele continuará.
 
-### <a name="setting-the-number-of-tempdb-data-files"></a>Definição do número de arquivos de dados TempDB
-O número de arquivos depende do número de processadores (lógicos) do computador. Como regra geral, se o número de processadores lógicos for menor ou igual a oito, use o mesmo número de processadores lógicos para os arquivos de dados. Se o número de processadores lógicos for maior que oito, use oito arquivos de dados e, se a contenção persistir, aumente o número de arquivos de dados em múltiplos de quatro até que a contenção seja reduzida a níveis aceitáveis ou faça alterações no código/carga de trabalho. Além disso, lembre-se de outras recomendações para o TempDB, disponível em [Otimizando o desempenho de TempDB no SQL Server](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server). 
+### <a name="setting-the-number-of-tempdb-data-files"></a>Definindo o número de arquivos de dados tempdb
+O número de arquivos depende do número de processadores (lógicos) do computador. Como regra geral, se o número de processadores lógicos for menor ou igual a oito, use o mesmo número de processadores lógicos para os arquivos de dados. Se o número de processadores lógicos for maior que oito, use oito arquivos de dados e, se a contenção persistir, aumente o número de arquivos de dados em múltiplos de quatro até que a contenção seja reduzida a níveis aceitáveis ou faça alterações no código/carga de trabalho. Além disso, lembre-se de outras recomendações para o tempdb, disponíveis em [Otimizando o desempenho de tempdb no SQL Server](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server). 
 
 No entanto, ao considerar cuidadosamente as necessidades simultâneas de tempdb, é possível reduzir a sobrecarga de gerenciamento do banco de dados. Por exemplo, se um sistema tiver 64 CPUs e geralmente apenas 32 consultas usam tempdb, o aumento do número de arquivos tempdb para 64 não melhorará o desempenho.
 
