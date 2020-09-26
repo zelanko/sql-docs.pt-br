@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2e931d371bd117d82d4cd1725acb3fc5f64890ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e18319e45c3d397e4283013ec31bb3c98424c892
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444580"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379674"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88444580"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql  
 DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]  
 ```  
   
@@ -65,7 +64,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove do banco de dados atual uma chave simétrica chamada `GailSammamishKey6`.  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY GailSammamishKey6;  
 DROP SYMMETRIC KEY GailSammamishKey6;  
 GO  

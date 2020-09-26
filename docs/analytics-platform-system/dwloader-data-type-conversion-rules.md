@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ce48c3352ffbd0a1c112f7fd60db2f0d85c6e6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401186"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379555"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Regras de conversão de tipo de dados para data warehouse dwloader paralelos
 Este tópico descreve os formatos de dados de entrada e as conversões implícitas de tipo de dados que o [carregador de linha de comando dwloader](dwloader.md) dá suporte ao carregar dados no PDW. As conversões de dados implícitas ocorrem quando os dados de entrada não correspondem ao tipo de dados na tabela de destino SQL Server PDW. Use essas informações ao criar seu processo de carregamento para garantir que os dados serão carregados com êxito no SQL Server PDW.  
@@ -124,12 +124,12 @@ A tabela a seguir define o formato padrão e as regras para carregar valores lit
 |Tipo de dados de entrada|Exemplos de dados de entrada|Conversão para tipo de dados bit|  
 |-------------------|-----------------------|-------------------------------|  
 |Literal de cadeia de caracteres no formato **inteiro**|'ffffffffff'<br /><br />Exemplo: ' 1 ' ou ' 321 '|Um valor inteiro formatado como um literal de cadeia de caracteres não pode conter um valor negativo. Por exemplo, o valor '-123 ' gera um erro.<br /><br />Um valor maior que 1 é convertido em 1. Por exemplo, o valor ' 123 ' é convertido em 1.|  
-|Literal de cadeia de caracteres|' TRUE ' ou ' FALSE '<br /><br />Exemplo: ' true '|O valor ' TRUE ' é convertido em 1; o valor ' FALSE ' é convertido em 0.|  
+|Cadeia de caracteres literal|' TRUE ' ou ' FALSE '<br /><br />Exemplo: ' true '|O valor ' TRUE ' é convertido em 1; o valor ' FALSE ' é convertido em 0.|  
 |Literal inteiro|fffffffn<br /><br />Exemplo: 1 ou 321|Um valor maior que 1 ou menor que 0 é convertido em 1. Por exemplo, os valores 123 e-123 são convertidos em 1.|  
 |Literal decimal|fffnn.fffn<br /><br />Exemplo: 1234,5678|Um valor maior que 1 ou menor que 0 é convertido em 1. Por exemplo, os valores 123,45 e-123,45 são convertidos em 1.|  
   
 ### <a name="decimal-data-type"></a>Tipo de dados decimal  
-A tabela a seguir define as regras para carregar valores literais em uma coluna do tipo **decimal** (*p, s*). As regras de conversão de dados são as mesmas para SQL Server. Para obter mais informações, consulte [conversão de tipo de dados (mecanismo de banco de dados)](https://go.microsoft.com/fwlink/?LinkId=202128) no msdn.  
+A tabela a seguir define as regras para carregar valores literais em uma coluna do tipo **decimal** (*p, s*). As regras de conversão de dados são as mesmas para SQL Server. Para obter mais informações, consulte [conversão de tipo de dados (mecanismo de banco de dados)](/previous-versions/sql/sql-server-2008-r2/ms191530(v=sql.105)) no msdn.  
   
 |Tipo de dados de entrada|Exemplos de dados de entrada|  
 |-------------------|-----------------------|  
@@ -170,7 +170,7 @@ A tabela a seguir define o formato padrão e as regras para carregar valores lit
   
 |Tipo de dados de entrada|Exemplos de dados de entrada|Conversão para tipos de dados de caractere|  
 |---------------|-------------------|----------------------------------|  
-|Literal de cadeia de caracteres|Formato: ' cadeia de caracteres '<br /><br />Exemplo: ' abc '| NA |  
+|Cadeia de caracteres literal|Formato: ' cadeia de caracteres '<br /><br />Exemplo: ' abc '| NA |  
 |Literal de cadeia de caracteres Unicode|Formato: cadeia de caracteres N'character '<br /><br />Exemplo: N'abc '| NA |  
 |Literal inteiro|Formato: ffffffffffn<br /><br />Exemplo: 321312313123| NA |  
 |Literal decimal|Formato: FFFFFF. fffffff<br /><br />Exemplo: 12344,34455| NA |  
@@ -185,4 +185,3 @@ o **dwloader** executa as mesmas conversões implícitas que o SMP SQL Server ex
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 
 -->
-  

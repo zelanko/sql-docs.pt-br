@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7cd2c25c24844e80107e3995287e3452c58e663e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2d1e0862a6f03c1dd7527390a36b6de0333f9662
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547746"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380351"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89547746"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 DROP MESSAGE TYPE message_type_name  
 [ ; ]  
 ```  
@@ -59,7 +58,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir exclui o tipo de mensagem `//Adventure-Works.com/Expenses/SubmitExpense` do banco de dados.  
   
-```  
+```sql  
 DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;  
 ```  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6c301570941c451709d4574663dc71c6b7632ef6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f31072dc67bb72fcbf484d74d697594425c1256
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459480"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379541"
 ---
 # <a name="x40x40total_read-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88459480"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 @@TOTAL_READ  
 ```  
   
@@ -54,7 +53,7 @@ ms.locfileid: "88459480"
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra o retorno do número total de leitura de disco e gravações a partir da data e hora atuais.  
   
-```  
+```sql
 SELECT @@TOTAL_READ AS 'Reads', @@TOTAL_WRITE AS 'Writes', GETDATE() AS 'As of';  
 ```  
   

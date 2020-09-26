@@ -19,12 +19,12 @@ ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: bd5c7d9ee466ba52d2cc82429e92f9ce6fec6ab2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02ec3dd7e7047411901dcaad4b76056781a9384c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467768"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379511"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88467768"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 TRY_CAST ( expression AS data_type [ ( length ) ] )  
 ```  
   
@@ -121,7 +120,7 @@ Explicit conversion from data type int to xml is not allowed.
 ### <a name="c-try_cast-succeeds"></a>C. TRY_CAST tem êxito  
  Este exemplo demonstra que a expressão deve estar no formato esperado.  
   
-```  
+```sql
 SET DATEFORMAT mdy;  
 SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
 GO  

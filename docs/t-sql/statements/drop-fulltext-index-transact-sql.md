@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 98d7d4fb82ee030afe623a9873be14963632f7c1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7883bb6eab65b2877e08c9ad9c0e9c869d4988af
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541257"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380421"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89541257"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 DROP FULLTEXT INDEX ON table_name  
 ```  
   
@@ -58,7 +57,7 @@ DROP FULLTEXT INDEX ON table_name
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir descarta o índice de texto completo que existe na tabela `JobCandidate`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DROP FULLTEXT INDEX ON HumanResources.JobCandidate;  

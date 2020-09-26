@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fb493b4698918e7d93fb3ef45b3c5d03a2919e1f
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e6a2cb161ae00d9f77d50c7a702183927cc169d8
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480423"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380187"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,6 @@ ms.locfileid: "89480423"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 DROP AVAILABILITY GROUP group_name   
 [ ; ]  
 ```  
@@ -75,7 +74,7 @@ DROP AVAILABILITY GROUP group_name
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cancela o grupo de disponibilidade `AccountsAG`.  
   
-```  
+```sql  
 DROP AVAILABILITY GROUP AccountsAG;  
 ```  
   

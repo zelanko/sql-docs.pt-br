@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761900"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379574"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar o Windows Server Update Services (WSUS) no Analytics Platform System
 Estas instruções orientam você pelas etapas para usar o assistente de configuração do Windows Server Update Services (WSUS) para configurar o WSUS para o Analytics Platform System. Você precisa configurar o WSUS antes de poder aplicar as atualizações de software ao dispositivo. O WSUS já está instalado na máquina virtual do VMM do dispositivo.  
   
-Para obter mais informações sobre como configurar o WSUS, consulte o [Guia de instalação passo a passo do WSUS](https://go.microsoft.com/fwlink/?LinkId=202417) no site do WSUS. Depois de configurar o WSUS, consulte [baixar e aplicar atualizações da Microsoft &#40;sistema de plataforma de análise&#41;](download-and-apply-microsoft-updates.md) para iniciar uma atualização.  
+Para obter mais informações sobre como configurar o WSUS, consulte o [Guia de instalação passo a passo do WSUS](/windows/deployment/deploy-whats-new) no site do WSUS. Depois de configurar o WSUS, consulte [baixar e aplicar atualizações da Microsoft &#40;sistema de plataforma de análise&#41;](download-and-apply-microsoft-updates.md) para iniciar uma atualização.  
   
 > [!WARNING]  
 > Se você encontrar erros durante esse processo de configuração, pare e entre em contato com o suporte para obter assistência. Não ignore erros ou continue no processo após os erros serem recebidos.  
@@ -61,7 +61,7 @@ Para configurar o WSUS, você precisa:
   
         ![Menu do painel do Gerenciador do Servidor](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  Se esta for a primeira vez que você executou o assistente do WSUS, você poderá ser solicitado a configurar um diretório para armazenar as atualizações. `C:\wsus`é um local apropriado; no entanto, você pode fornecer um caminho diferente.  
+    4.  Se esta for a primeira vez que você executou o assistente do WSUS, você poderá ser solicitado a configurar um diretório para armazenar as atualizações. `C:\wsus` é um local apropriado; no entanto, você pode fornecer um caminho diferente.  
   
         ![caminho WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -203,4 +203,3 @@ Depois de configurar o WSUS para o Analytics Platform System, a próxima etapa �
 6.  Selecione o novo grupo de computadores, altere seu **status** para **qualquer**e clique em **Atualizar**. Todos os computadores agora devem ser atribuídos a esse grupo e listados no painel direito. Em geral, é seguro continuar quando os nós mostrarem avisos como **este nó ainda não relataram o status**.  
   
     ![Altere o status para qualquer e clique em atualizar.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
-  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f2a75cf3da8220e861d8320b2454683c3b65a1f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362242"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380591"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88362242"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
 ```  
   
@@ -72,7 +71,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ### <a name="a-testing-for-data-with-a-valid-signature"></a>a. Testando se os dados têm uma assinatura válida  
  O exemplo a seguir retornará 1 se os dados selecionados não foram alterados desde a assinatura com a chave assimétrica `WillisKey74`. O exemplo retornará 0 se os dados foram violados.  
   
-```  
+```sql
 SELECT Data,  
      VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
      DataSignature ) as IsSignatureValid  
@@ -85,7 +84,7 @@ RETURN;
 ### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>B. Retornando um conjunto de resultados contendo dados com uma assinatura válida  
  O exemplo a seguir retorna linhas em `SignedData04` contendo dados que não foram alterados desde a assinatura com a chave assimétrica `WillisKey74`. O exemplo chama a função `AsymKey_ID` para obter a ID de chave assimétrica do banco de dados.  
   
-```  
+```sql
 SELECT Data   
 FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  

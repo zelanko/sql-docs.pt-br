@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 241eb35a882350a982177da3bcc94f4154f25e6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95f101b79978c86e2b963891d495ff5a067b5fd9
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459588"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380771"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88459588"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 [ database_name. ] $PARTITION.partition_function_name(expression)  
 ```  
   
@@ -65,10 +64,10 @@ ms.locfileid: "88459588"
 ### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>a. Obtendo o número de partições para um conjunto de valores de coluna de particionamento  
  O exemplo a seguir cria uma função de partição `RangePF1` que dividirá uma tabela ou índice em quatro partições. $PARTITION é usado para determinar se o valor `10`, representando a coluna de particionamento de `RangePF1`, será colocado na partição 1 da tabela.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PARTITION FUNCTION RangePF1 ( int )  
+CREATE PARTITION FUNCTION RangePF1 ( INT )  
 AS RANGE FOR VALUES (10, 100, 1000) ;  
 GO  
 SELECT $PARTITION.RangePF1 (10) ;  
@@ -80,7 +79,7 @@ GO
   
  Para executar esse exemplo, você deve primeiro executar o script PartitionAW.sql no banco de dados de amostra [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para obter mais informações, consulte [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT $PARTITION.TransactionRangePF1(TransactionDate) AS Partition,   
@@ -96,7 +95,7 @@ GO
 > [!NOTE]  
 >  Para executar esse exemplo, você deve primeiro executar o script PartitionAW.sql no banco de dados de amostra [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para obter mais informações, consulte [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
-```  
+```sql  
 SELECT * FROM Production.TransactionHistory  
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  

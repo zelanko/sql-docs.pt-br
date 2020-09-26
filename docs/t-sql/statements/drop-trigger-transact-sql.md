@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ebbd18eda53dcedcfd0118c16bb5b16066c8fa7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d800de4adea71523c3ae05bed53c97697c718d70
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539846"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379641"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -109,7 +109,7 @@ ON ALL SERVER
 ### <a name="a-dropping-a-dml-trigger"></a>a. Descartando um gatilho DML  
  O exemplo a seguir remove o gatilho `employee_insupd` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é possível usar a sintaxe DROP TRIGGER IF EXISTS.)  
   
-```  
+```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
 ```  
@@ -120,7 +120,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
 > [!IMPORTANT]  
 >  Uma vez que os gatilhos DDL não têm seu escopo definido para o esquema e, portanto, não aparecem na exibição de catálogo **sys.objects**, a função OBJECT_ID não pode ser usada para consultar se eles existem no banco de dados. Os objetos que não tenham seu escopo definido para o esquema devem ser consultados usando a exibição de catálogo apropriada. Para gatilhos DDL, use **sys.triggers**.  
   
-```  
+```sql  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  

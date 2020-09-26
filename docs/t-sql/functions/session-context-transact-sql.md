@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ae64d9e63d6c6a6c77642144275af00a8418a8d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb971143c7de2bdbf683b24f81162e088ffd2a8e
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467898"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91378692"
 ---
 # <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88467898"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 SESSION_CONTEXT(N'key')  
 ```  
   
@@ -57,7 +57,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="examples"></a>Exemplos  
  O exemplo simples a seguir define o valor de contexto de sessão para a chave `user_id` como 4 e, em seguida, usa a função **SESSION_CONTEXT** para recuperar o valor.  
   
-```  
+```sql  
 EXEC sp_set_session_context 'user_id', 4;  
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  
