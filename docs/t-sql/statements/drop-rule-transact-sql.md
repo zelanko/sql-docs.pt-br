@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da8dfea685330ed31e1e3ae8ad267841d36e94f9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc66ed0c7438c7495395aaa573ba820bd8cf3b6f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540661"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380291"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir desvincula e descarta a regra chamada `VendorID_rule`. 
   
-```  
+```sql  
 sp_unbindrule 'Production.ProductVendor.VendorID'  
 DROP RULE VendorID_rule  
 GO  

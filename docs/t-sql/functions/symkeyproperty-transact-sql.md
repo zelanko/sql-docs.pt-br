@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bd4e00191e7200bcdd5c8d38ac7fa008eeda0dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 321440dd7f9f895f4bbebb7b5d6fa361ac416bce
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479549"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380851"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,7 @@ ms.locfileid: "88479549"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )  
 ```  
   
@@ -57,7 +56,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna o algoritmo da chave simétrica com Key_ID 256.  
   
-```  
+```sql  
 SELECT SYMKEYPROPERTY(256, 'algorithm_desc') AS Algorithm ;  
 GO  
 ```  

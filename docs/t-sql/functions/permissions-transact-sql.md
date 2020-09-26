@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0681d22c6a48d8680c7b44e767558f02e2a4c251
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbd07982bc45b3fbd32b140f74a9a0f32fa3c3a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467925"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380737"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "88467925"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
@@ -118,7 +117,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ### <a name="a-using-the-permissions-function-with-statement-permissions"></a>a. Usando a função PERMISSIONS com permissões de instrução  
  O exemplo a seguir determina se o usuário atual pode executar a instrução `CREATE TABLE`.  
   
-```  
+```sql  
 IF PERMISSIONS()&2=2  
    CREATE TABLE test_table (col1 INT)  
 ELSE  
@@ -128,7 +127,7 @@ ELSE
 ### <a name="b-using-the-permissions-function-with-object-permissions"></a>B. Usando a função PERMISSIONS com permissões de objeto  
  O exemplo a seguir determina se o usuário atual pode inserir uma linha de dados na tabela instrução `Address` do banco de dados `AdventureWorks2012`.  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&8=8   
    PRINT 'The current user can insert data into Person.Address.'  
 ELSE  
@@ -138,7 +137,7 @@ ELSE
 ### <a name="c-using-the-permissions-function-with-grantable-permissions"></a>C. Usando a função PERMISSIONS com permissões que podem ser concedidas  
  O exemplo a seguir determina se o usuário atual pode conceder a permissão INSERT na tabela `Address` do banco de dados `AdventureWorks2012` para outro usuário.  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&0x80000=0x80000  
    PRINT 'INSERT on Person.Address is grantable.'  
 ELSE  

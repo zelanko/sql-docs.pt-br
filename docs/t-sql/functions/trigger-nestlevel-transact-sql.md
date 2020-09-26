@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 183d2e295fcdaf7de1bf20351272662979c888b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86554070c90b2c946e79359b561da324abbf700a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307568"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379531"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ ms.locfileid: "88307568"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_category' ] )  
 ```  
   
@@ -66,14 +65,14 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>a. Testando o nível de aninhamento de um gatilho DML específico  
   
-```  
+```sql
 IF ( (SELECT TRIGGER_NESTLEVEL( OBJECT_ID('xyz') , 'AFTER' , 'DML' ) ) > 5 )  
    RAISERROR('Trigger xyz nested more than 5 levels.',16,-1)  
 ```  
   
 ### <a name="b-testing-the-nesting-level-of-a-specific-ddl-trigger"></a>B. Testando o nível de aninhamento de um gatilho DDL específico  
   
-```  
+```sql
 IF ( ( SELECT TRIGGER_NESTLEVEL ( ( SELECT object_id FROM sys.triggers  
 WHERE name = 'abc' ), 'AFTER' , 'DDL' ) ) > 5 )  
    RAISERROR ('Trigger abc nested more than 5 levels.',16,-1)  
@@ -81,7 +80,7 @@ WHERE name = 'abc' ), 'AFTER' , 'DDL' ) ) > 5 )
   
 ### <a name="c-testing-the-nesting-level-of-all-triggers-executed"></a>C. Testando o nível de aninhamento de todos os gatilhos executados  
   
-```  
+```sql
 IF ( (SELECT trigger_nestlevel() ) > 5 )  
    RAISERROR  
       ('This statement nested over 5 levels of triggers.',16,-1)  

@@ -20,12 +20,12 @@ ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613b429b61e944c0bf39d01e7d9a96ee22c5ab0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9916894ee3e8f5aecbdd0b8e42ef39fc91082efb
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479578"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380511"
 ---
 # <a name="tan-transact-sql"></a>TAN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88479578"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
 TAN ( float_expression )  
 ```  
   
@@ -52,7 +52,7 @@ TAN ( float_expression )
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna a tangente de `PI()/2`.  
   
-```  
+```sql
 SELECT TAN(PI()/2);  
 ```  
   
@@ -66,7 +66,7 @@ SELECT TAN(PI()/2);
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir retorna a tangente de 0,45.  
   
-```  
+```sql
 SELECT TAN(.45);  
 ```  
   

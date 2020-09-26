@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca5a2c5fe01e67a4d2fb9486169e22c16d36f0a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae901261485ff0df0e7d34f19f629df497db1f45
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445632"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380716"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88445632"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 @@PROCID  
 ```  
   
@@ -53,18 +53,18 @@ ms.locfileid: "88445632"
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `@@PROCID` como o parâmetro de entrada na função `OBJECT_NAME` para retornar o nome do procedimento armazenado na mensagem `RAISERROR`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'usp_FindName', 'P' ) IS NOT NULL   
 DROP PROCEDURE usp_FindName;  
 GO  
 CREATE PROCEDURE usp_FindName  
-    @lastname varchar(40) = '%',   
-    @firstname varchar(20) = '%'  
+    @lastname VARCHAR(40) = '%',   
+    @firstname VARCHAR(20) = '%'  
 AS  
-DECLARE @Count int;  
-DECLARE @ProcName nvarchar(128);  
+DECLARE @Count INT;  
+DECLARE @ProcName NVARCHAR(128);  
 SELECT LastName, FirstName  
 FROM Person.Person   
 WHERE FirstName LIKE @firstname AND LastName LIKE @lastname;  

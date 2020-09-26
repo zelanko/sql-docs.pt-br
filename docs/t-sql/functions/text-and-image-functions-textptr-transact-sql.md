@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83e8edcea68c22bdd14154203c9bf13b84b42156
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422590"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380501"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funções Text e Image – TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88422590"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 TEXTPTR ( column )  
 ```  
   
@@ -78,10 +77,10 @@ TEXTPTR ( column )
 ### <a name="a-using-textptr"></a>a. Usando TEXTPTR  
  O exemplo a seguir usa a função `TEXTPTR` para localizar a coluna **image**`logo` associada a `New Moon Books` na tabela `pub_info` do banco de dados `pubs`. O ponteiro de texto é colocado em uma variável local `@ptrval.`  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(logo)  
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   
@@ -92,8 +91,8 @@ GO
 ### <a name="b-using-textptr-with-in-row-text"></a>B. Usando TEXTPTR com texto em linha  
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ponteiro de texto em linha deve ser usado dentro de uma transação, como mostra o exemplo a seguir.  
   
-```  
-CREATE TABLE t1 (c1 int, c2 text);  
+```sql
+CREATE TABLE t1 (c1 INT, c2 TEXT);  
 EXEC sp_tableoption 't1', 'text in row', 'on';  
 INSERT t1 VALUES ('1', 'This is text.');  
 GO  
@@ -109,7 +108,7 @@ COMMIT;
 ### <a name="c-returning-text-data"></a>C. Retornando dados de texto  
  O exemplo a seguir seleciona a coluna `pub_id` e o ponteiro de texto de 16 bytes da coluna `pr_info` na tabela `pub_info`.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, TEXTPTR(pr_info)  
@@ -137,7 +136,7 @@ pub_id
   
  O exemplo a seguir mostra como retornar os primeiros `8000` bytes de texto sem usar TEXTPTR.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SET TEXTSIZE 8000;  
@@ -168,10 +167,10 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ### <a name="d-returning-specific-text-data"></a>D. Retornando dados de texto específicos  
  O exemplo a seguir localiza a coluna `text` (`pr_info`) associada a `pub_id``0736` na tabela `pub_info`do banco de dados `pubs`. Primeiro, ele declara a variável local `@val`. O ponteiro de texto (uma longa cadeia de caracteres binários) é colocado em `@val` e fornecido como parâmetro para a instrução `READTEXT`. Isto retorna 10 bytes, iniciando no quinto byte (deslocamento de 4).  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @val varbinary(16);  
+DECLARE @val VARBINARY(16);  
 SELECT @val = TEXTPTR(pr_info)   
 FROM pub_info  
 WHERE pub_id = '0736';  
