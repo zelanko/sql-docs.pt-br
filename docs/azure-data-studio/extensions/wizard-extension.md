@@ -3,24 +3,24 @@ title: Criar uma extensão de assistente
 description: Este tutorial demonstra como criar uma extensão de assistente para adicionar uma funcionalidade personalizada ao Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 1ae3fe6606c926fedf7ff8c60a729c17d70b96be
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288138"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364053"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Criar uma extensão de assistente do Azure Data Studio
 
 Este tutorial demonstra como criar uma **extensão de assistente do Azure Data Studio**. A extensão contribui com um assistente para interagir com os usuários no Azure Data Studio.
 
-Neste tutorial, você aprenderá a:
+Neste artigo, você aprenderá a:
 > [!div class="checklist"]
 > - Instalar o gerador de extensão
 > - Criar sua extensão
