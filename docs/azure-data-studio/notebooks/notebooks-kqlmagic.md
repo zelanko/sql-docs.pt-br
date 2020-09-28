@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: f927f2259c96b0b42e184d0f4b0ee7e49cd5df01
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136566"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226966"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic no Azure Data Studio
 
@@ -107,6 +107,10 @@ Esta seção explica como executar a análise de dados usando Kqlmagic com um cl
    ```python
    %kql azureDataExplorer://code;cluster='help';database='Samples'
    ```
+
+    > [!Note]
+    > Se estiver usando seu próprio cluster ADX, você deverá incluir a região nas cadeias de conexão da seguinte maneira:   
+    ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
    Use o Logon do Dispositivo para se autenticar. Copie o código da saída e selecione **autenticar**, que abre um navegador no qual você precisa colar o código. Após autenticar-se com êxito, você pode voltar para o Azure Data Studio para continuar com o restante do script.
 
@@ -210,7 +214,7 @@ Consulte de dados usando o [operador renderizar](/azure/data-explorer/kusto/quer
 
 1. Verifique se o **Kernel** está definido como *Python3*.
 
-   ![Alteração](media/notebooks-kqlmagic/change-kernel.png)
+   ![Alterar](media/notebooks-kqlmagic/change-kernel.png)
 
 2. Carregue Kqlmagic:
 
