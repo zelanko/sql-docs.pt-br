@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d9eaba636c2567d60dfc62ce37080717e9c32e9
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b486d0fbb8e0f2c8595251de386bb9f133ac73cf
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680561"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379621"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>O que são pools de dados em um cluster de Big Data do SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Este artigo descreve a função dos *Pools de dados do SQL Server* em um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de dados do SQL.
+Este artigo descreve a função dos *Pools de dados do SQL Server* em um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. As seções a seguir descrevem a arquitetura, a funcionalidade e os cenários de uso de um pool de dados do SQL.
 
 Este vídeo de 5 minutos apresenta pools de dados e mostra como consultar dados de pools de dados:
 
@@ -28,13 +28,15 @@ Este vídeo de 5 minutos apresenta pools de dados e mostra como consultar dados 
 
 ## <a name="data-pool-architecture"></a>Arquitetura do pool de dados
 
-Um pool de dados é composto por uma ou mais instâncias de pool de dados do SQL Server. As instâncias de pool de dados do SQL fornecem armazenamento persistente no SQL Server para o cluster. Um pool de dados é usado para ingerir dados de consultas SQL ou de trabalhos do Spark. Para fornecer um melhor desempenho em grandes conjuntos de dados, os dados em um pool de dados são distribuídos em fragmentos entre as instâncias membro do pool de dados do SQL.
-
-## <a name="scale-out-data-marts"></a>Data marts de expansão
-
-Os pools de dados permitem a criação de data marts de expansão, em que dados externos de várias fontes são incluídos no pool de dados. Como os dados são distribuídos entre instâncias do pool de dados, consultas paralelas em relação aos dados organizados são mais eficientes.
+Um pool de dados consiste em uma ou mais instâncias do pool de dados do SQL Server que fornecem armazenamento do SQL Server persistente para o cluster. Ele permite a consulta de desempenho de dados armazenados em cache em fontes de dados externas e o descarregamento de trabalho. Os dados são incluídos no pool de dados usando consultas T-SQL ou de trabalhos do Spark. Para aprimorar o desempenho em grandes conjuntos de dados, os dados ingeridos são distribuídos em fragmentos e armazenados em todas as instâncias do SQL Server no pool. Os métodos de distribuições com suporte são round robin e replicados. Para a otimização de acesso de leitura, um índice columnstore clusterizado é criado em cada tabela em cada instância do pool de dados. Um pool de dados funciona como o data mart de expansão para clusters de Big Data do SQL.
 
 ![Data mart de expansão](media/concept-data-pool/data-virtualization-improvements.png)
+
+O acesso às instâncias do SQL Server no pool de dados é gerenciado por meio da instância mestra de SQL Server. Uma fonte de dados externa ao pool de dados é criada, juntamente com as tabelas externas do PolyBase para armazenar o cache de dados. Em segundo plano, o controlador cria um banco de dados no pool de data com tabelas que correspondem às tabelas externas. Na instância mestra do SQL Server, o fluxo de trabalho é transparente; o controlador redireciona as solicitações de tabela externa específicas às instâncias do SQL Server no pool de dados, o que pode ocorrer por meio do pool de computação, executa consultas e retorna o conjunto de resultados. Os dados no pool de dados só podem ser ingeridos ou consultados e não podem ser modificados. Portanto, qualquer atualização de dados exigiria uma remoção da tabela, seguida da recriação dela e de um novo preenchimento de dados subsequente. 
+
+## <a name="data-pool-scenarios"></a>Cenários de pool de dados
+
+ A finalidade dos relatórios é um cenário de pool de dados comum. Por exemplo, uma consulta complexa que une várias fontes de dados do PolyBase, usada para um relatório semanal, pode ser descarregada para o pool de dados. Os dados armazenados em cache fornecem uma computação rápida local e eliminam a necessidade de voltar para os conjuntos de dados originais. Da mesma forma, os dados do painel que exigem atualização periódica podem ser armazenados em cache no pool de dados para relatórios otimizados. A exploração de repetição do Machine Learning também poderia se beneficiar do armazenamento em cache de conjuntos de dados no pool de dados.
 
 ## <a name="next-steps"></a>Próximas etapas
 

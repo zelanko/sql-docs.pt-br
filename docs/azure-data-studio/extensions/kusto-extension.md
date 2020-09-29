@@ -9,18 +9,20 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 52f8bb103aad960750a74be1a4e35b0d1d5be5d7
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364063"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379611"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Extensão do Kusto (KQL) para o Azure Data Studio (versão prévia)
 
 A extensão do Kusto (KQL) para o [Azure Data Studio](../what-is.md) permite que você se conecte e consulte clusters do [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview).
 
-Agora, os usuários podem se conectar e navegar pelos respectivos clusters do Azure Data Explorer, escrever e executar consultas do KQL e criar notebooks com o kernel do Kusto completo com o IntelliSense. Ao habilitar a experiência nativa do Kusto (KQL) no Azure Data Studio, os engenheiros de dados, os cientistas de dados e os analistas de dados podem observar rapidamente tendências e anomalias em grandes quantidades de dados armazenados no Azure Data Explorer.
+Os usuários podem escrever e executar consultas do KQL e criar notebooks com o [kernel do Kusto](../notebooks/notebooks-kusto-kernel.md) completo com o IntelliSense.
+
+Ao habilitar a experiência nativa do Kusto (KQL) no Azure Data Studio, os engenheiros de dados, os cientistas de dados e os analistas de dados podem observar rapidamente tendências e anomalias em grandes quantidades de dados armazenados no Azure Data Explorer.
 
 Esta extensão está em versão prévia.
 
@@ -53,7 +55,7 @@ Para instalar a extensão do Kusto (KQL) no Azure Data Studio, siga as etapas ab
 
 Localize o cluster do Azure Data Explorer no [portal do Azure](https://ms.portal.azure.com/#home) e, em seguida, localize o URI para o cluster.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Extensão do Kusto":::
 
 No entanto, você pode começar imediatamente usando o cluster *help.kusto.windows.net*.
 
@@ -80,7 +82,7 @@ Para configurar um cluster do Azure Data Explorer ao qual se conectar, siga as e
     7. Deixe **Nome (opcional)** em branco.
         1. É possível usar esse campo para dar um alias ao seu servidor.
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Detalhes da conexão":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Extensão do Kusto":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>Como consultar um banco de dados do Azure Data Explorer no Azure Data Studio
 
@@ -118,24 +120,31 @@ Para alterar as configurações da extensão do Kusto, siga as etapas abaixo.
 
 As configurações das extensões se parecem com esta:
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Configurações de extensão do Kusto (KQL)":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Extensão do Kusto":::
 
 ## <a name="sanddance-visualization"></a>Visualização do SandDance
 
 A [extensão do SandDance](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) com a extensão do Kusto (KQL) no Azure Data Studio reúne visualizações interativas avançadas. No conjunto de resultados da consulta do KQL, selecione o botão **Visualizador** para iniciar o [SandDance](https://sanddance.js.org/).
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Visualização do SandDance":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Extensão do Kusto":::
 
-## <a name="limitations-and-considerations"></a>Limitações e considerações
+## <a name="known-issues"></a>Problemas conhecidos
 
-- Você precisa escolher um banco de dados para o cluster do Azure Data Explorer antes de executar uma consulta Kusto.
-- Se você deixar o cluster do Azure Data Explorer ocioso por muito tempo, ele poderá se desconectar.
-    - Solução alternativa: Desconecte-se do cluster e reconecte-se.
+| Detalhes | Solução alternativa |
+|---------|------------|
+| [Após ser recarregado, o viewlet de conexão do Kusto não funciona](https://github.com/microsoft/azuredatastudio/issues/12475). | N/D |
+| [Não é possível se reconectar automaticamente](https://github.com/microsoft/azuredatastudio/issues/11830). | Desconecte-se e reconecte-se ao cluster do Azure Data Explorer. |
+| [A atualização do cluster do Kusto não parece se reconectar corretamente](https://github.com/microsoft/azuredatastudio/issues/11824). | Desconecte-se e reconecte-se ao cluster do Azure Data Explorer. |
+| [A conexão com um cluster deve exibir o painel de cluster em vez de um banco de dados](https://github.com/microsoft/azuredatastudio/issues/12549) | N/D |
+| Para cada tabela em seu banco de dados de cluster de dados do Azure, há apenas uma opção para **SELECIONAR AS 1000 MELHORES** em vez de **USAR 10**. | N/D |
+
+Você pode arquivar uma [solicitação de recurso](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) para fornecer comentários à equipe do produto.  
+Você pode arquivar um [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) para fornecer comentários à equipe do produto.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 - [Criar e executar um notebook do Kusto](../notebooks/notebooks-kusto-kernel.md)
-- [Notebook Kqlmagic no Azure Data Studio](../notebooks-kqlmagic.md)
+- [Notebook Kqlmagic no Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
 - [Roteiro do SQL para o Kusto](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [O que é o Gerenciador de dados do Azure?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
 - [Como usar as visualizações do SandDance](https://sanddance.js.org/)

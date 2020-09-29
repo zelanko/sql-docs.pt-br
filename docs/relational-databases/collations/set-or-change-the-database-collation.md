@@ -14,19 +14,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22c6da8545c07424f95b83a56d406fceffeb6d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e2103871e039484a12234a7e26a2783125e9ffae
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465541"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364223"
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Este tópico descreve como definir e alterar a ordenação de banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhuma ordenação for especificada, será usada a ordenação do servidor.  
+  Este tópico descreve como definir e alterar a ordenação de banco de dados usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se nenhuma ordenação for especificada, será usada a ordenação do servidor.  
   
 > [!IMPORTANT]
-> Alterar a ordenação do banco de dados não é explicitamente proibido no Banco de Dados SQL do Azure. No entanto, alterar a ordenação do banco de dados requer o bloqueio exclusivo do banco de dados e de outros processos de usuário ou em segundo plano (por exemplo, se o segundo plano estiver executando backups), o que pode manter os bloqueios do banco de dados e impedir alterações na ordenação. A declaração `ALTER DATABASE COLLATE` no Banco de Dados SQL do Azure não tem suporte.
+> A declaração `ALTER DATABASE COLLATE` no Banco de Dados SQL do Azure não tem suporte.
 
  **Neste tópico**  
   

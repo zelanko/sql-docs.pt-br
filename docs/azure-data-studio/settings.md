@@ -3,18 +3,18 @@ title: Configurações do Workspace e do Usuário
 description: Saiba como usar configurações para personalizar o editor, a interface do usuário e o comportamento funcional do Azure Data Studio para atender às suas preferências.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06e9efa72ef82d8335db4b7ec6b8941c95501790
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114519"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364177"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificar Configurações do Workspace e do Usuário
 
@@ -22,8 +22,8 @@ ms.locfileid: "91114519"
 
 O Azure Data Studio oferece dois escopos diferentes para as configurações:
 
-* **Usuário** Essas configurações se aplicam globalmente a qualquer instância do Azure Data Studio que você abre.
-* **Workspace** Configurações do workspace são configurações específicas a uma pasta em seu computador e só estão disponíveis quando a pasta está aberta na barra lateral do Explorer. Configurações definidas nesse escopo substituem o escopo do usuário.
+* **Usuário** – Essas configurações se aplicarão globalmente a qualquer instância do Azure Data Studio que você abre.
+* **Workspace** – Configurações do workspace são configurações específicas a uma pasta em seu computador e só estão disponíveis quando a pasta está aberta na barra lateral do Explorer. Configurações definidas nesse escopo substituem o escopo do usuário.
 
 ## <a name="creating-user-and-workspace-settings"></a>Criando Configurações do Workspace e do Usuário
 
@@ -37,7 +37,7 @@ O exemplo a seguir desabilita números de linha no editor e configura as linhas 
 
 As alterações nas configurações são recarregadas pelo Azure Data Studio depois que o arquivo modificado `settings.json` é salvo.
 
-> [!NOTE] 
+> [!NOTE]
 > as configurações do workspace são úteis para compartilhar configurações específicas do projeto com uma equipe.
 
 ## <a name="settings-file-locations"></a>Locais do arquivo de configurações
@@ -52,13 +52,13 @@ O arquivo de configuração do workspace fica localizado na pasta `.Azure Data S
 
 ## <a name="hot-exit"></a>Hot Exit
 
-Por padrão, o Azure Data Studio memoriza alterações de arquivos não salvas quando você sai. É o mesmo que o recurso de Hot Exit do Visual Studio Code.
+Por padrão, o Azure Data Studio memoriza alterações de arquivos não salvas quando você sai. No Visual Studio Code, é o mesmo que o recurso de Hot Exit.
 
 Por padrão, Hot Exit fica desativado. Habilite o recurso de Hot Exit editando a configuração `files.hotExit`. Para obter detalhes, confira [Hot Exit (na documentação do Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
 ## <a name="tab-color"></a>Cor da guia
 
-Para simplificar a identificação das conexões com que você está trabalhando, as guias abertas no editor podem ter suas cores definidas de forma a corresponder à cor do grupo de servidores ao qual a conexão pertence. Por padrão, as cores das guias ficam desativadas. Habilite o recurso de cores das guias editando a configuração `sql.tabColorMode`.
+Para simplificar a identificação das conexões com que você está trabalhando, as guias abertas no editor podem ter as respectivas cores definidas de maneira a corresponder à cor do grupo de servidores ao qual a conexão pertence. Por padrão, as cores das guias ficam desativadas. Habilite o recurso de cores das guias editando a configuração `sql.tabColorMode`.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

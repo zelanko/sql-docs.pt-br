@@ -3,31 +3,32 @@ title: Criar uma extensão de painel
 description: Este tutorial demonstra como criar uma extensão de painel para adicionar uma funcionalidade personalizada ao Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 835b1fd4687dc5fd86afe300d7c6ed56dc2ed6ea
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111644"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364093"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Criar uma extensão de painel do Azure Data Studio
 
-Este tutorial demonstra como criar uma **extensão de painel do Azure Data Studio**. A extensão contribui para o painel de conexão do Azure Data Studio, de modo que você possa estender a funcionalidade do Azure Data Studio de maneira que seja facilmente visível para os usuários.
+Este tutorial demonstra como criar uma extensão de painel do Azure Data Studio. A extensão contribui para o painel de conexão do Azure Data Studio, de modo que você possa estender a funcionalidade do Azure Data Studio de maneira que seja facilmente visível para os usuários.
 
-Neste tutorial, você aprenderá a:
+Neste artigo, você aprenderá a:
+
 > [!div class="checklist"]
-> - Instalar o gerador de extensão
-> - Criar sua extensão
-> - Contribuir para o painel na extensão
-> - Testar sua extensão
-> - Empacotar sua extensão
-> - Publicar sua extensão no marketplace
+> - Instalar o gerador de extensão.
+> - Criar sua extensão.
+> - Contribuir para o painel em sua extensão.
+> - Testar sua extensão.
+> - Empacotar sua extensão.
+> - Publicar sua extensão no marketplace.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -35,12 +36,12 @@ O Azure Data Studio se baseia na mesma estrutura que o Visual Studio Code, porta
 
 - O [Node.js](https://nodejs.org) instalado e disponível em seu `$PATH`. O Node.js inclui o [npm](https://www.npmjs.com/), o Gerenciador de Pacotes do Node.js, que é usado para instalar o gerador de extensão.
 - O [Visual Studio Code](https://code.visualstudio.com) para depurar a extensão.
-- A [Extensão de depuração](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) do Azure Data Studio (opcional). Ela permite testar sua extensão sem a necessidade de empacotar e instalá-la no Azure Data Studio.
-- Certifique-se de que `azuredatastudio` está em seu caminho. Para o Windows, escolha a opção `Add to Path` em setup.exe. Para Mac ou Linux, execute o *Comando instalar 'azuredatastudio' no caminho*.
+- A [Extensão de depuração](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) do Azure Data Studio (opcional). A Extensão de depuração permite testar sua extensão sem a necessidade de empacotá-la e instalá-la no Azure Data Studio.
+- Certifique-se de que `azuredatastudio` está em seu caminho. Para o Windows, escolha a opção **Adicionar ao Caminho** em setup.exe. Para Mac ou Linux, execute o **Comando instalar 'azuredatastudio' no caminho**.
 
 ## <a name="install-the-extension-generator"></a>Instalar o gerador de extensão
 
-Para simplificar o processo de criação de extensões, criamos um [gerador de extensão](https://code.visualstudio.com/docs/extensions/yocode) usando o Yeoman. Para instalá-lo, execute o seguinte no prompt de comando:
+Para simplificar o processo de criação de extensões, criamos um [gerador de extensão](https://code.visualstudio.com/docs/extensions/yocode) usando o Yeoman. Para instalá-lo, execute o seguinte comando no prompt de comando:
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -52,9 +53,9 @@ Para simplificar o processo de criação de extensões, criamos um [gerador de e
 
 O painel de conexão do Azure Data Studio é uma ferramenta avançada que resume e fornece insights sobre as conexões de um usuário.
 
-Há duas variações do painel: o 'painel de servidor' que resume todo o servidor e o 'painel de banco de dados' que resume um banco de dados individual. Acesse-o clicando com o botão direito do mouse em um servidor ou um banco de dados na visualização Conexões do Azure Data Studio e clicando em **Gerenciar**:
+Há duas variações do painel. O *painel de servidor* resume todo o servidor e o *painel de banco de dados* resume um banco de dados individual. Acesse o painel clicando com o botão direito do mouse em um servidor ou um banco de dados no viewlet **Conexões** do Azure Data Studio e selecionando **Gerenciar**.
 
-:::image type="content" source="media/dashboard-extension/dashboard-summary.gif" alt-text="Introdução aos painéis":::
+:::image type="content" source="media/dashboard-extension/dashboard-summary.gif" alt-text="Captura de tela que mostra a introdução dos painéis.":::
 
 Há três pontos de contribuição principais para que as extensões adicionem uma funcionalidade ao painel:
 
@@ -62,7 +63,7 @@ Há três pontos de contribuição principais para que as extensões adicionem u
 2. **Ações da Home Page**: botões de ação na parte superior da barra de ferramentas de conexão.
 3. **Widgets**: grafos que são executados no SQL Server.
 
-:::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Pontos de contribuição":::
+   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Captura de tela que mostra a introdução dos painéis.":::
 
 ### <a name="run-the-extension-generator"></a>Executar o gerador de extensão
 
@@ -72,23 +73,23 @@ Para criar uma extensão:
 
    `yo azuredatastudio`
 
-2. Escolha **Novo Dashboard** na lista de tipos de extensão.
+1. Escolha **Novo Dashboard** na lista de tipos de extensão.
 
-3. Preencha os avisos, conforme mostrado abaixo. Isso criará uma extensão que contribui com uma guia para o Painel de Servidor.
+1. Preencha os prompts, conforme mostrado, para criar uma extensão que contribui com uma guia para o painel de servidor.
 
-:::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Gerador de extensão":::
+   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Captura de tela que mostra a introdução dos painéis.":::
 
-Como há muitos avisos, veja um pouco mais de informações sobre o que cada pergunta significa:
+   Como há muitos prompts, veja um pouco mais de informações sobre o que cada pergunta significa:
 
-:::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Fluxograma de painéis":::
+   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Captura de tela que mostra a introdução dos painéis.":::
 
 Seguir as etapas anteriores cria uma nova pasta. Abra a pasta no Visual Studio Code e você estará pronto para criar sua extensão de painel.
 
 ### <a name="run-the-extension"></a>Executar a extensão
 
-Vamos ver o que o modelo de painel nos oferece executando a extensão. Antes da execução, verifique se a **extensão de Depuração do Azure Data Studio** está instalada no Visual Studio Code.
+Vamos ver o que o modelo de painel nos oferece executando a extensão. Antes de executá-la, verifique se a **extensão de Depuração do Azure Data Studio** está instalada no Visual Studio Code.
 
-Selecione **F5** no VS Code para iniciar o Azure Data Studio no modo de depuração com a extensão em execução. Em seguida, você poderá ver como esse modelo padrão contribui para o painel.
+Selecione **F5** no Visual Studio Code para iniciar o Azure Data Studio no modo de depuração com a extensão em execução. Em seguida, você poderá ver como esse modelo padrão contribui para o painel.
 
 Depois, veremos como modificar esse painel padrão.
 
@@ -98,19 +99,19 @@ O arquivo mais importante para começar a usar o desenvolvimento de extensões �
 
 Estas são algumas alterações para você experimentar:
 
-- Explore os tipos de insights, incluindo 'bar', 'horizontalBar' e 'timeSeries'
-- Escreva suas consultas para executá-la na conexão do SQL Server
-- Veja este [tutorial de insight de exemplo](../tutorial-qds-sql-server.md) ou [este](../tutorial-table-space-sql-server.md) para obter tutoriais de insights específicos
+- Explore os tipos de insights, que incluem bar, horizontalBar e timeSeries.
+- Escreva suas consultas para executá-las na conexão do SQL Server.
+- Confira este [tutorial de insight de exemplo](../tutorial-qds-sql-server.md) ou [este tutorial](../tutorial-table-space-sql-server.md) para obter tutoriais de insights específicos.
 
 ## <a name="package-your-extension"></a>Empacotar sua extensão
 
-Para compartilhar com outras pessoas, você precisa empacotar a extensão em um único arquivo. Ele pode ser publicado no marketplace de extensões do Azure Data Studio ou compartilhado entre sua equipe ou comunidade. Para fazer isso, você precisa instalar outro pacote npm na linha de comando:
+Para compartilhar a extensão com outras pessoas, você precisará empacotá-la em um só arquivo. Sua extensão pode ser publicada no marketplace de extensões do Azure Data Studio ou compartilhada entre a sua equipe ou sua comunidade. Para realizar essa etapa, você precisa instalar outro pacote npm da linha de comando.
 
 ```console
 `npm install -g vsce`
 ```
 
-Edite o `README.md` como desejar, procure o diretório base da extensão e execute `vsce package`. Opcionalmente, você pode vincular um repositório com a extensão ou continuar sem um. Para adicionar um, adicione uma linha semelhante ao arquivo `package.json`.
+Edite o arquivo `README.md` de sua preferência. Navegue até o diretório base da extensão e execute `vsce package`. Opcionalmente, você pode vincular um repositório com a extensão ou continuar sem um. Para adicionar um, adicione uma linha semelhante ao arquivo `package.json`.
 
 ```json
 "repository": {
@@ -119,32 +120,32 @@ Edite o `README.md` como desejar, procure o diretório base da extensão e execu
 }
 ```
 
-Depois que essas linhas forem adicionadas, um arquivo my-test-extension-0.0.1.vsix terá sido criado e estará pronto para ser instalado no Azure Data Studio.
+Depois que essas linhas forem adicionadas, um arquivo `my-test-extension-0.0.1.vsix` será criado e estará pronto para ser instalado no Azure Data Studio.
 
-:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Instalar o VSIX":::
+:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Captura de tela que mostra a introdução dos painéis.":::
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Publicar sua extensão no marketplace
 
-O marketplace de extensões do Azure Data Studio ainda não está totalmente implementado, mas o processo atual é hospedar o VSIX da extensão em algum lugar (por exemplo, uma página de Versão do GitHub) e enviar uma PR atualizando [este arquivo JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) com as informações de sua extensão.
+O marketplace de extensões do Azure Data Studio está em construção. O processo atual é hospedar o VSIX de extensão em algum lugar, por exemplo, em uma página de versão do GitHub. Em seguida, envie uma solicitação de pull que atualiza [esse arquivo JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) com suas informações de extensão.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
-> - Instalar o gerador de extensão
-> - Criar sua extensão
-> - Contribuir para o painel na extensão
-> - Testar sua extensão
-> - Empacotar sua extensão
-> - Publicar sua extensão no marketplace
+> - Instalar o gerador de extensão.
+> - Criar sua extensão.
+> - Contribuir para o painel em sua extensão.
+> - Testar sua extensão.
+> - Empacotar sua extensão.
+> - Publicar sua extensão no marketplace.
 
-Esperamos que, depois de ler isto, você se sinta inspirado a criar sua própria extensão para o Azure Data Studio. Temos suporte para Insights do Painel (grafos bonitos que são executados em seu SQL Server), várias APIs específicas do SQL e um grande conjunto de pontos de extensão herdados do Visual Studio Code.
+Esperamos que, depois de ler esse artigo, você tenha inspiração para criar uma extensão para o Azure Data Studio. Temos suporte para Insights do Painel (grafos atraentes que são executados em seu SQL Server), várias APIs específicas do SQL e um grande conjunto de pontos de extensão herdados do Visual Studio Code.
 
-Se você tiver uma ideia, mas não souber exatamente como começar, abra um problema ou envie um tweet para a equipe: [azuredatastudio](https://twitter.com/azuredatastudio).
+Caso tenha uma ideia, mas não saiba exatamente como começar a desenvolvê-la, abra um problema ou envie um tweet para a equipe em [azuredatastudio](https://twitter.com/azuredatastudio).
 
-Você sempre pode consultar o [Guia de extensão do Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview), pois ele abrange todas as APIs e padrões existentes.
+Para obter mais informações, o [guia de extensão do Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview) abrange todas as APIs e os padrões existentes.
 
 Para saber como trabalhar com T-SQL no Azure Data Studio, conclua o tutorial do Editor de T-SQL:
 
 > [!div class="nextstepaction"]
-> [Usar o editor de Transact-SQL para criar objetos de banco de dados](../tutorial-sql-editor.md).
+> [Usar o editor de Transact-SQL para criar objetos de banco de dados](../tutorial-sql-editor.md)

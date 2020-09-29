@@ -3,18 +3,18 @@ title: Criar snippets de código reutilizáveis
 description: Saiba como criar e usar snippets de código SQL do Azure Data Studio, que facilitam a criação de bancos de dados e objetos de banco de dados.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 95b0385178a5e2bd25f8b64be5f910d4f885e34b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: aa1826539a6b9d2a5f649159e566d3ceda8d624d
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746086"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364123"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Criar e usar snippets de código para criar scripts T-SQL (Transact-SQL) rapidamente no Azure Data Studio
 
@@ -30,42 +30,40 @@ Snippets de código definidos pelo usuário também podem ser criados.
 
    ![snippets](media/code-snippets/sql-snippets.png)
 
-1. Selecione o snippet que deseja usar e ele gerará o script T-SQL. Por exemplo, selecione *sqlCreateTable*:
+2. Selecione o snippet que deseja usar e ele gerará o script T-SQL. Por exemplo, selecione *sqlCreateTable*:
 
    ![snippets de create table](media/code-snippets/create-table.png)
 
-1. Atualize os campos realçados com seus valores específicos. Por exemplo, substitua *TableName* e *Schema* pelos valores do banco de dados:
+3. Atualize os campos realçados com seus valores específicos. Por exemplo, substitua *TableName* e *Schema* pelos valores do banco de dados:
 
-   ![substituir campo de modelo](media/code-snippets/table-from-snippet.png)
+   ![Tabela do snippet](media/code-snippets/table-from-snippet.png)
 
    Se o campo que você deseja alterar não estiver mais realçado (isso acontece ao mover o cursor em torno do editor), clique com o botão direito do mouse na palavra que deseja alterar e selecione **Alterar todas as ocorrências**:
 
-   ![substituir campo de modelo](media/code-snippets/change-all.png)
+   ![Alterar tudo](media/code-snippets/change-all.png)
 
-1. Atualize ou adicione qualquer T-SQL adicional necessário para o snippet selecionado. Por exemplo, atualize *Column1*, *Column2* e adicione mais colunas.
+4. Atualize ou adicione qualquer T-SQL adicional necessário para o snippet selecionado. Por exemplo, atualize *Column1*, *Column2* e adicione mais colunas.
 
-
- 
-## <a name="creating-sql-code-snippets"></a>Como criar snippets de código SQL 
+## <a name="creating-sql-code-snippets"></a>Como criar snippets de código SQL
 
 Você pode definir seus próprios snippets. Para abrir o arquivo de snippet SQL para edição:
 
 1. Abra a *paleta de comandos* (**Shift+Ctrl+P**), digite *captura* e selecione **Preferências: Abrir Snippets de Usuário**:
 
-   ![substituir campo de modelo](media/code-snippets/user-snippets.png)
+   ![Snippets de usuário](media/code-snippets/user-snippets.png)
 
-1. Selecione **SQL**:
+2. Selecione **SQL**:
 
    > [!NOTE]
    > O Azure Data Studio herda a funcionalidade de snippet de código do Visual Studio Code e, portanto, este artigo aborda especificamente o uso de snippets SQL. Para obter informações mais detalhadas, confira [Como criar seus próprios snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) na documentação do Visual Studio Code. 
 
-   ![substituir campo de modelo](media/code-snippets/select-sql.png)
+   ![Selecionar SQL](media/code-snippets/select-sql.png)
 
-1. Cole o seguinte código em *sql.json*:
+3. Cole o seguinte código em *sql.json*:
 
-   ```sql
-   {
-   "Select top 5": {
+    ```sql
+    {
+     "Select top 5": {
     "prefix": "sqlSelectTop5",
     "body": "SELECT TOP 5 * FROM ${1:TableName}",
     "description": "User-defined snippet example 1"
@@ -81,25 +79,26 @@ Você pode definir seus próprios snippets. Para abrir o arquivo de snippet SQL 
     "-- Create the table in the specified schema",
     "CREATE TABLE $2.$1",
     "(",
-    "   $1Id INT NOT NULL PRIMARY KEY, -- primary key column",
-    "   Column1 [NVARCHAR](50) NOT NULL,",
-    "   Column2 [NVARCHAR](50) NOT NULL",
-    "   -- specify more columns here",
+    "$1Id INT NOT NULL PRIMARY KEY, -- primary key column",
+    "Column1 [NVARCHAR](50) NOT NULL,",
+    "Column2 [NVARCHAR](50) NOT NULL",
+    "-- specify more columns here",
     ");",
     "GO"
     ],
-   "description": "User-defined snippet example 2"
-   }
-   }
-   ```
+       "description": "User-defined snippet example 2"
+       }
+       }
+       ```
 
-1. Salve o arquivo sql.json.
-1. Abra uma nova janela do editor de consultas clicando em **Ctrl+N**.
-2. Digite **sql** e você verá os dois snippets de usuário recém-adicionados: *sqlCreateTable2* e *sqlSelectTop5*.
+4. Save the sql.json file.
 
-Selecione um dos novos snippets e experimente uma execução de teste.
+5. Open a new query editor window by clicking **Ctrl+N**.
 
+6. Type **sql**, and you see the two user snippets you just added; *sqlCreateTable2* and *sqlSelectTop5*.
 
-## <a name="additional-resources"></a>Recursos adicionais
+Select one of the new snippets and give it a test run!
 
-Para obter informações sobre o editor SQL, confira [Tutorial do editor de códigos](tutorial-sql-editor.md).
+## Next steps
+
+For information about the SQL editor, see [Code editor tutorial](tutorial-sql-editor.md).
