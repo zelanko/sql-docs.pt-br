@@ -4,22 +4,33 @@ description: Saiba mais sobre as alterações feitas no Assistente de Migração
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 75a82f8f87997dfa028a5e0b1ee7bae73c3913e6
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863462"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497884"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novidades no SSMA para MySQL (MySQLToSql)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para MySQL alterações em cada versão.
+
+## <a name="ssma-v814"></a>8.14 do SSMA v
+
+Além de várias melhorias para garantir maior acessibilidade para pessoas com deficiências, a versão v 8.14 do SSMA para MySQL requer uma atualização de projeto, pois agora armazena a versão completa do servidor de origem/destino nos metadados do projeto.
+
+## <a name="ssma-v813"></a>8.13 do SSMA v
+
+A versão v 8.13 do SSMA para MySQL contém as seguintes alterações:
+
+* Considere as conversões implícitas de tipo ao converter o procedimento e as chamadas de função
+* Melhorar o log da cadeia de conexão de origem para ajudar a solucionar problemas de conexão
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 

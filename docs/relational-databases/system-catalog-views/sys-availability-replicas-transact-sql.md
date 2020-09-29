@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 645d927a66deba3d19c44872a28abc16b2054fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc41c7e1a848ffd7b57012f0fbb1093a9115da3e
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539718"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498268"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,8 +57,8 @@ Se a instância de servidor local não puder falar com o cluster de failover WSF
 |**modify_date**|**datetime**|A data da última modificação da réplica.<br /><br /> NULL = Réplica não nesta instância de servidor.|  
 |**backup_priority**|**int**|Representa a prioridade especificada pelo usuário para executar backups nesta réplica em relação às outras réplicas no mesmo grupo de disponibilidade. O valor é um número inteiro no intervalo de 0..100.<br /><br /> Para obter mais informações, confira [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Ponto de extremidade de conectividade (URL) da réplica de disponibilidade somente leitura. Para obter informações, veja [Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
-|**seeding_mode**|**tinyint**|Um destes: </br></br> 0: manual </br></br> 1: automático|
-|**seeding_mode_desc**|**nvarchar(60)**|Descreve o modo de propagação. </br></br> MANUAL </br></br> AUTOMATIC|
+|**seeding_mode**|**tinyint**|Um destes: </br></br> 0: automático </br></br> 1: manual|
+|**seeding_mode_desc**|**nvarchar(60)**|Descreve o modo de propagação. </br></br> AUTOMATIC </br></br>MANUAL|
   
 ## <a name="security"></a>Segurança  
   

@@ -2,7 +2,7 @@
 title: Ajuste automático | Microsoft Docs
 description: Saiba mais sobre o ajuste automático no SQL Server e no banco de dados SQL do Azure
 ms.custom: fasttrack-edit
-ms.date: 08/16/2017
+ms.date: 09/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,28 +10,33 @@ ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance tuning [SQL Server]
+- automatic tuning
+- aprc
+- automatic plan regression correction
+- last known good plan
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5617630853a700c906949cfa9a9bc2acf719c2ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f59aee58735b3b38cf8de3a47461cad1c59f6b81
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727910"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497957"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 O ajuste automático é um recurso de banco de dados que fornece informações sobre possíveis problemas de desempenho de consultas, recomenda soluções e corrige automaticamente os problemas identificados.
 
-O ajuste automático no [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] notifica sempre que um possível problema de desempenho é detectado e permite que você aplique ações corretivas, ou permite que o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] corrija automaticamente os problemas de desempenho. O ajuste automático no [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] permite que você identifique e corrija problemas de desempenho causados por **regressões de opções de plano de execução de consulta**. O ajuste automático [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] também cria índices necessários e descarta índices não utilizados. Para obter mais informações sobre planos de execução de consulta, consulte [planos de execução](../../relational-databases/performance/execution-plans.md).
+O ajuste automático, introduzido no [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] , notifica você sempre que um possível problema de desempenho é detectado e permite que você aplique ações corretivas, ou permite que o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] corrija automaticamente os problemas de desempenho. O ajuste automático [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que você identifique e corrija problemas de desempenho causados por **regressões de opções de plano de execução de consulta**. O ajuste automático [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] também cria índices necessários e descarta índices não utilizados. Para obter mais informações sobre planos de execução de consulta, consulte [planos de execução](../../relational-databases/performance/execution-plans.md).
 
 O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] monitora as consultas que são executadas no banco de dados e melhora automaticamente o desempenho da carga de trabalho. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] tem um mecanismo de inteligência interno que pode ajustar e aprimorar automaticamente o desempenho de suas consultas, adaptando dinamicamente o banco de dados para sua carga de trabalho. Há dois recursos de ajuste automático que estão disponíveis:
 
- -  A **correção automática de plano** identifica planos de execução de consulta problemáticos e corrige problemas de desempenho do plano de execução de consulta. **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
- -  O **gerenciamento automático de índice** identifica os índices que devem ser adicionados ao banco de dados e os índices que devem ser removidos. **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+-   A **correção automática de plano** identifica planos de execução de consulta problemáticos, como uma [sensibilidade de parâmetro ou](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) problemas de detecção de parâmetro, e corrige problemas de desempenho relacionados ao plano de execução de consulta forçando o último plano válido antes da ocorrência da regressão. **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+-   O **gerenciamento automático de índice** identifica os índices que devem ser adicionados ao banco de dados e os índices que devem ser removidos. **Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>Por que usar o ajuste automático?
 
@@ -49,13 +54,19 @@ Esse processo permite que o banco de dados se adapte dinamicamente à sua carga 
 
 A correção automática de plano é um recurso de ajuste automático que identifica a **regressão da opção do plano de execução** e corrige automaticamente o problema forçando o último plano válido conhecido. Para obter mais informações sobre planos de execução de consulta e o otimizador de consulta, consulte o [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md).
 
+> [!IMPORTANT]
+> A correção automática de plano depende do Repositório de Consultas estar habilitado no banco de dados para acompanhamento de carga de trabalho. 
+
 ### <a name="what-is-execution-plan-choice-regression"></a>O que é regressão de opção de plano de execução?
 
-O [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] pode usar planos de execução diferentes para executar as [!INCLUDE[tsql_md](../../includes/tsql-md.md)] consultas. Os planos de consulta dependem das estatísticas, dos índices e de outros fatores. O plano ideal que deve ser usado para executar uma [!INCLUDE[tsql_md](../../includes/tsql-md.md)] consulta pode mudar ao longo do tempo, dependendo das alterações nesses fatores. Em alguns casos, o novo plano pode não ser melhor do que o anterior, e o novo plano pode causar uma regressão de desempenho.
+O [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] pode usar planos de execução diferentes para executar as [!INCLUDE[tsql_md](../../includes/tsql-md.md)] consultas. Os planos de consulta dependem das estatísticas, dos índices e de outros fatores. O plano ideal que deve ser usado para executar uma [!INCLUDE[tsql_md](../../includes/tsql-md.md)] consulta pode mudar ao longo do tempo, dependendo das alterações nesses fatores. Em alguns casos, o novo plano pode não ser melhor do que o anterior, e o novo plano pode causar uma regressão de desempenho, como uma [sensibilidade de parâmetro ou](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) um problema relacionado à detecção de parâmetros. 
 
  ![Regressão da opção do plano de execução de consulta](media/plan-choice-regression.png "Regressão da opção do plano de execução de consulta") 
 
 Sempre que você perceber que uma regressão de escolha de plano ocorreu, você deve encontrar um bom plano anterior e forçá-lo a ser usado em vez do atual. Isso pode ser feito usando o `sp_query_store_force_plan` procedimento. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] no [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] fornece informações sobre planos regressivos e ações corretivas recomendadas. Além disso, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] o permite automatizar completamente esse processo e deixar a [!INCLUDE[ssde_md](../../includes/ssde_md.md)] correção de qualquer problema encontrado relacionado à alteração do plano.
+
+> [!IMPORTANT]
+> A correção automática do plano deve ser usada no escopo de uma atualização do nível de compatibilidade do banco de dados, depois que uma linha de base tiver sido capturada, para atenuar automaticamente os riscos de atualização da carga de trabalho. Para obter mais informações sobre esse caso de uso, consulte [manter a estabilidade do desempenho durante a atualização para SQL Server mais recentes](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). 
 
 ### <a name="automatic-plan-choice-correction"></a>Correção automática de escolha do plano
 
@@ -63,10 +74,10 @@ O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] pode alternar automaticamente p
 
 ![Correção de opção do plano de execução de consulta](media/force-last-good-plan.png "Correção de opção do plano de execução de consulta") 
 
-O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta automaticamente qualquer regressão de opção de plano potencial, incluindo o plano que deve ser usado em vez do plano errado. Quando o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] aplica o último plano bom conhecido, ele monitora automaticamente o desempenho do plano forçado. Se o plano forçado não for melhor do que o plano regressivo, o novo plano não será forçado e o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] compilará um novo plano. Se o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verificar se o plano forçado é melhor do que o plano regressivo, o plano forçado será retido. Ele será retido até que ocorra uma recompilação (por exemplo, na próxima atualização de estatísticas ou alteração de esquema).
+O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta automaticamente qualquer regressão de opção de plano potencial, incluindo o plano que deve ser usado em vez do plano errado. Quando o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] aplica o último plano bom conhecido antes da regressão ter ocorrido, ele monitora automaticamente o desempenho do plano forçado. Se o plano forçado não for melhor do que o plano regressivo, o novo plano não será forçado e o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] compilará um novo plano. Se o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verificar se o plano forçado é melhor do que o plano regressivo, o plano forçado será retido. Ele será retido até que ocorra uma recompilação (por exemplo, na próxima atualização de estatísticas ou alteração de esquema). Para obter mais informações sobre a imposição de plano e os tipos de planos que podem ser forçados, consulte [limitações de imposição de plano](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md#plan-forcing-limitations).
 
 > [!NOTE]
-> Se a instância de SQL Server for reiniciada antes de uma ação de forçar um plano ser verificada, esse plano será automaticamente não forçado. Caso contrário, a imposição de plano persistirá em SQL Server reinicializações.
+> Se a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância for reiniciada antes de uma ação de forçar um plano ser verificada, esse plano será automaticamente não forçado. Caso contrário, a imposição de plano será persistida em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reinicializações.
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>Habilitando a correção automática da escolha do plano
 
@@ -86,21 +97,21 @@ Sem o ajuste automático, os usuários devem monitorar periodicamente o sistema 
 > [!TIP]
 > Como alternativa, use as **consultas com planos forçados** repositório de consultas exibição para localizar e não forçar planos.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece todas as exibições e os procedimentos necessários para monitorar o desempenho e corrigir problemas no Repositório de Consultas.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece todas as exibições e os procedimentos necessários para monitorar o desempenho e corrigir problemas no Repositório de Consultas.
 
-No [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] , você pode encontrar regressões de escolha de plano usando exibições do sistema repositório de consultas. No [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] , o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta e mostra regressões de escolha de plano potencial e as ações recomendadas que devem ser aplicadas na exibição de [&#41;sys. dm_db_tuning_recommendations &#40;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) . A exibição mostra informações sobre o problema, a importância do problema e detalhes como a consulta identificada, a ID do plano regressivo, a ID do plano que foi usado como linha de base para comparação e a [!INCLUDE[tsql_md](../../includes/tsql-md.md)] instrução que pode ser executada para corrigir o problema.
+No [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] , você pode encontrar regressões de escolha de plano usando exibições do sistema repositório de consultas. A partir [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] do, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta e mostra regressões de escolha de plano potencial e as ações recomendadas que devem ser aplicadas em [sys. Dm_db_tuning_recommendations &#40;DMV Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) . A DMV mostra informações sobre o problema, a importância do problema e detalhes como a consulta identificada, a ID do plano regressivo, a ID do plano que foi usado como linha de base para comparação e a [!INCLUDE[tsql_md](../../includes/tsql-md.md)] instrução que pode ser executada para corrigir o problema.
 
-| tipo | descrição | DATETIME | score | detalhes | ... |
+| tipo | description | DATETIME | score | detalhes | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Tempo de CPU alterado de 4 ms para 14 MS | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Tempo de CPU alterado de 37 MS para 84 MS | 16/03/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 
 Algumas colunas dessa exibição são descritas na lista a seguir:
- - Tipo da ação recomendada-`FORCE_LAST_GOOD_PLAN`
- - Descrição que contém informações por que o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] pensa que essa alteração de plano é uma regressão de desempenho potencial
- - DateTime quando a regressão potencial é detectada
- - Pontuação dessa recomendação
- - Detalhes sobre os problemas, como ID do plano detectado, ID do plano regressivo, ID do plano que deve ser forçado a corrigir o problema, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script que pode ser aplicado para corrigir o problema, etc. Os detalhes são armazenados no [formato JSON](../../relational-databases/json/index.md)
+ - Tipo da ação recomendada `FORCE_LAST_GOOD_PLAN` .
+ - Descrição que contém informações por que o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] pensa que essa alteração de plano é uma regressão de desempenho potencial.
+ - DateTime quando a regressão potencial é detectada.
+ - Pontuação dessa recomendação.
+ - Detalhes sobre os problemas, como ID do plano detectado, ID do plano regressivo, ID do plano que deve ser forçado a corrigir o problema, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script que pode ser aplicado para corrigir o problema, etc. Os detalhes são armazenados no [formato JSON](../../relational-databases/json/index.md).
 
 Use a consulta a seguir para obter um script que corrige o problema e informações adicionais sobre o lucro estimado:
 
@@ -127,7 +138,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | script | ID da consulta \_ | ID do plano atual \_ | ID do plano recomendado \_ | lucro estimado \_ | \_propenso a erros
+| reason | score | Script | ID da consulta \_ | ID do plano atual \_ | ID do plano recomendado \_ | lucro estimado \_ | \_propenso a erros
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Tempo de CPU alterado de 3 ms para 46 MS | 36 | \_Repositório de consultas do SP exec \_ \_ forçar \_ plano 12, 17; | 12 | 28 | 17 | 11,59 | 0
 
@@ -136,7 +147,7 @@ A coluna `estimated_gain` representa o número estimado de segundos que seria sa
 Embora o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] forneça todas as informações necessárias para identificar regressões de escolha de plano, o monitoramento contínuo e a correção de problemas de desempenho podem se tornar um processo entediante. O ajuste automático torna esse processo muito mais fácil.
 
 > [!NOTE]
-> Os dados na DMV sys. dm_db_tuning_recommendations não são persistidos entre as reinicializações da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.
+> Os dados na `sys.dm_db_tuning_recommendations` DMV não são persistidos entre as reinicializações da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.
 
 ## <a name="automatic-index-management"></a>Gerenciamento de índice automático
 
@@ -151,7 +162,7 @@ Os índices aceleram algumas de suas consultas que lêem dados das tabelas, no e
 
 Descobrir o conjunto ideal de índices que melhoram o desempenho das consultas de leitura de dados das tabelas e que tenham um impacto mínimo sobre as atualizações pode exigir uma análise contínua e complexa.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]usa inteligência interna e regras avançadas que analisam suas consultas, identificam índices que seriam ideais para suas cargas de trabalho atuais e identificam os índices que talvez precisem ser removidos. O banco de dados SQL do Azure garante que você tenha um conjunto mínimo necessário de índices que otimizam as consultas que lêem dados, com impacto minimizado sobre as outras consultas.
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] usa inteligência interna e regras avançadas que analisam suas consultas, identificam índices que seriam ideais para suas cargas de trabalho atuais e identificam os índices que talvez precisem ser removidos. O banco de dados SQL do Azure garante que você tenha um conjunto mínimo necessário de índices que otimizam as consultas que lêem dados, com impacto minimizado sobre as outras consultas.
 
 ### <a name="automatic-index-management"></a>Gerenciamento de índice automático
 
@@ -163,21 +174,21 @@ Quando o [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] aplica uma recomen
 
 ### <a name="automatic-index-management-considerations"></a>Considerações sobre o gerenciamento de índice automático
 
-As ações necessárias para criar os índices necessários no [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] podem consumir recursos e afetar o desempenho da carga de trabalho de tempo temporal. Para minimizar o impacto da criação do índice no desempenho da carga de trabalho, o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] localiza uma janela de tempo apropriada para qualquer operação de gerenciamento de índice. A ação de ajuste será adiada se o banco de dados precisar de recursos para executar a carga de trabalho e for reiniciado quando o banco de dados tiver recursos não utilizados suficientes que possam ser usados para a tarefa de manutenção. Um recurso importante no gerenciamento de índice automático é a verificação das ações. Quando [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o cria ou descarta um índice, um processo de monitoramento analisa o desempenho de sua carga de trabalho para verificar se a ação melhorou o desempenho geral. Se ele não levasse um aprimoramento significativo, a ação é revertida imediatamente. Dessa forma, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o garante que as ações de ajuste automático não afetem negativamente o desempenho da carga de trabalho. Os índices criados com o ajuste automático são transparentes para a operação de manutenção no esquema subjacente. Alterações de esquema como remover ou renomear colunas não são bloqueadas pela presença de índices criados automaticamente. Os índices criados automaticamente pelo [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] são imediatamente descartados quando a tabela ou as colunas relacionadas são descartadas.
+As ações necessárias para criar os índices necessários no [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] podem consumir recursos e afetar o desempenho da carga de trabalho de tempo temporal. Para minimizar o impacto da criação do índice no desempenho da carga de trabalho, o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  localiza uma janela de tempo apropriada para qualquer operação de gerenciamento de índice. A ação de ajuste será adiada se o banco de dados precisar de recursos para executar a carga de trabalho e for reiniciado quando o banco de dados tiver recursos não utilizados suficientes que possam ser usados para a tarefa de manutenção. Um recurso importante no gerenciamento de índice automático é a verificação das ações. Quando [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  o cria ou descarta um índice, um processo de monitoramento analisa o desempenho de sua carga de trabalho para verificar se a ação melhorou o desempenho geral. Se ele não levasse um aprimoramento significativo, a ação é revertida imediatamente. Dessa forma, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  o garante que as ações de ajuste automático não afetem negativamente o desempenho da carga de trabalho. Os índices criados com o ajuste automático são transparentes para a operação de manutenção no esquema subjacente. Alterações de esquema como remover ou renomear colunas não são bloqueadas pela presença de índices criados automaticamente. Os índices criados automaticamente pelo [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  são imediatamente descartados quando a tabela ou as colunas relacionadas são descartadas.
 
 ### <a name="alternative---manual-index-management"></a>Alternativa-gerenciamento de índice manual
 
-Sem o gerenciamento automático de índice, um usuário ou DBA precisaria consultar manualmente a exibição de [&#41;sys. dm_db_missing_index_details &#40;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) ou usar o relatório do painel de desempenho no [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] para localizar índices que possam melhorar o desempenho, criar índices usando os detalhes fornecidos nessa exibição e monitorar manualmente o desempenho da consulta. Para localizar os índices que devem ser descartados, os usuários devem monitorar as estatísticas de uso operacional dos índices para localizar índices raramente usados.
+Sem o gerenciamento automático de índice, um usuário ou DBA precisaria consultar manualmente a exibição de [&#41;sys. dm_db_missing_index_details &#40;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) ou usar o relatório do painel de desempenho no [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] para localizar índices que possam melhorar o desempenho, criar índices usando os detalhes fornecidos nessa exibição e monitorar manualmente o desempenho da consulta. Para localizar os índices que devem ser descartados, os usuários devem monitorar as estatísticas de uso operacional dos índices para localizar índices raramente usados.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]simplifica esse processo. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]analisa sua carga de trabalho, identifica as consultas que poderiam ser executadas mais rapidamente com um novo índice e identifica índices não utilizados ou duplicados. Encontre mais informações sobre a identificação de índices que devem ser alterados em [Encontrar recomendações de índice no portal do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifica esse processo. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analisa sua carga de trabalho, identifica as consultas que poderiam ser executadas mais rapidamente com um novo índice e identifica índices não utilizados ou duplicados. Encontre mais informações sobre a identificação de índices que devem ser alterados em [Encontrar recomendações de índice no portal do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
 
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys. database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
  [sys. dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  [sys. dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_query_store_force_plan](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
- [&#41;&#40;Transact-SQL de sp_query_store_unforce_plan](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
+ [&#41;&#40;Transact-SQL de sp_query_store_force_plan ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
+ [&#41;&#40;Transact-SQL de sp_query_store_unforce_plan ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
  [sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [Funções JSON](../../relational-databases/json/index.md)    
  [Planos de execução](../../relational-databases/performance/execution-plans.md)    

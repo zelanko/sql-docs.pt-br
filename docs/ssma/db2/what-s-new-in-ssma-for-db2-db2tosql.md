@@ -4,22 +4,34 @@ description: Saiba mais sobre as alterações feitas no Assistente de Migração
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862473"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498225"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>O que há de novo no SSMA para DB2 (DB2ToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para as alterações do DB2 em cada versão.
+
+## <a name="ssma-v814"></a>8.14 do SSMA v
+
+Além de várias melhorias para garantir maior acessibilidade para pessoas com deficiências, a versão v 8.14 do SSMA para DB2 requer uma atualização de projeto, pois agora armazena a versão completa do servidor de origem/destino nos metadados do projeto.
+
+## <a name="ssma-v813"></a>8.13 do SSMA v
+
+A versão v 8.13 do SSMA para DB2 contém as seguintes alterações:
+
+* Suporte para índices exclusivos filtrados
+* Considere as conversões implícitas de tipo ao converter o procedimento e as chamadas de função
+* Melhorar o log da cadeia de conexão de origem para ajudar a solucionar problemas de conexão
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -33,7 +45,7 @@ A versão v 8.12 do SSMA para DB2 contém as seguintes alterações:
 A versão v 8.11 do SSMA para DB2 contém as seguintes alterações:
 
 * Suporte para DB2 para i (v 7.1 e superior)
-* Tradução de `SQLSTATE` e`SQLCODE`
+* Tradução de `SQLSTATE` e `SQLCODE`
 * Mensagem de erro de conversão para operadores de efeito colateral em uma função
 * Usar a biblioteca MSAL.NET para autenticação de Azure Active Directory interativa
 
