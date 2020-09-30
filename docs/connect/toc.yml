@@ -5987,8 +5987,6 @@
               href: ../ado/guide/data/handling-errors-in-vbscript.md
             - name: Tratamento de erro em Visual C++
               href: ../ado/guide/data/handling-errors-in-visual-c.md
-            - name: Tratamento de erro em Visual J++
-              href: ../ado/guide/data/handline-errors-in-visual-j.md
             - name: Tratamento de erro em JScript
               href: ../ado/guide/data/handling-errors-in-jscript.md
         - name: Antecipar erros
@@ -6011,8 +6009,6 @@
               href: ../ado/guide/data/ado-event-instantiation-visual-basic.md
             - name: 'Instanciação de evento ADO: Visual C++'
               href: ../ado/guide/data/ado-event-instantiation-visual-c.md
-            - name: 'Instanciação de evento ADO: Visual J++'
-              href: ../ado/guide/data/ado-event-instantiation-visual-j.md
             - name: 'Instanciação de evento ADO: Visual VBScript'
               href: ../ado/guide/data/ado-event-instantiation-vbscript.md
             - name: 'Instanciação de evento ADO: JScript'
