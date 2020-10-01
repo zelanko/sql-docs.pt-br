@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee493ec09c5cfc8a5198239cd5cafcb2579f50d8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0d1cfed615144b947281b87f88965474e88031d1
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178606"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529481"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Mapeamentos de tipo de dados entre o Python e o SQL Server
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -25,7 +25,7 @@ Para soluções do Python executadas no recurso de integração do Python nos Se
 
 Um subconjunto da funcionalidade RevoScaleR (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees e talvez alguns outros) é fornecido usando APIs do Python, usando um novo pacote **revoscalepy** do Python. Você pode usar este pacote para trabalhar usando dados por meio das estruturas de dados do Pandas, arquivos XDF ou consultas de dados SQL.
 
-Para obter mais informações, confira o [módulo revoscalepy no SQL Server](ref-py-revoscalepy.md) e a [referência de função revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+Para obter mais informações, confira o [módulo revoscalepy no SQL Server](ref-py-revoscalepy.md) e a [referência de função revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package).
 
 O Python dá suporte a um número limitado de tipos de dados em comparação com o SQL Server. Como resultado, sempre que você usar dados do SQL Server em scripts Python, os dados poderão ser convertidos implicitamente em um tipo de dados compatível. No entanto, geralmente uma conversão exata não pode ser executada automaticamente e um erro é retornado.
 

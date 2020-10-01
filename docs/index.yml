@@ -6,12 +6,12 @@ metadata:
   title: Documentação do Microsoft SQL | Microsoft Docs
   description: 'Saiba como usar o SQL Server e o SQL do Azure para gerencias suas necessidades de banco de dados, tanto localmente quanto na nuvem. (link rápido: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: 5d6fffc9d875b0581e2358f86cd5e612df5adec9
-  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+  ms.openlocfilehash: 74d8bef8777f43355896af4ab16e5c2ef91a92d7
+  ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/22/2020
-  ms.locfileid: "90916408"
+  ms.lasthandoff: 09/30/2020
+  ms.locfileid: "91603435"
 highlightedContent:
   items:
   - title: Experimente o SQL Server 2019
@@ -43,9 +43,9 @@ productDirectory:
     - url: https://docs.microsoft.com/azure/azure-sql/database/
       text: Banco de Dados SQL do Azure
     - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
-      text: Instância Gerenciada de SQL do Azure
+      text: Instância Gerenciada do Azure SQL
     - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
-      text: SQL do Azure no Edge (versão prévia)
+      text: SQL do Azure no Edge
     - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
       text: Azure Synapse Analytics (SQL DW)
   - title: SQL Server no Linux
