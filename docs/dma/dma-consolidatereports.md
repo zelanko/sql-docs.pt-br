@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823238"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624793"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o Assistente de Migração de Dados
 
@@ -36,7 +36,7 @@ As instruções passo a passo a seguir ajudam a usar o Assistente de Migração 
   - [Power bi área de trabalho](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Módulos do Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Baixar e extrair:
-  - O [modelo de Power bi de relatórios de DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - O [modelo de Power bi de relatórios de DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - O [script loadwarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Carregando os módulos do PowerShell
@@ -64,7 +64,7 @@ Para carregar os módulos, execute as seguintes etapas:
 
     O PowerShell agora deve carregar esses módulos automaticamente quando uma nova sessão do PowerShell é iniciada.
 
-## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Criar um inventário de servidores SQL
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a> Criar um inventário de servidores SQL
 
 Antes de executar o script do PowerShell para avaliar seus SQL Servers, você precisa criar um inventário dos SQL Servers que você deseja avaliar.
 
@@ -126,12 +126,12 @@ Os parâmetros associados à função dmaDataCollector são descritos na tabela 
 |Parâmetro  |Descrição |
 |---------|---------|
 |**getServerListFrom** | Seu inventário. Os valores possíveis são **SqlServer** e **CSV**.<br/>Para obter mais informações, consulte [criar um inventário de servidores SQL](#create-inventory). |
-|**csvPath** | O caminho para o arquivo de inventário CSV.  Usado somente quando **getServerListFrom** é definido como **CSV**. |
+|**csvPath** | O caminho para o arquivo de inventário CSV.  Usado somente quando **getServerListFrom** é definido como  **CSV**. |
 |**serverName** | O SQL Server nome da instância do inventário ao usar o **SqlServer** no parâmetro **getServerListFrom** . |
-|**NomeDoBancoDeDados** | O banco de dados que hospeda a tabela de inventário. |
+|**databaseName** | O banco de dados que hospeda a tabela de inventário. |
 |**useInstancesOnly** | Sinalizador de bits para especificar se deve ser usada uma lista de instâncias para avaliação ou não.  Se definido como 0, a tabela DatabaseInventory será usada para criar a lista de destino de avaliação. |
 |**AssessmentName** | O nome da avaliação DMA. |
-|**TargetPlatform** | O tipo de destino da avaliação que você deseja executar.  Os valores possíveis são **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**e **SqlServerLinux2019**.  |
+|**TargetPlatform** | O tipo de destino da avaliação que você deseja executar.  Os valores possíveis são **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**e **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | O método de autenticação para se conectar aos destinos de SQL Server que você deseja avaliar. Os valores possíveis são **SQLAuth** e **WindowsAuth**. |
 |**OutputLocation** | O diretório no qual armazenar o arquivo de saída de avaliação JSON. Dependendo do número de bancos de dados que estão sendo avaliados e do número de objetos dentro dos bancos de dados, as avaliações podem levar um tempo excepcionalmente longo. O arquivo será gravado depois que todas as avaliações forem concluídas. |
 
@@ -153,7 +153,7 @@ Os parâmetros associados à função dmaProcessor são descritos na tabela a se
 |**serverName** | A instância de SQL Server para a qual os dados serão processados.  Se você especificar **AzureSQLDatabase** para o parâmetro **processto** , inclua somente o nome SQL Server (não include. Database.Windows.net). Você será solicitado a fornecer dois logons ao direcionar o banco de dados SQL do Azure; a primeira é suas credenciais de locatário do Azure, enquanto a segunda é seu logon de administrador para o SQL Server do Azure. |
 |**CreateDMAReporting** | O banco de dados de preparo a ser criado para processar o arquivo JSON.  Se o banco de dados especificado já existir e você definir esse parâmetro como um, os objetos não serão criados.  Esse parâmetro é útil para recriar um único objeto que foi Descartado. |
 |**Createdatawarehouse** | Cria o data warehouse que será usado pelo relatório de Power BI. |
-|**NomeDoBancoDeDados** | O nome do banco de dados DMAReporting. |
+|**databaseName** | O nome do banco de dados DMAReporting. |
 |**warehousename** | O nome do banco de dados data warehouse. |
 |**jsonDirectory** | O diretório que contém o arquivo de avaliação JSON.  Se houver vários arquivos JSON no diretório, então eles serão processados um a um. |
 
