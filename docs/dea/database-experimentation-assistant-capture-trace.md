@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951531"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636096"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar um rastreamento no Assistente para Experimentos de Banco de Dados
 
@@ -133,7 +133,7 @@ Se você vir um erro ao executar uma captura de rastreamento, confirme se:
 
 - O nome do computador que executa o SQL Server é válido. Para confirmar, tente se conectar ao computador que executa o SQL Server usando o SQL Server Management Studio (SSMS).
 - A configuração do firewall não bloqueia conexões com o computador que executa o SQL Server.
-- O usuário tem as permissões listadas nas [perguntas frequentes de reprodução](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
+- O usuário tem as permissões listadas nas [perguntas frequentes de reprodução](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - O nome do rastreamento não segue a Convenção de substituição padrão (captura \_ 1). Em vez disso, tente rastrear nomes como captura \_ 1a ou Capture1.
 
 A seguir estão alguns erros possíveis que você pode ver e soluções para solucioná-los:
@@ -145,8 +145,8 @@ A seguir estão alguns erros possíveis que você pode ver e soluções para sol
 |Um rastreamento DEA está sendo executado no servidor de destino.|Um rastreamento ativo já está em execução no servidor de destino. Você não pode iniciar um novo rastreamento quando um rastreamento de todo o servidor já está em execução.|  
 |Não é possível abrir o banco de dados solicitado para capturar o rastreamento. Esse erro pode ser causado por um nome de banco de dados incorreto.|O banco de dados especificado não existe ou não está acessível para o usuário atual. Use o nome de banco de dados correto.|  
 
-Se você vir quaisquer outros erros rotulados como *código de erro SQL*, consulte [mecanismo de banco de dados erros](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) para obter descrições detalhadas.
+Se você vir quaisquer outros erros rotulados como *código de erro SQL*, consulte [mecanismo de banco de dados erros](../relational-databases/errors-events/database-engine-events-and-errors.md) para obter descrições detalhadas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - Para saber como configurar as ferramentas de Distributed Replay no SQL Server antes de reproduzir um rastreamento capturado, consulte [configurar Distributed Replay para assistente para experimentos de banco de dados](database-experimentation-assistant-configure-replay.md).
