@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 25f4837fb73f15c8626a0b2a558f38badb1f36ed
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977387"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721287"
 ---
 # <a name="understanding-the-customization-file"></a>Noções básicas sobre o arquivo de personalização
 Cada cabeçalho de seção no arquivo de personalização consiste em colchetes (**[]**) contendo um tipo e um parâmetro. Os quatro tipos de seção são indicados pelas cadeias de caracteres literais **Connect**, **SQL**, **UserList**ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador especificado pelo usuário ou nada.  
   
 > [!IMPORTANT]
->  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](/dotnet/framework/wcf/).  
   
  Portanto, cada seção é marcada com um dos seguintes cabeçalhos de seção:  
   
@@ -45,7 +45,7 @@ identifier
 |Parte|Descrição|  
 |----------|-----------------|  
 |**connect**|Uma cadeia de caracteres literal que modifica uma cadeia de conexão.|  
-|**SQL**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
+|**sql**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
 |**UserList**|Uma cadeia de caracteres literal que modifica os direitos de acesso de um usuário específico.|  
 |**logs**|Uma cadeia de caracteres literal que especifica um arquivo de log que registra erros operacionais.|  
 |**default**|Uma cadeia de caracteres literal que será usada se nenhum identificador for especificado ou encontrado.|  
