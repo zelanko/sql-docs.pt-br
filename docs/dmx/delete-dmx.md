@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c6050a387af893e984b95c036181b7f16a269dc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eafe865a5d997b0f01a510fc0fad30646a732825
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491517"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726234"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,13 +41,13 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
  A tabela a seguir descreve o resultado de se usarem as diferentes formas da sintaxe.  
   
-|de|Result|  
+|Instrução|Resultado|  
 |---------------|------------|  
 |EXCLUIR DA ESTRUTURA DE MINERAÇÃO*\<structure>*<br /><br /> ou<br /><br /> EXCLUIR da estrutura de mineração *\<structure>* . DISPUTA|Executa ProcessClear na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração e de seus modelos de mineração associados.|  
 |EXCLUIR da estrutura de mineração *\<structure>* . BOLSAS|Executa ProcessClearStructureOnly na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração, deixando intactos os modelos de mineração associados. O detalhamento dos modelos de mineração associados falhará após a estrutura de mineração ter sido desmarcada.|  
 |EXCLUIR DO MODELO DE MINERAÇÃO*\<model>*<br /><br /> ou<br /><br /> EXCLUIR do modelo de mineração *\<model>* . DISPUTA|Executa ProcessClear no modelo de mineração, mas deixa os valores de estado intactos. Os valores de estado consistem nos estados possíveis de uma coluna. Por exemplo, os valores de estado de uma coluna de sexo seriam masculino e feminino.|  
   
- Para obter mais informações sobre tipos de processamento, consulte [elemento Type &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/type-element-xmla).  
+ Para obter mais informações sobre tipos de processamento, consulte [elemento Type &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/type-element-xmla).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove todo o conteúdo do modelo de NB_Sample.  
@@ -60,5 +60,4 @@ DELETE FROM NB_Sample.CONTENT
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

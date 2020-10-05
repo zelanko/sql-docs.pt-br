@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5da00163792b18bfd62ed0db4be0945f358115e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc96fb7dad5d7f6c4e555b133a0b3eaa02f91025
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352682"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726167"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,6 +49,5 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)   
  [EXPORTAR &#40;DMX&#41;](../dmx/export-dmx.md)   
- [Exportar e importar objetos de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+ [Exportar e importar objetos de mineração de dados](/analysis-services/data-mining/export-and-import-data-mining-objects)  
   

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f45a598c9e96d33f1edcc41c748a6751df712391
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 5c0ddd9aa7c89f7f77212155a0b85089c34087d9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886103"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726296"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar uma avaliação de migração do SQL Server com o Assistente de Migração de Dados
 
@@ -151,7 +151,7 @@ Se você quiser estender ainda mais essas avaliações para todo o espaço de da
 
 Isso permite que você exiba os resultados consolidados no projeto do hub de migrações para Azure.
 
-As diretrizes detalhadas passo a passo para avaliações de prontidão de destino estão disponíveis [aqui](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017).
+As diretrizes detalhadas passo a passo para avaliações de prontidão de destino estão disponíveis [aqui](./dma-assess-sql-data-estate-to-sqldb.md?view=sql-server-2017).
 
    ![Carregar resultados para migrações para Azure](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 

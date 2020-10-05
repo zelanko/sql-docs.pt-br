@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 860d151bb0071db6086629c8893795cadd47b821
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6a4e4fcec5217a9a9475f11d3a386c7436892ea6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990987"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724867"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Visão geral do provedor de comunicação remota do Microsoft OLE DB
 O provedor de comunicação remota do Microsoft OLE DB permite que um usuário local em um computador cliente invoque provedores de dados em um computador remoto. Especifique os parâmetros do provedor de dados para o computador remoto como você faria se fosse um usuário local no computador remoto. Em seguida, especifique os parâmetros usados pelo provedor de comunicação remota para acessar o computador remoto. Em seguida, você pode acessar o computador remoto como se você fosse um usuário local.
 
 > [!IMPORTANT]
->  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o  [WCF Data Service](/dotnet/framework/wcf/).
 
 ## <a name="provider-keyword"></a>Palavra-chave Provider
  Para invocar o provedor de comunicação remota OLE DB, especifique a palavra-chave e o valor a seguir na cadeia de conexão. (Observe o espaço em branco no nome do provedor.)
@@ -50,7 +50,7 @@ O provedor de comunicação remota do Microsoft OLE DB permite que um usuário l
 |**DFMode**|Indica o modo datafactory. Uma cadeia de caracteres que especifica a versão desejada do objeto [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) no servidor. Defina essa propriedade antes de abrir uma conexão para solicitar uma versão específica do **DataFactory**. Se a versão solicitada não estiver disponível, será feita uma tentativa de usar a versão anterior. Se não houver nenhuma versão anterior, ocorrerá um erro. Se **DFMode** for menor que a versão disponível, ocorrerá um erro. Essa propriedade é somente leitura depois que uma conexão é estabelecida.<br /><br /> Pode ser um dos seguintes valores de cadeia de caracteres válidos:<br /><br /> -"25"-versão 2,5 (padrão)<br />-"21"-versão 2,1<br />-"20"-versão 2,0<br />-"15"-versão 1,5|
 |**Propriedades do comando**|Indica os valores que serão adicionados à cadeia de caracteres de propriedades de comando (conjunto de linhas) enviadas ao servidor pelo provedor remoto MS. O valor padrão dessa cadeia de caracteres é vt_empty.|
 |**DFMode atual**|Indica o número de versão real do **DataFactory** no servidor. Verifique essa propriedade para ver se a versão solicitada na propriedade **DFMode** foi respeitada.<br /><br /> Pode ser um dos seguintes valores inteiros longos válidos:<br /><br /> -25-versão 2,5 (padrão)<br />-21-versão 2,1<br />-20-versão 2,0<br />-15-versão 1,5<br /><br /> Adicionar "DFMode = 20;" à sua cadeia de conexão ao usar o provedor **MSRemote** pode melhorar o desempenho do servidor ao atualizar dados. Com essa configuração, o objeto **RDSServer. datafactory** no servidor usa um modo menos intensivo de recursos. No entanto, os seguintes recursos não estão disponíveis nesta configuração:<br /><br /> -Usando consultas parametrizadas.<br />-Obtendo informações de parâmetro ou coluna antes de chamar o método **Execute** .<br />-Definindo **as atualizações do Transact** como **true**.<br />-Obtendo status de linha.<br />-Chamando o método de **ressincronização** .<br />-Atualizando (explicitamente ou automaticamente) por meio da propriedade **Atualizar ressincronização** .<br />-Definindo propriedades de **comando** ou **conjunto de registros** .<br />-Usando **adCmdTableDirect**.|
-|**Manipulador**|Indica o nome de um programa de personalização do lado do servidor (ou manipulador) que estende a funcionalidade do [RDSServer. datafactory](../../reference/rds-api/datafactory-object-rdsserver.md)e quaisquer parâmetros usados pelo manipulador, todos separados por vírgulas (","). Um valor de **cadeia de caracteres** .|
+|**Manipulador**|Indica o nome de um programa de personalização do lado do servidor (ou manipulador) que estende a funcionalidade do [RDSServer. datafactory](../../reference/rds-api/datafactory-object-rdsserver.md)e quaisquer parâmetros usados pelo manipulador, todos separados por vírgulas (","). Um valor de **String**.|
 |**Tempo limite da Internet**|Indica o número máximo de milissegundos para aguardar uma solicitação de viagem de e para o servidor. (O padrão é 5 minutos.)|
 |**Provedor remoto**|Indica o nome do provedor de dados a ser usado no servidor remoto.|
 |**Servidor remoto**|Indica o nome do servidor e o protocolo de comunicação a ser usado por essa conexão. Essa propriedade é equivalente ao [RDS. ](../../reference/rds-api/datacontrol-object-rds.md) Propriedade [do servidor](../../reference/rds-api/server-property-rds.md) de objetos DataContro.|

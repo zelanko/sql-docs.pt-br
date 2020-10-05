@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df70a8726e9abc56d677c48ba8f3f995814866d4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496268"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727635"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Selecione do &lt; modelo &gt; . CONTEÚDO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  A tabela a seguir lista as colunas que são incluídas no conteúdo do modelo de mineração.  
   
 > [!NOTE]  
->  Os algoritmos podem interpretar as colunas de forma diferente para representar corretamente o conteúdo. Para obter uma descrição do conteúdo do modelo de mineração para cada algoritmo e dicas sobre como interpretar e consultar o conteúdo do modelo de mineração para cada tipo de modelo, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  Os algoritmos podem interpretar as colunas de forma diferente para representar corretamente o conteúdo. Para obter uma descrição do conteúdo do modelo de mineração para cada algoritmo e dicas sobre como interpretar e consultar o conteúdo do modelo de mineração para cada tipo de modelo, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Coluna de conjunto de linhas DE CONTEÚDO|Descrição|  
 |---------------------------|-----------------|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  Resultados esperados:  
   
- Como o modelo é um modelo de árvores de decisão, os descendentes do nó pai do modelo incluem um único nó de estatísticas marginais, um nó que representa o atributo previsível e vários nós que contêm atributos e valores de entrada. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
+ Como o modelo é um modelo de árvores de decisão, os descendentes do nó pai do modelo incluem um único nó de estatísticas marginais, um nó que representa o atributo previsível e vários nós que contêm atributos e valores de entrada. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Usando a palavra-chave FLATTENED  
  O conteúdo de modelo de mineração frequentemente contém informações interessantes sobre o modelo nas colunas da tabela aninhada. A palavra-chave FLATTENED lhe permite recuperar os dados de uma coluna de tabela aninhada sem usar um fornecedor com suporte para conjuntos de linhas hierárquicos.  
@@ -147,5 +147,4 @@ WHERE NODE_TYPE = 26
  [SELECIONAR&#41;&#40;DMX ](../dmx/select-dmx.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

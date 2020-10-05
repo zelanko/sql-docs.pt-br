@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 64c18c32cde0c29c120c8cb1b2d976bd983c774a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885993"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727787"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Definir configurações para Assistente de Migração de Dados
 
-Você pode ajustar determinado comportamento de Assistente de Migração de Dados definindo valores de configuração no arquivo DMA. exe. config. Este artigo descreve os principais valores de configuração.
+Você pode ajustar determinado comportamento de Assistente de Migração de Dados definindo valores de configuração no arquivo dma.exe.config. Este artigo descreve os principais valores de configuração.
 
-Você pode encontrar o arquivo DMA. exe. config para o aplicativo de área de trabalho Assistente de Migração de Dados e o utilitário de linha de comando, nas seguintes pastas em seu computador.
+Você pode encontrar o arquivo de dma.exe.config para o aplicativo de área de trabalho Assistente de Migração de Dados e o utilitário de linha de comando, nas seguintes pastas em seu computador.
 
 - Aplicativo de desktop
 
-  % ProgramFiles% \\ Assistente de migração de dados da Microsoft \\ DMA. exe. config
+  % ProgramFiles% \\ Assistente de Migração de Dados da Microsoft \\dma.exe.config
 
 - Utilitário de linha de comando
 
-  % ProgramFiles% \\ Assistente de migração de dados da Microsoft \\ dmacmd. exe. config 
+  % ProgramFiles% \\ Assistente de Migração de Dados da Microsoft \\dmacmd.exe.config 
 
 Lembre-se de salvar uma cópia do arquivo de configuração original antes de fazer qualquer modificação. Depois de fazer alterações, reinicie Assistente de Migração de Dados para que os novos valores de configuração entrem em vigor.
 
@@ -111,7 +111,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: limite de recomendação
 
-Com o [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), você pode ampliar dinamicamente dados transacionais quentes e frios do Microsoft SQL Server 2016 para o Azure. Stretch Database se destina a bancos de dados transacionais com grandes quantidades de Cold Data. A recomendação de Stretch Database, sob recomendação de recurso de armazenamento, identifica primeiro as tabelas que ele acha que se beneficiarão desse recurso e identifica as alterações que precisam ser feitas para habilitar a tabela para esse recurso.
+Com o [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), você pode ampliar dinamicamente dados transacionais quentes e frios do Microsoft SQL Server 2016 para o Azure. Stretch Database se destina a bancos de dados transacionais com grandes quantidades de Cold Data. A recomendação de Stretch Database, sob recomendação de recurso de armazenamento, identifica primeiro as tabelas que ele acha que se beneficiarão desse recurso e identifica as alterações que precisam ser feitas para habilitar a tabela para esse recurso.
 
 A partir do Assistente de Migração de Dados v 2.0, você pode controlar esse limite para que uma tabela se qualifique para o recurso de Stretch Database usando o valor de configuração recommendedNumberOfRows. O valor padrão é 100.000 linhas. Se você quiser analisar os recursos de ampliação para tabelas ainda menores, diminua o valor de acordo.
 
@@ -130,7 +130,7 @@ A partir do Assistente de Migração de Dados v 2.0, você pode controlar esse l
 
 ## <a name="sql-connection-timeout"></a>Tempo limite de conexão SQL
 
-Você pode controlar o [tempo limite da conexão SQL](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) para instâncias de origem e de destino durante a execução de uma avaliação ou migração, definindo o valor de tempo limite da conexão como um número especificado de segundos. O valor padrão é 15 segundos.
+Você pode controlar o [tempo limite da conexão SQL](/dotnet/api/system.data.sqlclient.sqlconnection.connectiontimeout) para instâncias de origem e de destino durante a execução de uma avaliação ou migração, definindo o valor de tempo limite da conexão como um número especificado de segundos. O valor padrão é 15 segundos.
 
 ```
 <appSettings>

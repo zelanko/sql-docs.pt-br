@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 289a25088c61988382093f50526546bf5036a510
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466518"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727654"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Selecione do &lt; modelo &gt; . CASOS (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  Usar a função [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) na cláusula **Where** retorna apenas os casos associados ao nó especificado pela coluna NODE_UNIQUE_NAME do conjunto de linhas de esquema.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir são baseados na estrutura de mineração direcionada para mala direta, que é baseada no [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] banco de dados e seus modelos de mineração associados. Para obter mais informações, consulte o [tutorial básico de mineração de dados](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Os exemplos a seguir são baseados na estrutura de mineração direcionada para mala direta, que é baseada no [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] banco de dados e seus modelos de mineração associados. Para obter mais informações, consulte o [tutorial básico de mineração de dados](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Exemplo 1: detalhamento para casos de modelo colunas de estrutura  
  O seguinte exemplo retorna as colunas para todos os casos usados para testar o modelo Correspondência destinada. Se a estrutura de mineração na qual o modelo foi construído não tiver um conjunto de dados de testes de validação, essa consulta retornará 0 casos. É possível usar a lista de expressões para retornar apenas as colunas necessárias.  
@@ -85,12 +85,11 @@ AND IsInNode('002')
  Para retornar uma coluna de estrutura, as permissões de detalhamento devem estar habilitadas no modelo de mineração e na estrutura de mineração.  
   
 > [!NOTE]  
->  Nem todos os modelos de mineração suportam o detalhamento. Para obter informações sobre os modelos que dão suporte ao detalhamento, consulte [consultas de detalhamento &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining).  
+>  Nem todos os modelos de mineração suportam o detalhamento. Para obter informações sobre os modelos que dão suporte ao detalhamento, consulte [consultas de detalhamento &#40;mineração de dados&#41;](/analysis-services/data-mining/drillthrough-queries-data-mining).  
   
 ## <a name="see-also"></a>Consulte Também  
  [SELECIONAR&#41;&#40;DMX ](../dmx/select-dmx.md)   
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

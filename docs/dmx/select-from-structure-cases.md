@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf8afcdf84c5d33e91971c58dff5c1f93c68fd08
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500898"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726123"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Selecione da &lt; estrutura &gt; . BOLSAS
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Portanto, para proteger dados confidenciais ou informações pessoais, você deve construir sua exibição da fonte de dados para mascarar informações pessoais e conceder a permissão **AllowDrillThrough** em uma estrutura de mineração ou modelo de mineração somente quando necessário.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir são baseados na estrutura de mineração, mala direta, que se baseia no [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] banco de dados e nos modelos de mineração associados. Para obter mais informações, consulte o [tutorial básico de mineração de dados](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Os exemplos a seguir são baseados na estrutura de mineração, mala direta, que se baseia no [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] banco de dados e nos modelos de mineração associados. Para obter mais informações, consulte o [tutorial básico de mineração de dados](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Exemplo 1: detalhamento para casos da estrutura  
  O seguinte exemplo retorna uma lista dos 500 clientes mais antigos na estrutura de mineração, Correspondência destinada. A consulta retorna todas as colunas no modelo de mineração, mas restringe as linhas para as que compraram uma bicicleta e as classifica por idade. Também é possível editar a lista de expressões para retornar apenas as colunas necesárias.  
@@ -94,5 +94,4 @@ WHERE IsTestCase();
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

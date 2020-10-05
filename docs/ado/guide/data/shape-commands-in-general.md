@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a982f08323a9e852f555732b290d598412d3a802
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c20132fe933d232d38ee843a706e9ad923d0d376
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979607"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724927"
 ---
 # <a name="shape-commands-in-general"></a>Modelar comandos em geral
 O data Shaping define as colunas de um **conjunto de registros**moldado, as relações entre as entidades representadas pelas colunas e a maneira como o **conjunto de registros** é preenchido com os dados.  
@@ -28,7 +28,7 @@ O data Shaping define as colunas de um **conjunto de registros**moldado, as rela
   
 |Tipo de coluna|Descrição|  
 |-----------------|-----------------|  
-|data|Campos de um **conjunto de registros** retornado por um comando de consulta para um provedor de dados, uma tabela ou um **conjunto de registros**moldado anteriormente.|  
+|Dados|Campos de um **conjunto de registros** retornado por um comando de consulta para um provedor de dados, uma tabela ou um **conjunto de registros**moldado anteriormente.|  
 |6|Uma referência a outro **conjunto de registros**, chamada de *capítulo*. As colunas de capítulo possibilitam definir uma relação *pai-filho* em que o *pai* é o **conjunto de registros** que contém a coluna de capítulo e o *filho* é o conjunto de **registros** representado pelo capítulo.|  
 |aggregate|O valor da coluna é derivado pela execução de uma *função de agregação* em todas as linhas ou em uma coluna de todas as linhas de um **conjunto de registros**filho. (Consulte funções de agregação no tópico a seguir, [funções de agregação, a função Calc e a nova palavra-chave](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
 |expressão calculada|O valor da coluna é derivado ao calcular uma expressão de Visual Basic for Applications em colunas na mesma linha do conjunto de **registros**. A expressão é o argumento para a função CALC. (Consulte a expressão calculada no tópico a seguir, [funções de agregação, a função Calc e a nova palavra-chave](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) e em [funções Visual Basic for Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  
@@ -46,7 +46,7 @@ O data Shaping define as colunas de um **conjunto de registros**moldado, as rela
   
  Você pode acessar os componentes do **conjunto** de **registros** com formato programaticamente ou por meio de um controle visual apropriado.  
   
- A Microsoft fornece uma ferramenta visual que gera comandos de forma (consulte o [Designer de ambiente de dados](https://go.microsoft.com/fwlink/?LinkId=5689) na documentação do Visual Basic 6) e outro que exibe cursores hierárquicos (consulte "usando o controle de FlexGrid hierárquico da Microsoft" na documentação do Visual Basic 6).  
+ A Microsoft fornece uma ferramenta visual que gera comandos de forma (consulte o [Designer de ambiente de dados](/previous-versions/visualstudio/aa445793(v=vs.60)) na documentação do Visual Basic 6) e outro que exibe cursores hierárquicos (consulte "usando o controle de FlexGrid hierárquico da Microsoft" na documentação do Visual Basic 6).  
   
  Para obter informações sobre como navegar em um **conjunto de registros**hierárquico, consulte [acessando linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   

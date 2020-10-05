@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b4d69b516a06bd6d68c3f85e82b18be774ada0f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1a400e5247cc812cb72ba3422cb361888342155
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431098"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726294"
 ---
 # <a name="content-types-dmx"></a>Tipos de conteúdo (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,10 +23,10 @@ ms.locfileid: "88431098"
   
  Cada algoritmo oferece suporte a tipos de conteúdo específicos. Por exemplo, o algoritmo Naive Bayes do [!INCLUDE[msCoName](../includes/msconame-md.md)] não pode usar colunas contínuas. Para usar uma coluna contínua em um modelo [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes, é preciso diferenciar os dados na coluna. Alguns algoritmos requerem determinados tipos de conteúdo para funcionar corretamente. Por exemplo, o algoritmo Times Series do [!INCLUDE[msCoName](../includes/msconame-md.md)] exige uma coluna de chave de tempo para identificação do período em que os dados foram coletados.  
   
- Para obter uma descrição completa dos tipos de conteúdo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aos quais o oferece suporte, consulte [tipos de conteúdo &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining).  
+ Para obter uma descrição completa dos tipos de conteúdo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aos quais o oferece suporte, consulte [tipos de conteúdo &#40;mineração de dados&#41;](/analysis-services/data-mining/content-types-data-mining).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Referência de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-reference.md)   
  [As extensões de mineração de dados &#40;elementos de sintaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -36,5 +36,4 @@ ms.locfileid: "88431098"
  [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

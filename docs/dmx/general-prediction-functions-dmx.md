@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8023287277edafb2d054cafe7ae5ab09512f93ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22fe85d0e51de59d0b25b6a3eb89d29edf655ee4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352992"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726177"
 ---
 # <a name="general-prediction-functions-dmx"></a>Funções de previsão gerais (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "88352992"
   
 -   [&#41;&#40;DMX StructureColumn ](../dmx/structurecolumn-dmx.md)  
   
- Os algoritmos individuais podem dar suporte a funções adicionais. Para obter uma lista das funções com suporte em cada tipo de modelo, consulte [consultas de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).  
+ Os algoritmos individuais podem dar suporte a funções adicionais. Para obter uma lista das funções com suporte em cada tipo de modelo, consulte [consultas de mineração de dados](/analysis-services/data-mining/data-mining-queries).  
   
 ## <a name="functions-specific-to-select-syntax"></a>Funções específicas da sintaxe SELECT  
  A tabela a seguir lista as funções que você pode usar para cada tipo de instrução **Select** .  
@@ -70,12 +70,12 @@ ms.locfileid: "88352992"
 |Tipo de consulta|Funções suportadas|Comentários|  
 |----------------|-------------------------|-------------|  
 |[SELECIONAR DISTINCT DE \<model>](../dmx/select-distinct-from-model-dmx.md)|[&#41;&#40;DMX RangeMin ](../dmx/rangemin-dmx.md)<br /><br /> [&#41;&#40;DMX RangeMid ](../dmx/rangemid-dmx.md)<br /><br /> [&#41;&#40;DMX RangeMax ](../dmx/rangemax-dmx.md)|Essas funções podem ser usadas para fornecer valores máximos, valores mínimos e médias para qualquer coluna que contenha tipos de dados numéricos, independentemente de a coluna ser contínua ou ter sido diferenciada.|  
-|[Selecione \<model> . DISPUTA](../dmx/select-from-model-content-dmx.md)<br /><br /> ou<br /><br /> [Selecione \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Essa função recupera nós filho para o nó especificado no modelo e pode ser usada, por exemplo, para iterar através de nós no conteúdo do modelo de mineração. A organização dos nós no conteúdo do modelo de mineração depende do tipo de modelo. Para obter informações sobre a estrutura de cada tipo de modelo de mineração, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se você salvou o conteúdo do modelo de mineração como uma dimensão, também poderá usar outras funções MDX (Multidimensional Expressions) que estão disponíveis para consultar uma hierarquia de atributo.|  
+|[Selecione \<model> . DISPUTA](../dmx/select-from-model-content-dmx.md)<br /><br /> ou<br /><br /> [Selecione \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Essa função recupera nós filho para o nó especificado no modelo e pode ser usada, por exemplo, para iterar através de nós no conteúdo do modelo de mineração. A organização dos nós no conteúdo do modelo de mineração depende do tipo de modelo. Para obter informações sobre a estrutura de cada tipo de modelo de mineração, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se você salvou o conteúdo do modelo de mineração como uma dimensão, também poderá usar outras funções MDX (Multidimensional Expressions) que estão disponíveis para consultar uma hierarquia de atributo.|  
 |[Selecione \<model> . BOLSAS](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [&#41;&#40;DMX IsTrainingCase ](../dmx/istrainingcase-dmx.md)<br /><br /> [&#41;&#40;DMX IsTestCase ](../dmx/istestcase-dmx.md)|A função Lag tem suporte apenas para modelos de série temporal.<br /><br /> A função IsTestCase tem suporte em modelos baseados em uma estrutura que foi criada usando a opção de controle para criar um conjunto de dados de teste. Se o modelo não for baseado em uma estrutura com um conjunto de teste de validação, todos os casos serão considerados como casos de treinamento.|  
 |[Selecione \<model> . SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Nesse contexto, a função IsInNode retorna um caso que pertence a um conjunto de casos de exemplo ideais.|  
 |Selecione \<model> . PMML|Não aplicável. Em vez disso, use funções de consulta XML.|As representações PMML são suportadas apenas pelos tipos de modelo a seguir:<br /><br /> Árvores de Decisão da [!INCLUDE[msCoName](../includes/msconame-md.md)]<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
-|[SELECIONAR da \<model> junção de previsão](../dmx/select-from-model-prediction-join-dmx.md)|Funções de previsão que são específicas do algoritmo usado para criar o modelo.|Para obter uma lista de funções de previsão para cada tipo de modelo, consulte [consultas de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
-|[SELECIONAR DE \<model>](../dmx/select-from-model-dmx.md)|Funções de previsão que são específicas do algoritmo usado para criar o modelo.|Para obter uma lista de funções de previsão para cada tipo de modelo, consulte [consultas de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
+|[SELECIONAR da \<model> junção de previsão](../dmx/select-from-model-prediction-join-dmx.md)|Funções de previsão que são específicas do algoritmo usado para criar o modelo.|Para obter uma lista de funções de previsão para cada tipo de modelo, consulte [consultas de mineração de dados](/analysis-services/data-mining/data-mining-queries).|  
+|[SELECIONAR DE \<model>](../dmx/select-from-model-dmx.md)|Funções de previsão que são específicas do algoritmo usado para criar o modelo.|Para obter uma lista de funções de previsão para cada tipo de modelo, consulte [consultas de mineração de dados](/analysis-services/data-mining/data-mining-queries).|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -86,5 +86,4 @@ ms.locfileid: "88352992"
  [As extensões de mineração de dados &#40;elementos de sintaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

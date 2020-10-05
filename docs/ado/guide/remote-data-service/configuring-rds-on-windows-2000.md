@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a35d730981723f83b65867468a809f795fc6d3e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3c52989f83608b33756ae90778485bfddab08173
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978327"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724797"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configurar o RDS no Windows 2000
 Se você tiver dificuldades para que o RDS funcione corretamente após a atualização para o Windows 2000, siga estas etapas para solucionar o problema:  
@@ -38,7 +38,7 @@ Se você tiver dificuldades para que o RDS funcione corretamente após a atualiz
  Certifique-se de tentar reinicializar o servidor se as alterações não aparecerem para resolver o problema primeiro.  
   
 > [!IMPORTANT]
->  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565). A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows. Migre aplicativos que usam o RDS para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](/dotnet/framework/wcf/). A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows. Migre aplicativos que usam o RDS para o [WCF Data Service](/dotnet/framework/wcf/).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Conceitos básicos do RDS](./rds-fundamentals.md)

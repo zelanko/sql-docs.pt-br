@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e31f1c575441c01c6ff7e9325179ae6776802276
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb68d0aaa0d19fb903154b8d5c4d4135b57883e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352332"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726137"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indica se um caso é usado como um caso de treinamento para o modelo de mineração de dados ou a estrutura de mineração especificada.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -37,12 +37,12 @@ IsTrainingCase()
  É possível determinar se os dados de uma estrutura de mineração de dados específica foram particionados em conjuntos de teste e de treinamento exibindo um valor das propriedades <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> e <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  
   
 > [!NOTE]  
->  O detalhamento deve ser habilitado no modelo se você quiser usar as funções IsTrainingCase ou IsTestCase para retornar detalhes sobre os casos no modelo. Para obter mais informações,consulte [Habilitar drillthrough para um modelo de mineração](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
+>  O detalhamento deve ser habilitado no modelo se você quiser usar as funções IsTrainingCase ou IsTestCase para retornar detalhes sobre os casos no modelo. Para obter mais informações,consulte [Habilitar drillthrough para um modelo de mineração](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
  Para retornar casos que fazem parte do conjunto de dados de teste, use a função [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa o modelo de Data Mining de clustering do cenário de endereçamento direcionado no [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). A consulta retorna somente os casos que foram usados para treinar o modelo de mineração. Além disso, os casos de treinamento são restritos a clientes com menos de 40 anos.  
+ O exemplo a seguir usa o modelo de Data Mining de clustering do cenário de endereçamento direcionado no [tutorial de mineração de dados básico](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). A consulta retorna somente os casos que foram usados para treinar o modelo de mineração. Além disso, os casos de treinamento são restritos a clientes com menos de 40 anos.  
   
 ```  
 SELECT *  
@@ -54,8 +54,7 @@ AND [Age] <40
  Para obter outros exemplos de como consultar os casos usados em Data Mining, consulte [selecionar do modelo de &#60;&#62;. CASOS &#40;&#41;DMX ](../dmx/select-from-model-cases-dmx.md) e [selecionar entre &#60;estrutura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conjuntos de dados de treinamento e teste](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   
+ [Conjuntos de dados de treinamento e teste](/analysis-services/data-mining/training-and-testing-data-sets)   
  [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
- [Consultas de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)  
-  
+ [Consultas de mineração de dados](/analysis-services/data-mining/data-mining-queries)  
   

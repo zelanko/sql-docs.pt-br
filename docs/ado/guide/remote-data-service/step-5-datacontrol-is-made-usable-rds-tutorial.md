@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 560c5968b3343f2553bc117ebbbdcf06938cc49f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977507"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722947"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Etapa 5: O DataControl é tornado utilizável (Tutorial RDS)
 O objeto **Recordset** retornado está disponível para uso. Você pode examiná-lo, navegar ou editá-lo como faria com qualquer outro **conjunto de registros**. O que você pode fazer com o **conjunto de registros** depende do seu ambiente. Visual Basic e Visual C++ têm controles visuais que podem usar um **conjunto de registros** diretamente ou indiretamente com o auxílio de um controle de dados de habilitação.  
   
 > [!IMPORTANT]
->  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](/dotnet/framework/wcf/).  
   
  Por exemplo, se você estiver exibindo uma página da Web no Microsoft Internet Explorer, talvez queira exibir os dados do objeto **Recordset** em um controle visual. Os controles visuais em uma página da Web não podem acessar um objeto **Recordset** diretamente. No entanto, eles podem acessar o objeto **Recordset** por meio do [RDS. Controle](../../reference/rds-api/datacontrol-object-rds.md)de data. O **RDS. O DataControl** torna-se utilizável por um controle visual quando sua propriedade [SourceRecordset](../../reference/rds-api/recordset-sourcerecordset-properties-rds.md) é definida como o objeto **Recordset** .  
   

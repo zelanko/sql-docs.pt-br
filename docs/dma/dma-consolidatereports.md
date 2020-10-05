@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624793"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727797"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o Assistente de Migração de Dados
 
@@ -32,9 +32,9 @@ As instruções passo a passo a seguir ajudam a usar o Assistente de Migração 
   - [Assistente de migração de dados](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 ou superior.
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 ou superior.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 ou superior.
-  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,0 ou superior.
+  - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17,0 ou superior.
   - [Power bi área de trabalho](/power-bi/fundamentals/desktop-get-the-desktop).
-  - [Módulos do Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Módulos do Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Baixar e extrair:
   - O [modelo de Power bi de relatórios de DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - O [script loadwarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).

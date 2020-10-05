@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 35ca44da3c63d8de38a342cbf1f63bceb1916e15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f1523cde32af2c4a01b7b2838cb0293797afcdb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462112"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724615"
 ---
 # <a name="install-data-quality-services"></a>Instalar o Data Quality Services
 
@@ -115,7 +115,7 @@ ms.locfileid: "88462112"
                     [Acesse dados para as operações do DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Vídeo: instalar e configurar o DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
+ [Vídeo: instalar e configurar o DQS](/previous-versions/dn912438(v=msdn.10))   
  [Atualizar assemblies SQLCLR após a atualização de .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Exportar e importar bases de dados de conhecimento do DQS usando DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Atualizar o Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -124,5 +124,4 @@ ms.locfileid: "88462112"
  [Desinstalar o SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
  [Solução de problemas de instalação e de configuração no DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
-  
   

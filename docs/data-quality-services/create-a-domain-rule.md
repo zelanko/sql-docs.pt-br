@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bfb2db2c6ec11fa765d3554aef3daf853a305fa6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480388"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725407"
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
 
@@ -98,7 +98,7 @@ ms.locfileid: "89480388"
   
 2.  Clique em **Descartar Todas as Alterações** para remover qualquer alteração feita nas regras de domínio, fazendo a reversão para as regras previamente aplicadas, sabendo que qualquer alteração feita após a última aplicação das regras não se aplicará mais. A validade de cada valor no domínio será atualizada para estar em conformidade com as regras aplicadas anteriormente, e não com as alterações descartadas.  
   
-3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Acompanhamento: depois de criar uma regra de domínio  
  Depois que você criar uma regra de domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
@@ -131,7 +131,6 @@ ms.locfileid: "89480388"
 |Valor não corresponde ao padrão|Somente os valores que não correspondem ao padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.|Operando de exemplo: A1 (o valor não deve corresponder a um padrão de *qualquer* caractere seguido de *qualquer* dígito.)<br /><br /> Valores válidos: AB1, A, A:5<br /><br /> Valores inválidos: B7, c9|  
 |Valor contém o padrão|Somente valores contendo o padrão de caracteres, dígitos ou caracteres especiais do operando serão válidos.|Operando de exemplo: AA-12 (o valor contém um padrão de *quaisquer* dois caracteres seguidos de um hífen (-), seguidos novamente de *quaisquer* dois dígitos.)<br /><br /> Valores válidos: AAA-01, ab-975<br /><br /> Valor inválido: A7, AA-6, C-45, aa;98|  
 |Valor não contém o padrão|Somente os valores que não contêm o padrão de caracteres do operando serão válidos.|Operando de exemplo: AB-12 (o valor não deve conter um padrão de *quaisquer* dois caracteres seguidos de um hífen (-), seguidos novamente de *quaisquer* dois dígitos.)<br /><br /> Valores válidos: A7, AA-6, C-45, aa;98<br /><br /> Valor inválido: AAA-01, ab-975|  
-|O valor corresponde à expressão regular|Somente os valores iguais à expressão regular no operando serão válidos.<br /><br /> Não inclua a âncora "^" ou "$" à expressão regular, porque o DQS adiciona automaticamente essas âncoras a uma cláusula que contém Valor é igual à expressão regular. (Como alternativa, você pode colocar a expressão regular contendo "^" e "$" âncoras com parênteses.) Para obter mais informações sobre expressões regulares, consulte [elementos de linguagem de expressão regular](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando de exemplo: [1-5] + (cada caractere deve ser um dígito numérico de 1 a 5, ocorrendo uma ou mais vezes)<br /><br /> Valores válidos: 123, 12345, 14352<br /><br /> Valores inválidos: 456, ABC|  
+|O valor corresponde à expressão regular|Somente os valores iguais à expressão regular no operando serão válidos.<br /><br /> Não inclua a âncora "^" ou "$" à expressão regular, porque o DQS adiciona automaticamente essas âncoras a uma cláusula que contém Valor é igual à expressão regular. (Como alternativa, você pode colocar a expressão regular contendo "^" e "$" âncoras com parênteses.) Para obter mais informações sobre expressões regulares, consulte [elementos de linguagem de expressão regular](/dotnet/standard/base-types/regular-expression-language-quick-reference).|Operando de exemplo: [1-5] + (cada caractere deve ser um dígito numérico de 1 a 5, ocorrendo uma ou mais vezes)<br /><br /> Valores válidos: 123, 12345, 14352<br /><br /> Valores inválidos: 456, ABC|  
 |O valor não corresponde a uma expressão regular|Somente os valores que não correspondem à expressão regular no operando serão válidos.|Operando de exemplo: [1-5] + (a cadeia de caracteres não deve conter apenas dígitos numéricos de 1 a 5)<br /><br /> Valores válidos: 456, ABC<br /><br /> Valor inválido: 123, 123456, 14352|  
-  
   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf85cb8b432dcc6bf72208c12b934291bc72b049
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450010"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724625"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
 
@@ -101,7 +101,7 @@ ms.locfileid: "88450010"
   
 11. **Excluir valores de domínio selecionados**: Para remover um ou mais valores existentes do domínio, selecione os valores na tabela Valor e clique no ícone **Excluir valores de domínio selecionados** . A entrada DQS_NULL não pode ser excluída; portanto, se você escolher diversos valores para serem excluídos, e a entrada DQS_NULL for um deles, a operação falhará.  
   
-12. Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+12. Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-changing-domain-values"></a><a name="FollowUp"></a> Acompanhamento: após alterar valores de domínio  
  Após alterar valores de domínio, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
@@ -136,5 +136,4 @@ ms.locfileid: "88450010"
   
 ##  <a name="how-to-handle-null-equivalents"></a><a name="Null"></a> Como tratar equivalentes nulos  
  Cada tabela de valor na guia **Valores de Domínio** inclui um valor DQS_NULL. Um nulo em uma fonte de dados aparecerá como SQL_NULL na tabela de valor. Você pode definir um ou mais equivalentes nulos como sinônimos de DQS_NULL. Quando você fizer isso, todos os nulos e equivalentes nulos serão processados como DQS_NULL.  
-  
   

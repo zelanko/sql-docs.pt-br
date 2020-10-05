@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37a7a0e8be59136eb3ab6e0454c7910b9c9e3198
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352912"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726157"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Processa o objeto de mineração de dados especificado. Para obter mais informações sobre como processar modelos de mineração e estruturas de mineração, consulte [requisitos e considerações de processamento &#40;&#41;de mineração de dados ](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
+  Processa o objeto de mineração de dados especificado. Para obter mais informações sobre como processar modelos de mineração e estruturas de mineração, consulte [requisitos e considerações de processamento &#40;&#41;de mineração de dados ](/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
   
  Se uma estrutura de mineração for especificada, a instrução processará a estrutura de mineração e todos seus modelos de mineração associados. Se o modelo de mineração for especificado, a instrução processará apenas o modelo de mineração.  
   
@@ -49,7 +49,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  Usando o segundo formulário de sintaxe, insira em *\<object>* . COLUMN_VALUES, você pode inserir dados diretamente nas colunas de modelo sem treinar o modelo. Esse método fornece dados de coluna para o modelo de forma concisa, ordenada, que é útil quando se trabalha com conjuntos de dados contendo hierarquias ou colunas ordenadas.  
   
- Se você usar **Insert em** com um modelo de mineração ou uma estrutura de mineração e deixar os \<mapped model columns> \<source data query> argumentos e, a instrução se comportará como **ProcessDefault**, usando associações que já existem. Se não houver associações, a instrução retornará um erro. Para obter mais informações sobre **ProcessDefault**, consulte [Opções de processamento e configurações &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). O exemplo a seguir mostra a sintaxe:  
+ Se você usar **Insert em** com um modelo de mineração ou uma estrutura de mineração e deixar os \<mapped model columns> \<source data query> argumentos e, a instrução se comportará como **ProcessDefault**, usando associações que já existem. Se não houver associações, a instrução retornará um erro. Para obter mais informações sobre **ProcessDefault**, consulte [Opções de processamento e configurações &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). O exemplo a seguir mostra a sintaxe:  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -59,7 +59,7 @@ INSERT INTO [MINING MODEL] <model>
   
  A tabela a seguir fornece uma descrição do resultado de diferentes formas de instruções, dependendo do estado dos objetos.  
   
-|de|Estado de objetos|Result|  
+|Instrução|Estado de objetos|Resultado|  
 |---------------|----------------------|------------|  
 |INSERIR NO MODELO DE MINERAÇÃO*\<model>*|A estrutura de mineração é processada.|O modelo de mineração é processado.|  
 ||A estrutura de mineração é não processada.|O modelo de mineração e a estrutura de mineração são processadas.|  
@@ -124,5 +124,4 @@ AS [Models]
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

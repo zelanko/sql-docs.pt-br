@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae44534ae51f0bc49ca687ce73a17f9486bc1b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23a9a1594c31bda040a22ad3914af8b8e7d3603f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395722"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726073"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna o número especificado de linhas superiores em ordem decrescente de classificação, conforme especificado por uma expressão.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  No entanto, há situações em que talvez você ainda precise usar o TopCount. Por exemplo, o DMX não dá suporte ao qualificador **Top** em uma instrução de subseleção. A função de [&#41;de PredictHistogram &#40;DMX ](../dmx/predicthistogram-dmx.md) também não oferece suporte à adição de **Top**.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir são consultas de previsão em relação ao modelo de associação que você cria usando o [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). As consultas retornam os mesmos resultados, mas o primeiro exemplo usa TopCount e o segundo exemplo usa a função Predict.  
+ Os exemplos a seguir são consultas de previsão em relação ao modelo de associação que você cria usando o [tutorial de mineração de dados básico](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). As consultas retornam os mesmos resultados, mas o primeiro exemplo usa TopCount e o segundo exemplo usa a função Predict.  
   
  Para entender como o TopCount funciona, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
   
@@ -55,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  Neste exemplo, o valor fornecido como entrada contém uma única aspa e, portanto, deve ser precedido por outra aspa. Se você não tiver certeza da sintaxe para inserção de um caractere de escape, use o Construtor de Consultas de Previsão para criar a consulta. Quando você seleciona o valor da lista suspensa, o caractere de escape exigido é inserido. Para obter mais informações, consulte [criar uma consulta singleton no designer de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  Neste exemplo, o valor fornecido como entrada contém uma única aspa e, portanto, deve ser precedido por outra aspa. Se você não tiver certeza da sintaxe para inserção de um caractere de escape, use o Construtor de Consultas de Previsão para criar a consulta. Quando você seleciona o valor da lista suspensa, o caractere de escape exigido é inserido. Para obter mais informações, consulte [criar uma consulta singleton no designer de mineração de dados](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Resultados do exemplo:  
   
@@ -117,5 +117,4 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  [&#41;&#40;DMX BottomCount ](../dmx/bottomcount-dmx.md)   
  [&#41;&#40;DMX TopPercent ](../dmx/toppercent-dmx.md)   
  [TopSum &#40;&#41;DMX ](../dmx/topsum-dmx.md)  
-  
   

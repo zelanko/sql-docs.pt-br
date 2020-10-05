@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5083a23b8e29bfcbf1a4fc343cc8535667b0af89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb3e35b7ad6809eef6fec9bf8e390f36f6572cdf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496315"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724609"
 ---
 # <a name="managing-a-domain"></a>Gerenciando um domínio
 
@@ -53,7 +53,7 @@ ms.locfileid: "88496315"
 |Alterar ou aumentar os valores em uma base de dados de conhecimento|[Alterar valores de domínio](../data-quality-services/change-domain-values.md)|  
 |Usar regras de validação e padronização|[Criar uma regra de domínio](../data-quality-services/create-a-domain-rule.md)|  
 |Usar relações para corrigir um termo que faz parte de um valor em um domínio|[Criar relações baseadas em termos](../data-quality-services/create-term-based-relations.md)|  
-|Concluir, fechar ou cancelar a atividade de gerenciamento de domínio|[Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Concluir, fechar ou cancelar a atividade de gerenciamento de domínio|[Terminar a atividade Gerenciamento de Domínio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -62,5 +62,4 @@ ms.locfileid: "88496315"
 |Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criando uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md)|  
 |Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importando e exportando conhecimento](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciando um domínio composto](../data-quality-services/managing-a-composite-domain.md)|  
-  
   

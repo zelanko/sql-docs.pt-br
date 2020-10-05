@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2b810d2b268e12c97857475e474d3ed597978ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24a19fc748da4ef521bb9781941911efb08e0132
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431168"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727738"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna o número especificado de linhas inferiores em ordem crescente de classificação, conforme especificado por uma expressão.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -38,7 +38,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
  O valor fornecido pelo \<rank expression> argumento determina a ordem crescente de classificação para as linhas que são fornecidas no \<table expression> argumento, e o número de linhas inferiores que é especificado no \<count> argumento é retornado.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma consulta de previsão em relação ao modelo de associação que você cria usando o [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ O exemplo a seguir cria uma consulta de previsão em relação ao modelo de associação que você cria usando o [tutorial de mineração de dados básico](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
  Para entender como o BottomCount funciona, pode ser útil primeiro executar uma consulta de previsão que retorna apenas a tabela aninhada.  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  Neste exemplo, o valor fornecido como entrada contém uma única aspa e, portanto, deve ser precedido por outra aspa. Se você não tiver certeza da sintaxe para inserção de um caractere de escape, use o Construtor de Consultas de Previsão para criar a consulta. Quando você seleciona o valor da lista suspensa, o caractere de escape exigido é inserido. Para obter mais informações, consulte [criar uma consulta singleton no designer de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  Neste exemplo, o valor fornecido como entrada contém uma única aspa e, portanto, deve ser precedido por outra aspa. Se você não tiver certeza da sintaxe para inserção de um caractere de escape, use o Construtor de Consultas de Previsão para criar a consulta. Quando você seleciona o valor da lista suspensa, o caractere de escape exigido é inserido. Para obter mais informações, consulte [criar uma consulta singleton no designer de mineração de dados](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Resultados do exemplo:  
   
@@ -105,5 +105,4 @@ NATURAL PREDICTION JOIN
  [&#41;&#40;DMX BottomPercent ](../dmx/bottompercent-dmx.md)   
  [&#41;&#40;DMX BottomSum ](../dmx/bottomsum-dmx.md)   
  [&#41;&#40;DMX TopCount ](../dmx/topcount-dmx.md)  
-  
   

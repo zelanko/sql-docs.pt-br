@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 440d6d12ed639d158ad0309209b60daa56e08322
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472362"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727777"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Melhores práticas para a execução do Assistente de Migração de Dados
 Este artigo fornece algumas informações de práticas recomendadas para instalação, avaliação e migração.
@@ -40,6 +40,6 @@ Não instale e execute o Assistente de Migração de Dados diretamente na máqui
 
 - Habilite a conexão criptografada ao conectar-se aos servidores de origem e de destino. O uso da criptografia TLS aumenta a segurança dos dados transmitidos pelas redes entre Assistente de Migração de Dados e a instância de SQL Server, o que é benéfico especialmente ao migrar logons do SQL. Se a criptografia TLS não for usada e a rede estiver comprometida por um invasor, os logons do SQL que estão sendo migrados poderão ser interceptados e/ou modificados imediatamente pelo invasor.
 
-    No entanto, se todos os acessos envolverem uma configuração de intranet segura, a criptografia poderá não ser necessária. A habilitação da criptografia reduz o desempenho porque a sobrecarga extra é necessária para criptografar e descriptografar pacotes. Para obter mais informações, consulte [Criptografando conexões com SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    No entanto, se todos os acessos envolverem uma configuração de intranet segura, a criptografia poderá não ser necessária. A habilitação da criptografia reduz o desempenho porque a sobrecarga extra é necessária para criptografar e descriptografar pacotes. Para obter mais informações, consulte [Criptografando conexões com SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).
     
 - Verifique se há restrições não confiáveis no banco de dados de origem e no de destino antes de migrá-los. Após a migração, analise o banco de dados de destino novamente para ver se alguma restrição se tornou não confiável como parte da movimentação de dados. Corrija as restrições não confiáveis conforme necessário. Deixar as restrições não confiáveis pode resultar em planos de execução insatisfatórios e pode afetar o desempenho.

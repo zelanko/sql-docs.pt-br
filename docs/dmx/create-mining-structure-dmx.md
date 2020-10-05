@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414022"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726265"
 ---
 # <a name="create-mining-structure-dmx"></a>CRIAR UMA ESTRUTURA DE MINERAÇÃO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>Comentários  
  Uma estrutura de mineração é definida especificando uma lista de colunas, especificando, opcionalmente, as relações de hierarquia entre as colunas e particionamento, opcionalmente, a estrutura de mineração em conjuntos de dados de treinamento e de teste.  
   
- A palavra-chave opcional SESSION indica que a estrutura é temporária e você pode usá-la somente durante a sessão atual. Quando a sessão terminar, a estrutura e os modelos baseados nela serão excluídos. Para criar estruturas e modelos de mineração temporários, você deve primeiro definir a propriedade de banco de dados, AllowSessionMiningModels. Para obter mais informações, consulte [Propriedades de Data Mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+ A palavra-chave opcional SESSION indica que a estrutura é temporária e você pode usá-la somente durante a sessão atual. Quando a sessão terminar, a estrutura e os modelos baseados nela serão excluídos. Para criar estruturas e modelos de mineração temporários, você deve primeiro definir a propriedade de banco de dados, AllowSessionMiningModels. Para obter mais informações, consulte [Propriedades de Data Mining](/analysis-services/server-properties/data-mining-properties).  
   
 ## <a name="column-definition-list"></a>Lista de definições de coluna  
  Uma estrutura de mineração é definida incluindo as seguintes informações para cada coluna na lista de definições da coluna:  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Para obter uma lista dos tipos de dados, dos tipos de conteúdo, de distribuições de coluna e de sinalizadores de modelagem que podem ser usados para definir uma coluna de estrutura, consulte os seguintes tópicos:  
   
--   [Tipos de dados &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Tipos de dados &#40;Mineração de dados&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [Tipos de conteúdo &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Tipos de conteúdo &#40;Data Mining&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuições de colunas &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distribuições de colunas &#40;Mineração de dados&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Sinalizadores de modelagem &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Sinalizadores de modelagem &#40;Mineração de dados&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Você pode definir vários valores de sinalizadores de modelagem para uma coluna. No entanto, é possível ter apenas um tipo de conteúdo e um tipo de dados para uma coluna.  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Indica uma hierarquia de valor. O destino de uma coluna RELATED TO pode ser a coluna de chave em uma tabela aninhada, uma coluna com um valor discreto na linha de caso ou outra coluna com uma cláusula RELATED TO, que indica uma hierarquia mais profunda.  
   
 ## <a name="holdout-parameters"></a>Parâmetros de validação  
- Ao especificar parâmetros de validação, você cria uma partição dos dados da estrutura. A quantidade especificada para validação é reservada para teste e os dados restantes são usados para treinamento. Por padrão, se você criar uma estrutura de mineração usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], uma partição de validação será criada contendo 30 por cento dos dados de teste e 70 por cento dos dados de treinamento. Para obter mais informações, consulte [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets).  
+ Ao especificar parâmetros de validação, você cria uma partição dos dados da estrutura. A quantidade especificada para validação é reservada para teste e os dados restantes são usados para treinamento. Por padrão, se você criar uma estrutura de mineração usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], uma partição de validação será criada contendo 30 por cento dos dados de teste e 70 por cento dos dados de treinamento. Para obter mais informações, consulte [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets).  
   
  Se você criar uma estrutura de mineração usando DMX (Data Mining Extensions), deverá especificar manualmente a criação de uma partição de validação.  
   
@@ -182,5 +182,4 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

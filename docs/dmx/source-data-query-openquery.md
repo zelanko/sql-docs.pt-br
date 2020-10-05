@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fd654bf63cfbb961b6aaa3c6369358db25371846
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62d638b6b6028ffa861460e07f2283cb7380e129
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500852"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726100"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;consulta de dados &gt; de origem-OPENQUERY
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,9 +36,9 @@ OPENQUERY(<named datasource>, <query syntax>)
  Sintaxe de consulta que retorna um conjunto de linhas.  
   
 ## <a name="remarks"></a>Comentários  
- **OPENQUERY** fornece uma maneira mais segura de acessar dados externos ao dar suporte a permissões de fonte de dados. Como a cadeia de conexão é armazenada na fonte de dados, os administradores podem usar as propriedades da fonte de dados para gerenciar o acesso aos dados. Para obter mais informações sobre fontes de dados, consulte [fontes de dados com suporte &#40;SSAS-&#41;multidimensional ](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
+ **OPENQUERY** fornece uma maneira mais segura de acessar dados externos ao dar suporte a permissões de fonte de dados. Como a cadeia de conexão é armazenada na fonte de dados, os administradores podem usar as propriedades da fonte de dados para gerenciar o acesso aos dados. Para obter mais informações sobre fontes de dados, consulte [fontes de dados com suporte &#40;SSAS-&#41;multidimensional ](/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
   
- Você pode obter uma lista das fontes de dados que estão disponíveis em um servidor consultando o conjunto de linhas de esquema **MDSCHEMA_INPUT_DATASOURCES** . Para obter mais informações sobre como usar **MDSCHEMA_INPUT_DATASOURCES**, consulte [MDSCHEMA_INPUT_DATASOURCES conjunto de linhas](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126243(v=sql.110)).  
+ Você pode obter uma lista das fontes de dados que estão disponíveis em um servidor consultando o conjunto de linhas de esquema **MDSCHEMA_INPUT_DATASOURCES** . Para obter mais informações sobre como usar **MDSCHEMA_INPUT_DATASOURCES**, consulte [MDSCHEMA_INPUT_DATASOURCES conjunto de linhas](/previous-versions/sql/sql-server-2012/ms126243(v=sql.110)).  
   
  Também é possível retornar uma lista das fontes de dados no banco de dados atual do Analysis Services usando a seguinte consulta DMX:  
   
@@ -55,5 +55,4 @@ OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')
  [&#62;de consulta de dados de origem&#60;](../dmx/source-data-query.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

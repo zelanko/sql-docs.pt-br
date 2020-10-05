@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: caefcdc2e081c0e8d0e7bee329d4dc5d4d5cfa22
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413262"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727647"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECIONAR DISTINCT do &lt; modelo &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -48,7 +48,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>Comentários  
  A instrução **SELECT DISTINCT from** só funciona com uma única coluna ou com um conjunto de colunas relacionadas. Essa cláusula não funciona com um conjunto de colunas não relacionadas.  
   
- A instrução **SELECT DISTINCT from** permite que você referencie diretamente uma coluna dentro de uma tabela aninhada. Por exemplo:   
+ A instrução **SELECT DISTINCT from** permite que você referencie diretamente uma coluna dentro de uma tabela aninhada. Por exemplo:  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Contínuo|Ponto central para os valores da coluna.|  
   
 ## <a name="discrete-column-example"></a>Exemplo de coluna Discrete  
- O exemplo de código a seguir é baseado no `[TM Decision Tree]` modelo que você cria no [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). A consulta retorna os valores exclusivos que existem na coluna discreta `Gender`.  
+ O exemplo de código a seguir é baseado no `[TM Decision Tree]` modelo que você cria no [tutorial de mineração de dados básico](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). A consulta retorna os valores exclusivos que existem na coluna discreta `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -103,7 +103,7 @@ FROM [TM Decision Tree]
  O exemplo de código a seguir retorna os valores de ponto médio, máximo e mínimo de cada bucket criado pelo algoritmo para a coluna, [`Yearly Income]`. Para reproduzir os resultados deste exemplo, crie uma nova estrutura de mineração igual à de `[Targeted Mailing]`. No assistente, altere o tipo de conteúdo da `Yearly Income` coluna de **contínuo** para **discretizado**.  
   
 > [!NOTE]  
->  Também é possível alterar o modelo de mineração criado no Tutorial Mineração Básica para diferenciar a coluna da estrutura de mineração, [`Yearly Income]`. Para obter informações sobre como fazer isso, consulte [alterar o discretização de uma coluna em um modelo de mineração](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model). No entanto, quando você altera a diferenciação da coluna, isso força a estrutura de mineração a ser reprocessada, o que altera os resultados dos outros modelos criados com o uso dessa estrutura.  
+>  Também é possível alterar o modelo de mineração criado no Tutorial Mineração Básica para diferenciar a coluna da estrutura de mineração, [`Yearly Income]`. Para obter informações sobre como fazer isso, consulte [alterar o discretização de uma coluna em um modelo de mineração](/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model). No entanto, quando você altera a diferenciação da coluna, isso força a estrutura de mineração a ser reprocessada, o que altera os resultados dos outros modelos criados com o uso dessa estrutura.  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -138,5 +138,4 @@ FROM [TM Decision Tree]
  [SELECIONAR&#41;&#40;DMX ](../dmx/select-dmx.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

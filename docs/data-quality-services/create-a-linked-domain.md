@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dbe71b94bfc71cca727f34bb6a4fd4e532455bd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487855"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725348"
 ---
 # <a name="create-a-linked-domain"></a>Criar um domínio vinculado
 
@@ -63,7 +63,7 @@ ms.locfileid: "88487855"
   
 6.  Se necessário, você pode alterar o nome ou a descrição do domínio vinculado na guia Propriedades do Domínio.  
   
-7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Map two fields to linked domains  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88487855"
 -   Você não pode criar um domínio vinculado ou um domínio composto vinculado para um domínio composto.  
   
 -   Quando você clicar duas vezes em um domínio vinculado em qualquer uma das guias Gerenciamento de Domínio, o domínio estará aberto para edição com uma indicação na cadeia de caracteres de nome que é um domínio vinculado.  
-  
   

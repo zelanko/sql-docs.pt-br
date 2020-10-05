@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864933"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726337"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Avaliar a prontidão de um SQL Server banco de dados migrando para o Azure SQL usando o Assistente de Migração de Dados
 
 A migração de centenas de instâncias de SQL Server e de milhares de bancos de dados para o Azure SQL Database, nossa oferta de PaaS (plataforma como serviço), é uma tarefa considerável. Para simplificar o processo o máximo possível, você precisa se sentir confiante sobre a preparação relativa para a migração. Identificação de frutas de baixa interrupções, incluindo os servidores e bancos de dados que estão totalmente prontos ou que exigem esforço mínimo para se preparar para a migração, facilitar e acelerar seus esforços.
 
-Este artigo fornece instruções passo a passo para aproveitar os [Assistente de migração de dados](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) para resumir os resultados de preparação e Surface-los no Hub de [migrações para Azure](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
+Este artigo fornece instruções passo a passo para aproveitar os [Assistente de migração de dados](./dma-overview.md?view=sql-server-2017) para resumir os resultados de preparação e Surface-los no Hub de [migrações para Azure](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -134,7 +134,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 
    ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
-6. Entre no Portal do Azure.
+6. Entre no portal do Azure.
 
    ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 

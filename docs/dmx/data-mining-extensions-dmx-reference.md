@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd6830e46f10ba20642d1975f293b72b768f7e5b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414082"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726247"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Referência DMX (Data Mining Extensions)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88414082"
   
  A especificação define a base da mineração de dados como objeto virtual do modelo de mineração de dados. O objeto do modelo de mineração de dados encapsula tudo o que é conhecido sobre um modelo particular de mineração. O modelo do objeto de mineração de dados é estruturado como uma tabela SQL, com colunas, tipos de dados e informações meta que descrevem o modelo. Essa estrutura permite o uso da linguagem DMX, que é uma extensão de SQL, para criar e trabalhar com modelos.  
   
- **Para obter mais informações:** [estruturas de mineração &#40;mineração de dados Analysis Services&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
+ **Para obter mais informações:** [estruturas de mineração &#40;mineração de dados Analysis Services&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
 ##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> Instruções DMX  
  As instruções DMX podem ser usadas para criar, processar, excluir, copiar, pesquisar e prever, de acordo com modelos de mineração de dados. Há dois tipos de instruções em DMX: as instruções de definição de dados e as instruções de manipulação de dados. Cada um desses tipos de instrução podem executar diferentes tipos de tarefas.  
@@ -109,5 +109,4 @@ ms.locfileid: "88414082"
  [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

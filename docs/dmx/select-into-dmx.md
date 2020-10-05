@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7bc85d20ab3c1c087b6352d16777b2bb7d7dcd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 062e95b2030b3f4e3004fa1409f26fe82e38e05d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500850"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726104"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,7 +41,7 @@ FROM <existing model>
  Opcional. Uma lista separada por vírgulas de parâmetros definidos pelo provedor para o algoritmo.  
   
  *expressão*  
- Uma expressão que avalia a uma condição de filtro válida nos dados de treinamento. Para obter mais informações sobre expressões que podem ser usadas como filtros, consulte [filtros para modelos de mineração &#40;&#41;de mineração de dados de Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Uma expressão que avalia a uma condição de filtro válida nos dados de treinamento. Para obter mais informações sobre expressões que podem ser usadas como filtros, consulte [filtros para modelos de mineração &#40;&#41;de mineração de dados de Analysis Services ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
  *modelo existente*  
  Nome do modelo existente, a ser copiado.  
@@ -54,7 +54,7 @@ FROM <existing model>
  A cláusula **WITH DRILLTHROUGH** habilita o detalhamento no novo modelo de mineração. O detalhamento pode ser habilitado somente durante a criação do modelo.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Exemplo 1: Alterando os parâmetros do modelo  
- O exemplo a seguir cria um novo modelo de mineração com base em um modelo de mineração existente, `TM_Clustering` , que você cria no [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). No novo modelo, o parâmetro CLUSTER_COUNT é modificado para que no máximo cinco clusters existam no modelo. Em contraste, o modelo existente usa o valor padrão que é 10.  
+ O exemplo a seguir cria um novo modelo de mineração com base em um modelo de mineração existente, `TM_Clustering` , que você cria no [tutorial de mineração de dados básico](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). No novo modelo, o parâmetro CLUSTER_COUNT é modificado para que no máximo cinco clusters existam no modelo. Em contraste, o modelo existente usa o valor padrão que é 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -78,5 +78,4 @@ FROM [TM Clustering]
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

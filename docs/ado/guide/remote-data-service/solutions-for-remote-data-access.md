@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 849ef40c124cfe611f72c6ad5f258d678c24c963
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0e46994321b73166095acbb0891f5434a6fc86a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977597"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723034"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluções para Acesso a dados remotos
 ## <a name="the-issue"></a>O problema  
  O ADO permite que seu aplicativo tenha acesso direto e modifique fontes de dados (às vezes chamado de sistema de duas camadas). Por exemplo, se sua conexão for com a fonte de dados que contém seus dados, essa será uma conexão direta em um sistema de duas camadas.  
   
 > [!IMPORTANT]
->  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](/dotnet/framework/wcf/).  
   
  No entanto, talvez você queira acessar fontes de dados indiretamente por meio de um intermediário, como o Microsoft® Serviços de Informações da Internet (IIS). Essa organização, às vezes, é chamada de sistema de três camadas. O IIS é um sistema cliente/servidor que fornece uma maneira eficiente para um aplicativo local, ou cliente, para invocar um programa remoto ou de servidor na Internet ou em uma intranet. O programa de servidor obtém acesso à fonte de dados e, opcionalmente, processa os dados adquiridos.  
   

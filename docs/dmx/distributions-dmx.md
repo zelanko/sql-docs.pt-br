@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aef6ed4b98241b07e84aa11ed6408c600d6ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9deb3afaa6d0a4bc90281c2cc3998365eccb9838
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414192"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726212"
 ---
 # <a name="distributions-dmx"></a>Distribuições (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "88414192"
  **UNIVERSAL**  
  Os valores para a coluna contínua formam uma curva plana, na qual todos os valores são igualmente prováveis.  
   
- Para obter mais informações sobre [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de data mining, consulte [algoritmos de mineração de dados &#40;Analysis Services-&#41;de mineração de dados ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Provedores de algoritmo de terceiros podem oferecer suporte a tipos de distribuição adicionais. Para determinar a quais tipos de distribuição um algoritmo dá suporte, use o conjunto de linhas de esquema **SUPPORTED_DISTRIBUTION_FLAGS** .  
+ Para obter mais informações sobre [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de data mining, consulte [algoritmos de mineração de dados &#40;Analysis Services-&#41;de mineração de dados ](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Provedores de algoritmo de terceiros podem oferecer suporte a tipos de distribuição adicionais. Para determinar a quais tipos de distribuição um algoritmo dá suporte, use o conjunto de linhas de esquema **SUPPORTED_DISTRIBUTION_FLAGS** .  
   
- Para obter mais informações sobre tipos de distribuição, consulte [distribuições de coluna &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining).  
+ Para obter mais informações sobre tipos de distribuição, consulte [distribuições de coluna &#40;mineração de dados&#41;](/analysis-services/data-mining/column-distributions-data-mining).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tipos de conteúdo &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)   
+ [Tipos de conteúdo &#40;mineração de dados&#41;](/analysis-services/data-mining/content-types-data-mining)   
  [Referência de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-reference.md)   
  [As extensões de mineração de dados &#40;elementos de sintaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -47,5 +47,4 @@ ms.locfileid: "88414192"
  [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Estrutura e uso de consultas de previsão DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Compreendendo a instrução DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

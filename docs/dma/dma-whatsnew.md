@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988502"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727755"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
 
@@ -83,7 +83,7 @@ O fluxo de trabalho de avaliação ajuda a detectar os seguintes problemas, o qu
   - Alterações comportamentais: os objetos de esquema relatados podem continuar a funcionar, mas podem apresentar um comportamento diferente, por exemplo, degradação de desempenho.
   - Problemas informativos: esses objetos não afetarão a migração, mas podem ter sido preteridos do recurso SQL Server versões.
 
-Após a conclusão da avaliação, use o [serviço de migração de banco de dados do Azure](https://azure.microsoft.com/services/database-migration/) (DMS) para executar a migração de seus bancos de dados do SQL Server para o SQL instância gerenciada.  O DMS dá suporte a migrações de banco de dados [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (única) e [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (tempo de inatividade mínimo) para o SQL instância gerenciada.
+Após a conclusão da avaliação, use o [serviço de migração de banco de dados do Azure](https://azure.microsoft.com/services/database-migration/) (DMS) para executar a migração de seus bancos de dados do SQL Server para o SQL instância gerenciada.  O DMS dá suporte a migrações de banco de dados [offline](/azure/dms/tutorial-sql-server-to-managed-instance) (única) e [online](/azure/dms/tutorial-sql-server-managed-instance-online) (tempo de inatividade mínimo) para o SQL instância gerenciada.
 
 ## <a name="data-migration-assistant-v40"></a>Assistente de Migração de Dados v 4.0
 
@@ -141,7 +141,7 @@ Se o arquivo de backup físico estiver em um computador que executa o:
 
 ### <a name="migrating-windows-logins"></a>Migrando logons do Windows
 
-Embora a migração de logons do Active Directory (AD) seja oficialmente suportada pelo SQL Server 2017 no Linux, ela requer configuração adicional para funcionar com êxito. Consulte o artigo [Active Directory autenticação com SQL Server em Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) para obter informações detalhadas sobre como configurar Active Directory logons no SQL Server 2017 no Linux. Depois de executar a configuração necessária, a instalação será concluída e você poderá migrar Active Directory logons como de costume. A autenticação padrão do SQL funciona conforme o esperado sem nenhuma configuração adicional.
+Embora a migração de logons do Active Directory (AD) seja oficialmente suportada pelo SQL Server 2017 no Linux, ela requer configuração adicional para funcionar com êxito. Consulte o artigo [Active Directory autenticação com SQL Server em Linux](../linux/sql-server-linux-active-directory-authentication.md) para obter informações detalhadas sobre como configurar Active Directory logons no SQL Server 2017 no Linux. Depois de executar a configuração necessária, a instalação será concluída e você poderá migrar Active Directory logons como de costume. A autenticação padrão do SQL funciona conforme o esperado sem nenhuma configuração adicional.
 
 ## <a name="data-migration-assistant-v32"></a>Assistente de Migração de Dados v 3.2
 
@@ -190,6 +190,6 @@ A versão v 1.0 do Assistente de Migração de Dados é a versão inicial e forn
   - Armazenamento
 - Experiência de usuário moderna para realizar avaliações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão Geral do Assistente de Migração de Dados](../dma/dma-overview.md)

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ab5056926fcda98ef0f60449eb5b19d75105e35
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0e8d73b1c0a07ea127e0d4bad880b82c08ca24a5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981357"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724280"
 ---
 # <a name="refresh-method-example-vbscript"></a>Exemplo do método Refresh (VBScript)
 > [!IMPORTANT]
->  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](/dotnet/framework/wcf/).  
   
  O exemplo a seguir mostra como definir os parâmetros necessários de [RDS. Controle](./datacontrol-object-rds.md) de data em tempo de execução. A maneira na qual um [conjunto de registros](../ado-api/recordset-object-ado.md) é recuperado usando o método [Refresh](../ado-api/refresh-method-ado.md) é determinado pelas configurações das propriedades [executeoptions](./executeoptions-property-rds.md) e [FetchOptions](./fetchoptions-property-rds.md) . Para testar este exemplo, recorte e cole o código a seguir em um documento ASP normal e nomeie-o **RefreshVBS. asp**. Use **Localizar** para localizar o arquivo Adovbs. Inc e colocá-lo no diretório que você planeja usar. O script ASP identificará seu servidor.  
   

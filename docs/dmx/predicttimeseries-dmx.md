@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b85cc4197b0ffafef7a83566e4041a7d290548
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422259"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727667"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   O terceiro exemplo mostra como usar o parâmetro EXTEND_MODEL_CASES para atualizar um modelo de mineração com dados novos.  
   
- Para saber mais sobre como trabalhar com modelos de série temporal, confira o tutorial de Data Mining, [lição 2: Criando um cenário de previsão &#40;tutorial de mineração de dados intermediário&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [tutorial DMX de previsão de série temporal](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Para saber mais sobre como trabalhar com modelos de série temporal, confira o tutorial de Data Mining, [lição 2: Criando um cenário de previsão &#40;tutorial de mineração de dados intermediário&#41;](/previous-versions/sql/sql-server-2016/ms169846(v=sql.130)) e [tutorial DMX de previsão de série temporal](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130)).  
   
 > [!NOTE]  
 >  Você pode obter diferentes resultados do seu modelo. Os resultados dos exemplos a seguir são fornecidos somente para ilustrar o formato do resultado.  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>Exemplo 2: Adicionando novos dados e usando REPLACE_MODEL_CASES  
  Suponha que você acha que os dados estavam incorretos para uma região específica e deseja usar os padrões no modelo, mas ajustar as previsões para que correspondam aos novos dados. Ou, você pode achar que outra região tenha mais tendências confiáveis e desejar aplicar o modelo mais confiável aos dados de uma região diferente.  
   
- Nestes cenários, você pode usar o parâmetro REPLACE_MODEL_CASES e especificar um novo conjunto de dados a serem usados como dados históricos. Dessa maneira, as projeções serão baseadas nos padrões do modelo especificado, mas continuarão naturalmente a partir do final dos novos pontos de dados. Para obter uma explicação completa deste cenário, consulte [&#41;de previsões de série temporal avançadas &#40;tutorial de mineração de dados intermediário ](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ Nestes cenários, você pode usar o parâmetro REPLACE_MODEL_CASES e especificar um novo conjunto de dados a serem usados como dados históricos. Dessa maneira, as projeções serão baseadas nos padrões do modelo especificado, mas continuarão naturalmente a partir do final dos novos pontos de dados. Para obter uma explicação completa deste cenário, consulte [&#41;de previsões de série temporal avançadas &#40;tutorial de mineração de dados intermediário ](/previous-versions/sql/sql-server-2016/cc879290(v=sql.130)).  
   
  A seguinte consulta PREDICTION JOIN ilustra a sintaxe para substituir dados e fazer novas previsões. Para os dados de substituição, o exemplo recupera o valor das colunas Amount e Quantity e multiplica cada um deles por dois:  
   
@@ -254,7 +254,6 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Exemplos de consulta de modelo de série temporal](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
+ [Exemplos de consulta de modelo de série temporal](/analysis-services/data-mining/time-series-model-query-examples)   
  [Prever &#40;DMX&#41;](../dmx/predict-dmx.md)  
-  
   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 73ec65fc7de346ada1232bee7a03dce2aedffa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a229aacb9110bdd5eefa9dc3987ce39fec8a1e66
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466619"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726599"
 ---
 # <a name="set-domain-properties"></a>Definir propriedades do domínio
 
@@ -41,7 +41,7 @@ ms.locfileid: "88466619"
   
 2.  Defina as propriedades em um novo domínio depois de criá-la conforme descrito em [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-setting-domain-properties"></a><a name="FollowUp"></a> Acompanhamento: depois de definir propriedades de domínio  
  Após definir propriedades de domínio, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
@@ -90,5 +90,4 @@ ms.locfileid: "88466619"
   
 ###  <a name="disable-syntax-error-algorithms"></a><a name="Syntax"></a> Desabilitar algoritmos de erro de sintaxe  
  Se o tipo de dados for **Cadeia de Caracteres**, selecione para especificar que erros de sintaxe não sejam identificados pelo DQS no domínio durante a limpeza. Marque esta caixa de seleção quando a identificação de erros de sintaxe para esse domínio for irrelevante. Por exemplo, a identificação de erros de sintaxe pode não ter importância para um número de série. Este controle só está disponível para o tipo de dados cadeia de caracteres. O DQS não verificará se existem erros de sintaxe em tipos de dados que não sejam cadeia de caracteres.  
-  
   

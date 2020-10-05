@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6b93097b3a21e3858139146b50f15ddc79c6569
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2842d51c09585a9b954761ac31484e4cf717a9b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978127"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724717"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantir espaço suficiente de TempDB
 Se ocorrerem erros durante o tratamento de objetos [Recordset](../../reference/ado-api/recordset-object-ado.md) que precisam de espaço de processamento no Microsoft SQL Server 6,5, talvez seja necessário aumentar o tamanho do tempdb. (Algumas consultas exigem espaço de processamento temporário; por exemplo, uma consulta com uma cláusula ORDER BY requer um tipo de **conjunto de registros**, que requer algum espaço temporário.)  
   
 > [!IMPORTANT]
->  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](/dotnet/framework/wcf/).  
   
 > [!IMPORTANT]
 >  Leia este procedimento antes de executar as ações porque não é tão fácil reduzir um dispositivo depois que ele é expandido.  

@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cea4913bf3668c89fb0c1c66632359a372f3d54b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 180375f77251adaab9a8d30462267b043ed6e946
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422250"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727673"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna o valor de suporte para um estado especificado.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -40,7 +40,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Para retornar o suporte para os Estados ausentes, defina \<predicted state> como NULL.  
   
 > [!NOTE]  
->  Os valores de suporte são calculados de modo diferente ou talvez tenham uma interpretação diferente dependendo do tipo de modelo que você está consultando. Para obter mais informações sobre como o suporte é calculado para qualquer tipo de modelo específico, consulte o tipo de algoritmo individual no [conteúdo do modelo de mineração &#40;Analysis Services&#41;de mineração de dados ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  Os valores de suporte são calculados de modo diferente ou talvez tenham uma interpretação diferente dependendo do tipo de modelo que você está consultando. Para obter mais informações sobre como o suporte é calculado para qualquer tipo de modelo específico, consulte o tipo de algoritmo individual no [conteúdo do modelo de mineração &#40;Analysis Services&#41;de mineração de dados ](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa uma consulta singleton para prever se um indivíduo será um comprador de bicicletas, e também determina o suporte para a previsão com base no modelo de mineração da Árvore de decisão TM.  
@@ -63,5 +63,4 @@ NATURAL PREDICTION JOIN
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
  [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
-  
   

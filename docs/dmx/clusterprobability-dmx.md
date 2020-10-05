@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f27a901bbb45c48996c82bbedbbb3691c1a6cbc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb2cc218ff18b23237c561a3cac1a9a68373f3ae
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431108"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726288"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Retorna a probabilidade de que o caso de entrada pertença ao cluster especificado.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -32,7 +32,7 @@ ClusterProbability([<Node_Caption>])
  Essa função só pode ser usada se o modelo de mineração de dados subjacente oferecer suporte a clustering.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- Valor escalar.  
+ Um valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
  A sintaxe a seguir usa o conjunto de linhas do esquema de conteúdo do modelo de mineração para retornar as legendas de nó que existem no modelo de mineração.  
@@ -41,7 +41,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Para obter mais informações sobre como usar essa sintaxe, consulte [selecionar do modelo de &#60;&#62;.&#41;de conteúdo &#40;DMX ](../dmx/select-from-model-content-dmx.md). Para obter mais informações sobre o conjunto de linhas do esquema de conteúdo do modelo de mineração, consulte [DMSCHEMA_MINING_MODEL_CONTENT conjunto de linhas](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
+ Para obter mais informações sobre como usar essa sintaxe, consulte [selecionar do modelo de &#60;&#62;.&#41;de conteúdo &#40;DMX ](../dmx/select-from-model-content-dmx.md). Para obter mais informações sobre o conjunto de linhas do esquema de conteúdo do modelo de mineração, consulte [DMSCHEMA_MINING_MODEL_CONTENT conjunto de linhas](/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
  Se um \<node caption> não for especificado, a função retornará a probabilidade de que os casos de entrada pertençam ao cluster mais provável. Use a função de **cluster** para retornar o cluster mais provável.  
   
@@ -66,5 +66,4 @@ NATURAL PREDICTION JOIN
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;&#41;DMX ](../dmx/functions-dmx.md)   
  [Funções de previsão gerais &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
-  
   
