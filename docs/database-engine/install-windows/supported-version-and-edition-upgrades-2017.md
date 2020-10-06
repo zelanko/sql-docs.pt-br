@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 180a0a75b36ff945b672a730783b80766753a1b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41cfd3a4bcb4077c37a0d2801652d8bf6dfedc9f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900290"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671007"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2017"></a>Atualizações de versão e edição com suporte (SQL Server 2017)
 
@@ -47,7 +47,7 @@ ms.locfileid: "85900290"
   
 -   O [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] está disponível apenas em plataformas de 64 bits. A atualização de plataforma cruzada não é suportada. Não é possível atualizar uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nativa de 64 bits usando a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No entanto, será possível fazer backup de bancos de dados ou desanexá-los de uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, em seguida, restaurá-los ou anexá-los a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de 64 bits), se os bancos de dados não forem publicados na replicação. Você deverá recriar logons e outros objetos de usuário nos bancos de dados do sistema master, msdb e model.  
   
--   Não é possível adicionar novos recursos durante a atualização da instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], você poderá adicionar recursos usando a Instalação do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]. Para obter mais informações, consulte [Adicionar recursos a uma instância do SQL Server &#40;Instalação&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+-   Não é possível adicionar novos recursos durante a atualização da instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], você poderá adicionar recursos usando a Instalação do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]. Para obter mais informações, consulte [Adicionar recursos a uma instância do SQL Server &#40;Instalação&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 -   Não há suporte para clusters de failover no modo WOW.  
     
@@ -185,5 +185,4 @@ Para obter instruções passo a passo sobre como fazer um upgrade de edição, c
  [Requisitos de Hardware e Software para a Instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  
  [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
   

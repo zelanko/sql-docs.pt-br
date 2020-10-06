@@ -14,12 +14,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900203"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670229"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Fazer upgrade do SQL Server usando o Assistente de Instalação (Instalação)
 
@@ -46,7 +46,7 @@ O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 Você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e execução no compartilhamento remoto, e ser um administrador local.  
   
 > [!WARNING]  
->  Lembre-se de que você não pode alterar os recursos a serem atualizados, nem adicionar recursos durante a operação de atualização. Para obter mais informações sobre como adicionar recursos a uma instância atualizada do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] após a conclusão da operação de upgrade, consulte [Adicionar recursos a uma instância do SQL Server &#40;Instalação&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+>  Lembre-se de que você não pode alterar os recursos a serem atualizados, nem adicionar recursos durante a operação de atualização. Para obter mais informações sobre como adicionar recursos a uma instância atualizada do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] após a conclusão da operação de upgrade, consulte [Adicionar recursos a uma instância do SQL Server &#40;Instalação&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
   
  Se você estiver atualizando o [!INCLUDE[ssDE](../../includes/ssde-md.md)], examine [Planejar e testar o plano de atualização do Mecanismo de Banco de Dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) e realize as seguintes tarefas, conforme apropriado para seu ambiente:  
   
@@ -120,7 +120,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
-15. Na página Opções de Atualização da Pesquisa de Texto Completo, especifique as opções de atualização para os bancos de dados que estão sendo atualizados. Para obter mais informações, veja [Opções de atualização da Pesquisa de Texto Completo](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. Na página Opções de Atualização da Pesquisa de Texto Completo, especifique as opções de atualização para os bancos de dados que estão sendo atualizados. Para obter mais informações, veja [Opções de atualização da Pesquisa de Texto Completo](./install-sql-server.md).  
   
 16. A janela Regras de Recurso avançará automaticamente se todas as regras passarem.  
   
@@ -143,6 +143,5 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
 ## <a name="see-also"></a>Consulte Também  
  [Fazer upgrade do SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Compatibilidade com versões anteriores_excluída](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [Compatibilidade com versões anteriores_excluída](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244070"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670512"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017
 
@@ -62,7 +62,7 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server serão preteri
 
 | Recurso substituído | Substituição | Nome do recurso | ID do Recurso |
 |--------------------|-------------|--------------|------------|
-Atualização da versão 100 (SQL Server 2008 e SQL Server 2008 R2). | Quando uma versão do SQL Server fica sem [suporte](https://aka.ms/sqllifecycle), o nível de compatibilidade do banco de dados associado é marcado como preterido. No entanto, continuamos dando suporte a aplicativos certificados em qualquer nível de compatibilidade do banco de dados com suporte, contanto que possível, para facilitar as atualizações. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Nível de compatibilidade do banco de dados 100 | 108 |
+Atualização da versão 100 (SQL Server 2008 e SQL Server 2008 R2). | Quando uma versão do SQL Server fica sem [suporte](/lifecycle/products/?products=sql-server), o nível de compatibilidade do banco de dados associado é marcado como preterido. No entanto, continuamos dando suporte a aplicativos certificados em qualquer nível de compatibilidade do banco de dados com suporte, contanto que possível, para facilitar as atualizações. Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Nível de compatibilidade do banco de dados 100 | 108 |
 
 ### <a name="database-objects"></a>Objetos de banco de dados
 
@@ -370,6 +370,4 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 > O parâmetro **OUTPUT** de cookie para **sp_setapprole** está documentado atualmente como **varbinary(8000)** , que tem o tamanho máximo correto. No entanto, a implementação atual retorna **varbinary(50)** . Se os desenvolvedores alocaram **varbinary(50)** , o aplicativo poderá exigir alterações se o cookie retornar aumentos de tamanho em uma versão futura. Embora não seja um problema de substituição, isto é mencionado neste tópico porque os ajustes de aplicativo são semelhantes. Para obter mais informações, veja [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
-
+ [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)  

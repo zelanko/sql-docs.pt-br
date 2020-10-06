@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22b1d58bac2433f9f5bae7dac5a6568050e38daf
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772634"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670271"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85772634"
 ### <a name="operating-system-support"></a>Suporte do sistema operacional  
  Os seguintes links fornecem mais informações sobre o modo como o Windows dá suporte à **Proteção Estendida**:  
   
--   [Autenticação Integrada do Windows com Proteção Estendida](https://msdn.microsoft.com/library/dd639324.aspx)  
+-   [Autenticação Integrada do Windows com Proteção Estendida](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   
 -   [Microsoft Security Advisory (973811), Proteção Estendida para Autenticação](/security-updates/SecurityAdvisories/2009/973811)
   
@@ -100,12 +100,11 @@ ms.locfileid: "85772634"
 ## <a name="configuring-other-sql-server-components"></a>Configurando outros componentes do SQL Server  
  Para obter mais informações sobre como configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Proteção estendida para autenticação com o Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
- Ao usar o IIS para acessar dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando uma conexão HTTP ou HTTPS, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode aproveitar a Proteção Estendida fornecida pelo IIS. Para obter mais informações sobre como configurar o IIS para usar a Proteção Estendida, consulte [Configure Extended Protection in IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105)(em inglês).  
+ Ao usar o IIS para acessar dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando uma conexão HTTP ou HTTPS, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode aproveitar a Proteção Estendida fornecida pelo IIS. Para obter mais informações sobre como configurar o IIS para usar a Proteção Estendida, consulte [Configure Extended Protection in IIS 7.5](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee909472(v=ws.10))(em inglês).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configuração de rede do servidor](../../database-engine/configure-windows/server-network-configuration.md)   
  [Configuração de rede do cliente](../../database-engine/configure-windows/client-network-configuration.md)   
- [Visão geral sobre a Proteção Estendida para Autenticação](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [Autenticação Integrada do Windows com Proteção Estendida](https://go.microsoft.com/fwlink/?LinkId=179922)  
-  
+ [Visão geral sobre a Proteção Estendida para Autenticação](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+ [Autenticação Integrada do Windows com Proteção Estendida](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   

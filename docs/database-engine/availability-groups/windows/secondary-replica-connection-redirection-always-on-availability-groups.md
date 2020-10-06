@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472442"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669836"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirecionamento de conexão de leitura/gravação de réplica secundária para primária (Grupos de Disponibilidade Always On)
 
@@ -155,7 +155,7 @@ No diagrama a seguir, a réplica primária passou por failover manual para COMPU
 
 ## <a name="sql-server-instance-offline"></a>Instância do SQL Server offline
 
-Se a instância do SQL Server especificada na cadeia de conexão não estiver disponível (devido a interrupção), a conexão falhará independentemente da função que a réplica desempenha no servidor de destino. Para evitar um tempo de inatividade prolongado no aplicativo, configure um `FailoverPartner` alternativo na cadeia de conexão. O aplicativo precisa implementar a lógica de repetição para acomodar as réplicas primária e secundária que não ficam online durante o failover real. Para obter informações sobre cadeias de conexão, consulte [Propriedade SqlConnection.ConnectionString](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
+Se a instância do SQL Server especificada na cadeia de conexão não estiver disponível (devido a interrupção), a conexão falhará independentemente da função que a réplica desempenha no servidor de destino. Para evitar um tempo de inatividade prolongado no aplicativo, configure um `FailoverPartner` alternativo na cadeia de conexão. O aplicativo precisa implementar a lógica de repetição para acomodar as réplicas primária e secundária que não ficam online durante o failover real. Para obter informações sobre cadeias de conexão, consulte [Propriedade SqlConnection.ConnectionString](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
 
 ## <a name="see-also"></a>Consulte Também
 
@@ -163,4 +163,4 @@ Se a instância do SQL Server especificada na cadeia de conexão não estiver di
  
 [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

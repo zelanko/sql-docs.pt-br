@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772599"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670704"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instâncias do mecanismo de banco de dados (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772599"
 |Descreve como gerenciar o serviço associado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Isso inclui ações como iniciar e parar o serviço ou configurando opções de inicialização.|[Gerenciar os serviços do Mecanismo de Banco de Dados](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |Descreva como realizar tarefas de configuração de rede de servidor, como habilitação de protocolos, modificação de porta ou pipe usado por um protocolo, configuração de criptografia, configuração do serviço SQL Server Browser, exposição ou ocultação do Mecanismo de Banco de Dados do SQL Server na rede e registro do Nome da Entidade de Segurança do Servidor.|[Configuração de rede do servidor](../../database-engine/configure-windows/server-network-configuration.md)|  
 |Descreve como executar tarefas de configuração de rede de cliente como configurar protocolos de cliente e criar ou excluir um Alias de Servidor.|[Configuração de rede de cliente](../../database-engine/configure-windows/client-network-configuration.md)|  
-|Descreve os editores [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que podem ser usados para criar, depurar e executar scripts tais como scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Também descreve como codificar scripts do Windows PowerShell para trabalhar com componentes do SQL Server.|[Geração de scripts do mecanismo de banco de dados](../../relational-databases/scripting/database-engine-scripting.md)|  
+|Descreve os editores [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que podem ser usados para criar, depurar e executar scripts tais como scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Também descreve como codificar scripts do Windows PowerShell para trabalhar com componentes do SQL Server.|[Geração de scripts do mecanismo de banco de dados](../../ssms/scripting/database-engine-scripting.md)|  
 |Descreve como usar planos de manutenção para especificar um fluxo de trabalho de tarefas de administração comum para uma instância. Fluxos de trabalho incluem tarefas como backup de bancos de dados e atualização de estatísticas para melhorar o desempenho.|[Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |Descreve como usar o administrador de recursos para gerenciar o consumo de recursos e cargas de trabalho, especificando limites para a quantidade de CPU e memória que solicitações de aplicativo podem usar.|[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)|  
 |Descreve como aplicativos de banco de dados podem usar o email do banco de dados para enviar mensagens de email do [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Database Mail](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772599"
   
 ## <a name="see-also"></a>Consulte Também  
  [Aplicativo sqlservr](../../tools/sqlservr-application.md)   
- [Recursos de banco de dados](../../relational-databases/database-features.md)   
- [Recursos entre instâncias do Mecanismo de Banco de Dados](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [Recursos de banco de dados](../../relational-databases/databases/databases.md)   
+ [Recursos entre instâncias do Mecanismo de Banco de Dados](../../relational-databases/databases/databases.md)  
   

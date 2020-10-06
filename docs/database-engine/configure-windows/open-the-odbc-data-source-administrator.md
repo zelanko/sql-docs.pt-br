@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1704438e867c5ab0610230f3e64567ea52024921
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: edfefc8807b2633d05739cdbc2bb18020d3b09e9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790369"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670691"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Abrir o Administrador de Fonte de Dados ODBC
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +48,8 @@ ms.locfileid: "87790369"
 
 
 > [!NOTE]  
-> Para conexões com a Autenticação do Azure Active Directory para o Banco de Dados SQL, instale o driver mais recente, por exemplo, [ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).  
+> Para conexões com a Autenticação do Azure Active Directory para o Banco de Dados SQL, instale o driver mais recente, por exemplo, [ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Verificar a versão do driver ODBC do SQL Server &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
-  
   

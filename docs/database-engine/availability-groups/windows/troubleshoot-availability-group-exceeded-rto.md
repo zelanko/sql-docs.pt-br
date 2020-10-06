@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 391215275c97dba05fb7a3df0692a5a48e9fe58a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888025"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670660"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Solução de problemas: o grupo de disponibilidade excedeu o RTO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -64,6 +64,5 @@ from sys.dm_hadr_database_replica_states
  Se o thread refazer estiver realmente atrasado, será necessário investigar a causa raiz da degradação do desempenho na réplica secundária. Se houver uma contenção de E/S com a carga de trabalho de relatório, você poderá usar o [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) para controlar os ciclos de CPU que são usados pela carga de trabalho de relatório para controlar indiretamente os ciclos de E/S executados, até certo ponto. Por exemplo, se sua carga de trabalho de relatório estiver consumindo 10% da CPU, mas a carga de trabalho estiver associada a E/S, você poderá usar o Resource Governor para limitar o uso de recursos de CPU a 5% a fim de limitar a carga de trabalho de leitura, minimizando o impacto na E/S.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Solução de problemas de desempenho no SQL Server (aplica-se ao SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [Solução de problemas de desempenho no SQL Server (aplica-se ao SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

@@ -13,12 +13,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8638c87129cfcc567296c0cf20b6b4a9f2f2b08a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883254"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670439"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar o Mecanismo de Banco de Dados do SQL Server
 
@@ -73,13 +73,12 @@ Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Ba
   
 
 > [!NOTE]  
->  Por padrão, os bancos de dados de exemplo e o código de exemplo não são instalados como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar bancos de dados de exemplo e o código de exemplo, consulte [Exemplos do Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Consulte exemplos mais antigos no [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
+>  Por padrão, os bancos de dados de exemplo e o código de exemplo não são instalados como parte da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar bancos de dados de exemplo e o código de exemplo, consulte [Exemplos do Microsoft SQL Server](../../samples/sql-samples-where-are.md). Consulte exemplos mais antigos no [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
 
   
 ## <a name="see-also"></a>Confira também  
  [Edições e recursos com suporte do SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Soluções de alta disponibilidade &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [Soluções de alta disponibilidade &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)   
  [Fazer Upgrade do SQL Server Usando o Assistente de Instalação &#40;Instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
-ms.openlocfilehash: f8c9f728a5b28dd55a3c8a63c5998e450a7c7770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c8b0b5b1ae7c93c48ac12a950fe971feb4da920
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471960"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670489"
 ---
 # <a name="deprecated-database-engine-features-in-sssqlv15-md"></a>Recursos preteridos do mecanismo de banco de dados no [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 
@@ -32,4 +32,4 @@ O SQL Server 2019 não pretere nenhum recurso.
 
 - [Alterações da falha em recursos do mecanismo de banco de dados no SQL Server 2019](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
 - [Funcionalidades descontinuadas do mecanismo de banco de dados no SQL Server](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)
-- [Compatibilidade com versões anteriores do mecanismo de banco de dados do SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)
+- [Compatibilidade com versões anteriores do mecanismo de banco de dados do SQL Server](./discontinued-database-engine-functionality-in-sql-server.md)

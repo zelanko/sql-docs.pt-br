@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394212"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719766"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformação Pesquisa em Modo de Cache Cheio – gerenciador de conexões do cache
 
@@ -28,7 +28,7 @@ ms.locfileid: "88394212"
   Você pode configurar a transformação Pesquisa para usar o modo cache cheio e um gerenciador de conexões de cache. No modo cache cheio, o conjunto de dados de referência é carregado no cache antes que a transformação Pesquisa seja executada.  
   
 > [!NOTE]  
->  O gerenciador de conexões do Cache não oferece suporte aos tipos de dados BLOB (objetos binários grandes) DT_TEXT, DT_NTEXT e DT_IMAGE. Se o conjunto de dados de referência contiver um tipo de dados BLOB, o componente irá falhar quando o pacote for executado. Você pode usar o **Editor do Gerenciador de Conexões de Cache** para modificar os tipos de dados da coluna. Para obter mais informações, consulte [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+>  O gerenciador de conexões do Cache não oferece suporte aos tipos de dados BLOB (objetos binários grandes) DT_TEXT, DT_NTEXT e DT_IMAGE. Se o conjunto de dados de referência contiver um tipo de dados BLOB, o componente irá falhar quando o pacote for executado. Você pode usar o **Editor do Gerenciador de Conexões de Cache** para modificar os tipos de dados da coluna. Para obter mais informações, consulte [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
  A transformação Pesquisa executa pesquisas ao unir dados em colunas de entradas através de uma fonte de dados conectada com colunas em um conjunto de dados de referência. Para obter mais informações, consulte [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88394212"
   
 -   [Contêiner de sequência](../../integration-services/control-flow/sequence-container.md)  
   
- Para obter um vídeo que demonstre como implementar uma transformação Pesquisa no modo Cache Cheio usando o gerenciador de conexões de Cache, consulte [Como implementar a transformação Pesquisa no modo de Cache Cheio (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Para obter um vídeo que demonstre como implementar uma transformação Pesquisa no modo Cache Cheio usando o gerenciador de conexões de Cache, consulte [Como implementar a transformação Pesquisa no modo de Cache Cheio (vídeo do SQL Server)](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100)).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Para implementar uma transformação Pesquisa em modo cache cheio em um pacote usando o gerenciador de conexões de cache e uma fonte de dados no fluxo de dados  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88394212"
      Para colunas sem-índice, a posição de índice é 0. Para colunas de índice, a posição de índice é um número sequencial positivo.  
   
     > [!NOTE]  
-    >  Quando a transformação Pesquisa é configurada para usar um gerenciador de conexões de Cache, somente as colunas de índice no conjunto de dados de referência podem ser mapeadas para as colunas de entrada. Além disso, todas as colunas de índice devem ser mapeadas. Para obter mais informações, consulte [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Quando a transformação Pesquisa é configurada para usar um gerenciador de conexões de Cache, somente as colunas de índice no conjunto de dados de referência podem ser mapeadas para as colunas de entrada. Além disso, todas as colunas de índice devem ser mapeadas. Para obter mais informações, consulte [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
 6.  Para salvar o cache em um arquivo, em **Editor do Gerenciador de Conexões de Cache**, na guia **Geral** , configure o gerenciador de conexões de cache definindo as seguintes opções:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88394212"
     > [!NOTE]  
     >  O nível de proteção do pacote não se aplica ao arquivo de cache. Se o arquivo de cache tiver informações confidenciais, use uma lista de controle de acesso (ACL) para restringir o acesso ao local ou à pasta na qual você deseja armazenar o arquivo. Você deve habilitar o acesso apenas para determinadas contas. Para obter mais informações, consulte [Acesso aos arquivos usados por pacotes](../../integration-services/security/security-overview-integration-services.md#files).  
   
-7.  Configure o Cache Transform como necessário. Para obter mais informações, consulte [Editor de Transformação Cache &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) e [Editor de Transformação Cache &#40;Página Mapeamentos&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configure o Cache Transform como necessário. Para obter mais informações, consulte [Editor de Transformação Cache &#40;Página Gerenciador de Conexões&#41;](../data-flow/transformations/cache-transform.md) e [Editor de Transformação Cache &#40;Página Mapeamentos&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  No segundo fluxo de dados, adicione uma transformação Pesquisa e, então, configure a transformação fazendo as tarefas seguintes:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "88394212"
   
     8.  Na lista **Colunas de Pesquisa Disponíveis** , selecione colunas. Então, na lista **Operação de Pesquisa** , especifique se os valores das colunas de pesquisa substituem os valores na coluna de entrada ou se são gravados em uma nova coluna.  
   
-    9. Para configurar a saída de erro, clique na página **Saída de Erro** e defina as opções de tratamento de erros. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;página Saída de Erro&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Para configurar a saída de erro, clique na página **Saída de Erro** e defina as opções de tratamento de erros. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;página Saída de Erro&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Clique em **OK** para salvar suas alterações na transformação Pesquisa.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "88394212"
      Para colunas sem-índice, a posição de índice é 0. Para colunas de índice, a posição de índice é um número sequencial positivo.  
   
     > [!NOTE]  
-    >  Quando a transformação Pesquisa é configurada para usar um gerenciador de conexões de Cache, somente as colunas de índice no conjunto de dados de referência podem ser mapeadas para as colunas de entrada. Além disso, todas as colunas de índice devem ser mapeadas. Para obter mais informações, consulte [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Quando a transformação Pesquisa é configurada para usar um gerenciador de conexões de Cache, somente as colunas de índice no conjunto de dados de referência podem ser mapeadas para as colunas de entrada. Além disso, todas as colunas de índice devem ser mapeadas. Para obter mais informações, consulte [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
-7.  Configure o Cache Transform como necessário. Para obter mais informações, consulte [Editor de Transformação Cache &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) e [Editor de Transformação Cache &#40;Página Mapeamentos&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configure o Cache Transform como necessário. Para obter mais informações, consulte [Editor de Transformação Cache &#40;Página Gerenciador de Conexões&#41;](../data-flow/transformations/cache-transform.md) e [Editor de Transformação Cache &#40;Página Mapeamentos&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  Para popular o gerenciador de conexões de cache usado no segundo pacote faça uma das opções a seguir:  
   
@@ -213,7 +213,7 @@ ms.locfileid: "88394212"
   
     8.  Na lista **Colunas de Pesquisa Disponíveis** , selecione colunas. Então, na lista **Operação de Pesquisa** , especifique se os valores das colunas de pesquisa substituem os valores na coluna de entrada ou se são gravados em uma nova coluna.  
   
-    9. Para configurar a saída de erro, clique na página **Saída de Erro** e defina as opções de tratamento de erros. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;página Saída de Erro&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Para configurar a saída de erro, clique na página **Saída de Erro** e defina as opções de tratamento de erros. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;página Saída de Erro&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Clique em **OK** para salvar suas alterações na transformação Pesquisa.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "88394212"
      Para colunas sem-índice, a posição de índice é 0. Para colunas de índice, a posição de índice é um número sequencial positivo.  
   
     > [!NOTE]  
-    >  Quando a transformação Pesquisa é configurada para usar um gerenciador de conexões de Cache, somente as colunas de índice no conjunto de dados de referência podem ser mapeadas para as colunas de entrada. Além disso, todas as colunas de índice devem ser mapeadas. Para obter mais informações, consulte [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Quando a transformação Pesquisa é configurada para usar um gerenciador de conexões de Cache, somente as colunas de índice no conjunto de dados de referência podem ser mapeadas para as colunas de entrada. Além disso, todas as colunas de índice devem ser mapeadas. Para obter mais informações, consulte [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
 7.  Na guia **Fluxo de Controle** , adicione uma tarefa de Fluxo de Dados ao pacote e adicione uma transformação Pesquisa ao fluxo de dados.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88394212"
   
     8.  Na lista **Colunas de Pesquisa Disponíveis** , selecione colunas. Então, na lista **Operação de Pesquisa** , especifique se os valores das colunas de pesquisa substituem os valores na coluna de entrada ou se são gravados em uma nova coluna.  
   
-    9. Para configurar a saída de erro, clique na página **Saída de Erro** e defina as opções de tratamento de erros. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;página Saída de Erro&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Para configurar a saída de erro, clique na página **Saída de Erro** e defina as opções de tratamento de erros. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;página Saída de Erro&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Clique em **OK** para salvar suas alterações na transformação Pesquisa.  
   
@@ -288,5 +288,4 @@ ms.locfileid: "88394212"
  [Implementar uma Transformação Pesquisa em Modo de Cache Cheio por meio do gerenciador de conexões OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementar uma pesquisa no modo Sem cache ou Cache parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformações do Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027287"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670957"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 
@@ -74,7 +74,7 @@ A habilitação da criptografia TLS aumenta a segurança dos dados transmitidos 
 > Para usar critografia com um cluster de failover, você deve instalar o certificado de servidor com o nome DNS completamente qualificado do servidor virtual em todos os nós no cluster de failover. Por exemplo, se houver um cluster de dois nós, com nós ***test1.\*\<your company>\*.com*** e ***test2.\*\<your company>\*.com*** e você tiver um servidor virtual nomeado ***virtsql***, terá de instalar um certificado para ***virtsql.\*\<your company>\*.com*** em ambos os nós. É possível definir o valor da opção **ForceEncryption** na caixa de propriedade **Protocolos para virtsql** de **Configuração de Rede do SQL Server** como **Sim**.
 
 > [!NOTE]
-> Ao criar conexões criptografadas para um indexador do Azure Search para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma VM do Azure, confira [Configurar uma conexão de um indexador do Azure Search para SQL Server em uma VM do Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
+> Ao criar conexões criptografadas para um indexador do Azure Search para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma VM do Azure, confira [Configurar uma conexão de um indexador do Azure Search para SQL Server em uma VM do Azure](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers). 
 
 ## <a name="certificate-requirements"></a>Requisitos de certificado
 
@@ -126,7 +126,7 @@ Se estiver usando [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio do 
 
 > [!IMPORTANT]
 > Para ambientes de produção, é recomendável obter um certificado emitido por uma Autoridade de Certificação.    
-> Para fins de teste, o certificado autoassinado também pode ser usado. Para criar um certificado autoassinado, confira o [cmdlet do Powershell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) ou o [comando certreq](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
+> Para fins de teste, o certificado autoassinado também pode ser usado. Para criar um certificado autoassinado, confira o [cmdlet do Powershell New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) ou o [comando certreq](/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Instalar entre vários servidores
 
@@ -187,4 +187,4 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser criptografa
 
 + [Suporte a TLS 1.2 para o Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [Cmdlet do Powershell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
++ [Cmdlet do Powershell New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ec6c743ea40da4d7ee6846c3a1373d3912ec0dc9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 687f314e776dcc049f03cb4c8a164fb5fa84073e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900304"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670193"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2019"></a>Atualizações de versão e edição com suporte (SQL Server 2019)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85900304"
   
 - O [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] está disponível apenas em plataformas de 64 bits. A atualização de plataforma cruzada não é suportada. Não é possível atualizar uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma nativa de 64 bits usando a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No entanto, será possível fazer backup de bancos de dados ou desanexá-los de uma instância de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, em seguida, restaurá-los ou anexá-los a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de 64 bits), se os bancos de dados não forem publicados na replicação. Você deverá recriar logons e outros objetos de usuário nos bancos de dados do sistema master, msdb e model.  
   
-- Não é possível adicionar novos recursos durante a atualização da instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], você poderá adicionar recursos usando a Instalação do [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Para obter mais informações, consulte [Adicionar recursos a uma instância do SQL Server &#40;Instalação&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+- Não é possível adicionar novos recursos durante a atualização da instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], você poderá adicionar recursos usando a Instalação do [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Para obter mais informações, consulte [Adicionar recursos a uma instância do SQL Server &#40;Instalação&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 ## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>Atualizações de versões anteriores para o [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
@@ -100,7 +100,7 @@ Para obter informações, confira o [Guia de migração de banco de dados do Azu
 
 As seguintes dicas e ferramentas podem ajudar você a planejar e implementar sua migração.
 
-- Ferramentas de migração: Há suporte para a migração por meio do [DMA (Assistente de Migração de Dados)](https://aka.ms/dma).
+- Ferramentas de migração: Há suporte para a migração por meio do [DMA (Assistente de Migração de Dados)](../../dma/dma-overview.md).
 - Backup e restauração: Um backup feito no SQL Server 2008 ou no SQL Server 2008 R2 pode ser restaurado para o SQL Server 2019.
 - Envio de logs: O envio de logs terá suporte se o primário estiver executando o SQL Server 2008 SP3 ou posterior (ou o SQL Server 2008 R2 SP2 ou posterior) e o secundário estiver executando o SQL Server 2019. 
 
@@ -149,4 +149,4 @@ Para obter instruções passo a passo sobre como fazer um upgrade de edição, c
 
  [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 426df300ba160d9a19ff8c29edb7e413d28e6ec6
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: c981154462ec6b544d8dd877d1b6a41a6fa0ac2c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216723"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670584"
 ---
 # <a name="sql-server-installation-guide"></a>Guia de instalação do SQL Server
 
@@ -31,7 +31,7 @@ Este artigo é um índice de conteúdo que fornece diretrizes para a instalaçã
 Para ver outros cenários de implantação, confira:
 
 - [Linux](../../linux/sql-server-linux-setup.md)
-- [Contêineres do Docker](../../linux/sql-server-linux-configure-docker.md)
+- [Contêineres do Docker](../../linux/sql-server-linux-docker-container-deployment.md)
 - [Kubernetes – Clusters de Big Data](../../big-data-cluster/deploy-get-started.md)
 
 A partir do [!INCLUDE[sssql15](../../includes/sssql15-md.md)], o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] só está disponível como um aplicativo de 64 bits. Aqui estão os detalhes importantes sobre como obter o SQL Server e como instalá-lo.
@@ -86,12 +86,12 @@ Outros componentes do SQL Server podem ser encontrados aqui:
 |Artigo|Descrição|  
 |-----------|-----------------|  
 |[Assistente de Instalação](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Instale o SQL Server usando a GUI do Assistente de Instalação iniciada na mídia de instalação do setup.exe. |  
-|[Prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|Sintaxe de exemplo e parâmetros de instalação para executar uma instalação do SQL Server por meio do prompt de comando. | 
+|[Prompt de comando](./install-sql-server-from-the-command-prompt.md)|Sintaxe de exemplo e parâmetros de instalação para executar uma instalação do SQL Server por meio do prompt de comando. | 
 |[Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Instale o [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] no Windows Server Core.|  
 |[Verificar parâmetros do Verificador de Configuração do Sistema](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|Discute a função do Verificador de Configuração do Sistema (SCC).|   
-|[Arquivo de configuração](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|Sintaxe de exemplo e parâmetros de instalação para executar a Instalação por meio de um arquivo de configuração.|  
+|[Arquivo de configuração](./install-sql-server-using-a-configuration-file.md)|Sintaxe de exemplo e parâmetros de instalação para executar a Instalação por meio de um arquivo de configuração.|  
 |[SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|Sintaxe de exemplo e parâmetros de instalação para executar a Instalação por meio do SysPrep.|
-|[Adicionar recursos a uma instância](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Atualize os componentes de uma instância existente do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
+|[Adicionar recursos a uma instância](./add-features-to-an-instance-of-sql-server-setup.md)|Atualize os componentes de uma instância existente do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
 |[Instalação do cluster de failover do SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)| Instale uma instância de cluster de failover do SQL Server.  | 
 |[Reparar uma instalação com falha do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Repare uma instalação corrompida do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
 |[Renomear um computador com o SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Atualize os metadados do sistema armazenados em sys.servers depois que o nome do host de um computador que hospeda uma instância autônoma do SQL Server for renomeado. |  
@@ -107,7 +107,7 @@ Outros componentes do SQL Server podem ser encontrados aqui:
 |[Mecanismo de Banco de Dados do SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md)|Instale e configure o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Replicação do SQL Server](../../database-engine/install-windows/install-sql-server-replication.md)|Instale e configure a Replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)|Lista os artigos para instalar o recurso Distributed Replay.|  
-|[Ferramentas de Gerenciamento do SQL Server com o SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Instale e configure as Ferramentas de Gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Ferramentas de Gerenciamento do SQL Server com o SSMS](../../ssms/download-sql-server-management-studio-ssms.md)|Instale e configure as Ferramentas de Gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Considerações sobre a instalação de componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.|  
   
 
@@ -116,7 +116,7 @@ Outros componentes do SQL Server podem ser encontrados aqui:
 |Artigo|Descrição|  
 |-----------|-----------------|  
 |[Configurar o Firewall do Windows (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Visão geral da configuração do firewall e de como configurar o Firewall do Windows para permitir acesso ao SQL Server.|  
-|[Configurar o Firewall do Windows (SSAS)](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Defina as configurações de porta e firewall para permitir acesso ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint.|  
+|[Configurar o Firewall do Windows (SSAS)](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Defina as configurações de porta e firewall para permitir acesso ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou ao [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint.|  
 |[Configurar um computador multihomed](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Configure o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.|  
 
  
@@ -127,4 +127,4 @@ Outros componentes do SQL Server podem ser encontrados aqui:
 [Instalar o SSRS (SQL Server Reporting Services)](../../reporting-services/install-windows/install-reporting-services.md)   
 [Instalar o SSAS (SQL Server Analysis Services)](/analysis-services/instances/install-windows/install-analysis-services)   
 [Instalar Recursos de Business Intelligence do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
-[Soluções de alta disponibilidade &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+[Soluções de alta disponibilidade &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f33fff4f29650e54803d47dc2188ec67d5594f89
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472378"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671059"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Instalar o SQL Server com a Desired State Configuration do PowerShell
 
@@ -44,7 +44,7 @@ Na maioria dos casos, a DSC é usada para lidar com pré-requisitos. Porém, no 
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>Instalar o recurso de DSC SqlServerDsc
 
-Baixe o recurso do DSC [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) da [Galeria do PowerShell](https://www.powershellgallery.com/) usando o cmdlet [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1). 
+Baixe o recurso do DSC [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) da [Galeria do PowerShell](https://www.powershellgallery.com/) usando o cmdlet [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1). 
 
 > [!NOTE]
 > Verifique se o PowerShell está em execução **Como Administrador** para instalar o módulo.
@@ -71,7 +71,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ### <a name="configuration"></a>Configuração
 
-Crie a função de configuração que será chamada para gerar os documentos [MOF (Managed Object Format)](https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-):
+Crie a função de configuração que será chamada para gerar os documentos [MOF (Managed Object Format)](/windows/desktop/WmiSdk/managed-object-format--mof-):
 
 ```PowerShell
 Configuration SQLInstall
@@ -180,7 +180,7 @@ Conforme a configuração é aplicada, a saída detalhada mostra o que está aco
 
 ### <a name="dsc"></a>DSC
 
-Os cmdlets [Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) podem determinar se o estado atual do servidor cumpre o estado desejado. Neste caso, é a instalação do SQL Server. O resultado de **Test-DscConfiguration** deve ser **True**:
+Os cmdlets [Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) podem determinar se o estado atual do servidor cumpre o estado desejado. Neste caso, é a instalação do SQL Server. O resultado de **Test-DscConfiguration** deve ser **True**:
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

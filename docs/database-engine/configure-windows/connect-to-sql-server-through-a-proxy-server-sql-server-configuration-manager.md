@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7be0c8d6be720da45072922f2d5399f9ad0b6877
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b8e6c54a7f496f06067bb0393f83899f8df4253
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728628"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670269"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>Conectar-se ao SQL Server com um servidor proxy (SQL Server Configuration Manager)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,6 +40,4 @@ ms.locfileid: "85728628"
 2.  No servidor proxy, defina a tabela de endereço local (LAT) para o servidor proxy, para que o endereço do nó de escuta fique fora do intervalo de entradas de LAT. Para obter mais informações, consulte a documentação do servidor proxy.  
   
 > [!NOTE]
->  Este tópico se aplica ao [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]local. Para problemas de conexão relacionados ao [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], consulte [Solucionar problemas de conexão no Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues).  
-
-
+>  Este tópico se aplica ao [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]local. Para problemas de conexão relacionados ao [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], consulte [Solucionar problemas de conexão no Banco de Dados SQL do Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues).

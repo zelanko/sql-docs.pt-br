@@ -11,12 +11,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 67a68c2827fffcfd5be0af38cbc38f33fd9a09dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1bec1ae2badef02e407b4562732af9cda85fc989
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900189"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670209"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Fazer upgrade para outra edição do SQL Server (Instalação)
 
@@ -90,6 +90,5 @@ setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriateP
 
 ## <a name="see-also"></a>Consulte Também  
  [Fazer upgrade do SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Compatibilidade com versões anteriores_excluída](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [Compatibilidade com versões anteriores_excluída](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

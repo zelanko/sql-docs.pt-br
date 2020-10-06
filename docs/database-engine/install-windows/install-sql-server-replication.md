@@ -17,12 +17,12 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e5635065e77921b661d5b60e5ebcd0aad850295b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 199230f8438a93db64fd5e32ded526699c447a7b
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883490"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670923"
 ---
 # <a name="install-sql-server-replication"></a>Instalar a replicação do SQL Server
 
@@ -43,11 +43,10 @@ Depois da instalação dos componentes de replicação, é necessário configura
 ## <a name="installing-replication-from-the-command-prompt"></a>Instalando a replicação a partir do prompt de comando  
  **Para instalar a replicação ao instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- Consulte [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+- Consulte [Instalar o SQL Server do prompt de comando](./install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="see-also"></a>Confira também  
  [Instalar o SQL Server](../../database-engine/install-windows/install-sql-server.md)   
- [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Instalar o SQL Server do prompt de comando](./install-sql-server-from-the-command-prompt.md)   
  [Recursos com suporte nas edições do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md)  
-  
   

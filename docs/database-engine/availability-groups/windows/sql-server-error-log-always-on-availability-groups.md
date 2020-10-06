@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e88eed3b4b49b15f65ad888725374d953b87806b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b33827f37d02edf783c4688c9ad08cd4673706e7
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480353"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670879"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>Log de erros do SQL Server (Grupos de Disponibilidade Always On)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "89480353"
 -   Estado de conectividade de bancos de dados de disponibilidade entre réplicas primárias e secundárias    
 -   Status dos pontos de extremidade de grupo de disponibilidade    
 -   Status de ouvintes de grupo de disponibilidade    
--   Status da concessão entre a DLL de recurso do SQL Server (em execução no cluster WSFC) e a instância do SQL Server (para obter mais informações, veja [Como funciona tempo limite de concessão do Always On do SQL Server](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout))    
+-   Status da concessão entre a DLL de recurso do SQL Server (em execução no cluster WSFC) e a instância do SQL Server (para obter mais informações, veja [Como funciona tempo limite de concessão do Always On do SQL Server](/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout))    
 -   Eventos de erro no grupo de disponibilidade  
 
 Os seguintes sintomas devem levar à revisão do log de erros do SQL Server:  
@@ -38,5 +38,4 @@ Os seguintes sintomas devem levar à revisão do log de erros do SQL Server:
 -   Grupo de disponibilidade em um estado indeterminado  
   
 Para obter mais informações, veja [Exibir o log de erros do SQL Server &#40;SQL Server Management Studio&#41;](~/relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).  
-  
   

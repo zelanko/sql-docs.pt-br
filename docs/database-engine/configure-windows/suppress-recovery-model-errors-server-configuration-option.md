@@ -10,18 +10,18 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 73681a19df18a7bdae9c49b78c283a8345820322
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 942dfc62bd55d1843babb78d89b95ad602f3d938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496220"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670739"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>Opção de configuração de suprimir erros do modelo de recuperação do servidor
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-Os [modelos de recuperação](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server) do SQL Server controlam a manutenção do log de transações. O modelo de recuperação completa garante que nenhum trabalho seja perdido devido a um arquivo de dados perdido ou danificado e dá suporte à recuperação para um ponto arbitrário no tempo de acordo com a política de retenção de backups. O modelo de recuperação completa é um padrão e é o único modelo de recuperação com suporte na Instância Gerenciada de SQL. Tentativas de alterar o modelo de recuperação na Instância Gerenciada de SQL retornam uma mensagem de erro.
+Os [modelos de recuperação](../../relational-databases/backup-restore/recovery-models-sql-server.md) do SQL Server controlam a manutenção do log de transações. O modelo de recuperação completa garante que nenhum trabalho seja perdido devido a um arquivo de dados perdido ou danificado e dá suporte à recuperação para um ponto arbitrário no tempo de acordo com a política de retenção de backups. O modelo de recuperação completa é um padrão e é o único modelo de recuperação com suporte na Instância Gerenciada de SQL. Tentativas de alterar o modelo de recuperação na Instância Gerenciada de SQL retornam uma mensagem de erro.
 
 Use a opção de configuração avançada **suprimir erros do modelo de recuperação** para especificar se os comandos para alterar o modelo de recuperação do banco de dados, executados na Instância Gerenciada de SQL, retornarão erros ou somente avisos. Quando essa opção é definida como 1 (ATIVADO) na Instância Gerenciada de SQL, a execução do comando ALTER DATABASE SET RECOVERY não altera o modelo de recuperação do banco de dados, mas não retorna um erro, e sim uma mensagem de aviso. Quando essa opção é definida como 0 (DESATIVADO) na Instância Gerenciada de SQL, a execução do comando ALTER DATABASE SET RECOVERY retorna uma mensagem de erro.
 
