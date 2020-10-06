@@ -2,7 +2,7 @@
 title: Noções básicas sobre transações XA
 description: O Microsoft JDBC Driver for SQL Server dá suporte a transações distribuídas opcionais para a Plataforma Java, Enterprise Edition/JDBC 2.0.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293989"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529327"
 ---
 # <a name="understanding-xa-transactions"></a>Noções básicas sobre transações XA
 
@@ -63,7 +63,7 @@ As etapas a seguir serão necessárias se você desejar usar fontes de dados XA 
 > Os componentes de transações distribuídas do JDBC são incluídos no diretório xa da instalação do driver JDBC. Esses componentes incluem os arquivos xa_install.sql e sqljdbc_xa.dll. Se você tem versões diferentes do driver JDBC em clientes diferentes, é recomendável usar o sqljdbc_xa.dll mais recente no servidor.  
 
 > [!NOTE]  
-> Começando com o CTP 2.0 da versão prévia pública do SQL Server 2019, os componentes da transação distribuída do JDBC XA estão incluídos no mecanismo do SQL Server e podem ser habilitados ou desabilitados com um procedimento armazenado do sistema.
+> Os componentes da transação distribuída do JDBC XA estão incluídos no mecanismo do SQL Server no SQL Server 2017, começando com a atualização cumulativa 16 e no SQL Server 2019 e podem ser habilitados ou desabilitados com um procedimento armazenado do sistema.
 > Para habilitar os componentes necessários para executar transações distribuídas XA usando o driver JDBC, execute o procedimento armazenado a seguir.
 >
 > EXEC sp_sqljdbc_xa_install
@@ -86,11 +86,11 @@ No Windows Vista e versão posterior:
   
 4. Clique na guia **Segurança** na caixa de diálogo **Propriedades de DTC Local**.  
   
-5. Marque a caixa de seleção **Habilitar Transações XA** e clique em **OK**. Isso causará uma reinicialização do serviço MS DTC.
+5. Marque a caixa de seleção **Habilitar Transações XA** e clique em **OK**. Essa ação causará uma reinicialização do serviço MS DTC.
   
 6. Clique em **OK** novamente para fechar a caixa de diálogo **Propriedades** e feche **Serviços de Componentes**.  
   
-7. Pare e reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para assegurar que ele esteja sincronizado com as alterações do MS DTC.  
+7. Pare e reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para assegurar que ele seja sincronizado com as alterações do MS DTC.  
 
 ### <a name="configuring-the-jdbc-distributed-transaction-components"></a>Configurando os componentes de transações distribuídas do JDBC  
 
@@ -170,14 +170,14 @@ Ao instalar uma nova versão do driver JDBC, você também deve usar o arquivo s
   
 ### <a name="configuring-the-user-defined-roles"></a>Configurando as funções definidas pelo usuário
 
-Para conceder permissões para um usuário específico participar de transações distribuídas com o driver JDBC, adicione o usuário à função SqlJDBCXAUser. Por exemplo, use o código [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir para adicionar um usuário nomeado 'shelby' (usuário com logon padrão do SQL chamado 'shelby') à função SqlJDBCXAUser:  
+Para conceder permissões para um usuário específico participar de transações distribuídas com o driver JDBC, adicione o usuário à função SqlJDBCXAUser. Por exemplo, use o código [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir para adicionar um usuário nomeado "shelly" (usuário com logon padrão do SQL chamado "shelly") à função SqlJDBCXAUser:  
 
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 As funções definidas pelo usuário do SQL são definidas por banco de dados. Para criar sua própria função para fins de segurança, você terá que definir a função em cada banco de dados e adicionar os usuários para cada banco de dados. A função SqlJDBCXAUser é definida estritamente no banco de dados mestre porque é usada para conceder acesso aos procedimentos armazenados estendidos do SQL JDBC que residem no mestre. Primeiro, você precisará conceder acessos de usuário individuais ao mestre e, em seguida, conceder a eles acesso à função SqlJDBCXAUser enquanto você estiver conectado ao banco de dados mestre.  

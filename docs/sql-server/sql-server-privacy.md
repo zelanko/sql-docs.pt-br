@@ -1,7 +1,7 @@
 ---
 description: Suplemento de privacidade do SQL Server
 title: Suplemento de privacidade do SQL Server | Microsoft Docs
-ms.date: 01/19/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: mikeray
@@ -11,21 +11,23 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9e2619cf1bfc8994481c6f310977c77a7292911
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480679"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603412"
 ---
 # <a name="sql-server-privacy-supplement"></a>Suplemento de privacidade do SQL Server
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-Este artigo resume os recursos habilitados para Internet que podem coletar e enviar os dados anônimos de diagnóstico e uso de recursos à Microsoft. O SQL Server pode coletar informações padrão do computador e dados de uso e desempenho que podem ser transmitidas à Microsoft e analisadas com a finalidade de aprimorar a qualidade, a segurança e a confiabilidade do produto. Se você instalar o SQL Server em uma máquina virtual no serviço do Microsoft Azure, as informações do ambiente poderão ser enviadas à Microsoft para que ela possa registrar seu recurso de máquina virtual do SQL Server com o provedor de recursos em sua assinatura do Azure, conforme descrito mais detalhadamente [aqui](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Como parte do registro do recurso de máquina virtual do SQL Server, a extensão do agente de IaaS do SQL Server pode ser instalada em sua máquina virtual, como descrito mais detalhadamente [aqui](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). Este artigo funciona como um adendo à [Política de privacidade geral da Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). A classificação de dados neste artigo aplica-se somente às versões do produto SQL Server local. Ela não se aplica aos itens:
+Este artigo resume os recursos habilitados para Internet que podem coletar e enviar os dados anônimos de diagnóstico e uso de recursos à Microsoft. O SQL Server pode coletar informações padrão do computador e dados de uso e desempenho que podem ser transmitidas à Microsoft e analisadas com a finalidade de aprimorar a qualidade, a segurança e a confiabilidade do produto.
+
+Este artigo funciona como um adendo à [Política de privacidade geral da Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). A classificação de dados neste artigo aplica-se somente às versões do produto SQL Server local. Ela não se aplica aos itens:
 
 - Banco de Dados SQL do Azure
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - SSDT (SQL Server Data Tools)
 - Azure Data Studio
 - Assistente de Migração de Dados
@@ -115,6 +117,20 @@ Dados necessários para fornecer serviços baseados na Internet, de acordo com o
 |Mediante consentimento, os clientes podem enviar comentários do usuário que contêm conteúdo do cliente à Microsoft. |Limitado a uso interno da Microsoft sem acesso de terceiros. |Mediante consentimento, os clientes podem enviar comentários do usuário que contêm conteúdo do cliente à Microsoft. |
 |Os itens de mapeamento do Power View e do SQL Reporting Services podem enviar dados para serem usados pelo Bing Mapas. |Limitado aos dados de sessão |- |
 
+## <a name="organization-identifiable-information-oii"></a>OII (informações de identificação da organização)
+
+Os dados recebidos de uma organização ou gerados pelo uso do produto.
+-   Vinculável a uma organização.
+-   Não contém conteúdo.
+
+### <a name="examples-of-organization-identifiable-information"></a>Exemplos de informações de identificação da organização
+-   Nome da organização (exemplo: Microsoft Corp.)
+
+### <a name="permitted-usage-scenarios"></a>Cenários de uso permitidos
+|Cenário  |Restrições de acesso  |Requisitos de retenção|
+|---------|---------|---------|
+| A Microsoft pode coletar dados de uso genéricos de instâncias do SQL Server em execução em Máquinas Virtuais do Azure para a finalidade expressa de fornecer aos clientes benefícios opcionais no Azure para usar SQL Server em Máquinas Virtuais do Azure. | A Microsoft pode expor dados ao cliente, por exemplo, por meio do portal do Azure, para ajudar os clientes que executam SQL Server em Máquinas Virtuais do Azure a acessar os benefícios específicos da execução do SQL Server no Azure. </br></br>A Microsoft não usará esses dados para auditorias de licenciamento sem o consentimento antecipado do cliente. | Mín. 90 dias – Máx. três anos |
+
 ## <a name="system-metadata"></a>Metadados do sistema
 
 Dados gerados no decorrer da execução do servidor.  Os dados não contêm conteúdo do cliente.
@@ -134,7 +150,7 @@ Os seguintes são considerados metadados do sistema quando não incluem conteúd
 - Nomes de evento e códigos de erro
 - Configurações e identificação de hardware, como o fabricante OEM
 
-A Microsoft examina valores de nome de aplicativo definidos por outros programas que usam o SQL Server (exemplo: o Sharepoint ou programas empacotados de terceiros e inclui essas informações nos metadados do sistema enviados à Microsoft quando a opção Dados de Uso está habilitada). Os clientes não devem colocar dados pessoais, como informações de identificação do usuário final, nos campos de metadados do sistema nem criar aplicativos projetados para armazenar dados pessoais nesses campos. 
+A Microsoft examina os valores de nome de aplicativo definidos por outros programas que usam o SQL Server (exemplo: SharePoint ou programas de terceiros) e inclui essas informações nos Metadados do Sistema enviados à Microsoft quando os Dados de Uso estão habilitados. Os clientes não devem colocar dados pessoais, como informações de identificação do usuário final, nos campos de metadados do sistema nem criar aplicativos projetados para armazenar dados pessoais nesses campos. 
 
 ### <a name="permitted-usage-scenarios"></a>Cenários de uso permitidos
 

@@ -1,6 +1,6 @@
 ---
-description: 'Etapa 3: Prova de conceito da conexão ao SQL usando Ruby'
-title: 'Etapa 3: Prova de conceito da conexão com o SQL usando o Ruby | Microsoft Docs'
+title: 'Etapa 3: Prova de conceito da conexão ao SQL usando Ruby'
+description: A etapa 3 é uma prova de conceito, que mostra como você faz para se conectar ao SQL Server usando Ruby. Os exemplos básicos demonstram a seleção e a inserção de dados.
 ms.custom: ''
 ms.date: 06/22/2020
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3553f57191dc462067fc48dc1cf2394437912240
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2289009f4f0dc6d8e48dc5a6cccd58695d667da9
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484769"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603316"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Etapa 3: Prova de conceito da conexão ao SQL usando Ruby
 

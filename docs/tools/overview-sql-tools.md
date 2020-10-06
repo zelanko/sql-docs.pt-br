@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 59a376b17c6e4b396dba24999a52bf37ecc27988
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c46afa8b1edbbb548c5367197327de72e2acd27
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009603"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603511"
 ---
 # <a name="sql-tools-overview"></a>Visão geral das ferramentas do SQL
 
@@ -37,7 +37,7 @@ As ferramentas a seguir fornecem uma GUI (interface gráfica do usuário).
 | Ferramenta | DESCRIÇÃO | Sistema operacional |
 |:--|:--|:--|
 | [ **![Imagem do ADS](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | Um editor leve que pode executar consultas SQL sob demanda, exibir e salvar resultados como texto, JSON ou Excel. Edite dados, organize suas conexões de banco de dados favoritas e procure objetos de banco de dados em uma experiência de navegação de objetos familiar. | **Windows</br>macOS</br>Linux** |
-| [ **![Imagem do SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SSMS (SQL Server Management Studio)** ](../ssms/download-sql-server-management-studio-ssms.md) | Gerencie uma instância do SQL Server ou um banco de dados com compatibilidade total com a GUI. Acesse, configure, gerencie, administre e desenvolva todos os componentes do SQL Server, do Banco de Dados SQL do Azure e do SQL Data Warehouse. Fornece um utilitário abrangente que combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao SQL para desenvolvedores e administradores de banco de dados de todos os níveis de conhecimento. | **Windows** |
+| [ **![Imagem do SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SSMS (SQL Server Management Studio)** ](../ssms/download-sql-server-management-studio-ssms.md) | Gerencie uma instância do SQL Server ou um banco de dados com compatibilidade total com a GUI. Acesse, configure, gerencie, administre e desenvolva todos os componentes do SQL Server, do Banco de Dados SQL do Azure e do SQL Data Warehouse. Fornece um utilitário abrangente que combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao SQL para desenvolvedores e administradores de banco de dados de todos os níveis de habilidades. | **Windows** |
 | [ **![Imagem do SSDT](../tools/media/overview-sql-tools/ssdt.svg)</br>SSDT (SQL Server Data Tools)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | Uma moderna ferramenta de desenvolvimento para criar bancos de dados relacionais do SQL Server, bancos de dados SQL do Azure, modelos de dados do AS (Analysis Services), pacotes do IS (Integration Services) e relatórios do RS (Reporting Services). Com o SSDT, você pode projetar e implantar qualquer tipo de conteúdo do SQL Server com a mesma facilidade com que desenvolve um aplicativo no **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** . | **Windows** |
 | [ **![Imagem do VS Code](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | A **[extensão mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** para Visual Studio Code é a extensão do SQL Server oficial que é compatível com conexões com SQL Server e com a experiência de edição avançada para o T-SQL no Visual Studio Code. Escreva scripts T-SQL em um editor leve. | **Windows</br>macOS</br>Linux** |
 

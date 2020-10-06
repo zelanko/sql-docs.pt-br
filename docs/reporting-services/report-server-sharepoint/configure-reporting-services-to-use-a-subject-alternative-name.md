@@ -1,35 +1,37 @@
 ---
-title: Configurar o Reporting Services para usar um nome alternativo da entidade | Microsoft Docs
-description: Saiba como configurar o SQL Server Reporting Services para usar um SAN modificando o arquivo rsreportserver.config e usando a ferramenta Netsh.exe.
-ms.date: 09/25/2017
+title: Configurar o Reporting Services para usar um SAN (nome alternativo da entidade) | Microsoft Docs
+description: Saiba como configurar o SQL Server Reporting Services e o Servidor de Relatórios do Power BI para usar um SAN modificando o arquivo rsreportserver.config e usando a ferramenta Netsh.exe.
+ms.date: 09/27/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.technology: report-server-sharepoint
+ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecb4b0be06731070c0852f23375fafea0eed4434
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: cf1db4f6e07609ce6da38569732f7dba333f86ff
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767056"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497200"
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar o Reporting Services para usar um nome alternativo da entidade
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>Configurar o Reporting Services para usar um SAN (nome alternativo da entidade)
 
-Este tópico explica como configurar o SSRS (Reporting Services) para usar um SAN (nome alternativo da entidade) modificando o arquivo rsreportserver.config e usando a ferramenta Netsh.exe.
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-As instruções aplicam-se à URL do Reporting Service e à URL do Serviço Web.
+Este tópico explica como configurar o SSRS (Reporting Services) e o Servidor de Relatórios do Power BI para usar um SAN (nome alternativo da entidade) modificando o arquivo rsreportserver.config e usando a ferramenta Netsh.exe.
 
-Para usar um SAN, o certificado TLS/SSL deve estar registrado no servidor, estar assinado e ter a chave privada. Você não pode usar um certificado autoassinado  
+As instruções se aplicam à URL do serviço Web, bem como à URL do portal da Web na ferramenta Configuration Manager do Servidor de relatório.
+
+Para usar um SAN, o certificado TLS/SSL deve estar registrado no servidor, estar assinado e ter a chave privada. Você não pode usar um certificado autoassinado.
+
+As URLs no Reporting Services e no Servidor de Relatórios do Power BI podem ser configuradas para usar um certificado TLS/SSL. Um certificado normalmente tem apenas um nome de entidade, o que permite apenas uma URL por sessão de protocolo TSL, anteriormente conhecido como protocolo SSL. O SAN é um campo adicional no certificado que permite a um serviço TSL ouvir muitas URLs e compartilhar a porta TSL com outros aplicativos. Por exemplo, um SAN pode ser semelhante a `www.myreports.com`.
+
+Para obter mais informações sobre configurações TSL para o Reporting Services, confira [Configurar conexões TLS em um servidor de relatório no modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
- As URLs no Reporting Services podem ser configuradas para usar um certificado TLS/SSL. Um certificado normalmente tem apenas um nome de entidade, o que permite apenas uma URL por sessão de protocolo TSL, anteriormente conhecido como protocolo SSL. O SAN é um campo adicional no certificado que permite a um serviço TSL ouvir muitas URLs e compartilhar a porta TSL com outros aplicativos. O SAN é semelhante a `www.s2.com`.  
+## <a name="configure-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurar para usar um nome alternativo da entidade para a URL do serviço Web
   
- Para obter mais informações sobre configurações TSL para o Reporting Services, confira [Configurar conexões TLS em um servidor de relatório no modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
-  
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurar o SSRS para usar um nome alternativo da entidade para a URL do serviço Web
-  
-1.  Iniciar o Gerenciador de Configuração do Reporting Services.  
+1.  Inicie o Configuration Manager do Servidor de Relatórios.  
   
      Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
@@ -41,21 +43,33 @@ Para usar um SAN, o certificado TLS/SSL deve estar registrado no servidor, estar
   
 3.  Abra o arquivo rsreportserver.config.  
   
-     Para o modo Nativo do SSRS, o arquivo está localizado por padrão na seguinte pasta:  
+     Para o Modo nativo do SSRS 2016, o arquivo está localizado por padrão na seguinte pasta:  
   
     ```  
-    \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
+    \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
     ```  
   
-4.  Copie a seção da URL para o aplicativo Report Server Web Service.  
+     Para o SSRS 2017 e posteriores, o arquivo está localizado por padrão na seguinte pasta:  
+  
+    ```  
+    \Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer  
+    ```  
+    
+     Para o Servidor de Relatórios do Power BI, o arquivo está localizado por padrão na seguinte pasta:  
+  
+    ```  
+    \Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer  
+    ```  
+  
+4.  Copie a seção da URL para o aplicativo **ReportServerWebService**.
   
      Por exemplo, a seguinte seção de URL original é:  
   
     ```  
         <URL>  
-         <UrlString>https://localhost:443</UrlString>  
-         <AccountSid>S-1-5-20</AccountSid>  
-         <AccountName>NT Authority\NetworkService</AccountName>  
+         <UrlString>https://+:443</UrlString>  
+         <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>  
+         <AccountName>NT Service\ReportServer</AccountName>  
         </URL>  
   
     ```  
@@ -64,21 +78,25 @@ Para usar um SAN, o certificado TLS/SSL deve estar registrado no servidor, estar
   
     ```  
     <URL>  
-         <UrlString>https://www.s1.com:443</UrlString>  
-         <AccountSid>S-1-5-20</AccountSid>  
-         <AccountName>NT Authority\NetworkService</AccountName>  
+         <UrlString>https://+:443</UrlString>  
+         <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>  
+         <AccountName>NT Service\ReportServer</AccountName>  
         </URL>  
         <URL>  
-         <UrlString>https://www.s2.com:443</UrlString>  
-         <AccountSid>S-1-5-20</AccountSid>  
-         <AccountName>NT Authority\NetworkService</AccountName>  
+         <UrlString>https://www.myreports.com:443</UrlString>  
+         <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051/AccountSid>  
+         <AccountName>NT Service\ReportServer</AccountName>  
         </URL>  
   
     ```  
   
+  > [!TIP]  
+>  * Para o SSRS 2017 e posteriores, o valor de `AccountSid` é `S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301` e o valor de `AccountName` é `NT SERVICE\SQLServerReportingServices`.
+>  * Para o Servidor de Relatórios do Power BI, o valor de `AccountSid` é `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663` e o valor de `AccountName` é `NT SERVICE\PowerBIReportServer`.
+  
 5.  Salve o arquivo rsreportserver.config.  
   
-6.  Inicie um prompt de comando como administrador e execute a ferramenta Netsh.exe.  
+6.  Inicie um prompt de comando usando **Executar como Administrador** e execute a ferramenta Netsh.exe.  
   
     ```  
     C:\windows\system32\netsh  
@@ -99,11 +117,11 @@ Para usar um SAN, o certificado TLS/SSL deve estar registrado no servidor, estar
      Uma entrada como a seguinte é exibida:  
   
     ```  
-    Reserved URL            : https:// www.s1.com:443/ReportServer/  
+    Reserved URL            : https://+:443/ReportServer/  
         User: NT SERVICE\ReportServer  
             Listen: Yes  
             Delegate: No  
-            SDDL: D:(A;;GX;;;S-1-5-80-1234567890-123456789-123456789-123456789-1234567890)  
+            SDDL: D:(A;;GX;;;S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051)  
     ```  
   
      Uma urlacl é uma DACL (lista de controle de acesso discricionário) para uma URL reservada.  
@@ -111,12 +129,28 @@ Para usar um SAN, o certificado TLS/SSL deve estar registrado no servidor, estar
 9. Crie uma nova entrada para o nome alternativo da entidade, com o mesmo usuário e SDDL que a entrada existente, digitando o seguinte:  
   
     ```  
-    netsh http>add urlacl  url=https://www.s2.com:443/ReportServer    
-    user="NT Service\ReportServer" sddl=D:(A;;GX;;;S-1-5-80-1234567980-12346579-123456789-123456789-1234567890)  
+    netsh http>add urlacl  url=https://www.myreports.com:443/ReportServer    
+    user="NT Service\ReportServer" sddl=D:(A;;GX;;;S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051)  
   
     ```  
   
-10. Na página **Status do Servidor de Relatório** do Gerenciador de Configuração do Reporting Services, clique em **Parar** e clique em **Iniciar** para reiniciar o servidor de relatório.  
+10. Para a **URL do portal da Web**, crie uma entrada para o nome alternativo da entidade digitando o seguinte:
+
+    ```  
+    netsh http>add urlacl  url=https://www.myreports.com:443/Reports  
+    user="NT Service\ReportServer" sddl=D:(A;;GX;;;S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051)  
+  
+    ```  
+> [!TIP]  
+>  * Para o SSRS 2017 e posteriores, o valor de `user` é `NT SERVICE\SQLServerReportingServices` e o valor de `sddl` é `D:(A;;GX;;;S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301)`.
+>  * Para o Servidor de Relatórios do Power BI, o valor de `user` é `NT SERVICE\PowerBIReportServer` e o valor de `sddl` é `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`
+
+> [!NOTE]  
+> Para o Servidor de Relatórios do Power BI, você precisa criar duas entradas adicionais para o nome alternativo da entidade digitando o seguinte:
+>  * `add urlacl url=https://www.myreports.com:443/PowerBI user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
+>  * `add urlacl url=https://www.myreports.com:443/wopi user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
+
+11. Na página **Status do Servidor de Relatórios** do Configuration Manager do Servidor de Relatórios, clique em **Parar** e clique em **Iniciar** para reiniciar o servidor de relatórios.  
   
 ## <a name="see-also"></a>Confira também
 

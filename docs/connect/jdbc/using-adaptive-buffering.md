@@ -1,6 +1,6 @@
 ---
-description: Como usar o buffer adaptável
-title: Usar o buffer adaptável | Microsoft Docs
+title: Como usar o buffer adaptável
+description: Saiba como o uso do buffer adaptável elimina a sobrecarga dos cursores de servidor ao recuperar dados de grande valor usando o Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f0e31c679ab1c85e5bbee9f3e66336c20e86521
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487937"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603390"
 ---
 # <a name="using-adaptive-buffering"></a>Como usar o buffer adaptável
 

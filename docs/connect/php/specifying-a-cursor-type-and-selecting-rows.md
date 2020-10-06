@@ -1,6 +1,6 @@
 ---
-description: Especificando um tipo de cursor e selecionando linhas
-title: Especificar um tipo de cursor e selecionar linhas | Microsoft Docs
+title: Especificando um tipo de cursor e selecionando linhas
+description: Saiba como especificar um tipo de cursor e selecionar linhas usando os Drivers da Microsoft para PHP para o SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a8374bd54ef39a905e5ff99c113e11e3fd25af9f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7031f5aa0d3b2e3c222feface1b2c857a7b2384
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414372"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603419"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>Especificando um tipo de cursor e selecionando linhas
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

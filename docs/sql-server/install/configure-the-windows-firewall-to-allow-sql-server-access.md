@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238312"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497665"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -127,20 +127,20 @@ Por padrão, as portas normais usadas pelo SQL Server e os serviços de mecanism
   
  Uma alternativa à configuração de uma instância nomeada para escutar em uma porta fixa é criar uma exceção no firewall para um programa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o **sqlservr.exe** (para o [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Isso pode ser conveniente, mas o número da porta não será exibido na coluna **Porta Local** da página **Regras de Entrada** quando você usar o snap-in Firewall do Windows com Segurança Avançada do MMC. Isso pode tornar mais difícil auditar quais portas estão abertas. Outra consideração é que um service pack ou atualização cumulativa pode alterar o caminho para o executável do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o que invalidará a regra do firewall.  
   
-##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>Para adicionar uma exceção de programa ao firewall usando o Firewall do Windows com Segurança Avançada
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>Para adicionar uma exceção de programa ao firewall usando o Windows Defender Firewall com Segurança Avançada
   
-1. No menu Iniciar, digite *wf.msc*. Clique em **Firewall do Windows com Segurança Avançada**.
+1. No menu Iniciar, digite *wf.msc*. Pressione Enter ou selecione o resultado da pesquisa de wf.msc para abrir o **Windows Defender Firewall com Segurança Avançada**.
 1. No painel esquerdo, clique em **Regras de Entrada**.
-1. No painel direito, em **Ações**, clique em **Nova regra...** . O **Assistente de Nova Regra de Entrada** é aberto.
+1. No painel direito, em **Ações**, selecione **Nova regra...** . O **Assistente de Nova Regra de Entrada** é aberto.
 1. Em **Tipo de regra**, clique em **Programa**. Selecione **Avançar**.
 1. Em **Programa**, clique em **Este caminho de programa**. Clique em **Procurar** para localizar a instância do SQL Server. O programa é chamado sqlservr.exe. Ele normalmente encontra-se em:
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    Selecione **Avançar**.
 
-1. Na página **Ação**, clique em **Permitir a conexão**.  
-1. Perfil, inclua todos os três perfis. Selecione **Avançar**.
+1. Em **Ação**, selecione **Permitir a conexão**. Selecione **Avançar**.
+1. Em **Perfil**, inclua todos os três perfis. Selecione **Avançar**.
 1. Em **Nome**, digite um nome para a regra. Selecione **Concluir**.
 
 Para obter mais informações sobre pontos de extremidade, veja [Configurar o Mecanismo de Banco de Dados para escutar em várias portas TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) e [Exibições de catálogo de pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 

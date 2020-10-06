@@ -9,18 +9,18 @@ ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210571"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589295"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server habilitado para Azure Arc (versão prévia)
 
 O SQL Server habilitado para Azure Arc faz parte do Azure Arc para servidores. Ele estende os serviços do Azure para instâncias do SQL Server hospedadas fora do Azure no datacenter do cliente, na borda ou em um ambiente de várias nuvens.
 
-Para habilitar os serviços do Azure, uma instância do SQL Server em execução precisa ser registrada com Azure Arc usando o portal do Azure e um script de registro. Após o registro, a instância será representada no Azure como um recurso do __SQL Server – Azure Arc__. As propriedades desse recurso refletem um subconjunto das configurações do SQL Server.
+Para habilitar os serviços do Azure, uma instância do SQL Server em execução precisa ser registrada com Azure Arc usando o portal do Azure e um script de registro. Após o registro, a instância será representada no Azure como um recurso do __SQL Server – Azure Arc__. As propriedades desse recurso refletem um subconjunto das definições de configuração do SQL Server.
 
 O SQL Server pode ser instalado em uma máquina virtual ou computador físico que executa o Windows ou o Linux que está conectado ao Azure Arc por meio do Connected Machine Agent. O agente está instalado e o computador é registrado automaticamente como parte do registro da instância do SQL Server. O Connected Machine Agent comunica a saída com segurança ao Azure Arc pela porta TCP 443. Se o computador se conectar por meio de um firewall ou servidor proxy HTTP para se comunicar pela Internet, examine os [requisitos de configuração de rede para o Connected Machine Agent](/azure/azure-arc/servers/agent-overview#prerequisites).
 
@@ -38,7 +38,7 @@ O SQL Server habilitado para Azure Arc dá suporte ao SQL Server 2012 ou posteri
 
 - Windows Server 2012 R2 e versões posteriores
 - Ubuntu 16.04 e 18.04 (x64)
-- CentOS Linux 7 (x64)
+- RHEL (Red Hat Enterprise Linux) 7 (x64) 
 - SLES (SUSE Linux Enterprise Server) 15 (x64)
 
 ### <a name="required-permissions"></a>Permissões necessárias

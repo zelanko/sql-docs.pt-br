@@ -3,22 +3,32 @@ title: Notas de versão
 description: Este artigo tem notas sobre a versão para versões do Azure Data Studio de novembro de 2017 até agora. Para muitos dos problemas resumidos, há links para detalhes adicionais.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: overview
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/22/2020
-ms.openlocfilehash: aa55d393955eecaa4ba9af947985622334c59141
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.date: 09/30/2020
+ms.openlocfilehash: fdcba98194643a823d7cef79dde0e8be335f056d
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364189"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603469"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](./download-azure-data-studio.md)**
+
+## <a name="september-2020-hotfix"></a>Setembro de 2020 (hotfix)
+
+Versão &nbsp; / &nbsp; de 30 de setembro de 2020: 1.22.1
+
+&nbsp;
+
+| Alterar | Detalhes |
+| ------ | ------- |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/releases/tag/untagged-ca77e3ca71bd29150699). |
 
 ## <a name="september-2020"></a>Setembro de 2020
 

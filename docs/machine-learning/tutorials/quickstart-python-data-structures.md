@@ -4,32 +4,24 @@ titleSuffix: SQL machine learning
 description: Neste início rápido, saiba como trabalhar com estrutura de dados e objetos de dados no Python usando o machine learning do SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 41feb1db8b5ad14469dbf544e9cdbe083e2e6088
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 18f16b45c6bc5f2069783333be7905af94a41b41
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178519"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497977"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>Início Rápido: Estruturas de dados e objetos usando o Python com o machine learning do SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Neste início rápido, você aprenderá a usar estruturas e tipos de dados ao usar Python nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) ou nos [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md). Você aprenderá como mover dados entre o Python e o SQL Server e os problemas comuns que podem ocorrer.
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar Python nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md). Você aprenderá como mover dados entre o Python e o SQL Server e os problemas comuns que podem ocorrer.
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar o Python nos [Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Você aprenderá como mover dados entre o Python e a Instância Gerenciada de SQL do Azure, bem como os problemas comuns que podem ocorrer.
-::: moniker-end
+Neste início rápido, você aprenderá a usar estruturas e tipos de dados ao usar Python nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md), nos [Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) ou nos [Clusters de Big Data do SQL Server](../../big-data-cluster/machine-learning-services.md). Você aprenderá como mover dados entre o Python e o SQL Server e os problemas comuns que podem ocorrer.
 
 O machine learning do SQL se baseia no pacote **Pandas** do Python, que é ótimo para trabalhar usando dados tabulares. No entanto, você não pode passar um escalar do Python para o seu banco de dados e esperar que ele *simplesmente funcione*. Neste início rápido, você examinará algumas definições básicas de estrutura de dados, a fim de se preparar para problemas adicionais que pode enfrentar ao passar dados tabulares entre o Python e o banco de dados.
 
@@ -48,15 +40,10 @@ Como você faria para expor o único resultado de um cálculo como uma estrutura
 
 Para executar este início rápido, você precisará dos pré-requisitos a seguir.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md) ou o [Guia de instalação do Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Você também pode [habilitar Serviços de Machine Learning em Clusters de Big Data do SQL Server](../../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md). 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Serviços de Machine Learning da Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira a [Visão geral dos Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
-::: moniker-end
+- Um banco de dados SQL em uma destas plataformas:
+  - [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md). Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md) ou o [Guia de instalação do Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+  - Clusters de Big Data do SQL Server. Veja como [habilitar os Serviços de Machine Learning em Clusters de Big Data do SQL Server](../../big-data-cluster/machine-learning-services.md).
+  - Serviços de Machine Learning da Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira a [Visão geral dos Serviços de Machine Learning da Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 - Uma ferramenta para executar consultas SQL que contenham scripts Python. Este início rápido usa o [Azure Data Studio](../../azure-data-studio/what-is.md).
 

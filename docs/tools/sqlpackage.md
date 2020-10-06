@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
-ms.date: 07/06/2020
-ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 09/29/2020
+ms.openlocfilehash: 52a67ff5c77bebb1fb122af29759b9a440ef6931
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989439"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498216"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -136,7 +136,7 @@ Uma operação de publicação SqlPackage.exe atualiza o esquema de um banco de 
 |---|---|---|---|
 |**/Action:**|**/a**|Publicar|Especifica a ação a ser executada. |
 |**/AccessToken:**|**/at**|{string}| Especifica o token de acesso da autenticação com base em token a ser utilizado quando se conectar ao banco de dados de destino. |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Especifica o método de autenticação que é usado para acessar o Azure Key Vault |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Especifica qual método de autenticação será usado para acessar o Azure Key Vault se uma operação de publicação incluir modificações em uma tabela/coluna criptografada. |
 |**/ClientId:**|**/cid**|{string}|Especifica a ID do Cliente a ser usada na autenticação no Azure Key Vault, quando necessário |
 |**/DeployScriptPath:**|**/dsp**|{string}|Especifica um caminho de arquivo opcional no qual o script de implantação será salvo. Nas implantações do Azure, se houver comandos TSQL para criar ou banco de dados mestre para modificar, um script será gravado no mesmo caminho, mas com "Filename_Master.sql" como o nome do arquivo de saída. |
 |**/DeployReportPath:**|**/drp**|{string}|Especifica um caminho de arquivo opcional no qual o arquivo xml do relatório de implantação será salvo. |
@@ -313,7 +313,7 @@ Uma ação de exportação SqlPackage.exe exporta um banco de dados ativo do SQL
 |**/p:**|TableData=(STRING)|Indica a tabela a partir da qual os dados serão extraídos. Especifique o nome da tabela com ou sem os colchetes ao redor das partes do nome no seguinte formato: nome_esquema.identificador_tabela. Essa opção pode ser especificada várias vezes.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Especifica o diretório temporário usado para armazenar em buffer os dados da tabela antes de serem gravados no arquivo do pacote.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Especifica qual é a versão esperada do mecanismo de destino. Isso afeta se os objetos que têm suporte dos servidores de Banco de Dados SQL do Azure com recursos da V12, como tabelas com otimização de memória, são permitidos no bacpac gerado.|
-|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Especifica se os tipos de documento de texto completo compatíveis para Banco de Dados SQL do Microsoft Azure v12 devem ser verificados.|
+|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Especifica se os tipos de documento de texto completo compatíveis com o Banco de Dados SQL do Microsoft Azure versão 12 devem ser verificados.|
   
 ## <a name="import-parameters-and-properties"></a>Parâmetros e propriedades de importação
 
