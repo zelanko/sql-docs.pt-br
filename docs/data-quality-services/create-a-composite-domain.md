@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2da6f9cf82d189647d8b13ec864403134d6af571
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449888"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728021"
 ---
 # <a name="create-a-composite-domain"></a>Criar um domínio composto
 
@@ -90,7 +90,7 @@ ms.locfileid: "88449888"
   
 5.  Se você selecionou **Delimitadores** como o método de análise, também poderá selecionar **Usar Análise da Base de Dados de Conhecimento**. Para obter mais informações, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+6.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> Acompanhamento: depois de criar um domínio composto  
  Depois que você criar um domínio composto, poderá executar outras tarefas de gerenciamento de domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
@@ -103,5 +103,4 @@ ms.locfileid: "88449888"
  A análise baseada no conhecimento pode ser usada quando o domínio composto abrange domínios de cadeia de caracteres ou quando o domínio composto abrange uma combinação de tipos diferentes de domínios (int, date, time etc). Se a fonte de dados abranger tipos de dados diferentes, a análise deverá ser feita primeiro para os tipos de dados não de cadeias de caracteres e, em seguida, conforme descrito acima com base no conhecimento do domínio do restante dos dados.  
   
  Quando você está usando a análise baseada em conhecimento e há menos valores na fonte de dados do que domínios no domínio composto, o DQS coloca um valor nulo no domínio ausente. Quando há mais valores na fonte de dados do que domínios no domínio composto, o DQS adicionará os dados extras a uma das colunas. Se dois ou mais domínios contiverem os mesmos valores, a fonte de dados será analisada como o primeiro domínio correspondente.  
-  
   
