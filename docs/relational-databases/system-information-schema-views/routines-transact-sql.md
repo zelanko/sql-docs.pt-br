@@ -20,12 +20,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71985db395bd1574e40e1769093c30ec972f90a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aad968588ff8e7ed454b35d74ce992cae0f9d836
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536822"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753979"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "89536822"
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Reservado para uso futuro.|  
 |DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Retorna o SQL para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)] e EXTERNAL para uma função escrita externamente.<br /><br /> Funções sempre serão o SQL.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Retorna os primeiros 4000 caracteres do texto de definição da função ou procedimento armazenado, se a função ou procedimento armazenado não for criptografado. Caso contrário, retorna NULL.<br /><br /> Para garantir que você obtenha a definição completa, consulte a função [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) ou a coluna definição na exibição de catálogo [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Retorna os primeiros 4000 caracteres do texto de definição da função ou procedimento armazenado, se a função ou procedimento armazenado não for criptografado. Caso contrário, retorna NULL.<br /><br /> Para garantir que você obtenha a definição completa, consulte a função [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) ou a coluna definição na exibição de catálogo [Sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .|  
 |EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Reservado para uso futuro.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Reservado para uso futuro.|  
@@ -92,11 +92,10 @@ ms.locfileid: "89536822"
 |LAST_ALTERED|**datetime**|A última vez que a função foi modificada.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições do sistema &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Exibições do sistema &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Exibições do esquema de informações &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
-  
   

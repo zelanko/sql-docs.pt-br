@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d385c34f58e7796d7ed09fe5d5ba644f32a6eff1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 201541b36ff441fc6b2942b546105f256cb457dd
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548280"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753490"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,6 @@ EXECUTE sp_batch_params @SQLString;
   
 ## <a name="see-also"></a>Consulte Também  
  [Executando procedimentos armazenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Tópicos de instruções sobre como executar procedimentos armazenados &#40;&#41;ODBC ](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [Tópicos de instruções sobre como executar procedimentos armazenados &#40;&#41;ODBC ](../native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)   
  [Executando procedimentos armazenados &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
-  
   

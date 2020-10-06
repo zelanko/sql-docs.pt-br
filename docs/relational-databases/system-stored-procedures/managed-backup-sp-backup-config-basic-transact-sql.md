@@ -1,6 +1,6 @@
 ---
 description: managed_backup.sp_backup_config_basic (Transact-SQL)
-title: managed_backup. sp_backup_config_basic (Transact-SQL) | Microsoft Docs
+title: managed_backup managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d738a7cf10801366abaebe4ef7857475cd2aad5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549987"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753718"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89549987"
   Define as [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configurações básicas para um banco de dados específico ou para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Esse procedimento pode ser chamado por conta própria para criar uma configuração de backup gerenciado básico. No entanto, se você planeja adicionar recursos avançados ou uma agenda personalizada, primeiro defina essas configurações usando [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) e [managed_backup. sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) antes de habilitar o backup gerenciado com esse procedimento.  
+>  Esse procedimento pode ser chamado por conta própria para criar uma configuração de backup gerenciado básico. No entanto, se você planeja adicionar recursos avançados ou uma agenda personalizada, primeiro defina essas configurações usando [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) e [managed_backup. sp_backup_config_schedule &#40;&#41;do Transact-SQL ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) antes de habilitar o backup gerenciado com esse procedimento.  
    
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  O nome do banco de dados para habilitar o backup gerenciado em um banco de dados específico.  
   
  @container_url  
- Uma URL que indica o local do backup. Quando @credential_name é NULL, essa URL é uma URL de SAS (assinatura de acesso compartilhado) para um contêiner de blob no armazenamento do Azure e os backups usam o novo backup para bloquear a funcionalidade de BLOB. Para obter mais informações, consulte [noções básicas sobre SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Quando @credential_name é especificado, essa é uma URL de conta de armazenamento e os backups usam a funcionalidade de backup preterido para blob de páginas.  
+ Uma URL que indica o local do backup. Quando @credential_name é NULL, essa URL é uma URL de SAS (assinatura de acesso compartilhado) para um contêiner de blob no armazenamento do Azure e os backups usam o novo backup para bloquear a funcionalidade de BLOB. Para obter mais informações, consulte [noções básicas sobre SAS](/azure/storage/common/storage-sas-overview). Quando @credential_name é especificado, essa é uma URL de conta de armazenamento e os backups usam a funcionalidade de backup preterido para blob de páginas.  
   
 > [!NOTE]  
 >  Somente uma URL SAS tem suporte para esse parâmetro neste momento.  
@@ -110,7 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [managed_backup. sp_backup_config_advanced &#40;&#41;do Transact-SQL ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
-  
   

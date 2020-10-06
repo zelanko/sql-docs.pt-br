@@ -18,12 +18,12 @@ ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5050644389090e826f7c86593e9c68aea4cc4863
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a36470835da89f54fdfa9e474ed8b5e993ef0377
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469788"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753944"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Procedimentos armazenados de segurança (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88469788"
 
 :::row:::
     :::column:::
-        [sys. sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) 
+        [sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) 
     :::column-end:::
     :::column:::
         [sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (preterido)
@@ -127,10 +127,10 @@ ms.locfileid: "88469788"
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (preterido) 
+        [sp_dropalias](./system-stored-procedures-transact-sql.md) (preterido) 
     :::column-end:::
     :::column:::
-        [sys. sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) 
+        [sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) 
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -278,7 +278,6 @@ ms.locfileid: "88469788"
 :::row-end:::
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
   

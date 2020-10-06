@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ce2e2ad16277c6ae5e21939976ede8ac89c8843
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3d909da06b0f8cf4520d92a9ba8cb8652a6b2a5a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546242"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753880"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,7 +47,7 @@ sp_polybase_leave_group;
 ## <a name="remarks"></a>Comentários  
  Você só pode remover um nó de computação de um grupo.  
   
- Depois de executar o procedimento armazenado, reinicie o mecanismo do polybase e o serviço de Movimentação de Dados PolyBase no computador. Para verificar, execute o seguinte DMV no nó principal: **Sys. dm_exec_compute_nodes**.  
+ Depois de executar o procedimento armazenado, reinicie o mecanismo do polybase e o serviço de Movimentação de Dados PolyBase no computador. Para verificar, execute o seguinte DMV no nó principal: **Sys.dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo remove a máquina atual de um grupo do polybase.  
@@ -57,7 +57,6 @@ EXEC sp_polybase_leave_group ;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Introdução ao PolyBase](../polybase/polybase-guide.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   
