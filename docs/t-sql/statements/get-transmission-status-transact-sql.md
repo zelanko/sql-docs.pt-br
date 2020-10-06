@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b5e691a1836ee4826ad7d2db3be5b71ccd98fa8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a3aa4aecb35151734d2a0b9a7e7305dbb2643c1
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549000"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497838"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "89549000"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 GET_TRANSMISSION_STATUS ( conversation_handle )  
 ```  
   
@@ -67,7 +66,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir relata o status de transmissão para a conversa com o identificador de conversa `58ef1d2d-c405-42eb-a762-23ff320bddf0`.  
   
-```  
+```sql  
 SELECT Status =  
     GET_TRANSMISSION_STATUS('58ef1d2d-c405-42eb-a762-23ff320bddf0') ;  
 ```  

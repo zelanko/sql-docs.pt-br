@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f644ba5a1e42c309cc481d2ba7b42e6973d940e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77977886f4ccfca9fa41e4bdb685ac76ff96ff99
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496696"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497856"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ Exclui uma coleção de esquema XML inteira e todos os seus componentes.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
@@ -64,7 +63,7 @@ Não é possível descartar uma coleção de esquema XML que está em uso. Porta
   
 -   Mencionada em uma função associada ao esquema ou procedimento armazenado. Por exemplo, a função a seguir bloqueia a coleção de esquema XML `MyCollection` porque a função especifica `WITH SCHEMABINDING`. Se essa especificação for removida, não haverá nenhum bloqueio em XML SCHEMA COLLECTION.  
   
-    ```  
+    ```sql  
     CREATE FUNCTION dbo.MyFunction()  
     RETURNS int  
     WITH SCHEMABINDING  
@@ -82,7 +81,7 @@ O descarte de XML SCHEMA COLLECTION requer uma permissão DROP na coleção.
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir mostra a remoção de uma coleção de esquema XML.  
   
-```  
+```sql  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  

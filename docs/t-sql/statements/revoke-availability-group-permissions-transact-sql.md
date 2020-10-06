@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5bdcb114316ea124200e7974f2ffd5675adbe052
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9f3bf6cabb705c194036bb123ed9f9e463777f94
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485333"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498057"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade REVOKE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "86485333"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON AVAILABILITY GROUP :: availability_group_name  
     { FROM | TO } < server_principal >  [ ,...n ]  
@@ -111,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>a. Revogando a permissão VIEW DEFINITION em um grupo de disponibilidade  
  O exemplo a seguir revoga a permissão `VIEW DEFINITION` no grupo de disponibilidade `MyAg` para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -120,7 +119,7 @@ GO
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. Revogando a permissão TAKE OWNERSHIP com CASCADE  
  O exemplo a seguir revoga a permissão `TAKE OWNERSHIP` no grupo de disponibilidade `MyAg` para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuário `PKomosinski` e de todas as entidades de segurança às quais o `PKomosinski` concedeu TAKE OWNERSHIP em MyAg.  
   
-```  
+```sql  
 USE master;  
 REVOKE TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     CASCADE;  
@@ -130,7 +129,7 @@ GO
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. Revogando uma cláusula WITH GRANT OPTION previamente concedida  
  Se uma permissão foi concedida usando WITH GRANT OPTION, use REVOKE GRANT OPTION FOR… para remover WITH GRANT OPTION. O exemplo a seguir concede a permissão e remove a parte de WITH GRANT da permissão.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     WITH GRANT OPTION;  

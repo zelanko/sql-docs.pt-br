@@ -24,12 +24,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ac73076f7528b8c7fcb329540211cce9eee891e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8ae0325029d458df85c3250e96002a075945f88
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496655"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498031"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
@@ -40,8 +40,7 @@ ms.locfileid: "88496655"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```syntaxsql
 REVERT  
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
@@ -55,7 +54,7 @@ REVERT
 ## <a name="remarks"></a>Comentários  
  REVERT pode ser especificado dentro de um módulo como um procedimento armazenado ou uma função definida pelo usuário ou como uma instrução autônoma. Quando especificado dentro de um módulo, REVERT só é aplicável às instruções EXECUTE AS definidas no módulo. Por exemplo, o procedimento armazenado a seguir emite uma instrução `EXECUTE AS` seguida por uma instrução `REVERT`.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_myproc   
   WITH EXECUTE AS CALLER  
 AS   
@@ -69,7 +68,7 @@ GO
   
  Suponha que, na sessão em que o procedimento armazenado é executado, o contexto de execução da sessão seja explicitamente alterado para `login1`, como mostra o exemplo a seguir.  
   
-```  
+```sql 
   -- Sets the execution context of the session to 'login1'.  
 EXECUTE AS LOGIN = 'login1';  
 GO  
@@ -93,7 +92,7 @@ EXECUTE dbo.usp_myproc;
 ### <a name="a-using-execute-as-and-revert-to-switch-context"></a>a. Usando EXECUTE AS e REVERT para alternar o contexto  
  O exemplo a seguir cria uma pilha de execução de contexto usando várias entidades de segurança. A instrução REVERT é usada para redefinir o contexto de execução para o chamador anterior. A instrução REVERT é executada várias vezes movendo a pilha para cima até o contexto de execução ser definido como o chamador original.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create two temporary principals.  
@@ -137,8 +136,8 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. Usando a cláusula WITH COOKIE  
  O exemplo a seguir define o contexto de execução de uma sessão para determinado usuário e especifica a cláusula WITH NO REVERT COOKIE = @*varbinary_variable*. A instrução `REVERT` deve especificar o valor passado para a variável `@cookie` na instrução `EXECUTE AS` para reverter com êxito o contexto de volta para o chamador. Para executar este exemplo, o logon `login1` e o usuário `user1` criados no exemplo A devem existir.  
   
-```  
-DECLARE @cookie varbinary(100);  
+```sql 
+DECLARE @cookie VARBINARY(100);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie somewhere safe in your application.  
 -- Verify the context switch.  
@@ -147,7 +146,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(100);  
+DECLARE @cookie VARBINARY(100);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

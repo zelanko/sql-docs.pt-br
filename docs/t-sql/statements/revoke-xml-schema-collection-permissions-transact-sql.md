@@ -18,12 +18,12 @@ ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68192beaf1d8b5966acea3de1c6157afcc107298
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 695b3e367910d183d4b39829189dc8f0675b62b6
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485107"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497623"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>Permissões de coleção de esquema REVOKE XML (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "86485107"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  
     XML_schema_collection_name  
@@ -126,7 +125,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir revoga permissão `EXECUTE` na coleção de esquema XML `Invoices4` do usuário `Wanida`. A coleção de esquemas XML `Invoices4` está localizada dentro do esquema `Sales` do banco de dados `AdventureWorks2012`.  
   
- ```
+ ```sql
  USE AdventureWorks2012;  
  REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;  
  GO

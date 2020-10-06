@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eafb66e4cc5f14803027d26f88dbf4baafbcd0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540622"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497930"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "89540622"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -96,14 +95,14 @@ END CONVERSATION conversation_handle
 ### <a name="a-ending-a-conversation"></a>a. Terminando uma conversa  
  O exemplo a seguir encerra o diálogo especificado por `@dialog_handle`.  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>B. Terminando uma conversa com um erro  
  O exemplo a seguir encerrará o diálogo especificado por `@dialog_handle` com um erro se a instrução de processamento informar um erro. Observe que esta é uma abordagem simplista de tratamento de erros, e pode não ser apropriada para alguns aplicativos.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -128,7 +127,7 @@ COMMIT TRANSACTION ;
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. Limpando uma conversa que não pode ser concluída normalmente  
  O exemplo a seguir encerra o diálogo especificado por `@dialog_handle`. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remove imediatamente todas as mensagens da fila de serviço e da fila de transmissão, sem notificar o serviço remoto. Como o término de uma caixa de diálogo com a limpeza não notifica o serviço remoto, você deve usar isso apenas nos casos em que o serviço remoto não está disponível para receber uma mensagem **EndDialog** ou **Error**.  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

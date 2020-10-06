@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 1c67c085119a091985f8f87c5962b910890d0be9
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 6094ab4bb81556ce630730eb35f275dcb58071ab
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226976"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669039"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -40,6 +40,8 @@ Descarta um classificador de gerenciamento de carga de trabalho definido pelo us
 ```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>Argumentos
 

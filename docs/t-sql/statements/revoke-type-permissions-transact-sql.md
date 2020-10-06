@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3565cb96bc39b1f51cf5c1c64a25abf1766ad695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f2dc28c6d703102ef9d01797f1fe2127e0180ab
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426478"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497862"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>Permissões de tipo REVOKE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88426478"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON TYPE :: [ schema_name ]. type_name   
     { FROM | TO } <database_principal> [ ,...n ]   
@@ -133,7 +132,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir revoga a permissão `VIEW DEFINITION` no tipo definido pelo usuário `PhoneNumber` no usuário `KhalidR`. A opção `CASCADE` indica que a permissão `VIEW DEFINITION` também será revogada nas entidades de segurança às quais `KhalidR` a concedeu. `PhoneNumber` está localizado no esquema `Telemarketing`.  
   
-```  
+```sql  
 REVOKE VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     FROM KhalidR CASCADE;  
 GO  
