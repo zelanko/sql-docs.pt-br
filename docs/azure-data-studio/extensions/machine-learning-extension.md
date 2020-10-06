@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: bc3039207e083d2afc8f0850a6328facd1f1916f
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136604"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725141"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Extensão de Machine Learning para Azure Data Studio (versão prévia)
 
@@ -24,7 +24,7 @@ A extensão de Machine Learning para [Azure Data Studio](../what-is.md) permite 
 
 Os pré-requisitos a seguir precisam ser instalados no computador em que o Azure Data Studio é executado.
 
-- [Python 3](https://www.python.org/downloads/). Depois de instalar o Python, você precisará especificar o caminho local para uma instalação do Python em [Configurações da extensão](#settings). Se você usou um [notebook do kernel do Python](../notebooks-tutorial-python-kernel.md) no Azure Data Studio, a extensão usará o caminho do notebook por padrão.
+- [Python 3](https://www.python.org/downloads/). Depois de instalar o Python, você precisará especificar o caminho local para uma instalação do Python em [Configurações da extensão](#settings). Se você usou um [notebook do kernel do Python](../notebooks/notebooks-python-kernel.md) no Azure Data Studio, a extensão usará o caminho do notebook por padrão.
 
 - [Driver ODBC 17 da Microsoft para SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) para Windows, macOS ou Linux.
 
@@ -87,7 +87,7 @@ Para usar a extensão de Machine Learning, bem como o gerenciamento de pacotes d
 
 1. Verifique se **Machine Learning: habilitar Python** está habilitada. Essa configuração é habilitada por padrão.
 
-1. Forneça o caminho para a instalação do Python pré-existente em **Machine Learning: caminho do Python**. Esse pode ser o caminho completo para o executável do Python ou a pasta em que o executável está. Se você usou um [notebook do kernel do Python](../notebooks-tutorial-python-kernel.md) no Azure Data Studio, a extensão usará o caminho do notebook por padrão.
+1. Forneça o caminho para a instalação do Python pré-existente em **Machine Learning: caminho do Python**. Esse pode ser o caminho completo para o executável do Python ou a pasta em que o executável está. Se você usou um [notebook do kernel do Python](../notebooks/notebooks-python-kernel.md) no Azure Data Studio, a extensão usará o caminho do notebook por padrão.
 
 ### <a name="enable-r"></a>Habilitar R
 
@@ -114,6 +114,6 @@ Siga os links em **Próximas etapas** para ver como você pode usar a extensão 
 - [Gerenciar pacotes no banco de dados](machine-learning-extension-manage-packages.md)
 - [Fazer previsões](machine-learning-extension-predictions.md)
 - [Importar ou exibir modelos](machine-learning-extension-import-view-models.md)
-- [Notebooks no Azure Data Studio](../notebooks-guidance.md)
+- [Notebooks no Azure Data Studio](../notebooks/notebooks-guidance.md)
 - [Documentação do machine learning do SQL](../../machine-learning/index.yml)
 - [Machine Learning e IA com ONNX no SQL no Edge (versão prévia)](/azure/azure-sql-edge/onnx-overview)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc6be0059b1e49c5db9cf2ced79e66c6b523b5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 633dd8288a9168422d0e5187caa1265615911a8a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478208"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726663"
 ---
 # <a name="analysis-services-connection-manager"></a>Gerenciador de conexões do Analysis Services
 
@@ -31,7 +31,7 @@ ms.locfileid: "88478208"
   
  As tarefas Executar DDL do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e Processamento do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e os destinos, como o destino Treinamento do Modelo de Mineração de Dados, usam um gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Para obter mais informações sobre bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Bancos de dados de modelo multidimensional &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas).  
+ Para obter mais informações sobre bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Bancos de dados de modelo multidimensional &#40;SSAS&#41;](/analysis-services/multidimensional-models/multidimensional-model-databases-ssas).  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Configuração do Gerenciador de Conexões do Analysis Services  
  Quando você adiciona um gerenciador de conexões [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a um pacote, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria um gerenciador de conexões resolvido como uma conexão [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em tempo de execução, define as propriedades do gerenciador de conexões e o adiciona à coleção **Conexões** no pacote. A propriedade **ConnectionManagerType** do gerenciador de conexões está definida como **MSOLAP100**.  
@@ -45,7 +45,7 @@ ms.locfileid: "88478208"
 -   Se estiver se conectando a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], especifique o modo de autenticação.  
 
 > [!NOTE]    
->  Caso use o SSIS no ADF (Azure Data Factory) e queira se conectar à instância do AAS (Azure Analysis Services), você não poderá usar uma conta com a MFA (Autenticação Multifator) habilitada, mas deverá usar uma conta que não exija nenhuma interatividade/MFA ou uma entidade de serviço. Para usar a última opção, veja [aqui](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal) para criar uma e atribuir a função de administrador do servidor a ela, selecione **usar um determinado nome de usuário e senha** para fazer logon no servidor no seu Gerenciador de conexão e, por fim, insira `User name: app:YourApplicationID` e `Password: YourAuthorizationKey`.
+>  Caso use o SSIS no ADF (Azure Data Factory) e queira se conectar à instância do AAS (Azure Analysis Services), você não poderá usar uma conta com a MFA (Autenticação Multifator) habilitada, mas deverá usar uma conta que não exija nenhuma interatividade/MFA ou uma entidade de serviço. Para usar a última opção, veja [aqui](/azure/analysis-services/analysis-services-service-principal) para criar uma e atribuir a função de administrador do servidor a ela, selecione **usar um determinado nome de usuário e senha** para fazer logon no servidor no seu Gerenciador de conexão e, por fim, insira `User name: app:YourApplicationID` e `Password: YourAuthorizationKey`.
   
 -   Indique se a conexão criada a partir do gerenciador de conexões será retida em tempo de execução.  
   
@@ -56,5 +56,4 @@ ms.locfileid: "88478208"
 -   [Referência de IU da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
-  
   

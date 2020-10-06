@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 643de07ff630c5f36147aac5c7721297236fc728
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350012"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725965"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarefa de Upload do SQL DW do Azure
 
@@ -28,7 +28,7 @@ ms.locfileid: "88350012"
 
 
 A **Tarefa de Upload do Azure SQL DW** habilita um pacote do SSIS a copiar dados de tabela para o Azure SQL Data Warehouse (DW) do sistema de arquivos ou do Armazenamento de Blobs do Azure.
-A tarefa aproveita o PolyBase para melhorar o desempenho, conforme descrito no artigo [Padrões de carregamento e estratégias do Azure SQL Data Warehouse](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).
+A tarefa aproveita o PolyBase para melhorar o desempenho, conforme descrito no artigo [Padrões de carregamento e estratégias do Azure SQL Data Warehouse](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies).
 O formato de arquivo de dados de origem com suporte atualmente é texto delimitado em codificação UTF8.
 Ao copiar do sistema de arquivos, primeiro os dados serão carregados no Armazenamento de Blobs do Azure para o preparo e, depois, para o Azure SQL DW. Portanto, é necessário uma conta de Armazenamento de Blobs do Azure.
 

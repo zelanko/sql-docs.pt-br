@@ -166,6 +166,4 @@ A porta TCP no firewall deve estar aberta para a porta do ouvinte.
 >[!IMPORTANT]
 >Para a versão do SQL Server 2017, o único método de autenticação com suporte para o ponto de extremidade com espelhamento de banco de dados é o `CERTIFICATE`. A opção `WINDOWS` será habilitada em uma versão futura.
 
-Para obter mais informações, consulte [O ponto de extremidade de espelhamento de banco de dados (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
-
-
+Para obter mais informações, consulte [O ponto de extremidade de espelhamento de banco de dados (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).

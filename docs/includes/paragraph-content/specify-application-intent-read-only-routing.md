@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
-ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
-ms.translationtype: MT
+ms.openlocfilehash: a443b615a6a04b588ed6dc84c6a8a4f6ed12e2f0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721388"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726747"
 ---
 ## <a name="specifying-application-intent"></a>Especificando a intenção do aplicativo
 
@@ -31,9 +31,9 @@ Quando uma conexão escolhe **ReadOnly**, ela é atribuída a qualquer uma das c
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
     - Um banco de dados pode permitir ou não cargas de trabalho de leitura no banco de dados Always On de destino. A escolha é controlada usando a cláusula **ALLOW_CONNECTIONS** das instruções Transact-SQL **PRIMARY_ROLE** e **SECONDARY_ROLE**.
 
-- [Replicação geográfica](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
+- [Replicação geográfica](/azure/sql-database/sql-database-geo-replication-overview)
 
-- [Expansão de leitura](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
+- [Expansão de leitura](/azure/sql-database/sql-database-read-scale-out)
 
 Se nenhum desses destinos especiais estiver disponível, o banco de dados regular será lido.
 
@@ -54,5 +54,4 @@ O roteamento somente leitura é um recurso que pode garantir a disponibilidade d
 
 Várias conexões que usam roteamento somente leitura podem se conectar à mesma réplica somente leitura. Alterações na sincronização de banco de dados ou alterações na configuração de roteamento de servidor podem resultar em conexões de cliente com réplicas somente leitura diferentes. Garanta que todas as solicitações somente leitura se conectem à mesma réplica somente leitura. Assegure a uniformidade *não* passando um ouvinte de grupo de disponibilidade para a palavra-chave da cadeia de conexão do **Servidor**. Em vez disso, especifique o nome da instância somente leitura.
 
-O roteamento somente leitura pode levar mais tempo do que se conectar ao principal. A espera mais longa é porque o roteamento somente leitura se conecta primeiro à instância primária e, em seguida, procura a melhor instância secundária legível disponível. Devido a essas várias etapas, você deve aumentar seu tempo limite de logon para, pelo menos, 30 segundos.
-
+O roteamento somente leitura pode levar mais tempo do que se conectar ao principal. A espera mais longa é porque o roteamento somente leitura se conecta primeiro à instância primária e, em seguida, procura a melhor instância secundária legível disponível. O tempo limite do logon deve aumentar para no mínimo 30 segundos devido às várias etapas.

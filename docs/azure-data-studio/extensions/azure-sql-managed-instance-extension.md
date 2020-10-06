@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: e31895f09b06e51f76c745a9b00a1dfe7c41d759
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111755"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725197"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Painel da Instância Gerenciada de SQL do Azure para o Azure Data Studio (versão prévia)
 
@@ -28,7 +28,7 @@ A extensão da Instância Gerenciada de SQL do Azure fornece um painel para trab
 
 ## <a name="install"></a>Instalar
 
-Você pode instalar a versão oficial dessa extensão. Siga as etapas na [documentação do Azure Data Studio](../extensions.md).
+Você pode instalar a versão oficial dessa extensão. Siga as etapas na [documentação do Azure Data Studio](./add-extensions.md).
 No painel **Extensões**, pesquise "Instância Gerenciada" e instale-a nele. Depois da instalação, você será notificado automaticamente sobre atualizações futuras de extensão.
 
 Com a extensão instalada, você verá uma guia **Instância Gerenciada** no Azure Data Studio. Aqui, é possível encontrar informações específicas para sua instância gerenciada.
@@ -50,7 +50,7 @@ O painel superior mostra os seguintes detalhes:
 
 Ao selecionar o segundo painel na guia **Instância Gerenciada**, você recebe recomendações e alertas para ajudar a otimizar sua instância gerenciada.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Recomendações para a Instância Gerenciada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Propriedades da Instância Gerenciada":::
 
 Você pode ver algumas das seguintes recomendações:
 
@@ -67,7 +67,7 @@ Examine periodicamente essas recomendações, investigue as causas raiz e adote 
 
 O terceiro painel na guia **Instância Gerenciada** mostra o estado das réplicas de banco de dados em sua instância gerenciada.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Réplicas da Instância Gerenciada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Propriedades da Instância Gerenciada":::
 
 Na camada de serviço de uso geral, cada banco de dados tem uma única réplica (primária). Em uma instância de nível comercialmente crítico, cada banco de dados tem uma réplica primária e três secundárias, uma das quais é usada para cargas de trabalho somente leitura. No painel **Réplicas**, você pode monitorar o processo de sincronização e verificar se todas as réplicas secundárias estão sincronizadas com a réplica primária.
 
@@ -75,7 +75,7 @@ Na camada de serviço de uso geral, cada banco de dados tem uma única réplica 
 
 O quarto painel da **Instância Gerenciada** mostra as entradas de log de erros do SQL mais recentes e relevantes.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Entradas de log da Instância Gerenciada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Propriedades da Instância Gerenciada":::
 
 Embora sua instância gerenciada gere um grande número de entradas de log, a maioria contém informações internas/do sistema. Além disso, algumas entradas de log mostram nomes de bancos de dados físicos (valores `GUID`) em vez de nomes de banco de dados lógicos reais.
 

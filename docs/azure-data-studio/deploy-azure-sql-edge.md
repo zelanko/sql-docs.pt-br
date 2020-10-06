@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 89732af2b2fc5926193519b4a6508b97ac998c88
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364113"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725217"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>Implantar o SQL do Azure no Edge com o Azure Data Studio (Versão Prévia)
 
-O [SQL do Azure no Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview) é um mecanismo de banco de dados relacional otimizado para implantações de IoT e do Azure IoT Edge. Ele oferece funcionalidades para a criação de uma camada de processamento e armazenamento de dados de alto desempenho para aplicativos e soluções de IoT. Este artigo mostrará como implantar uma instância do SQL do Azure no Edge com o Azure Data Studio e os cenários de implantação compatíveis com o assistente de implantação.  
+O [SQL do Azure no Edge](/azure/azure-sql-edge/overview) é um mecanismo de banco de dados relacional otimizado para implantações de IoT e do Azure IoT Edge. Ele oferece funcionalidades para a criação de uma camada de processamento e armazenamento de dados de alto desempenho para aplicativos e soluções de IoT. Este artigo mostrará como implantar uma instância do SQL do Azure no Edge com o Azure Data Studio e os cenários de implantação compatíveis com o assistente de implantação.  
 
 Os seguintes cenários são compatíveis com o assistente de implantação no Azure Data Studio:
 
@@ -76,11 +76,11 @@ Também será possível compactar um arquivo dacpac em uma pasta e implantá-lo 
 
 ## <a name="multiple-devices-of-an-azure-iot-hub"></a>Vários dispositivos de um Hub IoT do Azure
 
-Caso tenha um hub IoT existente e dispositivos conectados, o SQL do Azure no Edge poderá ser implantado no dispositivo com base no grupo de recursos, em um nome do hub IoT, bem como em uma [condição de destino](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition) para selecionar o(s) dispositivo(s).
+Caso tenha um hub IoT existente e dispositivos conectados, o SQL do Azure no Edge poderá ser implantado no dispositivo com base no grupo de recursos, em um nome do hub IoT, bem como em uma [condição de destino](/azure/iot-edge/module-deployment-monitoring#target-condition) para selecionar o(s) dispositivo(s).
 O endereço IP fornecido durante a execução do assistente de implantação será utilizado para gerar um link de conexão rápida na parte inferior do notebook.
 
 Também será possível compactar um arquivo dacpac em uma pasta e implantá-lo na nova instância do SQL do Azure no Edge como parte do processo.  Caso um arquivo dacpac seja fornecido, uma conta de Armazenamento de Blobs do Azure será criada no mesmo grupo de recursos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Saiba mais sobre o SQL do Azure no Edge](https://docs.microsoft.com/azure/azure-sql-edge/)
+- [Saiba mais sobre o SQL do Azure no Edge](/azure/azure-sql-edge/)

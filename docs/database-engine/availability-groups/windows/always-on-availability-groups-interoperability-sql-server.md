@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f0038fb53bb0f50dfd11551bed9a7c17a41971a1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 286a3e31caad83c421865626eee28d9f7d3f91f1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115713"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726577"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de disponibilidade Always On: interoperabilidade (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -63,15 +63,15 @@ Os seguintes recursos interoperam com [!INCLUDE[ssHADR](../../../includes/sshadr
 
 - **Blogs:**
 
-  [Guia de migração: Migrando para o clustering de failover do SQL Server 2012 e os grupos de disponibilidade de implantações de clustering e espelhamento anteriores](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)
-  [Blogs da Equipe de Always On do SQL Server: o Blob da Equipe de Always On do SQL Server oficial](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [Blogs de Engenheiros do CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)
+  [Guia de migração: Migrando para o clustering de failover do SQL Server 2012 e os grupos de disponibilidade de implantações de clustering e espelhamento anteriores](/archive/blogs/sqlalwayson/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments)
+  [Blogs da Equipe de Always On do SQL Server: o Blob da Equipe de Always On do SQL Server oficial](/archive/blogs/sqlalwayson/)
+  [Blogs de Engenheiros do CSS SQL Server](/archive/blogs/psssql/)
 
 - **Whitepapers:**
 
-  [Guia de migração: Migrando para Grupos de Disponibilidade Always On de implantações anteriores que combinam espelhamento de banco de dados e envio de logs](https://msdn.microsoft.com/library/jj635217)
-  [Guia de soluções Always On do Microsoft SQL Server para alta disponibilidade e recuperação de desastres](https://go.microsoft.com/fwlink/?LinkId=227600)
-  [White papers da Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)
+  [Guia de migração: Migrando para Grupos de Disponibilidade Always On de implantações anteriores que combinam espelhamento de banco de dados e envio de logs](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))
+  [Guia de soluções Always On do Microsoft SQL Server para alta disponibilidade e recuperação de desastres](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
+  [White papers da Microsoft para SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)
   [White papers da equipe de consultoria de cliente do SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>Consulte Também

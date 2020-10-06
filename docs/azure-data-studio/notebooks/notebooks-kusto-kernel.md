@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379591"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725120"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Criar e executar um notebook do Kusto (KQL) (versão prévia)
 
@@ -28,7 +28,7 @@ Esse recurso está atualmente na visualização.
 
 Caso você não tenha uma assinatura do Azure, crie uma [conta gratuita do Azure](https://azure.microsoft.com/free/) antes de começar.
 
-- [Um cluster do Azure Data Explorer com um banco de dados ao qual você pode se conectar](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [Um cluster do Azure Data Explorer com um banco de dados ao qual você pode se conectar](/azure/data-explorer/create-cluster-database-portal).
 - [Azure Data Studio](../download-azure-data-studio.md).
 - [Extensão do Kusto (KQL) para o Azure Data Studio](../extensions/kusto-extension.md).
 
@@ -118,6 +118,6 @@ Você pode arquivar um [bug](https://github.com/microsoft/azuredatastudio/issues
 Saiba mais sobre os notebooks:
 
 - [Extensão do Kusto (KQL) para o Azure Data Studio](../extensions/kusto-extension.md)
-- [Como usar notebooks no Azure Data Studio](../notebooks-guidance.md)
-- [Criar e executar um notebook do Python](../notebooks-tutorial-python-kernel.md)
-- [Criar e executar um notebook do SQL Server](../notebooks-tutorial-sql-kernel.md)
+- [Como usar notebooks no Azure Data Studio](./notebooks-guidance.md)
+- [Criar e executar um notebook do Python](./notebooks-python-kernel.md)
+- [Criar e executar um notebook do SQL Server](./notebooks-sql-kernel.md)

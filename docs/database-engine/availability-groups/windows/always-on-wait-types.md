@@ -10,18 +10,18 @@ ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50886885852fd9ffe2d759be779989cb221cf76f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2a04953b5881362dbae6a83ea874dc9ed0207a7a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115802"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724518"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>Identificar esperas associadas a grupos de disponibilidade
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Ao solucionar problemas de latência de Grupos de Disponibilidade Always On, as estatísticas de espera podem ser monitoradas para acúmulo, usando os tipos de espera de disponibilidade específicos de grupos na DMV (exibição de gerenciamento dinâmico) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
- Para obter informações gerais sobre como usar estatísticas de espera, veja [Espera e filas do SQL Server 2005](https://technet.microsoft.com/library/cc966413.aspx). Esse documento foi escrito para o SQL Server 2005, mas as informações podem ser aplicadas a versões mais recentes do SQL Server.  
+ Para obter informações gerais sobre como usar estatísticas de espera, veja [Espera e filas do SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc966413(v=technet.10)). Esse documento foi escrito para o SQL Server 2005, mas as informações podem ser aplicadas a versões mais recentes do SQL Server.  
   
 ## <a name="query-for-availability-groups-wait-types"></a>Consultar tipos de espera de grupos de disponibilidade  
  Use a consulta T-SQL abaixo para recuperar todas as estatísticas de espera com os tipos de espera de grupos de disponibilidade:  
@@ -53,5 +53,4 @@ ORDER BY map_key ASC
   
 ## <a name="next-steps"></a>Próximas etapas  
  [Tipos de esperas](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)  
-  
   

@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1240bc202344762a48f4dde8e32b69789f1c0f46
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 754169b501dbc468e0e48f04e71534db61d80192
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114136"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726487"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Gerar e analisar o CLUSTER.LOG de um grupo de disponibilidade Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91114136"
   
 1.  Use o comando `cluster /log /g` no prompt de comando. Este comando gera os logs do cluster no diretório \windows\cluster\reports em cada nó do WSFC. A vantagem desse método é que você pode especificar o nível de detalhe dos logs gerados usando a opção `/level`. A desvantagem é que você não pode especificar o diretório de destino para os logs de cluster gerados. Para obter mais informações, veja [Como criar o cluster.log no Clustering de failover do Windows Server 2008](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283).  
   
-2.  Use o cmdlet [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) do PowerShell. A vantagem desse método é que você pode gerar o log do cluster em todos os nós em um diretório de destino do nó em que você executa o cmdlet. A desvantagem é que você não pode especificar o nível de detalhes dos logs gerados.  
+2.  Use o cmdlet [Get-ClusterLog](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10)) do PowerShell. A vantagem desse método é que você pode gerar o log do cluster em todos os nós em um diretório de destino do nó em que você executa o cmdlet. A desvantagem é que você não pode especificar o nível de detalhes dos logs gerados.  
   
  Os seguintes comandos do PowerShell geram os logs do cluster de todos os nós de cluster nos últimos 15 minutos, colocando-os no diretório atual. Execute os comandos em uma janela do PowerShell com privilégios de administrador.  
   
@@ -55,7 +55,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 8.  Clique com o botão direito do mouse no recurso do grupo de disponibilidade novamente e clique em **Colocar este recurso online**.  
   
 ## <a name="availability-group-resource-events"></a>Eventos de recurso do grupo de disponibilidade  
- A tabela abaixo mostra os diferentes tipos de eventos que você pode ver no CLUSTER.LOG e que pertencem ao recurso do grupo de disponibilidade. Para obter mais informações sobre o RHS (Subsistema de Hospedagem de Recursos) e o RCM (Monitor de Controle de Recursos) no WSFC, veja [RHS (Subsistema de Hospedagem de Recursos) nos Clusters de Failover do Windows Server 2008](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx).  
+ A tabela abaixo mostra os diferentes tipos de eventos que você pode ver no CLUSTER.LOG e que pertencem ao recurso do grupo de disponibilidade. Para obter mais informações sobre o RHS (Subsistema de Hospedagem de Recursos) e o RCM (Monitor de Controle de Recursos) no WSFC, veja [RHS (Subsistema de Hospedagem de Recursos) nos Clusters de Failover do Windows Server 2008](/archive/blogs/askcore/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters).  
   
 |Identificador|Fonte|Exemplo do CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
@@ -76,5 +76,4 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 3.  Alterar o valor **SeparateMonitor** para **1**.  
   
 4.  Reinicie o serviço em cluster do grupo de disponibilidade no cluster WSFC.  
-  
   

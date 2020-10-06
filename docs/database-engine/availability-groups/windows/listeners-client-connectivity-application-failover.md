@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116939"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727846"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Conectar-se a um ouvinte do grupo de disponibilidade Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ As conexões serão roteadas automaticamente para a réplica somente leitura se 
  
 -   Pelo menos uma réplica secundária é definida como acesso somente leitura e cada réplica secundária somente leitura e a réplica primária são [configuradas para oferecer suporte ao roteamento somente leitura](configure-read-only-routing-for-an-availability-group-sql-server.md). 
 
--   A cadeia de conexão faz referência a um banco de dados envolvido no grupo de disponibilidade. Uma alternativa para isso seria o logon usado na conexão ter o banco de dados configurado como seu banco de dados padrão. Para obter mais informações, consulte [este artigo sobre como o algoritmo funciona com o roteamento somente leitura](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+-   A cadeia de conexão faz referência a um banco de dados envolvido no grupo de disponibilidade. Uma alternativa para isso seria o logon usado na conexão ter o banco de dados configurado como seu banco de dados padrão. Para obter mais informações, consulte [este artigo sobre como o algoritmo funciona com o roteamento somente leitura](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).
 
 -   A cadeia de conexão faz referência a um ouvinte de grupo de disponibilidade, e a tentativa do aplicativo da conexão de entrada está definida como somente leitura (por exemplo, usando a palavra-chave **Application Intent=ReadOnly** nas cadeias de conexão ODBC ou OLEDB ou nos atributos ou propriedades da conexão). 
 
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 Depois de conectar-se com êxito ao ouvinte, considere descarregar [cargas de trabalho somente leitura](overview-of-always-on-availability-groups-sql-server.md) e [backups](configure-backup-on-availability-replicas-sql-server.md) para a réplica secundária para aprimorar o desempenho. Você também pode examinar várias [estratégias de monitoramento do grupo de disponibilidade](monitoring-of-availability-groups-sql-server.md) para garantir a integridade do seu grupo de disponibilidade. 
 
-Para obter mais informações sobre grupos de disponibilidade, confira a [Visão geral dos grupos de disponibilidade Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 
+Para obter mais informações sobre grupos de disponibilidade, confira a [Visão geral dos grupos de disponibilidade Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).

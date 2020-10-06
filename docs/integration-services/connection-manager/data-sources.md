@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d622a00995ec8a371ef531994e4f18c61173a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25c17b0d61c5e1f58932eb6abc035e7862dcbe6e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477969"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728052"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>Fontes de dados para pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477969"
   
 > **OBSERVAÇÃO:** Você pode adicionar fontes de dados somente a projetos que são configurados para usar o modelo de implantação de pacote. Se um projeto estiver configurado para usar o modelo de implantação de projeto, você usará gerenciadores de conexões criados no nível do projeto para compartilhar conexões, em vez de usar fontes de dados.  
 >   
->  Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Para obter mais informações sobre conversão de um projeto para o modelo de implantação de projetos, consulte [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Para obter mais informações sobre conversão de um projeto para o modelo de implantação de projetos, consulte [Deploy Projects to Integration Services Server](../packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  As vantagens de usar fontes de dados em pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluem o seguinte:  
   
@@ -47,5 +47,4 @@ ms.locfileid: "88477969"
  Um objeto de fonte de dados representa uma conexão simples para uma fonte de dados e fornece acesso aos objetos no repositório de dados que ela referencia. Por exemplo, um objeto de fonte de dados que se conecta ao Banco de dados de exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AdventureWorks inclui 60 tabelas do banco de dados.  
   
  Não há nenhuma dependência entre uma fonte de dados e os gerenciadores de conexões que fazem referência a ela. Se uma fonte de dados não faz mais parte do projeto, o pacote continua a ser válido, pois informações sobre a fonte de dados, tais como o tipo da conexão e a cadeia de caracteres da conexão, são inclusas na definição do pacote.  
-  
   

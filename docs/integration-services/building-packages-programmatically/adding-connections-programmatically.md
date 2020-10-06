@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 571037e357f6d4d99a0e1f0139c72bb2a8645be5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0beac97d600e95f48921a5eb8229c0ff5bff9b75
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457832"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727578"
 ---
 # <a name="adding-connections-programmatically"></a>Adicionando conexões programaticamente
 
@@ -216,6 +216,5 @@ End Class
   
 ## <a name="see-also"></a>Consulte Também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Criar Gerenciadores de Conexões](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [Criar Gerenciadores de Conexões](../connection-manager/integration-services-ssis-connections.md)  
   

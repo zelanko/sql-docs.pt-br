@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: e128b510c9bd40eedd89f7750c65bbd03a7d8670
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff32d53b663aa34b036fcfdb9202f7dadcd1ff5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477973"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724517"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gerenciador de conexões do Azure Data Lake Store
 
@@ -45,7 +45,7 @@ O Gerenciador de Conexões do Azure Data Lake Store é um componente do [Feature
     1.  Se você selecionou a opção de autenticação **Identidade de Usuário do Azure AD**, faça o seguinte:
         1. Forneça valores para os campos **Nome de Usuário** e **Senha**. 
     
-        2. Selecione **Testar Conexão** para testar a conexão. Se você ou o administrador do locatário não consentiu anteriormente em permitir que o SSIS acessasse os dados do Data Lake Storage Gen1, selecione **Aceitar** quando solicitado. Para obter mais informações sobre esta experiência de consentimento, consulte [integrando aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+        2. Selecione **Testar Conexão** para testar a conexão. Se você ou o administrador do locatário não consentiu anteriormente em permitir que o SSIS acessasse os dados do Data Lake Storage Gen1, selecione **Aceitar** quando solicitado. Para obter mais informações sobre esta experiência de consentimento, consulte [integrando aplicativos com o Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
         > [!NOTE] 
         > Quando você seleciona a opção de autenticação por **Identidade do Usuário do Azure AD**, a autenticação multifator e a autenticação por conta da Microsoft não têm suporte.
@@ -53,7 +53,7 @@ O Gerenciador de Conexões do Azure Data Lake Store é um componente do [Feature
     2. Se você selecionou a opção de autenticação **Identidade do Serviço do Azure AD**, faça o seguinte:
         1. Crie uma entidade de serviço e um aplicativo do AAD (Azure Active Directory) para acessar os dados do Data Lake Storage Gen1.
     
-        2. Atribua as permissões apropriadas para permitir que este aplicativo do AAD acesse seus recursos do Data Lake Storage Gen1. Para obter mais informações sobre essa opção de autenticação, consulte [Use o portal para criar a entidade de serviço e o aplicativo do Active Directory que pode acessar recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+        2. Atribua as permissões apropriadas para permitir que este aplicativo do AAD acesse seus recursos do Data Lake Storage Gen1. Para obter mais informações sobre essa opção de autenticação, consulte [Use o portal para criar a entidade de serviço e o aplicativo do Active Directory que pode acessar recursos](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
     
         3. Forneça valores para os campos **Id do cliente**, **Chave Secreta** e **Nome do Locatário**.
     
@@ -63,5 +63,4 @@ O Gerenciador de Conexões do Azure Data Lake Store é um componente do [Feature
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Exibir as propriedades do gerenciador de conexões
 Você pode ver as propriedades do gerenciador de conexões criado na janela **Propriedades** .  
-  
   

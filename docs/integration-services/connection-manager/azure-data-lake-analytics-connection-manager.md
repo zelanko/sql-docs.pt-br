@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: 87c4b6ca0ccb53087c2c4532631edfde9d0e6516
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d40fea72f0c39bf932146de239f4713dbe5eb247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918558"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726658"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Gerenciador de conexão do Azure Data Lake Analytics
 
@@ -43,15 +43,15 @@ O gerenciador de conexões do Data Lake Analytics é um componente do [Feature P
    a. Se você selecionou a opção de autenticação **Identidade de Usuário do Azure AD**:
    
       i. Forneça valores para os campos **Nome de Usuário** e **Senha**.    
-      ii. Selecione **Testar Conexão** para testar a conexão. Se você ou o administrador do locatário não consentiu anteriormente em permitir que o SSIS acessasse a conta do Data Lake Analytics, selecione **Aceitar** quando solicitado. Para obter mais informações sobre esta experiência de consentimento, consulte [integrando aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+      ii. Selecione **Testar Conexão** para testar a conexão. Se você ou o administrador do locatário não consentiu anteriormente em permitir que o SSIS acessasse a conta do Data Lake Analytics, selecione **Aceitar** quando solicitado. Para obter mais informações sobre esta experiência de consentimento, consulte [integrando aplicativos com o Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
    > [!NOTE] 
    > Quando você seleciona a opção de autenticação por **Identidade do Usuário do Azure AD**, a autenticação multifator e a autenticação por conta da Microsoft não têm suporte.
     
    b. Se você selecionou a opção de autenticação **Identidade do Serviço do Azure AD**:
    
-      i. Crie uma entidade de serviço e um aplicativo do Azure AD para acessar a conta do Data Lake Analytics. Para obter mais informações sobre essa opção de autenticação, consulte [Use o portal para criar a entidade de serviço e o aplicativo do Active Directory que pode acessar recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).    
-      ii. Atribua as permissões apropriadas para permitir que este aplicativo do Azure AD acesse sua conta do Data Lake Analytics. Saiba como conceder permissões para sua conta do Data Lake Analytics usando o [Assistente para Adicionar Usuário](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
+      i. Crie uma entidade de serviço e um aplicativo do Azure AD para acessar a conta do Data Lake Analytics. Para obter mais informações sobre essa opção de autenticação, consulte [Use o portal para criar a entidade de serviço e o aplicativo do Active Directory que pode acessar recursos](/azure/azure-resource-manager/resource-group-create-service-principal-portal).    
+      ii. Atribua as permissões apropriadas para permitir que este aplicativo do Azure AD acesse sua conta do Data Lake Analytics. Saiba como conceder permissões para sua conta do Data Lake Analytics usando o [Assistente para Adicionar Usuário](/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
       III. Forneça valores para os campos **ID do aplicativo**, **Chave de Autenticação** e **ID do locatário**.    
       iv. Selecione **Testar Conexão** para testar a conexão.  
 
@@ -59,5 +59,4 @@ O gerenciador de conexões do Data Lake Analytics é um componente do [Feature P
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Exibir as propriedades do gerenciador de conexões
 Você pode ver as propriedades do gerenciador de conexões criado na janela **Propriedades** .  
-  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc573bfaf7f68102631e4e65c607e76062c147ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41a59d34bd6b84388f9fc32443b703bdf94f3239
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350062"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728091"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle
 
@@ -100,9 +100,9 @@ Você pode definir a maioria das propriedades de tarefas e contêineres usando a
   
 4.  Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse na tarefa ou no contêiner e clique em **Editar** para abrir o editor correspondente.  
   
-     Para obter informações sobre como configurar um contêiner Loop For, consulte [Para configurar um contêiner Loop For](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     Para obter informações sobre como configurar um contêiner Loop For, consulte [Para configurar um contêiner Loop For](./for-loop-container.md).  
   
-     Para obter informações sobre como configurar um contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     Para obter informações sobre como configurar um contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](./foreach-loop-container.md).  
   
     > [!NOTE]  
     >  O contêiner Sequência não tem um editor personalizado.  
@@ -119,5 +119,4 @@ Você pode definir a maioria das propriedades de tarefas e contêineres usando a
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
-  
   

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ac57f5f3e064df60c0fc885765fcbc445be9e22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3e798ca968230aa0a554189076281a886bff3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457528"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727601"
 ---
 # <a name="data-mining-query"></a>Consulta de mineração de dados
 
@@ -68,7 +68,6 @@ ms.locfileid: "88457528"
  Especifique uma condição ou expressão de usuário que se aplica à coluna. As colunas podem ser arrastadas das tabelas que contêm o modelo de mineração e colunas de entrada para a célula.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ferramentas de Consulta de Data Mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
+ [Ferramentas de Consulta de Data Mining](/analysis-services/data-mining/data-mining-query-tools)   
  [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

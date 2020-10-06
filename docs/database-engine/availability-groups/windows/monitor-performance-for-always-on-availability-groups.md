@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362662"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727845"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87362662"
 > [!IMPORTANT]  
 >  Se um grupo de disponibilidade contém mais de um banco de dados de disponibilidade, o banco de dados de disponibilidade com o Tfailover mais alto torna-se o valor de limitação de conformidade do RTO.  
   
- O tempo de detecção de falha, Tdetection, é o tempo necessário para o sistema detectar a falha. Esse tempo depende de configurações no nível do cluster e não de cada uma das réplicas de disponibilidade. Dependendo da condição de failover automático configurada, um failover poderá ser disparado como uma resposta imediata para um erro interno crítico do SQL Server, como spinlocks órfãos. Nesse caso, a detecção pode ser tão rápida quanto o envio do relatório de erro [sp_server_diagnostics &#40;Transact-SQL&#41; ](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) para o cluster WSFC (o padrão é 1/3 do tempo limite de verificação de integridade). Um failover também pode ser disparado devido a um tempo limite, como a expiração do tempo limite de verificação de integridade do cluster (30 segundos por padrão) ou a expiração do tempo de concessão entre a DLL de recurso e a instância do SQL Server (20 segundos por padrão). Nesse caso, o tempo de detecção será igual ao intervalo de tempo limite. Para obter mais informações, veja [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](https://msdn.microsoft.com/library/hh710061(SQL.120).aspx).  
+ O tempo de detecção de falha, Tdetection, é o tempo necessário para o sistema detectar a falha. Esse tempo depende de configurações no nível do cluster e não de cada uma das réplicas de disponibilidade. Dependendo da condição de failover automático configurada, um failover poderá ser disparado como uma resposta imediata para um erro interno crítico do SQL Server, como spinlocks órfãos. Nesse caso, a detecção pode ser tão rápida quanto o envio do relatório de erro [sp_server_diagnostics &#40;Transact-SQL&#41; ](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) para o cluster WSFC (o padrão é 1/3 do tempo limite de verificação de integridade). Um failover também pode ser disparado devido a um tempo limite, como a expiração do tempo limite de verificação de integridade do cluster (30 segundos por padrão) ou a expiração do tempo de concessão entre a DLL de recurso e a instância do SQL Server (20 segundos por padrão). Nesse caso, o tempo de detecção será igual ao intervalo de tempo limite. Para obter mais informações, veja [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md?viewFallbackFrom=sql-server-2014).  
   
  A única coisa que a réplica secundária precisa para estar pronta para um failover é que a fase refazer alcance o final do log. O tempo para refazer, Tredo, é calculado com a seguinte fórmula:  
   
@@ -310,7 +310,7 @@ Para o banco de dados primário, o **last_commit_time** é a hora em que última
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Monitoramento de RTO e RPO  
- Esta seção demonstra como monitorar as métricas de RTO e RPO de seus grupos de disponibilidade. Esta demonstração é semelhante ao tutorial de GUI fornecido em [The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (O modelo de integridade do Always On, parte 2: estendendo o modelo de integridade).  
+ Esta seção demonstra como monitorar as métricas de RTO e RPO de seus grupos de disponibilidade. Esta demonstração é semelhante ao tutorial de GUI fornecido em [The Always On health model, part 2: Extending the health model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (O modelo de integridade do Always On, parte 2: estendendo o modelo de integridade).  
   
  Os elementos do tempo de failover e os cálculos da possível perda de dados em [Estimando o tempo de failover (RTO)](#estimating-failover-time-rto) e [Estimando o potencial de perda de dados (RPO)](#estimating-potential-data-loss-rpo) são fornecidos convenientemente como métricas de desempenho na faceta de gerenciamento de política, **Estado da réplica de banco de dados** (veja [Exibir as facetas do gerenciamento baseado em políticas em um objeto do SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Você pode monitorar essas duas métricas de acordo com um agendamento e ser alertado quando as métricas excederem o RTO e RPO, respectivamente.  
   
@@ -454,4 +454,4 @@ Para criar as políticas, siga as instruções abaixo em todas as instâncias de
 |hadr_worker_pool_task|`alwayson`|Depurar|Primária|  
 |hadr_dump_primary_progress|`alwayson`|Depurar|Primária|  
 |hadr_dump_log_progress|`alwayson`|Depurar|Primária|  
-|hadr_undo_of_redo_log_scan|`alwayson`|Analítico|Secundário|  
+|hadr_undo_of_redo_log_scan|`alwayson`|Analítico|Secundário|

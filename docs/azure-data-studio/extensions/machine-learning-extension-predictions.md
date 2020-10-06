@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: ad98cd8d9cdeb282a13ff35c278fd1c2a26df2b4
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2b68f15f69d3efb0a773022e87615d298da07706
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136605"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725152"
 ---
 # <a name="make-predictions-with-machine-learning-extension-for-azure-data-studio-preview"></a>Fazer previsões com a extensão de Machine Learning para o Azure Data Studio (versão prévia)
 
@@ -55,7 +55,7 @@ O Azure Data Studio criará uma consulta T-SQL com o [PREDICT](../../t-sql/queri
 - [Extensão do Machine Learning no Azure Data Studio](machine-learning-extension.md)
 - [Gerenciar pacotes no banco de dados](machine-learning-extension-manage-packages.md)
 - [Importar ou exibir modelos](machine-learning-extension-import-view-models.md)
-- [Notebooks no Azure Data Studio](../notebooks-guidance.md)
+- [Notebooks no Azure Data Studio](../notebooks/notebooks-guidance.md)
 - [Documentação do machine learning do SQL](../../machine-learning/index.yml)
 - [Serviços de Machine Learning na Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview)
 - [Machine learning e IA com o ONNX no SQL no Edge (versão prévia)](/azure/azure-sql-edge/onnx-overview)

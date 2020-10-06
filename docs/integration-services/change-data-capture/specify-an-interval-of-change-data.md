@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457618"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724967"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
 
@@ -113,9 +113,8 @@ ms.locfileid: "88457618"
  **Próximo tópico:** [Determinar se os dados de alteração estão prontos](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Usar variáveis em pacotes](../integration-services-ssis-variables.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md)   
  [Tarefa Script](../../integration-services/control-flow/script-task.md)  
-  
   
