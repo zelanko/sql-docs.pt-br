@@ -6030,8 +6030,6 @@
       items:
         - name: Novidades
           href: dma/dma-whatsnew.md
-        - name: Avaliar Banco de Dados SQL
-          href: dma/dma-assesssqlonprem.md
         - name: Avaliar SSIS (SQL Server Integration Services)
           href: dma/dma-assess-ssis.md
         - name: Salvar e carregar avaliações
@@ -6044,8 +6042,6 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: Migrar logons do SQL Server
           href: dma/dma-migrateserverlogins.md
-        - name: Avaliar o estado de dados de um SQL Server para a preparação do banco de dados SQL do Azure
-          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: Práticas recomendadas
           href: dma/dma-bestpractices.md
         - name: Consolidar relatórios de avaliação
@@ -6056,6 +6052,14 @@
           href: dma/dma-commandline.md
         - name: Definir configurações
           href: dma/dma-configurationsettings.md
+        - name: Avaliar a preparação do BD SQL do Azure
+          items:
+            - name: Criar avaliação
+              href: dma/dma-assesssqlonprem.md
+            - name: Usar GUI do AMD
+              href: dma/dma-assess-sql-data-estate-to-sqldb.md
+            - name: Usar linha de comando do AMD
+              href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
     - name: SSMA (Assistente de Migração do SQL Server)
       href: ssma/toc.yml
 - name: 'Gerenciar, monitorar e ajustar'
