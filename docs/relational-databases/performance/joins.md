@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511308"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725994"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ Algumas condições tornam uma junção lógica qualificada para uma Junção Ad
 - O nível de compatibilidade do banco de dados é 140 ou superior.
 - A consulta é uma instrução `SELECT` (as instruções de modificação de dados não são qualificadas no momento).
 - A junção é qualificada para ser executada por uma Junção de loops aninhados indexada ou um algoritmo físico de Junção hash.
-- A Junção hash usa o modo de Lote, habilitado pela presença de um Índice columnstore na consulta geral, uma tabela indexada por Columnstore referenciada diretamente pela junção ou pelo uso do [Modo de Lote no recurso Rowstore](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
+- A Junção hash usa o modo de Lote, habilitado pela presença de um Índice columnstore na consulta geral, uma tabela indexada por Columnstore referenciada diretamente pela junção ou pelo uso do [Modo de lote em rowstore](./intelligent-query-processing.md#batch-mode-on-rowstore).
 - As soluções alternativas geradas da Junção de loops aninhados e da Junção hash devem ter o mesmo primeiro filho (referência externa).
 
 ### <a name="adaptive-threshold-rows"></a>Linhas de limite adaptável

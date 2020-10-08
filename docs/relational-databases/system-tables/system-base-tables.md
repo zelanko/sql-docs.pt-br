@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56da705b29be712942fec337e84aec5d68a31bad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547012"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810187"
 ---
 # <a name="system-base-tables"></a>Tabelas base do sistema
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,4 +100,4 @@ MSG 3859: aviso: o catálogo do sistema foi atualizado diretamente na ID de banc
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Executando o comando DBCC_CHECKDB depois que uma tabela do sistema é atualizada manualmente
 MSG 3859: aviso: o catálogo do sistema foi atualizado diretamente na ID de banco de dados 17, mais recentemente em date_time.
 
-Se você executar atualizações manuais em uma tabela do sistema e encontrar um problema, você poderá ser solicitado a restaurar a partir de um backup ou copiar os dados do banco de dado afetado para um novo banco. Saiba mais sobre [mensagens de erro de ação do usuário](https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-8992-database-engine-error?view=sql-server-ver15#user-action).
+Se você executar atualizações manuais em uma tabela do sistema e encontrar um problema, você poderá ser solicitado a restaurar a partir de um backup ou copiar os dados do banco de dado afetado para um novo banco. Saiba mais sobre [mensagens de erro de ação do usuário](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action).

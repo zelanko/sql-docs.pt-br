@@ -16,19 +16,19 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1fbd97400ced46a70026b832ad4721d9f33cf690
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543429"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810242"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Executa uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução em um único banco de dados SQL do Azure remoto ou em um conjunto de bancos de dados que serve como fragmentos em um esquema de particionamento horizontal.  
   
- O procedimento armazenado faz parte do recurso de consulta elástica.  Consulte Visão geral de consulta de banco de dados [elástico do banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) e [consultas de banco de dados elástico para fragmentação (particionamento horizontal)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/).  
+ O procedimento armazenado faz parte do recurso de consulta elástica.  Consulte Visão geral de consulta de banco de dados [elástico do banco de dados SQL do Azure](/azure/azure-sql/database/elastic-query-overview) e [consultas de banco de dados elástico para fragmentação (particionamento horizontal)](/azure/azure-sql/database/elastic-query-horizontal-partitioning).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,4 +106,3 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 [CRIAR UMA CREDENCIAL NO ESCOPO DO BANCO DE DADOS](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-    

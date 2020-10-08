@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2caa0afdd029b630b0c10f1e3c3c0ea3c0ea0ca5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a09ac4702cae987c4fa5f4ccd420819c29073a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537069"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529427"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Suporte de alta disponibilidade para bancos de dados OLTP na memória
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "89537069"
 
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>Grupos de Disponibilidade AlwaysOn e bancos de dados OLTP in-memory  
- Configurar bancos de dados com componentes [!INCLUDE[hek_2](../../includes/hek-2-md.md)] fornece o seguinte:  
+ Configurar bancos de dados com componentes [!INCLUDE[hek_2](../../includes/hek-2-md.md)] fornece os seguintes benefícios:  
   
 -   **Uma experiência totalmente integrada**   
     Você pode configurar seus bancos de dados que contêm tabelas com otimização de memória usando o mesmo assistente com o mesmo nível de suporte para réplicas secundárias síncronas e assíncronas. Além disso, o monitoramento de integridade é fornecido usando o já familiar painel do AlwaysOn no SQL Server Management Studio.  
   
 -   **Tempo de Failover comparável**   
-    As réplicas secundárias mantêm o estado na memória das tabelas duráveis com otimização de memória. No caso de failover automático ou forçado, o tempo de failover para o novo primário é comparável às tabelas baseadas em disco, já que nenhuma recuperação é necessária. As tabelas com otimização de memória criadas como SCHEMA_ONLY têm suporte nesta configuração. No entanto, as alterações para essas tabelas não são registradas e, portanto, nenhum dado existirá nessas tabelas na réplica secundária.  
+    As réplicas secundárias mantêm o estado na memória das tabelas duráveis com otimização de memória. No caso de failover automático ou forçado, o tempo de failover para o novo primário é comparável às tabelas baseadas em disco, já que nenhuma recuperação é necessária. As tabelas com otimização de memória criadas como SCHEMA_ONLY têm suporte nesta configuração. No entanto, as alterações para essas tabelas não são registradas, portanto, nenhum dado existirá nessas tabelas na réplica secundária.  
   
 -   **Secundária Legível**   
     Você pode acessar e consultar tabelas com otimização de memória na réplica secundária, caso ela tenha sido configurada para acesso de leitura. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o carimbo de data/hora de leitura na réplica secundária está em sincronização próxima com o carimbo de data/hora de leitura na réplica primária, o que significa que as alterações na réplica primária se tornarão rapidamente visíveis na secundária. Esse comportamento de sincronização próxima é diferente do OLTP In-Memory do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -42,10 +42,10 @@ ms.locfileid: "89537069"
 - O SQL Server 2019 apresentou a fase refazer paralela para bancos de dados do grupo de disponibilidade com otimização de memória. No SQL Server 2016 e 2017, as tabelas baseadas em disco não usarão a fase refazer paralela se um banco de dados em um grupo de disponibilidade também tiver otimização de memória. 
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Instância de Clustering de Failover (FCI) e bancos de dados OLTP na memória  
- Para obter alta disponibilidade em uma configuração de armazenamento compartilhado, você pode configurar a instância do cluster de failover com bancos de dados usando tabelas com otimização de memória. Você precisa considerar os seguintes fatores como parte da configuração de uma FCI.  
+ Para obter alta disponibilidade em uma configuração de armazenamento compartilhado, você pode configurar a instância do cluster de failover com bancos de dados usando tabelas com otimização de memória. Considere os seguintes fatores como parte da configuração de uma FCI:  
   
 -   **Objetivo de tempo de recuperação**   
-    O tempo de failover provavelmente será maior conforme as tabelas com otimização de memória devam ser carregadas na memória antes que o banco de dados seja disponibilizado.  
+    O tempo de failover provavelmente será maior conforme as tabelas com otimização de memória precisem ser carregadas na memória antes que o banco de dados seja disponibilizado.  
   
 -   **Tabelas SCHEMA_ONLY**   
     Lembre-se de que as tabelas SCHEMA_ONLY estarão vazias e sem linhas após o failover. Isso é projetado e definido pelo aplicativo. E é exatamente o mesmo comportamento de quando você reinicia um banco de dados [!INCLUDE[hek_2](../../includes/hek-2-md.md)] com uma ou mais tabelas SCHEMA_ONLY.  

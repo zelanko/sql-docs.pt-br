@@ -15,12 +15,12 @@ ms.assetid: d9666d0b-3446-480e-bf1a-10b01213e411
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7bff44e05b7dc0904a5261f1bbdcbef32dfd63a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a131178ecef5a9a0e04eb1b0564f89e6788d745
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408042"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811090"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,6 @@ ms.locfileid: "88408042"
  Em geral, é mais eficiente reutilizar instruções do que descartar e alocar novas. No entanto, em algumas situações, como a reutilização de instruções, SQLFreeStmt ainda deve ser usado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Função SQLFreeStmt](https://go.microsoft.com/fwlink/?LinkId=59346)   
+ [Função SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

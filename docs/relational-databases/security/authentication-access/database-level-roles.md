@@ -39,12 +39,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bb15e848af1a5a2fa6236be0f9999accf144b1a
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005677"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624853"
 ---
 # <a name="database-level-roles"></a>Funções de nível de banco de dados
 
@@ -98,6 +98,10 @@ Essas funções de banco de dados existem somente no banco de dados mestre virtu
 
 > [!NOTE]
 > A entidade de segurança no nível do servidor e o Administrador do Azure Active Directory (se estiver configurado) têm todas as permissões no [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e no Azure Synapse sem precisar ser membros das funções. Saiba mais em [Autenticação e autorização do Banco de Dados SQL: concessão de acesso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+
+Algumas funções de banco de dados não são aplicáveis ao SQL do Azure ou ao SQL do Synapse:
+- **db_backupoperator** não é aplicável no banco de dados SQL do Azure (instância não gerenciada) e no pool sem servidor do SQL do Synapse porque os comandos do T-SQL de backup e de restauração não está disponível.
+- **db_datawriter** e **db_denydatawriter** não são aplicáveis ao SQL do Synapse sem servidor porque ele apenas lê dados externos.
   
 ## <a name="msdb-roles"></a>Funções msdb  
  O banco de dados msdb contém as funções com finalidade especial que são mostradas na tabela a seguir.  

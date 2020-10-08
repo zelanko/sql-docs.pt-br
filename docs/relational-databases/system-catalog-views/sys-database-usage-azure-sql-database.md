@@ -1,6 +1,6 @@
 ---
 description: sys.database_usage (Banco de Dados SQL do Azure)
-title: sys. database_usage (banco de dados SQL do Azure) | Microsoft Docs
+title: sys.database_usage (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -21,12 +21,12 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c72973c21b2e660667b2bed31d771f3ce19c43b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0c8809138bfad5cc9b7c4866978e7f2c111e09a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455250"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809203"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88455250"
   
  Lista o número, o tipo e a duração dos bancos de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor.  
   
- A exibição **Sys. database_usage** contém as colunas a seguir.  
+ A exibição **Sys.database_usage** contém as colunas a seguir.  
   
 |Nome da coluna|Descrição|  
 |-----------------|-----------------|  
@@ -47,10 +47,9 @@ ms.locfileid: "88455250"
  O acesso somente leitura a essa exibição está disponível para todos os usuários com permissões para se conectar ao banco de dados **mestre** .  
   
 ## <a name="remarks"></a>Comentários  
- A exibição **Sys. database_usage** retorna uma linha para cada dia da sua assinatura.  
+ A exibição **Sys.database_usage** retorna uma linha para cada dia da sua assinatura.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Detalhes de preços do banco de dados SQL](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Contas e cobrança no Banco de dados SQL do Azure](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
-  
+ [Contas e cobrança no Banco de dados SQL do Azure](/previous-versions/azure/ee621788(v=azure.100))  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.sp_cdc_get_captured_columns (Transact-SQL)
-title: sys. sp_cdc_get_captured_columns (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_get_captured_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e7fb66ec54400f5cae3fc080dd7dc9a6ab78d6a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9f19017dd72dc51f2fd79010b85c251c3c64ed22
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545859"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811038"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Retorna informações de metadados de captura de dados de alteração das colunas de origem capturadas, localizadas pela instância de captura especificada. A captura de dados de alteração não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Retorna informações de metadados de captura de dados de alteração das colunas de origem capturadas, localizadas pela instância de captura especificada. A captura de dados de alteração não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sys.sp_cdc_get_captured_columns
  [ @capture_instance =] '*capture_instance*'  
  É o nome da instância de captura associada à tabela de origem. *capture_instance* é **sysname** e não pode ser nulo.  
   
- Para relatar as instâncias de captura da tabela, execute o procedimento armazenado [Sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) .  
+ Para relatar as instâncias de captura da tabela, execute o procedimento armazenado [Sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -71,9 +71,9 @@ sys.sp_cdc_get_captured_columns
 |datetime_precision|**smallint**|Precisão da coluna com base em data e hora, caso contrário é NULL.|  
   
 ## <a name="remarks"></a>Comentários  
- Use sys. sp_cdc_get_captured_columns para obter informações de coluna sobre as colunas capturadas retornadas consultando as funções de consulta de instância de captura [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) ou [CDC. fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance. Os nomes de coluna, ID e posição permanecem constantes durante a duração da instância de captura. Somente o tipo de dados de coluna é alterado quando o tipo de dados da coluna de origem subjacente na tabela controlada é alterado. Colunas adicionadas ou excluídas de uma tabela de origem não têm nenhum impacto nas colunas capturadas de instâncias de captura existentes.  
+ Use sys.sp_cdc_get_captured_columns para obter informações de coluna sobre as colunas capturadas retornadas consultando as funções de consulta de instância de captura [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) ou [CDC.fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance de>. Os nomes de coluna, ID e posição permanecem constantes durante a duração da instância de captura. Somente o tipo de dados de coluna é alterado quando o tipo de dados da coluna de origem subjacente na tabela controlada é alterado. Colunas adicionadas ou excluídas de uma tabela de origem não têm nenhum impacto nas colunas capturadas de instâncias de captura existentes.  
   
- Use [Sys. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) para obter informações sobre as instruções DDL (linguagem de definição de dados) aplicadas a uma tabela de origem. Qualquer mudança de DDL que modificou a estrutura de uma coluna de origem localizada é retornada no conjunto de resultados.  
+ Use [Sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) para obter informações sobre as instruções DDL (linguagem de definição de dados) aplicadas a uma tabela de origem. Qualquer mudança de DDL que modificou a estrutura de uma coluna de origem localizada é retornada no conjunto de resultados.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de banco de dados fixa db_owner. Para todos os outros usuários, requer a permissão SELECT em todas as colunas capturadas na tabela de origem e, se uma função associada para a instância de captura tiver sido definida, faça associação nessa função de banco de dados. Quando o chamador não tiver permissão para exibir os dados de origem, a função retornará o erro 22981 (O objeto não existe ou o acesso a ele é negado).  
@@ -91,5 +91,4 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
-  
   

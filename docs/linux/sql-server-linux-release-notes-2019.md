@@ -3,16 +3,16 @@ title: Notas sobre a versão do SQL Server 2019 em Linux
 description: Este artigo contém as notas sobre a versão e os recursos com suporte do SQL Server 2019 em execução no Linux. As notas sobre a versão aqui incluídas são para a versão mais recente, bem como para diversas versões anteriores.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b5a0f9825a44e1f0d1a4d19ba5fc86a9b9fa9630
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: 8ee707f13c8b02669486f5fab0106cb9357be232
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145395"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636106"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Notas sobre a versão do SQL Server 2019 em Linux
 
@@ -35,6 +35,8 @@ A tabela a seguir lista o histórico de versões do SQL Server 2019.
 
 | Versão                   | Versão       | Data de liberação |
 |---------------------------|---------------|--------------|
+| [CU8](#cu8)               |               |              |
+| [CU7 (Removido)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
 | [CU6](#cu6)               | 15.0.4053.23  | 04-08-2020   |
 | [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
 | [CU4](#cu4)               | 15.0.4033.1   | 2020-03-31   |
@@ -57,9 +59,13 @@ Se você estiver atualizando pacotes de SQL Server existentes, execute o comando
 - [Instalar pacote do PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Habilitar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a name="cu8"></a><a id="cu8"></a> CU8
+
+A CU8 (Atualização Cumulativa 8) para SQL Server 2019 (15.x) ainda não foi lançada.
+
 ## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (julho de 2020)
 
-Esta é a versão CU6 (atualização cumulativa 6) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4053.23. Para obter informações sobre as correções e aprimoramentos, confira <https://support.microsoft.com/help/4563110>
+Esta é a versão CU6 (atualização cumulativa 6) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4053.23. Para obter informações sobre as correções e os aprimoramentos, confira <https://support.microsoft.com/help/4563110>.
 
 ### <a name="package-details"></a>Detalhes do pacote
 
@@ -78,7 +84,7 @@ Para instalações de pacotes manuais ou offline, você pode baixar os pacotes R
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (junho de 2020)
 
-Esta é a versão da CU5 (Atualização Cumulativa 5) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4043.16. Para obter informações sobre as correções e aprimoramentos, confira <https://support.microsoft.com/help/4552255>
+Esta é a versão da CU5 (Atualização Cumulativa 5) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4043.16. Para obter informações sobre as correções e os aprimoramentos, confira <https://support.microsoft.com/help/4552255>.
 
 ### <a name="package-details"></a>Detalhes do pacote
 
@@ -97,7 +103,7 @@ Para instalações de pacotes manuais ou offline, você pode baixar os pacotes R
 
 ## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (abril de 2020)
 
-Esta é a versão da CU4 (Atualização Cumulativa 4) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4033.1. Para obter informações sobre as correções e aprimoramentos, confira <https://support.microsoft.com/help/4548597>
+Esta é a versão da CU4 (Atualização Cumulativa 4) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4033.1. Para obter informações sobre as correções e os aprimoramentos, confira <https://support.microsoft.com/help/4548597>.
 
 ### <a name="package-details"></a>Detalhes do pacote
 
@@ -116,7 +122,7 @@ Para instalações de pacotes manuais ou offline, você pode baixar os pacotes R
 
 ## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3 (março de 2020)
 
-Esta é a versão da CU3 (Atualização Cumulativa 3) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4023.6. Para obter informações sobre as correções e aprimoramentos, confira <https://support.microsoft.com/help/4538853>
+Esta é a versão da CU3 (Atualização Cumulativa 3) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4023.6. Para obter informações sobre as correções e os aprimoramentos, confira <https://support.microsoft.com/help/4538853>.
 
 ### <a name="package-details"></a>Detalhes do pacote
 
@@ -135,7 +141,7 @@ Para instalações de pacotes manuais ou offline, você pode baixar os pacotes R
 
 ## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2 (fevereiro de 2020)
 
-Esta é a versão da CU2 (Atualização Cumulativa 2) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4013.40. Para obter informações sobre as correções e aprimoramentos, confira <https://support.microsoft.com/help/4536075>
+Esta é a versão da CU2 (Atualização Cumulativa 2) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4013.40. Para obter informações sobre as correções e os aprimoramentos, confira <https://support.microsoft.com/help/4536075>.
 
 ### <a name="package-details"></a>Detalhes do pacote
 
@@ -152,7 +158,7 @@ Para instalações de pacotes manuais ou offline, você pode baixar os pacotes R
 
 ## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1 (janeiro de 2020)
 
-Esta é a versão da CU1 (Atualização Cumulativa 1) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4003.23. Para obter informações sobre as correções e aprimoramentos nesta versão, confira <https://support.microsoft.com/en-us/help/4527376>
+Esta é a versão da CU1 (Atualização Cumulativa 1) do SQL Server 2019 (15.x). A versão do Mecanismo de Banco de Dados do SQL Server para essa versão é 15.0.4003.23. Para obter informações sobre as correções e aprimoramentos nesta versão, confira <https://support.microsoft.com/en-us/help/4527376>.
 
 ### <a name="package-details"></a>Detalhes do pacote
 

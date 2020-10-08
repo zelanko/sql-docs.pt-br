@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988748"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624826"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,6 +85,9 @@ O backup de um banco de dados grande no armazenamento de blobs está sujeito às
   
 -   O SQL Server limita para 1 TB o tamanho máximo de backup com suporte usando um blob de páginas. O tamanho máximo de backup com suporte, usando blobs de blocos, é limitado a aproximadamente 200 GB (50.000 blocos * MAXTRANSFERSIZE de 4 MB). Suporte à distribuição de blobs de blocos para dar suporte a tamanhos de backup consideravelmente maiores.  
   
+    > [!IMPORTANT]  
+    >  Embora o tamanho máximo de backup que um blob de blocos dê suporte seja 200 GB, é possível que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grave em tamanhos de bloco menores, o que pode levar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a alcançar o limite de blocos de 50 mil antes que todo o backup seja transferido. Distribua backups (mesmo se eles forem menores que 200 GB) para evitar o limite de bloco, especialmente se você usar backups diferenciais ou não compactados.
+
 -   Você pode emitir as instruções de backup ou restauração usando o TSQL, SMO, cmdlets do PowerShell, assistente de backup ou restauração do SQL Server Management Studio.   
   
 -   Não há suporte para a criação de um nome de dispositivo lógico. Portanto, não há suporte para a adição de uma URL como dispositivo de backup por meio de sp_dumpdevice ou do SQL Server Management Studio.  

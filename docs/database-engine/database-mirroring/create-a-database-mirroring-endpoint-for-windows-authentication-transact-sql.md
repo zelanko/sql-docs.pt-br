@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c364aab699f49a4a9c4814a572a6a7295273650b
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789730"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529441"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "85789730"
 ###  <a name="security"></a><a name="Security"></a> Segurança  
  Os métodos de autenticação e de criptografia da instância do servidor são estabelecidos pelo administrador do sistema.  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
- Exige a permissão CREATE ENDPOINT ou a associação na função de servidor fixa sysadmin. Para obter mais informações, consulte [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Exige a permissão `CREATE ENDPOINT` ou a associação na função de servidor fixa `sysadmin`. Para obter mais informações, consulte [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
@@ -58,15 +58,16 @@ ms.locfileid: "85789730"
   
 3.  Determine se um ponto de extremidade de espelhamento de banco de dados já existe usando a seguinte instrução:  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  Se um ponto de extremidade do espelhamento de banco de dados já existir para a instância do servidor, use aquele ponto de extremidade para qualquer outra sessão que você estabelecer na instância do servidor.  
   
-4.  Para usar o Transact-SQL para criar um ponto de extremidade para ser usado com a Autenticação do Windows, use uma instrução CREATE ENDPOINT. A instrução leva o seguinte formato geral:  
+4.  Para usar o Transact-SQL para criar um ponto de extremidade a ser usado com a Autenticação do Windows, use uma instrução `CREATE ENDPOINT`. A instrução leva o seguinte formato geral:  
   
+     ```syntaxsql
      CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
@@ -81,17 +82,18 @@ ms.locfileid: "85789730"
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { *\<algorithm>* } ]  
   
      ]  
   
-     [ **,** ] ROLE = *\<role>*  
+     [**,**] ROLE = *\<role>*  
   
      )  
-  
-     onde  
+     ```
+     
+     Em que:  
   
     -   *\<endpointName>* é um nome exclusivo para o ponto de extremidade do espelhamento de banco de dados da instância do servidor.  
   
@@ -101,7 +103,7 @@ ms.locfileid: "85789730"
   
          Um número de porta só pode ser usado uma vez por um sistema de computador. Um ponto de extremidade do espelhamento de banco de dados poderá usar qualquer porta que estiver disponível no sistema local quando o ponto de extremidade for criado. Para identificar as portas que estão sendo usadas atualmente pelos pontos de extremidade de TCP no sistema, use a seguinte instrução Transact-SQL:  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -124,12 +126,12 @@ ms.locfileid: "85789730"
   
          AES RC4 especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo AES. RC4 AES especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo RC4. Se ambos os ponto de extremidade especificarem ambos os algoritmos, mas em ordens diferentes, vence o ponto de extremidade que aceita a conexão. Forneça o mesmo algoritmo explicitamente para evitar erros de conexão entre servidores diferentes.
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.  
   
     -   *\<role>* define a função ou as funções que o servidor pode executar. Especificar ROLE é necessário. Entretanto, a função do ponto de extremidade é relevante apenas para o espelhamento de banco de dados. Para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], a função do ponto de extremidade é ignorada.  
   
-         Para permitir que uma instância do servidor sirva como uma função em uma sessão de espelhamento de banco de dados e uma função diferente em outra sessão, especifique ROLE=ALL. Para restringir uma instância do servidor como sendo um parceiro ou uma testemunha, especifique ROLE=PARTNER ou ROLE=WITNESS, respectivamente.  
+         Para permitir que uma instância do servidor sirva como uma função em uma sessão de espelhamento de banco de dados e uma função diferente em outra sessão, especifique ROLE=ALL. Para restringir uma instância do servidor como sendo um parceiro ou uma testemunha, especifique `ROLE = PARTNER` ou `ROLE = WITNESS`, respectivamente.  
   
         > [!NOTE]  
         >  Para obter mais informações sobre opções de Espelhamento de Banco de Dados para diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -155,7 +157,7 @@ ms.locfileid: "85789730"
 > [!IMPORTANT]  
 >  Cada instância do servidor só pode ter um ponto de extremidade. Então, se você quiser que uma instância do servidor seja parceiro em algumas sessões e testemunha em outras, especifique ROLE=ALL.  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

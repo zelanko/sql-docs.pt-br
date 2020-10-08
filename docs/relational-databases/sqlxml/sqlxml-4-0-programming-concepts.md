@@ -15,12 +15,12 @@ ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b321928d3e898edfcbae041391a85152d69e058
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21e32d4e0091738c95ed995318e4a1904c81d127
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665974"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809286"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceitos de programação do SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85665974"
  [Data Access Components do SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  Documenta o Provedor SQLXMLOLEDB e fornece links para outros componentes de acesso a dados do SQLXML 4.0.  
   
- [Suporte ao .NET Framework do SQLXML 4.0](https://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [Suporte ao .NET Framework do SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  Descreve o suporte do SQLXML 4.0 para .NET Framework.  
   
  [Caching de modelos, XSL e esquemas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
@@ -77,5 +77,4 @@ ms.locfileid: "85665974"
   
 ## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
-  
   

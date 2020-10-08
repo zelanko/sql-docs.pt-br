@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1d72f658cf957a9dfb78eae4186cdd35d6e9849
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727630"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809553"
 ---
 # <a name="clr-integration-architecture----performance"></a>Arquitetura de integração de CLR – Desempenho
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85727630"
  O processo de compilação gera um ponteiro de função que pode ser chamado em tempo de execução a partir do código nativo. No caso de funções definidas pelo usuário com valor escalar, essa invocação de função ocorre por linha. A fim de minimizar o custo da transição entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o CLR, as instruções que contêm qualquer invocação gerenciada têm uma etapa de inicialização para identificar o domínio do aplicativo de destino. Essa etapa de identificação reduz o custo de transição de cada linha.  
   
 ## <a name="performance-considerations"></a>Considerações sobre desempenho  
- Segue um resumo das considerações de desempenho específicas da integração CLR no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Informações mais detalhadas podem ser encontradas em "[usando a integração CLR no SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" no site do MSDN. Informações gerais sobre o desempenho do código gerenciado podem ser encontradas em "[melhorando o desempenho e a escalabilidade do aplicativo .net](https://go.microsoft.com/fwlink/?LinkId=50333)" no site do MSDN.  
+ Segue um resumo das considerações de desempenho específicas da integração CLR no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Informações mais detalhadas podem ser encontradas em "[usando a integração CLR no SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/ms345136(v=sql.90))" no site do MSDN. Informações gerais sobre o desempenho do código gerenciado podem ser encontradas em "[melhorando o desempenho e a escalabilidade do aplicativo .net](/previous-versions/msp-n-p/ff649152(v=pandp.10))" no site do MSDN.  
   
 ### <a name="user-defined-functions"></a>Funções definidas pelo usuário  
  As funções CLR se beneficiam de um caminho de invocação mais rápido que o das funções definidas pelo usuário do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Além disso, o código gerenciado tem uma vantagem de desempenho decisiva sobre o [!INCLUDE[tsql](../../includes/tsql-md.md)] em termos de código de procedimento, computação e manipulação de cadeias de caracteres. As funções CLR que utilizam muitos recursos de computação e que não executam acesso a dados são melhor escritas em código gerenciado. Entretanto, as funções [!INCLUDE[tsql](../../includes/tsql-md.md)] executam o acesso a dados de forma mais eficiente que a integração CLR.  
@@ -53,7 +53,7 @@ ms.locfileid: "85727630"
  Quando os cursores [!INCLUDE[tsql](../../includes/tsql-md.md)] devem atravessar dados que são expressos mais facilmente como uma matriz, é possível usar código gerenciado com ganhos de desempenho significativos.  
   
 ### <a name="string-data"></a>Dados de cadeia de caracteres  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os dados de caractere, como **varchar**, podem ser do tipo SqlString ou SqlChars em funções gerenciadas. As variáveis SqlString criam uma instância do valor inteiro na memória. As variáveis SqlChars fornecem uma interface de streaming que pode ser usada para obter um melhor desempenho e escalabilidade por não criar uma instância do valor inteiro na memória. Isso se torna especialmente importante no caso de dados LOB (objeto grande). Além disso, os dados do servidor XML podem ser acessados por meio de uma interface de streaming retornada por **SQLXML. CreateReader ()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os dados de caractere, como **varchar**, podem ser do tipo SqlString ou SqlChars em funções gerenciadas. As variáveis SqlString criam uma instância do valor inteiro na memória. As variáveis SqlChars fornecem uma interface de streaming que pode ser usada para obter um melhor desempenho e escalabilidade por não criar uma instância do valor inteiro na memória. Isso se torna especialmente importante no caso de dados LOB (objeto grande). Além disso, os dados do servidor XML podem ser acessados por meio de uma interface de streaming retornada por **SQLXML. CreateReader ()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR vs. procedimentos armazenados estendidos  
  As APIs Microsoft.SqlServer.Server que permitem que procedimentos gerenciados enviem conjuntos de resultados de volta ao cliente têm um desempenho melhor que as APIs ODS (Open Data Services) usadas por procedimentos armazenados estendidos. Além disso, as APIs System. Data. SqlServer dão suporte a tipos de dados como **XML**, **varchar (max)**, **nvarchar (max)** e **varbinary (max)**, introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , enquanto as APIs de ODS não foram estendidas para dar suporte aos novos tipos de dados.  
@@ -66,7 +66,7 @@ ms.locfileid: "85727630"
 >  É recomendável não desenvolver novos procedimentos armazenados estendidos, pois esse recurso foi preterido.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Serialização nativa para tipos definidos pelo usuário  
- Os UDTs (tipos definidos pelo usuário) são criados como um mecanismo de extensibilidade para o sistema de tipo de escalar. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementa um formato de serialização para UDTs chamado **Format. Native**. Durante a compilação, a estrutura do tipo é examinada para gerar MSIL personalizado para esta definição de tipo de particular.  
+ Os UDTs (tipos definidos pelo usuário) são criados como um mecanismo de extensibilidade para o sistema de tipo de escalar. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa um formato de serialização para UDTs chamado **Format. Native**. Durante a compilação, a estrutura do tipo é examinada para gerar MSIL personalizado para esta definição de tipo de particular.  
   
  A serialização nativa é a implementação padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A serialização definida pelo usuário invoca um método definido pelo autor do tipo para fazer a serialização. **Formato.** a serialização nativa deve ser usada quando possível para melhor desempenho.  
   
@@ -79,6 +79,5 @@ ms.locfileid: "85727630"
  Para que coleta de lixo gerenciada seja executada e bem-escalada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], evite uma única alocação grande. As alocações com mais de 88 quilobytes (KB) serão colocadas no heap de objetos grandes, que fará o desempenho e a escala da coleta de lixo serem muito piores que no caso de várias alocações menores. Por exemplo, se você precisar alocar uma matriz multidimensional grande, é melhor alocar uma matriz denteada (dispersa).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
-  
+ [Tipos definidos pelo usuário de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   

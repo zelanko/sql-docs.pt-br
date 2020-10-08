@@ -1,6 +1,6 @@
 ---
-description: sys. server_resource_stats (banco de dados SQL do Azure)
-title: sys. server_resource_stats (banco de dados SQL do Azure) | Microsoft Docs
+description: sys.server_resource_stats (banco de dados SQL do Azure)
+title: sys.server_resource_stats (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542477"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809312"
 ---
-# <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (banco de dados SQL do Azure)
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (banco de dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Retorna o uso da CPU, e/s e dados de armazenamento para o Azure SQL Instância Gerenciada. Os dados são coletados e agregados em intervalos de cinco minutos. Há uma linha para cada relatório de 15 segundos. Os dados retornados incluem uso de CPU, tamanho de armazenamento, utilização de e/s e SKU. Os dados históricos são retidos por aproximadamente 14 dias.
 
-A exibição **Sys. server_resource_stats** tem definições diferentes, dependendo da versão do instância gerenciada do Azure SQL à qual o banco de dados está associado. Considere essas diferenças e quaisquer modificações que seu aplicativo exige ao fazer a atualização para uma nova versão do servidor.
+A exibição **Sys.server_resource_stats** tem definições diferentes, dependendo da versão do instância gerenciada do Azure SQL ao qual o banco de dados está associado. Considere essas diferenças e quaisquer modificações que seu aplicativo exige ao fazer a atualização para uma nova versão do servidor.
  
   
  A tabela a seguir descreve as colunas disponíveis em um servidor v12:  
@@ -54,13 +54,13 @@ A exibição **Sys. server_resource_stats** tem definições diferentes, depende
 
  
 > [!TIP]  
->  Para obter mais contexto sobre esses limites e camadas de serviço, consulte os tópicos [instância gerenciada camadas de serviço](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
+>  Para obter mais contexto sobre esses limites e camadas de serviço, consulte os tópicos [instância gerenciada camadas de serviço](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
     
 ## <a name="permissions"></a>Permissões  
  Essa exibição está disponível para todas as funções de usuário com permissões para se conectar ao banco de dados **mestre** .  
   
 ## <a name="remarks"></a>Comentários  
- Os dados retornados por **Sys. server_resource_stats** são expressos como o total usado em bytes ou megabytes (declarados em nomes de coluna) que não seja avg_cpu, que é expresso como uma porcentagem do limite máximo permitido para a camada de serviço/nível de desempenho que você está executando.  
+ Os dados retornados por **Sys.server_resource_stats** são expressos como o total usado em bytes ou megabytes (declarados em nomes de coluna) que não seja avg_cpu, que é expresso como uma porcentagem do limite máximo permitido para a camada de serviço/nível de desempenho que você está executando.  
  
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna todos os bancos de dados que estão com média de pelo menos 80% de utilização de computação durante a última semana.  
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Consulte Também  
- [Instância Gerenciada camadas de serviço](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [Instância Gerenciada camadas de serviço](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

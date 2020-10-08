@@ -12,12 +12,12 @@ ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 053cd5f7aebf3b84de1bf08104b13aa30488704b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e26440be66b89ff789890169751a18500f465c00
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537693"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529367"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Práticas recomendadas para chamar procedimentos armazenados compilados nativamente
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "89537693"
   
 -   Executados com frequência.  
   
--   Espera-se que sejam muito rápidos.  
+-   Devem ser rápidos.  
   
- O benefício em termos de desempenho com o uso de um procedimento armazenado compilado nativamente aumenta com o crescente número de linhas e a quantidade de lógica que é processada pelo procedimento. Por exemplo, um procedimento armazenado compilado nativamente exibirá o melhor desempenho se ele usar um ou mais dos seguintes itens:  
+ O benefício em termos de desempenho com o uso de um procedimento armazenado compilado nativamente aumenta com o crescente número de linhas e a quantidade de lógica que é processada pelo procedimento. Por exemplo, um procedimento armazenado compilado nativamente exibirá o melhor desempenho se ele usar um ou mais dos seguintes componentes:  
   
 -   Agregação.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "89537693"
   
  Se você precisa processar apenas uma única linha, usar um procedimento armazenado compilado nativamente talvez não traga um benefício em termos de desempenho.  
   
- Para evitar que o servidor precise mapear nomes de parâmetro e converter tipos:  
+ Para evitar que o servidor precise mapear nomes de parâmetro e converter tipos, certifique-se de que você:  
   
 -   Faça a correspondência dos tipos dos parâmetros passados para o procedimento com os tipos contidos na definição de procedimento.  
   

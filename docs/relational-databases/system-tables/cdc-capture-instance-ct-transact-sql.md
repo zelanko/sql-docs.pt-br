@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0515c57b3c3249cc748c2ab96a12c2c1ef35d700
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d0a2dae85606a5e1cb0ffd5f86776e7aae25680
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538362"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809773"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT de capture_instance (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   É a tabela de alteração criada quando os dados de alteração capturados são habilitados uma tabela de origem. A tabela retorna uma linha para cada operação de inserção e exclusão executada contra a tabela de origem, e duas linhas para cada operação de atualização executada contra a tabela de origem. Quando o nome da tabela de alteração não for especificado no momento em que a tabela de origem for habilitada, o nome será derivado. O formato do nome é CDC. *capture_instance*_CT em que *capture_instance* é o nome do esquema da tabela de origem e o nome da tabela de origem no formato *schema_table*. Por exemplo, se a tabela **Person. Address** no banco de dados de exemplo **AdventureWorks** estiver habilitada para o Change Data Capture, o nome da tabela de alteração derivada será **CDC. Person_Address_CT**.  
   
- Recomendamos que você **não consulte as tabelas do sistema diretamente**. Em vez disso, execute as funções [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) e [cdc. fn_cdc_get_net_changes_<](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) capture_instance>.  
+ Recomendamos que você **não consulte as tabelas do sistema diretamente**. Em vez disso, execute as funções [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) e [CDC.fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance.  
   
 
   
@@ -46,7 +46,7 @@ ms.locfileid: "89538362"
   
 ## <a name="remarks"></a>Comentários  
 
-A coluna `__$command_id` foi introduzida em uma atualização cumulativa nas versões 2012 a 2016. Para obter informações sobre versão e download, consulte o artigo 3030352 do KB em [correção: a tabela de alteração é ordenada incorretamente para linhas atualizadas depois que você habilita a captura de dados de alteração para um banco de Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Para obter mais informações, consulte a [funcionalidade CDC pode ser interrompida após a atualização para o cu mais recente para SQL Server 2012, 2014 e 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+A coluna `__$command_id` foi introduzida em uma atualização cumulativa nas versões 2012 a 2016. Para obter informações sobre versão e download, consulte o artigo 3030352 do KB em [correção: a tabela de alteração é ordenada incorretamente para linhas atualizadas depois que você habilita a captura de dados de alteração para um banco de Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Para obter mais informações, consulte a [funcionalidade CDC pode ser interrompida após a atualização para o cu mais recente para SQL Server 2012, 2014 e 2016](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016).
 
 ## <a name="captured-column-data-types"></a>Tipos de dados da coluna capturada  
  As colunas capturadas incluídas nesta tabela têm o mesmo tipo de dados e valor que suas colunas de origem correspondentes com as exceções a seguir:  
@@ -63,9 +63,9 @@ A coluna `__$command_id` foi introduzida em uma atualização cumulativa nas ver
  Por padrão, o tamanho máximo que pode ser adicionado a uma coluna capturada em uma única instrução INSERT, UPDATE, WRITETEXT ou UPDATETEXT é de 65.536 bytes ou 64 KB. Para aumentar esse tamanho para dar suporte a dados LOB maiores, use a [opção de configuração de servidor configurar o Max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) para especificar um tamanho máximo maior. Para obter mais informações, veja [Configurar a opção max text repl size de configuração de servidor](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
 ## <a name="data-definition-language-modifications"></a>Modificações da linguagem de definição de dados  
- As modificações de DDL na tabela de origem, como adicionar ou descartar colunas, são registradas na tabela [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Essas alterações não serão aplicadas à tabela de alterações. Ou seja, a definição da tabela de alteração permanece constante. Ao inserir linhas na tabela de alteração, o processo de captura ignora as colunas que não aparecem na lista de colunas capturadas associadas à tabela de origem. Se uma coluna aparecer na lista de colunas capturadas e não estiver mais na tabela de origem, será atribuído um valor nulo à coluna.  
+ As modificações de DDL na tabela de origem, como adicionar ou descartar colunas, são registradas na tabela [CDC.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Essas alterações não serão aplicadas à tabela de alterações. Ou seja, a definição da tabela de alteração permanece constante. Ao inserir linhas na tabela de alteração, o processo de captura ignora as colunas que não aparecem na lista de colunas capturadas associadas à tabela de origem. Se uma coluna aparecer na lista de colunas capturadas e não estiver mais na tabela de origem, será atribuído um valor nulo à coluna.  
   
- A alteração do tipo de dados de uma coluna na tabela de origem também é registrada na tabela [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . No entanto, essa alteração modifica a definição da tabela de alteração. Os tipos de dados da coluna capturada na tabela de alteração são modificados quando o processo de captura encontrar o registro de log para a alteração de DDL feita na tabela de origem.  
+ A alteração do tipo de dados de uma coluna na tabela de origem também é registrada na tabela [CDC.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . No entanto, essa alteração modifica a definição da tabela de alteração. Os tipos de dados da coluna capturada na tabela de alteração são modificados quando o processo de captura encontrar o registro de log para a alteração de DDL feita na tabela de origem.  
   
  Se você precisar modificar o tipo de dados de uma coluna capturada na tabela de origem de forma a diminuir o tamanho do tipo de dados, use o procedimento a seguir para assegurar que a coluna equivalente na tabela de alteração poderá ser modificada com êxito.  
   
@@ -83,7 +83,6 @@ A coluna `__$command_id` foi introduzida em uma atualização cumulativa nas ver
  Para as operações de inserção e exclusão, todos os bits na máscara de atualização estão definidos. Para operações de atualização, a máscara de atualização nas linhas da antiga atualização e da nova atualização será modificada para refletir as colunas alteradas durante a atualização.  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.sp_cdc_enable_table ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
-  
   

@@ -1,8 +1,8 @@
 ---
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintaxe de criação de banco de dados para SQL Server, Banco de Dados SQL do Azure, Azure Synapse Analytics e Analytics Platform System
-ms.custom: ''
-ms.date: 07/21/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4738bbf83c73ae8f2e58b10196e1fc1394d43383
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539866"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723487"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -84,7 +84,7 @@ No SQL Server, essa instrução cria um novo banco de dados e os arquivos usados
 
 ## <a name="syntax"></a>Sintaxe
 
-Criar um banco de dados.
+Criar um banco de dados
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -133,14 +133,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 Anexar um banco de dados
@@ -157,6 +149,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -207,7 +206,7 @@ Para saber mais sobre nomes de ordenações Windows e SQL, confira [COLLATE](~/t
 > Os bancos de dados independentes são agrupados de maneira diferente dos bancos de dados dependente. Veja [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais informações.
 
 WITH \<option>
- **\<filestream_options>**
+ **\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.
 
@@ -897,8 +896,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -970,6 +975,11 @@ Para obter mais informações sobre nomes de ordenações do Windows e SQL, [COL
 CATALOG_COLLATION Especifica a ordenação padrão do catálogo de metadados. *DATABASE_DEFAULT* especifica que o catálogo de metadados usado para exibições do sistema e tabelas do sistema seja agrupado para corresponder à ordenação padrão do banco de dados. Esse é o comportamento encontrado no SQL Server.
 
 *SQL_Latin1_General_CP1_CI_AS* especifica que o catálogo de metadados usado para exibições do sistema e tabelas seja agrupado em uma ordenação SQL_Latin1_General_CP1_CI_AS fixo. Essa será a configuração padrão no Banco de Dados SQL do Azure, se não for especificado.
+
+BACKUP_STORAGE_REDUNDANCY Especifica como a restauração pontual e os backups de retenção de longo prazo de um banco de dados são replicados. A restauração geográfica ou a capacidade de recuperar-se da interrupção regional só estará disponível quando o banco de dados for criado com redundância de armazenamento de backup 'GEO'. A menos que especificado explicitamente, os bancos de dados criados com o T-SQL usam o armazenamento de backup com redundância geográfica. 
+
+> [!IMPORTANT]
+> A opção BACKUP_STORAGE_REDUNDANCY do Banco de Dados SQL do Azure está disponível em versão prévia pública apenas na região Sudeste da Ásia do Azure.  
 
 EDITION Especifica a camada de serviço do banco de dados.
 
@@ -1100,7 +1110,7 @@ O valor MAXSIZE do modelo de DTU, se especificado, deve ser um valor válido exi
 
 |MAXSIZE|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
 |:----- | -------: | -------: | -------: | -------: | -------: |
-|Tamanho máximo de dados (GB)|1280|1536|2\.048|4096|4096|
+|Tamanho máximo de dados (GB)|1280|1536|2.048|4096|4096|
 
 Se nenhum valor `MAXSIZE` for definido ao usar o modelo vCore, o padrão será de 32 GB. Para obter detalhes adicionais sobre limitações de recursos para o modelo de vCore, confira [Limites de recurso de vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -1169,6 +1179,10 @@ A seguinte sintaxe e as regras semânticas aplicam-se ao uso do argumento `AS CO
 - O banco de dados de origem pode continuar a ser acessado enquanto a cópia do banco de dados está em andamento.
 
 Para obter mais informações, consulte [Criar uma cópia de um Banco de Dados SQL do Azure usando o Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).
+
+> [!IMPORTANT]
+> Por padrão, a cópia do banco de dados é criada com a mesma redundância de armazenamento de backup que a do banco de dados de origem. Não há suporte para a alteração da redundância de armazenamento de backup ao criar uma cópia de banco de dados por meio do T-SQL. 
+
 
 ## <a name="permissions"></a>Permissões
 
@@ -1258,6 +1272,15 @@ O exemplo a seguir define a ordenação de catálogo como DATABASE_DEFAULT duran
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### <a name="create-database-using-zone-redundancy-for-backups"></a>Criar um banco de dados usando a redundância de zona para backups
+
+O exemplo a seguir define a redundância de zona para backups de banco de dados. Os backups de restauração pontual e os backups de retenção de longo prazo (se configurados) usarão a mesma redundância de armazenamento de backup.
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## <a name="see-also"></a>Confira também
@@ -1380,6 +1403,7 @@ No Azure Synapse, essa instrução pode ser usada com um servidor do Banco de Da
 
 ## <a name="syntax"></a>Sintaxe
 
+### <a name="sql-pool"></a>[Pool de SQL](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1400,6 +1424,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
+### <a name="sql-on-demand-preview"></a>[SQL sob demanda (versão prévia)](#tab/sqlod)
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+[;] 
+```
+---
 
 ## <a name="arguments"></a>Argumentos
 

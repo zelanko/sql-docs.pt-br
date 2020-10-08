@@ -23,12 +23,12 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05be8467516ff84c45268357eb6ab743d5599a05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645058"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810292"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimentos armazenados do sistema (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "88645058"
   
 |Categoria|Descrição|  
 |--------------|-----------------|  
-|[Procedimentos armazenados de replicação geográfica ativa](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Usado para gerenciar o gerenciamento de configurações de replicação geográfica ativa no banco de dados SQL do Azure|  
+|[Procedimentos armazenados de replicação geográfica ativa]()|Usado para gerenciar o gerenciamento de configurações de replicação geográfica ativa no banco de dados SQL do Azure|  
 |[Procedimentos armazenados do catálogo](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Usados para implementar funções do dicionário de dados ODBC e isolar aplicativos ODBC de alterações feitas nas tabelas subjacentes do sistema.|  
 |[Procedimentos armazenados de captura de alteração de dados](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Usados para habilitar, desabilitar ou gerar relatórios de objetos de captura de dados de alterações.|  
 |[Procedimentos armazenados de cursor](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Usados para implementar a funcionalidade variável do cursor.|  
@@ -49,7 +49,7 @@ ms.locfileid: "88645058"
 |[Database Mail procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Usados para executar operações de email em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Procedimentos armazenados do plano de manutenção de banco de dados](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Usados para configurar as tarefas de manutenção principais necessárias para gerenciar o desempenho do banco de dados.|  
 |[Procedimentos armazenados de consultas distribuídas](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Usados para implementar e gerenciar consultas distribuídas.|  
-|[Procedimentos armazenados de FileStream e Filetable &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Usados para configurar e gerenciar os recursos FILESTREAM e FileTable.|  
+|[Procedimentos armazenados de FileStream e Filetable &#40;Transact-SQL&#41;](./filestream-and-filetable-sp-filestream-force-garbage-collection.md)|Usados para configurar e gerenciar os recursos FILESTREAM e FileTable.|  
 |[Procedimentos armazenados de regras de firewall &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Usado para configurar o Firewall do banco de dados SQL do Azure.|  
 |[Procedimentos armazenados de pesquisa de texto completo](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Usados para implementar e consultar índices de texto completo.|  
 |[Procedimentos armazenados estendidos gerais](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Usados para disponibilizar uma interface a partir de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programas externos para várias atividades de manutenção.|  
@@ -57,16 +57,16 @@ ms.locfileid: "88645058"
 |[Procedimentos armazenados do data warehouse de gerenciamento &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Usado para configurar o data warehouse de gerenciamento.|  
 |[Procedimentos armazenados de automação OLE](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Usados para ativar objetos padrão de automação para uso em um lote [!INCLUDE[tsql](../../includes/tsql-md.md)] padrão.|  
 |[Procedimentos armazenados de Gerenciamento Baseados em Política](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Usado para Gerenciamento Baseado em Políticas.|  
-|[Procedimentos armazenados do PolyBase](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Adicionar ou remover um computador de um grupo de escala horizontal do polybase.|  
+|[Procedimentos armazenados do PolyBase](./polybase-stored-procedures-sp-polybase-join-group.md)|Adicionar ou remover um computador de um grupo de escala horizontal do polybase.|  
 |[Procedimentos Armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Usado para ajustar o desempenho.|  
 |[Procedimentos armazenados de replicação](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Usados para gerenciar a replicação.|  
 |[Procedimentos armazenados de segurança](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Usados para gerenciar a segurança.|  
-|[Procedimentos armazenados de backup de instantâneo](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Usado para excluir o backup de FILE_SNAPSHOT junto com todos os seus instantâneos ou para excluir um instantâneo de arquivo de backup individual.|  
-|[Procedimentos armazenados de índice espacial](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Usados para analisar e melhorar o desempenho de indexação de índices espaciais.|  
+|[Procedimentos armazenados de backup de instantâneo](./snapshot-backup-sp-delete-backup.md)|Usado para excluir o backup de FILE_SNAPSHOT junto com todos os seus instantâneos ou para excluir um instantâneo de arquivo de backup individual.|  
+|[Procedimentos armazenados de índice espacial](./spatial-index-stored-procedures-arguments-and-properties.md)|Usados para analisar e melhorar o desempenho de indexação de índices espaciais.|  
 |[Procedimentos armazenados do SQL Server Agent](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Usados pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar o desempenho e a atividade.|  
 |[Procedimentos armazenados do SQL Server Profiler](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Usados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para gerenciar atividades agendadas e baseadas em eventos.|  
 |[Stretch Database procedimentos armazenados](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Usado para gerenciar bancos de dados de ampliação.|  
-|[Procedimentos armazenados de tabelas temporais](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Usar para tabelas temporais|  
+|[Procedimentos armazenados de tabelas temporais](./spatial-index-stored-procedures-arguments-and-properties.md)|Usar para tabelas temporais|  
 |[Procedimentos armazenados XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Usados para gerenciar texto em XML.|  
   
 > [!NOTE]  
@@ -751,5 +751,4 @@ Os procedimentos armazenados a seguir não estão documentados:
  [Executando procedimentos armazenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Executando procedimentos armazenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
-  
   

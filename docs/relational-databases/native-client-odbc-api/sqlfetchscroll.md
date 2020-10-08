@@ -15,12 +15,12 @@ ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8222a36d720e323bb1c7007ce459905f414a1a00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e1bfb4b513770c231d1ec3018dc21ecf2c63f39
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424068"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810372"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "88424068"
  **SQLFetchScroll** dá suporte a UDTs (tipos definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Função SQLFetchScroll](https://go.microsoft.com/fwlink/?LinkId=59343)   
+ [Função SQLFetchScroll](../../odbc/reference/syntax/sqlfetchscroll-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

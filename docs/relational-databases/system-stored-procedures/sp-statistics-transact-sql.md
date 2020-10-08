@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06182bbd036fd746920f6e164b73321a170acc4f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: fd7e49443d6166b8a7da809b0b2e96fd2ddb927f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670048"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810746"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +95,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  O tipo de índice em hash aceita pesquisas de correspondência e de intervalo exatas, mas pesquisas de correspondência padrão não usam o índice.  
   
- **sp_statistics** é equivalente a **SQLStatistics** no ODBC. Os resultados retornados são ordenados por **NON_UNIQUE**, **Type**, **INDEX_QUALIFIER**, **index_name**e **SEQ_IN_INDEX**. Para obter mais informações, consulte a [referência da API ODBC](https://go.microsoft.com/fwlink/?LinkId=68323).  
+ **sp_statistics** é equivalente a **SQLStatistics** no ODBC. Os resultados retornados são ordenados por **NON_UNIQUE**, **Type**, **INDEX_QUALIFIER**, **index_name**e **SEQ_IN_INDEX**. Para obter mais informações, consulte a [referência da API ODBC](../../odbc/reference/syntax/odbc-reference.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  
@@ -113,5 +113,3 @@ EXEC sp_statistics DimEmployee;
  [Procedimentos armazenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
-  
-

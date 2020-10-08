@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785091"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412731"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  O Gerenciamento Baseado em Políticas permite que você monitore as práticas recomendadas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto de arquivos de políticas que você pode importar como políticas de práticas recomendadas e avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de bancos de dados. Avalie as políticas manualmente, defina-as para avaliar um conjunto de destino de acordo para um agendamento ou defina-as para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+  O Gerenciamento Baseado em Políticas permite que você monitore as práticas recomendadas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  Avalie as políticas manualmente, defina-as para avaliar um conjunto de destino de acordo para um agendamento ou defina-as para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  Um conjunto de [arquivos de política de exemplo](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) está disponível para ser importado como políticas de práticas recomendadas. Em seguida, você pode avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de bancos de dados.
   
 ## <a name="policy-and-rules-for-database-engine"></a>Política e regras para o mecanismo de banco de dados  
- A tabela a seguir lista as políticas que são incluídas com a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e informações sobre as regras de práticas recomendadas que cada política avalia. As políticas são armazenadas como arquivos XML e são importadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como importar políticas, consulte [Importar uma política de gerenciamento baseado em políticas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
+ A tabela a seguir lista as políticas que são incluídas na configuração de [políticas de exemplo](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) e informações sobre as regras de práticas recomendadas que cada política avalia. As políticas são armazenadas como arquivos XML e são importadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como importar políticas, consulte [Importar uma política de gerenciamento baseado em políticas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
   
 |Nome de política|Regra de prática recomendada|  
 |-----------------|------------------------|  

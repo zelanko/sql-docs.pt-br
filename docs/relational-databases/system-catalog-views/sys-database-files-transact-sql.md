@@ -1,6 +1,6 @@
 ---
 description: sys.database_files (Transact-SQL)
-title: sys. database_files (Transact-SQL) | Microsoft Docs
+title: sys.database_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50db45870e5168ab30973b2692fbcc7a3f6e7601
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 39b6c373a75a5480d4b2d044af84a53c7b906c4d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537449"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810512"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89537449"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID do arquivo no banco de dados.|  
 |**file_guid**|**uniqueidentifier**|GUID do arquivo.<br /><br /> NULL = o banco de dados foi atualizado de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (válido para SQL Server 2005 e anterior).|  
-|**tipo**|**tinyint**|Tipo de arquivo:<br/><br /> 0 = linhas<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo|  
+|**type**|**tinyint**|Tipo de arquivo:<br/><br /> 0 = linhas<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo|  
 |**type_desc**|**nvarchar(60)**|Descrição do tipo de arquivo:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|O valor pode ser 0 ou maior que 0. Um valor igual a 0 representa o arquivo de log do banco de dados, e um valor maior que 0 representa a ID do grupo de arquivos no qual os dados estão armazenados.|  
 |**name**|**sysname**|Nome lógico do arquivo no banco de dados.|  
@@ -80,14 +80,13 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-Para obter mais informações ao usar o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , consulte [determinando o tamanho do banco de dados no banco de dados SQL do Azure V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) no blog da equipe do SQL Customer Advisory.
+Para obter mais informações ao usar o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , consulte [determinando o tamanho do banco de dados no banco de dados SQL do Azure V12](/archive/blogs/sqlcat/determining-database-size-in-azure-sql-database-v12) no blog da equipe do SQL Customer Advisory.
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibição de catálogo do bancos de dados e de arquivos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Estados de arquivo](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.master_files ](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
   

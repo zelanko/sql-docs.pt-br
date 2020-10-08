@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a56a267fb7f10da12f0679c74f26b72a205fbf4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 840668495c620ca3cb7a403d3775238b12a52ec8
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541456"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809722"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Procedimentos armazenados de índice espacial – argumentos e propriedades
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -318,10 +318,9 @@ ms.locfileid: "89541456"
 ## <a name="requirements"></a>Requisitos  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados de índice espacial &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Procedimentos armazenados de índice espacial &#40;Transact-SQL&#41;]()   
  [&#41;&#40;Transact-SQL de sp_help_spatial_geometry_index ](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Noções básicas do XQuery](../../xquery/xquery-basics.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
-  
   

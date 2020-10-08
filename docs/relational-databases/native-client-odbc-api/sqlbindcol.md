@@ -15,12 +15,12 @@ ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fd259333aa8aa144dced7566a749ef70957e498
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66fe93f3657cc4e9c49e7092ed519b7570645f21
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428408"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809706"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "88428408"
  **SQLBindCol** dá suporte a tipos de dados CLR definidos pelo usuário. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Função SQLBindCol](https://go.microsoft.com/fwlink/?LinkId=59327)   
+ [Função SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

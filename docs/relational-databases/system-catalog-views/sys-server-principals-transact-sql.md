@@ -1,6 +1,6 @@
 ---
 description: sys.server_principals (Transact-SQL)
-title: sys. server_principals (Transact-SQL) | Microsoft Docs
+title: sys.server_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377292"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809330"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -37,8 +37,9 @@ ms.locfileid: "88377292"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do principal. É exclusivo em um servidor.|  
 |**principal_id**|**int**|Número da ID do principal. É exclusivo em um servidor.|  
-|**sid**|**varbinary (85)**|SID (ID de segurança) do principal. Se for o principal do Windows, corresponde à SID do Windows.|  
-|**tipo**|**Char (1)**|Tipo do principal:<br /><br /> S = Logon SQL<br /><br /> U = Logon do Windows<br /><br /> G = Grupo do Windows<br /><br /> R = Função do servidor<br /><br /> C = Logon mapeado para um certificado<br /><br /> K = Logon mapeado para uma chave assimétrica|  
+|**SIDs**|**varbinary(85)**|SID (ID de segurança) do principal. Se for o principal do Windows, corresponde à SID do Windows.|  
+|**type**|**char(1)**|Tipo do principal:<br /><br /> S = Logon SQL<br /><br /> U = Logon do Windows<br /><br /> G = Grupo do Windows<br /><br /> R = Função do servidor<br /><br /> C = Logon mapeado para um certificado<br /><br /> E = logon externo de Azure Active Directory<br /><br /> X = grupo externo de Azure Active Directory grupo ou aplicativos
+<br /><br /> K = Logon mapeado para uma chave assimétrica|  
 |**type_desc**|**nvarchar(60)**|Descrição do tipo do principal:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = O logon está desabilitado.|  
 |**create_date**|**datetime**|Hora em que o principal foi criado.|  
@@ -58,7 +59,7 @@ ms.locfileid: "88377292"
  A consulta a seguir lista as permissões concedidas ou negadas explicitamente a entidades de segurança do servidor.  
   
 > [!IMPORTANT]  
->  As permissões de funções de servidor fixas (diferentes de públicas) não aparecem em sys. server_permissions. Portanto, entidades de segurança do servidor podem ter permissões adicionais não listadas aqui.  
+>  As permissões de funções de servidor fixas (diferentes de públicas) não aparecem na sys.server_permissions. Portanto, entidades de segurança do servidor podem ter permissões adicionais não listadas aqui.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

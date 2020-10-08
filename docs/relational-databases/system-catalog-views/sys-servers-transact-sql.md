@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539561"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809314"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "89539561"
 |**is_nonsql_subscriber**|**bit**|Servidor não é um Assinante de replicação.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Se 1, chamando um procedimento armazenado remoto dará início a uma transação distribuída e inscrever a transação com o MS DTC. Para obter mais informações, consulte [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Data em que as informações do servidor foram alteradas pela última vez.|  
-|**is_rda_server**|**bit**|**Aplica-se a:** A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />O servidor é o arquivo morto de dados remotos habilitar (habilitado para Stretch). Para obter mais informações, consulte [habilitar Stretch Database no servidor](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer).|
+|**is_rda_server**|**bit**|**Aplica-se a:** A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />O servidor é o arquivo morto de dados remotos habilitar (habilitado para Stretch). Para obter mais informações, consulte [habilitar Stretch Database no servidor](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Permissões  
  O valor em **provider_string** é sempre nulo, a menos que o chamador tenha a permissão ALTER ANY linkd Server.  
@@ -80,4 +80,3 @@ ms.locfileid: "89539561"
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
- 

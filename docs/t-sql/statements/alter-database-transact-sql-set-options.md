@@ -31,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 2ba665e435b6245320f4f5c496a212d485df7951
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0c54bbd653e6939327e96beb5d7662b14dad1ea3
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538180"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589305"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -216,7 +216,7 @@ SET
 {
     QUERY_STORE
     {
-          = OFF [ FORCED ] 
+          = OFF [ ( FORCED ) ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -763,19 +763,19 @@ A configuração atual dessa opção pode ser determinada por meio do exame da `
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ATIVADO | **DESATIVADO** [ FORCED ] | LIMPAR [ ALL ]     
+ON | **OFF** [ ( FORCED )  ] | CLEAR [ ALL ]     
 Controla se o Repositório de Consultas está habilitado neste banco de dados, além de controlar a remoção do conteúdo do Repositório de Consultas. Para obter mais informações, confira [Cenários de uso do Repositório de Consultas](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ATIVADO     
 Habilita o Repositório de Consultas.
 
-OFF      
-Desabilita o Repositório de Consultas. OFF é o valor padrão. FORCED é opcional. FORCED anula todas as tarefas em execução em segundo plano do Repositório de Consultas e ignora a liberação síncrona quando o Repositório de Consultas é desativado. Faz com que o Repositório de Consultas seja desligado o mais rápido possível. FORCED aplica-se a CU6 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e builds posteriores.
+OFF [ ( FORCED ) ]      
+Desabilita o Repositório de Consultas. OFF é o valor padrão. FORCED é opcional. FORCED anula todas as tarefas em execução em segundo plano do Repositório de Consultas e ignora a liberação síncrona quando o Repositório de Consultas é desativado. Faz com que o Repositório de Consultas seja desligado o mais rápido possível. FORCED aplica-se a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU14, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU21, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 e builds posteriores.
 
 > [!NOTE]  
 > O Repositório de Consultas não pode ser desabilitado no banco de dados individual do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e no Pool Elástico. Executar `ALTER DATABASE [database] SET QUERY_STORE = OFF` retornará o aviso `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
-CLEAR     
+CLEAR [ ALL ]     
 Remove dados relacionados a consulta do Repositório de Consultas. ALL é opcional. ALL remove dados relacionados a consulta e metadados da Repositório de Consultas.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     

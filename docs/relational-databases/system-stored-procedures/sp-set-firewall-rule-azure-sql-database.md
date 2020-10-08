@@ -20,12 +20,12 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 372aad3acb06910c3c905a12486a6ece4adbd6ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed1df2288067d30f9443736b914b7560c0c6a784
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493039"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810465"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Banco de Dados SQL do Azure)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -82,6 +82,6 @@ exec sp_set_firewall_rule N'Example setting 1', '0.0.0.2', '0.0.0.4';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Firewall do banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Como: definir configurações de firewall (banco de dados SQL do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sys. firewall_rules &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)
+ [Firewall do banco de dados SQL do Azure](/azure/azure-sql/database/firewall-configure)   
+ [Como: definir configurações de firewall (banco de dados SQL do Azure)](/azure/azure-sql/database/firewall-configure)   
+ [sys.firewall_rules &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)

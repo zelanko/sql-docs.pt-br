@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 643257fb35e042979353b8918f0381525b497cf7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1a21fa1559bb09493ae2802254c87235ecc19efc
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539760"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809452"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>Exibições do aplicativo da camada de dados-dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,6 +53,5 @@ ms.locfileid: "89539760"
   
 ## <a name="see-also"></a>Consulte Também  
  [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Exibições de aplicativo da camada de dados &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
-  
+ [Exibições de aplicativo da camada de dados &#40;&#41;Transact-SQL ]()  
   

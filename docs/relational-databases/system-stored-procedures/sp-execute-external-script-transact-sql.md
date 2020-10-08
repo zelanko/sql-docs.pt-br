@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447178"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810182"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -165,14 +165,14 @@ Você pode controlar os recursos usados por scripts externos Configurando um poo
 
 ### <a name="monitor-script-execution"></a>Monitorar a execução do script
 
-Monitore a execução do script usando [Sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) e [Sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
+Monitore a execução do script usando [Sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) e [Sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>Parâmetros para modelagem de partição
 
 Você pode definir dois parâmetros adicionais que permitem a modelagem em dados particionados, em que as partições se baseiam em uma ou mais colunas que você fornece para segmentar naturalmente um conjunto de dados em partições lógicas criadas e usadas somente durante a execução do script. As colunas que contêm valores repetidos para idade, gênero, região geográfica, data ou hora são alguns exemplos que se prestam a conjuntos de dados particionados.
 
-Os dois parâmetros são **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, em que o segundo parâmetro é usado para ordenar o conjunto de resultados. Os parâmetros são passados como entradas para `sp_execute_external_script` o script externo executado uma vez para cada partição. Para obter mais informações e exemplos, consulte [tutorial: criar modelos baseados em partição](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition).
+Os dois parâmetros são **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, em que o segundo parâmetro é usado para ordenar o conjunto de resultados. Os parâmetros são passados como entradas para `sp_execute_external_script` o script externo executado uma vez para cada partição. Para obter mais informações e exemplos, consulte [tutorial: criar modelos baseados em partição](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).
 
 Você pode executar o script em paralelo especificando `@parallel=1` . Se a consulta de entrada puder ser paralelizada, você deverá definir `@parallel=1` como parte dos argumentos para `sp_execute_external_script` . Por padrão, o otimizador de consulta opera em `@parallel=1` tabelas com mais de 256 linhas, mas se você quiser tratar isso explicitamente, esse script incluirá o parâmetro como uma demonstração.
 
@@ -322,9 +322,9 @@ Para gerar um modelo semelhante usando Python, altere o identificador de idioma 
 
 Para pontuação, você também pode usar a função nativa [PREDICT](../../t-sql/queries/predict-transact-sql.md), que é normalmente mais rápida porque evita que o runtime do Python ou do R seja chamado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-+ [Aprendizado de máquina do SQL](../../machine-learning/index.yml)
++ [Machine learning do SQL](../../machine-learning/index.yml)
 + [Extensões de linguagem SQL Server](../../language-extensions/language-extensions-overview.md). 
 + [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
 + [CRIAR biblioteca externa &#40;&#41;Transact-SQL ](../../t-sql/statements/create-external-library-transact-sql.md)  
@@ -334,4 +334,4 @@ Para pontuação, você também pode usar a função nativa [PREDICT](../../t-sq
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server, objeto Scripts Externos](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

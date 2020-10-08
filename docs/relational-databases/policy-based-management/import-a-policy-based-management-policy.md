@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423710"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412746"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importar política de Gerenciamento Baseado em Políticas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "88423710"
 
 
 ## <a name="example-policies"></a>Exemplo de políticas
- Os exemplos de políticas não são incluídos no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], mas os exemplos anteriores de políticas distribuídas podem ser acessados pela instalação do [SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases).  Após a instalação do SQL Server Management Studio v17, encontre os exemplos de políticas em `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`. Essas políticas podem ser importadas e usadas como base para as próprias políticas de gerenciamento baseado em políticas.
+ As políticas de exemplo estão disponíveis no [repositório de Exemplos de código do SQL Server](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies). Essas políticas podem ser importadas e usadas como base para as próprias políticas de gerenciamento baseado em políticas.

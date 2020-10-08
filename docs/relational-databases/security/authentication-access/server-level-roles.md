@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334024"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636136"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,6 +58,9 @@ ms.locfileid: "85334024"
 |**diskadmin**|A função de servidor fixa **diskadmin** é usada para gerenciar arquivos em disco.|  
 |**dbcreator**|Os membros da função de servidor fixa **dbcreator** podem criar, alterar, remover e restaurar qualquer banco de dados.|  
 |**público**|Todo logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertence à função de servidor **pública**. Quando permissões específicas não são concedidas ou são negadas a uma entidade de servidor em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto. Somente atribua permissões públicas em qualquer objeto quando você quiser que ele esteja disponível para todos os usuários. Não é possível alterar associação em public.<br /><br /> **Observação:** **public** é implementado de maneira diferente de outras funções. Além disso, é possível conceder, negar ou revogar permissões das funções de servidor fixas públicas.|  
+  
+> [!IMPORTANT] 
+> A maioria das permissões fornecidas pelas seguintes funções de servidor não se aplica ao SQL do Synapse: **processadmin**, **serveradmin**, **setupadmin** e **diskadmin**.
   
 ## <a name="permissions-of-fixed-server-roles"></a>Permissões de funções de servidor fixas  
  Cada função de servidor fixa tem certas permissões atribuídas a ela. A imagem a seguir mostra as permissões atribuídas às funções de servidor.   

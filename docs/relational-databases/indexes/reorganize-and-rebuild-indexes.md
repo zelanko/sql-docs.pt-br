@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cdc5c87275af6056e9044ed534d6e916772a3dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537036"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753516"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Resolver a fragmentação do índice reorganizando ou recompilando índices
 
@@ -86,7 +86,7 @@ Da mesma forma, remover a fragmentação em um heap (uma tabela sem índice clus
 
 <sup>2</sup> A recompilação de um índice pode ser executada online ou offline. A reorganização de um índice sempre é executada online. Para atingir disponibilidade semelhante à opção de reorganização, recrie índices online. Para obter mais informações, confira [INDEX](#rebuild-an-index) e [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md).
 
-Índices com níveis de fragmentação inferiores a 5% não precisam ser desfragmentados, pois o benefício da remoção de uma pequena quantidade de fragmentação é quase sempre amplamente excedido pelo custo da CPU gerado pela reorganização ou pela recompilação do índice. Além disso, a recriação ou reorganização de índices rowstore pequenos geralmente não reduz a fragmentação. Até o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], incluindo-o, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] aloca espaço usando extensões mistas. Portanto, as páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação. Confira também [Considerações específicas para recompilar índices rowstore](#considerations-specific-to-rebuilding-rowstore-indexes). Para obter mais informações sobre as extensões, confira o [Guia de arquitetura de páginas e extensões](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
+Índices com níveis de fragmentação inferiores a 5% não precisam ser desfragmentados, pois o benefício da remoção de uma pequena quantidade de fragmentação é quase sempre amplamente excedido pelo custo da CPU gerado pela reorganização ou pela recompilação do índice. Além disso, a recompilação ou reorganização de índices rowstore pequenos geralmente não reduz a fragmentação. Até o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], incluindo-o, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] aloca espaço usando extensões mistas. Portanto, as páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação. Confira também [Considerações específicas para recompilar índices rowstore](#considerations-specific-to-rebuilding-rowstore-indexes). Para obter mais informações sobre as extensões, confira o [Guia de arquitetura de páginas e extensões](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Detectando a fragmentação de índices de columnstore
 
