@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c8dad935a404d682cf5c627a09795bf257efc209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86553021"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725877"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no OpenShift local e no Red Hat OpenShift no Azure
 
@@ -88,7 +88,7 @@ Este artigo descreve as etapas de implantação específicas da plataforma OpenS
 
 ## <a name="deploy-big-data-cluster"></a>Implantar um cluster de Big Data
 
-1. Instale o [azdata](deploy-install-azdata.md) mais recente.
+1. Instale o [azdata](../azdata/install/deploy-install-azdata.md) mais recente.
 
 1. Clone um dos arquivos de configuração internos do OpenShift, dependendo do ambiente de destino (OpenShift local ou ARO) e do cenário de implantação. Confira a seção *Configurações específicas do OpenShift nos arquivos de configuração de implantação* abaixo para obter as configurações específicas do OpenShift nos arquivos de configuração internos. Para obter mais detalhes sobre os arquivos de configuração disponíveis, confira as [diretrizes de implantação](deployment-guidance.md).
 

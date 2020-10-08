@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed42778724b468892ff72203695e976d176459b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243419"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725560"
 ---
 # <a name="sql-server-express-security"></a>Segurança do SQL Server Express
 
@@ -42,8 +42,8 @@ Para obter mais informações sobre o SQL Server Express, confira os recursos a 
   
 |Recurso|Descrição|
 |-|-|  
-|[Manuais online do Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Conclua a documentação do SQL Server 2005 Express Edition.|  
-|[Instância de usuário para não administradores](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) nos Manuais Online do SQL Server|Descreve como criar e implantar instâncias de usuário.|  
+|[Manuais online do Microsoft SQL Server 2005 Express Edition](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Conclua a documentação do SQL Server 2005 Express Edition.|  
+|[Instância de usuário para não administradores](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) nos Manuais Online do SQL Server|Descreve como criar e implantar instâncias de usuário.|  
 |[Instâncias de usuário do SQL Server Express](sql-server-express-user-instances.md)|Descreve as capacidades de instância de usuário em um aplicativo ADO.NET. Fornece informações sobre como habilitar uma instância de usuário e conectar-se a uma instância de usuário usando um <xref:Microsoft.Data.SqlClient.SqlConnection>, o tempo de vida da instância do usuário e cenários de instância do usuário.|  
   
 ## <a name="next-steps"></a>Próximas etapas

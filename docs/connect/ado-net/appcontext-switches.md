@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 16d3ed6db478f12157333badf93682eb861c57f3
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: e2e27070fee16e7a7e55272eb044870a704d70db
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091683"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725747"
 ---
 # <a name="appcontext-switches-in-sqlclient"></a>Opções de AppContext no SqlClient
 
@@ -71,7 +71,7 @@ TransparentNetworkIPResolution é habilitado por padrão. MultiSubnetFailover é
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString", true);
 ```
 
-Para obter mais informações sobre como definir essas propriedades, confira a documentação da [Propriedade SqlConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring). 
+Para obter mais informações sobre como definir essas propriedades, confira a documentação da [Propriedade SqlConnection.ConnectionString](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring). 
 
 ## <a name="enable-a-minimum-timeout-during-login"></a>Habilitar um tempo limite mínimo durante o logon
 
@@ -95,4 +95,4 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", fa
 
 ## <a name="see-also"></a>Confira também
 
-[Classe AppContext](https://docs.microsoft.com/dotnet/api/system.appcontext?view=netcore-3.1)
+[Classe AppContext](/dotnet/api/system.appcontext?view=netcore-3.1)

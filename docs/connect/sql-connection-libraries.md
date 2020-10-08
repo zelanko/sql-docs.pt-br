@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d5c44c11d9f5158abc52634f648a4159f86c143
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988507"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726607"
 ---
 # <a name="connection-modules-for-microsoft-sql-database"></a>Módulos de conexão para bancos de dados do Microsoft SQL
 
-Este artigo fornece links de download para módulos de conexão ou *drivers* que seus programas cliente podem usar para interagir com o [Microsoft SQL Server](../relational-databases/database-features.md) e com o gêmeo dele na nuvem, o [Banco de Dados SQL do Azure](/azure/sql-database/). Os drivers estão disponíveis para uma variedade de linguagens de programação, em execução nos seguintes sistemas operacionais:
+Este artigo fornece links de download para módulos de conexão ou *drivers* que seus programas cliente podem usar para interagir com o [Microsoft SQL Server](../relational-databases/databases/databases.md) e com o gêmeo dele na nuvem, o [Banco de Dados SQL do Azure](/azure/sql-database/). Os drivers estão disponíveis para uma variedade de linguagens de programação, em execução nos seguintes sistemas operacionais:
 
 - Linux
 - macOS
@@ -54,7 +54,7 @@ A tabela a seguir lista exemplos de estruturas de ORM (mapeamento relacional de 
 
 | Linguagem | Download do driver de ORM |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x ou posterior)](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x ou posterior)](/ef/) |
 | Java | [Colocar o ORM em hibernação](https://hibernate.org/orm)|
 | PHP | [ORM Eloquent, incluído na instalação do Laravel](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/) |
@@ -85,7 +85,7 @@ A tabela a seguir lista exemplos de estruturas de ORM (mapeamento relacional de 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de código para se conectar ao Banco de Dados SQL do Azure na nuvem, com Java e outras linguagens](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Exemplos de código para se conectar ao Banco de Dados SQL do Azure na nuvem, com Java e outras linguagens](/azure/sql-database/sql-database-connect-query-java).
 
 <!--
 Image references, **obsolete** markdown syntax alternative:

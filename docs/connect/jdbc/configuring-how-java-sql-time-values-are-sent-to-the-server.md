@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a360def7656fb270267372d5b226b68d30aeaf57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 29560d1622d239b2327da0907b49b95d10ae3541
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438468"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725525"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuração de como os valores de java.sql.Time são enviados ao servidor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88438468"
   
  Se quiser usar os tipos de dados **datetime** e **smalldatetime**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao trabalhar com valores java.sql.Time values, você deverá definir a propriedade de conexão **sendTimeAsDatetime** como **true**. Se quiser usar o tipo de dados **time do ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao trabalhar com valores java.sql.Time, você deverá definir a propriedade de conexão **sendTimeAsDatetime** para **false**.  
   
- Esteja ciente de que, ao enviar valores java.sql.Time para um parâmetro cujo tipo de dados também pode armazenar a data, as datas padrão serão diferentes dependendo de se o valor java.sql.Time é enviado como um valor **datetime** (1/1/1970) ou **time** (1/1/1900). Para obter mais informações sobre conversões de dados ao enviar dados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Usando dados de data e hora](https://go.microsoft.com/fwlink/?LinkID=145211).  
+ Esteja ciente de que, ao enviar valores java.sql.Time para um parâmetro cujo tipo de dados também pode armazenar a data, as datas padrão serão diferentes dependendo de se o valor java.sql.Time é enviado como um valor **datetime** (1/1/1970) ou **time** (1/1/1900). Para obter mais informações sobre conversões de dados ao enviar dados para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [Usando dados de data e hora](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105)).  
   
  No JDBC Driver 3.0 do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sendTimeAsDatetime** é true por padrão. Em uma futura versão, a propriedade de conexão **sendTimeAsDatetime** poderá ser definida como falso por padrão.  
   
@@ -64,5 +64,4 @@ SendTimeAsDatetime precisa ser false para colunas criptografadas, pois as coluna
   
 ## <a name="see-also"></a>Confira também
  [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
-  
   

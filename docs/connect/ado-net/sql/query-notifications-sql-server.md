@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d3905604b45eec2f1e9c7c1c93bd53b1863695f3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b5f4500645b60a98dd97166e12bdf0899149b1c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925462"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725597"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificações de consulta no SQL Server
 
@@ -35,19 +35,19 @@ As notificações de consulta são usadas para aplicativos que precisam atualiza
   
 Você pode configurar notificações para as instruções SELECT e EXECUTE. Ao usar uma instrução EXECUTE, o SQL Server registra uma notificação para o comando executado e não a própria instrução EXECUTE. O comando deve atender os requisitos e as limitações de uma instrução SELECT. Quando um comando que registra uma notificação contiver mais de uma instrução, o Mecanismo de Banco de Dados criará uma notificação para cada instrução no lote.  
   
-Se você estiver desenvolvendo um aplicativo em que precise receber notificações confiáveis imediatamente quando os dados forem alterados, examine as seções **Planejando uma estratégia eficiente das notificações de consulta** e **Alternativas para notificações de consulta** no tópico [Planejando para notificações](https://go.microsoft.com/fwlink/?LinkId=211984) nos Manuais Online do SQL Server. Para obter mais informações sobre as notificações de consulta e o SQL Server Service Broker, confira os links a seguir para tópicos nos Manuais Online do SQL Server.  
+Se você estiver desenvolvendo um aplicativo em que precise receber notificações confiáveis imediatamente quando os dados forem alterados, examine as seções **Planejando uma estratégia eficiente das notificações de consulta** e **Alternativas para notificações de consulta** no tópico [Planejando para notificações](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) nos Manuais Online do SQL Server. Para obter mais informações sobre as notificações de consulta e o SQL Server Service Broker, confira os links a seguir para tópicos nos Manuais Online do SQL Server.  
   
 **Documentação do SQL Server**  
   
-- [Usando notificações de consulta](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [Usando notificações de consulta](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [Criando uma consulta para notificação](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [Criando uma consulta para notificação](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Desenvolvimento (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [Desenvolvimento (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker Developer InfoCenter](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [Guia do desenvolvedor (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Guia do desenvolvedor (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>Nesta seção  
 [Habilitando notificações de consulta](enable-query-notifications.md)  

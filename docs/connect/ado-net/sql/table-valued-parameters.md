@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b88af5ea6f20f11fdb3551c82f70e109abedee09
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 02b05f65928aad5f0022d31e00847baeeb42e75c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918603"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725547"
 ---
 # <a name="table-valued-parameters"></a>Parâmetros com valor de tabela
 
@@ -34,8 +34,8 @@ Para obter mais informações sobre os parâmetros com valor de tabela, confira 
   
 |Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
-|[Parâmetros de valores de tabela (Mecanismo de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkId=98363) nos Manuais Online do SQL Server|Descreve como criar e usar parâmetros com valor de tabela.|  
-|[Tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkId=98364) nos Manuais Online do SQL Server|Descreve os tipos de tabela definidos pelo usuário usados para declarar parâmetros com valor de tabela.|  
+|[Parâmetros de valores de tabela (Mecanismo de Banco de Dados)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) nos Manuais Online do SQL Server|Descreve como criar e usar parâmetros com valor de tabela.|  
+|[Tipos de tabela definidos pelo usuário](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) nos Manuais Online do SQL Server|Descreve os tipos de tabela definidos pelo usuário usados para declarar parâmetros com valor de tabela.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Como passar várias linhas nas versões anteriores do SQL Server  
 Antes de os parâmetros de valores de tabela serem introduzidos no SQL Server 2008, as opções para passar várias linhas de dados para um procedimento armazenado ou um comando SQL parametrizado eram limitadas. Um desenvolvedor pode escolher entre as seguintes opções para passar várias linhas para o servidor:  
@@ -49,7 +49,7 @@ Antes de os parâmetros de valores de tabela serem introduzidos no SQL Server 20
 - Usar o programa utilitário `bcp` ou o objeto <xref:Microsoft.Data.SqlClient.SqlBulkCopy> para carregar várias linhas de dados em uma tabela. Embora essa técnica seja muito eficiente, ela não dá suporte ao processamento do lado do servidor, a menos que os dados sejam carregados em uma tabela temporária ou variável de tabela.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Como criar tipos de parâmetro com valor de tabela  
-Os parâmetros com valor de tabela são baseados em estruturas de tabela fortemente tipadas e definidas usando as instruções CREATE TYPE do Transact-SQL. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros de valores de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, confira [Tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkID=98364) nos Manuais Online do SQL Server.  
+Os parâmetros com valor de tabela são baseados em estruturas de tabela fortemente tipadas e definidas usando as instruções CREATE TYPE do Transact-SQL. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros de valores de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, confira [Tipos de tabela definidos pelo usuário](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) nos Manuais Online do SQL Server.  
   
 A seguinte instrução cria um tipo de tabela chamado CategoryTableType que é composto pelas colunas CategoryID e CategoryName:  
   

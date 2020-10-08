@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a29748dc5c62d3102dc964871b416e175dbd725a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 697dde24fcce29c725ab28c670a6d50f65d489bc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746066"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726633"
 ---
 # <a name="python-sql-driver"></a>Python SQL Driver
 
@@ -37,7 +37,7 @@ Há vários drivers SQL do Python disponíveis. No entanto, a Microsoft coloca e
 * [Comunidade python.org](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>Mais exemplos  
-* [Criar um aplicativo Python no Serviço de Aplicativo do Azure no Linux](https://docs.microsoft.com/azure/app-service/containers/quickstart-python?tabs=bash)
+* [Criar um aplicativo Python no Serviço de Aplicativo do Azure no Linux](/azure/app-service/containers/quickstart-python?tabs=bash)
 * [Introdução ao Python no Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [Introdução ao Python no macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
 * [Introdução ao Python no Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)

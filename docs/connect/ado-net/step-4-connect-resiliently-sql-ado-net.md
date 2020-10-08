@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: d2a300ce4565d9eb6104dd73c89a7b30b7aa1e8e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391761"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725526"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Etapa 4: Conectar-se de forma resiliente ao SQL com ADO.NET
 
@@ -41,7 +41,7 @@ As classes do ADO.NET para conexão ao Microsoft SQL Server local também podem 
   
 O programa deve distinguir entre erros transitórios versus erros persistentes. Erros transitórios são condições de erro que podem desaparecer em um período curto de tempo, como problemas de rede transitórios.  Um exemplo de um erro persistente seria se o programa tivesse um erro de ortografia no nome do banco de dados de destino, nesse caso, o erro "Nenhum banco de dados encontrado" persistiria e não haveria chance de que esse erro desaparecesse em um período curto de tempo.  
   
-A lista com os números dos erros que são categorizados como falhas transitórias está disponível em [Mensagens de erro para aplicativos cliente do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+A lista com os números dos erros que são categorizados como falhas transitórias está disponível em [Mensagens de erro para aplicativos cliente do Banco de Dados SQL](/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Etapa 2: Criar e executar o aplicativo de exemplo  
   
@@ -319,4 +319,4 @@ Para provar que o código lida com erros persistentes corretamente, execute nova
   
 ## <a name="next-steps"></a>Próximas etapas  
   
-Para explorar outras diretrizes de design e melhores práticas, visite [Como conectar-se ao Banco de Dados SQL: links, práticas recomendadas e diretrizes de design](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Para explorar outras diretrizes de design e melhores práticas, visite [Como conectar-se ao Banco de Dados SQL: links, práticas recomendadas e diretrizes de design](/azure/azure-sql/database/develop-overview)

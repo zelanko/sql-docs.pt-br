@@ -8,16 +8,16 @@ ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 7939aa1575aaeec8edff33a9a9f7101a1014abc2
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 83da4e1554e1a6fa112c6fc8f629d30cbcb97d4d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914940"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725247"
 ---
 # <a name="install-azdata"></a>Instalar `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 `azdata` é um utilitário de linha de comando escrito em Python para inicializar e gerenciar serviços de dados por meio de APIs REST. 
 

@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: b2222c72be6a499e9a60424d1a7cc508904b8f33
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528340"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726647"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>Etapa 4: Conectar-se de maneira resiliente ao SQL com PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-O programa de demonstração foi projetado de maneira que um erro transitório (que é qualquer código de erro com o prefixo '08', conforme listado neste [apêndice](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) durante uma tentativa de conexão leva a uma repetição. Mas um erro transitório durante o comando de consulta faz com que o programa descarte a conexão e crie uma nova conexão, antes de tentar novamente o comando de consulta. Não recomendamos nem desencorajamos essa opção de design. O programa de demonstração ilustra um pouco da flexibilidade de design que está disponível para você.  
+O programa de demonstração foi projetado de maneira que um erro transitório (que é qualquer código de erro com o prefixo '08', conforme listado neste [apêndice](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)) durante uma tentativa de conexão leva a uma repetição. Mas um erro transitório durante o comando de consulta faz com que o programa descarte a conexão e crie uma nova conexão, antes de tentar novamente o comando de consulta. Não recomendamos nem desencorajamos essa opção de design. O programa de demonstração ilustra um pouco da flexibilidade de design que está disponível para você.  
   
 O comprimento deste exemplo de código deve-se principalmente à lógica de exceção catch.   
   

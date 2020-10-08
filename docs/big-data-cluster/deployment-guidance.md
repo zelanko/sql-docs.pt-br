@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765765"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725862"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Como implantar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes
 
@@ -80,7 +80,7 @@ Antes de implantar um cluster de Big Data do SQL Server 2019, primeiro [instale 
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- [Extensão Virtualização de Dados](../azure-data-studio/data-virtualization-extension.md) para o Azure Data Studio
+- [Extensão Virtualização de Dados](../azure-data-studio/extensions/data-virtualization-extension.md) para o Azure Data Studio
 
 
 ## <a name="deployment-overview"></a><a id="deploy"></a> Visão geral da implantação
@@ -255,7 +255,7 @@ Depois que o script de implantação for concluído com êxito, você poderá ob
    > [!TIP]
    > Se não tiver alterado o nome padrão durante a implantação, use `-n mssql-cluster` no comando anterior. `mssql-cluster` é o nome padrão do cluster de Big Data.
 
-1. Faça logon no cluster de Big Data usando [azdata login](reference-azdata.md). Defina o parâmetro `--endpoint` como o endereço IP externo do ponto de extremidade do controlador.
+1. Faça logon no cluster de Big Data usando [azdata login](../azdata/reference/reference-azdata.md). Defina o parâmetro `--endpoint` como o endereço IP externo do ponto de extremidade do controlador.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -266,7 +266,7 @@ Depois que o script de implantação for concluído com êxito, você poderá ob
    > [!TIP]
    > Se for o administrador do cluster do Kubernetes e tiver acesso ao arquivo de configuração do cluster (arquivo de configuração de kube), você poderá configurar o contexto atual para apontar para o cluster do Kubernetes de destino. Nesse caso, você pode fazer logon com `azdata login -n <namespaceName>`, em que `namespace` é o nome do cluster de Big Data. As credenciais serão solicitadas se não forem especificadas no comando de logon.
    
-1. Execute [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) para obter uma lista com uma descrição de cada ponto de extremidade e seus valores de porta e endereço IP correspondentes. 
+1. Execute [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md) para obter uma lista com uma descrição de cada ponto de extremidade e seus valores de porta e endereço IP correspondentes. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -298,7 +298,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a name="verify-the-cluster-status"></a><a id="status"></a> Verificar o status do cluster
 
-Após a implantação, você pode verificar o status do cluster usando o comando [azdata bdc status show](reference-azdata-bdc-status.md).
+Após a implantação, você pode verificar o status do cluster usando o comando [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show
@@ -381,7 +381,7 @@ Bdc: ready                                                                      
 
 Você também pode obter o status mais detalhado com os seguintes comandos:
 
-- [azdata bdc control status show](reference-azdata-bdc-control-status.md) retorna o status de integridade de todos os componentes associados ao serviço de gerenciamento de controle
+- [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md) retorna o status de integridade de todos os componentes associados ao serviço de gerenciamento de controle
 ```
 azdata bdc control status show
 ```

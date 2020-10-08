@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 646eb9359dc5e7dfaad77bc3746fbfdf9ed9ce7a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f44991b2ea59d3f6cf6e1cf5a2bd653f270aa1ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920371"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725574"
 ---
 # <a name="sql-server-express-user-instances"></a>Instâncias de usuário do SQL Server Express
 
@@ -143,7 +143,7 @@ Os cenários de instância de usuário incluem:
   
 - Qualquer aplicativo de usuário único em que não é necessário compartilhar dados.  
   
-- Implantação do ClickOnce. Se o .NET Framework 2.0 (ou posterior) ou o .NET Core 1.0 (ou posterior) e o SQL Server Express já estão instalados no computador de destino, o pacote de instalação baixado como um resultado da ação ClickOnce pode ser instalado e usado por usuários não administradores. Observe que um administrador deverá instalar o SQL Server Express se ele fizer parte da instalação. Para obter mais informações, confira [Implantação do ClickOnce para Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
+- Implantação do ClickOnce. Se o .NET Framework 2.0 (ou posterior) ou o .NET Core 1.0 (ou posterior) e o SQL Server Express já estão instalados no computador de destino, o pacote de instalação baixado como um resultado da ação ClickOnce pode ser instalado e usado por usuários não administradores. Observe que um administrador deverá instalar o SQL Server Express se ele fizer parte da instalação. Para obter mais informações, confira [Implantação do ClickOnce para Windows Forms](/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
   
 - Hospedagem ASP.NET dedicada usando a Autenticação do Windows. Uma só instância do SQL Server Express pode ser hospedada em uma intranet. O aplicativo se conecta usando a conta do Windows do ASPNET, não usando a representação. As instâncias de usuário não devem ser usadas para cenários de hospedagem compartilhada ou de terceiros em que todos os aplicativos compartilhariam a mesma instância de usuário e não permaneceriam mais isolados uns dos outros.  
   

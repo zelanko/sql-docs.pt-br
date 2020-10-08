@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: be42913b07f037b002123bedb6d285f41b52c9a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393164"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725628"
 ---
 # <a name="handling-null-values"></a>Manipulando valores nulos
 
@@ -26,7 +26,7 @@ ms.locfileid: "86393164"
 Um valor nulo em um banco de dados relacional é usado quando o valor em uma coluna é desconhecido ou está ausente. Um valor nulo não é uma cadeia de caracteres vazia (para tipos de dados character ou datetime) nem um valor zero (para tipos de dados numéricos). A especificação ANSI SQL-92 declara que um valor nulo deve ser o mesmo para todos os tipos de dados, para que todos os nulos sejam manipulados consistentemente. O namespace <xref:System.Data.SqlTypes> fornece semântica nula ao implementar a interface <xref:System.Data.SqlTypes.INullable>. Cada um dos tipos de dados no <xref:System.Data.SqlTypes> tem uma propriedade própria `IsNull` e um valor `Null` que pode ser atribuído a uma instância desse tipo de dados.  
   
 > [!NOTE]
->  O .NET Framework versão 2.0 e o .NET Core versão 1.0 introduziram suporte para tipos que permitem valor nulo, o que possibilita aos programadores estender um tipo de valor para representar todos os valores do tipo subjacente. Esses tipos CLR que permitem valor nulo representam uma instância da estrutura <xref:System.Nullable>. Essa funcionalidade é especialmente útil quando os tipos de valor são boxed e unboxed, fornecendo compatibilidade aprimorada com tipos de objeto. Os tipos CLR que permitem valor nulo não se destinam ao armazenamento de nulos de banco de dados porque um nulo ANSI SQL não se comporta da mesma maneira que uma referência de `null` (ou `Nothing` no Visual Basic). Para trabalhar com valores nulos ANSI SQL de banco de dados, use nulos <xref:System.Data.SqlTypes> em vez de <xref:System.Nullable>. Para obter mais informações sobre como trabalhar com tipos CLR que permitem valores nulos no C#, confira [Tipos que permitem valor nulo](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/) e, para C#, confira [Como usar tipos que permitem valor nulo](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/).  
+>  O .NET Framework versão 2.0 e o .NET Core versão 1.0 introduziram suporte para tipos que permitem valor nulo, o que possibilita aos programadores estender um tipo de valor para representar todos os valores do tipo subjacente. Esses tipos CLR que permitem valor nulo representam uma instância da estrutura <xref:System.Nullable>. Essa funcionalidade é especialmente útil quando os tipos de valor são boxed e unboxed, fornecendo compatibilidade aprimorada com tipos de objeto. Os tipos CLR que permitem valor nulo não se destinam ao armazenamento de nulos de banco de dados porque um nulo ANSI SQL não se comporta da mesma maneira que uma referência de `null` (ou `Nothing` no Visual Basic). Para trabalhar com valores nulos ANSI SQL de banco de dados, use nulos <xref:System.Data.SqlTypes> em vez de <xref:System.Nullable>. Para obter mais informações sobre como trabalhar com tipos CLR que permitem valores nulos no C#, confira [Tipos que permitem valor nulo](/dotnet/csharp/programming-guide/nullable-types/) e, para C#, confira [Como usar tipos que permitem valor nulo](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/).  
   
 ## <a name="nulls-and-three-valued-logic"></a>Lógica nula e de três valores  
 Permitir valores nulos em definições de coluna apresenta uma lógica de três valores em seu aplicativo. Uma comparação pode ser avaliada como uma das três condições:  

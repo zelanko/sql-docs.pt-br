@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2d9b12cb2042b1e67e13057345056cfcb0105f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438398"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725497"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Recursos internacionais do JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,15 +55,14 @@ ms.locfileid: "88438398"
 ## <a name="collation-support"></a>Suporte a ordenações  
  O JDBC Driver 3.0 é compatível com todas as ordenações compatíveis com [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e as novas ordenações ou novas versões dos nomes de ordenação do Windows apresentadas no [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- Para obter mais informações sobre as ordenações, consulte [Suporte a ordenações e a Unicode](https://go.microsoft.com/fwlink/?LinkId=131366) e [Nomes de ordenação do Windows (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para obter mais informações sobre as ordenações, consulte [Suporte a ordenações e a Unicode](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105)) e [Nomes de ordenação do Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-international-domain-names-idn"></a>Como usar IDN (nomes de domínio internacionais)  
  O JDBC Driver 6.0 para o SQL Server dá suporte ao uso de nomes de domínio internacionalizados (IDNs) e pode converter um serverName Unicode para compatível com codificação ASCII (Punycode) quando solicitado durante a conexão.  Se os IDNs forem armazenados no sistema de nome de domínio (DNS) como cadeias de caracteres ASCII no formato Punycode (especificado pela RFC 3490), habilite a conversão do nome do servidor Unicode definindo a propriedade serverNameAsACE como true.  Caso contrário, se o serviço DNS é configurado para permitir o uso de caracteres Unicode, defina a propriedade de serverNameAsACE como falso (padrão).  Para versões anteriores do driver JDBC, também é possível converter o serverName em Punycode usando os métodos [IDN.toASCII do Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) antes de definir essa propriedade para uma conexão.  
   
 > [!NOTE]  
->  A maioria dos softwares de resolvedor escritos para plataformas não Windows baseia-se nos padrões da Internet DSN e, portanto, é mais provável usar o formato Punycode IDNs, enquanto um servidor DNS baseados no Windows em uma rede privada pode ser configurado para permitir o uso de caracteres UTF-8 em uma base por servidor.  Para saber mais detalhes, consulte [Suporte a caracteres Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
+>  A maioria dos softwares de resolvedor escritos para plataformas não Windows baseia-se nos padrões da Internet DSN e, portanto, é mais provável usar o formato Punycode IDNs, enquanto um servidor DNS baseados no Windows em uma rede privada pode ser configurado para permitir o uso de caracteres UTF-8 em uma base por servidor.  Para saber mais detalhes, consulte [Suporte a caracteres Unicode](/previous-versions/windows/it-pro/windows-server-2003/cc738403(v=ws.10)).  
   
 ## <a name="see-also"></a>Confira também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
   
