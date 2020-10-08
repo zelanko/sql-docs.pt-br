@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393124"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727534"
 ---
 # <a name="tracing-driver-operation"></a>Rastreamento de operação do driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393124"
   O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] é compatível com o uso de rastreamento (ou log) para ajudar a resolver problemas com o driver JDBC quando ele é usado em seu aplicativo. Para habilitar o uso de rastreamento, o driver JDBC usa as APIs de log no java.util.logging, que fornece um conjunto de classes para criar objetos Logger e LogRecord.  
   
 > [!NOTE]  
->  Para o componente nativo (sqljdbc_xa.dll) que está incluído com o driver JDBC, o rastreamento é habilitado pela estrutura de Diagnósticos Internos (BID). Para obter mais informações sobre BID, consulte [Rastreamento do acesso a dados no SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
+>  Para o componente nativo (sqljdbc_xa.dll) que está incluído com o driver JDBC, o rastreamento é habilitado pela estrutura de Diagnósticos Internos (BID). Para obter mais informações sobre BID, consulte [Rastreamento do acesso a dados no SQL Server](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)).  
   
  Quando você desenvolve seu aplicativo, pode fazer chamadas para objetos Logger, que, por sua vez, criam objetos LogRecord, que serão então passados aos objetos Handler para processamento. Ambos os objetos Logger e Handler usam níveis de log e, opcionalmente, filtros de log para regulamentar quais LogRecords são processados. Quando as operações de log estiverem concluídas, os objetos Handler poderão usar objetos Formatter como opção para publicar as informações de log.  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>Confira também  
  [Diagnosticando problemas com o JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

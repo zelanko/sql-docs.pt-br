@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680721"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726813"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formatação de cadeias de caracteres decimais e valores monetários (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Para preservar a precisão, [tipos decimais ou numéricos](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) são sempre buscados como cadeias de caracteres com precisão e escala exatas. Se qualquer valor for menor que 1, o zero à esquerda estará ausente. É o mesmo com campos money e smallmoney, pois são campos decimais com uma escala fixa igual a 4.
+Para preservar a precisão, [tipos decimais ou numéricos](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) são sempre buscados como cadeias de caracteres com precisão e escala exatas. Se qualquer valor for menor que 1, o zero à esquerda estará ausente. É o mesmo com campos money e smallmoney, pois são campos decimais com uma escala fixa igual a 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Adicionar zeros à esquerda se estiverem ausentes
 Da versão 5.6.0 em diante, a opção `FormatDecimals` é adicionada aos níveis de conexão e de instrução do sqlsrv, o que permite ao usuário formatar cadeias de caracteres decimais. Essa opção espera um valor booliano (true ou false) e afeta apenas a formatação de valores decimais ou numéricos nos resultados buscados. Em outras palavras, a opção `FormatDecimals` não tem qualquer efeito sobre outras operações, como inserção ou atualização.

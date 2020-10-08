@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009332"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727425"
 ---
 # <a name="connecting-to-sql-server"></a>Conectar-se ao SQL Server
 
@@ -77,7 +77,7 @@ Use o protocolo TLS, anteriormente conhecido como SSL, para criptografar conexõ
 
 Habilitar a criptografia aumenta a segurança, mas reduz o desempenho.
 
-Para obter mais informações, confira [Criptografar conexões para o SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) e [Usar criptografia sem validação](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Para obter mais informações, confira [Criptografar conexões para o SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) e [Usar criptografia sem validação](../../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 Independentemente das configurações para **Encrypt** e **TrustServerCertificate**, as credenciais de logon do servidor (nome de usuário e senha) sempre são criptografadas. A tabela a seguir mostra o efeito das configurações de **Encrypt** e **TrustServerCertificate** .  
 

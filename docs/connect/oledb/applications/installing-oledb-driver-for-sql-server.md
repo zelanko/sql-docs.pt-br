@@ -21,12 +21,12 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b748efb2fecd7030622ee85b7dc9bb72d20dc674
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 43b91e08726ed548d24ba3461f45164eb97bb6b7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860629"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727356"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Instalar o OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ Os arquivos do Driver do OLE DB para SQL Server (msoledbsql.dll, msoledbsqlr.rll
 
 Os arquivos de biblioteca e de cabeçalho do Driver do OLE DB para SQL Server (msoledbsql.h and msoledbsql.lib) são instalados em `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`. Além disso, o msoledbsql.msi x64 instala os mesmos arquivos em `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`.  
 
-Você pode distribuir o Driver do OLE DB para SQL Server por meio de msoledbsql.msi. Talvez seja necessário instalar o Driver do OLE DB para SQL Server ao implantar um aplicativo. Uma maneira de instalar vários pacotes em um processo que, para o usuário, parece ser uma única instalação é usar a tecnologia de encadeador e bootstrapper. Para obter mais informações, confira [Criando um pacote de bootstrapper personalizado para o Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) e [Adicionando pré-requisitos personalizados](https://go.microsoft.com/fwlink/?LinkId=115668).  
+Você pode distribuir o Driver do OLE DB para SQL Server por meio de msoledbsql.msi. Talvez seja necessário instalar o Driver do OLE DB para SQL Server ao implantar um aplicativo. Uma maneira de instalar vários pacotes em um processo que, para o usuário, parece ser uma única instalação é usar a tecnologia de encadeador e bootstrapper. Para obter mais informações, confira [Criando um pacote de bootstrapper personalizado para o Visual Studio 2005](/previous-versions/aa730839(v=vs.80)) e [Adicionando pré-requisitos personalizados](/visualstudio/deployment/creating-bootstrapper-packages).  
   
 O msoledbsql.msi x64 também instala a versão de 32 bits do Driver do OLE DB para SQL Server. Se o aplicativo for projetado para uma plataforma diferente daquela em que foi desenvolvido, você poderá baixar as versões do msoledbsql.msi para x64 e x86.
 
@@ -63,4 +63,4 @@ O valor passado para APPGUID é o seu código de produto específico. É preciso
 A opção APPGUID requer a execução do instalador em um prompt de comandos com privilégios elevados.
 
 ## <a name="see-also"></a>Consulte Também  
- [Criação de aplicativos com o Driver do OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [Criação de aplicativos com o Driver do OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)

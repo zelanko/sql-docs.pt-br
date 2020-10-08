@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: db9392b523be8777a96e4d262cfca5acccc8f406
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680651"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726837"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>Formatação de cadeias de caracteres decimais e valores monetários (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Para preservar a precisão, [tipos decimais ou numéricos](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) são sempre buscados como cadeias de caracteres com precisão e escala exatas. Se qualquer valor for menor que 1, o zero à esquerda estará ausente. É o mesmo com campos money e smallmoney, pois são campos decimais com uma escala fixa igual a 4.
+Para preservar a precisão, [tipos decimais ou numéricos](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) são sempre buscados como cadeias de caracteres com precisão e escala exatas. Se qualquer valor for menor que 1, o zero à esquerda estará ausente. É o mesmo com campos money e smallmoney, pois são campos decimais com uma escala fixa igual a 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Adicionar zeros à esquerda se estiverem ausentes
 Da versão 5.6.0 em diante, o atributo de conexão ou instrução `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` permite que o usuário formate cadeias de caracteres decimais. Esse atributo espera um valor booliano (true ou false) e afeta apenas a formatação de valores decimais ou numéricos nos resultados buscados. Em outras palavras, esse atributo não tem qualquer efeito sobre outras operações, como inserção ou atualização.

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: fd04b92aaffab70835ce2affb56ece70cdb393b3
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989847"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765780"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Instalar Extensões de Linguagem do SQL Server no Windows
 
@@ -23,7 +23,7 @@ ms.locfileid: "90989847"
 Saiba como instalar o componente de Extensões de Linguagem no SQL Server executando o assistente de instalação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Este artigo é para instalação das Extensões de Linguagem do SQL Server no Windows. Para Linux, confira [Instalar as Extensões de Linguagem do SQL Server 2019 (Java) no Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)
+> Este artigo é para instalação das Extensões de Linguagem do SQL Server no Windows. Para Linux, confira [Instalar as Extensões de Linguagem do SQL Server 2019 (Java) no Linux](../..//linux/sql-server-linux-setup-language-extensions.md)
 
 <a name="prerequisites"></a> 
 
@@ -33,7 +33,7 @@ Saiba como instalar o componente de Extensões de Linguagem no SQL Server execut
 
 + Uma instância do mecanismo de banco de dados é necessária. Você não pode instalar apenas os recursos das Extensões de Linguagem, embora você possa adicioná-los incrementalmente a uma instância existente.
 
-+ Para continuidade de negócios, há suporte para [grupos de disponibilidade Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) para Extensões de Linguagem. Você precisa instalar extensões de linguagem e configurar pacotes em cada nó.
++ Para continuidade de negócios, há suporte para [grupos de disponibilidade Always On](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) para Extensões de Linguagem. Você precisa instalar extensões de linguagem e configurar pacotes em cada nó.
 
 + Há suporte para a instalação de Extensões de Linguagem em um cluster de failover no SQL Server 2019.
 
@@ -87,7 +87,7 @@ Para instalações locais, você deve executar a Instalação como um administra
 
         - Se você desejar usar seu próprio runtime do Java, selecione **Serviços de Machine Learning e Extensões de Linguagem**. Não selecione Java.
 
-        Se desejar usar R e Python, confira [Instalar Serviços de Machine Learning do SQL Server no Windows](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install).
+        Se desejar usar R e Python, confira [Instalar Serviços de Machine Learning do SQL Server no Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 
     ![Opções de recurso para Extensões de Linguagem](../media/sql-install-feature-selection.png)
 
@@ -107,7 +107,7 @@ Para instalações locais, você deve executar a Instalação como um administra
 
     Observe a localização da pasta no caminho `..\Setup Bootstrap\Log` em que os arquivos de configuração são armazenados. Quando a instalação for concluída, você poderá examinar os componentes instalados no arquivo de Resumo.
 
-6. Após a conclusão da instalação, se você receber instruções para reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para saber mais, veja [Exibir e ler arquivos de log da Instalação do SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+6. Após a conclusão da instalação, se você receber instruções para reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para saber mais, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## <a name="add-the-jre_home-variable"></a>Adicionar a variável JRE_HOME
 
@@ -161,7 +161,7 @@ Se você não instalou o Zulu Open JRE padrão incluído com o SQL Server e não
 1. Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > Você pode baixar e instalar a versão apropriada nesta página: [Baixe o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > Você pode baixar e instalar a versão apropriada nesta página: [Baixe o SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
     > Você também pode usar o [Azure Data Studio](../../azure-data-studio/what-is.md), que dá suporte a tarefas administrativas e consultas no SQL Server.
   
@@ -194,7 +194,7 @@ Você pode reiniciar o serviço usando o clique com o botão direito do mouse no
 
 ## <a name="register-external-language"></a>Registrar linguagem externa
 
-Para cada banco de dados no qual você deseja usar extensões de linguagem, é necessário registrar a linguagem externa com [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Para cada banco de dados no qual você deseja usar extensões de linguagem, é necessário registrar a linguagem externa com [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 O exemplo a seguir adiciona uma linguagem externa chamada Java a um banco de dados no SQL Server no Windows.
 
@@ -204,7 +204,7 @@ FROM (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-Para obter mais informações, confira [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Para obter mais informações, confira [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 ## <a name="verify-installation"></a>Verifique a instalação
 
@@ -241,7 +241,7 @@ No nível da instância, a configuração adicional pode incluir:
 No banco de dados, talvez você precise das seguintes atualizações de configuração:
 
 * [Conceder aos usuários permissão para os Serviços de Machine Learning do SQL Server](../../machine-learning/security/user-permission.md)
-* [Conceder aos usuários permissão para executar uma linguagem específica](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
+* [Conceder aos usuários permissão para executar uma linguagem específica](../../t-sql/statements/create-external-language-transact-sql.md#permissions)
 
 > [!NOTE]
 > Se a configuração adicional for necessária depende do seu esquema de segurança, em que você instalou o SQL Server e como você espera que os usuários se conectem ao banco de dados e executem scripts externos.

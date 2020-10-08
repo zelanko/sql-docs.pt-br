@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147577"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727247"
 ---
 # <a name="sql-server-login-dialog-box"></a>Caixa de diálogo de logon do SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,14 +27,14 @@ Quando você tenta se conectar sem especificar informações o suficiente, o dri
 > [!NOTE]  
 > O comportamento de solicitação da Caixa de Diálogo do SQL Server é controlado pela propriedade de inicialização do `DBPROP_INIT_PROMPT`. Para obter mais informações, consulte:
 > - [Propriedades de inicialização e autorização](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [Guia do Programador do OLE DB](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [Guia do Programador do OLE DB](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![Captura de tela da Caixa de Diálogo de Logon do SQL Server](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>Opções
 |Opção|Descrição|
 |---   |---        |
-|Servidor|O nome de uma instância do SQL Server na sua rede. Selecione um nome de servidor\instância na lista ou digite o nome do servidor\instância na caixa **Servidor**. Se desejar, crie um alias de servidor no computador cliente usando o **SQL Server Configuration Manager** e digite esse nome na caixa **Servidor**. <br/><br/>Digite "(local)" quando estiver usando o mesmo computador como SQL Server. Assim, você pode se conectar a uma instância local do SQL Server, até mesmo ao executar uma versão não em rede do SQL Server.<br/><br/>Para obter mais informações sobre nomes de servidor para diferentes tipos de rede, confira [Instalação do SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
+|Servidor|O nome de uma instância do SQL Server na sua rede. Selecione um nome de servidor\instância na lista ou digite o nome do servidor\instância na caixa **Servidor**. Se desejar, crie um alias de servidor no computador cliente usando o **SQL Server Configuration Manager** e digite esse nome na caixa **Servidor**. <br/><br/>Digite "(local)" quando estiver usando o mesmo computador como SQL Server. Assim, você pode se conectar a uma instância local do SQL Server, até mesmo ao executar uma versão não em rede do SQL Server.<br/><br/>Para obter mais informações sobre nomes de servidor para diferentes tipos de rede, confira [Instalação do SQL Server](../../../database-engine/install-windows/install-sql-server.md).|
 |Modo de autenticação|Você pode selecionar as seguintes opções de autenticação na lista suspensa:<br/><ul><li>Autenticação do `Windows Authentication:` para SQL Server usando as credenciais da conta do Windows do usuário conectado no momento.</li><li>Autenticação do `SQL Server Authentication:` usando a ID de logon e a senha.</li><li>Autenticação integrada do `Active Directory - Integrated:` com uma identidade do Azure Active Directory. Esse modo também pode ser usado para a autenticação do Windows para SQL Server.</li><li>Autenticação de ID de usuário e senha do `Active Directory - Password:` com uma identidade do Azure Active Directory.</li><li>Autenticação interativa do `Active Directory - Universal with MFA support:` com uma identidade do Azure Active Directory. Este modo é compatível com a Autenticação Multifator (MFA) do Azure.</li></ul>|
 |SPN do servidor|Se você usar uma conexão confiável, poderá especificar um SPN (nome de entidade de serviço) para o servidor.|
 |ID de Logon|Especifica a ID de logon a ser usada na conexão. A caixa de texto ID de logon só será habilitada se `Authentication Mode` for definido como `SQL Server Authentication`, `Active Directory - Password` ou `Active Directory - Universal with MFA support`.|

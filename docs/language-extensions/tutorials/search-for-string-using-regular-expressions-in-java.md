@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dab5079ab3c0447b0895bbc3642f23884317f3c4
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9de0a8e595cca3009be4a44b63ce268d673b6dff
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180485"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765741"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Tutorial: Pesquisar uma cadeia de caracteres usando regex (expressões regulares) em Java
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -26,7 +26,7 @@ Este código de exemplo usa uma expressão regular que verifica se um texto cont
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-+ Instância do Mecanismo de Banco de Dados do SQL Server 2019 com a estrutura de extensibilidade e a extensão de programação do Java [no Windows](../install/install-sql-server-language-extensions-on-windows.md) ou [no Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions). Para obter mais informações, confira [Extensão de Linguagem no SQL Server 2019](../language-extensions-overview.md). Para obter mais informações sobre requisitos de codificação, confira [Como chamar o Java no SQL Server](../how-to/call-java-from-sql.md).
++ Instância do Mecanismo de Banco de Dados do SQL Server 2019 com a estrutura de extensibilidade e a extensão de programação do Java [no Windows](../install/install-sql-server-language-extensions-on-windows.md) ou [no Linux](../../linux/sql-server-linux-setup-language-extensions.md). Para obter mais informações, confira [Extensão de Linguagem no SQL Server 2019](../language-extensions-overview.md). Para obter mais informações sobre requisitos de codificação, confira [Como chamar o Java no SQL Server](../how-to/call-java-from-sql.md).
 
 + SQL Server Management Studio ou Azure Data Studio para executar T-SQL.
 
@@ -216,11 +216,11 @@ GO
 
 Para executar o código Java, um usuário precisa receber a execução de script externo nessa linguagem específica.
 
-Para obter mais informações, confira [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Para obter mais informações, confira [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 ## <a name="create-external-libraries"></a>Criar bibliotecas externas
 
-Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) para criar uma biblioteca externa para seus arquivos `.jar`. O SQL Server terá acesso aos arquivos `.jar` e você não precisará definir nenhuma permissão especial para o **classpath**.
+Use [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) para criar uma biblioteca externa para seus arquivos `.jar`. O SQL Server terá acesso aos arquivos `.jar` e você não precisará definir nenhuma permissão especial para o **classpath**.
 
 Nesse exemplo, você criará duas bibliotecas externas. Uma para o SDK e outra para o código Java RegEx.
 

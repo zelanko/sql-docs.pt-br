@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9d16c785696a18262b818668af9d65c55f37616
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393144"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727490"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Usando a autenticação NTLM para se conectar ao SQL Server
 
@@ -35,11 +35,11 @@ As seguintes propriedades também são usadas para autenticação NTLM:
 
 Além do **domínio**, as outras propriedades são obrigatórias, o driver gerará um erro se alguma delas estiver ausente quando a propriedade authenticationScheme do **NTLM** for usada. 
 
-Para obter mais informações sobre as propriedades de conexão, confira [Configuração das propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md). Para obter mais informações sobre o protocolo de autenticação NTLM da Microsoft, confira [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
+Para obter mais informações sobre as propriedades de conexão, confira [Configuração das propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md). Para obter mais informações sobre o protocolo de autenticação NTLM da Microsoft, confira [Microsoft NTLM](/windows/desktop/SecAuthN/microsoft-ntlm).
 
 ## <a name="remarks"></a>Comentários
 
-Confira [Segurança de rede: Nível de autenticação do LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) para encontrar a descrição das configurações do SQL Server, que controlam o comportamento da autenticação NTLM. 
+Confira [Segurança de rede: Nível de autenticação do LAN Manager](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) para encontrar a descrição das configurações do SQL Server, que controlam o comportamento da autenticação NTLM. 
 
 ## <a name="logging"></a>Registro em log
 
@@ -79,7 +79,7 @@ Por exemplo, o SPN pode ser: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 
 Para obter mais informações sobre SPNs (nomes de entidade de serviço), consulte:
 
-- [Suporte a SPN (Nome da entidade de serviço) em conexões com o cliente](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [Suporte a SPN (Nome da entidade de serviço) em conexões com o cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
 
 > [!NOTE]  
 > O atributo de conexão serverSpn é compatível somente com os Microsoft JDBC Drivers 4.2 e superiores.

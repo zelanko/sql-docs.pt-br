@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 44f32695e91c3c273b024b9f8d7259c59b43014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180303"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765686"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Arquitetura de extensibilidade nas Extensões de Linguagem do SQL Server
 
@@ -58,7 +58,7 @@ O [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é um servi
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll para Java | Extensão de Java | SQL Server 2019 |
 
-O serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é executado em **SQLRUserGroup** que usa [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) para isolamento de execução.
+O serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é executado em **SQLRUserGroup** que usa [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) para isolamento de execução.
 
 Um serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] separado é criado para cada instância do mecanismo de banco de dados à qual você adicionou Extensões de Linguagem de Computador do SQL Server. Há um serviço Launchpad para cada instância de mecanismo de banco de dados; portanto, se você tiver várias instâncias com suporte a script externo, você terá um serviço Launchpad para cada um. Uma instância do mecanismo de banco de dados está associada ao serviço Launchpad criado para ela. Todas as invocações de script externo em um procedimento armazenado ou T-SQL resultam no serviço SQL Server chamando o serviço Launchpad criado para a mesma instância.
 
@@ -86,7 +86,7 @@ Os protocolos de comunicação entre componentes e plataformas de dados são des
 
 + **Outros protocolos**
 
-  Processos que precisam trabalhar em partes ou transferir dados para um cliente remoto também podem usar o [formato de arquivo XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). A transferência de dados real é feita por meio de blobs codificados.
+  Processos que precisam trabalhar em partes ou transferir dados para um cliente remoto também podem usar o [formato de arquivo XDF](/machine-learning-server/r/concept-what-is-xdf). A transferência de dados real é feita por meio de blobs codificados.
 
 ## <a name="next-steps"></a>Próximas etapas
 

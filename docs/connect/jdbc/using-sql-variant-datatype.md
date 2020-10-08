@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414522"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727478"
 ---
 # <a name="using-sql_variant-data-type"></a>Como usar o tipo de dados sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Começando com a versão 6.3.0, o driver JDBC é compatível com o tipo de dados sql_variant. O sql_variant também é compatível ao usar recursos como parâmetros com valor de tabela e BulkCopy com algumas limitações mencionadas posteriormente nesta página. Nem todos os tipos de dados podem ser armazenados no tipo de dados sql_variant. Para obter uma lista de tipos de dados compatíveis com o sql_variant, verifique a [documentação](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) do SQL Server.
+Começando com a versão 6.3.0, o driver JDBC é compatível com o tipo de dados sql_variant. O sql_variant também é compatível ao usar recursos como parâmetros com valor de tabela e BulkCopy com algumas limitações mencionadas posteriormente nesta página. Nem todos os tipos de dados podem ser armazenados no tipo de dados sql_variant. Para obter uma lista de tipos de dados compatíveis com o sql_variant, verifique a [documentação](../../t-sql/data-types/sql-variant-transact-sql.md) do SQL Server.
 
 ##  <a name="populating-and-retrieving-a-table"></a>Populando e recuperando uma tabela:
 Supondo que haja uma tabela com uma coluna sql_variant como:
@@ -95,4 +95,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>Confira também
 
-[Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

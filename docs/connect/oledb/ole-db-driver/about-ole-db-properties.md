@@ -14,12 +14,12 @@ helpviewer_keywords:
 - property values [OLE DB Driver for SQL Server]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1cd1a9f56ff4ac70ee0802bed3ffc7856c04678e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: af733c202d9413cde25abf98974b7bce0ed8284a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862342"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727209"
 ---
 # <a name="about-ole-db-properties"></a>Sobre propriedades OLE DB
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,6 +73,5 @@ PR 15068:  This HTML comment is being added by PR...
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando um aplicativo do OLE DB Driver for SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
- [Propriedades (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
-  
+ [Propriedades (OLE DB)](/previous-versions/windows/desktop/ms722734(v=vs.85))  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c71c9a458d285cdf33bd785e1bec74a6f33d5820
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: e6925b2b79629fbcbe84f6577e2617e9b45ea82c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288188"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727377"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Como usar o Azure Active Directory com o Driver ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -45,7 +45,7 @@ Os seguintes atributos de pré-conexão foram introduzidos ou modificados para d
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(não definido)|Confira a descrição da palavra-chave `Authentication` acima. `SQL_AU_NONE` é fornecido para substituir explicitamente um valor `Authentication` definido no DSN e/ou na cadeia de conexão, enquanto `SQL_AU_RESET` cancela a definição do atributo caso ele tenha sido definido, permitindo que o DSN ou o valor da cadeia de conexão tenha precedência.|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|Ponteiro como `ACCESSTOKEN` ou NULL|NULO|Se não for NULL, especificará o token de acesso do AzureAD a ser usado. É um erro especificar um token de acesso além de palavras-chave da cadeia de conexão `UID`, `PWD`, `Trusted_Connection` ou `Authentication` ou seus atributos equivalentes. <br> **OBSERVAÇÃO:** O Driver ODBC versão 13.1 só oferece suporte a isso no _Windows_.|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(confira a descrição)|Controla a criptografia de uma conexão. `SQL_EN_OFF` e `SQL_EN_ON` ativam e desativam a criptografia, respectivamente. Se o valor de pré-atributo da configuração `Authentication` não for _nenhum_, ou `SQL_COPT_SS_ACCESS_TOKEN` estiver definido e `Encrypt` não tiver sido especificado no DSN e na cadeia de conexão, o padrão será `SQL_EN_ON`. Caso contrário, o padrão é `SQL_EN_OFF`. Se o atributo de conexão `SQL_COPT_SS_AUTHENTICATION` estiver definido como não sendo _nenhum_, defina explicitamente `SQL_COPT_SS_ENCRYPT` como o valor desejado se `Encrypt` não tiver sido especificado no DSN ou na cadeia de conexão. O valor efetivo desse atributo controla [se a criptografia será usada para a conexão.](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(confira a descrição)|Controla a criptografia de uma conexão. `SQL_EN_OFF` e `SQL_EN_ON` ativam e desativam a criptografia, respectivamente. Se o valor de pré-atributo da configuração `Authentication` não for _nenhum_, ou `SQL_COPT_SS_ACCESS_TOKEN` estiver definido e `Encrypt` não tiver sido especificado no DSN e na cadeia de conexão, o padrão será `SQL_EN_ON`. Caso contrário, o padrão é `SQL_EN_OFF`. Se o atributo de conexão `SQL_COPT_SS_AUTHENTICATION` estiver definido como não sendo _nenhum_, defina explicitamente `SQL_COPT_SS_ENCRYPT` como o valor desejado se `Encrypt` não tiver sido especificado no DSN ou na cadeia de conexão. O valor efetivo desse atributo controla [se a criptografia será usada para a conexão.](../../relational-databases/native-client/features/using-encryption-without-validation.md)|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Não há suporte no Azure Active Directory já que as alterações de senha para entidades de segurança do Azure AD não podem ser realizadas por meio de uma conexão ODBC. <br><br>A expiração de senha para Autenticação do SQL Server foi introduzida no SQL Server 2005. O atributo `SQL_COPT_SS_OLDPWD` foi adicionado para permitir que o cliente forneça tanto a senha antiga quanto a nova para a conexão. Quando essa propriedade estiver definida, o provedor não usará o pool de conexões na primeira conexão nem nas conexões seguintes, já que a cadeia de conexão conterá a "senha antiga", que agora foi alterada.|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|_Preterido_; em vez disso, use `SQL_COPT_SS_AUTHENTICATION` definido como `SQL_AU_AD_INTEGRATED`. <br><br>Força o uso da Autenticação do Windows (Kerberos no Linux e macOS) para validação de acesso no logon do servidor. Quando a Autenticação do Windows é usada, o driver ignora os valores do identificador de usuário e da senha fornecidos como parte do processamento de `SQLConnect`, `SQLDriverConnect` ou `SQLBrowseConnect`.|
 
@@ -135,7 +135,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-O `ACCESSTOKEN` é uma estrutura de comprimento variável formada por um _comprimento_ de 4 bytes seguido pelos bytes de _comprimento_ dos dados opacos que formam o token de acesso. Devido ao modo como SQL Server trata os tokens de acesso, o token obtido por meio de uma resposta JSON do [OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) deve ser expandido para que cada byte seja seguido por um byte de preenchimento 0, semelhante a uma cadeia de caracteres UCS-2 contendo apenas caracteres ASCII; no entanto, o token é um valor opaco e o comprimento especificado, em bytes, não deve incluir terminadores nulos. Devido a suas restrições de comprimento e formato consideráveis, esse método de autenticação só está disponível programaticamente por meio do atributo de conexão `SQL_COPT_SS_ACCESS_TOKEN`. Não há palavras-chave correspondentes da cadeia de conexão e do DSN. A cadeia de conexão não deve conter as palavras-chave `UID`, `PWD`, `Authentication` ou `Trusted_Connection`.
+O `ACCESSTOKEN` é uma estrutura de comprimento variável formada por um _comprimento_ de 4 bytes seguido pelos bytes de _comprimento_ dos dados opacos que formam o token de acesso. Devido ao modo como SQL Server trata os tokens de acesso, o token obtido por meio de uma resposta JSON do [OAuth 2.0](/azure/active-directory/develop/active-directory-authentication-scenarios) deve ser expandido para que cada byte seja seguido por um byte de preenchimento 0, semelhante a uma cadeia de caracteres UCS-2 contendo apenas caracteres ASCII; no entanto, o token é um valor opaco e o comprimento especificado, em bytes, não deve incluir terminadores nulos. Devido a suas restrições de comprimento e formato consideráveis, esse método de autenticação só está disponível programaticamente por meio do atributo de conexão `SQL_COPT_SS_ACCESS_TOKEN`. Não há palavras-chave correspondentes da cadeia de conexão e do DSN. A cadeia de conexão não deve conter as palavras-chave `UID`, `PWD`, `Authentication` ou `Trusted_Connection`.
 
 > [!NOTE]
 > O Driver ODBC versão 13.1 só oferece suporte a essa autenticação no _Windows_.

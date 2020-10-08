@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: d23957c6f735ce7a69830eaf53d6aff113c9b720
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147567"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727264"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configuração do UDL (Universal Data Link)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ Use a guia Avançado para ver e definir propriedades de inicialização adiciona
 
 
 > [!NOTE]  
->  Para obter informações gerais de conexão do vínculo de dados, confira a [Visão geral da API do Data Link](https://go.microsoft.com/fwlink/?linkid=2067432).
+>  Para obter informações gerais de conexão do vínculo de dados, confira a [Visão geral da API do Data Link](/previous-versions/windows/desktop/ms718102(v=vs.85)).
 
 ## <a name="next-steps"></a>Próximas etapas
 - [Autenticar para o Azure Active Directory](../features/using-azure-active-directory.md) usando o driver do OLE DB.

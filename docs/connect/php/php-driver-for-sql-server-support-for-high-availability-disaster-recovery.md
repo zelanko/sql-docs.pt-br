@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e0386a6aba186924ee345bd9d5b470bd0bd6c56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875c5944a0b74c7140843388da1e783e9f2ba5b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477998"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726748"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Suporte a alta disponibilidade e recuperação de desastres
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ Com a versão 3.0 dos Drivers da Microsoft para PHP e para SQL Server será poss
 
 A propriedade de conexão **MultiSubnetFailover** indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou em uma Instância de Cluster de Failover. E que o driver tentará se conectar ao banco de dados na instância primária do SQL Server ao tentar se conectar a todos os endereços IP. Sempre especifique **MultiSubnetFailover=True** ao se conectar a um ouvinte do grupo de disponibilidade ou a uma Instância de Cluster de Failover do SQL Server. Caso o aplicativo esteja conectado a um banco de dados AlwaysOn que faça failover, a conexão original será interrompida e o aplicativo deverá abrir uma nova conexão para continuar trabalhando após o failover.
 
-Detalhes completos sobre grupos de disponibilidade Always On podem ser encontrados na página de documentos [Alta Disponibilidade e Recuperação de Desastre](https://docs.microsoft.com/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery).
+Detalhes completos sobre grupos de disponibilidade Always On podem ser encontrados na página de documentos [Alta Disponibilidade e Recuperação de Desastre](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>Resolução IP de Rede Transparente (TNIR)
 
@@ -72,4 +72,3 @@ O driver retornará um erro se o espelhamento de banco de dados for usado no ban
 
 ## <a name="see-also"></a>Consulte Também  
 [Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)  
-  
