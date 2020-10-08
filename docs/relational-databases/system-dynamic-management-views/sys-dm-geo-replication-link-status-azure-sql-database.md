@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548462"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834257"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Banco de Dados SQL do Azure)
 
@@ -48,10 +48,10 @@ ms.locfileid: "89548462"
 |last_commit|**datetimeoffset**|A hora da última transação confirmada no banco de dados. Se for recuperado no banco de dados primário, ele indica a hora da última confirmação no banco de dados primário. Se for recuperado no banco de dados secundário, ele indica a hora da última confirmação no banco de dados secundário. Se for recuperado no banco de dados secundário quando o primário do link de replicação estiver inativo, ele indicará até que ponto o secundário foi pego.|
   
 > [!NOTE]  
->  Se a relação de replicação for encerrada com a remoção do banco de dados secundário (seção 4,2), a linha desse banco de dados na exibição **Sys. dm_geo_replication_link_status** desaparecerá.  
+>  Se a relação de replicação for encerrada com a remoção do banco de dados secundário (seção 4,2), a linha desse banco de dados na exibição de **Sys.dm_geo_replication_link_status** desaparecerá.  
   
 ## <a name="permissions"></a>Permissões  
- Qualquer conta com view_database_state permissão pode consultar **Sys. dm_geo_replication_link_status**.  
+ Qualquer conta com view_database_state permissão pode consultar **Sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Exemplo  
  Mostrar atraso de replicação e tempo da última replicação dos meus bancos de dados secundários.  
@@ -66,8 +66,7 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [ALTER DATABASE &#40;banco de dados SQL do Azure&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys. geo_replication_links &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys. dm_operation_status &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [ALTER DATABASE &#40;banco de dados SQL do Azure&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.geo_replication_links &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

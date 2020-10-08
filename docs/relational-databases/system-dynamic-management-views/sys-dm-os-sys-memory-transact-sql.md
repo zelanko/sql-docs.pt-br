@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_sys_memory (Transact-SQL)
-title: sys. dm_os_sys_memory (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_sys_memory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 490a70abe37841cd5d0a6f7f34a1a58a8fd794a8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b91e4ac74636f30f390cf38526be55d0767a27b1
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539280"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834064"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89539280"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O  está vinculado, e responde, às condições de memória externa, ao nível do sistema operacional e dos limites físicos do hardware subjacente.  Determinar o estado geral do sistema é uma parte importante da avaliação do uso de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_os_sys_memory**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_os_sys_memory**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -47,8 +47,8 @@ ms.locfileid: "89539280"
 |**system_cache_kb**|**bigint**|Quantidade total de memória cache do sistema, em KB.|  
 |**kernel_paged_pool_kb**|**bigint**|Quantidade total da reserva de memória do kernel paginável, em KB.|  
 |**kernel_nonpaged_pool_kb**|**bigint**|Quantidade total da reserva de memória do kernel não paginável, em KB.|  
-|**system_high_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória alta. Um valor de 1 indica o sinal de memória alto determinado pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) na biblioteca do MSDN.|  
-|**system_low_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória insuficiente. Um valor de 1 indica que o sinal de memória insuficiente definido pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) na biblioteca do MSDN.|  
+|**system_high_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória alta. Um valor de 1 indica o sinal de memória alto determinado pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](/windows/win32/api/memoryapi/nf-memoryapi-creatememoryresourcenotification) na biblioteca do MSDN.|  
+|**system_low_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória insuficiente. Um valor de 1 indica que o sinal de memória insuficiente definido pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](/windows/win32/api/memoryapi/nf-memoryapi-creatememoryresourcenotification) na biblioteca do MSDN.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Descrição do estado da memória. Veja a tabela abaixo.|  
 |**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
@@ -66,6 +66,3 @@ ms.locfileid: "89539280"
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-

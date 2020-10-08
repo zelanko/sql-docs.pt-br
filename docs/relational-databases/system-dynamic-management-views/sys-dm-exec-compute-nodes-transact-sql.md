@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_compute_nodes (Transact-SQL)
-title: sys. dm_exec_compute_nodes (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_compute_nodes (Transact-SQL)
+title: sys.dm_exec_compute_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,14 +23,14 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f92655d1b489ddaf35ec8085d68a2059781ecb48
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 85a63b9df2e4d1bbb7a0f4c9096ae8ff192315eb
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542142"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834159"
 ---
-# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
@@ -41,13 +41,12 @@ ms.locfileid: "89542142"
 |Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ID numérica exclusiva associada ao nó. Chave para esta exibição.|Exclusivo entre o cluster de escala horizontal, independentemente do tipo.|  
-|tipo|**nvarchar(32)**|Tipo do nó.|"COMPUTE", "HEAD"|  
+|type|**nvarchar(32)**|Tipo do nó.|"COMPUTE", "HEAD"|  
 |name|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de comprimento apropriado.|  
 |address|**nvarchar(32)**|Endereço IP deste nó.|Intervalo de Endereços IP|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Solução de problemas do polybase com exibições de gerenciamento dinâmico](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solução de problemas do polybase com exibições de gerenciamento dinâmico](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

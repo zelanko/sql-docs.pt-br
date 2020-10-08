@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
-title: sys. dm_db_resource_stats (banco de dados SQL do Azure) | Microsoft Docs
+title: sys.dm_db_resource_stats (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2020
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 083a9d14803d0a8c4e34c43e338f58a0b44be5ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475008"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833701"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88475008"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Hora UTC que indica o término do intervalo de relatório atual.|  
 |avg_cpu_percent|**decimal (5, 2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
-|avg_data_io_percent|**decimal (5, 2)**|Média de utilização de e/s de dados em porcentagem do limite da camada de serviço. Para bancos de dados de hiperescala, consulte [data e/s em estatísticas de utilização de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
+|avg_data_io_percent|**decimal (5, 2)**|Média de utilização de e/s de dados em porcentagem do limite da camada de serviço. Para bancos de dados de hiperescala, consulte [data e/s em estatísticas de utilização de recursos](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal (5, 2)**|Média de gravações do log de transações (em MBps) como percentual do limite da camada de serviço.|  
 |avg_memory_usage_percent|**decimal (5, 2)**|Utilização média de memória, em porcentagem, do limite da camada de serviço.<br /><br /> Isso inclui a memória usada para páginas do pool de buffers e o armazenamento de objetos OLTP na memória.|  
 |xtp_storage_percent|**decimal (5, 2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatórios). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: tabelas com otimização de memória, índices e variáveis de tabela. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retornará 0 se o OLTP na memória não for usado no banco de dados.|  
@@ -51,17 +51,17 @@ ms.locfileid: "88475008"
 |||
   
 > [!TIP]  
-> Para obter mais contexto sobre esses limites e camadas de serviço, consulte as [camadas de serviço](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)de tópicos, [ajustar manualmente o desempenho de consulta no banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)e [limites de recursos do banco de dados SQL e governança de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
+> Para obter mais contexto sobre esses limites e camadas de serviço, consulte as [camadas de serviço](/azure/azure-sql/database/purchasing-models)de tópicos, [ajustar manualmente o desempenho de consulta no banco de dados SQL do Azure](/azure/azure-sql/database/performance-guidance)e [limites de recursos do banco de dados SQL e governança de recursos](/azure/sql-database/sql-database-resource-limits-database-server).
   
 ## <a name="permissions"></a>Permissões
  Essa exibição exige a permissão VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Comentários
- Os dados retornados por **Sys. dm_db_resource_stats** são expressos como uma porcentagem do limite máximo permitido para a camada de serviço/nível de desempenho que você está executando.
+ Os dados retornados pelo **Sys.dm_db_resource_stats** são expressos como uma porcentagem dos limites máximos permitidos para a camada de serviço/nível de desempenho que você está executando.
  
  Se o banco de dados tiver feito failover para outro servidor nos últimos 60 minutos, a exibição retornará apenas os dados para o tempo desde o failover.  
   
- Para uma exibição menos granular desses dados com um período de retenção mais longo, use o modo de exibição de catálogo **Sys. resource_stats** no banco de dados **mestre** . Essa exibição captura dados a cada 5 minutos e mantém dados históricos por 14 dias.  Para obter mais informações, consulte [Sys. resource_stats &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Para uma exibição menos granular desses dados com um período de retenção mais longo, use **Sys.resource_stats** exibição de catálogo no banco de dados **mestre** . Essa exibição captura dados a cada 5 minutos e mantém dados históricos por 14 dias.  Para obter mais informações, consulte [sys.resource_stats &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Quando um banco de dados é membro de um pool elástico, as estatísticas de recursos apresentadas como valores percentuais são expressas como a porcentagem do limite máximo para os bancos de dados, conforme definido na configuração do pool elástico.  
   
@@ -102,4 +102,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Sys. resource_stats &#40;camadas de serviço do banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)
+ [sys.resource_stats &#40;o banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [camadas de serviço](/azure/azure-sql/database/purchasing-models)

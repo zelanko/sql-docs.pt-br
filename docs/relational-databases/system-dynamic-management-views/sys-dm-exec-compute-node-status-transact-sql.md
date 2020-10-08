@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_compute_node_status (Transact-SQL)
-title: sys. dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_compute_node_status (Transact-SQL)
+title: sys.dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17457d540e65f4af1dcef4941d365769ad02f185
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5ba6ccebd6274fc77b12a64b365f4c56ef9783c2
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89533336"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834177"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm_exec_compute_node_status (Transact-SQL)
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Contém informações adicionais sobre o desempenho e o status de todos os nós do polybase. Lista uma linha por nó.  
@@ -53,8 +53,7 @@ ms.locfileid: "89533336"
 |compute_pool_id|`int`|Identificador exclusivo do pool.|
 
 ## <a name="see-also"></a>Consulte Também  
- [Solução de problemas do polybase com exibições de gerenciamento dinâmico](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solução de problemas do polybase com exibições de gerenciamento dinâmico](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

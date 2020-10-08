@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_physical_stats (Transact-SQL)
-title: sys. dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9633305e5d60a9ccbdfcf57f966353792c24a12a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518637"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833867"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "89518637"
   Retorna informações de tamanho e fragmentação dos dados e índices da tabela ou exibição especificada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para um índice, uma linha é retornada para cada nível da árvore B em cada partição. Para um heap, uma linha é retornada para a unidade de alocação de IN_ROW_DATA de cada partição. Para dados LOB (objeto grande), uma linha é retornada para a unidade de alocação de LOB_DATA de cada partição. Se houver dados de estouro de linha na tabela, uma linha será retornada para a unidade de alocação de ROW_OVERFLOW_DATA em cada partição. Retorna informações sobre índices de columnstore otimizado de memória xVelocity.  
   
 > [!IMPORTANT]
-> Se você consultar **Sys. dm_db_index_physical_stats** em uma instância de servidor que está hospedando uma always on [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), poderá encontrar um problema de bloqueio de restauração. Isso ocorre porque essa exibição de gerenciamento dinâmico adquire um bloqueio IS na exibição ou tabela de usuário especificada, que pode bloquear solicitações por um thread REDO para um bloqueio X na exibição ou tabela de usuário.  
+> Se você consultar **Sys.dm_db_index_physical_stats** em uma instância de servidor que está hospedando uma always on [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), poderá encontrar um problema de bloqueio de restauração. Isso ocorre porque essa exibição de gerenciamento dinâmico adquire um bloqueio IS na exibição ou tabela de usuário especificada, que pode bloquear solicitações por um thread REDO para um bloqueio X na exibição ou tabela de usuário.  
   
- **Sys. dm_db_index_physical_stats** não retorna informações sobre índices com otimização de memória. Para obter informações sobre o uso de índice com otimização de memória, consulte [Sys. dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **Sys.dm_db_index_physical_stats** não retorna informações sobre índices com otimização de memória. Para obter informações sobre o uso de índice com otimização de memória, consulte [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -111,7 +111,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Tamanho de registro médio em bytes.<br /><br /> Para um índice, o tamanho de registro médio aplica-se ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o tamanho de registro médio na unidade de alocação IN_ROW_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o tamanho de registro médio na unidade de alocação completa.<br /><br /> NULL quando *Mode* = Limited.|  
 |forwarded_record_count|**bigint**|Número de registros em um heap com ponteiros encaminhados a outro local de dados. (Esse estado ocorre durante uma atualização, quando não há espaço suficiente para armazenar a nova linha no local original.)<br /><br /> NULL para qualquer unidade de alocação diferente das unidades de alocação IN_ROW_DATA de um heap.<br /><br /> NULL para heaps quando *Mode* = Limited.|  
 |compressed_page_count|**bigint**|O número total de páginas compactadas.<br /><br /> Para heaps, as páginas alocadas recentemente não são compactadas com PAGE. Um heap é compactado com PAGE em duas condições especiais: quando os dados são importados em massa ou quando um heap é reconstruído. Operações DML típicas que causam alocações de página não terão compactação PAGE. Reconstrua um heap quando o valor compressed_page_count aumentar ultrapassando o limite desejado.<br /><br /> Para tabelas que têm um índice clusterizado, o valor compressed_page_count indica a eficiência da compactação PAGE.|  
-|hobt_id|BIGINT|Somente para índices columnstore, essa é a ID de um conjunto de linhas que controla dados columnstore internos para uma partição. Os conjuntos de linhas são armazenados como heaps de dados ou árvores binárias. Eles têm a mesma ID de índice que o índice columnstore pai. Para obter mais informações, consulte [Sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL se <br /><br /> **Aplica-se a**: SQL Server 2016 e posterior, banco de dados SQL do Azure, SQL do Azure instância gerenciada|  
+|hobt_id|BIGINT|Somente para índices columnstore, essa é a ID de um conjunto de linhas que controla dados columnstore internos para uma partição. Os conjuntos de linhas são armazenados como heaps de dados ou árvores binárias. Eles têm a mesma ID de índice que o índice columnstore pai. Para obter mais informações, consulte [sys.internal_partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL se <br /><br /> **Aplica-se a**: SQL Server 2016 e posterior, banco de dados SQL do Azure, SQL do Azure instância gerenciada|  
 |column_store_delete_buffer_state|TINYINT| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRENAGEM<br /><br /> 3 = LIBERAÇÃO<br /><br /> 4 = DESATIVANDO<br /><br /> 5 = PRONTO<br /><br />**Aplica-se a**: SQL Server 2016 e posterior, banco de dados SQL do Azure, SQL do Azure instância gerenciada|  
 |column_store_delete_buff_state_desc|| Não é válido-o índice pai não é um índice columnstore.<br /><br /> Os scanners abertos e os verificadores usam isso.<br /><br /> DRENAgem-os Excluidores estão esgotando, mas os scanners ainda o utilizam.<br /><br /> A liberação de buffer é fechada e as linhas no buffer estão sendo gravadas no bitmap de exclusão.<br /><br /> A desativação de linhas no buffer de exclusão fechado foi gravada no bitmap de exclusão, mas o buffer não foi truncado porque os scanners ainda o estão usando. Novos scanners não precisam usar o buffer de desativação porque o buffer aberto é suficiente.<br /><br /> Pronto-este buffer de exclusão está pronto para uso. <br /><br /> **Aplica-se a**: SQL Server 2016 e posterior, banco de dados SQL do Azure, SQL do Azure instância gerenciada|  
 |version_record_count|**bigint**|Esta é a contagem dos registros de versão de linha que estão sendo mantidos neste índice.  Essas versões de linha são mantidas pelo recurso de [recuperação de banco de dados acelerado](../../relational-databases/accelerated-database-recovery-concepts.md) . <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
@@ -125,7 +125,7 @@ sys.dm_db_index_physical_stats (
  A função de gerenciamento dinâmico sys.dm_db_index_physical_stats substitui a instrução DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modos de exame  
- O modo em que a função é executada determina o nível do exame executado para obter os dados estatísticos usados pela função. o *modo* é especificado como limitado, amostrado ou detalhado. A função atravessa as cadeias de páginas para as unidades de alocação que compõem as partições especificadas da tabela ou índice. sys. dm_db_index_physical_stats requer apenas um bloqueio de tabela de tentativa-compartilhada (IS), independentemente do modo em que é executado.  
+ O modo em que a função é executada determina o nível do exame executado para obter os dados estatísticos usados pela função. o *modo* é especificado como limitado, amostrado ou detalhado. A função atravessa as cadeias de páginas para as unidades de alocação que compõem as partições especificadas da tabela ou índice. sys.dm_db_index_physical_stats requer apenas um bloqueio de tabela (IS) de intenção compartilhado, independentemente do modo em que ele é executado.  
   
  O modo LIMITED é o mais rápido e examina o menor número de páginas. Para um índice, apenas as páginas de nível pai da árvore b (ou seja, aquelas acima do nível folha) são examinadas. Para um heap, as páginas PFS e IAM associadas são examinadas, e as páginas de dados de um heap são examinadas no modo LIMITED.  
   
@@ -138,7 +138,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Usando funções de sistema para especificar valores de parâmetro  
  Você pode usar as [!INCLUDE[tsql](../../includes/tsql-md.md)] funções [DB_ID](../../t-sql/functions/db-id-transact-sql.md) e [object_id](../../t-sql/functions/object-id-transact-sql.md) para especificar um valor para os parâmetros *database_id* e *object_id* . No entanto, passar valores que não sejam válidos a essas funções pode causar resultados não intencionais. Por exemplo, se o banco de dados ou nome de objeto não puder ser encontrado por não existir ou por estar escrito incorretamente, ambas as funções retornarão NULL. A função sys.dm_db_index_physical_stats interpreta o NULL como um valor curinga que especifica todos os bancos de dados ou todos os objetos.  
   
- Além disso, a função OBJECT_ID é processada antes que a função sys. dm_db_index_physical_stats seja chamada e, portanto, é avaliada no contexto do banco de dados atual, não no banco de dados especificado em *database_id*. Esse comportamento pode fazer com que a função OBJECT_ID retorne um valor NULL; ou, se o nome do objeto existir no contexto do banco de dados atual e no banco de dados especificado, uma mensagem de erro poderá ser exibida. Os exemplos seguintes demonstram esses resultados não intencionais.  
+ Além disso, a função OBJECT_ID é processada antes que a função sys.dm_db_index_physical_stats seja chamada e, portanto, é avaliada no contexto do banco de dados atual, não no banco de dados especificado em *database_id*. Esse comportamento pode fazer com que a função OBJECT_ID retorne um valor NULL; ou, se o nome do objeto existir no contexto do banco de dados atual e no banco de dados especificado, uma mensagem de erro poderá ser exibida. Os exemplos seguintes demonstram esses resultados não intencionais.  
   
 ```  
 USE master;  
@@ -175,7 +175,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>Melhor prática  
- Sempre verifique se uma ID válida é retornada ao usar DB_ID ou OBJECT_ID. Por exemplo, quando você usa OBJECT_ID, especifique um nome de três partes, como `OBJECT_ID(N'AdventureWorks2012.Person.Address')` , ou teste o valor retornado pelas funções antes de usá-las na função sys. dm_db_index_physical_stats. Os exemplos A e B a seguir demonstram um modo seguro de especificar identificações de banco de dados e objeto.  
+ Sempre verifique se uma ID válida é retornada ao usar DB_ID ou OBJECT_ID. Por exemplo, quando você usa OBJECT_ID, especifique um nome de três partes, como `OBJECT_ID(N'AdventureWorks2012.Person.Address')` , ou teste o valor retornado pelas funções antes de usá-las na função sys.dm_db_index_physical_stats. Os exemplos A e B a seguir demonstram um modo seguro de especificar identificações de banco de dados e objeto.  
   
 ## <a name="detecting-fragmentation"></a>Detectando a fragmentação  
  A fragmentação ocorre por meio dos processos de modificações de dados (instruções INSERT, UPDATE e DELETE) feitas na tabela e, portanto, nos índices definidos na tabela. Como essas modificações não são distribuídas uniformemente entre as linhas da tabela e os índices, o preenchimento de cada página pode variar com o tempo. Para consultas que examinam parte dos índices de uma tabela ou todos eles, esse tipo de fragmentação pode causar leituras de página adicionais. Isso impede o exame paralelo de dados.  
@@ -434,10 +434,8 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições e funções de gerenciamento dinâmico relacionadas ao índice &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.dm_db_index_usage_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.dm_db_partition_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Exibições do sistema &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Exibições do sistema &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)  
   
-  
-

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_encryption_keys (Transact-SQL)
-title: sys. dm_database_encryption_keys (Transact-SQL) | Microsoft Docs
+title: sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6795fed58b8c368e838746d107325c221c58fcf4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b876db6159985e600536439f587004b33fd6fc6f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546629"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834278"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89546629"
 |key_algorithm|**nvarchar(32)**|Exibe o algoritmo que é usado para a chave.|  
 |key_length|**int**|Exibe o comprimento da chave.|  
 |encryptor_thumbprint|**varbinary(20)**|Mostra a impressão digital do criptografador.|  
-|encryptor_type|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Descreve o criptografador.|  
+|encryptor_type|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](../../sql-server/what-s-new-in-sql-server-2016.md)).<br /><br /> Descreve o criptografador.|  
 |percent_complete|**real**|Porcentagem concluída da alteração de estado da criptografia do banco de dados. Será 0 se não houver nenhuma alteração de estado.|
 |encryption_state_desc|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.<br><br> Cadeia de caracteres que indica se o banco de dados está criptografado ou não.<br><br>Nenhuma<br><br>Não CRIPTOGRAFADO<br><br>CRIPTOGRAFADOS<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.<br><br>Indica o estado atual da verificação de criptografia. <br><br>0 = nenhuma verificação foi iniciada, o TDE não está habilitado<br><br>1 = a verificação está em andamento.<br><br>2 = a verificação está em andamento, mas foi suspensa, o usuário pode retomar.<br><br>3 = a verificação foi anulada por algum motivo, a intervenção manual é necessária. Contate a Suporte da Microsoft para obter mais assistência.<br><br>4 = a verificação foi concluída com êxito, o TDE está habilitado e a criptografia está concluída.|
@@ -68,5 +68,4 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
-  
   

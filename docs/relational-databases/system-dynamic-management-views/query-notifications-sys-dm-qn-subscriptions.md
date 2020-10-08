@@ -1,6 +1,6 @@
 ---
-description: Notificações de consulta-sys. dm_qn_subscriptions
-title: sys. dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
+description: Notificações de consulta-sys.dm_qn_subscriptions
+title: sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 197d3fd3ab4108c898c9377bbeed2f0e16e83d76
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542361"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834470"
 ---
-# <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificações de consulta-sys. dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificações de consulta-sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre as assinaturas de notificações de consulta ativa no servidor. Você pode usar essa exibição para verificar assinaturas ativas no servidor ou em um banco de dados especificado, ou verificar um principal de servidor especificado.  
@@ -43,7 +43,7 @@ ms.locfileid: "89542361"
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
-|De|Para|Ativado|Type|  
+|De|Para|Ativado|Tipo|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Muitos para um|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Muitos para um|  
@@ -53,7 +53,7 @@ ms.locfileid: "89542361"
   
  Os códigos de status a seguir indicam que uma assinatura foi acionada devido a uma alteração:  
   
-|Código|Status secundário|Informações|  
+|Código|Status secundário|Info|  
 |----------|------------------|----------|  
 |65798|Assinatura acionada porque os dados foram alterados|Assinatura disparada por inserção|  
 |65799|Assinatura acionada porque os dados foram alterados|Excluir|  
@@ -70,7 +70,7 @@ ms.locfileid: "89542361"
   
  Os códigos de status a seguir indicam que uma assinatura não pôde ser criada:  
   
-|Código|Status secundário|Informações|  
+|Código|Status secundário|Info|  
 |----------|------------------|----------|  
 |132609|A criação de assinatura falhou porque não há suporte à instrução|Consulta muito complexa|  
 |132610|A criação de assinatura falhou porque não há suporte à instrução|Instrução inválida para assinatura|  
@@ -81,7 +81,7 @@ ms.locfileid: "89542361"
   
  Os códigos de status a seguir são usados internamente e são classificados como modos de check kill e init:  
   
-|Código|Status secundário|Informações|  
+|Código|Status secundário|Info|  
 |----------|------------------|----------|  
 |198656|Usado internamente: modos check kill e init|Modo de informações indefinido|  
 |198928|Assinatura destruída|Assinatura acionada porque o banco de dados foi anexado|  
@@ -133,7 +133,6 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico relacionadas a notificações de consulta &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [Exibições de gerenciamento dinâmico relacionadas a notificações de consulta &#40;&#41;Transact-SQL ](./system-dynamic-management-views.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_workload_groups_history_ex (Banco de Dados SQL do Azure)
-title: sys. dm_resource_governor_workload_groups_history_ex (banco de dados SQL do Azure) | Microsoft Docs
+title: sys.dm_resource_governor_workload_groups_history_ex (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: eee98e604fad74b58db9acd5e1f5b20a0189f216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d761d1ca80037e26f8757ec681929dd5356b182f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489710"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834400"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -103,6 +103,6 @@ ORDER BY snapshot_time DESC;
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Governança de taxa de log de tradução](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Limites de recursos DTU do pool elástico](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Limites de recursos vCore do pool elástico](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Governança de taxa de log de tradução](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Limites de recursos DTU do pool elástico](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Limites de recursos vCore do pool elástico](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_wait_stats (Transact-SQL)
-title: sys. dm_os_wait_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/19/2020
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdf67ebe15b869cb295c3090fe24ed5cd4f50413
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532011"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834235"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Retorna informações sobre todas as esperas encontradas por threads executados. É possível usar essa exibição agregada para diagnosticar problemas de desempenho com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também com consultas e lotes específicos. o [Sys. dm_exec_session_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fornece informações semelhantes por sessão.  
+Retorna informações sobre todas as esperas encontradas por threads executados. É possível usar essa exibição agregada para diagnosticar problemas de desempenho com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também com consultas e lotes específicos. [sys.dm_exec_session_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fornece informações semelhantes por sessão.  
   
 > [!NOTE] 
-> Para chamá-lo de ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **, use o nome **Sys. dm_pdw_nodes_os_wait_stats**.  
+> Para chamá-lo de ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ou **, use o nome **Sys.dm_pdw_nodes_os_wait_stats**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -87,7 +87,7 @@ Esse comando redefine todos os contadores como 0.
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
 
-|tipo |Descrição| 
+|type |Descrição| 
 |-------------------------- |--------------------------| 
 |ABR |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| | 
 |AM_INDBUILD_ALLOCATION |Somente para uso interno. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
@@ -136,7 +136,7 @@ Esse comando redefine todos os contadores como 0.
 |BROKER_TRANSMISSION_OBJECT |Somente para uso interno. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |BROKER_TRANSMISSION_TABLE |Somente para uso interno. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |BROKER_TRANSMISSION_WORK |Somente para uso interno. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|BROKER_TRANSMITTER |Ocorre quando o transmissor de Service Broker está aguardando trabalho. Service Broker tem um componente conhecido como transmissor que agenda mensagens de várias caixas de diálogo a serem enviadas pela conexão por um ou mais pontos de extremidade de conexão. O transmissor tem 2 threads dedicados para essa finalidade. Esse tipo de espera é cobrado quando esses threads de transmissor estão aguardando que as mensagens de caixa de diálogo sejam enviadas usando as conexões de transporte. Valores altos de waiting_tasks_count para esse tipo de espera apontam para o trabalho intermitente para esses threads de transmissor e não são indicações de nenhum problema de desempenho. Se o Service Broker não for usado, waiting_tasks_count deve ser 2 (para os dois threads de transmissor) e wait_time_ms deve ser duas vezes a duração desde a inicialização da instância. Consulte [Estatísticas de espera do Service Broker](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types).|
+|BROKER_TRANSMITTER |Ocorre quando o transmissor de Service Broker está aguardando trabalho. Service Broker tem um componente conhecido como transmissor que agenda mensagens de várias caixas de diálogo a serem enviadas pela conexão por um ou mais pontos de extremidade de conexão. O transmissor tem 2 threads dedicados para essa finalidade. Esse tipo de espera é cobrado quando esses threads de transmissor estão aguardando que as mensagens de caixa de diálogo sejam enviadas usando as conexões de transporte. Valores altos de waiting_tasks_count para esse tipo de espera apontam para o trabalho intermitente para esses threads de transmissor e não são indicações de nenhum problema de desempenho. Se o Service Broker não for usado, waiting_tasks_count deve ser 2 (para os dois threads de transmissor) e wait_time_ms deve ser duas vezes a duração desde a inicialização da instância. Consulte [Estatísticas de espera do Service Broker](/archive/blogs/sql_service_broker/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |Pode ocorrer depois de inicialização de instância, enquanto as estruturas de dados internos estiverem sendo inicializadas. Não ocorrerá antes que as estruturas de dados tiverem inicializado.| 
 |CHANGE_TRACKING_WAITFORCHANGES |Somente para uso interno. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |CHECK_PRINT_RECORD |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
@@ -331,7 +331,7 @@ Esse comando redefine todos os contadores como 0.
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |Uma tarefa em segundo plano está aguardando a conclusão da inicialização de uma tarefa em segundo plano que processa as notificações do Windows Server Failover Clustering. Somente para uso interno. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |Uma tarefa em segundo plano está aguardando a conclusão de uma tarefa em segundo plano que processa as notificações do Windows Server Failover Clustering. Somente para uso interno. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |HADR_PARTNER_SYNC |Espera de controle de simultaneidade na lista de parceiro. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|HADR_READ_ALL_NETWORKS |Aguardando para obter acesso de leitura ou gravação para a lista de redes do WSFC. Somente para uso interno. Observação: o mecanismo mantém uma lista de redes WSFC que é usada em exibições de gerenciamento dinâmico (como sys. dm_hadr_cluster_networks) ou para validar Always On instruções Transact-SQL que fazem referência a informações de rede do WSFC. Essa lista é atualizada após a inicialização do mecanismo, as notificações relacionadas ao WSFC e a reinicialização interna de Always On (por exemplo, perder e reconhecer o quorum do WSFC). As tarefas serão geralmente bloqueadas quando uma atualização nessa lista estiver em andamento. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
+|HADR_READ_ALL_NETWORKS |Aguardando para obter acesso de leitura ou gravação para a lista de redes do WSFC. Somente para uso interno. Observação: o mecanismo mantém uma lista de redes WSFC que é usada em exibições de gerenciamento dinâmico (como sys.dm_hadr_cluster_networks) ou para validar Always On instruções Transact-SQL que fazem referência a informações de rede do WSFC. Essa lista é atualizada após a inicialização do mecanismo, as notificações relacionadas ao WSFC e a reinicialização interna de Always On (por exemplo, perder e reconhecer o quorum do WSFC). As tarefas serão geralmente bloqueadas quando uma atualização nessa lista estiver em andamento. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |Aguardando o banco de dados secundário conectar-se ao banco de dados primário antes de executar a recuperação. Essa é uma espera prevista, que pode ser prolongada se a conexão com o primário demorar para ser estabelecida. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |A recuperação de banco de dados está aguardando o banco de dados secundário concluir a fase de reversão e inicialização para devolvê-lo ao ponto de log comum com o banco de dados primário. Essa é uma espera prevista após failovers. O progresso da ação de desfazer pode ser rastreado por meio do Monitor do Sistema do Windows (perfmon.exe) e exibições de gerenciamento dinâmico. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |HADR_REPLICAINFO_SYNC |Aguardando o controle de simultaneidade atualizar o estado da réplica atual. <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
@@ -381,12 +381,12 @@ Esse comando redefine todos os contadores como 0.
 |KTM_ENLISTMENT |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
 |KTM_RECOVERY_MANAGER |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
 |KTM_RECOVERY_RESOLUTION |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|LATCH_DT |Ocorre ao esperar uma trava de DT (destruir). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_EX |Ocorre ao esperar uma trava de EX (exclusivo). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_KP |Ocorre ao esperar uma trava de KP (manutenção). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_DT |Ocorre ao esperar uma trava de DT (destruir). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys.dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_EX |Ocorre ao esperar uma trava de EX (exclusivo). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys.dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_KP |Ocorre ao esperar uma trava de KP (manutenção). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys.dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
 |LATCH_NL |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.| 
-|LATCH_SH |Ocorre ao esperar uma trava de SH (compartilhamento). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_UP |Ocorre ao esperar uma trava de UP (atualização). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_SH |Ocorre ao esperar uma trava de SH (compartilhamento). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys.dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_UP |Ocorre ao esperar uma trava de UP (atualização). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys.dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
 |LAZYWRITER_SLEEP |Ocorre quando as tarefas de gravador lentas são suspensas. É uma medição do tempo gasto por tarefas em segundo plano em espera. Não considere esse estado quando você estiver procurando pausas de usuário.| 
 |LCK_M_BU |Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização em Massa (BU).| 
 |LCK_M_BU_ABORT_BLOCKERS |Ocorre quando uma tarefa está esperando para adquirir um bloqueio BU (Atualização em Massa) com Bloqueadores de Anulação. (Relacionado à opção de espera de baixa prioridade de ALTER TABLE e ALTER INDEX.) <br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
@@ -1024,12 +1024,11 @@ Esse comando redefine todos os contadores como 0.
   
 -   ddl_with_wait_at_low_priority  
   
- Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
+ Para obter uma matriz de compatibilidade de bloqueio, confira [sys.dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
     
  [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys. dm_db_wait_stats &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
-  
+ [&#41;&#40;Transact-SQL de sys.dm_exec_session_wait_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_db_wait_stats &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
