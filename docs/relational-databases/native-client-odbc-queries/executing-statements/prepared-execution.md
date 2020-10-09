@@ -19,17 +19,17 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 721b2377f5539a4ee047816da6e5ecb5bc2fe213
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f1eb4580f3654b12f09b39e2fadf2167a9f9e561
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486770"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869337"
 ---
 # <a name="prepared-execution"></a>Execução preparada
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  A API do ODBC define a execução preparada como um modo de reduzir a sobrecarga de análise e compilação associada à execução repetida da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)]. O aplicativo compila uma cadeia de caracteres que contém uma instrução SQL e então a executa em duas fases. Ele chama a [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) uma vez para que a instrução seja analisada e compilada em um plano de execução pelo [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . Em seguida, ele chama **SQLExecute** para cada execução do plano de execução preparado. Dessa forma, a sobrecarga de análise e compilação é salva em cada execução. A execução preparada geralmente é usada através de aplicativos para executar a mesma instrução SQL com parâmetros várias vezes.  
+  A API do ODBC define a execução preparada como um modo de reduzir a sobrecarga de análise e compilação associada à execução repetida da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)]. O aplicativo compila uma cadeia de caracteres que contém uma instrução SQL e então a executa em duas fases. Ele chama a [função SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md) uma vez para que a instrução seja analisada e compilada em um plano de execução pelo [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . Em seguida, ele chama **SQLExecute** para cada execução do plano de execução preparado. Dessa forma, a sobrecarga de análise e compilação é salva em cada execução. A execução preparada geralmente é usada através de aplicativos para executar a mesma instrução SQL com parâmetros várias vezes.  
   
  Para a maioria dos bancos de dados, a execução preparada é mais rápida que a direta para instruções executadas mais de três ou quatro vezes primariamente, pois a instrução é compilada somente uma vez, enquanto instruções executadas diretamente são compiladas sempre que ocorrem. A execução preparada também pode fornecer uma redução no tráfego de rede, pois o driver pode enviar um identificador do plano de execução e os valores de parâmetro, em vez de toda uma instrução SQL, para a fonte de dados sempre que a instrução for executada.  
   
@@ -49,5 +49,4 @@ ms.locfileid: "88486770"
   
 ## <a name="see-also"></a>Consulte Também  
  [Executando instruções &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
-  
   
