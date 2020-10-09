@@ -14,19 +14,19 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a27332a7948c535b768f6507aad81ca72bbcbb26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455952"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867996"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>Enumerar SQL Server Native Client OLE DB fontes de dados (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este exemplo mostra como usar o objeto enumerador para listar as fontes de dados disponíveis.  
   
- Para listar as fontes de dados visíveis para o enumerador SQLOLEDB, o consumidor chama o método [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Esse método retorna um conjunto de linhas de informações sobre as fontes de dados visíveis no momento.  
+ Para listar as fontes de dados visíveis para o enumerador SQLOLEDB, o consumidor chama o método [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) . Esse método retorna um conjunto de linhas de informações sobre as fontes de dados visíveis no momento.  
   
  Dependendo da biblioteca de rede usada, o domínio apropriado é pesquisado em busca das fontes de dados. Para pipes nomeados, é o domínio no qual o cliente fez logon. Para AppleTalk, é a zona padrão. Para SPX/IPX, é a lista de instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontradas no bindery. Para Banyan VINES, são as instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontradas na rede local. Soquetes TCP/IP e de protocolos múltiplos não são suportados.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88455952"
  Este exemplo exige o banco de dados de exemplo AdventureWorks, que pode ser baixado na home page de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês).  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)(em inglês).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Para enumerar fontes de dados OLE DB  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

@@ -20,11 +20,12 @@ ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b001a0222f32b3810e3610c11d8fdce672d7bd38
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 912a025e689343ffe3dce2ccc19dbec600576cd1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004677"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867278"
 ---
 # <a name="processing-results-odbc"></a>Processando resultados (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "86004677"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Determinando as características de um conjunto de resultados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+-   [Determinando as características de um conjunto de resultados &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
 -   [Atribuindo armazenamento](../../relational-databases/native-client-odbc-results/assigning-storage.md)  
   
@@ -81,6 +82,5 @@ ms.locfileid: "86004677"
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Tópicos de instruções sobre o processamento de resultados &#40;ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
-  
+ [Tópicos de instruções sobre o processamento de resultados &#40;ODBC&#41;](../native-client-odbc-how-to/processing-results-process-results.md)  
   

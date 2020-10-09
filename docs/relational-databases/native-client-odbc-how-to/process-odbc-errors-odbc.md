@@ -14,29 +14,29 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5bade3c381024ef8e20ac069ed3effd16ac1e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cab8507af433b39a6be6e35063d8a89c713af3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490852"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868875"
 ---
 # <a name="process-odbc-errors-odbc"></a>Processar erros ODBC (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  É possível usar duas chamadas de função ODBC para recuperar mensagens ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Para obter informações relacionadas ao ODBC principal nos campos de diagnóstico **SQLState**, **pfNative** e **ErrorMessage**, chame [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) até ele retornar SQL_NO_DATA. Para cada registro de diagnóstico, é possível chamar [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) a fim de recuperar campos individuais. Todos os campos específicos do driver devem ser recuperados usando **SQLGetDiagField**.  
+  É possível usar duas chamadas de função ODBC para recuperar mensagens ODBC: [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Para obter informações relacionadas ao ODBC principal nos campos de diagnóstico **SQLState**, **pfNative** e **ErrorMessage**, chame [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) até ele retornar SQL_NO_DATA. Para cada registro de diagnóstico, é possível chamar [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) a fim de recuperar campos individuais. Todos os campos específicos do driver devem ser recuperados usando **SQLGetDiagField**.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) são processados pelo Gerenciador de Driver ODBC, não por um driver individual. O Gerenciador de Driver ODBC não armazena em cache campos de diagnóstico específicos do driver até que seja feita uma conexão bem-sucedida. Não é possível chamar [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) para campos de diagnóstico específicos do driver antes de obter uma conexão bem-sucedida. Isso inclui os comandos de conexão ODBC, mesmo se eles retornarem SQL_SUCCESS_WITH_INFO. Os campos de diagnóstico específicos do driver não estarão disponíveis até a próxima chamada de função ODBC.  
+ [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) são processados pelo Gerenciador de Driver ODBC, não por um driver individual. O Gerenciador de Driver ODBC não armazena em cache campos de diagnóstico específicos do driver até que seja feita uma conexão bem-sucedida. Não é possível chamar [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) para campos de diagnóstico específicos do driver antes de obter uma conexão bem-sucedida. Isso inclui os comandos de conexão ODBC, mesmo se eles retornarem SQL_SUCCESS_WITH_INFO. Os campos de diagnóstico específicos do driver não estarão disponíveis até a próxima chamada de função ODBC.  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- O exemplo mostra um manipulador de erros simples que chama [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) para as informações ODBC padrão. Em seguida, ele testa se há uma conexão válida e, em caso positivo, chama o **SQLGetDiagField** para os campos de diagnósticos específicos de driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este exemplo não tem suporte em IA64.  
+ O exemplo mostra um manipulador de erros simples que chama [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) para as informações ODBC padrão. Em seguida, ele testa se há uma conexão válida e, em caso positivo, chama o **SQLGetDiagField** para os campos de diagnósticos específicos de driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este exemplo não tem suporte em IA64.  
   
  Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference)(em inglês).  
   
  Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
@@ -241,5 +241,4 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
-  
   

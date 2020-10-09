@@ -22,11 +22,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab2bb533605c09a0a0d20e970eef58c1fbdd7ffd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95cf24fb9cfa226708c4d628110c295f35e1fe4d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002911"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869340"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Usar parâmetros de instrução – Parâmetros de associação
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,9 +60,8 @@ ms.locfileid: "86002911"
   
  Só há suporte para parâmetros nomeados ao usar a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução **Execute** ou a sequência de escape de chamada ODBC para executar um procedimento armazenado.  
   
- Se **SQL_DESC_NAME** for definido para um parâmetro de procedimento armazenado, todos os parâmetros de procedimento armazenado na consulta também deverão definir **SQL_DESC_NAME**.  Se literais forem usadas em chamadas de procedimento armazenado, em que os parâmetros têm **SQL_DESC_NAME** definido, os literais deverão usar o formato *' name* = *Value*', em que *Name* é o nome do parâmetro de procedimento armazenado (por exemplo, @p1 ). Para obter mais informações, consulte [ligando parâmetros por nome (parâmetros nomeados)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Se **SQL_DESC_NAME** for definido para um parâmetro de procedimento armazenado, todos os parâmetros de procedimento armazenado na consulta também deverão definir **SQL_DESC_NAME**.  Se literais forem usadas em chamadas de procedimento armazenado, em que os parâmetros têm **SQL_DESC_NAME** definido, os literais deverão usar o formato *' name* = *Value*', em que *Name* é o nome do parâmetro de procedimento armazenado (por exemplo, @p1 ). Para obter mais informações, consulte [ligando parâmetros por nome (parâmetros nomeados)](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Usando parâmetros de instrução](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
-  
   

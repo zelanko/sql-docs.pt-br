@@ -14,12 +14,12 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f45147881ec8cc2c62f8d023a1fe443164682678
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ecf3ba2f0e332d75af5513d1c960f8e65cd815d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381742"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868993"
 ---
 # <a name="metadata---parameter-and-rowset-in-sql-server-native-client"></a>Metadados-parâmetro e conjunto de linhas em SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -146,6 +146,5 @@ ms.locfileid: "88381742"
  Um novo sinalizador, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, é fornecido em *dwFlags* para permitir que um aplicativo determine o tipo de servidor de colunas, em que *wType* é DBTYPE_DBTIMESTAMP. *bScale* também precisa ser usado para identificar o tipo de servidor.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Metadados &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
-  
+ [Metadados &#40;OLE DB&#41;](./data-type-support-for-ole-db-date-and-time-improvements.md)  
   

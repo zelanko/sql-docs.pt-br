@@ -14,12 +14,12 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48143270af2a56f9662d742ec41e5984972b30c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d61cdfb974a59f61fe53ba65656d49002a816d32
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490829"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868867"
 ---
 # <a name="processing-results---process-results"></a>Resultados do processamento – Resultados do processo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ O processamento de resultados em um aplicativo ODBC envolve primeiro determinar 
   
 3.  Para cada linha no conjunto de resultados:  
   
-    -   Chame [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) para acessar a próxima linha.  
+    -   Chame [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) para acessar a próxima linha.  
   
     -   Se forem usadas colunas associadas, use os dados disponíveis agora nos buffers de coluna associados.  
   
@@ -42,15 +42,15 @@ O processamento de resultados em um aplicativo ODBC envolve primeiro determinar 
   
     -   Chame **SQLGetData** várias vezes para obter dados de uma coluna de textos ou imagens.  
   
-4.  Quando [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) sinalizar o término do conjunto de resultados retornando SQL_NO_DATA, chame [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) para determinar se há outro conjunto de resultados disponível.  
+4.  Quando [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) sinalizar o término do conjunto de resultados retornando SQL_NO_DATA, chame [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) para determinar se há outro conjunto de resultados disponível.  
   
     -   Se SQL_SUCCESS for retornado, outro conjunto de resultados estará disponível.  
   
     -   Se SQL_NO_DATA for retornado, nenhum outro conjunto de resultados estará disponível.  
   
-    -   Se SQL_SUCCESS_WITH_INFO ou SQL_ERROR for retornado, chame [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) para determinar se a saída de uma instrução PRINT ou RAISERROR estará disponível.  
+    -   Se SQL_SUCCESS_WITH_INFO ou SQL_ERROR for retornado, chame [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) para determinar se a saída de uma instrução PRINT ou RAISERROR estará disponível.  
   
-         Se parâmetros de instrução associados forem usados para parâmetros de saída ou o valor retornado de um procedimento armazenado, use os dados disponíveis agora nos buffers de parâmetro associados. Além disso, quando são usados parâmetros associados, cada chamada para [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) ou [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) terá executado a instrução SQL por *S* vezes, em que *S* é o número de elementos na matriz de parâmetros associados. Isso significa que haverá *S* conjuntos de resultados a serem processados, em que cada conjunto de resultados inclui todos os conjuntos de resultados, parâmetros de saída e códigos de retorno geralmente retornados por uma única execução da instrução SQL.  
+         Se parâmetros de instrução associados forem usados para parâmetros de saída ou o valor retornado de um procedimento armazenado, use os dados disponíveis agora nos buffers de parâmetro associados. Além disso, quando são usados parâmetros associados, cada chamada para [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) ou [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) terá executado a instrução SQL por *S* vezes, em que *S* é o número de elementos na matriz de parâmetros associados. Isso significa que haverá *S* conjuntos de resultados a serem processados, em que cada conjunto de resultados inclui todos os conjuntos de resultados, parâmetros de saída e códigos de retorno geralmente retornados por uma única execução da instrução SQL.  
   
     > [!NOTE]  
     >  Quando um conjunto de resultados contém linhas computadas, cada linha computada é disponibilizada como um conjunto de resultados separado. Esses conjuntos de resultados computados são intercalados nas linhas normais e dividem as linhas normais em vários conjuntos de resultados.  
@@ -60,9 +60,8 @@ O processamento de resultados em um aplicativo ODBC envolve primeiro determinar 
 6.  Se outro conjunto de resultados estiver disponível, vá para a Etapa 1.  
 
 > [!NOTE]  
->  Para cancelar o processamento de um conjunto de resultados antes que [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) retorne SQL_NO_DATA, chame [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
+>  Para cancelar o processamento de um conjunto de resultados antes que [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) retorne SQL_NO_DATA, chame [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Recuperar informações do conjunto de resultados &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
-  
   

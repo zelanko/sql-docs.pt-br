@@ -15,14 +15,14 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: a631ed40344fc8661cef23b9758aa35feb041c45
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91729246"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867696"
 ---
-# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database"></a>DMACMD: avaliar a prontidão de um SQL Server banco de dados migrando para o Azure SQL Database 
+# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD: avaliar a prontidão de um SQL Server espaço de dados migrando para o SQL do Azure 
 
 Com muitas organizações tentando migrar para o Azure, é essencial avaliar as instâncias de SQL Server locais existentes e identificar o destino SQL do Azure correto-banco de dados SQL do Azure, Azure SQL Instância Gerenciada ou SQL Server em VMs do Azure. 
 

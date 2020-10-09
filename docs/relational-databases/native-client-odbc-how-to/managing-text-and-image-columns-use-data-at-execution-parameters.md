@@ -14,12 +14,12 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9542741a00cee0206931e6194e3ded2089fe3f4d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ce4d81317218c8823b528c3e37df40694471e9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460750"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868912"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Gerenciar colunas Text e Image – Usar parâmetros de dados em execução
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88460750"
   
     -   Use um **rgbValue** (oitavo parâmetro) de um identificador de parâmetro definido por programa.  
   
-2.  Chamar [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) ou [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) retorna SQL_NEED_DATA, que indica que os parâmetros de dados em execução estão prontos para serem processados.  
+2.  Chamar [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) ou [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) retorna SQL_NEED_DATA, que indica que os parâmetros de dados em execução estão prontos para serem processados.  
   
 3.  Para cada parâmetro de dados em execução:  
   
-    -   Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para obter o ID de parâmetro definido por programa. Isso retornará SQL_NEED_DATA se houver outro parâmetro de dados em execução.  
+    -   Chame [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) para obter o ID de parâmetro definido por programa. Isso retornará SQL_NEED_DATA se houver outro parâmetro de dados em execução.  
   
     -   Chame [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) uma ou mais vezes para enviar os dados de parâmetro, até que o comprimento seja enviado.  
   
-4.  Chame [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para indicar que todos os dados do parâmetro de dados em execução final foram enviados. SQL_NEED_DATA não será retornado.  
+4.  Chame [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) para indicar que todos os dados do parâmetro de dados em execução final foram enviados. SQL_NEED_DATA não será retornado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo mostra como ler dados de caracteres variáveis do SQL_LONG por meio de SQLParamData e SQLPutData. Este exemplo não tem suporte em IA64.  
@@ -226,6 +226,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tópicos de instruções sobre como gerenciar colunas de texto e imagem &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Tópicos de instruções sobre como gerenciar colunas de texto e imagem &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

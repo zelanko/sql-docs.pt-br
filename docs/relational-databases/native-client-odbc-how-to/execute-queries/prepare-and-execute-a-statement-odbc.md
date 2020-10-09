@@ -15,12 +15,12 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a00b92a059014ff36ee1e0b473285641ef107c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ee418dfb4378ea0291996a0a16e5f0596faf471
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423766"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867743"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparar e executar uma instrução (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "88423766"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>Para preparar uma instrução uma vez e, depois, executá-la várias vezes  
   
-1.  Chame a [Função SQL Prepare](https://go.microsoft.com/fwlink/?LinkId=59360) para preparar a instrução.  
+1.  Chame a [Função SQL Prepare](../../../odbc/reference/syntax/sqlprepare-function.md) para preparar a instrução.  
   
-2.  Opcionalmente, chame [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) para determinar o número de parâmetros na instrução preparada.  
+2.  Opcionalmente, chame [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) para determinar o número de parâmetros na instrução preparada.  
   
 3.  Opcionalmente, para cada parâmetro na instrução preparada:  
   
@@ -42,9 +42,9 @@ ms.locfileid: "88423766"
   
     -   Se a instrução tiver marcadores de parâmetro, coloque os valores de dados no buffer de parâmetros associado.  
   
-    -   Chame [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) para executar a instrução preparada.  
+    -   Chame [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) para executar a instrução preparada.  
   
-    -   Se forem usados parâmetros de entrada de dados em execução, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) retornará SQL_NEED_DATA. Envie os dados em partes useo [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   Se forem usados parâmetros de entrada de dados em execução, [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) retornará SQL_NEED_DATA. Envie os dados em partes useo [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Para preparar uma instrução com associação de parâmetro de coluna  
   
@@ -60,7 +60,7 @@ ms.locfileid: "88423766"
   
 2.  Chame SQLPrepare para preparar a instrução.  
   
-3.  Opcionalmente, chame [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) para determinar o número de parâmetros na instrução preparada.  
+3.  Opcionalmente, chame [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) para determinar o número de parâmetros na instrução preparada.  
   
 4.  Opcionalmente, para cada parâmetro na instrução preparada, chame SQLDescribeParam para obter informações de parâmetro.  
   
@@ -116,5 +116,4 @@ ms.locfileid: "88423766"
   
 ## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre como executar consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb647cc83c9d98aedc15531c919c54f9ae7d53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8d8b297afe44f990b7d0fa685ffa4aff51accf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494064"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867786"
 ---
 # <a name="use-cursors-odbc"></a>Usar cursores (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "88494064"
   
 2.  Chame [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para definir o tamanho do conjunto de linhas usando o atributo SQL_ATTR_ROW_ARRAY_SIZE.  
   
-3.  Outra opção será chamar [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) para definir um nome de cursor se as atualizações posicionadas forem feitas usando a cláusula WHERE CURRENT OF.  
+3.  Outra opção será chamar [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) para definir um nome de cursor se as atualizações posicionadas forem feitas usando a cláusula WHERE CURRENT OF.  
   
 4.  Execute a instrução SQL.  
   
-5.  Outra opção será chamar [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) para definir o nome de cursor se as atualizações posicionadas forem feitas usando a cláusula WHERE CURRENT OF e um nome de cursor não foi fornecido com [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) na Etapa 3.  
+5.  Outra opção será chamar [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) para definir o nome de cursor se as atualizações posicionadas forem feitas usando a cláusula WHERE CURRENT OF e um nome de cursor não foi fornecido com [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) na Etapa 3.  
   
 6.  Chame [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) para obter o número de colunas (C) no conjunto de linhas.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "88494064"
   
     -   Se SQL_NO_DATA for retornado, nenhum outro conjunto de resultados estará disponível.  
   
-    -   Se SQL_SUCCESS_WITH_INFO ou SQL_ERROR for retornado, chame [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) para determinar se a saída de uma instrução PRINT ou RAISERROR estará disponível.  
+    -   Se SQL_SUCCESS_WITH_INFO ou SQL_ERROR for retornado, chame [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) para determinar se a saída de uma instrução PRINT ou RAISERROR estará disponível.  
   
      Se parâmetros de instrução associados forem usados para parâmetros de saída ou o valor retornado de um procedimento armazenado, use os dados disponíveis agora nos buffers de parâmetro associados.  
   
-     Quando são usados parâmetros associados, cada chamada para [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) ou [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) terá executado a instrução SQL por S vezes, em que S é o número de elementos na matriz de parâmetros associados. Isso significa que haverá S conjuntos de resultados a ser processados, onde cada conjunto consiste em todos os conjuntos de resultados, parâmetros de saída e códigos de retorno normalmente retornados por uma única execução da instrução SQL.  
+     Quando são usados parâmetros associados, cada chamada para [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) ou [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) terá executado a instrução SQL por S vezes, em que S é o número de elementos na matriz de parâmetros associados. Isso significa que haverá S conjuntos de resultados a ser processados, onde cada conjunto consiste em todos os conjuntos de resultados, parâmetros de saída e códigos de retorno normalmente retornados por uma única execução da instrução SQL.  
   
      Observe que, quando um conjunto de resultados contém linhas computadas, cada linha computada é disponibilizada como um conjunto de resultados separado. Esses conjuntos de resultados computados são intercalados nas linhas normais e dividem as linhas normais em vários conjuntos de resultados.  
   
@@ -77,5 +77,4 @@ ms.locfileid: "88494064"
   
 ## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre o uso de cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
-  
   

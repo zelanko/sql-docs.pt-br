@@ -1,6 +1,6 @@
 ---
 description: Enviando dados como um parâmetro com valor de tabela usando dados em execução (ODBC)
-title: Parâmetro com valor de tabela, dados em execução (ODBC)
+title: Table-Valued parâmetro, dados em execução (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499118"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868216"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviando dados como um parâmetro com valor de tabela usando dados em execução (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Isso é semelhante ao procedimento [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , mas usa dados em execução para o parâmetro com valor de tabela.  
   
- Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros de Table-Valued &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
  Neste exemplo, quando SQLExecute ou SQLExecDirect é chamado, o driver retorna SQL_NEED_DATA. O aplicativo então chama SQLParamData repetidamente até que o driver retorne um valor diferente de SQL_NEED_DATA. O driver retorna *ParameterValuePtr* para informar ao aplicativo qual parâmetro ele está solicitando dados. O aplicativo chama SQLPutData para fornecer dados de parâmetro antes da próxima chamada para SQLParamData. Para um parâmetro com valor de tabela, a chamada para SQLPutData indica quantas linhas ele preparou para o driver (neste exemplo, sempre 1). Quando todas as linhas do valor de tabela tiverem sido passadas para o driver, SQLPutData será chamado para indicar que 0 linhas estão disponíveis.  
   
@@ -582,6 +582,5 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplos de programação de parâmetros com valor de tabela (ODBC)](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [Exemplos de programação de parâmetros com valor de tabela (ODBC)](./table-valued-parameters-odbc.md)  
   
