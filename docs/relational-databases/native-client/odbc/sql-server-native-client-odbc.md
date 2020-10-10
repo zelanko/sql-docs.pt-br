@@ -20,11 +20,12 @@ ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f5e0cb4acb7be267d54318dff55526c1dd0de84
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 767669b2aec77e689fa9191c013968610f9a9823
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85979187"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892246"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,11 +46,11 @@ ms.locfileid: "85979187"
   
 -   [Executando consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [Processando resultados &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+-   [Processando resultados &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
 -   [Usando cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [Executando transações &#40;&#41;ODBC](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+-   [Executando transações &#40;&#41;ODBC ](./performing-transactions-in-odbc.md)  
   
 -   [Tratando de erros e mensagens](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -57,30 +58,29 @@ ms.locfileid: "85979187"
   
 -   [Usando funções de catálogo](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
   
--   [Executando operações de cópia em massa &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [Executando operações de cópia em massa &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
 -   [Gerenciando colunas de texto e imagem](../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [Criando perfil de desempenho do driver ODBC](../../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
--   [Parâmetros com valor de tabela &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [Parâmetros com valor de tabela &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Melhorias de data e hora &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Melhorias de data e hora &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [Tipos de CLR grandes definidos pelo usuário &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [Tipos de User-Defined CLR grandes &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
--   [Suporte a FILESTREAM &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [Suporte a FILESTREAM &#40;&#41;ODBC ](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
 -   [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Colunas esparsas dão suporte a&#41;&#40;ODBC](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
+-   [Colunas esparsas dão suporte a&#41;&#40;ODBC ](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [Referência de&#41; &#40;ODBC do SQL Server Native Client](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
+-   [Referência de&#41; &#40;ODBC do SQL Server Native Client]()  
   
 -   [Tópicos de instruções sobre ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Programação de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Instalando o SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
-  
   

@@ -21,12 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db94d769171bd5335253611758da5234f6d5a7c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428118"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892266"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Criando perfil de desempenho do driver ODBC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Número de instruções SELECT processadas depois de SQL_PERF_START.|  
 |SQLSelectRows|Número de linhas selecionadas depois de SQL_PERF_START.|  
 |Transactions|Número de transações de usuário depois de SQL_PERF_START, incluindo reversões. Quando um aplicativo ODBC estiver sendo executado com SQL_AUTOCOMMIT_ON, cada comando será considerado uma transação.|  
-|SQLPrepares|Número de chamadas de [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) após SQL_PERF_START.|  
+|SQLPrepares|Número de chamadas de [função SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md) após SQL_PERF_START.|  
 |ExecDirects|Número de chamadas **SQLExecDirect** após SQL_PERF_START.|  
 |SQLExecutes|Número de chamadas **SQLExecute** após SQL_PERF_START.|  
 |CursorOpens|Número de horas que o driver abriu um cursor de servidor depois de SQL_PERF_START.|  
@@ -124,5 +124,4 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Tópicos de instruções de desempenho do driver ODBC de criação de perfil &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

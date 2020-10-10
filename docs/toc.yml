@@ -4330,6 +4330,10 @@
       href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
     - name: Arquitetura de gerenciamento de memória
       href: relational-databases/memory-management-architecture-guide.md
+    - name: Diagnosticando contenção de trava
+      href: relational-databases/diagnose-resolve-latch-contention.md
+    - name: Diagnosticando contenção de spinlock
+      href: relational-databases/diagnose-resolve-spinlock-contention.md
 - name: Instalação
   items:
     - name: Visão geral

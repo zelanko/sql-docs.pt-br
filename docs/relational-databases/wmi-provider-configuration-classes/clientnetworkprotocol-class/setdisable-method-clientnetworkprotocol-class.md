@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 772e6c3eac9a6e6b9434e2cbb9e76f884cc031aa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73430317142354c33b973ee5dca6f0748ba1d6cb
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537189"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889067"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>Método SetDisable (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Desabilita o protocolo de rede do cliente que é especificado pelo [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
+  Desabilita o protocolo de rede do cliente que é especificado pelo [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,6 +46,5 @@ object.SetDisable()
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurando protocolos de cliente de servidor e bibliotecas de rede](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurando protocolos de cliente de servidor e bibliotecas de rede](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

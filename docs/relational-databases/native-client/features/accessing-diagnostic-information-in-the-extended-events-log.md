@@ -10,19 +10,19 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51dc4f1def0f612c0eb074ae1111a177e27c1413
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 71219302c9180000ee14c18f0d7f90c9557c3673
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042757"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891986"
 ---
 # <a name="accessing-sql-server-native-client-diagnostic-information-in-the-extended-events-log"></a>Acessando SQL Server Native Client informações de diagnóstico no log de eventos estendidos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o rastreamento do acesso a dados ([Rastreamento do Acesso a Dados](https://go.microsoft.com/fwlink/?LinkId=125805)) foram atualizados para facilitar a obtenção de informações de diagnóstico sobre falhas de conexão do buffer de anéis de conectividade e informações de desempenho de aplicativo do registro de eventos estendidos.  
+  A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o rastreamento do acesso a dados ([Rastreamento do Acesso a Dados](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))) foram atualizados para facilitar a obtenção de informações de diagnóstico sobre falhas de conexão do buffer de anéis de conectividade e informações de desempenho de aplicativo do registro de eventos estendidos.  
   
- Para obter mais informações sobre como ler o log de eventos estendidos, consulte [View Event Session Data](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49).  
+ Para obter mais informações sobre como ler o log de eventos estendidos, consulte [View Event Session Data](../../extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).  
   
 > [!NOTE]  
 >  Este recurso é destinado somente para finalidades de solucionar problemas e realizar diagnóstico, e pode não ser adequado para auditoria ou propósitos de segurança.  
@@ -215,5 +215,4 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
   
 ## <a name="see-also"></a>Consulte Também  
  [Tratando de erros e mensagens](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
-  
   

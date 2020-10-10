@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09c25de732fa08bc0032164aaf42ca223e71f2c9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: be425aa9234355f695b08297f2088a9760cdeae5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540138"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891266"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>Classe ClientSettingsGeneralFlag
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,5 @@ ms.locfileid: "89540138"
 -   Exibir e modificar o valor de sinalizador.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

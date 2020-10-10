@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff086556b507c0d09750b7ab27671a7b1cfaf496
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e106fa85ac8832782c339b115969e2ca8d4fad4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89522043"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891526"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -95,10 +95,9 @@ Next
   
      ** \<Drive> : \Arquivos de Programas\microsoft SQL Server\MSSQL13** **. \<InstanceName> \MSSQL\Log**  
   
- Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectando-se ao WMI remotamente a partir do Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectando-se ao WMI remotamente a partir do Windows Vista](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Classe sqllogsfile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [Exibir arquivos de log offline](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

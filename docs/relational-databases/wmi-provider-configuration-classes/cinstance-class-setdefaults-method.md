@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a99b8bbc94bf8e62cd8125e01327a4691a296cb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 99771d12be4c10d8d4b823ceb788e9722d417fca
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545301"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890976"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>Classe CInstance – Método SetDefaults
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,6 +52,5 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md)  
   

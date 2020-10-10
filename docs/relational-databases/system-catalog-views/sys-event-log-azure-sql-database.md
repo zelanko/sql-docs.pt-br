@@ -21,16 +21,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d75c8cb02c64b5965fd5a6fe084b065c3dc8ba65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809842"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892396"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Banco de Dados SQL do Azure)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Retorna [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] conexões de banco de dados, falhas de conexão e deadlocks bem-sucedidos. Você pode usar essas informações para controlar ou solucionar problemas da atividade de banco de dados com o [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -172,7 +172,7 @@ WHERE event_type = 'throttling'
     AND end_time <= '2011-09-25 11:00:00';  
 ```
 
-### <a name="db-scoped-extended-event"></a>Evento estendido no escopo do banco de BD
+### <a name="db-scoped-extended-event"></a>DB-Scoped evento estendido
 
  Use o seguinte código de exemplo para configurar a sessão de evento estendido no escopo do BD (XEvent):  
 

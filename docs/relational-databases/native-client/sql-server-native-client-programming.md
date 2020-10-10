@@ -19,11 +19,12 @@ ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 776d2483b31f8bcc5fb31e793667445d9173e7cf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb4fa99aa8b67f27f75746f6c1e094ba12ba8e27
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012101"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891096"
 ---
 # <a name="sql-server-native-client-programming"></a>Programação do SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,12 +69,11 @@ ms.locfileid: "86012101"
  [Localizando mais informações sobre o SQL Server Native Client](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
  Fornece recursos adicionais sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, incluindo links para recursos externos e assistência adicional.  
   
- [Erros do SQL Server Native Client](https://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
+ [Erros do SQL Server Native Client](./sql-server-native-client-error-mssqlserver-50000.md)  
  Contém tópicos sobre erros de runtime associados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Atualizando um aplicativo do SQL Server Native Client 2005](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [Tópicos de instruções sobre ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Tópicos de instruções do OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

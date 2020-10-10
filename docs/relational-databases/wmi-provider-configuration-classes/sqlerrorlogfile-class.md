@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f74e8efc28591bb951d52aa7e242ee259810ff8f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 11c22c1756e580cc194db336fed4e192f5b67e3b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540004"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891636"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ class SQLErrorLogFile
 |InstanceName|Tipo de dados: **cadeia de caracteres**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> Qualificadores: Chave<br /><br /> <br /><br /> O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o arquivo de log reside.|  
 |LastModified|Tipo de dados: **DateTime**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> A data da última modificação do arquivo de log.|  
 |LogFileSize|Tipo de dados: **UInt32**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> O tamanho do arquivo de log, em bytes.|  
-|Name|Tipo de dados: **cadeia de caracteres**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> Qualificadores: Chave<br /><br /> <br /><br /> O nome do arquivo de log.|  
+|Nome|Tipo de dados: **cadeia de caracteres**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> Qualificadores: Chave<br /><br /> <br /><br /> O nome do arquivo de log.|  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -95,10 +95,9 @@ Next
   
      ** \<Drive> : \Arquivos de Programas\microsoft SQL Server\MSSQL11** **. \<InstanceName> \MSSQL\Log**  
   
- Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectando-se ao WMI remotamente a partir do Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectando-se ao WMI remotamente a partir do Windows Vista](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Classe SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   
  [Exibir arquivos de log offline](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

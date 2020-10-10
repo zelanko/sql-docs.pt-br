@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df2e36110a9e4a52a3587644b96994bc040442e8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6187c97f246a8c4eb445fb0afe224922b2c57f03
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519713"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891956"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Compreendendo o Provedor WMI para eventos do servidor
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O Provedor WMI para Eventos do Servidor permite usar o WMI para monitorar eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O provedor funciona transformando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um objeto WMI gerenciado. Qualquer evento que possa gerar uma notificação de eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser aproveitado pelo WMI usando esse provedor. Além disso, como um aplicativo de gerenciamento que interage com o WMI, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode responder a esses eventos, aumentando o escopo de eventos abordados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em versões anteriores.  
   
- Aplicativos de gerenciamento, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, podem acessar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usem o Provedor WMI para Eventos de Servidor emitindo instruções de linguagem WQL. O WQL é um subconjunto simplificado da linguagem SQL, com algumas extensões específicas do WMI. Usando o WQL, um aplicativo recupera um tipo de evento em relação a um banco de dados específico ou objeto de banco de dados. O Provedor WMI para Eventos de Servidor converte a consulta em uma notificação de eventos, criando efetivamente uma notificação de eventos no banco de dados de destino. Para obter mais informações sobre como as notificações de eventos funcionam no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [provedor WMI para conceitos de eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx). Os eventos que podem ser consultados são listados no [provedor WMI para classes e propriedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Aplicativos de gerenciamento, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, podem acessar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usem o Provedor WMI para Eventos de Servidor emitindo instruções de linguagem WQL. O WQL é um subconjunto simplificado da linguagem SQL, com algumas extensões específicas do WMI. Usando o WQL, um aplicativo recupera um tipo de evento em relação a um banco de dados específico ou objeto de banco de dados. O Provedor WMI para Eventos de Servidor converte a consulta em uma notificação de eventos, criando efetivamente uma notificação de eventos no banco de dados de destino. Para obter mais informações sobre como as notificações de eventos funcionam no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [provedor WMI para conceitos de eventos de servidor](./wmi-provider-for-server-events-concepts.md). Os eventos que podem ser consultados são listados no [provedor WMI para classes e propriedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
  Quando ocorre um evento que dispara a notificação de eventos para enviar uma mensagem, a mensagem vai para um serviço de destino predefinido no **msdb** chamado **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. O serviço coloca o evento em uma fila predefinida no **msdb** chamado **WMIEventProviderNotificationQueue**. (O serviço e a fila são criados dinamicamente pelo provedor quando ele se conecta pela primeira vez ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .) Em seguida, o provedor lê os dados de evento dessa fila e os transforma no MOF (Managed Object Format) antes de retorná-los para o aplicativo. A ilustração a seguir mostra este processo.  
   
@@ -62,9 +62,8 @@ GO
   
  A DLL do provedor, Sqlwep.dll, é carregada apenas uma vez no serviço de host WMI do sistema operacional do servidor, independentemente de quantas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão no servidor.  
   
- Para obter um exemplo de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo de gerenciamento de agente que usa o provedor WMI para eventos de servidor, consulte [exemplo: Criando um alerta de SQL Server Agent usando o provedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms186385.aspx). Para obter um exemplo de um aplicativo de gerenciamento que usa o provedor WMI para eventos de servidor em código gerenciado, consulte [exemplo: usando o provedor de eventos WMI em código gerenciado](https://technet.microsoft.com/library/ms179315.aspx). Mais informações também estão disponíveis sobre o WMI no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK do.  
+ Para obter um exemplo de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo de gerenciamento de agente que usa o provedor WMI para eventos de servidor, consulte [exemplo: Criando um alerta de SQL Server Agent usando o provedor WMI para eventos de servidor](./sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md). Para obter um exemplo de um aplicativo de gerenciamento que usa o provedor WMI para eventos de servidor em código gerenciado, consulte [exemplo: usando o provedor de eventos WMI em código gerenciado](./sample-using-the-wmi-event-provider-with-the-net-framework.md). Mais informações também estão disponíveis sobre o WMI no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK do.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Provedor WMI para conceitos de eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx)  
-  
+ [Provedor WMI para conceitos de eventos de servidor](./wmi-provider-for-server-events-concepts.md)  
   

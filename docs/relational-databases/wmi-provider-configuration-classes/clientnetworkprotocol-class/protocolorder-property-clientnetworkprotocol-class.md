@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51b686edb6ac9e93862c5f90f06bb7370fe47a9a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 40ebe80960ca238cce4ff923a2e2457c45cd77f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89522583"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889038"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>Propriedade ProtocolOrder (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,6 @@ object.ProtocolOrder [= value]
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)   
- [Configurando protocolos de cliente de servidor e bibliotecas de rede](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Configurando protocolos de cliente de servidor e bibliotecas de rede](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

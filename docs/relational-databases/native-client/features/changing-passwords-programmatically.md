@@ -22,12 +22,12 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54eaac3f4b8a5e8cc8ab6de6c0b0c75fb54c22c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c67769e4afd62c4b69628a263f3485ee63081a2a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428178"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892006"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>Alterando SQL Server Native Client senhas programaticamente
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88428178"
   Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do, o Native Client dá suporte ao tratamento de expiração de senha programaticamente por meio do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client e por meio de alterações nas caixas de diálogo de **logon do SQL Server** .  
   
 > [!NOTE]  
->  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../../relational-databases/security/strong-passwords.md).  
+>  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Códigos de erro de logon do SQL Server  
  Quando não é possível estabelecer uma conexão devido a problemas de autenticação, um dos seguintes códigos de erro do SQL Server estará disponível para o aplicativo, de forma a auxiliar no diagnóstico e na recuperação.  
@@ -120,5 +120,4 @@ ms.locfileid: "88428178"
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-  
   

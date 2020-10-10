@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9374bd24e0a9691f41b8fba913df5e0661b4eb3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45b28bc1a026f482172e95ee1c2a30eaa070e722
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540144"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891256"
 ---
 # <a name="clientsettings-class"></a>Classe ClientSettings
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,6 +31,5 @@ ms.locfileid: "89540144"
  Essa classe permite o gerenciamento programático do cliente.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md)  
   
