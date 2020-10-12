@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2f640415ecdc2ae4a48220aeec2a2c78ed79807c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18d4e9c18c4848a0857c1afb146b0d0405f418ce
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488535"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956557"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Instalação e configuração do WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -56,9 +56,9 @@ Para restaurar um backup em uma instância do SQL Server, você pode usar Manage
 Para importar um bacpac para um novo banco de dados SQL, você pode usar Management Studio.
 
 1. adicional Se você ainda não tiver uma SQL Server no Azure, navegue até a [portal do Azure](https://portal.azure.com/) e crie um novo banco de dados SQL. No processo de criar um banco de dados, você criará um servidor do. Anote o servidor.
-   - Consulte [este tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) para criar um banco de dados em minutos
+   - Consulte [este tutorial](/azure/azure-sql/database/single-database-create-quickstart) para criar um banco de dados em minutos
 2. Abra SQL Server Management Studio e conecte-se ao servidor no Azure.
-3. Clique com o botão direito do mouse no nó **bancos** de dados e selecione **importar aplicativo da camada de dados**.
+3. Clique com o botão direito do mouse no nó **bancos de dados** e selecione **importar Data-Tier aplicativo**.
 4. Em **configurações de importação** , selecione **Importar do disco local** e selecione o bacpac do banco de dados de exemplo do sistema de arquivos.
 5. Em **configurações do banco de dados** , altere o nome do banco de dados para *WideWorldImportersDW* e selecione a edição de destino e o objetivo de serviço a serem usados.
 6. Clique em **Avançar** e em **concluir** para iniciar a implantação. Isso levará alguns minutos para ser concluído. Ao especificar um objetivo de serviço inferior a S2, pode levar mais tempo.

@@ -1,6 +1,6 @@
 ---
 description: sys.sql_logins (Transact-SQL)
-title: sys. sql_logins (Transact-SQL) | Microsoft Docs
+title: sys.sql_logins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfa2b330d03b7480021487983e9ff1a3a210ad11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc8e947c60f8a1225b9079cbd55ec9d8a617b712
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375502"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956997"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -35,20 +35,21 @@ ms.locfileid: "88375502"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**|--|Herda de **Sys. server_principals**.|  
+|**\<inherited columns>**|--|Herda de **Sys.server_principals**.|  
 |**com_política_verificada**|**bit**|Política de Senha é verificada.|  
 |**com_expiração_verificada**|**bit**|Expiração de Senha é verificada.|  
 |**password_hash**|**varbinary(256)**|Hash de SQL logon senha. Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]armazenadas, informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal.|  
   
- Para obter uma lista de colunas que essa exibição herda, consulte [Sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). As colunas `owning_principal_id` e `is_fixed_role` não são herdadas de sys. server_principals.
+ Para obter uma lista de colunas que essa exibição herda, consulte [sys.server_principals &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). As colunas `owning_principal_id` e `is_fixed_role` não são herdadas de sys.server_principals.
   
 ## <a name="remarks"></a>Comentários  
- Para exibir os logons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação e os logons de autenticação do Windows, consulte [sys. Server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Para exibir os logons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação e os logons de autenticação do Windows, confira [sys.server_principals &#40;&#41;TRANSACT-SQL ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Quando os usuários de banco de dados independentes estiverem habilitados, as conexões poderão ser feitas sem logons. Para identificar essas contas, consulte  [Sys. database_principals &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Quando os usuários de banco de dados independentes estiverem habilitados, as conexões poderão ser feitas sem logons. Para identificar essas contas, confira  [sys.database_principals &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Os logons de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ver seu próprio nome de logon e o logon de sa. Ver outros logons requer ALTER ANY LOGIN ou uma permissão no logon.  
+ Para exibir o conteúdo da coluna password_hash, a permissão CONTROL SERVER é necessária.
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

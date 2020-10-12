@@ -1,6 +1,6 @@
 ---
 description: sys.http_endpoints (Transact-SQL)
-title: sys. http_endpoints (Transact-SQL) | Microsoft Docs
+title: sys.http_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,17 @@ helpviewer_keywords:
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2672f010bb9345b3ce37ee52ec8aa96d28c79469
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a9d4627c0a5914b4ff62b36fd9357f7919c2e490
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537364"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956371"
 ---
 # <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
 
   Contém uma linha para cada ponto de extremidade criado no servidor que usa o protocolo HTTP.  
   

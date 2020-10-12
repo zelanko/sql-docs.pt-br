@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 9868b414d627c7ea98504120432c0c3a662d463b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824061"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956547"
 ---
 # <a name="installation-and-configuration"></a>Instalação e configuração
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -52,14 +52,14 @@ Para restaurar um backup em uma instância do SQL Server, você pode usar Manage
 5. Se necessário, altere o local de destino dos arquivos de dados e de log no painel **arquivos** . Observe que é uma prática recomendada posicionar arquivos de dados e de log em unidades diferentes.
 6. Clique em **OK**. Isso iniciará a restauração do banco de dados. Após a conclusão, você terá o banco de dados WideWorldImporters instalado em sua instância de SQL Server.
 
-### <a name="azure-sql-database"></a>Banco de dados SQL do Azure
+### <a name="azure-sql-database"></a>Banco de Dados SQL do Azure
 
 Para importar um bacpac para um novo banco de dados SQL, você pode usar Management Studio.
 
 1. adicional Se você ainda não tiver uma SQL Server no Azure, navegue até a [portal do Azure](https://portal.azure.com/) e crie um novo banco de dados SQL. No processo de criar um banco de dados, você criará um servidor do. Anote o servidor.
-   - Consulte [este tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) para criar um banco de dados em minutos
+   - Consulte [este tutorial](/azure/azure-sql/database/single-database-create-quickstart) para criar um banco de dados em minutos
 2. Abra SQL Server Management Studio e conecte-se ao servidor no Azure.
-3. Clique com o botão direito do mouse no nó **bancos** de dados e selecione **importar aplicativo da camada de dados**.
+3. Clique com o botão direito do mouse no nó **bancos de dados** e selecione **importar Data-Tier aplicativo**.
 4. Em **configurações de importação** , selecione **Importar do disco local** e selecione o bacpac do banco de dados de exemplo do sistema de arquivos.
 5. Em **configurações do banco de dados** , altere o nome do banco de dados para *WideWorldImporters* e selecione a edição de destino e o objetivo de serviço a serem usados.
 6. Clique em **Avançar** e em **concluir** para iniciar a implantação. Haverá alguns minutos para ser concluído em um P1. Se um tipo de preço mais baixo for desejado, é recomendável importar para um novo banco de dados P1 e, em seguida, alterar o tipo de preço para o nível desejado.
@@ -68,10 +68,10 @@ Para importar um bacpac para um novo banco de dados SQL, você pode usar Managem
 
 ### <a name="full-text-indexing"></a>Indexação de texto completo
 
-O banco de dados de exemplo pode fazer uso de indexação de texto completo. No entanto, esse recurso não é instalado por padrão com SQL Server-você precisa selecioná-lo durante a instalação do SQL Server (ele é habilitado por padrão no banco de dados SQL do Azure). Portanto, uma etapa pós-instalação é necessária.
+O banco de dados de exemplo pode fazer uso de Full-Text indexação. No entanto, esse recurso não é instalado por padrão com SQL Server-você precisa selecioná-lo durante a instalação do SQL Server (ele é habilitado por padrão no banco de dados SQL do Azure). Portanto, uma etapa pós-instalação é necessária.
 
 1. No SQL Server Management Studio, conecte-se ao banco de dados WideWorldImporters e abra uma nova janela de consulta.
-2. Execute o seguinte comando T-SQL para habilitar o uso da indexação de texto completo no banco de dados:`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Execute o seguinte comando T-SQL para habilitar o uso de Full-Text indexação no banco de dados:  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>Auditoria do SQL Server
@@ -90,9 +90,8 @@ No banco de dados SQL do Azure, a auditoria é configurada por meio do [portal d
 
 Aplica-se a: banco de dados SQL do Azure
 
-A segurança em nível de linha não é habilitada por padrão no download de bacpac de WideWorldImporters. Para habilitar a segurança em nível de linha no banco de dados, execute o seguinte procedimento armazenado:
+A segurança de Row-Level não está habilitada por padrão no download de bacpac de WideWorldImporters. Para habilitar Row-Level segurança no banco de dados, execute o seguinte procedimento armazenado:
 
 ```sql
 EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 ```
-
