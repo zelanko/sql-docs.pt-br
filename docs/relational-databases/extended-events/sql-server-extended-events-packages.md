@@ -14,12 +14,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce93ba3d2049315911ec7297991bf7ce416fab64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7cf573478ce602b15718a54cfb71b03b243d601b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756851"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867045"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacotes de Eventos Estendidos do SQL Server
 
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  Palavras-chave mapeiam com precisão até o agrupamento atual de eventos de Rastreamento do SQL.  
   
 ### <a name="targets"></a>Destinos  
- Destinos são consumidores de evento. Os destinos processam eventos de forma síncrona no thread que aciona o evento ou de forma assíncrona em um thread fornecido pelo sistema. Os Eventos Estendidos fornecem vários destinos que você pode usar conforme apropriado para direcionar a saída do evento. Para obter mais informações, consulte [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+ Destinos são consumidores de evento. Os destinos processam eventos de forma síncrona no thread que aciona o evento ou de forma assíncrona em um thread fornecido pelo sistema. Os Eventos Estendidos fornecem vários destinos que você pode usar conforme apropriado para direcionar a saída do evento. Para obter mais informações, consulte [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130)).  
   
 ### <a name="actions"></a>Ações  
  Uma ação é uma resposta ou série de respostas de programa a um evento. As ações são associadas a um evento e cada evento pode ter um conjunto exclusivo de ações.  
@@ -220,6 +220,5 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Consulte Também  
  [Sessões de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Mecanismo de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
-  
+ [Destinos de eventos estendidos do SQL Server](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))  
   

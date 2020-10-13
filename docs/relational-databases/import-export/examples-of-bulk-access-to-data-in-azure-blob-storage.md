@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7d05c7c6b049958f2f6280f3ee8ed2ae56ce325d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b067b668cfdf0dc42596d7fb6858240ad8d944e9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650844"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867709"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Exemplos de acesso a dados em massa no Armazenamento de Blobs do Azure
 
@@ -40,7 +40,7 @@ O acesso em massa para o armazenamento de blobs do Azure do SQL Server requer, n
 Todos os exemplos a seguir exigem uma credencial com escopo de banco de dados fazendo referência a uma assinatura de acesso compartilhado.
 
 > [!IMPORTANT]
-> A fonte de dados externa deve ser criada com uma credencial com escopo de banco de dados que usa a identidade `SHARED ACCESS SIGNATURE`. Para criar uma assinatura de acesso compartilhado para sua conta de armazenamento, consulte a propriedade **Assinatura de acesso compartilhado** na página de propriedades da conta de armazenamento, no portal do Azure. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Para mais informações, consulte [CRIAR CREDENCIAL COM ESCOPO DE BANCO DE DADOS](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+> A fonte de dados externa deve ser criada com uma credencial com escopo de banco de dados que usa a identidade `SHARED ACCESS SIGNATURE`. Para criar uma assinatura de acesso compartilhado para sua conta de armazenamento, consulte a propriedade **Assinatura de acesso compartilhado** na página de propriedades da conta de armazenamento, no portal do Azure. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Para mais informações, consulte [CRIAR CREDENCIAL COM ESCOPO DE BANCO DE DADOS](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 Crie uma credencial com escopo de banco de dados usando o `IDENTITY`, que deve ser `SHARED ACCESS SIGNATURE`. Use o token SAS gerado para a conta de armazenamento de blobs. Verifique se o token SAS não tem um entrelinhamento `?`, se você tem pelo menos permissão de leitura no objeto que deve ser carregado e se o período de expiração é válido (todas as datas estão em UTC).
 

@@ -12,12 +12,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12288ac1ab4923e776b968a6f990e95a17f96060
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eabca1300e3937d4b1a1f48531c9cc09b1978dd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722412"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867094"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ Este artigo descreve as formas como a adoção de recursos in-memory afeta outro
 
 As subseções a seguir discutem fatores que você deve considerar ao planejar adotar e implementar recursos in-memory. Muitas informações explicativas estão disponíveis em:
 
-- [Usar o OLTP in-memory para melhorar o desempenho do aplicativo no Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-migration/)
+- [Usar o OLTP in-memory para melhorar o desempenho do aplicativo no Banco de Dados SQL do Azure](/azure/azure-sql/in-memory-oltp-configure)
 
 
 
@@ -42,7 +42,7 @@ Um pré-requisito para usar os recursos in-memory pode envolver a edição ou a 
 
 - [Requisitos para usar tabelas com otimização de memória](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
     - [Edições e componentes do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-    - [Recomendações de tipo de preço do Banco de Dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
+    - [Recomendações de tipo de preço do Banco de Dados SQL](/azure/azure-sql/database/service-tiers-vcore)
 
 
 ### <a name="a2-forecast-the-amount-of-active-memory"></a>A. 2 Prever a quantidade de memória ativa
@@ -59,8 +59,8 @@ Uma tabela com otimização de memória que contém 200 GB de dados requer mais 
 
 Para um banco de dados hospedado no serviço de nuvem do Banco de Dados SQL do Azure, a camada de serviço escolhida afeta a quantidade de memória ativa que o banco de dados pode consumir. Você deve se planejar para monitorar o uso de memória do banco de dados usando um alerta. Para obter detalhes, confira:
 
-- Examine os limites de armazenamento de OLTP in-memory para seu [Tipo de preço](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
-- [Monitorar o armazenamento no OLTP in-memory](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
+- Examine os limites de armazenamento de OLTP in-memory para seu [Tipo de preço](/azure/sql-database/sql-database-purchase-models)
+- [Monitorar o armazenamento no OLTP in-memory](/azure/azure-sql/in-memory-oltp-monitor-space)
 
 #### <a name="memory-optimized-table-variables"></a>Variáveis de tabela com otimização de memória
 
@@ -261,7 +261,7 @@ Não há suporte para elementos específicos do Transact-SQL em módulos T-SQL c
 
 Para obter considerações ao migrar um módulo Transact-SQL que usa recursos sem suporte para procedimentos compilados nativamente, consulte:
 
-- [Problemas de migração para procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
+- [Problemas de migração para procedimentos armazenados compilados nativamente](./a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 Além das limitações em determinados elementos do Transact-SQL, também há limitação de operadores de consulta com suporte em módulos T-SQL compilados nativamente. Devido a essas limitações, os procedimentos armazenados compilados nativamente não são adequados para consultas analíticas que processam grandes conjuntos de dados.
 
@@ -297,12 +297,10 @@ No o SQL Server 2016:
 Você pode tornar seus scripts do Transact-SQL mais robustos contra possíveis erros de transação adicionando a *lógica de repetição* a eles. A lógica de repetição tem mais chances de ajudar quando as chamadas UPDATE e DELETE são frequentes ou se a tabela com otimização de memória for referenciada por uma chave estrangeira em outra tabela. Para obter detalhes, confira:
 
 - [Transações com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Limites de dependência de transações em tabelas otimizadas para memória – Erro 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Limites de dependência de transações em tabelas otimizadas para memória – Erro 41839](/archive/blogs/sqlcat/transaction-dependency-limits-with-memory-optimized-tables-error-41839)
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [OLTP na memória (otimização na memória)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
-

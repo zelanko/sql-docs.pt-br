@@ -1,20 +1,20 @@
 ---
 title: Configurar o cluster de disco compartilhado SLES para o SQL Server
 description: Implemente a alta disponibilidade configurando o cluster de disco compartilhado do SLES (SUSE Linux Enterprise Server) para o SQL Server.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4d2032c14f435b48fa181f2fcab388d417ebea7d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c32a526c35d4a4cf236794e1ada6dc66cfac6ba6
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897238"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784723"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado SLES para o SQL Server
 

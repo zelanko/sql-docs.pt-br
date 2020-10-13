@@ -24,12 +24,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 860f4d84084916982fb8328e2fa1cc373d8b3204
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 77b94fa9994a42dd11b6fa5a54fffd222e87feb2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005683"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867444"
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "86005683"
   
     2.  Em **Desta localização**, clique em **Localizações...** para abrir a caixa de diálogo **Localizações** e selecione um dos locais de servidor disponíveis. Quando terminar, clique em **OK**.  
   
-    3.  Sob **Inserir os nomes de objeto a serem selecionados (exemplos)** , insira o nome de usuário ou de grupo que você deseja localizar. Para obter mais informações, consulte [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos](https://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Sob **Inserir os nomes de objeto a serem selecionados (exemplos)** , insira o nome de usuário ou de grupo que você deseja localizar. Para obter mais informações, consulte [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771712(v=ws.11)).  
   
-    4.  Clique em **Avançado...** para mais opções de pesquisa avançada. Para obter mais informações, veja [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos – Página Avançada](https://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Clique em **Avançado...** para mais opções de pesquisa avançada. Para obter mais informações, veja [Caixa de Diálogo Selecionar Usuários, Computadores ou Grupos – Página Avançada](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733110(v=ws.11)).  
   
     5.  Clique em **OK**.  
   
@@ -275,5 +275,4 @@ ms.locfileid: "86005683"
   
 ## <a name="see-also"></a>Consulte Também  
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   

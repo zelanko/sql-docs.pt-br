@@ -15,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a20924d617f3c0333d548a3134f2bfc211dab7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28658f7f420976efe51d84a86123fe037965ab48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733689"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868016"
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
 
@@ -28,9 +28,9 @@ ms.locfileid: "85733689"
 
   Antes de usar o Rastreamento de Eventos do Windows (ETW) como destino, é recomendável ter um conhecimento prático do ETW. O rastreamento ETW é usado junto com o recurso Eventos Estendidos ou como um consumidor de Eventos Estendidos. Os links externos a seguir fornecem um ponto de partida para a obtenção de informações gerais do ETW:  
   
--   [Eventos do Windows](https://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Eventos do Windows](/windows/win32/events/windows-events)  
   
--   [Melhore o ajuste de depuração e desempenho com o ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Melhore o ajuste de depuração e desempenho com o ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)  
   
  O destino de ETW é um destino singleton, embora o destino pode ser adicionado a muitas sessões. Se um evento for gerado em muitas sessões, esse evento somente será propagado para o destino de ETW uma vez por ocorrência de evento. O mecanismo de Eventos Estendidos é limitado a uma única instância por processo.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85733689"
     > [!IMPORTANT]  
     >  O caminho do arquivo não pode ser alterado depois que a sessão for iniciada.  
   
--   Os arquivos MOF (Managed Object Format) estão em *\<your install path>* \Microsoft SQL Server\Shared. Para obter mais informações, veja [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) no MSDN.
+-   Os arquivos MOF (Managed Object Format) estão em *\<your install path>* \Microsoft SQL Server\Shared. Para obter mais informações, veja [Managed Object Format](/windows/win32/wmisdk/managed-object-format--mof-) no MSDN.
 
 <!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->
@@ -99,5 +99,4 @@ ADD TARGET package0.etw_classic_sync_target
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  
-  
   

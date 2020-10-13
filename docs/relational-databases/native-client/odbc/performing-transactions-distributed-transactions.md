@@ -18,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e5ace381694dcc3afdbed36e35e48af147067b32
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892256"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005964"
 ---
 # <a name="create-a-distributed-transaction"></a>Criar uma transação distribuída
 
@@ -64,7 +64,7 @@ Para obter mais informações, consulte [referência do programador do DTC](/pre
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>Alternativa C# para banco de dados SQL na nuvem
 
-O MSDTC não tem suporte para o banco de dados SQL do Azure nem para o Azure SQL Data Warehouse.
+O MSDTC não tem suporte para o banco de dados SQL do Azure nem para o Azure Synapse Analytics.
 
 No entanto, uma transação distribuída pode ser criada para o banco de dados SQL fazendo com que seu programa C# use a classe do .NET [System. Transactions. TransactionScope](/dotnet/api/system.transactions.transactionscope).
 

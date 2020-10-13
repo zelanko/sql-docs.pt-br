@@ -17,22 +17,22 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b62bccc5d3633a4f9f69416a49dfc3511c8370e2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: ceaed72b9a7005cadc20e185099105282693cc95
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809221"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006041"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Banco de Dados SQL do Azure)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
-Retorna a edição (camada de serviço), o objetivo de serviço (tipo de preço) e o nome do pool elástico, se houver, para um banco de dados SQL do Azure ou um SQL Data Warehouse do Azure. Se estiver conectado ao banco de dados mestre em um servidor do Banco de Dados SQL do Azure, retornará informações sobre todos os bancos de dados. Para o SQL Data Warehouse do Azure, você deve estar conectado ao banco de dados mestre.  
+Retorna a edição (camada de serviço), o objetivo de serviço (tipo de preço) e o nome do pool elástico, se houver, para um banco de dados SQL do Azure ou uma análise de Synapse do Azure. Se estiver conectado ao banco de dados mestre em um servidor do Banco de Dados SQL do Azure, retornará informações sobre todos os bancos de dados. Para o Azure Synapse Analytics, você deve estar conectado ao banco de dados mestre.  
   
   
  Para obter informações sobre preços, consulte [Opções e desempenho do banco de dados SQL: preços do banco de dados SQL](https://azure.microsoft.com/pricing/details/sql-database/) e [preços de SQL data warehouse](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Para alterar as configurações de serviço, consulte [ALTER DATABASE (banco de dados SQL do Azure)](../../t-sql/statements/alter-database-transact-sql.md) e [alter database (Azure SQL data warehouse)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
+ Para alterar as configurações de serviço, consulte [ALTER DATABASE (banco de dados SQL do Azure)](../../t-sql/statements/alter-database-transact-sql.md) e [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
   
  A exibição sys.database_service_objectives contém as colunas a seguir.  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 4d0af1b6f32ddc31cef057b2eb13a123dd13e348
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36eef2c38d708b3634d669830e34f46a8480e138
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718085"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809700"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restaurações de arquivo (modelo de recuperação completa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "85718085"
   
      Em uma *restauração de arquivo online*, se o banco de dados estiver online no momento da restauração, ele permanecerá online durante a restauração do arquivo. Porém, cada grupo de arquivos no qual um arquivo está sendo restaurado fica offline durante a operação de restauração. Depois que todos os arquivos de um grupo de arquivos offline são recuperados, o grupo de arquivos é automaticamente colocado online.  
   
-     Para obter informações sobre o suporte para restauração de arquivo e de página online, consulte [Recursos com suporte e edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Para obter informações sobre restaurações online, consulte [Restauração online (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
+     Para obter informações sobre o suporte para restauração de arquivo e de página online, consulte [Recursos com suporte e edições do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Para obter informações sobre restaurações online, consulte [Restauração online (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).
   
     > [!TIP]  
     >  Se você deseja que o banco de dados esteja offline para uma restauração arquivo, coloque o banco de dados offline antes de iniciar a sequência de restauração executando a seguinte instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md): ALTER DATABASE *database_name* SET OFFLINE.  
@@ -141,5 +141,4 @@ RESTORE LOG database_name FROM <tail_log_backup>
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

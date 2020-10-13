@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: c73439c6fd7015bcd6bbae61d4164348331deb17
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279332"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866594"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ A chave mestra de serviço só pode ser aberta pela conta de serviço do Windows
 >  Se você perder todo o acesso às chaves descritas anteriormente, perderá o acesso a objetos, conexões e dados protegidos por essas chaves. É possível restaurar a chave mestra de serviço, conforme descrito nos links aqui mostrados, ou você pode voltar ao sistema de criptografia original para recuperar o acesso. Não há nenhuma "porta dos fundos" para recuperar o acesso.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Chave mestra de serviço](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Chave mestra de serviço]()  
  Fornece uma breve explicação da chave mestra de serviço e suas práticas recomendadas.  
   
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -105,5 +105,4 @@ A chave mestra de serviço só pode ser aberta pela conta de serviço do Windows
  [Excluir e recriar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Adicionar e remover chaves de criptografia para implantação escalável &#40;Gerenciador de Configurações do SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
-  
   

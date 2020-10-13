@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0c28163aab72b8011bb4fdf4984813cbd026091
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 797c213fcba4e74cc9fe2a376985352120d5898b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455610"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868132"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "88455610"
   
  **Para configurar o IIS para sincronização da Web**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurar o IIS para sincronização da Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurar o IIS para sincronização da Web](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configurar o IIS 7 para sincronização da Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "88455610"
   
 -   Cada publicação deve usar um diretório virtual separado para o IIS.  
   
--   A conta sob a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) executa também é a conta que se conectará ao Publicador e ao Distribuidor durante a sincronização. Essa conta deve ser mapeada para uma conta de logon do SQL no Publicador e no Distribuidor. Para obter mais informações, consulte a seção "Definindo permissões para o SQL Server Replication Listener" no [Configurar IIS para sincronização da Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+-   A conta sob a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) executa também é a conta que se conectará ao Publicador e ao Distribuidor durante a sincronização. Essa conta deve ser mapeada para uma conta de logon do SQL no Publicador e no Distribuidor. Para obter mais informações, consulte a seção "Definindo permissões para o SQL Server Replication Listener" no [Configurar IIS para sincronização da Web](./configure-iis-7-for-web-synchronization.md).  
   
 -   É possível usar FTP para entregar o instantâneo do Publicador ao computador que está executando o IIS. O instantâneo é sempre entregue do computador que está executando o IIS ao Assinante, usando HTTPS. Para obter mais informações, consulte [Transferir instantâneos pelo FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
@@ -177,5 +177,4 @@ ms.locfileid: "88455610"
   
 ## <a name="see-also"></a>Consulte Também  
  [Sincronização da Web para replicação de mesclagem](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

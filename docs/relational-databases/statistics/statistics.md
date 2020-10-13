@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116572"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810520"
 ---
 # <a name="statistics"></a>Estatísticas
 
@@ -121,7 +121,7 @@ ORDER BY s.name;
 Você pode usar as seguintes diretrizes para habilitar o sinalizador de rastreamento 2371 em seu ambiente pré-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]:
 
  - Se você não observar problemas de desempenho devido a estatísticas desatualizadas, não será necessário habilitar esse sinalizador de rastreamento.
- - Se você estiver em sistemas SAP, habilite o sinalizador de rastreamento.  Confira mais informações neste [blog](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
+ - Se você estiver em sistemas SAP, habilite o sinalizador de rastreamento.  Confira mais informações neste [blog](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
  - Se for necessário contar com o trabalho noturno para atualizar estatísticas porque a atualização automática atual não é disparada com uma frequência suficiente, considere habilitar o sinalizador de rastreamento 2371 para reduzir o limite.
   
 O otimizador de consulta procura estatísticas desatualizadas antes de compilar uma consulta e antes de executar um plano de consulta em cache. Antes de compilar uma consulta, o otimizador usa as colunas, tabelas e exibições indexadas no predicado de consulta para determinar quais estatísticas podem estar desatualizadas. Antes de executar um plano de consulta em cache, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se o plano de consulta faz referência a estatísticas atualizadas.  
@@ -406,4 +406,4 @@ GO
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

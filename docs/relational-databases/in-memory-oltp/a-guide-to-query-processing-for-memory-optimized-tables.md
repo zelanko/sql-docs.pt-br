@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 2bd48189958a95a54efa128a7b0a9887b4e04b4c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989899"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867416"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -300,6 +300,5 @@ Em relação a esse plano de consulta:
 - A verificação de índice completo em IX_CustomerID foi substituída por uma busca de índice. Isso resultou na verificação de 5 linhas, em vez das 830 linhas exigidas para a verificação de índice completo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)  
   

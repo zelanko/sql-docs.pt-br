@@ -12,12 +12,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93cbaac67010b89f3aca07abb11b7e59459cb4c4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c54b396ea05fd78abfe7c05026d23e37a0f18585
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537039"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866956"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ As tabelas com otimização de memória requerem a existência de memória sufic
 
 Se você estiver criando uma nova tabela com otimização de memória ou estiver migrando uma tabela com base em disco existente para uma tabela com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)], é importante ter uma estimativa razoável das necessidades de memória de cada tabela para que você possa provisionar ao servidor memória suficiente. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
   
-Se você pretende migrar de tabelas baseadas em disco para tabelas com otimização de memória, antes de continuar neste tópico, veja o tópico [Determinando se uma tabela ou procedimento armazenado deve ser movido para OLTP in-memory](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para obter diretrizes sobre as melhores tabelas para migração. Todos os tópicos em [Migrando para OLTP in-memory](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) fornecem diretrizes sobre como migrar de tabelas baseadas em disco para tabelas com otimização de memória. 
+Se você pretende migrar de tabelas baseadas em disco para tabelas com otimização de memória, antes de continuar neste tópico, veja o tópico [Determinando se uma tabela ou procedimento armazenado deve ser movido para OLTP in-memory](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para obter diretrizes sobre as melhores tabelas para migração. Todos os tópicos em [Migrando para OLTP in-memory](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md) fornecem diretrizes sobre como migrar de tabelas baseadas em disco para tabelas com otimização de memória. 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>Diretrizes básicas para estimar os requisitos de memória
 
@@ -132,7 +132,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 Se você estiver criando uma nova tabela, precisará estimar o tamanho da matriz ou a coleta de dados dos testes antes da implantação.  
   
-Para obter informações sobre como os índices de hash funcionam em tabelas com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , veja [Índices de hash](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+Para obter informações sobre como os índices de hash funcionam em tabelas com otimização de memória [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , veja [Índices de hash](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130)).  
   
 #### <a name="setting-the-hash-index-array-size"></a>Definindo o tamanho da matriz de índice de hash  
   
@@ -194,5 +194,4 @@ Os cálculos acima estima suas necessidades de memória para a tabela como exist
   
 ## <a name="see-also"></a>Consulte Também
 
-[Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
+[Migrando para OLTP na memória](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

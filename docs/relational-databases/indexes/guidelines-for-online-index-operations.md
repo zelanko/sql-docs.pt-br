@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e7467127593b5a853bf5c26df75e9bc52ff12e4
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480918"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867672"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 
@@ -38,7 +38,7 @@ Quando você executa operações de índice online, as diretrizes seguintes se a
 - Índices podem ser retomados de onde pararam após uma falha inesperada, failover de banco de dados ou um comando **PAUSE**. Consulte [Criar índice](../../t-sql/statements/create-index-transact-sql.md) e [Alterar índice](../../t-sql/statements/alter-index-transact-sql.md).
 
 > [!NOTE]  
-> As operações de índice online não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte pelas edições](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> As operações de índice online não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte pelas edições](../../sql-server/editions-and-components-of-sql-server-2016.md).  
 
 A tabela seguinte mostra os operações de índice que podem ser executadas online e os índices que são excluídos destas operações online, além das restrições de índice resumíveis. Restrições adicionais também estão incluídas.  
 
@@ -73,7 +73,7 @@ As operações de índice online exigem mais requisitos de espaço em disco que 
 
 Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
-## <a name="performance-considerations"></a>Considerações sobre desempenho
+## <a name="performance-considerations"></a>Considerações sobre o desempenho
 
 Embora as operações de índice online permitam atividade de atualização de usuário simultânea, as operações de índice levarão mais tempo se a atividade de atualização for muito pesada. Tipicamente, as operações de índice online serão mais lentas que as operações de índice offline equivalentes, independentemente do nível de atividade de atualização simultâneo.  
   
@@ -81,11 +81,11 @@ Em razão de ambas as estruturas de fonte e destino serem mantidas durante a ope
   
 Embora recomendemos as operações online , você deve avaliar o seu ambiente e os requisitos específicos. Pode ser melhor executar as operações de índice offline. Fazendo isto, os usuários têm acesso restrito aos dados durante a operação, mas a operação termina mais rapidamente e usa menos recursos.  
   
-Em computadores multiprocessadores em execução no SQL Server 2016, as instruções de índice podem usar mais processadores para executar operações de exame e classificação associadas à instrução de índice da mesma forma que outras consultas. Você pode usar a opção de índice MAXDOP para controlar o número de processadores dedicados a uma operação de índice online. Desse modo, é possível equilibrar os recursos usados por uma operação de índice com aqueles dos usuários simultâneos. Para obter mais informações, consulte [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md). Para mais informações sobre as edições do SQL Server que dão suporte a operações indexadas paralelas, consulte [Recursos compatíveis com as edições](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+Em computadores multiprocessadores em execução no SQL Server 2016, as instruções de índice podem usar mais processadores para executar operações de exame e classificação associadas à instrução de índice da mesma forma que outras consultas. Você pode usar a opção de índice MAXDOP para controlar o número de processadores dedicados a uma operação de índice online. Desse modo, é possível equilibrar os recursos usados por uma operação de índice com aqueles dos usuários simultâneos. Para obter mais informações, consulte [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md). Para mais informações sobre as edições do SQL Server que dão suporte a operações indexadas paralelas, consulte [Recursos compatíveis com as edições](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 Em razão do bloqueio S-lock ou Sch-M ser mantido na fase final da operação de índice, tome cuidado ao executar uma operação de índice online dentro de uma transação de usuário explicita, como no bloco BEGIN TRANSACTION...COMMIT. Fazer isso faz com que a fechadura seja mantida até o término da transação, impedindo portanto simultaneidade de usuário.  
   
-A recriação de índice online pode aumentar a fragmentação quando é permitido executá-la com as opções `MAX DOP > 1` e `ALLOW_PAGE_LOCKS = OFF` . Para obter mais informações, consulte [Como funciona: recriação de índice online - pode causar maior fragmentação](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation).  
+A recriação de índice online pode aumentar a fragmentação quando é permitido executá-la com as opções `MAX DOP > 1` e `ALLOW_PAGE_LOCKS = OFF` . Para obter mais informações, consulte [Como funciona: recriação de índice online - pode causar maior fragmentação](/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation).  
   
 ## <a name="transaction-log-considerations"></a>Considerações do log de transações
 
@@ -134,4 +134,4 @@ ELEVATE_ONLINE e ELEVATE_RESUMABLE são aplicáveis somente a instruções DDL q
 - [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)  
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

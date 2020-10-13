@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493807"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866700"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Consultar colunas usando o Always Encrypted com o Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-Este artigo descreve como consultar colunas criptografadas com o [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usando o [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is). Com o Azure Data Studio, você pode:
+Este artigo descreve como consultar colunas criptografadas com o [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usando o [Azure Data Studio](../../../azure-data-studio/what-is.md). Com o Azure Data Studio, você pode:
 - Recuperar valores de texto cifrado armazenados em colunas criptografadas. 
 - Recuperar valores de texto sem formatação armazenados em colunas criptografadas.  
 - Envie valores de texto sem formatação para colunas criptografadas (por exemplo, em instruções `INSERT` ou `UPDATE` e como um parâmetro de pesquisa de cláusulas `WHERE` em instruções `SELECT`). 
@@ -113,7 +113,7 @@ Para habilitar (desabilitar) o Always Encrypted:
 
 ## <a name="parameterization-for-always-encrypted"></a>Parametrização do Always Encrypted
 
-A Parametrização do Always Encrypted é um recurso do Azure Data Studio 18.1 e posterior que converte automaticamente as variáveis Transact-SQL em parâmetros de consulta (instâncias da [Classe SqlParameter](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)). Isso permite que o [Provedor de Dados Microsoft .NET para SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) subjacente detecte dados destinados a colunas criptografadas e criptografe esses dados antes de enviá-los para o banco de dados.
+A Parametrização do Always Encrypted é um recurso do Azure Data Studio 18.1 e posterior que converte automaticamente as variáveis Transact-SQL em parâmetros de consulta (instâncias da [Classe SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter)). Isso permite que o [Provedor de Dados Microsoft .NET para SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) subjacente detecte dados destinados a colunas criptografadas e criptografe esses dados antes de enviá-los para o banco de dados.
   
 Sem a parametrização, o Provedor de Dados Microsoft .NET para SQL Server passa cada instrução que você cria na janela de consultas como uma consulta sem parâmetros. Se a consulta contiver literais ou variáveis Transact-SQL destinados a colunas criptografadas, o Provedor de Dados do .NET Framework para SQL Server não conseguirá detectá-los e criptografá-los antes de enviar a consulta ao banco de dados. Como resultado, a consulta falhará devido à incompatibilidade de tipo (entre a variável Transact-SQL literal de texto sem formatação e a coluna criptografada). Por exemplo, a consulta a seguir falhará sem parametrização, supondo que a coluna `SSN` seja criptografada.   
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 O Azure Data Studio usa o IntelliSense para informar quais variáveis podem ser parametrizadas com sucesso e quais tentativas de parametrização falham (e por quê).   
 
-Uma declaração de uma variável que pode ser parametrizada com sucesso é marcada com um sublinhado na mensagem de informações na janela de consultas. Caso passe o mouse sobre uma instrução de declaração que foi marcada com um sublinhado na mensagem de informações, você verá a mensagem contendo os resultados do processo de parametrização, incluindo os valores das propriedades de chave do objeto [SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) resultante (a variável é mapeada para: [SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Você também pode ver a lista completa de todas as variáveis que foram parametrizadas com sucesso na exibição de **Problemas**. Para abrir a exibição de **Problemas**, selecione **Exibir** > **Problemas**.    
+Uma declaração de uma variável que pode ser parametrizada com sucesso é marcada com um sublinhado na mensagem de informações na janela de consultas. Caso passe o mouse sobre uma instrução de declaração que foi marcada com um sublinhado na mensagem de informações, você verá a mensagem contendo os resultados do processo de parametrização, incluindo os valores das propriedades de chave do objeto [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) resultante (a variável é mapeada para: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Você também pode ver a lista completa de todas as variáveis que foram parametrizadas com sucesso na exibição de **Problemas**. Para abrir a exibição de **Problemas**, selecione **Exibir** > **Problemas**.    
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: sys. workload_management_workload_classifiers (Transact-SQL)
-title: sys. workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs
+description: sys.workload_management_workload_classifiers (Transact-SQL)
+title: sys.workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: eae75e8580a1a8333574aceabe8be5581ff3087e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88d8010883def59e8d9ab4c3e5535359fcd3d3a1
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475094"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006407"
 ---
-# <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys. workload_management_workload_classifiers (Transact-SQL)
+# <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "88475094"
 |Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|ID exclusiva do classificador. Não permite valor nulo||
-group_name|**sysname**|Nome do grupo de carga de trabalho ao qual o classificador está atribuído. Não permite valor nulo. Ingresse em sys. workload_management_workload_groups ||
+group_name|**sysname**|Nome do grupo de carga de trabalho ao qual o classificador está atribuído. Não permite valor nulo. Junção para sys.workload_management_workload_groups ||
 name|**sysname**|Nome do classificador. Deve ser exclusivo para a instância. Não permite valor nulo.||
 |importance|**sysname**|É a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho. Permite valor nulo.  Quando NULL, a configuração de importância do grupo de carga de trabalho é usada.|baixa, below_normal, normal (padrão), above_normal, alta |
 |create_time|**datetime**|Hora em que o classificador foi criado. Não permite valor nulo.||
@@ -43,4 +43,4 @@ Requer a permissão VIEW SERVER STAT.
 
 ## <a name="next-steps"></a>Próximas etapas
 
- Para obter uma lista de todas as exibições de catálogo para SQL Data Warehouse e data warehouse paralelo, consulte [exibições de catálogo SQL data warehouse e parallel data warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Para criar um classificador de carga de trabalho, consulte [criar classificação de carga de trabalho](../../t-sql/statements/create-workload-classifier-transact-sql.md). Para obter mais informações sobre a classificação de carga de trabalho, consulte [classificação de carga de trabalho](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+ Para obter uma lista de todas as exibições de catálogo para o Azure Synapse Analytics e Parallel data warehouse, consulte [exibições de catálogo SQL data warehouse e paralela data warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Para criar um classificador de carga de trabalho, consulte [criar classificação de carga de trabalho](../../t-sql/statements/create-workload-classifier-transact-sql.md). Para obter mais informações sobre a classificação de carga de trabalho, consulte [classificação de carga de trabalho](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

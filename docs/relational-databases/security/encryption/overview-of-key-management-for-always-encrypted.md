@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784005"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867603"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Visão geral do gerenciamento de chaves do Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ Quando chaves Always Encrypted são gerenciadas sem a separação de funções, 
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>Ferramentas para gerenciar chaves Always Encrypted
 
-Chaves Always Encrypted podem ser gerenciadas usando o [SSMS (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms174173.aspx) e [PowerShell](../../scripting/sql-server-powershell.md):
+Chaves Always Encrypted podem ser gerenciadas usando o [SSMS (SQL Server Management Studio)](../../../ssms/sql-server-management-studio-ssms.md) e [PowerShell](../../../powershell/sql-server-powershell.md):
 
 - **SSMS (SQL Server Management Studio)** – fornece caixas de diálogo e assistentes que combinam tarefas que envolvem o acesso ao repositório de chaves e ao banco de dados, por isso o SSMS não dá suporte à separação de funções, mas facilita a configuração de suas chaves. Para obter mais informações sobre gerenciamento de chaves usando o SSMS, consulte:
     - [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
@@ -101,9 +101,5 @@ Para garantir que Always Encrypted seja eficaz na prevenção desses tipos de at
 
 ## <a name="see-also"></a>Consulte Também
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Tutorial do assistente do Always Encrypted (Cofre de Chaves do Azure)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
-- [Tutorial do assistente do Always Encrypted (Repositório de Certificados do Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
+- [Tutorial do assistente do Always Encrypted (Cofre de Chaves do Azure)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
+- [Tutorial do assistente do Always Encrypted (Repositório de Certificados do Windows)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

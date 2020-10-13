@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 653698d6bb6699d5434d2bfd10b21ccd93aaefa1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882482"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867000"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar alterações a linhas relacionadas com registros lógicos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "85882482"
   
 -   Se registros lógicos forem usados em uma publicação que inclui filtros com parâmetros, você deverá inicializar cada Assinante com um instantâneo de sua partição. Se você inicializar um Assinante com outro método, o Merge Agent falhará. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
--   Não são exibidos conflitos que envolvem registros lógicos no Visualizador de Conflitos. Para exibir informações sobre esses conflitos, use procedimentos armazenados de replicação. Para obter mais informações, consulte [Exibir informações sobre conflitos em publicações de mesclagem &#40;Programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+-   Não são exibidos conflitos que envolvem registros lógicos no Visualizador de Conflitos. Para exibir informações sobre esses conflitos, use procedimentos armazenados de replicação. Para obter mais informações, consulte [Exibir informações sobre conflitos em publicações de mesclagem &#40;Programação Transact-SQL de replicação&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md).  
   
 ### <a name="publication-settings"></a>Configurações de Publicação  
   
@@ -144,5 +144,4 @@ ms.locfileid: "85882482"
   
 ## <a name="see-also"></a>Consulte Também  
  [Opções de artigos para a replicação de mesclagem](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
   

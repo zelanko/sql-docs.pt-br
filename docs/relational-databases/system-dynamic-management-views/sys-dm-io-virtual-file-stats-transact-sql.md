@@ -1,6 +1,6 @@
 ---
 description: sys.dm_io_virtual_file_stats (Transact-SQL)
-title: sys. dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330c14ca06fab7a67c580c1aa1337d1d5c7699cb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70311ec54cd2eb49894751a2891259800552afc6
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532209"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005615"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89532209"
   Retorna estatísticas de E/S para arquivos de dados e de log. Essa exibição de gerenciamento dinâmico substitui a função [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) .  
   
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , use o nome **sys. dm_pdw_nodes_io_virtual_file_stats**. 
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , use o nome **Sys.dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ sys.dm_io_virtual_file_stats (
 ```  
 
 ```  
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
@@ -89,7 +89,7 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
 |**io_stall**|**bigint**|Tempo total, em milissegundos, que os usuários aguardaram até o término de E/S no arquivo.|  
 |**size_on_disk_bytes**|**bigint**|Número de bytes do disco usado por esse arquivo. No caso de arquivos esparsos, esse número é o número real de bytes do disco que é utilizado para os instantâneos do banco de dados.|  
 |**file_handle**|**varbinary**|Identificador de arquivo do Windows desse arquivo.|  
-|**io_stall_queued_read_ms**|**bigint**|**Não se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br /> Latência total de E/S apresentada pela administração do recurso de E/S para leituras. Não permite valor nulo. Para obter mais informações, consulte [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_read_ms**|**bigint**|**Não se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br /> Latência total de E/S apresentada pela administração do recurso de E/S para leituras. Não permite valor nulo. Para obter mais informações, consulte [sys.dm_resource_governor_resource_pools &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Não se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Latência total de E/S apresentada pela administração do recurso de E/S para gravações. Não permite valor nulo.|
 |**pdw_node_id**|**int**|**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador do nó para a distribuição.
  
@@ -114,7 +114,7 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Retornar estatísticas para o arquivo em tempdb
 
-**Aplica-se a:** SQL Data Warehouse do Azure
+**Aplica-se a:** Análise de Synapse do Azure
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 

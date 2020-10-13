@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe3f756c08229631a76effe5fc8b16bc5fe6f965
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 919b3126a47fb0f71efb41e645e0443c309f643e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216701"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867566"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Banco de dados de exemplo para OLTP na memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88216701"
  Este exemplo demonstra o recurso OLTP in-memory. Ele mostra as tabelas com otimização de memória e os procedimentos armazenados compilados nativamente e pode ser usado para demonstrar os benefícios de desempenho do OLTP in-memory.  
   
 > [!NOTE]  
->  Para exibir este tópico para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consulte [Extensões do AdventureWorks para demonstrar o OLTP in-memory](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview).  
+>  Para exibir este tópico para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consulte [Extensões do AdventureWorks para demonstrar o OLTP in-memory](./overview-and-usage-scenarios.md?view=sql-server-ver15#in-memory-oltp-overview).  
   
  O exemplo a seguir migra cinco tabelas do banco de dados do AdventureWorks para a otimização de memória e inclui uma carga de trabalho de demonstração para o processamento de pedidos de vendas. Você pode usar essa carga de trabalho de demonstração para consultar o benefício de desempenho em usar o OLTP in-memory no servidor.  
   
@@ -183,10 +183,10 @@ Do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 em diante, há
   
  Os índices de HASH podem ser usados para otimizar mais a carga de trabalho. Eles são particularmente otimizados para pesquisas de ponto e inserções de linhas. No entanto, lembre-se de que eles não dão suporte a exames de intervalo, exames ordenados ou pesquisas nas colunas de chave de índice. Consequentemente, tome cuidado ao usar esses índices. Além disso, é necessário especificar o bucket_count na hora da criação. Normalmente, ele deve ser definido entre uma e duas vezes o número de valores de chave de índice, mas valores superestimados não costumam ser um problema.  
   
-Para obter mais informações, confira os Manuais Online para obter mais detalhes sobre [diretrizes de índice](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) e diretrizes para [escolher o bucket_count certo](https://sqlserver-help.com/tag/bucket_count/).  
+Para obter mais informações, confira os Manuais Online para obter mais detalhes sobre [diretrizes de índice](/sql/relational-databases/indexes/guidelines-for-online-index-operations) e diretrizes para [escolher o bucket_count certo](https://sqlserver-help.com/tag/bucket_count/).  
 
 Os Manuais Online a seguir fornecem mais informações sobre os seguintes tópicos:
-- [Diretrizes de índice](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [Diretrizes de índice](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  Os índices nas tabelas migradas foram ajustados para a carga de trabalho de processamento de pedidos de vendas de demonstração. A carga de trabalho se baseia em inserções e pesquisas de ponto nas tabelas Sales.SalesOrderHeader_inmem e Sales.SalesOrderDetail_inmem, e ela também se baseia em pesquisas de ponto nas colunas de chave primária nas tabelas Production.Product_inmem e Sales.SpecialOffer_inmem.  
   
@@ -274,7 +274,7 @@ Os Manuais Online a seguir fornecem mais informações sobre os seguintes tópic
   
     -   Atualize as informações de envio de um pedido de vendas específico. Isso também atualizará as informações de envio para todos os itens de linha do pedido de vendas.  
   
-    -   Este é um procedimento de wrapper para os procedimentos armazenados compilados nativamente Sales.usp_UpdateSalesOrderShipInfo_native, com a lógica de repetição para lidar com conflitos em potencial (inesperados) em transações simultâneas que atualizam o mesmo pedido. Para obter mais informações sobre a lógica de repetição, consulte o tópico dos Manuais Online [aqui](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables).  
+    -   Este é um procedimento de wrapper para os procedimentos armazenados compilados nativamente Sales.usp_UpdateSalesOrderShipInfo_native, com a lógica de repetição para lidar com conflitos em potencial (inesperados) em transações simultâneas que atualizam o mesmo pedido. Para obter mais informações sobre a lógica de repetição, consulte o tópico dos Manuais Online [aqui](./transactions-with-memory-optimized-tables.md).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -760,4 +760,4 @@ ORDER BY state, file_type
   
 ## <a name="see-also"></a>Consulte Também
 
-[OLTP in-memory &#40;Otimização na memória&#41;](in-memory-oltp-in-memory-optimization.md)  
+[OLTP in-memory &#40;Otimização na memória&#41;](in-memory-oltp-in-memory-optimization.md)

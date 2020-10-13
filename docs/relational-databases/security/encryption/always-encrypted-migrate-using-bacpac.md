@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b82259c992000578a4fcca1c5807cf551dc9d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc54fedce772b267cf19a9396672b61cf6e6254
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498553"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867773"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>Exportar e importar bancos de dados usando o Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ Se você tem um aplicativo que está configurado para consultar as colunas cript
 Para obter informações detalhadas sobre como exportar e importar um banco de dados, confira:
 - [Exportar um aplicativo da camada de dados](../../data-tier-applications/export-a-data-tier-application.md)
 - [Importar um arquivo BACPAC para criar um novo banco de dados de usuário](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
-- [Exportar um Banco de Dados SQL do Azure para um arquivo BACPAC](https://docs.microsoft.com/azure/sql-database/sql-database-export)
-- [Importar um arquivo BACPAC para um banco de dados no Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-import)
+- [Exportar um Banco de Dados SQL do Azure para um arquivo BACPAC](/azure/sql-database/sql-database-export)
+- [Importar um arquivo BACPAC para um banco de dados no Banco de Dados SQL do Azure](/azure/sql-database/sql-database-import)
 - [SqlPackage.exe](../../../tools/sqlpackage.md)
 
 ## <a name="permissions-for-migrating-databases-with-encrypted-columns"></a>Permissões para migrar bancos de dados com colunas criptografadas

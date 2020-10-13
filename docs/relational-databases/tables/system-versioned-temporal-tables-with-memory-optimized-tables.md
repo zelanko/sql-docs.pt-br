@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72c4b76489628e29825a7a212232a8f4aad99fde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546979"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810453"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
 
@@ -25,7 +25,7 @@ ms.locfileid: "89546979"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-As tabelas temporais com controle da versão do sistema para [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) são projetadas para fornecer uma solução econômica para cenários nos quais há a necessidade de [auditoria de dados e análise pontual](https://msdn.microsoft.com/library/mt631669.aspx) sobre os dados coletados com cargas de trabalho OLTP in-memory. Elas fornecem alta taxa de transferência transacional, simultaneidade livre de bloqueios e, ao mesmo tempo, a capacidade de armazenar grande quantidade de dados de histórico que podem ser consultados facilmente.
+As tabelas temporais com controle da versão do sistema para [Tabelas com otimização de memória](../in-memory-oltp/sample-database-for-in-memory-oltp.md) são projetadas para fornecer uma solução econômica para cenários nos quais há a necessidade de [auditoria de dados e análise pontual](./temporal-table-usage-scenarios.md) sobre os dados coletados com cargas de trabalho OLTP in-memory. Elas fornecem alta taxa de transferência transacional, simultaneidade livre de bloqueios e, ao mesmo tempo, a capacidade de armazenar grande quantidade de dados de histórico que podem ser consultados facilmente.
 
 ## <a name="overview"></a>Visão geral
 
@@ -43,7 +43,7 @@ Os fatos a seguir sobre as tabelas temporais com controle da versão do sistema 
 
 - Apenas as tabelas com otimização de memória podem ter controle da versão do sistema (**DURABILITY = SCHEMA_AND_DATA**).
 - A tabela de histórico para a tabela com controle da versão do sistema com otimização de memória deve ter base em disco, independentemente de ter sido criada pelo usuário final ou o sistema.
-- Consultas que afetam apenas a tabela atual (na memória) podem ser usadas em [módulos T-SQL compilados nativamente](https://msdn.microsoft.com/library/dn133184.aspx). Não há suporte para consultas temporais usando a cláusula FOR SYSTEM TIME em módulos compilados nativamente. O uso da cláusula FOR SYSTEM TIME com tabelas com otimização de memória em consultas ad hoc e módulos não nativos tem suporte.
+- Consultas que afetam apenas a tabela atual (na memória) podem ser usadas em [módulos T-SQL compilados nativamente](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md). Não há suporte para consultas temporais usando a cláusula FOR SYSTEM TIME em módulos compilados nativamente. O uso da cláusula FOR SYSTEM TIME com tabelas com otimização de memória em consultas ad hoc e módulos não nativos tem suporte.
 - Quando **SYSTEM_VERSIONING = ON**, uma tabela interna de preparo com otimização de memória é criada automaticamente para aceitar as alterações de versão do sistema mais recentes resultantes de operações de atualização e exclusão na tabela atual com otimização de memória.
 - Dados da tabela interna de preparo com otimização de memória são movidos regularmente para a tabela de histórico com base em disco pela tarefa de limpeza de dados assíncrona. Esse mecanismo de limpeza de dados tem o objetivo de manter os buffers internos da memória em menos de 10% do consumo de memória de seus objetos pai. Você pode acompanhar o consumo total de memória da tabela temporal com controle da versão do sistema com otimização de memória consultando [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) e resumindo os dados da tabela interna de preparo com otimização de memória e a tabela temporal atual.
 - Você pode impor uma liberação de dados invocando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).

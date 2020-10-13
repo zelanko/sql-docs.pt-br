@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a031fdb7c4a71c26990d26a524e5a75ac784565
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a894198a994f98f9bcb2586c9b1b6a1428f562c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901870"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867909"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicação de mesclagem avançada – detecção e resolução de conflito
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ Resolver conflitos de replicação de mesclagem
  A forma mais objetiva de exibir conflitos é usar o Visualizador de Conflitos de Replicação, disponível no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também fornece procedimentos armazenados que permitem a consulta de tabelas em conflito). O Visualizador de Conflitos e o Resolvedor Interativo são ferramentas semelhantes, mas o Resolvedor Interativo permite resolver conflitos à medida que a sincronização ocorre, enquanto o Visualizador de Conflitos foi projetado para exibir os conflitos após eles terem sido resolvidos. Se os metadados de conflito ainda estiverem disponíveis nas tabelas do sistema (metadados de conflito são retidos por 14 dias, por padrão), será possível substituir os resultados da resolução de conflitos no Visualizador de Conflitos; contudo, se a intervenção direta for necessária de maneira regular, o melhor será usar o Resolvedor Interativo.  
   
 > [!NOTE]  
->  Não são exibidos conflitos que envolvem registros lógicos no Visualizador de Conflitos. Para exibir informações sobre esses conflitos, use procedimentos armazenados de replicação. Para obter mais informações, consulte [Exibir informações sobre conflitos em publicações de mesclagem &#40;Programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Não são exibidos conflitos que envolvem registros lógicos no Visualizador de Conflitos. Para exibir informações sobre esses conflitos, use procedimentos armazenados de replicação. Para obter mais informações, consulte [Exibir informações sobre conflitos em publicações de mesclagem &#40;Programação Transact-SQL de replicação&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md).  
   
  O Visualizador de Conflitos exibe informações de três tabelas do sistema:  
   
@@ -148,9 +148,8 @@ Resolver conflitos de replicação de mesclagem
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Exibir e resolver conflitos de dados em publicações de mesclagem &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programação de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Exibir informações sobre conflitos para publicações de mesclagem &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   Programação de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Exibir informações sobre conflitos para publicações de mesclagem &#40;programação Transact-SQL de replicação&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Sincronizar dados](../../../relational-databases/replication/synchronize-data.md)  
-  
   

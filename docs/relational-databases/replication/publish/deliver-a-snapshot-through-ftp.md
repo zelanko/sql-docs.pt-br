@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8d912f3fd344c535d6101a0598750e61763f6ccf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d809281ec96263d94ccb1ec85b2028d8c16477f8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475535"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869095"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar um instantâneo pelo FTP
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -160,11 +160,11 @@ Para obter mais informações sobre como modificar as propriedades de localizaç
 3.  (Opcional) Para desabilitar a entrega do instantâneo de FTP , execute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) no Publicador do banco de dados de publicação. Especifique um valor de `enabled_for_internet` para `@property` e um valor de `false` para `@value`.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
- O exemplo seguinte cria uma publicação de mesclagem que permite aos Assinantes acessarem os dados de instantâneo que usam FTP. O Assinante deve usar uma conexão VPN segura ao acessar o compartilhamento de FTP. **sqlcmd** as variáveis de script são usadas para fornecer valores de logon e senha. Para obter mais informações, consulte [Usar sqlcmd com variáveis de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
+ O exemplo seguinte cria uma publicação de mesclagem que permite aos Assinantes acessarem os dados de instantâneo que usam FTP. O Assinante deve usar uma conexão VPN segura ao acessar o compartilhamento de FTP. **sqlcmd** as variáveis de script são usadas para fornecer valores de logon e senha. Para obter mais informações, consulte [Usar sqlcmd com variáveis de script](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md).  
   
  [!code-sql[HowTo#sp_createmergepub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_1.sql)]  
   
- O exemplo a seguir cria uma assinatura para uma publicação de mesclagem onde o Assinante obtém o instantâneo usando FTP. O Assinante deve usar uma conexão VPN segura ao acessar o compartilhamento de FTP. **sqlcmd** as variáveis de script são usadas para fornecer valores de logon e senha. Para obter mais informações, consulte [Usar sqlcmd com variáveis de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
+ O exemplo a seguir cria uma assinatura para uma publicação de mesclagem onde o Assinante obtém o instantâneo usando FTP. O Assinante deve usar uma conexão VPN segura ao acessar o compartilhamento de FTP. **sqlcmd** as variáveis de script são usadas para fornecer valores de logon e senha. Para obter mais informações, consulte [Usar sqlcmd com variáveis de script](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md).  
   
  [!code-sql[HowTo#sp_createmergepullsub_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_2.sql)]  
   
@@ -174,5 +174,4 @@ Para obter mais informações sobre como modificar as propriedades de localizaç
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Inicializar uma assinatura com um instantâneo](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
-  
   

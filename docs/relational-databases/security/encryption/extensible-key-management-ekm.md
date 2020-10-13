@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0524aa4738ae7003d763422c20db17e39e89e964
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896796"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867839"
 ---
 # <a name="extensible-key-management-ekm"></a>Gerenciamento extensível de chaves (EKM)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85896796"
   
  O Gerenciador Extensível de Chaves [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que os fornecedores do EKM/HSM de terceiros registrem os seus módulos no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando registrado, os usuários [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem usar as chaves de criptografia armazenadas em módulos EKM. Isso permite o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] acessar os recursos avançados de criptografia, esses módulos oferecem suporte à criptografia em massa e à descriptografia e, às funções de gerenciamento de chave, como envelhecimento de chave e rotação de chave.  
   
- Ao executar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma VM do Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode usar chaves armazenadas no [Cofre da Chave do Azure](https://go.microsoft.com/fwlink/?LinkId=521401). Para obter mais informações, veja [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ Ao executar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma VM do Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode usar chaves armazenadas no [Cofre da Chave do Azure](/azure/key-vault/general/basic-concepts). Para obter mais informações, veja [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## <a name="ekm-configuration"></a>Configuração de EKM  
  O gerenciamento extensível de chaves não está disponível em todas as edições do [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -169,5 +169,4 @@ DECRYPTION BY EKM_AKey1
  [Fazer backup da chave mestra de um banco de dados](../../../relational-databases/security/encryption/back-up-a-database-master-key.md)   
  [Restaurar uma chave mestra de banco de dados](../../../relational-databases/security/encryption/restore-a-database-master-key.md)   
  [Criar chaves simétricas idênticas em dois servidores](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
-  
   

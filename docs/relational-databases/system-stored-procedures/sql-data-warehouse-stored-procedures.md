@@ -13,14 +13,14 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 75186b766ae144719838db981ea9b857876bce23
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 8edea157c14004d48f340af1313ccfabeb9d2818
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809413"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005927"
 ---
-# <a name="sql-data-warehouse-stored-procedures"></a>SQL Data Warehouse procedimentos armazenados
+# <a name="azure-synapse-analytics-stored-procedures"></a>Procedimentos armazenados do Azure Synapse Analytics
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] fornece procedimentos internos que você pode usar para executar operações relacionadas a funções de banco de dados. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] inclui os seguintes procedimentos de sistema:  

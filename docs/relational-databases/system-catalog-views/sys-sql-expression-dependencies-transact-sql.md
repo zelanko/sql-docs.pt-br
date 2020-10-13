@@ -1,6 +1,6 @@
 ---
 description: sys.sql_expression_dependencies (Transact-SQL)
-title: sys. sql_expression_dependencies (Transact-SQL) | Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4aabba6bd3608b4a4392b47e64ee37d7498d80
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548640"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006423"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89548640"
   
 -   Entidades entre banco de dados e entre servidores. São relatados os nomes de entidade; porém, os IDs da entidade não são solucionados.  
   
--   Dependências de coluna em entidades associadas a esquema. As dependências em nível de coluna para objetos não associados a esquema podem ser retornadas usando [Sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).  
+-   Dependências de coluna em entidades associadas a esquema. As dependências em nível de coluna para objetos não associados a esquema podem ser retornadas usando [Sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).  
   
 -   A DDL no nível de servidor é disparada quando está no contexto do banco de dados mestre.  
   
@@ -69,14 +69,14 @@ ms.locfileid: "89548640"
  A tabela a seguir lista os tipos de entidades para os quais as informações de dependência são criadas e mantidas. As informações de dependência não são criadas nem mantidas para regras, padrões, tabelas temporárias, procedimentos armazenados temporários ou objetos do sistema.  
 
 > [!NOTE]
-> O Azure SQL Data Warehouse e Parallel data warehouse dão suporte a tabelas, exibições, estatísticas filtradas e tipos de entidade de procedimentos armazenados Transact-SQL desta lista.  As informações de dependência são criadas e mantidas somente para tabelas, exibições e estatísticas filtradas.  
+> O Azure Synapse Analytics e Parallel data warehouse dão suporte a tabelas, exibições, estatísticas filtradas e tipos de entidade de procedimentos armazenados Transact-SQL desta lista.  As informações de dependência são criadas e mantidas somente para tabelas, exibições e estatísticas filtradas.  
   
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
 |-----------------|------------------------|-----------------------|  
-|Tabela|Sim*|Sim|  
+|Tabela|Sim*|Yes|  
 |Visualizar|Sim|Sim|  
-|Índice filtrado|Sim**|Não|  
-|Estatísticas filtradas|Sim**|Não|  
+|Índice filtrado|Sim**|No|  
+|Estatísticas filtradas|Sim**|No|  
 |Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sim|Sim|  
 |procedimento armazenado CLR|Não|Sim|  
 |Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  

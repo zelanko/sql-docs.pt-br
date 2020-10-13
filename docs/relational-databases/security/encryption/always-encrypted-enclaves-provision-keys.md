@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13e6fd165c65aa8aeaed4394ec91a17c82b72097
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77a438ee4f495429bbe0eb9c1e98728ecb324009
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482229"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867667"
 ---
 # <a name="provision-enclave-enabled-keys"></a>Provisionar chaves habilitadas para enclave
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -68,7 +68,7 @@ Para provisionar chaves habilitadas para enclave usando o PowerShell, você prec
 
 Em geral, os fluxos de trabalho de provisionamento de chave do PowerShell (com e sem separação de função) para Always Encrypted, descritos em [Provisionar chaves Always Encrypted usando o PowerShell](configure-always-encrypted-keys-using-powershell.md) também se aplicam a chaves habilitadas para enclave. Esta seção descreve detalhes específicos de chaves habilitadas para enclave.
 
-O módulo SqlServer PowerShell estende o [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) e [**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) com o parâmetro `-AllowEnclaveComputations` para permitir que você especifique uma chave mestra de coluna habilitada para enclave durante o processo de provisionamento. Um cmdlet cria um objeto local que contém as propriedades de uma chave mestra de coluna (armazenada no Azure Key Vault ou no repositório de certificados do Windows). Se especificada, a propriedade `-AllowEnclaveComputations` marcará a chave como habilitada para enclave no objeto local. Ela também faz com que o cmdlet acesse a chave mestra de coluna referenciada (no Azure Key Vault ou no repositório de certificados do Windows) para assinar digitalmente as propriedades da chave. Depois de criar um objeto de configurações para uma nova chave mestra de coluna habilitada para enclave, você pode usá-lo em uma invocação subsequente do cmdlet [**New-SqlColumnMasterKey**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcolumnmasterkey) para criar um objeto de metadados que descreve a nova chave no banco de dados.
+O módulo SqlServer PowerShell estende o [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) e [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) com o parâmetro `-AllowEnclaveComputations` para permitir que você especifique uma chave mestra de coluna habilitada para enclave durante o processo de provisionamento. Um cmdlet cria um objeto local que contém as propriedades de uma chave mestra de coluna (armazenada no Azure Key Vault ou no repositório de certificados do Windows). Se especificada, a propriedade `-AllowEnclaveComputations` marcará a chave como habilitada para enclave no objeto local. Ela também faz com que o cmdlet acesse a chave mestra de coluna referenciada (no Azure Key Vault ou no repositório de certificados do Windows) para assinar digitalmente as propriedades da chave. Depois de criar um objeto de configurações para uma nova chave mestra de coluna habilitada para enclave, você pode usá-lo em uma invocação subsequente do cmdlet [**New-SqlColumnMasterKey**](/powershell/module/sqlserver/new-sqlcolumnmasterkey) para criar um objeto de metadados que descreve a nova chave no banco de dados.
 
 O provisionamento de chaves de criptografia de coluna habilitadas para enclave não é diferente do provisionamento de chaves de criptografia de coluna que não são habilitadas para enclave. Você só precisa certificar-se de que uma chave mestra de coluna usada para criptografar a nova chave de criptografia de coluna esteja habilitada para enclave.
 
@@ -76,7 +76,7 @@ O provisionamento de chaves de criptografia de coluna habilitadas para enclave n
 > O módulo SqlServer PowerShell atualmente não é compatível com o provisionamento de chaves habilitadas para enclave armazenadas em módulos de segurança de hardware (usando CNG ou CAPI).
 
 ### <a name="example---provision-enclave-enabled-keys-using-windows-certificate-store"></a>Exemplo – Provisionamento de chaves habilitadas para enclave usando o repositório de certificados do Windows
-O exemplo de ponta a ponta abaixo mostra como provisionar chaves habilitadas para enclave, armazenando a chave mestra de coluna armazenada no repositório de certificados do Windows. Esse script é baseado no exemplo em [Repositório de Certificados do Windows sem separação de funções (exemplo)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example). É importante observar o uso do parâmetro `-AllowEnclaveComputations` no cmdlet [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings), que é a única diferença entre os fluxos de trabalho nos dois exemplos.
+O exemplo de ponta a ponta abaixo mostra como provisionar chaves habilitadas para enclave, armazenando a chave mestra de coluna armazenada no repositório de certificados do Windows. Esse script é baseado no exemplo em [Repositório de Certificados do Windows sem separação de funções (exemplo)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example). É importante observar o uso do parâmetro `-AllowEnclaveComputations` no cmdlet [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings), que é a única diferença entre os fluxos de trabalho nos dois exemplos.
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -107,8 +107,8 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ### <a name="example---provision-enclave-enabled-keys-using-azure-key-vault"></a>Exemplo – Provisionamento de chaves habilitadas para enclave usando o Azure Key Vault
 O exemplo de ponta a ponta abaixo mostra como provisionar chaves habilitadas para enclave, armazenando a chave mestra de coluna no Azure Key Vault. O script é baseado no exemplo em [Azure Key Vault sem separação de funções (exemplo)](configure-always-encrypted-keys-using-powershell.md#azure-key-vault-without-role-separation-example). É importante observar duas diferenças entre o fluxo de trabalho para chaves habilitadas para enclave em comparação com as chaves que não são habilitadas para enclave. 
-- No script abaixo, o [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) usa o parâmetro `-AllowEnclaveComputations` para tornar a nova chave mestra de coluna habilitada para enclave. 
-- O script abaixo chama o cmdlet [**Add-SqlAzureAuthenticationContext**](https://docs.microsoft.com/powershell/module/sqlserver/add-sqlazureauthenticationcontext) para entrar no Azure antes de chamar o cmdlet [**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings). Primeiro, é necessário entrar no Azure, pois o parâmetro `-AllowEnclaveComputations` faz com que o **New-SqlAzureKeyVaultColumnMasterKeySettings** chame o Azure Key Vault para assinar as propriedades da chave mestra de coluna.
+- No script abaixo, o [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) usa o parâmetro `-AllowEnclaveComputations` para tornar a nova chave mestra de coluna habilitada para enclave. 
+- O script abaixo chama o cmdlet [**Add-SqlAzureAuthenticationContext**](/powershell/module/sqlserver/add-sqlazureauthenticationcontext) para entrar no Azure antes de chamar o cmdlet [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings). Primeiro, é necessário entrar no Azure, pois o parâmetro `-AllowEnclaveComputations` faz com que o **New-SqlAzureKeyVaultColumnMasterKeySettings** chame o Azure Key Vault para assinar as propriedades da chave mestra de coluna.
 
 ```powershell
 # Create a column master key in Azure Key Vault.
@@ -156,4 +156,4 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ## <a name="see-also"></a>Consulte Também  
 - [Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Gerenciar chaves para Always Encrypted com enclaves seguros](always-encrypted-enclaves-manage-keys.md)
-- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 
+- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

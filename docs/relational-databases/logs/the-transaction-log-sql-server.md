@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 4d6e28a0e86a240d03ab4cdccac843488ff84446
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834757"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869307"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ Depois de uma perda de hardware ou falha de disco que afeta os arquivos de banco
 Ao restaurar cada backup de log, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reaplica todas as modificações registradas no log para efetuar roll forward de todas as transações. Quando o último backup de log é restaurado, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usa as informações de log para reverter todas as transações que não estavam completas naquele ponto. Para obter mais informações, confira [Visão geral de restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="supporting-transactional-replication"></a>Dando suporte à replicação transacional
-O Agente de Leitor de Log monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição. Para obter mais informações, veja [Como funciona a replicação transacional](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
+O Agente de Leitor de Log monitora o log de transações de cada banco de dados configurado para replicação transacional e copia as transações marcadas para replicação do log de transações no banco de dados de distribuição. Para obter mais informações, veja [Como funciona a replicação transacional](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Suporte a soluções de recuperação de desastres e alta disponibilidade
 As soluções do servidor em espera, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], o espelhamento de banco de dados e o envio de logs dependem muito do log de transações. 
@@ -192,5 +192,4 @@ Quando a replicação transacional está habilitada, as operações `SELECT INTO
 [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-  
   
