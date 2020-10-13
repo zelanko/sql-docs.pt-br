@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667860"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869287"
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "85667860"
   
  Se você estiver usando os Servidores Registrados, a instância com a qual você deseja se conectar deverá estar registrada em **Grupos de Servidores Locais** ou **Servidores de Gerenciamento Central**. (A instância pode ser registrada por si própria ou ser membro de um grupo de servidores.) Para obter mais informações sobre como adicionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aos Servidores Registrados, consulte os seguintes tópicos:  
   
--   [Criar ou editar um grupo de servidores &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
+-   [Criar ou editar um grupo de servidores &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
--   [Registrar um servidor conectado &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)  
+-   [Registrar um servidor conectado &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md)  
   
--   [Criar um servidor de gerenciamento central e um grupo de servidores &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)  
+-   [Criar um servidor de gerenciamento central e um grupo de servidores &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
  Para obter mais informações sobre como exibir os arquivos de log offline programaticamente através de consultas WMI e WQL, consulte os seguintes tópicos:  
   
@@ -122,5 +122,4 @@ ms.locfileid: "85667860"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visualizador do Arquivo de Log](../../relational-databases/logs/log-file-viewer.md)  
-  
   

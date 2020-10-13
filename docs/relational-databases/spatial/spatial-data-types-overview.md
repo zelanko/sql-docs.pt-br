@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: befee8aca5a1c9d7a66015a02c8851c56d0e5a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464894"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809523"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
 
@@ -74,7 +74,7 @@ Os segmentos de arco circular para tipos geometry são definidos no plano de coo
 
 No sistema planar (de terra plana), as medidas de distâncias e de áreas são fornecidas na mesma unidade de medida das coordenadas. Usando o tipo de dados **geometry**, a distância entre (2, 2) e (5, 6) é de cinco unidades, independentemente das unidades usadas.  
 
-Em um sistema elipsoidal ou de terra redonda, as coordenadas são fornecidas em graus de latitude ou de longitude. No entanto, os comprimentos e áreas normalmente são medidos em metros e em metros quadrados, embora a medida possa depender do [identificador de referência espacial](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) da instância de **geography**. A unidade de medida mais comum para o tipo de dados **geography** é em metros.  
+Em um sistema elipsoidal ou de terra redonda, as coordenadas são fornecidas em graus de latitude ou de longitude. No entanto, os comprimentos e áreas normalmente são medidos em metros e em metros quadrados, embora a medida possa depender do [identificador de referência espacial](./spatial-reference-identifiers-srids.md) da instância de **geography**. A unidade de medida mais comum para o tipo de dados **geography** é em metros.  
 
 ### <a name="orientation-of-spatial-data"></a>Orientação de dados espaciais
 
@@ -201,10 +201,10 @@ Instâncias**CurvePolygon** podem usar instâncias **CircularString** e **Compou
 
 ## <a name="see-also"></a>Confira também
 
-- [Dados espaciais (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [Referência de método de tipo de dados geometry](https://msdn.microsoft.com/library/bb933973.aspx)
-- [Referência de método de tipo de dados geography](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [Dados espaciais (SQL Server)](./spatial-data-sql-server.md)
+- [Referência de método de tipo de dados geometry](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [Referência de método de tipo de dados geography](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves &#40;Tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves &#40;Tipo de dados geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

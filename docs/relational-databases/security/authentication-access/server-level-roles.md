@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636136"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869026"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91636136"
   
  Você pode adicionar entidades de segurança no nível do servidor (logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], contas do Windows e grupos do Windows) em funções no nível do servidor. Cada membro de uma função de servidor fixa pode adicionar outros logons a essa mesma função. Os membros de funções de servidor definidas pelo usuário não podem acrescentar outras entidades de segurança de servidor à função.  
 > [!NOTE]
->  Permissões no nível do servidor não estão disponíveis no Banco de Dados SQL ou no SQL Data Warehouse. Para obter mais informações sobre o Banco de Dados SQL, consulte [Controlando e concedendo acesso ao banco de dados.](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)
+>  Permissões no nível do servidor não estão disponíveis no Banco de Dados SQL ou no SQL Data Warehouse. Para obter mais informações sobre o Banco de Dados SQL, consulte [Controlando e concedendo acesso ao banco de dados.](/azure/sql-database/sql-database-manage-logins)
   
 ## <a name="fixed-server-level-roles"></a>Funções fixas de nível de servidor  
  A tabela a seguir mostra as funções fixas de nível de servidor e seus recursos.  
@@ -104,5 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [Permissões REVOKE de entidade do servidor &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [Permissões DENY de entidade do servidor &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [Criar uma função de servidor](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490542"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868941"
 ---
 # <a name="upgrade-full-text-search"></a>Atualizar pesquisa de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ Quando um banco de dados é atualizado do [!INCLUDE[ssCurrent](../../includes/ss
 ## <a name="backup-and-imported-full-text-catalogs"></a>Backup e catálogos de texto completo importados  
  Nos catálogos de texto completo que são recompilados ou redefinidos durante a atualização (e nos novos catálogos de texto completo), o catálogo de texto completo é um conceito lógico e não reside em um grupo de arquivos. Portanto, para fazer backup de um catálogo de texto completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é necessário identificar cada grupo de arquivos que contém um índice de texto completo do catálogo e fazer backup de cada um deles. Para obter mais informações, consulte [Fazer backup e restaurar índices e catálogos de texto completo](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
- Nos catálogos de texto completo importados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o catálogo de texto completo ainda é um arquivo de banco de dados em seu próprio grupo de arquivos. O processo de backup do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para catálogos de texto completo ainda é aplicável, a diferença é que o serviço MSFTESQL não existe no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre o processo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [Backing Up and Restoring Full-Text Catalogs](https://go.microsoft.com/fwlink/?LinkId=209154) (Backup e restauração de catálogos de texto completo) nos Manuais Online do SQL Server 2005.  
+ Nos catálogos de texto completo importados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o catálogo de texto completo ainda é um arquivo de banco de dados em seu próprio grupo de arquivos. O processo de backup do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para catálogos de texto completo ainda é aplicável, a diferença é que o serviço MSFTESQL não existe no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre o processo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [Backing Up and Restoring Full-Text Catalogs](/previous-versions/sql/sql-server-2005/ms142511(v=sql.90)) (Backup e restauração de catálogos de texto completo) nos Manuais Online do SQL Server 2005.  
   
 ##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> Migrando índices de texto completo ao atualizar um banco de dados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Os arquivos de banco de dados e catálogos de texto completo de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser atualizados para uma instância de servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] por meio de anexação, restauração ou do Assistente para Copiar Banco de Dados. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] os índices de texto completo, se houver algum, serão importados, redefinidos ou recompilados. A propriedade de servidor **upgrade_option** controla qual opção de atualização de texto completo é usada pela instância de servidor durante essas atualizações de banco de dados.  
@@ -135,7 +135,7 @@ Quando um banco de dados é atualizado do [!INCLUDE[ssCurrent](../../includes/ss
   
 -   Se o catálogo de texto completo estiver offline, ocorrerá falha no backup.  
   
- Para obter mais informações sobre como fazer o backup e a restauração de catálogos de texto completo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [Fazer backup e restaurar índices e catálogos de texto completo](https://go.microsoft.com/fwlink/?LinkId=121052) e [Restauração por etapas e índices de texto completo](https://go.microsoft.com/fwlink/?LinkId=121053)nos Manuais Online do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ Para obter mais informações sobre como fazer o backup e a restauração de catálogos de texto completo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [Fazer backup e restaurar índices e catálogos de texto completo](./back-up-and-restore-full-text-catalogs-and-indexes.md) e [Restauração por etapas e índices de texto completo](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))nos Manuais Online do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  Quando o banco de dados for restaurado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], um novo arquivo de banco de dados será criado para o catálogo de texto completo. O nome padrão desse arquivo é ftrow_*catalog-name*.ndf. Por exemplo, se o *catalog-name* for `cat1`, o nome padrão do arquivo de banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Porém, se o nome padrão já estiver sendo usado no diretório de destino, o novo arquivo de banco de dados será chamado `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, em que *GUID* é o Identificador Global Exclusivo do novo arquivo.  
   
@@ -176,11 +176,10 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Se o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não encontrar um arquivo de catálogo de texto completo ou se o arquivo de texto completo foi movido durante a operação de anexação sem que fosse especificado um novo local, o comportamento dependerá da opção de atualização de texto completo selecionada. Se a opção de atualização de texto completo for **Importar** ou **Recriar**, o catálogo de texto completo anexado será recriado. Se a opção de atualização de texto completo for **Redefinir**, o catálogo de texto completo anexado será redefinido.  
   
- Para obter mais informações sobre desanexar e anexar um banco de dados, consulte [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) e [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
+ Para obter mais informações sobre desanexar e anexar um banco de dados, consulte [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) e [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 ## <a name="see-also"></a>Confira também  
  [Iniciar a pesquisa de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar filtros de pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4c1494efa032ba58315e8a5f7fe5fd855b3e51f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472942"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809362"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Cadeias de propriedade e comutação de contexto
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +46,11 @@ Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
-- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Baixe o [Bancos de dados de exemplo do AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Baixe o [Bancos de dados de exemplo do AdventureWorks2017](../samples/adventureworks-install-configure.md).
 
-Para obter instruções sobre como restaurar um banco de dados no SQL Server Management Studio, veja [Restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Para obter instruções sobre como restaurar um banco de dados no SQL Server Management Studio, veja [Restaurar um banco de dados](./backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## <a name="1-configure-the-environment"></a>1. Configure o ambiente  
 Use o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e o código a seguir para abrir o banco de dados `AdventureWorks2017` e use a instrução [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` para verificar se o usuário dbo é exibido como o contexto.  
@@ -334,6 +334,5 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
 [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

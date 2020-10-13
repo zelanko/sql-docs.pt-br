@@ -2,20 +2,20 @@
 title: 'RHEL: Configurar um grupo de disponibilidade para o SQL Server em Linux'
 description: Saiba como configurar um grupo de disponibilidade ao executar o RHEL (Red Hat Enterprise Linux) para SQL Server.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2eb6198e7d2b776a9c7fefd811f2883675adb83b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896955"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784896"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurar o cluster do RHEL para o Grupo de Disponibilidade do SQL Server
 

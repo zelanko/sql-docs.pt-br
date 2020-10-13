@@ -15,12 +15,12 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730858"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868576"
 ---
 # <a name="memory-optimization-advisor"></a>Orientador de otimização da memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85730858"
   
 -   Migre uma tabela e dados para a otimização de memória (se não há recursos sem suporte).  
     
- Para obter informações sobre as metodologias de migração, confira [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
+ Para obter informações sobre as metodologias de migração, confira [In-Memory OLTP – Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10))(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Passo a passo usando o orientador de otimização da memória  
  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela que você deseja converter e selecione **Orientador de Otimização da Memória**. Isso exibirá a página de boas-vindas do **Orientador de Otimização da Memória da Tabela**.  
@@ -99,7 +99,7 @@ ms.locfileid: "85730858"
   
  Se não existir uma chave primária e a tabela estiver sendo migrada para uma tabela não durável, esta tela não aparecerá.  
   
- Para as colunas textuais (colunas com tipos **char**, **nchar**, **varchar**e **nvarchar**), é necessário selecionar uma ordenação adequada. O OLTP na memória somente dá suporte a ordenações BIN2 para colunas em uma tabela com otimização de memória e não dá suporte a ordenações com caracteres suplementares. Consulte [Páginas de código de ordenações](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) para obter informações sobre as ordenações com suporte e o impacto potencial de uma alteração na ordenação.  
+ Para as colunas textuais (colunas com tipos **char**, **nchar**, **varchar**e **nvarchar**), é necessário selecionar uma ordenação adequada. O OLTP na memória somente dá suporte a ordenações BIN2 para colunas em uma tabela com otimização de memória e não dá suporte a ordenações com caracteres suplementares. Consulte [Páginas de código de ordenações](./introduction-to-memory-optimized-tables.md) para obter informações sobre as ordenações com suporte e o impacto potencial de uma alteração na ordenação.  
   
  Você pode configurar os seguintes parâmetros para a chave primária:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "85730858"
   
 -   Um índice NONCLUSTERED. Esse tipo de índice é melhor para índices com muitas consultas de intervalo. Você pode configurar a ordem de classificação para cada coluna na lista **Coluna e ordem de classificação** .  
   
- Para entender o melhor tipo de índice para sua chave primária, consulte [Índices de hash](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ Para entender o melhor tipo de índice para sua chave primária, consulte [Índices de hash](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130)).  
   
  Clique em **Avançar** depois de fazer suas escolhas de chave primária.  
   
@@ -130,6 +130,5 @@ ms.locfileid: "85730858"
  Depois que o processo estiver concluído, atualize o **Pesquisador de Objetos** para ver a nova tabela com otimização de memória e a antiga tabela baseada em disco. Você pode manter a tabela antiga ou excluí-la de acordo com a conveniência.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrando para OLTP na memória](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

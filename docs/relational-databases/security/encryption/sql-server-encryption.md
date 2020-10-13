@@ -16,12 +16,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 702b7f39a3435255432474542b74a8d1f210284d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720434"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869243"
 ---
 # <a name="sql-server-encryption"></a>Criptografia do SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ Você pode usar criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnover
  [Protegendo o SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Visão geral de como ajudar a proteger a plataforma do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e como trabalhar com usuários e objetos protegíveis.  
 
-[Uma visão geral das funcionalidades de segurança do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview)
+[Uma visão geral das funcionalidades de segurança do Banco de Dados SQL do Azure](/azure/sql-database/sql-database-security-overview)
 </br>Visão geral de segurança do Banco de Dados SQL do Azure para proteção de dados, controle de acesso e o monitoramento proativo.
   
  [Funções criptográficas &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
@@ -88,5 +88,4 @@ Você pode usar criptografia no [!INCLUDE[ssNoVersion](../../../includes/ssnover
  [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Fazer backup e restaurar as chave de criptografia do Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     
  [Habilitar conexões criptografadas com o Mecanismo de Banco de Dados](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)    
-  
   

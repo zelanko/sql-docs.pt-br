@@ -19,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382522"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869057"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88382522"
   
 -   Um gráfico de links entre páginas da Web  
   
- Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) como o tipo de dados para criar tabelas com uma estrutura hierárquica ou para descrever a estrutura hierárquica dos dados armazenados em outro local. Use as [funções hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) no [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar e gerenciar dados hierárquicos.  
+ Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) como o tipo de dados para criar tabelas com uma estrutura hierárquica ou para descrever a estrutura hierárquica dos dados armazenados em outro local. Use as [funções hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) no [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar e gerenciar dados hierárquicos.  
   
 ##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> Propriedades chave de hierarchyid  
  Um valor do tipo de dados **hierarchyid** representa uma posição em uma hierarquia de árvore. Os valores para **hierarchyid** têm as seguintes propriedades:  
@@ -540,8 +540,7 @@ GO
   
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de método de tipo de dados hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [Referência de método de tipo de dados hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
  [Tutorial: Usar o tipo de dados HierarchyId](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   

@@ -16,12 +16,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 811723fa85d059b5e750135bf551f723c5c137dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab482e4818d7d60b9876fbf300a39de0b2f9ee40
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716711"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868383"
 ---
 # <a name="replication-tutorials"></a>Tutoriais de replicação
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,8 +51,7 @@ Saiba como configurar a replicação de mesclagem para trocar dados entre um ser
 ## <a name="see-also"></a>Confira também  
 [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
-[Visão geral da replicação transacional](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
+[Visão geral da replicação transacional](./transactional/transactional-replication.md) 
 
-[Visão geral da replicação de mesclagem](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
+[Visão geral da replicação de mesclagem](./merge/merge-replication.md)
 
-  

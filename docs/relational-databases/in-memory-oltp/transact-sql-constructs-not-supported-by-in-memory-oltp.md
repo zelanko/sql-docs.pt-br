@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753205"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868787"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85753205"
   
  Para obter mais informações sobre os recursos com suporte em tabelas com otimização de memória e procedimentos armazenados nativamente compilados, consulte:  
   
--   [Problemas de migração para procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [Problemas de migração para procedimentos armazenados compilados nativamente](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 -   [Suporte ao Transact-SQL para OLTP in-memory](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [Recursos do SQL Server sem suporte para OLTP na Memória](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [Procedimentos armazenados compilados nativamente](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## <a name="databases-that-use-in-memory-oltp"></a>Bancos de dados que usam OLTP na memória  
  A tabela a seguir lista os recursos do [!INCLUDE[tsql](../../includes/tsql-md.md)] que não têm suporte, além das palavras-chave que podem ser exibidas no texto da mensagem de erro que envolve um banco de dados de OLTP in-memory. A tabela também lista a resolução para o erro.  
@@ -110,7 +110,7 @@ ms.locfileid: "85753205"
 |Recurso|COMPUTE|Não há suporte para a cláusula **COMPUTE** . Remova-a da consulta.|  
 |Recurso|SELECT INTO|Não há suporte para a cláusula **INTO** na instrução **SELECT** . Reescreva a consulta como **INSERT INTO** _Tabela_ **SELECT**.|  
 |Recurso|lista de colunas de inserção incompleta|Em geral, os valores das instruções INSERT devem ser especificados para todas as colunas na tabela.<br /><br /> No entanto, damos suporte a restrições DEFAULT e colunas IDENTITY(1,1) em tabelas com otimização de memória. Essas colunas podem ser (no caso colunas IDENTITY, devem ser) omitidas da lista de colunas INSERT.|  
-|Recurso|*Função*|Algumas funções internas ainda não têm suporte em procedimentos armazenados nativamente compilados. Remova a função rejeitada do procedimento armazenado. Para obter mais informações sobre funções internas com suporte, veja<br />[Recursos com suporte para módulos T-SQL compilados de modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)ou<br />[Procedimentos armazenados compilados de modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Recurso|*Função*|Algumas funções internas ainda não têm suporte em procedimentos armazenados nativamente compilados. Remova a função rejeitada do procedimento armazenado. Para obter mais informações sobre funções internas com suporte, veja<br />[Recursos com suporte para módulos T-SQL compilados de modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)ou<br />[Procedimentos armazenados compilados de modo nativo](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Recurso|CASE|**Aplica-se a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] e ao SQL Server começando pelo [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**Não** há suporte para expressões CASE em procedimentos armazenados compilados nativamente. Crie consultas para cada caso. Para obter mais informações,veja [Implementando uma expressão CASE em um procedimento armazenado compilado de modo nativo](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>O [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e o SQL Server a partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] dão suporte a expressões CASE.|  
 |Recurso|INSERT EXECUTE|Remova a referência.|  
 |Recurso|Execute|Com suporte somente para executar funções definidas pelo usuário e procedimentos armazenados compilados nativamente.|  
@@ -147,7 +147,7 @@ ms.locfileid: "85753205"
 |Operador|TSEQUAL|Não há suporte para esse operador. Remova **TSEQUAL** do procedimento armazenado compilado de modo nativo.|  
 |Operador|LIKE|Não há suporte para esse operador. Remova **LIKE** do procedimento armazenado compilado de modo nativo.|  
 |Operador|NEXT VALUE FOR|As sequências não podem referenciadas dentro de procedimentos armazenados nativamente compilados. Obtenha o valor usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado e transmita-o ao procedimento armazenado nativamente compilado. Para obter mais informações, veja [Implementando IDENTITY em uma tabela com otimização de memória](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
-|Opção Set|*opção*|As opções SET não podem ser alteradas dentro de procedimentos armazenados nativamente compilados. Algumas opções podem ser definidas com a instrução BEGIN ATOMIC. Para obter mais informações, confira a seção sobre blocos atômicos em [Procedimentos armazenados compilados de modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Opção Set|*opção*|As opções SET não podem ser alteradas dentro de procedimentos armazenados nativamente compilados. Algumas opções podem ser definidas com a instrução BEGIN ATOMIC. Para obter mais informações, confira a seção sobre blocos atômicos em [Procedimentos armazenados compilados de modo nativo](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Operando|TABLESAMPLE|Não há suporte para esse operador. Remova **TABLESAMPLE** do procedimento armazenado compilado de modo nativo.|  
 |Opção|RECOMPILE|Os procedimentos armazenados nativamente compilados são compilados no tempo de criação. Remova **RECOMPILE** da definição de procedimento.<br /><br /> Você pode executar sp_recompile em um procedimento armazenado compilado nativamente, o que faz com que ele recompile na próxima execução.|  
 |Opção|ENCRYPTION|Não há suporte para essa opção. Remova **ENCRYPTION** da definição do procedimento.|  
@@ -187,6 +187,5 @@ ms.locfileid: "85753205"
 |Recurso|DTC|As transações que acessam tabelas com otimização de memória não podem ser transações distribuídas.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Migrando para OLTP na memória](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrando para OLTP na memória](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

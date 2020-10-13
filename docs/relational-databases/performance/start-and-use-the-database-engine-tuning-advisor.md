@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1f13fc030209957910284132b42c89a52b01ff31
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042809"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890749"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "90042809"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Para iniciar o Orientador de Otimização do Mecanismo de Banco de Dados do Editor de Consultas do SQL Server Management Studio  
   
-1.  Abra um arquivo de script do [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, veja [Editores de Consultas e de Texto &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
+1.  Abra um arquivo de script do [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, veja [Editores de Consultas e de Texto &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
   
 2.  Selecione uma consulta no script do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou selecione todo o script, clique com o botão direito do mouse na seleção e escolha **Analisar Consulta no Orientador de Otimização do Mecanismo de Banco de Dados**. A interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados abre e importa o script como uma carga de trabalho de arquivo XML. Você pode especificar um nome de sessão e opções de ajuste para ajustar as consultas selecionadas no [!INCLUDE[tsql](../../includes/tsql-md.md)] como sua carga de trabalho.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "90042809"
   
 ###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Para criar cargas de trabalho de script do Transact-SQL  
   
-1.  Inicie o Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, veja [Editores de Consultas e de Texto &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
+1.  Inicie o Editor de Consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, veja [Editores de Consultas e de Texto &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
   
 2.  Digite seu script [!INCLUDE[tsql](../../includes/tsql-md.md)] no Editor de Consultas. Este script deve conter um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que são executadas no banco ou bancos de dados que você quer ajustar.  
   
@@ -519,4 +519,3 @@ database_name.owner_name.table_name
  [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [Utilitário dta](../../tools/dta/dta-utility.md)    
  [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
-  

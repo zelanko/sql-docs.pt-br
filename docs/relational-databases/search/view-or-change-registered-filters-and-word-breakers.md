@@ -17,12 +17,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f261aeafc9ae6010f02a8f4cff4cb14168e81303
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec6bffa39e5f7a9b3bb1938f42dac110b8385da5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490509"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868936"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Exibir ou alterar filtros registrados e separadores de palavras
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "88490509"
   
      **Para instalar e carregar o Microsoft Filter Pack IFilters**  
   
-    -   [Como registrar o Microsoft Filter Pack IFilters no SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [Como registrar o Microsoft Filter Pack IFilters no SQL Server]()  
   
 4.  Use **sp_fulltext_service** para carregar os separadores de palavras e filtros recentemente instalados na instância de servidor, da seguinte maneira:  
   
@@ -105,5 +105,4 @@ ms.locfileid: "88490509"
  [Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-  
   

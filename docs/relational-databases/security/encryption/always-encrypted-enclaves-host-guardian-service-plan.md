@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411367"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869159"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planejar o atestado do Serviço Guardião de Host
 
@@ -42,7 +42,7 @@ O computador que executa o [!INCLUDE [ssnoversion-md](../../../includes/ssnovers
 ### <a name="high-availability"></a>Alta disponibilidade
 
 O recurso HGS instala e configura automaticamente um cluster de failover.
-Em um ambiente de produção, é recomendável usar três servidores HGS para alta disponibilidade. Veja a [documentação do cluster de failover](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum) para obter detalhes sobre como o quorum de cluster é determinado e configurações alternativas, incluindo clusters de dois nós com uma testemunha externa.
+Em um ambiente de produção, é recomendável usar três servidores HGS para alta disponibilidade. Veja a [documentação do cluster de failover](/windows-server/failover-clustering/manage-cluster-quorum) para obter detalhes sobre como o quorum de cluster é determinado e configurações alternativas, incluindo clusters de dois nós com uma testemunha externa.
 
 O armazenamento compartilhado não é necessário entre os nós HGS. Uma cópia do banco de dados de atestado é armazenada em cada servidor HGS e é replicada automaticamente pela rede pelo serviço de cluster.
 
@@ -67,7 +67,7 @@ O HGS é compatível com dois modos de atestado para uso com [!INCLUDE [ssnovers
 Em geral, fazemos as seguintes recomendações:
 
 - Para **servidores de produção físicos**, é recomendável usar o atestado do TPM para obter as garantias adicionais que ele fornece.
-- Para **servidores de produção virtuais**, recomendamos o atestado de chave de host, pois a maioria das máquinas virtuais não tem TPMs virtuais ou Inicialização Segura. Se você estiver usando uma VM com segurança aprimorada como uma [VM blindada no local](https://aka.ms/shieldedvms), poderá optar por usar o modo TPM. Em todas as implantações virtualizadas, o processo de atestado apenas analisa seu ambiente de VM, não a plataforma de virtualização sob a VM.
+- Para **servidores de produção virtuais**, recomendamos o atestado de chave de host, pois a maioria das máquinas virtuais não tem TPMs virtuais ou Inicialização Segura. Se você estiver usando uma VM com segurança aprimorada como uma [VM blindada no local](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node), poderá optar por usar o modo TPM. Em todas as implantações virtualizadas, o processo de atestado apenas analisa seu ambiente de VM, não a plataforma de virtualização sob a VM.
 - Para **cenários de desenvolvimento/teste**, recomendamos o atestado de chave de host porque é mais fácil de configurar.
 
 ### <a name="trust-model"></a>Modelo de confiança
@@ -114,7 +114,7 @@ O computador do HGS não deve ser ingressado em um domínio antes de você come�
 
 ### <a name="ssnoversion-md-computer-prerequisites"></a>Pré-requisitos do computador [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
-Os computadores em execução [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] devem atender aos [Requisitos de instalação do SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) e aos [Requisitos de hardware do Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
+Os computadores em execução [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] devem atender aos [Requisitos de instalação do SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) e aos [Requisitos de hardware do Hyper-V](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 
 Estes requisitos incluem:
 
@@ -124,7 +124,7 @@ Estes requisitos incluem:
   - Intel VT-x com Tabelas de Página Estendida.
   - AMD-V com Indexação de Virtualização Rápida.
   - Se você estiver executando [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] em uma VM, o hipervisor e a CPU física deverão oferecer recursos de virtualização aninhados. Confira a seção [modelo de confiança](#trust-model) para obter informações sobre as garantias ao executar os enclaves VBS em uma VM.
-    - No Hyper-V 2016 ou posterior, [habilite as extensões de virtualização aninhadas no processador da VM](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - No Hyper-V 2016 ou posterior, [habilite as extensões de virtualização aninhadas no processador da VM](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - No Azure, selecione um tamanho de VM que dê suporte à virtualização aninhada. Todas as VMs da série v3 são compatíveis com virtualização aninhada, por exemplo, Dv3 e Ev3. Confira [Criar uma VM do Azure compatível com aninhamento](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - No VMWare vSphere 6.7 ou posterior, habilite o suporte de segurança baseada em virtualização para a VM conforme descrito na [documentação do VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Outros hipervisores e nuvens públicas podem dar suporte a recursos de virtualização aninhados que também permitem Always Encrypted com enclaves de VBS. Verifique a documentação da solução de virtualização para obter instruções sobre compatibilidade e configuração.

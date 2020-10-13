@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6ad0881cbc1c00bdebdd9244b56007ed51a66b86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f439f07e8bdc374e5457c946e3b57120b0c6b0c8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736994"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869156"
 ---
 # <a name="surface-area-configuration"></a>Configuração da Área de Superfície
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "85736994"
  Para alterar a propriedade **EnableIntegrated Security** do [!INCLUDE[ssRS](../../includes/ssrs.md)], use as configurações de propriedades no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para alterar as propriedades **Eventos de agendamento e entrega de relatório** e **Serviço Web e acesso HTTP** , edite o arquivo de configuração **RSReportServer.config** .  
   
 ## <a name="command-prompt-options"></a>Opções do prompt de comando  
- Use o cmdlet **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do PowerShell para invocar as Políticas de Configuração da Área da Superfície. Para obter mais informações, veja [Usar os cmdlets do Mecanismo de Banco de Dados](../../relational-databases/scripting/use-the-database-engine-cmdlets.md).  
+ Use o cmdlet **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do PowerShell para invocar as Políticas de Configuração da Área da Superfície. Para obter mais informações, veja [Usar os cmdlets do Mecanismo de Banco de Dados](../../powershell/sql-server-powershell.md).  
   
 ## <a name="soap-and-service-broker-endpoints"></a>Pontos de extremidade SOAP e do Service Broker  
  Para desabilitar os pontos de extremidade, use o Gerenciamento Baseado em Política. Para criar e alterar as propriedades de pontos de extremidade, use [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md) e [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
@@ -76,5 +76,4 @@ ms.locfileid: "85736994"
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
   

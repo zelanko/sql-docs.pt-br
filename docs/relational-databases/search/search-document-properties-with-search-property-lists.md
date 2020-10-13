@@ -20,12 +20,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4938844b0014745dd50060b0e1da43b4e574a20e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464958"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868964"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "88464958"
   
     -   **Criar de uma lista de propriedades de pesquisa existente**  
   
-     Para obter mais informações, veja [Nova lista de propriedades de pesquisa](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql).  
+     Para obter mais informações, veja [Nova lista de propriedades de pesquisa](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -202,7 +202,7 @@ GO
   
     2.  Para adicionar uma propriedade de documento, clique na linha vazia na parte inferior da lista, à direita do **\*** , e insira os valores para a nova propriedade.  
   
-         Para obter informações sobre esses valores, consulte [Editor da Lista de Pesquisa de Propriedades](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql). Para obter informações sobre como obter esses valores de propriedades definidos pela Microsoft, veja [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obter informações sobre propriedades definidas por um ISV (fornecedor independente de software), consulte a documentação daquele fornecedor.  
+         Para obter informações sobre esses valores, consulte [Editor da Lista de Pesquisa de Propriedades](../../t-sql/statements/create-search-property-list-transact-sql.md). Para obter informações sobre como obter esses valores de propriedades definidos pela Microsoft, veja [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obter informações sobre propriedades definidas por um ISV (fornecedor independente de software), consulte a documentação daquele fornecedor.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -228,5 +228,4 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Configurar e gerenciar filtros de pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

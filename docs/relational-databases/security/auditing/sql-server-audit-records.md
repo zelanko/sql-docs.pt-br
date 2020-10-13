@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1683231db68ea20fda3082a8ade8f945fcae4c29
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885319"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868554"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85885319"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data/hora em que a ação auditável é acionada.|**datetime2**|Sim|  
 |**sequence_no**|Rastreia a sequência de registros dentro de um único registro de auditoria que é muito grande para se ajustar no buffer de gravação das auditorias.|**int**|Sim|  
-|**action_id**|ID da ação<br /><br /> Dica: Para usar **action_id** como um predicado, ele deve ser convertido de uma cadeia de caracteres em um valor numérico. Para obter mais informações, veja [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)(Filtrar a Auditoria do SQL Server no predicado action_id / class_type).|**varchar(4)**|Sim|  
+|**action_id**|ID da ação<br /><br /> Dica: Para usar **action_id** como um predicado, ele deve ser convertido de uma cadeia de caracteres em um valor numérico. Para obter mais informações, veja [Filter SQL Server Audit on action_id / class_type predicate](/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)(Filtrar a Auditoria do SQL Server no predicado action_id / class_type).|**varchar(4)**|Sim|  
 |**succeeded**|Indica se a verificação de permissão da ação que aciona o evento de auditoria teve êxito ou falhou. |**bit**<br /> - 1 = êxito, <br />0 = Falha|Sim|  
 |**permission_bitmask**|Quando aplicável, mostra as permissões concedidas, negadas ou revogadas|**bigint**|Não|  
 |**is_column_permission**|Sinalizador que indica uma permissão no nível da coluna|**bit** <br />-1 = True, <br />0 = False|Não|  
@@ -110,5 +110,4 @@ ms.locfileid: "85885319"
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)  
   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753186"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868663"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transações com tabelas com otimização de memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ Veja abaixo as condições de erro que podem causar falhas nas transações ao a
 | Código do Erro | Descrição | Causa |
 | :-- | :-- | :-- |
 | **41302** | Tentou atualizar uma linha que foi atualizada em uma transação diferente desde o início da transação atual. | Essa condição de erro ocorre se duas transações simultâneas tentam atualizar ou excluir a mesma linha ao mesmo tempo. Uma das duas transações recebe essa mensagem de erro e precisará ser repetida. <br/><br/>  | 
-| **41305**| Falha de validação de leitura repetida. Uma linha lida de uma tabela com otimização de memória – esta transação foi atualizada por outra transação que foi confirmada antes da confirmação dessa transação. | Esse erro pode ocorrer ao usar o isolamento REPEATABLE READ ou SERIALIZABLE e também se as ações de uma transação simultânea causam a violação de uma restrição FOREIGN KEY. <br/><br/>Em geral, uma violação simultânea de restrições de chave estrangeira desse tipo é rara e, normalmente, indica um problema com a lógica do aplicativo ou a entrada de dados. No entanto, o erro também pode ocorrer se não há nenhum índice nas colunas envolvidas com a restrição FOREIGN KEY. Portanto, a orientação é sempre criar um índice em colunas de chave estrangeira em uma tabela com otimização de memória. <br/><br/> Para obter considerações mais detalhadas sobre as falhas de validação causadas por violações de chave estrangeira, confira [esta postagem no blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) da Equipe de Consultoria ao Cliente do SQL Server. |  
+| **41305**| Falha de validação de leitura repetida. Uma linha lida de uma tabela com otimização de memória – esta transação foi atualizada por outra transação que foi confirmada antes da confirmação dessa transação. | Esse erro pode ocorrer ao usar o isolamento REPEATABLE READ ou SERIALIZABLE e também se as ações de uma transação simultânea causam a violação de uma restrição FOREIGN KEY. <br/><br/>Em geral, uma violação simultânea de restrições de chave estrangeira desse tipo é rara e, normalmente, indica um problema com a lógica do aplicativo ou a entrada de dados. No entanto, o erro também pode ocorrer se não há nenhum índice nas colunas envolvidas com a restrição FOREIGN KEY. Portanto, a orientação é sempre criar um índice em colunas de chave estrangeira em uma tabela com otimização de memória. <br/><br/> Para obter considerações mais detalhadas sobre as falhas de validação causadas por violações de chave estrangeira, confira [esta postagem no blog](/archive/blogs/sqlcat/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys) da Equipe de Consultoria ao Cliente do SQL Server. |  
 | **41325** | Falha de validação serializável. Uma nova linha foi inserida em um intervalo que foi examinado anteriormente pela transação atual. Chamamos isso de uma linha fantasma. | Esse erro pode ocorrer ao usar o isolamento SERIALIZABLE e também se as ações de uma transação simultânea causam a violação de uma restrição PRIMARY KEY, UNIQUE ou FOREIGN KEY. <br/><br/> Em geral, uma violação de restrição simultânea desse tipo é rara e, normalmente, indica um problema com a lógica do aplicativo ou com a entrada de dados. No entanto, de forma semelhante às falhas de validação de leitura repetida, esse erro também pode ocorrer se há uma restrição FOREIGN KEY sem nenhum índice nas colunas envolvidas. |  
 | **41301** | Falha de dependência: uma dependência foi usada em outra transação que posteriormente não foi confirmada. | Esta transação (Tx1) usou uma dependência em outra transação (Tx2) enquanto a transação (Tx2) estava em sua fase de validação ou processamento de confirmação, com a leitura dos dados gravados por Tx2. Consequentemente, ocorreu uma falha na confirmação de Tx2. As causas mais comuns de falha na confirmação de Tx2 são falhas de validação de leitura repetida (41305) e de validação serializável (41325); uma causa menos comum é a falha de E/S de log. |
 | **41823** e **41840** | A cota para dados de usuário em tabelas com otimização de memória e variáveis de tabela foi alcançada. | O erro 41823 aplica-se ao SQL Server Express/Web/Standard Edition, bem como a bancos de dados individuais no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. O erro 41840 se aplica a pools elásticos no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> Na maioria dos casos, esses erros indicam que o tamanho máximo de dados de usuário foi alcançado e a maneira de resolver o erro é excluir dados das tabelas com otimização de memória. No entanto, há casos raros em que esse erro é transitório. Portanto, recomendamos uma nova tentativa ao encontrar esses erros pela primeira vez.<br/><br/> Como os outros erros desta lista, os erros 41823 e 41840 causam anulação da transação ativa. |
@@ -281,6 +281,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Níveis de isolamento com base no controle de versão de linha no Mecanismo de Banco de Dados](https://msdn.microsoft.com/library/ms177404.aspx)  
+- [Níveis de isolamento com base no controle de versão de linha no Mecanismo de Banco de Dados](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))  
   
-- [Controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md)   
+- [Controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md)

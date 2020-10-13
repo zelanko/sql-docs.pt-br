@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279362"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868166"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted com enclaves seguros usando SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,8 +42,8 @@ Para começar com o Always Encrypted com enclaves seguros, você precisa de pelo
   - Intel VT-x com Tabelas de Página Estendida.
   - AMD-V com Indexação de Virtualização Rápida.
   - Se você estiver executando [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] em uma VM, o hipervisor e a CPU física deverão oferecer recursos de virtualização aninhados. 
-    - No Hyper-V 2016 ou posterior, [habilite as extensões de virtualização aninhadas no processador da VM](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
-    - No Azure, selecione um tamanho de VM que dê suporte à virtualização aninhada. Isso inclui todas as VMs da série v3, por exemplo, Dv3 e Ev3. Confira [Criar uma VM do Azure compatível com aninhamento](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+    - No Hyper-V 2016 ou posterior, [habilite as extensões de virtualização aninhadas no processador da VM](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - No Azure, selecione um tamanho de VM que dê suporte à virtualização aninhada. Isso inclui todas as VMs da série v3, por exemplo, Dv3 e Ev3. Confira [Criar uma VM do Azure compatível com aninhamento](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - No VMWare vSphere 6.7 ou posterior, habilite o suporte de segurança baseada em virtualização para a VM conforme descrito na [documentação do VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Outros hipervisores e nuvens públicas podem dar suporte a recursos de virtualização aninhados que também permitem Always Encrypted com enclaves de VBS. Verifique a documentação da solução de virtualização para obter instruções sobre compatibilidade e configuração.
 - [SSMS (SQL Server Management Studio) 18.3 ou posterior](../../ssms/download-sql-server-management-studio-ssms.md).
@@ -264,7 +264,7 @@ Nesta etapa, você criará uma chave mestra da coluna e uma chave de criptografi
     2. Selecione o nome da chave mestra da coluna: **CMK1**.
     3. Certifique-se de selecionar **Repositório de certificados do Windows (usuário atual ou computador local)** ou **Azure Key Vault**.
     4. Selecione **Permitir computações de enclave**.
-    5. Se tiver selecionado o Azure Key Vault, entre no Azure e selecione seu cofre de chaves. Para obter mais informações sobre como criar um cofre de chaves para Always Encrypted, veja [Gerenciar cofres de chaves do portal do Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
+    5. Se tiver selecionado o Azure Key Vault, entre no Azure e selecione seu cofre de chaves. Para obter mais informações sobre como criar um cofre de chaves para Always Encrypted, veja [Gerenciar cofres de chaves do portal do Azure](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal).
     6. Selecione seu certificado ou chave do Azure Key Value se ela já existir, ou clique no botão **Gerar Certificado** para criar um novo.
     7. Selecione **OK**.
 

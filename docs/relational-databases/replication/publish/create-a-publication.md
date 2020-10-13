@@ -17,12 +17,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7c3c7ec81176b4124a78322cc5601ac8f049ca34
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 216e497c9d0e7a9e2090ad734bdb945c42bb792e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922815"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869109"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "86922815"
 -   Os nomes de publicação e de artigo não podem incluir nenhum dos seguintes caracteres: % , \* , [ , ] , | , : , " , ? , ' , \ , / , < , >. Se algum objeto do banco de dados incluir qualquer um desses caracteres, para replicá-los será necessário especificar um nome de artigo que seja diferente do nome do objeto na caixa de diálogo **Propriedades do Artigo – \<Article>** , disponível na página **Artigos** no assistente.  
   
 ###  <a name="security"></a><a name="Security"></a> Segurança  
- Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
+ Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](/previous-versions/aa719848(v=vs.71)) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Crie publicações e defina artigos com o Assistente para Nova Publicação. Após a criação de uma publicação, veja e modifique as propriedades da publicação na caixa de diálogo **Propriedades da Publicação – \<Publication>** . Para obter informações sobre como criar uma publicação de um banco de dados Oracle, consulte [Criar uma publicação de um banco de dados Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
@@ -252,7 +252,7 @@ ms.locfileid: "86922815"
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usar sqlcmd com variáveis de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
+ [Usar sqlcmd com variáveis de script](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
@@ -260,5 +260,4 @@ ms.locfileid: "86922815"
  [Configurar Distribuição](../../../relational-databases/replication/configure-distribution.md)   
  [Proteger o Distribuidor](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Proteger o Publicador](../../../relational-databases/replication/security/secure-the-publisher.md)  
-  
   

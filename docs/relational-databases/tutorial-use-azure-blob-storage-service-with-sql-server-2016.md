@@ -15,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: baf78116ef5d200246a0da7f4f8ce5c8686d2426
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af830fc0130c4404f4321c3ec5c03bd1111a11a0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472928"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809744"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: usar o serviço de Armazenamento de Blobs do Azure com o SQL Server 2016
 
@@ -36,16 +36,16 @@ Este tutorial mostra como trabalhar com arquivos de dados do SQL Server no servi
 Para concluir este tutorial, você deve estar familiarizado com os conceitos de backup e restauração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a sintaxe do T-SQL. Para usar este tutorial, você precisa de uma conta de Armazenamento do Azure, o SSMS (SQL Server Management Studio), acesso a uma instância local do SQL Server, acesso a uma VM (máquina virtual) do Azure que execute o SQL Server 2016 e um banco de dados AdventureWorks2016. Além disso, a conta de usuário usada para emitir os comandos BACKUP e RESTORE deve estar na função de banco de dados **db_backupoperator** com as permissões **Alterar qualquer credencial**. 
 
 - Obtenha uma [conta do Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuita.
-- Crie uma [conta de armazenamento do Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Crie uma [conta de armazenamento do Azure](/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Provisionar uma [VM do Azure que executa o SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/)
-- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Baixar [Bancos de dados de exemplo do AdventureWorks2016](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
-- Atribua a conta de usuário à função [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e conceda permissões para [Alterar qualquer credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
+- Instale o [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
+- Baixar [Bancos de dados de exemplo do AdventureWorks2016](../samples/adventureworks-install-configure.md).
+- Atribua a conta de usuário à função [db_backupoperator](./security/authentication-access/database-level-roles.md) e conceda permissões para [Alterar qualquer credencial](../t-sql/statements/alter-credential-transact-sql.md). 
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 – Criar uma política de acesso armazenado e um armazenamento de acesso compartilhado
 
-Nesta seção, você usará um script do [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) para criar uma assinatura de acesso compartilhado em um contêiner de Blobs do Azure usando uma política de acesso armazenado.  
+Nesta seção, você usará um script do [Azure PowerShell](/powershell/azure/) para criar uma assinatura de acesso compartilhado em um contêiner de Blobs do Azure usando uma política de acesso armazenado.  
   
 > [!NOTE]  
 > Esse script é escrito com o Azure PowerShell 5.0.10586.  
@@ -484,13 +484,13 @@ Para excluir o grupo de recursos, execute o seguinte código do powershell:
 [Arquivos de dados do SQL Server no Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Backup do SQL Server para URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
-[Assinaturas de Acesso Compartilhado, Parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
-[Definir ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
-[Obter ACL do contêiner](https://msdn.microsoft.com/library/azure/dd179469.aspx)
+[Assinaturas de Acesso Compartilhado, Parte 1: Noções básicas sobre o modelo SAS](/azure/storage/common/storage-sas-overview)  
+[Create Container](/rest/api/storageservices/Create-Container)  
+[Definir ACL do contêiner](/rest/api/storageservices/Set-Container-ACL)  
+[Obter ACL do contêiner](/rest/api/storageservices/Get-Container-ACL)
 [Credenciais &#40;Mecanismo de Banco de Dados&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)

@@ -12,12 +12,12 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e26bb81bb4289d2b60f069444230e6fb25142ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2600cee68204b3ec05c68e074cfc12d48cfee9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722444"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868526"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilação nativa de tabelas e procedimentos armazenados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -149,7 +149,7 @@ A DLL de tabela entende as estruturas de índice e o formato da linha da tabela.
 
 Os procedimentos armazenados que são marcados com NATIVE_COMPILATION são compilados nativamente. Isso significa que as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no procedimento são todas compiladas em código nativo para execução eficiente da lógica de negócios crítica ao desempenho.
 
-Para obter mais informações sobre procedimentos armazenados nativamente compilados, consulte [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).
+Para obter mais informações sobre procedimentos armazenados nativamente compilados, consulte [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 Considere o procedimento armazenado do exemplo a seguir, que insere linhas na tabela t1 do exemplo anterior:
 
@@ -212,6 +212,6 @@ Nenhuma interação do usuário é necessária para gerenciar esses arquivos. [!
 
 ## <a name="see-also"></a>Consulte Também
 
-[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)
 
-[Procedimentos armazenados compilados nativamente](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[Procedimentos armazenados compilados nativamente](./a-guide-to-query-processing-for-memory-optimized-tables.md)

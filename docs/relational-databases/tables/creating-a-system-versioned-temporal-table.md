@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990386"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809289"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Como criar uma tabela temporal com controle de versão do sistema
 
@@ -84,7 +84,7 @@ A tabela de histórico é criada usando as mesmas regras que se aplicam à cria�
 
 - O nome do esquema é obrigatório para o parâmetro **HISTORY_TABLE** .
 - Se o esquema especificado não existir, a instrução **CREATE TABLE** falhará.
-- Se a tabela especificada pelo parâmetro **HISTORY_TABLE** já existir, ela será validada em relação à tabela temporal recém-criada em termos de [consistência do esquema e consistência dos dados temporais](https://msdn.microsoft.com/library/dn935015.aspx). Se você especificar uma tabela de histórico inválido, a instrução **CREATE TABLE** falhará.
+- Se a tabela especificada pelo parâmetro **HISTORY_TABLE** já existir, ela será validada em relação à tabela temporal recém-criada em termos de [consistência do esquema e consistência dos dados temporais](./temporal-tables.md). Se você especificar uma tabela de histórico inválido, a instrução **CREATE TABLE** falhará.
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Criação de uma tabela temporal com uma tabela de histórico definido pelo usuário
 
@@ -207,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [Modificando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [Consultando dados em uma tabela temporal com controle da versão do sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [Alterando o esquema de uma tabela temporal com versão do sistema](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [Interrompendo o controle de versão do sistema em uma tabela temporal com controle de versão do sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [Interrompendo o controle de versão do sistema em uma tabela temporal com controle de versão do sistema](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

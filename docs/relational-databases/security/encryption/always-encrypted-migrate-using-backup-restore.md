@@ -11,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b20a6e33c308115c9f8d9b5334ea0ec31035116
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475513"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869045"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Fazer backup de bancos de dados e restaurá-los usando o Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ Se você restaurou o banco de dados em um servidor diferente ou com outro nome, 
 
 Para obter informações detalhadas sobre como fazer backup de um banco de dados e restaurá-lo, confira:
 - [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
-- [Restaurar um banco de dados em uma Instância Gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
+- [Restaurar um banco de dados em uma Instância Gerenciada](/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>Próximas etapas
 - [Consultar colunas usando o Always Encrypted com o SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

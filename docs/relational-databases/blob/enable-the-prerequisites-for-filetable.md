@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: fc5ba7ab181e07552f9865eff482d67e292c0249
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768000"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809906"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Habilitar os pré-requisitos para FileTable
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ GO
  Os níveis disponíveis de acesso não transacional são FULL, READ_ONLY e OFF.  
   
  **Especificar o nível de acesso não transacional usando Transact-SQL**  
- - Quando você **criar um novo banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) com a opção **NON_TRANSACTED_ACCESS** de FILESTREAM.
+ - Quando você **criar um novo banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) com a opção **NON_TRANSACTED_ACCESS** de FILESTREAM.
 
    ```sql
    CREATE DATABASE database_name  
@@ -94,7 +94,7 @@ GO
  O nome que você especifica deve estar exclusivo na instância para diretórios em nível de banco de dados.  
   
 **Especificar um diretório para FileTables usando Transact-SQL**  
-- Quando você **criar um novo banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) com a opção **DIRECTORY_NAME** de FILESTREAM.
+- Quando você **criar um novo banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) com a opção **DIRECTORY_NAME** de FILESTREAM.
 
    ```sql
    CREATE DATABASE database_name  
@@ -110,7 +110,7 @@ GO
     GO  
     ```  
   
--   Ao **anexar um banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) com a opção **FOR ATTACH** e com a opção FILESTREAM **DIRECTORY_NAME**.  
+-   Ao **anexar um banco de dados**, chame a instrução [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) com a opção **FOR ATTACH** e com a opção FILESTREAM **DIRECTORY_NAME**.  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -153,5 +153,4 @@ GO
 -   Quando você habilita ou desabilita o acesso não transacional no nível de banco de dados, a operação não verifica se o nome de diretório foi especificado ou se é exclusivo.  
   
 -   Quando você remove um banco de dados que foi habilitado para FileTables, o diretório no nível de banco de dados e todas as estruturas de diretórios de todos os FileTables contidos nele serão removidos.  
-  
   

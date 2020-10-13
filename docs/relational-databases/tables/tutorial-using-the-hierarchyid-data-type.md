@@ -15,12 +15,12 @@ ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1abc4ab38086afd380707b2eb12fafc48713bf08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eece1dc9ea612e37c466d57e074ae105ea0608c4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418990"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809643"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Como usar o tipo de dados HierarchyId
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,9 +47,8 @@ O sistema deverá ter o seguinte instalado:
 ## <a name="see-also"></a>Consulte Também  
 [Tutorial: Introdução ao Mecanismo de Banco de Dados](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Tutorial: Gravando instruções Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
-[Referência de método de tipo de dados hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[Referência de método de tipo de dados hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
 [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 98507653332b0dc221a0f1c93b189607e50574e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759021"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809172"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Melhores práticas e solução de problemas de backup para URL do SQL Server
 
@@ -67,7 +67,7 @@ ms.locfileid: "85759021"
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    ,SECRET = '<storage access key> ;  
+    , SECRET = '<storage access key>' ;  
     ```  
   
 -   A credencial existem, mas a conta de logon usada para executar o comando de backup não tem permissões para acessar as credenciais. Use uma conta de logon na função **db_backupoperator** com permissões ***Alterar qualquer credencial*** .  
@@ -92,7 +92,7 @@ ms.locfileid: "85759021"
   
     -   Você também pode encontrar informações analisando o Log de Eventos do Windows nos logs de aplicativo com o nome `SQLBackupToUrl`.  
 
-    -   Considere COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE e vários argumentos de URL ao fazer backup de bancos de dados grandes.  Consulte [Fazendo backup de um VLDB para o Armazenamento de Blobs do Azure](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
+    -   Considere COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE e vários argumentos de URL ao fazer backup de bancos de dados grandes.  Consulte [Fazendo backup de um VLDB para o Armazenamento de Blobs do Azure](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)
   
         ```console
         Msg 3202, Level 16, State 1, Line 1
@@ -182,4 +182,3 @@ Para resolver esse problema, crie um arquivo de configuração que permite que o
  [Restaurando de backups armazenados no Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-  

@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8801e4727beba94c95408716606208c122e96204
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480348"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890759"
 ---
 # <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ Ao identificar uma consulta com desempenho abaixo do ideal, sua ação depender�
   
 -   Criando índices ausentes em tabelas referenciadas por consultas caras.  
   
--   Aplicando política de filtragem para segurança no nível de linha. Para obter mais informações, confira [Otimizando a segurança em nível de linha com o Repositório de Consultas](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store).  
+-   Aplicando política de filtragem para segurança no nível de linha. Para obter mais informações, confira [Otimizando a segurança em nível de linha com o Repositório de Consultas](/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store).  
   
 -   Adicionando controle de versão do sistema temporal a tabelas que são frequentemente modificadas pelos seus aplicativos OLTP.  
   
@@ -222,4 +222,3 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Prática recomendada com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Atualizando bancos de dados usando o Assistente de Ajuste de Consulta](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  

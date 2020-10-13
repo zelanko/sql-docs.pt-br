@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f51c01570aa5149e24ca1cb37af4b6bafe35ee0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95b7165fb16832b8b76e6a9c7a331433d49ff0a9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737814"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809632"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Excluir arquivos de blob de backup com concessões ativas
 
@@ -24,7 +24,7 @@ ms.locfileid: "85737814"
 
 Ao fazer backup para o armazenamento do Microsoft Azure ou restaurar nele, o SQL Server adquirirá uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob não poderá ser gravado ou excluído até que a concessão seja liberada. Este tópico descreve como liberar (interromper) a concessão e excluir o blob.
   
-Para obter mais informações sobre tipos de concessão, leia este [artigo](https://go.microsoft.com/fwlink/?LinkId=275664).  
+Para obter mais informações sobre tipos de concessão, leia este [artigo](/rest/api/storageservices/Lease-Blob).  
   
 Se a operação de backup falhar, o resultado poderá ser um arquivo de backup inválido. O arquivo de blob de backup pode ter também uma concessão ativa, impedindo que ele seja excluído ou substituído. Para excluir ou substituir esses blobs, primeiro a concessão deve ser liberada (interrompida). Se houver falhas de backup, recomendamos que você limpe as concessões e exclua os blobs. Você também pode limpar as concessões e excluir os blobs periodicamente como parte de suas tarefas de gerenciamento de armazenamento.  
   
@@ -36,7 +36,7 @@ As etapas a seguir descrevem como efetuar a limpeza após uma atividade de resta
   
 1. **Identificar blobs com concessões:** Se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.  Você também pode usar o LeaseStats e as propriedades do LeastState para identificar blobs que contêm concessões. Depois de ter identificado os blobs, examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
   
-1. **Interromper a concessão:** Uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
+1. **Interromper a concessão:** Uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](/rest/api/storageservices/Lease-Blob) para obter mais informações.  
   
     > [!TIP]  
     > O SQL Server emite uma ID de concessão para estabelecer o acesso exclusivo durante a operação de restauração. A ID de concessão da restauração é BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -46,7 +46,7 @@ As etapas a seguir descrevem como efetuar a limpeza após uma atividade de resta
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Exemplo de script do PowerShell  
   
 > [!IMPORTANT]
-> Se você estiver executando o PowerShell 2.0, você poderá ter problemas ao carregar o assembly do Microsoft WindowsAzure.Storage.dll. Recomendamos que você atualize o [Powershell](https://docs.microsoft.com/powershell/) para solucionar o problema. Use também a seguinte solução alternativa para criar ou modificar o arquivo powershell.exe.config para carregar os assemblies do.NET 2.0 e do.NET 4.0 em runtime com o seguinte:  
+> Se você estiver executando o PowerShell 2.0, você poderá ter problemas ao carregar o assembly do Microsoft WindowsAzure.Storage.dll. Recomendamos que você atualize o [Powershell](/powershell/) para solucionar o problema. Use também a seguinte solução alternativa para criar ou modificar o arquivo powershell.exe.config para carregar os assemblies do.NET 2.0 e do.NET 4.0 em runtime com o seguinte:  
 >
 > ```xml
 > <?xml version="1.0"?>
@@ -128,4 +128,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## <a name="see-also"></a>Confira também
 
-[Solução de problemas e melhores práticas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[Solução de problemas e melhores práticas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

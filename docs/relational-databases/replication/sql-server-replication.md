@@ -15,12 +15,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6644a84c2134735cefd489c4ddf6abdae775c412
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0690ad04a9b4dfdb2edd22c4e882616c2f8bf73f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723098"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869507"
 ---
 # <a name="sql-server-replication"></a>Replicação do SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -134,7 +134,6 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
 -   [Permitir que não administradores usem o Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Monitorar programaticamente a replicação](monitor/programmatically-monitor-replication.md)    
 -   [Exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [Exibir informações sobre conflitos para publicações de mesclagem &#40;programação Transact-SQL de replicação&#41;](view-conflict-information-for-merge-publications.md) 
+-   [Exibir informações sobre conflitos para publicações de mesclagem &#40;programação Transact-SQL de replicação&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md) 
 -   [Medir a latência e validar conexões para replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
-  
   

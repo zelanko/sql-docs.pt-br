@@ -30,12 +30,12 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 213babf7e34fac642bd91374b2f008776dbbd8d1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 22a6beec87891408ef34039675dd4a2b9ede5758
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005613"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869067"
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,7 +93,7 @@ Cada logon pertence à função de servidor fixa `public` e cada usuário de ban
   
  Os tópicos a seguir são incluídos nesta seção dos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
--   [Tópicos de instruções sobre gerenciamento de logons, usuários e esquemas](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
+-   [Tópicos de instruções sobre gerenciamento de logons, usuários e esquemas](./create-a-login.md)  
   
 -   [Funções de nível de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md)  
   
@@ -109,5 +109,4 @@ Cada logon pertence à função de servidor fixa `public` e cada usuário de ban
  [sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [Funções de nível de servidor](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Funções de nível de banco de dados](../../../relational-databases/security/authentication-access/database-level-roles.md)  
-  
   

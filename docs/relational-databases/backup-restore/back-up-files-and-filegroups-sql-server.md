@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db9345dd3411a28d2bfd72b64b4917c93d6567b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ba5f84315eec687e6ab93c407226a3ff2fbc343
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725224"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809183"
 ---
 # <a name="back-up-files-and-filegroups"></a>Arquivos de backup e grupos de arquivos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -202,7 +202,7 @@ GO
   
 ## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell
 
-Configure e use o [Provedor do SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
+Configure e use o [Provedor do SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md).
   
 Use o cmdlet **Backup-SqlDatabase** e especifique **Files** como valor do parâmetro **-BackupAction** . Além disso, especifique um dos seguintes parâmetros:  
   
@@ -226,4 +226,4 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
  [Backups completos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)  
+ [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)

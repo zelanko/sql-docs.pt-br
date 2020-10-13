@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f37e26803ebc57479d0c70dcd69dc951881c119a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923923"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868589"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "86923923"
  Todas as edições do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferecem suporte a auditorias no nível do servidor. Todas as edições oferecem suporte a auditorias no nível do banco de dados a partir do [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Antes disso, a auditoria no nível de banco de dados se limitava às edições Enterprise, Developer e Evaluation. Para obter mais informações, consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
->  Este tópico aplica-se ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], confira [Introdução à auditoria de banco de dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  
+>  Este tópico aplica-se ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], confira [Introdução à auditoria de banco de dados SQL](/azure/azure-sql/database/auditing-overview).  
   
 ## <a name="sql-server-audit-components"></a>Componentes de auditoria do SQL Server  
  *Auditoria* é a combinação de vários elementos em um único pacote de um grupo específico de ações de servidor ou de banco de dados. Os componentes de auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são combinados para produzir uma saída conhecida como auditoria, da mesma forma como uma definição de relatório combinada com elementos gráficos e de dados produz um relatório.  
@@ -70,7 +70,7 @@ ms.locfileid: "86923923"
 > [!IMPORTANT]  
 >  Qualquer usuário autenticado pode fazer a leitura ou gravação no log de eventos de Aplicativo do Windows. O log de eventos de Aplicativo requer menos permissões que o log de eventos de Segurança do Windows e é menos seguro.  
   
- Gravar no log de Segurança do Windows exige que a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja adicionada à política **Gerar auditorias de segurança** . Por padrão, Sistema Local, Serviço Local e Serviço de Rede fazem parte dessa política. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Além disso, é necessário habilitar a política de segurança **Auditar acesso ao objeto** para **Êxito** e **Falha**. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). No [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou no Windows Server 2008, é possível definir a política mais detalhada de **aplicativo gerado** na linha de comando usando o programa de política de auditoria (**AuditPol.exe)** . Para obter mais informações sobre as etapas para habilitar a gravação no log de Segurança do Windows, consulte [Gravar eventos de auditoria do SQL Server no log de segurança](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Para obter mais informações sobre o programa Auditpol.exe, consulte o artigo 921469 [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/)da Base de Dados de Conhecimento. Os logs de eventos do Windows são globais ao sistema operacional Windows. Para obter mais informações sobre os logs de eventos do Windows, consulte [Event Viewer Overview](https://go.microsoft.com/fwlink/?LinkId=101455). Se você precisar de permissões mais exatas na auditoria, use o destino de arquivo binário.  
+ Gravar no log de Segurança do Windows exige que a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja adicionada à política **Gerar auditorias de segurança** . Por padrão, Sistema Local, Serviço Local e Serviço de Rede fazem parte dessa política. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). Além disso, é necessário habilitar a política de segurança **Auditar acesso ao objeto** para **Êxito** e **Falha**. Esta configuração pode ser definida com o uso do snap-in de política de segurança (secpol.msc). No [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou no Windows Server 2008, é possível definir a política mais detalhada de **aplicativo gerado** na linha de comando usando o programa de política de auditoria (**AuditPol.exe)** . Para obter mais informações sobre as etapas para habilitar a gravação no log de Segurança do Windows, consulte [Gravar eventos de auditoria do SQL Server no log de segurança](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Para obter mais informações sobre o programa Auditpol.exe, consulte o artigo 921469 [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/)da Base de Dados de Conhecimento. Os logs de eventos do Windows são globais ao sistema operacional Windows. Para obter mais informações sobre os logs de eventos do Windows, consulte [Event Viewer Overview](/previous-versions/windows/it-pro/windows-server-2003/cc737015(v=ws.10)). Se você precisar de permissões mais exatas na auditoria, use o destino de arquivo binário.  
   
  Quando você está salvando informações de auditoria em um arquivo, para ajudar a impedir falsificação, você pode restringir o acesso ao local do arquivo das seguintes maneiras:  
   
@@ -215,12 +215,10 @@ ms.locfileid: "86923923"
  [Gatilhos DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Explica como os gatilhos DDL (linguagem de definição de dados) podem ser usados para controlar alterações nos bancos de dados.  
   
- [Microsoft TechNet: SQL Server TechCenter: Proteção e Segurança do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: Proteção e Segurança do SQL Server 2005](../../../sql-server/index.yml)  
  Fornece informações atualizadas sobre a segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Ações e grupos de ações de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [Registros de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
-  
-

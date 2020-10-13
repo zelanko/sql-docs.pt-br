@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3abf911faf82a4a20ed99c2f89d4171300981de0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de570769ee53617d0c8ed0cb71c13647c279fea1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718045"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809380"
 ---
 # <a name="full-database-backups-sql-server"></a>Backups de bancos de dados completos (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,6 +106,5 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Backup e restauração de bancos de dados do Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
-  
+ [Backup e restauração de bancos de dados do Analysis Services](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   

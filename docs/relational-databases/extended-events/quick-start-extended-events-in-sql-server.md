@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18e0b44567d2e6a06dfc243231aebe6f9be11222
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624783"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869425"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
 
@@ -49,13 +49,13 @@ Este artigo faz o seguinte:
 Blogs e outras conversas informais, às vezes, referem-se aos eventos estendidos pela abreviação *xevents*.
 
 > [!NOTE]
-> Para obter informações sobre eventos estendidos no Banco de Dados SQL do Azure, incluindo exemplos de código, confira [Eventos estendidos no Banco de Dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
+> Para obter informações sobre eventos estendidos no Banco de Dados SQL do Azure, incluindo exemplos de código, confira [Eventos estendidos no Banco de Dados SQL](/azure/azure-sql/database/xevent-db-diff-from-svr).
 
 ## <a name="preparations-before-demo"></a>Preparações antes da demonstração
 
 As etapas preliminares a seguir serão necessárias para a realização real da próxima demonstração.
 
-1. [Baixar o SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+1. [Baixar o SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
    Todos os meses, é necessário instalar a atualização mais recente mensal do SSMS.
 2. Faça logon no Microsoft SQL Server 2014 ou posterior.
@@ -359,7 +359,7 @@ Cenários específicos de sessões de evento destinadas à avaliação de bloque
 - [Localizar os objetos que detêm a maioria dos bloqueios](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - Esse cenário usa o destino package0.histogram, que processa os dados brutos de evento antes de exibi-los para você.
 - [Determinar quais consultas estão mantendo bloqueios](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - Esse cenário usa o [destino package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), em que o par de eventos é sqlserver.lock_acquire e lock_release.
+  - Esse cenário usa o [destino package0.pair_matching](/previous-versions/sql/sql-server-2016/ff878062(v=sql.130)), em que o par de eventos é sqlserver.lock_acquire e lock_release.
 
 ## <a name="terms-and-concepts-in-extended-events"></a>Termos e conceitos nos eventos estendidos
 
@@ -541,7 +541,7 @@ Estes são os links para a documentação relacionada a essas instruções SELEC
 - Detalhes da função interna [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [Permissões de servidor GRANT (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- [sys.server_principals (Transact-SQL)](../system-catalog-views/sys-server-principals-transact-sql.md)
 - Blog: [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx) (Permissões eficientes do Mecanismo de Banco de Dados)
 - [Cartaz](https://aka.ms/sql-permissions-poster)que permite zoom, como um PDF, que exibe a hierarquia de todas as permissões do SQL Server.
 

@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719301"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890773"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> Para obter mais informações sobre a sobrecarga de desempenho da criação de perfil de consulta, confira a postagem no blog [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar). 
+> Para obter mais informações sobre a sobrecarga de desempenho da criação de perfil de consulta, confira a postagem no blog [Developers Choice: Query progress – anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar). 
 
 Ao executar uma sessão de eventos estendidos que usa o evento *query_thread_profile*, o DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) também é populado usando a criação de perfil leve, o que permite estatísticas de consulta dinâmica para todas as sessões, usando o [Monitor de Atividade](../../relational-databases/performance-monitor/activity-monitor.md) ou consultando diretamente o DMV.
 
@@ -212,4 +212,4 @@ Para obter mais informações sobre a sobrecarga de desempenho da criação de p
  [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [Estatísticas de consulta dinâmica](../../relational-databases/performance/live-query-statistics.md)      
+ [Estatísticas de consulta dinâmica](../../relational-databases/performance/live-query-statistics.md)

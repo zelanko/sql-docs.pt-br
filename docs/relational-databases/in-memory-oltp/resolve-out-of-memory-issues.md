@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b907472303d6ba11691efe72bb08717ac7854ea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 75b1f1b489a50041d360ac8abc60dd492bf43378
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537993"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868246"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -159,9 +159,8 @@ Se você seguir as práticas acima para um banco de dados com tabelas otimizadas
 Para solucionar isso, pré-aloque memória suficiente para o banco de dados a ser recuperado ou reinicie o banco de dados, não um valor mínimo que depende da memória dinâmica para fornecer a memória adicional quando for necessário.
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciando memória para OLTP na memória](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [Gerenciando memória para OLTP na memória](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))   
  [Monitorar e solucionar problemas de uso da memória](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Guia de arquitetura de gerenciamento de memória](../../relational-databases/memory-management-architecture-guide.md)  
  [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
-  

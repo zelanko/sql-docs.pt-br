@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c691d1e4a6164087ee3bee776e27a786f68effe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519173"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809262"
 ---
 # <a name="create-a-full-database-backup"></a>Criar um backup de banco de dados completo
 
@@ -208,7 +208,7 @@ Neste exemplo, será feito backup do banco de dados `SQLTestDB` com criptografia
 
 O exemplo abaixo faz um backup completo de banco de dados do `SQLTestDB` no serviço de Armazenamento de Blobs do Azure. Esse exemplo assume que você já tem uma conta de armazenamento com um contêiner de blobs. Esse exemplo cria uma assinatura de acesso compartilhado para você. Esse exemplo falha se o contêiner tiver uma assinatura de acesso compartilhado existente.
 
-Se você não tiver um contêiner de blobs do Azure em uma conta de armazenamento, crie um antes de continuar. Para obter mais informações, confira [Criar uma conta de armazenamento de uso geral](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) e [Criar um contêiner](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+Se você não tiver um contêiner de blobs do Azure em uma conta de armazenamento, crie um antes de continuar. Para obter mais informações, confira [Criar uma conta de armazenamento de uso geral](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) e [Criar um contêiner](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Depois de se conectar à instância adequada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no **Pesquisador de Objetos**, expanda a árvore do servidor.
 
@@ -368,7 +368,7 @@ Use o cmdlet **Backup-SqlDatabase** . Para indicar explicitamente que este é um
 > [!NOTE]
 > Esses exemplos exigem o módulo SqlServer. Para determinar se ele está instalado, execute `Get-Module -Name SqlServer`. Para instalar esse módulo, execute `Install-Module -Name SqlServer` em uma sessão de administrador do PowerShell.
 >
-> Para obter mais informações, consulte [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).
+> Para obter mais informações, consulte [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
 
 > [!IMPORTANT]
 > Se estiver abrindo uma janela do PowerShell no SQL Server Management Studio para se conectar a uma instalação do SQL Server, você poderá omitir a parte da credencial desse exemplo, pois sua credencial no SSMS é usada automaticamente para estabelecer a conexão entre o PowerShell e sua instância do SQL Server.
@@ -379,7 +379,7 @@ Use o cmdlet **Backup-SqlDatabase** . Para indicar explicitamente que este é um
 
 O exemplo a seguir cria um backup de banco de dados completo do banco de dados `<myDatabase>` para o local de backup padrão da instância de servidor `Computer\Instance`. Como opção, esse exemplo especifica **-BackupAction Database**.
 
-Para obter a sintaxe completa e os exemplos adicionais, confira [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase).
+Para obter a sintaxe completa e os exemplos adicionais, confira [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase).
 
 ```powershell
 $credential = Get-Credential

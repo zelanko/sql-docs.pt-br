@@ -18,12 +18,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca2d2b650e8691e34445a4b239fb6eff71b25557
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773932"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869104"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
 
@@ -308,7 +308,7 @@ GO
     -   (Opcional) Um valor de **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para criar um trabalho de agente que seja usado para sincronizar a assinatura. Se você especificar **false** (o padrão), a assinatura pode ser sincronizada apenas de forma programada e é preciso especificar propriedades adicionais para <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> ao acessar esse objeto da propriedade <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> . Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
         > [!NOTE]  
-        >  O SQL Server Agent não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Quando você especifica um valor de **true** para Assinantes do Express, o trabalho de agente não é criado. Porém, importantes metadados relacionados a assinatura são armazenados no Assinante.  
+        >  O SQL Server Agent não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Quando você especifica um valor de **true** para Assinantes do Express, o trabalho de agente não é criado. Porém, importantes metadados relacionados a assinatura são armazenados no Assinante.  
   
     -   (Opcional) Defina os campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> ou <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ao usar a Autenticação do SQL Server para conexão com o Distribuidor.  
   
@@ -1136,5 +1136,4 @@ End Try
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

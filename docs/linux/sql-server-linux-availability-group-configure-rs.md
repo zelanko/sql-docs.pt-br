@@ -2,19 +2,19 @@
 title: Configurar um grupo de disponibilidade de escala de leitura (SQL Server em Linux)
 description: Saiba mais sobre como configurar um AG (grupo de disponibilidade) Always On do SQL Server para cargas de trabalho de escala de leitura no Linux.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b1472c1cbe3bdb9611ffcb06ff3404c28c431545
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892293"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784840"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurar um grupo de disponibilidade do SQL Server para escala de leitura no Linux
 

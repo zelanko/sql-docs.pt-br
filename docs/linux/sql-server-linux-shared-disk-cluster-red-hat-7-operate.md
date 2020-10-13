@@ -2,20 +2,20 @@
 title: Operar a FCI RHEL do SQL Server em Linux
 description: Saiba como operar uma FCI (instância de cluster de failover) de disco compartilhado RHEL (Red Hat Enterprise Linux) do SQL Server para alta disponibilidade, como fazer failover manual da FCI e adicionar nós ao cluster ou removê-los do cluster.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 94ac1e7dbd6632d2346df2d7d1837b8ee66859c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 639e88a96ac639d20a6190bffeed75d46495aa51
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897262"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785069"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Operar a FCI (instância de cluster de failover) RHEL do SQL Server
 

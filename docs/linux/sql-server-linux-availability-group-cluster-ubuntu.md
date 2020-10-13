@@ -3,20 +3,20 @@ title: Configurar um cluster do Ubuntu para um grupo de disponibilidade
 titleSuffix: SQL Server on Linux
 description: Saiba como criar um cluster de três nós no Ubuntu e adicionar um recurso de grupo de disponibilidade criado anteriormente ao cluster.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 52511077d0f4f0da4db0f32dc057b614830587ec
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892318"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784861"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar o cluster do Ubuntu e o recurso do grupo de disponibilidade
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540821"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809182"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Cenários de uso da tabela temporal
 
@@ -59,7 +59,7 @@ Várias opções para criar a tabela com controle temporal da versão do sistema
 
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Habilitação do controle da versão de sistema em uma tabela existente para auditoria de dados
 
-Se você precisar realizar auditoria de dados em bancos de dados existentes, use ALTER TABLE para estender as tabelas não temporais, fazendo com que passem a oferecer controle da versão do sistema. Para evitar alterações interruptivas em seu aplicativo, adicione colunas de período como HIDDEN, conforme explicado em [Alterar a tabela não temporal para ser uma tabela temporal com controle da versão do sistema](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3). O exemplo a seguir ilustra a habilitação do controle da versão do sistema em uma tabela Funcionário existente em um banco de dados de RH hipotético:
+Se você precisar realizar auditoria de dados em bancos de dados existentes, use ALTER TABLE para estender as tabelas não temporais, fazendo com que passem a oferecer controle da versão do sistema. Para evitar alterações interruptivas em seu aplicativo, adicione colunas de período como HIDDEN, conforme explicado em [Alterar a tabela não temporal para ser uma tabela temporal com controle da versão do sistema](./creating-a-system-versioned-temporal-table.md). O exemplo a seguir ilustra a habilitação do controle da versão do sistema em uma tabela Funcionário existente em um banco de dados de RH hipotético:
 
 ```sql
 /*
