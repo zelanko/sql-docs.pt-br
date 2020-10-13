@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d5f43aa7846f20ad6c3d723b1415450bbc0915f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad66d6d5b6aa32ba8f2e594dbba91c07940d185a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768026"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809962"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Criar um banco de dados habilitado para FILESTREAM
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico mostra como criar um banco de dados que oferece suporte a FILESTREAM. Como o FILESTREAM usa um tipo especial de grupo de arquivos, ao criar o banco de dados, será preciso especificar a cláusula CONTAINS FILESTREAM para pelo menos um grupo de arquivos.  
   
- Um grupo de arquivos FILESTREAM pode conter mais de um arquivo. Para ver um exemplo de código que demonstra como criar um grupo de arquivos FILESTREAM que contém vários arquivos, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Um grupo de arquivos FILESTREAM pode conter mais de um arquivo. Para ver um exemplo de código que demonstra como criar um grupo de arquivos FILESTREAM que contém vários arquivos, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 ### <a name="to-create-a-filestream-enabled-database"></a>Para criar um banco de dados habilitado para FILESTREAM  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85768026"
   
  [!code-sql[FILESTREAM#FS_CreateDB](../../relational-databases/blob/codesnippet/tsql/create-a-filestream-enab_1.sql)]  
   
- Para um grupo de arquivos `FILESTREAM` , `FILENAME` faz referência a um caminho. O caminho até a última pasta deve existir e a última pasta não deve existir. Neste exemplo, `c:\data` deve existir. Entretanto, a subpasta `filestream1` não pode existir quando você executar a instrução `CREATE DATABASE` . Para saber mais sobre a sintaxe, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Para um grupo de arquivos `FILESTREAM` , `FILENAME` faz referência a um caminho. O caminho até a última pasta deve existir e a última pasta não deve existir. Neste exemplo, `c:\data` deve existir. Entretanto, a subpasta `filestream1` não pode existir quando você executar a instrução `CREATE DATABASE` . Para saber mais sobre a sintaxe, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
  Após executar o exemplo anterior, um arquivo filestream.hdr e uma pasta $FSLOG devem aparecer na pasta c:\Data\filestream1. O arquivo filestream.hdr é um arquivo de cabeçalho para o contêiner FILESTREAM.  
   
@@ -52,7 +52,6 @@ ms.locfileid: "85768026"
  Em bancos de dados existentes, você pode usar a instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) para adicionar um grupo de arquivos FILESTREAM.  
   
 ## <a name="see-also"></a>Consulte Também  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
-  
   

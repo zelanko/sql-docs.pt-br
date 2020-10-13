@@ -16,12 +16,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: acaf5441ee5ca80468d6795071f99979ac3bcda9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 85f30b310f6878e9090dcf55e63be41c16f1490e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863364"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809853"
 ---
 # <a name="copy-only-backups"></a>Backups somente cópia
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes
  Backups somente cópia são registrados na coluna **is_copy_only** da tabela [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) .  
  
  > [!IMPORTANT]  
-> Na Instância Gerenciada de SQL do Azure, não é possível criar o backup somente cópia para um banco de dados criptografado com a [TDE (Transparent Data Encryption) gerenciada por serviço](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). A TDE gerenciada por serviço usa a chave interna para criptografia de dados e essa chave não pode ser exportada, portanto, não é possível restaurar o backup em outro lugar. Considere usar a [TDE gerenciada pelo cliente](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) para poder criar backups somente cópia de bancos de dados criptografados, mas certifique-se de ter a chave de criptografia disponível para restauração posterior.
+> Na Instância Gerenciada de SQL do Azure, não é possível criar o backup somente cópia para um banco de dados criptografado com a [TDE (Transparent Data Encryption) gerenciada por serviço](/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). A TDE gerenciada por serviço usa a chave interna para criptografia de dados e essa chave não pode ser exportada, portanto, não é possível restaurar o backup em outro lugar. Considere usar a [TDE gerenciada pelo cliente](/azure/sql-database/transparent-data-encryption-byok-azure-sql) para poder criar backups somente cópia de bancos de dados criptografados, mas certifique-se de ter a chave de criptografia disponível para restauração posterior.
   
 ## <a name="to-create-a-copy-only-backup"></a>Para criar um backup somente cópia  
  Você pode criar um backup somente cópia usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
@@ -98,7 +98,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **Para configurar e usar o provedor do SQL Server PowerShell**  
   
-- [Provedor do SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+- [Provedor do SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>Confira também  
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
@@ -108,4 +108,3 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
-  

@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2cc6c779f441934e76108a71445078386dc4d567
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627555"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866915"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografia Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85627555"
   
  Uma CEK (chave de criptografia de coluna) é uma criptografia de conteúdo (por exemplo, uma chave usada para proteger dados) protegida por uma CMK.  
   
- Todos os provedores de repositórios de CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] criptografam CEKs usando RSA-OAEP (RSA com Preenchimento de Criptografia Assimétrica Ideal). O provedor de repositório de chaves que dá suporte à API de Criptografia da Microsoft: A próxima geração (CNG) no .NET Framework ([SqlColumnEncryptionCngProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) usa os parâmetros padrão especificados por RFC 8017 na seção A.2.1. Esses parâmetros padrão estão usando uma função de hash de SHA-1 e uma função de geração de máscara de MGF1 com SHA-1. Todos os outros provedores de repositório de chaves usam SHA-256. 
+ Todos os provedores de repositórios de CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] criptografam CEKs usando RSA-OAEP (RSA com Preenchimento de Criptografia Assimétrica Ideal). O provedor de repositório de chaves que dá suporte à API de Criptografia da Microsoft: A próxima geração (CNG) no .NET Framework ([SqlColumnEncryptionCngProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) usa os parâmetros padrão especificados por RFC 8017 na seção A.2.1. Esses parâmetros padrão estão usando uma função de hash de SHA-1 e uma função de geração de máscara de MGF1 com SHA-1. Todos os outros provedores de repositório de chaves usam SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Algoritmo de criptografia de dados  
  O Always Encrypted usa o algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** para criptografar dados no banco de dados.  
@@ -181,5 +181,4 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="see-also"></a>Consulte Também  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Desenvolver aplicativos usando o Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-  
   

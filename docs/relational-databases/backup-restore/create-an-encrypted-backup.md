@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fbf54c1e384357a423ee9c2c1f086edbc5c947f9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748430"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809250"
 ---
 # <a name="create-an-encrypted-backup"></a>Criar um backup criptografado
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85748430"
   
  **Pré-requisitos:**  
   
--   Uma conta de armazenamento do Windows e um contêiner. Para obter mais informações, consulte: [Lição 1: Criar objetos de Armazenamento do Azure](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Uma conta de armazenamento do Windows e um contêiner. Para obter mais informações, consulte: [Lição 1: Criar objetos de Armazenamento do Azure](/previous-versions/sql/sql-server-2016/jj720557(v=sql.130)).  
   
 -   Uma Chave Mestra do Banco de Dados para o banco de dados mestre, e um certificado ou uma chave assimétrica na instância do SQL Server. Para requisitos e permissões de criptografia, consulte [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -129,5 +129,4 @@ ms.locfileid: "85748430"
     GO  
   
     ```  
-  
   

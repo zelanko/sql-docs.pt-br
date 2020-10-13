@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723110"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866617"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices em tabelas com otimização de memória
 
@@ -143,7 +143,7 @@ Considere uma tabela `Customers` que tenha uma chave primária em `CustomerId` e
 
 Nesse cenário, a melhor prática é usar um índice não clusterizado em `(CustomerCategoryID, CustomerId)`. Esse índice pode ser usado para consultas que usam um predicado que envolve `CustomerCategoryID`, mas a chave de índice não contém duplicação. Portanto, nenhuma ineficiência na manutenção do índice é causada pelos valores CustomerCategoryID duplicados nem pela coluna extra no índice.
 
-A consulta a seguir mostra o número médio de valores de chave de índice duplicado para o índice em `CustomerCategoryID` na tabela `Sales.Customers`, no banco de dados de exemplo [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
+A consulta a seguir mostra o número médio de valores de chave de índice duplicado para o índice em `CustomerCategoryID` na tabela `Sales.Customers`, no banco de dados de exemplo [WideWorldImporters](../../samples/wide-world-importers-what-is.md).
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -235,4 +235,4 @@ Aproveite soluções como a [Desfragmentação de índice adaptável](https://gi
  [Guia de criação de índice do SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
  [Índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Índices não clusterizados para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Desfragmentação de índice adaptável](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

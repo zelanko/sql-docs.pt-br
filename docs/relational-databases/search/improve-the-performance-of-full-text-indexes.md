@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4b893bd45de93ab0ee934343e16bf6d577f1123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427928"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868071"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -207,7 +207,7 @@ O mecanismo de texto completo usa dois tipos de filtros ao popular um índice de
   
  Por razões de segurança, os filtros são carregados por processos de host do daemon de filtro. Uma instância de servidor usa um processo multi-threaded para todos os filtros multi-threaded e um processo single-threaded para todos os filtros single-threaded. Quando um documento que usa um filtro multithread contém um documento incorporado que usa um filtro de thread único, o Mecanismo de Texto Completo inicia um processo de thread único para o documento incorporado. Por exemplo, ao encontrar um documento do Word que contém um documento em PDF, o Mecanismo de Texto Completo usa o processo multithread para o conteúdo do Word e inicia um processo de thread único para o conteúdo do PDF. Um filtro de thread único pode não funcionar bem neste ambiente e pode desestabilizar o processo de filtragem. Em determinadas circunstâncias em que o processo de incorporação é comum, a desestabilização pode causar o travamento do processo. Quando isso ocorrer, o mecanismo de texto completo refaz a rota do documento que falhou (por exemplo, um documento do Word que contém um conteúdo em PDF incorporado) para o processo de filtragem em thread único. Se isso acontecer com frequência, ocorrerá uma degradação de desempenho do processo de indexação de texto completo.  
   
-Para solucionar esse problema, marque o filtro para o documento de contêiner (neste caso, o Word) como filtro de thread único. Para marcar um filtro como filtro de thread único, defina o valor de Registro **ThreadingModel** para o filtro como **Apartment Threaded**. Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Compreendendo e usando os modelos de threading COM).  
+Para solucionar esse problema, marque o filtro para o documento de contêiner (neste caso, o Word) como filtro de thread único. Para marcar um filtro como filtro de thread único, defina o valor de Registro **ThreadingModel** para o filtro como **Apartment Threaded**. Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](/previous-versions/ms809971(v=msdn.10))(Compreendendo e usando os modelos de threading COM).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Opções Server Memory de configuração do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -217,5 +217,4 @@ Para solucionar esse problema, marque o filtro para o documento de contêiner (n
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [Solucionar problemas na indexação de texto completo](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
   

@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 27f37c0bfc246256274eb435ff8a79a9010c204e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248618"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810172"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Habilitar o backup gerenciado do SQL Server no Azure
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as configurações padrão nos níveis de instância e de banco de dados. Também descreve como habilitar as notificações por email e como monitorar a atividade de backup.  
   
- Este tutorial usa o Azure PowerShell. Antes de iniciar o tutorial, [baixe e instale o Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ Este tutorial usa o Azure PowerShell. Antes de iniciar o tutorial, [baixe e instale o Azure PowerShell](/powershell/azure/).  
   
 > [!IMPORTANT]  
 >  Se você também quiser habilitar opções avançadas ou usar uma agenda personalizada, defina essas configurações antes de habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para saber mais, confira [Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "87248618"
 
 O processo exige uma conta do Azure. Caso já tenha uma conta, vá para a próxima etapa. Caso contrário, você pode começar com uma [avaliação gratuita](https://azure.microsoft.com/pricing/free-trial/) ou explorar as [opções de compra](https://azure.microsoft.com/pricing/purchase-options/).
 
-Para saber mais sobre contas de armazenamento, confira [Sobre as contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
+Para saber mais sobre contas de armazenamento, confira [Sobre as contas de armazenamento do Azure](/azure/storage/common/storage-account-create). 
 
 #### <a name="azure-cli"></a>[CLI do Azure](#tab/azure-cli)
 
@@ -106,7 +106,7 @@ Se a URL for incluída, separe-a do token SAS no ponto de interrogação (não i
 |**Token SAS**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO SQL. Para saber mais sobre SAS, confira [Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) (Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo de SAS)  
+Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO SQL. Para saber mais sobre SAS, confira [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview) (Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo de SAS)  
   
 ## <a name="enable-managed-backup-to-azure"></a>Habilitar o backup gerenciado no Azure
   
@@ -211,4 +211,4 @@ Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO 
 As etapas descritas nesta seção destinam-se especificamente à configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez no banco de dados. Você pode modificar as configurações existentes usando o mesmo procedimento armazenado do sistema e fornecer os novos valores.  
   
 ## <a name="see-also"></a>Confira também  
- [Backup gerenciado do SQL Server no Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Backup gerenciado do SQL Server no Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

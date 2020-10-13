@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f321bc96749a0a5c6bf260a8093113258c64f3f1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863318"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866567"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar a publicação e a distribuição
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -133,7 +133,7 @@ O exemplo a seguir mostra como configurar publicação e distribuição programa
 
 5. Instale o Distribuidor chamando o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Especifique uma senha segura (usada pelo Publicador ao se conectar ao Distribuidor remoto) e o objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> da etapa 3. Para obter mais informações, consulte [Proteger o Distribuidor](../../relational-databases/replication/security/secure-the-distributor.md).
 
-   > `IMPORTANT!!` Quando possível, solicite que os usuários insiram as credenciais de segurança em runtime. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.
+   > `IMPORTANT!!` Quando possível, solicite que os usuários insiram as credenciais de segurança em runtime. Se for preciso armazenar credenciais, use os serviços [criptográficos](/previous-versions/aa719848(v=vs.71)) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.
 
 6. Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
@@ -158,7 +158,7 @@ O exemplo a seguir mostra como configurar publicação e distribuição programa
 11. Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Passe o nome do Distribuidor remoto e a senha para o Distribuidor remoto especificados na etapa 5.
 
 > [!IMPORTANT]
-> Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo Windows .NET Framework.
+> Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os [serviços criptográficos](/previous-versions/aa719848(v=vs.71)) fornecidos pelo Windows .NET Framework.
 
 ###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemplo (RMO) 
 Você pode configurar a replicação da publicação e da distribuição de forma programada usando o RMO (Replication Management Objects).
@@ -172,6 +172,4 @@ Você pode configurar a replicação da publicação e da distribuição de form
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)  
 [Conceitos de objetos de gerenciamento de replicação](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-[Configurar a replicação para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) 
-
-
+[Configurar a replicação para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

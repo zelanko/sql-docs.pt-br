@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651005"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866629"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Antes do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o tamanho dos dados na linha de uma tabela com otimização de memória não podia ter mais de [8.060 bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). No entanto, no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no Banco de Dados SQL do Azure, agora é possível criar uma tabela com otimização de memória com várias colunas grandes [por exemplo, várias colunas de varbinary(8000)] e colunas LOB [ou seja, varbinary(max), varchar(max) e nvarchar(max)] e executar operações nela usando módulos T-SQL e tipos de tabela compilados nativamente. 
+Antes do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o tamanho dos dados na linha de uma tabela com otimização de memória não podia ter mais de [8.060 bytes](?viewFallbackFrom=sql-server-2014). No entanto, no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no Banco de Dados SQL do Azure, agora é possível criar uma tabela com otimização de memória com várias colunas grandes [por exemplo, várias colunas de varbinary(8000)] e colunas LOB [ou seja, varbinary(max), varchar(max) e nvarchar(max)] e executar operações nela usando módulos T-SQL e tipos de tabela compilados nativamente. 
   
 Colunas que não se ajustam ao limite de tamanho de linha de 8.060 bytes são colocadas fora de linha, em uma tabela interna separada. Cada coluna fora de linha tem uma tabela interna correspondente, que por sua vez, tem um único índice não clusterizado. Para obter detalhes sobre essas tabelas internas usadas para colunas fora da linha, consulte [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  
@@ -238,9 +238,8 @@ where object_id = object_id('dbo.Orders')
 -   Para LOBs, a limitação de tamanho espelha-se na de tabelas baseadas em disco (limite de 2 GB em valores de LOB). 
 -   Para otimizar o desempenho, é recomendável que a maioria das colunas caibam dentro de 8060 bytes. 
 
-A postagem no blog [Novidades para OLTP in-memory do SQL Server 2016 desde o CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) oferece mais detalhes sobre algumas dessas complexidades.   
+A postagem no blog [Novidades para OLTP in-memory do SQL Server 2016 desde o CTP3](/archive/blogs/sqlserverstorageengine/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) oferece mais detalhes sobre algumas dessas complexidades.   
  
 ## <a name="see-also"></a>Consulte Também  
- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)  
   

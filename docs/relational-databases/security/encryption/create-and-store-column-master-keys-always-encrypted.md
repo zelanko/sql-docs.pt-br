@@ -12,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765046"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867825"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Criar e armazenar chaves mestras de coluna para Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Criar um certificado autoassinado usando o SSMS (SQL Server Management Studio)
 
 Para obter detalhes, confira [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Always Encrypted no Repositório de Certificados do Windows, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de banco de dados e armazenar as chaves de criptografia no Repositório de Certificados do Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
+Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Always Encrypted no Repositório de Certificados do Windows, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de banco de dados e armazenar as chaves de criptografia no Repositório de Certificados do Windows](/azure/azure-sql/database/always-encrypted-certificate-store-configure).
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>Disponibilizando certificados para aplicativos e usuários
@@ -104,7 +104,7 @@ Para conceder a um usuário a permissão *Leitura* para um certificado armazenad
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Criando chaves mestras de coluna no Cofre de Chaves do Azure
 
-O Cofre de Chaves do Azure ajudará a proteger segredos e chaves de criptografia, sendo uma opção conveniente para armazenar chaves mestras de coluna do Sempre Criptografado, especialmente se seus aplicativos estiverem hospedados no Azure. Para criar uma chave no [Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), é necessário ter uma [assinatura do Azure](https://azure.microsoft.com/free/) e um Cofre de Chaves do Azure.
+O Cofre de Chaves do Azure ajudará a proteger segredos e chaves de criptografia, sendo uma opção conveniente para armazenar chaves mestras de coluna do Sempre Criptografado, especialmente se seus aplicativos estiverem hospedados no Azure. Para criar uma chave no [Cofre de Chaves do Azure](/azure/key-vault/general/overview), é necessário ter uma [assinatura do Azure](https://azure.microsoft.com/free/) e um Cofre de Chaves do Azure.
 
 ### <a name="using-powershell"></a>Usando o PowerShell
 
@@ -128,7 +128,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### <a name="using-sql-server-management-studio-ssms"></a>Usando o SSMS (SQL Server Management Studio)
 
 Para obter detalhes sobre como criar uma chave mestra de coluna no Azure Key Vault usando o SSMS, confira [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Always Encrypted em um Cofre de Chaves do Azure, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de dados e armazenar as chaves de criptografia no Cofre de Chaves do Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
+Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Always Encrypted em um Cofre de Chaves do Azure, veja [Always Encrypted – Proteger dados confidenciais no Banco de Dados SQL com a criptografia de dados e armazenar as chaves de criptografia no Cofre de Chaves do Azure](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Disponibilizando as chaves do Cofre de Chaves do Azure para aplicativos e usuários
 
@@ -138,7 +138,7 @@ Para provisionar as chaves de criptografia de coluna protegidas com uma chave me
 
 #### <a name="using-powershell"></a>Usando o PowerShell
 
-Para permitir que usuários e aplicativos acessem as chaves reais no Azure Key Vault, é necessário definir a política de acesso do cofre ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
+Para permitir que usuários e aplicativos acessem as chaves reais no Azure Key Vault, é necessário definir a política de acesso do cofre ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -227,4 +227,4 @@ Confira a documentação do HSM e do CSP para saber como configurar o CSP em um 
   
 ## <a name="see-also"></a>Consulte Também 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Visão geral do gerenciamento de chaves do Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Visão geral do gerenciamento de chaves do Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

@@ -12,12 +12,12 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f0408cce9d95fa1ca984fb94823bef442cbaf4c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 474f5b9f512139762140aa9c1932b6df7da96b0f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537740"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867387"
 ---
 # <a name="application-level-partitioning"></a>Particionamento de nível de aplicativo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -218,6 +218,5 @@ select * from cold order by orderDate desc
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplos de código do OLTP in-memory](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [Exemplos de código do OLTP in-memory](./sample-database-for-in-memory-oltp.md)  
   

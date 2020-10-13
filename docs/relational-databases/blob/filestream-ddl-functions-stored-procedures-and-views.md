@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fe2ed55cd68ee6852ab071a7ff8ca428150737d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cfc44f0284b16df456881cf178c1846691aa9862
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642687"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809920"
 ---
 # <a name="filestream-functions-stored-procedures-and-views"></a>FILESTREAM, funções, procedimentos armazenados e exibições
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "85642687"
   
 ##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instruções DDL (linguagem de definição de dados) Transact-SQL  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
@@ -64,6 +64,5 @@ ms.locfileid: "85642687"
   
 -   [Acessar dados do FILESTREAM com OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
--   [API gerenciada - classe SqlFileStream](https://go.microsoft.com/fwlink/?LinkId=220875)  
-  
+-   [API gerenciada - classe SqlFileStream](/dotnet/api/system.data.sqltypes.sqlfilestream)  
   

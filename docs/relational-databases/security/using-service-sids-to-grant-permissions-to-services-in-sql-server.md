@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: f366af08581accf5ef1f1c8fc00830f6cc592537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403562"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868150"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Usando SIDs de serviço para conceder permissões para serviços no SQL Server
 
@@ -28,7 +28,7 @@ Exemplos de serviços em que um SID de serviço pode ser usado são:
 
 Por padrão, alguns serviços não têm um SID de serviço. O SID de serviço deve ser criado usando [SC.exe](/windows/desktop/services/configuring-a-service-using-sc). [Esse método](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) foi adotado por administradores do Microsoft System Center Operations Manager para conceder permissão para o HealthService dentro do SQL Server.
 
-Uma vez o serviço SID foi criado e confirmado, ele deve ter a permissão dentro do SQL Server. Conceder permissões é feito criando um logon do Windows usando um [SSMS (SQL Server Management Studio)](/sql/ssms/download-sql-server-management-studio-ssms) ou uma consulta. Depois que o logon for criado, ele poderá receber permissões, ser adicionado a funções e ser mapeado para bancos de dados assim como qualquer outro logon.
+Uma vez o serviço SID foi criado e confirmado, ele deve ter a permissão dentro do SQL Server. Conceder permissões é feito criando um logon do Windows usando um [SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md) ou uma consulta. Depois que o logon for criado, ele poderá receber permissões, ser adicionado a funções e ser mapeado para bancos de dados assim como qualquer outro logon.
 
 > [!TIP]
 > Se o erro `Login failed for user 'NT AUTHORITY\SYSTEM'` for recebido, verifique se o SID de serviço existe para o serviço desejado, se o logon do SID de serviço foi criado no SQL Server e se as permissões apropriadas foram concedidas para o SID de serviço no SQL Server.
@@ -41,7 +41,7 @@ Tradicionalmente, contas de serviço eram usadas para permitir os serviços logo
 
 ### <a name="granular-permissions-to-system-accounts"></a>Permissões granulares para contas do sistema
 
-Contas do sistema historicamente recebem permissões criando um logon para as contas [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([NT AUTHORITY\SYSTEM em en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) ou [NetworkService](/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE em en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) e concedendo a elas permissões de logon. Esse método concede qualquer permissão de processo ou serviço em SQL, que está em execução como uma conta do sistema.
+Contas do sistema historicamente recebem permissões criando um logon para as contas [LocalSystem](/windows/win32/services/localsystem-account) ([NT AUTHORITY\SYSTEM em en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) ou [NetworkService](/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE em en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) e concedendo a elas permissões de logon. Esse método concede qualquer permissão de processo ou serviço em SQL, que está em execução como uma conta do sistema.
 
 Usar um SID de Serviço possibilita a concessão de permissões a um serviço específico. O serviço só tem acesso aos recursos para os quais recebeu permissões quando está em execução. Por exemplo, se o `HealthService` estiver em execução como `LocalSystem` e receber `View Server State`, a conta `LocalSystem` só terá permissão para `View Server State` quando estiver em execução no contexto do `HealthService`. Se qualquer outro processo tentar acessar o estado do servidor do SQL como `LocalSystem`, ele terá o acesso negado.
 
@@ -106,8 +106,8 @@ GO
 
 Para obter mais informações sobre o serviço de estrutura de sid, leia [estrutura SERVICE_SID_INFO](/windows/win32/api/winsvc/ns-winsvc-service_sid_info).
 
-Leia sobre as opções adicionais disponíveis ao [criar um logon](/sql/t-sql/statements/create-login-transact-sql).
+Leia sobre as opções adicionais disponíveis ao [criar um logon](../../t-sql/statements/create-login-transact-sql.md).
 
-Para usar segurança baseada em função com SIDs de serviço, leia sobre [criar funções](/sql/t-sql/statements/create-role-transact-sql) no SQL Server.
+Para usar segurança baseada em função com SIDs de serviço, leia sobre [criar funções](../../t-sql/statements/create-role-transact-sql.md) no SQL Server.
 
-Leia sobre diferentes maneiras de [conceder permissões](/sql/t-sql/statements/grant-transact-sql) para SIDs de serviço no SQL Server.
+Leia sobre diferentes maneiras de [conceder permissões](../../t-sql/statements/grant-transact-sql.md) para SIDs de serviço no SQL Server.

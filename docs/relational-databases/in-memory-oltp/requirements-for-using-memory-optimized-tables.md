@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62e63082d016d36855cd6a9e9f6067257bc6c77c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 796a0423da44917251fa87828c71d0e47092d028
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551564"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867053"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para usar tabelas com otimização de memória
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Para usar o OLTP in-memory no Banco de Dados do Azure, consulte [Introdução a Na Memória no Banco de Dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
+  Para usar o OLTP in-memory no Banco de Dados do Azure, consulte [Introdução a Na Memória no Banco de Dados SQL](/azure/azure-sql/in-memory-oltp-overview).  
   
  Além dos [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), estes são os requisitos para usar o OLTP in-memory:  
   
@@ -59,4 +59,3 @@ ms.locfileid: "89551564"
  [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
  [Inicialização imediata de arquivo do banco de dados](../../relational-databases/databases/database-instant-file-initialization.md)  
  [Guia de arquitetura de memória](../../relational-databases/memory-management-architecture-guide.md)
-  

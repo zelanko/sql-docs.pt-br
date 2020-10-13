@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448056"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867939"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erros comuns de Transparent Data Encryption com chaves gerenciadas pelo cliente no Azure Key Vault
 
@@ -34,7 +34,7 @@ Durante as primeiras 8 horas, se o problema subjacente de acesso à chave do Azu
 
 Se um banco de dados inacessível não for mais necessário, ele poderá ser excluído imediatamente para interromper os custos. Todas as outras ações no banco de dados não são permitidas até que o acesso à chave do Azure Key Vault tenha sido restaurado e o banco de dados fique novamente online. A alteração da opção de TDE de chaves gerenciadas pelo cliente para chaves gerenciadas pelo servidor também não é possível enquanto um banco de dados criptografado com chaves gerenciadas pelo cliente está inacessível. Isso é necessário para proteger os dados contra o acesso não autorizado, enquanto as permissões para o protetor de TDE foram revogadas. 
 
-Depois que um banco de dados ficar inacessível por mais de 8 horas, ele não será mais reparado automaticamente. Se o acesso necessário à chave do cofre de chaves do Azure for restaurado após esse período, você deverá revalidar o acesso à chave manualmente para colocar novamente o banco de dados online. Nesse caso, colocar novamente o banco de dados online pode demorar, dependendo do tamanho do banco de dados. Depois que o banco de dados estiver novamente online, as configurações definidas anteriormente, como o [grupo de failover](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), histórico de PITR e todas as marcas **serão perdidas**. Portanto, é recomendável implementar um sistema de notificação usando [Grupos de Ações](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permitem estar ciente e tratar os problemas subjacentes do cofre de chaves assim que possível. 
+Depois que um banco de dados ficar inacessível por mais de 8 horas, ele não será mais reparado automaticamente. Se o acesso necessário à chave do cofre de chaves do Azure for restaurado após esse período, você deverá revalidar o acesso à chave manualmente para colocar novamente o banco de dados online. Nesse caso, colocar novamente o banco de dados online pode demorar, dependendo do tamanho do banco de dados. Depois que o banco de dados estiver novamente online, as configurações definidas anteriormente, como o [grupo de failover](/azure/sql-database/sql-database-auto-failover-group), histórico de PITR e todas as marcas **serão perdidas**. Portanto, é recomendável implementar um sistema de notificação usando [Grupos de Ações](/azure/azure-monitor/platform/action-groups) que permitem estar ciente e tratar os problemas subjacentes do cofre de chaves assim que possível. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erros comuns que fazem com que os bancos de dados se tornem inacessíveis
 
@@ -68,17 +68,17 @@ _401 AzureKeyVaultNoServerIdentity – a identidade do servidor não está confi
 
 Use o comando ou cmdlet a seguir para garantir que uma identidade seja atribuída à instância lógica do SQL Server:
 
-- Azure PowerShell: [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- CLI do Azure: [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- CLI do Azure: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
 **Mitigação**
 
 Use o cmdlet ou o comando a seguir para configurar uma AppId (identidade do Azure AD) para a instância lógica do SQL Server:
 
-- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) com a opção `-AssignIdentity`.
+- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) com a opção `-AssignIdentity`.
 
-- CLI do Azure: [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) com a opção `--assign_identity`.
+- CLI do Azure: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) com a opção `--assign_identity`.
 
 No portal do Azure, vá até o cofre de chaves e depois às **Políticas de acesso**. Conclua estas etapas: 
 
@@ -103,9 +103,9 @@ Para identificar o URI da chave e o cofre de chaves:
 
 1. Use o comando ou cmdlet a seguir para obter o URI da chave de uma determinada instância lógica do SQL Server:
 
-    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - CLI do Azure: [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - CLI do Azure: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 1. Use o URI da chave para identificar o cofre de chaves:
 
@@ -165,7 +165,7 @@ Confirme se a instância lógica do SQL Server tem permissões para o cofre de c
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Obter o status de TDE do Log de atividades
 
-Para permitir o monitoramento do status do banco de dados devido aos problemas de acesso a chaves do Azure Key Vault, os seguintes eventos serão registrados no [Log de Atividades](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) para a ID do recurso com base na URL do Azure Resource Manager e Assinatura + Resourcegroup + ServerName + DatabaseName: 
+Para permitir o monitoramento do status do banco de dados devido aos problemas de acesso a chaves do Azure Key Vault, os seguintes eventos serão registrados no [Log de Atividades](/azure/service-health/alerts-activity-log-service-notifications) para a ID do recurso com base na URL do Azure Resource Manager e Assinatura + Resourcegroup + ServerName + DatabaseName: 
 
 **Evento quando o serviço perde o acesso à chave do Azure Key Vault**
 
@@ -238,7 +238,5 @@ Descrição: A restauração do acesso ao banco de dados para a chave do Azure K
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Saiba mais sobre o [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Configure os [Grupos de ações](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) para receber notificações e alertas com base em suas preferências, por exemplo, email/SMS/Push/voz, aplicativo lógico, webhook, ITSM ou runbook de automação. 
-
-
+- Saiba mais sobre o [Azure Resource Health](/azure/service-health/resource-health-overview).
+- Configure os [Grupos de ações](/azure/azure-monitor/platform/action-groups) para receber notificações e alertas com base em suas preferências, por exemplo, email/SMS/Push/voz, aplicativo lógico, webhook, ITSM ou runbook de automação.

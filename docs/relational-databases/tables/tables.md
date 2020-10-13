@@ -15,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 588b33d51a2a3814c3be8ddf3b083050df856c41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55fdb422e4a8dd35a23e8e637cabd165729c97b0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488568"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809972"
 ---
 # <a name="tables"></a>Tabelas
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ O resultado final é uma redução de recompilações desnecessárias e sobrecar
 
 ### <a name="system-tables"></a>Tabelas do sistema
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os dados que definem a configuração do servidor e todas as suas tabelas em um conjunto especial de tabelas conhecido como tabelas do sistema. Usuários não podem consultar nem atualizar diretamente as tabelas do sistema. A informações das tabelas do sistema são disponibilizadas por meio de exibições do sistema. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90). 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os dados que definem a configuração do servidor e todas as suas tabelas em um conjunto especial de tabelas conhecido como tabelas do sistema. Usuários não podem consultar nem atualizar diretamente as tabelas do sistema. A informações das tabelas do sistema são disponibilizadas por meio de exibições do sistema. Para obter mais informações, veja [Exibições do sistema &#40;Transact-SQL&#41;](../../t-sql/language-reference.md). 
  
 ### <a name="wide-tables"></a>Tabelas largas
 
@@ -103,5 +103,3 @@ Tabelas largas têm as implicações de desempenho a seguir.
 
 ## <a name="see-also"></a>Consulte Também
  [Restrições de chave primária e estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Restrições exclusivas e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
-
-

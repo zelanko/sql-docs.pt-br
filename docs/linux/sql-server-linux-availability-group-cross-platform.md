@@ -1,8 +1,8 @@
 ---
 title: Configurar o Grupo de Disponibilidade Always On do SQL Server no Windows e no Linux
 description: Saiba como criar um AG (grupo de disponibilidade) Always On do SQL Server com uma réplica em um Windows Server e a outra réplica em um servidor Linux.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/31/2018
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d38aed51796609a9fb97c2f6d06a7383fba9dde
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: ac19c1c8e0dfc2e8a8cf4711400eb3c5cb29b5f2
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088937"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784828"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurar o Grupo de Disponibilidade Always On do SQL Server no Windows e no Linux (multiplataforma)
 

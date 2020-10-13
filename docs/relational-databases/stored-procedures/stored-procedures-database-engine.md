@@ -14,12 +14,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68fbf67a8ff58c4f768c56a84e45c11fd4480c05
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 1ea9a185b1f7a00c8e6ea7e6d848cf2b4e88319f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332207"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809622"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimento armazenados (Mecanismo de Banco de Dados)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,6 +95,5 @@ ms.locfileid: "87332207"
 |Descreve como os parâmetros são usados em um procedimento armazenado.|[Parâmetros](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Procedimentos armazenados CLR](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [Procedimentos armazenados CLR](/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
  [Resolução de nome adiada](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
-  

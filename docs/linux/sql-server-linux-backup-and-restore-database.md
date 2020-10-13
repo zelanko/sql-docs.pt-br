@@ -1,20 +1,20 @@
 ---
 title: Fazer backup dos bancos de dados do SQL Server no Linux e restaurá-los
 description: Aprenda a backup dos bancos de dados do SQL Server no Linux e restaurá-los. Saiba também como fazer backup e restauração com o SSMS (SQL Server Management Studio).
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 743995e7615ac7c0398d525657dfa44138de3108
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753505"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784776"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Fazer backup dos bancos de dados do SQL Server no Linux e restaurá-los
 

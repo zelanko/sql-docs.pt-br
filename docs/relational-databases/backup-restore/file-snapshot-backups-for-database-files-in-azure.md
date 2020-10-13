@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718065"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809426"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Backups de instantâneo de arquivo para arquivos de banco de dados no Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85718065"
   
 -   RESTORE WITH MOVE é obrigatório.  
   
--   Para obter mais informações sobre o Armazenamento Premium, confira [Armazenamento Premium: Armazenamento de alto desempenho para cargas de trabalho da Máquina Virtual do Azure](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)  
+-   Para obter mais informações sobre o Armazenamento Premium, confira [Armazenamento Premium: Armazenamento de alto desempenho para cargas de trabalho da Máquina Virtual do Azure](/azure/virtual-machines/disks-types)  
   
  **Conta única de armazenamento:** O instantâneo de arquivo e os blobs de destino precisam usar a mesma conta de armazenamento.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85718065"
   
  **Restauração online:** Ao usar backups de instantâneo de arquivo, não é possível executar uma restauração online. Para obter mais informações sobre restaurações online, consulte [Restauração online &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
- **Cobrança:** Ao usar o backup de instantâneo de arquivo do SQL Server, encargos adicionais serão gerados à medida que os dados forem alterados. Para saber mais, consulte [Noções básicas sobre como os instantâneos acumulam cobranças](https://msdn.microsoft.com/library/azure/hh768807.aspx).  
+ **Cobrança:** Ao usar o backup de instantâneo de arquivo do SQL Server, encargos adicionais serão gerados à medida que os dados forem alterados. Para saber mais, consulte [Noções básicas sobre como os instantâneos acumulam cobranças](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges).  
   
  **Arquivamento:** Caso você deseje arquivar um backup de instantâneo de arquivo, poderá arquivá-lo no armazenamento de blobs ou no backup de streaming. Para arquivar no Armazenamento de Blobs, copie os instantâneos no conjunto de backup de instantâneo de arquivo em blobs separados. Para arquivar o backup de streaming, restaure o backup de instantâneo de arquivo como um novo banco de dados e execute um backup de streaming normal com compactação e/ou criptografia, e arquive-o durante o tempo desejado, independentemente dos blobs de base.  
   
@@ -178,5 +178,4 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Tutorial: Como usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

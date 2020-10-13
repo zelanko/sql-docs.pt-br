@@ -18,14 +18,14 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8398d6dcd8dc4fa10a6a4e4c52c0e910a9de1f18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cad1def690f9ebf0803f25e83300d3790d6ef4c9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485361"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809372"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Introdução ao Mecanismo de Banco de Dados
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: introdução ao Mecanismo de Banco de Dados
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 Bem-vindo ao Guia de Introdução com o tutorial [!INCLUDE[ssDE](../includes/ssde-md.md)] . Este tutorial é dirigido a usuários não familiarizados com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e que instalaram o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Este tutorial resumido ajuda você a começar a usar o [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -49,8 +49,6 @@ Para que você possa usar o tutorial, os itens a seguir devem estar instalados n
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para instalar o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], consulte [Baixar o SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## <a name="see-also"></a>Consulte Também  
-[Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+[Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
   
   
-  
-
