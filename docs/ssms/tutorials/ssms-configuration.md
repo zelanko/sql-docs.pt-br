@@ -1,21 +1,21 @@
 ---
 title: Componentes e configuração do SSMS"
 description: Um tutorial descrevendo os componentes e as opções de configuração básica para seu ambiente do SQL Server Management Studio.
-keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/16/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
-ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/16/2018
+ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247288"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662025"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>componentes e configuração do SQL Server Management Studio
 
@@ -53,7 +53,7 @@ Esta seção descreve os vários componentes de janela que estão disponíveis n
 
 * **Propriedades** (F4): você pode ver a exibição Propriedades quando a Janela de Consulta está aberta. A exibição mostra as propriedades básicas da consulta. Por exemplo, mostra a hora em que uma consulta começou, o número de linhas retornadas e os detalhes da conexão.  
 
-    ![Propriedades](media/ssms-configuration/properties.png)
+    ![Propriedades de Configuração](media/ssms-configuration/properties.png)
 
 * **Navegador de Modelos** (Ctrl+Alt+T): o Navegador de Modelos tem vários modelos T-SQL predefinidos. Você pode usar esses modelos para executar várias funções, como criar ou fazer backup de um banco de dados. 
 

@@ -1,7 +1,7 @@
 ---
 title: O que são Extensões de Linguagem do SQL Server?
 titleSuffix: ''
-description: As Extensões de Linguagem é um recurso do SQL Server usado para executar código externo. No SQL Server 2019, há suporte para Java. Os dados relacionais podem ser usados no código externo usando a estrutura de extensibilidade.
+description: As Extensões de Linguagem é um recurso do SQL Server usado para executar código externo. No SQL Server 2019, o Java, o R e o Python têm suporte. Os dados relacionais podem ser usados no código externo usando a estrutura de extensibilidade.
 author: dphansen
 ms.author: davidph
 ms.date: 08/19/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: a7e79d6253c531ef2a008a7284fa8d7cd0365999
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645917"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765794"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>O que são Extensões de Linguagem do SQL Server?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -30,7 +30,7 @@ No SQL Server 2019, há suporte para Java. O runtime do Java padrão é o Zulu O
 
 As Extensões de Linguagem usam a estrutura de extensibilidade para executar código externo. A execução de código é isolada dos principais processos de mecanismo, mas totalmente integrada à execução de consulta do SQL Server. Eles permitem que você execute código onde os dados residem, acabando com a necessidade de extrair dados pela rede.
 
-As linguagens externas são definidas com [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql). O procedimento armazenado do sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) é usado como a interface para executar o código.
+As linguagens externas são definidas com [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). O procedimento armazenado do sistema [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) é usado como a interface para executar o código.
 
 As Extensões de Linguagem oferecem várias vantagens:
 
@@ -53,9 +53,9 @@ Normalmente, os desenvolvedores escrevem código em seu próprio laptop ou esta�
 
 + **Instale o [SDK de Extensibilidade da Microsoft para Java](how-to/extensibility-sdk-java-sql-server.md)** para executar código Java no SQL Server
 
-+ **Use o [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) ou o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)** para executar código externo no SQL Server
++ **Use o [Azure Data Studio](../azure-data-studio/what-is.md) ou o [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)** para executar código externo no SQL Server
 
-+ **Use o procedimento armazenado do sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** para executar seu código Java no SQL Server.
++ **Use o procedimento armazenado do sistema [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)** para executar seu código Java no SQL Server.
 
 ### <a name="step-3-write-your-first-code"></a>Etapa 3: Escrever seu primeiro código
 
@@ -69,5 +69,7 @@ Executar código Java de dentro do script T-SQL:
 
 ## <a name="next-steps"></a>Próximas etapas
 
++ Instalar um [runtime personalizado do Python para o SQL Server](../machine-learning/install/custom-runtime-python.md)
++ Instalar um [runtime personalizado do R para o SQL Server](../machine-learning/install/custom-runtime-r.md)
 + Instalar [Extensões de Linguagem do SQL Server no Windows](install/install-sql-server-language-extensions-on-windows.md) ou [no Linux](../linux/sql-server-linux-setup-language-extensions.md)
 + Instalar o [SDK de Extensibilidade da Microsoft para Java](how-to/extensibility-sdk-java-sql-server.md)

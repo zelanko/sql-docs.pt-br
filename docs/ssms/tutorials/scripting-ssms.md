@@ -1,15 +1,15 @@
 ---
 title: Objetos de script do SSMS
 description: Gere scripts T-SQL (Transact-SQL) para vários objetos encontrados no SSMS (SQL Server Management Studio).
-keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Gerar script
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/13/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Gerar script
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
+ms.date: 03/13/2018
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - source controls [SQL Server Management Studio], tutorials
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 0cc0e394e622880dc60991b1c0ca3b0c00597be6
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523328"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662035"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>gerar script de objetos no SQL Server Management Studio
 
@@ -156,7 +156,7 @@ A seção a seguir ensina como gerar o script do banco de dados, tanto usando a 
 
 9. Clique em **Substituir tudo** para substituir todas as instâncias do *AdventureWorks2016* pelo *AdventureWorks2016b*.
 
-    ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
+    ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
 
 10. Clique em **Executar** para executar a consulta e criar o novo banco de dados AdventureWorks2016b.
 

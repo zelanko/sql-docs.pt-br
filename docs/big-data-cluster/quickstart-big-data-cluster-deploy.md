@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d547dc374de8171097ceda77afb234d4e5dfa451
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6457c4bfe1579453a68e8d5ea11f45b67980ca8b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772385"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785101"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usar um script Python para implantar um cluster de Big Data do SQL Server no AKS (Serviço de Kubernetes do Azure)
 
@@ -75,14 +75,20 @@ Use as etapas a seguir para executar o script de implantação em um prompt do B
    | **ID da assinatura do Azure** | A ID da assinatura do Azure a ser usada no AKS. Você pode listar todas as suas assinaturas e suas IDs executando `az account list` de outra linha de comando. |
    | **Grupo de recursos do Azure** | O nome do grupo de recursos do Azure a ser criado para o cluster do AKS. |
    | **Região do Azure** | A região do Azure para o novo cluster do AKS (**westus** padrão). |
-   | **Tamanho do computador** | O [tamanho do computador](/azure/virtual-machines/windows/sizes) a ser usado para os nós no cluster do AKS (**Standard_L8s** padrão). |
+   | **Tamanho do computador** | O [tamanho do computador](/azure/virtual-machines/windows/sizes) a ser usado para os nós no cluster do AKS (**Standard_D16s_v3** padrão). |
    | **Nó de trabalho** | O número de nós de trabalho no cluster do AKS (**1** padrão). |
    | **Nome do cluster** | O nome do cluster do AKS e do cluster de Big Data. O nome do cluster de Big Data deve ter apenas caracteres alfanuméricos minúsculos e nenhum espaço. (**sqlbigdata** padrão). |
    | **Senha** | Senha para o controlador, o gateway HDFS/Spark e a instância mestre (**MySQLBigData2019** padrão). |
    | **Nome de usuário** | Nome de usuário do controlador (padrão: **admin**). |
 
    > [!IMPORTANT]
-   > O tamanho padrão do computador **Standard_L8s** pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de computador diferente, verifique se o número total de discos que podem ser anexados entre os nós no cluster é maior ou igual a 24. Cada declaração de volume persistente no cluster requer um disco anexado. Atualmente, o cluster de Big Data requer 24 declarações de volume persistente. Por exemplo, o tamanho do computador [Standard_L8s](/azure/virtual-machines/lsv2-series) dá suporte a 32 discos anexados, portanto, você pode avaliar clusters de Big Data com um único nó desse tamanho de computador.
+   > O tamanho padrão do computador **Standard_D16s_v3** pode não estar disponível em todas as regiões do Azure. Se você selecionar um tamanho de computador diferente, verifique se o número total de discos que podem ser anexados entre os nós no cluster é maior ou igual a 24. Cada declaração de volume persistente no cluster requer um disco anexado. Atualmente, o cluster de Big Data requer 24 declarações de volume persistente.
+   >
+   >Execute o comando a seguir para identificar os tipos de VM disponíveis.
+   >
+   >```azurecli-interactive
+   >az vm list-sizes --query "sort_by(@,&name)[?contains(name,'Standard_D16s')]" -l westus2 -o table
+   >```
 
    > [!NOTE]
    > A conta `sa` do SQL Server é desabilitada durante a implantação do cluster de Big Data. Um novo logon sysadmin é provisionado na instância mestra do SQL Server com o mesmo nome especificado para a entrada de **Nome de usuário** e a senha correspondente à entrada **Senha**. Os mesmos valores de **Nome de usuário** e **Senha** são usados para provisionar um usuário administrador do controlador. Em clusters implantados antes do SQL Server 2019 CU5, o único usuário compatível com o gateway (Knox) é **raiz** e a senha é a mesma que a apresentada acima.

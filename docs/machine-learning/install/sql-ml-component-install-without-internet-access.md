@@ -1,23 +1,25 @@
 ---
-title: Instalar sem acesso à Internet
-description: Instalar Python e R para aprendizado de máquina do SQL Server em computadores isolados atrás de um firewall de rede.
+title: Instalação offline sem acesso à Internet
+description: Instale offline os Serviços de Machine Learning do SQL Server com Python e R em computadores isolados por trás de um firewall de rede.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487639"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636147"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar Python e R para aprendizado de máquina do SQL Server em computadores sem acesso à Internet
+# <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Instale offline os Serviços de Machine Learning do SQL Server com Python e R em computadores sem acesso à Internet
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+Este artigo descreve como instalar offline os Serviços de Machine Learning do SQL Server em computadores sem acesso à Internet isolados por trás de um firewall de rede.
 
 Por padrão, os instaladores conectam-se aos sites de download da Microsoft para obter os componentes necessários e atualizados para aprendizado de máquina no SQL Server. Se as restrições de firewall impedirem o instalador de acessar esses sites, você poderá usar um dispositivo conectado à Internet para baixar os arquivos, transferir os arquivos para um servidor offline e executar a instalação.
 

@@ -1,8 +1,8 @@
 ---
 title: Driver SQL Python – pyodbc
-description: Este guia descreve como instalar o Python, o Microsoft ODBC Driver for SQL Server e o pymssql. Em seguida, com o código de exemplo, conecte-se e interaja com um banco de dados SQL.
+description: Este guia descreve como instalar o Python, o ODBC Driver for SQL Server e o pyodbc. O código de exemplo mostra como se conectar e interagir com um banco de dados SQL.
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 10/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36486871749049c636414456a73dd14975080742
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 40285a0e8dc25b309d8dbc9a714e9219e594b50b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528520"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809682"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Driver SQL Python – pyodbc
 
 ![Download-DownArrow-Circled](../../../ssms/media/download-icon.png)[Para instalar o driver SQL para Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-## <a name="getting-started"></a>Introdução
+## <a name="get-started"></a>Introdução
 
 * [Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Python pyodbc](step-1-configure-development-environment-for-pyodbc-python-development.md)  
 * [Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento Python pyodbc](step-2-create-a-sql-database-for-pyodbc-python-development.md)  
@@ -31,3 +31,14 @@ ms.locfileid: "81528520"
 ## <a name="documentation"></a>Documentação
 
 * [Documentação do pyodbc](https://mkleehammer.github.io/pyodbc/)  
+
+## <a name="support"></a>Suporte
+
+O pyodbc é um software com suporte da comunidade. A Microsoft contribui para a comunidade de software livre do pyodbc e é um participante ativo no repositório em [https://github.com/mkleehammer/pyodbc/](https://github.com/mkleehammer/pyodbc/). No entanto, esse software não é fornecido com suporte da Microsoft.
+
+Para obter ajuda, relate um [problema no repositório GitHub DO pyodbc](https://github.com/mkleehammer/pyodbc/issues) ou visite outros recursos da comunidade do Python.
+
+## <a name="community-resources"></a>Recursos da comunidade
+
+* [Central de Desenvolvedores do Python do Azure](https://azure.microsoft.com/develop/python/)  
+* [Comunidade python.org](https://www.python.org/community/)  

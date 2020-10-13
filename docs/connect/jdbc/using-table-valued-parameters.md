@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eac620d522408ff9fb4de5550d92cfcbd0f3ec4a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631934"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727467"
 ---
 # <a name="using-table-valued-parameters"></a>Como usar parâmetros com valor de tabela
 
@@ -35,8 +35,8 @@ Os valores de coluna em parâmetros com valor de tabela podem ser acessados usan
   
 | Recurso                                                                                                             | Descrição                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Parâmetros de valores de tabela (Mecanismo de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkId=98363) nos Manuais Online do SQL Server | Descreve como criar e usar parâmetros com valor de tabela                             |
-| [Tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkId=98364) nos Manuais Online do SQL Server                  | Descreve os tipos de tabela definidos pelo usuário usados para declarar parâmetros com valor de tabela |
+| [Parâmetros de valores de tabela (Mecanismo de Banco de Dados)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) nos Manuais Online do SQL Server | Descreve como criar e usar parâmetros com valor de tabela                             |
+| [Tipos de tabela definidos pelo usuário](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) nos Manuais Online do SQL Server                  | Descreve os tipos de tabela definidos pelo usuário usados para declarar parâmetros com valor de tabela |
 | A seção [Mecanismo de Banco de Dados do Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=120507) do CodePlex        | Contém exemplos que demonstram como usar recursos e funcionalidade do SQL Server  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Como passar várias linhas nas versões anteriores do SQL Server  
@@ -53,7 +53,7 @@ Antes de os parâmetros de valores de tabela serem introduzidos no SQL Server 20
   
 ## <a name="creating-table-valued-parameter-types"></a>Como criar tipos de parâmetro com valor de tabela  
 
-Os parâmetros com valor de tabela se baseiam em estruturas de tabela fortemente tipadas que são definidas usando instruções Transact-SQL `CREATE TYPE`. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros de valores de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, confira [Tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkID=98364) nos Manuais Online do SQL Server.  
+Os parâmetros com valor de tabela se baseiam em estruturas de tabela fortemente tipadas que são definidas usando instruções Transact-SQL `CREATE TYPE`. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros de valores de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, confira [Tipos de tabela definidos pelo usuário](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) nos Manuais Online do SQL Server.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -315,4 +315,4 @@ Os métodos a seguir foram adicionados a essa classe para dar suporte à passage
 
 ## <a name="see-also"></a>Confira também
 
-[Visão geral do JDBC Driver](overview-of-the-jdbc-driver.md)  
+[Visão geral do JDBC Driver](overview-of-the-jdbc-driver.md)

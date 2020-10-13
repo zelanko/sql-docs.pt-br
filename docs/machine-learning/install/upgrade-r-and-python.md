@@ -3,17 +3,17 @@ title: Atualizar runtimes do Python e do R (associação)
 description: Atualize os runtimes do Python e do R nos Serviços de Machine Learning do SQL Server ou no SQL Server R Services usando sqlbindr.exe para associação ao Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/16/2020
+ms.date: 09/30/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: af8999f35d0dbab75b50381d521904d4c9e28f8f
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990109"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624843"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Atualizar os runtimes do Python e do R com a associação nos Serviços de Machine Learning do SQL Server
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -61,30 +61,30 @@ A associação não garante a versão mais recente do R ou do Anaconda. Ao assoc
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-Componente |Versão inicial | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [Machine Learning Server 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
-----------|----------------|----------------|--------------|---------|-------|
-MRO (Microsoft R Open) pelo R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.d. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[modelos pré-treinados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.d. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.d. | 1.0 |  1.0 |  1.0 |  1.0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.d. | 1.0 |  1.0 |  1.0 |  1.0 |
+Componente |Versão inicial | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [Machine Learning Server 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |  [Machine Learning Server 9.4.7](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+----------|----------------|----------------|--------------|---------|-------|-------|
+MRO (Microsoft R Open) pelo R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 | R 3.5.2
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |  9.4.7 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.d. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
+[modelos pré-treinados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.d. | 9.0.1 |  9.1 |  9.2.1 |  9.3 | 9.4.7 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.d. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.d. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 [**Serviços de Machine Learning do SQL Server 2017**](../install/sql-machine-learning-services-windows-install.md)
 
-Componente |Versão inicial | Machine Learning Server 9.3 |
-----------|----------------|---------|
-MRO (Microsoft R Open) pelo R | R 3.3.3 | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 |
+Componente |Versão inicial | Machine Learning Server 9.3 | Machine Learning Server 9.4.7 |
+----------|----------------|---------|---------|
+MRO (Microsoft R Open) pelo R | R 3.3.3 | R 3.4.3 | R 3.5.2 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | 9.4.7 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | 1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | 1.0 |
 Anaconda 4.2 no Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3|
-[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
-[modelos pré-treinados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3|
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| 9.4.7 |
+[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| 9.4.7 |
+[modelos pré-treinados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| 9.4.7 |
 ::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>Como funciona a atualização de componentes
@@ -112,7 +112,7 @@ A associação é reversível. Você pode reverter para a manutenção do SQL Se
 
 ## <a name="bind-to-machine-learning-server-using-setup"></a>Fazer a associação ao Machine Learning Server usando a Instalação
 
-Siga as etapas abaixo para associar o SQL Server ao Microsoft Machine Learning Server usando a instalação. 
+Siga as etapas para associar o SQL Server ao Microsoft Machine Learning Server usando a configuração. 
 
 1. No SSMS, execute `SELECT @@version` para verificar se o servidor atende aos requisitos mínimos de build.
 
@@ -132,7 +132,7 @@ Siga as etapas abaixo para associar o SQL Server ao Microsoft Machine Learning S
     WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
     ```
 
-1. Feche o SSMS e outras ferramentas que têm uma conexão aberta com o SQL Server. A associação substitui arquivos de programa. Se o SQL Server tiver sessões abertas, a associação falhará com o código de erro de associação 6.
+1. Feche o SSMS e todas as outras ferramentas que tiverem uma conexão aberta com o SQL Server. A associação substitui arquivos de programa. Se o SQL Server tiver sessões abertas, a associação falhará com o código de erro de associação 6.
 
 1. Baixe o Microsoft Machine Learning Server para o computador que tem a instância que você deseja atualizar. Recomendamos a [versão mais recente](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer).
 
@@ -146,7 +146,7 @@ Siga as etapas abaixo para associar o SQL Server ao Microsoft Machine Learning S
 
 1. Na página **Quase lá**, anote a pasta de instalação. A pasta padrão é \Arquivos de Programas\Microsoft\ML Server.
 
-    Se desejar alterar a pasta de instalação, clique em **Avançado** para voltar para a primeira página do assistente. No entanto, você deve repetir todas as seleções anteriores.
+    Se desejar alterar a pasta de instalação, selecione **Avançado** para voltar para a primeira página do assistente. No entanto, você deve repetir todas as seleções anteriores.
 
 Se a atualização falhar, verifique os [códigos de erro do SqlBindR](#sqlbindr-error-codes) para obter mais informações.
 
@@ -160,7 +160,7 @@ As instruções a seguir explicam como inserir os arquivos para uma instalação
 
 1. Baixe o instalador do MLSWIN93. Ele é baixado como um arquivo compactado único. Recomendamos a [versão mais recente](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer), mas você também pode instalar [versões anteriores](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components).
 
-1. Baixe os arquivos .cab. Os links a seguir são para a versão 9.3. Se você precisar de versões anteriores, poderão ser encontrados links adicionais no [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Lembre-se de que o Python/Anaconda só podem ser adicionados a uma instância dos Serviços de Machine Learning do SQL Server. Há modelos pré-treinados para o Python e o R; o .cab fornece modelos nas linguagens que você está usando.
+1. Baixe os arquivos .cab. Os links a seguir são para a versão 9.3. Se você precisar de versões anteriores, poderão ser encontrados links adicionais no [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Lembre-se de que o Python/Anaconda só podem ser adicionados a uma instância dos Serviços de Machine Learning do SQL Server. Há modelos pré-treinados para o Python e o R. O .cab fornece modelos nas linguagens que você está usando.
 
     | Recurso | Baixar |
     |---------|----------|
@@ -218,7 +218,7 @@ Há duas opções para reverter a associação: executar novamente a instalaçã
 2. O instalador identifica as instâncias locais que são candidatas à desassociação.
 3. Desmarque a caixa de seleção ao lado da instância que você deseja reverter para a configuração original.
 4. Aceite todos os contratos de licença.
-5. Clique em **Concluir**. O processo leva algum tempo.
+5. Selecione **Concluir**. O processo leva algum tempo.
 
 #### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> Desassociar usando a linha de comando
 
@@ -269,7 +269,7 @@ O Instalador do Machine Learning Server e o SqlBindR retornam os códigos de err
 |Erro de associação 0 | Ok (êxito) | Associação aprovada sem erros. |
 |Erro de associação 1 | Argumentos inválidos | Erro de sintaxe. |
 |Erro de associação 2 | Ação inválida | Erro de sintaxe. |
-|Erro de associação 3 | Instância inválida | Existe uma instância, mas não é válida para associação. |
+|Erro de associação 3 | Instância inválida | Existe uma instância, mas ela não é válida para a associação. |
 |Erro de associação 4 | Não associável | |
 |Erro de associação 5 | Já associado | Você executou o comando *bind* , mas a instância especificada já está associada. |
 |Erro de associação 6 | Falha na associação | Ocorreu um erro ao desassociar a instância. Esse erro poderá ocorrer se você tiver executado o instalador do Machine Learning Server sem selecionar nenhum recurso. A associação requer que você selecione uma instância do MSSQL e o Python e o R, supondo que a instância seja o SQL Server 2017. Esse erro também poderá ocorrer se o SqlBindR não puder ser gravado na pasta Arquivos de Programas. Sessões ou identificadores abertos para o SQL Server gerarão esse erro. Se você receber esse erro, reinicialize o computador e refaça as etapas de associação antes de iniciar novas sessões.|
@@ -289,6 +289,16 @@ A versão mais recente do SqlBindR restaura automaticamente os recursos originai
 
 Use comandos do R para sincronizar pacotes instalados no sistema de arquivos usando os registros no banco de dados. Para obter mais informações, confira [Gerenciamento de Pacotes do R para o SQL Server](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server).
 
+### <a name="problems-with-overwritten-sqlbinrini-file-in-sql-server"></a>Problemas com o arquivo sqlbinr.ini substituído no SQL Server
+
+Cenário: Esse problema ocorre ao associar o Machine Learning Server 9.4.7 ao SQL Server 2017.  Quando o Python é atualizado e associado, ou quando você atualiza para uma nova CU, ele não entende que o Python está associado e substitui arquivos. Não há um problema conhecido com o R.
+
+Como uma solução alternativa, crie um arquivo `sqlbindr.ini` no diretório PYTHON_SERVICES que não esteja vazio. O conteúdo não afeta como o arquivo funciona.
+
+Crie um arquivo `sqlbindr.ini`, contendo **9.4.7.82** e salve nesta localização:  
+
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Problemas com várias atualizações do SQL Server
 
 Cenário: Instância atualizada anteriormente do SQL Server 2016 R Services para o 9.0.1. Foi executado o novo instalador para o Microsoft R Server 9.1.0. O instalador exibe uma lista de todas as instâncias válidas.
@@ -296,7 +306,7 @@ Por padrão, o instalador seleciona as instâncias associadas anteriormente. Se 
 
 Como uma alternativa, você pode modificar a instalação existente do R Server da seguinte maneira:
 1. No Painel de Controle, abra **Adicionar ou Remover Programas**.
-2. Localize o Microsoft R Server e clique em **Alterar/Modificar**.
+2. Localize o Microsoft R Server e selecione **Alterar/Modificar**.
 3. Quando o instalador for iniciado, selecione as instâncias que deseja associar à versão 9.1.0.
 
 O Microsoft Machine Learning Server 9.2.1 e 9.3 não têm esse problema.
@@ -310,6 +320,7 @@ Remova as pastas temporárias após a conclusão da instalação.
 
 ## <a name="see-also"></a>Confira também
 
++ [Alterar a versão padrão do runtime da linguagem R ou Python](https://docs.microsoft.com/sql/machine-learning/install/change-default-language-runtime-version)
 + [Instalar o Machine Learning Server para Windows (conectado à Internet)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Instalar o Machine Learning Server para Windows (offline)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 + [Problemas Conhecidos no Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues)

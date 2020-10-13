@@ -5,23 +5,24 @@ description: Saiba como instalar a ferramenta azdata no macOS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c812600394546cba8adb0eacab59fa450b7c4bd2
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 19a3542f77708dcf779cf01d5299e7ff6add8273
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914910"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725237"
 ---
 # <a name="install-azdata-on-macos"></a>Instalar o `azdata` no macOS
 
-Para a plataforma macOS, você pode instalar a `azdata-cli` com o gerenciador de pacotes homebrew. O pacote da CLI foi testado em versões do macOS: 
-* 10.13 High Sierra
-* 10.14 Mojave
-* 10.15 Catalina
+Para a plataforma macOS, você pode instalar o `azdata-cli` com o gerenciador de pacotes Homebrew. O pacote da CLI foi testado em versões do macOS:
+
+- 10.13 High Sierra
+- 10.14 Mojave
+- 10.15 Catalina
 
 ## <a name="install-with-homebrew"></a>Instalar com o Homebrew
 
@@ -53,7 +54,7 @@ brew upgrade azdata-cli
 
 ## <a name="uninstall"></a>Desinstalar
 
-Use o homebrew para desinstalar o pacote `azdata-cli`.
+Use o Homebrew para desinstalar o pacote `azdata-cli`.
 
 ```bash
 brew uninstall azdata-cli

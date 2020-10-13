@@ -5,56 +5,29 @@ description: Saiba como instalar a ferramenta azdata com o instalador.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a33e43386c44ec2ab60166ef57a502fc592c8d73
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: b36b69206f6a50c3c24a5ed059f52a7f2edd6c68
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914960"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784741"
 ---
-# <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>Instalar o `azdata` para gerenciar [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] com o Windows Installer
+# <a name="install-azdata-with-windows-installer"></a>Instalar o `azdata` com o Windows Installer
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE [azdata](../../includes/applies-to-version/azdata.md)]
 
-Este artigo descreve como instalar o `azdata` no Windows. Antes que a instalação do Windows estivesse disponível, a instalação do `azdata` exigiu `pip`.
+Este artigo descreve como instalar o `azdata` no Windows com um instalador. Use o `azdata` para gerenciar os Clusters de Big Data do SQL Server ou os serviços de dados habilitados para Azure Arc.
 
->Para Linux (Ubuntu), confira [Instalar o `azdata` com o instalador](./deploy-install-azdata-linux-package.md).
-
-Neste momento, não há gerenciadores de pacotes para instalar `azdata` em outros sistemas operacionais ou distribuições. Para essas plataformas, confira [Instalar o `azdata` sem o gerenciador de pacotes](./deploy-install-azdata.md).
-
-## <a name="install-azdata-with-the-microsoft-windows-installer"></a>Instalar o `azdata` com o Microsoft Windows Installer
+## <a name="steps-to-install-azdata-with-the-microsoft-windows-installer"></a>Etapas para instalar o `azdata` com o Microsoft Windows Installer
 
 Para instalar o `azdata` com o Microsoft Windows Installer,
 
 1. remova `azdata` se ele tiver sido instalado usando `pip`. Se o `azdata` tiver sido instalado usando Windows Installer, vá para a próxima etapa.
-1. Instale o `azdata` usando o Windows Installer.
-
-### <a name="uninstall-if-previous-installation-done-with-pip"></a>Desinstalar se a instalação anterior tiver sido feita com `pip`
-
-Caso você tenha versões anteriores de `azdata` instaladas, será importante desinstalá-las primeiro antes de instalar a última versão.
-
-   Para remover a versão Release Candidate do `azdata`, execute o comando a seguir.
-
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
-   ```
-
-Depois de removida, [instale o `azdata` no Windows](#install-azdata-windows).
-
->[!NOTE]
->Se a instalação anterior tiver sido feita usando o MSI, não será necessário desinstalar nenhuma versão atual antes de usar o instalador do MSI.
-
-### <a name="install-with-windows-installer"></a><a id="install-azdata-windows"></a>Instalar com o Windows Installer
-
-Use o Windows Installer para instalar ou atualizar o `azdata` no Windows.
-
-[Baixe o Windows Installer do `azdata`](https://aka.ms/azdata-msi).
-
-Quando o instalador perguntar se ele pode fazer alterações ao seu computador, clique em `Yes`.
+1. Instale o `azdata` usando o [Windows Installer](https://aka.ms/azdata-msi).
 
 ### <a name="uninstall-azdata-with-windows-installer"></a>Desinstalar o `azdata` com o Windows Installer
 

@@ -2,7 +2,7 @@
 description: Create an ActiveX Script Job Step
 title: Create an ActiveX Script Job Step
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 10/06/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -14,47 +14,37 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1d602a87258cd126d217353e94c0c600870e5a61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: <= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8bac45061aa165808202b2a08b71618bd6513954
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418222"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784996"
 ---
-# <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+# <a name="create-an-activex-script-job-step"></a>Criar uma etapa de trabalho de script ActiveX
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+O subsistema ActiveX está descontinuado desde o SQL Server 2016. Converta todas as etapas de trabalho existentes que usam o script ActiveX em uma [Etapa de trabalho de script do PowerShell](create-a-powershell-script-job-step.md). Use o PowerShell para qualquer desenvolvimento futuro.
 
 > [!IMPORTANT]  
-> No momento, na [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira detalhes em [Instância Gerenciada do ManagSQL de SQL do Azure do SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> No momento, na [Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira [Instância Gerenciada de SQL do Azure no SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obter mais detalhes.
 
-Este tópico descreve como criar e definir uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que executa um script ActiveX usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o SQL Server Management Objects.  
+Esse tópico descreve como criar e definir uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no SQL Server 2014 e versões anteriores que executa um script ActiveX usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o SQL Server Management Objects.  
 
-**Importante** [!INCLUDEssNoteDepFutureAvoid]
-  
--   **Antes de começar:**  
-  
-    [Limitações e restrições](#Restrictions)  
-  
-    [Segurança](#Security)  
-  
--   **Para criar uma etapa de trabalho Transact-SQL usando:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
-  
 ## <a name="before-you-begin"></a>Antes de começar  
   
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitações e Restrições  
+
 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
   
 ### <a name="security"></a><a name="Security"></a>Segurança  
+
 Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Usando o SQL Server Management Studio  
+## <a name="use-sql-server-management-studio"></a><a name="SSMS"></a>Usar o SQL Server Management Studio  
   
 #### <a name="to-create-an-activex-script-job-step"></a>Para criar uma etapa de trabalho de Script ActiveX  
   
@@ -78,7 +68,7 @@ Para obter informações detalhadas, consulte [Implementar a segurança do SQL S
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>Usando Transact-SQL  
   
-#### <a name="to-create-an-activex-script-job-step"></a>Para criar uma etapa de trabalho de Script ActiveX  
+#### <a name="to-create-an-activex-script-job-step"></a>Para criar uma etapa de trabalho de script do ActiveX  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   

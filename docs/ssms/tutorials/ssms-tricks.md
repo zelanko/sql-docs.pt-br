@@ -1,12 +1,12 @@
 ---
 title: Dicas e truques ao usar o SSMS
 description: Saiba como comentar código e remover a marca de comentário dele, recuar texto, filtrar objetos, acessar logs de erros e localizar nomes de instância do SQL Server com o SQL Server Management Studio.
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462340"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724507"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Dicas e truques para usar o SSMS (SQL Server Management Studio)
 
-Este artigo apresenta algumas dicas e truques para usar o SSMS (SQL Server Management Studio). Este artigo mostra como: 
+Este artigo apresenta algumas dicas e truques para usar o SSMS ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Este artigo mostra como: 
 
 > [!div class="checklist"]
 > * Comentar/remover marca de comentário do seu texto T-SQL (Transact-SQL)
 > * Recuar o texto
 > * Filtrar objetos no Pesquisador de Objetos
-> * Acessar seu log de erros do SQL Server
-> * Localize o nome da sua instância do SQL Server
+> * Acessar o seu log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+> * Encontrar o nome da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para testar as etapas deste artigo, você precisará do SQL Server Management Studio, acesso a um SQL Server e um banco de dados do AdventureWorks. 
+Para testar as etapas deste artigo, você precisará do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de acesso a um SQL Server e de um banco de dados do AdventureWorks. 
 
 * Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-* Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Instalar o [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Baixe um [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para saber como restaurar um banco de dados no SSMS, consulte [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Comentar/remover marca de comentário do seu código T-SQL
 
 Você pode comentar e remover a marca de comentário do seu texto usando o botão **Comentário** na barra de ferramentas. Texto que é comentado não é executado.
 
-1. Abra o SQL Server Management Studio.
+1. Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 2. Conecte-se ao seu SQL Server.
 
 3. Abra uma janela de Nova Consulta.
 
-4. Cole o código T-SQL a seguir na janela de texto.
+4. Cole o código [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir na janela de texto.
 
     ```sql
     USE master
@@ -105,7 +105,7 @@ Você pode usar os botões de recuo na barra de ferramentas para aumentar ou dim
 
 1. Abra uma janela de Nova Consulta.
 
-2. Cole o código T-SQL a seguir na janela de texto:
+2. Cole o seguinte código [!INCLUDE[tsql](../../includes/tsql-md.md)] na janela de texto:
 
     ```sql
     USE master
@@ -163,11 +163,11 @@ Em bancos de dados que têm muitos objetos, é possível usar a filtragem para p
 
 ## <a name="access-your-sql-server-error-log"></a>Acessar seu log de erros do SQL Server
 
-O log de erros é um arquivo que contém detalhes sobre o que ocorre na sua instância do SQL Server. Você pode procurar e consultar o log de erros no SSMS. O log de erros é um arquivo .log localizado no disco.
+O log de erros é um arquivo que contém detalhes sobre o que ocorre na sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode procurar e consultar o SSMS de log de erros. O log de erros é um arquivo .log localizado no disco.
 
 ### <a name="open-the-error-log-in-ssms"></a>Abra o log de erros no SSMS
 
-1. Conecte-se ao seu SQL Server.  
+1. Conecte-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 2. Expanda **Gerenciamento** > **Logs do SQL Server**. 
 
@@ -181,7 +181,7 @@ O log de erros é um arquivo que contém detalhes sobre o que ocorre na sua inst
 
 2. Abra uma janela de Nova Consulta.
 
-3. Cole o código T-SQL a seguir na janela de consulta:
+3. Cole o seguinte código [!INCLUDE[tsql](../../includes/tsql-md.md)] na janela de consulta:
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -195,11 +195,11 @@ O log de erros é um arquivo que contém detalhes sobre o que ocorre na sua inst
 
 ### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>Localize o local do log de erros se você estiver conectado ao SQL Server
 
-1. Conecte-se ao seu SQL Server.
+1. Conecte-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 2. Abra uma janela de Nova Consulta.
 
-3. Cole o código T-SQL a seguir na janela de consulta e, em seguida, selecione **Executar**:
+3. Cole o seguinte código [!INCLUDE[tsql](../../includes/tsql-md.md)] na janela de consulta e, em seguida, selecione **Executar**:
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -211,13 +211,13 @@ O log de erros é um arquivo que contém detalhes sobre o que ocorre na sua inst
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Localize o local do log de erros se você não conseguir se conectar ao SQL Server
 
-O caminho para o log de erros do SQL Server pode variar dependendo das suas definições de configuração. O caminho para o local do log de erros pode ser encontrado nos parâmetros de inicialização no SQL Server Configuration Manager. Siga as etapas abaixo para localizar o parâmetro de inicialização relevante que identifica o local do seu log de erros do SQL Server. *O caminho pode variar do caminho indicado abaixo*.
+O caminho para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode variar dependendo das suas definições de configuração. O caminho para o local do log de erros pode ser encontrado nos parâmetros de inicialização no SQL Server Configuration Manager. Siga as etapas abaixo para localizar o parâmetro de inicialização relevante que identifica a localização do seu log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *O caminho pode variar do caminho indicado abaixo*.
 
 1. Abra o SQL Server Configuration Manager.
 
 2. Expanda **Serviços**.
 
-3. Clique com o botão direito do mouse na sua instância do SQL Server e, em seguida, selecione **Propriedades**:
+3. Clique com o botão direito do mouse na sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em seguida, selecione **Propriedades**:
 
     ![Propriedades do servidor do Configuration Manager](media/ssms-tricks/serverproperties.PNG)
 
@@ -227,13 +227,13 @@ O caminho para o log de erros do SQL Server pode variar dependendo das suas defi
 
     ![Log de erros](media/ssms-tricks/errorlog.png)
 
-    Há vários arquivos errorlog.* neste local. O nome do arquivo que termina com *.log é o arquivo de log de erros atual. Nomes de arquivo que terminam com números são arquivos de log anteriores. Um novo log é criado sempre que o SQL Server é reiniciado.
+    Há vários arquivos de log de erros nesta localização. O nome do arquivo que termina com *.log é o arquivo de log de erros atual. Nomes de arquivo que terminam com números são arquivos de log anteriores. Um novo log é criado sempre que o SQL Server é reiniciado.
 
-6. Abra o arquivo errorlog.log no Bloco de Notas. 
+6. Abra o arquivo errorlog.log no Bloco de Notas.
 
-## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Localizar o nome da instância do SQL Server
+## <a name="find-sql-server-instance-name"></a>Localizar o nome da instância do SQL Server
 
-Você tem algumas opções para localizar o nome do SQL Server antes e depois de se conectar ao SQL Server.  
+Você tem algumas opções para localizar o nome do SQL Server antes e depois de se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ### <a name="before-you-connect-to-sql-server"></a>Antes de você se conectar ao SQL Server
 
@@ -243,7 +243,7 @@ Você tem algumas opções para localizar o nome do SQL Server antes e depois de
 
 3. Pesquise o texto *O nome do servidor é*.
 
-    Tudo o que está listado entre aspas simples é o nome da instância do SQL Server à qual você vai se conectar:
+    Tudo o que está listado entre aspas simples é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual você se conectará:
 
     ![Localize o nome do servidor no log de erros](media/ssms-tricks/servernameinlog.png)
 
@@ -251,7 +251,7 @@ Você tem algumas opções para localizar o nome do SQL Server antes e depois de
 
 ### <a name="when-youre-connected-to-sql-server"></a>Quando você está conectado ao SQL Server
 
-Quando você está conectado ao SQL Server, pode encontrar o nome do servidor em três locais: 
+Ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você poderá encontrar o nome do servidor em três localizações: 
 
 1. O nome do servidor é listado no Pesquisador de Objetos:
 
@@ -266,19 +266,19 @@ Quando você está conectado ao SQL Server, pode encontrar o nome do servidor em
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>Se você estiver conectado a um alias ou ouvinte do Grupo de Disponibilidade
 
-Se você estiver conectado a um alias ou a um ouvinte do Grupo de Disponibilidade, essa informação será exibida no Pesquisador de Objetos e em Propriedades. Nesse caso, o nome do SQL Server pode não estar imediatamente aparente e deverá ser consultado:
+Se você estiver conectado a um alias ou a um ouvinte do Grupo de Disponibilidade, essa informação será exibida no Pesquisador de Objetos e em Propriedades. Nesse caso, o nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode não estar imediatamente aparente e precisará ser consultado:
 
 1. Conecte-se ao seu SQL Server.
 
 2. Abra uma janela de Nova Consulta.
 
-3. Cole o código T-SQL a seguir na janela:
+3. Cole o seguinte código [!INCLUDE[tsql](../../includes/tsql-md.md)] na janela:
 
       ```sql
        select @@Servername
      ```
 
-4. Veja os resultados da consulta para identificar o nome da instância do SQL Server à qual você está conectado: 
+4. Veja os resultados da consulta para identificar o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à qual você está conectado: 
 
     ![Consulte o nome do SQL Server](media/ssms-tricks/queryservername.png)
 
