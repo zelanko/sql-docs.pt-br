@@ -7800,6 +7800,8 @@
                   href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
                 - name: Solução de problemas do Conector do SQL Server
                   href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
+                - name: Registro em log do Conector do SQL Server
+                  href: relational-databases/security/encryption/sql-server-connector-registry-modification.md
             - name: Fazer backup da chave mestra de serviço
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: Restaurar a chave mestra de serviço
