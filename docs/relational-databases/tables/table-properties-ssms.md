@@ -18,12 +18,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cc8c79f0a8020d4301e6bc8653f2d3fcf600149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 018b1388e283541f883844daf77c68267c535a9c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463767"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810452"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "88463767"
  Indica se o objeto foi criado com a opção de identificador entre aspas definida como ON. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **Escalonamento de Bloqueios**  
- Indica a granularidade do escalonamento de bloqueios da tabela. Para obter mais informações sobre bloqueio no Mecanismo de Banco de Dados, consulte [Bloqueio de transação do SQL Server e guia de controle de versão de linha](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15). Os valores possíveis são:  
+ Indica a granularidade do escalonamento de bloqueios da tabela. Para obter mais informações sobre bloqueio no Mecanismo de Banco de Dados, consulte [Bloqueio de transação do SQL Server e guia de controle de versão de linha](../sql-server-transaction-locking-and-row-versioning-guide.md?view=sql-server-ver15). Os valores possíveis são:  
   
  AUTO  
  Essa opção permite que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] selecione a granularidade do escalonamento de bloqueios apropriado ao esquema da tabela.  
@@ -175,5 +175,4 @@ ms.locfileid: "88463767"
 ## <a name="see-also"></a>Consulte Também  
  [Exibir a definição da tabela](../../relational-databases/tables/view-the-table-definition.md)   
  [Modificar colunas &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
-  
   

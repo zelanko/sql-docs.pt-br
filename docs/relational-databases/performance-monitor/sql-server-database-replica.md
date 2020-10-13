@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458330"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892226"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, Réplica de Banco de Dados
 
@@ -42,7 +42,7 @@ ms.locfileid: "86458330"
 |**Bytes de Restauração Restantes**|A quantidade de log em quilobytes a ser refeita para concluir a fase de reversão.|Réplica secundária|  
 |**Bytes Refeitos/s**|Quantidade de registros de log refeitos no banco de dados secundário no último segundo.|Réplica secundária|  
 |**Total de Log a ser desfeito**|Total de quilobytes de log que deve ser desfeito.|Réplica secundária|  
-|**Atraso na Transação**|Atraso na espera por um reconhecimento de confirmação não terminado para todas as transações atuais, em milissegundos. Divida por *Transações de Gravação Espelhadas/s* para obter *Atraso Médio da Transação*. Para obter mais informações, veja [SQL Server 2012 AlwaysOn – Parte 12 – Aspectos de desempenho e monitoramento de desempenho II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)|Réplica primária|  
+|**Atraso na Transação**|Atraso na espera por um reconhecimento de confirmação não terminado para todas as transações atuais, em milissegundos. Divida por *Transações de Gravação Espelhadas/s* para obter *Atraso Médio da Transação*. Para obter mais informações, veja [SQL Server 2012 AlwaysOn – Parte 12 – Aspectos de desempenho e monitoramento de desempenho II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii)|Réplica primária|  
   
 ## <a name="see-also"></a>Consulte Também
   
@@ -50,4 +50,3 @@ ms.locfileid: "86458330"
  [SQL Server, Réplica de Disponibilidade](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, objeto Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

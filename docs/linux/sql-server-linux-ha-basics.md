@@ -2,19 +2,19 @@
 title: Alta disponibilidade do SQL Server para implantações do Linux
 description: Saiba mais sobre as opções de alta disponibilidade para o SQL Server em Linux, como os grupos de disponibilidade Always On, as FCIs (instâncias de cluster de failover) e o envio de logs.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196835"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785131"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 

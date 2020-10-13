@@ -12,12 +12,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24ecd09d3f649e0a18e76db87c05ee2be79c0cb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05ca5334dd7f83ac31c8e118cad983b25d049b03
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381972"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863906"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introdução ao Columnstore para análise operacional em tempo real
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -91,21 +91,21 @@ Não há atraso algum quando as cargas de trabalho OLTP e analíticas são execu
   
 -   [Business case for real-time operational analytics (Caso de negócios para análise operacional em tempo real)](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
   
--   [Using a nonclustered columnstore index for real-time operational analytics (Usando um índice columnstore não clusterizado para análise operacional em tempo real)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)  
+-   [Using a nonclustered columnstore index for real-time operational analytics (Usando um índice columnstore não clusterizado para análise operacional em tempo real)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)  
   
--   [A simple example using a nonclustered columnstore index (Um exemplo simples usando um índice columnstore não clusterizado)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)  
+-   [A simple example using a nonclustered columnstore index (Um exemplo simples usando um índice columnstore não clusterizado)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)  
   
--   [How SQL Server maintains a nonclustered columnstore index  on a transactional workload (Como o SQL Server mantém um índice columnstore não clusterizado em uma carga de trabalho transacional)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)  
+-   [How SQL Server maintains a nonclustered columnstore index  on a transactional workload (Como o SQL Server mantém um índice columnstore não clusterizado em uma carga de trabalho transacional)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)  
   
--   [Minimizing the impact of nonclustered columnstore index maintenance by using a filtered index (Minimizando o impacto da manutenção do índice columnstore não clusterizado usando um índice filtrado)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
+-   [Minimizing the impact of nonclustered columnstore index maintenance by using a filtered index (Minimizando o impacto da manutenção do índice columnstore não clusterizado usando um índice filtrado)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)  
   
--   [Minimizing the impact of nonclustered columnstore index maintenance by using compression delay (Minimizando o impacto da manutenção do índice columnstore não clusterizado usando o atraso da compactação)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)  
+-   [Minimizing the impact of nonclustered columnstore index maintenance by using compression delay (Minimizando o impacto da manutenção do índice columnstore não clusterizado usando o atraso da compactação)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)  
   
--   [Minimizing impact of a nonclustered columnstore index maintenance by using compression delay - performance numbers (Minimizando o impacto da manutenção de um índice columnstore não clusterizado usando atraso de compactação — número de desempenho)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
+-   [Minimizing impact of a nonclustered columnstore index maintenance by using compression delay - performance numbers (Minimizando o impacto da manutenção de um índice columnstore não clusterizado usando atraso de compactação — número de desempenho)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)  
   
--   [Real time operational analytics with memory-optimized tables (Análise operacional em tempo real com tabelas com otimização de memória)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
+-   [Real time operational analytics with memory-optimized tables (Análise operacional em tempo real com tabelas com otimização de memória)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)  
   
--   [Columnstore index and the merge policy for rowgroups (Índice columnstore e a política de mesclagem para rowgroups)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
+-   [Columnstore index and the merge policy for rowgroups (Índice columnstore e a política de mesclagem para rowgroups)](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)  
   
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>Dica de desempenho nº 1: use índices filtrados para melhorar o desempenho da consulta  
  Executar a análise operacional em tempo real pode afetar o desempenho da carga de trabalho OLTP. Esse impacto deve ser mínimo. O exemplo abaixo mostra como usar índices filtrados para minimizar o impacto do índice columnstore não clusterizado na carga de trabalho transacional enquanto ainda estiver entregando análise em tempo real.  
@@ -165,7 +165,7 @@ Group By customername
   
  ![Plano de consulta](../../relational-databases/indexes/media/query-plan-columnstore.png "Plano de consulta")  
   
- Veja o blog para obter detalhes sobre o [índice columnstore não clusterizado filtrado.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
+ Veja o blog para obter detalhes sobre o [índice columnstore não clusterizado filtrado.](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)  
   
 ## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>Dica de desempenho nº 2: transferir a análise para o secundário legível Always On  
  Mesmo que você possa minimizar a manutenção do índice columnstore usando um índice columnstore filtrado, as consultas analíticas ainda podem exigir recursos consideráveis de computação (CPU, E/S, memória), que afetam o desempenho da carga de trabalho operacional. Para a maioria das cargas de trabalho de missão crítica, nossa recomendação é usar a configuração Always On. Nessa configuração, você pode eliminar o impacto de executar a análise transferindo-a para um secundário legível.  
@@ -192,7 +192,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
- Confira o blog para obter detalhes sobre o [atraso na compactação](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/).  
+ Confira o blog para obter detalhes sobre o [atraso na compactação](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci).  
   
  Aqui estão as melhores práticas recomendadas:  
   
@@ -222,4 +222,3 @@ ORDER BY created_time DESC;
  [Desempenho de consultas de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Índices columnstore para Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
-  

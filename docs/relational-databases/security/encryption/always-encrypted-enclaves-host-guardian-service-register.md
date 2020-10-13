@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411142"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868901"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>Registrar computador com o Serviço Guardião de Host
 
@@ -120,7 +120,7 @@ Há três arquivos de dados coletados para atestado de TPM, alguns dos quais pod
 | -------------------- | ---------------- | ---------- |
 | Identificador de plataforma  | A chave de endosso pública no TPM do computador e o certificado de chave de endosso do fabricante do TPM. | Uma para cada computador |
 | Linha de base do TPM | Os PCRs (registros de controle de plataforma) no TPM que medem o firmware e a configuração do sistema operacional carregados durante o processo de inicialização. Os exemplos incluem o estado de inicialização segura e se os despejos de memória são criptografados. | Configuração de uma linha de base por computador único (hardware e software idênticos podem usar a mesma linha de base) |
-| Política de integridade de código | A política de [Controle de Aplicativo do Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) em que você confia para proteger os computadores | Uma por política de CI exclusiva implantada nos computadores. |
+| Política de integridade de código | A política de [Controle de Aplicativo do Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) em que você confia para proteger os computadores | Uma por política de CI exclusiva implantada nos computadores. |
 
 Você pode configurar mais de um artefato de atestado no HGS para dar suporte a uma frota mista de hardware e software.
 O HGS requer apenas que um atestado de computador corresponda a uma política de cada categoria de política.
@@ -147,7 +147,7 @@ Se você já estiver usando uma política de integridade de código WDAC persona
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. Siga as orientações no [guia de implantação do Controle de Aplicativos do Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) para implantar o arquivo de `allowall_cipolicy.bin` nos computadores [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] usando a [Política de Grupo](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). Para computadores do grupo de trabalho, siga o mesmo processo usando o Editor de Política de Grupo Local (`gpedit.msc`).
+2. Siga as orientações no [guia de implantação do Controle de Aplicativos do Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) para implantar o arquivo de `allowall_cipolicy.bin` nos computadores [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] usando a [Política de Grupo](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). Para computadores do grupo de trabalho, siga o mesmo processo usando o Editor de Política de Grupo Local (`gpedit.msc`).
 
 3. Execute `gpupdate /force` nos computadores [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] para configurar a nova política de integridade de código e reinicie os computadores para aplicar a política.
 
@@ -243,7 +243,7 @@ Repita a etapa 4B para cada computador [!INCLUDE [ssnoversion-md](../../../inclu
 
 Depois de registrar o computador [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] com o HGS ([Etapa 4A](#step-4a-register-a-computer-in-tpm-mode) para o modo TPM, [Etapa 4B](#step-4b-register-a-computer-in-host-key-mode) para o modo de chave do host), você deve confirmar se ele é capaz de atestar com êxito.
 
-Você pode verificar a configuração do cliente de atestado do HGS e executar uma tentativa de atestado a qualquer momento com [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
+Você pode verificar a configuração do cliente de atestado do HGS e executar uma tentativa de atestado a qualquer momento com [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
 A saída do comando terá uma aparência semelhante à seguinte:
 
 ```

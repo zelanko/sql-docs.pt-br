@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a26b04b1acc7ac829bb8fe79db2d3eaeede502dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea4b3c26cba886b5150b1bef7b8f3b08380c7a98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760471"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892476"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lição 1: Criar e aplicar uma política desativada por padrão
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ Usando as políticas do Gerenciamento Baseado em Políticas, você pode administ
 ## <a name="prerequisites"></a>Pré-requisitos
 Para concluir este tutorial, é necessário ter o SQL Server Management Studio e acesso a um servidor que está executando o SQL Server. 
 
-- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## <a name="create-the-mail-off-condition"></a>Criar a condição de correio desativado
@@ -92,6 +92,5 @@ Para concluir este tutorial, é necessário ter o SQL Server Management Studio e
    
 ## <a name="next-lesson"></a>Próxima lição  
 [Lição 2: Criar e aplicar uma política de nomeação de padrões](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
-  
   
   

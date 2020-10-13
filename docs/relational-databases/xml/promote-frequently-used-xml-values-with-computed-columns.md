@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772096"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891936"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  Para fazer isso, primeiro crie a função CLR de streaming. O tipo de dados **xml** é exposto como um SqlXml de classe gerenciada no ADO.NET e dá suporte ao método **CreateReader()** que retorna um XmlReader.  
   
 > [!NOTE]  
->  O código de exemplo nesta seção usa XPathDocument e XPathNavigator. Isso força você a carregar todos os documentos XML na memória. Se estiver usando código semelhante em seu aplicativo para processar vários documentos XML grandes, esse código não será escalável. Em vez disso, mantenha as alocações de memória pequenas e use interfaces de streaming sempre que possível. Para obter mais informações sobre o desempenho, veja [Arquitetura da integração CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  O código de exemplo nesta seção usa XPathDocument e XPathNavigator. Isso força você a carregar todos os documentos XML na memória. Se estiver usando código semelhante em seu aplicativo para processar vários documentos XML grandes, esse código não será escalável. Em vez disso, mantenha as alocações de memória pequenas e use interfaces de streaming sempre que possível. Para obter mais informações sobre o desempenho, veja [Arquitetura da integração CLR](../clr-integration/clr-integration-architecture-clr-hosted-environment.md).  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -257,5 +257,4 @@ as
   
 ## <a name="see-also"></a>Consulte Também  
  [Usar XML em colunas computadas](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   

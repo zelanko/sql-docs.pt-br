@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 912aca78675b1cf5a0a088ba9a2264fe23b2b2eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548885"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810670"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a retenção de dados históricos em tabelas temporais com versão do sistema
 
@@ -38,10 +38,10 @@ O gerenciamento da retenção de dados da tabela temporal começa com a determin
 
 Após determinar o período de retenção de dados, a próxima etapa é desenvolver um plano para gerenciar os dados históricos, como e onde você armazena seus dados históricos e como excluir dados históricos anteriores aos requisitos de retenção. As três abordagens a seguir estão disponíveis para gerenciar dados históricos na tabela de histórico temporal:
 
-- [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)
-- [Particionamento de Tabela](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)
-- [Script de Limpeza Personalizada](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)
-- [Política de Retenção](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)
+- [Stretch Database](#using-stretch-database-approach)
+- [Particionamento de Tabela](#using-table-partitioning-approach)
+- [Script de Limpeza Personalizada](#using-custom-cleanup-script-approach)
+- [Política de Retenção](#using-temporal-history-retention-policy-approach)
 
  Com cada uma dessas abordagens, a lógica para a migração ou limpeza de dados históricos baseia-se na coluna que corresponde ao término do período na tabela atual. O final do valor do período para cada linha determina o momento em que a versão de linha se torna "fechada", ou seja, quando ela chega à tabela de histórico. Por exemplo, a condição `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` especifica que dados históricos com mais de um mês precisam ser removidos ou movidos da tabela de histórico.
 
@@ -53,7 +53,7 @@ Após determinar o período de retenção de dados, a próxima etapa é desenvol
 > [!NOTE]
 > A utilização da abordagem do Stretch Database só se aplica ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e não se aplica ao [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra os dados históricos de forma transparente para o Azure. Para mais segurança, é possível criptografar dados em movimento usando o recurso [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) do SQL Server. Além disso, você pode usar a [Segurança em nível de linha](../../relational-databases/security/row-level-security.md) e outros recursos de segurança avançados do SQL Server com o Stretch Database e o Temporal para proteger seus dados.
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra os dados históricos de forma transparente para o Azure. Para mais segurança, é possível criptografar dados em movimento usando o recurso [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) do SQL Server. Além disso, você pode usar a [Segurança em nível de linha](../../relational-databases/security/row-level-security.md) e outros recursos de segurança avançados do SQL Server com o Stretch Database e o Temporal para proteger seus dados.
 
 Ao utilizar a abordagem do Stretch Database, você pode ampliar algumas ou todas as tabelas de histórico temporal para o Azure e, assim, o SQL Server moverá silenciosamente os dados históricos para o Azure. Habilitar a ampliação de uma tabela de histórico não altera a forma como você interage com a tabela temporal em termos de modificação de dados e consultas temporais.
 
@@ -98,7 +98,7 @@ Consulte também:
 
 ### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Usando o Transact-SQL para alongar a tabela de histórico inteira
 
-Você também pode usar o Transact-SQL para habilitar o Stretch no servidor local e para [Habilitar Stretch Database em um banco de dados](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Você pode [usar o Transact-SQL para habilitar o Stretch Database em uma tabela](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Com um banco de dados habilitado anteriormente para Stretch Database, execute o seguinte script Transact-SQL para alongar uma tabela de histórico temporal com controle de versão do sistema existente:
+Você também pode usar o Transact-SQL para habilitar o Stretch no servidor local e para [Habilitar Stretch Database em um banco de dados](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Você pode [usar o Transact-SQL para habilitar o Stretch Database em uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). Com um banco de dados habilitado anteriormente para Stretch Database, execute o seguinte script Transact-SQL para alongar uma tabela de histórico temporal com controle de versão do sistema existente:
 
 ```sql
 ALTER TABLE <history table name>
@@ -315,7 +315,7 @@ Você pode modificar um pouco o script acima e usá-lo no processo de manutenç�
 4. Na etapa (6) alterar função de partição mesclando o limite inferior: `MERGE RANGE(N'2015-10-31T23:59:59.999'` depois que você moveu os dados de outubro.
 5. Na etapa (7) dividir função de partição criando um novo limite superior: `SPLIT RANGE (N'2016-04-30T23:59:59.999'` depois que você moveu os dados de outubro.
 
-No entanto, a solução ideal seria executar regularmente um script Transact-SQL genérico que fosse capaz de executar a ação apropriada todos os meses sem modificar o script. É possível generalizar o script acima para agir sobre parâmetros fornecidos (limite inferior que precisa ser mesclado e o novo limite que será criado com divisão de partição). Para evitar a criação de uma tabela de preparo a cada mês, você pode criar uma antecipadamente e reutilizá-la alterando a restrição de verificação para corresponder à partição que será alternada. Examine as páginas a seguir para obter ideias sobre [como a janela deslizante pode ser totalmente automatizada](https://msdn.microsoft.com/library/aa964122.aspx) usando um script Transact-SQL.
+No entanto, a solução ideal seria executar regularmente um script Transact-SQL genérico que fosse capaz de executar a ação apropriada todos os meses sem modificar o script. É possível generalizar o script acima para agir sobre parâmetros fornecidos (limite inferior que precisa ser mesclado e o novo limite que será criado com divisão de partição). Para evitar a criação de uma tabela de preparo a cada mês, você pode criar uma antecipadamente e reutilizá-la alterando a restrição de verificação para corresponder à partição que será alternada. Examine as páginas a seguir para obter ideias sobre [como a janela deslizante pode ser totalmente automatizada](/previous-versions/sql/sql-server-2005/administrator/aa964122(v=sql.90)) usando um script Transact-SQL.
 
 ### <a name="performance-considerations-with-table-partitioning"></a>Considerações sobre desempenho com o particionamento de tabela
 
@@ -502,7 +502,7 @@ A tarefa de limpeza para o columnstore clusterizado remove grupos de linha intei
 
 A excelente compactação de dados e eficiente limpeza da retenção torna o índice de columnstore clusterizado uma opção ideal para cenários em que sua carga de trabalho gera rapidamente uma grande quantidade de dados históricos. Esse padrão é comum para cargas de trabalho intensivas de processamento de transações que usam tabelas temporais para controle de alterações e auditoria, análise de tendências ou ingestão de dados IoT.
 
-Confira [Gerenciar dados históricos em tabelas temporais com a política de retenção](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy) para obter mais detalhes.
+Confira [Gerenciar dados históricos em tabelas temporais com a política de retenção](/azure/sql-database/sql-database-temporal-tables-retention-policy) para obter mais detalhes.
 
 ## <a name="next-steps"></a>Próximas etapas
 

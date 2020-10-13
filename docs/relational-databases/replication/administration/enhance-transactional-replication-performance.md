@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902268"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891116"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ As conclusões:
     - Aumentar o valor **SubscriptionStreams** ajuda na produtividade geral do Agente de Distribuição, já que várias conexões com o assinante aplicam lotes de alterações em paralelo. No entanto, dependendo do número de processadores e outras condições de metadados (como chave primária, chaves estrangeiras, restrições exclusivas e índices), na verdade o valor mais alto de SubscriptionStreams pode ter um efeito adverso. Além disso, se um fluxo não for executado ou confirmado, o Agente de Distribuição voltará a usar um único fluxo para repetir os lotes com falha.
 
 
-Para saber mais sobre esse teste, confira a postagem de blog [Otimizando os parâmetros de perfil de agente de replicação para melhorar o desempenho](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/).
+Para saber mais sobre esse teste, confira a postagem de blog [Otimizando os parâmetros de perfil de agente de replicação para melhorar o desempenho](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance).
 
 
 ### <a name="log-reader-agent"></a>Agente de Leitor de Log
@@ -162,5 +162,4 @@ A confirmação de um conjunto de transações tem uma sobrecarga fixa. Ao confi
 [Trabalhar com perfis do Agente de Replicação](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Exibir e modificar parâmetros do prompt de comando de agentes de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

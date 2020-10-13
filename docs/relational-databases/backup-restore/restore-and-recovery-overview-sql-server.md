@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480386"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810687"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Visão geral da restauração e recuperação (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ Caso ocorra um failover ou outro desligamento não limpo, os bancos de dados pod
 
 -   A **Fase desfazer** reverte transações incompletas encontradas na ATT para garantir que a integridade do banco de dados seja preservada. Depois da reversão, o banco de dados fica online e mais nenhum backup de log de transações pode ser aplicado ao banco de dados.
 
-As informações sobre o andamento de cada fase de recuperação do banco de dados são registradas no [log de erros](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O progresso da recuperação do banco de dados também pode ser acompanhado usando eventos estendidos. Saiba mais na postagem do blog [Novos eventos estendidos para o progresso da recuperação do banco de dados](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/).
+As informações sobre o andamento de cada fase de recuperação do banco de dados são registradas no [log de erros](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O progresso da recuperação do banco de dados também pode ser acompanhado usando eventos estendidos. Saiba mais na postagem do blog [Novos eventos estendidos para o progresso da recuperação do banco de dados](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress).
 
 > [!NOTE]
 > Em um cenário de restauração por etapas, se o status de um grupo de arquivos for somente leitura desde antes de o backup de arquivo ser criado, aplicar backups de log ao grupo de arquivos será desnecessário e será ignorado pela restauração de arquivo. 
@@ -174,9 +174,9 @@ O orientador de recuperação de banco de dados facilita a criação de planos d
   
 Para obter mais informações, obtenha informações sobre o orientador de recuperação de banco de dados consultando os seguintes blogs sobre capacidade de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Assistente de Recuperação: Uma introdução](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [Assistente de Recuperação: Uma introdução](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [Assistente de Recuperação: Usando o SSMS para criar/restaurar backups divididos](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [Assistente de Recuperação: Usando o SSMS para criar/restaurar backups divididos](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Recuperação acelerada de banco de dados
 A [recuperação acelerada do banco de dados](/azure/sql-database/sql-database-accelerated-database-recovery/) está disponível no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A recuperação acelerada de banco de dados aprimora significativamente a disponibilidade do banco de dados, especialmente na presença de transações de execução prolongada, remodelando o [processo de recuperação](#TlogAndRecovery) do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Um banco de dados para o qual a recuperação acelerada do banco de dados foi habilitada conclui o processo de recuperação significativamente mais rápido após um failover ou outro desligamento não limpo. Quando habilitada, a recuperação acelerada do banco de dados também conclui a reversão de transações canceladas de longa execução muito mais rapidamente.
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Guia de arquitetura e gerenciamento de log de transações do SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [Aplicar backups de log de transações (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Aplicar backups de log de transações (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a6ea70d3e24d659337c85895946c1f310e045234
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c54a2d16acafefdc763ca7e02f9b42c81cb1c2f7
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247299"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892386"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Monitorar e solucionar problemas do PolyBase
 
@@ -260,7 +260,7 @@ Solução alternativa: use o nome DNS para redirecionar conexões para o Nó de 
 
 ## <a name="error-messages-and-possible-solutions"></a>Mensagens de erro e possíveis soluções
 
-Para solucionar problemas de erros de tabela externa, confira o blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Erros de instalação do PolyBase e possíveis soluções").
+Para solucionar problemas de erros de tabela externa, confira o blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions "Erros de instalação do PolyBase e possíveis soluções").
 
 ## <a name="see-also"></a>Confira também
 

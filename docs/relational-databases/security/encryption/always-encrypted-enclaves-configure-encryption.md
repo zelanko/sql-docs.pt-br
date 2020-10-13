@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38f421815202b16fe5d7d2570ce5661be5097109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490479"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863697"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Configurar a criptografia de coluna in-loco usando o Always Encrypted com enclaves seguros 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -43,7 +43,7 @@ Um usuário ou um aplicativo que dispara operações criptográficas deve ter pe
 Você só pode disparar a criptografia in-loco usando [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) do SQL Server Management Studio ou de seu aplicativo personalizado. Confira [Configurar criptografia de coluna in-loco com Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
 
 > [!NOTE]
-> Atualmente, o [assistente do Always Encrypted](always-encrypted-wizard.md) e o cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) não dão suporte à criptografia in-loco e sempre baixam os dados para operações criptográficas, mesmo que sua configuração atenda aos requisitos acima. 
+> Atualmente, o [assistente do Always Encrypted](always-encrypted-wizard.md) e o cmdlet [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) não dão suporte à criptografia in-loco e sempre baixam os dados para operações criptográficas, mesmo que sua configuração atenda aos requisitos acima. 
 
 ## <a name="next-steps"></a>Próximas etapas
 - [Configurar criptografia de coluna in-loco com Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)

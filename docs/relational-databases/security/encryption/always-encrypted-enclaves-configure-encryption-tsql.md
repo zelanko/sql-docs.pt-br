@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90bb710e57e87bfb6bf86f4ae0543329a4500940
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490469"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863646"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Configurar criptografia de coluna in-loco com Transact-SQL
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -36,7 +36,7 @@ Como qualquer consulta que usa um enclave seguro no lado do servidor, uma instru
 O restante deste artigo descreve como disparar a criptografia in-loco usando a instrução `ALTER TABLE`/`ALTER COLUMN` do SQL Server Management Studio. Como alternativa, você pode emitir `ALTER TABLE`/`ALTER COLUMN` do seu aplicativo. 
 
 > [!NOTE]
-> Atualmente, ferramentas diferentes do SSMS, incluindo o cmdlet [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) no módulo do SqlServer do PowerShell e [sqlcmd](../../../tools/sqlcmd-utility.md), não dão suporte ao uso de `ALTER TABLE`/`ALTER COLUMN` para operações criptográficas in-loco.
+> Atualmente, ferramentas diferentes do SSMS, incluindo o cmdlet [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) no módulo do SqlServer do PowerShell e [sqlcmd](../../../tools/sqlcmd-utility.md), não dão suporte ao uso de `ALTER TABLE`/`ALTER COLUMN` para operações criptográficas in-loco.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>Executar a criptografia in-loco com o Transact-SQL no SSMS
 ### <a name="pre-requisites"></a>Pré-requisitos
