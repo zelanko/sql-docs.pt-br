@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1dee948ce6b0cd36191fc13421fcfdfaa07138ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e183c885cc08f699926dc88838d8650be55b400b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935492"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987872"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introdução ao SSMA para MySQL (MySQLToSQL)
 O Assistente de Migração do SQL Server (SSMA) para MySQL permite converter rapidamente esquemas de banco de dados MySQL em SQL Server ou esquemas de banco de dados SQL do Azure, carregar os esquemas resultantes no SQL Server ou no banco de dados SQL do Azure e migrar os dados do MySQL para o SQL Server ou o Azure SQL Database.  
@@ -73,7 +73,7 @@ SQL Server ou o Gerenciador de metadados do banco de dados SQL do Azure mostra i
   
 Você pode usar esse Gerenciador de metadados para selecionar objetos de banco de dados MySQL convertidos e, em seguida, sincronizar esses objetos com a instância do SQL Server ou do banco de dados SQL do Azure.  
   
-Para obter mais informações, consulte [sincronização (MySQL para SQL Server/banco de dados SQL do Azure)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+Para obter mais informações, consulte [sincronização (MySQL para SQL Server/banco de dados SQL do Azure)](./loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ### <a name="metadata"></a>Metadados  
 À direita de cada Gerenciador de metadados estão as guias que descrevem o objeto selecionado. Por exemplo, se você selecionar uma tabela no Gerenciador de metadados do MySQL, nove guias serão exibidas: **tabela**, **SQL**, **mapeamento de tipo**, **dados**, **configurações**, mapeamento de conjunto de **caracteres**, **modos SQL**, **Propriedades**e **relatório**. A guia **relatório** contém informações somente depois que você cria um relatório que contém o objeto selecionado. Se você selecionar uma tabela no SQL Server Gerenciador de metadados, três guias serão exibidas: **tabela**, **SQL** e **dados**.  
@@ -125,4 +125,3 @@ O menu **Exibir** fornece comandos para alternar a visibilidade do painel de sa�
 ## <a name="see-also"></a>Consulte Também  
 [Referência da interface do usuário &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
 [Migrando dados do MySQL para o SQL Server-Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
-  

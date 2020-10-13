@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f68af2ae2176ed4860f92a829544c7ff463254e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472475"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987412"
 ---
 # <a name="managing-passwords-db2tosql"></a>Gerenciando senhas (DB2ToSQL)
 Esta seção trata da proteção de senhas de banco de dados e do procedimento para importá-las ou exportá-las entre servidores:  
@@ -139,5 +139,4 @@ A _funcionalidade de importação_ lê a ID do servidor e as informações de se
 8. Confirmar senha: xxxxxxxx
 
 ## <a name="see-also"></a>Consulte Também  
-[Executar o console do SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Executar o console do SSMA](./executing-the-ssma-console-db2tosql.md)  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cfcf6b812d820685fd2d960066b69037fc3ed5c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b612ec00ecebf5dd9e4cd2cf803567f1d7dfc149
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492459"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988439"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>Criar arquivos de valor da variável (MySQLToSQL)
 O arquivo de valor da variável é um arquivo XML que inclui os valores de parâmetro de comandos, como, o nome do servidor de origem ou de destino que costuma ser alterado de uma migração de servidor para outra. Quando ocorre um grande número de migrações de banco de dados, vários arquivos de variáveis para armazenar o valor de cada servidor de origem serão criados e referenciados em um arquivo de script mestre com a opção **-v** na linha de comando. Isso ajuda a manter valores estáticos em alguns arquivos de script com os valores de variáveis em vários arquivos de variáveis.  
@@ -94,5 +94,4 @@ O usuário pode facilmente validar seu arquivo de valor de variável com o arqui
 A próxima etapa na operação do console é [criar os arquivos de conexão do servidor &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
-[Criando os arquivos de conexão do servidor (MySQL)](https://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
-  
+[Criando os arquivos de conexão do servidor (MySQL)](./creating-the-server-connection-files-mysqltosql.md)  

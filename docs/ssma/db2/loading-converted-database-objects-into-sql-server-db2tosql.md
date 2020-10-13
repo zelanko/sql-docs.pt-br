@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ddd074654a12d6eb837b9e9fc9a152c7ec1e75b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e89edc66dee92fb74071de952e056d99c91cbf12
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497752"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984982"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Carregando objetos de banco de dados convertidos em SQL Server (DB2ToSQL)
 Depois de converter os esquemas do DB2 no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode carregar os objetos de banco de dados resultantes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você pode fazer com que o SSMA crie os objetos, ou pode criar o script dos objetos e executar os scripts por conta própria. Além disso, o SSMA permite que você atualize os metadados de destino com o conteúdo real do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  
@@ -104,8 +104,7 @@ Você também pode executar scripts na linha de comando usando o utilitário **s
 Depois de carregar os objetos de banco de dados convertidos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode conceder e negar permissões nesses objetos. É uma boa ideia fazer isso antes de migrar dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter informações sobre como ajudar a proteger objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte "considerações de segurança para bancos de dados e aplicativos de banco de dados" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa do processo de migração é [migrar dados do DB2 para o SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
+A próxima etapa do processo de migração é [migrar dados do DB2 para o SQL Server](./migrating-db2-data-into-sql-server-db2tosql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Migrar dados do DB2 para o SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

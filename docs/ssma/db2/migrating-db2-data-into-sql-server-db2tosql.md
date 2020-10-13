@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c4d2511774944e7115172dda7832b10ed967cf1f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5b833a97fceeaf09b5eb6ffb86ac3abeb06e6bb0
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933783"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987910"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migrando dados do DB2 para o SQL Server (DB2ToSQL)
 Depois de sincronizar com êxito os objetos convertidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode migrar dados do DB2 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
-> Se o mecanismo que está sendo usado for o mecanismo de migração de dados do servidor, antes de poder migrar os dados, você deverá instalar o pacote de extensão do SSMA para DB2 e os provedores do DB2 no computador que está executando o SSMA. O serviço de SQL Server Agent também deve estar em execução. Para obter mais informações sobre como instalar o pacote de extensão, consulte [instalando componentes do SSMA no SQL Server](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+> Se o mecanismo que está sendo usado for o mecanismo de migração de dados do servidor, antes de poder migrar os dados, você deverá instalar o pacote de extensão do SSMA para DB2 e os provedores do DB2 no computador que está executando o SSMA. O serviço de SQL Server Agent também deve estar em execução. Para obter mais informações sobre como instalar o pacote de extensão, consulte [instalando componentes do SSMA no SQL Server](./installing-ssma-components-on-sql-server-db2tosql.md)  
   
 ## <a name="setting-migration-options"></a>Definindo opções de migração  
 Antes de migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, examine as opções de migração do projeto na caixa de diálogo **configurações do projeto** .  
   
--   Usando essa caixa de diálogo, você pode definir opções como tamanho do lote de migração, bloqueio de tabela, verificação de restrição, manipulação de valor nulo e tratamento de valor de identidade. Para obter mais informações sobre as configurações de migração do projeto, consulte [configurações do projeto (migração)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae).  
+-   Usando essa caixa de diálogo, você pode definir opções como tamanho do lote de migração, bloqueio de tabela, verificação de restrição, manipulação de valor nulo e tratamento de valor de identidade. Para obter mais informações sobre as configurações de migração do projeto, consulte [configurações do projeto (migração)](./project-settings-migration-db2tosql.md).  
   
 -   O **mecanismo de migração** na caixa de diálogo **configurações do projeto** permite que o usuário execute o processo de migração usando dois tipos de mecanismos de migração de dados:  
   
@@ -45,7 +45,7 @@ Antes de migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 **Migração de dados no lado do servidor:**  
   
--   Durante a migração de dados do lado do servidor, o mecanismo reside no banco de dados de destino. Ele é instalado por meio do pacote de extensão. Para obter mais informações sobre como instalar o pacote de extensões, consulte [instalando componentes do SSMA no SQL Server](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+-   Durante a migração de dados do lado do servidor, o mecanismo reside no banco de dados de destino. Ele é instalado por meio do pacote de extensão. Para obter mais informações sobre como instalar o pacote de extensões, consulte [instalando componentes do SSMA no SQL Server](./installing-ssma-components-on-sql-server-db2tosql.md)  
   
 -   Para iniciar a migração no lado do servidor, selecione a opção **mecanismo de migração de dados do servidor** na caixa de diálogo Configurações do **projeto** .  
   
@@ -91,13 +91,12 @@ Para exibir as mensagens de migração, verifique se o painel de saída está vi
   
 5.  Na caixa de diálogo **conectar ao DB2** , insira as credenciais de conexão e clique em **conectar**. Para obter mais informações sobre como se conectar ao DB2, consulte [conectando-se ao banco de dados DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    Para se conectar ao banco de dados de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , insira as credenciais de conexão na caixa de diálogo **conectar a SQL Server** e clique em **conectar**. Para obter mais informações sobre como se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [conectando-se ao SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
+    Para se conectar ao banco de dados de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , insira as credenciais de conexão na caixa de diálogo **conectar a SQL Server** e clique em **conectar**. Para obter mais informações sobre como se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [conectando-se ao SQL Server](./connecting-to-sql-server-db2etosql.md)  
   
-    As mensagens serão exibidas no painel de **saída** . Quando a migração for concluída, o **relatório de migração de dados** será exibido. Se algum dado não for migrado, clique na linha que contém os erros e, em seguida, clique em **detalhes**. Ao concluir o relatório, clique em **fechar**. Para obter mais informações sobre o relatório de migração de dados, consulte [relatório de migração de dados (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    As mensagens serão exibidas no painel de **saída** . Quando a migração for concluída, o **relatório de migração de dados** será exibido. Se algum dado não for migrado, clique na linha que contém os erros e, em seguida, clique em **detalhes**. Ao concluir o relatório, clique em **fechar**. Para obter mais informações sobre o relatório de migração de dados, consulte [relatório de migração de dados (SSMA Common)](../sybase/data-migration-report-sybasetosql.md)  
   
 > [!NOTE]  
 > Quando o SQL Express Edition é usado como o banco de dados de destino, somente a migração de dado do lado do cliente é permitida e não há suporte para a migração de dados do lado do servidor.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Migrar dados do DB2 para o SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

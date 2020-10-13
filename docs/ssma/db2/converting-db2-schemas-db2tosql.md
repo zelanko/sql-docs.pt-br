@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418552"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985082"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Convertendo esquemas do DB2 (DB2ToSQL)
 Depois de ter se conectado ao DB2, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e defina as opções de projeto e mapeamento de dados, você pode converter objetos de banco de dado DB2 em objetos de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -74,7 +74,7 @@ A tabela a seguir mostra quais objetos DB2 são convertidos e os [!INCLUDE[ssNoV
 |Apelidos|Mapeamento parcial. O processamento manual é necessário para o objeto subjacente|  
 |Sinônimos|São mapeados.|  
 |Funções padrão no DB2|O SSMA mapeia as funções padrão do DB2 quando uma função equivalente está disponível no SQL Server:|  
-|Autorização|Não mapeado.|  
+|Authorization|Não mapeado.|  
 |Predicados|São mapeados.|  
 |instrução SELECT INTO|Não mapeado.|  
 |VALORES em instrução|Não mapeado.|  
@@ -147,8 +147,7 @@ Para cada item que não pôde ser convertido, você precisa determinar o que des
 -   Você pode excluir o objeto da migração. No Gerenciador de metadados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no Gerenciador de metadados DB2, desmarque a caixa de seleção ao lado do item antes de carregar os objetos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e migrar dados do DB2.  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa do processo de migração é [carregar os objetos convertidos em SQL Server](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
+A próxima etapa do processo de migração é [carregar os objetos convertidos em SQL Server](./loading-converted-database-objects-into-sql-server-db2tosql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Migrar dados do DB2 para o SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

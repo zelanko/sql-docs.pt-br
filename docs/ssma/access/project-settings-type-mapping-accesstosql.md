@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454298"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987522"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configurações do projeto (mapeamento de tipo) (AccessToSQL)
 As configurações do projeto de mapeamento de tipo permitem que você defina mapeamentos de tipo padrão para o projeto do SSMA. Você também pode especificar mapeamentos de tipo para objetos de banco de dados individuais. Para obter mais informações, consulte [mapeando tipos de dados de origem e de destino](mapping-source-and-target-data-types-accesstosql.md).  
@@ -34,7 +34,7 @@ O mapeamento de tipo está disponível nas caixas de diálogo **configurações 
 -   Use a caixa de diálogo **configurações de projeto padrão** para definir opções de configuração para todos os projetos. Para acessar as configurações de mapeamento de tipo, no menu **ferramentas** , selecione **configurações de projeto padrão**, selecione tipo de projeto de migração para o qual as configurações devem ser exibidas/Changed do menu suspenso **versão de destino de migração** e clique em mapeamento de **tipo** no painel esquerdo.  
   
 ## <a name="options"></a>Opções  
-**Tipo de origem**  
+**Tipo de Origem**  
 O tipo de dados do Access a ser mapeado.  
   
 **Tipo de destino**  
@@ -50,12 +50,12 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |**moeda**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
-|**double**|**float**|  
+|**duplo**|**flutuante**|  
 |**guid**|**uniqueidentifier**|  
 |**inteiro**|**smallint**|  
 |**longo**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**memorando**|**nvarchar(max)**|  
+|**campos**|**nvarchar(max)**|  
 |**memorando** -para o Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**texto [ \* .. \* ]**|**nvarchar [ \* ]**|  
@@ -75,5 +75,4 @@ Clique para redefinir todos os mapeamentos de tipo de dados para os padrões do 
   
 ## <a name="see-also"></a>Consulte Também  
 [Mapeamento de tipo de dados de destino e de origem](mapping-source-and-target-data-types-accesstosql.md)  
-[Referência da interface do usuário (Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referência da interface do usuário (Access)](./user-interface-reference-accesstosql.md)  

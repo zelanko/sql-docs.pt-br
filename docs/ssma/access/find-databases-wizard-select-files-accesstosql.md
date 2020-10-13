@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2b1aeed74dc475d3e14130ace1772ce5f604d63b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 973d2ec0a740e07aac94a4f44ab08051294d5128
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488319"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985007"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Assistente para localizar bancos de dados (selecionar arquivos) (AccessToSQL)
 A página Selecionar arquivos do assistente para localizar bancos de dados lista os arquivos que foram encontrados durante a pesquisa. Para selecionar um arquivo a ser adicionado ao SSMA, selecione a linha que contém o nome do arquivo. Quando terminar de selecionar arquivos, clique em **Avançar** para exibir a página verificar seleção.  
@@ -52,5 +52,4 @@ A data e a hora em que o banco de dados foi criado.
 A data e a hora da última atualização do banco de dados.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Referência da interface do usuário (Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referência da interface do usuário (Access)](./user-interface-reference-accesstosql.md)  

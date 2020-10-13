@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497843"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988672"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mapeando tipos de dados de origem e de destino (AccessToSQL)
 Tipos de banco de dados do Access são diferentes dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de banco de dados Ao converter objetos de banco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados do Access em objetos, você deve especificar como mapear tipos de dado do Access para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você pode aceitar os mapeamentos de tipo de dados padrão ou pode personalizar os mapeamentos, conforme mostrado nos procedimentos a seguir.  
   
 ## <a name="default-mappings"></a>Mapeamentos padrão  
-O SSMA tem um conjunto padrão de mapeamentos de tipo de dados. Para obter a lista de mapeamentos padrão, consulte [configurações do projeto (mapeamento de tipo)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+O SSMA tem um conjunto padrão de mapeamentos de tipo de dados. Para obter a lista de mapeamentos padrão, consulte [configurações do projeto (mapeamento de tipo)](./project-settings-type-mapping-accesstosql.md).  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizando mapeamentos de tipo de dados  
 Usando a caixa de diálogo **configurações do projeto** , você pode personalizar a forma como os tipos são mapeados para todos os bancos de dados e objetos de um projeto. Os mapeamentos de tipo para um projeto aplicam-se a todos os bancos de dados e objetos de banco que não têm mapeamentos de tipo personalizados.  
@@ -93,4 +93,3 @@ A próxima etapa no processo de migração é [converter objetos de banco de dad
   
 ## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

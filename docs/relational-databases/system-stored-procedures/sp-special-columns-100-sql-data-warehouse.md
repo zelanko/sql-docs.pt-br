@@ -1,6 +1,6 @@
 ---
-description: sp_special_columns_100 (SQL Data Warehouse)
-title: sp_special_columns_100 (SQL Data Warehouse) | Microsoft Docs
+description: sp_special_columns_100 (Azure Synapse Analytics)
+title: sp_special_columns_100 (Azure Synapse Analytics)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
@@ -14,14 +14,14 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7089187cc0eaa6c0cc3667d8bbf34aeca93bc3f2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725027"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987805"
 ---
-# <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
+# <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Retorna o conjunto ideal de colunas que identificam, de forma exclusiva, uma linha na tabela. Também retorna colunas atualizadas automaticamente quando qualquer valor na linha for atualizado por uma transação.  
@@ -31,7 +31,7 @@ ms.locfileid: "91725027"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
@@ -77,7 +77,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Escopo real da ID da linha. Pode ser 0, 1 ou 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna 0. Esse campo sempre retorna um valor.<br /><br /> 0 = SQL_SCOPE_CURROW. A ID da linha tem a garantia de ser válida somente quando posicionada nessa linha. Uma nova seleção posterior que utilize a ID da linha talvez não retorne uma linha se a linha foi atualizada ou excluída por outra transação.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. A ID da linha tem a garantia de ser válida durante a transação atual.<br /><br /> 2 = SQL_SCOPE_SESSION. A ID da linha tem a garantia de ser válida durante a sessão (dentro dos limites da transação).|  
-|COLUMN_NAME|**sysname**|Nome da coluna para cada coluna da *tabela*retornada. Esse campo sempre retorna um valor.|  
+|COLUMN_NAME|**sysname**|Nome da coluna para cada coluna da *tabela* retornada. Esse campo sempre retorna um valor.|  
 |DATA_TYPE|**smallint**|Tipo de dados SQL ODBC.|  
 |TYPE_NAME|**sysname**|Nome do tipo de dados dependente de fonte de dados; por exemplo, **Char**, **varchar**, **Money**ou **Text**.|  
 |PRECISION|**Int**|Precisão da coluna na fonte de dados. Esse campo sempre retorna um valor.|  

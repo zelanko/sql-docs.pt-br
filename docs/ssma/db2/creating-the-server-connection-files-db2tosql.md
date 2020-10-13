@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5a27b74e529d917cf746d617e08dd44f9953a800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 754f9002dd5b9e8f9111dce59bc81417c704e40d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497753"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984912"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>Criando os arquivos de conexão do servidor (DB2ToSQL)
 
@@ -73,4 +73,4 @@ A próxima etapa na operação do console é [executar o console do SSMA &#40;DB
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Executar o console do SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)
+- [Executar o console do SSMA](./executing-the-ssma-console-db2tosql.md)

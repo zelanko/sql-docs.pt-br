@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 94bd5cc9a8cb0db9079db981ec50a5fa6af7b20c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3163da352fa925a821287fc1447fd8b6b5e89cdb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480520"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988492"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configurações do projeto (migração) (AccessToSQL)
 As configurações do projeto de migração permitem que você configure como os dados são migrados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
@@ -88,5 +88,4 @@ Especifica se o SSMA deve corrigir as datas de acesso anteriores à data de [!IN
 Tamanho do lote usado durante a migração de dados. Uma transação é registrada após cada lote. Por padrão, o tamanho do lote para todos os esquemas é 10000.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Referência da interface do usuário (Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referência da interface do usuário (Access)](./user-interface-reference-accesstosql.md)  

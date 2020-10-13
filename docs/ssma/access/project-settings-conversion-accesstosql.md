@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 49df8709518a9654ca5c286c4381b274546007cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63952d4e46b1c25e49e7f29f8da1e23543232cb7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488258"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988502"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Configurações do projeto (conversão) (AccessToSQL)
 As configurações do projeto de conversão permitem que você configure como os objetos são convertidos de objetos de banco de dados do Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos do banco de dados SQL do Azure.  
@@ -112,5 +112,4 @@ Exibe uma mensagem no relatório de avaliação e no painel de saída quando um 
 -   **Modo completo**: verdadeiro  
   
 ## <a name="see-also"></a>Consulte Também  
-[Referência da interface do usuário (Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referência da interface do usuário (Access)](./user-interface-reference-accesstosql.md)  

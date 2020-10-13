@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8815b6d3f6d4f825082b0c2eac4d8bfa45cb98de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8f84909de05efc5d53b924eb298adcaab93d7f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320872"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985029"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Criando arquivos de valor de variável (AccessToSQL)
 Um arquivo de valor de variável é um arquivo XML que inclui os valores de parâmetro de comandos (como o nome do servidor de origem ou de destino) que são alterados com frequência nas migrações do servidor. Quando ocorre um grande número de migrações de banco de dados, vários arquivos variáveis para armazenar o valor de cada servidor de origem são criados e referenciados em um arquivo de script mestre com a opção **-v** na linha de comando. Esse comportamento ajuda a manter valores estáticos em alguns arquivos de script com os valores de variáveis em vários arquivos de variáveis.  
@@ -94,6 +94,5 @@ O usuário pode facilmente validar seu arquivo de valor de variável em relaçã
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa na operação do console é [criar os arquivos de conexão do servidor &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>Confira também  
-[Criando os arquivos de conexão do servidor (Access)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
-  
+## <a name="see-also"></a>Veja também  
+[Criando os arquivos de conexão do servidor (Access)](./creating-the-server-connection-files-accesstosql.md)  

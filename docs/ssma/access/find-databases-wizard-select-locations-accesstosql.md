@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15e065410a32b0902ad065a1903f4e28da044149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488307"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984942"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistente para localizar bancos de dados (selecionar locais) (AccessToSQL)
 Na página Selecionar locais do assistente para localizar bancos de dados, insira os parâmetros de pesquisa para localizar bancos de dados do Access.  
@@ -60,5 +60,4 @@ Insira o nome de usuário completo do Windows do proprietário. Isso pode ser fo
   
 ## <a name="see-also"></a>Consulte Também  
 [Adicionando e removendo arquivos de banco de dados do Access](adding-and-removing-access-database-files-accesstosql.md)  
-[Referência da interface do usuário (Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referência da interface do usuário (Access)](./user-interface-reference-accesstosql.md)  

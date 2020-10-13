@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7547984e97bb47a640c162743fe0b069b38f7dff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418462"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988632"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Configurações de conversão (MySQLToSQL)
 A guia **' configurações '** permite que o usuário defina as configurações de nível de nó. A guia estará disponível nos seguintes nós de metabase:  
@@ -76,5 +76,4 @@ Essas configurações estarão disponíveis com base no tipo de nó da metabase.
     3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata ao clicar no botão **aplicar** .  
   
 ## <a name="see-also"></a>Consulte Também  
-[Configurações do projeto (conversão) (MySQL para SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
-  
+[Configurações do projeto (conversão) (MySQL para SQL)](./project-settings-conversion-mysqltosql.md)  

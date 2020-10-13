@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ea9a89eadfd03f31573fd3a25e41e8bb8c1ed73f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88b8566b0ed3b264f09f0307251dcf9e69270e19
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418572"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987666"
 ---
 # <a name="appendix---1-accesstosql"></a>Apêndice-1 (AccessToSQL)
 Exibição rápida das opções de linha de comando do console do SSMA:  
@@ -32,5 +32,4 @@ Exibição rápida das opções de linha de comando do console do SSMA:
 |8|-?|Não|Não Aplicável|Não Aplicável|  
   
 ## <a name="see-also"></a>Consulte Também  
-[Executando o console do SSMA (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[Executando o console do SSMA (Access)](./executing-the-ssma-console-accesstosql.md)  

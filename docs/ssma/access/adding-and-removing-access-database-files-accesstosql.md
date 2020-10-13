@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 597de64479014e44f38c7073b6bc88e76a3137b4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934127"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987712"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Adicionando e removendo arquivos de banco de dados do Access (AccessToSQL)
 Para migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ou SQL Azure, você deve adicionar um ou mais bancos de dado do Access ao projeto do SSMA. Esses bancos de dados devem ter o Access 97 ou versões posteriores. Se você tiver bancos de dados de uma versão anterior do Access, deverá converter os bancos de dados em uma versão mais recente. Você faz isso abrindo e salvando os bancos de dados no Access 97 ou em uma versão posterior antes de adicioná-los ao SSMA.  
@@ -85,7 +85,7 @@ Se você quiser adicionar vários bancos de dados do Access de pastas diferentes
   
     Você pode usar os botões **selecionar tudo** e **desmarcar todos** na parte superior da lista para selecionar ou limpar todos os bancos de dados. Você pode manter a tecla CTRL pressionada para selecionar vários bancos de dados ou manter a tecla SHIFT pressionada para selecionar um intervalo de bancos de dados.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página verificar, clique em **concluir**.  
   
@@ -129,9 +129,8 @@ Você pode remover um banco de dados do Access de um projeto seguindo estas etap
 2.  Clique com o botão direito do mouse no banco de dados e selecione **remover banco de dados**.  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa do processo de migração é [conectar-se a SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+A próxima etapa do processo de migração é [conectar-se a SQL Server](../sybase/connecting-to-sql-server-sybasetosql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Criando e Gerenciando Projetos](creating-and-managing-projects-accesstosql.md)  
-  

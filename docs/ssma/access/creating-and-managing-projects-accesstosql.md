@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 078b7f511d8120a0b5fa7cd182024cf7a124e84a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373052"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988192"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Criando e gerenciando projetos (AccessToSQL)
 Para migrar bancos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o ou SQL Azure, você deve primeiro criar um projeto do SSMA. O projeto é um arquivo que contém metadados sobre os bancos de dados do Access para os quais você deseja migrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, metadados sobre a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure que receberá os objetos e dados migrados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as informações de conexão e as configurações do projeto.  
@@ -39,19 +39,19 @@ O SSMA contém várias opções para a conversão e a sincronização de objetos
   
 3.  No painel esquerdo, clique em **conversão**.  
   
-4.  No painel direito, examine as opções. Para obter mais informações sobre essas opções, consulte [configurações do projeto (conversão)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388).  
+4.  No painel direito, examine as opções. Para obter mais informações sobre essas opções, consulte [configurações do projeto (conversão)](./project-settings-conversion-accesstosql.md).  
   
 5.  Altere as opções conforme necessário.  
   
 6.  Repita as etapas anteriores para as páginas de **migração**, **GUI**e **mapeamento de tipo** .  
   
-    -   Para obter informações sobre opções de migração, consulte [configurações do projeto (migração)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+    -   Para obter informações sobre opções de migração, consulte [configurações do projeto (migração)](./project-settings-migration-accesstosql.md).  
   
-    -   Para obter informações sobre as opções de interface do usuário, consulte [configurações do projeto (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+    -   Para obter informações sobre as opções de interface do usuário, consulte [configurações do projeto (GUI)](../sybase/project-settings-gui-sybasetosql.md).  
   
-    -   Para obter mais informações sobre configurações de mapeamento de tipo de dados, consulte [configurações do projeto (mapeamento de tipo)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+    -   Para obter mais informações sobre configurações de mapeamento de tipo de dados, consulte [configurações do projeto (mapeamento de tipo)](./project-settings-type-mapping-accesstosql.md).  
   
-    -   Para obter informações sobre configurações de SQL Azure, consulte [configurações de projeto (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e).  
+    -   Para obter informações sobre configurações de SQL Azure, consulte [configurações de projeto (SQL Azure)](./project-settings-azure-sql-db-accesstosql.md).  
   
 **Observação** SQL Azure configurações estarão disponíveis somente quando você selecionar migração para SQL Azure ao criar um projeto.  
   
@@ -90,7 +90,7 @@ Quando você salva um projeto, o SSMA persiste as configurações do projeto e, 
   
         Salvar metadados pode levar vários minutos. Se você não quiser salvar os metadados neste ponto, não marque nenhuma caixa de seleção.  
   
-    2.  Clique em **Save** (Salvar).  
+    2.  Clique em **Salvar**.  
   
         O SSMA analisará os esquemas de acesso e salvará os metadados no arquivo de projeto.  
   
@@ -115,4 +115,3 @@ A próxima etapa do processo de migração é [Adicionar um ou mais bancos de da
 ## <a name="see-also"></a>Consulte Também  
 [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Adicionando e removendo arquivos de banco de dados do Access](adding-and-removing-access-database-files-accesstosql.md)  
-  

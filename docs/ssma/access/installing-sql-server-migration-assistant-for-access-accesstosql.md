@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 97974e649c27e8cf1182baa3b168d3490371a4cf
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 1313699a3d82e0dbced8469f251a0a105f296246
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411624"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985182"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalando o Assistente de Migração do SQL Server para acesso (AccessToSQL)
 
@@ -39,8 +39,8 @@ ms.locfileid: "86411624"
 Antes de instalar o SSMA, verifique se o seu sistema atende aos seguintes requisitos:
 
 - Windows 7 ou uma versão posterior, ou Windows Server 2008 ou uma versão posterior.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 ou uma versão posterior.
-- A [!INCLUDE[msCoName](../../includes/msconame_md.md)] versão .NET Framework 4.7.2 ou posterior. O .NET Framework está disponível no [Guia de Microsoft .net](https://docs.microsoft.com/dotnet/framework/).
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 ou uma versão posterior.
+- A [!INCLUDE[msCoName](../../includes/msconame_md.md)] versão .NET Framework 4.7.2 ou posterior. O .NET Framework está disponível no [Guia de Microsoft .net](/dotnet/framework/).
 - Acesso a e permissões suficientes no computador que hospeda a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] para a qual você migrará objetos de banco de dados e data.
 - Provedor DAO (Microsoft Data Access Object) versão 12,0 ou 14,0. Você pode instalar o provedor DAO do produto Microsoft Office 2010/2007 ou baixá-lo do site da Microsoft.
 - 4 GB de RAM (recomendado).
@@ -55,11 +55,11 @@ O SSMA é um download da Web. Para baixar a versão mais recente, consulte a [p�
 Para instalar o SSMA:
   
 1. Clique duas vezes em **SSMAforAccess_*n*. msi**, em que *n* é o número da compilação.
-2. Na página de Boas-vindas, clique em **Avançar**.
+2. Na página Bem-vindo , clique em **Avançar**.
 
    Se você não tiver os pré-requisitos instalados, será exibida uma mensagem indicando que você deve primeiro instalar os componentes necessários. Verifique se você instalou todos os pré-requisitos e execute o programa de instalação novamente.
 
-3. Ler o contrato de licença de usuário final; Se você concordar, selecione **aceito o contrato**e clique em **Avançar**.
+3. Ler o contrato de licença de End-User; Se você concordar, selecione **aceito o contrato**e clique em **Avançar**.
 4. Na página **escolher tipo de instalação** , clique em **típico**.
 5. Na página **pronto para instalar** , você pode habilitar ou desabilitar a telemetria e as verificações de atualização automática toda vez que a ferramenta for iniciada. Clique em **Instalar** para iniciar a instalação.
   
@@ -80,7 +80,7 @@ Se você quiser atualizar para uma versão posterior do SSMA para Access, primei
 
 Se você abrir um projeto criado em uma versão anterior do SSMA para acesso, o SSMA poderá perguntar se você deseja converter o projeto para a versão mais recente. Clique em **Sim** para trabalhar com o projeto na versão mais recente do SSMA.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Preparando bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md)
 - [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)

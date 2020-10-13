@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6bd27b4c437d2dded9941feec3cedaa3ccd4ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9b1d9148572823e8cd274fe2812e46b2a84320a3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468878"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988152"
 ---
 # <a name="appendix---1-db2tosql"></a>Apêndice-1 (DB2ToSQL)
 Exibição rápida das opções de linha de comando do console do SSMA:  
@@ -32,5 +32,4 @@ Exibição rápida das opções de linha de comando do console do SSMA:
 |8|-?|Não|Não Aplicável|Não Aplicável|  
   
 ## <a name="see-also"></a>Consulte Também  
-[Executar o console do SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Executar o console do SSMA](./executing-the-ssma-console-db2tosql.md)  

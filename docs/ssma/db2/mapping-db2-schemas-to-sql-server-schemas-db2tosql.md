@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a5c60984f9f1ed8da7238c254ac8b939dc1a9dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472502"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987442"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Mapeando esquemas do DB2 para esquemas de SQL Server (DB2ToSQL)
 No DB2, cada banco de dados tem um ou mais esquemas. Por padrão, o SSMA migra todos os objetos em um esquema do DB2 para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados chamado para o esquema. No entanto, você pode personalizar o mapeamento entre os esquemas e bancos de dados do DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -60,9 +60,8 @@ Se você personalizar o mapeamento entre um esquema do DB2 e um [!INCLUDE[ssNoVe
 1.  Na guia mapeamento de esquema, selecione qualquer linha e clique em **Redefinir para padrão** para reverter para o banco de dados e o esquema padrão.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-Se desejar analisar a conversão de objetos DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, você poderá o [relatório de migração de dados (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
+Se desejar analisar a conversão de objetos DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, você poderá o [relatório de migração de dados (SSMA Common)](../sybase/data-migration-report-sybasetosql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Conectando-se ao SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
 [Migrar bancos de dados DB2 para SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  
