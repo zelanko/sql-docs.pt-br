@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_columns (Transact-SQL)
-title: sys. pdw_nodes_columns (Transact-SQL) | Microsoft Docs
+description: sys.pdw_nodes_columns (Transact-SQL)
+title: sys.pdw_nodes_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 32cd66ea386f2b07d910c9371c66036a4e162dfd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8865ca09c1c0aad0da1388a514c522ba89a71e97
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490221"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037409"
 ---
-# <a name="syspdw_nodes_columns-transact-sql"></a>sys. pdw_nodes_columns (Transact-SQL)
+# <a name="syspdw_nodes_columns-transact-sql"></a>sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Mostra colunas para tabelas definidas pelo usuário e exibições definidas pelo usuário.  
@@ -58,7 +58,7 @@ ms.locfileid: "88490221"
  Requer a permissão CONTROL SERVER.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
+ [Exibições de Catálogo do Azure Synapse Analytics e do Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [&#41;&#40;Transact-SQL de sys.all_columns ](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

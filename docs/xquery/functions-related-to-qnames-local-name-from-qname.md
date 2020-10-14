@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc416f49610aa5641aa06d8e3fbd7f6da89c7977
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d19153bbfd3cf2483cf8dfa30358f752dd45290e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901872"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036809"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>Funções Relacionadas a QNames – local-name-from-QName
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -77,6 +77,5 @@ FROM T
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções relacionadas a QNames &#40;&#41;XQuery](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+ [Funções relacionadas a QNames &#40;&#41;XQuery ](./functions-related-to-qnames-expanded-qname.md)  
   

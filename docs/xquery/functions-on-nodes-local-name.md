@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc7c25d1b953b98c81691843a4de6dc924bca651
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753612"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038064"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funções em Nós – local-name
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -85,7 +85,6 @@ WHERE ProductModelID=7
  A consulta retorna todos os <`Location` elementos> filhos do `root` elemento> <.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções em nós](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Funções em nós](./xquery-functions-against-the-xml-data-type.md)   
  [Função de URI de namespace &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
-  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce33aca0939a6a956f053824da1f7fdd35930b30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b070a45c7990efbb598401b241083fcb2d804f5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320072"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035135"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso de repositórios de teste (OracleToSQL)
 O repositório de teste do SSMA armazena casos de teste e resultados de teste do SSMA Tester para uso posterior. Os dados do repositório são salvos nas tabelas de SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_oracle_utilities** do banco de dados **ssmatesterdb** .  
@@ -50,7 +50,7 @@ Os botões a seguir estão disponíveis na página casos de teste:
   
 -   Clique no botão **Editar** para executar o assistente de caso de teste e alterar o teste selecionado.  
   
--   Clique no botão **executar** para abrir a caixa de diálogo [executando casos de teste (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) e execute o teste selecionado.  
+-   Clique no botão **executar** para abrir a caixa de diálogo [executando casos de teste (OracleToSQL)](./running-test-cases-oracletosql.md) e execute o teste selecionado.  
   
 ## <a name="test-results-repository"></a>Repositório de Resultados de Teste  
 Você pode exibir o repositório Resultados de Teste na página **resultados de teste** do **repositório da janela casos de teste** . Abra-o clicando em **resultados de teste...** no menu do **testador** .  
@@ -78,4 +78,3 @@ Os botões a seguir estão disponíveis na página resultado do teste:
 ## <a name="see-also"></a>Consulte Também  
 [Executando casos de teste &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Testando objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  

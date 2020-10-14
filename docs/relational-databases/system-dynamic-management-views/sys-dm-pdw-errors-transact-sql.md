@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_errors (Transact-SQL)
-title: sys. dm_pdw_errors (Transact-SQL) | Microsoft Docs
+description: sys.dm_pdw_errors (Transact-SQL)
+title: sys.dm_pdw_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dbc33260f68a6258373ed77cca32835a1906dd1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de46fc1078b4a8a7d3898fbb034aa147cec157e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474751"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035369"
 ---
-# <a name="sysdm_pdw_errors-transact-sql"></a>sys. dm_pdw_errors (Transact-SQL)
+# <a name="sysdm_pdw_errors-transact-sql"></a>sys.dm_pdw_errors (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contém informações sobre todos os erros encontrados durante a execução de uma solicitação ou consulta.  
@@ -29,11 +29,11 @@ ms.locfileid: "88474751"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar (36)**|Chave para esta exibição.<br /><br /> ID numérica exclusiva associada ao erro.|Exclusivo em todos os erros de consulta no sistema.|  
 |source|**nvarchar (64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|type|**nvarchar(4000)**|Tipo do erro ocorrido.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|tipo|**nvarchar(4000)**|Tipo do erro ocorrido.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|Hora em que o erro ocorreu.|Menor ou igual à hora atual.|  
-|pwd_node_id|**int**|Identificador do nó específico envolvido, se houver. Para obter informações adicionais sobre IDs de nó, consulte [Sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  
-|session_id|**nvarchar(32)**|Identificador da sessão envolvida, se houver. Para obter informações adicionais sobre IDs de sessão, consulte  [Sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|request_id|**nvarchar(32)**|Identificador da solicitação envolvida, se houver. Para obter informações adicionais sobre IDs de solicitação, consulte [Sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).||  
+|pwd_node_id|**int**|Identificador do nó específico envolvido, se houver. Para obter informações adicionais sobre IDs de nó, consulte [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  
+|session_id|**nvarchar(32)**|Identificador da sessão envolvida, se houver. Para obter informações adicionais sobre IDs de sessão, consulte  [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|request_id|**nvarchar(32)**|Identificador da solicitação envolvida, se houver. Para obter informações adicionais sobre IDs de solicitação, consulte [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).||  
 |spid|**int**|SPID da sessão de SQL Server envolvida, se houver.||  
 |thread_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |detalhes|**nvarchar(4000)**|Mantém a descrição do texto de erro completo.||  
@@ -41,6 +41,6 @@ ms.locfileid: "88474751"
  Para obter informações sobre o máximo de linhas retidas por essa exibição, consulte a seção de metadados no tópico [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Exibições de gerenciamento dinâmico do Azure Synapse Analytics e Parallel data warehouse &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

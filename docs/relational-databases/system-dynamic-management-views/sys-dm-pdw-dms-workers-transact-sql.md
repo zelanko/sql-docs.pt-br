@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_dms_workers (Transact-SQL)
-title: sys. dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
+description: sys.dm_pdw_dms_workers (Transact-SQL)
+title: sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,31 +13,31 @@ ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 886b96bebe2d7535694dc724d7ad236ae1c2b5f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf53d8d1ae8787ee8cff12ea944398f90707d7ea
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474753"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035389"
 ---
-# <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers (Transact-SQL)
+# <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contém informações sobre todos os trabalhos concluindo as etapas de DMS.  
   
 |Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|Consulta de que esse trabalho DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.|Consulte request_id em [Sys. dm_pdw_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|step_index|**int**|Etapa de consulta para a qual este trabalho DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.|Consulte step_index em [Sys. dm_pdw_request_steps &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Consulta de que esse trabalho DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.|Consulte request_id em [sys.dm_pdw_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|step_index|**int**|Etapa de consulta para a qual este trabalho DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.|Consulte step_index em [sys.dm_pdw_request_steps &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Etapa no plano DMS que esse trabalho está executando.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.||  
-|pdw_node_id|**int**|Nó no qual o trabalho está sendo executado.|Consulte node_id em [Sys. dm_pdw_nodes &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|distribution_id|**Int**|A distribuição em que o trabalho está sendo executado, se houver.|Consulte distribution_id em [Sys. pdw_distributions &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|type|**nvarchar(32)**|Tipo de thread de trabalho do DMS que essa entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' GRAVADOR '|  
+|pdw_node_id|**int**|Nó no qual o trabalho está sendo executado.|Consulte node_id em [sys.dm_pdw_nodes &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|distribution_id|**Int**|A distribuição em que o trabalho está sendo executado, se houver.|Consulte distribution_id em [sys.pdw_distributions &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
+|tipo|**nvarchar(32)**|Tipo de thread de trabalho do DMS que essa entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' GRAVADOR '|  
 |status|**nvarchar(32)**|Status do trabalho do DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Taxa de transferência de leitura ou gravação no último segundo.|Maior ou igual a 0. NULL se a consulta foi cancelada ou falhou antes da execução do trabalho.|  
 |bytes_processed|**bigint**|Total de bytes processados por este trabalhador.|Maior ou igual a 0. NULL se a consulta foi cancelada ou falhou antes da execução do trabalho.|  
 |rows_processed|**bigint**|Número de linhas lidas ou gravadas para este trabalho.|Maior ou igual a 0. NULL se a consulta foi cancelada ou falhou antes da execução do trabalho.|  
-|start_time|**datetime**|Hora em que a execução deste trabalhador foi iniciada.|Maior ou igual à hora de início da etapa de consulta à qual este trabalhador pertence. Consulte [Sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|start_time|**datetime**|Hora em que a execução deste trabalhador foi iniciada.|Maior ou igual à hora de início da etapa de consulta à qual este trabalhador pertence. Confira [sys.dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Hora em que a execução terminou, falhou ou foi cancelada.|NULO para trabalhos em andamento ou em fila. Caso contrário, maior que start_time.|  
 |total_elapsed_time|**int**|Tempo total gasto na execução, em milissegundos.|Maior ou igual a 0.<br /><br /> Tempo total decorrido desde a inicialização ou reinicialização do sistema. Se total_elapsed_time exceder o valor máximo de um inteiro (24,8 dias em milissegundos), isso causará falha de materialização devido ao estouro.<br /><br /> O valor máximo em milissegundos é equivalente a 24,8 dias.|  
 |cpu_time|**bigint**|Tempo de CPU consumido por este trabalhador, em milissegundos.|Maior ou igual a 0.|  
@@ -45,13 +45,13 @@ ms.locfileid: "88474753"
 |buffers_available|**int**|Número de buffers não utilizados.| NULL se a consulta foi cancelada ou falhou antes da execução do trabalho.|  
 |sql_spid|**int**|ID da sessão na instância de SQL Server executando o trabalho para esse trabalho DMS.||  
 |dms_cpid|**int**|ID de processo do thread real em execução.||  
-|error_id|**nvarchar (36)**|Identificador exclusivo do erro que ocorreu durante a execução deste trabalhador, se houver.|Consulte error_id em [Sys. dm_pdw_request_steps &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|error_id|**nvarchar (36)**|Identificador exclusivo do erro que ocorreu durante a execução deste trabalhador, se houver.|Consulte error_id em [sys.dm_pdw_request_steps &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |source_info|**nvarchar(4000)**|Para um leitor, especificação das tabelas e colunas de origem.||  
 |destination_info|**nvarchar(4000)**|Para um gravador, especificação das tabelas de destino.||  
   
  Para obter informações sobre o máximo de linhas retidas por essa exibição, consulte a seção de metadados no tópico [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Exibições de gerenciamento dinâmico do Azure Synapse Analytics e Parallel data warehouse &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

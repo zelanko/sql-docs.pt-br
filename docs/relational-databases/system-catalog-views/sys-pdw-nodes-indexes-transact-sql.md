@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_indexes (Transact-SQL)
-title: sys. pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
+description: sys.pdw_nodes_indexes (Transact-SQL)
+title: sys.pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f6c518d53122015af3e86350b0037e1b88604543
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70d4fbc8c6f6558001211646f79a16a79659e6e9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490239"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036908"
 ---
-# <a name="syspdw_nodes_indexes-transact-sql"></a>sys. pdw_nodes_indexes (Transact-SQL)
+# <a name="syspdw_nodes_indexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Retorna índices para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "88490239"
 |object_id|**int**|ID do objeto ao qual este índice pertence.||  
 |name|**sysname**|Nome do índice. O nome é exclusivo somente dentro do objeto. NULL = Heap||  
 |index_id|**int**|ID do índice. index_id só é exclusivo dentro do objeto.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> >1 = Índice não clusterizado||  
-|type|**tinyint**|Tipo de índice:<br /><br /> 0 = Heap<br /><br /> 1 = Clusterizado<br /><br /> 2 = Não clusterizado<br /><br /> 5 = índice columnstore com otimização de memória xVelocity clusterizado|  
+|tipo|**tinyint**|Tipo de índice:<br /><br /> 0 = Heap<br /><br /> 1 = Clusterizado<br /><br /> 2 = Não clusterizado<br /><br /> 5 = índice columnstore com otimização de memória xVelocity clusterizado|  
 |type_desc|**nvarchar(60)**|Descrição de tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> COLUMNSTORE CLUSTERIZADO||  
 |is_unique|**bit**|0 = O índice não é exclusivo.|Sempre 0.|  
 |data_space_id|**int**|ID do espaço de dados para este índice. O espaço de dados é um grupo de arquivos ou um esquema de partição.<br /><br /> 0 = object_id é uma função com valor de tabela.||  
@@ -51,6 +51,6 @@ ms.locfileid: "88490239"
  Requer a permissão CONTROL SERVER.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Exibições de Catálogo do Azure Synapse Analytics e do Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

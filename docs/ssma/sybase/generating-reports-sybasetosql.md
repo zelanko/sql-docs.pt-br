@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ff4e618126d9bb720d5bd4e8323e333c421f74f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99516dc132f9c086c96bb3b886424927d68bab1b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372172"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034955"
 ---
 # <a name="generating-reports-sybasetosql"></a>Geração de relatórios (SybaseToSQL)
 Os relatórios de determinadas atividades executadas usando comandos são gerados no console do SSMA no nível da árvore de objetos.  
@@ -143,5 +143,4 @@ O comando **Atualizar-de-banco de dados** tem o parâmetro **Report-Errors-to** 
 -   script de falha  
   
 ## <a name="see-also"></a>Consulte Também  
-[Executando o console do SSMA (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[Executando o console do SSMA (Sybase)](./executing-the-ssma-console-sybasetosql.md)  

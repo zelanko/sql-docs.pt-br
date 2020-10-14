@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
-title: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+description: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+title: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e712d2b5adafbb3f47ef132c701a82d3c9026c9
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062345"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038289"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Fornece informações de índice columnstore clusterizado por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **Sys. pdw_nodes_column_store_row_groups** tem uma coluna para o número total de linhas armazenadas fisicamente (incluindo aquelas marcadas como excluídas) e uma coluna para o número de linhas marcadas como excluídas. Use **Sys. pdw_nodes_column_store_row_groups** para determinar quais grupos de linhas têm uma alta porcentagem de linhas excluídas e devem ser recriados.  
+  Fornece informações de índice columnstore clusterizado por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **Sys.pdw_nodes_column_store_row_groups** tem uma coluna para o número total de linhas armazenadas fisicamente (incluindo aquelas marcadas como excluídas) e uma coluna para o número de linhas marcadas como excluídas. Use **Sys.pdw_nodes_column_store_row_groups** para determinar quais grupos de linhas têm uma alta porcentagem de linhas excluídas e devem ser recriados.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID da tabela subjacente. Essa é a tabela física no nó de computação, não o object_id para a tabela lógica no nó de controle. Por exemplo, object_id não corresponde ao object_id em sys. Tables.<br /><br /> Para ingressar com sys. Tables, use sys. pdw_index_mappings.|  
+|**object_id**|**int**|ID da tabela subjacente. Essa é a tabela física no nó de computação, não o object_id para a tabela lógica no nó de controle. Por exemplo, object_id não corresponde ao object_id em sys. Tables.<br /><br /> Para ingressar com sys. Tables, use sys.pdw_index_mappings.|  
 |**index_id**|**int**|ID do índice columnstore clusterizado na tabela *object_id* .|  
 |**partition_number**|**int**|ID da partição de tabela que mantém o grupo de linhas *row_group_id*. Você pode usar *partition_number* para unir essa DMV a sys. partitions.|  
 |**row_group_id**|**int**|ID deste grupo de linhas. Isso é exclusivo dentro da partição.|  
@@ -43,7 +43,7 @@ ms.locfileid: "89062345"
 ## <a name="remarks"></a>Comentários  
  Retorna uma linha para cada grupo de linhas columnstore para cada tabela que tem um índice columnstore clusterizado ou não clusterizado.  
   
- Use **Sys. pdw_nodes_column_store_row_groups** para determinar o número de linhas incluídas no grupo de linhas e o tamanho do grupo de linhas.  
+ Use **Sys.pdw_nodes_column_store_row_groups** para determinar o número de linhas incluídas no grupo de linhas e o tamanho do grupo de linhas.  
   
  Quando o número de linhas excluídas em um grupo de linhas cresce para uma grande porcentagem do total de linhas, a tabela fica menos eficiente. Recrie o índice columnstore para reduzir o tamanho da tabela, reduzindo a E/S de disco necessária para ler a tabela. Para recriar o índice columnstore, use a opção **Rebuild** da instrução **ALTER INDEX** .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "89062345"
  Requer a permissão **VIEW SERVER STATE**.  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir une a tabela **Sys. pdw_nodes_column_store_row_groups** a outras tabelas do sistema para retornar informações sobre tabelas específicas. A coluna calculada `PercentFull` é uma estimativa da eficiência do grupo de linhas. Para localizar informações em uma única tabela, remova os hifens de comentário na frente da cláusula WHERE e forneça um nome de tabela.  
+ O exemplo a seguir une a tabela **Sys.pdw_nodes_column_store_row_groups** a outras tabelas do sistema para retornar informações sobre tabelas específicas. A coluna calculada `PercentFull` é uma estimativa da eficiência do grupo de linhas. Para localizar informações em uma única tabela, remova os hifens de comentário na frente da cláusula WHERE e forneça um nome de tabela.  
   
 ```sql
 SELECT IndexMap.object_id,   
@@ -109,9 +109,9 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Exibições de Catálogo do Azure Synapse Analytics e do Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CRIAR índice COLUMNSTORE &#40;&#41;Transact-SQL ](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys. pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys. pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sys.pdw_nodes_column_store_segments ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.pdw_nodes_column_store_dictionaries ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

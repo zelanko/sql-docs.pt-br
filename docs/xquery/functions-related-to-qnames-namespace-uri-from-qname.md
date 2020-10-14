@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91174fa3ef113a7944ef02bb62e7088acd344f3e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 035b92b719431b5a9b74f951f20d51911a41d59c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720037"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035764"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funções Relacionadas a QNames – namespace-uri-from-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -50,6 +50,5 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
 -   A função **namespace-URI-from-QName ()** retorna instâncias de xs: String em vez de xs: anyURI.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções relacionadas a QNames &#40;&#41;XQuery](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+ [Funções relacionadas a QNames &#40;&#41;XQuery ](./functions-related-to-qnames-expanded-qname.md)  
   

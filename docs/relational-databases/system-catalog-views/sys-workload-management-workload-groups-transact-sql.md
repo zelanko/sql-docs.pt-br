@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e6366de9514f625ef1c0a008b0ca6e0e331b5669
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: a2d573ef8cfc97d40451ad59d0fe51f98542c677
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006398"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033631"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-SQL)
 
@@ -47,4 +47,4 @@ Requer a permissão VIEW SERVER STAT.
 
 ## <a name="next-steps"></a>Próximas etapas
 
- Para obter uma lista de todas as exibições de catálogo para o Azure Synapse Analytics e Parallel data warehouse, consulte [exibições de catálogo SQL data warehouse e paralela data warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Para criar um grupo de carga de trabalho, consulte [Criar grupo de carga de trabalho](../../t-sql/statements/create-workload-group-transact-sql.md). Para obter mais informações sobre a classificação de carga de trabalho, consulte [isolamento de carga de trabalho](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)
+ Para obter uma lista de todas as exibições de catálogo para o Azure Synapse Analytics e Parallel data warehouse, consulte [Azure Synapse Analytics e exibições do catálogo de data warehouse paralela](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Para criar um grupo de carga de trabalho, consulte [Criar grupo de carga de trabalho](../../t-sql/statements/create-workload-group-transact-sql.md). Para obter mais informações sobre a classificação de carga de trabalho, consulte [isolamento de carga de trabalho](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)

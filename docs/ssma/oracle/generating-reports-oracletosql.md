@@ -15,12 +15,12 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: aa659269808555f37a570963d82119d1360d1ef4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 76197097f2e0fc6961c06d7413a8d4f3acb88780
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463201"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038029"
 ---
 # <a name="generating-reports-oracletosql"></a>Geração de relatórios (OracleToSQL)
 Os relatórios de determinadas atividades executadas usando comandos são gerados no console do SSMA no nível da árvore de objetos.  
@@ -140,5 +140,4 @@ O comando **Atualizar-de-banco de dados** tem o parâmetro **Report-Errors-to** 
 -   script de falha  
   
 ## <a name="see-also"></a>Consulte Também  
-[Executando o console do SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[Executando o console do SSMA (Oracle)](./executing-the-ssma-console-oracletosql.md)  
