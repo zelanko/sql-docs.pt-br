@@ -1,5 +1,5 @@
 ---
-description: sp_pdw_add_network_credentials (SQL Data Warehouse)
+description: sp_pdw_add_network_credentials (Azure Synapse Analytics)
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure Synapse Analytics
 ms.date: 03/14/2017
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a91960dc4dad3909e18003309bcd7f12f1461b67
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 87757b771e7c140454d8cdceac8dc1a77600f94b
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004540"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059335"
 ---
-# <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
+# <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Isso armazena as credenciais de rede no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e os associa a um servidor. Por exemplo, use esse procedimento armazenado para conceder [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] permissões de leitura/gravação apropriadas para executar operações de backup e restauração de banco de dados em um servidor de destino ou para criar um backup de um certificado usado para TDE.  
@@ -80,7 +80,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 >  Para executar o backup de banco de dados em InfiniBand, certifique-se de usar o endereço IP de InfiniBand do servidor de backup.  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+ [sp_pdw_remove_network_credentials &#40;o Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

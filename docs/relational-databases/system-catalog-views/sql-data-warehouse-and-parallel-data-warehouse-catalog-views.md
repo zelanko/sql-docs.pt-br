@@ -1,5 +1,5 @@
 ---
-description: Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse
+description: Exibições de Catálogo do Azure Synapse Analytics e do Parallel Data Warehouse
 title: Exibições do catálogo
 titleSuffix: Azure Synapse Analytics and Parallel Data Warehouse
 ms.date: 10/29/2019
@@ -13,12 +13,12 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6f3ad2bc90395be2e5186de4c44f5b03958a26de
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 8ff25c5988b3e989be11758591af1f69f778b72f
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005936"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059574"
 ---
 # <a name="azure-synapse-analytics-and-parallel-data-warehouse-catalog-views"></a>Exibições de Catálogo do Azure Synapse Analytics e do Parallel Data Warehouse
 
