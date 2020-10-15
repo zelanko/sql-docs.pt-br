@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b66ae216df1b50ee1fa71de8e18f7ee8251e1be4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 86bc7c0352e7bf2447628a143a5c1732b132a412
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547868"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891366"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Ativar e desativar recursos do Reporting Services
   Você pode desativar os recursos do servidor de relatório que não são usados como parte de uma estratégia de bloqueio para reduzir a superfície de ataque de um servidor de relatório de produção. Na maioria dos casos, você deve executar os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultaneamente para usar toda a funcionalidade disponível no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. No entanto, dependendo de seu modelo de implantação, você pode desabilitar os recursos dos quais não precisa. Por exemplo, você pode habilitar apenas o processamento em segundo plano se todo o processamento de relatórios for configurado como operações agendadas. Da mesma maneira, você pode executar somente o serviço Web Servidor de Relatório se quiser apenas relatórios interativos sob demanda.  
@@ -116,7 +116,7 @@ Do SQL Server 2016 Reporting Services Atualização Cumulativa 2 em diante, o po
 4.  Selecione **OK**.  
   
 ## <a name="see-also"></a>Confira também  
-[Gerenciador de Configurações do Reporting Services (Modo Nativo)](../install-windows/reporting-services-configuration-manager-native-mode.md)
+[Configuration Manager do servidor de relatório (modo nativo)](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
  Mais perguntas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   

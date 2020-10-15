@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f7772dbfc2442929627ce30f5653404cbe4f8bc
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 6af853a4f9dc82ee652a816a40d27508bafc6fc0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458012"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891706"
 ---
 # <a name="query-design-tools-ssrs"></a>Ferramentas de Design da Consulta (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece várias ferramentas de design de consulta que podem ser usadas para criar consultas de conjunto de dados no Designer de Relatórios. Alguns designers de consulta fornecem modos alternativos para que você possa escolher se deseja trabalhar no modo visual ou diretamente na linguagem da consulta. Este tópico apresenta cada ferramenta e descreve o tipo de fonte de dados que cada uma suporta. As seguintes ferramentas são descritas neste tópico:  
@@ -43,7 +43,7 @@ ms.locfileid: "86458012"
   
 -   [Designer de Consulta do Hyperion Essbase](#Hyperion)  
   
- Todas as ferramentas de design de consulta são executadas no ambiente de design de dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] quando você trabalha com um modelo de projeto de Servidor de Relatório ou de Assistente de Servidor de Relatório. Para obter mais informações sobre designers de consulta, consulte [Designers de Consulta do Reporting Services](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
+ Todas as ferramentas de design de consulta são executadas no ambiente de design de dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] quando você trabalha com um modelo de projeto de Servidor de Relatório ou de Assistente de Servidor de Relatório. Para obter mais informações sobre designers de consulta, consulte [Designers de Consulta do Reporting Services](/previous-versions/sql/).  
   
  O tipo de fonte de dados com a qual você está trabalhando determina a disponibilidade de um designer de consulta específico.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86458012"
   
  ![Designer de consultas genérico para consulta de dados relacionais](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Designer de consultas genérico para consulta de dados relacionais")  
   
- O designer de consulta com base no texto é recomendado para criar consultas complexas, com o uso de procedimentos armazenados, consultando dados XML, e para escrever consultas dinâmicas. Dependendo da fonte de dados, talvez você possa alternar o botão **Editar como Texto** na barra de ferramentas para alternar entre o designer de consultas gráficas e o designer de consulta com base no texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c).  
+ O designer de consulta com base no texto é recomendado para criar consultas complexas, com o uso de procedimentos armazenados, consultando dados XML, e para escrever consultas dinâmicas. Dependendo da fonte de dados, talvez você possa alternar o botão **Editar como Texto** na barra de ferramentas para alternar entre o designer de consultas gráficas e o designer de consulta com base no texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](/previous-versions/sql/).  
   
 ##  <a name="graphical-query-designer"></a><a name="Graphical"></a> Designer de Consultas Gráficas  
  O designer de consultas gráficas é usado criar ou modificar consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas em um banco de dados relacional. Essa ferramenta de design de consulta é usada em vários produtos [!INCLUDE[msCoName](../../includes/msconame-md.md)] e em outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dependendo do tipo de fonte de dados, ele dá suporte aos modos de Texto, StoredProcedure e TableDirect. A imagem a seguir fornece uma ilustração do designer de consultas gráficas.  
@@ -80,7 +80,7 @@ ms.locfileid: "86458012"
   
  ![Interface do usuário do Designer de Consultas do Modelo Semântico](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "Interface do usuário do Designer de Consultas do Modelo Semântico")  
   
- Para usar o designer de consulta do Modelo de Relatório, você deve definir uma fonte de dados que aponte para um modelo publicado. Quando você define um conjunto de dados para a fonte de dados, pode abrir a consulta de conjunto de dados no designer de consulta do Modelo de Relatório. O designer de consulta do Modelo de Relatório pode ser usado em modos gráficos ou com base no texto. Você pode alternar o botão **Editar como Texto** na barra de ferramentas para alternar entre o designer de consultas gráficas e o designer de consulta com base no texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consulta do modelo de relatório](../../reporting-services/report-data/report-model-query-designer-user-interface.md).  
+ Para usar o designer de consulta do Modelo de Relatório, você deve definir uma fonte de dados que aponte para um modelo publicado. Quando você define um conjunto de dados para a fonte de dados, pode abrir a consulta de conjunto de dados no designer de consulta do Modelo de Relatório. O designer de consulta do Modelo de Relatório pode ser usado em modos gráficos ou com base no texto. Você pode alternar o botão **Editar como Texto** na barra de ferramentas para alternar entre o designer de consultas gráficas e o designer de consulta com base no texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consulta do modelo de relatório]().  
   
 ##  <a name="mdx-query-designer"></a><a name="MDX"></a> Designer de Consulta MDX  
  O designer de consulta MDX é usado para criar ou modificar consultas executadas em uma fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com cubos multidimensionais. A imagem a seguir fornece uma ilustração do designer de consulta MDX após a definição da consulta e do filtro.  
@@ -116,6 +116,5 @@ ms.locfileid: "86458012"
  [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Criar uma fonte de dados inserida ou compartilhada &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
-  
+ [Criar uma fonte de dados inserida ou compartilhada &#40;SSRS&#41;](/previous-versions/sql/)  
   

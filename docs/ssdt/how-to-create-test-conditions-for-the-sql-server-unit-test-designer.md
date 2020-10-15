@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: ae0b544fb49a1161699a1a9e2d152abea2d847bb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518886"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985934"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Como fazer: Criar condições de teste para o designer de teste de unidade do SQL Server
 
-Você pode usar a classe extensível [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) para criar novas condições de teste. Por exemplo, você pode criar uma nova condição de teste que verifica o número de colunas ou os valores em um conjunto de resultados.  
+Você pode usar a classe extensível [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) para criar novas condições de teste. Por exemplo, você pode criar uma nova condição de teste que verifica o número de colunas ou os valores em um conjunto de resultados.  
   
 ## <a name="to-create-a-test-condition"></a>Para criar uma condição de teste  
 Este procedimento explica como criar uma condição de teste para aparecer no Designer de Teste de Unidade do SQL Server.  
@@ -47,9 +47,9 @@ Este procedimento explica como criar uma condição de teste para aparecer no De
   
 9. Salve o arquivo e feche-o. Clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e escolha **Recarregar Projeto**.  
   
-10. Derive sua classe da classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
+10. Derive sua classe da classe [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)).  
   
-11. Assine o assembly com um nome forte. Para obter mais informações, confira [Como assinar um assembly com um nome forte](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Assine o assembly com um nome forte. Para obter mais informações, confira [Como assinar um assembly com um nome forte](/dotnet/standard/assembly/sign-strong-name).  
   
 12. Crie a biblioteca de classes.  
   
@@ -172,9 +172,9 @@ namespace Ssdt.Samples.SqlUnitTesting
 }  
 ```  
   
-A classe para a condição de teste personalizada herda da classe base [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Devido às propriedades adicionais na condição de teste personalizada, os usuários podem configurar a condição na janela Propriedades depois de terem instalado a condição.  
+A classe para a condição de teste personalizada herda da classe base [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Devido às propriedades adicionais na condição de teste personalizada, os usuários podem configurar a condição na janela Propriedades depois de terem instalado a condição.  
   
-[ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) deve ser adicionada às classes que estendem [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Este atributo permite que a classe seja descoberta pelo SQL Server Data Tools e usada durante o design e a execução de teste de unidade. O atributo utiliza dois parâmetros:  
+[ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)) deve ser adicionada às classes que estendem [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Este atributo permite que a classe seja descoberta pelo SQL Server Data Tools e usada durante o design e a execução de teste de unidade. O atributo utiliza dois parâmetros:  
   
 |Parâmetro de Atributos|Posição|Descrição|  
 |-----------------------|------------|---------------|  
@@ -205,4 +205,3 @@ Você deve definir a biblioteca de classes que contém sua condição de teste a
   
 ## <a name="see-also"></a>Consulte Também  
 [Condições de teste personalizadas para testes de unidade do SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

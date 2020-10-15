@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247231"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891486"
 ---
 # <a name="feature-reference-reporting-services"></a>Referência de recurso (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui várias ferramentas e aplicativos que podem ser usados para criar, gerenciar e exibir relatórios. Esta seção fornece tópicos específicos que descrevem as caixas de diálogo, as páginas da Web e os assistentes dessas ferramentas e desses aplicativos.  
@@ -29,9 +29,6 @@ ms.locfileid: "87247231"
 ## <a name="in-this-section"></a>Nesta seção  
  [Ajuda F1 do Designer de Relatórios](../reporting-services/tools/report-designer-f1-help.md)  
  Fornece ajuda para o Designer de Relatórios e suas caixas de diálogo relacionadas, para o Assistente de Relatório e para o Assistente de Imagem.  
-  
- [Tópicos de Ajuda do Gerenciador de Configuração do Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- Fornece ajuda para a ferramenta de Configuração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usada para implantar e gerenciar instâncias do servidor de relatório.  
   
  [Servidor de Relatório na ajuda F1 do Management Studio](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  Fornece ajuda para caixas de diálogo usadas para gerenciar relatórios e servidores de relatórios no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  

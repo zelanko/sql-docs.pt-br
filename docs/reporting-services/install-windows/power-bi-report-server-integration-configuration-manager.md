@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991860"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891296"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integração de servidor de relatório do Power BI (Configuration Manager)
 
@@ -24,9 +24,9 @@ A página  **Integração do Power BI** no [!INCLUDE[ssRSnoversion](../../includ
 
 Além de uma conexão de Internet ativa para que você possa navegar até o serviço do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , estes são os requisitos para concluir a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
-- **Azure Active Directory:** sua organização deve usar o Azure Active Directory, que fornece gerenciamento de identidades e diretórios para serviços e aplicativos Web do Azure. Para obter mais informações, confira [O que é Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory:** sua organização deve usar o Azure Active Directory, que fornece gerenciamento de identidades e diretórios para serviços e aplicativos Web do Azure. Para obter mais informações, confira [O que é Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Microsoft 365 e o Microsoft Intune.   Não há suporte para locatários virais no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Locatário gerenciado:** o painel do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ao qual você deseja fixar itens de relatório devem ser parte de um locatário gerenciado do Azure AD.  Um locatário gerenciado é criado automaticamente na primeira vez em que sua empresa assina os serviços do Azure, como o Microsoft 365 e o Microsoft Intune.   Não há suporte para locatários virais no momento.  Para obter mais informações, confira as seções “O que é um locatário do Azure AD” e “Como obter um diretório do Azure AD” em [O que é um diretório do Azure AD?](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant)
 
 - O usuário que executando a integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] precisa ser um membro do locatário do Azure AD, um administrador de sistema do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e um administrador de sistema para o banco de dados de catálogo ReportServer.
 
@@ -46,7 +46,7 @@ Um administrador pode examinar os arquivos de log do  [!INCLUDE[ssRSnoversion](.
 
 ## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> Para integrar e registrar o Servidor de Relatório
 
-Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+Conclua as seguintes etapas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Para obter mais informações, consulte [Gerenciador de Configurações do Servidor de Relatório](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 1. Selecione a página de integração do [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 

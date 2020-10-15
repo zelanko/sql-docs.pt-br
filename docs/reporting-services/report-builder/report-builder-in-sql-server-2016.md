@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f8c6cb06fd63f526de699d7c6050dacd1b5ff05b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290891"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891856"
 ---
 # <a name="report-builder-in-sql-server"></a>Construtor de Relatórios no SQL Server
 
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é uma ferramenta para criação de relatórios paginados para usuários comerciais que preferem trabalhar em um ambiente autônomo em vez de usar o Designer de Relatórios no Visual Studio/SSDT.  Quando você cria um relatório paginado, está criando uma definição de relatório que especifica quais dados recuperar, onde obtê-los e como exibi-los. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e combina-os ao layout de relatório para gerar este relatório. Você pode visualizar o relatório no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Em seguida, publicar seu relatório em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo nativo ou no modo integrado do SharePoint (2016 e anterior). 
 
-Você também pode publicar um relatório paginado no serviço do Power BI. Leia mais sobre [relatórios paginados no Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (Versão prévia).
+Você também pode publicar um relatório paginado no serviço do Power BI. Leia mais sobre [relatórios paginados no Power BI Premium](/power-bi/paginated-reports-report-builder-power-bi) (Versão prévia).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -93,5 +93,3 @@ Você também pode publicar um relatório paginado no serviço do Power BI. Leia
   
  [Atalhos de teclado &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Descreve as teclas de atalho disponíveis para navegar e criar relatórios no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
-  
-

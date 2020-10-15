@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a13617ec599390718e5c56222fb40b5e78f384fd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245115"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892066"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho
 Depois que você criar o relatório pai, a próxima etapa será criar uma conexão de dados e uma tabela de dados para o relatório filho. Neste tutorial, a conexão de dados é estabelecida com o banco de dados AdventureWorks2014.  
@@ -62,7 +62,7 @@ Depois que você criar o relatório pai, a próxima etapa será criar uma conex�
     > [!WARNING]  
     > Lembre-se de desmarcar a opção **Criar métodos para enviar atualizações diretamente ao banco de dados (GenerateDBDirectMethods)**  
   
-    Agora você concluiu a configuração de [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) do ADO.NET como uma fonte de dados do relatório. Na página Designer de Conjunto de Dados no Visual Studio, você verá a **DataTable** adicionada, listando as colunas especificadas na consulta. O DataSet2 contém os dados da tabela PurhcaseOrderDetail, com base na consulta.  
+    Agora você concluiu a configuração de [DataTable](/dotnet/api/system.data.datatable) do ADO.NET como uma fonte de dados do relatório. Na página Designer de Conjunto de Dados no Visual Studio, você verá a **DataTable** adicionada, listando as colunas especificadas na consulta. O DataSet2 contém os dados da tabela PurhcaseOrderDetail, com base na consulta.  
   
 11. Salve o arquivo.  
   
@@ -70,5 +70,3 @@ Depois que você criar o relatório pai, a próxima etapa será criar uma conex�
   
 ## <a name="next-task"></a>Próxima tarefa  
 Você criou uma conexão de dados e uma tabela de dados para o relatório filho. Em seguida, você criará o relatório filho usando o Assistente de Relatório. Confira a [Lição 5: Criar o Relatório Filho usando o Assistente de Relatório](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
-  
-

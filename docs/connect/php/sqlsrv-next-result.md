@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7d88913a06e44bdec247793b0080f3ba860025
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426228"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081255"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_next_result( resource $stmt )
 ## <a name="return-value"></a>Valor de retorno  
 Se o próximo resultado tiver sido ativado com êxito, o valor booliano **true** será retornado. Se ocorrer um erro na ativação do próximo resultado, **false** será retornado. Se não houver mais resultados disponíveis, **null** será retornado.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example-1"></a>Exemplo 1  
 O exemplo a seguir cria e executa um procedimento armazenado que insere uma análise do produto na tabela *Production.ProductReview* e depois seleciona todas as análises do produto especificado. Após a execução do procedimento armazenado, o primeiro resultado (o número de linhas afetadas pela consulta INSERT no procedimento armazenado) é consumido sem chamar **sqlsrv_next_result**. O próximo resultado (as linhas retornadas pela consulta SELECT no procedimento armazenado) é disponibilizado chamando **sqlsrv_next_result** e consumido usando [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
@@ -180,7 +180,7 @@ sqlsrv_close( $conn );
   
 Ao executar um procedimento armazenado que tenha parâmetros de saída, é recomendável que todos os outros resultados sejam consumidos antes de acessar os valores dos parâmetros de saída. Para obter mais informações, consulte [Como especificar a direção do parâmetro com o driver SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example-2"></a>Exemplo 2  
 O exemplo a seguir executa uma consulta em lotes que recupera informações de análise de produto de uma ID de produto especificada, insere uma análise e depois, novamente, recupera as informações de análise da ID de produto especificada. A análise do produto recém-inserida será incluída no conjunto de resultados final da consulta em lotes. O exemplo usa [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) para ir de um resultado da consulta em lotes para o seguinte.  
   
 > [!NOTE]  

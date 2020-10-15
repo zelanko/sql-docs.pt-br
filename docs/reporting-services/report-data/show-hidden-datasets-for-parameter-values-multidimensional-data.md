@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 610ca1c3b7dbd5660a98dec4a91ce4f9988a5108
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4118c7ad1cccb46a08ec200eef223f62010cf45e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455248"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890820"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Mostrar conjuntos de dados ocultos para valores de parâmetros – dados multidimensionais
   Seu relatório pode incluir conjuntos de dados gerados automaticamente (também conhecidos como conjuntos de dados ocultos) que não aparecem por padrão no painel de dados do relatório. Esses conjuntos de dados são criados das seguintes formas:  
@@ -36,8 +36,7 @@ ms.locfileid: "86455248"
   
 ## <a name="see-also"></a>Consulte Também  
  [Ferramentas de Design da Consulta &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Designers de Consultas do Reporting Services](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Designers de Consultas do Reporting Services](/previous-versions/sql/)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-  
   

@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.date: 08/12/2020
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a933145d646c8e8a0c65151eaff7307066a223d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7ca5fa6785257de26e173a1946045109f00fbd7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550586"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986043"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Instalar a documentação do SQL Server para visualização offline em SSMS
 
@@ -22,7 +22,7 @@ ms.locfileid: "89550586"
 
 Este artigo descreve como baixar e exibir o conteúdo do SQL Server no [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) offline. O conteúdo offline permite acessar a documentação sem estar conectado à Internet (embora seja necessário inicialmente uma conexão com a Internet para baixá-lo).
 
-A documentação offline está disponível para versões do SQL Server 2012 e posteriores. Embora você possa ver o conteúdo de [versões anteriores online](https://docs.microsoft.com/previous-versions/sql/), uma opção offline fornece um modo conveniente de acessar conteúdo mais antigo.
+A documentação offline está disponível para versões do SQL Server 2012 e posteriores. Embora você possa ver o conteúdo de [versões anteriores online](/previous-versions/sql/), uma opção offline fornece um modo conveniente de acessar conteúdo mais antigo.
 
 - [SQL Server 2016 e posterior](#sql-server-2016-and-later-offline-content)
 - [SQL Server 2014](#sql-server-2014-offline-content)
@@ -171,6 +171,6 @@ Confira o Ciclo de Vida do Produto da Microsoft para obter informações de comp
 Para saber mais sobre conteúdo arquivado e o Help Viewer, confira os links abaixo.
 
 - [Documentação online do SQL Server](../sql-server/index.yml?view=sql-server-2016&preserve-view=true)
-- [Documentação online do SQL Server 2014](https://docs.microsoft.com/previous-versions/sql/2014)
+- [Documentação online do SQL Server 2014](/previous-versions/sql/2014)
 - [Versões anteriores da documentação online do SQL Server](previous-versions-sql-server.md)
 - [Sistema de controle de versão para documentação do SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016&preserve-view=true)

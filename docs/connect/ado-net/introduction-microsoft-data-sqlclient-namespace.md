@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725697"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081465"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Introdução ao namespace Microsoft.Data.SqlClient
 
@@ -218,7 +218,7 @@ Em geral, a documentação existente que usa System.Data.SqlClient no .NET Frame
 
 ### <a name="authentication"></a>Autenticação
 
-Modos de autenticação diferentes podem ser especificados usando a opção de cadeia de conexão _Authentication_. Para obter mais informações, confira a [documentação do SqlAuthenticationMethod](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
+Modos de autenticação diferentes podem ser especificados usando a opção de cadeia de conexão _Authentication_. Para obter mais informações, confira a [documentação do SqlAuthenticationMethod](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2&preserve-view=true).
 
 > [!NOTE]
 > Provedores de repositório de chaves personalizados, como o provedor do Azure Key Vault, precisarão ser atualizados para dar suporte a Microsoft.Data.SqlClient. Da mesma forma, os provedores de enclave também precisarão ser atualizados para dar suporte ao Microsoft.Data.SqlClient.

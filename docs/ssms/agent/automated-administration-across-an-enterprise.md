@@ -22,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 447e1c66d9e94f654414ae1c7205772097fe575f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e043f333f752a515ca629c58c13045eac883127
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468827"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033349"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administração automatizada em toda a empresa
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> No momento, na [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira detalhes nas [Diferenças entre o T-SQL da Instância Gerenciada de SQL do Azure e o SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> No momento, na [Instância Gerenciada de SQL do Azure](/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira detalhes nas [Diferenças entre o T-SQL da Instância Gerenciada de SQL do Azure e o SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
  A automatização de administração em várias instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é chamada de *administração multisservidor*. Use a administração multisservidor para fazer o seguinte:  
   
@@ -86,7 +86,7 @@ Contém informações sobre o encaminhamento de eventos dos servidores de destin
 Contém informações sobre como a administração automatizada em um ambiente multisservidor aproveita os recursos de autoajuste do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
-[Tópicos de compatibilidade com versões anteriores sobre a instalação do Mecanismo de Banco de Dados do SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+[Tópicos de compatibilidade com versões anteriores sobre a instalação do Mecanismo de Banco de Dados do SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
 [Registrando servidores](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
 [sp_delete_targetserver](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
@@ -99,4 +99,3 @@ Contém informações sobre como a administração automatizada em um ambiente m
 [sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
 [syslogins](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
 [systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
-  

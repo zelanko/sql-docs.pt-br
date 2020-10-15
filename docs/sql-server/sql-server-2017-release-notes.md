@@ -11,12 +11,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 33d6fd836bd4676e9f178fb5a3c59cc9fba67f80
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cb011f6d5140099a82a3d41587c5f7a93fac009
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245598"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985612"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de Versão do SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -151,7 +151,7 @@ Não há nenhuma nota de versão do SQL Server no Windows relacionada a essa ver
 ## <a name="more-information"></a>Mais informações
 - [Notas de versão do SQL Server Reporting Services](../reporting-services/release-notes-reporting-services.md).
 - [Problemas Conhecidos de Serviços de Machine Learning](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
-- [Centro de atualização do SQL Server – links e informações para todas as versões com suporte](https://msdn.microsoft.com/library/ff803383.aspx)
+- [Centro de atualização do SQL Server – links e informações para todas as versões com suporte](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

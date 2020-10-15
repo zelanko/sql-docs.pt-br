@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b5257d6e99600e28605fc02dfac2df2910d28b7
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 0ff17051abc5b1b4cbcfef5c3050771b0f194fbb
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914784"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866823"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
@@ -39,7 +39,7 @@ azdata bdc spark statement list --session-id -i
 ### <a name="examples"></a>Exemplos
 Listar todas as instruções da sessão.
 ```bash
-azdata spark statement list --session-id 0
+azdata bdc spark statement list --session-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--session-id -i`
@@ -64,7 +64,7 @@ azdata bdc spark statement create --session-id -i
 ### <a name="examples"></a>Exemplos
 Executar uma instrução.
 ```bash
-azdata spark statement create --session-id 0 --code "2+2"
+azdata bdc spark statement create --session-id 0 --code "2+2"
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--session-id -i`
@@ -91,7 +91,7 @@ azdata bdc spark statement info --session-id -i
 ### <a name="examples"></a>Exemplos
 Obter informações de instrução para a sessão com a ID 0 e a ID de instrução 0.
 ```bash
-azdata spark statement info --session-id 0 --statement-id 0
+azdata bdc spark statement info --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--session-id -i`
@@ -118,7 +118,7 @@ azdata bdc spark statement cancel --session-id -i
 ### <a name="examples"></a>Exemplos
 Cancelar uma instrução.
 ```bash
-azdata spark statement cancel --session-id 0 --statement-id 0
+azdata bdc spark statement cancel --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--session-id -i`

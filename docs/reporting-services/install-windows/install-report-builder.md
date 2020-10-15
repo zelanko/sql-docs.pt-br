@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971384"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890848"
 ---
 # <a name="install-report-builder"></a>Instalar o Construtor de Relatórios
 
@@ -43,7 +43,7 @@ ms.locfileid: "76971384"
  
 ## <a name="install-ssrbnoversion-with-microsoft-endpoint-configuration-manager"></a>Instalar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] com o Microsoft Endpoint Configuration Manager 
   
- Um administrador também pode usar um software como o Microsoft Endpoint Configuration Manager para enviar o programa por push para o computador. Para saber como usar software específico para instalar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consulte a documentação do software. Para obter mais informações, confira a [documentação do Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/configmgr/).  
+ Um administrador também pode usar um software como o Microsoft Endpoint Configuration Manager para enviar o programa por push para o computador. Para saber como usar software específico para instalar o [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consulte a documentação do software. Para obter mais informações, confira a [documentação do Microsoft Endpoint Configuration Manager](/configmgr/).  
   
 > [!IMPORTANT]  
 >  Os recursos de segurança do Windows Vista e do Windows 7 exigem permissões elevadas para executar operações de linha de comando e solicitarão permissão para executar a linha de comando. A instalação não é silenciosa. Para fazer a instalação silenciosa, é necessário executar a linha de comando como um administrador.  
@@ -118,5 +118,4 @@ ms.locfileid: "76971384"
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)   
  [Desinstalar o Construtor de Relatórios](../../reporting-services/install-windows/uninstall-report-builder.md)  
-  
   

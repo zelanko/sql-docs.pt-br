@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b90baf141289a8dbee8eebe0c788823a50aa6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ccffdc3beca07d53302b7a7dceff0e30bbb6331
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446098"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891216"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Instalar o primeiro servidor de relatório no modo do SharePoint
 
@@ -51,7 +51,7 @@ ms.locfileid: "88446098"
  ![Implantação de servidor único no modo do SharePoint para SSRS](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "Implantação de servidor único no modo do SharePoint para SSRS")  
   
 > [!TIP]  
->  Para obter exemplos de implantação mais complexos, veja [Topologias de implantação para recursos de BI do SQL Server no SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
+>  Para obter exemplos de implantação mais complexos, veja [Topologias de implantação para recursos de BI do SQL Server no SharePoint](/previous-versions/sql/sql-server-2016/hh231674(v=sql.130)).  
   
 ##  <a name="setup-accounts"></a><a name="bkmk_setupaccounts"></a> Contas de instalação
 
@@ -63,7 +63,7 @@ ms.locfileid: "88446098"
   
  **Criando aplicativos do serviço Reporting Services**  
   
--   Após a instalação e registro do serviço Reporting Services, crie um ou mais aplicativos do serviço Reporting Services. A "conta de serviço do farm do SharePoint" precisa ser temporariamente um membro do grupo de administradores local para que o aplicativo de serviço do Reporting Services possa ser criado. Para obter mais informações sobre as permissões de conta do SharePoint 2013, veja [Permissões de conta e configurações de segurança no SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx) ou para o SharePoint 2016, consulte [Permissões de conta e configurações de segurança no SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Após a instalação e registro do serviço Reporting Services, crie um ou mais aplicativos do serviço Reporting Services. A "conta de serviço do farm do SharePoint" precisa ser temporariamente um membro do grupo de administradores local para que o aplicativo de serviço do Reporting Services possa ser criado. Para obter mais informações sobre as permissões de conta do SharePoint 2013, veja [Permissões de conta e configurações de segurança no SharePoint 2013](/SharePoint/install/account-permissions-and-security-settings-in-sharepoint-server-2016) (https://technet.microsoft.com/library/cc678863.aspx) ou para o SharePoint 2016, consulte [Permissões de conta e configurações de segurança no SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      É prática recomendada de segurança que as contas de administrador do farm do SharePoint também não sejam contas locais de administrador do sistema operacional. Se você adicionar uma conta de administrador do farm ao grupo de administradores local como parte do processo de instalação, é recomendável remover a conta do grupo de administradores local depois que a instalação for concluída.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "88446098"
   
 9. Se você selecionou os serviços do Mecanismo de Banco de Dados, aceite a instância padrão de **MSSQLSERVER** na página **Configuração da Instância** e clique em **Avançar**.  
   
-     ![observação](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "observação")A arquitetura de serviço do SharePoint do Reporting Services não se baseia em uma “instância” do SQL Server, como a arquitetura anterior do Reporting Services.  
+     ![observação](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "observação")A arquitetura de serviço do SharePoint do Reporting Services não se baseia em uma “instância” do SQL Server, como a arquitetura anterior do Reporting Services.  
   
 10. Se você vir a página **Configuração do Servidor** , digite as credenciais apropriadas. Se desejar usar os recursos de alerta de dados ou de assinatura do Reporting Services, precisará alterar o **Tipo de Inicialização** do SQL Server Agent para **Automática**. Você pode não ver a página de **Configuração do Servidor** , dependendo do que já esteja instalado no computador.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "88446098"
 15. A instalação levará vários minutos. Você verá a página de **Concluído** com os recursos listados e o status de cada recurso. Você pode ver uma caixa de diálogo de informações indicando que o computador precisa ser reiniciado.  
   
 ##  <a name="step-2-register-and-start-the-reporting-services-sharepoint-service"></a><a name="bkmk_install_SSRS_sharedservice"></a> Etapa 2: Registrar e iniciar o Serviço SharePoint do Reporting Services  
- ![Conteúdo relacionado ao PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")  
+ ![Conteúdo relacionado ao PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")  
   
 > [!NOTE]
 > Se você estiver executando a instalação em um farm existente do SharePoint, não será necessário concluir as etapas nesta seção. O serviço SharePoint do Reporting Services foi instalado e iniciado durante a execução do assistente de instalação do SQL Server como parte da seção anterior deste documento.  
@@ -261,7 +261,7 @@ ms.locfileid: "88446098"
   
 11. O processo para criar um aplicativo de serviço poderá demorar vários minutos para ser concluído. Quando for concluído, você verá uma mensagem de confirmação e um link para uma página **Provisionar Assinaturas e Alertas** . Conclua a etapa de provisionamento se desejar usar os recursos de assinaturas ou de alertas de dados do Reporting Services. Para obter mais informações, consulte [Provisionar assinaturas e alertas para aplicativos de serviço do SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Conteúdo relacionado ao PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") Para obter informações sobre como usar o PowerShell para criar um aplicativo de serviço do Reporting Services, confira:  
+ ![Conteúdo relacionado ao PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") Para obter informações sobre como usar o PowerShell para criar um aplicativo de serviço do Reporting Services, confira:  
   
 -   Confira a seguinte seção [Script do Windows PowerShell para as etapas 1 a 4](#bkmk_full_script).  
   
@@ -279,7 +279,7 @@ ms.locfileid: "88446098"
   
      Abra o navegador para o site do SharePoint desejado. Por exemplo, https://\<servername>/sites/bi  
   
-2.  Selecione **Configurações**![Configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint").  
+2.  Selecione **Configurações**![Configurações do SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint").  
   
 3.  Selecione **Configurações de site**.  
   
@@ -304,7 +304,7 @@ ms.locfileid: "88446098"
   
  Parâmetros  
   
--   Atualizar o parâmetro **-Account** para o proxy de serviço. A conta deve ser uma conta de serviço gerenciada no farm do SharePoint. Para obter mais informações, consulte o tópico do SharePoint [Plano para as contas administrativas e de serviço no SharePoint 2013](https://technet.microsoft.com/library/cc263445.aspx).  
+-   Atualizar o parâmetro **-Account** para o proxy de serviço. A conta deve ser uma conta de serviço gerenciada no farm do SharePoint. Para obter mais informações, consulte o tópico do SharePoint [Plano para as contas administrativas e de serviço no SharePoint 2013](/SharePoint/security-for-sharepoint-server/plan-for-administrative-and-service-accounts).  
   
 -   Atualizar o parâmetro **-DatabaseServer** para o aplicativo de serviço. Esse parâmetro é a instância do mecanismo de banco de dados  
   
@@ -398,15 +398,15 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  Para o SharePoint 2016, um [Servidor do Office Online](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) precisa ser configurado para usar os Serviços do Excel. Para obter informações detalhadas, confira os white papers a seguir.
  
- - [Implantando o SQL Server 2016 PowerPivot e o Power View no SharePoint 2016](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
+ - [Implantando o SQL Server 2016 PowerPivot e o Power View no SharePoint 2016](/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
  
- - [Implantando o SQL Server 2016 PowerPivot e Power View em um farm multicamadas do SharePoint 2016](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
+ - [Implantando o SQL Server 2016 PowerPivot e Power View em um farm multicamadas do SharePoint 2016](/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
  Para SharePoint 2016, você precisará criar e configurar um Aplicativo dos Serviços do Excel. Para saber mais, consulte o seguinte:  
   
--   A seção "Configurar Serviços do Excel para a integração do Analysis Services" em [Instalar o Analysis Services no Modo do Power Pivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
+-   A seção "Configurar Serviços do Excel para a integração do Analysis Services" em [Instalar o Analysis Services no Modo do Power Pivot](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
--   [Gerenciar configurações de modelo de dados de Serviços do Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
+-   [Gerenciar configurações de modelo de dados de Serviços do Excel (SharePoint Server 2013)](/SharePoint/administration/manage-excel-services-data-model-settings).  
 
 Além disso, a conta de segurança do pool de aplicativos usada pelo aplicativo do serviço Reporting Services deve ser um administrador no Servidor do Analysis Services.
   
@@ -414,7 +414,7 @@ Além disso, a conta de segurança do pool de aplicativos usada pelo aplicativo 
  Os recursos de assinatura e de alerta de dados do Reporting Services podem exigir a configuração de permissões do SQL Server Agent. Se você vir uma mensagem de erro indicando que um SQL Server Agent é necessário e tiver verificado que o SQL Server Agent está em execução, atualize as permissões. Você pode clicar no link **Provisionar Assinaturas e Alertas** na página de criação do aplicativo de serviço bem-sucedida para ir para outra página para provisionamento do SQL Server Agent. A etapa de provisionamento será necessária se a sua implantação for cruzar os limites dos computadores, por exemplo, quando a instância de banco de dados do SQL Server estiver em um computador diferente. Para obter mais informações, veja [Provisionar assinaturas e alertas para aplicativos de serviço SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>Configurar o email para aplicativos do serviço SSRS  
- O recurso de alertas de dados do Reporting Services envia alertas em mensagens de email. Para enviar um email, talvez seja necessário configurar o aplicativo do serviço Reporting Services e modificar a extensão de entrega de email do aplicativo de serviço. Se você pretende usar a extensão de entrega de email para o recurso de assinatura do Reporting Services, as configurações de email são necessárias. Para obter mais informações, consulte [Configurar o email para um aplicativo de serviço do Reporting Services &#40;SharePoint 2013 e SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
+ O recurso de alertas de dados do Reporting Services envia alertas em mensagens de email. Para enviar um email, talvez seja necessário configurar o aplicativo do serviço Reporting Services e modificar a extensão de entrega de email do aplicativo de serviço. Se você pretende usar a extensão de entrega de email para o recurso de assinatura do Reporting Services, as configurações de email são necessárias. Para obter mais informações, consulte [Configurar o email para um aplicativo de serviço do Reporting Services &#40;SharePoint 2013 e SharePoint 2016&#41;](./configure-e-mail-for-a-reporting-services-service-application.md). 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>Adicionar tipos de conteúdo do Reporting Services a bibliotecas de conteúdo  
  O Reporting Services fornece tipos de conteúdo predefinidos usados para gerenciar arquivos de fonte de dados compartilhada (.rsds) e arquivos de definição de relatório (.rdl) do Construtor de Relatórios. A adição de um tipo de conteúdo do **Relatório do Construtor de Relatórios** ou da **Fonte de Dados de Relatório** a uma biblioteca habilita o comando **Novo** para que você possa criar novos documentos desse tipo. Para obter mais informações, veja [Adicionar os tipos de conteúdo do Reporting Services à sua biblioteca do SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
@@ -429,7 +429,7 @@ Além disso, a conta de segurança do pool de aplicativos usada pelo aplicativo 
   
 -   Em uma biblioteca de documentos do SharePoint, crie um relatório básico do Reporting Services que contém somente uma caixa de texto, por exemplo, um título. O relatório não contém fonte de dados ou conjunto de dados. A meta é verificar se você pode abrir o Construtor de Relatórios, criar um relatório básico e visualizar o relatório.  
   
-     Salve o relatório em uma biblioteca de documentos e execute o relatório da biblioteca. Para obter mais informações sobre como criar relatórios com o Construtor de Relatórios, veja [Iniciar o Construtor de Relatórios (Construtor de Relatórios)](https://technet.microsoft.com/library/ms159221.aspx).  
+     Salve o relatório em uma biblioteca de documentos e execute o relatório da biblioteca. Para obter mais informações sobre como criar relatórios com o Construtor de Relatórios, veja [Iniciar o Construtor de Relatórios (Construtor de Relatórios)](../report-builder/start-report-builder.md).  
   
 ## <a name="next-steps"></a>Próximas etapas
 
