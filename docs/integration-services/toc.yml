@@ -1560,7 +1560,7 @@
   href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: Carregar dados no Banco de Dados SQL ou SQL Server
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
-- name: Carregar dados no SQL Data Warehouse
+- name: Carregar dados para o Azure Synapse Analytics
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 - name: Captura de dados de alterações
   items:

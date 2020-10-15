@@ -88,8 +88,6 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Implantações offline
               href: big-data-cluster/deploy-offline.md
-            - name: Modo do Active Directory
-              href: big-data-cluster/deploy-active-directory.md
             - name: Implantar com alta disponibilidade
               items:
                 - name: Instância principal
@@ -130,6 +128,22 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: Segurança
           href: big-data-cluster/concept-security.md
+        - name: Modo do Active Directory
+          items:
+            - name: Pré-requisitos
+              href: big-data-cluster/active-directory-prerequisites.md
+            - name: Implantar
+              href: big-data-cluster/active-directory-deploy.md
+            - name: Conectar
+              href: big-data-cluster/active-directory-connect.md
+            - name: Vários BDCs no mesmo domínio do AD
+              href: big-data-cluster/active-directory-deployment-background.md
+            - name: Objetos do AD gerados automaticamente
+              href: big-data-cluster/active-directory-objects.md
+            - name: Reconciliação de DNS do AD
+              href: big-data-cluster/active-directory-dns-reconciliation.md
+            - name: Gerenciar o acesso de usuário
+              href: big-data-cluster/manage-user-access.md
         - name: Cluster privado
           items:
             - name: Implantar
@@ -336,16 +350,8 @@
               href: big-data-cluster/kubernetes-rbac.md
             - name: Atualizar AZDATA_PASSWORD
               href: big-data-cluster/change-azdata-password.md
-            - name: Gerenciar o acesso de usuário
-              href: big-data-cluster/manage-user-access.md
             - name: Contêineres não raiz
               href: big-data-cluster/non-root-containers.md
-            - name: Vários BDCs no mesmo domínio do AD
-              href: big-data-cluster/active-directory-deployment-background.md
-            - name: Objetos do AD gerados automaticamente
-              href: big-data-cluster/active-directory-objects.md
-            - name: Reconciliação de DNS do AD
-              href: big-data-cluster/active-directory-dns-reconciliation.md
         - name: Trabalhos do Spark
           items:
             - name: Enviar trabalhos do Spark no Azure Data Studio
@@ -362,13 +368,17 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: Solucionar problemas de notebook do pyspark
               href: big-data-cluster/troubleshoot-pyspark-notebook.md
-            - name: Escopo do grupo de domínio do Active Directory
-              href: big-data-cluster/troubleshoot-active-directory.md
-            - name: DNS do Active Directory
-              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-            - name: Falhas de logon do Active Directory
-              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-            - name: Permissões de administrador do HDFS
+            - name: Solucionar problemas do Active Directory
+              items:
+                - name: Paradas de implantação do AD
+                  href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+                - name: Escopo do grupo de domínio do AD
+                  href: big-data-cluster/troubleshoot-active-directory.md
+                - name: DNS do AD
+                  href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+                - name: Falha de logon do AD
+                  href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+            - name: Solucionar problemas de permissões de administrador do HDFS
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Referência
       items:
@@ -10132,7 +10142,7 @@
   items:
     - name: Banco de dados SQL do Azure >
       href: /azure/sql-database/
-    - name: SQL Data Warehouse do Azure >
+    - name: Azure Synapse Analytics >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: SQL Server em uma VM do Azure >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -16234,7 +16244,7 @@
               items:
                 - name: AT TIME ZONE
                   href: t-sql/queries/at-time-zone-transact-sql.md
-                - name: 'Usando aliases (SQL Data Warehouse do Azure, Parallel Data Warehouse)'
+                - name: 'Atribuição de alias (Azure Synapse Analytics, Parallel Data Warehouse)'
                   href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: EXPLAIN
                   href: t-sql/queries/explain-transact-sql.md
@@ -16248,7 +16258,7 @@
                   href: t-sql/queries/readtext-transact-sql.md
                 - name: Critério de Pesquisa
                   href: t-sql/queries/search-condition-transact-sql.md
-                - name: 'Subconsultas (SQL Data Warehouse do Azure, Parallel Data Warehouse)'
+                - name: 'Subconsultas (Azure Synapse Analytics, Parallel Data Warehouse)'
                   href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: Construtor de Valor de Tabela
                   href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16568,7 +16578,7 @@
                   href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
                 - name: FUNCTION
                   href: t-sql/statements/create-function-transact-sql.md
-                - name: FUNCTION (SQL Data Warehouse)
+                - name: FUNCTION (Azure Synapse Analytics)
                   href: t-sql/statements/create-function-sql-data-warehouse.md
                 - name: INDEX
                   href: t-sql/statements/create-index-transact-sql.md
@@ -16628,11 +16638,11 @@
                   href: t-sql/statements/create-synonym-transact-sql.md
                 - name: TABLE
                   href: t-sql/statements/create-table-transact-sql.md
-                - name: TABLE (SQL Data Warehouse do Azure)
+                - name: TABLE (Azure Synapse Analytics)
                   href: t-sql/statements/create-table-azure-sql-data-warehouse.md
                 - name: TABLE (SQL Graph)
                   href: t-sql/statements/create-table-sql-graph.md
-                - name: TABLE AS SELECT (SQL Data Warehouse do Azure)
+                - name: TABLE AS SELECT (Azure Synapse Analytics)
                   href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
                 - name: TABLE IDENTITY (Propriedade)
                   href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16892,7 +16902,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: 'Permissões: GRANT, DENY, REVOKE (SQL Data Warehouse do Azure, Parallel Data Warehouse)'
+                - name: 'Permissões: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)'
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md
