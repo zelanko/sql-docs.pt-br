@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3df8294e7028573518fe349d8c490fe6b5a266d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497413"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034899"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Conectar a qualquer componente do SQL Server a partir do SQL Server Management Studio
 
@@ -51,6 +51,5 @@ Ao registrar um servidor, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md
 O Gerenciador de Soluções permite o armazenamento de consultas relacionadas, scripts, conexões e outras informações associadas em um projeto. Cada projeto de script contém um nó denominado **Conexões**, no qual você pode salvar uma ou mais conexões. Para adicionar uma conexão, selecione **Conexões** com o botão direito do mouse e escolha **Nova Conexão**. Para acessar uma conexão salva, expanda **Conexões** e faça uma seleção dupla na conexão. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre uma janela de consulta associada àquela conexão. Quando salvos, os scripts retêm sua associação com uma conexão específica.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Usar o SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[Usar o SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [Pesquisador de Objetos](../../ssms/object/object-explorer.md)  
-  

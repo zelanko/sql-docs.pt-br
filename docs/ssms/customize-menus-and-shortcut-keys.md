@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0cc9ba049ab56b65165fd1ba016ecd913df49a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480198"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034907"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar menus e teclas de atalho
 
@@ -163,5 +163,4 @@ Podem ser criados aceleradores de teclado para procedimentos armazenados usando 
 > Alguns comandos só estarão disponíveis quando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] estiver exibindo conteúdo relevante. Se nenhum comando do menu estiver disponível, o item de menu não estará disponível.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Recursos do SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  
-  
+[Recursos do SQL Server Management Studio](./sql-server-management-studio-ssms.md)  

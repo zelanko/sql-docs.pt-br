@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 89a0398fe2e76e02daa123edfaef725de121760f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f169f8a88c13cc6b12b060405285c963dd9524e3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918799"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988045"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Computar limites de capacidade por edição do SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ Quando o desempenho de cada processador virtual for importante, você poderá de
  [Edições e componentes do SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Recursos compatíveis nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Especificações de capacidade máxima do SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Instalação de Início Rápido do SQL Server 2016](https://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
+ [Instalação de Início Rápido do SQL Server 2016](../database-engine/install-windows/install-sql-server.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b7a5b108cf263e284e557526c21a3bb399dcc979
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8653d0b07ee5774acf0cbc22ce4a24a2d727f4b8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462947"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036039"
 ---
 # <a name="create-a-new-solution"></a>Criar uma nova solução
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,5 +42,4 @@ Para acessar o Gerenciador de Soluções, clique em **Gerenciador de Soluções*
   
 ## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
-[Abrir soluções no controle do código-fonte](https://docs.microsoft.com/sql/azure-data-studio/source-control)  
-  
+[Abrir soluções no controle do código-fonte](../../azure-data-studio/source-control.md)  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 40a9ab1568ab2b61a1582f3dfbc62badbd480a1f
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 79db11ee25dd4ca05a5940e511b39d4280a4a5ed
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84012424"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933355"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Gráficos de ações (Construtor de Relatórios e SSRS)
 
@@ -44,6 +44,6 @@ ms.locfileid: "84012424"
 [Gráficos de intervalo](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Gráficos](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Formatando um gráfico](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Caixa de diálogo Propriedades do Eixo, Opções de Eixo](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Caixa de diálogo Propriedades do Eixo, Opções de Eixo](/previous-versions/sql/)  
 
 Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

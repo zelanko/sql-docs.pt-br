@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: ad8f30b236ca9d4fe8a134db3e1726aaeb17a2d3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 509c88230b8a09933291e5c09d528370cf06caca
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727457"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081525"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>Recuperar o ParameterMetaData por meio de useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  O recurso apenas dá suporte a consultas `SELECT/INSERT/UPDATE/DELETE`. As consultas devem começar com uma das quatro palavras-chave com suporte ou uma [Expressão de Tabela Comum](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017) seguida por uma das consultas com suporte. Não há suporte para parâmetros dentro de Expressão de Tabela Comum.
+>  O recurso apenas dá suporte a consultas `SELECT/INSERT/UPDATE/DELETE`. As consultas devem começar com uma das quatro palavras-chave com suporte ou uma [Expressão de Tabela Comum](../../t-sql/queries/with-common-table-expression-transact-sql.md) seguida por uma das consultas com suporte. Não há suporte para parâmetros dentro de Expressão de Tabela Comum.
 
 ## <a name="known-issues"></a>Problemas conhecidos
   Atualmente, há alguns problemas com o recurso, causados por deficiências na lógica de análise do SQL. Esses problemas podem ser abordados em uma atualização futura do recurso e estão documentados abaixo, juntamente com as sugestões de solução alternativa.
@@ -139,6 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Veja também  
  [Configuração das propriedades de conexão](../../connect/jdbc/setting-the-connection-properties.md)  
   

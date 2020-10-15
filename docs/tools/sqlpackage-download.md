@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: drskwier; sstein
 ms.date: 10/02/2020
-ms.openlocfilehash: 1a722b41576136bdcc509c96626f8cf4351629e4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6b84916d94a77c0ab832ceee902f9c5d4f95dc2b
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721577"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081955"
 ---
 # <a name="download-and-install-sqlpackage"></a>Baixar e instalar o sqlpackage
 
@@ -33,7 +33,7 @@ Baixar e instalar a versão mais recente do .NET Framework e as versões prévia
 Para obter detalhes sobre a versão mais recente, confira as [notas sobre a versão](release-notes-sqlpackage.md). Para baixar idiomas adicionais, confira a seção [Idiomas disponíveis](#available-languages).
 
 ## <a name="dacfx"></a>DacFx
-O DacServices ([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices)) é um mecanismo relacionado para integrar a implantação de banco de dados no seu pipeline de aplicativo.  A API do DacServices está disponível em um pacote por meio do nuget [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx).  A versão atual do DacFx é 150.4897.1.
+O DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) é um mecanismo relacionado para integrar a implantação de banco de dados no seu pipeline de aplicativo.  A API do DacServices está disponível em um pacote por meio do nuget [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx).  A versão atual do DacFx é 150.4897.1.
 
 A instalação do pacote nuget por meio da CLI do .NET é realizada com este comando:
 

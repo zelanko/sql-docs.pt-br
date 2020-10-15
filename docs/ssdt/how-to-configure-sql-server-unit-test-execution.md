@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519026"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987962"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Como fazer: Configurar a execução do teste de unidade do SQL Server
 
@@ -30,7 +30,7 @@ Essas configurações determinam como o teste se conectará ao banco de dados a 
 -   **Implantação do esquema**. Um projeto de banco de dados é uma representação offline do banco de dados. O projeto de banco de dados representa a estrutura dos objetos de banco de dados, mas não contém nenhum dado. Depois que você fizer alterações no esquema em um projeto de banco de dados, poderá testá-los em um banco de dados real. Na etapa de implantação do esquema, os objetos de banco de dados que você deseja testar serão copiados do projeto de banco de dados para o banco de dados no qual você executará os testes. Para saber mais sobre implantação de esquema, confira [Implantar um esquema de banco de dados](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Os testes não são executados na pasta de soluções, mas em uma pasta separada no disco rígido local. Embora seja possível configurar aspectos da implantação de teste, você normalmente não precisa configurá-los para os testes de unidade. Para saber mais sobre a implantação de teste, confira [Executar testes](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Os testes não são executados na pasta de soluções, mas em uma pasta separada no disco rígido local. Embora seja possível configurar aspectos da implantação de teste, você normalmente não precisa configurá-los para os testes de unidade. Para saber mais sobre a implantação de teste, confira [Executar testes](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100)).  
   
 ## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Especificar cadeias de conexão  
   
@@ -85,4 +85,3 @@ Essas configurações determinam como o teste se conectará ao banco de dados a 
 ## <a name="see-also"></a>Consulte Também  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verificar o código do banco de dados usando os testes de unidade do SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

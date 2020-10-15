@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6e2a3540ea758fa394ad0ebcdcd28777bf4237b
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901585"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036294"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar um filtro de ponto de interrupção
 
@@ -52,6 +52,6 @@ Filtros de ponto de interrupção não são normalmente usados com o depurador [
 3.  Clique em **OK** para implementar as alterações ou em **Cancelar** para sair sem aplicar as alterações.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Especificar uma condição de ponto de interrupção](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Especificar uma contagem de ocorrências](../../relational-databases/scripting/specify-a-hit-count.md)   
- [Especificar uma ação de ponto de interrupção](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
+ [Especificar uma condição de ponto de interrupção](./specify-a-breakpoint-condition.md)   
+ [Especificar uma contagem de ocorrências](./specify-a-hit-count.md)   
+ [Especificar uma ação de ponto de interrupção](./specify-a-breakpoint-action.md)

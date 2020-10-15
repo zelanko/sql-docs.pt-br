@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 269e886708ec82211a4e29ac8b1e492d9f69cc98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772881"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891066"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Solucionar problemas de integração do Active Directory com o cluster de Big Data do SQL Server
 
@@ -123,7 +123,7 @@ Para identificar por que a implantação é encerrada sem criar pods de computa�
 
 ## <a name="cause"></a>Causa
 
-No exemplo acima, a implantação não cria um logon para o usuário de domínio porque o grupo de domínio está no escopo como domínio local. Use grupos com escopo global ou universal. [Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo Active Directory](deploy-active-directory.md) explica os requisitos de escopo do grupo do AD.
+No exemplo acima, a implantação não cria um logon para o usuário de domínio porque o grupo de domínio está no escopo como domínio local. Use grupos com escopo global ou universal. [Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo Active Directory](active-directory-deploy.md) explica os requisitos de escopo do grupo do AD.
 
 ## <a name="verify"></a>Verificar
 

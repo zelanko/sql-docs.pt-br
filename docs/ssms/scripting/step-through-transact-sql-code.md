@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e3837ed8b1876216f847c956e0a4421f8a95c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2a953cd71bc267622dd158569da80bc924e89b83
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901513"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036229"
 ---
 # <a name="step-through-transact-sql-code"></a>Percorrer código Transact-SQL
 
@@ -33,7 +33,7 @@ O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que você contro
 
 ## <a name="breakpoints"></a>Pontos de interrupção
 
-Um ponto de interrupção sinaliza o depurador para pausar a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica. Para mais informações sobre pontos de interrupção, consulte [Pontos de interrupção de Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
+Um ponto de interrupção sinaliza o depurador para pausar a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica. Para mais informações sobre pontos de interrupção, consulte [Pontos de interrupção de Transact-SQL](./transact-sql-breakpoints.md).  
   
 ## <a name="controlling-statement-execution"></a>Controlando a execução de uma instrução
 
@@ -67,4 +67,4 @@ No depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] , você pode especifica
   
 ## <a name="see-also"></a>Consulte Também
 
-- [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Informações do depurador Transact-SQL](./transact-sql-debugger-information.md)

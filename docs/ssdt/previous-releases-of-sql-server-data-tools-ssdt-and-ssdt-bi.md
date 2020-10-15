@@ -11,12 +11,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 06/17/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f6fea0264cdbd28c8f6665f5f0d67eda4a8da3c9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5c88e83bcc0b4722bf52da697bdaa03af37b972d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009947"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988563"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versões anteriores do SQL Server Data Tools (SSDT e SSDT-BI)
 
@@ -138,7 +138,7 @@ Esta versão do **SSDT para Visual Studio 2012** pode ser instalada nos seguinte
 | [Espanhol](https://go.microsoft.com/fwlink/?linkid=518814&clcid=0x40a) | 6D81FB572A7003C54C29D2ACF076D2CED4A1CA80F329BFF9D41A806920D64EEE |
 
 > [!Note]
-> O SSDT dá suporte às duas versões mais recentes do Visual Studio. Com o lançamento do Visual Studio 2019, as versões do SSDT para Visual Studio 2015 e anteriores deixaram de ser atualizadas. O SSDT para Visual Studio 2010 não está mais disponível. Para obter mais informações, confira a seção *Perguntas frequentes* [desta postagem no blog da equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
+> O SSDT dá suporte às duas versões mais recentes do Visual Studio. Com o lançamento do Visual Studio 2019, as versões do SSDT para Visual Studio 2015 e anteriores deixaram de ser atualizadas. O SSDT para Visual Studio 2010 não está mais disponível. Para obter mais informações, confira a seção *Perguntas frequentes* [desta postagem no blog da equipe do SSDT](/archive/blogs/ssdt/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017).
 
 ## <a name="sql-bi-analysis-services-reporting-services-integration-services"></a>SQL BI: Analysis Services, Reporting Services, Integration Services
 

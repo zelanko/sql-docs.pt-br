@@ -9,12 +9,12 @@ ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834314"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987982"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server habilitado para Azure Arc (versão prévia)
 
@@ -49,7 +49,7 @@ Para conectar as instâncias do SQL Server e a hospedagem ao Azure Arc, você pr
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-Para uma segurança ideal, é recomendável criar uma função personalizada no Azure que tenha as permissões mínimas listadas. Para obter informações sobre como criar uma função personalizada no Azure com essas permissões, confira [Visão geral das funções personalizadas](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview). Para adicionar a atribuição de função, confira [Adicionar ou remover atribuições de função usando o portal do Azure](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) ou [Adicionar ou remover atribuições de função usando o Azure RBAC e a CLI do Azure](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli).
+Para uma segurança ideal, é recomendável criar uma função personalizada no Azure que tenha as permissões mínimas listadas. Para obter informações sobre como criar uma função personalizada no Azure com essas permissões, confira [Visão geral das funções personalizadas](/azure/active-directory/users-groups-roles/roles-custom-overview). Para adicionar a atribuição de função, confira [Adicionar ou remover atribuições de função usando o portal do Azure](/azure/role-based-access-control/role-assignments-portal) ou [Adicionar ou remover atribuições de função usando o Azure RBAC e a CLI do Azure](/azure/role-based-access-control/role-assignments-cli).
 
 ### <a name="azure-subscription-and-service-limits"></a>Limites de serviço e assinatura do Azure
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111021"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988282"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Diagnóstico e solução de problemas do cluster de failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111021"
 -   Usando procedimentos armazenados estendidos e objetos COM.  
   
 ## <a name="basic-troubleshooting-steps"></a>Etapas básicas da solução de problemas  
- A primeira etapa de diagnóstico é executar uma verificação da validação de cluster atualizado. Para obter detalhes sobre a validação, confira [Guia passo a passo do cluster de failover: validar hardware para um cluster de failover](https://technet.microsoft.com/library/cc732035.aspx).  Isso pode ser concluído sem qualquer interrupção do serviço, pois não afeta nenhum recurso de cluster online. A validação pode ser executada a qualquer momento após a instalação do recurso de Clustering de Failover, incluindo antes da implantação do cluster, durante a criação do cluster e enquanto o cluster está em execução. Na verdade, outros testes são executados enquanto o cluster estiver em uso, verificando se as práticas recomendadas estão sendo seguidas para cargas de trabalho altamente disponíveis. Entre esses dezenas de testes, apenas alguns deles afetarão as cargas de trabalho de cluster em execução, e todos estão dentro da categoria de armazenamento, portanto, ignorar esta categoria inteira é uma maneira fácil de evitar interrupções de testes.  
+ A primeira etapa de diagnóstico é executar uma verificação da validação de cluster atualizado. Para obter detalhes sobre a validação, confira [Guia passo a passo do cluster de failover: validar hardware para um cluster de failover](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)).  Isso pode ser concluído sem qualquer interrupção do serviço, pois não afeta nenhum recurso de cluster online. A validação pode ser executada a qualquer momento após a instalação do recurso de Clustering de Failover, incluindo antes da implantação do cluster, durante a criação do cluster e enquanto o cluster está em execução. Na verdade, outros testes são executados enquanto o cluster estiver em uso, verificando se as práticas recomendadas estão sendo seguidas para cargas de trabalho altamente disponíveis. Entre esses dezenas de testes, apenas alguns deles afetarão as cargas de trabalho de cluster em execução, e todos estão dentro da categoria de armazenamento, portanto, ignorar esta categoria inteira é uma maneira fácil de evitar interrupções de testes.  
 O Clustering de Failover vem com uma proteção interna para evitar o tempo de inatividade acidental durante a execução de testes de armazenamento durante a validação. Se o cluster tiver grupos online quando a validação for iniciada, e os testes de armazenamento permanecerem selecionados, ele solicitará a confirmação do usuário para a execução de todos os testes (e causar o tempo de inatividade), ou para ignorar o teste nos discos de quaisquer grupos online a fim de evitar o tempo de inatividade. Se a categoria de armazenamento inteira foi excluída do teste, esse prompt não será exibido. Isso permitirá a validação do cluster sem tempo de inatividade.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>Como revalidar o cluster  
@@ -189,5 +189,4 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Como funcionam os procedimentos armazenados estendidos](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Características de execução de procedimentos armazenados estendidos](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

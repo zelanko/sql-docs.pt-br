@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f142a872688d28befefcffebfcdeb75976072863
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195122"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987832"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas sobre a versão para o SSDT (SQL Server Data Tools)
 
@@ -899,7 +899,7 @@ Console.WriteLine(result.DeploymentReport);
 **Analysis Services e Reporting Services**
 
 O analisador DAX de designer tabular do SSAS teve o desempenho aprimorado ao trabalhar com grandes expressões DAX.
-Para obter mais informações, leia a [Postagem de blog do Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
+Para obter mais informações, leia a [Postagem de blog do Analysis Services](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular).
 
 ### <a name="fixed--improved-this-month"></a>Corrigido/aprimorado neste mês
 
@@ -935,11 +935,11 @@ _Para o SQL Server 2016._
 
 **Novidades**
 
-Agora há suporte para a Comparação de Esquemas nas APIs SqlPackage.exe e DacFx (Data-Tier Application Framework). Para obter detalhes, veja  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) (Comparação de Esquemas na SqlPackage e na Data-Tier Application Framework).
+Agora há suporte para a Comparação de Esquemas nas APIs SqlPackage.exe e DacFx (Data-Tier Application Framework). Para obter detalhes, veja  [Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx) (Comparação de Esquemas na SqlPackage e na Data-Tier Application Framework).
 
 **Analysis Services – modo integrado de workspace para SSDT Tabular (SSAS)**
 
-O SSDT Tabular agora inclui uma instância do SSAS interna, que o SSDT Tabular inicia automaticamente em segundo plano se o modo de workspace integrado estiver habilitado, para que você possa adicionar e exibir dados, tabelas e colunas no designer de modelo sem ter que fornecer uma instância de servidor de workspace externo. Modo de workspace integrado não será alterado quando SSDT Tabular trabalhar com um servidor de workspace e o banco de dados. O que muda é onde o SSDT Tabular hospeda o banco de dados do workspace. Para habilitar o modo de workspace integrado, selecione a opção Workspace Integrado na caixa de diálogo Designer de Modelos de Tabela, exibida ao criar um novo projeto tabular. Para projetos tabulares existentes, que atualmente usam um servidor de workspace explícito, você pode mudar para o modo de workspace integrado, definindo o parâmetro Modo de Workspace Integrado como True na janela Propriedades, que é exibida quando você seleciona o arquivo Model.bim no Gerenciador de Soluções. Para obter detalhes, consulte a [Postagem de blog do Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
+O SSDT Tabular agora inclui uma instância do SSAS interna, que o SSDT Tabular inicia automaticamente em segundo plano se o modo de workspace integrado estiver habilitado, para que você possa adicionar e exibir dados, tabelas e colunas no designer de modelo sem ter que fornecer uma instância de servidor de workspace externo. Modo de workspace integrado não será alterado quando SSDT Tabular trabalhar com um servidor de workspace e o banco de dados. O que muda é onde o SSDT Tabular hospeda o banco de dados do workspace. Para habilitar o modo de workspace integrado, selecione a opção Workspace Integrado na caixa de diálogo Designer de Modelos de Tabela, exibida ao criar um novo projeto tabular. Para projetos tabulares existentes, que atualmente usam um servidor de workspace explícito, você pode mudar para o modo de workspace integrado, definindo o parâmetro Modo de Workspace Integrado como True na janela Propriedades, que é exibida quando você seleciona o arquivo Model.bim no Gerenciador de Soluções. Para obter detalhes, consulte a [Postagem de blog do Analysis Services](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular).
 
 **Atualizações e correções**
 **Ferramentas de banco de dados:**
@@ -1012,7 +1012,7 @@ _Para o SQL Server 2016._
 **Novidades**  
 - **Suporte para Always Encrypted:** para bancos de dados que contêm colunas Always Encrypted, esta versão adiciona suporte completo para Always Encrypted por meio de nossas principais APIs e da ferramenta de linha de comando (SqlPackage.exe). Você pode criar e publicar projetos de banco de dados com suporte total para todos os recursos Always Encrypted.  
 - **Suporte aprimorado a tabelas temporais:** a experiência foi simplificada por meio da desvinculação de tabelas temporais antes das alterações e da nova vinculação após a conclusão das alterações. Isso significa que as Tabelas Temporais têm paridade com outros tipos de tabela (padrão, na memória) em termos das operações as quais elas têm suporte. 
-- **Alterações de instalação e de SqlPackage.exe:** alterações para isolar o SSDT do mecanismo do SQL Server e das atualizações do SSMS. Para obter detalhes, consulte [Alterações na instalação e nas atualizações do SSDT e da SqlPackage.exe](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
+- **Alterações de instalação e de SqlPackage.exe:** alterações para isolar o SSDT do mecanismo do SQL Server e das atualizações do SSMS. Para obter detalhes, consulte [Alterações na instalação e nas atualizações do SSDT e da SqlPackage.exe](/archive/blogs/ssdt/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates).
 
 
 **Atualizações e correções**
@@ -1050,12 +1050,12 @@ _Lançamento:_ &nbsp; 1º de junho de 2016
 _Número de build:_ &nbsp; 14.0.60525.0  
 _Para o SQL Server 2016._
 
-A GA (Disponibilidade Geral) do SSDT foi lançada. A atualização GA do SSDT de junho de 2016 adiciona suporte para as atualizações mais recentes do SQL Server 2016 RTM e várias correções de bugs. Para obter detalhes, consulte [Atualização GA do SQL Server Data Tools de junho de 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/).
+A GA (Disponibilidade Geral) do SSDT foi lançada. A atualização GA do SSDT de junho de 2016 adiciona suporte para as atualizações mais recentes do SQL Server 2016 RTM e várias correções de bugs. Para obter detalhes, consulte [Atualização GA do SQL Server Data Tools de junho de 2016](/archive/blogs/ssdt/sql-server-data-tools-ga-update-for-june-2016).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
 - [Baixar o SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Versões anteriores do SQL Server Data Tools &#40;SSDT e SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
-- [Novidades do Mecanismo de Banco de Dados](https://msdn.microsoft.com/library/bb510411.aspx)
-- [Novidades do Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
+- [Novidades do Mecanismo de Banco de Dados](../sql-server/what-s-new-in-sql-server-2016.md)
+- [Novidades do Analysis Services](/analysis-services/what-s-new-in-analysis-services)
 - [Novidades do Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
