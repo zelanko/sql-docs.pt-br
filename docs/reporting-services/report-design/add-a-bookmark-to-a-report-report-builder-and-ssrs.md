@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e79359d8d9cdfb6af624f86fca5ca2a5648ecb10
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: c3922a25108de54db68075589a5832a2f90832b7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779498"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934027"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Adicionar um indicador a um relatório (Construtor de Relatórios e SSRS)
   Adicione indicadores e links de indicadores a um relatório quando quiser fornecer um sumário personalizado ou links de navegação internos personalizados no relatório. Geralmente, os indicadores são adicionados aos relatórios para conduzir os usuários aos locais para os quais deseja direcioná-los, como tabelas, gráficos ou os valores de grupo exclusivos exibidos em uma tabela ou matriz. Você pode criar suas próprias cadeias de caracteres para usar como indicadores, ou, em grupos, pode definir o indicador para uma expressão de grupo.  
@@ -23,7 +23,7 @@ ms.locfileid: "84779498"
   
  Por exemplo, se o seu relatório exibe uma tabela agrupada por cor, você poderia adicionar um indicador ao cabeçalho do grupo com base na expressão do grupo. Em seguida, você poderia adicionar uma tabela com uma caixa de texto simples no começo do relatório que exibiu os valores de cor e definir o link de indicador nessa caixa de texto. Ao clicar na cor, o relatório é direcionado para a página que exibe a linha de cabeçalho do grupo daquela cor.  
   
- O indicador pode ser adicionado a qualquer item do relatório e o link de indicador pode ser adicionado a qualquer item que tenha uma propriedade **Ação** , como uma caixa de texto, uma imagem ou uma séria calculada em um gráfico. Para obter mais informações, consulte [Caixa de diálogo Propriedades da Ação &#40;Construtor de Relatórios e SSRS&#41;](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9).  
+ O indicador pode ser adicionado a qualquer item do relatório e o link de indicador pode ser adicionado a qualquer item que tenha uma propriedade **Ação** , como uma caixa de texto, uma imagem ou uma séria calculada em um gráfico. Para obter mais informações, consulte [Caixa de diálogo Propriedades da Ação &#40;Construtor de Relatórios e SSRS&#41;](./add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -57,5 +57,4 @@ ms.locfileid: "84779498"
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
   

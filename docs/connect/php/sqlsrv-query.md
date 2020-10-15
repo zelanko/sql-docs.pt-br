@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec60fe007ff784c2ff19ad82bd9d212f685ef6d6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5c2b60fa120863c5ca33fb21ae158649b1d1adcf
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726678"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081095"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ A função **sqlsrv_query** é adequada para consultas únicas e deve ser a opç
   
 Para obter mais informações, confira [Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example-1"></a>Exemplo 1  
 No exemplo a seguir, uma única linha é inserida na tabela *Sales.SalesOrderDetail* do banco de dados AdventureWorks. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemplo  
+## <a name="example-2"></a>Exemplo 2  
 O exemplo a seguir atualiza um campo na tabela *Sales.SalesOrderDetail* do banco de dados AdventureWorks. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
@@ -159,7 +159,7 @@ sqlsrv_close($conn);
 > [!NOTE]
 > É recomendável usar cadeias de caracteres como entradas ao associar valores a uma [coluna decimal ou numérica](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) a fim de garantir a precisão e a exatidão, pois o PHP tem uma precisão limitada para [números de ponto flutuante](https://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, principalmente quando os valores estão fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a>Exemplo  
+## <a name="example-3"></a>Exemplo 3  
 Este exemplo de código mostra como associar um valor decimal como um parâmetro de entrada.  
 
 ```
@@ -183,7 +183,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-4"></a>Exemplo 4
 Este exemplo de código mostra como criar uma tabela de tipos [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) tipos e buscar os dados inseridos.
 
 ```

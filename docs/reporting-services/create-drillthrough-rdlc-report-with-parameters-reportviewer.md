@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3cc136efcf016a84325c40e6bbebc2a71741f86e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7f6e6e631b32aa7eab8d6c56c8b6f9e2cf03752f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248594"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891196"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>Criar um relatório de detalhamento (RDLC) com parâmetros – ReportViewer
-Um relatório de [detalhamento](https://technet.microsoft.com/library/ff519554.aspx) é um relatório que pode ser aberto pelo usuário quando ele clica em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Este tutorial apresentará as lições a seguir sobre como criar um relatório de detalhamento com parâmetros e uma consulta, no [relatório de modo local](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+Um relatório de [detalhamento](./report-design/drillthrough-reports-report-builder-and-ssrs.md) é um relatório que pode ser aberto pelo usuário quando ele clica em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Este tutorial apresentará as lições a seguir sobre como criar um relatório de detalhamento com parâmetros e uma consulta, no [relatório de modo local](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
 ## <a name="requirements"></a>Requisitos  
 Para usar este passo a passo, você deverá ter acesso ao banco de dados de exemplo **AdventureWorks2014** . Para obter mais informações sobre como obter o banco de dados de exemplo **AdventureWorks2014**, consulte [Bancos de dados de exemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
-Este passo a passo pressupõe que você esteja familiarizado com as consultas Transaction-SQL e os objetos [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) e [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) do ADO.NET.  
+Este passo a passo pressupõe que você esteja familiarizado com as consultas Transaction-SQL e os objetos [DataSet](/dotnet/api/system.data.dataset) e [DataTable](/dotnet/api/system.data.datatable) do ADO.NET.  
   
 Use o Visual Studio 2015 e o Aplicativo Web ASP .NET para criar uma página da Web ASP.NET com um controle ReportViewer. O controle é configurado para exibir um relatório criado por você. Neste passo a passo, você cria o aplicativo no Microsoft Visual C #.  
   
@@ -40,5 +40,3 @@ Use o Visual Studio 2015 e o Aplicativo Web ASP .NET para criar uma página da W
 ## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  
 [Criar relatórios com o Designer de Relatórios &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
-  
-

@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 06/03/2020
-ms.openlocfilehash: 43d1e84377f7d08718ec4452b6b3376c627064ba
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 087be959ea39ba9b223b7bd5ae0e3e343d90a594
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423190"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891476"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Suporte para versões do branch atual do Visualizador de Relatórios
 
@@ -28,4 +28,4 @@ Para um histórico de versão do controle do Visualizador de Relatórios, confir
 - [Windows Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/)
 - [Web Forms do ASP.NET](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
 
-Para obter mais informações sobre a versão atual do controle do Visualizador de Relatórios, você pode examinar o seguinte [blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2016/11/30/report-viewer-2016-control-update-now-available/).
+Para obter mais informações sobre a versão atual do controle do Visualizador de Relatórios, você pode examinar o seguinte [blog](/archive/blogs/sqlrsteamblog/report-viewer-2016-control-update-now-available).

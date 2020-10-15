@@ -13,12 +13,12 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 371f11980c743632499befe2a442357bccc8acf4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9c615e709d31b9bd1632d77490ac84ad9081aa0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427108"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892106"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>Instalar o Reporting Services 2016 no modo do SharePoint
 
@@ -52,7 +52,7 @@ Há dois componentes principais do [!INCLUDE[ssRSnoversion](../../includes/ssrsn
   
  [Adicionar um front-end da Web do Reporting Services a um farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [Configurar o email para um serviço de aplicativo do Reporting Services &#40;SharePoint 2013 e SharePoint 2016&#41;](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)  
+ [Configurar o email para um serviço de aplicativo do Reporting Services &#40;SharePoint 2013 e SharePoint 2016&#41;](./configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [Provisionar assinaturas e alertas para aplicativos de serviço SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   

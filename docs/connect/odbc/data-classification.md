@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 38439c3eff4eee2eef3b3e39f7b2b2b5454b2bec
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a4c7664c35d4c98ebcf8f8ae4a57d2948a83624c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727442"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081515"
 ---
 # <a name="data-classification"></a>Classificação de dados
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91727442"
 ## <a name="overview"></a>Visão geral
 Com a finalidade de gerenciar dados confidenciais, o SQL Server e o SQL Server do Azure introduziram a capacidade de fornecer colunas de bancos de dados com metadados de sensibilidade que permitem ao aplicativo cliente lidar com diferentes tipos de dados confidenciais (como saúde, finanças etc.) de acordo com as políticas de proteção de dados.
 
-Para obter mais informações sobre como atribuir classificação a colunas, confira [Descoberta e classificação de dados SQL](../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017).
+Para obter mais informações sobre como atribuir classificação a colunas, confira [Descoberta e classificação de dados SQL](../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 O Microsoft ODBC Driver 17.2 permite a recuperação desses metadados por meio de SQLGetDescField usando o identificador de campo SQL_CA_SS_DATA_CLASSIFICATION.
 

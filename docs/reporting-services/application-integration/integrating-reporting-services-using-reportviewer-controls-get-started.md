@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d4195123fbe1660c1c081c810d2b5b6b0feebd80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569956"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891506"
 ---
 # <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrar o Reporting Services usando os controles do Visualizador de Relatórios – Introdução
 
-Os controles do Visualizador de Relatórios podem ser usados para integrar relatórios de RDL do Reporting Services a aplicativos de WebForms e WinForms. Para obter informações detalhadas sobre atualizações recentes, consulte o [log de mudanças](changelog.md).
+Os controles do Visualizador de Relatórios podem ser usados para integrar relatórios de RDL do Reporting Services a aplicativos de WebForms e WinForms. Para obter informações detalhadas sobre atualizações recentes, consulte o [log de mudanças](./release-notes-ssrs-application-integration.md).
 
 ## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>Adicionar o controle do Visualizador de Relatórios a um novo projeto Web
 
@@ -270,9 +270,8 @@ Estes são os links para artigos do site NuGet.org sobre as versões WebForm e W
 
 ## <a name="forum-feedback"></a>Comentários do fórum
 
-Informe a equipe sobre problemas nos [Fóruns do Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html).
+Informe a equipe sobre problemas nos [Fóruns do Reporting Services](/answers/topics/sql-server-reporting-services.html).
 
 ## <a name="see-also"></a>Confira também
 
-[Coleta de dados no controle do Visualizador de Relatórios](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-
+[Coleta de dados no controle do Visualizador de Relatórios](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d52ef6b9d9ac23afee2f6c9187da0da22ef4dd0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cc34af8b12a36ceae0195f747d5f9a8c5b675b52
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915682"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986279"
 ---
 # <a name="grouping-pane"></a>Painel Agrupamento
 Ao projetar relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , o painel Agrupamento exibe os grupos de linhas e de colunas referentes à região de dados tablix selecionada no momento. O painel Agrupamento não está disponível para as regiões de dados Gráfico e Medidor. O painel Agrupamento consiste nos painéis Grupos de Linhas e Grupos de Colunas. Ele tem dois modos: padrão e Avançado. O modo padrão exibe uma exibição hierárquica dos membros dinâmicos dos grupos de linhas e de colunas. O modo Avançado exibe os membros dinâmicos e estáticos dos grupos de linhas e de colunas. Um grupo é um conjunto nomeado de dados de um conjunto de dados de relatório exibido em uma região de dados. Os grupos são organizados em hierarquias que incluem membros estáticos e dinâmicos. Para obter mais informações, consulte [Compreendendo grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Se o painel Agrupamento não estiver visível, no menu **Relatório** , clique em **Agrupamento**.
+  ![ssrs_fyi_note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Se o painel Agrupamento não estiver visível, no menu **Relatório** , clique em **Agrupamento**.
   
  As células nas áreas dos grupos de linhas e de colunas podem ser membros estáticos ou dinâmicos de um grupo. Os membros estáticos repetem-se uma vez por grupo e normalmente contêm rótulos ou totais. Já os membros dinâmicos se repetem uma vez por instância de grupo e normalmente contêm os valores exclusivos da expressão de grupo. À medida que você seleciona células Tablix nas áreas dos grupos de linhas ou de colunas, o membro do grupo correspondente é selecionado no painel Grupos de Linhas ou Grupos de Colunas. Por outro lado, caso você selecione grupos no painel Agrupamento, a célula correspondente associada ao membro do grupo é selecionada na superfície de design. Para obter mais informações sobre as áreas dos grupos de linhas e de colunas Tablix, consulte [Áreas da região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -50,7 +50,7 @@ Ao projetar relatórios do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 ## <a name="advanced-mode"></a>modo Avançado  
 No modo Avançado, é possível exibir todos os membros estáticos e dinâmicos de um grupo. Quando você seleciona um membro, a janela Propriedades exibe as propriedades do **Membro Tablix**selecionado no momento.  
   
-![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Para alternar **Modo Avançado**, clique com o botão direito do mouse na seta para baixo ao lado do painel Grupos de Colunas e clique em **Modo Avançado**.  
+![ssrs_fyi_note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Para alternar **Modo Avançado**, clique com o botão direito do mouse na seta para baixo ao lado do painel Grupos de Colunas e clique em **Modo Avançado**.  
   
 Na maior parte dos casos, as propriedades que controlam a exibição das linhas e das colunas dos grupos estáticos e dinâmicos são definidas automaticamente quando você cria um grupo ou adiciona totais. 
 
@@ -82,5 +82,4 @@ Para editar os valores padrão, você deve selecionar o membro do grupo no paine
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
   

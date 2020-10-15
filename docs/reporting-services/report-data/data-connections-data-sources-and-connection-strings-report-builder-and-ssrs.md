@@ -8,12 +8,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b544e7220d82d8368aec2a44c861e44b1e96398
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 96c470f52cb5c76601f4d7a7b6b97fd69290152f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988444"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891826"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS
 
@@ -37,7 +37,7 @@ ms.locfileid: "87988444"
 |Banco de Dados SQL do Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Defina o tipo de fonte de dados como **Banco de Dados SQL do Microsoft Azure**. Confira mais informações em [Tipo de conexão &#40;SSRS&#41; do SQL Azure](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Defina o tipo de fonte de dados como **Microsoft SQL Server Parallel Data Warehouse**. Para obter mais informações, consulte [Tipo de conexão do SQL Server Parallel Data Warehouse &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Banco de dados do Analysis Services no servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Para obter mais informações, consulte [Tipo de conexão do Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [Tipo de conexão do Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Banco de dados modelo de tabela do Analysis Services com perspectiva de vendas|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Especifique o nome da perspectiva na configuração de cube=. Para obter mais informações, consulte [Perspectivas &#40;SSAS de Tabela&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
+|Banco de dados modelo de tabela do Analysis Services com perspectiva de vendas|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Defina o tipo de fonte de dados como **Microsoft SQL Server Analysis Services**. Especifique o nome da perspectiva na configuração de cube=. Para obter mais informações, consulte [Perspectivas &#40;SSAS de Tabela&#41;](/analysis-services/tabular-models/perspectives-ssas-tabular).|  
 |Servidor do Oracle|`data source=myserver`|Defina o tipo de fonte de dados como **Oracle**. As ferramentas do cliente Oracle devem estar instaladas no computador de Designer de Relatórios e no servidor de relatório. Para obter mais informações, consulte [Tipo de conexão Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md).|  
 |Fonte de dados do SAP NetWeaver BI|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Defina o tipo de fonte de dados como **SAP NetWeaver Bl**. Para obter mais informações, consulte [Tipo de conexão SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Fonte de dados do Hyperion Essbase|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Defina o tipo de fonte de dados como **Hyperion Essbase**. Para obter mais informações, consulte [Tipo de conexão Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
@@ -55,7 +55,7 @@ ms.locfileid: "87988444"
  Para saber mais sobre as configurações necessárias para se conectar a esses tipos de fonte de dados, confira o artigo de conexão de dados específicos em [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) ou [Fontes de dados compatíveis com o Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> Caracteres especiais em uma senha  
- Se você configurar a fonte de dados ODBC ou SQL para solicitar uma senha ou para incluir uma senha na cadeia de conexão e o usuário inserir a senha com caracteres especiais, como sinais de pontuação, alguns drivers de fonte de dados subjacentes não conseguirão validar os caracteres especiais. Quando você processar o relatório, a mensagem "Senha inválida" poderá indicar esse problema. Se não for possível alterar a senha, você poderá trabalhar com o administrador do banco de dados para armazenar as credenciais apropriadas no servidor como parte de um DSN (nome da fonte de dados) do sistema ODBC. Para saber mais, confira [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring) na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Se você configurar a fonte de dados ODBC ou SQL para solicitar uma senha ou para incluir uma senha na cadeia de conexão e o usuário inserir a senha com caracteres especiais, como sinais de pontuação, alguns drivers de fonte de dados subjacentes não conseguirão validar os caracteres especiais. Quando você processar o relatório, a mensagem "Senha inválida" poderá indicar esse problema. Se não for possível alterar a senha, você poderá trabalhar com o administrador do banco de dados para armazenar as credenciais apropriadas no servidor como parte de um DSN (nome da fonte de dados) do sistema ODBC. Para saber mais, confira [OdbcConnection.ConnectionString](/dotnet/api/system.data.odbc.odbcconnection.connectionstring) na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> Cadeias de conexão baseadas em expressão  
  Cadeias de conexão baseadas em expressão são avaliadas em tempo de execução. Por exemplo, você pode especificar a fonte de dados como um parâmetro, incluir a referência ao parâmetro na cadeia de conexão e permitir que o usuário escolha a fonte de dados para o relatório. Por exemplo, suponha que uma empresa multinacional tem servidores de dados em vários países. Com uma cadeia de conexão baseada em expressão, um usuário que está executando um relatório de vendas pode selecionar uma fonte de dados para um país específico antes de executar o relatório.  

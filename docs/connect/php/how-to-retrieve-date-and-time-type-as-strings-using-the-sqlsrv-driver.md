@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51135c202b40cbae5a251a2ab36a695f6981c68e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 2dd1bd53b5ce3304b48fe8ed022e538d4d705154
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410957"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081435"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Como recuperar tipos de data e hora como cadeias de caracteres usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ O padrão é **false**, o que significa que os tipos **smalldatetime**, **dateti
 
 O driver PDO_SQLSRV retorna tipos de data e hora como cadeias de caracteres por padrão. Para recuperá-los como objetos DateTime de PHP, confira [Como recuperar tipos de data e hora como objetos datetime PHP usando o PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
-## <a name="example"></a>Exemplo
+## <a name="example-1"></a>Exemplo 1
 O exemplo a seguir mostra a sintaxe especificando a recuperação dos tipos de data e hora como cadeias de caracteres.
 
 ```php
@@ -50,7 +50,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-2"></a>Exemplo 2
 O exemplo a seguir mostra que você pode recuperar datas como cadeias de caracteres especificando UTF-8 quando recuperar a cadeia de caracteres, mesmo quando a conexão tiver sido feita com `"ReturnDatesAsStrings" => false`.
 
 ```php
@@ -87,7 +87,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-3"></a>Exemplo 3
 O exemplo a seguir mostra como recuperar datas como cadeias de caracteres especificando UTF-8 e `"ReturnDatesAsStrings" => true` na cadeia de conexão.
 
 ```php
@@ -123,7 +123,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-4"></a>Exemplo 4
 O exemplo a seguir mostra como recuperar a data como um tipo do PHP. `'ReturnDatesAsStrings'=> false` está ativado por padrão.
 
 ```php
@@ -161,7 +161,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-5"></a>Exemplo 5
 A opção ReturnDatesAsStrings no nível de instrução substitui a opção de conexão correspondente.
 
 ```php

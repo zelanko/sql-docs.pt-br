@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
-ms.openlocfilehash: 0a05f23265bd6e81c639bc8342699bf3bb8ab661
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: b0174f0b7705c9a7c7c678782a4b17fb4a1a74af
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742188"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985852"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gerenciar os proprietários da assinatura e executar a assinatura – PowerShell
 
@@ -23,7 +23,7 @@ ms.locfileid: "80742188"
 
 A partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , você pode transferir de forma programática a propriedade de uma assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de um usuário para outro. Este tópico fornece vários scripts do Windows PowerShell que você pode usar para mudar ou simplesmente listar a propriedade das assinaturas. Cada amostra inclui a sintaxe de amostra do modo Nativo e do modo SharePoint. Após mudar o proprietário da assinatura, está será executada no contexto de segurança do novo proprietário, e o campo User!UserID no relatório exibirá o valor do novo proprietário. Para obter mais informações sobre o modelo de objeto que as amostras do PowerShell chamam, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![Conteúdo relacionado ao PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")
+![Conteúdo relacionado ao PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")
 
 ##  <a name="in-this-topic"></a><a name="bkmk_top"></a> Neste tópico:
   
@@ -47,17 +47,17 @@ A partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLU
 
 Esta seção resume os níveis de permissão necessários para usar cada um dos métodos para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]em modo Nativo e SharePoint. Os scripts neste tópico usam os seguintes métodos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-- [Método ReportingService2010.ListSubscriptions](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [Método ReportingService2010.ListSubscriptions](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
   
-- [Método ReportingService2010.ChangeSubscriptionOwner](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+- [Método ReportingService2010.ChangeSubscriptionOwner](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)  
   
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
   
-- O método [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) é usado apenas no último script para disparar uma assinatura específica a ser executada. Se você não planeja usar esse script, é possível ignorar os requisitos de permissão para o método FireEvent.  
+- O método [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent) é usado apenas no último script para disparar uma assinatura específica a ser executada. Se você não planeja usar esse script, é possível ignorar os requisitos de permissão para o método FireEvent.  
   
 **Modo Nativo:**
   
-- Listar assinaturas: [Enumeração ReportOperation](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) no relatório E o usuário é o proprietário da assinatura OU ReadAnySubscription.  
+- Listar assinaturas: [Enumeração ReportOperation](/dotnet/api/microsoft.reportingservices.interfaces.reportoperation) no relatório E o usuário é o proprietário da assinatura OU ReadAnySubscription.  
   
 - Alterar assinaturas: O usuário deve ser membro do grupo BUILTIN\Administrators  
   
@@ -67,7 +67,7 @@ Esta seção resume os níveis de permissão necessários para usar cada um dos 
   
  **Modo SharePoint:**
   
-- Listar assinaturas: ManageAlerts OU [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) no relatório E o usuário é o proprietário da assinatura e a assinatura é cronometrada.  
+- Listar assinaturas: ManageAlerts OU [CreateAlerts](/previous-versions/office/sharepoint-server/ms412690(v=office.15)) no relatório E o usuário é o proprietário da assinatura e a assinatura é cronometrada.  
   
 - Alterar assinaturas: ManageWeb  
   
@@ -387,10 +387,10 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 
 ## <a name="see-also"></a>Confira também  
 
-- [Método ReportingService2010.ListSubscriptions](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [Método ReportingService2010.ListSubscriptions](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
 
-- [Método ReportingService2010.ChangeSubscriptionOwner](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [Método ReportingService2010.ChangeSubscriptionOwner](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
 
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
 
-- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)

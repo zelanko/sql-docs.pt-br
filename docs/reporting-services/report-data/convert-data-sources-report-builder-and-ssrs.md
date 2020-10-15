@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 799e3f877f2a92fb0b476037f08013e624f2d518
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 58cc14aaa1dace81c3711dfd6bb7d9a24664165d
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458178"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891736"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>Converter fontes de dados (Construtor de Relatórios e SSRS)
   Cada fonte de dados no painel de dados do relatório é inserida e específica do relatório ou é compartilhada. No Construtor de Relatórios, uma fonte de dados compartilhada aponta para uma fonte de dados compartilhada publicada em um servidor de relatório ou no site do SharePoint. No Designer de Relatórios, uma fonte de dados compartilhada aponta para uma fonte de dados compartilhada na pasta **Fontes de Dados Compartilhadas** do Gerenciador de Soluções.  
   
- Para obter mais informações sobre as diferenças entre fontes de dados inseridas e compartilhadas, consulte [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56).  
+ Para obter mais informações sobre as diferenças entre fontes de dados inseridas e compartilhadas, consulte [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](./data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Para obter mais informações sobre como criar uma fonte de dados compartilhada, consulte [Criar uma fonte de dados inserida ou compartilhada &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b).  
+ Para obter mais informações sobre como criar uma fonte de dados compartilhada, consulte [Criar uma fonte de dados inserida ou compartilhada &#40;SSRS&#41;](/previous-versions/sql/).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -63,5 +63,4 @@ ms.locfileid: "86458178"
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciar fontes de dados de relatório](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
   
