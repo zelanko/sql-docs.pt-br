@@ -10,19 +10,18 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 08/06/2020
-ms.openlocfilehash: 9a3b653a0e82eed4bffdf88461474a999eef152d
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: ba4b1362a3f435617f36c75fbcf0e8371169f990
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714174"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005155"
 ---
 # <a name="how-to-enable-the-tcp-protocol"></a>Como habilitar o protocolo TCP
 
 ## <a name="how-to-enable-the-tcp-protocol-when-connected-to-the-console-with-sqlps"></a>Como habilitar o protocolo TCP quando conectado ao console com SQLPS.
 
-> [!Note]
-> O módulo **SQLPS** está incluído na instalação do SQL Server (para compatibilidade com versões anteriores), mas não está sendo atualizado. O módulo do PowerShell mais atualizado é o do **[SqlServer](sql-server-powershell.md)** .
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 1. Abra um prompt de comando e digite:
 
@@ -92,10 +91,6 @@ ms.locfileid: "88714174"
 
     Restart-Service -Name MSSQLSERVER -Force
     ```
-
-
-
-
 
 ## <a name="next-steps"></a>Próximas etapas
 

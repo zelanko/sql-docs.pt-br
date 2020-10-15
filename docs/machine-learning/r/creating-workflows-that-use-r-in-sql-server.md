@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288276"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956611"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Criar fluxos de trabalho SSIS e SSRS com R no SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,9 +47,9 @@ Aqui estão algumas ideias sobre como você pode automatizar seus pipelines de p
 
 O exemplo a seguir provém de uma postagem no blog do MSDN agora desativada, criada por Jimmy Wong, nesta URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
-Este exemplo mostra como automatizar tarefas usando o SSIS. Você cria procedimentos armazenados com R incorporado usando o SQL Server Management Studio e, em seguida, executa esses procedimentos armazenados das [tarefas Executar T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) em um pacote do SSIS.
+Este exemplo mostra como automatizar tarefas usando o SSIS. Você cria procedimentos armazenados com R incorporado usando o SQL Server Management Studio e, em seguida, executa esses procedimentos armazenados das [tarefas Executar T-SQL](../../integration-services/control-flow/execute-t-sql-statement-task.md) em um pacote do SSIS.
 
-Para percorrer este exemplo, você deve estar familiarizado com Management Studio, SSIS, Designer SSIS, design de pacote e T-SQL. O pacote SSIS usa três [tarefas Executar T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) que inserem dados de treinamento em uma tabela, modelam os dados e pontuam os dados para obter a saída de previsão.
+Para percorrer este exemplo, você deve estar familiarizado com Management Studio, SSIS, Designer SSIS, design de pacote e T-SQL. O pacote SSIS usa três [tarefas Executar T-SQL](../../integration-services/control-flow/execute-t-sql-statement-task.md) que inserem dados de treinamento em uma tabela, modelam os dados e pontuam os dados para obter a saída de previsão.
 
 ### <a name="load-training-data"></a>Carregar dados de treinamento
 
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-No Designer SSIS, crie uma [tarefa Executar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) que execute o procedimento armazenado que você acabou de definir. O script para **SQLStatement** remove dados existentes, especifica quais dados inserir e, em seguida, chama o procedimento armazenado para fornecer os dados.
+No Designer SSIS, crie uma [tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md) que execute o procedimento armazenado que você acabou de definir. O script para **SQLStatement** remove dados existentes, especifica quais dados inserir e, em seguida, chama o procedimento armazenado para fornecer os dados.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-Crie um procedimento armazenado que gere um modelo linear usando [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). As bibliotecas RevoScaleR e revoscalepy estão automaticamente disponíveis em sessões de R e Python no SQL Server para que não haja necessidade de importar a biblioteca.
+Crie um procedimento armazenado que gere um modelo linear usando [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod). As bibliotecas RevoScaleR e revoscalepy estão automaticamente disponíveis em sessões de R e Python no SQL Server para que não haja necessidade de importar a biblioteca.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-No Designer SSIS, crie uma [tarefa Executar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) para executar o procedimento armazenado **generate_iris_rx_model**. O modelo é serializado e salvo na tabela de ssis_iris_models. O script para **SQLStatement** é o seguinte:
+No Designer SSIS, crie uma [tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md) para executar o procedimento armazenado **generate_iris_rx_model**. O modelo é serializado e salvo na tabela de ssis_iris_models. O script para **SQLStatement** é o seguinte:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ Como um ponto de verificação, após a conclusão dessa tarefa, você pode cons
 
 Agora que você tem código que carrega dados de treinamento e gera um modelo, a única etapa restante é usar o modelo para gerar previsões. 
 
-Para fazer isso, coloque o script de R na consulta SQL para disparar a função de R incorporada em [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) no ssis_iris_model. Um procedimento armazenado chamado **predict_species_length** realiza essa tarefa.
+Para fazer isso, coloque o script de R na consulta SQL para disparar a função de R incorporada em [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) no ssis_iris_model. Um procedimento armazenado chamado **predict_species_length** realiza essa tarefa.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-No Designer SSIS, crie uma [tarefa Executar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) que executa o procedimento armazenado **predict_species_length** para gerar o comprimento de pétala previsto.
+No Designer SSIS, crie uma [tarefa Executar SQL](../../integration-services/control-flow/execute-sql-task.md) que executa o procedimento armazenado **predict_species_length** para gerar o comprimento de pétala previsto.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

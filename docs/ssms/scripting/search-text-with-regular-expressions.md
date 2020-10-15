@@ -17,12 +17,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41132064138e0272911bdd8bb4c89a24444fd1c0
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 564aafe28198a0afc46ba379849d24a7f3ec588f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902107"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036346"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -134,5 +134,5 @@ As expressões regulares são notação concisa e flexível para pesquisa e subs
 |Han/Kanji/Ideográfico|:Id|Faz a correspondência de caracteres ideográficos, como Han e Kanji.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Pesquisar e substituir](../../relational-databases/scripting/search-and-replace.md)   
- [Pesquisar texto com curingas](../../relational-databases/scripting/search-text-with-wildcards.md)  
+ [Pesquisar e substituir](./search-and-replace.md)   
+ [Pesquisar texto com curingas](./search-text-with-wildcards.md)

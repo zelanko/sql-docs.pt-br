@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093420"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038970"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gerenciar o editor e o modo de exibição
 
@@ -91,7 +91,7 @@ O Editor fornece várias maneiras para controlar a exibição do código.
  Quando o modo Espaço Virtual não é habilitado, o cursor faz uma quebra automática do final da primeira linha até o primeiro caractere da próxima linha e vice-versa.  
   
 ## <a name="displaying-line-numbers"></a>exibindo números de linha  
- Você pode ativar a numeração de linhas em seu código. Os números de linha são úteis para navegar por código. Para obter mais informações, veja [Navegar em código e texto](../../relational-databases/scripting/navigate-code-and-text.md).  
+ Você pode ativar a numeração de linhas em seu código. Os números de linha são úteis para navegar por código. Para obter mais informações, veja [Navegar em código e texto](./navigate-code-and-text.md).  
   
 > [!NOTE]  
 >  Ativar a numeração de linhas não significa que o documento será impresso com números de linha. Para imprimir os números de linha, marque a caixa de seleção **Números de linha** no comando **Configurar Página** no menu **Arquivo** .  
@@ -122,5 +122,4 @@ O Editor fornece várias maneiras para controlar a exibição do código.
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>Para ocultar todas as janelas de ferramentas de uma só vez  
   
 1.  Selecione **Ocultar Tudo Automaticamente** no menu **Janela** .  
-  
   

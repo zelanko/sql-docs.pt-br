@@ -14,12 +14,12 @@ ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 88f2c0cff6bd33bf5327c7c919370015873700ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d42c0bb0c18b7917ef0e8c8a29e9522e744ce2d2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88314622"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037754"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>Questões do Database Evolution (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,6 +36,5 @@ Se você alterar a estrutura de um banco de dados implantado, tenha atenção es
 Você deve manter um histórico das alterações independentemente de como o design do banco de dados é alterado. Uma opção é manter os scripts SQL de todas as modificações que você já fez em seu banco de dados de produção.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Trabalhando com restrições](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Trabalhando com restrições](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [Ambientes multiusuários &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
-  

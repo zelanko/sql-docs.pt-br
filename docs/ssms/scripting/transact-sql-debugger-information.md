@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902104"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036169"
 ---
 # <a name="transact-sql-debugger---information"></a>Depurador do Transact-SQL – Informações
 
@@ -70,10 +70,10 @@ Em modo de depurador, o depurador abre duas janelas na parte inferior da janela 
   
  Você pode definir valores de dados para variáveis nas janelas **Locais**, **Inspecionar**ou **QuickWatch** , clicando com o botão direito na linha e selecionando **Editar Valor**. As colunas **Valor** , na janela **Locais** , janela **Inspeção** e a caixa de diálogo **QuickWatch** dão suporte a visualizadores de dados em texto, XML e HTML. Os visualizadores são representados por um dica de dados à direita da coluna **Valores** . Você pode usar os visualizadores para exibir valores de dados em texto, XML ou HTML em exibições que correspondam aos tipos de dados, por exemplo, exibindo arquivos XML em uma janela do navegador.  
   
- No modo de depuração, quando você move o ponteiro do mouse sobre um identificador, uma pop-up **Informações Rápidas** é exibida com o nome da expressão e seu valor atual. Para obter mais informações, veja [Informações rápidas &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md).  
+ No modo de depuração, quando você move o ponteiro do mouse sobre um identificador, uma pop-up **Informações Rápidas** é exibida com o nome da expressão e seu valor atual. Para obter mais informações, veja [Informações rápidas &#40;IntelliSense&#41;](./quick-info-intellisense.md).  
   
 ## <a name="breakpoints"></a>Pontos de interrupção  
- Você pode usar a janela **Pontos de Interrupção** para exibir e gerenciar os pontos de interrupção definidos no momento. Para obter mais informações, veja [Percorrer código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+ Você pode usar a janela **Pontos de Interrupção** para exibir e gerenciar os pontos de interrupção definidos no momento. Para obter mais informações, veja [Percorrer código Transact-SQL](./step-through-transact-sql-code.md).  
   
 ## <a name="call-stacks"></a>Pilhas de Chamadas  
  A janela **Pilha de Chamadas** exibe o local de execução atual e informações sobre como a execução foi transmitida da janela do editor original por meio de qualquer módulo do [!INCLUDE[tsql](../../includes/tsql-md.md)] (funções, procedimentos armazenados ou gatilhos) para alcançar o local de execução atual. Cada linha na janela **Pilha de Chamadas** é chamada de um registro de ativação e representa qualquer um dos seguintes itens:  
@@ -104,13 +104,12 @@ Em modo de depurador, o depurador abre duas janelas na parte inferior da janela 
  Em modo de depuração, as guias **Resultados** e **Mensagens** ainda ficam ativas no Editor de Consultas. A guia **Resultados** continua a exibir os conjuntos de resultados das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que são executados durante uma sessão de depuração. A guia **Mensagens** continua a exibir mensagens de sistema, como, por exemplo, *xx* Linhas Afetadas e a saída de instruções PRINT e RAISERROR.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Janela Locais](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Janela de Observação](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Caixa de diálogo QuickWatch](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Janela Pontos de Interrupção](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [Janela Pilha de Chamadas](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Janela Threads](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [Janela Saída](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [Janela Locais](./transact-sql-debugger-locals-window.md)   
+ [Janela de Observação](./transact-sql-debugger-watch-window.md)   
+ [Caixa de diálogo QuickWatch](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Janela Pontos de Interrupção](./transact-sql-debugger-breakpoints-window.md)   
+ [Janela Pilha de Chamadas](./transact-sql-debugger-call-stack-window.md)   
+ [Janela Threads](./transact-sql-debugger-threads-window.md)   
+ [Janela Saída](./transact-sql-debugger-output-window.md)   
+ [Depurador do Transact-SQL](./transact-sql-debugger.md)  
   

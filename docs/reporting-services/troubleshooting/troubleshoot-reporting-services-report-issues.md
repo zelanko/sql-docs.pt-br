@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662797"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988370"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Solucionar problemas de relatório do Reporting Services
 Este tópico ajuda você a solucionar problemas com design de relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , visualização de um relatório, publicação de um relatório em um servidor de relatório em modo nativo ou em modo SharePoint, exibindo um relatório no servidor de relatório ou exportando um relatório para um formato de arquivo diferente.  
@@ -38,7 +38,7 @@ Para exibir a pilha de chamadas, faça logon no servidor de relatório usando as
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para Verificar Consultas e Credenciais  
 Use essa o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para validar consultas complexas antes de incluí-las no relatório.   
   
-Para obter mais informações, consulte [Editor de consultas do Mecanismo de Banco de Dados](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) e [Gerenciar Objetos Usando o Pesquisador de Objetos](~/ssms/object/manage-objects-by-using-object-explorer.md).  
+Para obter mais informações, consulte [Editor de consultas do Mecanismo de Banco de Dados](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) e [Gerenciar Objetos Usando o Pesquisador de Objetos](~/ssms/object/manage-objects-by-using-object-explorer.md).  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>Analisar relatórios de problemas com dados de relatório em cache no cliente  
 Quando um autor de relatório cria um relatório no Business Intelligence Development Studio, o cliente de criação armazena em cache os dados como um arquivo de dados .rdl, que é usado quando você visualiza um relatório. Sempre que a consulta é alterada, o cache é atualizado. Para depurar problemas de relatório, às vezes, é útil evitar a atualização dos dados do relatório, para que eles não sejam alterados quando você estiver depurando.   
@@ -60,5 +60,3 @@ Desde que o valor seja definido como 1, somente dados de relatório em cache sã
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

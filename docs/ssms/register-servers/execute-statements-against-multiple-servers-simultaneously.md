@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: 627eff46acaae38b675814e84ea76e7a7ea64f2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91a18087a9bf3f844988dec16e84a1cdbbfb1948
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417952"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037569"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Executar instruções em vários servidores simultaneamente
 
@@ -30,7 +30,7 @@ Este tópico descreve como consultar vários servidores ao mesmo tempo no [!INCL
 
 Os resultados retornados pela consulta podem ser combinados em um único painel de resultados ou em painéis de resultados separados. O conjunto de resultados pode incluir colunas adicionais para o nome do servidor e o logon usado pela consulta em cada servidor. Os servidores de gerenciamento centrais e os servidores registrados subordinados podem ser registrados somente com o uso da Autenticação do Windows. Os servidores em grupos de servidores locais podem ser registrados usando Autenticação do Windows ou a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-> **OBSERVAÇÃO:** Antes de executar os procedimentos a seguir, crie um Servidor de Gerenciamento Central e grupos de servidores. Para obter mais informações, consulte [Criar um servidor de gerenciamento central e um grupo de servidores &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  
+> **OBSERVAÇÃO:** Antes de executar os procedimentos a seguir, crie um Servidor de Gerenciamento Central e grupos de servidores. Para obter mais informações, consulte [Criar um servidor de gerenciamento central e um grupo de servidores &#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md).  
 
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
@@ -63,5 +63,4 @@ Os resultados retornados pela consulta podem ser combinados em um único painel 
   
 ## <a name="see-also"></a>Consulte Também  
  [Administrar vários servidores usando os Servidores de Gerenciamento Centrais](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c5932a335dc1789256932f327ba9dab58c6afaf7
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d435340ec276de3dd2b08f340ecd49bb8c03787
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178593"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956897"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (pacote de Python nos Serviços de Machine Learning do SQL Server)
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -31,14 +31,14 @@ As fontes de dados e os contextos de computação criados no **revoscalepy** tam
 
 ## <a name="full-reference-documentation"></a>Documentação de referência completa
 
-O pacote **revoscalepy** é distribuído em vários produtos da Microsoft, mas o uso é o mesmo com o pacote no SQL Server ou em outro produto. Como as funções são as mesmas, a [documentação para funções individuais do revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) é publicada em apenas uma localização na [referência do R](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) para o Microsoft Machine Learning Server. Se existirem comportamentos específicos do produto, as discrepâncias serão indicadas na página de ajuda da função.
+O pacote **revoscalepy** é distribuído em vários produtos da Microsoft, mas o uso é o mesmo com o pacote no SQL Server ou em outro produto. Como as funções são as mesmas, a [documentação para funções individuais do revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) é publicada em apenas uma localização na [referência do R](/machine-learning-server/python-reference/introducing-python-package-reference) para o Microsoft Machine Learning Server. Se existirem comportamentos específicos do produto, as discrepâncias serão indicadas na página de ajuda da função.
 
 ## <a name="versions-and-platforms"></a>Versões e plataformas
 
 O módulo **revoscalepy** se baseia no Python 3.5 e está disponível somente quando você instala um dos seguintes produtos ou downloads da Microsoft:
 
 + [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 ou posterior](https://docs.microsoft.com/machine-learning-server/)
++ [Microsoft Machine Learning Server 9.2.0 ou posterior](/machine-learning-server/)
 + [Bibliotecas de clientes do Python para um cliente de ciência de dados](setup-python-client-tools-sql.md)
 
 > [!NOTE]
@@ -46,7 +46,7 @@ O módulo **revoscalepy** se baseia no Python 3.5 e está disponível somente qu
 
 ## <a name="functions-by-category"></a>Funções por categoria
 
-Esta seção lista as funções por categoria para dar uma ideia de como cada uma é usada. Use também o [sumário](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) para localizar as funções em ordem alfabética.
+Esta seção lista as funções por categoria para dar uma ideia de como cada uma é usada. Use também o [sumário](/machine-learning-server/python-reference/introducing-python-package-reference) para localizar as funções em ordem alfabética.
 
 ## <a name="1-data-source-and-compute"></a>1 – Fonte de dados e computação
 
@@ -56,20 +56,20 @@ O SQL Server e o Python usam diferentes tipos de dados em alguns casos. Para obt
 
 | Função| Descrição|
 | ------- | ---------- |
-| [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  Crie um objeto de contexto de computação do SQL Server para efetuar push de cálculos para uma instância remota. Várias funções do **revoscalepy** usam o contexto de computação como argumento. Para obter um exemplo de alternância de contexto, confira [Criar um modelo usando revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md).|
-| [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | Crie um objeto de dados com base em uma consulta ou uma tabela do SQL Server. |
-| [RxOdbcData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxodbcdata)| Crie uma fonte de dados com base em uma conexão ODBC. |
-| [RxXdfData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxxdfdata) | Crie uma fonte de dados com base em um arquivo XDF local. Os arquivos XDF geralmente são usados para descarregar dados na memória no disco. Um arquivo XDF pode ser útil ao trabalhar com mais dados do que é possível transferir do banco de dados em um lote ou mais dados do que cabem na memória. Por exemplo, se você mover regularmente grandes quantidades de dados de um banco de dados para uma estação de trabalho local, em vez de consultar o banco de dados repetidamente para cada operação do R, use o arquivo XDF como um tipo de cache para salvar os dados localmente e, em seguida, trabalhar com eles no workspace do R. |
+| [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  Crie um objeto de contexto de computação do SQL Server para efetuar push de cálculos para uma instância remota. Várias funções do **revoscalepy** usam o contexto de computação como argumento. Para obter um exemplo de alternância de contexto, confira [Criar um modelo usando revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md).|
+| [RxSqlServerData](/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | Crie um objeto de dados com base em uma consulta ou uma tabela do SQL Server. |
+| [RxOdbcData](/machine-learning-server/python-reference/revoscalepy/rxodbcdata)| Crie uma fonte de dados com base em uma conexão ODBC. |
+| [RxXdfData](/machine-learning-server/python-reference/revoscalepy/rxxdfdata) | Crie uma fonte de dados com base em um arquivo XDF local. Os arquivos XDF geralmente são usados para descarregar dados na memória no disco. Um arquivo XDF pode ser útil ao trabalhar com mais dados do que é possível transferir do banco de dados em um lote ou mais dados do que cabem na memória. Por exemplo, se você mover regularmente grandes quantidades de dados de um banco de dados para uma estação de trabalho local, em vez de consultar o banco de dados repetidamente para cada operação do R, use o arquivo XDF como um tipo de cache para salvar os dados localmente e, em seguida, trabalhar com eles no workspace do R. |
 
 > [!TIP]
-> Se a ideia de fontes de dados ou contextos de computação for uma novidade para você, recomendamos que comece com a [computação distribuída](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing) na documentação do Microsoft Machine Learning Server.
+> Se a ideia de fontes de dados ou contextos de computação for uma novidade para você, recomendamos que comece com a [computação distribuída](/machine-learning-server/r/how-to-revoscaler-distributed-computing) na documentação do Microsoft Machine Learning Server.
 
 ## <a name="2-data-manipulation-etl"></a>2 – Manipulação de dados (ETL)
 
 | Função | Descrição |
 |----------|-------------|
-|[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | Importe dados para um arquivo .xdf ou um quadro de dados.|
-|[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | Transforme dados de um conjunto de dados de entrada em um conjunto de dados de saída.|
+|[rx_import](/machine-learning-server/python-reference/revoscalepy/rx-import) | Importe dados para um arquivo .xdf ou um quadro de dados.|
+|[rx_data_step](/machine-learning-server/python-reference/revoscalepy/rx-data-step) | Transforme dados de um conjunto de dados de entrada em um conjunto de dados de saída.|
 
 <a name="bkmk_algorithms"></a>
 
@@ -77,14 +77,14 @@ O SQL Server e o Python usam diferentes tipos de dados em alguns casos. Para obt
 
 | Função| Descrição|
 | ------- | ---------- |
-|[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | Ajuste árvores de decisão aumentadas de gradiente alheatórias|
-|[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | Ajuste florestas de decisão de classificação e regressão|
-|[rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) | Ajuste árvores de classificação e regressão |
-|[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) | Criar um modelo de regressão linear|
-|[rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) | Criar um modelo de regressão logística|
-|[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) | Produza resumos monovariáveis de objetos no revoscalepy.|
+|[rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) | Ajuste árvores de decisão aumentadas de gradiente alheatórias|
+|[rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) | Ajuste florestas de decisão de classificação e regressão|
+|[rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) | Ajuste árvores de classificação e regressão |
+|[rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) | Criar um modelo de regressão linear|
+|[rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) | Criar um modelo de regressão logística|
+|[rx_summary](/machine-learning-server/python-reference/revoscalepy/rx-summary) | Produza resumos monovariáveis de objetos no revoscalepy.|
 
-Examine também as funções no [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) para ver outras abordagens.
+Examine também as funções no [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) para ver outras abordagens.
 
 <a name="ml-scoring"></a>
 
@@ -92,10 +92,10 @@ Examine também as funções no [microsoftml](https://docs.microsoft.com/machine
 
 | Função| Descrição|
 | ------- | ---------- |
-| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Gere previsões com base em um modelo treinado|) | Gera previsões com base em um modelo treinado e pode ser usado para pontuação em tempo real. |
-|[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Calcule os valores previstos e os resíduos usando objetos rx_lin_mod e rx_logit. |
-|[rx_predict_rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | Calcule os valores previstos ou ajustados para um conjunto de dados de um objeto rx_dforest ou rx_btrees. |
-|[rx_predict_rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | Calcule os valores previstos ou ajustados para um conjunto de dados de um objeto rx_dtree. |
+| [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) | Gere previsões com base em um modelo treinado|) | Gera previsões com base em um modelo treinado e pode ser usado para pontuação em tempo real. |
+|[rx_predict_default](/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Calcule os valores previstos e os resíduos usando objetos rx_lin_mod e rx_logit. |
+|[rx_predict_rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | Calcule os valores previstos ou ajustados para um conjunto de dados de um objeto rx_dforest ou rx_btrees. |
+|[rx_predict_rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | Calcule os valores previstos ou ajustados para um conjunto de dados de um objeto rx_dtree. |
 
 ## <a name="how-to-work-with-revoscalepy"></a>Como trabalhar com o revoscalepy
 
@@ -103,7 +103,7 @@ As funções do **revoscalepy** podem ser chamadas no código Python encapsulado
 
 Na execução local, normalmente, você executa um script Python na linha de comando ou em um ambiente de desenvolvimento do Python e especifica um contexto de computação do SQL Server usando uma das funções do **revoscalepy**. Use o contexto de computação remota para todo o código ou para funções individuais. Por exemplo, talvez você queira descarregar o treinamento do modelo no servidor para usar os dados mais recentes e evitar a movimentação de dados.
 
-Quando você estiver pronto para encapsular o script Python dentro de um procedimento armazenado, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), recomendamos reescrever o código como uma única função que tenha entradas e saídas claramente definidas. 
+Quando você estiver pronto para encapsular o script Python dentro de um procedimento armazenado, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), recomendamos reescrever o código como uma única função que tenha entradas e saídas claramente definidas. 
 
 As entradas e as saídas precisam ser quadros de dados **Pandas**. Quando isso for feito, você poderá chamar o procedimento armazenado em qualquer cliente que dê suporte a T-SQL, passar com facilidade consultas SQL como entradas e salvar os resultados em tabelas SQL. Para obter um exemplo, confira [Saiba mais sobre a análise do Python no banco de dados para desenvolvedores do SQL](../tutorials/python-taxi-classification-introduction.md).
 
@@ -121,5 +121,5 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 ## <a name="see-also"></a>Confira também
 
-+ [Tutoriais do Python](../tutorials/sql-server-python-tutorials.md)
-+ [Referência do Python (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
++ [Tutoriais do Python](../tutorials/python-tutorials.md)
++ [Referência do Python (Microsoft Machine Learning Server)](/machine-learning-server/python-reference/introducing-python-package-reference)

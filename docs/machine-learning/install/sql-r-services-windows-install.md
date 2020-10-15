@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487649"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956758"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalar o SQL Server 2016 R Services
 
@@ -32,7 +32,7 @@ Saiba como instalar o SQL Server 2016 R Services no Windows. Você pode usar o R
 
 + Uma instância do mecanismo de banco de dados é necessária. Não é possível instalar apenas o R, embora você possa adicioná-lo de maneira incremental a uma instância existente.
 
-+ Para continuidade dos negócios, há suporte para [grupos de disponibilidade Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) no R Services. Você precisa instalar o R Services e configurar pacotes em cada nó.
++ Para continuidade dos negócios, há suporte para [grupos de disponibilidade Always On](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) no R Services. Você precisa instalar o R Services e configurar pacotes em cada nó.
 
 + Não instale o R Services em uma FCI (Instância do Cluster de Failover) sempre ativada do SQL Server. O mecanismo de segurança usado para isolar processos do R não é compatível com um ambiente da FCI (Instância do Cluster de Failover) Always On do SQL Server.
 
@@ -91,7 +91,7 @@ Para instalações locais, você deve executar a Instalação como um administra
     + Serviços do Mecanismo de Banco de Dados
     + R Services (no Banco de Dados)
 
-1. Após a conclusão da instalação, se você receber instruções para reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para saber mais, veja [Exibir e ler arquivos de log da Instalação do SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Após a conclusão da instalação, se você receber instruções para reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para saber mais, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## <a name="set-environment-variables"></a>Definir variáveis de ambiente
 
@@ -110,7 +110,7 @@ Esta etapa requer uma reinicialização do servidor. Você poderá segurar a rei
 
 ##  <a name="enable-script-execution"></a>Habilitar a execução do script
 
-1. Abra o [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou o [Azure Data Studio](../../azure-data-studio/what-is.md).
+1. Abra o [SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md) ou o [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 1. Conecte-se à instância em que você instalou o R Services, clique em **Nova Consulta** para abrir uma janela de consulta e execute o seguinte comando:
 
@@ -181,7 +181,7 @@ Em servidores desconectados, são necessárias etapas adicionais. Para obter mai
 
 1. Comece com uma instância de linha de base já instalada: Versão inicial do SQL Server 2016, SQL Server 2016 SP 1 ou SQL Server 2016 SP 2.
 
-1. Acesse a lista de atualizações cumulativas: [Atualizações mais recentes do Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+1. Acesse a lista de atualizações cumulativas: [Atualizações mais recentes do Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 1. Selecione o service pack (ainda não instalado como a instância de linha de base) e a atualização cumulativa mais recentes. Um executável é baixado e extraído automaticamente.
 
@@ -205,7 +205,7 @@ No nível da instância, a configuração adicional pode incluir:
 * [Configuração de firewall para os Serviços de Machine Learning do SQL Server](../../machine-learning/security/firewall-configuration.md).
 * [Habilitar protocolos de rede adicionais](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 * [Habilitar conexões remotas](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md).
-* [Gerenciar cotas de disco](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) para evitar que scripts externos executem tarefas que esgotem o espaço em disco.
+* [Gerenciar cotas de disco](/windows/desktop/fileio/managing-disk-quotas) para evitar que scripts externos executem tarefas que esgotem o espaço em disco.
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>

@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b55dcfbdc7172e545c93e9878a18ee5826eb43f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45c136d29261b2ba4ce12185a7a9e437147f990b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468648"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037929"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementar a segurança do SQL Server Agent
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> No momento, na [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira detalhes nas [Diferenças entre o T-SQL da Instância Gerenciada de SQL do Azure e o SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> No momento, na [Instância Gerenciada de SQL do Azure](/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira detalhes nas [Diferenças entre o T-SQL da Instância Gerenciada de SQL do Azure e o SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent permite que o administrador do banco de dados execute cada etapa de trabalho em um contexto de segurança que tem apenas as permissões necessárias para executá-la, as quais são determinadas por um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para definir as permissões para uma etapa de trabalho em particular, crie um proxy com as permissões necessárias e atribua-o à etapa de trabalho. Um proxy pode ser especificado para mais de uma etapa de trabalho. Para etapas de trabalho que requerem as mesmas permissões, use o mesmo proxy.  
   
@@ -82,7 +82,6 @@ Siga estas diretrizes para melhorar a segurança de sua implementação do [!INC
   
 ## <a name="see-also"></a>Consulte Também  
 [Usando funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)  
-[sp_addrolemember (Transact-SQL)](https://msdn.microsoft.com/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
-[sp_droprolemember (Transact-SQL)](https://msdn.microsoft.com/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  
-[Segurança e proteção (Mecanismo de Banco de Dados)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)  
-  
+[sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
+[sp_droprolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)  
+[Segurança e proteção (Mecanismo de Banco de Dados)](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

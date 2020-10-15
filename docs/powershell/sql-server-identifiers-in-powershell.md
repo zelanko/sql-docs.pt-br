@@ -4,7 +4,6 @@ description: Saiba mais sobre os caminhos usados pelos provedores do Windows Pow
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54a37555038b3757ebff61faad8717c6a800ff1c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.openlocfilehash: 4f889fa93b78782a368ba36085a393f8b79fdb91
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714294"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006106"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificadores do SQL Server no PowerShell
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 O provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell usa identificadores [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em caminhos do Windows PowerShell. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Identificadores podem conter caracteres sem suporte pelo Windows PowerShell em caminhos. É necessário substituir esses caracteres ou usar codificação especial quando usar os identificadores em caminhos do Windows PowerShell.  
   
-> [!NOTE]
-> Há dois módulos do SQL Server PowerShell; **SqlServer** e **SQLPS**. O módulo **SQLPS** está incluído na instalação do SQL Server (para compatibilidade com versões anteriores), mas não está sendo atualizado. O módulo do PowerShell mais atualizado é o módulo do **SqlServer**. O módulo do **SqlServer** contém versões atualizadas dos cmdlets no **SQLPS** e também inclui novos cmdlets para dar suporte aos recursos mais recentes do SQL.  
-> As versões anteriores do módulo do **SqlServer** *foram* incluídas no SQL Server Management Studio (SSMS), mas apenas nas versões 16.x do SSMS. Para usar o PowerShell com o SSMS 17.0 e versões posteriores, o módulo do **SqlServer** deve ser instalado da Galeria do PowerShell.
-> Para instalar o módulo do **SqlServer**, consulte [Instalar o SQL Server PowerShell](download-sql-server-ps-module.md).
-
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Identificadores do SQL Server em caminhos do Windows PowerShell  
- Os provedores Windows PowerShell expõem as hierarquias de dados usando uma estrutura de caminho semelhante ao sistema de arquivos do Windows. O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows PowerShell implementa caminhos para objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . No [!INCLUDE[ssDE](../includes/ssde-md.md)], a unidade é definida como SQLSERVER:, a primeira pasta é definida como \SQL e os objetos de banco de dados são considerados como contêineres e itens. Este é o caminho para a tabela Vendor no esquema Purchasing do banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] na instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)]:  
+
+Os provedores Windows PowerShell expõem as hierarquias de dados usando uma estrutura de caminho semelhante ao sistema de arquivos do Windows. O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows PowerShell implementa caminhos para objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . No [!INCLUDE[ssDE](../includes/ssde-md.md)], a unidade é definida como SQLSERVER:, a primeira pasta é definida como \SQL e os objetos de banco de dados são considerados como contêineres e itens. Este é o caminho para a tabela Vendor no esquema Purchasing do banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] na instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)]:  
   
 ```  
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  

@@ -13,12 +13,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d842772e4ca65e4905d1e8134c4247a965ba46a
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: b1914ed4748a14bc7af7fc7113493e18c34604e8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901247"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036289"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd – Executar arquivos de script do Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,6 @@ ms.locfileid: "88901247"
  Nenhuma saída é retornada na janela de prompt de comando. Em vez disso, a saída é enviada ao arquivo EmpAdds.txt. Você pode verificar essa saída abrindo o arquivo EmpAdds.txt.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Iniciar o utilitário sqlcmd](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
+ [Iniciar o utilitário sqlcmd](./sqlcmd-start-the-utility.md)   
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)  
-  
   

@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37e339dc13577bd30491f1c155ebb8114868d60
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491735"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038923"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Restrição (Visual Database Tools)
 
@@ -44,7 +44,7 @@ Remova a restrição selecionada da tabela. Para cancelar a adição de uma rest
 Expanda para mostrar o campo de propriedade **Expressão** .  
   
 **Expression**  
-Exibe a expressão para a restrição de verificação selecionada. Para nova restrições, você deve digitar a expressão antes de sair dessa caixa. Você também pode editar restrições de verificação existentes. Para saber mais, confira [Trabalhar com restrições](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Exibe a expressão para a restrição de verificação selecionada. Para nova restrições, você deve digitar a expressão antes de sair dessa caixa. Você também pode editar restrições de verificação existentes. Para saber mais, confira [Trabalhar com restrições](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 **Categoria de identidade**  
 Expanda para mostrar propriedades para **Nome** e **Descrição**.  
@@ -69,5 +69,5 @@ Indica se é para impor a restrição quando um agente de replicação executar 
   
 ## <a name="see-also"></a>Consulte Também
 
-[Como trabalhar com restrições](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[Como trabalhar com restrições](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 [Caixa de diálogo Índices – Chaves &#40;Ferramentas de Banco de Dados Visual&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

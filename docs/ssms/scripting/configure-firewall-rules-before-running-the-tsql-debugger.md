@@ -23,12 +23,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09732c9089781026239c300dd53f51108d3e149a
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 18ddcd8e2671416af4af22ee324caedd296b89bf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901982"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039074"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar regras de firewall antes de executar o Depurador TSQL
 
@@ -170,8 +170,8 @@ Todas as tentativas de iniciar o depurador do [!INCLUDE[tsql](../../includes/tsq
 
 ## <a name="see-also"></a>Consulte Também
 
-- [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Executar o depurador do Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)
-- [Percorrer o código do Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Depurador do Transact-SQL](./transact-sql-debugger.md)
+- [Executar o depurador do Transact-SQL](./run-the-transact-sql-debugger.md)
+- [Percorrer o código do Transact-SQL](./step-through-transact-sql-code.md)
+- [Informações do depurador Transact-SQL](./transact-sql-debugger-information.md)
+- [Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)

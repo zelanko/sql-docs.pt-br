@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: dffd92620f8975b41f8ea8c13a956c3984e56ea3
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1c017a50c2c5806012547d87fd67786e8121510a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479868"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038118"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Construir projetos de banco de dados usando o SQL Server Management Studio
 
@@ -68,6 +68,5 @@ O Gerenciador de Soluções é uma ferramenta para desenvolvedores que criam e r
 Uma solução consiste em um ou mais projetos de script. Um projeto consiste em um ou mais scripts ou conexões. Um projeto também pode incluir arquivos não script.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Usar o SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+[Usar o SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
 [Soluções &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
-  

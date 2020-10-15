@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1259cc5d536e66b95db4e6575237484efafcc581
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179955"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956903"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>O que é Machine Learning Server ou Microsoft R Server autônomo no SQL Server?
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,7 +24,7 @@ O SQL Server fornece suporte à instalação de um Microsoft R Server ou Machine
 No SQL Server 2016, esse recurso é chamado **Microsoft R Server (autônomo)** e inclui apenas R. No SQL Server 2017, é chamado **Machine Learning Server (autônomo)** e inclui R e Python.  
 
 > [!Note]
-> Conforme instalado pela instalação do SQL Server, um servidor autônomo é funcionalmente equivalente às versões sem marca SQL do [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), compatível com os mesmos cenários de usuário, incluindo execução remota, operacionalização e serviços Web, bem como a coleção completa de bibliotecas de R e Python.
+> Conforme instalado pela instalação do SQL Server, um servidor autônomo é funcionalmente equivalente às versões sem marca SQL do [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server), compatível com os mesmos cenários de usuário, incluindo execução remota, operacionalização e serviços Web, bem como a coleção completa de bibliotecas de R e Python.
 
 ## <a name="components"></a>Componentes
 
@@ -48,7 +48,7 @@ Os desenvolvedores de R e Python normalmente escolhem um servidor autônomo para
 
 Como um servidor independente dissociado do SQL Server, o ambiente do R e do Python é configurado, protegido e acessado usando o sistema operacional subjacente e as ferramentas padrão fornecidas no servidor autônomo, não no SQL Server. Não há suporte interno para dados relacionais do SQL Server. Se você quiser usar dados do SQL Server, poderá criar conexões e objetos de fonte de dados como faria usando qualquer cliente.
 
-Como um suplemento para SQL Server, um servidor autônomo também será útil como um ambiente de desenvolvimento avançado se você precisar de computação local e remota. Os pacotes do R e do Python em um servidor autônomo são os mesmos fornecidos com uma instalação do mecanismo de banco de dados, permitindo portabilidade de código e [alternância de contexto de computação](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
+Como um suplemento para SQL Server, um servidor autônomo também será útil como um ambiente de desenvolvimento avançado se você precisar de computação local e remota. Os pacotes do R e do Python em um servidor autônomo são os mesmos fornecidos com uma instalação do mecanismo de banco de dados, permitindo portabilidade de código e [alternância de contexto de computação](/machine-learning-server/r/concept-what-is-compute-context).
 
 ## <a name="how-to-get-started"></a>Como começar
 
@@ -72,15 +72,15 @@ Em um servidor autônomo, é comum trabalhar localmente usando um desenvolviment
 
 Escreva o script do R ou do Python usando funções de RevoScaleR, revoscalepy e algoritmos de aprendizado de máquina.
   
-  + [Explorar R e RevoScaleR em 25 funções](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): Comece com comandos básicos do R e progrida para funções analíticas distribuíveis do RevoScaleR que proporcionam alto desempenho e escala para as soluções de R. Inclui versões paralelizáveis de muitos dos pacotes mais populares de modelagem do R, como clustering k-means, árvores de decisão e florestas de decisão, bem como as ferramentas para a manipulação de dados.
+  + [Explorar R e RevoScaleR em 25 funções](/machine-learning-server/r/tutorial-r-to-revoscaler): Comece com comandos básicos do R e progrida para funções analíticas distribuíveis do RevoScaleR que proporcionam alto desempenho e escala para as soluções de R. Inclui versões paralelizáveis de muitos dos pacotes mais populares de modelagem do R, como clustering k-means, árvores de decisão e florestas de decisão, bem como as ferramentas para a manipulação de dados.
 
-  + [Início Rápido: Um exemplo de classificação binária com o pacote microsoftml do Python](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): Crie um modelo de classificação binária usando as funções de microsoftml e o conjunto de dados sobre câncer de mama conhecido.
+  + [Início Rápido: Um exemplo de classificação binária com o pacote microsoftml do Python](/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): Crie um modelo de classificação binária usando as funções de microsoftml e o conjunto de dados sobre câncer de mama conhecido.
 
 Escolha a melhor linguagem para a tarefa. A linguagem R é melhor para cálculos estatísticos que podem ser difíceis de implementar usando SQL. Para operações baseadas em conjunto sobre dados, aproveite o poder de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alcançar o desempenho máximo. Use o mecanismo de banco de dados em memória para computações muito rápidas sobre colunas.
 
 ### <a name="step-4-operationalize-your-solution"></a>Etapa 4: Operacionalizar sua solução
 
-Os servidores autônomos podem usar a funcionalidade de [operacionalização](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) do [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) não SQL. Você pode configurar um servidor autônomo para operacionalização, que oferece estes benefícios: implantar e hospedar seu código como serviços Web, executar diagnóstico, testar a capacidade do serviço Web.
+Os servidores autônomos podem usar a funcionalidade de [operacionalização](//machine-learning-server/what-is-operationalization) do [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) não SQL. Você pode configurar um servidor autônomo para operacionalização, que oferece estes benefícios: implantar e hospedar seu código como serviços Web, executar diagnóstico, testar a capacidade do serviço Web.
 
 ### <a name="step-5-maintain-your-server"></a>Etapa 5: Manter seus servidores
 
@@ -93,4 +93,3 @@ Para obter mais informações sobre como aplicar atualizações a uma instância
 ## <a name="see-also"></a>Confira também
 
  [Instalar o Microsoft R Server (autônomo) ou o Machine Learning Server (autônomo)](../install/sql-machine-learning-standalone-windows-install.md)
-

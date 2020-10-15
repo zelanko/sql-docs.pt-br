@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8964906be1f9d055e45c7eacb6699f7ccc87da86
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 97502e9f1e8c5784afb2d8ad05f8fb2a05dab57a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197202"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935558"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Adicionar os tipos de conteúdo do Reporting Services a uma biblioteca do SharePoint
 
@@ -61,7 +61,7 @@ ms.locfileid: "86197202"
   
 2.  Vá para **Configurações de site**.  
   
-    -   No SharePoint 2013, clique no ícone **Configurações** . ![Configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint")  
+    -   No SharePoint 2013, clique no ícone **Configurações** . ![Configurações do SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint")  
   
     -   No SharePoint 2010, clique em **Ações do Site**e, depois, em **Configurações de Site**.  
   
@@ -173,5 +173,4 @@ ms.locfileid: "86197202"
 ## <a name="see-also"></a>Confira também  
  [Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Iniciar o Construtor de Relatórios](../../reporting-services/report-builder/start-report-builder.md)  
-  
   

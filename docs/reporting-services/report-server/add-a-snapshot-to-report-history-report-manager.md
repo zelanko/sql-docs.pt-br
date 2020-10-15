@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245729"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935317"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Adicionar um instantâneo ao histórico de relatório
 
@@ -71,7 +71,7 @@ Os instantâneos de relatório não são salvos em um formato de renderização 
 - [Configurar propriedades de execução de um relatório &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limitar o histórico de relatórios &#40;Gerenciador de Relatórios&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Agendas](../../reporting-services/subscriptions/schedules.md)   
-- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -160,6 +160,6 @@ Os instantâneos de relatório não são salvos em um formato de renderização 
 - [Configurar propriedades de execução de um relatório (portal da Web)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limitar o histórico de relatório (portal da Web)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Agendas](../../reporting-services/subscriptions/schedules.md)   
-- [o portal da Web &#40;Modo nativo do SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [o portal da Web &#40;Modo nativo do SSRS&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

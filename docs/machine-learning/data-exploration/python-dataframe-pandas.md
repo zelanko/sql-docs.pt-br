@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 32b546107697dffdf3c77ea292b7b68c5c7dc9b5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 549507edaeec804776e830864bc93526e22eaea0
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179814"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956826"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>Inserir dados de uma tabela SQL em um dataframe Pandas do Python
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -28,11 +28,11 @@ Este artigo descreve como inserir dados SQL em um dataframe [Pandas](https://pan
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Banco de Dados SQL do Azure. Para saber como se inscrever, confira [Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+* Banco de Dados SQL do Azure. Para saber como se inscrever, confira [Banco de Dados SQL do Azure](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart).
+* Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira [Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/instance-create-quickstart).
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) para restaurar o banco de dados de exemplo na Instância Gerenciada de SQL do Azure.
 ::: moniker-end

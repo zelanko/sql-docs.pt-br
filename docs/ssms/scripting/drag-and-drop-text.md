@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f341d4dd956bd032bd5dcee264cbf48a5fd05e22
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 14ad38d835e4ef96cbf91a009026e35d504ca8cb
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093421"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039030"
 ---
 # <a name="drag-and-drop-text"></a>Arrastar e soltar texto
 
@@ -49,6 +49,5 @@ Você pode selecionar texto e depois arrastá-lo e soltá-lo em outro local. É 
  Arrastar texto significa movê-lo, isto é, o texto é apagado do local anterior e movido para o novo local. Pressionar a tecla CTRL enquanto você arrasta o texto, significa copiá-lo no local novo. Arrastar um objeto do Pesquisador de Objetos é uma exceção e não exclui o nome do objeto do explorador.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Navegar no código e no texto](../../relational-databases/scripting/navigate-code-and-text.md)  
-  
+ [Navegar no código e no texto](./navigate-code-and-text.md)  
   

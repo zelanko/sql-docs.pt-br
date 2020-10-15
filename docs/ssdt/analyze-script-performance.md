@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dbaec18d8f28e820af1905047de89aa6c00e9743
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2abb12c7df083de7e19148729cb64e16b96d528d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519106"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988232"
 ---
 # <a name="analyze-script-performance"></a>Analisar o desempenho do script
 
@@ -30,7 +30,7 @@ Para ativar/desativar a coleta de estatísticas do cliente, quando o Editor Tran
   
 Se você ativou as estatísticas de cliente, a guia **Estatísticas** será exibida ao lado da guia **Mensagem** após a execução da consulta. Se você desativou as estatísticas de cliente, a guia **Estatísticas** não será exibida. São listadas estatísticas de execuções de consulta sucessivas junto com os valores médios.  
   
-Para saber mais sobre as estatísticas coletadas, confira [Painel de Estatísticas de Janela de Consulta](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) e a [seção "Guia de Estatísticas do Cliente" deste tópico](https://msdn.microsoft.com/library/aa833205.aspx).  
+Para saber mais sobre as estatísticas coletadas, confira [Painel de Estatísticas de Janela de Consulta](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) e a [seção "Guia de Estatísticas do Cliente" deste tópico](/previous-versions/visualstudio/visual-studio-2010/aa833205(v=vs.100)).  
   
 ## <a name="using-execution-plans"></a>Utilizando planos de execução  
 Os planos de execução exibem como o mecanismo de banco de dados navega nas tabelas e como usa os índices para acessar ou processar os dados para uma consulta ou outra instrução DML, como uma atualização. Essa abordagem gráfica é muito útil para entender as características de desempenho de uma consulta.  
@@ -39,7 +39,7 @@ Abra um script Transact\-SQL que contenha as consultas que você deseja analisar
   
 Depois de o script ter sido analisado ou executado, clique na guia **Plano de execução** para ver uma representação gráfica da saída do plano de execução.  
   
-A saída do plano de execução gráfica é lida da direita para a esquerda e de cima para baixo. Cada consulta no lote analisado é exibida, inclusive o custo de cada consulta, como uma porcentagem do custo total do lote. Para exibir mais informações como o custo e a operação para cada etapa, passe o mouse sobre os [ícones dos operadores lógicos e físicos](https://msdn.microsoft.com/library/ms175913.aspx) no plano gráfico.  
+A saída do plano de execução gráfica é lida da direita para a esquerda e de cima para baixo. Cada consulta no lote analisado é exibida, inclusive o custo de cada consulta, como uma porcentagem do custo total do lote. Para exibir mais informações como o custo e a operação para cada etapa, passe o mouse sobre os [ícones dos operadores lógicos e físicos](/previous-versions/sql/sql-server-2008-r2/ms175913(v=sql.105)) no plano gráfico.  
   
 Para alterar a exibição do plano de execução, clique com o botão direito do mouse no **Plano de execução** e selecione **Ampliar**, **Reduzir**, **Zoom Personalizado** ou **Ajustar Nível de Zoom**. **Ampliar** e **Reduzir** permitem ampliar ou reduzir o plano de execução com valores fixos. **Zoom personalizado** permite que você defina sua própria ampliação da exibição, como ampliar em 80 por cento.  **Ajustar nível de zoom** ajusta o plano de execução de acordo com o painel de resultados.  
   
@@ -50,5 +50,4 @@ Você pode usar Análise de Código para descobrir problemas potenciais em seus 
   
 Para usar a Análise de Código manualmente, clique com o botão direito do mouse no seu projeto no **Gerenciador de Soluções** e selecione **Executar Análise de Código**. Os avisos da análise de código são listados na janela **Lista de Erros** . Você pode clicar duas vezes em um aviso para navegar para o código-fonte que contém o problema e você pode exibir informações adicionais e possíveis correções para um aviso usando o menu contextual **Mostrar Ajuda para erros**.  
   
-Para obter mais informações sobre Análise de Código, consulte [Analisando o código do banco de dados para melhorar a qualidade do código](https://msdn.microsoft.com/library/dd172133.aspx)(a página pode estar em inglês).  
-  
+Para obter mais informações sobre Análise de Código, consulte [Analisando o código do banco de dados para melhorar a qualidade do código](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100))(a página pode estar em inglês).  

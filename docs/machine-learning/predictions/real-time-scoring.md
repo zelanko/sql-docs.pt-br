@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 89e7a3e15f389de8fc696247197c9f678955ed73
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: e6809a66ce7f5fd425ce9bfeb2b1fea919c4dfaa
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009342"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956920"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server"></a>Pontuação em tempo real com sp_rxPredict no SQL Server
 [!INCLUDE[sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,12 +44,12 @@ A pontuação em tempo real é um processo de várias etapas:
 
 + O modelo precisa ser treinado com antecedência usando um dos algoritmos do **rx** compatíveis. Para o R, a pontuação em tempo real com `sp_rxPredict` funciona com os [algoritmos compatíveis com o RevoScaleR e o MicrosoftML](#bkmk_rt_supported_algos). Para o Python, confira [Algoritmos compatíveis com o revoscalepy e o microsoftml](#bkmk_py_supported_algos).
 
-+ Serialize o modelo usando [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) para o R e [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) para o Python. Essas funções de serialização foram otimizadas para dar suporte à pontuação rápida.
++ Serialize o modelo usando [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel) para o R e [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) para o Python. Essas funções de serialização foram otimizadas para dar suporte à pontuação rápida.
 
 + Salve o modelo na instância do mecanismo de banco de dados da qual você deseja chamá-lo. Não é necessário que essa instância tenha a extensão de runtime do R ou do Python.
 
 > [!Note]
-> Atualmente, a pontuação em tempo real é otimizada para previsões rápidas em conjuntos de dados menores, variando de algumas linhas a centenas de milhares de linhas. Em conjuntos de dados grandes, o uso de [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) pode ser mais rápido.
+> Atualmente, a pontuação em tempo real é otimizada para previsões rápidas em conjuntos de dados menores, variando de algumas linhas a centenas de milhares de linhas. Em conjuntos de dados grandes, o uso de [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) pode ser mais rápido.
 
 <a name ="bkmk_enableRtScoring"></a> 
 
@@ -98,29 +98,29 @@ Para desabilitar a funcionalidade de pontuação em tempo real, abra um prompt d
 
 + Modelos do revoscalepy
 
-  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
-  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
-  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
-  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
-  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
+  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
+  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
+  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
+  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
+  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
   
   Os modelos marcados com \* também dão suporte à pontuação nativa com a função PREDICT.
 
 + Modelos do microsoftml
 
-  + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
-  + [rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
-  + [rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
-  + [rx_neural_net](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
-  + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
+  + [rx_fast_trees](/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [rx_fast_forest](/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
+  + [rx_logistic_regression](/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
+  + [rx_oneclass_svm](/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
+  + [rx_neural_net](/machine-learning-server/python-reference/microsoftml/rx-neural-network)
+  + [rx_fast_linear](/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
 + Transformações fornecidas pelo microsoftml
 
-  + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text)
-  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
-  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
+  + [featurize_text](/machine-learning-server/python-reference/microsoftml/featurize-text)
+  + [concat](/machine-learning-server/python-reference/microsoftml/concat)
+  + [categorical](/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical_hash](/machine-learning-server/python-reference/microsoftml/categorical-hash)
 
 <a name="bkmk_rt_supported_algos"></a>
 
@@ -128,30 +128,30 @@ Para desabilitar a funcionalidade de pontuação em tempo real, abra um prompt d
 
 + Modelos do RevoScaleR
 
-  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
-  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
-  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
+  + [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   Os modelos marcados com \* também dão suporte à pontuação nativa com a função PREDICT.
 
 + Modelos do MicrosoftML
 
-  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + Transformações fornecidas pelo MicrosoftML
 
-  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](/machine-learning-server/r-reference/microsoftml/concat)
+  + [categorical](/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>Tipos de modelos sem suporte
 
@@ -167,7 +167,7 @@ Esta seção descreve as etapas necessárias para preparar e salvar um modelo pa
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Etapa 1. Preparar e salvar o modelo
 
-O formato binário exigido por sp\_rxPredict é o mesmo que o formato necessário para usar a função PREDICT. Portanto, no código R, inclua uma chamada a [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) e especifique `realtimeScoringOnly = TRUE`, como neste exemplo:
+O formato binário exigido por sp\_rxPredict é o mesmo que o formato necessário para usar a função PREDICT. Portanto, no código R, inclua uma chamada a [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) e especifique `realtimeScoringOnly = TRUE`, como neste exemplo:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -195,7 +195,7 @@ EXEC sp_rxPredict
 >
 > Portanto, talvez seja necessário filtrar os tipos sem suporte nos dados de entrada antes de usá-los para a pontuação em tempo real.
 >
-> Para obter informações sobre os tipos SQL correspondentes, confira [Mapeamento de tipos SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) ou [Mapeamento de dados de parâmetro CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
+> Para obter informações sobre os tipos SQL correspondentes, confira [Mapeamento de tipos SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) ou [Mapeamento de dados de parâmetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 

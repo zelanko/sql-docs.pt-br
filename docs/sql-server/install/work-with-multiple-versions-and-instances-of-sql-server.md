@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3067b285a1d821808323cff524b109f782172e84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a2f9c1f0a6f73d4f2e2dfa5556548d3e1d5d9481
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899621"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988079"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Trabalhar com várias versões e instâncias do SQL Server
 
@@ -126,4 +126,4 @@ Quando uma Instância de Cluster de failover do [!INCLUDE[ssNoVersion](../../inc
 * [Atualizar o SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
 * [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
 * [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-* [Compatibilidade com versões anteriores_excluída](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)
+* [Compatibilidade com versões anteriores_excluída](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))

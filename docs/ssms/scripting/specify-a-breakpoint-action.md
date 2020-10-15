@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9f25e1c75bfeef51562dddd71f5dc376d46b927
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 843963d6c056151842fc5f1edaf786ecc0ced79e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901623"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036319"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar uma ação de ponto de interrupção
 
@@ -73,5 +73,5 @@ Uma mensagem de impressão é especificada na opção **Imprimir uma Mensagem** 
 3.  Clique em **OK** para implementar as alterações ou em **Cancelar** para sair sem aplicar as alterações.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Especificar uma condição de ponto de interrupção](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Especificar uma contagem de ocorrências](../../relational-databases/scripting/specify-a-hit-count.md)  
+ [Especificar uma condição de ponto de interrupção](./specify-a-breakpoint-condition.md)   
+ [Especificar uma contagem de ocorrências](./specify-a-hit-count.md)

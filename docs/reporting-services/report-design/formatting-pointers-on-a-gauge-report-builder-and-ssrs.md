@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 196e542698af55c3469a1851b3f7b315d9410f8d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8c0ee25b36c64a8b151c6d816d47dd0e8c1e90b4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939226"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935032"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
  Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , um ponteiro do medidor indica o valor atual do medidor.   
@@ -44,7 +44,7 @@ ms.locfileid: "87939226"
  Você pode especificar uma extremidade de agulha que possa ser desenhada acima ou abaixo do ponteiro apenas em um ponteiro radial. Todos os estilos de extremidade de agulha são desenhados usando gradações internas que não podem ser modificadas. A exceção é o estilo **RoundedDark** , em que você pode especificar uma cor de gradiente e o estilo de gradiente.  
   
 ##  <a name="setting-a-snapping-interval"></a><a name="SettingSnappingInterval"></a> Como definir um intervalo de ajuste  
- Um intervalo de ajuste define o múltiplo para o qual os valores são arredondados. Por padrão, o medidor apontará para o valor exato do campo especificado no painel de dados. No entanto, talvez você queira arredondar o valor exato para cima ou para baixo de forma que o ponteiro se ajuste a um intervalo predefinido. Por exemplo, se o valor em seu medidor for 34,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 35. Se o valor em seu medidor for 31,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 30. Para obter mais informações, consulte [Definir um intervalo de ajuste em um medidor (Construtor de Relatórios e SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs).  
+ Um intervalo de ajuste define o múltiplo para o qual os valores são arredondados. Por padrão, o medidor apontará para o valor exato do campo especificado no painel de dados. No entanto, talvez você queira arredondar o valor exato para cima ou para baixo de forma que o ponteiro se ajuste a um intervalo predefinido. Por exemplo, se o valor em seu medidor for 34,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 35. Se o valor em seu medidor for 31,2 e você especificar um intervalo de ajuste de 5, o ponteiro do medidor apontará para 30. Para obter mais informações, consulte [Definir um intervalo de ajuste em um medidor (Construtor de Relatórios e SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
 ##  <a name="specifying-an-image-as-a-pointer-on-a-radial-gauge"></a><a name="SpecifyingImage"></a> Especificando uma imagem como um ponteiro em um medidor radial  
  Além da lista interna dos estilos de ponteiro, é possível especificar uma imagem como um ponteiro. Isso é muito efetivo quando você usa uma imagem para substituir um estilo de ponteiro de agulha existente. A imagem é sobreposta no ponteiro, mas toda a funcionalidade de ponteiro é aplicável. As opções de cor e de gradação não são aplicáveis quando uma imagem é usada no ponteiro.  
@@ -55,5 +55,4 @@ ms.locfileid: "87939226"
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatando intervalos de um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
   

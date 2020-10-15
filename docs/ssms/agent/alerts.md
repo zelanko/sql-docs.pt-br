@@ -24,19 +24,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7fa31500bd90ab993f58a2e27e1a41c937ad0370
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea3cc85669b31eed9ba2b91d6d4c91c8b59bd603
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320262"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039216"
 ---
 # <a name="alerts"></a>Alertas
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
-> No momento, na [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira detalhes nas [Diferenças entre o T-SQL da Instância Gerenciada de SQL do Azure e o SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> No momento, na [Instância Gerenciada de SQL do Azure](/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Confira detalhes nas [Diferenças entre o T-SQL da Instância Gerenciada de SQL do Azure e o SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Eventos são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inseridos no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent lê o log de aplicativos e compara os eventos gravados ali com os alertas que você definiu. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent encontra uma correspondência, ele dispara um alerta, que é uma resposta automatizada a um evento. Além de monitorar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent também pode monitorar condições de desempenho e eventos do Windows Management Instrumentation (WMI).  
   
@@ -130,44 +130,43 @@ Encontram-se, a seguir, os links para tarefas comuns:
   
 -   [SQL Server Management Studio](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)  
   
 **Para criar um alerta com base em níveis de severidade**  
   
 -   [SQL Server Management Studio](../../ssms/agent/create-an-alert-using-severity-level.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)  
   
 **Para criar um alerta com base em um evento do WMI**  
   
 -   [SQL Server Management Studio](../../ssms/agent/create-a-wmi-event-alert.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)  
   
 **Para definir uma resposta a um alerta**  
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)  
   
 **Para criar uma mensagem de erro de evento definida pelo usuário**  
   
--   [Transact-SQL](https://msdn.microsoft.com/54746d30-f944-40e5-a707-f2d9be0fb9eb)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)  
   
 **Para modificar uma mensagem de erro de evento definida pelo usuário**  
   
--   [Transact-SQL](https://msdn.microsoft.com/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
   
 **Para excluir uma mensagem de erro de evento definida pelo usuário**  
   
--   [Transact-SQL](https://msdn.microsoft.com/17287a15-cdde-43d1-bb18-9f920bc15db8)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)  
   
 **Para desabilitar ou reativar um alerta**  
   
 -   [SQL Server Management Studio](../../ssms/agent/disable-or-reactivate-an-alert.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
-[sp_update_alert (Transact-SQL)](https://msdn.microsoft.com/bcd731b1-3c4e-4086-b58a-af7a3af904ad)  
-  
+[sp_update_alert (Transact-SQL)](../../relational-databases/performance-monitor/use-sql-server-objects.md)  

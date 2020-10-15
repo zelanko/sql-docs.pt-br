@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32adf127957504d85d071e7b59ad0ab6a0590547
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abc9fccd9c81f26b872a991c05a2d653384ad123
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462938"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036890"
 ---
 # <a name="registered-servers-f1-help"></a>Ajuda F1 dos Servidores Registrados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Essa seção contém a Ajuda F1 para o componente Servidores Registrados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ela descreve as várias opções disponíveis.
   
- Para saber mais sobre Servidores Registrados e obter links para saber o que fazer com eles, vá para o tópico [Registrar servidores](../../tools/sql-server-management-studio/register-servers.md) . 
+ Para saber mais sobre Servidores Registrados e obter links para saber o que fazer com eles, vá para o tópico [Registrar servidores](./register-servers.md) . 
  
 
  Clique para salvar as configurações de Servidores Registrados. 
@@ -147,4 +147,3 @@ ms.locfileid: "88462938"
 
  
  
-  

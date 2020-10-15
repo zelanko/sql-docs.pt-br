@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8981ada42e88eadcb263e01dd65f1b2cf9015852
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 018a84c06eb9d74032b5d2eaf5dc7041372a14f9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480228"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037229"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opções (página Ambiente – Fontes e Cores)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,4 +83,4 @@ Marque esta caixa de seleção para exibir o texto dos itens de exibição selec
 Exibe um exemplo de estilo e tamanho de fonte e esquema de cores para valores selecionados em **Mostrar configurações de** e **Itens de exibição**. Você pode usar essa caixa de texto para visualizar os resultados à medida que experimenta opções de formatação diferentes.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Codificação de cores nos editores de códigos](../../relational-databases/scripting/color-coding-in-query-editors.md)  
+[Codificação de cores nos editores de códigos](../scripting/color-coding-in-query-editors.md)

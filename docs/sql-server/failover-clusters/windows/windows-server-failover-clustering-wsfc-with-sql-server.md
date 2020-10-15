@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9854bef628a04871e0c173847651df0b64c83088
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3340ba57a0b316c9a58fbf1b0c65d7ca01f3e1ee
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896660"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988105"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clustering de Failover do Windows Server com o SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85896660"
   
 -   **Coordenação de failover.** Cada recurso é configurado para ser hospedado em um nó primário, e cada um deles pode ser transferido automática ou manualmente para um ou mais nós secundários. Uma política de failover baseado em integridade controla a transferência automática de propriedade de recurso entre nós. Os nós e os aplicativos hospedados são notificados quando ocorre um failover para que possam reagir de maneira apropriada.  
   
- Para obter mais informações, consulte: [Visão geral do Clustering de Failover – Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)  
+ Para obter mais informações, consulte: [Visão geral do Clustering de Failover – Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> Tecnologias do SQL Server AlwaysOn e WSFC  
  O [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* é uma solução de alta disponibilidade e recuperação de desastre que aproveita o WSFC. Os recursos do Always On fornecem soluções integradas e flexíveis, que aumentam a disponibilidade do aplicativo, fornecem melhores retornos sobre os investimentos de hardware e simplificam a implantação e o gerenciamento de alta disponibilidade.  
@@ -85,7 +85,7 @@ ms.locfileid: "85896660"
 >  Para obter mais informações, consulte: [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Alta disponibilidade em nível de instância com Instâncias de Cluster de Failover AlwaysOn  
- Uma FCI *(Instância de Cluster de Failover)* Always On é uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instalada em nós em um WSFC. Esse tipo de instância depende dos recursos de armazenamento e do nome da rede virtual. O armazenamento pode usar Fibre Channel, iSCSI, FCoE ou SAS para armazenamento em disco compartilhado ou usar armazenamento anexado localmente com [S2D (Espaços de Armazenamento Diretos)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). O recurso de nome de rede virtual depende de um ou mais endereços IP virtuais, cada um em uma sub-rede diferente. O serviço SQL Server e o serviço SQL Server Agent também são recursos e ambos dependem dos recursos de nome de rede virtual e armazenamento.  
+ Uma FCI *(Instância de Cluster de Failover)* Always On é uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instalada em nós em um WSFC. Esse tipo de instância depende dos recursos de armazenamento e do nome da rede virtual. O armazenamento pode usar Fibre Channel, iSCSI, FCoE ou SAS para armazenamento em disco compartilhado ou usar armazenamento anexado localmente com [S2D (Espaços de Armazenamento Diretos)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview). O recurso de nome de rede virtual depende de um ou mais endereços IP virtuais, cada um em uma sub-rede diferente. O serviço SQL Server e o serviço SQL Server Agent também são recursos e ambos dependem dos recursos de nome de rede virtual e armazenamento.  
   
  No caso de um failover, o serviço WSFC transfere a propriedade dos recursos da instância para um nó de failover designado. A instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é então reiniciada no nó de failover e os bancos de dados são recuperados da maneira usual. Em qualquer momento determinado, apenas um único nó do cluster pode hospedar a FCI e os recursos subjacentes.  
   
@@ -175,13 +175,13 @@ ms.locfileid: "85896660"
   
 -   [Tecnologias do Windows Server: clusters de failover](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
--   [Visão geral de S2D \((Espaços de Armazenamento Diretos)\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [Visão geral de S2D \((Espaços de Armazenamento Diretos)\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
 -   [Clusters de failover no Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [Exibir eventos e logs de um cluster de failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Cluster de failover Get-ClusterLog do cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Cluster de failover Get-ClusterLog do cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instâncias do cluster de failover do AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
@@ -190,4 +190,3 @@ ms.locfileid: "85896660"
  [Política de failover para instâncias de cluster de failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Recuperação de desastre do WSFC por meio de quorum forçado (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [O SQL Server 2016 dá suporte a Espaços de Armazenamento Diretos do Windows Server 2016](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
-  

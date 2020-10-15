@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d0532f2705a926cc9395e62759aef3eb1dc9f69
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 69458d99f5c7a594915c2539b57e01102df1042e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858666"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988091"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Locais de arquivos para instâncias padrão e nomeadas do SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -142,7 +142,6 @@ Observe que a unidade padrão para locais de arquivo é *systemdrive*, normalmen
 >  Espera-se que os arquivos de dados sempre estejam localizados em um diretório filho denominado Data. Por exemplo, especifique C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\ para especificar o caminho raiz para o diretório de dados dos bancos de dados do sistema durante a atualização quando os arquivos de dados forem encontrados em C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\MSSQL\Data.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
- [Configuração do Analysis Services - diretórios de dados](https://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
-  
+ [Configuração do Mecanismo de Banco de Dados – Diretórios de dados](../../database-engine/install-windows/install-sql-server.md)   
+ [Configuração do Analysis Services - diretórios de dados](../../database-engine/install-windows/install-sql-server.md)  
   

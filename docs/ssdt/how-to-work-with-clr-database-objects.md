@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893854"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988679"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Como fazer: Trabalhar com objetos de banco de dados CLR
 
-Além da linguagem de programação Transact\-SQL, você pode usar as linguagens .NET Framework para criar objetos de banco de dados que recuperam e atualizam dados. Objetos de banco de dados que são gravados em código gerenciado são chamados objetos de banco de dados CLR (Common Language Runtime) do SQL Server. Para obter uma explicação das vantagens de usar objetos de banco de dados CLR hospedados no SQL Server e também para saber como escolher entre o Transact\-SQL e o CLR, confira [Vantagens da integração CLR](../relational-databases/clr-integration/clr-integration-overview.md) e [Vantagens de usar código gerenciado para criar objetos de bancos de dados](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
+Além da linguagem de programação Transact\-SQL, você pode usar as linguagens .NET Framework para criar objetos de banco de dados que recuperam e atualizam dados. Objetos de banco de dados que são gravados em código gerenciado são chamados objetos de banco de dados CLR (Common Language Runtime) do SQL Server. Para obter uma explicação das vantagens de usar objetos de banco de dados CLR hospedados no SQL Server e também para saber como escolher entre o Transact\-SQL e o CLR, confira [Vantagens da integração CLR](../relational-databases/clr-integration/clr-integration-overview.md) e [Vantagens de usar código gerenciado para criar objetos de bancos de dados](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100)).  
   
 Para criar um objeto de banco de dados CLR usando o SQL Server Data Tools, crie um projeto de banco de dados e adicione um objeto de banco de dados CLR a ele. Ao contrário de versões anteriores do Visual Studio, você não precisa criar um projeto CLR separado e depois adicionar uma referência a ele do projeto de banco de dados. Quando você compila e publica o projeto de banco de dados, publica automaticamente os objetos CLR no projeto ao mesmo tempo. Depois que você publicar esses objetos CLR, eles poderão ser chamados e executados como qualquer outro objeto de banco de dados.  
   
@@ -29,7 +29,7 @@ As páginas de propriedades CLR e Compilação CLR contêm muitas configuraçõe
   
 Para habilitar a depuração de objetos de banco de dados CLR, abra o **Pesquisador de Objetos do SQL Server**. Clique com o botão direito do mouse no servidor que contém os artefatos do banco de dados CLR que você deseja depurar e escolha **Permitir Depuração SQL/CLR**. Uma caixa de mensagem será exibida com o aviso: "Observe que, durante a depuração, todos os threads gerenciados neste servidor serão interrompidos. Deseja habilitar a depuração SQL CLR neste servidor?". Quando você estiver depurando objetos de banco de dados CLR, a interrupção da execução interromperá todos os threads no servidor, afetando outros usuários. Por esse motivo, você não deve depurar aplicativos para objetos de banco de dados CLR em um servidor de produção. Você também deve observar que, depois de iniciar a depuração, será tarde demais para alterar as configurações no **Pesquisador de Objetos do SQL Server**. As alterações feitas no **Pesquisador de Objetos do SQL Server** não entrarão em vigor até que a próxima sessão de depuração seja iniciada.  
   
-Para saber mais sobre os requisitos de compilação de objetos de banco de dados CLR, consulte [Criar objetos de banco de dados com a integração CLR (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx).  
+Para saber mais sobre os requisitos de compilação de objetos de banco de dados CLR, consulte [Criar objetos de banco de dados com a integração CLR (Common Language Runtime)](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
   
 > [!WARNING]  
 > Os procedimentos a seguir usam entidades criadas em procedimentos anteriores nas seções [Desenvolvimento de banco de dados conectado](../ssdt/connected-database-development.md) e [Desenvolvimento de banco de dados offline orientado a projetos](../ssdt/project-oriented-offline-database-development.md).  
@@ -103,6 +103,5 @@ Para saber mais sobre os requisitos de compilação de objetos de banco de dados
   
 ## <a name="see-also"></a>Consulte Também  
 [Vantagens da integração CLR](../relational-databases/clr-integration/clr-integration-overview.md)  
-[Vantagens de usar código gerenciado para criar objetos de banco de dados](https://msdn.microsoft.com/library/k2e1fb36.aspx)  
-[Criando objetos de banco de dados com a integração CLR (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx)  
-  
+[Vantagens de usar código gerenciado para criar objetos de banco de dados](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))  
+[Criando objetos de banco de dados com a integração CLR (Common Language Runtime)](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  

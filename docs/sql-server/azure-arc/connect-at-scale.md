@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990349"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988002"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Conectar as instâncias do SQL Server com o Azure Arc em escala
 
-Você pode conectar várias instâncias do SQL Server instaladas em vários computadores Windows ou Linux ao Azure Arc usando o mesmo [script gerado para um único computador](connect.md). O script se conectará a cada computador e registrará o computador e as instâncias do SQL Server instaladas nele no Azure Arc. Para obter a melhor experiência possível, é recomendado usar uma [entidade de serviço](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals) do Azure Active Directory. Uma entidade de serviço é uma identidade de gerenciamento limitada especial que recebe apenas a permissão mínima necessária para conectar computadores ao Azure e criar os recursos do Azure para o servidor habilitado para o Azure Arc e o SQL Server habilitado para o Azure Arc. Isso é mais seguro do que usar uma conta com privilégios maiores como um Administrador de Locatários e segue nossas melhores práticas de segurança de controle de acesso.  
+Você pode conectar várias instâncias do SQL Server instaladas em vários computadores Windows ou Linux ao Azure Arc usando o mesmo [script gerado para um único computador](connect.md). O script se conectará a cada computador e registrará o computador e as instâncias do SQL Server instaladas nele no Azure Arc. Para obter a melhor experiência possível, é recomendado usar uma [entidade de serviço](/azure/active-directory/develop/app-objects-and-service-principals) do Azure Active Directory. Uma entidade de serviço é uma identidade de gerenciamento limitada especial que recebe apenas a permissão mínima necessária para conectar computadores ao Azure e criar os recursos do Azure para o servidor habilitado para o Azure Arc e o SQL Server habilitado para o Azure Arc. Isso é mais seguro do que usar uma conta com privilégios maiores como um Administrador de Locatários e segue nossas melhores práticas de segurança de controle de acesso.  
 
 Os métodos de instalação e configuração do agente do Connected Machine requerem que o método automatizado usado tenha permissões de administrador nos computadores. No Linux, usando a conta raiz, e no Windows, como membro do grupo de Administradores Locais.
 
