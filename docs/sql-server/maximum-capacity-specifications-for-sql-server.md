@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c7335d6a9f2fd1993ce66a6fd56f0f14d111a7e9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 81a36f15a68d3b122a0ba7651c11bfb22fbfa2e2
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523038"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988552"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
 
@@ -122,7 +122,7 @@ Tamanhos e números máximos de vários objetos que foram testados no Utilitári
 |Arquivos de log por banco de dados|1|
 |Volumes por computador|3|
 
-<sup>*</sup> O número máximo de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com suporte do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode variar com base na configuração de hardware do servidor. Para obter informações de introdução, consulte [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não está disponível em todas as edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).
+<sup>*</sup> O número máximo de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com suporte do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode variar com base na configuração de hardware do servidor. Para obter informações de introdução, consulte [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não está disponível em todas as edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](./editions-and-components-of-sql-server-2016.md).
 
 ## <a name="ssnoversion-data-tier-application-objects"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objetos de aplicativo da camada de dados
 

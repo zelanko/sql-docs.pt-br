@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dc5e5817952ea19f12879079c572a3c79594e070
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43dbf8c960e45ab0b9099951b7b03b331170ad53
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895114"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987752"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Usando condições de teste nos testes de unidade do SQL Server
 
-Em um teste de unidade do SQL Server, um ou mais scripts de teste Transact\-SQL são executados. Os resultados podem ser avaliados dentro do script Transact\-SQL e THROW ou RAISERROR podem ser usados para retornar um erro e falha do teste, ou as condições de teste podem ser definidas no teste para avaliar os resultados. O teste retorna uma instância da classe [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx). A instância dessa classe contém um ou mais Conjunto de Dados, o tempo de execução e as linhas afetadas pelo script. Todas essas informações são coletadas durante a execução do script. Esses resultados podem ser avaliados usando condições de teste. O SQL Server Data Tools fornece um conjunto de condições de teste predefinidos. Você também pode criar e usar condições personalizadas; confira [Condições de teste personalizadas para testes de unidade do SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
+Em um teste de unidade do SQL Server, um ou mais scripts de teste Transact\-SQL são executados. Os resultados podem ser avaliados dentro do script Transact\-SQL e THROW ou RAISERROR podem ser usados para retornar um erro e falha do teste, ou as condições de teste podem ser definidas no teste para avaliar os resultados. O teste retorna uma instância da classe [SqlExecutionResult](/previous-versions/sql/sql-server-data-tools/jj856590(v=vs.103)). A instância dessa classe contém um ou mais Conjunto de Dados, o tempo de execução e as linhas afetadas pelo script. Todas essas informações são coletadas durante a execução do script. Esses resultados podem ser avaliados usando condições de teste. O SQL Server Data Tools fornece um conjunto de condições de teste predefinidos. Você também pode criar e usar condições personalizadas; confira [Condições de teste personalizadas para testes de unidade do SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
 ## <a name="predefined-test-conditions"></a>Condições de teste predefinidas  
 A tabela a seguir lista as condições de teste predefinidas que você pode adicionar usando o painel Condições de Teste no Designer de Teste de Unidade do SQL Server.  
@@ -92,7 +92,7 @@ Depois que você adicionar a condição de teste Soma de Verificação de Dados 
   
     A caixa de diálogo **Configuração de TestConditionName** é exibida.  
   
-5.  Especifique uma conexão com o banco de dados que você deseja testar. Para obter mais informações, confira [Como criar uma Conexão de Banco de Dados](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Especifique uma conexão com o banco de dados que você deseja testar. Para obter mais informações, confira [Como criar uma Conexão de Banco de Dados](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100)).  
   
 6.  Por padrão, o corpo de Transact\-SQL do teste é exibido no painel de edição. Você pode modificar o código, se necessário, para gerar os resultados esperados. Por exemplo, se o teste tiver código no pré-teste, talvez seja necessário adicionar esse código.  
   
@@ -122,7 +122,7 @@ Depois que você adicionar a condição de teste Esquema Esperado ao teste de un
   
     A caixa de diálogo **Configuração de TestConditionName** é exibida.  
   
-5.  Especifique uma conexão com o banco de dados que você deseja testar. Para obter mais informações, confira [Como criar uma Conexão de Banco de Dados](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Especifique uma conexão com o banco de dados que você deseja testar. Para obter mais informações, confira [Como criar uma Conexão de Banco de Dados](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100)).  
   
 6.  Por padrão, o corpo de Transact\-SQL do teste é exibido no painel de edição. Você pode modificar o código, se necessário, para gerar os resultados esperados. Por exemplo, se o teste tiver código no pré-teste, talvez seja necessário adicionar esse código.  
   
@@ -144,4 +144,3 @@ Além das seis condições de teste predefinidas, você pode escrever novas cond
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Usar asserções Transact-SQL nos testes de unidade do SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)  
 [Scripts nos testes de unidade do SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md)  
-  

@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 451776ba842c38ca306c17291404355908cb5202
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 40e30f96de60e6d6bd404ca2b00099b7ac7b01a9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901598"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036298"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Especificar uma condição de ponto de interrupção
 
@@ -52,5 +52,5 @@ A expressão especificada deve ser uma expressão Transact-SQL válida que seja 
   
 ## <a name="see-also"></a>Consulte Também
 
-- [Especificar uma contagem de ocorrências](../../relational-databases/scripting/specify-a-hit-count.md)
-- [Especificar uma ação de ponto de interrupção](../../relational-databases/scripting/specify-a-breakpoint-action.md)
+- [Especificar uma contagem de ocorrências](./specify-a-hit-count.md)
+- [Especificar uma ação de ponto de interrupção](./specify-a-breakpoint-action.md)

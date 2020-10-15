@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: a15ce5e05e54b6196d363e8967c33fa4ad190295
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d6055d14fd6edbc711c950aa194cd9b553cb3b78
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990260"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035911"
 ---
 # <a name="get-full-memory-dump"></a>Obtenha Despejo de Memória Completo
 
@@ -27,7 +27,7 @@ Neste artigo, você aprenderá a capturar informações de diagnóstico para sol
 
 Siga as etapas abaixo para capturar informações de diagnóstico para solucionar problemas.
 
-1. Baixe o [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Baixe o [ProcDump](/sysinternals/downloads/procdump).
 
 2. Descompacte-o em uma pasta.
 
@@ -61,7 +61,7 @@ Você também pode obter o despejo de memória completo do SSMS quando ele gera 
 
 Siga as etapas abaixo para capturar informações de diagnóstico para solucionar problemas de uma OutOfMemoryException do SSMS.
 
-1. Baixe o [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Baixe o [ProcDump](/sysinternals/downloads/procdump).
 
 2. Descompacte-o em uma pasta.
 

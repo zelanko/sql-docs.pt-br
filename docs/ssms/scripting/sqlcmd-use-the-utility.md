@@ -18,12 +18,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3a7425eebb86ae2afd5d9e41af51fa0badbb304
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901523"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036259"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd – Usar o utilitário
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88901523"
   
 -   Os usuários enviam um trabalho **sqlcmd** especificando uma única instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a ser executada ou apontando o utilitário para um arquivo de texto que contenha instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a serem executadas. O resultado geralmente é dirigido a um arquivo de texto, mas também pode ser exibido no prompt de comando.  
   
--   [modo SQLCMD](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+-   [modo SQLCMD](./edit-sqlcmd-scripts-with-query-editor.md) no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   SQL Server Management Objects (SMO)  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88901523"
  As linhas depois da linha `3> GO` são a saída de uma instrução `SELECT` . Depois que você gerar a saída, o `sqlcmd` redefine o prompt `sqlcmd` e exibe `1>`. Após digitar `EXIT` na linha `1>`, a janela de prompt de comando exibe a mesma linha, como fez quando você a abriu primeiramente. Isto indica que o `sqlcmd` encerrou sua sessão. Agora você pode fechar a janela de prompt de comando digitando outro comando `EXIT` .  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Executar arquivos de script Transact-SQL usando o sqlcmd  
- Você pode usar **sqlcmd** para executar arquivos de script do banco de dados. Os arquivos de script são arquivos de texto que contêm uma mistura de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , comandos do **sqlcmd** e variáveis de script. Para obter mais informações sobre como usar variáveis de script, veja [Usar sqlcmd com variáveis de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). O**sqlcmd** funciona com instruções, comandos e variáveis de script em um arquivo de script de modo semelhante ao modo como funciona com instruções e comandos inseridos interativamente. A principal diferença é que o **sqlcmd** faz a leitura por meio do arquivo de entrada sem pausa, em vez de esperar que um usuário insira as instruções, os comandos e as variáveis de script.  
+ Você pode usar **sqlcmd** para executar arquivos de script do banco de dados. Os arquivos de script são arquivos de texto que contêm uma mistura de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , comandos do **sqlcmd** e variáveis de script. Para obter mais informações sobre como usar variáveis de script, veja [Usar sqlcmd com variáveis de script](./sqlcmd-use-with-scripting-variables.md). O**sqlcmd** funciona com instruções, comandos e variáveis de script em um arquivo de script de modo semelhante ao modo como funciona com instruções e comandos inseridos interativamente. A principal diferença é que o **sqlcmd** faz a leitura por meio do arquivo de entrada sem pausa, em vez de esperar que um usuário insira as instruções, os comandos e as variáveis de script.  
   
  Existem maneiras diferentes de criar arquivos de script de banco de dados:  
   
@@ -535,9 +535,8 @@ SQLCMD -E -N -C
   
 ## <a name="more-about-sqlcmd"></a>Mais sobre sqlcmd  
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)   
- [Usar sqlcmd com variáveis de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [Editar scripts SQLCMD com o Editor de Consultas](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
+ [Usar sqlcmd com variáveis de script](./sqlcmd-use-with-scripting-variables.md)   
+ [Editar scripts SQLCMD com o Editor de Consultas](./edit-sqlcmd-scripts-with-query-editor.md)   
  [Gerenciar etapas de trabalho](../../ssms/agent/manage-job-steps.md)   
  [Criar uma etapa de trabalho CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)  
-  
   

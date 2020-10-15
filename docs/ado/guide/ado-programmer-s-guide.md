@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 985c1eff05d5b1d3323d8b99818a48258b6c5ed4
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 90b04d936d4e923da06914dddfa0d934a4996ee5
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059074"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098595"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>Guia do programador do ADO para usar objetos ADO
 Esta documentação fornece uma visão geral de como usar objetos ADO para trabalhar com dados de várias fontes de dados. Primeiro, a introdução resume os novos recursos e o requisito para instalar, usar e redistribuir o componente ADO. As seções a seguir discutem o uso dos vários tipos de objetos ADO. Por fim, os apêndices abordam vários provedores de dados e serviços fornecidos pela Microsoft, mensagens de erro e dicas sobre como usar o ADO em várias linguagens de programação, além de exemplos e um glossário.
@@ -27,7 +27,7 @@ Esta documentação fornece uma visão geral de como usar objetos ADO para traba
 
 -   [Introdução](./ado-introduction.md)
 
--   [ADO ( ActiveX Data Object)](./data/ado-fundamentals.md?view=sql-server-ver15&preserve-view=true)
+-   [ADO ( ActiveX Data Object)](./data/ado-fundamentals.md?view=sql-server-ver15)
 
 -   [RDS (serviços de dados remotos)](./remote-data-service/remote-data-service-rds.md)
 
@@ -35,4 +35,4 @@ Esta documentação fornece uma visão geral de como usar objetos ADO para traba
 
 -   [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](./extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
--   [Apêndices](./appendixes/appendix-a-providers.md?view=sql-server-ver15&preserve-view=true)
+-   [Apêndices](./appendixes/appendix-a-providers.md?view=sql-server-ver15)

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 79053a7dcf91b220bdb288fc7efc711c80684aa0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88171768"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956838"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Monitorar instruções T-SQL PREDICT com eventos estendidos nos Serviços de Machine Learning do SQL Server
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -23,7 +23,7 @@ Saiba como usar eventos estendidos para monitorar e solucionar problemas de inst
 
 ## <a name="table-of-extended-events"></a>Tabela de eventos estendidos
 
-Os seguintes eventos estendidos estão disponíveis em todas as versões do SQL Server compatíveis com a instrução T-SQL [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql). 
+Os seguintes eventos estendidos estão disponíveis em todas as versões do SQL Server compatíveis com a instrução T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md). 
 
 |name |object_type|descrição| 
 |----|----|----|
@@ -47,7 +47,7 @@ WHERE object_name LIKE `predict%'
 
 Para capturar informações sobre o desempenho de uma sessão de pontuação usando PREDICT:
 
-1. Crie uma nova sessão de evento estendido usando o Management Studio ou outra [ferramenta](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools) compatível.
+1. Crie uma nova sessão de evento estendido usando o Management Studio ou outra [ferramenta](../../relational-databases/extended-events/extended-events-tools.md) compatível.
 2. Adicione os eventos `predict_function_completed` e `predict_model_cache_hit` à sessão.
 3. Inicie a sessão de evento estendido.
 4. Execute a consulta que usa PREDICT.
@@ -82,6 +82,6 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 Para saber mais sobre eventos estendidos (às vezes chamados de XEvents) e como rastrear eventos em uma sessão, confira estes artigos:
 
 + [Monitorar scripts do Python e do R com eventos estendidos nos Serviços de Machine Learning do SQL Server](extended-events.md)
-+ [Arquitetura e conceitos de eventos estendidos](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [Configurar a captura de eventos no SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [Gerenciar sessões de evento no Pesquisador de Objetos](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [Arquitetura e conceitos de eventos estendidos](../../relational-databases/extended-events/extended-events.md)
++ [Configurar a captura de eventos no SSMS](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
++ [Gerenciar sessões de evento no Pesquisador de Objetos](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)

@@ -14,12 +14,12 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8127d6b7c38fc2ca95acea9de94fd030773e7a20
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56201dec5bb9b6a66c63f6c4bca50d90b4e27c33
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901283"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039033"
 ---
 # <a name="find-in-files"></a>Localizar em Arquivos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,10 +84,10 @@ ms.locfileid: "88901283"
  Indica como interpretar caracteres especiais digitados nas caixas de texto **Localizar** ou **Substituir por** . As opções incluem **Curingas** e **Expressões Regulares**.  
   
  **Regular Expressions**  
- Notações especiais definem padrões de texto para correspondência. Para obter uma lista, veja [Pesquisar texto com expressões regulares](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
+ Notações especiais definem padrões de texto para correspondência. Para obter uma lista, veja [Pesquisar texto com expressões regulares](./search-text-with-regular-expressions.md).  
   
  **Curingas**  
- Caracteres especiais, como asteriscos (`*`) e pontos de interrogação (`?`) representam um ou mais caracteres. Para obter uma lista, veja [Pesquisar texto com curingas](../../relational-databases/scripting/search-text-with-wildcards.md).  
+ Caracteres especiais, como asteriscos (`*`) e pontos de interrogação (`?`) representam um ou mais caracteres. Para obter uma lista, veja [Pesquisar texto com curingas](./search-text-with-wildcards.md).  
   
  **Pesquisar nestes tipos de arquivo**  
  Essa lista indica os tipos de arquivos a serem pesquisados nos diretórios especificados em **Examinar**. Se esse campo ficar em branco, serão pesquisados todos os arquivos nos diretórios especificados em **Examinar** .  
@@ -135,4 +135,4 @@ ms.locfileid: "88901283"
  Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localizar Símbolos** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

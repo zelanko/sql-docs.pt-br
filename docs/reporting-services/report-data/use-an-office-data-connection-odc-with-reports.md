@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b8fd87736e84336cc206235dd78aa76576bfdf1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 7403bdc38692d843de266a64e8b44245ee966555
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458497"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935163"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Usar uma conexão de dados do Office (.odc) com relatórios
   Em cenários limitados, você pode usar um arquivo de conexão de dados do Office (.odc) para fornecer informações sobre conexão com um relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Um arquivo .odc pode ser usado no lugar de um arquivo .rsds quando você cria uma fonte de dados compartilhados. O servidor de relatório usa um arquivo .odc do mesmo modo que usa um arquivo .rsds; ele lê o arquivo para detectar informações sobre tipo de fonte de dados, cadeia de caracteres de conexão e credenciais.  
@@ -45,7 +45,7 @@ ms.locfileid: "86458497"
   
  Se você não estiver familiarizado com arquivos .odc, pode usar as instruções a seguir para criá-los e exportá-los. Um modo simples para criar um arquivo .odc para uma fonte de dados OLE DB é usar o Excel 2007 e o Assistente para Conexão de Dados. Observe que o assistente não cria uma fonte de dados; você deverá ter uma fonte de dados externa já definida.  
   
- Um arquivo .odc existente deve ser usado apenas se for totalmente compatível com o relatório e com as consultas. Se você encontrar erros que exijam modificações significativas no relatório ou no arquivo .odc, deverá criar um novo arquivo .rsds para o relatório. Para obter mais informações sobre como criar uma fonte de dados compartilhada que usa um arquivo .rsds, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Um arquivo .odc existente deve ser usado apenas se for totalmente compatível com o relatório e com as consultas. Se você encontrar erros que exijam modificações significativas no relatório ou no arquivo .odc, deverá criar um novo arquivo .rsds para o relatório. Para obter mais informações sobre como criar uma fonte de dados compartilhada que usa um arquivo .rsds, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](/previous-versions/sql/).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>Para criar e exportar um arquivo .odc  
   
@@ -101,5 +101,4 @@ ms.locfileid: "86458497"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
-  
   

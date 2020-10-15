@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5031cafdcb62d840d26950682d3490e5f252ee72
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370842"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037237"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar ao Servidor (página Propriedades da Conexão) Mecanismo de Banco de Dados
 
@@ -76,5 +76,4 @@ Ao registrar o [!INCLUDE[ssDE](../../includes/ssde_md.md)] em **Servidores Regis
 Salve as configurações em **Servidores Registrados**.  
   
 ## <a name="see-also"></a>Consulte Também  
-[caixa de diálogo Propriedades da conexão](../../ssms/f1-help/connection-properties-dialog-box.md)  
-  
+[caixa de diálogo Propriedades da conexão]()  

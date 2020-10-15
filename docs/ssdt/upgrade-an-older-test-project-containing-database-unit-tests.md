@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 801844176680032b24e777a70acceea65f19f1f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26c12a659e702765b4d69b58d5e1b4247d7aba3c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883393"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987782"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Atualizar um projeto de teste mais antigo contendo testes de unidade de banco de dados
 
@@ -24,7 +24,7 @@ Você pode atualizar um projeto de teste mais antigo, que foi criado no Visual S
 > [!TIP]  
 > Se você estiver usando o Visual Studio 2010, depois de adicionar os testes de unidade do SQL Server a um projeto de teste, não deverá adicionar testes de unidade usando o modelo de teste de unidade de banco de dados mais antigo. Se o fizer, precisará converter para o projeto novamente antes de os testes serem executados corretamente.  
   
-Se você tiver um projeto de banco de dados de teste que foi criado em uma versão mais antiga que o Visual Studio 2010, poderá usar as informações em [Como atualizar testes de unidade de banco de dados de versões antigas do Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) para atualizar seu projeto de banco de dados para o Visual Studio 2010, antes de atualizar o projeto para o SQL Server Data Tools.  
+Se você tiver um projeto de banco de dados de teste que foi criado em uma versão mais antiga que o Visual Studio 2010, poderá usar as informações em [Como atualizar testes de unidade de banco de dados de versões antigas do Visual Studio](/previous-versions/visualstudio/visual-studio-2010/dd193412(v=vs.100)) para atualizar seu projeto de banco de dados para o Visual Studio 2010, antes de atualizar o projeto para o SQL Server Data Tools.  
   
 ### <a name="initiating-an-upgrade"></a>Iniciando uma atualização  
   
@@ -41,4 +41,3 @@ Se você tiver um projeto de banco de dados de teste que foi criado em uma vers�
   
 ## <a name="see-also"></a>Consulte Também  
 [Verificar o código do banco de dados usando os testes de unidade do SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

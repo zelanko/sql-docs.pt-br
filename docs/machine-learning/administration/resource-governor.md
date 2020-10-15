@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 20506baeb0a22e4e32fd1c4b24a7d00f4493b6d5
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283547"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956505"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Gerenciar cargas de trabalho do Python e do R com o Resource Governor nos Serviços de Machine Learning do SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,9 +38,9 @@ Por padrão, os processos externos usam até 20% da memória total do host no se
 
 Como opção, você pode criar **pools de recursos externos** personalizados, com grupos de carga de trabalho e classificadores associados, a fim de determinar a alocação de recurso para solicitações provenientes de programas, hosts ou outros critérios específicos que você definir. Um pool de recursos externos é um tipo de pool de recursos introduzido no [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] para ajudar a gerenciar os processos de R e Python externos ao mecanismo de banco de dados.
 
-1. [Habilite a governança de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (ela está desativada por padrão).
+1. [Habilite a governança de recursos](../../relational-databases/resource-governor/enable-resource-governor.md) (ela está desativada por padrão).
 
-2. Execute [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) para criar e configurar o pool de recursos, seguido por [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) para implementá-lo.
+2. Execute [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md) para criar e configurar o pool de recursos, seguido por [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) para implementá-lo.
 
 3. Crie um grupo de carga de trabalho para alocações granulares, por exemplo, entre treinamento e pontuação.
 

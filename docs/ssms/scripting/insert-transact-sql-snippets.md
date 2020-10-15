@@ -16,12 +16,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 979018404b696ef3d8a39b198d4cf115e28f068f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2998121fff0be71019539a9e40da5a06bbf9133a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901914"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039010"
 ---
 # <a name="insert-transact-sql-snippets"></a>Inserir snippets Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901914"
 ## <a name="inserting-snippets"></a>Inserindo snippets  
  Você pode usar o menu **Inserir Snippet** para abrir uma lista categorizada de snippets a serem selecionados.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Os snippets contêm pontos de substituição: texto que sugere a sintaxe pertinente àquele ponto. Por exemplo, o snippet CREATE TABLE tem pontos de substituição para elementos como o nome de tabela, nomes de coluna e tipos de dados de coluna. Após a inserção do snippet, você deve alterar o texto de substituição para formar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obter mais informações, veja [Concluir snippets Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Os snippets contêm pontos de substituição: texto que sugere a sintaxe pertinente àquele ponto. Por exemplo, o snippet CREATE TABLE tem pontos de substituição para elementos como o nome de tabela, nomes de coluna e tipos de dados de coluna. Após a inserção do snippet, você deve alterar o texto de substituição para formar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obter mais informações, veja [Concluir snippets Transact-SQL](./complete-transact-sql-snippets.md).  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>Inserindo um snippet usando o menu de snippet de inserção  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901914"
 3.  Clique duas vezes em o snippet ou selecione o snippet do seletor de snippet e pressione TAB ou ENTER.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Inserir snippets Transact-SQL com Surround](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [Inserir snippets Transact-SQL com Surround](./insert-surround-with-transact-sql-snippets.md)  
   

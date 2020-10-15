@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92a2cb347a575477d9697a8e5e5d29d989cdb816
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 966121ea88b5456b2068b87e8736685f0f064605
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901459"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036189"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Depurador do Transact-SQL – Janela Pontos de Interrupção
 
@@ -95,4 +95,4 @@ Lista todas as colunas que podem ser exibidas na janela **Pontos de Interrupçã
 
 ## <a name="see-also"></a>Consulte Também
 
-[Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
+[Depurador do Transact-SQL](./transact-sql-debugger.md)

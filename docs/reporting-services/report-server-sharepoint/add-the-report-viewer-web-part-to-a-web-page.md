@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf8f744078ccad4e755cc6d635ba999e0f077574
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 0061f824a8801db7c703df4a902b7b6cac7d10bd
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767107"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935539"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>Adicionar a web part do Visualizador de Relatórios a uma página da Web
 
@@ -55,7 +55,7 @@ Para adicionar uma web part a uma página da Web, é necessário ter a permissã
   
 ## <a name="see-also"></a>Confira também
 
- [Web part do Visualizador de Relatórios em um Site do SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Web part do Visualizador de Relatórios em um Site do SharePoint](./report-viewer-web-part-sharepoint-site.md)   
  [Personalizar a web part do Visualizador de Relatórios](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
  [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)

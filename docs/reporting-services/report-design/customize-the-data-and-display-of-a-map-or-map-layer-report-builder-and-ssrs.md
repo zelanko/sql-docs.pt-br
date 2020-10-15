@@ -22,12 +22,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdc1069f0dfd9d12307d27ec7e2309f2ef0a9aec
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5516a294c8cd3dfb331db7c447982099c513ad99
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480580"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934998"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar os dados e a exibição de um mapa ou de uma camada do mapa (Construtor de Relatórios e SSRS)
   Depois de adicionar um mapa ou uma camada do mapa a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usando um assistente, você poderá alterar a aparência do mapa no relatório. Você pode fazer melhorias considerando as seguintes ideias:  
@@ -87,7 +87,7 @@ ms.locfileid: "89480580"
   
 -   Resolução e simplificação. Escolha um equilíbrio entre o tempo de desenho e contornos detalhados para linhas e polígonos.  
   
- Para alterar estas opções, clique com o botão direito do mouse no visor do mapa, use a página [Caixa de diálogo Propriedades do Visor do Mapa, Geral](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) e as páginas relacionadas.  
+ Para alterar estas opções, clique com o botão direito do mouse no visor do mapa, use a página [Caixa de diálogo Propriedades do Visor do Mapa, Geral](./maps-report-builder-and-ssrs.md) e as páginas relacionadas.  
   
 ##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> Alterar as opções das legendas  
  As legendas ajudam os usuários a interpretar os dados em um mapa.  
@@ -122,7 +122,7 @@ ms.locfileid: "89480580"
   
  A expressão de grupo especifica o modo como os dados analíticos que têm uma relação com dados espaciais são agregados para cada elemento do mapa na camada. Por padrão, a expressão de grupo é o conjunto de campos de correspondência especificado para a relação entre os dados espaciais e os dados analíticos. Por exemplo, para um mapa de bolhas que exibe locais de cidade e o tamanho da população de um país ou região, os campos de correspondência incluem o nome da cidade [Cidade] e o nome da região [Região], porque pode haver várias cidades com o mesmo nome. A expressão de grupo correspondente inclui dois campos: [Cidade] e [Região].  
   
- Para saber mais, confira [Dicas de mapa: como importar shapefiles no SQL Server e agregar dados espaciais](https://docs.microsoft.com/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data).  
+ Para saber mais, confira [Dicas de mapa: como importar shapefiles no SQL Server e agregar dados espaciais](/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data).  
   
 ##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> Alterar opções dos elementos de mapas na camada  
  Elementos de mapas são os pontos, linhas ou polígonos em uma camada que se baseiam nos dados espaciais. As opções a seguir podem ser definidas para elementos de mapas. Estas opções se aplicam a todos os elementos de mapas na camada, estejam eles inseridos ou não:  
@@ -163,5 +163,4 @@ ms.locfileid: "89480580"
 ## <a name="see-also"></a>Consulte Também  
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
-  
   

@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/16/2018
-ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: 238df1200d88023abec54fdf3fa2c37df758f0f8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662025"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038941"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>componentes e configuração do SQL Server Management Studio
 
@@ -33,7 +33,7 @@ Este tutorial descreve os diversos componentes de janela no SSMS (SQL Server Man
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio.  
 
-* Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Instale o [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 ## <a name="sql-server-management-studio-components"></a>Componentes do SQL Server Management Studio
 
@@ -138,7 +138,7 @@ Esta seção descreve como modificar algumas configurações básicas no SSMS us
 
 O melhor modo de se familiarizar com o SSMS é praticando. Estes artigos com *tutoriais* e *instruções* ajudam nos diversos recursos disponíveis no SSMS.  Estes artigos ensinam a administrar os componentes do SSMS e a encontrar os recursos que você usa com regularidade.
 
-* [Conectar-se e consultar uma instância](connect-query-sql-server.md)
+* [Conectar-se e consultar uma instância](../quickstarts/connect-query-sql-server.md)
 * [Script](scripting-ssms.md)
 * [Usando modelos no SSMS](../template/templates-ssms.md)
 * [Mais dicas e truques para usar o SSMS](ssms-tricks.md)
