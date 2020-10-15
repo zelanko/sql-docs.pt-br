@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: 3363414382df2eb73a21dd32a9daa3a950c6907a
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 97200a4dfdaebeb77703fe420267557a3d5ad9d7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990359"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035902"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Obter dados de diagnóstico após uma falha do SQL Server Management Studio (SSMS)
 
@@ -28,7 +28,7 @@ Obtenha o despejo de memória completo do SSMS (SQL Server Management Studio) qu
 
 Siga as etapas abaixo para capturar informações de diagnóstico para solucionar problemas de falha ou falta de resposta do SSMS.
 
-1. Baixe o [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Baixe o [ProcDump](/sysinternals/downloads/procdump).
 
 2. Descompacte-o em uma pasta.
 
@@ -62,7 +62,7 @@ Você pode obter um despejo de memória completo com qualquer exceção gerencia
 
 Para capturar as informações de diagnóstico a fim de solucionar problemas de OutOfMemoryException no SSMS, siga as etapas abaixo.
 
-1. Baixe o [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Baixe o [ProcDump](/sysinternals/downloads/procdump).
 
 2. Descompacte-o em uma pasta.
 

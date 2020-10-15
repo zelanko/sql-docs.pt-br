@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 0db07a60c00e499cb86b5efb1113bbfd49807dc4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518746"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988212"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Criando e definindo testes de unidade do SQL Server
 
@@ -43,9 +43,8 @@ Na tabela a seguir, é possível localizar descrições de tarefas comuns que of
 [Executar testes de unidade do SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 Depois que você criar os testes de unidade do SQL Server, poderá executá-los na janela Modo de Teste, no Designer de Teste de Unidade do SQL Server ou usando o Team Foundation Build.  
   
-[Cenário: definir condições de teste personalizadas para testes de unidade de banco de dados](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Cenário: definir condições de teste personalizadas para testes de unidade de banco de dados](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 Você pode criar uma condição de teste personalizada para testar um comportamento que as condições de teste padrão não podem verificar.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Verificar o código do banco de dados usando os testes de unidade do SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60c533d241353c2147cfc9b473e3531364f95496
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 20246ae24d3b8916537e041218dadf4bf1e3a042
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901170"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036157"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Depurador do Transact-SQL – janela Locais
 
@@ -54,9 +54,9 @@ A janela **Locais** exibe informações sobre as expressões locais no escopo at
  Exibe o tipo de dados da expressão.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Janela de Observação](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Janela Pilha de Chamadas](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Caixa de diálogo QuickWatch](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Depurador do Transact-SQL](./transact-sql-debugger.md)   
+ [Informações do depurador Transact-SQL](./transact-sql-debugger-information.md)   
+ [Janela de Observação](./transact-sql-debugger-watch-window.md)   
+ [Janela Pilha de Chamadas](./transact-sql-debugger-call-stack-window.md)   
+ [Caixa de diálogo QuickWatch](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

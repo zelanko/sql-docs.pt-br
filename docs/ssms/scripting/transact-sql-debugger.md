@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: ea7e44a8069fc1b66c49f4bb20fbfc8ba3e1c3f7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480378"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036109"
 ---
 # <a name="transact-sql-debugger"></a>Depurador do Transact-SQL
 
@@ -47,7 +47,7 @@ O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] fornece as seguintes op�
 
     Se você desejar depurar um procedimento armazenado ou uma função, poderá avançar no módulo. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] abre uma nova janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que é preenchida com o código de origem do módulo, coloca a janela no modo de depuração e pausa a execução na primeira instrução do módulo. Em seguida, você pode navegar pelo código do módulo, por exemplo, definindo pontos de interrupção ou percorrendo o código.  
 
-Para obter mais informações sobre como o depurador permite navegar pelo código, veja [Percorrer código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+Para obter mais informações sobre como o depurador permite navegar pelo código, veja [Percorrer código Transact-SQL](./step-through-transact-sql-code.md).  
 
 ## <a name="viewing-debugger-information"></a>Como exibir informações do depurador
 
@@ -69,11 +69,11 @@ Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](.
 
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como configurar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para a depuração remota.|[Configurar regras de firewall antes de executar o Depurador do TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|Descreve como iniciar, interromper e controlar a operação do depurador.|[Executar o depurador do Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|Descreve como usar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para percorrer o código.|[Percorrer o código do Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|Descreve como usar o depurador para exibir dados [!INCLUDE[tsql](../../includes/tsql-md.md)] , como, por exemplo, parâmetros e variáveis e informações do sistema.|[Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|Descreve como configurar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para a depuração remota.|[Configurar regras de firewall antes de executar o Depurador do TSQL](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Descreve como iniciar, interromper e controlar a operação do depurador.|[Executar o depurador do Transact-SQL](./run-the-transact-sql-debugger.md)|  
+|Descreve como usar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para percorrer o código.|[Percorrer o código do Transact-SQL](./step-through-transact-sql-code.md)|  
+|Descreve como usar o depurador para exibir dados [!INCLUDE[tsql](../../includes/tsql-md.md)] , como, por exemplo, parâmetros e variáveis e informações do sistema.|[Informações do depurador Transact-SQL](./transact-sql-debugger-information.md)|  
 
 ## <a name="see-also"></a>Confira também
 
-[Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

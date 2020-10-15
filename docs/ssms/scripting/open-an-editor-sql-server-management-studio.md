@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093464"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036479"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir um editor (SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ Este tópico descreve como abrir o editor [!INCLUDE[ssDE](../../includes/ssde-md
 ### <a name="using-the-fileopen-menu"></a>Usando o menu Arquivo/Abrir  
  No menu **Arquivo** , clique em **Abrir**, navegue até um arquivo e abra-o. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre o tipo apropriado de editor para a extensão de arquivo, copia o conteúdo do arquivo na janela de editor e também abre uma caixa de diálogo de conexão, se necessário. Por exemplo, se você abrir um arquivo com extensão .sql, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá uma janela de Editor de Consulta [!INCLUDE[ssDE](../../includes/ssde-md.md)] , copiará o conteúdo do arquivo .sql e abrirá uma caixa de diálogo de conexão. Se você abrir um arquivo com uma extensão não associada a um editor específico, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá a janela do editor e copiará o conteúdo do arquivo.  
   
- Para obter mais informações, veja [Associar extensões de arquivo a um Editor de Códigos](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+ Para obter mais informações, veja [Associar extensões de arquivo a um Editor de Códigos](./associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="using-the-toolbar"></a>Usando a barra de ferramentas  
  Na barra de ferramentas **Padrão** , clique em um dos seguintes botões:  

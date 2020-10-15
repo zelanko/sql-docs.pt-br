@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1f05ea22f092573364e663165559be73857ca320
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724507"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038909"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Dicas e truques para usar o SSMS (SQL Server Management Studio)
 
@@ -41,9 +41,9 @@ Este artigo apresenta algumas dicas e truques para usar o SSMS ([!INCLUDE[ssManS
 
 Para testar as etapas deste artigo, você precisará do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de acesso a um SQL Server e de um banco de dados do AdventureWorks. 
 
-* Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Instale o [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Instalar o [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* Baixe um [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para saber como restaurar um banco de dados no SSMS, consulte [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+* Baixe um [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para saber como restaurar um banco de dados no SSMS, consulte [Restaurando um banco de dados](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Comentar/remover marca de comentário do seu código T-SQL
 
@@ -286,7 +286,7 @@ Se você estiver conectado a um alias ou a um ouvinte do Grupo de Disponibilidad
 
 O melhor modo de se familiarizar com o SSMS é praticando. Estes artigos com *tutoriais* e *instruções* ajudam nos diversos recursos disponíveis no SSMS.  Estes artigos ensinam a administrar os componentes do SSMS e a encontrar os recursos que você usa com regularidade.
 
-* [Conectar-se e consultar uma instância](connect-query-sql-server.md)
+* [Conectar-se e consultar uma instância](../quickstarts/connect-query-sql-server.md)
 * [Script](scripting-ssms.md)
 * [Usando modelos no SSMS](../template/templates-ssms.md)
 * [Configuração do SSMS](ssms-configuration.md)

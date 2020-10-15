@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662035"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038957"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>gerar script de objetos no SQL Server Management Studio
 
@@ -43,11 +43,11 @@ Para gerar script de qualquer objeto no **Pesquisador de Objetos**, clique duas 
 
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
-* Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Instale o [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Baixar [Bancos de dados de exemplo do AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-As instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+As instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurando um banco de dados](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="script-queries-from-the-gui"></a>Gerar script de consultas da GUI
 
@@ -146,7 +146,7 @@ A seção a seguir ensina como gerar o script do banco de dados, tanto usando a 
    ![Objetos de script](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > Você pode gerar scripts dos dados do banco de dados ao selecionar *Esquema e dados* na opção **Tipos de dados dos quais gerar script**. No entanto, isso não é ideal com grandes bancos de dados. Pode consumir mais memória do que o SSMS pode alocar. Essa limitação pode ser usada para bancos de dados pequenos. Se você quiser mover dados para um banco de dados maior, use o [Assistente de importação e exportação](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > Você pode gerar scripts dos dados do banco de dados ao selecionar *Esquema e dados* na opção **Tipos de dados dos quais gerar script**. No entanto, isso não é ideal com grandes bancos de dados. Pode consumir mais memória do que o SSMS pode alocar. Essa limitação pode ser usada para bancos de dados pequenos. Se você quiser mover dados para um banco de dados maior, use o [Assistente de importação e exportação](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 6. Selecione **OK** e, em seguida, selecione **Avançar**.
 
@@ -199,7 +199,7 @@ Nesta seção, você aprenderá a soltar e criar um procedimento armazenado.
 
 ## <a name="script-extended-events"></a>Gerar script de eventos estendidos
 
-Esta seção aborda como gerar o script de [eventos estendidos](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
+Esta seção aborda como gerar o script de [eventos estendidos](../../relational-databases/extended-events/extended-events.md).
 
 1. Conecte-se a um servidor que executa o SQL Server.
 
@@ -226,7 +226,7 @@ Esta seção aborda como gerar o script de [eventos estendidos](https://docs.mic
 
 O melhor modo de se familiarizar com o SSMS é praticando. Estes artigos com *tutoriais* e *instruções* ajudam nos diversos recursos disponíveis no SSMS. Estes artigos ensinam a administrar os componentes do SSMS e a encontrar os recursos que você usa com regularidade.
 
-* [Conectar-se e consultar uma instância](connect-query-sql-server.md)
+* [Conectar-se e consultar uma instância](../quickstarts/connect-query-sql-server.md)
 * [Usando modelos no SSMS](../template/templates-ssms.md)
 * [Configuração do SSMS](ssms-configuration.md)
 * [Mais dicas e truques para usar o SSMS](ssms-tricks.md)

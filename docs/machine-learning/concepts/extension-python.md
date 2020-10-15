@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9263d11f271249d7fa31b1a3f3af83a21c04c793
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8ed1adfff31afc57f50e6b5e0757370b152cd544
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173289"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956497"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>Extensão da linguagem Python nos Serviços de Machine Learning do SQL Server
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -42,8 +42,8 @@ Os pacotes do Python adicionados pela Microsoft para cargas de trabalho paralela
 
 | Biblioteca | Descrição |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | É compatível com objetos de fonte de dados e exploração, manipulação, transformação e visualização de dados. Ele é compatível com a criação de contextos de computação remota, bem como com vários modelos de machine learning escalonáveis, como **rxLinMod**. Para obter mais informações, confira o [módulo revoscalepy com o SQL Server](../python/ref-py-revoscalepy.md).  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contém algoritmos de aprendizado de máquina que foram otimizados para velocidade e precisão, bem como transformações em linha para trabalhar com texto e imagens. Para obter mais informações, confira o [módulo microsoftml com o SQL Server](../python/ref-py-microsoftml.md). |
+| [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | É compatível com objetos de fonte de dados e exploração, manipulação, transformação e visualização de dados. Ele é compatível com a criação de contextos de computação remota, bem como com vários modelos de machine learning escalonáveis, como **rxLinMod**. Para obter mais informações, confira o [módulo revoscalepy com o SQL Server](../python/ref-py-revoscalepy.md).  |
+| [**microsoftml**](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contém algoritmos de aprendizado de máquina que foram otimizados para velocidade e precisão, bem como transformações em linha para trabalhar com texto e imagens. Para obter mais informações, confira o [módulo microsoftml com o SQL Server](../python/ref-py-microsoftml.md). |
 
 Microsoftml e revoscalepy estão rigidamente acoplados; as fontes de dados usadas em microsoftml são definidas como objetos revoscalepy. Limitações de contexto de computação na transferência do revoscalepy para microsoftml. Ou seja, todas as funcionalidades estão disponíveis para operações locais, mas alternar para um contexto de computação remota requer o RxInSqlServer.
 
@@ -102,7 +102,7 @@ O diagrama a seguir resume o fluxo de trabalho geral quando os scripts são envi
 ## <a name="next-steps"></a>Próximas etapas
 
 + [módulo revoscalepy no SQL Server](../python/ref-py-revoscalepy.md)
-+ [referência de função revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [referência de função revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [Estrutura de extensibilidade no SQL Server](extensibility-framework.md)
 + [Extensões de aprendizado de máquina e R no SQL Server](extension-r.md)
 + [Obter informações sobre o pacote do Python](../package-management/python-package-information.md)

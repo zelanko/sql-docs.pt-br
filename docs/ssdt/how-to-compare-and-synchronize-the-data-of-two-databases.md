@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: e246374476c3dff300aaf6c53ee3c6e8a1896db5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519036"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987972"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Como fazer: Comparar e sincronizar os dados de dois bancos de dados
 
@@ -83,7 +83,7 @@ Para saber mais, confira [Comparar e sincronizar dados em uma ou mais tabelas co
   
     Substitua os espaços reservados (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* e *tDisplayName*) pelos valores para os bancos de dados de origem e de destino.  
   
-    Se você não especificar uma origem e um destino, a caixa de diálogo **Nova Comparação de Dados** será exibida. Para saber mais sobre os parâmetros para o comando Sql.NewDataComparison, confira a [Referência de comandos de automação para os recursos do banco de dados do Visual Studio Team System](https://msdn.microsoft.com/library/dd470565.aspx).  
+    Se você não especificar uma origem e um destino, a caixa de diálogo **Nova Comparação de Dados** será exibida. Para saber mais sobre os parâmetros para o comando Sql.NewDataComparison, confira a [Referência de comandos de automação para os recursos do banco de dados do Visual Studio Team System](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100)).  
   
     Os dados nos bancos de dados de origem e destino especificados são comparados. Os resultados aparecem na sessão Comparação de Dados. Para saber mais sobre como exibir resultados ou sincronizar os dados, confira [Exibir diferenças de dados](#ViewDifferences) e [Sincronizar dados do banco de dados](#Synchronize).  
   
@@ -168,4 +168,3 @@ Depois de comparar os dados em dois bancos de dados, você poderá sincronizá-l
   
 ## <a name="see-also"></a>Consulte Também  
 [Comparar e sincronizar dados em uma ou mais tabelas com dados em um banco de dados de referência](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)  
-  

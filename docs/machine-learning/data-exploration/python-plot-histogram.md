@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1a946efdd8da5a64d2475164a1b8057c7b41554f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: c1f30230b00258b5f5f662a99c2d75c29ea7ba8d
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226816"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956787"
 ---
 # <a name="plot-histograms-in-python"></a>Plotar histogramas no Python 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -28,11 +28,11 @@ Este artigo descreve como plotar os dados usando o pacote [pandas'.hist()](https
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Banco de Dados SQL do Azure. Para saber como se inscrever, confira [Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+* Banco de Dados SQL do Azure. Para saber como se inscrever, confira [Banco de Dados SQL do Azure](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart).
+* Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira [Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/instance-create-quickstart).
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) para restaurar o banco de dados de exemplo na Instância Gerenciada de SQL do Azure.
 ::: moniker-end
@@ -93,5 +93,3 @@ df.hist(bins=10)
 A exibição mostra a distribuição etária de clientes na tabela FactInternetSales.
 
 ![Histograma do Pandas](./media/python-histogram.png)
-
-

@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d0d43fe140f2165b19cb38a6c8d7391428a14e93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a66f57b77b5d92bf39795533a29faacacdf01b95
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370837"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037609"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Criar um servidor de gerenciamento central e grupo de servidor
 
@@ -65,7 +65,7 @@ Este tópico descreve como designar uma instância do [!INCLUDE[ssNoVersion](../
   
 4.  Em **Servidor Registrado**, digite um nome de servidor e uma descrição opcional.  
   
-5.  Na guia de **Propriedades da Conexão**, analise ou modifique as propriedades da rede e da conexão. Para obter mais informações, consulte [Conectar ao Servidor &#40;página Propriedades da Conexão&#41; Mecanismo de Banco de Dados](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)  
+5.  Na guia de **Propriedades da Conexão**, analise ou modifique as propriedades da rede e da conexão. Para obter mais informações, consulte [Conectar ao Servidor &#40;página Propriedades da Conexão&#41; Mecanismo de Banco de Dados](../f1-help/connect-to-server-connection-properties-page-database-engine.md)  
   
 6.  Clique em **Testar**para testar a conexão.  
   
@@ -79,13 +79,12 @@ Este tópico descreve como designar uma instância do [!INCLUDE[ssNoVersion](../
   
 3.  Em **Servidores Registrados**, clique com o botão direito do mouse no grupo de servidores e clique em **Novo Registro de Servidor**.  
   
-4.  Em Novo Registro de Servidor, selecione uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Criar um novo servidor registrado &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md). Adicione mais servidores conforme apropriado.  
+4.  Em Novo Registro de Servidor, selecione uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Criar um novo servidor registrado &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md). Adicione mais servidores conforme apropriado.  
   
 #### <a name="to-execute-queries-against-several-configuration-targets-at-the-same-time"></a>Para executar consultas em vários destinos de configuração ao mesmo tempo  
   
--   Depois de criar um servidor de gerenciamento central, um ou mais grupos de servidores e um ou mais servidores registrados, você poderá executar consultas simultâneas no grupo inteiro. Para obter mais informações sobre como executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nos servidores em um grupo de servidores ao mesmo tempo, consulte [Executar instruções em vários servidores simultaneamente &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
+-   Depois de criar um servidor de gerenciamento central, um ou mais grupos de servidores e um ou mais servidores registrados, você poderá executar consultas simultâneas no grupo inteiro. Para obter mais informações sobre como executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nos servidores em um grupo de servidores ao mesmo tempo, consulte [Executar instruções em vários servidores simultaneamente &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administrar vários servidores usando os Servidores de Gerenciamento Centrais](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

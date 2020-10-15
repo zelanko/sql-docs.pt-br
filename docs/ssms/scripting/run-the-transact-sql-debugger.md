@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901955"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036374"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Executar o depurador Transact-SQL
 
@@ -42,7 +42,7 @@ Você pode iniciar o depurador do [!INCLUDE[tsql](../../includes/tsql-md.md)] de
 
 Os requisitos para iniciar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] são os seguintes:
 
-- Se seu Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em outro computador, você deverá ter configurado o depurador para depuração remota. Para obter mais informações, veja [Configurar regras de firewall antes de executar o Depurador TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
+- Se seu Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em outro computador, você deverá ter configurado o depurador para depuração remota. Para obter mais informações, veja [Configurar regras de firewall antes de executar o Depurador TSQL](./configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] deve estar sendo executado sob uma conta do Windows que seja membro da função de servidor fixa sysadmin.
 
@@ -114,8 +114,8 @@ Os requisitos para iniciar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md
   
 ## <a name="see-also"></a>Consulte Também
 
-- [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Percorrer o código do Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Depurador do Transact-SQL](./transact-sql-debugger.md)
+- [Percorrer o código do Transact-SQL](./step-through-transact-sql-code.md)
+- [Informações do depurador Transact-SQL](./transact-sql-debugger-information.md)
+- [Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [Estatísticas de consulta dinâmica](../../relational-databases/performance/live-query-statistics.md)

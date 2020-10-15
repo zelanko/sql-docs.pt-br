@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 30869fbd4c9a57c068b56d638495cce76ac23789
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518816"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988690"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Como fazer: Criar um teste de unidade do SQL Server vazio
 
@@ -96,10 +96,9 @@ Depois que você configurar o projeto de teste e criar o teste de unidade, estas
 -   Adicione condições de teste ou outra instrução de asserção para verificar os resultados do script.  
   
 > [!NOTE]  
-> A condição de teste Inconclusivo é a condição padrão adicionada a cada teste. Ela é incluída para indicar que a verificação de teste não foi implementada. Exclua essa condição do teste depois que você tiver adicionado outras condições. Para obter mais informações, confira [Como adicionar condições de teste a testes de unidade de banco de dados](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> A condição de teste Inconclusivo é a condição padrão adicionada a cada teste. Ela é incluída para indicar que a verificação de teste não foi implementada. Exclua essa condição do teste depois que você tiver adicionado outras condições. Para obter mais informações, confira [Como adicionar condições de teste a testes de unidade de banco de dados](/previous-versions/visualstudio/visual-studio-2010/aa833242(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Como: Executar testes de unidade do SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Criar testes de unidade](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
-  
+[Criar testes de unidade](/previous-versions/visualstudio/visual-studio-2008/ms182523(v=vs.90))  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb1c05534ef2ce73caeccd4f6f1bf4fee3d10063
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e06f6e6b667092b6b27871a48724afc0498bf34a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497369"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037636"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Opções (Pesquisador de Objetos – Comandos do SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,5 +45,4 @@ Especifica o número de linhas a serem retornadas quando você estiver editando 
 Especifica o número de linhas a serem retornadas especificado no script do Editor de Consultas criado. O padrão é 1000 linhas.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Auditoria do SQL Server (Mecanismo de Banco de Dados)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
-  
+[Auditoria do SQL Server (Mecanismo de Banco de Dados)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

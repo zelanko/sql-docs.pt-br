@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30097342700a9daccb6107f5fafe9e5acef3e225
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4a4f32c73d1fdf0cd47caaa031321eaa0ef52092
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179226"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956735"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>SQL Server 2019 no Windows: Alterações de isolamento nos Serviços de Machine Learning
 [!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -24,7 +24,7 @@ Para obter mais informações, confira como instalar os [Serviços de Machine Le
 
 ## <a name="changes-to-isolation-mechanism"></a>Alterações no mecanismo de isolamento
 
-No Windows, a instalação do SQL Server 2019 altera o mecanismo de isolamento para processos externos. Essa alteração substitui as contas de trabalho locais por [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), uma tecnologia de isolamento para aplicativos cliente em execução no Windows. 
+No Windows, a instalação do SQL Server 2019 altera o mecanismo de isolamento para processos externos. Essa alteração substitui as contas de trabalho locais por [AppContainers](/windows/desktop/secauthz/appcontainer-isolation), uma tecnologia de isolamento para aplicativos cliente em execução no Windows. 
 
 Não há itens de ação específicos para o administrador como resultado da modificação. Em um servidor novo ou atualizado, todos os scripts externos e códigos executados de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) seguem o novo modelo de isolamento automaticamente. 
 
@@ -39,7 +39,7 @@ Embora o modelo de isolamento tenha sido alterado, o assistente de instalação 
 
 Nas versões anteriores, o **SQLRUserGroup** continha um pool de contas de usuário local do Windows (MSSQLSERVER00-MSSQLSERVER20) usadas para isolar e executar processos externos. Quando um processo externo era necessário, o serviço do SQL Server Launchpad pegava uma conta disponível e a usava para executar um processo. 
 
-No SQL Server 2019, a instalação não cria mais contas de trabalho locais. Em vez disso, o isolamento é obtido por meio de [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). No tempo de execução, quando o script incorporado ou o código é detectado em um procedimento armazenado ou consulta, o SQL Server chama o Launchpad com uma solicitação para um inicializador específico da extensão. O Launchpad invoca o ambiente de runtime apropriado em um processo sob sua identidade e instancia um AppContainer para contê-lo. Essa alteração é benéfica porque o gerenciamento de conta local e de senha não é mais necessário. Além disso, em instalações em que as contas de usuário local são proibidas, a eliminação da dependência de conta de usuário local significa que agora você pode usar esse recurso.
+No SQL Server 2019, a instalação não cria mais contas de trabalho locais. Em vez disso, o isolamento é obtido por meio de [AppContainers](/windows/desktop/secauthz/appcontainer-isolation). No tempo de execução, quando o script incorporado ou o código é detectado em um procedimento armazenado ou consulta, o SQL Server chama o Launchpad com uma solicitação para um inicializador específico da extensão. O Launchpad invoca o ambiente de runtime apropriado em um processo sob sua identidade e instancia um AppContainer para contê-lo. Essa alteração é benéfica porque o gerenciamento de conta local e de senha não é mais necessário. Além disso, em instalações em que as contas de usuário local são proibidas, a eliminação da dependência de conta de usuário local significa que agora você pode usar esse recurso.
 
 Conforme implementado pelo SQL Server, os AppContainers são um mecanismo interno. Embora você não veja evidências físicas de AppContainers no monitor de processos, pode encontrá-las em regras de firewall de saída criadas pela instalação para impedir que processos façam chamadas de rede.
 

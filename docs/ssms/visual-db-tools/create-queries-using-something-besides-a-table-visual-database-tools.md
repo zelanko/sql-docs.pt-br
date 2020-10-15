@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3c5f6cf27b08c761f4c1b36618bd207c5187f154
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e33f45c9fc5e3219db2731922d0f1c83ff751084
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468396"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037512"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Criar consultas usando algo além de uma tabela (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -143,5 +143,4 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-"VPA30890F" é a emp_id do gerente cuja organização você quer recuperar. Para obter mais informações sobre como adicionar uma função definida pelo usuário a uma consulta, veja [Adicionar tabelas a consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Para uma descrição completa de funções definidas pelo usuário, consulte [Funções definidas pelo usuário](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
-  
+"VPA30890F" é a emp_id do gerente cuja organização você quer recuperar. Para obter mais informações sobre como adicionar uma função definida pelo usuário a uma consulta, veja [Adicionar tabelas a consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Para uma descrição completa de funções definidas pelo usuário, consulte [Funções definidas pelo usuário](../../relational-databases/user-defined-functions/user-defined-functions.md).  

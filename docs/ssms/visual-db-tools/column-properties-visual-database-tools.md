@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2228819de295edf29d5b2b1ca6bfcc43626a42a0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480071"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038907"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Mostra o nome da fonte dos dados para a coluna selecionada. (Aplica-se somente a
 Expande para mostrar as propriedades restantes.  
   
 **Tipo de Dados**  
-Mostra o tipo de dados da coluna selecionada. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Mostra o tipo de dados da coluna selecionada. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Incremento de Identidade**  
 Mostra o incremento a ser adicionado à **Semente de Identidade** para cada linha seguinte da coluna de identidade. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
@@ -95,7 +95,7 @@ Exibe o nome da coluna. Para editar o nome, digite-o na caixa de texto.
 Mostra se o tipo de dados da coluna permite ou não valores nulos.  
   
 **Tipo de Dados**  
-Mostra o tipo de dados para a coluna selecionada. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Mostra o tipo de dados para a coluna selecionada. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Valor Padrão ou Associação**  
 Mostra o padrão para essa coluna quando nenhum valor for especificado para essa coluna. A lista suspensa contém todos os padrões gerais definidos na fonte de dados. Para associar a coluna a um padrão geral, faça a seleção na lista suspensa. Alternativamente, para criar uma restrição padrão para a coluna, digite o valor padrão diretamente como texto.  
@@ -143,7 +143,7 @@ Mostra que coluna é usada para definir o tipo de documento de uma coluna do tip
 Indica a linguagem usada para indexar a coluna.  
   
 **Semântica Estatística**  
-Especifique se habilitará a semântica estatística da coluna selecionada. Para obter mais informações, consulte [Espaço reservado Pesquisa semântica](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Especifique se habilitará a semântica estatística da coluna selecionada. Para obter mais informações, consulte [Espaço reservado Pesquisa semântica](../../relational-databases/search/semantic-search-sql-server.md).  
   
 Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será definida como **Não** e não poderá ser modificada. Se você selecionar **Sim** na opção **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na coluna **Idioma** serão restringidos a esses para os quais o Modelo de Idioma Semântico oferece suporte.  
   
@@ -188,4 +188,3 @@ Mostra o tamanho em bytes permitido pelo tipo de dados de coluna. Por exemplo, u
   
 > [!NOTE]  
 > O comprimento de um tipo de dados **varchar(max)** varia para cada linha. sp_help retorna (-1) como o comprimento de colunas **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] exibe -1 como o tamanho de coluna.  
-  

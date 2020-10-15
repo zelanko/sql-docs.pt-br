@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882917"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987932"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Passo a passo: Criar e executar um teste de unidade do SQL Server
 
@@ -40,7 +40,7 @@ Neste passo a passo, você executará as seguintes tarefas:
 Depois que um dos testes de unidade detecta um erro em um procedimento armazenado, você corrige esse erro e executa o teste novamente.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
-Para concluir esse passo a passo, você precisa se conectar a um servidor de banco de dados (ou banco de dados LocalDB) no qual tenha permissões para criar e implantar um banco de dados. Para saber mais, confira [Permissões necessárias para os recursos de banco de dados do Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+Para concluir esse passo a passo, você precisa se conectar a um servidor de banco de dados (ou banco de dados LocalDB) no qual tenha permissões para criar e implantar um banco de dados. Para saber mais, confira [Permissões necessárias para os recursos de banco de dados do Visual Studio](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100)).  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Criar um script que contenha um esquema de banco de dados  
   
@@ -992,4 +992,3 @@ Após estabelecer uma linha de base, você poderá criar e modificar objetos de 
 [Verificar o código do banco de dados usando os testes de unidade do SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Como: Criar um teste de unidade do SQL Server vazio](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [Como: configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  
