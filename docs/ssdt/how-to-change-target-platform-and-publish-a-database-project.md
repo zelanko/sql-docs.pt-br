@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942462"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987212"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Como fazer: Alterar a plataforma de destino e publicar um projeto de banco de dados
 
@@ -43,7 +43,7 @@ O SSDT também simplifica essa tarefa reconhecendo a plataforma de destino e det
   
 3.  Observe que o erro a seguir aparece no painel **Lista de Erros**: SQL70015: 'Esquema de particionamento e referência a grupo de arquivos' não tem suporte no SQL Azure.  
   
-    O SSDT valida automaticamente seu script com base na plataforma de destino. Neste caso, como o grupo de arquivos não tem suporte no SQL Azure, o SSDT retorna um erro. Para obter uma lista de instruções do Transact\-SQL sem suporte no SQL Azure, confira [Instruções Transact-SQL com suporte parcial (Banco de Dados SQL do Microsoft Azure)](https://msdn.microsoft.com/library/ee336267.aspx).  
+    O SSDT valida automaticamente seu script com base na plataforma de destino. Neste caso, como o grupo de arquivos não tem suporte no SQL Azure, o SSDT retorna um erro. Para obter uma lista de instruções do Transact\-SQL sem suporte no SQL Azure, confira [Instruções Transact-SQL com suporte parcial (Banco de Dados SQL do Microsoft Azure)](/previous-versions/azure/ee336267(v=azure.100)).  
   
 4.  Remova a cláusula `ON` . Observe que o erro desaparece imediatamente da **Lista de Erros**.  
   
@@ -68,4 +68,3 @@ O SSDT também simplifica essa tarefa reconhecendo a plataforma de destino e det
 **Um projeto que especifica o Microsoft SQL Server 2012 como a plataforma de destino pode enfrentar problemas de compatibilidade com o SQL Server 2008**   Se tal projeto contiver entidades (por exemplo, um objeto Sequence) introduzidas no Microsoft SQL Server 2012, a operação de publicação falhará.  
   
 A implantação falhará se os predicados de objeto usarem **CONTAINS** ou **FREETEXT** em um índice de texto completo recém-criado e se scripts transacionais forem utilizados. Se a opção para incluir scripts transacionais for habilitada durante a implantação, os procedimentos e as exibições serão definidos dentro de uma transação, enquanto um índice de texto completo é definido fora de uma transação no fim do script de implantação. Devido a essa classificação no script, os procedimentos ou as exibições que usam CONTAINS ou FREETEXT não serão resolvidos em relação ao índice de texto completo resultando em um erro de implantação.  
-  

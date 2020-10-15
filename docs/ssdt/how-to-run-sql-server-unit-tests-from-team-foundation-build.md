@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893920"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987532"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Como fazer: executar testes de unidade do SQL Server no Team Foundation Build
 
@@ -23,15 +23,15 @@ Você pode usar o Team Foundation Build para executar os testes de unidade do SQ
   
 -   [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Como: configurar e executar testes agendados depois de criar seu aplicativo](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Como: configurar e executar testes agendados depois de criar seu aplicativo](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100))  
   
--   [Criar uma definição de build básica](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Criar uma definição de build básica](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
   
 Antes de executar esses procedimentos, primeiro você deve configurar o ambiente de trabalho realizando as seguintes tarefas:  
   
 -   Instale o Team Foundation Build e o controle de versão do Team Foundation. Você provavelmente tem que instalar o Team Foundation Build e o controle de versão do Team Foundation em computadores diferentes.  
   
--   Instale o Microsoft SQL Server Data Tools Build Utilities no mesmo computador que o Team Foundation Build. Para instalar o SQL Server Data Tools Build Utilities, primeiro realize um ponto de instalação administrativo. Para saber mais sobre um ponto de instalação administrativo, confira [Instalar o SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md). Em seguida, instale o SSDTBuildUtilties.msi no servidor de compilação do local (/location) usado para o ponto de instalação administrativo.  
+-   Instale o Microsoft SQL Server Data Tools Build Utilities no mesmo computador que o Team Foundation Build. Para instalar o SQL Server Data Tools Build Utilities, primeiro realize um ponto de instalação administrativo. Para saber mais sobre um ponto de instalação administrativo, confira [Instalar o SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md). Em seguida, instale o SSDTBuildUtilties.msi no servidor de compilação do local (/location) usado para o ponto de instalação administrativo.  
   
 -   Conecte-se a uma instância do Visual Studio Team Foundation Server.  
   
@@ -215,22 +215,22 @@ Neste procedimento, você faz o check-in de todos os arquivos da solução. Esse
   
 1.  Conecte-se a um computador que esteja executando o Team Foundation Build.  
   
-    Para saber mais, confira [Usar o Source Control Explorer](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    Para saber mais, confira [Usar o Source Control Explorer](/previous-versions/visualstudio/visual-studio-2010/ms181370(v=vs.100)).  
   
 2.  Se sua solução ainda não estiver no controle do código-fonte, adicione-a a ele.  
   
-    Para saber mais, confira [Adicionar um projeto ou solução ao controle de versão](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    Para saber mais, confira [Adicionar um projeto ou solução ao controle de versão](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100)).  
   
 3.  Clique em **Exibir** e clique em **Check-ins Pendentes**.  
   
 4.  Faça check-in de todos os arquivos da solução.  
   
-    Para saber mais, confira [Fazer check-in das alterações pendentes](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    Para saber mais, confira [Fazer check-in das alterações pendentes](/previous-versions/visualstudio/visual-studio-2010/ms181411(v=vs.100)).  
   
     > [!NOTE]  
     > Você poderia ter um processo de equipe específico que determinasse como os testes automatizados são criados e gerenciados. Por exemplo, o processo pode exigir que você verifique a compilação localmente antes de fazer check-in desse código junto com os testes que serão executados nele.  
   
-    Em **Gerenciador de Soluções**, um ícone de cadeado aparece ao lado de cada arquivo para indicar que ele foi verificado. Para saber mais, confira [Propriedades de pasta e arquivo de controle de versão do modo de exibição](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    Em **Gerenciador de Soluções**, um ícone de cadeado aparece ao lado de cada arquivo para indicar que ele foi verificado. Para saber mais, confira [Propriedades de pasta e arquivo de controle de versão do modo de exibição](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100)).  
   
     Os testes estão disponíveis para o Team Foundation Build. Agora você pode criar uma definição de compilação que contenha os testes a serem executados.  
   
@@ -280,11 +280,10 @@ Neste procedimento, você faz o check-in de todos os arquivos da solução. Esse
   
 3.  Confirme se os valores nos campos **Definição de build**, **Agente de build** e **Pasta de descarte deste build** são apropriados e clique em **Enfileirar**.  
   
-    A guia **Enfileirado** de **Gerenciador de Compilações** é exibida. Para saber mais, confira [Gerenciar e exibir compilações concluídas (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) or [Gerenciar suas compilações no Gerenciador de Compilações (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
+    A guia **Enfileirado** de **Gerenciador de Compilações** é exibida. Para saber mais, confira [Gerenciar e exibir compilações concluídas (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100)) or [Gerenciar suas compilações no Gerenciador de Compilações (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140)).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Executar testes de unidade do SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Criar uma definição de build básica](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Enfileirar um build](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Monitorar o andamento de uma compilação em execução](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
-  
+[Criar uma definição de build básica](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
+[Enfileirar um build](/previous-versions/visualstudio/visual-studio-2010/ms181722(v=vs.100))  
+[Monitorar o andamento de uma compilação em execução](/previous-versions/visualstudio/visual-studio-2010/ms181724(v=vs.100))  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c0929f82f7f9a086fa58856b6e1357807c198f7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454518"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987381"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definições de função – funções predefinidas
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  
@@ -60,11 +60,11 @@ ms.locfileid: "88454518"
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Criar relatórios vinculados|Criar relatórios vinculados com base em um relatório não vinculado.|  
-|Gerenciar todas as assinaturas|Exibir, modificar e excluir qualquer assinatura para relatórios e relatórios vinculados, independentemente de quem for proprietário da assinatura. Essa tarefa dá suporte à criação de assinaturas controladas por dados. Ela também dá suporte à edição e execução da [atualização agendada para arquivos do Power BI (.pbix) no Servidor de Relatórios do Power BI](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Gerenciar todas as assinaturas|Exibir, modificar e excluir qualquer assinatura para relatórios e relatórios vinculados, independentemente de quem for proprietário da assinatura. Essa tarefa dá suporte à criação de assinaturas controladas por dados. Ela também dá suporte à edição e execução da [atualização agendada para arquivos do Power BI (.pbix) no Servidor de Relatórios do Power BI](/power-bi/report-server/configure-scheduled-refresh).|  
 |Gerenciar as fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
 |Gerenciar pastas|Criar, exibir e excluir pastas, e exibir e modificar propriedades de pasta.|  
 |Gerenciar modelos|Criar, exibir e excluir modelos e exibir e modificar propriedades de modelo.|  
-|Administrar assinaturas individuais|Criar, exibir, modificar e excluir assinaturas de propriedade do usuário para relatórios e relatórios vinculados. Essa tarefa também dá suporte à edição e execução da [atualização agendada para arquivos do Power BI (.pbix) no Servidor de Relatórios do Power BI](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Administrar assinaturas individuais|Criar, exibir, modificar e excluir assinaturas de propriedade do usuário para relatórios e relatórios vinculados. Essa tarefa também dá suporte à edição e execução da [atualização agendada para arquivos do Power BI (.pbix) no Servidor de Relatórios do Power BI](/power-bi/report-server/configure-scheduled-refresh).|  
 |Gerenciar histórico de relatório|Criar, exibir e excluir histórico de relatório, exibir propriedades do histórico de relatório, e exibir e modificar configurações que determinam limites para o número de instantâneos e o funcionamento do cache.|  
 |Gerenciar relatórios|Adicionar e excluir relatórios, modificar parâmetros de relatório, exibir e modificar propriedades de relatório, exibir e modificar fontes de dados que fornecem o conteúdo para o relatório, exibir e modificar definições de relatório e definir diretrizes de segurança no nível do relatório.|  
 |Gerenciar recursos|Criar, modificar e excluir recursos, e exibir e modificar propriedades de recurso.|  
@@ -216,4 +216,3 @@ A tabela a seguir lista as tarefas incluídas na definição da função **Usuá
 [Modificar ou excluir uma atribuição de função &#40; do portal da Web do SSRS&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [Conceder permissões em um servidor de relatório no Modo Nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [Tarefas e permissões](../../reporting-services/security/tasks-and-permissions.md)
-  

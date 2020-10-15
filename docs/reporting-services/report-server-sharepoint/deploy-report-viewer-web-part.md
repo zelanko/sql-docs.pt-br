@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767017"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933563"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implantar a web part do Visualizador de Relatórios do SQL Server Reporting Services em um site do SharePoint
 
@@ -53,7 +53,7 @@ Esta seção mostra como implantar o pacote de solução no farm do SharePoint. 
 
 1. Em um servidor do SharePoint, abra um Shell de Gerenciamento do SharePoint usando a opção **Executar como Administrador**.
 
-2. Execute [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) para adicionar a solução de farm.
+2. Execute [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution) para adicionar a solução de farm.
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -61,7 +61,7 @@ Esta seção mostra como implantar o pacote de solução no farm do SharePoint. 
 
     O cmdlet retorna o nome da solução, sua ID de solução e Deployed=False. Na próxima etapa, você implantará a solução.
 
-3. Execute o cmdlet [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) para implantar a solução de farm.
+3. Execute o cmdlet [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) para implantar a solução de farm.
 
     **SharePoint 2013**
 
@@ -93,7 +93,7 @@ Esta seção mostra como implantar o pacote de solução no farm do SharePoint. 
 
 6. Repita a operação em outros conjuntos de sites, abrindo cada site e clicando em Ações do Site.
 
-Opcionalmente, também use o PowerShell para habilitar esse recurso em todos os sites usando o cmdlet [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx).
+Opcionalmente, também use o PowerShell para habilitar esse recurso em todos os sites usando o cmdlet [Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature).
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 

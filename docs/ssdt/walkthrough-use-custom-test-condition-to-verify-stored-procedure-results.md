@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 296e9220c4c8b0518bba5a7587cf3a69fcecae06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 738ff14a43dd473abeab0c02ef206417675a7fb9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882888"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987690"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Passo a passo: Usar uma condição de teste personalizada para verificar os resultados de um procedimento armazenado
 
@@ -35,7 +35,7 @@ Este passo a passo ilustra as seguintes tarefas:
   
 -   Como testar a nova condição de teste.  
   
-Você deve ter o Visual Studio 2010 ou Visual Studio 2012 com a versão mais recente do SQL Server Data Tools para concluir este passo a passo. Para saber mais, confira [Instalar o SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md).  
+Você deve ter o Visual Studio 2010 ou Visual Studio 2012 com a versão mais recente do SQL Server Data Tools para concluir este passo a passo. Para saber mais, confira [Instalar o SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md).  
   
 ## <a name="creating-a-custom-test-condition"></a>Criando uma condição de teste personalizada  
 Primeiro, você criará uma biblioteca de classes.  
@@ -95,7 +95,7 @@ Em seguida, você adicionará as referências necessárias para o projeto.
     As referências necessárias serão mostradas no nó **Referências** do projeto no **Gerenciador de Soluções**.  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>Criando a classe ResultSetColumnCountCondition  
-Agora, você renomeará **Class1** para **ResultSetColumnCountCondition** e o derivará de [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). A classe **ResultSetColumnCountCondition** é uma condição de teste simples que verifica o número de colunas retornadas no ResultSet. Você pode usar esta condição para verificar se o contrato para um procedimento armazenado está correto:  
+Agora, você renomeará **Class1** para **ResultSetColumnCountCondition** e o derivará de [testcondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). A classe **ResultSetColumnCountCondition** é uma condição de teste simples que verifica o número de colunas retornadas no ResultSet. Você pode usar esta condição para verificar se o contrato para um procedimento armazenado está correto:  
   
 1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em Class1.cs, clique em **Renomear** e digite **ResultSetColumnCountCondition.cs**.  
   
@@ -115,13 +115,13 @@ Agora, você renomeará **Class1** para **ResultSetColumnCountCondition** e o de
         public class ResultSetColumnCountCondition  
     ```  
   
-4.  Derive a classe de [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx):  
+4.  Derive a classe de [testcondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)):  
   
     ```  
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Adicione [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). Veja [Como criar condições de teste para o Designer de teste de unidade do SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) para saber mais sobre UnitTesting.Conditions.ExportTestConditionAttribute.  
+5.  Adicione [ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)). Veja [Como criar condições de teste para o Designer de teste de unidade do SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) para saber mais sobre UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -404,4 +404,3 @@ Para exibir a nova condição de teste:
   
 ## <a name="see-also"></a>Consulte Também  
 [Condições de teste personalizadas para testes de unidade do SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

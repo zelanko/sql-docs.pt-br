@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1ea16180c9a4e67f40302de7d70ae357b8393010
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396105"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986622"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Desabilitar ou pausar o processamento de relatório e assinatura  
 Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste artigo abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com ambos os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. As seguintes tabelas resumem os métodos e os modos de servidor compatíveis do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
@@ -60,7 +60,7 @@ No portal da Web, navegue até a assinatura na página **Minhas Assinaturas** ou
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![Conteúdo relacionado ao PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell"): **Use o Windows PowerShell para desabilitar uma assinatura única:** Use o script do PowerShell a seguir para desabilitar uma assinatura específica. Atualize o nome do servidor e a ID da assinatura no script.  
+![Conteúdo relacionado ao PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell"): **Use o Windows PowerShell para desabilitar uma assinatura única:** Use o script do PowerShell a seguir para desabilitar uma assinatura específica. Atualize o nome do servidor e a ID da assinatura no script.  
   
 ```PS  
 #disable specific subscription  
@@ -80,7 +80,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![Conteúdo relacionado ao PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") **Use o Windows PowerShell para listar todas as assinaturas desabilitadas:** Use o script do PowerShell a seguir para listar todas as assinaturas desabilitadas no servidor de relatório atual em modo nativo. Atualize o nome do servidor.  
+ ![Conteúdo relacionado ao PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") **Use o Windows PowerShell para listar todas as assinaturas desabilitadas:** Use o script do PowerShell a seguir para listar todas as assinaturas desabilitadas no servidor de relatório atual em modo nativo. Atualize o nome do servidor.  
   
 ```  
 #list all disabled subscriptions  
@@ -91,7 +91,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![Conteúdo relacionado ao PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") **Use o Windows PowerShell para habilitar todas as assinaturas desabilitadas:** Use o script do PowerShell a seguir para habilitar todas as assinaturas desabilitadas no momento. Atualize o nome do servidor.  
+ ![Conteúdo relacionado ao PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") **Use o Windows PowerShell para habilitar todas as assinaturas desabilitadas:** Use o script do PowerShell a seguir para habilitar todas as assinaturas desabilitadas no momento. Atualize o nome do servidor.  
   
 ```  
 #enable all subscriptions  
@@ -105,7 +105,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![Conteúdo relacionado ao PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") **Use o Windows PowerShell para DESABILITAR todas as assinaturas:** Use o script do PowerShell a seguir para desabilitar **TODAS** as assinaturas.  
+ ![Conteúdo relacionado ao PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") **Use o Windows PowerShell para DESABILITAR todas as assinaturas:** Use o script do PowerShell a seguir para desabilitar **TODAS** as assinaturas.  
   
 ```  
 #DISABLE all subscriptions  
@@ -121,7 +121,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> Pausar uma agenda compartilhada  
  Se um relatório ou assinatura for executado a partir de uma agenda compartilhada, você pode pausar a agenda para impedir o processamento. Todos os processamentos de relatório e assinatura controlados pelo agendamento serão adiados até o agendamento ser retomado.  
   
--   **Modo SharePoint:** ![configurações do SharePoint:](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") nas **Configurações do site**, selecione **Gerenciar agendas compartilhadas**. Selecione a agenda e clique em **Pausar agendamentos selecionados**.  
+-   **Modo SharePoint:** ![configurações do SharePoint:](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") nas **Configurações do site**, selecione **Gerenciar agendas compartilhadas**. Selecione a agenda e clique em **Pausar agendamentos selecionados**.  
   
 -   **Modo Nativo:** No portal da Web, selecione o botão **Configurações** ![botão Configurações](media/ssrs-portal-settings-gear.png) na barra de menus, na parte superior da tela do portal da Web, depois selecione **Configurações do site** no menu suspenso. Selecione a guia **Agendamentos** para exibir a página de agendamentos. Marque as caixas de seleção ao lado dos agendamentos que deseja habilitar ou desabilitar e, em seguida, selecione o botão **Habilitar** ou **Desabilitar**, respectivamente, para executar a ação desejada. A coluna de status será atualizada para "Desabilitado" ou "Habilitado", conforme a opção escolhida.  
   
@@ -177,4 +177,3 @@ Uma maneira de tornar um relatório indisponível é remover temporariamente a a
  [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [O portal da Web de um servidor de relatório (modo nativo do SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Itens protegíveis](../../reporting-services/security/securable-items.md) 
-  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 24cf362c711abd450533b218c699fc7f2bc1dd18
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967457"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987252"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
@@ -59,10 +59,10 @@ O SQL Server 2016 Analysis Services fornece melhor desempenho, criação, gerenc
 - O novo **Verificador de Consistência de Banco de Dados (DBCC)** é executado internamente para detectar possíveis problemas de corrupção de dados.
 - **Consulta Direta**, que consulta os dados externos ativos em vez de importá-los primeiro, agora dá suporte a mais fontes de dados, incluindo SQL Azure, Oracle e Teradata. 
 - Há diversas **funções DAX (Expressões de Acesso a Dados) novas**.
-- O novo namespace **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** gerencia instâncias de modo de tabela e modelos. 
-- Os [Objetos de Gerenciamento do Analysis Services (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) foram refatorados para incluir um segundo assembly, **Microsoft.AnalysisServices.Core.dll**.
+- O novo namespace **[Microsoft.AnalysisServices.Tabular](/dotnet/api/microsoft.analysisservices.tabular)** gerencia instâncias de modo de tabela e modelos. 
+- Os [Objetos de Gerenciamento do Analysis Services (AMO)](/dotnet/api/) foram refatorados para incluir um segundo assembly, **Microsoft.AnalysisServices.Core.dll**.
 
-Confira [Mecanismo do Analysis Services (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
+Confira [Mecanismo do Analysis Services (SSAS)](/analysis-services/what-s-new-in-analysis-services). 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SSIS (SQL Server 2016 Integration Services)
 - Suporte a **Grupos de Disponibilidade Always On**
@@ -97,13 +97,13 @@ A Microsoft renovou completamente o Reporting Services nesta versão.
 Confira [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## <a name="next-steps"></a>Próximas etapas   
-- [Instalação do SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   
+- [Instalação do SQL Server](../database-engine/install-windows/install-sql-server.md)   
 - [Notas de Versão do SQL Server 2016.](../sql-server/sql-server-2016-release-notes.md) 
 - [Folha de dados do SQL Server 2016](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-- [Recursos com suporte nas edições do SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
+- [Recursos com suporte nas edições do SQL Server](./editions-and-components-of-sql-server-2016.md)
 - [Requisitos de hardware e software para a instalação do SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Instalar o SQL Server 2016 por meio do Assistente de Instalação](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Configuração e instalação de manutenção](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [Configuração e instalação de manutenção](../database-engine/install-windows/install-sql-server-servicing-updates.md)
 - [Novo módulo do PowerShell no SQL](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
