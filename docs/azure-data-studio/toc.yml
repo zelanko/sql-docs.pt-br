@@ -59,7 +59,7 @@
         - name: Extensão do PowerShell
           href: extensions/powershell-extension.md
         - name: Extensão do SandDance
-          href: sanddance-extension.md
+          href: extensions/sanddance-extension.md
         - name: Extensão de Comparação de Esquema
           href: extensions/schema-compare-extension.md
         - name: Extensão de Projetos de Banco de Dados SQL
@@ -84,10 +84,10 @@
           href: extensions/sql-server-profiler-extension.md
     - name: Criação de extensão
       items:
-        - name: Visão geral da extensibilidade
-          href: extensibility.md
         - name: Criação de extensão
           href: extensions/extension-authoring.md
+        - name: Visão geral da extensibilidade
+          href: extensibility.md
         - name: APIs de extensibilidade
           href: extensibility-apis.md
         - name: Extensão de mapa de teclas
@@ -102,6 +102,8 @@
           href: extensions/wizard-extension.md
     - name: 'Terminal integrado (PowerShell, Bash)'
       href: integrated-terminal.md
+    - name: Versão prévia dos recursos
+      href: preview-features.md
     - name: Grupos de servidores
       href: server-groups.md
     - name: Controle do código-fonte
@@ -122,8 +124,12 @@
           href: notebooks/notebooks-kqlmagic.md
     - name: Implantação
       items:
+        - name: Implantar o Banco de Dados SQL do Azure
+          href: deploy-azure-sql-database.md
         - name: Implantar o SQL do Azure no Edge
           href: deploy-azure-sql-edge.md
+        - name: Implantar o SQL Server em Máquinas Virtuais do Azure
+          href: deploy-azure-sql-server-vm.md
     - name: Painéis e widgets de insights
       href: insight-widgets.md
     - name: Snippets de código

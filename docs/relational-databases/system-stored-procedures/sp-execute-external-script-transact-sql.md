@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810182"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155077"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ O procedimento armazenado **sp_execute_external_script** executa um script forne
 
 Para Serviços de Machine Learning, [Python](../../machine-learning/concepts/extension-python.md) e [R](../../machine-learning/concepts/extension-r.md) são idiomas com suporte. Para extensões de linguagem, há suporte para Java, mas deve ser definido com [criar linguagem externa](../../t-sql/statements/create-external-language-transact-sql.md).
 
-Para executar **sp_execute_external_script**, você deve primeiro instalar as extensões de serviços de Machine Learning ou de idioma. Para obter mais informações, consulte [instalar SQL Server serviços de Machine Learning (Python e R) no Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) e [Linux](../../linux/sql-server-linux-setup-machine-learning.md), ou [instalar as extensões de linguagem SQL Server no Windows e no](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) [Linux](../../linux/sql-server-linux-setup-language-extensions.md).
+Para executar **sp_execute_external_script**, você deve primeiro instalar as extensões de serviços de Machine Learning ou de idioma. Para obter mais informações, consulte [instalar SQL Server serviços de Machine Learning (Python e R) no Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) e [Linux](../../linux/sql-server-linux-setup-machine-learning.md), ou [instalar as extensões de linguagem SQL Server no Windows e no](../../language-extensions/install/windows-java.md) [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -98,7 +98,7 @@ sp_execute_external_script
 ```
 ::: moniker-end
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a>Arguments
  ** \@ idioma** = N '*idioma*'  
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
  Indica a linguagem de script. o *idioma* é **sysname**. Os valores válidos são **R**, **Python**e qualquer linguagem definida com [criar linguagem externa](../../t-sql/statements/create-external-language-transact-sql.md) (por exemplo, Java).
@@ -322,7 +322,7 @@ Para gerar um modelo semelhante usando Python, altere o identificador de idioma 
 
 Para pontuação, você também pode usar a função nativa [PREDICT](../../t-sql/queries/predict-transact-sql.md), que é normalmente mais rápida porque evita que o runtime do Python ou do R seja chamado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 + [Machine learning do SQL](../../machine-learning/index.yml)
 + [Extensões de linguagem SQL Server](../../language-extensions/language-extensions-overview.md). 
