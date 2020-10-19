@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603376"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892436"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a dobra constante c
 - Expressões aritméticas, como 1+1, 5/3*2, que contêm apenas constantes.
 - Expressões lógicas, como 1=1 and 1>2 AND 3>4, que contêm apenas constantes.
 - Funções internas consideradas dobráveis pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], inclusive `CAST` e `CONVERT`. Geralmente, uma função intrínseca será dobrável se for uma função de suas entradas apenas e não outras informações contextuais, como opções SET, configurações de idioma, opções de banco de dados e chaves de codificação. Funções não determinísticas não são dobráveis. Funções internas determinísticas são dobráveis, com algumas exceções.
-- Métodos determinísticos de tipos CLR definidos pelo usuário e funções CLR determinísticas com valor escalar definidas pelo usuário (começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para saber mais, veja [Dobra constante para funções e métodos de CLR definidos pelo usuário](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
+- Métodos determinísticos de tipos CLR definidos pelo usuário e funções CLR determinísticas com valor escalar definidas pelo usuário (começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para saber mais, veja [Dobra constante para funções e métodos de CLR definidos pelo usuário](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
 > Há uma exceção para tipos de objeto grandes. Se o tipo de saída do processo de dobra for um tipo de objeto grande (text,ntext, image, nvarchar(max), varchar(max), varbinary(max) ou XML), então [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dobrará a expressão.
@@ -1030,7 +1030,7 @@ Os constructos que inibem o paralelismo incluem:
     Para saber mais sobre cursores, confira [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
     
 -   **Consultas recursivas**        
-    Para saber mais sobre recursão, confira [Guidelines for Defining and Using Recursive Common Table Expressions ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) (Diretrizes para definir e usar Expressões de Tabela Comum Recursivas) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Recursão em T-SQL).
+    Para saber mais sobre recursão, confira [Guidelines for Defining and Using Recursive Common Table Expressions ](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) (Diretrizes para definir e usar Expressões de Tabela Comum Recursivas) e [Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)) (Recursão em T-SQL).
 
 -   **MSTVFs (Funções com valor de tabela de várias instruções)**         
     Para obter mais informações sobre MSTVFs, confira [Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
@@ -1270,7 +1270,8 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especifica um mecanismo
 O [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] melhorou o desempenho do processamento de consultas em tabelas particionadas para muitos planos paralelos, alterou a maneira como os planos paralelos e seriais são representados e aprimorou as informações de particionamento fornecidas nos planos de execução de tempo de compilação e tempo de execução. Este tópico descreve esses aperfeiçoamentos, fornece orientação sobre como interpretar os planos de execução de consultas de tabelas e índices particionados e fornece as práticas recomendadas para aperfeiçoar o desempenho de consultas em objetos particionados. 
 
 > [!NOTE]
-> Há suporte para tabelas e índices particionados apenas nas edições Enterprise, Developer e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+> Até o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], as tabelas e índices particionados terão suporte apenas nas edições Enterprise, Developer e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].   
+> Desde o [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, as tabelas e índices particionados na Edição Standard do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] também terão suporte. 
 
 ### <a name="new-partition-aware-seek-operation"></a>Operação de busca com reconhecimento de nova partição
 
@@ -1435,7 +1436,7 @@ Para melhorar o desempenho das consultas que acessam uma grande quantidade de da
 * Usar um servidor com processadores rápidos e o máximo possível de núcleos de processador, para se beneficiar da capacidade de processamento de consultas paralelas.
 * Verificar se o servidor tem largura de banda suficiente do controlador de E/S. 
 * Criar um índice clusterizado em todas as tabelas particionadas grandes para beneficiar-se de otimizações de exames da árvore B.
-* Seguir as práticas recomendadas no documento [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx)(Guia de Desempenho de Carregamento de Dados) quando estiver carregando dados em massa em tabelas particionadas.
+* Seguir as práticas recomendadas no documento [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))(Guia de Desempenho de Carregamento de Dados) quando estiver carregando dados em massa em tabelas particionadas.
 
 ### <a name="example"></a>Exemplo
 

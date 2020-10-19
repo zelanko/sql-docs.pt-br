@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024363"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834211"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -54,6 +54,9 @@ WITH IDENTITY = 'identity_name'
 *credential_name* Especifica o nome da credencial no escopo do banco de dados que está sendo criada. *credential_name* não pode começar com a tecla jogo da velha (#). As credenciais de sistema começam com ##.
 
 IDENTITY **='** _identity\_name_ **'** Especifica o nome da conta a ser usada ao se conectar fora do servidor. Para importar um arquivo do armazenamento de Blobs do Azure usando uma chave compartilhada, o nome de identidade deve ser `SHARED ACCESS SIGNATURE`. Para carregar dados no SQL DW, qualquer valor válido pode ser usado para a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Ao usar o Kerberos (Windows Active Directory ou MIT KDC), não use o nome de domínio no argumento IDENTITY. Ele deve ser apenas o nome da conta.
+
+> [!IMPORTANT]
+> Os Conectores ODBC do SQL, do Oracle, do Teradata e do MongoDB para PolyBase dão suporte apenas à autenticação Básica, não à autenticação Kerberos.
 
 > [!NOTE]
 > WITH IDENTITY não será necessário se o contêiner no armazenamento de Blobs do Azure estiver habilitado para acesso anônimo. Para obter um exemplo de como consultar o armazenamento de Blobs do Azure, confira [Importar dados em uma tabela de um arquivo armazenado no Armazenamento de Blobs do Azure](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).

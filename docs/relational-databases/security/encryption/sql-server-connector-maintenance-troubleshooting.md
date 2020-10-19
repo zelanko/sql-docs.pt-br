@@ -2,7 +2,7 @@
 title: Manutenção e solução de problemas do Conector do SQL Server
 description: Saiba mais sobre as instruções de manutenção e as etapas comuns de solução de problemas para o Conector do SQL Server.
 ms.custom: seo-lt-2019
-ms.date: 07/25/2019
+ms.date: 10/08/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 35ac4ad2bd6ee621973d4f999b32ec6b8099bfb7
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 4c8a74d33e75ab19b283f3b9d1bfdaf47dc69240
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042767"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869265"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Manutenção e solução de problemas do Conector do SQL Server
 
@@ -30,10 +30,10 @@ ms.locfileid: "90042767"
 ### <a name="key-rollover"></a>Substituição de Chave  
   
 > [!IMPORTANT]  
-> O Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que o nome da chave use somente os caracteres “a-z”, “A-Z”, “0-9” e “-”, com um limite de 26 caracteres.   
+> O Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que o nome da chave use somente os caracteres “a-z”, “A-Z”, “0-9” e “-”, com um limite de 26 caracteres.
 > Versões de chave diferentes com o mesmo nome de chave no Cofre de Chaves do Azure não funcionarão com o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para girar uma chave do Azure Key Vault que está sendo usado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], uma nova chave com um novo nome de chave deve ser criada.  
   
- Normalmente, as chaves assimétricas do servidor para criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisam ter sua verão atualizada cada 1-2 anos. É importante observar que embora o cofre de chaves permita que as chaves tenham sua versão atualizada, os clientes não devem usar esse recurso para implementar o controle de versão. O Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não pode lidar com as alterações na versão das chaves do Cofre de Chaves. Para implementar o controle de versão de chaves, o cliente precisa criar uma nova chave no Cofre de Chaves e criptografar novamente a chave de criptografia de dados no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+ Normalmente, as chaves assimétricas do servidor para criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisam ter controle de versão a cada 1 a 2 anos. É importante observar que embora o cofre de chaves permita que as chaves tenham sua versão atualizada, os clientes não devem usar esse recurso para implementar o controle de versão. O Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não pode lidar com as alterações na versão das chaves do Cofre de Chaves. Para implementar o controle de versão de chaves, crie uma chave no Key Vault e criptografe novamente a chave de criptografia de dados no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  Eis o modo como isso seria feito para TDE:  
   
@@ -98,60 +98,59 @@ ms.locfileid: "90042767"
 
 Versões 1.0.0.440 e anteriores foram substituídas e não têm mais suporte em ambientes de produção. Há suporte para versões 1.0.1.0 e mais recentes em ambientes de produção. Use as instruções a seguir para atualizar para a última versão disponível no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
 
-Se você estiver usando a Versão 1.0.1.0 ou mais recente, realize as etapas a seguir para atualizar para a última versão do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Essas instruções evitem a necessidade de reiniciar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
- 
-1. Instale a versão mais nova do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=45344). No assistente de instalação, salve o novo arquivo DLL em um caminho de arquivo diferente do caminho do arquivo da DLL original do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, o novo caminho do arquivo poderá ser: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
- 
-1. Na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], execute o seguinte comando Transact-SQL para apontar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a nova versão do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :
+### <a name="upgrade"></a>Atualizar
 
-    ```sql
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll'
-    GO  
-    ```
+1. Interrompa o serviço SQL Server usando o SQL Server Configuration Manager
+1. Desinstale a versão antiga usando Painel de Controle\Programas\Programas e Recursos
+    1. Nome do aplicativo: Conector do SQL Server para Microsoft Azure Key Vault
+    1. Versão: 15.0.300.96 (ou anterior)
+    1. Data do arquivo DLL: 30/01/2018 15:00 (ou anterior)
+1. Instalar (atualizar) o novo Conector do SQL Server para Microsoft Azure Key Vault
+    1. Versão: 15.0.2000.367
+    1. Data do arquivo DLL: 11/09/2020 ‏‎5:17
+1. Iniciar o serviço SQL Server
+1. Os BDs criptografados de teste estão acessíveis
 
-Se você estiver usando a Versão 1.0.0.440 ou mais antiga, siga estas etapas para atualizar para a última versão do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
-  
-1. Pare a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Pare o serviço do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
-  
-1. Desinstale o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o recurso Programas e Recursos do Windows.  
-  
-     (Como alternativa, você pode renomear a pasta em que o arquivo DLL está localizado. O nome padrão da pasta é “[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for Microsoft Azure Key Vault”.  
-  
-1. Instale a versão mais recente do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Centro de Download da Microsoft.  
-  
-1. Reinicie a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Execute a seguinte instrução para alterar o provedor EKM para começar a usar a versão mais recente do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Certifique-se de que o caminho do arquivo está apontando para o local em que você baixou a versão mais recente. (Essa etapa poderá ser ignorada se a nova versão estiver sendo instalada no mesmo local que a versão original.)
-  
-    ```sql  
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
-    GO  
-    ```  
-  
+### <a name="rollback"></a>Reversão
+
+1. Interrompa o serviço SQL Server usando o SQL Server Configuration Manager
+
+1. Desinstale a nova versão usando Painel de Controle\Programas\Programas e Recursos
+    1. Nome do aplicativo: Conector do SQL Server para Microsoft Azure Key Vault
+    1. Versão: 15.0.2000.367
+    1. Data do arquivo DLL: 11/09/2020 ‏‎5:17
+
+1. Instalar a versão antiga do Conector do SQL Server para Microsoft Azure Key Vault
+    1. Versão: 15.0.300.96
+    1. Data do arquivo DLL: 30/01/2018 15:00
+1. Iniciar o serviço SQL Server
+
 1. Verifique se os bancos de dados usando TDE estão acessíveis.  
   
-1. Depois de validar que a atualização funciona, você poderá excluir a antiga pasta do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (se você optar por renomeá-la em vez de desinstalá-la na Etapa 3).  
+1. Depois de validar que a atualização funciona, você poderá excluir a antiga pasta do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (se você optar por renomeá-la em vez de desinstalá-la na Etapa 3).
+
+### <a name="older-versions-of-the-sql-server-connector"></a>Versões anteriores do Conector do SQL Server
   
+Links profundos para versões anteriores do Conector do SQL Server
+
+- Atualmente: [1.0.5.0 (versão 15.0.2000.367) – Data do arquivo: 11 de setembro de 2020](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/1033_15.0.2000.367/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.5.0 (versão 15.0.300.96) – Data do arquivo: 30 de janeiro de 2018](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/ENU/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.4.0: (versão 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+
 ### <a name="rolling-the-ssnoversion-service-principal"></a>Revertendo a Entidade de Serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa entidades de serviço criadas no Azure Active Directory como credenciais para acessar o Cofre de Chaves.  A entidade de serviço tem uma ID do Cliente e uma Chave de Autenticação.  Uma credencial do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é configurada com o **VaultName**, a **ID do cliente**e a **Chave de Autenticação**.  A **Chave de Autenticação** é válida por determinado período (um ou dois anos).   Antes do período de tempo expirar, uma nova chave deve ser gerada no Azure AD para a Entidade de Serviço.  Em seguida, a credencial deve ser alterada no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantém um cache de credencial na sessão atual, portanto, quando uma credencial é alterada, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve ser reiniciado.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa entidades de serviço criadas no Azure Active Directory como credenciais para acessar o Cofre de Chaves. A entidade de serviço tem uma ID do Cliente e uma Chave de Autenticação. Uma credencial do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é configurada com o **VaultName**, a **ID do cliente**e a **Chave de Autenticação**. A **Chave de Autenticação** é válida por determinado período (um ou dois anos). Antes do período de tempo expirar, uma nova chave deve ser gerada no Azure AD para a Entidade de Serviço. Em seguida, a credencial deve ser alterada no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantém um cache de credencial na sessão atual, portanto, quando uma credencial é alterada, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] deve ser reiniciado.  
   
 ### <a name="key-backup-and-recovery"></a>Backup e Recuperação de Chaves
 
 O backup do cofre de chaves deve ser feito regularmente. Se uma chave assimétrica no cofre for perdida, ela poderá ser restaurada do backup. A chave deve ser restaurada usando o mesmo nome de antes, o que o comando Restore PowerShell fará (consulte etapas abaixo).  
-Se o cofre tiver sido perdido, você precisará recriar um cofre e restaurar a chave assimétrica no cofre usando o mesmo nome de antes. O nome do cofre pode ser diferente (ou o mesmo de antes). Você também deve definir as permissões de acesso no novo cofre para conceder à entidade de serviço do SQL Server o acesso necessário para os cenários de criptografia do SQL Server e, em seguida, ajustar a credencial do SQL Server para que o nome do novo cofre seja refletido.
+Se o cofre tiver sido perdido, você precisará recriar um cofre e restaurar a chave assimétrica no cofre usando o mesmo nome de antes. O nome do cofre pode ser diferente (ou o mesmo de antes). Defina as permissões de acesso no novo cofre para conceder à entidade de serviço do SQL Server o acesso necessário para os cenários de criptografia do SQL Server e ajuste a credencial do SQL Server para que o nome do novo cofre seja refletido.
 
 Resumindo, estas são as etapas:  
   
 - Fazer backup do cofre de chaves (usando o cmdlet do PowerShell Backup-AzureKeyVaultKey).  
-- Em caso de falha do cofre, crie um novo cofre na mesma região geográfica*. O usuário criando-o deve estar no mesmo diretório padrão que a entidade de serviço configurada para SQL Server.  
-- Restaure a chave para o novo cofre (usando o cmdlet do PowerShell Restore-AzureKeyVaultKey – isso restaura a chave usando o mesmo nome de antes). Se já houver uma chave com o mesmo nome, a restauração falhará.  
+- Em caso de falha do cofre, crie um cofre na mesma região geográfica. O usuário que está criando o cofre deve estar no mesmo diretório padrão que a instalação da entidade de serviço para SQL Server.  
+- Restaure a chave para o novo cofre usando o cmdlet do PowerShell Restore-AzureKeyVaultKey, que restaura a chave usando o mesmo nome de antes. Se já houver uma chave com o mesmo nome, a restauração falhará.  
 - Conceder permissões para a entidade de serviço do SQL Server usar esse novo cofre.
 - Modificar a credencial do SQL Server usada pelo Mecanismo de Banco de Dados para refletir o nome do novo cofre (se necessário).  
   
@@ -176,7 +175,7 @@ O Conector se comunica com dois pontos de extremidade que precisam ser permitido
 - *.vault.azure.net/* :443
 
 **Como fazer para se conectar ao Azure Key Vault por meio de um servidor proxy HTTP(S)?**
-O Conector usa as definições de configuração de proxy do Internet Explorer. Essas configurações podem ser controladas por meio da [Política de Grupo](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) ou por meio do Registro, mas é importante observar que elas não são configurações de todo o sistema e precisarão ser direcionadas para a conta de serviço que executa a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se um administrador de banco de dados exibir ou editar as configurações no Internet Explorer, elas só afetarão a conta do administrador de banco de dados em vez do mecanismo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Não é recomendável fazer logon no servidor de maneira interativa usando a conta de serviço, e isso é bloqueado em muitos ambientes seguros. As alterações nas configurações de proxy definidas podem exigir a reinicialização da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para entrarem em vigor, pois elas são armazenadas em cache quando o Conector tenta se conectar a um cofre de chaves pela primeira vez.
+O Conector usa as definições de configuração de proxy do Internet Explorer. Essas configurações podem ser controladas por meio da [Política de Grupo](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) ou por meio do Registro, mas é importante observar que elas não são configurações de todo o sistema e precisarão ser direcionadas para a conta de serviço que executa a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se Administradores de Banco de Dados exibirem ou editarem as configurações no Internet Explorer, elas só afetarão as contas dos Administradores de Banco de Dados em vez do mecanismo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Não é recomendável fazer logon no servidor de maneira interativa usando a conta de serviço. Isso é bloqueado em muitos ambientes seguros. As alterações nas configurações de proxy definidas podem exigir a reinicialização da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para entrarem em vigor, pois elas são armazenadas em cache quando o Conector tenta se conectar a um cofre de chaves pela primeira vez.
 
 **Quais são os níveis de permissão mínimos necessários para cada etapa da configuração em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Embora você possa executar todas as etapas de configuração como um membro da função de servidor fixa sysadmin, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] incentiva você a minimizar as permissões utilizadas. A lista a seguir define o nível mínimo de permissão para cada ação.  
@@ -193,10 +192,10 @@ O Conector usa as definições de configuração de proxy do Internet Explorer. 
 
 **Como posso alterar meu Active Directory padrão para que o cofre de chaves seja criado na mesma assinatura e o Active Directory como a entidade de serviço que criei para o Conector do [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
-![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
+![aad change default directory helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. Acesse o portal clássico do Azure: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
-2. No menu à esquerda, role a tela para baixo e selecione **Configurações**.
+2. No menu à esquerda, selecione **Configurações**.
 3. Selecione a assinatura do Azure que você está usando e clique em **Editar Diretório** nos comandos da parte inferior da tela.
 4. Na janela pop-up, use a lista suspensa **Diretório** para selecionar o Active Directory que você deseja usar. Isso tornará o Diretório padrão.
 5. Verifique se você é o administrador global do Active Directory recém-selecionado. Se você não for o administrador global, poderá perder permissões de gerenciamento, pois você mudou de diretório.
@@ -205,10 +204,11 @@ O Conector usa as definições de configuração de proxy do Internet Explorer. 
     > [!NOTE] 
     > Talvez você não tenha permissões para realmente alterar o diretório padrão na assinatura do Azure. Nesse caso, crie a entidade de serviço do AAD no diretório padrão para que ela esteja no mesmo diretório que o Cofre de Chaves do Azure que será usado mais tarde.
 
-Para saber mais sobre o Active Directory, leia [Como a assinatura do Azure está relacionada ao Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
+Para saber mais sobre o Active Directory, leia [Como a assinatura do Azure está relacionada ao Azure Active Directory](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
   
-##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Explicações de Código de Erro do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- **Códigos de erro do provedor:**  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Explicações de Código de Erro do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+
+**Códigos de erro do provedor:**  
   
 Código do erro  |Símbolo  |Descrição
 ---------|---------|---------  
@@ -358,7 +358,7 @@ Código do erro  |Símbolo  |Descrição
 
 Se você não vir o código de erro nesta tabela, aqui estão algumas outras razões pelas quais o erro pode estar ocorrendo:
   
-- Você pode não ter acesso à Internet e não pode acessar seu Azure Key Vault, verifique sua conexão com a Internet.  
+- Talvez você não tenha acesso à Internet e não possa acessar o seu Azure Key Vault. Verifique a sua conexão com a Internet.  
   
 - O serviço do Cofre de Chaves do Azure pode estar desativado. Tente novamente em outro momento.  
   
@@ -405,9 +405,9 @@ Versão do SQL Server  |Link de instalação redistribuível
   
  Documentação do Cofre de Chaves do Azure:  
   
-- [O que é o Cofre da Chave do Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+- [O que é o Cofre da Chave do Azure?](/azure/key-vault/general/basic-concepts)  
   
-- [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
+- [Introdução ao Azure Key Vault](/azure/key-vault/general/overview)  
   
 - Referência dos [Cmdlets do Cofre de Chaves do Azure](/powershell/module/azurerm.keyvault/) do PowerShell  
   

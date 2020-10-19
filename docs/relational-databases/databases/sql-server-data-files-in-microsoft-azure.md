@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715495"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987580"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Arquivos de dados do SQL Server no Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -177,25 +177,28 @@ Para saber mais, confira [Gerenciar o acesso aos recursos de Armazenamento do Az
   
  **Erros de banco de dados**  
   
-1.  *Erros ao criar um banco de dados*   
-    Resolução: Analise as instruções fornecidas na lição 4 em [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
+Resolução dos **erros ao criar um banco de dados**: Analise as instruções fornecidas na lição 4 em [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
   
-2.  *Erros ao executar a instrução Alter*   
-    Resolução: execute a instrução Alterar Banco de Dados quando o banco de dados estiver online. Ao copiar os arquivos de dados no Armazenamento do Azure, sempre crie um blob de páginas, não um blob de blocos. Caso contrário, ALTER Database falhará. Analise as instruções fornecidas na lição 7 em [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+**Erros ao executar a instrução Alter** Resolução: execute a instrução Alter Database mudar quando o banco de dados estiver online. Ao copiar os arquivos de dados no Armazenamento do Azure, sempre crie um blob de páginas, não um blob de blocos. Caso contrário, ALTER Database falhará. Analise as instruções fornecidas na lição 7 em [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Código de erro 5120 Não é possível abrir o arquivo físico “%.\*ls”. Erro no sistema operacional %d: "%ls"*   
+**Código de erro 5120 – Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"**   
 
-    Resolução: Atualmente, essa nova melhoria não dá suporte a mais de uma instância do SQL Server acessando os mesmos arquivos de banco de dados no Armazenamento do Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro *5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"* .  
+Resolução: Atualmente, essa nova melhoria não dá suporte a mais de uma instância do SQL Server acessando os mesmos arquivos de banco de dados no Armazenamento do Azure ao mesmo tempo. Se o Servidor A estiver online com um arquivo de banco de dados ativo e o Servidor B for iniciado por acidente e também tiver um banco de dados que aponta para o mesmo arquivo de dados, o segundo servidor não iniciará o banco de dados com um código de erro *5120 Não é possível abrir o arquivo físico "%.\*ls". Erro no sistema operacional %d: "%ls"* .  
   
-     Para resolver esse problema, primeiro determine se você precisa que o ServerA acesse o arquivo de banco de dados no Armazenamento do Azure. Se não precisar, remova as conexões entre o Servidor A e os arquivos de banco de dados no Armazenamento do Azure. Para fazer isso, siga estas etapas:  
-  
-    1.  Defina o caminho do arquivo do Servidor A para uma pasta local usando a instrução ALTER Database.  
-  
-    2.  Defina o banco de dados como offline no Servidor A.  
-  
-    3.  Em seguida, copie os arquivos de banco de dados do Armazenamento do Azure para a pasta local no Servidor A. Isso garante que o ServerA ainda terá uma cópia do banco de dados localmente.  
-  
-    4.  Defina o banco de dados como online.  
+Para resolver esse problema, primeiro determine se você precisa que o ServerA acesse o arquivo de banco de dados no Armazenamento do Azure. Se não precisar, remova as conexões entre o Servidor A e os arquivos de banco de dados no Armazenamento do Azure. Para fazer isso, siga estas etapas:  
+
+1.  Defina o caminho do arquivo do Servidor A para uma pasta local usando a instrução ALTER Database.  
+
+2.  Defina o banco de dados como offline no Servidor A.  
+
+3.  Em seguida, copie os arquivos de banco de dados do Armazenamento do Azure para a pasta local no Servidor A. Isso garante que o ServerA ainda terá uma cópia do banco de dados localmente.  
+
+4.  Defina o banco de dados como online.
+
+**Código de erro 833 – As solicitações de E/S estão levando mais de 15 segundos para serem concluídas** 
+   
+   Esse erro indica que o sistema de armazenamento não consegue atender às demandas da carga de trabalho do SQL Server. Diminua a atividade de E/S da camada do aplicativo ou aumente a capacidade de taxa de transferência na camada de armazenamento. Para saber mais, confira [Erro 833](../errors-events/mssqlserver-833-database-engine-error.md). Se os problemas de desempenho persistirem, considere mover os arquivos para uma camada de armazenamento diferente, como Premium ou UltraSSD. Para o SQL Server em VMs do Azure, confira [otimização do desempenho de armazenamento](/azure/virtual-machines/premium-storage-performance).
+
 
 ## <a name="next-steps"></a>Próximas etapas  
   

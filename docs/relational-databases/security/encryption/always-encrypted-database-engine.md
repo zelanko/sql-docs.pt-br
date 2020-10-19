@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216771"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810002"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Não há suporte para o Always Encrypted para as colunas com as características
 - Colunas com propriedade `ROWGUIDCOL`.  
 - Colunas de cadeia de caracteres (`varchar`, `char` etc.) com ordenações não bin2.  
 - Colunas que são chaves para índices clusterizados e não clusterizados ao usar a criptografia aleatória (há suporte para criptografia determinística).
-- Colunas que são chaves para índices de texto completo ao usar a criptografia aleatória (há suporte para criptografia determinística).  
+- Colunas incluídas em índices de texto completo (Always Encrypted não dá suporte à [Pesquisa de Texto Completo](../../../relational-databases/search/full-text-search.md)).  
 - Colunas computadas.
 - Colunas referenciadas por colunas computadas (quando a expressão realiza operações sem suporte para o Always Encrypted).  
 - Conjunto de colunas esparsas.  

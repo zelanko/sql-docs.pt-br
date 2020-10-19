@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470347"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891006"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, as tabelas e os índices particionados não estavam disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. Antes do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, as tabelas e os índices particionados não estavam disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 > O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte a até 15.000 partições por padrão. Em versões anteriores à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o número de partições era limitado por padrão a 1.000. Em sistemas baseados em x86, é possível criar uma tabela ou índice com mais de 1.000 partições, mas isso não tem suporte.  
@@ -48,7 +48,7 @@ Além disso, você pode melhorar o desempenho habilitando o escalonamento de blo
 As condições a seguir são aplicáveis ao particionamento de tabela e de índice.  
   
 ### <a name="partition-function"></a>Função de partição  
-Um objeto de banco de dados que define como as linhas de uma tabela ou índice são mapeadas para um conjunto de partições, com base nos valores de determinada coluna, chamada de coluna de particionamento. Ou seja, a função de partição define o número de partições que a tabela terá e como serão definidos os limites das partições. Por exemplo, considerando uma tabela que contém dados de ordem de venda, você pode desejar particionar a tabela em doze (mensalmente) partições com base em uma coluna **datetime** como uma data de vendas.  
+Um objeto de banco de dados que define como as linhas de uma tabela ou índice são mapeadas para um conjunto de partições, com base nos valores de determinada coluna, chamada de coluna de particionamento. Cada valor na coluna de particionamento é uma entrada para a função de particionamento, que retorna um valor de partição. A função de partição define o número de partições e os limites de partição que a tabela terá. Por exemplo, considerando uma tabela que contém dados de ordem de venda, você pode desejar particionar a tabela em doze (mensalmente) partições com base em uma coluna **datetime** como uma data de vendas.  
   
 ### <a name="partition-scheme"></a>Esquema de partição 
 Um objeto de banco de dados que mapeia as partições de uma função de partição para um conjunto de grupos de arquivos. O principal motivo para colocar suas partições em grupos de arquivos separados é para garantir que poderá efetuar operações de backup em partições de forma independente. Isso porque se pode executar backups em grupos de arquivos individuais.  
@@ -129,9 +129,8 @@ Desse modo, o otimizador de consulta pode processar a junção mais rapidamente,
  Você pode localizar os livros brancos a seguir em estratégias e implementações úteis de tabelas e índices particionados.  
 -   [Estratégias de tabelas e índices particionados usando o SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [Como implementar uma janela deslizante automática](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [Carregamento em massa em uma tabela particionada](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [Projeto REAL: Ciclo de Vida de Dados – Particionamento](https://technet.microsoft.com/library/cc966424.aspx)    
--   [Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [Carregamento em massa em uma tabela particionada](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
+-   [Projeto REAL: Ciclo de Vida de Dados – Particionamento](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    
+-   [Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 -   [10 principais práticas recomendadas para a criação de um Data Warehouse relacional em grande escala](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) no _Guia do SQLCAT para: Engenharia relacional_
-  
   

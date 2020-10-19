@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ab1ef128b86f3426193b648c41f6cac6b324e71
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741766"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834038"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurar o PolyBase para acessar dados externos no MongoDB
 
@@ -49,6 +49,10 @@ Os seguintes comandos Transact-SQL são usados nesta seção:
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > O Conector ODBC do MongoDB para PolyBase dá suporte apenas à autenticação Básica, não à autenticação Kerberos.    
+    
 1. Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
     ```sql
@@ -72,7 +76,9 @@ Os seguintes comandos Transact-SQL são usados nesta seção:
     ```
 
 >[!IMPORTANT] 
->Depois de criar uma fonte de dados externa, você pode usar o comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para criar uma tabela que possa ser consultada por essa fonte. 
+>Depois de criar uma fonte de dados externa, você pode usar o comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para criar uma tabela que possa ser consultada por essa fonte.
+>
+>Por exemplo, confira [Criar uma tabela externa para MongoDB](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb).
 
 ## <a name="flattening"></a>Nivelamento
 O nivelamento é habilitado para os dados aninhados e repetidos das coleções de documentos do MongoDB. O usuário precisa habilitar `create an external table` e especificar explicitamente um esquema relacional nas coleções de documentos do MongoDB que possam ter dados repetidos e/ou aninhados. Os tipos de dados repetidos/aninhados do JSON serão nivelados da seguinte forma
