@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2c9bd8f20ffae61656dd30f139ce12665ff57f4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 095a4ab1b3acd4ec5a238f19c27446b7cebe27b2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476968"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196925"
 ---
 # <a name="using-stored-procedures-mdx"></a>Usando procedimentos armazenados (MDX)
 
 
-  Você pode estender a funcionalidade do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e da linguagem MDX gravando procedimentos armazenados .NET ou funções definidas pelo usuário. Para obter mais informações, consulte [programação de servidor ADOMD.net](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
+  Você pode estender a funcionalidade do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e da linguagem MDX gravando procedimentos armazenados .NET ou funções definidas pelo usuário. Para obter mais informações, consulte [programação de servidor ADOMD.net](/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
  Quando você faz referência ou chama um procedimento armazenado, você especifica o nome da função seguido por parênteses. Dentro dos parênteses, você pode especificar expressões chamadas argumentos que fornecem dados a serem transmitidos nos parâmetros. Quando você chama uma função, deve fornecer valores de argumentos para todos os parâmetros e especificar os valores de argumentos na mesma sequência na qual os parâmetros são definidos na função definida pelo usuário.  
   
@@ -43,5 +43,4 @@ WHERE [Measures].[Reseller Freight Cost]
   
 ## <a name="see-also"></a>Consulte Também  
  [Funções &#40;sintaxe MDX&#41;](../mdx/functions-mdx-syntax.md)  
-  
   

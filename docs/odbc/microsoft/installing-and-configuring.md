@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 76057ce89097efa4b54deea6080eb3a429707125
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f229e1605646a427e2326e5689486d1319b7b206
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449488"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194335"
 ---
 # <a name="installing-and-configuring"></a>Instalar e configurar
-Para baixar o driver ODBC do Visual FoxPro, consulte [o site de download do driver ODBC do Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+Para baixar o driver ODBC do Visual FoxPro, consulte [o site de download do driver ODBC do Visual FoxPro](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).  
   
  Esta seção contém os tópicos a seguir para ajudá-lo a instalar e configurar o driver ODBC do Microsoft Visual FoxPro:  
   
@@ -34,8 +34,8 @@ Para baixar o driver ODBC do Visual FoxPro, consulte [o site de download do driv
   
 -   [Versões do FoxPro com suporte](../../odbc/microsoft/supported-versions-of-foxpro.md)  
   
--   [Configurando o driver ODBC do Visual FoxPro](../../odbc/microsoft/setting-up-the-visual-foxpro-odbc-driver.md)  
+-   [Configurar o driver ODBC do Visual FoxPro](../../odbc/microsoft/setting-up-the-visual-foxpro-odbc-driver.md)  
   
 -   [Caixa de diálogo da instalação do Visual FoxPro do ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- Para baixar o driver, consulte [o site de download do driver ODBC do Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).
+ Para baixar o driver, consulte [o site de download do driver ODBC do Visual FoxPro](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34da0a8cc7f2b6aa069a45e0366d361b06102feb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477018"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193938"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definição de dados MDX – CREATE SUBCUBE
 
@@ -53,7 +53,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Os objetos de sessão criados no contexto de um subcubo são descartados quando o subcubo é descartado.  
   
- Para obter mais informações sobre subcubos, consulte [criando subcubos em mdx &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
+ Para obter mais informações sobre subcubos, consulte [criando subcubos em mdx &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um subcubo que restringe o espaço de cubo aparente aos membros que existem com o país Canadá. Em seguida, ele usa a função **Members** para retornar todos os membros do nível de país da hierarquia geography definida pelo usuário, retornando apenas o país do Canadá.  
@@ -90,7 +90,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Gera o os seguintes resultados:  
   
-|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Clothing|  
+|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Roupas|  
 |-|-|-|-|  
 |Todos os Revendedores|$2031079.39|$506,172.45|$1,524,906.93|  
 |Revendedor de Valor Agregado|$767388.52|$175,002.81|$592,385.71|  
@@ -118,7 +118,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Gera o os seguintes resultados diferentes:  
   
-|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Clothing|  
+|Tipo de negócio + categoria|Todos os Produtos|Acessórios|Roupas|  
 |-|-|-|-|  
 |Todos os Revendedores|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Revendedor de Valor Agregado|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -127,9 +127,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  A coluna e a linha [All Products] e [All Resellers], respectivamente, contêm totais de todos os membros, não só dos visíveis.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos principais em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Conceitos principais em MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Instruções de script MDX &#40;&#41;MDX ](../mdx/mdx-scripting-statements-mdx.md)   
  [Instrução DROP SUBCUBO &#40;&#41;MDX ](../mdx/mdx-data-definition-drop-subcube.md)   
  [Instrução SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
-  
   

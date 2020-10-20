@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 397aed6cd2b2066bd73343ad861f0212e8357570
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3c2fecc26cf2d8bbf5d53598a7b28ce7db5612
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483079"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195568"
 ---
 # <a name="driver-manager-connection-pooling"></a>Pool de conexões do Gerenciador de Driver
 O pool de conexões permite que um aplicativo use uma conexão de um pool de conexões que não precisam ser restabelecidas para cada uso. Depois que uma conexão é criada e colocada em um pool, um aplicativo pode reutilizar essa conexão sem executar o processo de conexão completa.  
@@ -60,11 +60,11 @@ O pool de conexões permite que um aplicativo use uma conexão de um pool de con
     > [!NOTE]  
     >  A forma como uma conexão solicitada é correspondida a uma conexão em pool é determinada pelo atributo de ambiente SQL_ATTR_CP_MATCH. Para obter mais informações, consulte [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
-     Os aplicativos ODBC que usam o pool de conexões devem chamar [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) durante a inicialização do aplicativo e [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) quando o aplicativo é fechado.  
+     Os aplicativos ODBC que usam o pool de conexões devem chamar [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) durante a inicialização do aplicativo e [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) quando o aplicativo é fechado.  
   
 5.  Chama **SQLDisconnect** quando terminar com a conexão. A conexão é retornada para o pool de conexões e fica disponível para reutilização.  
   
- Para uma discussão aprofundada, consulte [pooling nos componentes de acesso a dados da Microsoft](https://go.microsoft.com/fwlink/?LinkId=120776).  
+ Para uma discussão aprofundada, consulte [pooling nos componentes de acesso a dados da Microsoft](/previous-versions/ms810829(v=msdn.10)).  
   
 ## <a name="connection-pooling-considerations"></a>Considerações sobre pooling de conexão  
  Executar qualquer uma das seguintes ações usando um comando SQL (em vez de por meio da API ODBC) pode afetar o estado da conexão e causar problemas inesperados quando o pool de conexões está ativo:  
@@ -86,4 +86,4 @@ O pool de conexões permite que um aplicativo use uma conexão de um pool de con
 ## <a name="see-also"></a>Consulte Também  
  [Conectando-se a uma fonte de dados ou driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Pooling nos componentes de acesso a dados da Microsoft](https://go.microsoft.com/fwlink/?LinkId=120776)
+ [Pooling nos componentes de acesso a dados da Microsoft](/previous-versions/ms810829(v=msdn.10))

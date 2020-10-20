@@ -1,6 +1,6 @@
 ---
 description: Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC
-title: Desenvolvendo o reconhecimento do pool de conexões em um driver ODBC | Microsoft Docs
+title: Desenvolvendo Connection-Pool conscientização em um driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f22be001a7434c13158deae8677b8c7bcb2f0630
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476268"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192306"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC
 Este tópico discute os detalhes do desenvolvimento de um driver ODBC que contém informações sobre como o driver deve fornecer serviços de pooling de conexão.  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>Habilitando o pool de conexões com reconhecimento de driver  
+## <a name="enabling-driver-aware-connection-pooling"></a>Habilitando o pool de conexões Driver-Aware  
  Um driver deve implementar as seguintes funções SPI (interface do provedor de serviços ODBC):  
   
 -   SQLSetConnectAttrForDbcInfo  
@@ -68,7 +68,7 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
 ## <a name="the-connection-rating"></a>A classificação de conexão  
  Em comparação com o estabelecimento de uma nova conexão, você pode obter melhor desempenho redefinindo algumas informações de conexão (como banco de dados) em uma conexão em pool. Portanto, talvez você não queira que o nome do banco de dados esteja em seu conjunto de atributos de chave. Caso contrário, você pode ter um pool separado para cada banco de dados, o que pode não ser bom em aplicativos de camada intermediária, em que os clientes usam várias cadeias de conexão diferentes.  
   
- Sempre que você reutiliza uma conexão que tem alguma incompatibilidade de atributo, você deve redefinir os atributos incompatíveis com base na nova solicitação de aplicativo, para que a conexão retornada seja idêntica à solicitação do aplicativo (consulte a discussão do atributo SQL_ATTR_DBC_INFO_TOKEN na [função SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). No entanto, a redefinição desses atributos pode diminuir o desempenho. Por exemplo, redefinir um banco de dados requer uma chamada de rede para o servidor. Portanto, reutilize uma conexão perfeitamente correspondida, se houver uma disponível.  
+ Sempre que você reutiliza uma conexão que tem alguma incompatibilidade de atributo, você deve redefinir os atributos incompatíveis com base na nova solicitação de aplicativo, para que a conexão retornada seja idêntica à solicitação do aplicativo (consulte a discussão do atributo SQL_ATTR_DBC_INFO_TOKEN na [função SQLSetConnectAttr](../syntax/sqlsetconnectattr-function.md)). No entanto, a redefinição desses atributos pode diminuir o desempenho. Por exemplo, redefinir um banco de dados requer uma chamada de rede para o servidor. Portanto, reutilize uma conexão perfeitamente correspondida, se houver uma disponível.  
   
  Uma função de classificação no driver pode avaliar uma conexão existente com uma nova solicitação de conexão. Por exemplo, a função de classificação do driver pode determinar:  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a6e723c8ad5ff8c97a3b57edb554092211da4d7
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1be293f98a3b78280b16f80ab7dcfcb656f7e0ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785160"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196886"
 ---
 # <a name="how-to-debug-clr-database-objects"></a>Como depurar objetos de banco de dados CLR
 
@@ -47,7 +47,7 @@ Devido às restrições anteriores, recomendamos que o [!INCLUDE[tsql](../../inc
 
 A depuração no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segue um modelo por conexão. Um depurador só pode detectar e depurar atividades para a conexão do cliente à qual ele está anexado. Como a funcionalidade do depurador não é limitada pelo tipo de conexão, pode-se depurar conexões do protocolo TDS e HTTP. Porém, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite a depuração de conexões existentes. A depuração oferece suporte a todos os recursos de depuração comuns dentro de rotinas executadas no servidor. A interação entre um depurador e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ocorre através do COM (Component Object Model) distribuído.  
   
-Para obter mais informações e cenários sobre como depurar procedimentos armazenados gerenciados, funções, gatilhos, tipos definidos pelo usuário e agregações, consulte [SQL Server depuração do banco de dados de integração CLR](https://go.microsoft.com/fwlink/?LinkId=120378) na documentação do Visual Studio.  
+Para obter mais informações e cenários sobre como depurar procedimentos armazenados gerenciados, funções, gatilhos, tipos definidos pelo usuário e agregações, consulte [SQL Server depuração do banco de dados de integração CLR](/previous-versions/ms165050(v=vs.100)) na documentação do Visual Studio.  
   
 O protocolo de rede TCP/IP deve estar habilitado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para permitir o uso do Visual Studio no desenvolvimento remoto, na depuração e no desenvolvimento. Para obter mais informações sobre como habilitar o protocolo TCP/IP no servidor, consulte [Configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -60,7 +60,7 @@ Use as etapas a seguir para depurar um objeto de banco de dados CLR no Microsoft
 2. Criar um novo tipo CLR SQL (C#):
 
    1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**, **novo item...**. 
-   1. Na janela **Adicionar novo item** , selecione o **procedimento armazenado SQL CLR C#**, **função definida pelo usuário**SQL CLR c#, **tipo definido pelo usuário SQL CLR C#**, **gatilho SQL CLR c#**, **agregação SQL CLR c#** ou **classe**.
+   1. Na janela **Adicionar novo item** , selecione o **procedimento armazenado SQL CLR C#**, **SQL CLR c# User-Defined função**, **tipo de User-Defined SQL CLR c#**, SQL CLR **c# Trigger**, **SQL CLR c# Aggregate**ou **Class**.
    1. Especifique um nome para o arquivo de origem do novo tipo e, em seguida, selecione **Adicionar**.
 
 3. Adicione código para o tipo novo no editor de texto. Para obter o código de exemplo de um procedimento armazenado de exemplo, consulte a seção de exemplo a seguir neste artigo.
@@ -116,6 +116,6 @@ EXEC GetVersion
 
 ## <a name="next-steps"></a>Próximas etapas
   
-Para obter mais informações sobre como depurar código gerenciado usando o Visual Studio, consulte [depuração de código gerenciado](https://go.microsoft.com/fwlink/?LinkId=120377) na documentação do Visual Studio.  
+Para obter mais informações sobre como depurar código gerenciado usando o Visual Studio, consulte [depuração de código gerenciado](/visualstudio/debugger/debugging-managed-code) na documentação do Visual Studio.  
 
 Para obter mais informações, consulte [conceitos de programação de integração do Common Language Runtime](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

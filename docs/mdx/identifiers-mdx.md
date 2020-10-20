@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fe8494558f7026355cb25e1415f9269fbeb1bed3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 489829468d9f30d54c7b76c0d1d10cce9142d9d1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387492"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194380"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
 
@@ -125,7 +125,6 @@ ms.locfileid: "88387492"
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de linguagem MDX &#40;&#41;MDX ](../mdx/mdx-language-reference-mdx.md)   
- [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
  [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

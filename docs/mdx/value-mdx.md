@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d6bf8edd7cbeefefa723c1acc374daa8d2c9407
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 52224625f5e2e6fc70ca9a76f750ed374108c52c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449608"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196724"
 ---
 # <a name="value-mdx"></a>Value (MDX)
 
@@ -33,7 +33,7 @@ Member_Expression[.Value]
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- A função **Value** retorna o valor do membro especificado como uma cadeia de caracteres. O argumento de **valor** é opcional porque o valor de um membro é a propriedade padrão de um membro e é o valor retornado para um membro se nenhum outro valor for especificado. Para obter mais informações sobre as propriedades de membros, consulte [propriedades intrínsecas do membro &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) e [Propriedades do membro definidas pelo usuário &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
+ A função **Value** retorna o valor do membro especificado como uma cadeia de caracteres. O argumento de **valor** é opcional porque o valor de um membro é a propriedade padrão de um membro e é o valor retornado para um membro se nenhum outro valor for especificado. Para obter mais informações sobre as propriedades de membros, consulte [propriedades intrínsecas do membro &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) e [Propriedades do membro definidas pelo usuário &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna o valor de um membro e também retorna explicitamente o nome dele.  
@@ -59,5 +59,4 @@ from [Adventure Works]
  [Nome &#40;&#41;MDX ](../mdx/name-mdx.md)   
  [UniqueName&#41;MDX &#40;](../mdx/uniquename-mdx.md)   
  [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d571ed020c1b36ea2e09beca7d2ccbef5899951f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbdae47b3ede8ad2b22258e83a69b4f2776115d9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500469"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192336"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -36,7 +36,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  Uma expressão de cadeia de caracteres válida de um nome de propriedade de membro.  
   
 ## <a name="remarks"></a>Comentários  
- A função **Properties** retorna o valor do membro especificado para a propriedade de membro especificada. A Propriedade Member pode ser qualquer uma das propriedades intrínsecas do membro, como **nome**, **ID**, **chave**ou **legenda**, ou pode ser uma propriedade de membro definida pelo usuário. Para obter mais informações, consulte [propriedades intrínsecas do membro &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) e [Propriedades do membro definidas pelo usuário &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
+ A função **Properties** retorna o valor do membro especificado para a propriedade de membro especificada. A Propriedade Member pode ser qualquer uma das propriedades intrínsecas do membro, como **nome**, **ID**, **chave**ou **legenda**, ou pode ser uma propriedade de membro definida pelo usuário. Para obter mais informações, consulte [propriedades intrínsecas do membro &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) e [Propriedades do membro definidas pelo usuário &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
  Por padrão, o valor é forçado a ser uma cadeia de caracteres. Se **tipado** for especificado, o valor de retorno será fortemente tipado.  
   
@@ -106,7 +106,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usando propriedades do membro &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [Usando propriedades do membro &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: a6cc30d907d6b8c0c14d177106da3457eb828bef
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522000"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194078"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidade e recuperação de desastres para Master Data Services
 
@@ -184,9 +184,9 @@ Observações:
 
 - O recurso WSFC pode não estar disponível em todas as edições do Windows Server. Certifique-se de que sua edição tenha esse recurso.
 
-- Certifique-se de que você tenha as permissões adequadas para configurar o WSFC no active directory. Se houver qualquer problema, consulte [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guia passo a passo do cluster de failover: configurar contas no Active Directory).
+- Certifique-se de que você tenha as permissões adequadas para configurar o WSFC no active directory. Se houver qualquer problema, consulte [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)) (Guia passo a passo do cluster de failover: configurar contas no Active Directory).
 
-Para obter mais informações sobre o WSFC, consulte [Clusters de failover](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx).
+Para obter mais informações sobre o WSFC, consulte [Clusters de failover](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732488(v=ws.10)).
 
 ## <a name="sql-server-always-on-availability-group"></a>SQL Server Always On grupo de disponibilidade
 
@@ -394,5 +394,4 @@ Neste white paper, vimos como configurar e configurar o banco de dados de back-e
 
 Este white paper foi útil? Envie seus comentários clicando **Comentários** na parte superior do artigo. 
 
-Seus comentários nos ajudarão a melhorar a qualidade dos white papers que lançamos. 
-
+Seus comentários nos ajudarão a melhorar a qualidade dos white papers que lançamos.

@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dcbf0f0321ddc0c1959c4681c0b1dddf49c1aba
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429698"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192286"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funções VBA no MDX e no DAX
 
 
-  Este documento contém uma referência cruzada de todas as funções do VBA disponíveis em [Visual Basic for Applications funções](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) com suporte no MDX; Além disso, a lista inclui uma observação quando há equivalência funcional com a linguagem DAX.  
+  Este documento contém uma referência cruzada de todas as funções do VBA disponíveis em [Visual Basic for Applications funções](/office/vba/Language/Reference/functions-visual-basic-for-applications) com suporte no MDX; Além disso, a lista inclui uma observação quando há equivalência funcional com a linguagem DAX.  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referência a funções do Visual Basic for Applications  
   
@@ -69,7 +69,7 @@ ms.locfileid: "88429698"
 |FileDateTime|Sem suporte||  
 |FileLen|Sem suporte||  
 |Filtrar|Sem suporte|**Aviso** A linguagem MDX implementa uma função diferente com o mesmo nome; a função FILTER (Set_Expression, Logical_Expression) retorna o conjunto que resulta da filtragem de um conjunto especificado com base em um critério de pesquisa dos argumentos especificados<br /><br /> **Aviso** O DAX implementa uma função diferente com o mesmo nome; a função FILTER ( \<table> , \<filter> ) retorna uma tabela que representa um subconjunto de outra tabela ou expressão dos argumentos especificados|  
-|Correção|Somente MDX||  
+|Fix|Somente MDX||  
 |Formato (Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|Sem suporte||  
 |FormatDateTime|Sem suporte||  
@@ -114,7 +114,7 @@ ms.locfileid: "88429698"
 |Mid|DAX, MDX||  
 |Minuto|DAX, MDX||  
 |MIRR|Somente MDX||  
-|Month|DAX, MDX||  
+|Mês|DAX, MDX||  
 |MonthName|Sem suporte||  
 |MsgBox|Sem suporte||  
 |Agora|DAX, MDX||  
@@ -137,7 +137,7 @@ ms.locfileid: "88429698"
 |Seek|Sem suporte||  
 |Sgn|DAX, MDX||  
 |Shell|Sem suporte||  
-|Seno|Somente MDX||  
+|Sin|Somente MDX||  
 |SLN|Somente MDX||  
 |Space|Somente MDX||  
 |Spc|Sem suporte||  
@@ -164,6 +164,5 @@ ms.locfileid: "88429698"
 |VarType|Sem suporte||  
 |Weekday|DAX, MDX||  
 |WeekdayName|Sem suporte||  
-|Ano|DAX, MDX||  
-  
+|Year|DAX, MDX||  
   

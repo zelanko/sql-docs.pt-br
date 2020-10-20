@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0b20fde852e02662780f75bd14e4b9023e01d80
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389292"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192397"
 ---
 # <a name="entity-dependencies-explorer"></a>Gerenciador de dependências de entidade
 
@@ -29,7 +29,7 @@ ms.locfileid: "88389292"
   
 Ele ajuda a responder a pergunta "que está consumindo minha entidade e como?". A exibição é semelhante à página do gerenciador Hierarquia Derivada, mas é mais inclusiva. Ela mostra todas as relações de DBA, não apenas aquelas definidas como parte de uma hierarquia específica. Uma definição de hierarquia não é necessária porque a estrutura hierárquica exibida é simplesmente inferida de DBAs existentes.  
   
-No menu de página do Gerenciador, o item de menu Dependências da Entidade lista todas as entidades no modelo que são dependentes pelo menos de uma entidade (ou seja, pelo menos uma entidade tem um DBA que faz referência à entidade listada). O número de dependências (diretas e indiretas) é exibido próximo ao nome da entidade e a lista é classificada por esse número com as entidades mais intensamente referenciadas na parte superior. A captura de tela abaixo, obtida do modelo do cliente dos [dados de exemplo](https://msdn.microsoft.com/library/master-data-services-sample.aspx), mostra que a entidade BigArea é referenciada (direta ou indiretamente) por 7 entidades:  
+No menu de página do Gerenciador, o item de menu Dependências da Entidade lista todas as entidades no modelo que são dependentes pelo menos de uma entidade (ou seja, pelo menos uma entidade tem um DBA que faz referência à entidade listada). O número de dependências (diretas e indiretas) é exibido próximo ao nome da entidade e a lista é classificada por esse número com as entidades mais intensamente referenciadas na parte superior. A captura de tela abaixo, obtida do modelo do cliente dos [dados de exemplo](./sql-server-samples-model-deployment-packages-mds.md), mostra que a entidade BigArea é referenciada (direta ou indiretamente) por 7 entidades:  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -47,5 +47,3 @@ A exibição é totalmente editável, assim como na página Gerenciador de Hiera
   
   
   
-  
-

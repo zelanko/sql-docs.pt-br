@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c879d9091c692cfa7a93490b34c70ad84fa81c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494909"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193968"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  Retorna o conjunto de tuplas do primeiro conjunto especificado que existe com uma ou mais tuplas do segundo conjunto especificado. Essa função executa manualmente o que o auto exists executa automaticamente. Para obter mais informações sobre a existência automática, consulte os [principais conceitos em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+  Retorna o conjunto de tuplas do primeiro conjunto especificado que existe com uma ou mais tuplas do segundo conjunto especificado. Essa função executa manualmente o que o auto exists executa automaticamente. Para obter mais informações sobre a existência automática, consulte os [principais conceitos em MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
  Se o opcional \<Measure Group Name> for fornecido, a função retornará tuplas que existem com uma ou mais tuplas do segundo conjunto e as tuplas que têm linhas associadas na tabela de fatos do grupo de medidas especificado.  
   
@@ -99,5 +99,4 @@ FROM [Adventure Works]
  [NonEmptyCrossjoin&#41;MDX &#40;](../mdx/nonemptycrossjoin-mdx.md)   
  [&#41;&#40;MDX não vazios ](../mdx/nonempty-mdx.md)   
  [IsEmpty &#40;&#41;MDX ](../mdx/isempty-mdx.md)  
-  
   

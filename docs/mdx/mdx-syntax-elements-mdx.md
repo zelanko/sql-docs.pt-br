@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10a9aa360a50b43324ae9e41b77dee6ce84baf60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27755806802e5238329b4a9ecb49e6a9f6ad5ce2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483882"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196936"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>Elementos MDX Syntax (MDX)
 
@@ -30,9 +30,8 @@ ms.locfileid: "88483882"
 |[Funções](../mdx/functions-mdx-syntax.md)|Funções são elementos de sintaxe que têm zero, um ou mais valores de entrada e retornam um valor escalar ou um objeto. Os exemplos incluem a função [sum](../mdx/sum-mdx.md) para adicionar vários valores, a função [Members](../mdx/members-set-mdx.md) para retornar um conjunto de membros de uma dimensão ou nível, e assim por diante.|  
 |[Comentários](../mdx/comments-mdx-syntax.md)|Comentários são partes do texto inseridas em instruções MDX ou scripts para explicar o objetivo da instrução. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não executa comentários.|  
 |[Palavras-chave reservadas](../mdx/reserved-keywords-mdx-syntax.md)|Palavras-chave reservadas são palavras reservadas para utilização do MDX e que não devem ser utilizadas para nomes de objetos usados em instruções MDX.|  
-|[Membros, Tuplas e Conjuntos](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Membros, tuplas e conjuntos são conceitos principais de dados multidimensionais que você deve compreender antes de criar uma consulta MDX.|  
+|[Membros, Tuplas e Conjuntos](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Membros, tuplas e conjuntos são conceitos principais de dados multidimensionais que você deve compreender antes de criar uma consulta MDX.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de expressões multidimensionais &#40;MDX&#41;](../mdx/multidimensional-expressions-mdx-reference.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0992df0c7180c8a572fb1f8c34b99059ab118ea4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c4ca356847d75150aa098b331bdf0f8c8368bb6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387232"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195601"
 ---
 # <a name="mdx-data-definition---drop-set"></a>Definição de dados MDX – DROP SET
 
@@ -41,9 +41,8 @@ DROP [SESSION] SET
  Uma expressão de cadeia de caracteres válida que fornece esse nome do conjunto nomeado a ser descartado.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre conjuntos nomeados, consulte [Criando conjuntos nomeados em MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets).  
+ Para obter mais informações sobre conjuntos nomeados, consulte [Criando conjuntos nomeados em MDX &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

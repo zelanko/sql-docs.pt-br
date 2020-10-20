@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812962"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197013"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importar Dados de Tabelas (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "85812962"
   
 -   Você deve ter permissão para inserir dados no STG. \<name> _Leaf, o STG. \<name> _Consolidated, STG. \<name> _Relationship tabela no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados.  
   
--   Você deve ter permissões para executar o STG. udp_ \<name> _Leaf, STG. udp \_ \<name> _Consolidated ou o procedimento armazenado stg. UDP \_ \<name> _Relationship no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados.  
+-   Você deve ter permissões para executar o stg.udp_ \<name> _Leaf, STG. udp \_ \<name> _Consolidated ou o procedimento armazenado stg. UDP \_ \<name> _Relationship no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados.  
   
 -   O modelo não deve ter um status de **Confirmado**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85812962"
   
 2.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e conecte-se à instância do mecanismo de banco de dados do seu banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-     Para obter mais informações, consulte [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
+     Para obter mais informações, consulte [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
   
 3.  Importe dados para tabelas de preparo usando o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -77,5 +77,4 @@ ms.locfileid: "85812962"
      No Master Data Manager, navegue até a área funcional **Gerenciador** do seu modelo e, em seguida, aplique as regras de negócio para validar os dados. Para obter mais informações, consulte [Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md). Você também pode usar um procedimento armazenado para validar os dados. Para obter mais informações, consulte [Procedimento armazenado de validação &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
      Quando você carrega dados com as tabelas de preparo, os dados não são validados automaticamente em relação às regras de negócio. Para obter mais informações sobre o que é a validação e quando ela ocorre, consulte [Validação &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).  
-  
   

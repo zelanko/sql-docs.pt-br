@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db3a0122abd82506f24464fb7131eeb557c596c8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0f5c1ba58efb8fddcf5375d2a38fbf9f227f43f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87946969"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196864"
 ---
 # <a name="clr-integration-security"></a>Segurança da integração CLR
 
@@ -47,10 +47,10 @@ ms.locfileid: "87946969"
  [Atributos de proteção de host e programação da Integração CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Fornece informações sobre valores HPA (atributo de proteção do host) que são desaprovados nos assemblies SAFE e EXTERNAL_ACCESS.  
   
- [Links em segurança da integração CLR](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Links em segurança da integração CLR]()  
  Descreve como partes do código do usuário podem se chamar uma à outra no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Representação e segurança de integração CLR](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Representação e segurança de integração CLR](../data-access/impersonation-and-credentials-for-connections.md)  
  Aborda como o código gerenciado acessa recursos externos que usam representação.  
   
  Aborda problemas que surgem quando um método gerenciado invoca um método em uma classe contida em outro assembly.  
@@ -60,5 +60,4 @@ ms.locfileid: "87946969"
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciando assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
-  
   

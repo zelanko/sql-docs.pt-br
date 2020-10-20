@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e65024ac3673e6579e614ad64931ab772b599f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480311"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193643"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
 
@@ -72,11 +72,10 @@ ms.locfileid: "89480311"
 |Administrador de entidade|Pode ser um administrador de entidade com base nas permissões de administrador atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Tem automaticamente todas as permissões para todos os objetos e membros na entidade específica.<br /><br /> Poderá aprovar os conjuntos de alterações pendentes se as alterações de entidade exigirem aprovação.|  
   
 ## <a name="external-resources"></a>Recursos externos  
- Postagem do blog, [Aprimoramentos de Segurança](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay), em msdn.com.  
+ Postagem do blog, [Aprimoramentos de Segurança](/archive/blogs/e7/improvements-to-autoplay), em msdn.com.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Criar um banco de dados Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cdbee6f6ede5e46926f1a8189792d86cf9e99f5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d352a12a4567fc88d2d037862c4cab2f1cd20fe0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387262"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193958"
 ---
 # <a name="mdx-data-definition---create-measure"></a>Definição de dados MDX – CREATE MEASURE
 
@@ -43,11 +43,10 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ## <a name="remarks"></a>Comentários  
  O *MEASURE_NAME*  deve ser colocado entre parênteses.  
   
- A instrução CREATE MEASURE só pode ser usada dentro de uma definição de script MDX; consulte o [elemento MdxScript &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
+ A instrução CREATE MEASURE só pode ser usada dentro de uma definição de script MDX; consulte o [elemento MdxScript &#40;ASSL&#41;](/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
   
- Também é possível definir um membro calculado para ser usado por uma consulta única. Para definir um membro calculado limitado a uma consulta única, use a cláusula WITH na instrução SELECT. Para obter mais informações, consulte [Building Measures in MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
+ Também é possível definir um membro calculado para ser usado por uma consulta única. Para definir um membro calculado limitado a uma consulta única, use a cláusula WITH na instrução SELECT. Para obter mais informações, consulte [Building Measures in MDX](/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 671ae0d9578c81d56c3324f73a4240152594dd49
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87878943"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194426"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hospedar um banco de dados MDS em uma instância gerenciada
 
@@ -31,15 +31,15 @@ Para preparar, você precisa criar e configurar um Instância Gerenciada de SQL 
 
 ### <a name="create-and-configure-the-database"></a>Criar e configurar o banco de dados
 
-1. Crie uma instância gerenciada com uma rede virtual. Consulte [início rápido: criar um instância gerenciada SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) para obter detalhes.
+1. Crie uma instância gerenciada com uma rede virtual. Consulte [início rápido: criar um instância gerenciada SQL](/azure/sql-database/sql-database-managed-instance-get-started) para obter detalhes.
 
-1. Configure uma conexão ponto a site. Consulte [Configurar uma conexão ponto a site com uma VNet usando a autenticação de certificado nativa do Azure: portal do Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obter instruções.
+1. Configure uma conexão ponto a site. Consulte [Configurar uma conexão ponto a site com uma VNet usando a autenticação de certificado nativa do Azure: portal do Azure](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obter instruções.
 
-1. Configure Azure Active Directory autenticação com o SQL Instância Gerenciada. Consulte [configurar e gerenciar a autenticação de Azure Active Directory com o SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) para obter detalhes.
+1. Configure Azure Active Directory autenticação com o SQL Instância Gerenciada. Consulte [configurar e gerenciar a autenticação de Azure Active Directory com o SQL](/azure/sql-database/sql-database-aad-authentication-configure) para obter detalhes.
 
 ### <a name="configure-web-application-machine"></a>Configurar computador do aplicativo Web
 
-1. Instale um certificado de conexão ponto a site e uma VPN para garantir que o computador possa acessar a instância gerenciada. Consulte [Configurar uma conexão ponto a site com uma VNet usando a autenticação de certificado nativa do Azure: portal do Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obter instruções.
+1. Instale um certificado de conexão ponto a site e uma VPN para garantir que o computador possa acessar a instância gerenciada. Consulte [Configurar uma conexão ponto a site com uma VNet usando a autenticação de certificado nativa do Azure: portal do Azure](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obter instruções.
 
 1. Instale as seguintes funções e recursos:
    - Funções:
@@ -56,16 +56,16 @@ Para preparar, você precisa criar e configurar um Instância Gerenciada de SQL 
      - Filtros ISAPI
      - Recursos comuns de HTTP
      - Documento padrão
-     - Navegação de diretório
-     - Erros de HTTP
-     - Conteúdo estático
+     - Pesquisa no Diretório
+     - Erros HTTP
+     - Conteúdo Estático
      - Integridade e diagnóstico
-     - Log de HTTP
-     - Monitor de solicitação
+     - Log HTTP
+     - Monitor de Solicitações
      - Desempenho
-     - Compactação de conteúdo estático
+     - Compactação de Conteúdo Estático
      - Segurança
-     - Filtragem de solicitação
+     - Filtragem de Solicitações
      - Autenticação do Windows
        > [!NOTE]
        > Não instalar a publicação WebDAV
@@ -131,7 +131,7 @@ Esta ação instala:
 
    ![MDS-SQLServer2019-config-MI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
 
-1. Selecione **Avançar** para exibir um resumo das configurações do banco de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] dados. Selecione **Avançar** novamente para criar o banco de dados. Você verá a página **progresso e conclusão** .
+1. Selecione **Avançar** para exibir um resumo das configurações do banco de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] dados. Selecione  **Avançar** novamente para criar o banco de dados. Você verá a página **progresso e conclusão** .
 
 1. Depois que o banco de dados for criado e configurado, selecione **concluir**.
 
@@ -169,7 +169,7 @@ Esta ação instala:
 
    ![MDS-SQLServer2019-config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
 
-1. Escolha **Aplicar**. Você verá a mensagem **configuração concluída** . Selecione **OK** na caixa de mensagem para iniciar o aplicativo Web. O endereço do site é `http://server name/web application/` .
+1. Selecione **Aplicar**. Você verá a mensagem **configuração concluída** . Selecione **OK** na caixa de mensagem para iniciar o aplicativo Web. O endereço do site é `http://server name/web application/` .
 
 ## <a name="configure-authentication"></a>Configurar autenticação
 
@@ -199,9 +199,9 @@ O MDS também dá suporte à autenticação de senha e SQL Server de Active Dire
 
 ## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>Atualização [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] e versão do banco de dados SQL
 
-### <a name="upgrade-ssmdsshort_md"></a>Melhora[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>Melhora [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
-Instale a **atualização cumulativa do SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]será atualizado automaticamente.
+Instale a **atualização cumulativa do SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] será atualizado automaticamente.
 
 ### <a name="upgrade-sql-server"></a>Atualizar o SQL Server
 
@@ -210,7 +210,7 @@ Você pode receber o erro: `The client version is incompatible with the database
 
 Para corrigir esse problema, você precisa atualizar a versão do banco de dados:
 
-1. Abra o [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] e selecione configuração do **banco de dados** no painel esquerdo.
+1. Abra o [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] e selecione configuração do  **banco de dados** no painel esquerdo.
 
 1. Na página **configuração do banco de dados** no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , **escolha Selecionar Banco de dados**.
 
@@ -222,7 +222,7 @@ Para corrigir esse problema, você precisa atualizar a versão do banco de dados
 
    ![MDS-SQLServer2019-config-MI-SelectUpgradeDB](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
 
-1. No Assistente para atualizar banco de dados, selecione **Avançar** na página de **boas-vindas** e na página **revisão de atualização** .
+1. No Assistente para atualizar banco de dados, selecione **Avançar** na página de **boas-vindas** e na página  **revisão de atualização** .
 
    ![MDS-SQLServer2019-config-MI-UpgradeDBWizard](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
 

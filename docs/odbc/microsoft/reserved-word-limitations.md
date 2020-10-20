@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07917cbe056b38be42e4697fcef52935bae3efe3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15033816b953df764126853ada353452f00650d6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449288"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196170"
 ---
 # <a name="reserved-keyword-limitations"></a>Limitações de palavra-chave reservadas
 
@@ -29,7 +29,6 @@ A limitação de palavra-chave reservada também se aplica a qualquer forma abre
 
 Uma lista das palavras-chave reservadas do ODBC está disponível em:
 
-- [Palavras-chave reservadas ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+- [Palavras-chave reservadas ODBC](../reference/appendixes/reserved-keywords.md).
 
-- No *Guia de referência do programador de ODBC*, consulte o [Apêndice C: gramática SQL](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
-
+- No *Guia de referência do programador de ODBC*, consulte o [Apêndice C: gramática SQL](../reference/appendixes/appendix-c-sql-grammar.md).

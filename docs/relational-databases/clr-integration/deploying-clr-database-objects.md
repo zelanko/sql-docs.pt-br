@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c69f0ed73b638fd17183c5efba1c1f5e8e3c74f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88f297829a13c1b7d132230aebab76b9f546704d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756301"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192597"
 ---
 # <a name="deploying-clr-database-objects"></a>Implantando objetos de banco de dados CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "85756301"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Para obter mais informações sobre como criar os diferentes tipos de objetos de banco de dados gerenciado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [funções CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)definidas pelo usuário, [agregações CLR definidas pelo](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)usuário, [tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimentos armazenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)e [gatilhos CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Para obter mais informações sobre como criar os diferentes tipos de objetos de banco de dados gerenciado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [funções CLR User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [agregações CLR User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [tipos CLR User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimentos armazenados CLR](/dotnet/framework/data/adonet/sql/clr-stored-procedures)e [gatilhos CLR](/dotnet/framework/data/adonet/sql/clr-triggers).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Implantando o assembly em servidores de produção  
  Uma vez testados e verificados no servidor de teste, os objetos de banco de dados do CLR podem ser distribuídos para servidores de produção. Para obter mais informações sobre como depurar objetos de banco de dados gerenciado, consulte [DEBUGGING CLR Database Objects](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -93,7 +93,7 @@ ms.locfileid: "85756301"
   
 4.  No painel **escolher opções de script** , clique em **Avançar**ou altere as opções e clique em **Avançar**.  
   
-5.  No painel **escolher tipos de objeto** , escolha o tipo de objeto de banco de dados a ser implantado. Clique em **Próximo**.  
+5.  No painel **escolher tipos de objeto** , escolha o tipo de objeto de banco de dados a ser implantado. Clique em **Avançar**.  
   
 6.  Para cada tipo de objeto selecionado no painel **escolher tipos de objeto** , um painel **escolher \<type> ** é apresentado. Nesse painel, é possível escolher uma dentre todas as instâncias do tipo de objeto de banco de dados registrado no banco de dados especificado. Selecione um ou mais objetos e clique em **Avançar**.  
   
@@ -108,5 +108,4 @@ ms.locfileid: "85756301"
   
 ## <a name="see-also"></a>Consulte Também  
  [Conceitos de programação da Integração CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

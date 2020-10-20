@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480405"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195029"
 ---
 # <a name="tracing-master-data-services"></a>Rastreamento (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "89480405"
   
 -   O rastreamento está habilitado para mensagens de Aviso e de Rastreamento de Atividades.  
   
-     Para saber mais, veja [Enumeração SourceLevels](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
+     Para saber mais, veja [Enumeração SourceLevels](/dotnet/api/system.diagnostics.sourcelevels).  
   
 -   Os logs são salvos na pasta Logs na pasta WebApplication. O local padrão é C:\Arquivos de Programas\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
@@ -71,5 +71,4 @@ ms.locfileid: "89480405"
   
 ## <a name="external-resources"></a>Recursos externos  
  Postagem de blog, [Troubleshooting Logging Improvement (Aperfeiçoamento da Solução de Problemas de Log)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214), no msdn.com.  
-  
   
