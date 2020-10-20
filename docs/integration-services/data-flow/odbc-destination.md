@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04bf343142c1e89affe6ebb056f09771226da6e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392102"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194768"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
 
@@ -35,7 +35,7 @@ ms.locfileid: "88392102"
  O destino ODBC tem uma saída regular e uma saída de erro.  
   
 ##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Opções de carregamento  
- O destino ODBC pode usar um de dois módulos de carga de acesso. Defina o modo no [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Os dois modos são:  
+ O destino ODBC pode usar um de dois módulos de carga de acesso. Defina o modo no [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](./odbc-source.md). Os dois modos são:  
   
 -   **Lote**: nesse modo, o destino ODBC tenta usar o método de inserção mais eficiente com base nos recursos do provedor ODBC percebido. Para a maioria dos provedores ODBC modernos, isso significa preparar uma instrução INSERT com parâmetros e usar uma associação de parâmetro de matriz row-wise (em que o tamanho da matriz é controlado pela propriedade **BatchSize** ). Se você selecionar **Lote** e o provedor não oferecer suporte a esse método, o destino ODBC alternará automaticamente para modo **Linha a linha** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88392102"
   
 -   As colunas de dados de saída padrão.  
   
- Dependendo da configuração de comportamento de erro, o destino ODBC oferece suporte ao retorno de erros (conversão de dados, truncamento) que ocorre durante o processo de extração na saída de erro. Para obter mais informações, consulte [Editor de origem ODBC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md).  
+ Dependendo da configuração de comportamento de erro, o destino ODBC oferece suporte ao retorno de erros (conversão de dados, truncamento) que ocorre durante o processo de extração na saída de erro. Para obter mais informações, consulte [Editor de origem ODBC &#40;Página Saída de Erro&#41;](./odbc-source.md).  
   
 ## <a name="parallelism"></a>Paralelismo  
  Não há nenhuma limitação no número de componentes de destino ODBC que podem ser executados em paralelo na mesma tabela ou tabelas diferentes, na mesma máquina ou em máquinas diferentes (diferente de limites de sessão globais normais).  
@@ -67,11 +67,11 @@ ms.locfileid: "88392102"
   
  Para obter mais informações, consulte um dos tópicos a seguir.  
   
--   [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;]()  
   
--   [Editor de Destinos ODBC &#40;Página Mapeamentos&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Editor de Destinos ODBC &#40;Página Mapeamentos&#41;]()  
   
--   [Editor do Destino ODBC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Editor do Destino ODBC &#40;Página Saída de Erro&#41;]()  
   
  A caixa de diálogo **Editor Avançado** contém as propriedades que podem ser definidas programaticamente.  
   
@@ -185,4 +185,3 @@ ms.locfileid: "88392102"
   
 #### <a name="redirect-flow"></a>Redirecionar fluxo  
  A linha que está causando o erro ou o truncamento é direcionada para a saída do erro do destino ODBC. Para obter mais informações, consulte Destino ODBC.  
-  

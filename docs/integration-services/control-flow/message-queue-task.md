@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e5eab167ddaa471ac0bddbd4b048b38e040b62e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484599"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194266"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -46,7 +46,7 @@ ms.locfileid: "88484599"
   
  Quando estiver enviando ou recebendo mensagens, a tarefa Fila de Mensagens usa um dos quatro tipos de mensagem: arquivo de dados, cadeia, mensagem de cadeia a variável, ou variável. O tipo de mensagem “mensagem de cadeia de caracteres para variável” só pode ser usada ao receber mensagens.  
   
- A tarefa usa um gerenciador de conexões MSMQ para se conectar à uma fila de mensagens. Para obter mais informações, consulte [Gerenciador de Conexão do SMO](../../integration-services/connection-manager/msmq-connection-manager.md). Para obter mais informações sobre o serviço de enfileiramento de mensagens, consulte a [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ A tarefa usa um gerenciador de conexões MSMQ para se conectar à uma fila de mensagens. Para obter mais informações, consulte [Gerenciador de Conexão do SMO](../../integration-services/connection-manager/msmq-connection-manager.md). Para obter mais informações sobre o serviço de enfileiramento de mensagens, consulte a [MSDN Library](../../sql-server/index.yml).  
   
  A tarefa Fila de Mensagens requer que o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esteja instalado. Alguns componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pode selecionar para instalação na página **Componentes a Serem Instalados** ou na página **Seleção de Recursos** do Assistente de Instalação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalam um subconjunto parcial de componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Esses componentes são úteis para tarefas específicas, mas a funcionalidade do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] será limitada. Por exemplo, a opção [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] instala os componentes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necessários para projetar um pacote, mas o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não é instalado e, portanto, a tarefa Fila de Mensagens não é funcional. Para assegurar uma instalação completa de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você deve selecionar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] na página **Componentes a Serem Instalados** . Para obter mais informações sobre como instalar e executar a tarefa Fila de Mensagens, consulte [Instalar o Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88484599"
  Para obter mais informações sobre como definir essas propriedades programaticamente, consulte a documentação da classe **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** no Guia do Desenvolvedor.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para obter mais informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Definir as propriedades de uma tarefa ou um contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obter mais informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Definir as propriedades de uma tarefa ou um contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Editor da Tarefa Fila de Mensagens (página Geral)
   Use a **página Geral** da caixa de diálogo do **Editor da Tarefa Fila de Mensagens** para nomear e descrever a tarefa Fila de Mensagens, especificar o formato da mensagem e indicar se a tarefa envia ou recebe mensagens.  
@@ -123,7 +123,7 @@ ms.locfileid: "88484599"
  **MSMQConnection**  
  Selecione um gerenciador de conexões MSMQ existente ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
- **Tópicos relacionados**: [Gerenciador de conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor do Gerenciador de conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **Tópicos relacionados**: [Gerenciador de conexões MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor do Gerenciador de conexões MSMQ](../connection-manager/msmq-connection-manager.md)  
   
  **Mensagem**  
  Especifique se a tarefa Fila de Mensagens envia ou recebe mensagens. Se você selecionar **Enviar mensagem**, será listada a página Enviar no painel esquerdo da caixa de diálogo; se você selecionar **Receber mensagem**, será listada a página Receber. Por padrão, esse valor está definido como **Enviar mensagem**.  
@@ -233,7 +233,7 @@ ms.locfileid: "88484599"
  **Variável**  
  Digite o nome da variável ou clique em \<**New variable...**> e configure uma nova variável.  
   
- **Tópicos relacionados:** [Adicionar Variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Adicionar Variável](../integration-services-ssis-variables.md)  
   
 #### <a name="filter-dynamic-options"></a>Opções dinâmicas do filtro  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88484599"
  **Variável**  
  Digite o nome da variável para manter a mensagem recebida ou clique em \<**New variable...**> e configure uma nova variável.  
   
- **Tópicos relacionados:** [Adicionar Variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Adicionar Variável](../integration-services-ssis-variables.md)  
   
 ## <a name="select-variables"></a>Selecionar variáveis
   Use a caixa de diálogo **Selecionar Variáveis** para especificar as variáveis a serem usadas em uma operação de envio de mensagem na tarefa Fila de Mensagens. A lista das **Variáveis Disponíveis** inclui variáveis do sistema e aquelas definidas por usuários que estão no escopo da tarefa Fila de Mensagens ou no seu contêiner pai. A tarefa usa as variáveis da lista de **Variáveis Selecionadas** .  
@@ -299,9 +299,8 @@ ms.locfileid: "88484599"
  **Nova Variável**  
  Crie uma nova variável.  
   
- **Tópicos relacionados:** [Adicionar Variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Adicionar Variável](../integration-services-ssis-variables.md)  
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
-  
   

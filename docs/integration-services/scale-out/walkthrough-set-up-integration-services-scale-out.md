@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: f7de3c86cf58a9e4173ef170dff07db61f06f7f9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8d71c814adf1843a6fb6237f7767e1d9f540e7e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522340"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196347"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Passo a passo: Configurar o Integration Services (SSIS) Scale Out
 
@@ -76,7 +76,7 @@ Para instalar o recurso Mestre do Scale Out, use o assistente de instalação do
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>Instalar o Mestre do Scale Out por meio do prompt de comando
 
-Siga as instruções em [Instalar o SQL Server do Prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Defina os parâmetros para o Mestre do Scale Out seguindo estas etapas:
+Siga as instruções em [Instalar o SQL Server do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Defina os parâmetros para o Mestre do Scale Out seguindo estas etapas:
  
 1.  Adicionar `IS_Master` ao parâmetro `/FEATURES`
 
@@ -131,7 +131,7 @@ Para instalar o recurso Trabalho do Scale Out, use o assistente de instalação 
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>Instalar o Trabalho do Scale Out por meio do prompt de comando
 
-Siga as instruções em [Instalar o SQL Server do Prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Defina os parâmetros para o Trabalho do Scale Out seguindo estas etapas:
+Siga as instruções em [Instalar o SQL Server do Prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Defina os parâmetros para o Trabalho do Scale Out seguindo estas etapas:
 
 1.  Adicione IS_Worker ao parâmetro `/FEATURES`.
 

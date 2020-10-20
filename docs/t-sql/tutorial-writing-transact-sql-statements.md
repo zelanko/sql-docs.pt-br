@@ -15,12 +15,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d842186c057df54276d19c2b5b5774225961b3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9058445789197a3ddcf8b2412028f0bfc5fc85f4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426468"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036826"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Gravando instruções Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ Bem-vindo ao tutorial Escrevendo Instruções [!INCLUDE[tsql](../includes/tsql-m
 >**OBSERVAÇÃO:** se você for um iniciante, talvez seja mais fácil usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em vez de escrever instruções [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
 ## <a name="finding-more-information"></a>Descobrindo mais informações  
-Para encontrar mais informações sobre uma instrução específica, pesquise a instrução pelo nome nos Manuais Online do SQL Server ou use o Conteúdo para navegar pelos 1.800 elementos de linguagem listados em ordem alfabética em [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../t-sql/transact-sql-reference-database-engine.md). Outra boa estratégia para obter informações é pesquisar palavras-chave relacionadas ao assunto do seu interesse. Por exemplo, se quiser saber como retornar uma parte de uma data (como o mês), pesquise **datas [SQL Server]** no índice e selecione **dateparts**. Isso o levará ao tópico [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). Como outro exemplo, para descobrir como trabalhar com cadeias de caracteres, pesquise **funções de cadeia de caracteres**. Isso o levará ao tópico [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
+Para encontrar mais informações sobre uma instrução específica, pesquise a instrução pelo nome nos Manuais Online do SQL Server ou use o Conteúdo para navegar pelos 1.800 elementos de linguagem listados em ordem alfabética em [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](./language-reference.md). Outra boa estratégia para obter informações é pesquisar palavras-chave relacionadas ao assunto do seu interesse. Por exemplo, se quiser saber como retornar uma parte de uma data (como o mês), pesquise **datas [SQL Server]** no índice e selecione **dateparts**. Isso o levará ao tópico [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). Como outro exemplo, para descobrir como trabalhar com cadeias de caracteres, pesquise **funções de cadeia de caracteres**. Isso o levará ao tópico [Funções de cadeia de caracteres &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
 Este tutorial lhe mostrará como criar um banco de dados, criar uma tabela no banco de dados, inserir dados numa tabela, atualizar dados, ler dados, excluir dados e, por fim, excluir a tabela. Você criará exibições e procedimentos armazenados e configurará um usuário ao banco de dados e aos dados.  
@@ -58,5 +58,3 @@ O sistema deverá ter o seguinte instalado:
  
   
   
-  
-

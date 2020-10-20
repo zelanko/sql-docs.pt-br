@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2abf3c8a09ead6369a5201a2d582623f05bc2f79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85b62ff41c9b413c49ff6312e918f648fba430cd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477833"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194818"
 ---
 # <a name="excel-destination"></a>Destino do Excel
 
@@ -54,7 +54,7 @@ ms.locfileid: "88477833"
   
  A caixa de diálogo **Editor Avançado** reflete todas as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas do Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88477833"
 |Opção|Descrição|  
 |------------|-----------------|  
 |Tabela ou exibição|Carregue dados em uma planilha ou intervalo nomeado na fonte de dados do Excel.|  
-|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](../integration-services-ssis-variables.md)|  
 |Comando SQL|Carregue dados no destino do Excel usando uma consulta SQL.|  
   
  **Nome da planilha do Excel**  

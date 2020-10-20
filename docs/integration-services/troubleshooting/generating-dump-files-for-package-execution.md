@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913731"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193768"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Gerando arquivos de despejo para execução de pacote
 
@@ -35,7 +35,7 @@ No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode cri
   
      Chame esse procedimento armazenado para pausar a execução de um pacote e criar um arquivo de despejo.  
   
- Se estiver usando o modelo de implantação de pacote, você criará os arquivos de despejo de depuração usando o utilitário **dtexec** ou **dtutil** para especificar uma opção de despejo de depuração na linha de comando. Para saber mais, veja [Utilitário dtexec](../../integration-services/packages/dtexec-utility.md) e [Utilitário dtutil](../../integration-services/dtutil-utility.md). Para obter mais informações sobre o modelo de implantação de pacote, consulte [Implantar projetos e pacotes do SSIS (Integration Services)](https://msdn.microsoft.com/library/hh213290.aspx) e [Implantação de pacote herdado &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
+ Se estiver usando o modelo de implantação de pacote, você criará os arquivos de despejo de depuração usando o utilitário **dtexec** ou **dtutil** para especificar uma opção de despejo de depuração na linha de comando. Para saber mais, veja [Utilitário dtexec](../../integration-services/packages/dtexec-utility.md) e [Utilitário dtutil](../../integration-services/dtutil-utility.md). Para obter mais informações sobre o modelo de implantação de pacote, consulte [Implantar projetos e pacotes do SSIS (Integration Services)](../packages/deploy-integration-services-ssis-projects-and-packages.md) e [Implantação de pacote herdado &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## <a name="debug-dump-file-format"></a>Formato do arquivo de despejo de depuração  
  Ao especificar uma opção de despejo de depuração, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria os seguintes arquivos de despejo de depuração:  
@@ -55,4 +55,4 @@ No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode cri
 |Mensagens recentes|Mensagens recentes emitidas pelo sistema. Inclui hora, tipo, descrição e ID de thread de cada mensagem.|[M:1]   Entrada de buffer de anel:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Carimbo de data/hora: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID do thread: 2368           (ThreadID)<br /><br /> [E:3]         Nome do evento: OnError                        (EventName)<br /><br /> [E:3]         Nome de origem:                (SourceName)<br /><br /> [E:3]         ID de origem:                        (SourceID)<br /><br /> [E:3]         ID de execução:                 (ExecutionGUID)<br /><br /> [E:3]         Código de dados: -1073446879              (DataCode)<br /><br /> [E:3]         Descrição: O componente está faltando, não está registrado, não é atualizável ou não possui as interfaces necessárias. As informações de contato desse componente são "".|  
   
 ## <a name="related-information"></a>Informações relacionadas  
-[Caixa de diálogo Executar Pacote](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[Caixa de diálogo Executar Pacote](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

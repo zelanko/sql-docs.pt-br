@@ -21,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889e473669093646ae7c976025ed4032c17beeff
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468026"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038337"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quais são as funções do banco de dados SQL?
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ Funcionam em um valor único e retornam um valor único. As funções escalares 
 |[Funções de cadeia de caracteres](string-functions-transact-sql.md)|Executam operações em um valor de entrada de cadeia de caracteres (**char** ou **varchar**) e retornam uma cadeia de caracteres ou um valor numérico.|  
 |[Funções do Sistema](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Executam operações e informações de retorno sobre valores, objetos e configurações em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funções estatísticas do sistema](system-statistical-functions-transact-sql.md)|Retornam informações estatísticas sobre o sistema.|  
-|[Funções de texto e imagem](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Executam operações em valores de entrada de texto ou imagem ou colunas e retornam informações sobre o valor.|  
+|[Funções de texto e imagem](./text-and-image-functions-textptr-transact-sql.md)|Executam operações em valores de entrada de texto ou imagem ou colunas e retornam informações sobre o valor.|  
   
 ## <a name="function-determinism"></a>Determinismo de função  
  As funções internas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são determinísticas ou não determinísticas. As funções são determinísticas quando retornam sempre o mesmo resultado quando são chamadas com o uso de um conjunto específico de valores de entrada. As funções são não determinísticas quando podem retornar resultados diferentes sempre que são chamadas, mesmo com o mesmo conjunto específico de valores de entrada. Para obter mais informações, consulte [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  
@@ -83,5 +83,4 @@ Funcionam em um valor único e retornam um valor único. As funções escalares 
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [Usando procedimentos armazenados &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  
-  
   

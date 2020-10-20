@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 60eb4edd5f52bb160b3be2fad2757b649a59d474
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 647ba1436995028580b6c1ed7ed40a8cd7849ab5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115239"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036839"
 ---
 # <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
@@ -72,6 +72,6 @@ SELECT CURRENT_TIMEZONE();
   
 ## <a name="see-also"></a>Confira também
 
-[Fuso horário da Instância Gerenciada de SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[Fuso horário da Instância Gerenciada de SQL](/azure/sql-database/sql-database-managed-instance-timezone)
 
-[CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)
+[CURRENT_TIMEZONE_ID()](./current-timezone-id-transact-sql.md)

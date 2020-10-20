@@ -12,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bae2ef1468110ba89d77d5f7a6360aecb324abd0
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 5d6830452d32de9a1b3ca954cbaf94d7d883f1b5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076695"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038341"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 
@@ -41,7 +41,7 @@ DBCC SHRINKLOG
 SIZE = { *target_size* [ MB \| **GB** \| TB ]  } \| **DEFAULT**.  
 *target_size* é o tamanho desejado para o log de transações em todos os nós de computação, após a conclusão do DBCC SHRINKLOG. É um número inteiro maior que 0.  
 O tamanho do log é medido em megabytes (MB), gigabytes (GB) ou terabytes (TB). É o tamanho combinado do log de transações em todos os nós de computação.  
-Por padrão, o DBCC SHRINKLOG reduz o log de transações para o tamanho do log armazenado nos metadados do banco de dados. O tamanho do log nos metadados é determinado pelo parâmetro LOG_SIZE em [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) ou [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md). O DBCC SHRINKLOG reduz o tamanho do log de transações para o tamanho padrão quando `SIZE=DEFAULT` é especificado ou quando a cláusula `SIZE` é omitida.
+Por padrão, o DBCC SHRINKLOG reduz o log de transações para o tamanho do log armazenado nos metadados do banco de dados. O tamanho do log nos metadados é determinado pelo parâmetro LOG_SIZE em [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) ou [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../statements/alter-database-transact-sql.md). O DBCC SHRINKLOG reduz o tamanho do log de transações para o tamanho padrão quando `SIZE=DEFAULT` é especificado ou quando a cláusula `SIZE` é omitida.
   
 WITH NO_INFOMSGS  
 As mensagens informativas não são exibidas nos resultados do DBCC SHRINKLOG.  

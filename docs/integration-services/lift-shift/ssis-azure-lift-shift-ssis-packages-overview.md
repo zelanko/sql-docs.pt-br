@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 8b3e01fbded713f59832c30eb8cd9d8149e5b469
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 7a962b29d6af2caf48f32eec5bc7e77bef3b126f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864593"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194031"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem
 
@@ -33,7 +33,7 @@ Mover suas cargas de trabalho SSIS de local para o Azure tem os seguintes benef�
 ## <a name="architecture-of-ssis-on-azure"></a>Arquitetura do SSIS no Azure
 A tabela a seguir destaca as diferenças entre o SSIS local e o SSIS no Azure.
 
-A diferença mais importante é a separação do armazenamento do runtime. O Azure Data Factory hospeda o mecanismo de runtime para pacotes do SSIS no Azure. O mecanismo de tempo de execução é chamado de IR do Azure-SSIS (Integration Runtime do Azure-SSIS). Para obter mais informações, veja [Integration Runtime do Azure-SSIS](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
+A diferença mais importante é a separação do armazenamento do runtime. O Azure Data Factory hospeda o mecanismo de runtime para pacotes do SSIS no Azure. O mecanismo de tempo de execução é chamado de IR do Azure-SSIS (Integration Runtime do Azure-SSIS). Para obter mais informações, veja [Integration Runtime do Azure-SSIS](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
 
 | Location | Armazenamento | Runtime | Escalabilidade |
 |---|---|---|---|
@@ -45,9 +45,9 @@ A diferença mais importante é a separação do armazenamento do runtime. O Azu
 
 **Provisione**. Antes de implantar e executar os pacotes SSIS no Azure, é necessário provisionar o SSISDB (Catálogo do SSIS) e o Azure-SSIS Integration Runtime.
 
--   Para provisionar o SSIS no Azure, usando o portal do Azure, siga as etapas de provisionamento deste artigo: [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+-   Para provisionar o SSIS no Azure, usando o portal do Azure, siga as etapas de provisionamento deste artigo: [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory](/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
 
--   Para provisionar o SSIS no Azure, usando o PowerShell, siga as etapas de provisionamento neste artigo: [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory com o PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
+-   Para provisionar o SSIS no Azure, usando o PowerShell, siga as etapas de provisionamento neste artigo: [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory com o PowerShell](/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
 
 Você só precisa provisionar o IR do Azure-SSIS uma vez. Depois disso, você pode usar ferramentas familiares, como SSDT (SQL Server Data Tools) e o SSMS (SQL Server Management Studio) para implantar, configurar, executar, monitorar, agendar e gerenciar pacotes.
 
@@ -59,9 +59,9 @@ Você só precisa provisionar o IR do Azure-SSIS uma vez. Depois disso, você po
 -   A instância existente do Banco de Dados SQL do Azure para hospedar o SSISDB (banco de dados de catálogo do SSIS) e a camada de serviço para o banco de dados.
 -   O número máximo de execuções paralelas por nó.
 
-**Aumente o desempenho**. Para obter mais informações, veja [Configurar o Integration Runtime do Azure-SSIS para alto desempenho](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
+**Aumente o desempenho**. Para obter mais informações, veja [Configurar o Integration Runtime do Azure-SSIS para alto desempenho](/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
 
-**Reduza os custos**. Para reduzir os custos, execute o Azure-SSIS IR somente quando necessário. Para saber mais, confira [Como agendar o início e a parada de um runtime de integração do Azure SSIS](https://docs.microsoft.com/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime).
+**Reduza os custos**. Para reduzir os custos, execute o Azure-SSIS IR somente quando necessário. Para saber mais, confira [Como agendar o início e a parada de um runtime de integração do Azure SSIS](/azure/data-factory/how-to-schedule-azure-ssis-integration-runtime).
 
 ## <a name="design-packages"></a>Criar pacotes
 
@@ -69,9 +69,9 @@ Você pode continuar a **projetar e criar pacotes** localmente no SSDT ou então
 
 ### <a name="connect-to-data-sources"></a>Conectar-se às fontes de dados
 
-Para se conectar a fontes de dados locais da nuvem com a **autenticação do Windows**, confira [Conectar-se a fontes de dados e compartilhamentos de arquivos com a Autenticação do Windows de pacotes do SSIS no Azure](ssis-azure-connect-with-windows-auth.md).
+Para se conectar a fontes de dados locais da nuvem com a **autenticação do Windows**, confira [Conectar-se a fontes de dados e compartilhamentos de arquivos com a Autenticação do Windows de pacotes do SSIS no Azure](/azure/data-factory/ssis-azure-connect-with-windows-auth).
 
-Para se conectar a arquivos e compartilhamentos de arquivos, confira [Abrir e salvar arquivos no local e no Azure com pacotes SSIS implantados no Azure](ssis-azure-files-file-shares.md).
+Para se conectar a arquivos e compartilhamentos de arquivos, confira [Abrir e salvar arquivos no local e no Azure com pacotes SSIS implantados no Azure](/azure/data-factory/ssis-azure-files-file-shares).
 
 ### <a name="available-ssis-components"></a>Componentes do SSIS disponíveis
 
@@ -79,15 +79,15 @@ Quando você provisiona uma instância do Banco de Dados SQL para hospedar o SSI
 
 Também é possível instalar componentes adicionais, por exemplo, é possível instalar um driver não instalado por padrão. Para saber mais, confira [Personalizar a instalação para o runtime de integração do Azure-SSIS](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
-Se você tiver uma licença do Enterprise Edition, os componentes adicionais estarão disponíveis. Para saber mais, confira [Provisionar a Enterprise Edition para o Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition).
+Se você tiver uma licença do Enterprise Edition, os componentes adicionais estarão disponíveis. Para saber mais, confira [Provisionar a Enterprise Edition para o Azure-SSIS Integration Runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition).
 
-Se você for um ISV, poderá atualizar a instalação dos componentes licenciados para disponibilizá-las no Azure. Para saber mais, confira [Instalar componentes personalizados pagos ou licenciados para o Integration Runtime do Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components).
+Se você for um ISV, poderá atualizar a instalação dos componentes licenciados para disponibilizá-las no Azure. Para saber mais, confira [Instalar componentes personalizados pagos ou licenciados para o Integration Runtime do Azure-SSIS](/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components).
 
 ### <a name="transaction-support"></a>Suporte à transação
 
-Com o SQL Server local e em máquinas virtuais do Azure, você pode usar transações do MSDTC (Coordenador de Transações Distribuídas da Microsoft). Para configurar o MSDTC em cada nó do IR do Azure SSIS, use a funcionalidade de instalação personalizada. Para obter mais informações, consulte [Instalação personalizada para o runtime de integração do Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+Com o SQL Server local e em máquinas virtuais do Azure, você pode usar transações do MSDTC (Coordenador de Transações Distribuídas da Microsoft). Para configurar o MSDTC em cada nó do IR do Azure SSIS, use a funcionalidade de instalação personalizada. Para obter mais informações, consulte [Instalação personalizada para o runtime de integração do Azure-SSIS](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
-Com o Banco de Dados SQL do Azure, você só pode usar transações elásticas. Para obter mais informações, consulte [Transações distribuídas entre bancos de dados na nuvem](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview).
+Com o Banco de Dados SQL do Azure, você só pode usar transações elásticas. Para obter mais informações, consulte [Transações distribuídas entre bancos de dados na nuvem](/azure/sql-database/sql-database-elastic-transactions-overview).
 
 ## <a name="deploy-and-run-packages"></a>Implantar e executar pacotes
 
@@ -127,7 +127,7 @@ Para executar pacotes do SSIS implantados no Azure, você pode usar diversos mé
 
 ### <a name="run-packages-in-an-azure-data-factory-pipeline"></a>Executar pacotes em um pipeline do Azure Data Factory
 
-Para executar um pacote do SSIS em um pipeline do Azure Data Factory, use a Atividade Executar Pacote do SSIS. Para obter mais informações, consulte [Executar um pacote do SSIS usando a atividade Executar pacote do SSIS no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+Para executar um pacote do SSIS em um pipeline do Azure Data Factory, use a Atividade Executar Pacote do SSIS. Para obter mais informações, consulte [Executar um pacote do SSIS usando a atividade Executar pacote do SSIS no Azure Data Factory](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
 Quando você executa um pacote em um pipeline do Data Factory com a Atividade Executar Pacote do SSIS, pode passar valores para o pacote em runtime. Para passar um ou mais valores de runtime, crie ambientes de execução do SSIS no SSISDB com o SQL Server Management Studio (SSMS). Em cada ambiente, crie variáveis e atribua valores correspondentes aos parâmetros dos seus projetos ou pacotes. Configure seus pacotes do SSIS no SSMS para associar as variáveis de ambiente aos parâmetros do seu projeto ou pacote. Ao executar os pacotes no pipeline, alterne entre ambientes especificando diferentes caminhos de ambiente na guia Configurações da interface do usuário da atividade Executar pacote do SSIS. Para saber mais sobre ambientes do SSIS, confira [Criar e mapear um ambiente de servidor](../packages/deploy-integration-services-ssis-projects-and-packages.md#create-and-map-a-server-environment).
 
@@ -137,7 +137,7 @@ Para monitorar pacotes em execução, use as seguintes opções de geração de 
 -   Clique com o botão direito do mouse em **SSISDB** e, em seguida, selecione **Operações Ativas** para abrir a caixa de diálogo **Operações Ativas**.
 -   Selecione um pacote no Pesquisador de Objetos, clique com o botão direito do mouse e selecione, sucessivamente, **Relatórios**, **Relatórios Padrão** e **Todas as Execuções**.
 
-Para monitorar o Integration Runtime do Azure-SSIS, veja [Monitorar o Integration Runtime do Azure-SSIS](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+Para monitorar o Integration Runtime do Azure-SSIS, veja [Monitorar o Integration Runtime do Azure-SSIS](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ## <a name="schedule-packages"></a>Agendar pacotes
 Para agendar a execução de pacotes implantados no Azure, você pode usar uma variedade de ferramentas. Para saber mais, confira [Agendar a execução de pacotes SSIS (SQL Server Integration Services) implantados no Azure](ssis-azure-schedule-packages.md).
@@ -145,4 +145,4 @@ Para agendar a execução de pacotes implantados no Azure, você pode usar uma v
 ## <a name="next-steps"></a>Próximas etapas
 Para uma introdução às cargas de trabalho de SSIS no Azure, consulte os seguintes artigos:
 -   [Tutorial: implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure](ssis-azure-deploy-run-monitor-tutorial.md)
--   [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [Provisionar o Azure-SSIS Integration Runtime no Azure Data Factory](/azure/data-factory/tutorial-deploy-ssis-packages-azure)

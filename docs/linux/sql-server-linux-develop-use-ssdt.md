@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: 93e65b7ab401479cc126e8428295cb0f0715eae4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc8975a1454996ffbbab38e3e443f3f3847dc8a1
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896262"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115449"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use o Visual Studio para criar bancos de dados para SQL Server em Linux
 
@@ -110,7 +110,7 @@ Se você for novo no T-SQL, confira o [Tutorial: Escrevendo instruções Transac
 Para obter mais informações sobre como desenvolver um banco de dados com SQL Data Tools, confira os artigos abaixo.
 
 * [Baixar e instalar o Visual Studio](https://www.visualstudio.com/downloads/)
-* [Baixar e instalar o SSDT](https://aka.ms/ssdt-download)
-* [Documentos do MSDN do SSDT](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
-* [Tutorial: Gravando instruções Transact-SQL](https://msdn.microsoft.com/library/ms365303.aspx)
-* [Referência do Transact-SQL (Mecanismo de Banco de Dados)](https://msdn.microsoft.com/library/bb510741.aspx)
+* [Baixar e instalar o SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)
+* [Documentos do MSDN do SSDT](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103))
+* [Tutorial: Gravando instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
+* [Referência do Transact-SQL (Mecanismo de Banco de Dados)](../t-sql/language-reference.md)

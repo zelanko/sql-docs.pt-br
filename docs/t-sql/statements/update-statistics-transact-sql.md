@@ -22,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 153a0654613c01805b4d5b66f078c0637464e5e2
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 3225978926ade62bd932e41f9d46d8a5bdd8720b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670169"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036869"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -116,7 +116,7 @@ Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a amostragem 
   
  Para a maioria das cargas de trabalho, uma verificação completa não é necessária e a amostragem padrão é adequada.  
 No entanto, algumas cargas de trabalho que são sensíveis a distribuições de dados com ampla variação podem exigir um tamanho maior de amostra ou até mesmo uma verificação completa.  
-Para obter mais informações, confira o [blog CSS SQL Escalation Services](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed) (Serviços de escalonamento do CSS SQL).  
+Para obter mais informações, confira o [blog CSS SQL Escalation Services](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed) (Serviços de escalonamento do CSS SQL).  
   
  RESAMPLE  
  Atualiza cada estatística usando sua taxa de amostragem mais recente.  
@@ -319,4 +319,4 @@ UPDATE STATISTICS Customer;
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)

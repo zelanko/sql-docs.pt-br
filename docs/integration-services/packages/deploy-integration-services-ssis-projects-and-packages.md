@@ -19,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425218"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196361"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
 
@@ -95,7 +95,7 @@ Esse erro normalmente é o resultado de permissões DCOM ausentes. Para corrigir
 
 Para obter mais informações sobre o erro descrito nesta seção e sobre as permissões necessárias para a conta de serviço do SSIS, confira a seguinte postagem no blog:
  
-- [System.ComponentModel.Win32Exception: o cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception: o cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
   Na versão atual do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de runtime para pacotes por meio de ambientes.  
@@ -114,7 +114,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
     -   Se você criou o projeto em uma versão anterior do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], depois que abrir o arquivo de projeto no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], converta o projeto no modelo de implantação de projeto.  
   
         > [!NOTE]  
-        >  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
          Dependendo em se você executa o **Assistente de Conversão de Projeto do Integration Services** no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o assistente executa tarefas de conversão diferentes.  
   
@@ -530,7 +530,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   O **Assistente de Conversão de Projeto do Integration Services** converte um projeto no modelo de implantação de projeto.  
   
 > [!NOTE]  
->  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+>  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
  **O que você deseja fazer?**  
   
@@ -655,7 +655,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Digite uma descrição de projeto opcional.  
   
 ###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> Definir opções na página Atualizar a Tarefa Executar Pacote  
- Atualizar as Tarefas Executar Pacote contidas nos pacotes, para usar uma referência baseada em projeto. Para obter mais informações, consulte [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md).  
+ Atualizar as Tarefas Executar Pacote contidas nos pacotes, para usar uma referência baseada em projeto. Para obter mais informações, consulte [Execute Package Task Editor](../control-flow/execute-package-task.md).  
   
  **Pacote pai**  
  Lista o nome do pacote que executa o pacote filho usando a tarefa Executar Pacote.  
@@ -746,4 +746,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  A conversão de projeto não será salva até que o projeto seja salvo no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **Salvar relatório**  
- Clique para salvar um resumo da conversão de projeto em um arquivo .xml.  
+ Clique para salvar um resumo da conversão de projeto em um arquivo .xml.

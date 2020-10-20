@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 940b0ab0250a626673c883542fc2e1f1700f0c52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34df520dcb0f193e2b548a909ea10cd4113995fc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307397"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196650"
 ---
 # <a name="comparison-operators-transact-sql"></a>Operadores de comparação (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "88307397"
   
  Expressões com tipos de dados **Boolean** são usadas na cláusula WHERE para filtrar as linhas que se qualificam para os critérios de pesquisa e nas instruções de linguagem de controle de fluxo, como IF e WHILE, por exemplo:  
   
-```  
+```syntaxsql  
 -- Uses AdventureWorks  
   
-DECLARE @MyProduct int;  
+DECLARE @MyProduct INT;  
 SET @MyProduct = 750;  
 IF (@MyProduct <> 0)  
    SELECT ProductID, Name, ProductNumber  

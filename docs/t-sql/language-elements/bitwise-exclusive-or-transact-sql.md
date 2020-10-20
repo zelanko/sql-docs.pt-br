@@ -26,12 +26,12 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe64aa29987ee280a79afd66faed94cbbc89540e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7d027a1173962da36ccbefa9084311a496b70e8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417172"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189225"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (OR exclusivo bit a bit) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88417172"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 expression ^ expression  
 ```  
   
@@ -70,7 +70,7 @@ expression ^ expression
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma tabela usando o tipo de dados **int** para armazenar os valores originais e insere os dois valores em uma linha.  
   
-```  
+```sql  
 CREATE TABLE bitwise (   
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL);
@@ -81,7 +81,7 @@ GO
   
  A consulta a seguir executa o OR exclusivo bit a bit nas colunas `a_int_value` e `b_int_value`.  
   
-```  
+```sql  
 SELECT a_int_value ^ b_int_value  
 FROM bitwise;  
 GO  

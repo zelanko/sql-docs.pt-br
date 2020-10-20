@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3306032f1ee69b99a2b7fd3c080003a93644ac3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbda2ed08797343b328cf5764a5e73dc9b418e3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456993"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195833"
 ---
 # <a name="ssis-designer"></a>Designer SSIS
 
@@ -93,7 +93,7 @@ ms.locfileid: "88456993"
 ### <a name="event-handlers-tab"></a>Guia Manipuladores de Eventos  
  Você pode criar os eventos em um pacote na superfície de design da guia **Manipuladores de Eventos** . Na guia **Manipuladores de Eventos** , selecione o pacote ou o objeto do pacote para o qual deseja criar um manipulador de eventos e selecione o evento a ser associado ao manipulador de eventos. Um manipulador de eventos tem um fluxo de controle e fluxos de dados opcionais.  
   
- Para obter mais informações, consulte [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Para obter mais informações, consulte [Add an Event Handler to a Package](./integration-services-ssis-event-handlers.md).  
   
 ### <a name="package-explorer-tab"></a>Guia Explorador de Pacotes  
  Os pacotes podem ser complexos, incluindo muitas tarefas, gerenciadores de conexões, variáveis e outros elementos. A exibição do explorador do pacote permite que você visualize uma lista completa de elementos de pacote.  
@@ -108,7 +108,7 @@ ms.locfileid: "88456993"
 #### <a name="connection-managers-area"></a>Área Gerenciadores de Conexões  
  Você adiciona e modifica os gerenciadores de conexões que um pacote usa na área **Gerenciadores de conexões** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui gerenciadores de conexões para conexão a várias fontes de dados, como arquivos de texto, bancos de dados OLE DB e provedores .NET.  
   
- Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](./connection-manager/integration-services-ssis-connections.md).  
  
 ## <a name="control-flow-tab"></a>Guia Fluxo de Controle
 Use a guia **Fluxo de Controle** do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] para criar o fluxo de controle em um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -191,5 +191,4 @@ Os pacotes usam gerenciadores de conexões para se conectarem a fontes de dados,
   
 ## <a name="see-also"></a>Consulte Também  
  [Interface do usuário do Integration Services](../integration-services/integration-services-user-interface.md)  
-  
   

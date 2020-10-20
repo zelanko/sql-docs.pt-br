@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87f70b54a0f43252bd6ebc2f28b32371715760cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4575b22bc7321322fbb51acdabded7a7039473d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457317"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195338"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Propriedades personalizadas do destino Processamento de Partições
 
@@ -46,6 +46,5 @@ ms.locfileid: "88457317"
  Para obter mais informações, consulte [Destino de processamento de partições](../../integration-services/data-flow/partition-processing-destination.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md)  
   

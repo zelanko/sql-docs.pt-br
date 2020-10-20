@@ -20,12 +20,12 @@ ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67977deba00a1df52a9264256b83f6e57bc49ed5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7cd3bfc9b136dac41352d2be594e7d1e3099bd37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116127"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035929"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funções de ordenação – COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,8 +51,8 @@ A propriedade Collation. O argumento *property* tem um tipo de dados **varchar (
   
 |Nome da propriedade|Descrição|  
 |---|---|
-|**CodePage**|Página de código de não Unicode da ordenação. É o conjunto de caracteres usado para dados **varchar**. Veja o [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](https://msdn.microsoft.com/library/cc194886.aspx) e o [Apêndice H: Páginas de código](https://msdn.microsoft.com/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.<br /><br />Tipo de dados base: **int**|  
-|**LCID**|ID de localidade do Windows da ordenação. É a cultura usada para regras de classificação e comparação. Veja a [Estrutura de LCID](https://msdn.microsoft.com/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).<br /><br />Tipo de dados base: **int**|  
+|**CodePage**|Página de código de não Unicode da ordenação. É o conjunto de caracteres usado para dados **varchar**. Veja o [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](/previous-versions/cc194886(v=msdn.10)) e o [Apêndice H: Páginas de código](/previous-versions/cc195051(v=msdn.10)) para converter esses valores e ver seus mapeamentos de caracteres.<br /><br />Tipo de dados base: **int**|  
+|**LCID**|ID de localidade do Windows da ordenação. É a cultura usada para regras de classificação e comparação. Veja a [Estrutura de LCID](/openspecs/windows_protocols/ms-lcid/63d3d639-7fd2-4afb-abbe-0d5b5551eef8) para converter esses valores (você precisará converter **varbinary** primeiro).<br /><br />Tipo de dados base: **int**|  
 |**ComparisonStyle**|Estilo de comparação da ordenação do Windows. Retorna 0 para ordenações primárias – (\_BIN) e (\_BIN2) – bem como quando todas as propriedades são confidenciais – (\_CS\_AS\_KS\_WS), (\_CS\_AS\_KS\_WS\_SC) e (\_CS\_AS\_KS\_WS\_VSS). Valores de bitmask:<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> Observação: a opção \_VSS (seletor sensível à variação) não é representada nesse valor, embora afete o comportamento da comparação.<br /><br />Tipo de dados base: **int**|  
 |**Versão**|A versão da ordenação. Retorna um valor entre 0 e 3.<br /><br /> Ordenações com "140" no nome retornam 3.<br /><br /> Ordenações com "100" no nome retornam 2.<br /><br /> Ordenações com "90" no nome retornam 1.<br /><br /> Todas as outras ordenações retornam 0.<br /><br />Tipo de dados base: **tinyint**|  
   
@@ -86,5 +86,3 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 ## <a name="see-also"></a>Confira também
 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
-  
-

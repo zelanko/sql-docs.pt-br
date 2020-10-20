@@ -20,26 +20,26 @@ ms.assetid: c3040db6-21d6-40ac-a783-82c98ec006cc
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9b1233cb665304c2a9b38689b8470b416c3abe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e7b83fe2e452d2f58f592d4af6958ce94786f13
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459446"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196839"
 ---
 # <a name="-assignment-operator-transact-sql"></a>= (Operador de atribuição) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   O sinal de igual (=) é o único operador de atribuição [!INCLUDE[tsql](../../includes/tsql-md.md)]. No exemplo a seguir, a variável `@MyCounter` é criada, e o operador de atribuição define `@MyCounter` com um valor retornado por uma expressão.  
   
-```  
+```sql  
 DECLARE @MyCounter INT;  
 SET @MyCounter = 1;  
 ```  
   
  O operador de atribuição também pode ser usado para estabelecer a relação entre um título de coluna e a expressão que define os valores para a coluna. O exemplo a seguir exibe os títulos de coluna `FirstColumnHeading` e `SecondColumnHeading`. A cadeia de caracteres `xyz` é exibida no título de coluna `FirstColumnHeading` para todas as linhas. Depois, cada ID de produto da tabela `Product` é listada no título de coluna `SecondColumnHeading`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstColumnHeading = 'xyz',  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa56c3788e690aae63d292ac1a71fad3a4fc6b67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b745e73cb7f25ff8936ddc385979c69ad675f8ea
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495719"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194739"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de Origem SAP BW (página Gerenciador de Conexões)
 
@@ -54,7 +54,7 @@ ms.locfileid: "88495719"
  **Novo**  
  Crie um novo gerenciador de conexões, usando a caixa de diálogo **Gerenciador de Conexões SAP BW** .  
   
- Para obter mais informações sobre essa caixa de diálogo, consulte [SAP BW Connection Manager Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md).  
+ Para obter mais informações sobre essa caixa de diálogo, consulte [SAP BW Connection Manager Editor](../connection-manager/sap-bw-connection-manager.md).  
   
  **Destino OHS**  
  Selecione o destino do OHS (Open Hub Service) a ser usado para extrair dados da origem.  
@@ -133,5 +133,4 @@ ms.locfileid: "88495719"
  [Editor de Origem SAP BW &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [Editor de Origem SAP BW &#40;Página Avançado&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Ajuda F1 do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
   

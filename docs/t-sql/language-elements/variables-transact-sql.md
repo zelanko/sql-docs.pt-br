@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807023"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196140"
 ---
 # <a name="variables-transact-sql"></a>Variáveis (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ O script seguinte cria uma tabela de teste pequena e a popula com 26 linhas. O s
 
 ```sql
 -- Create the table.
-CREATE TABLE TestTable (cola int, colb char(3));
+CREATE TABLE TestTable (cola INT, colb CHAR(3));
 GO
 SET NOCOUNT ON;
 GO
 -- Declare the variable to be used.
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 
 -- Initialize the variable.
 SET @MyCounter = 0;
@@ -90,20 +90,20 @@ A instrução DECLARE inicializa uma variável Transact-SQL por:
 
 Por exemplo, a instrução **DECLARE** seguinte cria uma variável local nomeada **\@mycounter** com um tipo de dados int.  
 ```sql
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 ```
 Para declarar mais de uma variável local, use uma vírgula depois da primeira variável local definida, e especifique o próximo nome de variável local e o tipo de dados.
 
 Por exemplo, esta instrução **DECLARE** cria três variáveis locais chamadas **\@LastName**, **\@FirstName** e **\@StateProvince**, e inicializa cada uma como NULL:  
 ```sql
-DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
+DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
 
 O escopo de uma variável é a gama de instruções Transact-SQL que podem referenciar a variável. O escopo de uma variável dura do ponto em que é declarada até o término do lote ou procedimento armazenado no qual ela é declarada. Por exemplo, o seguinte script gera um erro de sintaxe porque a variável é declarada em um lote e referenciada em outro:  
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 -- Terminate the batch by using the GO keyword.
 GO 
@@ -119,7 +119,7 @@ WHERE BusinessEntityID = @MyVariable;
 As variáveis têm escopo local e são apenas visíveis dentro do lote ou procedimento, onde elas estão definidas. No exemplo a seguir, o escopo aninhado criado para execução de sp_executesql não tem acesso à variável declarada no escopo mais alto e retorna um erro.  
 
 ```sql
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 ```
@@ -134,8 +134,8 @@ Para atribuir um valor a uma variável usando a instrução SET, inclua o nome d
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
-DECLARE @FirstNameVariable nvarchar(50),
-   @PostalCodeVariable nvarchar(15);
+DECLARE @FirstNameVariable NVARCHAR(50),
+   @PostalCodeVariable NVARCHAR(15);
 
 -- Set their values.
 SET @FirstNameVariable = N'Amy';
@@ -154,7 +154,7 @@ Uma variável também pode ter um valor atribuído ao ser referenciada na lista 
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = MAX(EmployeeID)
 FROM HumanResources.Employee;
@@ -169,7 +169,7 @@ Se uma instrução SELECT retornar mais de uma linha e a variável referenciar u
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = BusinessEntityID
 FROM HumanResources.Employee

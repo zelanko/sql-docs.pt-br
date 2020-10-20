@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 747e9798918debf5a69c5013cec5fb7077b2da41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b4e23b3f9296153772b1aaead04f48ba5f151a8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430788"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197110"
 ---
 # <a name="flat-file-destination"></a>Destino de arquivo simples
 
@@ -51,7 +51,7 @@ ms.locfileid: "88430788"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas de arquivo simples](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88430788"
 ## <a name="see-also"></a>Consulte Também  
  [Fonte de Arquivo Simples](../../integration-services/data-flow/flat-file-source.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
-  
   
