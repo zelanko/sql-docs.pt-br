@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3333e8d26c6f79bc3f99298e2854f05789caac9f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541003"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257603"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,14 +65,15 @@ The command(s) completed successfully.
   
 ## <a name="remarks"></a>Comentários  
  O processo do Windows gerado por **xp_cmdshell** tem os mesmos direitos de segurança que a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço.  
+ 
+> [!IMPORTANT]
+>  o **xp_cmdshell** é um recurso muito avançado e é desabilitado por padrão. **xp_cmdshell** pode ser habilitado e desabilitado usando o gerenciamento baseado em políticas ou executando **sp_configure**. Para obter mais informações, consulte [configuração da área de superfície](../../relational-databases/security/surface-area-configuration.md) e opção de configuração de [servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- **xp_cmdshell** funciona de forma síncrona. O controle não é voltado ao chamador até que o comando do shell de comandos seja concluído.  
-  
- **xp_cmdshell** pode ser habilitado e desabilitado usando o gerenciamento baseado em políticas ou executando **sp_configure**. Para obter mais informações, consulte [configuração da área de superfície](../../relational-databases/security/surface-area-configuration.md) e opção de configuração de [servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
-  
+ **xp_cmdshell** funciona de forma síncrona. O controle não é voltado ao chamador até que o comando do shell de comandos seja concluído. 
+ 
 > [!IMPORTANT]
 >  Se **xp_cmdshell** for executado em um lote e retornar um erro, o lote falhará. É uma alteração de comportamento. Em versões anteriores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lote, continuaria a ser executado.  
-  
+ 
 ## <a name="xp_cmdshell-proxy-account"></a>Conta proxy xp_cmdshell  
  Quando ele é chamado por um usuário que não é membro da função de servidor fixa **sysadmin** , **xp_cmdshell** se conecta ao Windows usando o nome da conta e a senha armazenados na credencial **# #xp_cmdshell_proxy_account #**#. Se essa credencial de proxy não existir, **xp_cmdshell** irá falhar.  
   

@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88cbb1203595203af88cf9e9da6e122cc7db5322
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 6d8b590e304120015f6333546a08c8c78a26493c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227450"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038322"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   O nível de isolamento READ COMMITTED com a opção de banco de dados READ_COMMITTED_SNAPSHOT definida como ON.  
   
--   O nível de isolamento SNAPSHOT. Para obter mais informações sobre isolamento de instantâneo, confira [Isolamento de instantâneo no SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
+-   O nível de isolamento SNAPSHOT. Para obter mais informações sobre isolamento de instantâneo, confira [Isolamento de instantâneo no SQL Server](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
   
  READ COMMITTED  
  Especifica que as instruções não podem ler dados que foram modificados, mas que ainda não foram confirmados por outras transações. Isso impede leituras sujas. Os dados podem ser alterados por outras transações entre instruções individuais dentro da transação atual, resultando em leituras não repetíveis ou dados fantasmas. Essa é a opção padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -90,7 +90,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   Se READ_COMMITTED_SNAPSHOT estiver definido como ON (o padrão no Banco de Dados SQL do Azure), o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usará o controle de versão de linhas para apresentar a cada instrução um instantâneo transacionalmente consistente dos dados como estavam no início da instrução. Não são usados bloqueios para proteger os dados contra atualizações efetuadas por outras transações.
 
 > [!IMPORTANT]  
-> Escolhendo um nível de isolamento da transação não afeta os bloqueios obtidos para proteger as modificações de dados. Uma transação sempre obtém um bloqueio exclusivo em quaisquer dados que modifica e mantém tal bloqueio até que a transação seja concluída, sem considerar o conjunto de níveis de isolamento para a transação em questão. Além disso, uma atualização feita no nível de isolamento READ_COMMITTED usa bloqueios de atualização nas linhas de dados selecionadas, enquanto uma atualização feita no nível de isolamento SNAPSHOT usa versões de linha para selecionar as linhas a serem atualizadas. Para operações de leitura, níveis de isolamento da transação definem principalmente o nível de proteção dos efeitos das modificações feitas por outras transações. Confira o [Guia de controle de versão de linha e bloqueio de transação](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide) para obter mais informações.
+> Escolhendo um nível de isolamento da transação não afeta os bloqueios obtidos para proteger as modificações de dados. Uma transação sempre obtém um bloqueio exclusivo em quaisquer dados que modifica e mantém tal bloqueio até que a transação seja concluída, sem considerar o conjunto de níveis de isolamento para a transação em questão. Além disso, uma atualização feita no nível de isolamento READ_COMMITTED usa bloqueios de atualização nas linhas de dados selecionadas, enquanto uma atualização feita no nível de isolamento SNAPSHOT usa versões de linha para selecionar as linhas a serem atualizadas. Para operações de leitura, níveis de isolamento da transação definem principalmente o nível de proteção dos efeitos das modificações feitas por outras transações. Confira o [Guia de controle de versão de linha e bloqueio de transação](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md) para obter mais informações.
 
 > [!NOTE]  
 >  O isolamento de instantâneo oferece suporte a dados FILESTREAM. No modo de isolamento de instantâneos, os dados FILESTREAM lidos por qualquer instrução em uma transação serão a versão transacionalmente consistente dos dados que existiam no início da transação.  
@@ -197,5 +197,4 @@ GO
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
-  
   

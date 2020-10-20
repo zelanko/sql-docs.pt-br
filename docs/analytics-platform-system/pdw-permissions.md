@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289684"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257442"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gerenciando permissões em paralelo data warehouse
 Este artigo descreve os requisitos e as opções para gerenciar permissões de banco de dados para SQL Server PDW.
@@ -48,9 +48,9 @@ Veja a seguir um exemplo que representa um método comum e recomendado de config
 
 5.  Conceda permissões às funções de banco de dados definidas pelo usuário.
 
-Os logons são objetos de nível de servidor e podem ser listados exibindo [Sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Somente permissões de nível de servidor podem ser concedidas a entidades de servidor.
+Os logons são objetos de nível de servidor e podem ser listados exibindo [Sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Somente permissões de nível de servidor podem ser concedidas a entidades de servidor.
 
-Usuários e funções de banco de dados são objetos de nível de banco de dados e podem ser listados exibindo [Sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Somente permissões de nível de banco de dados podem ser concedidas a entidades de banco de dados.
+Os usuários e as funções de banco de dados são objetos de nível de banco de dados e podem ser listados exibindo [Sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Somente permissões de nível de banco de dados podem ser concedidas a entidades de banco de dados.
 
 ## <a name="default-permissions"></a><a name="BackupTypes"></a>Permissões padrão
 A lista a seguir descreve as permissões padrão:
@@ -84,7 +84,7 @@ Todos os novos logons de dispositivo pertencem automaticamente à função públ
 Se um logon ou não tem permissão para executar uma ação específica depende das permissões concedidas ou negadas ao logon, ao usuário e às funções das quais o usuário é membro. As permissões de nível de servidor (como **criar logon** e **Exibir estado do servidor**) estão disponíveis para entidades de segurança no nível do servidor (logons). As permissões em nível de banco de dados (como **selecionar** de uma tabela ou **executar** em um procedimento) estão disponíveis para entidades de segurança no nível do banco de dados (usuários e funções de banco de dados).
 
 ### <a name="implicit-and-explicit-permissions"></a>Permissões implícitas e explícitas
-Uma *permissão explícita* é uma permissão **GRANT** ou **DENY** concedida a uma entidade de segurança por uma instrução **GRANT** ou **DENY**. As permissões de nível de banco de dados são listadas na exibição [Sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . As permissões de nível de servidor são listadas na exibição [Sys. server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .
+Uma *permissão explícita* é uma permissão **GRANT** ou **DENY** concedida a uma entidade de segurança por uma instrução **GRANT** ou **DENY**. As permissões de nível de banco de dados são listadas na exibição [Sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . As permissões de nível de servidor são listadas na exibição [Sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .
 
 Uma *permissão implícita* é uma permissão **Grant** ou **Deny** que uma entidade de segurança (função de logon ou de servidor) herdou. Uma permissão pode ser herdada das seguintes maneiras.
 
@@ -229,12 +229,12 @@ GRANT CONTROL SERVER TO Fay;
 Cada logon que pode se conectar a SQL Server PDW é um membro da função de servidor **público** . Todos os logons herdam as permissões concedidas a **Public** em qualquer objeto. Atribua somente permissões **públicas** em um objeto quando desejar que o objeto esteja disponível para todos os usuários. Você não pode alterar a associação na função **pública** .
 
 > [!NOTE]
-> o **público** é implementado de forma diferente de outras funções. Como todas as entidades de segurança do servidor são membros do público, a associação da função **pública** não está listada na DMV **Sys. server_role_members** .
+> o **público** é implementado de forma diferente de outras funções. Como todas as entidades de segurança do servidor são membros do público, a associação da função **pública** não está listada na DMV **Sys.server_role_members** .
 
 ### <a name="fixed-server-roles-vs-granting-permissions"></a>Funções de servidor fixas vs. concedendo permissões
 O sistema de funções de servidor fixas e de funções de banco de dados fixas é um sistema herdado originado no de 1980. As funções fixas ainda têm suporte e são úteis em ambientes em que há poucos usuários e as necessidades de segurança são simples. A partir do SQL Server 2005, um sistema mais detalhado de concessão de permissão foi criado. Esse novo sistema é mais granular, fornecendo muitas outras opções para conceder e negar permissões. A complexidade extra do sistema mais granular dificulta o aprendizado, mas a maioria dos sistemas empresariais deve conceder permissões em vez de usar as funções fixas. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
 - [Conceder permissões](grant-permissions.md)
 

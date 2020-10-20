@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0eaa6b0cbe19656096cdb47a31ec73b5fd4ade7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c6e986f032f755f73db249f7ddeff539fca4a8c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392622"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197166"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Loop em arquivos e tabelas do Excel com um contêiner do Loop Foreach
 
@@ -40,7 +40,7 @@ ms.locfileid: "88392622"
   
      Se você não usar uma variável para o argumento Propriedades Estendidas, adicione-a manualmente à expressão que contém a cadeia de conexão.  
   
-3.  Adicione um contêiner Loop Foreach à guia **Fluxo de Controle** . Para obter informações sobre como configurar um Contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Adicione um contêiner Loop Foreach à guia **Fluxo de Controle** . Para obter informações sobre como configurar um Contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](./foreach-loop-container.md).  
   
 4.  Na página **Coleção** do **Editor de Loop Foreach**, selecione o enumerador de Arquivo Foreach, especifique a pasta na qual as pastas de trabalho do Excel estão situadas e especifique o filtro de arquivo (geralmente *.xlsx).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "88392622"
   
 6.  Feche o **Editor de Loop Foreach**.  
   
-7.  Adicione um gerenciador de conexões do Excel para o pacote conforme descrito em [Adicionar, excluir ou compartilhar um Gerenciador de Conexões em um pacote](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655). Selecione uma pasta de trabalho existente do Excel para a conexão para evitar erros de validação.  
+7.  Adicione um gerenciador de conexões do Excel para o pacote conforme descrito em [Adicionar, excluir ou compartilhar um Gerenciador de Conexões em um pacote](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)). Selecione uma pasta de trabalho existente do Excel para a conexão para evitar erros de validação.  
   
     > [!IMPORTANT]  
     >  Para evitar erros de validação conforme você configura tarefas e componentes de fluxo de dados que usam esse gerenciador de conexões do Excel, selecione uma pasta de trabalho existente do Excel no **Editor do Gerenciador de Conexões do Excel**. O gerenciador de conexões não usará esta pasta de trabalho em tempo de execução depois que você configurar uma expressão para a propriedade **ConnectionString** conforme descrito nas etapas a seguir. Após criar e configurar o pacote, você pode limpar o valor da propriedade **ConnectionString** na janela Propriedades. No entanto, se você limpar esse valor, a propriedade da cadeia de conexão do gerenciador de conexões do Excel não será mais válida até que Loop Foreach seja executado. Portanto você deve definir a propriedade **DelayValidation** como **True** nas tarefas ou no pacote em que o gerenciador de conexões é usado para evitar erros de validação.  
@@ -77,11 +77,11 @@ ms.locfileid: "88392622"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para criar um loop através de tabelas do Excel usando o enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach  
   
-1.  Crie um gerenciador de conexões ADO.NET que use o Provedor Microsoft ACE OLE DB para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões**, insira a versão do Excel, neste caso, Excel 12.0, como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Crie um gerenciador de conexões ADO.NET que use o Provedor Microsoft ACE OLE DB para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões**, insira a versão do Excel, neste caso, Excel 12.0, como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
 2.  Crie uma variável de cadeia que receberá o nome da tabela atual em cada iteração do loop.  
   
-3.  Adicione um contêiner Loop Foreach à guia **Fluxo de Controle** . Para obter informações sobre como configurar um contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Adicione um contêiner Loop Foreach à guia **Fluxo de Controle** . Para obter informações sobre como configurar um contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](./foreach-loop-container.md).  
   
 4.  Na página **Coleção** do **Editor de Loop Foreach**, selecione o Enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach.  
   
@@ -100,11 +100,10 @@ ms.locfileid: "88392622"
   
 ## <a name="see-also"></a>Consulte Também  
  [Carregar dados do ou para o Excel com o SSIS (SQL Server Integration Services)](../load-data-to-from-excel-with-ssis.md)  
- [Para configurar um contêiner Loop Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [Para configurar um contêiner Loop Foreach](./foreach-loop-container.md)   
  [Adicionar ou alterar uma expressão de propriedade](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Gerenciador de Conexões do Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Origem do Excel](../../integration-services/data-flow/excel-source.md)   
  [Destino do Excel](../../integration-services/data-flow/excel-destination.md)   
  [Trabalhar com arquivos do Excel com a tarefa Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
-  
   

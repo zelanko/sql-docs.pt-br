@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db38bcb37a0b7167a7d4c27b62a34438d77c343
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477241"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195874"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Criar banco de dados (Assistente de Importação e Exportação do SQL Server)
 
@@ -29,7 +29,7 @@ Se você selecionar **Novo** na página **Escolher um Destino** para criar um no
 A caixa de diálogo **Criar Banco de Dados** do assistente oferece apenas as opções básicas que estão disponíveis para criar um novo banco de dados do SQL Server. Para ver e configurar todas as opções para um novo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar o banco de dados ou para configurá-lo após a criação dele pelo assistente. 
 
 > [!NOTE]
-> Se você estiver procurando informações sobre a instrução CREATE DATABASE do [!INCLUDE[tsql](../../includes/tsql-md.md)], não sobre a caixa de diálogo **Criar Banco de Dados** do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+> Se você estiver procurando informações sobre a instrução CREATE DATABASE do [!INCLUDE[tsql](../../includes/tsql-md.md)], não sobre a caixa de diálogo **Criar Banco de Dados** do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>Captura de tela da página Criar Banco de Dados  
 A captura de tela a seguir mostra a caixa de diálogo **Criar Banco de Dados** do assistente.  
@@ -89,8 +89,7 @@ Para obter informações detalhadas sobre esses requisitos, consulte [Identifica
  Especifique um número de megabytes para o crescimento do arquivo de log.  
 
 ### <a name="more-info"></a>Obter mais informações
-Para obter mais informações sobre as opções de tamanho do arquivo que você vê nessa página, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
+Para obter mais informações sobre as opções de tamanho do arquivo que você vê nessa página, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md). 
 
-## <a name="whats-next"></a>O que vem a seguir?  
- Depois que você fornecer um nome para o novo banco de dados que o assistente criará e clicar em **OK**, a caixa de diálogo **Criar Banco de Dados** retornará a página **Escolher um destino** . Para obter mais informações, consulte [Escolher um destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
+## <a name="whats-next"></a>E agora?  
+ Depois que você fornecer um nome para o novo banco de dados que o assistente criará e clicar em **OK**, a caixa de diálogo **Criar Banco de Dados** retornará a página **Escolher um destino** . Para obter mais informações, consulte [Escolher um destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).

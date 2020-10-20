@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e34be2d218041a4c8994bf0bea5579942f444ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b19a591448da6e14c6275462ba6cb5ae595092a0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430978"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197206"
 ---
 # <a name="execute-process-task"></a>Tarefa Executar Processo
 
@@ -46,12 +46,12 @@ ms.locfileid: "88430978"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="property-settings"></a>Configurações de propriedades  
  Quando a tarefa Executar Processo executa um aplicativo personalizado, a tarefa fornece entrada para o aplicativo por meio de um ou de ambos estes métodos:  
   
--   Uma variável que você especifica na configuração da propriedade **StandardInputVariable** . Para obter mais informações sobre variáveis, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Uma variável que você especifica na configuração da propriedade **StandardInputVariable** . Para obter mais informações sobre variáveis, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../integration-services-ssis-variables.md).  
   
 -   Um argumento que você especifica na configuração de propriedade **Arguments** . Por exemplo, se a tarefa abrir um documento no Word, o argumento poderá nomear o arquivo .doc.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88430978"
   
  Você pode usar uma expressão para definir várias propriedades da tarefa Executar Processo.  
   
- Quando você usar a propriedade **StandardInputVariable** para configurar a tarefa Executar Processo para fornecer entrada, chame o método **Console.ReadLine** do aplicativo para ler a entrada. Para obter mais informações, confira o tópico [Método Console.ReadLine](https://go.microsoft.com/fwlink/?LinkId=129201)na Biblioteca de Classes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Quando você usar a propriedade **StandardInputVariable** para configurar a tarefa Executar Processo para fornecer entrada, chame o método **Console.ReadLine** do aplicativo para ler a entrada. Para obter mais informações, confira o tópico [Método Console.ReadLine](/dotnet/api/system.console.readline)na Biblioteca de Classes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Quando você usar a propriedade **Arguments** para configurar a tarefa Executar Processo para fornecer entrada, execute uma destas etapas para obter os argumentos:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88430978"
   
 -   Se você usar o Microsoft Visual C# para escrever o aplicativo, use o método **Main**.  
   
-     Para obter mais informações, consulte o tópico [Argumentos de Linha de Comando (Guia de Programação C#)](https://go.microsoft.com/fwlink/?LinkId=129406), no Guia de Programação C#.  
+     Para obter mais informações, consulte o tópico [Argumentos de Linha de Comando (Guia de Programação C#)](/dotnet/csharp/programming-guide/main-and-command-args/command-line-arguments), no Guia de Programação C#.  
   
  A tarefa Executar Processo também inclui as propriedades **StandardOutputVariable** e **StandardErrorVariable** para especificar as variáveis que consomem a saída padrão e a saída de erro do aplicativo, respectivamente.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88430978"
  **StandardInputVariable**  
  Selecione a variável que fornecerá a entrada para o processo ou clique em \<**New variable...**> para criar uma variável:  
   
- **Tópicos relacionados:** [Adicionar Variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Adicionar Variável](../integration-services-ssis-variables.md)  
   
  **StandardOutputVariable**  
  Selecione a variável para capturar a saída do processo ou clique em \<**New variable...**> para criar uma variável.  
@@ -145,5 +145,4 @@ ms.locfileid: "88430978"
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
-  
   

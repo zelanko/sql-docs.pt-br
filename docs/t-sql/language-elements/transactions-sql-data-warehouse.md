@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227457"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038890"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>Transações (Azure Synapse Analytics)
 
@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Se um erro que não seja de instrução de tempo de execução impedir que uma transação explícita seja concluída com sucesso, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] reverterá a transação e liberará todos os recursos mantidos pela transação automaticamente. Por exemplo, se a conexão de rede do cliente com uma instância do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] for interrompida ou o cliente fizer logoff do aplicativo, todas as transações não confirmadas para a conexão serão revertidas quando a rede notificar a instância sobre a interrupção.  
   
- Se ocorrer um erro de instrução de tempo de execução em um lote, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comportará de forma consistente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** definido como **ON** e a transação inteira será revertida. Para obter mais informações sobre a configuração **XACT_ABORT**, confira [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Se ocorrer um erro de instrução de tempo de execução em um lote, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comportará de forma consistente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** definido como **ON** e a transação inteira será revertida. Para obter mais informações sobre a configuração **XACT_ABORT**, confira [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Uma sessão só pode executar uma única transação em um determinado momento. Não há compatibilidade com pontos de salvamento e transações aninhadas.  
@@ -94,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Não é possível reverter uma transação depois que uma instrução COMMIT é emitida porque as modificações nos dados tornaram-se permanentes no banco de dados.  
   
- Os comandos [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) não podem ser usados dentro de uma transação explícita.  
+ Os comandos [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) e [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) não podem ser usados dentro de uma transação explícita.  
   
  O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] não tem nenhum mecanismo de compartilhamento de transação. Isso significa que em um determinado momento, somente uma sessão pode estar executando o trabalho em uma transação no sistema.  
   
@@ -150,5 +150,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

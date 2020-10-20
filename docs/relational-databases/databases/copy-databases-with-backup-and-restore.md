@@ -19,19 +19,20 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 828963dabc79c53c831efd3c2acac797d109555d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f8148fa7d0a648bd7ad34ee766ff2a4488dceb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763554"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115720"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar um novo banco de dados por meio da restauração de um backup de um banco de dados do usuário criado por meio do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou de uma versão posterior. No entanto, backups de **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Além disso, backups do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não podem ser restaurados por nenhuma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**IMPORTANTE:** O SQL Server 2016 usa um caminho padrão diferente das versões anteriores. Portanto, para restaurar backups de um banco de dados criados no local padrão de versões anteriores, você deve usar a opção MOVE. Para obter informações sobre o novo caminho padrão, veja [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obter mais informações sobre como mover arquivos de banco de dados, consulte "Movendo arquivos do banco de dados", mais adiante neste tópico.  
+> [!IMPORTANT]
+> O SQL Server 2016 usa um caminho padrão diferente das versões anteriores. Portanto, para restaurar backups de um banco de dados criados no local padrão de versões anteriores, você deve usar a opção MOVE. Para obter informações sobre o novo caminho padrão, veja [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obter mais informações sobre como mover arquivos de banco de dados, consulte "Movendo arquivos do banco de dados", mais adiante neste tópico.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Etapas gerais para usar Backup e Restauração para copiar um banco de dados  
  Quando você usa backup e restauração para copiar um banco de dados para outra instância do SQL Server, os computadores de origem e de destino podem ser todas as plataformas na qual o SQL Server é executado.  

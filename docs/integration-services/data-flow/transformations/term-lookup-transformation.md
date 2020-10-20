@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d9c6826ac7b226dff7aa2652cac9285fa15cccea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0138f45aed5a4c7153dbc1d8cf9da99d5ef66dda
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425678"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195910"
 ---
 # <a name="term-lookup-transformation"></a>transformação Pesquisa de Termos
 
@@ -102,7 +102,7 @@ ms.locfileid: "88425678"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "88425678"
  Digite um alias para cada coluna de saída. O padrão é o nome da coluna; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
  **Configurar Saída de Erro**  
- Use a caixa de diálogo [Configurar Saída de Erro](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar as opções de tratamento de erro em linhas que causam erros.  
+ Use a caixa de diálogo [Configurar Saída de Erro](../error-handling-in-data.md) para especificar as opções de tratamento de erro em linhas que causam erros.  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor de Transformação Pesquisa de Termos (guia Tabela de Referência)
   Use a guia **Tabela de Referência** da caixa de diálogo **Editor de Transformação Pesquisa de Termos** para especificar a conexão com a tabela de referência (pesquisa).  
@@ -141,7 +141,7 @@ ms.locfileid: "88425678"
  Selecione uma tabela de pesquisa ou exibição do banco de dados, selecionando um item da lista. A tabela ou exibição deve conter uma coluna com uma lista existente de termos com os quais o texto na coluna de origem possa ser comparado.  
   
  **Configurar Saída de Erro**  
- Use a caixa de diálogo [Configurar Saída de Erro](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar as opções de tratamento de erro em linhas que causam erros.  
+ Use a caixa de diálogo [Configurar Saída de Erro](../error-handling-in-data.md) para especificar as opções de tratamento de erro em linhas que causam erros.  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor de Transformação Pesquisa de Termos (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Pesquisa de Termos** para especificar se a pesquisa deve diferenciar maiúsculas e minúsculas.  
@@ -151,9 +151,8 @@ ms.locfileid: "88425678"
  Indique se a pesquisa diferencia maiúsculas e minúsculas. O padrão é **False**.  
   
  **Configurar Saída de Erro**  
- Use a caixa de diálogo [Configurar Saída de Erro](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar as opções de tratamento de erro em linhas que causam erros.  
+ Use a caixa de diálogo [Configurar Saída de Erro](../error-handling-in-data.md) para especificar as opções de tratamento de erro em linhas que causam erros.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformação Extração de Termos](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
-  

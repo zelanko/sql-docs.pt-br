@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d8494479e14516ac9448498e8ec09301c6493aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec0279c86306de3fff135b3d56b137a67dba7afa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477820"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194150"
 ---
 # <a name="recordset-destination-custom-properties"></a>Propriedades personalizadas do destino Conjunto de Registros
 
@@ -36,6 +36,5 @@ ms.locfileid: "88477820"
  Para obter mais informações, consulte [Recordset Destination](../../integration-services/data-flow/recordset-destination.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md)  
   

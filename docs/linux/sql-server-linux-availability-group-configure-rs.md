@@ -9,12 +9,12 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b1472c1cbe3bdb9611ffcb06ff3404c28c431545
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 4c0057327466773d759752ad6760b2e736b84ebb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784840"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115945"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurar um grupo de disponibilidade do SQL Server para escala de leitura no Linux
 
@@ -82,6 +82,6 @@ Há duas maneiras de se conectar a réplicas secundárias somente leitura. Os ap
 
 ## <a name="next-steps"></a>Próximas etapas
 
-* [Configurar um grupo de disponibilidade distribuído](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [Configurar um grupo de disponibilidade distribuído](../database-engine/availability-groups/windows/distributed-availability-groups.md)
 * [Saiba mais sobre grupos de disponibilidade](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [Executar um failover manual forçado](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

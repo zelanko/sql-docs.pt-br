@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449758"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193818"
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88449758"
 ## <a name="system-and-user-defined-variables"></a>Variáveis de sistema e definidas pelo usuário  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dá suporte a dois tipos de variáveis: variáveis definidas pelo usuário e variáveis de sistema. As variáveis definidas pelo usuário são definidas por desenvolvedores de pacote e as variáveis de sistema são definidas pelo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Você pode criar tantas variáveis definidas pelo usuário quantas forem exigidas por um pacote, mas não pode criar variáveis de sistema adicionais.  
   
- Todas as variáveis, as do sistema e as definidas pelo usuário, podem ser usadas nas associações de parâmetro que a tarefa Executar SQL usa para mapear variáveis para parâmetros em instruções SQL. Para obter mais informações, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Todas as variáveis, as do sistema e as definidas pelo usuário, podem ser usadas nas associações de parâmetro que a tarefa Executar SQL usa para mapear variáveis para parâmetros em instruções SQL. Para obter mais informações, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](./control-flow/execute-sql-task.md).  
   
 > [!NOTE]  
 >  Os nomes das variáveis de sistema e das variáveis definidas pelo usuário diferenciam maiúsculas de minúsculas.  
@@ -79,7 +79,7 @@ ms.locfileid: "88449758"
   
  Um conjunto diferente de variáveis de sistema está disponível para tipos de contêiner diferentes. Para obter mais informações sobre as variáveis de sistema usadas por pacotes e seus elementos, consulte [System Variables](../integration-services/system-variables.md).  
   
- Para obter mais informações sobre situações reais de uso de variáveis, consulte [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Para obter mais informações sobre situações reais de uso de variáveis, consulte [Usar variáveis em pacotes]().  
   
 ## <a name="properties-of-variables"></a>Propriedades de variáveis  
  Você pode configurar variáveis definidas pelo usuário configurando as seguintes propriedades na janela **Variáveis** ou na janela **Propriedades** . Determinadas propriedades só estão disponíveis na janela Propriedades.  
@@ -114,7 +114,7 @@ ms.locfileid: "88449758"
   
  Uma variável é criada no escopo de um pacote ou no escopo de um contêiner, tarefa ou manipulador de eventos do pacote. Como o contêiner do pacote está no topo da hierarquia de contêineres, as variáveis com escopo de pacote funcionam como variáveis globais e podem ser usadas por todos os contêineres do pacote. Da mesma maneira, as variáveis definidas no escopo de um contêiner, como o contêiner Loop For, podem ser usadas por todas as tarefas ou contêineres no contêiner Loop For.  
   
- Se um pacote executar outros pacotes usando a tarefa Executar Pacote, as variáveis definidas no escopo do pacote de chamada ou da tarefa Executar Pacote poderão se tornar disponíveis para o pacote chamado usando o tipo de configuração Variável do Pacote Pai. Para obter mais informações, consulte [Package Configurations](../integration-services/packages/package-configurations.md).  
+ Se um pacote executar outros pacotes usando a tarefa Executar Pacote, as variáveis definidas no escopo do pacote de chamada ou da tarefa Executar Pacote poderão se tornar disponíveis para o pacote chamado usando o tipo de configuração Variável do Pacote Pai. Para obter mais informações, consulte [Package Configurations](./packages/legacy-package-deployment-ssis.md).  
   
 **IncludeInDebugDump**  
  Indique se o valor da variável está incluído nos arquivos de despejo de depuração.  
@@ -159,13 +159,13 @@ Uma variável tem opções para definir o valor da variável e o tipo de dados d
   
  **Expressões de Fluxo de Dados** Use variáveis para fornecer valores nas expressões que as transformações Coluna Derivada e Divisão Condicional usam para preencher colunas ou direcionar as linhas de dados para diferentes saídas de transformação. Por exemplo, a expressão, `@varSalutation + LastName`, junta o valor na variável `VarSalutation` e a coluna `LastName` . A expressão, `Income < @HighIncome`, direciona as linhas de dados nas quais o valor da coluna `Income` é menor que o valor na variável `HighIncome` para uma saída. Para obter mais informações, consulte [Transformação Coluna Derivada](../integration-services/data-flow/transformations/derived-column-transformation.md), [Transformação Divisão Condicional](../integration-services/data-flow/transformations/conditional-split-transformation.md) e [Expressões do Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Expressões de Restrição de Precedência** Fornece valores para usar em restrições de precedência para determinar se o executável de uma restrição executa. As expressões pode ser usadas junto com uma saída de execução (êxito, falha, conclusão) ou no lugar de uma saída de execução. Por exemplo, se a expressão, `@varMax > @varMin`, for avaliada como **true**, o executável será executado. Para obter mais informações, consulte [Adicionar expressões a restrições de precedência](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+ **Expressões de Restrição de Precedência** Fornece valores para usar em restrições de precedência para determinar se o executável de uma restrição executa. As expressões pode ser usadas junto com uma saída de execução (êxito, falha, conclusão) ou no lugar de uma saída de execução. Por exemplo, se a expressão, `@varMax > @varMin`, for avaliada como **true**, o executável será executado. Para obter mais informações, consulte [Adicionar expressões a restrições de precedência](./control-flow/precedence-constraints.md).  
   
- **Parâmetros e Códigos de Retorno** Fornecem valores para parâmetros de entrada ou armazenam os valores de parâmetros de saída e códigos de retorno. Isso é feito mapeando as variáveis para parâmetros e valores de retorno. Por exemplo, se você definir a variável `varProductId` como 23 e executar a instrução SQL, `SELECT * from Production.Product WHERE ProductID = ?`, a consulta recuperará o produto com um `ProductID` de 23. Para obter mais informações, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Parâmetros e Códigos de Retorno** Fornecem valores para parâmetros de entrada ou armazenam os valores de parâmetros de saída e códigos de retorno. Isso é feito mapeando as variáveis para parâmetros e valores de retorno. Por exemplo, se você definir a variável `varProductId` como 23 e executar a instrução SQL, `SELECT * from Production.Product WHERE ProductID = ?`, a consulta recuperará o produto com um `ProductID` de 23. Para obter mais informações, consulte [Tarefa Executar SQL](../integration-services/control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](./control-flow/execute-sql-task.md).  
   
  **Expressões Loop For** Fornece valores a serem usados na inicialização, avaliação e expressões de atribuição do Loop For. Por exemplo, se a variável `varCount` for 2 e a `varMaxCount` for 10, a expressão de inicialização será `@varCount`, a expressão de avaliação será  `@varCount < @varMaxCount`e a expressão de atribuição será `@varCount =@varCount +1`e o loop será repetido 8 vezes. Para obter mais informações, consulte [Contêiner Loop For](../integration-services/control-flow/for-loop-container.md).  
   
- **Configurações de Variável do Pacote Pai** Passa valores de pacotes pai para pacotes filho. Os pacotes filho podem acessar variáveis no pacote pai usando configurações de variáveis do pacote pai. Por exemplo, se o pacote filho precisar usar a mesma data que o pacote pai, o pacote filho poderá definir uma configuração de variável de pacote pai que especifica uma variável definida pela função GETDATE no pacote pai. Para obter mais informações, consulte [Tarefa Executar Pacote](../integration-services/control-flow/execute-package-task.md) e [Configurações de pacote](../integration-services/packages/package-configurations.md).  
+ **Configurações de Variável do Pacote Pai** Passa valores de pacotes pai para pacotes filho. Os pacotes filho podem acessar variáveis no pacote pai usando configurações de variáveis do pacote pai. Por exemplo, se o pacote filho precisar usar a mesma data que o pacote pai, o pacote filho poderá definir uma configuração de variável de pacote pai que especifica uma variável definida pela função GETDATE no pacote pai. Para obter mais informações, consulte [Tarefa Executar Pacote](../integration-services/control-flow/execute-package-task.md) e [Configurações de pacote](./packages/legacy-package-deployment-ssis.md).  
   
  **Tarefa Script e Componente Script** Fornece uma lista de variáveis somente leitura e de leitura/gravação à tarefa Script ou ao componente Script, atualiza as variáveis de leitura/gravação dentro do script e usa os valores atualizados dentro ou fora do script. Por exemplo, no código, `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`, a variável do script `numberOfCars` é atualizada pelo valor na variável, `NumberOfCars`. Para obter mais informações, consulte [Usando variáveis na tarefa Script](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md).  
 
@@ -189,7 +189,7 @@ Uma variável tem opções para definir o valor da variável e o tipo de dados d
   
 6.  Se desejar, clique no ícone **Opções de Grade** , selecione as colunas adicionais a serem exibidas na caixa de diálogo **Opções de Grade Variáveis** e clique em **OK**.  
   
-7.  Como opção, define as propriedades de variáveis. Para obter mais informações, consulte [Definir as propriedades de uma variável definida pelo usuário](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
+7.  Como opção, define as propriedades de variáveis. Para obter mais informações, consulte [Definir as propriedades de uma variável definida pelo usuário]().  
   
 8.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
 
@@ -320,9 +320,9 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
 8.  Para salvar o pacote atualizado, no menu **Arquivo** , clique em **Salvar Itens Selecionados**.  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Atualizar uma variável dinamicamente com configurações  
- Para atualizar dinamicamente as variáveis, é possível criar configurações para as variáveis, implantar as configurações com o pacote e atualizar os valores da variável no arquivo de configuração ao implantar os pacotes. Em tempo de execução, o pacote usa os valores de variável atualizados. Para obter mais informações, consulte [Criar configurações de pacote](../integration-services/packages/create-package-configurations.md).  
+ Para atualizar dinamicamente as variáveis, é possível criar configurações para as variáveis, implantar as configurações com o pacote e atualizar os valores da variável no arquivo de configuração ao implantar os pacotes. Em tempo de execução, o pacote usa os valores de variável atualizados. Para obter mais informações, consulte [Criar configurações de pacote](./packages/legacy-package-deployment-ssis.md).  
 
 ## <a name="related-tasks"></a>Related Tasks  
  [Usar os valores de variáveis e parâmetros em um pacote filho](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
- [Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)

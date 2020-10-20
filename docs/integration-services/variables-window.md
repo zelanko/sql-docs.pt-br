@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa326be8b57eed58f0aa52876d0d32b889320c58
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495086"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193730"
 ---
 # <a name="variables-window"></a>Janela Variáveis
 
@@ -50,7 +50,7 @@ ms.locfileid: "88495086"
  Selecione uma variável na lista e clique em **Excluir Variável**.  
   
  **Opções de grade**  
- Clique para abrir a caixa de diálogo **Opções de Grade Variáveis** em que é possível alterar a seleção de colunas e aplique filtros à janela **Variáveis** . Para obter mais informações, consulte [Opções de Grade Variáveis](../integration-services/variable-grid-options.md).  
+ Clique para abrir a caixa de diálogo **Opções de Grade Variáveis** em que é possível alterar a seleção de colunas e aplique filtros à janela **Variáveis** . Para obter mais informações, consulte [Opções de Grade Variáveis]().  
   
  **Nome**  
  Exiba o nome da variável. Você pode atualizar o nome para as variáveis definidas pelo usuário.  
@@ -116,8 +116,7 @@ ms.locfileid: "88495086"
   
 ## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Usar variáveis em pacotes](./integration-services-ssis-variables.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Gerar arquivos de despejo para execução de pacote](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

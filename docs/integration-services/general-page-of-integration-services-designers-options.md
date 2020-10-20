@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a55d74c1f7f75065cafa560cf1c6cc0bc70e2f99
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391112"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195218"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Página geral da opções dos Designers do Integration Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "88391112"
  **Verificar assinatura digital ao carregar um pacote**  
  Selecione para que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verifique a assinatura digital ao carregar um pacote. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] apenas verificará se a assinatura digital está presente, é válida e é de uma fonte confiável. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não verificará se o pacote foi alterado depois que o pacote for assinado.  
   
- Se você definir o valor de registro **BlockedSignatureStates** , esse valor de registro substituirá a opção **Verificar assinatura digital ao carregar um pacote** . Para obter mais informações, consulte [Como implementar uma política de assinatura definindo um valor do Registro](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md).  
+ Se você definir o valor de registro **BlockedSignatureStates** , esse valor de registro substituirá a opção **Verificar assinatura digital ao carregar um pacote** . Para obter mais informações, consulte [Como implementar uma política de assinatura definindo um valor do Registro](./security/identify-the-source-of-packages-with-digital-signatures.md).  
   
  Para obter mais informações sobre certificados e pacotes digitais, consulte [Identificar a origem de pacotes com assinaturas digitais](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
@@ -61,5 +61,4 @@ ms.locfileid: "88391112"
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral de segurança &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
  [Estendendo pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
   

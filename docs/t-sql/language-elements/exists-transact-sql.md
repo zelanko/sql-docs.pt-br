@@ -26,12 +26,12 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ea1933bc37001040beb6007fb877fa8765a24c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e5b3519a18f8729920e307ddd895d34a2449d93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467681"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194958"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467681"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 EXISTS ( subquery )  
 ```  
   
@@ -63,7 +63,7 @@ EXISTS ( subquery )
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>a. Usando NULL em uma subconsulta para ainda a retornar um conjunto de resultados  
  O exemplo a seguir retorna um conjunto de resultados com `NULL` especificado na subconsulta e ainda é avaliado como TRUE usando `EXISTS`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name   
@@ -75,7 +75,7 @@ ORDER BY Name ASC ;
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>B. Comparando consultas usando EXISTS e IN  
  O exemplo a seguir compara duas consultas semanticamente equivalentes. A primeira consulta usa `EXISTS` e a segunda usa `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -90,7 +90,7 @@ GO
   
  A consulta a seguir usa `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -118,7 +118,7 @@ Willis                                             Johnson
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. Comparando consultas usando EXISTS e = ANY  
  O exemplo a seguir mostra duas consultas para localizar lojas cujo nome seja igual ao de um fornecedor. A primeira consulta usa `EXISTS` e a segunda usa `=``ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -132,7 +132,7 @@ GO
   
  A consulta a seguir usa `= ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -146,7 +146,7 @@ GO
 ### <a name="d-comparing-queries-by-using-exists-and-in"></a>D. Comparando consultas usando EXISTS e IN  
  O exemplo a seguir mostra consultas para localizar os funcionários de departamentos que começam com `P`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -165,7 +165,7 @@ GO
   
  A consulta a seguir usa `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -183,7 +183,7 @@ GO
 ### <a name="e-using-not-exists"></a>E. Usando NOT EXISTS  
  NOT EXISTS funciona de forma contrária a EXISTS. A cláusula WHERE em NOT EXISTS será atendida se nenhuma linha for retornada pela subconsulta. O exemplo a seguir localiza funcionários que não estão em departamentos que têm nomes que começam com `P`.  
   
-```  
+```sql  
 SELECT p.FirstName, p.LastName, e.JobTitle  
 FROM Person.Person AS p   
 JOIN HumanResources.Employee AS e  
@@ -304,7 +304,7 @@ Peng                           Wu                             Quality Assurance 
 ### <a name="f-using-exists"></a>F. Usando EXISTS  
  O exemplo a seguir identifica se uma linha na tabela `ProspectiveBuyer` pode corresponder a linhas na tabela `DimCustomer`. A consulta retornará linhas apenas quando os valores `LastName` e `BirthDate` nas duas tabelas forem correspondentes.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  
@@ -318,7 +318,7 @@ WHERE EXISTS
 ### <a name="g-using-not-exists"></a>G. Usando NOT EXISTS  
  NOT EXISTS funciona como o oposto de EXISTS. A cláusula WHERE em NOT EXISTS será atendida se nenhuma linha for retornada pela subconsulta. O exemplo a seguir localiza linhas na tabela `DimCustomer` em que `LastName` e `BirthDate` não corresponde a nenhuma entrada na tabela `ProspectiveBuyers`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  

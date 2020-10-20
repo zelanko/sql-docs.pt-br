@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430148"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194041"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430148"
   
 -   **Gerenciador de conexões do SAP BW** – o gerenciador de conexões do SAP BW conecta uma origem do SAP BW ou um destino do SAP BW a um sistema SAP Netweaver BW versão 7.  
   
- Para obter um passo a passo que demonstre como configurar e usar o gerenciador de conexões do SAP BW, a origem e o destino, consulte o white paper [Usando o SQL Server Integration Services com SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). Este white paper também mostra como configurar os objetos necessários no SAP BW.  
+ Para obter um passo a passo que demonstre como configurar e usar o gerenciador de conexões do SAP BW, a origem e o destino, consulte o white paper [Usando o SQL Server Integration Services com SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). Este white paper também mostra como configurar os objetos necessários no SAP BW.  
   
 ## <a name="documentation"></a>Documentação  
  Este arquivo da Ajuda para o [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW contém os seguintes tópicos e seções:  
@@ -58,5 +58,4 @@ ms.locfileid: "88430148"
   
  [Ajuda F1 do Microsoft Connector para SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  Descreve a interface do usuário de cada componente do [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW.  
-  
   
