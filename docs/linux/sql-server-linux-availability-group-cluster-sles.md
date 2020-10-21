@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: efa93b1d85e0aec5be7ea62ce76cb0270c68178f
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: f353230ecedbec6e30347a6999fabc706c9b09c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784873"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081715"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar o cluster do SLES para o Grupo de Disponibilidade do SQL Server
 
@@ -320,7 +320,7 @@ A restrição de colocalização tem uma restrição de ordenação implícita. 
 Para impedir que o endereço IP aponte temporariamente para o nó com o secundário de pré-failover, adicione uma restrição de ordenação. Para adicionar uma restrição de ordenação, execute o comando a seguir em um nó: 
 
 ```bash
-crm crm configure \
+sudo crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 

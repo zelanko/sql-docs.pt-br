@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392112"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194754"
 ---
 # <a name="odbc-source"></a>Origem ODBC
 
@@ -51,7 +51,7 @@ ms.locfileid: "88392112"
   
 -   As colunas de dados de saída padrão.  
   
- Dependendo da configuração de comportamento de erro, a origem ODBC oferece suporte ao retorno de erros (conversão de dados, truncamento) que ocorre durante o processo de extração na saída de erro. Para obter mais informações, consulte [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
+ Dependendo da configuração de comportamento de erro, a origem ODBC oferece suporte ao retorno de erros (conversão de dados, truncamento) que ocorre durante o processo de extração na saída de erro. Para obter mais informações, consulte [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](./odbc-destination.md).  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
  Para obter informações sobre os tipos de dados com suporte da fonte ODBC, consulte Conector para ODBC.  
@@ -195,5 +195,4 @@ ms.locfileid: "88392112"
   
 #### <a name="redirect-flow"></a>Redirecionar fluxo  
  A linha que está causando o erro ou o truncamento é direcionada para a saída do erro da origem ODBC.  
-  
   

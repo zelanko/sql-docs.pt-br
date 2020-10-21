@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7be82eb5eaa61307cd5421033adc1634de9a946b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bdc1669274577d7d75f0d50ab2f5b9ec736799cc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411362"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194358"
 ---
 # <a name="master-database"></a>Banco de dados mestre
 
@@ -27,7 +27,7 @@ ms.locfileid: "88411362"
   O banco de dados **master** registra todas as informações no nível de sistema para um sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isto inclui metadados de ampla instância como contas de logon, pontos de extremidade, servidores vinculados e parâmetros de configuração de sistema. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os objetos de sistema não são mais armazenados no banco de dados **mestre** ; em vez disso, eles são armazenados no [Banco de dados de recurso](../../relational-databases/databases/resource-database.md). Além disso, **mestre** é o banco de dados que registra a existência de todos os outros bancos de dados e o local desses arquivos de bancos de dados, e registra as informações de inicialização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não poderá iniciar se o banco de dados **mestre** não estiver disponível.  
 
 > [!IMPORTANT]
-> Para os bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure, apenas o banco de dados mestre e o banco de dados tempdb se aplicam. Para saber mais, confira [O que é um servidor do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Para obter uma discussão sobre o tempdb no contexto do Banco de Dados SQL do Azure, confira [Banco de dados tempdb no Banco de Dados SQL do Azure](tempdb-database.md#tempdb-database-in-sql-database). Para a Instância Gerenciada de SQL do Azure, todos os bancos de dados do sistema se aplicam. Para saber mais sobre Instâncias Gerenciadas no Banco de Dados SQL, confira [O que é uma Instância Gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> Para os bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure, apenas o banco de dados mestre e o banco de dados tempdb se aplicam. Para saber mais, confira [O que é um servidor do Banco de Dados SQL do Azure](/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Para obter uma discussão sobre o tempdb no contexto do Banco de Dados SQL do Azure, confira [Banco de dados tempdb no Banco de Dados SQL do Azure](tempdb-database.md#tempdb-database-in-sql-database). Para a Instância Gerenciada de SQL do Azure, todos os bancos de dados do sistema se aplicam. Para saber mais sobre Instâncias Gerenciadas no Banco de Dados SQL, confira [O que é uma Instância Gerenciada](/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="physical-properties-of-master"></a>Propriedades físicas de mestre
 
@@ -134,4 +134,4 @@ Ao trabalhar com o banco de dados **mestre** , considere as seguintes recomenda�
 - [Bancos de dados do sistema](../../relational-databases/databases/system-databases.md)  
 - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
 - [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-- [Mover arquivos de banco de dados](../../relational-databases/databases/move-database-files.md)  
+- [Mover arquivos de banco de dados](../../relational-databases/databases/move-database-files.md)

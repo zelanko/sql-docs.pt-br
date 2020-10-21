@@ -1,5 +1,6 @@
 ---
-title: Anotações (Master Data Services) | Microsoft Docs
+description: Anotações (Master Data Services)
+title: Anotações
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d9b6416383e332819e45bec6e6cbe42ece163edb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 592669feb90076b84c472f3e9e18a948276173c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255203"
 ---
 # <a name="annotations-master-data-services"></a>Anotações (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], anotações são comentários que você insere para fornecer detalhes sobre transações.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68047775"
   
 -   O MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

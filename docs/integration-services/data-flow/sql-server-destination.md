@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2e7bc60bcfd7578d70528d92ef025370c28134e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425798"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194718"
 ---
 # <a name="sql-server-destination"></a>destino do SQL Server
 
@@ -99,7 +99,7 @@ ms.locfileid: "88425798"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas do destino SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88425798"
   
 -   Artigo técnico, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=199482), em support.microsoft.com.  
   
--   Artigo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), em msdn.microsoft.com.  
+-   Artigo técnico, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), em msdn.microsoft.com.  
   
 -   Artigo técnico, [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701)(Usando o SQL Server Integration Services para carregar dados em massa), em simple-talk.com.  
   
@@ -206,5 +206,4 @@ ms.locfileid: "88425798"
   
 ## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
-  
   

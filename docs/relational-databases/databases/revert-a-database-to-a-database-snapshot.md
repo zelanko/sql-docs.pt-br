@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0d4551044d0db95cfa8abaf177d683626c666dcf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21b00ef447dd9312fc0ad3b4bb41cc414f91ff0f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471123"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196700"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -142,7 +142,7 @@ GO
   
  Para obter o código para criar o banco de dados de exemplo e instantâneos dos quais esse exemplo depende, consulte:  
   
--   Para obter o banco de dados **Sales** e o instantâneo **sales_snapshot0600**, veja “Criando um banco de dados com grupos de arquivo” e “Criando um instantâneo de banco de dados” em [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+-   Para obter o banco de dados **Sales** e o instantâneo **sales_snapshot0600**, veja “Criando um banco de dados com grupos de arquivo” e “Criando um instantâneo de banco de dados” em [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 -   Para obter o banco de dados **sales_snapshot1200** , veja “Criando um instantâneo do banco de dados Sales” em [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
@@ -172,5 +172,4 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Espelhamento de banco de dados e instantâneos de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
-  
   

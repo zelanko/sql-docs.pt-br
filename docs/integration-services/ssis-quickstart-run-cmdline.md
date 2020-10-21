@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc97eb4c3c8d554a86a773910508c2d1ba936459
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9efc610f33e2f58a8c1ae66b43480fb1d1da164
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495401"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195820"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Executar um pacote do SSIS no prompt de comando com DTExec.exe
 
@@ -26,7 +26,7 @@ Este guia de início rápido demonstra como executar um pacote do SSIS por meio 
 > [!NOTE]
 > O método descrito neste artigo não foi testado com os pacotes implantados em um servidor de Banco de Dados SQL do Azure.
 
-Para obter mais informações sobre o `DTExec.exe`, consulte [Utilitário dtexec](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility).
+Para obter mais informações sobre o `DTExec.exe`, consulte [Utilitário dtexec](./packages/dtexec-utility.md).
 
 ## <a name="supported-platforms"></a>Plataformas com suporte
 
@@ -58,4 +58,4 @@ Com os valores de parâmetro usados no exemplo a seguir, o programa executa o pa
     - [Executar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Executar um pacote do SSIS com o PowerShell](ssis-quickstart-run-powershell.md)
-    - [Executar um pacote do SSIS com o C#](./ssis-quickstart-run-dotnet.md) 
+    - [Executar um pacote do SSIS com o C#](./ssis-quickstart-run-dotnet.md)

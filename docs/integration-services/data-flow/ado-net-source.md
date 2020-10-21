@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94a94ba7bcd71510f82769ebb1517caef7e5a0fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b10ca4ddff49785c1b5b6e33d7510985fd801c85
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425848"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194858"
 ---
 # <a name="ado-net-source"></a>Origem do ADO NET
 
@@ -36,12 +36,12 @@ ms.locfileid: "88425848"
 
   A origem do ADO NET recebe dados de um provedor de .NET e os disponibiliza para o fluxo de dados.  
   
- Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], confira [Diretrizes gerais e limitações (Banco de dados SQL do Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Você pode usar a fonte ADO.NET para se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Não há suporte para a conexão ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)] com o uso do OLE DB. Para obter mais informações sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], confira [Diretrizes gerais e limitações (Banco de dados SQL do Azure)](/previous-versions/azure/ee336245(v=azure.100)).  
   
 ## <a name="data-type-support"></a>Suporte do tipo de dados  
  A fonte converte qualquer tipo de dados que não é mapeado para um tipo de dados específico do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um tipo de dados DT_NTEXT do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Essa conversão ocorre mesmo que o tipo de dados seja **System.Object**.  
   
- É possível alterar o tipo de dados DT_NTEXT para o tipo de dados DT_WSTR ou alterar DT_WSTR para DT_NTEXT. Para alterar tipos de dados, defina a propriedade **DataType** na caixa de diálogo **Editor Avançado** da fonte ADO.NET. Para obter mais informações, consulte [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ É possível alterar o tipo de dados DT_NTEXT para o tipo de dados DT_WSTR ou alterar DT_WSTR para DT_NTEXT. Para alterar tipos de dados, defina a propriedade **DataType** na caixa de diálogo **Editor Avançado** da fonte ADO.NET. Para obter mais informações, consulte [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md).  
   
  O tipo de dados DT_NTEXT também pode ser convertido no tipo de dados DT_BYTES ou DT_STR usando uma transformação Conversão de Dados depois da origem do ADO NET. Para obter mais informações, consulte [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "88425848"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas do ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -207,5 +207,4 @@ ms.locfileid: "88425848"
  [Destino DataReader](../../integration-services/data-flow/datareader-destination.md)   
  [Destino do ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
  [Fluxo de Dados](../../integration-services/data-flow/data-flow.md)  
-  
   

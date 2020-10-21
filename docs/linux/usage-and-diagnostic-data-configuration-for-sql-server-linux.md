@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8d137a12cdb11fc0f5d5cd9065db9a758de57154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902344"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115719"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Configurar a coleta de dados de uso e diagnóstico do SQL Server em Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "85902344"
 
 Por padrão, o Microsoft SQL Server coleta informações sobre como os clientes estão usando o aplicativo. Especificamente, o SQL Server coleta informações sobre a experiência de instalação, uso e desempenho. Essas informações ajudam a Microsoft a melhorar o produto para melhor atender às necessidades do cliente. Por exemplo, a Microsoft coleta informações sobre quais tipos de códigos de erro os clientes costumam encontrar, para que possamos corrigir erros relacionados, melhorar nossa documentação sobre como usar o SQL Server e determinar se os recursos devem ser adicionados ao produto para melhor atender aos clientes.
 
-Este documento fornece detalhes sobre quais tipos de informações são coletados e sobre como configurar o Microsoft SQL Server em Linux para enviar essas informações coletadas à Microsoft. O SQL Server 2017 inclui uma política de privacidade que explica as informações que coletamos e que não coletamos dos usuários. Para obter mais informações, confira a [política de privacidade](https://go.microsoft.com/fwlink/?LinkID=868444).
+Este documento fornece detalhes sobre quais tipos de informações são coletados e sobre como configurar o Microsoft SQL Server em Linux para enviar essas informações coletadas à Microsoft. O SQL Server 2017 inclui uma política de privacidade que explica as informações que coletamos e que não coletamos dos usuários. Para obter mais informações, confira a [política de privacidade](../sql-server/sql-server-privacy.md).
 
 Especificamente, a Microsoft não envia nenhum dos seguintes tipos de informações por meio desse mecanismo:
 
@@ -56,7 +56,7 @@ Essa opção permite alterar se o SQL Server envia a coleta de dados de diagnós
    ```
    
 ### <a name="on-docker"></a>No Docker
-Para desabilitar a coleta de dados de diagnóstico e uso no Docker, você fazer o Docker [manter seus dados](sql-server-linux-configure-docker.md). 
+Para desabilitar a coleta de dados de diagnóstico e uso no Docker, você fazer o Docker [manter seus dados](./sql-server-linux-docker-container-deployment.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -143,7 +143,7 @@ Essa opção habilita a Auditoria Local e permite que você defina o diretório 
    ```
    
 ### <a name="on-docker"></a>No Docker
-Para habilitar a auditoria local no Docker, você deve fazer o Docker [manter seus dados](sql-server-linux-configure-docker.md). 
+Para habilitar a auditoria local no Docker, você deve fazer o Docker [manter seus dados](./sql-server-linux-docker-container-deployment.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

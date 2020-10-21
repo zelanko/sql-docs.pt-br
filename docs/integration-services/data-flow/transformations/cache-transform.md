@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495718"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194637"
 ---
 # <a name="cache-transform"></a>transformação Cache
 
@@ -33,7 +33,7 @@ ms.locfileid: "88495718"
   
  Você pode usar o gerenciador de conexões de Cache quando deseja configurar a Transformação Pesquisa para executar no modo de cache cheio. Nesse modo, o conjunto de dados de referência é carregado no cache antes da execução da Transformação Pesquisa.  
   
- Para obter instruções sobre como configurar a Transformação Pesquisa em modo de cache cheio com o gerenciador de conexões de Cache e a Transformação Cache, consulte [Implementar uma Transformação Pesquisa em modo cache cheio usando o Gerenciador de Conexões do Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
+ Para obter instruções sobre como configurar a Transformação Pesquisa em modo de cache cheio com o gerenciador de conexões de Cache e a Transformação Cache, consulte [Implementar uma Transformação Pesquisa em modo cache cheio usando o Gerenciador de Conexões do Cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
   
  Para obter mais informações sobre o cache do conjunto de dados de referência, consulte [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88495718"
   
  Em um único pacote, somente uma transformação Cache pode gravar dados no mesmo gerenciador de conexões de cache. Se o pacote contiver várias transformações Cache, a primeira transformação, que é chamada quando o pacote é executado, gravará os dados no gerenciador de conexões. As operações de gravação das transformações Cache subsequentes falham.  
   
- Para obter mais informações, consulte [Gerenciador de Conexões do Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Para obter mais informações, consulte [Gerenciador de Conexões do Cache](../../connection-manager/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Configuração da transformação Cache  
  Você pode configurar o gerenciador de conexões de cache para salvar os dados em um arquivo de cache (.caw).  
@@ -65,7 +65,7 @@ ms.locfileid: "88495718"
 ## <a name="cache-transformation-editor-connection-manager-page"></a>Editor de Transformação Cache (Página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Transformação Cache** para selecionar um gerenciador de conexões Cache existente ou para criar um novo.  
   
- Para obter mais informações sobre o Gerenciador de conexões de cache, consulte [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Para obter mais informações sobre o Gerenciador de conexões de cache, consulte [Cache Connection Manager](../../connection-manager/cache-connection-manager.md).  
   
 ### <a name="options"></a>Opções  
  **Gerenciador de conexões de cache**  
@@ -80,5 +80,4 @@ ms.locfileid: "88495718"
 ## <a name="see-also"></a>Consulte Também  
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)  
-  
   

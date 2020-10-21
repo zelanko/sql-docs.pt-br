@@ -23,12 +23,12 @@ ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc2fdfc46c53b5a345d6ac27847592485043f934
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0274a2259bab7fe16109520030d526113d4e876c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459459"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189206"
 ---
 # <a name="-bitwise-or-assignment-transact-sql"></a>|= (Atribuição de OR bit a bit) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88459459"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 expression |= expression  
 ```  
   

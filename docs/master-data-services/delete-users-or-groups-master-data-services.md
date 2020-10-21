@@ -1,5 +1,6 @@
 ---
-title: Excluir usuários ou grupos (Master Data Services) | Microsoft Docs
+description: Excluir usuários ou grupos (Master Data Services)
+title: Excluir usuários ou grupos
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 81b16bc5b2bc8f2158a82733fb96f5144b7d15f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48ddbf53a44bf0d34abe725595bba255e6fa4fae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258076"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>Excluir usuários ou grupos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Exclua usuários ou grupos quando não desejar mais que eles acessem o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
@@ -53,7 +54,7 @@ ms.locfileid: "67906273"
   
 5.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

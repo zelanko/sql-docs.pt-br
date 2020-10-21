@@ -1,5 +1,6 @@
 ---
-title: Segurança (Master Data Services) | Microsoft Docs
+title: Segurança
+description: Saiba mais sobre segurança em Master Data Services, incluindo tipos de usuários, como definir segurança, segurança no suplemento para Excel e tarefas relacionadas.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9501014be6fdd311c37fd8f446ae01f0f2939f90
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257823"
 ---
 # <a name="security-master-data-services"></a>Segurança (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use a segurança para garantir que os usuários tenham acesso aos dados mestre específicos necessários para fazer seus trabalhos e para impedir que acessem dados que não devem estar disponíveis para eles.  
   
@@ -45,14 +46,14 @@ ms.locfileid: "68085669"
   
 -   Opcionalmente, [permissões de membro da hierarquia](../master-data-services/hierarchy-member-permissions-master-data-services.md), que determinam os membros que um usuário pode acessar e o tipo de acesso (Ler, Atualizar e Excluir) que o usuário tem nesses membros.  
   
- Quando você atribui permissões a atributos e membros, as permissões se cruzam e as regras determinam qual permissão tem precedência. Para obter mais informações, consulte [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
+ Quando você atribui permissões a atributos e membros, as permissões se cruzam e as regras determinam qual permissão tem precedência. Para obter mais informações, consulte [Como as permissões são determinadas &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Segurança no suplemento para Excel  
  A segurança definida no aplicativo Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] também se aplica ao [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Usuários só podem exibir e trabalhar com dados para os quais têm permissão. Administradores podem executar tarefas administrativas.  
   
  A única limitação é que toda a segurança atribuída no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não entra em vigor no Excel antes de um intervalo de 20 minutos. O intervalo é definido pela configuração *MdsMaximumUserInformationCacheInterval* no arquivo web.config. Para alterar o intervalo, você pode alterar a configuração e reiniciar o IIS.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
@@ -62,7 +63,7 @@ ms.locfileid: "68085669"
 |Atribuir permissão a valores de atributos por meio da atribuição de permissão a objetos modelo.|[Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |Atribuir permissão a valores de membros por meio da atribuição de permissão a nós da hierarquia.|[Atribuir permissões de membro de hierarquia &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [Usuários e grupos &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
  [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   

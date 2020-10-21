@@ -13,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306633"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035843"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lição 2: Configurar permissões em objetos de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -30,11 +30,11 @@ Conceder um acesso de usuário a um banco de dados envolve três etapas. Primeir
 ## <a name="prerequisites"></a>Pré-requisitos
 Para concluir este tutorial, você precisa de acesso ao SQL Server Management Studio e a uma instância do SQL Server. 
 
-- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 
 Se você não tiver acesso a uma instância do SQL Server, selecione sua plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
 - **Windows**: [baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [baixe o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **macOS**: [baixe o SQL Server 2017 no Docker](../linux/quickstart-install-connect-docker.md).
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -111,4 +111,3 @@ O próximo artigo ensina a remover objetos de banco de dados criados nas outras 
 Vá até o próximo artigo para saber mais:
 > [!div class="nextstepaction"]
 >[Próximas etapas](lesson-3-deleting-database-objects.md)
-  

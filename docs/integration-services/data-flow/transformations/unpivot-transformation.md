@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4dd81bf33b43f4adf73225faa199fd9c5f792fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ebed637551110df71897dc17afe0c1a959eb0e5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425628"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194578"
 ---
 # <a name="unpivot-transformation"></a>Transformação Não Dinâmica
 
@@ -52,7 +52,7 @@ ms.locfileid: "88425628"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -99,5 +99,4 @@ ms.locfileid: "88425628"
 ## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformação Dinâmica](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
-  
   

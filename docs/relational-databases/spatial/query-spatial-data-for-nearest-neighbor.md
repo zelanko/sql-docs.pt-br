@@ -11,15 +11,15 @@ ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e53b816b25c991e7dafb891a0006b256979cb298
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 675ff1891d8bcb459ba21d330176eae44a629fe3
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464906"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006611"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar dados espaciais de vizinho mais próximo
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Uma consulta comum usada com dados espaciais é a consulta de Vizinho Mais Próximo. As consultas de Vizinho Mais Próximo são usadas para localizar os objetos espaciais mais próximos a um objeto espacial específico. Por exemplo, um localizador de lojas para um site geralmente deve localizar os locais de loja mais próximos ao local de um cliente.  
   
  Uma consulta de Vizinho Mais Próximo pode ser escrita em uma variedade de formatos de consulta válidos, mas, para que a consulta de Vizinho Mais Próximo use um índice espacial, a sintaxe a seguir deve ser usada.  
@@ -76,7 +76,7 @@ SELECT TOP ( number )
   
  É recomendado que os novos mosaicos de índice espaciais sejam usados para índices usados em consultas de Vizinhos Mais Próximos. Para obter mais informações sobre mosaicos de índice espacial, veja [Dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example-1"></a>Exemplo 1  
  O exemplo de código a seguir mostra para uma consulta de Vizinho Mais Próximo que pode usar um índice espacial. O exemplo usa a tabela `Person.Address` no banco de dados `AdventureWorks2016` .  
   
 ```sql  
@@ -90,7 +90,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  Crie um índice espacial na coluna SpatialLocation para ver como uma consulta de Vizinho Mais Próximo usa um índice espacial. Para obter mais informações sobre como criar índices espaciais, consulte [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example-2"></a>Exemplo 2  
  O exemplo de código a seguir mostra para uma consulta de Vizinho Mais Próximo que não pode usar um índice espacial.  
   
 ```sql  

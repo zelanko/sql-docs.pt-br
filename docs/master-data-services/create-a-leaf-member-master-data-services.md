@@ -1,5 +1,6 @@
 ---
-title: Criar um membro folha (Master Data Services) | Microsoft Docs
+description: Criar um membro folha (Master Data Services)
+title: Criar um membro folha
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a7204fb8183ed84390bd3eaec38b16833dd8eb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f5436cf2d553209a80ae5f9bb9f32b3df1c7d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257813"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Criar um membro folha (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Em [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro folha quando quiser adicionar dados mestres ao sistema. Se você quiser adicionar dados em massa, use tabelas de preparo. Para obter mais informações, consulte [Importar dados de tabelas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
+  Em [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro folha quando quiser adicionar dados mestres ao sistema. Se você quiser adicionar dados em massa, use tabelas de preparo. Para obter mais informações, consulte  [importar dados de tabelas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  Você também pode usar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar os dados.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "67906741"
   
 8.  Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um membro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Membros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   

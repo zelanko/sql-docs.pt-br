@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c184f0be8a853eb373063468e3bded901c4b58e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2197b4a47a01e114b4bac330fb170e5489ff614
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495902"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195974"
 ---
 # <a name="wmi-data-reader-task"></a>Tarefa Leitor de Dados do WMI
 
@@ -55,7 +55,7 @@ ms.locfileid: "88495902"
  A tarefa Leitor de Dados do WMI usa um gerenciador de conexões WMI para se conectar ao servidor do qual lê informações de WMI. Para obter mais informações, consulte [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
 ## <a name="wql-query"></a>Consulta WQL  
- WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](https://go.microsoft.com/fwlink/?linkid=7022).  
+ WQL é um dialeto do SQL com extensões para dar suporte à notificação de eventos de WMI e outros recursos específicos ao WMI. Para obter mais informações sobre WQL, consulte a documentação da Instrumentação de Gerenciamento do Windows na [Biblioteca do MSDN](../../sql-server/index.yml).  
   
 > [!NOTE]  
 >  As classes WMI variam entre versões de Windows.  
@@ -100,7 +100,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="wmi-data-reader-task-editor-general-page"></a>Editor da Tarefa Leitor de Dados do WMI (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Leitor de Dados WMI** para nomear e descrever a tarefa Leitor de Dados WMI.  
@@ -126,7 +126,7 @@ Select * FROM Win32_QuickFixEngineering
  **WMIConnectionName**  
  Selecione um gerenciador de conexões WMI na lista ou clique em \<**New WMI Connection...**> para criar um gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexões WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de Conexões WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de Conexões WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de Conexões WMI](../connection-manager/wmi-connection-manager.md)  
   
  **WQLQuerySourceType**  
  Selecione o tipo de origem da consulta WQL que a tarefa executa. As opções dessa propriedade são listadas na tabela a seguir.  
@@ -161,13 +161,13 @@ Select * FROM Win32_QuickFixEngineering
  **WQLQuerySource**  
  Selecione um gerenciador de conexões de Arquivos na lista ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../connection-manager/file-connection-manager.md)  
   
 #### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variável  
  **WQLQuerySource**  
  Selecione uma variável na lista ou clique em \<**New variable...**> para criar uma variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](../integration-services-ssis-variables.md)  
   
 ### <a name="destinationtype-dynamic-options"></a>Opções dinâmicas de DestinationType  
   
@@ -175,16 +175,15 @@ Select * FROM Win32_QuickFixEngineering
  **Destino**  
  Selecione um gerenciador de conexões de Arquivos na lista ou clique em \<**New connection...**> para criar um gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../connection-manager/file-connection-manager.md)  
   
 #### <a name="destinationtype--variable"></a>DestinationType = Variável  
  **Destino**  
  Selecione uma variável na lista ou clique em \<**New variable...**> para criar uma variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](../integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
-  
   

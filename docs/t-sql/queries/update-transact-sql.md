@@ -39,12 +39,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8bde11240927cc7f20581c1f9a9fd7655b38f19
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 56eaaeb3dfc90ee9de1f5ee769417eb75c232e4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115930"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035809"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ UPDATE
 ```  
   
 ```syntaxsql 
--- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+-- Syntax for Azure Synapse Analysis
 
 [ WITH <common_table_expression> [ ,...n ] ]
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
@@ -785,7 +785,7 @@ GO
 ```  
   
 ###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> Como atualizar linhas em uma tabela remota  
- Os exemplos nesta seção demonstram como atualizar linhas em uma tabela de destino remota usando um [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou uma [função de conjunto de linhas](../../t-sql/functions/rowset-functions-transact-sql.md) para referenciar a tabela remota.  
+ Os exemplos nesta seção demonstram como atualizar linhas em uma tabela de destino remota usando um [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou uma [função de conjunto de linhas](../functions/opendatasource-transact-sql.md) para referenciar a tabela remota.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Atualizando dados em uma tabela remota por meio de um servidor vinculado  
  O exemplo a seguir atualiza uma tabela em um servidor remoto. O exemplo começa criando um link com a fonte de dados remota usando [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). O nome de servidor vinculado, `MyLinkedServer`, é especificado então como parte do nome de objeto de quatro partes no formulário server.catalog.schema.object. Observe que você deve especificar um nome de servidor válido para `@datasrc`.  
@@ -1190,9 +1190,8 @@ GO
  [Cursores &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Funções de texto e imagem &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Funções de texto e imagem &#40;Transact-SQL&#41;](../functions/text-and-image-functions-textptr-transact-sql.md)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
  [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
- [Conjuntos de caracteres multibyte e de byte único](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
- 
+ [Conjuntos de caracteres multibyte e de byte único](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  

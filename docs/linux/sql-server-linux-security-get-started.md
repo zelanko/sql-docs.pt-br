@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 031005dcb6a5353e9e4f0b73a7a45d667d2212e7
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 4a9137ad71947d222d246df046c6ab573fb4500d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088788"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115809"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Passo a passo dos recursos de segurança do SQL Server em Linux
 
@@ -250,7 +250,7 @@ As operações de criptografia e descriptografia são agendadas em threads em se
 > [!WARNING]
 >  Os arquivos de backup de bancos de dados com TDE habilitada também são criptografados usando a chave de criptografia do banco de dados. Como resultado, quando você restaura esses backups, o certificado que protege a chave de criptografia do banco de dados deve estar disponível. Isso significa que, além de fazer backup do banco de dados, você deve assegurar que os backups dos certificados de servidor sejam mantidos para evitar perda de dados. Se o certificado não estiver mais disponível, haverá perda de dados. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-Para obter mais informações sobre a TDE, confira [TDE (Transparent Data Encryption)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
+Para obter mais informações sobre a TDE, confira [TDE (Transparent Data Encryption)](../relational-databases/security/encryption/transparent-data-encryption.md).   
 
 
 ## <a name="configure-backup-encryption"></a>Configurar a criptografia de backup

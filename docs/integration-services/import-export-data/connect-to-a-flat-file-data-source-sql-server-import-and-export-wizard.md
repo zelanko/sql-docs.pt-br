@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495637"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195178"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados de arquivo simples (Assistente de Importação e Exportação do SQL Server)
 
@@ -261,7 +261,7 @@ Na página **Visualização**, verifique se que a lista de colunas e os dados de
  **Atualizar**  
  Exiba o efeito de alterar o número de linhas a ignorar, clicando em **Atualizar**. Esse botão só ficará visível após você alterar outras opções de conexão.  
  
-Para obter mais informações sobre a página **Visualização**, consulte a seguinte página de referência do Integration Services: [Editor do Gerenciador de Conexões de arquivos simples &#40;página Visualização&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md).
+Para obter mais informações sobre a página **Visualização**, consulte a seguinte página de referência do Integration Services: [Editor do Gerenciador de Conexões de arquivos simples &#40;página Visualização&#41;](../connection-manager/flat-file-connection-manager.md).
 
 ## <a name="connect-to-a-flat-file-destination"></a>Conectar-se a um destino de arquivo simples
 Para um destino de arquivo simples, há apenas uma única página de opções, conforme mostrado na captura de tela a seguir. Procure para selecionar o arquivo e, em seguida, verifique as configurações na seção **Formato**.
@@ -303,4 +303,3 @@ Para um destino de arquivo simples, há apenas uma única página de opções, c
 ## <a name="see-also"></a>Confira também
 [Escolher uma Fonte de Dados](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Escolher um Destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

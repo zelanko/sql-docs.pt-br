@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088729"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115792"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solução de problemas do SQL Server em Linux
 
@@ -42,11 +42,11 @@ Se você estiver tendo dificuldades para se conectar ao SQL Server em Linux, hav
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Uma exceção a essa técnica está relacionada às VMs do Azure. Para VMs do Azure, [localize o IP público da VM no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > Uma exceção a essa técnica está relacionada às VMs do Azure. Para VMs do Azure, [localize o IP público da VM no portal do Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - Se aplicável, verifique se você abriu a porta do SQL Server (padrão 1433) no firewall.
 
-- Para VMs do Azure, verifique se você tem uma [regra de grupo de segurança de rede para a porta padrão do SQL Server](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
+- Para VMs do Azure, verifique se você tem uma [regra de grupo de segurança de rede para a porta padrão do SQL Server](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Verifique se o nome de usuário e a senha não contêm erros de digitação, espaços extras ou uso incorreto de maiúsculas.
 
@@ -90,7 +90,7 @@ Você pode parar ou reiniciar o serviço SQL Server, conforme necessário, usand
    ```
 
 > [!TIP]
-> Para obter mais dicas de solução de problemas para o Docker, confira [Solução de problemas de contêineres do Docker do SQL Server](sql-server-linux-configure-docker.md#troubleshooting).
+> Para obter mais dicas de solução de problemas para o Docker, confira [Solução de problemas de contêineres do Docker do SQL Server](./sql-server-linux-docker-container-troubleshooting.md).
 
 ## <a name="access-the-log-files"></a>Acessar os arquivos de log
    
@@ -109,7 +109,7 @@ Se preferir, converta também os arquivos em UTF-8 para lê-los com 'more' ou 'l
    ```
 ## <a name="extended-events"></a>Eventos estendidos
 
-Os eventos estendidos podem ser consultados por meio de um comando SQL.  Encontre mais informações sobre eventos estendidos [aqui](https://technet.microsoft.com/library/bb630282.aspx):
+Os eventos estendidos podem ser consultados por meio de um comando SQL.  Encontre mais informações sobre eventos estendidos [aqui](../relational-databases/extended-events/extended-events.md):
 
 ## <a name="crash-dumps"></a>Despejos de memória 
 
@@ -197,7 +197,7 @@ Há muitos fatores que afetam o desempenho, incluindo design de banco de dados, 
 
 - [Repositório de Consultas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [DMVs (exibições de gerenciamento dinâmico) do sistema](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Painel de desempenho no SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [Painel de desempenho no SQL Server Management Studio](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## <a name="common-issues"></a>Problemas comuns
 

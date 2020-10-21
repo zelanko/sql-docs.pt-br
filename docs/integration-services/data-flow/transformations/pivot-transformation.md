@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f09d86cc1bf5ba9301de4da8e869b3a054d55ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5166b67a52cc93190c9dc6c273d9336c0f6d7552
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477653"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195318"
 ---
 # <a name="pivot-transformation"></a>transformação Dinâmica
 
@@ -131,7 +131,7 @@ ms.locfileid: "88477653"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** , clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -142,5 +142,4 @@ ms.locfileid: "88477653"
  [Transformação não dinâmica](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

@@ -14,15 +14,15 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2c7be1815002208ffea6e08ea4b7200579a78e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8af9fceff99881b5b6d2ddaa343adba949b70853
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455398"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006316"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Uma **GeometryCollection** é uma coleção de zero ou mais instâncias de **geometry** ou de **geography** . Uma **GeometryCollection** pode estar vazia.  
   
 ## <a name="geometrycollection-instances"></a>Instâncias de GeometryCollection  

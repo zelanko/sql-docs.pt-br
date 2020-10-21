@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a8c0bb1cb003605ec863b41e2194bad4e3cf3e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d95b3894351d156444b22e5b20c4cf5ed259990
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393562"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196500"
 ---
 # <a name="for-loop-container"></a>Contêiner Loop For
 
@@ -67,9 +67,9 @@ ms.locfileid: "88393562"
   
 2.  Adicione tarefas e contêineres ao contêiner Loop For. Para obter mais informações, consulte [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-3.  Conecte tarefas e contêineres ao contêiner Loop For usando restrições de precedência. Para obter mais informações, consulte [Como conectar tarefas e contêineres utilizando uma restrição de precedência padrão](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
+3.  Conecte tarefas e contêineres ao contêiner Loop For usando restrições de precedência. Para obter mais informações, consulte [Como conectar tarefas e contêineres utilizando uma restrição de precedência padrão](./precedence-constraints.md).  
   
-4.  Configure o contêiner Loop For. Para obter mais informações, consulte [Configurar um contêiner Loop For](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+4.  Configure o contêiner Loop For. Para obter mais informações, consulte [Configurar um contêiner Loop For]().  
 
 ##  <a name="configure-the-for-loop-container"></a>Configurar o contêiner do Loop For
 Este procedimento descreve como configurar um contêiner Loop For usando a caixa de diálogo **Editor do Loop For** .  
@@ -122,7 +122,7 @@ Use a página **Loop For** da caixa de diálogo **Editor do Loop For** para conf
   
  Quando você especifica uma variável em uma expressão, deve introduzir o nome da variável com o sinal de arroba (@). Por exemplo, para uma variável nomeada **Counter**, digite @Counter na expressão usada pelo contêiner Loop For. Se você incluir a propriedade namespace na variável, deverá incluir a variável e namespace entre colchetes. Por exemplo, para uma variável **Counter** no namespace **MyNamespace**, digite [@MyNamespace::Counter].  
   
- As variáveis que o contêiner Loop For usa devem ser definidas no escopo do contêiner Loop For ou no escopo de qualquer contêiner que seja o maior na hierarquia de contêiner do pacote. Por exemplo, um contêiner Loop For pode usar variáveis definidas em seu escopo e também variáveis definidas no escopo do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ As variáveis que o contêiner Loop For usa devem ser definidas no escopo do contêiner Loop For ou no escopo de qualquer contêiner que seja o maior na hierarquia de contêiner do pacote. Por exemplo, um contêiner Loop For pode usar variáveis definidas em seu escopo e também variáveis definidas no escopo do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../integration-services-ssis-variables.md).  
   
  A gramática de expressão do [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece um conjunto completo de operadores e funções para implementar as complexas expressões usadas para avaliação, inicialização ou atribuição. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
@@ -130,5 +130,4 @@ Use a página **Loop For** da caixa de diálogo **Editor do Loop For** para conf
 ## <a name="see-also"></a>Consulte Também  
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
-  
   

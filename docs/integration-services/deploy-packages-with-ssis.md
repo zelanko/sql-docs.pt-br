@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430648"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194561"
 ---
 # <a name="deploy-packages-with-ssis"></a>Implantar pacotes com o SSIS
 
@@ -37,9 +37,9 @@ O [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../inc
     
 Primeiro, você executará as tarefas para preparar a implantação. Você criará um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e adicionará pacotes e arquivos de dados existentes ao projeto. Você não criará nenhum pacote a partir do zero; em vez disso, apenas trabalhará com pacotes concluídos criados apenas para este tutorial. Você não modificará a funcionalidade dos pacotes neste tutorial; porém, após adicionar os pacotes ao projeto, poderá achar útil abrir os pacotes no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] e revisar o conteúdo de cada pacote. Ao examinar os pacotes, aprenderá sobre as dependências dos pacotes, como arquivos de log, e sobre outros recursos interessantes dos pacotes.    
     
-Na preparação para a implantação, você também atualizará os pacotes para usar as configurações. As configurações tornam as propriedades dos pacotes e dos objetos de pacote atualizáveis em tempo de execução. Neste tutorial, você usará configurações para atualizar as cadeias de caracteres de conexão de arquivos log e de texto e os locais dos arquivos XML e XSD utilizados pelo pacote. Para obter mais informações, consulte [Configurações de pacote](../integration-services/packages/package-configurations.md) e [Criar configurações de pacote](../integration-services/packages/create-package-configurations.md).    
+Na preparação para a implantação, você também atualizará os pacotes para usar as configurações. As configurações tornam as propriedades dos pacotes e dos objetos de pacote atualizáveis em tempo de execução. Neste tutorial, você usará configurações para atualizar as cadeias de caracteres de conexão de arquivos log e de texto e os locais dos arquivos XML e XSD utilizados pelo pacote. Para obter mais informações, consulte [Configurações de pacote](./packages/legacy-package-deployment-ssis.md) e [Criar configurações de pacote](./packages/legacy-package-deployment-ssis.md).    
     
-Depois de verificar se os pacotes estão sendo executados com êxito no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você criará o grupo de desenvolvimento para usar na instalação dos pacotes. O grupo de desenvolvimento consistirá nos arquivos de pacote e outros itens adicionados ao projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , as dependências de pacote que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui automaticamente e o utilitário de implantação que você compilou. Para obter mais informações, consulte [Criar um utilitário de implantação](../integration-services/packages/create-a-deployment-utility.md).    
+Depois de verificar se os pacotes estão sendo executados com êxito no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você criará o grupo de desenvolvimento para usar na instalação dos pacotes. O grupo de desenvolvimento consistirá nos arquivos de pacote e outros itens adicionados ao projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , as dependências de pacote que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui automaticamente e o utilitário de implantação que você compilou. Para obter mais informações, consulte [Criar um utilitário de implantação](./packages/legacy-package-deployment-ssis.md).    
     
 Você copiará o pacote de implantação no computador de destino e executará o Assistente de Instalação de Pacotes para instalar os pacotes e as dependências de pacotes. Os pacotes serão instalados no banco de dados msdb do SQL Server e os arquivos auxiliares e de suporte serão instalados no sistema de arquivos. Como os pacotes implantados usam configurações, você atualizará a configuração para usar novos valores que habilitam os pacotes para serem executados com êxito no novo ambiente.    
     
@@ -98,5 +98,3 @@ Nesta lição, você compilará um utilitário de implantação e verificará se
     
 [Lição 3: instalar os pacotes SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 Nesta lição, você copiará o grupo de implantação para o computador de destino, instalará os pacotes e executará os pacotes.    
-    
-

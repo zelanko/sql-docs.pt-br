@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480888"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196480"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
 
@@ -86,7 +86,7 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
  Este Fluxo de Controle do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém duas tarefas de controle CDC e a tarefa de Fluxo de Dados. A primeira tarefa chamada **Obter Intervalo de Processamento CDC** estabelece o intervalo de LSN para as alterações que são processadas na tarefa de fluxo de dados chamada **Processar Alterações**. Este intervalo é estabelecido com base no que foi processado durante a última execução de pacote e foi salvo em um repositório persistente.  
   
- Para obter mais informações sobre a tarefa Controle CDC, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) e [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ Para obter mais informações sobre a tarefa Controle CDC, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) e [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  A figura a seguir mostra o fluxo de dados de **Processar Alterações** que conceitualmente mostra como as alterações são processadas.  
   
@@ -104,11 +104,11 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
  [Origem CDC](../../integration-services/data-flow/cdc-source.md)  
   
- [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](./cdc-source.md)  
   
- [Editor de Origem CDC &#40;página Colunas&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [Editor de Origem CDC &#40;página Colunas&#41;](./cdc-source.md)  
   
- [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [Editor de Origem CDC &#40;Página Saída de Erro&#41;](./cdc-source.md)  
   
  Para obter mais informações sobre o Separador de CDC, consulte:  
   
@@ -217,9 +217,8 @@ Uma mensagem é exibida depois de instalar os componentes. Clique em **Sim** qua
   
 -   Artigo técnico [Solucionando erros de instância CDC no Microsoft Change Data Capture para Oracle da Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)em social.technet.microsoft.com.  
   
--   Vídeo [CDC para bancos de dados Oracle usando o SQL Server Integration Services 2012 (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)em technet.microsoft.com.  
+-   Vídeo [CDC para bancos de dados Oracle usando o SQL Server Integration Services 2012 (vídeo do SQL Server)](/previous-versions/dn912438(v=msdn.10))em technet.microsoft.com.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

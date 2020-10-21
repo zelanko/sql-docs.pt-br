@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bf6a495a3c481622fd5e01406e14172cea252e71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 060fa6ad9faae0fa6159eba2591623af57a41c5b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393932"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196530"
 ---
 # <a name="execute-t-sql-statement-task"></a>Tarefa Executar Instrução T-SQL
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  A tarefa Executar Instrução T-SQL executa instruções Transact-SQL. Para obter mais informações, consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md) e [Integration Services &#40;SSIS&#41; Consultas](../../integration-services/integration-services-ssis-queries.md).  
+  A tarefa Executar Instrução T-SQL executa instruções Transact-SQL. Para obter mais informações, consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/language-reference.md) e [Integration Services &#40;SSIS&#41; Consultas](../../integration-services/integration-services-ssis-queries.md).  
   
  Essa tarefa é semelhante à tarefa Executar SQL. Porém, a tarefa Executar Instrução T-SQL só dá suporte à versão Transact-SQL da linguagem SQL e, por isso, você não pode usá-la para executar instruções em servidores que usam outros dialetos de linguagem SQL. Se for necessário executar consultas parametrizadas, salvar resultados de consulta em variáveis ou usar expressões de propriedade, você deverá usar a tarefa Executar SQL em vez de a tarefa Executar Instrução T-SQL. Para obter mais informações, consulte [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md).  
   
@@ -42,11 +42,10 @@ ms.locfileid: "88393932"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)   
  [MERGE em pacotes do Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
-  
   

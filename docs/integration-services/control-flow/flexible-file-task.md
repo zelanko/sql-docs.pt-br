@@ -13,12 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a84bfa9b7aa9fc50d16268005ac02868f11784b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93cecf5b261a888375ead03aac1eec07b76c63d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393542"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196490"
 ---
 # <a name="flexible-file-task"></a>Tarefa Arquivo Flexível
 
@@ -29,7 +29,7 @@ Os serviços de armazenamento compatíveis no momento são
 
 - Sistema de Arquivos Local
 - [Armazenamento de Blobs do Azure](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
 
 A Tarefa de Arquivo Flexível é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -62,12 +62,12 @@ Para a operação **Delete**, as seguintes propriedades estão disponíveis.
 ***Observações sobre a configuração de permissão da entidade de serviço***
 
 Para que a **conexão de teste** funcione (armazenamento de blobs ou Data Lake Storage Gen2), a entidade de serviço deve ser atribuída pelo menos à função de **Leitor de Dados do Storage Blob** para a conta de armazenamento.
-Isso é feito com o [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+Isso é feito com o [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Para o armazenamento de blobs, as permissões de leitura e gravação são concedidas por meio da atribuição de pelo menos as funções de **Leitor de Dados do Storage Blob** e **Colaborador de Dados do Storage Blob**, respectivamente.
 
-Para o Azure Data Lake Storage Gen2, a permissão é determinada pelo RBAC e pelas [ACLs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
-Preste atenção nas ACLs que são configuradas usando a OID (ID de objeto) da entidade de serviço para o registro do aplicativo, conforme detalhado [aqui](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Para o Azure Data Lake Storage Gen2, a permissão é determinada pelo RBAC e pelas [ACLs](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Preste atenção nas ACLs que são configuradas usando a OID (ID de objeto) da entidade de serviço para o registro do aplicativo, conforme detalhado [aqui](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
 Isso é diferente da ID do aplicativo (cliente) que é usada com a configuração de RBAC.
 Quando uma entidade de segurança recebe permissões de dados RBAC por meio de uma função interna ou por meio de uma função personalizada, essas permissões são avaliadas primeiro após a autorização de uma solicitação.
 Se a operação solicitada for autorizada pelas atribuições de RBAC da entidade de segurança, a autorização será imediatamente resolvida e nenhuma verificação de ACL adicional será executada.
@@ -76,4 +76,4 @@ Como alternativa, se a entidade de segurança não tiver uma atribuição de RBA
 - Para a permissão de leitura, conceda pelo menos a permissão de **execução** no sistema de arquivos de origem, juntamente com a permissão de **Leitura** para os arquivos a serem copiados. Como alternativa, conceda pelo menos a função de **Leitor de dados do blob de armazenamento** com RBAC.
 - Para a permissão de gravação, conceda pelo menos a permissão de **execução** no sistema de arquivos do coletor, juntamente com a permissão de **gravação** para a pasta do coletor. Como alternativa, conceda pelo menos a função de **Colaborador de dados do blob de armazenamento** com RBAC.
 
-Consulte [este](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) artigo para obter detalhes.
+Consulte [este](/azure/storage/blobs/data-lake-storage-access-control) artigo para obter detalhes.

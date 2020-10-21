@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ff8e4b35d30e9b2504dd128ca9694007647f5eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7aa2c4e59ced60c31467b13a4de154887c84f52
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477909"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195404"
 ---
 # <a name="transfer-logins-task"></a>Tarefa Transferir Logons
 
@@ -40,7 +40,7 @@ ms.locfileid: "88477909"
  A tarefa Transferir Logons não informa o progresso incremental da transferência de logons; informa só 0% e 100% concluídos.  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução, definido na propriedade da tarefa **ExecutionValue** retorna o número de logons que são transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Logons, informações sobre a transferência de logons podem se tornar disponíveis a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ O valor de execução, definido na propriedade da tarefa **ExecutionValue** retorna o número de logons que são transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Logons, informações sobre a transferência de logons podem se tornar disponíveis a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Logons inclui as seguintes entradas de log personalizadas:  
@@ -79,7 +79,7 @@ ms.locfileid: "88477909"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-logins-task"></a>Configuração programática da tarefa Transferir Logons  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
@@ -140,4 +140,3 @@ ms.locfileid: "88477909"
   
  **CopySids**  
  Selecione se os identificadores de segurança associados aos logons devem ser copiados para o servidor de destino. Será necessário definir**CopySids** para **True** se a tarefa Transferir Logons for usada junto com a tarefa Transferir Banco de Dados. Caso contrário, os logons copiados não serão reconhecidos pelo banco de dados transferido.  
-  

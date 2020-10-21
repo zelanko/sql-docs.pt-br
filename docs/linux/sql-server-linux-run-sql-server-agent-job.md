@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088816"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115823"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Criar e executar trabalhos do SQL Server Agent no Linux
 
@@ -39,7 +39,7 @@ Os pré-requisitos a seguir são necessários para concluir esse tutorial:
 Os seguintes pré-requisitos são opcionais:
 
 * Computador com Windows com SSMS:
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) para etapas opcionais do SSMS.
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) para etapas opcionais do SSMS.
 
 ## <a name="enable-sql-server-agent"></a>Habilitar o SQL Server Agent
 
@@ -81,7 +81,7 @@ Use as etapas a seguir para criar um banco de dados de exemplo chamado **SampleD
 As etapas a seguir criam um trabalho de SQL Server Agent no Linux com comandos Transact-SQL. O trabalho executa um backup diário do banco de dados de exemplo, **SampleDB**.
 
 > [!TIP]
-> Você pode usar qualquer cliente T-SQL para executar esses comandos. Por exemplo, no Linux, você pode usar o [sqlcmd](sql-server-linux-setup-tools.md) ou o [Visual Studio Code](sql-server-linux-develop-use-vscode.md). Em um Windows Server remoto, você também pode executar consultas no SSMS (SQL Server Management Studio) ou usar a interface do usuário para gerenciamento de trabalho, que é descrita na próxima seção.
+> Você pode usar qualquer cliente T-SQL para executar esses comandos. Por exemplo, no Linux, você pode usar o [sqlcmd](sql-server-linux-setup-tools.md) ou o [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md). Em um Windows Server remoto, você também pode executar consultas no SSMS (SQL Server Management Studio) ou usar a interface do usuário para gerenciamento de trabalho, que é descrita na próxima seção.
 
 1. Use [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) para criar um trabalho chamado `Daily SampleDB Backup`.
 
@@ -200,4 +200,4 @@ Neste tutorial, você aprendeu a:
 Em seguida, explore outros recursos para criar e gerenciar trabalhos:
 
 > [!div class="nextstepaction"]
->[Documentação do SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[Documentação do SQL Server Agent](../ssms/agent/sql-server-agent.md)

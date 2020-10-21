@@ -21,12 +21,12 @@ ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da987dbea422db8ab6e26ce9b84ff55b5d5abb2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6670c42505ef245b06fb2f605ebca078167d1a6c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459378"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196590"
 ---
 # <a name="-division-transact-sql"></a>/ (Divisão) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88459378"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 dividend / divisor  
 ```  
   
@@ -61,7 +61,7 @@ dividend / divisor
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa o operador aritmético de divisão para calcular a meta de vendas mensal da equipe de vendas em [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT s.BusinessEntityID AS SalesPersonID, FirstName, LastName, SalesQuota, SalesQuota/12 AS 'Sales Target Per Month'  
@@ -88,7 +88,7 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir usa o operador aritmético de divisão para calcular uma taxa simples de horas de férias de todos os funcionários para horas de licença médica.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, VacationHours/SickLeaveHours AS PersonalTimeRatio  

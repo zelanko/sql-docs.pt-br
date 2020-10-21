@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484470"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194698"
 ---
 # <a name="connect-to-the-teradata-source"></a>Conectar-se à origem do Teradata
 
@@ -31,7 +31,7 @@ A origem usa o gerenciador de conexões do Teradata para se conectar à origem d
 
 Você pode registrar as chamadas que a origem do Teradata faz para a API TPT (Teradata Parallel Transporter). Para isso, habilite o registro em log do pacote e selecione o evento **Diagnóstico** no nível do pacote.
 
-Você pode registrar em log as chamadas ODBC (Conectividade Aberta de Banco de Dados) que a origem do Teradata faz ao driver ODBC do Teradata habilitando o rastreamento do gerenciador de driver ODBC. Confira mais informações em [Como gerar um rastreamento ODBC com o Administrador de Fonte de Dados ODBC](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
+Você pode registrar em log as chamadas ODBC (Conectividade Aberta de Banco de Dados) que a origem do Teradata faz ao driver ODBC do Teradata habilitando o rastreamento do gerenciador de driver ODBC. Confira mais informações em [Como gerar um rastreamento ODBC com o Administrador de Fonte de Dados ODBC](../../odbc/admin/setting-tracing-options.md).
 
 ## <a name="parallelism"></a>Paralelismo
 

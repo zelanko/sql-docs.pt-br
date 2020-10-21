@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f72f8f6aff6b5861a9bf4ba91ff77ef6e80719b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbb4b442c50e8a40c0c0db20dd45073339ea48b8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349342"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195391"
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
 
@@ -85,12 +85,11 @@ ms.locfileid: "88349342"
   
  Não dê à variável um valor como parte de sua definição. O valor deve ser definido pela tarefa Controle de CDC.  
   
- Se você estiver planejando usar a tarefa Controle de CDC com **Persistência de Estado Automática**, a variável de Estado CDC será lida a partir da tabela de estado de banco de dados especificada e será atualizada para a mesma tabela quando seu valor for alterado. Para obter mais informações sobre a tabela de Estado, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)e [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ Se você estiver planejando usar a tarefa Controle de CDC com **Persistência de Estado Automática**, a variável de Estado CDC será lida a partir da tabela de estado de banco de dados especificada e será atualizada para a mesma tabela quando seu valor for alterado. Para obter mais informações sobre a tabela de Estado, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)e [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  Se você não estiver usando a tarefa de Controle CDC com a Persistência de Estado Automática, deverá carregar o valor da variável a partir do repositório persistente em que seu valor foi salvo da última vez que o pacote foi executado e gravá-la no repositório persistente quando o processamento do intervalo atual for concluído.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor da Tarefa Controle de CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
-  
+ [Editor da Tarefa Controle de CDC](../control-flow/cdc-control-task.md)  
   

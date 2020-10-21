@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8e1e0b55183e2d1a2093d4726abdfd39f55f19ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d27181eac591f6c66166810e9662c04b6b97fc40
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425368"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196399"
 ---
 # <a name="using-variables-in-the-script-component"></a>Usando variáveis no componente Script
 
@@ -32,7 +32,7 @@ ms.locfileid: "88425368"
 > [!IMPORTANT]  
 >  A coleção de **ReadWriteVariables** está disponível somente no método **PostExecute** para maximizar o desempenho e minimizar o risco de conflitos de bloqueio. Portanto, não será possível incrementar diretamente o valor de uma variável de pacote ao processar cada linha de dados. Em vez disso, incremente o valor de uma variável local e defina o valor da variável do pacote como o valor da variável local no método **PostExecute** depois de todos os dados terem sido processados. Você também pode usar a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> para funcionar nesta limitação, conforme descrito posteriormente neste tópico. Entretanto, gravar diretamente em uma variável de pacote, à medida que cada linha for processada, afetará negativamente o desempenho e aumentará o risco de conflitos de bloqueio.  
   
- Para obter mais informações sobre a página **Script** do **Editor de Transformação Scripts**, consulte [Configurando o componente Script no Editor de Componentes de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) e [Editor de Transformação Scripts &#40;Página Script&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Para obter mais informações sobre a página **Script** do **Editor de Transformação Scripts**, consulte [Configurando o componente Script no Editor de Componentes de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) e [Editor de Transformação Scripts &#40;Página Script&#41;](../../data-flow/transformations/script-component.md).  
   
  O componente Script cria uma classe de coleção **Variables** no item de projeto **ComponentWrapper** com uma propriedade de acessador fortemente tipada para o valor de cada variável pré-configurada em que a propriedade tem o mesmo nome que a variável propriamente dita. Esta coleção é exposta pela propriedade **Variables** da classe **ScriptMain**. A propriedade de acessador fornece permissão somente leitura ou de leitura/gravação ao valor da variável conforme apropriado. Por exemplo, se você tiver adicionado uma variável de inteiro nomeada `MyIntegerVariable` à lista **ReadOnlyVariables**, poderá recuperar seu valor em seu script utilizando o seguinte código:  
   
@@ -42,6 +42,5 @@ ms.locfileid: "88425368"
   
 ## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](../../../integration-services/integration-services-ssis-variables.md)   
- [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [Usar variáveis em pacotes](../../integration-services-ssis-variables.md)  
   

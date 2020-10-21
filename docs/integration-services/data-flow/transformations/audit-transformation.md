@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5696075b36f09a57e4de06bebdd4f228ee8e4364
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392272"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194636"
 ---
 # <a name="audit-transformation"></a>Transformação Auditoria
 
@@ -55,7 +55,7 @@ ms.locfileid: "88392272"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -82,5 +82,4 @@ ms.locfileid: "88392272"
 |**Nome de usuário**|Insira o nome de logon do usuário que inicializou o pacote.|  
 |**Nome da tarefa**|Insira o nome da tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
 |**ID da Tarefa**|Insira o GUID que identifica com exclusividade a tarefa de Fluxo de Dados com a qual Auditar Transformação está associada.|  
-  
   

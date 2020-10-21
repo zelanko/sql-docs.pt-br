@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72bc4d08685f411cb07194234e37f20e5bdbaac4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 253bd5f8accf3e2fd9fc28dcaa535bea6f736316
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477804"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197090"
 ---
 # <a name="flexible-file-destination"></a>Destino de Arquivo Flexível
 
@@ -29,7 +29,7 @@ O componente **Destino de Arquivo Flexível** permite que um pacote do SSIS grav
 Os serviços de armazenamento compatíveis no momento são
 
 - [Armazenamento de Blobs do Azure](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
    
 Arraste e solte **Destino de Arquivo Flexível** no designer de fluxo de dados e clique duas vezes nele para ver o editor.
   
@@ -53,7 +53,7 @@ As propriedades a seguir estão disponíveis no **Editor Avançado**.
 - **escapeChar:** o caractere especial usado para escapar um delimitador de coluna no conteúdo do arquivo de entrada. Não é possível especificar escapeChar e quoteChar para uma tabela. É permitido somente um caractere. Sem valor padrão.
 - **quoteChar:** o caractere usado para colocar um valor de cadeia de caracteres entre aspas. Os delimitadores de coluna e linha que ficam dentro dos caracteres de aspas seriam tratados como parte do valor da cadeia de caracteres. Essa propriedade se aplica aos conjuntos de dados de entrada e de saída. Não é possível especificar escapeChar e quoteChar para uma tabela. É permitido somente um caractere. Sem valor padrão.
 - **nullValue:** um ou mais caracteres usados para representar um valor nulo. O valor **padrão** é \N.
-- **encodingName:** especifica o nome de codificação. Confira a propriedade [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8).
+- **encodingName:** especifica o nome de codificação. Confira a propriedade [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8).
 - **skipLineCount:**  indica o número de linhas não vazias a serem ignoradas ao ler dados dos arquivos de entrada. Se skipLineCount e firstRowAsHeader forem especificados, primeiro as linhas serão ignoradas e, em seguida, as informações de cabeçalho serão lidas no arquivo de entrada.
 - **treatEmptyAsNull:** especifica se é necessário tratar uma cadeia de caracteres nula ou vazia como um valor nulo ao ler dados de um arquivo de entrada. O valor **padrão** é True.
 
@@ -62,16 +62,16 @@ Depois de especificar as informações de conexão, alterne para a página **Col
 **Observações sobre a configuração de permissão da entidade de serviço**
 
 Para que a **conexão de teste** funcione (armazenamento de blobs ou Data Lake Storage Gen2), a entidade de serviço deve ser atribuída pelo menos à função de **Leitor de Dados do Storage Blob** para a conta de armazenamento.
-Isso é feito com o [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+Isso é feito com o [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Para o armazenamento de blobs, a permissão de gravação é concedida por meio da atribuição de pelo menos a função de **Colaborador de dados do blob de armazenamento**.
 
-Para o Azure Data Lake Storage Gen2, a permissão é determinada pelo RBAC e pelas [ACLs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
-Preste atenção nas ACLs que são configuradas usando a OID (ID de objeto) da entidade de serviço para o registro do aplicativo, conforme detalhado [aqui](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Para o Azure Data Lake Storage Gen2, a permissão é determinada pelo RBAC e pelas [ACLs](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Preste atenção nas ACLs que são configuradas usando a OID (ID de objeto) da entidade de serviço para o registro do aplicativo, conforme detalhado [aqui](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
 Isso é diferente da ID do aplicativo (cliente) que é usada com a configuração de RBAC.
 Quando uma entidade de segurança recebe permissões de dados RBAC por meio de uma função interna ou por meio de uma função personalizada, essas permissões são avaliadas primeiro após a autorização de uma solicitação.
 Se a operação solicitada for autorizada pelas atribuições de RBAC da entidade de segurança, a autorização será imediatamente resolvida e nenhuma verificação de ACL adicional será executada.
 Como alternativa, se a entidade de segurança não tiver uma atribuição de RBAC ou se a operação da solicitação não corresponder à permissão atribuída, as verificações de ACL serão executadas para determinar se a entidade de segurança está autorizada a executar a operação solicitada.
 Para a permissão de gravação, conceda pelo menos a permissão de **execução** no sistema de arquivos do coletor, juntamente com a permissão de **gravação** para a pasta do coletor.
 Como alternativa, conceda pelo menos a função de **Colaborador de dados do blob de armazenamento** com RBAC.
-Consulte [este](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) artigo para obter detalhes.
+Consulte [este](/azure/storage/blobs/data-lake-storage-access-control) artigo para obter detalhes.

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d5fd2e96e9d0695f098eab02fb3d4ab86e5d256
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902334"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115859"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados SQL Server em um contêiner do Docker em Linux
 
@@ -85,7 +85,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
    Esse comando cria um contêiner do SQL Server 2017 com a Developer Edition (padrão). A porta do SQL Server **1433** é exposta no host como a porta **1401**. O parâmetro `-v sql1data:/var/opt/mssql` opcional cria um contêiner de volume de dados chamado **sql1ddata**. Isso é usado para persistir os dados criados pelo SQL Server.
 
    > [!IMPORTANT]
-   > Este exemplo usa um contêiner de volume de dados no Docker. Se, em vez disso, você optar por mapear um diretório de host, observe que haverá limitações para essa abordagem no Docker para Mac e Windows. Para obter mais informações, confira [Configurar imagens de contêiner do SQL Server no Docker](sql-server-linux-configure-docker.md#persist).
+   > Este exemplo usa um contêiner de volume de dados no Docker. Se, em vez disso, você optar por mapear um diretório de host, observe que haverá limitações para essa abordagem no Docker para Mac e Windows. Para obter mais informações, confira [Configurar imagens de contêiner do SQL Server no Docker](./sql-server-linux-docker-container-configure.md#persist).
 
 1. Para exibir seus contêineres do Docker, use o comando `docker ps`.
 
@@ -97,7 +97,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
    docker ps -a
    ```
 
-1. Se a coluna **STATUS** mostrar o status **Up**, o SQL Server estará em execução no contêiner e será escutado na porta especificada na coluna **PORTS**. Se a coluna **STATUS** do contêiner do SQL Server mostrar **Exited**, confira a [seção Solução de problemas do guia de configuração](sql-server-linux-configure-docker.md#troubleshooting).
+1. Se a coluna **STATUS** mostrar o status **Up**, o SQL Server estará em execução no contêiner e será escutado na porta especificada na coluna **PORTS**. Se a coluna **STATUS** do contêiner do SQL Server mostrar **Exited**, confira a [seção Solução de problemas do guia de configuração](./sql-server-linux-docker-container-troubleshooting.md).
 
   ```bash
   $ sudo docker ps -a
@@ -153,7 +153,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
    docker ps -a
    ```
 
-1. Se a coluna **STATUS** mostrar o status **Up**, o SQL Server estará em execução no contêiner e será escutado na porta especificada na coluna **PORTS**. Se a coluna **STATUS** do contêiner do SQL Server mostrar **Exited**, confira a [seção Solução de problemas do guia de configuração](sql-server-linux-configure-docker.md#troubleshooting).
+1. Se a coluna **STATUS** mostrar o status **Up**, o SQL Server estará em execução no contêiner e será escutado na porta especificada na coluna **PORTS**. Se a coluna **STATUS** do contêiner do SQL Server mostrar **Exited**, confira a [seção Solução de problemas do guia de configuração](./sql-server-linux-docker-container-troubleshooting.md).
 
    ```bash
    $ sudo docker ps -a
@@ -170,7 +170,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 
 ## <a name="copy-a-backup-file-into-the-container"></a>Copiar um arquivo de backup para o contêiner
 
-Este tutorial usa o [banco de dados de exemplo da Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Use as etapas a seguir para baixar e copiar o arquivo de backup do banco de dados da Wide World Importers para seu contêiner do SQL Server.
+Este tutorial usa o [banco de dados de exemplo da Wide World Importers](../samples/wide-world-importers-what-is.md). Use as etapas a seguir para baixar e copiar o arquivo de backup do banco de dados da Wide World Importers para seu contêiner do SQL Server.
 
 1. Primeiro, use o **docker exec** para criar uma pasta de backup. O comando a seguir cria um diretório **/var/opt/mssql/backup** dentro do contêiner do SQL Server.
 
@@ -208,7 +208,7 @@ Este tutorial usa o [banco de dados de exemplo da Wide World Importers](../sampl
 O arquivo de backup agora está localizado dentro do contêiner. Antes de restaurar o backup, é importante saber os nomes do arquivo lógico e os tipos de arquivo dentro do backup. Os comandos Transact-SQL a seguir inspecionam o backup e executam a restauração usando **sqlcmd** no contêiner.
 
 > [!TIP]
-> Este tutorial usa o **sqlcmd** dentro do contêiner, pois o contêiner vem com essa ferramenta pré-instalada. No entanto, você também pode executar instruções do Transact-SQL com outras ferramentas de cliente fora do contêiner, como [Visual Studio Code](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Para conectar-se, use a porta do host que foi mapeada para a porta 1433 no contêiner. Neste exemplo, é **localhost, 1401** no computador host e **Host_IP_Address, 1401** remotamente.
+> Este tutorial usa o **sqlcmd** dentro do contêiner, pois o contêiner vem com essa ferramenta pré-instalada. No entanto, você também pode executar instruções do Transact-SQL com outras ferramentas de cliente fora do contêiner, como [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Para conectar-se, use a porta do host que foi mapeada para a porta 1433 no contêiner. Neste exemplo, é **localhost, 1401** no computador host e **Host_IP_Address, 1401** remotamente.
 
 1. Execute o **sqlcmd** dentro do contêiner para listar nomes de arquivos lógicos e caminhos dentro do backup. Isso é feito com a instrução **RESTORE FILELISTONLY** do Transact-SQL.
 
@@ -545,4 +545,4 @@ Neste tutorial, você aprendeu a fazer backup de um banco de dados em Windows e 
 A seguir, examine outros cenários de configuração e solução de problemas do Docker:
 
 > [!div class="nextstepaction"]
->[Guia de configuração do SQL Server 2017 no Docker](sql-server-linux-configure-docker.md)
+>[Guia de configuração do SQL Server 2017 no Docker](./sql-server-linux-docker-container-deployment.md)

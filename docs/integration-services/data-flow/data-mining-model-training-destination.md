@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e79b6190a8e3659b97f3e8f1c82533f3270bd42
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b70fe92da0c7efb0e59dbc89505ad623cad64432
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430908"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196442"
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Um destino de treinamento de modelos de mineração de dados treina modelos de mineração de dados ao passar os dados que o destino recebe pelos algoritmos de modelo de mineração de dados. Vários modelos de mineração de dados poderão ser treinados por um destino se os modelos forem criados na mesma estrutura de mineração de dados. Para obter mais informações, consulte [Mining Structure Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) e [Mining Model Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+  Um destino de treinamento de modelos de mineração de dados treina modelos de mineração de dados ao passar os dados que o destino recebe pelos algoritmos de modelo de mineração de dados. Vários modelos de mineração de dados poderão ser treinados por um destino se os modelos forem criados na mesma estrutura de mineração de dados. Para obter mais informações, consulte [Mining Structure Columns](/analysis-services/data-mining/mining-structure-columns) e [Mining Model Columns](/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="configuration-of-the-data-mining-model-training-destination"></a>Configuração do destino Treinamento de Modelo de Mineração de Dados  
- Se uma coluna de nível de caso da estrutura de destino e os modelos criados na estrutura tiverem o tipo de conteúdo KEY TIME ou KEY SEQUENCE, os dados de entrada deverão ser classificados nessa coluna. Por exemplo, os modelos criados pelo algoritmo do Microsoft Time Series utilizam o tipo de conteúdo KEY TIME. Se os dados de entrada não forem classificados, o processamento do modelo poderá falhar. Se os dados exigirem a classificação, você poderá usar uma transformação do tipo Classificação antecipadamente no fluxo de dados para classificá-los. Esse requisito não se aplica a colunas com o tipo de conteúdo KEY. Para obter mais informações, consulte [Tipos de Conteúdo &#40; mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining) e [Transformação Sort](../../integration-services/data-flow/transformations/sort-transformation.md).  
+ Se uma coluna de nível de caso da estrutura de destino e os modelos criados na estrutura tiverem o tipo de conteúdo KEY TIME ou KEY SEQUENCE, os dados de entrada deverão ser classificados nessa coluna. Por exemplo, os modelos criados pelo algoritmo do Microsoft Time Series utilizam o tipo de conteúdo KEY TIME. Se os dados de entrada não forem classificados, o processamento do modelo poderá falhar. Se os dados exigirem a classificação, você poderá usar uma transformação do tipo Classificação antecipadamente no fluxo de dados para classificá-los. Esse requisito não se aplica a colunas com o tipo de conteúdo KEY. Para obter mais informações, consulte [Tipos de Conteúdo &#40; mineração de dados&#41;](/analysis-services/data-mining/content-types-data-mining) e [Transformação Sort](../../integration-services/data-flow/transformations/sort-transformation.md).  
   
 > [!NOTE]  
 >  A entrada para o destino Treinamento de Modelo de Mineração de Dados deve ser classificada. Para classificar os dados, você pode incluir um upstream de destino do tipo Classificação a partir do destino Treinamento de Modelo de Mineração de Dados no fluxo de dados. Para obter mais informações, consulte [Sort Transformation](../../integration-services/data-flow/transformations/sort-transformation.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "88430908"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   
@@ -88,4 +88,3 @@ ms.locfileid: "88430908"
   
  **Colunas da estrutura de mineração**  
  Exiba cada coluna de destino disponível, seja mapeada ou não.  
-  

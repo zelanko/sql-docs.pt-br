@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480872"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196430"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
 
@@ -139,7 +139,7 @@ ms.locfileid: "89480872"
  Se tiver criado várias agregações em um fluxo de dados, considere a criação de várias agregações que usam uma transformação Agregação em vez de criar várias transformações. Esse procedimento melhora o desempenho quando uma agregação for um subconjunto de outra agregação porque a transformação pode otimizar o armazenamento interno e analisar os dados de entrada apenas uma vez. Por exemplo, se uma agregação usa uma cláusula GROUP BY e uma agregação AVG, combiná-las em uma transformação pode melhorar o desempenho. Entretanto, executar várias agregações dentro de uma transformação Agregação serializa as operações de agregação e pode não melhorar o desempenho quando várias agregações devem ser computadas de forma independente.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformações Pesquisa Difusa e Agrupamento Difuso  
- Para obter informações mais detalhadas sobre as transformações Pesquisa Difusa e Agrupamento Difuso, consulte a documentação [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(em inglês).  
+ Para obter informações mais detalhadas sobre as transformações Pesquisa Difusa e Agrupamento Difuso, consulte a documentação [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))(em inglês).  
   
 #### <a name="lookup-transformation"></a>transformação Pesquisa  
  Minimize o tamanho dos dados de referência na memória usando uma instrução SELECT que seja capaz de pesquisar somente as colunas necessárias. Esta é uma opção melhor do que selecionar uma tabela ou exibição inteira, que retorna uma quantidade grande de dados desnecessários.  
@@ -175,15 +175,15 @@ ms.locfileid: "89480872"
 ## <a name="related-content"></a>Conteúdo relacionado  
  **Artigos e postagens de blog**  
   
--   Artigo técnico sobre [SQL Server 2005 Integration Services: uma estratégia para o desempenho](https://go.microsoft.com/fwlink/?LinkId=98899)no site technet.microsoft.com  
+-   Artigo técnico sobre [SQL Server 2005 Integration Services: uma estratégia para o desempenho](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10))no site technet.microsoft.com  
   
--   Artigo técnico, [Integration Services: técnicas de ajuste de desempenho](https://go.microsoft.com/fwlink/?LinkId=98900), em technet.microsoft.com  
+-   Artigo técnico, [Integration Services: técnicas de ajuste de desempenho](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10)), em technet.microsoft.com  
   
 -   Artigo técnico sobre como [aumentar a taxa de transferência dos pipelines dividindo transformações síncronas em várias tarefas](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf), no _Guia do SQLCAT para BI e Análise_
   
--   Artigo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=220816), em msdn.microsoft.com.  
+-   Artigo técnico, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), em msdn.microsoft.com.  
   
--   Artigo técnico, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](https://go.microsoft.com/fwlink/?LinkId=220817), em msdn.microsoft.com.  
+-   Artigo técnico, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100)), em msdn.microsoft.com.  
   
 -   Artigo técnico, [Top 10 SQL Server Integration Services Best Practices](https://go.microsoft.com/fwlink/?LinkId=220818), em sqlcat.com.  
   
@@ -195,18 +195,17 @@ ms.locfileid: "89480872"
   
 -   Série de vídeos, [Design e ajuste para desempenho dos seus pacotes SSIS no Enterprise (Série de vídeo do SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Vídeo, [Ajustando seu fluxo de dados de pacotes SSIS na empresa (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), em technet.microsoft.com  
+-   Vídeo, [Ajustando seu fluxo de dados de pacotes SSIS na empresa (vídeo do SQL Server)](/previous-versions/ff686901(v=msdn.10)), em technet.microsoft.com  
   
--   Vídeo, [Noções básicas sobre buffers de fluxo de dados SSIS (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), em technet.microsoft.com  
+-   Vídeo, [Noções básicas sobre buffers de fluxo de dados SSIS (vídeo do SQL Server)](/previous-versions/ff686905(v=msdn.10)), em technet.microsoft.com  
   
 -   Vídeo, [Padrões de design de desempenho do Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), em channel9.msdn.com.  
   
 -   Apresentação, [Como a TI da Microsoft aproveita os aprimoramentos do mecanismo de fluxo de dados SSIS do SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=217660), em sqlcat.com.  
   
--   Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com  
+-   Vídeo, [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10)), em technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte Também  
  [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Ferramentas de solução de problemas de execução de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
   

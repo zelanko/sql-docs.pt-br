@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ff964cda9e4e9687a61d50db7c7d53c6e9e24ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477896"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195987"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
 
@@ -52,7 +52,7 @@ ms.locfileid: "88477896"
   
  O arquivo WSDL lista os métodos oferecidos pelo serviço da Web, os parâmetros de entrada necessários para os métodos, as respostas que os métodos retornam e como comunicar-se com o serviço da Web.  
   
- Se o método utilizar parâmetros de entrada, a tarefa Serviço da Web necessitará de valores de parâmetro. Por exemplo, um método de serviço da Web que recomenda o comprimento dos esquis que você deve comprar com base em sua altura requer que sua altura seja apresentada em um parâmetro de entrada. Os valores de parâmetro podem ser fornecidos por uma cadeia de caracteres definida na tarefa, por variáveis definidas no escopo da tarefa ou por um contêiner pai. Usar variáveis é vantajoso porque elas permitem a atualização dinâmica de valores de parâmetro por meio de configurações de pacote ou scripts. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Configurações de pacote](../../integration-services/packages/package-configurations.md).  
+ Se o método utilizar parâmetros de entrada, a tarefa Serviço da Web necessitará de valores de parâmetro. Por exemplo, um método de serviço da Web que recomenda o comprimento dos esquis que você deve comprar com base em sua altura requer que sua altura seja apresentada em um parâmetro de entrada. Os valores de parâmetro podem ser fornecidos por uma cadeia de caracteres definida na tarefa, por variáveis definidas no escopo da tarefa ou por um contêiner pai. Usar variáveis é vantajoso porque elas permitem a atualização dinâmica de valores de parâmetro por meio de configurações de pacote ou scripts. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Configurações de pacote](../packages/legacy-package-deployment-ssis.md).  
   
  Muitos métodos de serviço da Web não utilizam parâmetros de entrada. Por exemplo, um método de serviço da Web que busca nomes de presidentes que nasceram no mês atual não exigirá um parâmetro de entrada porque o serviço da Web pode determinar o mês atual localmente.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88477896"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuração programática da tarefa Serviço Web  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique em um dos tópicos a seguir:  
@@ -93,7 +93,7 @@ ms.locfileid: "88477896"
 > [!IMPORTANT]  
 >  O gerenciador de conexões HTTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
   
- **Tópicos relacionados:**  [Gerenciador de Conexões de HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor do Gerenciador de Conexões de HTTP &#40;página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **Tópicos relacionados:**  [Gerenciador de Conexões de HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor do Gerenciador de Conexões de HTTP &#40;página Servidor&#41;](../connection-manager/http-connection-manager.md)  
   
  **WSDLFile**  
  Digite o caminho totalmente qualificado de um arquivo WSDL que é local para o computador ou clique no botão Procurar **(…)** e localize esse arquivo.  
@@ -176,13 +176,13 @@ ms.locfileid: "88477896"
  **Arquivo**  
  Selecione um gerenciador de conexões de Arquivos na lista ou clique em \<**New Connection...**> para criar um gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../connection-manager/file-connection-manager.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variável**  
  Selecione uma variável na lista ou clique em \<**New Variable...**> para criar uma variável.  
   
- **Tópicos relacionados:**  [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Tópicos relacionados:**  [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Adicionar variável](../integration-services-ssis-variables.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Vídeo, [Como chamar um serviço Web usando a tarefa Serviço da Web (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), no technet.microsoft.com.  
+ Vídeo, [Como chamar um serviço Web usando a tarefa Serviço da Web (vídeo do SQL Server)](/previous-versions/dn912438(v=msdn.10)), no technet.microsoft.com.

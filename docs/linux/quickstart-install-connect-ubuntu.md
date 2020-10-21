@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 95581e7cfd8fbddd80aff1f4086d7f44e5812159
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438108"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115952"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Ubuntu
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -47,17 +47,17 @@ Neste início rápido, você instalará o SQL Server 2019 no Ubuntu 18.04. Em se
 
 É necessário ter um computador Ubuntu 16.04 ou 18.04 com **pelo menos 2 GB** de memória.
 
-Para instalar o Ubuntu 18.04 em seu próprio computador, acesse <http://releases.ubuntu.com/bionic/>. Também é possível criar máquinas virtuais Ubuntu no Azure. Confira [Criar e gerenciar VMs do Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Para instalar o Ubuntu 18.04 em seu próprio computador, acesse <http://releases.ubuntu.com/bionic/>. Também é possível criar máquinas virtuais Ubuntu no Azure. Confira [Criar e gerenciar VMs do Linux com a CLI do Azure](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> Neste momento, não há suporte para o [Subsistema do Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) para Windows 10 como um destino de instalação.
+> Neste momento, não há suporte para o [Subsistema do Windows para Linux](/windows/wsl/about) para Windows 10 como um destino de instalação.
 
 Para obter outros requisitos do sistema, confira [Requisitos do sistema do SQL Server em Linux](sql-server-linux-setup.md#system).
 
 > [!NOTE]
 > Há suporte para o Ubuntu 18.04 a partir do SQL Server 2017 CU20. Se você quiser usar as instruções neste artigo com o Ubuntu 18.04, use o [caminho de repositório](sql-server-linux-change-repo.md) correto, `18.04` em vez de `16.04`.
 >
-> Se você estiver executando o SQL Server em uma versão anterior, a configuração será possível com [modificações](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
+> Se você estiver executando o SQL Server em uma versão anterior, a configuração será possível com [modificações](/archive/blogs/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts).
 
 ::: moniker-end
 
@@ -66,10 +66,10 @@ Para obter outros requisitos do sistema, confira [Requisitos do sistema do SQL S
 
 É necessário ter um computador Ubuntu 16.04 ou 18.04 com **pelo menos 2 GB** de memória.
 
-Para instalar o Ubuntu 18.04 em seu próprio computador, acesse <http://releases.ubuntu.com/bionic/>. Também é possível criar máquinas virtuais Ubuntu no Azure. Confira [Criar e gerenciar VMs do Linux com a CLI do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Para instalar o Ubuntu 18.04 em seu próprio computador, acesse <http://releases.ubuntu.com/bionic/>. Também é possível criar máquinas virtuais Ubuntu no Azure. Confira [Criar e gerenciar VMs do Linux com a CLI do Azure](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> Neste momento, não há suporte para o [Subsistema do Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) para Windows 10 como um destino de instalação.
+> Neste momento, não há suporte para o [Subsistema do Windows para Linux](/windows/wsl/about) para Windows 10 como um destino de instalação.
 
 Para obter outros requisitos do sistema, confira [Requisitos do sistema do SQL Server em Linux](sql-server-linux-setup.md#system).
 

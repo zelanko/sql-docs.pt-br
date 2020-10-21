@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348438"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195946"
 ---
 # <a name="fuzzy-grouping-transformation"></a>transformação Agrupamento Difuso
 
@@ -44,7 +44,7 @@ ms.locfileid: "88348438"
   A transformação Agrupamento Difuso executa tarefas de limpeza de dados identificando linhas de dados que provavelmente sejam duplicatas e selecionando uma linha canônica de dados a ser usada na padronização dos dados.  
   
 > [!NOTE]  
->  Para obter informações mais detalhadas sobre transformação de Agrupamento Difuso, incluindo limitações de desempenho e de memória, consulte o white paper, [Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Para obter informações mais detalhadas sobre transformação de Agrupamento Difuso, incluindo limitações de desempenho e de memória, consulte o white paper, [Pesquisa Difusa e Agrupamento Difuso no SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90)).  
   
  A transformação Agrupamento Difuso requer uma conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criar tabelas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] temporárias que o algoritmo de transformação necessita para executar seu trabalho. A conexão deve determinar um usuário que tenha permissão para criar tabelas no banco de dados.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88348438"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -184,5 +184,4 @@ ms.locfileid: "88348438"
 ## <a name="see-also"></a>Consulte Também  
  [Transformação Pesquisa Difusa](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

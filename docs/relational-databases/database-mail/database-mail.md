@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 36dbf63620fa42d923605e83505b3f13212528ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1097198ea9d1545068494bb198b24c8aa5d2cc6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476241"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194406"
 ---
 # <a name="database-mail"></a>Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  O Database Mail é uma solução corporativa para envio de mensagens de email do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou da [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Com o Database Mail, seus aplicativos de banco de dados podem enviar mensagens de email a usuários. As mensagens podem conter resultados de consulta e incluir, também, arquivos de qualquer recurso de sua rede.  
+  O Database Mail é uma solução corporativa para envio de mensagens de email do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou da [Instância Gerenciada de SQL do Azure](/azure/sql-database/sql-database-managed-instance-index). Com o Database Mail, seus aplicativos de banco de dados podem enviar mensagens de email a usuários. As mensagens podem conter resultados de consulta e incluir, também, arquivos de qualquer recurso de sua rede.  
   
 > [!NOTE] 
-> O Database Mail está disponível no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e na [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), mas não nos pools elásticos e singleton do banco de dados SQL do Azure. 
+> O Database Mail está disponível no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e na [Instância Gerenciada de SQL do Azure](/azure/sql-database/sql-database-managed-instance-index), mas não nos pools elásticos e singleton do banco de dados SQL do Azure. 
 
 ##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Benefícios do uso do Database Mail  
  O Database Mail foi projetado de modo a garantir confiança, escalabilidade, segurança e suporte.  
@@ -127,6 +127,5 @@ ms.locfileid: "88476241"
 -   [Log e auditoria do Database Mail](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
 -   [Configurar o SQL Server Agent Mail para usar o Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
-  
   
   
