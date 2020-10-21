@@ -1,19 +1,19 @@
 ---
 title: Reconciliação de DNS do Active Directory e do Kubernetes em implantações de Clusters de Big Data
-description: Gerenciar o acesso ao cluster de Big Data
-author: mihaelablendea
-ms.author: mihaelab
+description: Configurar a reconciliação de DNS para um cluster de Big Data do SQL Server no modo do Active Directory
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279420"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892456"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>Reconciliação de DNS do Active Directory e do Kubernetes em implantações de Clusters de Big Data
 
@@ -89,6 +89,6 @@ Após o BDC ser excluído, não há nenhum trabalho dinâmico adicional para exc
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Implantar Clusters de Big Data do SQL Server no modo do Active Directory](deploy-active-directory.md)
+- [Implantar Clusters de Big Data do SQL Server no modo do Active Directory](active-directory-deploy.md)
 - [Gerenciar o acesso ao cluster de Big Data no modo do Active Directory](active-directory-objects.md)
 - [Implantar vários Clusters de Big Data do SQL Server no mesmo domínio do Active Directory](active-directory-deployment-background.md)

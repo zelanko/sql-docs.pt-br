@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3539b53864f14c9d88f92a07f5217d619084c3fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74713128e0a7e1c749bcde676d02c63ec05e3632
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484979"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891926"
 ---
 # <a name="install-sql-server-reporting-services"></a>Instale o SQL Server Reporting Services
 
@@ -68,7 +68,7 @@ A instalação de um servidor de relatório é simples. Há apenas algumas etapa
     > [!NOTE]
     > O caminho padrão é C:\Program Files\Microsoft SQL Server Reporting Services.
 
-7. Após uma instalação bem-sucedida, selecione **Configurar Servidor de Relatório** para iniciar o Gerenciador de Configurações do Reporting Services.
+7. Após uma instalação bem-sucedida, selecione **Configurar Servidor de Relatório** para iniciar o Gerenciador de Configurações do Servidor de Relatório.
 
 ## <a name="configure-your-report-server"></a>Configurar o servidor de relatório
 

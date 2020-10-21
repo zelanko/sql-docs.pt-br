@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7730435d762d6e9e9bc4690dbdc644f0801fe20a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459996"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890866"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar uma implantação em expansão do servidor de relatório em modo nativo.
 
@@ -62,7 +62,7 @@ Para o Reporting Services do SQL Server 2016 e anteriores, os servidores de rela
   
          Para evitar erros de compatibilidade de banco de dados ao conectar as instâncias de servidor ao banco de dados compartilhado, certifique-se de que todas as instâncias tenham a mesma versão. Por exemplo, se você criar o banco de dados do servidor de relatório usando uma instância do servidor de relatório do SQL Server 2016, todas as outras instâncias na mesma implantação também deverão ser do SQL Server 2016.  
   
-    -   Use o gerenciador de Configuração do Reporting Services para conectar cada servidor de relatório ao banco de dados compartilhado. Você pode se conectar e configurar somente um servidor de relatório de cada vez.  
+    -   Use o Gerenciador de Configurações do Servidor de Relatório para conectar cada servidor de relatório ao banco de dados compartilhado. Você pode se conectar e configurar somente um servidor de relatório de cada vez.  
   
     -   Use a ferramenta Configuração do Reporting Services para concluir a expansão por meio da associação de novas instâncias do servidor de relatório à primeira instância do servidor de relatório já conectada ao banco de dados do servidor de relatório.  
   

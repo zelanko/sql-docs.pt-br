@@ -1,6 +1,6 @@
 ---
 title: Azure Active Directory no SSDT
-description: Saiba mais sobre os métodos de autenticação do Azure Active Directory que o SSDT (SQL Server Data Tools) fornece para o Banco de Dados SQL do Azure e o Azure SQL Data Warehouse.
+description: Saiba mais sobre os métodos de autenticação do Azure Active Directory que o SSDT (SQL Server Data Tools) fornece para o Banco de Dados SQL do Azure e o Azure Synapse Analytics.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480839"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005917"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Suporte do Azure Active Directory no SSDT (SQL Server Data Tools)
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-O SSDT (SQL Server Data Tools) fornece vários métodos de autenticação do [Azure AD (Azure Active Directory)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis).
+O SSDT (SQL Server Data Tools) fornece vários métodos de autenticação do [Azure AD (Azure Active Directory)](/azure/active-directory/active-directory-whatis).
 
 No Visual Studio, abra o **Pesquisador de Objetos do SQL Server** (no menu **Exibir**) e selecione **Adicionar SQL Server**:
 
@@ -32,7 +32,7 @@ No Visual Studio, abra o **Pesquisador de Objetos do SQL Server** (no menu **Exi
 Este artigo aborda o Azure AD para a seguinte lista de *produtos Azure SQL* na [nuvem do Azure](https://azure.microsoft.com/):
 
 - Banco de Dados SQL do Azure
-- SQL Data Warehouse do Azure
+- Azure Synapse Analytics
 
 ## <a name="active-directory-password-authentication"></a>Autenticação da Senha do Active Directory
 
@@ -41,18 +41,18 @@ Este artigo aborda o Azure AD para a seguinte lista de *produtos Azure SQL* na [
 - Estiver conectado no Windows com credenciais de um domínio não federado com o Azure ou
 - Estiver usando a autenticação do Azure AD com o Azure AD e ela for baseada no domínio cliente ou inicial.
 
-Para saber mais, confira [Connecting to SQL Database By Using Azure Active Directory Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication) (Conectando-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory).  
+Para saber mais, confira [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication) (Conectando-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory).  
 
 ## <a name="active-directory-integrated-authentication"></a>Autenticação Integrada do Active Directory
 
-A *Autenticação Integrada do Active Directory* é um mecanismo de conexão com os produtos Azure SQL listados usando identidades no Azure AD (Azure Active Directory). Use esse método para se conectar, caso você entre no Windows com as credenciais de um domínio federado do Azure Active Directory. Para saber mais, confira [Connecting to SQL Database By Using Azure Active Directory Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication) (Conectando-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory).
+A *Autenticação Integrada do Active Directory* é um mecanismo de conexão com os produtos Azure SQL listados usando identidades no Azure AD (Azure Active Directory). Use esse método para se conectar, caso você entre no Windows com as credenciais de um domínio federado do Azure Active Directory. Para saber mais, confira [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication) (Conectando-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory).
 
 ## <a name="active-directory-interactive-authentication"></a>Autenticação Interativa do Active Directory
 
-A *Autenticação Interativa do Active Directory* está disponível ao se conectar com os produtos listados Azure SQL listados com o SSDT, mas apenas com o [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) ou com uma versão posterior.
+A *Autenticação Interativa do Active Directory* está disponível ao se conectar com os produtos listados Azure SQL listados com o SSDT, mas apenas com o [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) ou com uma versão posterior.
 
 - [Baixe e instale para o .NET Framework, qualquer versão](https://www.microsoft.com/net/download/all).
-- [Visual Studio 2017 versão 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) ou uma versão posterior.
+- [Visual Studio 2017 versão 15.6](/visualstudio/releasenotes/vs2017-relnotes) ou uma versão posterior.
 
 #### <a name="multi-factor-authentication-mfa"></a>Autenticação Multifator (MFA)
 
@@ -86,9 +86,9 @@ A imposição da MFA é fornecida pelo Microsoft Azure AD por meio dessa janela 
 
 ## <a name="see-also"></a>Consulte Também  
 
-[Autenticação multifator](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
-[Autenticação do Azure Active Directory com o Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
+[Autenticação multifator](/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[Autenticação do Azure Active Directory com o Banco de Dados SQL](/azure/sql-database/sql-database-aad-authentication-configure)  
 [Fórum do MSDN do SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[Blog da equipe do SSDT](https://docs.microsoft.com/archive/blogs/ssdt/)  
-[Referência DACFx API](https://msdn.microsoft.com/library/dn645454.aspx)  
-[Baixar o SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
+[Blog da equipe do SSDT](/archive/blogs/ssdt/)  
+[Referência DACFx API](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
+[Baixar o SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

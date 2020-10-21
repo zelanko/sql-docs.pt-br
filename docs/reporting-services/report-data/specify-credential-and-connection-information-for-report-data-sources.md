@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f07e5cbcbe3604f140f197d64c4666d992f8112e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244559"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934861"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar informações de credenciais e de conexão para fontes de dados de relatório
   Um servidor de relatório usa credenciais para se conectar a fontes de dados externas que fornecem conteúdo a relatórios ou informações de destinatário para assinaturas controladas por dados. Você pode especificar credenciais que usam a Autenticação do Windows, autenticação de banco de dados, nenhuma autenticação ou autenticação personalizada. Ao enviar uma solicitação de conexão pela rede, o servidor de relatório representará uma conta de usuário ou uma conta de execução autônoma. Para obter mais informações sobre o contexto de segurança sob o qual uma conexão é feita, consulte [Configuração de fontes de dados e conexões de rede](#DataSourceConfigurationConnections) mais adiante neste tópico.  
@@ -49,7 +49,7 @@ ms.locfileid: "75244559"
   
      Quando você salvar, publicar ou navegar em um servidor de relatório ou site do SharePoint pela primeira vez, talvez seja necessário inserir suas credenciais. As credenciais inseridas são usadas até a sessão do Construtor de Relatórios terminar. Se você optar por salvar as credenciais, elas serão armazenadas com segurança nas configurações de usuário de seu computador. Nas sessões subsequentes do Construtor de Relatórios, as credenciais salvas são usadas para se conectar ao mesmo servidor de relatório ou site do SharePoint. O administrador do servidor de relatório ou do SharePoint especifica o tipo de credencial a ser usado.  
   
--   As credenciais de fonte de dados inseridas na página [Caixa de diálogo Propriedades da Fonte de Dados, Credenciais &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) de uma fonte de dados inserida.  
+-   As credenciais de fonte de dados inseridas na página [Caixa de diálogo Propriedades da Fonte de Dados, Credenciais &#40;Construtor de Relatórios&#41;](/previous-versions/sql/) de uma fonte de dados inserida.  
   
      Essas credenciais são usadas pelo servidor de relatório para fazer uma conexão de dados com a fonte de dados externa. Para alguns tipos de fontes de dados, as credenciais podem ser armazenadas com segurança no servidor de relatório. Essas credenciais permitem ao outros usuários executar o relatório sem fornecer credenciais para a conexão de dados subjacente.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75244559"
   
      Para fontes de dados compartilhadas, use a opção **Salvar minha senha** para salvar as credenciais localmente nas configurações de usuário de seu computador. O Construtor de Relatórios usa as credenciais salvas toda vez que uma conexão é feita com a fonte de dados externa correspondente.  
   
- Para obter mais informações, consulte [Caixa de diálogo Propriedades de Fonte de Dados, Geral &#40;Construtor de Relatórios&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) e [Visualizando relatórios no Construtor de Relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Para obter mais informações, consulte [Caixa de diálogo Propriedades de Fonte de Dados, Geral &#40;Construtor de Relatórios&#41;](/previous-versions/sql/) e [Visualizando relatórios no Construtor de Relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="using-remote-data-sources"></a>Usando fontes de dados remotas  
  Se o relatório recuperar dados de um servidor de banco de dados remoto, verifique o seguinte:  
@@ -142,7 +142,7 @@ ms.locfileid: "75244559"
   
 -   O relatório é um sub-relatório que usa as credenciais do relatório pai.  
   
- Sob essas condições, o servidor de relatório se conecta a uma fonte de dados remota usando a execução autônoma que você deve definir antecipadamente. Como o servidor de relatório não se conecta a um servidor remoto usando suas credenciais de serviço, você deve especificar uma conta que o servidor de relatório possa usar para fazer a conexão. Para obter mais informações sobre como criar essa conta, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de Configuração do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Sob essas condições, o servidor de relatório se conecta a uma fonte de dados remota usando a execução autônoma que você deve definir antecipadamente. Como o servidor de relatório não se conecta a um servidor remoto usando suas credenciais de serviço, você deve especificar uma conta que o servidor de relatório possa usar para fazer a conexão. Para obter mais informações sobre como criar essa conta, confira [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="user-name-and-password-login"></a>Logon de nome de usuário e senha  
  Quando você seleciona **Usar este nome de usuário e senha**, um nome de usuário e senha devem ser fornecidos para acessar a fonte de dados. Para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , as credenciais talvez sejam de um logon de banco de dados. As credenciais são passadas para a fonte de dados para autenticação.  
@@ -165,5 +165,4 @@ ms.locfileid: "75244559"
  [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gerenciar fontes de dados de relatório](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configurar propriedades de fonte de dados para um relatório](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
-  
   

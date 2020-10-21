@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989429"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005976"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas sobre a versão do SqlPackage.exe
 
@@ -51,7 +51,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Always Encrypted | Suporte adicionado para importação e exportação de enclave seguro para SQL Server 2019 |
 | Implantação | Suporte adicionado para desconsideração da captura de dados de alterações habilitada ao exportar do Banco de Dados SQL do Azure |
 | Implantação | Adicionado suporte para a opção de índice OPTIMIZE_FOR_SEQUENTIAL_KEY no Banco de Dados SQL do Azure |
-| Implantação | Adicionado suporte para colunas de identidade para o SQL Data Warehouse do Azure | 
+| Implantação | Adicionado suporte para colunas de identidade para o Azure Synapse Analytics | 
 | Ajuda | Mostrar a versão do sqlpackage na ajuda (/?) e dar suporte ao parâmetro /version | 
 
 ### <a name="fixes"></a>Correções
@@ -63,12 +63,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Implantação | Corrigido o registro do dacpac ao implantar para o .NET Core | 
 | Implantação | Corrigida a manipulação do parâmetro /accessToken (/at) pelo sqlPackage no .NET Core | 
 | Implantação | Permitir instruções ALTER TABLE em procedimentos armazenados como instruções de nível não superior | 
-| Implantação | Corrigida a validação do SQL Data Warehouse do Azure de exibições materializadas como não diferenciadoras de maiúsculas e minúsculas | 
+| Implantação | Corrigida a validação do Azure Synapse Analytics de exibições materializadas como não diferenciadoras de maiúsculas e minúsculas | 
 
 ### <a name="known-issues"></a>Problemas conhecidos
 | Recurso | Detalhes |
 | :------ | :------ |
-| Implantação | O recurso de gerenciamento de carga de trabalho do SQL Data Warehouse do Azure (grupos de carga de trabalho e classificadores de carga de trabalho) ainda não é compatível | 
+| Implantação | O recurso de gerenciamento de carga de trabalho do Azure Synapse Analytics (grupos de carga de trabalho e classificadores de carga de trabalho) ainda não é compatível | 
 
 ## <a name="1851-sqlpackage"></a>sqlpackage 18.5.1
 
@@ -96,14 +96,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="features"></a>Recursos
 | Recurso | Detalhes |
 | :------ | :------ |
-| Implantação | Agora, a classificação de Confidencialidade de Dados tem suporte para o SQL Server 2008 e superiores, o Banco de Dados SQL do Azure e o SQL Data Warehouse do Azure |
-| Implantação | Adicionar suporte do SQL Data Warehouse do Azure para restrições de tabela |
-| Implantação | Adicionar suporte do SQL Data Warehouse do Azure para índice columnstore clusterizado ordenado |
+| Implantação | Agora, a classificação de Confidencialidade de Dados tem suporte para o SQL Server 2008 e superiores, o Banco de Dados SQL do Azure e o Azure Synapse Analytics |
+| Implantação | Adicionar suporte do Azure Synapse Analytics para restrições de tabela |
+| Implantação | Adicionar suporte do Azure Synapse Analytics para índice columnstore clusterizado ordenado |
 | Implantação | Adicionar suporte para Fonte de Dados Externa (para Oracle, Teradata, MongoDB/CosmosDB, ODBC, Cluster de Big Data) e Tabela Externa para o Cluster de Big Data do SQL Server 2019 |
 | Implantação | Adicionar Instância do Banco de Dados SQL no Edge como edição com suporte |
 | Implantação | Suporte a nomes de servidor da Instância Gerenciada no formato "\<server>.\<dnszone>.database.windows.net" |
-| Implantação | Adicionar suporte para comando de cópia no SQL Data Warehouse do Azure |
-| Implantação | Adicionar a opção de implantação 'IgnoreTablePartitionOptions' durante a publicação para evitar a recriação de tabela quando houver alteração na função de partição na tabela para o SQL Data Warehouse do Azure |
+| Implantação | Adicionar suporte para comando de cópia no Azure Synapse Analytics |
+| Implantação | Adicionar a opção de implantação 'IgnoreTablePartitionOptions' durante a publicação para evitar a recriação de tabela quando houver alteração na função de partição na tabela para o Azure Synapse Analytics |
 | .NET Core | Adicionar suporte para Microsoft.Data.SqlClient na versão do .NET Core do sqlpackage |
 | &nbsp; | &nbsp; |
 
@@ -114,9 +114,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Implantação | Corrigir a geração de instruções GRANT para as permissões AlterAnyDatabaseScopedConfiguration e AlterAnySensitivityClassification |
 | Implantação | A permissão Corrigir Script Externo não era reconhecida |
 | Implantação | Correção para propriedade embutida – a adição implícita da propriedade não deve aparecer na diferença, mas a menção explícita deve aparecer por meio do script |
-| Implantação | Foi resolvido um problema em que alterar uma Tabela referenciada por uma MV (Exibição Materializada) faz com que as instruções ALTER VIEW sejam geradas, o que não é compatível com as MVs do SQL Data Warehouse do Azure |
-| Implantação | Corrigir falha na publicação ao adicionar coluna a uma tabela usando dados para o SQL Data Warehouse do Azure |
-| Implantação | Corrigir o script de atualização que deve mover dados para uma nova tabela ao alterar o tipo de coluna de distribuição (cenário de perda de dados) para o SQL Data Warehouse do Azure |
+| Implantação | Foi resolvido um problema em que alterar uma Tabela referenciada por uma MV (Exibição Materializada) faz com que as instruções ALTER VIEW sejam geradas, o que não é compatível com as MVs do Azure Synapse Analytics |
+| Implantação | Corrigir falha na publicação ao adicionar coluna a uma tabela usando dados para o Azure Synapse Analytics |
+| Implantação | Corrigir o script de atualização que deve mover dados para uma nova tabela ao alterar o tipo de coluna de distribuição (cenário de perda de dados) para o Azure Synapse Analytics |
 | ScriptDom | Corrigir o bug de ScriptDom em que ele não reconhecia as restrições embutidas definidas após um índice embutido |
 | ScriptDom | Corrigir o parêntese de fechamento ausente em SYSTEM_TIME de ScriptDom quando em uma instrução de lote |
 | Always Encrypted | Corrigir a tabela #tmpErrors, em que o descarte falhava se o sqlpackage se reconectasse e a tabela temporária já tivesse sido desativada, pois a tabela temporária desaparece quando a conexão é eliminada |
@@ -164,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Recurso | Detalhes |
 | :------ | :------ |
-| Implantação | Adicione suporte para implantar no SQL Data Warehouse do Azure (GA). | 
+| Implantação | Adicione suporte para implantar no Azure Synapse Analytics (GA). | 
 | Plataforma | GA .NET Core do sqlpackage para macOS, Linux e Windows. | 
 | Segurança | Remova a assinatura de código SHA1. |
 | Implantação | Adicione suporte para novas edições de banco de dados do Azure: GeneralPurpose, BusinessCritical e Hiperescala |
@@ -203,7 +203,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Recurso | Detalhes |
 | :------ | :------ |
-| Implantação | Adicione suporte para implantar no SQL Data Warehouse do Azure (versão prévia). | 
+| Implantação | Adicione suporte para implantar no Azure Synapse Analytics (versão prévia). | 
 | Implantação | Adicione o parâmetro /p:DatabaseLockTimeout=(INT32 '60') ao sqlpackage. | 
 | Implantação | Adicione o parâmetro /p:LongRunningCommandTimeout=(INT32) ao sqlpackage. |
 | Exportar/Extrair | Adicione o parâmetro /p:TempDirectoryForTableData=(STRING) ao sqlpackage. |

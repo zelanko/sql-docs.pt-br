@@ -13,37 +13,37 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09eac58c362b4fd6c561fd3188d265d1bb39464
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 8e6fe5d4571ea8cd276da46f8c89688cd310da07
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547951"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935108"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gerenciar um servidor de relatório de modo nativo do Reporting Services
-  Esta seção contém procedimentos para a configuração de uma instância do servidor de relatório de modo nativo usando o Gerenciador de Configurações do Reporting Services.  
+  Esta seção contém procedimentos para a configuração de uma instância do servidor de relatório no modo nativo usando o Gerenciador de Configurações do Servidor de Relatório.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos desta seção estão organizados em categorias para que seja possível localizar mais facilmente as instruções desejadas. A primeira seção contém tópicos para tarefas de configuração básica para um servidor de relatório no modo nativo. A segunda seção contém tópicos de configuração avançada. A terceira seção contém tópicos para configuração de um servidor de relatório para execução no modo integrado do SharePoint.  
   
 ### <a name="basic-configuration"></a>Configuração básica  
- [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Gerenciador de Configurações do Servidor de Relatório &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Fornece etapas para iniciar a ferramenta Configuração do Reporting Services.  
   
- [Configurar uma conta de serviço &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [Configurar uma conta de serviço &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Explica como especificar informações de conta e senha para o serviço Servidor de Relatório.  
   
  [Registrar um SPN &#40;Nome da Entidade de Serviço&#41; para um servidor de relatório](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
  Explica como registrar manualmente um SPN para um servidor de relatório executado em uma conta de usuário de domínio em uma rede que use autenticação Kerberos.  
   
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurar uma URL &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  Explica como estabelecer uma ou mais URLs usadas para acessar o serviço Web Servidor de Relatórios e o portal da Web.  
   
- [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
+ [Criar um banco de dados do servidor de relatório no modo nativo &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Fornece etapas para a criação de um banco de dados do servidor de relatório. Essa etapa é necessária para a implantação de uma instalação do Reporting Services.  
   
 ### <a name="advanced-or-optional-configuration"></a>Configuração avançada ou opcional  
- [Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Fornece etapas para a configuração de vários servidores de relatório para compartilhar um banco de dados do servidor de relatório.  
   
  [Entrega de email no Reporting Services](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   

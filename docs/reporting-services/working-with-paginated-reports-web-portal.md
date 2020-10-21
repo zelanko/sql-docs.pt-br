@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243566"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935414"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabalhando com relatórios paginados (portal da Web)
 
@@ -117,7 +117,7 @@ Você também pode escolher que tipo de credencial seria. Autenticação do Wind
   
 Isso permite a você não fornecer nenhuma credencial para a fonte de dados. Se uma fonte de dados precisar de um logon de usuário, a escolha dessa opção não terá nenhum efeito. Você só deve escolher esta opção se a conexão de fonte de dados não requerer credenciais de usuário.  
   
-Para usar essa opção, a conta de execução autônoma deve estar previamente configurada para o seu servidor de relatório. A conta de execução autônoma é usada para conectar a fontes externas, quando outros cursos de credenciais não estiverem disponíveis. Se você especificar essa opção e a conta não estiver configurada, a conexão com a fonte de dados do relatório falhará e o processamento do relatório não ocorrerá. Para obter mais informações sobre essa conta, consulte [Configurar a conta de execução autônoma (Gerenciador de Configuração do SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+Para usar essa opção, a conta de execução autônoma deve estar previamente configurada para o seu servidor de relatório. A conta de execução autônoma é usada para conectar a fontes externas, quando outros cursos de credenciais não estiverem disponíveis. Se você especificar essa opção e a conta não estiver configurada, a conexão com a fonte de dados do relatório falhará e o processamento do relatório não ocorrerá. Para obter mais informações sobre essa conta, confira [Configurar a conta de execução autônoma (Gerenciador de Configurações do Servidor de Relatório)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Assinaturas  
 Uma assinatura do Reporting Services é uma configuração que fornece um relatório em um momento específico ou em resposta a um evento, em um formato de arquivo que você especificar. Por exemplo, toda quarta-feira, salvar o relatório MonthlySales.rdl como um documento do Microsoft Word em um compartilhamento de arquivo. As assinaturas podem ser usadas para agendar e automatizar a entrega de um relatório e com um conjunto específico de valores de parâmetros do relatório. Para obter mais informações, consulte [Trabalhando com assinaturas](working-with-subscriptions-web-portal.md).

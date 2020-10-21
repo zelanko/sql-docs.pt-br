@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 7115c3c36f79b35fbb66d39ec530b320d7929c0e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603440"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039150"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas sobre a versão do SQL Server Management Studio (SSMS)
 
@@ -66,8 +66,8 @@ O SSMS 18.6 é a última versão de GA (disponibilidade geral) do SSMS. Se você
 | Classificação de dados | Atualize o SSMS para dar suporte à importação/exportação de política exportada por meio de cmdlets do PowerShell. |
 | Importar arquivo simples | Adição de suporte para arquivos de largura fixa e detecção de tipo de arquivo para arquivos .csv/.tsv a fim de garantir que eles sejam analisados como arquivos CSV/TSV, respectivamente. |
 | Integration Services | Adição de suporte para trabalhos do agente da Instância Gerenciada de SQL do Azure para executar um pacote SSIS por meio do repositório de pacotes no Azure-SSIS IR. |
-| SMO/script | Adição de suporte à Máscara Dinâmica de Dados de script no [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (antigo SQL Azure DW). |
-| SMO/script | Adição de suporte à política de segurança de script no [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (antigo SQL DW). |
+| SMO/script | Adição de suporte à Máscara Dinâmica de Dados de script no [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (antigo SQL Azure DW). |
+| SMO/script | Adição de suporte à política de segurança de script no [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (antigo SQL DW). |
 
 ### <a name="bug-fixes-in-186"></a>Correções de bug da versão 18.6
 
@@ -376,7 +376,7 @@ Veja os [comentários do usuário do SQL Server](https://feedback.azure.com/foru
 | Execução ou resultados de consulta | Adicionado um *tempo para conclusão* nas mensagens para acompanhar quando a execução de uma determinada consulta foi concluída. |
 | Execução ou resultados de consulta | Permitem que mais dados sejam exibidos (resultado para texto) e armazenados em células (resultado para grade). O SSMS agora permite até 2 milhões de caracteres para esses formatos (limite que antigamente era de 256 mil e 64 mil, respectivamente). Isso também resolveu o problema dos usuários que não conseguiam obter mais de 43.680 caracteres das células da grade. |
 | Plano de Execução | Adicionado um novo atributo no QueryPlan quando o [recurso de UDF escalar embutido](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) está habilitado (ContainsInlineScalarTsqludfs). |
-| SMO | Adicionado suporte para a *API de Avaliação do SQL*. Para obter mais informações, confira [API de Avaliação do SQL](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
+| SMO | Adicionado suporte para a *API de Avaliação do SQL*. Para obter mais informações, confira [API de Avaliação do SQL](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
 |  |  |
 
 #### <a name="bug-fixes-in-182"></a>Correções de bugs na versão 18.2
@@ -526,7 +526,7 @@ Veja os [comentários do usuário do SQL Server](https://feedback.azure.com/foru
 |SSMS requer o NetFx 4.7.2 ou superior|Atualizamos nosso requisito mínimo do NetFx4.6.1 para NetFx4.7.2: isso permite tirar proveito das novas funcionalidades expostas pela nova estrutura.|
 |Capacidade de migrar as configurações do SSMS| Quando SSMS 18 é iniciado pela primeira vez, o usuário é solicitado a migrar as configurações da versão 17.x. Agora, os arquivos de configuração do usuário são armazenados como um arquivo XML simples, melhorando a portabilidade e, possivelmente, permitindo a edição.|
 |Suporte para DPI alto| DPI alto agora está habilitado por padrão.|
-|O SSMS é enviado com o driver do Microsoft OLE DB| Para detalhes, veja [Baixar o Driver do Microsoft OLE DB para SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server).|
+|O SSMS é enviado com o driver do Microsoft OLE DB| Para detalhes, veja [Baixar o Driver do Microsoft OLE DB para SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md).|
 |Não há suporte para o SSMS no Windows 8. Windows 10 e Windows Server 2016 exigem a versão 1607 (10.0.14393) ou posterior|Devido à nova dependência no NetFx 4.7.2, o SSMS 18.0 não é instalado no Windows 8 e nas versões mais antigas do Windows 10 e do Windows Server 2016. A instalação do SSMS bloqueia esses sistemas. Ainda há suporte para o Windows 8.1.|
 |O SSMS não é mais adicionado à variável de ambiente PATH|O caminho para SSMS.EXE (e ferramentas em geral) não é mais adicionado ao caminho. Os usuários podem adicioná-lo manualmente ou, se estiverem em um computador moderno do Windows, usar no menu Iniciar.|
 |IDs de pacote não são mais necessárias para desenvolver Extensões do SSMS| No passado, o SSMS carregava seletivamente apenas os pacotes conhecidos, exigindo, assim, que os desenvolvedores registrassem o próprio pacote. Esse não é mais o caso.|
@@ -553,10 +553,10 @@ Veja os [comentários do usuário do SQL Server](https://feedback.azure.com/foru
 |Always Encrypted com enclaves seguros| Várias melhorias foram feitas para dar suporte ao Always Encrypted com enclaves seguros no SQL Server 2019:  Um campo de texto para especificar a URL de atestado de enclave na caixa de diálogo Conectar ao Servidor (a nova guia Always Encrypted).  A nova caixa de seleção na caixa de diálogo Nova Chave Mestra da Coluna para controlar se uma nova chave mestra da coluna permite cálculos de enclave.  Outras caixas de diálogo de gerenciamento de chaves do Always Encrypted agora expõem as informações sobre quais chaves mestras da coluna permitem cálculos de enclave.|
 |Arquivos de Auditoria|O método de autenticação foi alterado de Chave de Conta de Armazenamento para a autenticação baseada no Azure AD.|
 |Classificação de dados| Menu de tarefas de classificação de dados reorganizado: adicionado um submenu ao menu de tarefas do banco de dados e uma opção para abrir o relatório usando o menu sem primeiro abrir a janela de dados de classificar.|
-|Classificação de dados|Adicionado o novo recurso 'Classificação de dados' para o SMO. O objeto Column expõe novas propriedades: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (somente leitura). Para obter mais informações, veja [ADICIONAR CLASSIFICAÇÃO DE SENSIBILIDADE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
+|Classificação de dados|Adicionado o novo recurso 'Classificação de dados' para o SMO. O objeto Column expõe novas propriedades: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (somente leitura). Para obter mais informações, veja [ADICIONAR CLASSIFICAÇÃO DE SENSIBILIDADE (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)|
 |Classificação de dados|Adicionado o item de menu "Relatório de Classificação" ao menu "Classificação de Dados".|
 |Classificação de dados| Recomendações atualizadas.|
-|Atualização do modo de compatibilidade do banco de dados|Uma nova opção foi adicionada em ***Nome do banco de dados*** > ***Tarefas*** > ***Atualização do Banco de Dados***. Isso inicia o novo **QTA (Assistente de Ajuste de Consulta)** para orientar o usuário no processo de: Coleta de uma linha de base de desempenho antes de atualizar o nível de compatibilidade do banco de dados. Atualização para o nível de compatibilidade do banco de dados desejado.  Coleta de uma segunda passagem de dados de desempenho sobre a mesma carga de trabalho. Detectar regressões de carga de trabalho e fornecer recomendações testadas para melhorar o desempenho da carga de trabalho.  Isso está perto do processo de atualização de banco de dados documentado em [cenários de uso do repositório de consultas](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), exceto pela última etapa, em que o QTA não se baseia em um estado anterior sabidamente válido para gerar recomendações.|
+|Atualização do modo de compatibilidade do banco de dados|Uma nova opção foi adicionada em ***Nome do banco de dados*** > ***Tarefas*** > ***Atualização do Banco de Dados***. Isso inicia o novo **QTA (Assistente de Ajuste de Consulta)** para orientar o usuário no processo de: Coleta de uma linha de base de desempenho antes de atualizar o nível de compatibilidade do banco de dados. Atualização para o nível de compatibilidade do banco de dados desejado.  Coleta de uma segunda passagem de dados de desempenho sobre a mesma carga de trabalho. Detectar regressões de carga de trabalho e fornecer recomendações testadas para melhorar o desempenho da carga de trabalho.  Isso está perto do processo de atualização de banco de dados documentado em [cenários de uso do repositório de consultas](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), exceto pela última etapa, em que o QTA não se baseia em um estado anterior sabidamente válido para gerar recomendações.|
 |Assistente de Aplicativo da Camada de Dados|Adicionado suporte para Importação/Exportação de aplicativo da camada de dados com tabelas de grafo.|
 |Assistente de Importação de Arquivo Simples|Adicionada lógica para notificar o usuário de que uma importação pode ter resultado em uma renomeação das colunas.|
 |Integration Services (SSIS)|Suporte adicionado para permitir aos clientes agendar pacotes do SSIS nos Azure-SSIS IRs que estão na nuvem do Azure Governamental.|
@@ -576,7 +576,7 @@ Veja os [comentários do usuário do SQL Server](https://feedback.azure.com/foru
 |Plano de Execução|Adicionada lógica para exibir o "operador Materializer (seleção externa)".|
 |Plano de Execução|Adicione o atributo BatchModeOnRowStoreUsed de plano de execução para identificar facilmente as consultas que estão usando o recurso "verificação de modo de lote em rowstores". Sempre que uma consulta executa a verificação de modo de lote em rowstores, um novo atributo (BatchModeOnRowStoreUsed="true") é adicionado ao elemento StmtSimple.|
 |Plano de Execução|Adicionado suporte do plano de execução para LocalCube RelOp para DW ROLLUP e CUBE.|
-|Plano de Execução|Novo operador LocalCube para o novo recurso de agregação de ROLLUP e CUBE no SQL Data Warehouse do Azure.|
+|Plano de Execução|Novo operador LocalCube para o novo recurso de agregação de ROLLUP e CUBE no Azure Synapse Analytics.|
 |SMO| Estenda o suporte do SMO para a criação de índice retomável.|
 |SMO| Adicionado novo evento em objetos SMO ("PropertyMissing") para ajudar os autores de aplicativos a detectar problemas de desempenho do SMO mais rapidamente.|
 |SMO| A nova propriedade DefaultBackupChecksum foi exposta no objeto de configuração que mapeia para a configuração do servidor "padrão de soma de verificação de backup".|

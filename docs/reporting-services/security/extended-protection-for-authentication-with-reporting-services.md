@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c1103f32d08335e2f2dfc6c302db0b62ff93b3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f152bf79c030fee3ce480d455c54fbdfad4b719
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373463"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935477"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
 
@@ -154,7 +154,7 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
 |ComputerNamePhysicalDnsHostname|O nome do host de DNS do computador local. Se o computador local for um nó de um cluster, será usado o nome de host do DNS e não o nome do servidor virtual de cluster.|  
 |ComputerNamePhysicalNetBIOS|O nome NetBIOS do computador local. Se o computador local for um nó de um cluster, será usado o nome do computador local e não do servidor virtual de cluster.|  
   
-Para obter mais informações, consulte [Registrar um Nome da Entidade de Serviço &#40;SPN&#41; para um Servidor de Relatório](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) e [Sobre reservas e registro de URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+Para obter mais informações, confira [Registrar um nome da entidade de serviço &#40;SPN&#41; para um Servidor de Relatório](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) e [Sobre reservas e registro de URL &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## <a name="next-steps"></a>Próximas etapas
 

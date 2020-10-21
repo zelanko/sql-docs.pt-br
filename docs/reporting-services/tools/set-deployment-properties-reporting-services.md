@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 97a0f7d9bf63bf6ad74b522a42900fc36cfcd429
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512332"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891646"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88512332"
  Use o Gerenciador de Configuração para criar e gerenciar conjuntos de propriedades de projeto em configurações de projeto. O Gerenciador de Configurações é um recurso suportado pelo [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], no qual o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se baseia.  
   
 > [!NOTE]  
-> Não confunda esse recurso com o Gerenciador de Configuração do Reporting Services, usado para configurar os Reporting Services depois da instalação. Para obter mais informações, consulte [Configurar e administrar um servidor de relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
+> Não confunda esse recurso com o Gerenciador de Configurações do Servidor de Relatório, que é usado para configurar o Reporting Services após a instalação. Para obter mais informações, consulte [Configurar e administrar um servidor de relatório &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
 >
 > [!NOTE]  
 > No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], a ação de publicar relatórios de um projeto ou solução do Servidor de Relatório é conhecida como *implantar relatórios*.  

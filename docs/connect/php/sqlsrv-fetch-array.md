@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391801"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080636"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 Se um conjunto de resultados contiver várias colunas sem nome, o valor da última coluna sem nome será atribuído à chave da cadeia de caracteres vazia ("").  
   
-## <a name="example"></a>Exemplo  
+## <a name="associative-array-example"></a>Exemplo de matriz associativa  
 O exemplo a seguir recupera cada linha de um conjunto de resultados como uma **matriz**associativa. O exemplo supõe que o SQL Server e o banco de dados do [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
@@ -121,7 +121,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemplo  
+## <a name="indexed-array-xample"></a>Exemplo de matriz indexada  
 O exemplo a seguir recupera cada linha de um conjunto de resultados como uma matriz indexada numericamente.  
   
 O exemplo recupera informações de produtos da tabela *Purchasing.PurchaseOrderDetail* do banco de dados AdventureWorks para produtos que tenham uma data especificada e uma quantidade em estoque (*StockQty*) menor que um valor especificado.  

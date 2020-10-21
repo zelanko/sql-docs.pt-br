@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901371"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039012"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
 
@@ -57,7 +57,7 @@ ms.locfileid: "88901371"
 
 Você pode usar **Assistente para Gerar e Publicar Scripts** para criar scripts para transferir um banco de dados entre instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou do [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. É possível gerar scripts para um banco de dados em uma instância do Mecanismo de Banco de Dados em sua rede local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Os scripts gerados podem ser executados em outra instância do Mecanismo de Banco de Dados ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. É possível usar o assistente para publicar o conteúdo de um banco de dados diretamente em um serviço Web criado usando os Serviços de Publicação de Banco de dados. É possível criar scripts para um banco de dados inteiro ou limitá-lo a objetos específicos.
 
-Confira mais detalhes sobre como usar o assistente para Gerar e Publicar Scripts no [Tutorial: Assistente para Gerar Scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Confira mais detalhes sobre como usar o assistente para Gerar e Publicar Scripts no [Tutorial: Assistente para Gerar Scripts](../tutorials/scripting-ssms.md#script-databases).
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -130,7 +130,7 @@ Use esta página para especificar se você deseja que o assistente salve scripts
 
 ![Salvar como notebook](media/generate-and-publish-scripts-wizard/save.png)
 
-- **[Salvar como bloco de anotações](../../azure-data-studio/notebooks-guidance.md)** – Salve o script em um ou mais arquivos .sql. Selecione o botão Procurar ( **…** ) para especificar um nome e uma localização para o arquivo.
+- **[Salvar como bloco de anotações](../../azure-data-studio/notebooks/notebooks-guidance.md)** – Salve o script em um ou mais arquivos .sql. Selecione o botão Procurar ( **…** ) para especificar um nome e uma localização para o arquivo.
 
 - **Salvar como arquivo de script** – Salve o script em um ou mais arquivos .sql. Selecione o botão Procurar ( **…** ) para especificar um nome e uma localização para o arquivo. Marque a caixa de seleção **Substituir o arquivo existente** para substituir o arquivo se já existir outro com o mesmo nome. Selecione **Arquivo de script único** ou **Arquivo de script único por objeto** para especificar como os scripts devem ser gerados. Selecione **Texto Unicode** ou **Texto ANSI** para especificar o tipo de texto que deve ser usado no script.
 
@@ -246,7 +246,7 @@ Use esta página para monitorar o andamento do assistente enquanto ele ocorre.
 
 Se todas as configurações estiverem corretas, sua configuração será concluída com êxito.
 
-## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Gerando scripts no SQL Data Warehouse do Azure
+## <a name="generating-scripts-on-azure-synapse-analytics"></a>Gerando scripts no Azure Synapse Analytics
 
 Se a sintaxe gerada ao usar "Script como…" não parecer uma sintaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ou se você receber uma mensagem de erro, talvez seja necessário definir as opções de script no SQL Server Management Studio para o [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 

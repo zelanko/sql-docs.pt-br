@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988467"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935193"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Tipo de conexão do SQL do Azure (SSRS)
 
@@ -27,7 +27,7 @@ Essa extensão de dados oferece suporte a parâmetros de vários valores, a agre
 > [!NOTE]  
 > Ao abrir uma conexão com um [!INCLUDE[ssSDS](../../includes/sssds-md.md)], defina o tempo limite da conexão para 30 segundos.
   
-Para obter mais informações, consulte [Banco de Dados SQL do Microsoft Azure em docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/).  
+Para obter mais informações, consulte [Banco de Dados SQL do Microsoft Azure em docs.microsoft.com](/azure/sql-database/).  
   
 Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e verificar uma conexão de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -55,7 +55,7 @@ Em um cliente de criação de relatório, as seguintes opções estão disponív
   
 - Usar um nome de usuário e senha armazenados. Para negociar o salto duplo que ocorre quando o banco de dados que contém os dados de relatório é diferente do servidor de relatório, selecione as opções para usar as credenciais como credenciais do Windows. Também é possível optar por representar o usuário autenticado depois de se conectar à fonte de dados.  
   
-- Nenhuma credencial é necessária. Para usar essa opção, você deve ter a conta de execução autônoma configurada no servidor de relatório. Para obter mais informações, consulte [Configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+- Nenhuma credencial é necessária. Para usar essa opção, você deve ter a conta de execução autônoma configurada no servidor de relatório. Para obter mais informações, confira [Configurar a conta de execução autônoma &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 Para obter mais informações, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Especificar informações de credenciais e conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -79,7 +79,7 @@ O designer de consultas com base em texto oferece aos dois modos a seguir:
   
 Para obter mais informações, consulte [Interface do usuário do Designer de Consultas Relacionais &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) e [Interface do usuário do Designer de Consultas Baseadas em Texto &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-O designer de consultas gráficas usado pelo [!INCLUDE[ssSDS](../../includes/sssds-md.md)] fornece suporte interno ao agrupamento e às agregações para ajudar a escrever consultas que só recuperam dados resumidos. Os recursos de linguagem do [!INCLUDE[tsql](../../includes/tsql-md.md)] são: a cláusula GROUP BY, a palavra-chave DISTINCT e agregações, como SUM e COUNT. O designer de consultas baseado em texto dá suporte completo para a linguagem do [!INCLUDE[tsql](../../includes/tsql-md.md)] , incluindo agrupamentos e agregações. Para obter mais informações sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte a [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+O designer de consultas gráficas usado pelo [!INCLUDE[ssSDS](../../includes/sssds-md.md)] fornece suporte interno ao agrupamento e às agregações para ajudar a escrever consultas que só recuperam dados resumidos. Os recursos de linguagem do [!INCLUDE[tsql](../../includes/tsql-md.md)] são: a cláusula GROUP BY, a palavra-chave DISTINCT e agregações, como SUM e COUNT. O designer de consultas baseado em texto dá suporte completo para a linguagem do [!INCLUDE[tsql](../../includes/tsql-md.md)] , incluindo agrupamentos e agregações. Para obter mais informações sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte a [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](../../t-sql/language-reference.md).  
   
 ### <a name="using-query-type-text"></a><a name="QueryText"></a> Usando o tipo de consulta Text
 
@@ -161,9 +161,9 @@ Você pode usar o banco de dados SQL do Azure com autenticação de passagem do 
 Esse cenário tem suporte quando você configura os seguintes itens corretamente:
 
 - [Biblioteca de Autenticação do Active Directory para SQL Server (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) está instalada no servidor de relatório.
-- [Serviços de Federação do Active Directory (AD FS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) está configurado para federação entre o Active Directory local e o AAD.
-- [A Delegação Restrita de Kerberos (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) é configurada do servidor de relatório para o servidor ADFS.
-- Configure o relatório/fonte de dados para autenticar no [Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) como o usuário que está exibindo o relatório.
+- [Serviços de Federação do Active Directory (AD FS)](/windows-server/identity/active-directory-federation-services) está configurado para federação entre o Active Directory local e o AAD.
+- [A Delegação Restrita de Kerberos (KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) é configurada do servidor de relatório para o servidor ADFS.
+- Configure o relatório/fonte de dados para autenticar no [Banco de Dados SQL do Azure](/azure/sql-database/sql-database-technical-overview) como o usuário que está exibindo o relatório.
 
 ::: moniker-end
 
@@ -198,8 +198,7 @@ Fornece informações detalhadas sobre suporte à plataforma e à versão para c
   
 ## <a name="see-also"></a>Consulte Também
 
-[Banco de Dados SQL do Microsoft Azure em docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/)  
+[Banco de Dados SQL do Microsoft Azure em docs.microsoft.com](/azure/sql-database/)  
 [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
+[Expressões &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

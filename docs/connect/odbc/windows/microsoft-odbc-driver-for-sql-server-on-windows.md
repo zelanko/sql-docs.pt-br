@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 38d897f60b5e3ed9278214c8dae8525c72668e20
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4b52e3df054a0c13846741237000855c079c842b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727353"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005900"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server no Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Os Microsoft ODBC Drivers para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são drivers ODBC independentes que fornecem uma API (interface de programação de aplicativo) implementando as interfaces ODBC padrão para a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-O Microsoft ODBC Driver for SQL Server pode ser usado para criar novos aplicativos. Você também pode atualizar seus aplicativos mais antigos que usam um driver ODBC mais antigo no momento. O ODBC Driver for SQL Server dá suporte a conexões para o Banco de Dados SQL do Azure, o SQL Data Warehouse do Azure e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+O Microsoft ODBC Driver for SQL Server pode ser usado para criar novos aplicativos. Você também pode atualizar seus aplicativos mais antigos que usam um driver ODBC mais antigo no momento. O ODBC Driver for SQL Server dá suporte a conexões com o Banco de Dados SQL do Azure, o Azure Synapse Analytics e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
 ## <a name="summary"></a>Resumo
 

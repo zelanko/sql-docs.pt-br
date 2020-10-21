@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90a0f31355b5225533728efb25dfb5f6c96de16
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462160"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934962"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Como localizar e iniciar as Ferramentas do SSRS (Reporting Services)
 
 Este tutorial apresenta as ferramentas usadas para configurar um servidor de relatório, gerenciar o conteúdo e as operações do servidor de relatório e criar e publicar relatórios paginados e móveis do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se você já está familiarizado com as ferramentas, pode passar para outros tutoriais para aprender habilidades para usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para ver outros tutoriais, consulte [Tutoriais do Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).
 
-## <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Gerenciador de Configurações do Reporting Services (Modo Nativo).
+## <a name="report-server-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Gerenciador de Configurações do Servidor de Relatório (modo nativo)
 Use o gerenciador de configurações do modo nativo para concluir o seguinte:
 
 - Especifique a conta de serviço.
@@ -43,15 +43,15 @@ Use o gerenciador de configurações do modo nativo para concluir o seguinte:
 
 **Instalação:** O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado quando você instala o Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter mais informações, consulte [Instalar o servidor de relatórios no modo nativo do Reporting Services](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md).
 
-### <a name="to-start-the-reporting-services-configuration-manager"></a>Para iniciar o Gerenciador de Configuração do Reporting Services
+### <a name="to-start-the-report-server-configuration-manager"></a>Para iniciar o Gerenciador de Configurações do Servidor de Relatório
 
-1. Na tela inicial do Windows, digite **reporting** e, nos resultados da pesquisa de **Aplicativos** , clique em **Gerenciador de Configurações do Reporting Services**.
+1. Na tela inicial do Windows, digite **relatórios** e, nos resultados da pesquisa de **Aplicativos**, clique em **Gerenciador de Configurações do Servidor de Relatório**.
 
-    ![Gerenciador de Configurações do Reporting Services na tela inicial](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Gerenciador de Configurações do Reporting Services na tela inicial")
+    ![Gerenciador de Configurações do Servidor de Relatório na inicialização](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Gerenciador de Configurações do Servidor de Relatório na inicialização")
 
     **Or**
 
-    Clique em **Iniciar**, **Programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Ferramentas de Configuração**e **Gerenciador de Configurações do Reporting Services**.
+    Clique em **Iniciar**, **Programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Ferramentas de Configuração** e **Gerenciador de Configurações do Servidor de Relatório**.
 
     A caixa de diálogo **Seleção da Instância de Instalação do Servidor de Relatório** será exibida, para que você possa selecionar a instância do servidor de relatório que deseja configurar.
 
@@ -67,7 +67,7 @@ Use o gerenciador de configurações do modo nativo para concluir o seguinte:
 
     ![Ferramenta Configuração do Reporting Services](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "ferramenta Configuração do Reporting Services")
 
- **Próximas etapas:** [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) e [Gerenciador de Configurações do Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ **Próximas etapas:** [Configurar e administrar um servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) e [Gerenciador de Configurações do Servidor de Relatório &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## <a name="web-portal-native-mode"></a>Portal da Web (modo nativo)
 
@@ -81,7 +81,7 @@ Antes de poder abrir o Portal da Web, é necessário ter permissões suficientes
 
 1. Abra seu navegador. Para saber mais sobre navegadores e versões compatíveis, confira [Suporte ao navegador para Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-2. Na barra de endereço do navegador da Web, digite a URL do Portal da Web. Por padrão, a URL é `https://<serverName>/reports`. Você pode usar a ferramenta Configuração do Reporting Services para confirmar o nome de servidor e a URL. Para obter mais informações sobre as URLs usadas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Configurar as URLs do Servidor de Relatório &#40;Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
+2. Na barra de endereço do navegador da Web, digite a URL do Portal da Web. Por padrão, a URL é `https://<serverName>/reports`. Você pode usar a ferramenta Configuração do Reporting Services para confirmar o nome de servidor e a URL. Para obter mais informações sobre as URLs usadas no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], confira [Configurar URLs do Servidor de Relatório &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
 
 3. O Portal da Web é aberto na janela de navegador. A página de inicialização é a pasta Base. Dependendo das permissões, você poderá ver pastas adicionais, hiperlinks para relatórios e arquivos de recursos na página de inicialização. Você também poderá ver botões e comandos adicionais na barra de ferramentas.
 

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c58ed673834c0226f9998b80fa4b12f14538e0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74865999"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892076"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configurações de email - Modo Nativo do Reporting Services (Gerenciador de Configurações)
 O SQL Server Reporting Services inclui uma extensão de entrega de email para que você possa distribuir relatórios por email. Dependendo de como você definir a assinatura de email, uma entrega pode consistir em uma notificação, um link, um anexo ou um relatório inserido. A extensão de entrega de email funciona com sua tecnologia de servidor de email existente. O servidor de email deve ser um encaminhador ou servidor SMTP. O servidor de relatório se conecta a um servidor SMTP por meio de bibliotecas (cdosys.dll) de CDO (Collaboration Data Objects) que são fornecidas pelo sistema operacional.
 
-A extensão de entrega de email do servidor de relatório não é configurada por padrão. Você deve usar o Gerenciador de Configurações do Reporting Services para configurar a extensão de forma mínima. Para definir propriedades avançadas, você deve editar o arquivo RSReportServer.config. Se não for possível configurar o servidor de relatório para usar essa extensão, em vez disso você poderá entregar relatórios para uma pasta compartilhada. Para obter mais informações, veja Entrega de arquivo compartilhado no Reporting Services.
+A extensão de entrega de email do servidor de relatório não é configurada por padrão. Você precisará usar o Gerenciador de Configurações do Servidor de Relatório para fazer uma configuração mínima da extensão. Para definir propriedades avançadas, você deve editar o arquivo RSReportServer.config. Se não for possível configurar o servidor de relatório para usar essa extensão, em vez disso você poderá entregar relatórios para uma pasta compartilhada. Para obter mais informações, veja Entrega de arquivo compartilhado no Reporting Services.
 
 ## <a name="configuration-requirements"></a>Requisitos de configuração
 
@@ -41,16 +41,16 @@ Antes de usar a entrega de email do Servidor de Relatório, você deve definir v
 
 Para configurar um servidor de relatório para entrega de email, faça o seguinte:
 
-- Use o Gerenciador de Configurações do Reporting Services se estiver especificando somente um servidor SMTP e uma conta de usuário que tenha permissão para enviar email. Essas são as configurações mínimas necessárias para a configuração da extensão de entrega de email do Servidor de Relatório.
+- Use o Gerenciador de Configurações do Servidor de Relatório se estiver especificando somente um servidor SMTP e uma conta de usuário que tenha permissão para enviar email. Essas são as configurações mínimas necessárias para a configuração da extensão de entrega de email do Servidor de Relatório.
 
 - (Opcionalmente) Use um editor de texto para especificar configurações adicionais no arquivo RSreportserver.config. Esse arquivo contém todos os parâmetros de configuração para a entrega de email do Servidor de Relatório. Será necessário especificar configurações adicionais nesses arquivos se você estiver usando um servidor SMTP local ou se estiver restringindo a entrega de email para hosts específicos. Para obter mais informações sobre como encontrar e modificar arquivos de configuração, consulte [Modificar um arquivo de configuração do Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
 
 > [!NOTE] 
 > As configurações de email do servidor de relatório têm como base o CDO. Para obter mais detalhes sobre configurações específicas, você pode consultar a documentação de produção do CDO.
 
-## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Configurar o email do servidor de relatório usando o Reporting Services Configuration Manager
+## <a name="configure-report-server-e-mail-using-the-report-server-configuration-manager"></a><a name="rsconfigman"/>Configurar o email do servidor de relatório usando o Gerenciador de Configurações do Servidor de Relatório
 
-1. Inicie o Gerenciador de Configurações do Reporting Services e conecte-se à instância do servidor de relatório.
+1. Inicie o Gerenciador de Configurações do Servidor de Relatório e conecte-se à instância do servidor de relatório.
 
 2. Em **Endereço do Remetente**, insira o endereço de email a ser usado no campo **De:** de um email gerado. 
 
@@ -137,12 +137,12 @@ Outros valores usados para o serviço SMTP remoto incluem os seguintes (observe 
 
 - `<SMTPServerPort>` está configurado para a porta 25 por padrão.
 - `<SMTPAuthenticate>` especifica como o servidor de relatório se conecta ao servidor SMTP remoto. O valor padrão é **0** (sem autenticação). Nesse caso, a conexão é feita por acesso Anônimo. Dependendo da configuração do domínio, o servidor de relatório e o servidor SMTP podem precisar ser membros do mesmo domínio.
-- Para enviar email para listas de distribuição restritas (por exemplo, listas de distribuição que aceitem mensagens de entrada apenas de contas autenticadas), defina `<SMTPAuthenticate>` como **1** ou **2**. Se você defini-lo como **1**, também será necessário definir `<SendUserName>` e `<SendPassword>`. É recomendável fazer isso por meio do Reporting Services Configuration Manager, já que ele criptografa os valores para `<SendUserName>` e `<SendPassword>`.
+- Para enviar email para listas de distribuição restritas (por exemplo, listas de distribuição que aceitem mensagens de entrada apenas de contas autenticadas), defina `<SMTPAuthenticate>` como **1** ou **2**. Se você defini-lo como **1**, também será necessário definir `<SendUserName>` e `<SendPassword>`. É recomendável fazer isso por meio do Gerenciador de Configurações do Servidor de Relatório, pois ele criptografará os valores de `<SendUserName>` e `<SendPassword>`.
 
 ### <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a>Para configurar um serviço SMTP remoto para o servidor de relatório
 
 > [!NOTE] 
-> É recomendável configurar o servidor de email por meio do Reporting Services Configuration Manager.
+> É recomendável configurar o servidor de email por meio do Gerenciador de Configurações do Servidor de Relatório.
 
 1. Verifique se o serviço do Windows Servidor de Relatório tem permissões **Send As** no servidor SMTP.
 
@@ -154,7 +154,7 @@ Outros valores usados para o serviço SMTP remoto incluem os seguintes (observe 
      
 5. Em `<SMTPServer>`, digite o nome do servidor SMTP. Esse valor pode ser um endereço IP, um nome UNC de um computador em sua intranet corporativa ou um nome de domínio totalmente qualificado.
 
-6. Defina `<SendUsing>` com um valor de **2** para usar a conta de serviço do servidor de relatório. Defina `<SendUsing>` com um valor de **1** para autenticação básica. Se você defini-lo como **1**, você também precisará fornecer um valor para `<SendUserName>` e `<SendPassword>`. Se você quiser que esses valores sejam criptografados, defina a autenticação no Reporting Services Configuration Manager.
+6. Defina `<SendUsing>` com um valor de **2** para usar a conta de serviço do servidor de relatório. Defina `<SendUsing>` com um valor de **1** para autenticação básica. Se você defini-lo como **1**, você também precisará fornecer um valor para `<SendUserName>` e `<SendPassword>`. Se você quiser que esses valores sejam criptografados, defina a autenticação no Gerenciador de Configurações do Servidor de Relatório.
 
 7. Defina `<SMTPAuthenticate>` com um valor de **1** se você definir `<SendUsing>` como 1 ou 2.
 
@@ -222,7 +222,7 @@ A conexão entre o servidor de relatório e um encaminhador ou servidor SMTP loc
 17. Salve o arquivo.
   
 ## <a name="see-also"></a>Consulte Também  
-[Gerenciador de Configurações do Reporting Services (Modo Nativo)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Configuration Manager do servidor de relatório (modo nativo)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Arquivo de configuração rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

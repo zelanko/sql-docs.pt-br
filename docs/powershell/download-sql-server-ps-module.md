@@ -6,15 +6,15 @@ ms.technology: sql-server-powershell
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: matteot, aanelson
+ms.reviewer: matteot, drskwier
 ms.custom: ''
-ms.date: 06/11/2020
-ms.openlocfilehash: 3165a56d93ba78c387be0cdd23ef0c225b31c336
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.date: 10/14/2020
+ms.openlocfilehash: 21730bf32e66c5954b2447037286dfdc10717e9c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714064"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081535"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>Instalar o módulo SQL Server PowerShell
 
@@ -35,8 +35,8 @@ Há dois módulos do SQL Server PowerShell:
 
 Para tópicos de ajuda, vá para:
 
-- Cmdlets [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver).
-- Cmdlets [SQLPS](https://docs.microsoft.com/powershell/module/sqlps).
+- Cmdlets [SqlServer](/powershell/module/sqlserver).
+- Cmdlets [SQLPS](/powershell/module/sqlps).
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
@@ -49,7 +49,7 @@ O [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-s
 
 O [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) não instala nenhum desses módulos do PowerShell. Para usar o PowerShell com o Azure Data Studio, instale o módulo **SqlServer** da [Galeria do PowerShell](https://www.powershellgallery.com/packages/Sqlserver).
 
-É possível usar a [extensão do PowerShell](../azure-data-studio/powershell-extension.md), que fornece suporte avançado ao editor do PowerShell no Azure Data Studio.
+É possível usar a [extensão do PowerShell](../azure-data-studio/extensions/powershell-extension.md), que fornece suporte avançado ao editor do PowerShell no Azure Data Studio.
 
 ## <a name="installing-or-updating-the-sqlserver-module"></a>Como instalar ou atualizar o módulo SqlServer
 
@@ -118,14 +118,14 @@ Uninstall-module -Name SQLServer -RequiredVersion "<version number>" -AllowClobb
 
 ### <a name="troubleshooting"></a>Solução de problemas
 
-Se tiver problemas na instalação, consulte a [documentação Install-Module](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) e a [referência Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
+Se tiver problemas na instalação, consulte a [documentação Install-Module](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) e a [referência Install-Module](/powershell/module/powershellget/Install-Module).
 
 ## <a name="using-a-specific-version-of-the-sqlserver-module"></a>Como usar uma versão específica do módulo SqlServer
 
 Para usar uma versão específica do módulo, importe-a com um número de versão específico, semelhante ao seguinte comando:
 
 ```powershell
-Import-Module SqlServer -Version 21.1.18080
+Import-Module SqlServer -Version 21.1.18218
 ```
 
 ## <a name="pre-release-versions-of-the-sqlserver-module"></a>Versões de pré-lançamento do módulo SqlServer
@@ -150,7 +150,7 @@ Para instalar uma versão de pré-lançamento específica do módulo, instale-a 
 Você pode tentar usar o seguinte comando:
 
 ```powershell
-Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
+Install-Module SqlServer -RequiredVersion 21.1.18218-preview -AllowPrerelease
 ```
 
 ## <a name="sql-server-powershell-on-linux"></a>SQL Server PowerShell no Linux
@@ -163,6 +163,13 @@ Visite [Gerenciar o SQL Server em Linux com o PowerShell Core](../linux/sql-serv
 
 - [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) – Módulo com recursos de DSC para implantação e configuração do Microsoft SQL Server.
 
+## <a name="cmdlet-reference"></a>Referência de cmdlet
+
+- [Cmdlets do SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)
+- [Cmdlets do SQLPS](https://docs.microsoft.com/powershell/module/sqlps)
+
 ## <a name="next-steps"></a>Próximas etapas
 
-[SQL Server PowerShell](sql-server-powershell.md)
+- [SQL Server PowerShell](sql-server-powershell.md)
+- [Cmdlets do SQL Server PowerShell](https://docs.microsoft.com/powershell/module/sqlserver)
+- [Usar o PowerShell com o Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

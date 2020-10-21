@@ -4,24 +4,24 @@ titleSuffix: SQL Server Language Extensions
 description: É possível usar a estrutura de extensibilidade para escrever extensões de linguagem de programação para o SQL Server. A API Extensibility Framework para Microsoft SQL Server pode ser usada por uma extensão de linguagem para interagir e trocar dados com o SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765766"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956857"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>API Extensibility Framework para SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 É possível usar a estrutura de extensibilidade para escrever extensões de linguagem de programação para o SQL Server. A API Extensibility Framework para Microsoft SQL Server pode ser usada por uma extensão de linguagem para interagir e trocar dados com o SQL Server.
 
-Como autor da extensão de linguagem, você pode usar essa referência junto com a [extensão de linguagem Java para SQL Server](../how-to/extensibility-sdk-java-sql-server.md) de software livre para entender como usar a API com a finalidade de escrever suas próprias extensões de linguagem. Encontro o código-fonte da extensão de linguagem Java em [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
+Como autor da extensão de linguagem, você pode usar essa referência com as extensões de linguagem de software livre para entender como usar a API para escrever suas extensões de linguagem. Encontro o código-fonte das extensões de linguagem em [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
 Localize as informações de sintaxe e argumento sobre todas as funções de API abaixo.
 
@@ -36,7 +36,7 @@ A saída da extensão para a saída padrão ou os fluxos de erros serão rastrea
 
 ## <a name="init"></a>Init
 
-Função chamada somente uma vez e usada para inicializar o runtime para a execução. Por exemplo, a extensão Java inicializa o JVM.
+Função chamada somente uma vez e usada para inicializar o runtime para a execução. 
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -81,7 +81,7 @@ SQLRETURN Init(
 
 ## <a name="initsession"></a>InitSession
 
-Função chamada uma vez por sessão que inicializa configurações específicas da sessão.
+Essa função é chamada uma vez por sessão e inicializa configurações específicas da sessão.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -304,14 +304,14 @@ Quando `@parallel = 1` em [sp_execute_external_script](../../relational-database
 \[Entrada\] O número de linhas em *Dados*.
 
 *Dados*  
-\[Entrada\] Uma matriz bidimensional que contém o conjunto de resultados de `@input_data_1` em [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+\[Entrada\] Matriz bidimensional que contém o conjunto de resultados de `@input_data_1` em [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 O número total de colunas é *InputSchemaColumnsNumber*, recebido na chamada [InitSession](#initsession). Cada coluna contém elementos *RowsNumber* que devem ser interpretados de acordo com o tipo de coluna de [InitColumn](#initcolumn).
 
 Elementos indicados como NULL em *StrLen_or_Ind* não têm garantia de serem válidos e devem ser ignorados.
 
 *StrLen_or_Ind*  
-\[Entrada\] Uma matriz bidimensional que contém o indicador de comprimento/NULL para cada valor em *Dados*. Valores possíveis de cada célula:
+\[Entrada\] Matriz bidimensional que contém o indicador de comprimento/NULL para cada valor em *Dados*. Valores possíveis de cada célula:
 
 - n, em que n > 0, indicando o comprimento dos dados em bytes
 - SQL_NULL_DATA, indicando um valor nulo.
@@ -407,12 +407,12 @@ Quando `@parallel = 1` em [sp_execute_external_script](../../relational-database
 \[Saída\] Um ponteiro para um buffer que contém o número de linhas em *Dados*.
 
 *Dados*  
-\[Saída\] Um ponteiro para uma matriz bidimensional alocada pela extensão que contém o conjunto de resultados de `@script` em [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+\[Saída\] Um ponteiro para a matriz bidimensional alocada pela extensão que contém o conjunto de resultados de `@script` em [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 O número total de colunas deve ser o *OutputSchemaColumnsNumber* recuperado na chamada [Executar](#execute). Cada coluna precisa conter elementos *RowsNumber* que devem ser interpretados de acordo com o tipo de coluna de [GetResultColumn](#getresultcolumn).
 
 *StrLen_or_Ind*  
-\[Saída\] Um ponteiro para uma matriz bidimensional alocada pela extensão que contém o indicador de comprimento/NULL de cada valor em *Dados*. Valores possíveis de cada célula:
+\[Saída\] Um ponteiro para a matriz bidimensional alocada pela extensão que contém o indicador de comprimento/NULL de cada valor em *Dados*. Valores possíveis de cada célula:
 
 - n, em que n > 0, indicando o comprimento dos dados em bytes
 - SQL_NULL_DATA, indicando um valor nulo.
@@ -638,3 +638,5 @@ SQLRETURN UninstallExternalLibrary(
 ## <a name="next-steps"></a>Próximas etapas
 
 - [SDK de Extensibilidade da Microsoft para Java para o SQL Server](../how-to/extensibility-sdk-java-sql-server.md)
+- [Runtime personalizado de Python](../../machine-learning/install/custom-runtime-python.md)
+- [Runtime personalizado de R](../../machine-learning/install/custom-runtime-r.md).

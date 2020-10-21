@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 018bce8226fc534694b230c18bb2f272787ec144
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076761"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005952"
 ---
 # <a name="sqlcmd-utility"></a>Utilitário sqlcmd
 
@@ -65,8 +65,8 @@ Número da versão: 15.0.2<br>
 Número de build: 15.0.2000.5<br>
 Data de lançamento: 11 de setembro de 2020
 
-A nova versão do SQLCMD é compatível com a autenticação do Azure AD, incluindo a compatibilidade com a MFA (Autenticação Multifator) para os recursos do Banco de Dados SQL, do SQL Data Warehouse e do Always Encrypted.
-O novo BCP é compatível com a autenticação do Azure AD, incluindo suporte à MFA (autenticação multifator) para Banco de Dados SQL e o SQL Data Warehouse.
+A nova versão do SQLCMD é compatível com a autenticação do Azure AD, incluindo a compatibilidade com a MFA (Autenticação Multifator) para os recursos do Banco de Dados SQL, do Azure Synapse Analytics e do Always Encrypted.
+O novo BCP é compatível com a autenticação do Azure AD, incluindo suporte à MFA (Autenticação Multifator) para o Banco de Dados SQL e o Azure Synapse Analytics.
 
 **Requisitos do sistema** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008–2019.
 
@@ -102,6 +102,7 @@ sqlcmd
    -c batch_terminator
    -C (trust the server certificate)
    -d db_name
+   -D
    -e (echo input)
    -E (use trusted connection)
    -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
@@ -148,17 +149,23 @@ sqlcmd
 
 **Opções relacionadas a logon**
 
-**-A**
-
+**-A**  
 Faça logon no SQL Server com uma DAC (conexão de administrador dedicada). Esse tipo de conexão é usado para solucionar um problema no servidor. Essa conexão funciona apenas com computadores servidor compatíveis com DAC. Se a DAC não estiver disponível, o **sqlcmd** vai gerar uma mensagem de erro e será encerrado. Para obter mais informações sobre a DAC, consulte [Conexão de diagnóstico para administradores de banco de dados](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). A opção -A não é compatível com a opção -G. Ao conectar-se ao Banco de Dados SQL usando -A, você deve ser um administrador do SQL Server. O DAC não está disponível para um administrador do Azure Active Directory.
 
-**–C** Essa opção é usada pelo cliente para configurá-lo para confiar implicitamente no certificado do servidor sem validação. Essa opção é equivalente à opção `TRUSTSERVERCERTIFICATE = true`do ADO.NET.  
+**-C**  
+Essa opção é usada pelo cliente para configurá-lo para confiar implicitamente no certificado do servidor sem validação. Essa opção é equivalente à opção `TRUSTSERVERCERTIFICATE = true`do ADO.NET.  
 
 **-d** _db_name_  
 Emite uma instrução `USE` *db_name* ao iniciar o **sqlcmd**. Essa opção define a variável de script SQLCMDDBNAME do **sqlcmd** . Esse parâmetro especifica o banco de dados inicial. O padrão é a propriedade do banco de dados padrão de seu logon. Se o banco de dados não existir, será gerada uma mensagem de erro e o **sqlcmd** será encerrado.  
 
+**-D**  
+O interpreta o nome do servidor fornecido para -S como um DSN em vez de um nome de host. Para obter mais informações, confira _Suporte para DSN no sqlcmd e no bcp_ em [Conectar-se com sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
+
+> [!NOTE]
+> A opção -D só está disponível em clientes Linux e MacOS. Em clientes Windows, ela fazia referência a uma opção agora obsoleta que foi removida e ignorada.
+
 **-l** _login_timeout_  
-Especifica o número de segundos antes que um logon do **sqlcmd** no driver ODBC expire quando você tentar se conectar a um servidor. Essa opção define a variável de script SQLCMDLOGINTIMEOUT do **sqlcmd** . O tempo limite padrão de logon do **sqlcmd** é de oito segundos. Ao usar a opção **- G** para se conectar ao Banco de Dados SQL ou o SQL Data Warehouse e autenticar usando o Azure Active Directory, é recomendado estipular um valor de tempo limite de pelo menos 30 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. Se o valor fornecido não for numérico ou se não estiver nesse intervalo, o **sqlcmd** vai gerar uma mensagem de erro. Um valor de 0 especifica o tempo limite como infinito.
+Especifica o número de segundos antes que um logon do **sqlcmd** no driver ODBC expire quando você tentar se conectar a um servidor. Essa opção define a variável de script SQLCMDLOGINTIMEOUT do **sqlcmd** . O tempo limite padrão de logon do **sqlcmd** é de oito segundos. Ao usar a opção **-G** para se conectar ao Banco de Dados SQL ou o Azure Synapse Analytics e autenticar usando o Azure Active Directory, é recomendado estipular um valor de tempo limite de pelo menos 30 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. Se o valor fornecido não for numérico ou se não estiver nesse intervalo, o **sqlcmd** vai gerar uma mensagem de erro. Um valor de 0 especifica o tempo limite como infinito.
 
 **-E**  
 Usa uma conexão confiável em vez de um nome de usuário e uma senha para entrar no SQL Server. Por padrão, sem a especificação de **-E** , o **sqlcmd** usa a opção de conexão confiável.  
@@ -169,7 +176,7 @@ A opção **-E** ignora possíveis definições de variável de ambiente de nome
 Define a Configuração de Criptografia de Coluna como `Enabled`. Para obter mais informações, consulte [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Há suporte apenas para as chaves mestras armazenadas no Repositório de Certificados do Windows. A opção -g exige, no mínimo, a versão **13.1** do [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=825643). Para determinar a versão, execute `sqlcmd -?`.
 
 **-G**  
-Essa opção é usada pelo cliente ao se conectar ao Banco de Dados SQL ou o SQL Data Warehouse para especificar que o usuário seja autenticado usando a autenticação do Azure Active Directory. Essa opção define a variável de script SQLCMDUSEAAD do **sqlcmd** = true. A opção -G exige, no mínimo, a versão **13.1** do [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=825643). Para determinar a versão, execute `sqlcmd -?`. Para obter mais informações, consulte [Conectando-se ao Banco de Dados SQL ou ao SQL Data Warehouse usando a Autenticação do Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). A opção -A não é compatível com a opção -G.
+Essa opção é usada pelo cliente ao se conectar ao Banco de Dados SQL ou o Azure Synapse Analytics para especificar que o usuário seja autenticado usando a autenticação do Azure Active Directory. Essa opção define a variável de script SQLCMDUSEAAD do **sqlcmd** = true. A opção -G exige, no mínimo, a versão **13.1** do [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=825643). Para determinar a versão, execute `sqlcmd -?`. Para obter mais informações, confira [Conectando-se ao Banco de Dados SQL ou ao Azure Synapse Analytics usando a Autenticação do Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). A opção -A não é compatível com a opção -G.
 
 > [!IMPORTANT]
 > A opção `-G` só se aplica ao Banco de Dados SQL do Azure e ao Azure Data Warehouse.
@@ -209,7 +216,7 @@ Essa opção é usada pelo cliente ao se conectar ao Banco de Dados SQL ou o SQL
 
 - **Interatividade do Azure Active Directory**
 
-    A autenticação interativa do Azure AD para o Banco de Dados SQL do Azure e o SQL Data Warehouse permite que você use um método interativo compatível com a autenticação multifator. Para obter mais informações, confira [Autenticação interativa do Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+    A autenticação interativa do Azure AD para o Banco de Dados SQL do Azure e o Azure Synapse Analytics permite que você use um método interativo compatível com a autenticação multifator. Para obter mais informações, confira [Autenticação interativa do Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
    O Azure AD interativo requer **sqlcmd** [versão 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) ou posterior, bem como [ODBC versão 17.2 ou posterior](https://aka.ms/downloadmsodbcsql).  
 

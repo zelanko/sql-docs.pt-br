@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603387"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935571"
 ---
-# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Criar um banco de dados de servidor de relatório, Gerenciador de Configurações do SSRS  
+# <a name="create-a-report-server-database-report-server-configuration-manager"></a>Criar um banco de dados do servidor de relatório, Gerenciador de Configurações do Servidor de Relatório  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -49,7 +49,7 @@ A seguir são apresentados nomes de exemplo dos três bancos de dados do modo do
  ### <a name="native-mode"></a>nativo
  Você pode criar o banco de dados do servidor de relatório do modo nativo das seguintes maneiras:  
   
-- **Automático**. Use o Assistente de instalação do SQL Server se você escolher a opção de configuração padrão para instalação. No Assistente de Instalação do SQL Server, essa opção é **Instalar e configurar** na página **Opções de Instalação do Servidor de Relatório**. Caso escolha a opção **Instalar somente**, você deverá usar o Gerenciador de Configurações do Reporting Services para criar o banco de dados.  
+- **Automático**. Use o Assistente de instalação do SQL Server se você escolher a opção de configuração padrão para instalação. No Assistente de Instalação do SQL Server, essa opção é **Instalar e configurar** na página **Opções de Instalação do Servidor de Relatório**. Se escolher a opção **Instalar somente**, você precisará usar o Gerenciador de Configurações do Servidor de Relatório do SQL Server para criar o banco de dados.  
   
 - **Manual**. Use o SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Crie manualmente o banco de dados do servidor de relatório se você usa um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto para hospedar o banco de dados. Confira mais informações em [Criar um banco de dados de servidor de relatório no modo nativo](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
@@ -85,7 +85,7 @@ A página **Opções de Instalação do Servidor de Relatório** tem apenas uma 
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-Se você criar o banco de dados do servidor de relatório em um computador remoto, configure a conexão para usar uma conta de usuário de domínio ou uma conta de serviço que tenha acesso à rede. Se você usar uma instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considere quais credenciais o servidor de relatório deve usar para se conectar à instância. Confira mais informações em [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Se você criar o banco de dados do servidor de relatório em um computador remoto, configure a conexão para usar uma conta de usuário de domínio ou uma conta de serviço que tenha acesso à rede. Se você usar uma instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considere quais credenciais o servidor de relatório deve usar para se conectar à instância. Para obter mais informações, confira [Configurar uma conexão de banco de dados do servidor de relatório &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 > O servidor de relatório e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados do servidor de relatório podem estar em domínios diferentes. Para implantação na Internet, é uma prática comum usar um servidor que esteja atrás de um firewall. 
@@ -98,6 +98,6 @@ Se você criar o banco de dados do servidor de relatório em um computador remot
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Leia sobre o [Gerenciador de Configurações do Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434).  
+Leia sobre o [Gerenciador de Configurações do Servidor de Relatório](reporting-services-configuration-manager-native-mode.md).  
 
 Mais perguntas? Faça uma pergunta no [Fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

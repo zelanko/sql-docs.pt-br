@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5946e49610acd59603b6730381e586ea3456ac8d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 968de0f9cf8c95b13a67f3fb2b0f36e3d8c09ced
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662789"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986108"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Solucionar problemas de conexão de banco de dados e de servidor com o Reporting Services
-Use este tópico para solucionar problemas de conexão com um servidor de relatório. Este tópico também fornece informações sobre mensagens de "erro inesperado". Para saber mais sobre configuração de fonte de dados e como configurar a conexão do servidor de relatório, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e [Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Use este tópico para solucionar problemas de conexão com um servidor de relatório. Este tópico também fornece informações sobre mensagens de "erro inesperado". Para saber mais sobre a configuração de fonte de dados e sobre como configurar as informações de conexão do servidor de relatório, confira [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e [Configurar uma conexão de banco de dados do Servidor de Relatório (Gerenciador de Configurações do Servidor de Relatório)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>Não é possível criar uma conexão com uma fonte de dados 'datasourcename'. (rsErrorOpeningConnection)  
 Este é um erro genérico que ocorre quando o servidor de relatório não pode abrir uma conexão com uma fonte de dados externa que fornece dados a um relatório. Este erro aparece com uma segunda mensagem de erro que indica a causa subjacente. Os erros adicionais a seguir podem aparecer com **rsErrorOpeningConnection**.  
@@ -32,7 +32,7 @@ Este erro ocorre quando as credenciais são transmitidas em várias conexões de
 Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (provedor: Provedor de Pipes Nomeados, erro: 40 – Não foi possível abrir uma conexão com o SQL Server). Esse erro é retornado pela instância do Mecanismo de Banco de Dados que hospeda o banco de dados do servidor de relatório. Na maioria das vezes, esse erro ocorre porque o serviço SQL Server é interrompido. Ou, se você estiver usando o SQL Server Express com Advanced Services ou uma instância nomeada, esse erro ocorrerá caso a URL do servidor de relatório ou a cadeia de conexão do banco de dados de tal servidor não esteja correta. Para resolver esses problemas, siga este procedimento:  
   
 * Verifique se o serviço SQL Server (**MSSQLSERVER**) foi iniciado. No computador que hospeda a instância do Mecanismo de Banco de Dados, clique em Iniciar, em Ferramentas Administrativas, em Serviços e role até o SQL Server (**MSSQLSERVER**). Se ele ainda não tiver sido iniciado, clique com o botão direito do mouse no serviço, selecione Propriedades, em Tipo de Inicialização, escolha Automático e clique consecutivamente em Aplicar, Iniciar e OK.   
-* Verifique se a URL do servidor de relatório e a cadeia de conexão do banco de dados de tal servidor estão corretas. Se o Reporting Services ou o Mecanismo de Banco de Dados tiver sido instalado como uma instância nomeada, a cadeia de conexão padrão criada durante a Instalação incluirá o nome da instância. Por exemplo, se você instalou uma instância padrão do SQL Server Express com Advanced Services em um servidor denominado DEVSRV01, a URL do portal da Web será DEVSRV01\Reports$SQLEXPRESS. Além disso, o nome de servidor de banco de dados na cadeia de conexão será semelhante a DEVSRV01\SQLEXPRESS. Para saber mais sobre URLs e cadeias de conexão de fonte de dados para SQL Server Express, confira [Reporting Services no SQL Server Express com Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Para verificar a cadeia de conexão do banco de dados do servidor de relatório, inicie a ferramenta Configuração do Reporting Services e exiba a página Configuração do Banco de Dados.  
+* Verifique se a URL do servidor de relatório e a cadeia de conexão do banco de dados de tal servidor estão corretas. Se o Reporting Services ou o Mecanismo de Banco de Dados tiver sido instalado como uma instância nomeada, a cadeia de conexão padrão criada durante a Instalação incluirá o nome da instância. Por exemplo, se você instalou uma instância padrão do SQL Server Express com Advanced Services em um servidor denominado DEVSRV01, a URL do portal da Web será DEVSRV01\Reports$SQLEXPRESS. Além disso, o nome de servidor de banco de dados na cadeia de conexão será semelhante a DEVSRV01\SQLEXPRESS. Para saber mais sobre URLs e cadeias de conexão de fonte de dados para SQL Server Express, confira [Reporting Services no SQL Server Express com Advanced Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105)). Para verificar a cadeia de conexão do banco de dados do servidor de relatório, inicie a ferramenta Configuração do Reporting Services e exiba a página Configuração do Banco de Dados.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Uma conexão não pode ser feita. Verifique se o servidor está em execução.  
 Este erro é retornado pelo provedor ADOMD.NET. Há várias razões para a ocorrência desse erro. Se você tiver especificado o servidor como “localhost”, tente especificar o nome do servidor. Esse erro também poderá ocorrer se não for possível alocar a memória na nova conexão. Para saber mais, confira [o artigo 912017 da Base de Dados de Conhecimento — Mensagem de erro quando você se conectar a uma instância do SQL Server 2005 Analysis Services:](https://support.microsoft.com/kb/912017).  
@@ -69,7 +69,7 @@ Um erro **rsReportServerDatabaseLogonFailed** poderá ocorrer se você estiver u
   
 O texto completo de erro é: "O servidor de relatório não pode abrir uma conexão com o banco de dados do servidor de relatório. Falha de logon (**rsReportServerDatabaseLogonFailed**). Falha de logon: nome de usuário desconhecido ou senha inválida”.  
   
-Se a senha for redefinida, atualize a conexão. Para saber mais, confira [Configurar uma conexão de banco de dados do servidor de relatório (Configuration Manager do SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Se a senha for redefinida, atualize a conexão. Para obter mais informações, confira [Configurar uma conexão de banco de dados do Servidor de Relatório (Gerenciador de Configurações do Servidor de Relatório)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="the-report-server-cannot-open-a-connection-to-the-report-server-database-rsreportserverdatabaseunavailable"></a>O servidor de relatório não pode abrir uma conexão com o banco de dados do servidor de relatório. (rsReportServerDatabaseUnavailable).  
 Mensagem completa: O servidor de relatório não pode abrir uma conexão com o banco de dados do servidor de relatório. Uma conexão com o banco de dados é necessária para todas as solicitações e processamentos. (rsReportServerDatabaseUnavailable)  
@@ -120,4 +120,3 @@ Quando você cria os bancos de dados do servidor de relatório, **ReportServer**
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

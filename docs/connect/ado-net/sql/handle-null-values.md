@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d11586f380354d0cef98039fbe95d2f9ed3287b
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725628"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081455"
 ---
 # <a name="handling-null-values"></a>Manipulando valores nulos
 
@@ -107,7 +107,7 @@ Além disso, as seguintes regras se aplicam a uma instância de atribuições nu
   
 - O método <xref:System.Data.DataRow.IsNull%2A> retorna `true` para `DbNull.Value` e `INullable.Null`.  
   
-## <a name="assigning-null-values"></a>Como atribuir valores nulos  
+## <a name="assigning-null-values-to-sqltypes"></a>Atribuindo valores nulos a SqlTypes  
 O valor padrão para uma instância <xref:System.Data.SqlTypes> é nulo.  
   
 Os valores nulos em <xref:System.Data.SqlTypes> são específicos do tipo e não podem ser representados por um valor, como `DbNull`. Use a propriedade `IsNull` para verificar valores nulos.  

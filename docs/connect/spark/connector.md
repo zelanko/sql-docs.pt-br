@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 47412f3781274fa242c03975295cdc5ba66b1669
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89284803"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867241"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Conector do Apache Spark: SQL Server e SQL do Azure
 
@@ -25,7 +25,7 @@ Esta biblioteca contém o código-fonte para o conector do Apache Spark para SQL
 
 O [Apache Spark](https://spark.apache.org/) é um mecanismo de análise unificado para processamento de dados em grande escala.
 
-Você pode criar o conector da origem ou baixar o JAR da seção versão no GitHub. Para obter as informações mais recentes sobre o conector, confira [Repositório GitHub do conector do SQL Spark](https://github.com/microsoft/sql-spark-connector).
+Importe o conector para o seu projeto por meio das coordenadas do Maven: `com.microsoft.azure:spark-mssql-connector:1.0.0`. Crie também o conector com base na origem ou baixe o JAR da seção Versão no GitHub. Para obter as informações mais recentes sobre o conector, confira [Repositório GitHub do conector do SQL Spark](https://github.com/microsoft/sql-spark-connector).
 
 ## <a name="supported-features"></a>Recursos com suporte
 
@@ -49,14 +49,15 @@ Você pode criar o conector da origem ou baixar o JAR da seção versão no GitH
 ### <a name="supported-options"></a>Opções Suportadas
 O Conector do Apache Spark para SQL Server e SQL do Azure dá suporte às opções definidas aqui: [JDBC do DataSource SQL](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
 
-Além disso, há suporte para as seguintes opções
+Além disso, há suporte para as opções a seguir
 
 | Opção | Padrão | Descrição |
 | --------- | ------------------ | ------------------------------------------ |
 | `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` ou `NO_DUPLICATES`. `NO_DUPLICATES` implementa uma inserção confiável em cenários de reinicialização do executor |
-| `dataPoolDataSource` | `none` | `none` implica que o valor não está definido e o conector deve gravar em uma única instância do SQL Server. Defina esse valor como nome da fonte de dados para gravar em uma tabela de pool de dados em um Cluster de Big Data do SQL Server|
+| `dataPoolDataSource` | `none` | `none` implica que o valor não está definido e o conector deve fazer a gravação na instância única do SQL Server. Defina esse valor como o nome da fonte de dados para gravar uma tabela de pool de dados em Clusters de Big Data|
 | `isolationLevel` | `READ_COMMITTED` | Especificar o nível de isolamento |
 | `tableLock` | `false` | Implementa uma inserção com a opção `TABLOCK` para melhorar o desempenho de gravação |
+| `schemaCheckEnabled` | `true` | Desabilita a verificação estrita de quadro de dados e esquema de tabela SQL quando definido como falso |
 
 Outras [opções de cópia em massa](../jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions) podem ser definidas como opções no `dataframe` e serão passadas para APIs `bulkcopy` na gravação
 
@@ -227,3 +228,5 @@ O Conector do Apache Spark para SQL do Azure e SQL Server é um projeto de softw
 ## <a name="next-steps"></a>Próximas etapas
 
 Acesse o [repositório GitHub do conector do SQL Spark](https://github.com/microsoft/sql-spark-connector).
+
+Para obter mais informações sobre os níveis de isolamento, confira [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).

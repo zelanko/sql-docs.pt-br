@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062305"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005667"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Notas sobre a versão do Microsoft JDBC Driver para SQL Server
 
@@ -361,9 +361,9 @@ Para saber mais sobre como usar esse recurso com o JDBC Driver, confira o exempl
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>Foi adicionada a propriedade de conexão: useBulkCopyForBatchInsert
 
-O Microsoft JDBC Driver 7.0 para SQL Server apresenta uma nova propriedade de conexão, `useBulkCopyForBatchInsert`. Essa propriedade tem suporte apenas para o SQL Data Warehouse do Microsoft Azure.
+O Microsoft JDBC Driver 7.0 para SQL Server apresenta uma nova propriedade de conexão, `useBulkCopyForBatchInsert`. Essa propriedade tem suporte apenas para o Azure Synapse Analytics.
 
-Essa propriedade fica desabilitada por padrão. É possível habilitá-la para aumentar o desempenho de aplicativos do usuário ao enviar uma grande quantidade de dados para o SQL Data Warehouse do Microsoft Azure. Habilitar essa propriedade altera o comportamento das operações de inserção de lotes, alternando para operações de cópia em massa com os dados fornecidos pelo usuário. Para saber mais sobre essa propriedade e suas limitações, confira como [usar a API de cópia em massa para a operação de inserção de lote](use-bulk-copy-api-batch-insert-operation.md).
+Essa propriedade fica desabilitada por padrão. É possível habilitá-la para aumentar o desempenho de aplicativos do usuário ao enviar uma grande quantidade de dados para o Azure Synapse Analytics. Habilitar essa propriedade altera o comportamento das operações de inserção de lotes, alternando para operações de cópia em massa com os dados fornecidos pelo usuário. Para saber mais sobre essa propriedade e suas limitações, confira como [usar a API de cópia em massa para a operação de inserção de lote](use-bulk-copy-api-batch-insert-operation.md).
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>Foi adicionada a propriedade de conexão: cancelQueryTimeout
 

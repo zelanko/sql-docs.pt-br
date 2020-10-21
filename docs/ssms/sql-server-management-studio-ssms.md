@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 91fc06c59f9e2be53409d67d0c00de1fe187e611
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480414"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035966"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>O que é o SSMS (SQL Server Management Studio)?
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) é um ambiente integrado para gerenciar qualquer infraestrutura SQL. Use o SSMS para acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], do Banco de Dados SQL do Azure e do SQL Data Warehouse. O SSMS fornece um único utilitário abrangente que combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para desenvolvedores e administradores de banco de dados de todos os níveis de conhecimento.
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) é um ambiente integrado para gerenciar qualquer infraestrutura SQL. Use o SSMS para acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], do Banco de Dados SQL do Azure e do Azure Synapse Analytics. O SSMS fornece um único utilitário abrangente que combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para desenvolvedores e administradores de banco de dados de todos os níveis de conhecimento.
 
 - [**Baixar o SQL Server Management Studio (SSMS)** ](download-sql-server-management-studio-ssms.md)
 - [**Baixar o SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
@@ -43,7 +43,7 @@ ms.locfileid: "89480414"
 |Como usar o **Gerenciador de Modelos** para criar e gerenciar arquivos de texto de boilerplate que você usa para acelerar o desenvolvimento de consultas e scripts.|[Explorador de Modelos](../ssms/template/template-explorer.md)|  
 |Como usar o **Gerenciador de Soluções** preterido para criar projetos usados para gerenciar itens de administração como scripts e consultas.|[Gerenciador de Soluções](../ssms/solution/solution-explorer.md)|  
 |Como usar as ferramentas de design visuais incluídas no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|Como usar os editores de idioma do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para criar interativamente e depurar consultas e scripts.|[Editores de texto e consulta](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+|Como usar os editores de idioma do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para criar interativamente e depurar consultas e scripts.|[Editores de texto e consulta](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>SQL Server Management Studio para Business Intelligence
 
@@ -58,7 +58,7 @@ Para acessar, configurar, gerenciar e administrar o [!INCLUDE[ssASnoversion](../
 
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] fornece um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script no qual é possível desenvolver e salvar scripts gravados em MDX (expressões MDX), DMX (extensões DMX) e XMLA (XML for Analysis). Use os projetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script para executar tarefas de gerenciamento ou recriar objetos, como bancos de dados e cubos, nas instâncias do [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] . Por exemplo, você pode desenvolver um script XMLA em um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script que cria novos objetos diretamente em uma instância existente do [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] . Os projetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script podem ser salvos como parte de uma solução e integrados ao controle do código fonte.
   
-Para obter mais informações sobre como usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], consulte [Desenvolvimento e implementação usando o SQL Server Management Studio](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
+Para obter mais informações sobre como usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], consulte [Desenvolvimento e implementação usando o SQL Server Management Studio](/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
   
 ### <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>Gerenciando as soluções do Integration Services com o SQL Server Management Studio
 
@@ -90,7 +90,7 @@ Para obter mais informações sobre localidade diferente com as versões anterio
 
 - Começando com o SSMS 17.0, a equipe de Ferramentas SQL adotou a [Política de Ciclo de Vida Moderna da Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 - Leia o [comunicado de Política de Ciclo de Vida Moderna](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy) original. Para obter informações adicionais, veja as [Perguntas frequentes sobre a política moderna](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
-- Para obter informações sobre a coleta de dados de diagnóstico e o uso de recursos, confira o [suplemento de privacidade SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-privacy).
+- Para obter informações sobre a coleta de dados de diagnóstico e o uso de recursos, confira o [suplemento de privacidade SQL Server](../sql-server/sql-server-privacy.md).
 
 ## <a name="cross-platform-tool"></a>Ferramenta multiplataforma
 
@@ -101,8 +101,8 @@ Para obter mais informações sobre localidade diferente com as versões anterio
 ## <a name="next-steps"></a>Próximas etapas
 
 - [Instalar versões de idioma do SSMS que não estão em inglês](install-other-languages.md)
-- [Conectar-se e consultar uma instância do SQL Server](tutorials/connect-query-sql-server.md)
-- [Escrevendo instruções do Transact-SQL](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
+- [Conectar-se e consultar uma instância do SQL Server](./quickstarts/connect-query-sql-server.md)
+- [Escrevendo instruções do Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

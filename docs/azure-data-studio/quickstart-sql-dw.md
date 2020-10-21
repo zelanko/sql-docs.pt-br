@@ -1,6 +1,6 @@
 ---
-title: Conectar-se ao SQL Data Warehouse do Azure e consultá-lo
-description: Este guia de início rápido mostra como usar o Azure Data Studio para conectar-se a um SQL Data Warehouse do Azure e executar uma consulta
+title: Conectar-se ao Azure Synapse Analytics e consultá-lo
+description: Este guia de início rápido mostra como usar o Azure Data Studio para conectar-se a um pool de SQL dedicado no Azure Synapse Analytics e executar uma consulta.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
@@ -9,30 +9,30 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766365"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005487"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Início Rápido: Use o Azure Data Studio para conectar-se ao SQL Data Warehouse do Azure e consultá-lo
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Início Rápido: Usar o Azure Data Studio para se conectar e consultar dados usando o pool de SQL dedicado no Azure Synapse Analytics
 
-Este guia de início rápido demonstra como usar o Azure Data Studio para se conectar ao SQL Data Warehouse do Azure e usar instruções Transact-SQL para criar, inserir e selecionar dados. 
+Este início rápido demonstra como usar o Azure Data Studio para se conectar usando o pool de SQL dedicado no Azure Synapse Analytics e usar instruções Transact-SQL para criar, inserir e selecionar dados. 
 
 ## <a name="prerequisites"></a>Pré-requisitos
-Para concluir este guia de início rápido, você precisa do Azure Data Studio e do SQL Data Warehouse do Azure.
+Para concluir este início rápido, você precisa do Azure Data Studio e de um pool de SQL dedicado no Azure Synapse Analytics.
 
 - [Instale o Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-Se você ainda não tiver um SQL data warehouse, confira [Criar um SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Se ainda não tiver um pool de SQL dedicado, confira [Criar um pool de SQL dedicado](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Lembre-se do nome do servidor e das credenciais de logon.
 
 
-## <a name="connect-to-your-data-warehouse"></a>Como conectar-se ao data warehouse
+## <a name="connect-to-your-dedicated-sql-pool"></a>Conectar-se ao seu pool de SQL dedicado
 
-Use o Azure Data Studio para estabelecer uma conexão com o servidor do SQL Data Warehouse do Azure.
+Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Synapse Analytics.
 
 1. Na primeira vez que você executar o Azure Data Studio, a página **Conexão** deverá abrir. Se você não vir a página **Conexão**, clique em **Adicionar Conexão** ou no ícone **Nova Conexão** na barra lateral **SERVIDORES**:
    
@@ -58,7 +58,7 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do SQL Data
 
 4. Depois de se conectar com êxito, o servidor será aberto na barra lateral *Servidores*.
 
-## <a name="create-the-tutorial-data-warehouse"></a>Criar o data warehouse do tutorial
+## <a name="create-the-tutorial-dedicated-sql-pool"></a>Criar pool de SQL dedicado do tutorial
 1. Clique com o botão direito do mouse no servidor no pesquisador de objetos e selecione **Nova Consulta**.
 
 1. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
@@ -145,4 +145,4 @@ Limpe os recursos excluindo os grupos de recursos de que você não precisa mais
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Agora que você se conectou com êxito a um SQL Data Warehouse do Azure e executou uma consulta, experimente o [Tutorial do editor de código](tutorial-sql-editor.md).
+Agora que você se conectou com êxito a um Azure Synapse Analytics e executou uma consulta, experimente o [Tutorial do editor de código](tutorial-sql-editor.md).

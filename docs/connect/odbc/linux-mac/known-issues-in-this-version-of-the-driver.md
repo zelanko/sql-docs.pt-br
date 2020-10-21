@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6729d46fe498c6efe8e49f941c0ef1b007870b2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: af611dcc4ca45ae18d650af6248b0f53ab8bcb0b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727397"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847296"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problemas conhecidos do driver ODBC no Linux e macOS
 
@@ -33,7 +33,7 @@ Problemas adicionais serão postados no [blog de Drivers do SQL Server](https://
 
 - Se a codificação cliente for UTF-8, o gerenciador de driver nem sempre converterá corretamente de UTF-8 em UTF-16. Atualmente, dados corrompidos ocorrem quando um ou mais caracteres na cadeia de caracteres não são caracteres de UTF-8 válidos. Caracteres ASCII são mapeados corretamente. O gerenciador de driver tentará fazer essa conversão ao chamar as versões SQLCHAR da API do ODBC (por exemplo, SQLDriverConnectA). O gerenciador de driver não tentará fazer essa conversão ao chamar as versões SQLWCHAR da API do ODBC (por exemplo, SQLDriverConnectW).  
 
-- O parâmetro *ColumnSize* do **SQLBindParameter** refere-se ao número de caracteres no tipo SQL, enquanto *BufferLength* é o número bytes no buffer do aplicativo. No entanto, se o tipo de dados SQL for `varchar(n)` ou `char(n)`, o aplicativo associar o parâmetro como SQL_C_CHAR ou SQL_C_VARCHAR e a codificação de caracteres do cliente for UTF-8, você poderá receber um erro do tipo "Dados da cadeia de caracteres, truncamento à direita" do driver, mesmo se o valor de *ColumnSize* estiver alinhado com o tamanho do tipo de dados no servidor. Esse erro ocorre porque as conversões entre codificações de caracteres podem mudar o comprimento dos dados. Por exemplo, um caractere de apóstrofo reto (U+2019) é codificado em CP-1252 como o byte único 0x92, mas, em UTF-8, como a sequência de 3 bytes 0xe2 0x80 0x99.
+- O parâmetro *ColumnSize* do **SQLBindParameter** refere-se ao número de caracteres no tipo SQL, enquanto *BufferLength* é o número bytes no buffer do aplicativo. No entanto, se o tipo de dados SQL for `varchar(n)` ou `char(n)`, o aplicativo associar o parâmetro como SQL_C_CHAR para o tipo C e SQL_CHAR ou SQL_VARCHAR para o tipo SQL e a codificação de caracteres do cliente for UTF-8, você poderá receber um erro "Dados da cadeia de caracteres, truncamento à direita" do driver, mesmo se o valor de *ColumnSize* estiver alinhado com o tamanho do tipo de dados no servidor. Esse erro ocorre porque as conversões entre codificações de caracteres podem mudar o comprimento dos dados. Por exemplo, um caractere de apóstrofo reto (U+2019) é codificado em CP-1252 como o byte único 0x92, mas, em UTF-8, como a sequência de 3 bytes 0xe2 0x80 0x99.
 
 Por exemplo, se sua codificação for UTF-8 e você especificar 1 para *BufferLength* e para *ColumnSize* no **SQLBindParameter** para um parâmetro de saída e então tentar recuperar o caractere precedente armazenado em uma coluna `char(1)` no servidor (usando CP-1252), o driver tentará convertê-lo na codificação de 3 bytes UTF-8, mas não conseguirá colocar o resultado em um buffer de 1 byte. Na outra direção, ele compara *ColumnSize* com o *BufferLength* no **SQLBindParameter** antes de fazer a conversão entre as diferentes páginas de código no cliente e no servidor. Como um *ColumnSize* de valor 1 é menor que um *BufferLength* de valor 3 (por exemplo), o driver gerará um erro. Para evitar esse erro, verifique se o comprimento dos dados após a conversão se adapta à coluna ou ao buffer especificado. Observe que *ColumnSize* não pode ser maior que 8000 para o tipo `varchar(n)`.
 

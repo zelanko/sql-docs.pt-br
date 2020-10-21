@@ -352,6 +352,14 @@
               href: big-data-cluster/change-azdata-password.md
             - name: Contêineres não raiz
               href: big-data-cluster/non-root-containers.md
+            - name: Criptografia em repouso
+              items:
+                - name: Conceitos e configuração
+                  href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+                - name: TDE do SQL Server
+                  href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+                - name: Zonas de criptografia de HDFS
+                  href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
         - name: Trabalhos do Spark
           items:
             - name: Enviar trabalhos do Spark no Azure Data Studio

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454572"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934841"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
 
@@ -122,7 +122,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
 
  Antes de instalar uma nova instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], faça backup de todos os arquivos da instalação atual.  
   
-1. Faça backup da chave de criptografia do banco de dados do servidor de relatório. Esta etapa é fundamental para o sucesso da migração. Mais adiante no processo de migração, você deverá restaurar a chave de criptografia para que o servidor de relatório tenha novamente acesso aos dados criptografados. Para fazer backup da chave, use o Gerenciador de Configurações do Reporting Services.  
+1. Faça backup da chave de criptografia do banco de dados do servidor de relatório. Esta etapa é fundamental para o sucesso da migração. Mais adiante no processo de migração, você deverá restaurar a chave de criptografia para que o servidor de relatório tenha novamente acesso aos dados criptografados. Para fazer backup da chave, use o Gerenciador de Configurações do Servidor de Relatório.  
   
 2. Faça backup do banco de dados do servidor de relatório usando qualquer um dos métodos suportados de backup de bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, confira as instruções sobre como fazer backup do banco de dados do servidor de relatório em [Movendo os bancos de dados do servidor de relatório para outro computador &#40;Modo Nativo do SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
@@ -202,7 +202,7 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
   
 1. Verifique se os assemblies têm suporte ou se precisam de recompilação:
 
-    * As extensões de segurança personalizadas devem ser gravadas novamente usando a interface [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx).
+    * As extensões de segurança personalizadas devem ser gravadas novamente usando a interface [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2).
   
     * As extensões de renderização personalizadas para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devem ser reescritas usando o ROM (Modelo de Objeto de Renderização).  
   
@@ -237,15 +237,15 @@ Para obter mais informações sobre as alterações no SQL Server Reporting Serv
 > [!IMPORTANT]
 >  Se qualquer um dos servidores de relatório da implantação em expansão estiver online e não foi migrado, poderá ocorrer uma exceção *rsInvalidReportServerDatabase* porque ele está usando um esquema mais antigo quando conectado ao atualizado.  
 
-Se o servidor de relatório migrado estiver configurado como o banco de dados compartilhado para uma implantação em expansão, exclua todas as chaves de criptografia antigas da tabela **Keys** no banco de dados do **ReportServer** antes de configurar o serviço de servidor de relatório. Se as chaves não forem removidas, o servidor de relatório migrado tentará inicializar em modo de implantação em expansão. Para obter mais informações, consulte [Adicionar e remover chaves de criptografia para implantação escalável &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) e [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+Se o servidor de relatório migrado estiver configurado como o banco de dados compartilhado para uma implantação em expansão, exclua todas as chaves de criptografia antigas da tabela **Keys** no banco de dados do **ReportServer** antes de configurar o serviço de servidor de relatório. Se as chaves não forem removidas, o servidor de relatório migrado tentará inicializar em modo de implantação em expansão. Para obter mais informações, confira [Adicionar e remover as chaves de criptografia para implantação escalável &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) e [Configurar e gerenciar as chaves de criptografia &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
 As chaves em expansão não podem ser excluídas com o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As chaves antigas devem ser excluídas da tabela **Keys** no banco de dados do **ReportServer** usando o SQL Server Management Studio. Exclua todas as linhas da tabela Keys. Essa ação desmarca a tabela e a prepara para restaurar apenas a chave simétrica, conforme documentado nas seguintes etapas.  
 
 Antes de excluir as chaves, é recomendável primeiro fazer backup da chave de Criptografia Simétrica. Você pode usar o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para fazer backup da chave. Abra o Configuration Manager, clique na guia Chaves de Criptografia e clique no botão **Backup**. Você também pode gerar um script de comandos WMI para fazer backup da chave de criptografia. Para obter mais informações sobre o WMI, consulte [Método BackupEncryptionKey &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
-1. Inicie o Gerenciador de Configurações do Reporting Services e se conecte à instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalada. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1. Inicie o Gerenciador de Configurações do Servidor de Relatório e conecte-se à instância instalada do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter mais informações, confira [Gerenciador de Configurações do Servidor de Relatório&#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2. Configure URLs para o servidor de relatório e o portal da Web. Para obter mais informações, veja [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2. Configure URLs para o servidor de relatório e o portal da Web. Para obter mais informações, confira [Configurar uma URL &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 3. Configure o banco de dados do servidor de relatório selecionando o banco de dados do servidor de relatório existente da instalação anterior. Após a configuração bem-sucedida, os serviços do servidor de relatório serão reiniciados e, uma vez estabelecida a conexão com o banco de dados do servidor de relatório, o banco de dados será automaticamente atualizado para o SQL Server Reporting Services. Para obter mais informações sobre como executar o Assistente para Alterar Banco de Dados, usado para criar ou selecionar um banco de dados do servidor de relatório, consulte [Criar um banco de dados de servidor de relatório do modo nativo](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
@@ -300,6 +300,6 @@ Depois de migrar o servidor de relatório com êxito para uma nova instância, �
 * [Banco de dados do Servidor de Relatório](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Compatibilidade com versões anteriores do Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [Gerenciador de configuração do servidor de relatório](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -16,12 +16,12 @@ ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: afcd910170f612289be3e8f49d3f732c39f9da67
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ac7b092672a715b48e32b962a509bd7e6aa4ccdf
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901994"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005698"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Configurar o IntelliSense (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88901994"
 ### <a name="to-turn-statement-completion-options-off-by-default"></a>Para desativar as opções de conclusão de instrução por padrão  
 
 > [!NOTE]
-> O SQL Data Warehouse não é compatível com o IntelliSense.
+> O Azure Synapse Analytics não dá suporte ao IntelliSense.
 >
 >
   

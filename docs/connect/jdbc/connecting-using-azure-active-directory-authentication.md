@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cf829dfabdd291367990ef21280208ac0741154c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725463"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081305"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conectando-se usando a autenticação do Azure Active Directory
 
@@ -31,7 +31,7 @@ As propriedades de conexão para dar suporte à Autenticação do Azure Active D
     * **ActiveDirectoryMSI**
         * Compatível desde a versão do driver **v7.2**, o `authentication=ActiveDirectoryMSI` pode ser usado para se conectar a um Banco de Dados SQL/SQL Data Warehouse do Azure de dentro de um recurso do Azure com suporte de "Identidade" habilitado. Opcionalmente, **msiClientId** também pode ser especificado nas propriedades Connection/DataSource com esse modo de autenticação, que deve conter a ID do cliente de uma Identidade Gerenciada a ser usada a fim de adquirir o **accessToken** para estabelecer a conexão.
     * **ActiveDirectoryIntegrated**
-        * Compatível desde a versão do driver **v6.0**, o `authentication=ActiveDirectoryIntegrated` pode ser usado para se conectar a um Banco de Dados SQL/SQL Data Warehouse do Azure usando a autenticação integrada. Para usar esse modo de autenticação, você precisa federar o ADFS (Serviços de Federação do Active Directory) local com o Azure Active Directory na nuvem. Depois de configurado, você pode se conectar adicionando a biblioteca nativa 'mssql-jdbc_auth-\<version>-\<arch>.dll' ao caminho da classe de aplicativo no sistema operacional Windows ou configurar um tíquete Kerberos para suporte de autenticação multiplataforma. Você poderá acessar o Banco de Dados SQL do Azure/Data Warehouse do SQL sem ser solicitado a fornecer credenciais quando estiver conectado a um computador ingressado no domínio.
+        * Compatível desde a versão do driver **v6.0**, o `authentication=ActiveDirectoryIntegrated` pode ser usado para se conectar a um Banco de Dados SQL/SQL Data Warehouse do Azure usando a autenticação integrada. Para usar esse modo de autenticação, você precisa federar o ADFS (Serviços de Federação do Active Directory) local com o Azure Active Directory na nuvem. Depois de configurado, você pode se conectar adicionando a biblioteca nativa 'mssql-jdbc_auth-\<version>-\<arch>.dll' ao caminho da classe de aplicativo no sistema operacional Windows ou configurar um tíquete Kerberos para suporte de autenticação multiplataforma. Você poderá acessar o Banco de Dados SQL do Azure/Azure Synapse Analytics sem ser solicitado a fornecer credenciais quando estiver conectado a um computador ingressado no domínio.
     * **ActiveDirectoryPassword**
         * Com suporte desde a versão do driver **v6.0**, o `authentication=ActiveDirectoryPassword` pode ser usado para se conectar a um Data Warehouse/Banco de Dados SQL do Azure usando um nome de usuário e uma senha do Azure AD.
     * **SqlPassword**
@@ -286,8 +286,8 @@ O exemplo a seguir contém um aplicativo Java simples que se conecta ao Banco de
     11. Na seção "Chaves", crie uma chave preenchendo o campo de nome, selecionando a duração da chave e salvando a configuração (deixe o campo de valor vazio). Depois de salvar, o campo de valor deve ser preenchido automaticamente. Copie o valor gerado. Esse é o Segredo do cliente.
     12. Clique em Azure Active Directory no painel à esquerda. Em "Registros de aplicativo", localize a guia "Pontos de extremidade". Copie a URL em "PONTO DE EXTREMIDADE DO TOKEN 2.0 DO OATH", que é a URL do STS.
     
-    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Entre no banco de dados de usuário do Azure SQL Server como um administrador do Azure Active Directory e, usando um comando T-SQL, provisione um usuário de banco de dados independente para a entidade de segurança do aplicativo. Para obter mais informações, confira [Como conectar-se ao Banco de Dados SQL ou ao SQL Data Warehouse usando a autenticação do Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview) para mais detalhes sobre como criar um administrador de Azure Active Directory e um usuário de banco de dados independente.
+    ![Ponto de extremidade de registro de aplicativo do portal do Azure – URL de STS](media/jdbc_aad_token.png)  
+2. Entre no banco de dados de usuário do Azure SQL Server como um administrador do Azure Active Directory e, usando um comando T-SQL, provisione um usuário de banco de dados independente para a entidade de segurança do aplicativo. Para obter mais informações, confira [Como conectar-se ao Banco de Dados SQL ou ao Azure Synapse Analytics usando a autenticação do Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview) para mais detalhes sobre como criar um administrador de Azure Active Directory e um usuário de banco de dados independente.
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER

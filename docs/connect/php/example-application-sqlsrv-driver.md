@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 69df287d23713b1465a44f46e68f190bf3e25b09
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728351"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081735"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Aplicativo de exemplo (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ Para executar o aplicativo de exemplo AdventureWorks Product Reviews, as condiç
 -   O SQL Server 2005 ou o SQL Server 2008, com o banco de dados [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) anexado, está instalado no computador local.  
 -   Um navegador da Web está instalado.  
   
-## <a name="demonstrates"></a>Demonstra  
+## <a name="adventureworks-example"></a>Exemplo com o AdventureWorks  
 O aplicativo de exemplo AdventureWorks Product Reviews demonstra o seguinte:  
   
 -   Como abrir uma conexão com o SQL Server usando a Autenticação do Windows.  
@@ -52,8 +52,7 @@ O aplicativo de exemplo AdventureWorks Product Reviews demonstra o seguinte:
 -   Como enviar dados como um fluxo.  
 -   Como verificar se há erros.  
   
-## <a name="example"></a>Exemplo  
-O aplicativo de exemplo AdventureWorks Product Reviews retorna informações do banco de dados sobre os produtos com nomes que contêm uma cadeia de caracteres inserida pelo usuário. Na lista de produtos retornados, o usuário pode ver análises, ver uma imagem, carregar uma imagem e escrever uma análise para um produto selecionado.  
+Este exemplo retorna informações do banco de dados sobre os produtos com nomes que contêm uma cadeia de caracteres inserida pelo usuário. Na lista de produtos retornados, o usuário pode ver análises, ver uma imagem, carregar uma imagem e escrever uma análise para um produto selecionado.  
   
 Coloque o seguinte código em um arquivo chamado adventureworks_demo.php:  
   
@@ -492,7 +491,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a>Exemplo  
+## <a name="lob-example"></a>Exemplo de LOB  
 O script photo.php retorna uma foto do produto com o **ProductID**especificado. Esse script é chamado do script adventureworks_demo.php.  
   
 Coloque o seguinte código em um arquivo chamado photo.php:  

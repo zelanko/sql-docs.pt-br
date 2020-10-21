@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726881"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004560"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Conectar usando a Autenticação do Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[O Azure AD](/azure/active-directory/active-directory-whatis) (Azure Active Directory) é uma tecnologia de gerenciamento de ID de usuário central que funciona como uma alternativa para a [autenticação do SQL Server](how-to-connect-using-sql-server-authentication.md). O Azure AD permite conexões com Banco de Dados SQL do Microsoft Azure e SQL Data Warehouse com identidades federadas no Azure AD usando um nome de usuário e senha, autenticação integrada do Windows ou um token de acesso do Azure AD. Os drivers do PHP para SQL Server oferecem suporte parcial para esses recursos.
+[O Azure AD](/azure/active-directory/active-directory-whatis) (Azure Active Directory) é uma tecnologia de gerenciamento de ID de usuário central que funciona como uma alternativa para a [autenticação do SQL Server](how-to-connect-using-sql-server-authentication.md). O Azure AD permite conexões com Banco de Dados SQL do Microsoft Azure e o Azure Synapse Analytics com identidades federadas no Azure AD usando um nome de usuário e senha, autenticação integrada do Windows ou um token de acesso do Azure AD. Os drivers do PHP para SQL Server oferecem suporte parcial para esses recursos.
 
 Para usar o Azure AD, use as palavras-chave **Authentication** ou **AccessToken** (elas são mutuamente exclusivas), conforme mostrado na tabela a seguir. Para obter mais detalhes técnicos, confira [Usar o Azure Active Directory com o Driver ODBC](../odbc/using-azure-active-directory.md).
 

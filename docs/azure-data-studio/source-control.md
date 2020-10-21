@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 09/24/2019
+ms.openlocfilehash: 7f032d870952cdadbde79dbf56f4c63ae351d6e9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746146"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081565"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Controle do código-fonte no Azure Data Studio
 
@@ -22,12 +22,12 @@ O Azure Data Studio é compatível com o Git para controle do código-fonte/vers
 
 ## <a name="git-support-in-azure-data-studio"></a>Compatibilidade do Git no Azure Data Studio
 
-O Azure Data Studio é fornecido com um SCM (gerenciador de controle do código-fonte) do Git, mas você ainda precisa [instalar o Git (versão 2.0.0 ou posterior)](https://git-scm.com/download) para que esses recursos fiquem disponíveis. 
+O Azure Data Studio é fornecido com um SCM (gerenciador de controle do código-fonte) do Git, mas você ainda precisa [instalar o Git (versão 2.0.0 ou posterior)](https://git-scm.com/download) para que esses recursos fiquem disponíveis.
 
 ## <a name="open-an-existing-git-repository"></a>Abrir um repositório Git existente
 
 1. No menu **Arquivo**, selecione **Abrir Pasta...**
-2. Navegue até a pasta que contém os arquivos rastreados pelo Git e clique em **Selecionar Pasta**. As subpastas no repositório local podem ser selecionadas aqui.
+2. Navegue até a pasta que contém os arquivos rastreados pelo Git e selecione **Selecionar Pasta**. As subpastas no repositório local podem ser selecionadas aqui.
 
 ## <a name="initialize-a-new-git-repository"></a>Inicializar um novo repositório Git
 

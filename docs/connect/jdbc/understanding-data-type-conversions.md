@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa84b420b4100e74a9e57047f1bfbbd386fa5fa6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 266db3efac0fb737ccb36900ef3b27f24c8c8888
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435317"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081675"
 ---
 # <a name="understanding-data-type-conversions"></a>Entendendo conversões de tipo de dados
 
@@ -28,7 +28,7 @@ Para facilitar a conversão de tipos de dados da linguagem de programação Java
 
 Com base nos tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o gráfico a seguir contém o mapa de conversão do JDBC Driver para os métodos get\<Type>() da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e as conversões compatíveis para os métodos get\<Type> da classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
-![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
+![Matriz de conversão de tipos do JDBC para o SQL Server](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
 Há três categorias de conversões que têm suporte pelos métodos getter do driver JDBC:
 

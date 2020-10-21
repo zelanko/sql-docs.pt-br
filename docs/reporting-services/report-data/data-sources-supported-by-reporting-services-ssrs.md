@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88c6ae8820997bf1544ac497df6cb251c215a1ac
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603493"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006458"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Fontes de dados com suporte no Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera dados de relatório de fontes de dados por meio de uma camada de dados modular e extensível que usa extensões de processamento de dados. Para recuperar dados de relatório de uma fonte de dados, você deve selecionar uma extensão de processamento de dados que dá suporte ao tipo de fonte de dados, à versão do software em execução na fonte de dados e à plataforma da fonte de dados ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 bits ou 64 bits).  
@@ -157,7 +157,7 @@ ms.locfileid: "91603493"
   
  Caso você use o designer de consulta em modo gráfico, a consulta é analisada e, possivelmente, reescrita. Um designer de consulta com base em texto também está disponível para gravar consultas. Use o designer de consultas com base em texto quando quiser controlar a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] exata usada em uma consulta.   
   
- A recuperação de dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do SQL Data Warehouse e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é semelhante, mas há alguns requisitos que se aplicam apenas ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Para obter mais informações, confira [Tipo de conexão do SQL do Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ A recuperação de dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], do Azure Synapse Analytics e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é semelhante, mas há alguns requisitos que se aplicam apenas ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Para obter mais informações, confira [Tipo de conexão do SQL do Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Retornar à tabela de fontes de dados](#DataSourcesTable)  
   
@@ -171,7 +171,7 @@ Essa fonte de dados foi preterida. Use o tipo de fonte de dados SQL Server para 
   
  Esse provedor de dados usa o modelo de objeto ADOMD.NET par criar consultas que usam XMLA (XML for Analysis) versão 1.1. Os resultados são retornados como um conjunto de linhas bidimensional. Para obter mais informações, consulte [Tipo de conexão do Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Tipo de conexão do Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Interface do usuário do Designer de Consultas MDX do Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) e [Interface do usuário do Designer de Consultas DMX do Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
- Para fontes de dados do conjunto de dados do Azure Analysis Services e do Power BI Premium, a autenticação multifator deve estar desabilitada para as credenciais usadas na conexão à fonte de dados. Se precisar da autenticação multifator habilitada para seu ambiente, examine o <a href="https://docs.microsoft.com/azure/active-directory/conditional-access/overview">Acesso condicional do Azure Active Directory</a> como uma opção para desabilitar a autenticação multifator para as credenciais usadas na fonte de dados.
+ Para fontes de dados do conjunto de dados do Azure Analysis Services e do Power BI Premium, a autenticação multifator deve estar desabilitada para as credenciais usadas na conexão à fonte de dados. Se precisar da autenticação multifator habilitada para seu ambiente, examine o <a href="/azure/active-directory/conditional-access/overview">Acesso condicional do Azure Active Directory</a> como uma opção para desabilitar a autenticação multifator para as credenciais usadas na fonte de dados.
   
  Ao se conectar a uma fonte de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a extensão de processamento de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é compatível com os parâmetros de vários valores e mapeia as propriedades da célula e do membro para propriedades estendidas compatíveis com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
@@ -240,7 +240,7 @@ Para instalar as ferramentas de Cliente da Oracle, siga o procedimento a seguir.
   
  Essa extensão dá suporte a parâmetros nomeados. Para o Oracle versão 11g ou posterior, há suporte para parâmetros de vários valores. Para parâmetros sem nome dependentes de posição, use a extensão de processamento de dados OLE DB com o Provedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Oracle. Para obter informações sobre como configurar uma fonte de dados Oracle, consulte [Como usar o Reporting Services para configurar e acessar uma fonte de dados Oracle](https://support.microsoft.com/kb/834305). Para obter mais informações sobre a configuração de permissões adicionais, consulte [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668) [Como adicionar permissões à entidade de segurança SERVIÇO DE REDE] na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- É possível recuperar dados de procedimentos armazenados com vários parâmetros de entrada, mas o procedimento armazenado deve retornar apenas um cursor de saída. Para saber mais, confira [Retornar resultados com REF CURSORs Oracle](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) em "Recuperar dados usando um DataReader".
+ É possível recuperar dados de procedimentos armazenados com vários parâmetros de entrada, mas o procedimento armazenado deve retornar apenas um cursor de saída. Para saber mais, confira [Retornar resultados com REF CURSORs Oracle](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) em "Recuperar dados usando um DataReader".
   
  Para obter mais informações, consulte [Tipo de conexão Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md). Para obter mais informações sobre o designer de consultas associado, consulte [Interface do usuário do designer de consultas gráficas](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -317,5 +317,4 @@ Para instalar as ferramentas de Cliente da Oracle, siga o procedimento a seguir.
  [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Conjuntos de dados de relatório &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Mais perguntas? [Experimente o fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

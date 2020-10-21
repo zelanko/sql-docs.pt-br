@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/24/2020
-ms.openlocfilehash: 5688b402cf4b7dafae7812e4e86985a48626da23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cc43babe2ae064731f293a0dc96219aaeced5a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417882"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035986"
 ---
 # <a name="ssms-utility"></a>Utilitário SSMS
 
@@ -30,7 +30,7 @@ ms.locfileid: "88417882"
 
 O utilitário **SSMS** abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Se especificado, o **Ssms** também estabelece uma conexão com um servidor e abre consultas, scripts, arquivos, projetos e soluções.
 
-Você pode especificar arquivos que contenham consultas, projetos ou soluções. Arquivos que contêm consultas serão conectados automaticamente a um servidor se a informação de conexão for fornecida e o tipo de arquivo for associado com aquele tipo de servidor. Por exemplo, arquivos .sql abrem uma janela do Editor de Consulta SQL em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], e os arquivos .mdx abrem uma janela do Editor de Consulta MDX em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. **Soluções e Projetos do SQL Server** são abertos no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+Você pode especificar arquivos que contenham consultas, projetos ou soluções. Arquivos que contêm consultas serão conectados automaticamente a um servidor se a informação de conexão for fornecida e o tipo de arquivo for associado com aquele tipo de servidor. Por exemplo, arquivos .sql abrem uma janela do Editor de Consulta SQL em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], e os arquivos .mdx abrem uma janela do Editor de Consulta MDX em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. **Soluções e Projetos do SQL Server** são abertos no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 > [!NOTE]
 > O utilitário **Ssms** não executa consultas. Para executar consultas da linha de comando, use o utilitário **sqlcmd** . 
@@ -62,7 +62,10 @@ Ssms
 
 [ **-U** _username_] Nome de usuário ao se conectar com a "Autenticação do SQL"
 
-[ **-P** _password_] Senha usada ao se conectar com a 'Autenticação SQL'
+> [!Note]
+> **-P** foi removido no SSMS versão 18.0.
+>
+> Solução alternativa: Tente se conectar ao servidor uma vez usando a interface do usuário e salve sua senha.
 
 [ **-E**] Conectar-se usando a Autenticação do Windows
 
@@ -91,40 +94,40 @@ A tabela a seguir mapeia os tipos de servidor para extensões de arquivo.
 
 O script seguinte abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em um prompt de comando com as configurações padrão:
 
-```
+```console
   Ssms
 ```
 
 Os scripts a seguir abrem o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de um prompt de comando usando o *Active Directory – Integrado*:
 
-```
+```console
 Ssms.exe -S servername.database.windows.net -G
 ```
 
 O script seguinte abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em um prompt de comando, com Autenticação do Windows, com o Editor de Código definido para o servidor `ACCTG and the database AdventureWorks2012,` sem mostrar a tela inicial:
 
-```
+```console
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
 ```
 
 O script seguinte abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em um prompt de comando, e abre o script MonthEndQuery.
 
-```
+```console
 Ssms "C:\Documents and Settings\username\My Documents\SQL Server Management Studio Projects\FinanceScripts\FinanceScripts\MonthEndQuery.sql"
 ```
 
 O script seguinte abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em um prompt de comando e abre o projeto NewReportsProject no computador nomeado de `developer`:
 
-```
+```console
 Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 ```
 
 O script seguinte abre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] em um prompt de comando e abre a solução MonthlyReports: 
 
-```
+```console
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 ```
 
 ## <a name="see-also"></a>Consulte Também
 
-[Usar o SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)
+[Usar o SQL Server Management Studio](./sql-server-management-studio-ssms.md)

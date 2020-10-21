@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 292736c937a2345e88964521ea294c69595729e5
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 39f1f79701a0a3fd871b2b273a48197b8b42187b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412877"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005884"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Baixe o SSDT (SQL Server Data Tools) para Visual Studio
 
@@ -39,7 +39,7 @@ Com o Visual Studio de 2019, a funcionalidade necessária para habilitar os proj
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Instalar o SSDT com o Visual Studio 2019
 
-Se o [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019&preserve-view=true) já estiver instalado, você poderá editar a lista de cargas de trabalho para incluir o SSDT. Caso não tenha o Visual Studio 2019 instalado, você pode baixar e instalar o [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
+Se o [Visual Studio 2019](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2019) já estiver instalado, você poderá editar a lista de cargas de trabalho para incluir o SSDT. Caso não tenha o Visual Studio 2019 instalado, você pode baixar e instalar o [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
 
 Para modificar as cargas de trabalho do Visual Studio instaladas para incluir o SSDT, use o Instalador do Visual Studio.
 
@@ -164,7 +164,7 @@ Para ver as opções disponíveis, execute `SSDT-Setup-ENU.exe /help`
 
 |Modelos de projeto|Plataformas SQL com suporte|
 |-------------------|--------------------|
-|Bancos de dados relacionais| SQL Server 2005\* – SQL Server 2017<br> (use o SSDT 17.x ou o SSDT para Visual Studio 2017 para conectar-se ao [SQL Server no Linux](../linux/sql-server-linux-overview.md))<br /><br />Banco de Dados SQL do Azure<br /><br />SQL Data Warehouse do Azure (dá suporte somente a consultas; ainda não há suporte para projetos de banco de dados)<br /><br /> \* O suporte ao SQL Server 2005 está preterido,<br /><br /> passe para uma versão do SQL oficialmente com suporte|
+|Bancos de dados relacionais| SQL Server 2005\* – SQL Server 2017<br> (use o SSDT 17.x ou o SSDT para Visual Studio 2017 para conectar-se ao [SQL Server no Linux](../linux/sql-server-linux-overview.md))<br /><br />Banco de Dados SQL do Azure<br /><br />Azure Synapse Analytics (dá suporte somente a consultas; ainda não há suporte para projetos de banco de dados)<br /><br /> \* O suporte ao SQL Server 2005 está preterido,<br /><br /> passe para uma versão do SQL oficialmente com suporte|
 |Modelos do Analysis Services<br /><br />Relatórios do Reporting Services | SQL Server 2008 – SQL Server 2017|
 |pacotes do Integration Services| SQL Server 2012 – SQL Server 2019 |
 
@@ -180,9 +180,9 @@ Para baixar e instalar o SSDT para o Visual Studio 2015 ou uma versão mais anti
 
 * [Fórum do MSDN do SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [Blog da equipe do SSDT](https://docs.microsoft.com/archive/blogs/ssdt/)
+* [Blog da equipe do SSDT](/archive/blogs/ssdt/)
 
-* [Referência DACFx API](https://msdn.microsoft.com/library/dn645454.aspx)
+* [Referência DACFx API](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))
 
 * [Baixar o SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -194,7 +194,7 @@ Depois de instalar o SSDT, trabalhe com esses tutoriais para aprender a criar ba
 
 * [Tutorial do SSIS: criar um pacote ETL simples](../integration-services/ssis-how-to-create-an-etl-package.md)
 
-* [Tutoriais do Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)
+* [Tutoriais do Analysis Services](/analysis-services/analysis-services-tutorials-ssas)
 
 * [Criando um relatório de tabela básico (Tutorial do SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 

@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042847"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935454"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>Configurar a conta de serviço do Servidor de Relatório (Gerenciador de Configurações do Servidor de Relatório)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é implementado com um único serviço que contém um serviço Web do Servidor de Relatório, um [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]e um aplicativo de processamento em segundo plano usado para processamento agendado de relatórios e entrega de assinaturas. Este tópico explica como uma conta de serviço é configurada inicialmente e como modificar a conta ou a senha usando a ferramenta Configuração do Reporting Services.  
   
@@ -99,7 +99,7 @@ Os links e as diretrizes a seguir irão ajudá-lo a decidir qual a melhor opçã
   
 ## <a name="updating-an-expired-password"></a>Atualizando uma senha expirada
 
- Se o serviço do Servidor de Relatório for executado em uma conta de domínio e a senha expirar antes de ser atualizada no Gerenciador de Configurações do Reporting Services, o serviço não será iniciado até que seja especificada uma nova senha.  
+ Se o serviço do Servidor de Relatório for executado em uma conta de domínio e a senha expirar antes de ser atualizada no Gerenciador de Configurações do Servidor de Relatório, o serviço não será iniciado até que seja especificada uma nova senha.  
   
  Se a senha da conta de serviço do [!INCLUDE[ssDE](../../includes/ssde-md.md)] expirar, ocorrerá o erro **rsReportServerDatabaseUnavailable** quando você tentar se conectar ao servidor de relatório. A redefinição da senha resolve esse erro.  
   
@@ -115,5 +115,4 @@ Os links e as diretrizes a seguir irão ajudá-lo a decidir qual a melhor opçã
   
 ## <a name="next-steps"></a>Próximas etapas
 
- [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Configurar as URLs do servidor de relatório &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Gerenciador de Configurações do Servidor de Relatório &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

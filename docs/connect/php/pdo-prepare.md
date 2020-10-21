@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 15130a351548ab5ad1d21ef2142b5b8c68db11b8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435206"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081865"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ Você pode fechar um objeto PDOStatement chamando `unset`:
 unset($stmt);
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="forward-only-example"></a>Exemplo de somente avanço
 Este exemplo mostra como usar o método PDO::prepare com marcadores de parâmetro e um cursor de somente avanço.
 
 ```
@@ -100,7 +100,7 @@ unset($stmt);
 ?>
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="static-cursor-example"></a>Exemplo de cursor estático
 Este exemplo mostra como usar PDO::Prepare com um cursor estático do lado do servidor. Para ver um exemplo que mostra um cursor do lado do cliente, confira [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
 ```
@@ -140,7 +140,7 @@ print_r($row);
 ?>
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="targeted-example"></a>Exemplo direcionado
 Os dois trechos de código a seguir mostram como usar PDO::prepare e os dados direcionados para colunas CHAR/VARCHAR. Como a codificação padrão para PDO::prepare é UTF-8, o usuário poderá usar a opção `PDO::SQLSRV_ENCODING_SYSTEM` para evitar conversões implícitas.
 
 **Opção 1**
@@ -169,7 +169,7 @@ $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCO
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a>Exemplo
+## <a name="prepare-example"></a>Exemplo com prepare
 
 Este exemplo mostra como usar o método PDO::prepare com `PDO::ATTR_EMULATE_PREPARES` definido como true.
 

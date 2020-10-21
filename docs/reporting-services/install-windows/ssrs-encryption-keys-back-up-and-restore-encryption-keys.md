@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454556"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933758"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Chaves de criptografia do SSRS – Fazer backup e restaurar chaves de criptografia
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88454556"
   
  Será necessário restaurar a cópia de backup da chave de criptografia quando ocorrer quaisquer dos seguintes eventos:  
   
--   Alteração do nome da conta de serviço do Windows Servidor de Relatório ou redefinição da senha. Quando você usa o Gerenciador de configurações do Reporting Services, o backup da chave faz parte de uma operação de alteração de nome da conta de serviço.  
+-   Alteração do nome da conta de serviço do Windows Servidor de Relatório ou redefinição da senha. Quando você usa o Gerenciador de Configurações do Servidor de Relatório, o backup da chave faz parte de uma operação de alteração de nome da conta de serviço.  
   
     > [!NOTE]
     > Redefinir a senha não é o mesmo que alterar a senha. Uma redefinição de senha requer permissão para substituir informações de conta no controlador de domínio. As redefinições de senha são executadas por um administrador de sistema quando você esquecer ou não souber uma senha específica. Somente redefinições de senha requerem a restauração da chave simétrica. A alteração periódica da senha de uma conta não requer a redefinição da chave simétrica.  
@@ -47,7 +47,7 @@ ms.locfileid: "88454556"
 
  O backup da chave simétrica é um processo que grava a chave em um arquivo especificado e codifica a chave usando uma senha que você fornecer. A chave simétrica nunca pode ser armazenada em um estado não criptografado, portanto você deve fornecer uma senha para codificar a chave ao salvá-la em disco. Depois que o arquivo for criado, você deverá armazená-lo em um local seguro **e lembrar-se da senha** usada para desbloquear o arquivo. Para fazer backup da chave simétrica, você pode usar as seguintes ferramentas:  
   
- **Modo nativo:** Gerenciador de configurações do Reporting Services ou o utilitário **rskeymgmt** .  
+ **Modo Nativo:** o Gerenciador de Configurações do Servidor de Relatório ou o utilitário **rskeymgmt**.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "88454556"
 
 ::: moniker-end
   
-##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Fazer backup das chaves de criptografia - Gerenciador de configurações do Reporting Services (Modo Nativo)  
+##  <a name="back-up-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Fazer backup das chaves de criptografia – Gerenciador de Configurações do Servidor de Relatório (modo nativo)  
   
 1.  Inicie o Gerenciador de Configuração do Servidor de Relatório e conecte-se à instância do servidor de relatório que você deseja configurar.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88454556"
   
 -   Os dados da chave simétrica armazenada anteriormente (por exemplo, informações de chave que já estavam no banco de dados do servidor de relatório de uma implantação anterior) serão excluídos.  
   
- Para restaurar a chave de criptografia, você deve ter uma cópia da chave de criptografia em arquivo. Você também deve saber a senha que desbloqueia a cópia armazenada. Se você tiver a chave e a senha, poderá executar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para restaurar a chave. A chave simétrica deve ser a mesma que bloqueia e desbloqueia os dados criptografados atualmente armazenados no banco de dados do servidor de relatório. Se você restaurar uma cópia que não seja válida, o servidor de relatório não poderá acessar os dados criptografados atualmente armazenados no banco de dados do servidor de relatório. Se isso ocorrer, poderá ser necessário excluir todos os valores criptografados se você não puder restaurar uma chave válida. Se por alguma razão você não puder restaurar a chave de criptografia (por exemplo, se você não tiver uma cópia de backup), você deverá excluir a chave existente e o conteúdo criptografado. Para obter mais informações, consulte [Excluir e recriar chaves de criptografia &#40; 	Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para obter mais informações sobre como criar chaves simétricas, veja [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Para restaurar a chave de criptografia, você deve ter uma cópia da chave de criptografia em arquivo. Você também deve saber a senha que desbloqueia a cópia armazenada. Se você tiver a chave e a senha, poderá executar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para restaurar a chave. A chave simétrica deve ser a mesma que bloqueia e desbloqueia os dados criptografados atualmente armazenados no banco de dados do servidor de relatório. Se você restaurar uma cópia que não seja válida, o servidor de relatório não poderá acessar os dados criptografados atualmente armazenados no banco de dados do servidor de relatório. Se isso ocorrer, poderá ser necessário excluir todos os valores criptografados se você não puder restaurar uma chave válida. Se por alguma razão você não puder restaurar a chave de criptografia (por exemplo, se você não tiver uma cópia de backup), você deverá excluir a chave existente e o conteúdo criptografado. Para obter mais informações, confira [Excluir e recriar as chaves de criptografia &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para obter mais informações sobre como criar chaves simétricas, confira [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Restaurar as chaves de criptografia - Gerenciador de configurações do Reporting Services (Modo Nativo)  
+###  <a name="restore-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Restaurar as chaves de criptografia – Gerenciador de Configurações do Servidor de Relatório (modo nativo)  
   
-1.  Inicie o Gerenciador de configurações do Reporting Services e conecte-se à instância do servidor de relatório que deseja configurar.  
+1.  Inicie o Gerenciador de Configuração do Servidor de Relatório e conecte-se à instância do servidor de relatório que você deseja configurar.  
   
 2.  Na página Chaves de Criptografia, selecione em **Restaurar**.  
   
@@ -112,6 +112,6 @@ ms.locfileid: "88454556"
     ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do Servidor de Relatório&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

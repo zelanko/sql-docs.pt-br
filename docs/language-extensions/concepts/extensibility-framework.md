@@ -1,7 +1,7 @@
 ---
 title: Arquitetura de extensibilidade nas Extensões de Linguagem do SQL Server
 titleSuffix: ''
-description: Saiba mais sobre a arquitetura de extensibilidade usada para as Extensões de Linguagem do SQL Server, que permite executar código externo no SQL Server. No SQL Server 2019, há suporte para Java. O código é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
+description: Saiba mais sobre a arquitetura de extensibilidade usada para as Extensões de Linguagem do SQL Server, que permite executar código externo no SQL Server. No SQL Server 2019, há suporte para Java, Python e R. O código é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 40fd6b73bf28b6a201a1c0fedd1624a09d67b9c0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765686"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935369"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Arquitetura de extensibilidade nas Extensões de Linguagem do SQL Server
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Saiba mais sobre a arquitetura de extensibilidade usada para as Extensões de Linguagem do SQL Server, que permite executar código externo no SQL Server. No SQL Server 2019, há suporte para Java. O código é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
+Saiba mais sobre a arquitetura de extensibilidade usada para as Extensões de Linguagem do SQL Server, que permite executar código externo no SQL Server. No SQL Server 2019, há suporte para Java, Python e R. O código é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
 
 ## <a name="background"></a>Tela de fundo
 
-A finalidade da estrutura de extensibilidade é oferecer uma interface entre o SQL Server e as linguagens externas, como Java. Executando uma linguagem confiável dentro de uma estrutura segura gerenciada pelo SQL Server, os administradores de banco de dados podem manter a segurança enquanto permitem que os cientistas de dados acessem dados empresariais.
+A finalidade da estrutura de extensibilidade é oferecer uma interface entre o SQL Server e as linguagens externas. Executando uma linguagem confiável dentro de uma estrutura segura gerenciada pelo SQL Server, os administradores de banco de dados podem manter a segurança enquanto permitem que os cientistas de dados acessem dados empresariais.
 
 <!-- We need to get a diagram like the one below.
 The following diagram visually describes opportunities and benefits of the extensible architecture.
@@ -53,10 +53,6 @@ Os componentes incluem um serviço **Launchpad** usado para invocar tempos de ex
 ## <a name="launchpad"></a>Launchpad
 
 O [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é um serviço que gerencia os limites de tempo de vida, recursos e segurança do processo externo responsável pela execução do script. Isso é semelhantes à forma com que o serviço de indexação e consulta de texto completo inicia um host separado para o processamento de consultas de texto completo. O serviço Launchpad pode iniciar somente inicializadores confiáveis que foram publicados pela Microsoft ou que tenham sido certificados pela Microsoft como atendendo aos requisitos de desempenho e gerenciamento de recursos.
-
-| Inicializadores confiáveis | Extensão | Versões do SQL Server |
-|-------------------|-----------|---------------------|
-| JavaLauncher.dll para Java | Extensão de Java | SQL Server 2019 |
 
 O serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é executado em **SQLRUserGroup** que usa [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) para isolamento de execução.
 

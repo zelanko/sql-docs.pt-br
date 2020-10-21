@@ -1,30 +1,25 @@
 ---
 title: Instalar por meio de um prompt de comando
-description: Execute a configuração da linha de comando do SQL Server para adicionar os Serviços de Machine Learning com R e Python em uma instância de mecanismo de banco de dados do SQL Server.
+description: Execute a configuração da linha de comando do SQL Server para adicionar os Serviços de Machine Learning com Python e R em uma instância do mecanismo de banco de dados do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/30/2020
+ms.date: 10/12/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624753"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956757"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Instalar os Serviços de Machine Learning do SQL Server com R e Python na linha de comando
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este artigo fornece instruções para instalar os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) usando uma linha de comando:
-
-+ [Nova instância no banco de dados](#indb)
-+ [Adicionar a uma instância de mecanismo de banco de dados existente](#add-existing)
-+ [Instalação silenciosa](#silent)
-+ [Novo servidor autônomo](#shared-feature)
+Este artigo fornece instruções para instalar os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) com Python e R usando uma linha de comando.
 
 Você pode especificar a interação silenciosa, básica ou completa com a interface do usuário de Instalação. Este artigo complementa o artigo [Instalar o SQL Server do prompt de comando](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), que aborda parâmetros exclusivos dos componentes de aprendizado de máquina de R e Python.
 
@@ -39,7 +34,6 @@ Você pode especificar a interação silenciosa, básica ou completa com a inter
 + Não instale em um controlador de domínio. A parte dos Serviços de Machine Learning da instalação falhará.
 
 + Evite instalar instâncias autônomas e no banco de dados no mesmo computador. Um servidor autônomo competirá pelos mesmos recursos, prejudicando o desempenho das duas instalações.
-
 
 ## <a name="command-line-arguments"></a>Argumentos de linha de comando
 
@@ -202,7 +196,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 Quando a instalação for concluída, você terá um servidor, pacotes da Microsoft, distribuições open-source de R e Python, ferramentas, amostras e scripts que fazem parte da distribuição. 
 
-Para abrir uma janela do console do R, vá para `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` e clique duas vezes em **RGui.exe**. Você é novo no R? Experimente este tutorial: [Comandos básicos de R e funções RevoScaleR: 25 exemplos comuns](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
+Para abrir uma janela do console do R, vá para `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` e clique duas vezes em **RGui.exe**. Você é novo no R? Experimente este tutorial: [Comandos básicos de R e funções RevoScaleR: 25 exemplos comuns](/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 Para abrir um comando do Python, vá para `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` e clique duas vezes em **Python.exe**.
 

@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866313"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933551"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de Configurações do Servidor de Relatório)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
   
 -   Enviar solicitações de conexão pela rede para relatórios que usam autenticação do banco de dados ou conexão a fontes de dados de relatórios externos que não requeiram ou utilizem autenticação. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
@@ -41,7 +41,7 @@ ms.locfileid: "74866313"
   
  Para especificar a conta, você pode usar a ferramenta de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou o utilitário **rsconfig** . A maneira mais fácil de configurar a conta de execução autônoma é executar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e especificar credenciais na página Conta de Execução.  
   
-1.  Inicie a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatório que você deseja configurar. Para obter instruções, veja [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Inicie a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatório que você deseja configurar. Para obter instruções, confira [Gerenciador de Configurações do Servidor de Relatório &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Na página Conta de Execução, selecione **Especificar uma conta de execução**.  
   
@@ -106,6 +106,6 @@ ms.locfileid: "74866313"
  As informações da conta serão removidas do arquivo RSReportServer.config.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Gerenciador de Configurações do Servidor de Relatório (modo nativo do SSRS)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

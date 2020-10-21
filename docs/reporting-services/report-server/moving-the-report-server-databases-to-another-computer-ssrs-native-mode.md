@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c8d602417a7423655ef5800d081432499d2761aa
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254585"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891686"
 ---
 # <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>Como mover Bancos de Dados do Servidor de Relatório para outro computador (modo nativo do SSRS)
 
@@ -222,7 +222,7 @@ GO
 [Iniciar e parar o serviço Servidor de Relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
 [Configurar uma conexão de banco de dados do Servidor de Relatório](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Configurar a conta de execução autônoma](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
-[Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Gerenciador de Configurações do Servidor de Relatório](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Utilitário rsconfig](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
 [Configurar e gerenciar chaves de criptografia](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [Banco de dados do Servidor de Relatório](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
