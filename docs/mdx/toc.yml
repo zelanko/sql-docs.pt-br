@@ -169,7 +169,7 @@
           href: ../mdx/less-than-or-equal-to-mdx.md
         - name: <> (Diferente de)
           href: ../mdx/not-equal-to-mdx.md
-        - name: = (Equal To)
+        - name: '= (Equal To)'
           href: ../mdx/equal-to-mdx.md
         - name: '> (Maior que)'
           href: ../mdx/greater-than-mdx.md
