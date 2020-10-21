@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04b4284795a48e15f56c99fee4c868e26250fd4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 757e838efe95130f745cf8966789cab4432bc0d5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417142"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196838"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,6 @@ ms.locfileid: "88417142"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 BEGIN DISTRIBUTED { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable ]   
 [ ; ]  
@@ -88,7 +87,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 > [!NOTE]  
 >  A menos que o MS DTC esteja instalado atualmente no computador que executa a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Esse exemplo emitirá uma mensagem de erro. Para obter mais informações sobre a instalação do MS DTC, consulte a documentação do Coordenador de Transações Distribuídas da Microsoft.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN DISTRIBUTED TRANSACTION;  

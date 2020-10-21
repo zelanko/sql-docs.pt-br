@@ -21,12 +21,12 @@ ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11dbf45f7376a1a5557331dbd0466443bbd92739
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4924d983b55592cbc7a6be5794e0fd32fc10748
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422490"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191366"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ boolean_expression OR boolean_expression
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa a exibição `vEmployeeDepartmentHistory` para recuperar os nomes dos funcionários de `Quality Assurance` que trabalham no turno da tarde ou da noite. Se os parênteses forem omitidos, a consulta retornará funcionários de `Quality Assurance` que trabalham no turno da tarde e todos os funcionários que trabalham no turno da noite.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Shift   
@@ -86,7 +86,7 @@ WHERE Department = 'Quality Assurance'
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir recupera os nomes de funcionários que ganham uma `BaseRate` menor de 20 ou têm uma `HireDate` igual a 1 de janeiro de 2001 ou posterior.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, BaseRate, HireDate   

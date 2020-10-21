@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487674"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193778"
 ---
 # <a name="security-overview-integration-services"></a>Visão geral de segurança (Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487674"
   
  Se você não armazenar configurações no sistema de arquivos, em vez de no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], proteja as pastas no sistema de arquivos que contenham os arquivos de configuração de pacote.  
   
- Para obter mais informações sobre configurações, consulte [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ Para obter mais informações sobre configurações, consulte [Package Configurations](../packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Controlando o acesso ao serviço Integration Services  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para listar pacotes armazenados. Para impedir que usuários não autorizados exibam informações sobre pacotes armazenados em computadores locais e remotos, e, assim, obtenham informações privadas, restrinja o acesso aos computadores que executam o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -121,7 +121,7 @@ ms.locfileid: "88487674"
 ### <a name="configuration-files"></a>Arquivos de configuração  
  Se você tiver informações confidenciais em uma configuração, como informações de logon e senha, deverá salvar a configuração no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou usar uma ACL (lista de controle de acesso), para restringir acesso ao local ou à pasta na qual você armazena os arquivos e só permitir o acesso a determinadas contas. Normalmente, você concede acesso às contas que você permite que executem pacotes, e às contas que gerenciam e solucionam problemas de pacotes, que podem incluir revisão do conteúdo de configuração, ponto de verificação e arquivos de log. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o armazenamento mais seguro porque oferece proteção nos níveis de servidor e de banco de dados. Para salvar configurações no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use o tipo de configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para salvar no sistema de arquivos, use o tipo de configuração XML.  
   
- Para obter mais informações, consulte [Configurações de pacote](../../integration-services/packages/package-configurations.md), [Criar configurações de pacote](../../integration-services/packages/create-package-configurations.md)e [Considerações de segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+ Para obter mais informações, consulte [Configurações de pacote](../packages/legacy-package-deployment-ssis.md), [Criar configurações de pacote](../packages/legacy-package-deployment-ssis.md)e [Considerações de segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### <a name="checkpoint-files"></a>arquivos de ponto de verificação  
  Do mesmo modo, se o arquivo de ponto de verificação usado pelo pacote incluir informações confidenciais, você deverá usar uma lista de controle de acesso (ACL) para proteger o local ou a pasta onde armazena o arquivo. Arquivos de ponto de verificação salvam informações do estado atual no andamento do pacote, bem como os valores atuais das variáveis. Por exemplo, o pacote pode incluir uma variável personalizada que contenha um número de telefone. Para saber mais, confira [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
@@ -147,4 +147,4 @@ ms.locfileid: "88487674"
   
 -   [Assinar um pacote por meio de um certificado digital](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Definir ou alterar o nível de proteção de pacotes](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [Definir ou alterar o nível de proteção de pacotes](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

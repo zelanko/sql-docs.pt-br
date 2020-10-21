@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989963"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195168"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Agendar a execução de pacotes SSIS (SQL Server Integration Services) implantados no Azure
 
@@ -44,13 +44,13 @@ Esse recurso exige o SQL Server Management Studio versão 17.7 ou superior. Para
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Agendar um pacote com trabalhos elásticos de Banco de Dados SQL
 
-Para obter mais informações sobre trabalhos elásticos no Banco de Dados SQL, consulte [Gerenciando bancos de dados de nuvem expandidos](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+Para obter mais informações sobre trabalhos elásticos no Banco de Dados SQL, consulte [Gerenciando bancos de dados de nuvem expandidos](/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Prerequisites
 
 Antes que você possa usar trabalhos elásticos para agendar pacotes do SSIS armazenados no banco de dados de catálogo do SSISDB em um servidor de Banco de Dados SQL do Azure, você deverá fazer o seguinte:
 
-1.  Instale e configure os componentes de trabalhos de banco de dados elástico. Para obter mais informações, consulte [Visão geral da instalação de trabalhos de Banco de Dados Elástico](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Instale e configure os componentes de trabalhos de banco de dados elástico. Para obter mais informações, consulte [Visão geral da instalação de trabalhos de Banco de Dados Elástico](/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Crie credenciais no escopo do banco de dados que os trabalhos possam usar para enviar comandos para o banco de dados de catálogo do SSIS. Para obter mais informações, veja [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -166,17 +166,17 @@ Para agendar um pacote com o SQL Server Agent local, crie um trabalho com uma et
 
 Para agendar um pipeline do Data Factory, use um dos seguintes gatilhos:
 
-- [Gatilho de agendamento](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [Gatilho de agendamento](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [Gatilho de janela em cascata](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [Gatilho de janela em cascata](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [Gatilho baseado em evento](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [Gatilho baseado em evento](/azure/data-factory/how-to-create-event-trigger)
 
 Para executar um pacote do SSIS como parte de um pipeline do Data Factory, use uma das seguintes atividades:
 
-- [Atividade Executar pacote do SSIS](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+- [Atividade Executar pacote do SSIS](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
-- [Atividade Procedimento armazenado](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+- [Atividade Procedimento armazenado](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="next-steps"></a>Próximas etapas
 

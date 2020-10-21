@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dd901474ae9c866a7f0ac67b70b2a40a3611c4a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425528"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196401"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
 
@@ -135,12 +135,11 @@ ms.locfileid: "88425528"
  Resultados de muitas operações e funções predeterminaram tipos de dados. Esse pode ser o tipo de dados do argumento ou o tipo de dados para o qual o avaliador de expressão converte o resultado. Por exemplo, o resultado de um operador OR lógico (||) é sempre um Booliano, o resultado da função ABS é o tipo de dados numérico do argumento, e o resultado da multiplicação é o menor tipo de dados numérico que pode manter o resultado sem perda. Para obter mais informações sobre os tipos de dados de resultados, consulte [Expressão de Operadores &#40;SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) e [Expressão de Funções &#40;SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Usar uma expressão em um componente de fluxo de dados](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Usar uma expressão em um componente de fluxo de dados](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
 -   Artigo técnico, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), em pragmaticworks.com  
   
 -   Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
-  
   

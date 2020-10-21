@@ -22,12 +22,12 @@ ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce17dd2263c23519633a24fa49f0c82c9abdf40a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 7fd868824316fdd532851040730ae76e259cb3cc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670187"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191984"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,8 @@ ms.locfileid: "91670187"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```syntaxsql
+
+```syntaxsql  
 @@TRANCOUNT  
 ```  
 
@@ -57,7 +58,8 @@ ms.locfileid: "91670187"
 ### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>a. Mostrando os efeitos das instruções BEGIN e COMMIT  
  O exemplo a seguir mostra o efeito das instruções aninhadas `BEGIN` e `COMMIT` sobre a variável `@@TRANCOUNT`.  
   
-```sql
+
+```sql  
 PRINT @@TRANCOUNT  
 --  The BEGIN TRAN statement will increment the  
 --  transaction count by 1.  
@@ -81,7 +83,8 @@ PRINT @@TRANCOUNT
 ### <a name="b-showing-the-effects-of-the-begin-and-rollback-statements"></a>B. Mostrando os efeitos das instruções BEGIN e ROLLBACK  
  O exemplo a seguir mostra o efeito das instruções aninhadas `BEGIN TRAN` e `ROLLBACK` sobre a variável `@@TRANCOUNT`.  
   
-```sql
+
+```sql  
 PRINT @@TRANCOUNT  
 --  The BEGIN TRAN statement will increment the  
 --  transaction count by 1.  

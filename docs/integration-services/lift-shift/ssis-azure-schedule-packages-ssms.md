@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 2681515e691478d095149a7dc4a8a578c6a89bf3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864603"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192518"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Agendar a execução de pacotes SSIS implantados no Azure com o SSMS (SQL Server Management Studio)
 
@@ -75,5 +75,5 @@ O recurso descrito neste artigo exige o SQL Server Management Studio versão 17.
 Para saber mais sobre outros métodos para agendar um pacote SSIS, veja [Agendar a execução de um pacote SSIS no Azure](ssis-azure-schedule-packages.md).
 
 Para saber mais sobre pipelines do Azure Data Factory, atividades e gatilhos, confira os seguintes artigos:
--   [Pipelines e atividades no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Gatilhos e execução de pipeline no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Pipelines e atividades no Azure Data Factory](/azure/data-factory/concepts-pipelines-activities)
+-   [Gatilhos e execução de pipeline no Azure Data Factory](/azure/data-factory/concepts-pipeline-execution-triggers)

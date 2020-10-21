@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487659"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192366"
 ---
 # <a name="ssis-toolbox"></a>Caixa de Ferramentas do SSIS
 
@@ -34,7 +34,7 @@ ms.locfileid: "88487659"
  > [!NOTE]
 > Se você não puder ver a caixa de ferramentas, vá para a EXIBIR -> Outras Janelas -> Caixa de Ferramentas do SSIS.
  
-Obtenha mais informações sobre um componente na caixa de ferramentas, clicando no componente para exibir a descrição dele na parte inferior da caixa de ferramentas. Para alguns componentes, você também pode acessar exemplos que demonstram como configurá-los e usá-los. Os exemplos estão disponíveis no [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189). Para acessar os exemplos da **Caixa de Ferramentas do SSIS**, clique no link **Localizar Exemplos** que aparece abaixo da descrição.  
+Obtenha mais informações sobre um componente na caixa de ferramentas, clicando no componente para exibir a descrição dele na parte inferior da caixa de ferramentas. Para alguns componentes, você também pode acessar exemplos que demonstram como configurá-los e usá-los. Os exemplos estão disponíveis no [MSDN](/samples/browse/). Para acessar os exemplos da **Caixa de Ferramentas do SSIS**, clique no link **Localizar Exemplos** que aparece abaixo da descrição.  
   
 > [!NOTE]
 > Não é possível *remover* componentes instalados da caixa de ferramentas.  
@@ -65,5 +65,4 @@ Obtenha mais informações sobre um componente na caixa de ferramentas, clicando
   
 ## <a name="refresh-the-ssis-toolbox"></a>Atualizar a caixa de ferramentas do SSIS  
   
-1.  Clique com o botão direito do mouse na Caixa de Ferramentas do SSIS e clique em **Atualizar Caixa de Ferramentas**.  
-
+1.  Clique com o botão direito do mouse na Caixa de Ferramentas do SSIS e clique em **Atualizar Caixa de Ferramentas**.

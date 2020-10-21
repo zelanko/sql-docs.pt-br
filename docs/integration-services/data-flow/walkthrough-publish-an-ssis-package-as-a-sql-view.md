@@ -1,5 +1,5 @@
 ---
-description: 'Passo a passo: publicar um Pacote SSIS como um modo SQL'
+description: 'Passo a passo: Publicar um pacote do SSIS como uma exibição SQL'
 title: 'Passo a passo: publicar um pacote SSIS como uma exibição SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1df84869443257dbfc73d5ef3984f3e37a15b6c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425638"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194560"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: publicar um Pacote SSIS como um modo SQL
 
@@ -256,7 +256,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Timeout indica o número de segundos que o provedor OLE DB para SSIS pode aguardar antes que novos dados cheguem do pacote do SSIS. Por padrão, o tempo limite é de 60 segundos. Você pode especificar um valor inteiro para o tempo limite entre 20 e 32000.  
   
- Parameters contém o valor tanto dos parâmetros do pacote quanto dos parâmetros do projeto. As regras para os parâmetros são as mesmas usadas para os parâmetros em [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
+ Parameters contém o valor tanto dos parâmetros do pacote quanto dos parâmetros do projeto. As regras para os parâmetros são as mesmas usadas para os parâmetros em [DTExec](../packages/dtexec-utility.md).  
   
  A lista a seguir especifica os caracteres especiais permitidos na cláusula de consulta:  
   
@@ -270,6 +270,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>Consulte Também  
  [Destino do Streaming de Dados](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configurar destino do streaming de dados](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [Configurar destino do streaming de dados](./data-streaming-destination.md)  
   

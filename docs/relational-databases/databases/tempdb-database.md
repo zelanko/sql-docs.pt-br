@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024338"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195548"
 ---
 # <a name="tempdb-database"></a>banco de dados tempdb
 
@@ -40,9 +40,9 @@ O banco de dados do sistema `tempdb` é um recurso global disponível para todos
   > [!IMPORTANT]
   > Os bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure dão suporte a tabelas temporárias globais e a procedimentos armazenados temporários globais armazenados no `tempdb` e que estão no escopo do nível do banco de dados. 
   >
-  > As tabelas temporárias globais e os procedimentos armazenados temporários globais são compartilhados entre todas as sessões de usuários no mesmo banco de Dados SQL. As sessões de usuário de outros bancos de dados SQL não podem acessar tabelas temporárias globais. Para obter mais informações, consulte [Tabelas temporárias globais no escopo do banco de dados (Banco de Dados SQL do Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). A [Instância Gerenciada de SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) dá suporte aos mesmos objetos temporários do SQL Server.
+  > As tabelas temporárias globais e os procedimentos armazenados temporários globais são compartilhados entre todas as sessões de usuários no mesmo banco de Dados SQL. As sessões de usuário de outros bancos de dados SQL não podem acessar tabelas temporárias globais. Para obter mais informações, consulte [Tabelas temporárias globais no escopo do banco de dados (Banco de Dados SQL do Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). A [Instância Gerenciada de SQL do Azure](/azure/sql-database/sql-database-managed-instance) dá suporte aos mesmos objetos temporários do SQL Server.
   >
-  > Para os bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure, apenas o banco de dados mestre e o banco de dados `tempdb` se aplicam. Para saber mais, confira [O que é um servidor do Banco de Dados SQL do Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Para ver uma discussão sobre o `tempdb` no contexto de bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure, confira [Banco de dados tempdb em bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure](#tempdb-database-in-sql-database). 
+  > Para os bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure, apenas o banco de dados mestre e o banco de dados `tempdb` se aplicam. Para saber mais, confira [O que é um servidor do Banco de Dados SQL do Azure?](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Para ver uma discussão sobre o `tempdb` no contexto de bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure, confira [Banco de dados tempdb em bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure](#tempdb-database-in-sql-database). 
   >
   > Para a Instância Gerenciada de SQL do Azure, todos os bancos de dados do sistema se aplicam.
 
@@ -149,7 +149,7 @@ Para obter uma descrição dessas opções de banco de dados, consulte [Opções
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Tamanhos de tempdb para as camadas de serviço baseadas em vCore
 
-Confira [Limites de recursos baseados em vCore](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
+Confira [Limites de recursos baseados em vCore](/azure/sql-database/sql-database-vcore-resource-limits).
 
 ## <a name="restrictions"></a>Restrições
 
@@ -223,7 +223,7 @@ De [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, o desempenho do 
 - Além disso, todas as alocações em `tempdb` usam extensões uniformes. O [sinalizador de rastreamento 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) não é mais necessário.  
 - No caso do grupo de arquivos primário, a propriedade `AUTOGROW_ALL_FILES` é ativada e não pode ser modificada.
 
-Para saber mais sobre melhorias de desempenho em `tempdb`, confira o artigo do blog [TEMPDB – Arquivos, atualizações e sinalizadores de rastreamento. O que fazer?!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/).
+Para saber mais sobre melhorias de desempenho em `tempdb`, confira o artigo do blog [TEMPDB – Arquivos, atualizações e sinalizadores de rastreamento. O que fazer?!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadados do tempdb com otimização de memória
 Historicamente, a contenção de metadados do `tempdb` tem sido um gargalo para a escalabilidade em muitas cargas de trabalho em execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [banco de dados em memória](../in-memory-database.md): metadados de tempdb com otimização de memória. 
@@ -355,4 +355,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [Mover arquivos de banco de dados](../../relational-databases/databases/move-database-files.md)    
-  

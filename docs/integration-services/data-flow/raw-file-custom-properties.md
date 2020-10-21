@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45e439343713ac98dfd293a21af90d75e1275847
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b1b7f0e1416b20ce641848abe47d3497f7c7b7f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457269"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196390"
 ---
 # <a name="raw-file-custom-properties"></a>Propriedades personalizadas de arquivo bruto
 
@@ -58,6 +58,5 @@ ms.locfileid: "88457269"
  Para obter mais informações, consulte [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md)  
   

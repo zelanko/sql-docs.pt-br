@@ -40,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421080"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192586"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -440,7 +440,7 @@ ms.locfileid: "88421080"
  A **mailitem_id** da mensagem de teste de email.  
   
  **Solucionar problemas**  
- Clique para abrir os Manuais Online no tópico [Solucionando problemas do Database Mail](https://msdn.microsoft.com/library/ms188663.aspx).  
+ Clique para abrir os Manuais Online no tópico [Solucionando problemas do Database Mail](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105)).  
   
  [Assistente de Configuração do Database](#DBWizard)  
   
@@ -460,5 +460,4 @@ ms.locfileid: "88421080"
 6.  Execute o script para criar a configuração.  
   
 7.  O script não concede nenhum acesso de usuário de banco de dados ao perfil. Portanto, por padrão, o perfil pode ser usado apenas por membros da função de segurança fixa **sysadmin** . Para obter mais informações sobre como conceder acesso a perfis, veja [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
-  
   

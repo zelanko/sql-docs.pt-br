@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480898"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193207"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
 
@@ -38,7 +38,7 @@ ms.locfileid: "89480898"
 
   A transformação Pesquisa executa pesquisas unindo dados em colunas de entrada com colunas em um conjunto de dados de referência. Você usa a pesquisa para acessar informações adicionais em uma tabela relacionada que tem como base valores de colunas comuns.  
   
- O conjunto de dados de referência pode ser um arquivo de cache, uma tabela ou uma exibição existente, uma nova tabela ou o resultado de uma consulta SQL. A transformação Pesquisa usa um gerenciador de conexões OLE DB ou um gerenciador de conexões de cache para se conectar ao conjunto de dados de referência. Para obter mais informações, consulte [Gerenciador de Conexões do OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) e [Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
+ O conjunto de dados de referência pode ser um arquivo de cache, uma tabela ou uma exibição existente, uma nova tabela ou o resultado de uma consulta SQL. A transformação Pesquisa usa um gerenciador de conexões OLE DB ou um gerenciador de conexões de cache para se conectar ao conjunto de dados de referência. Para obter mais informações, consulte [Gerenciador de Conexões do OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) e [Gerenciador de Conexões de Cache](../../connection-manager/cache-connection-manager.md)  
   
  Você pode configurar a transformação Pesquisa das seguintes formas:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "89480898"
   
  A seguir, veja alguns benefícios adicionais da persistência de cache para um arquivo:  
   
--   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, consulte***  [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, consulte***  [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Implante o arquivo de cache com um pacote. ***Você pode usar os dados em vários computadores.*** Para obter mais informações, consulte [Criar e implantar um cache para a Transformação de Pesquisa](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -108,7 +108,7 @@ ms.locfileid: "89480898"
   
      Esta opção de cache é compatível com a opção de cache completo que está disponível para a transformação Pesquisa no [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
--   O conjunto de dados de referência é gerado a partir de uma fonte de dados conectada ao fluxo de dados ou de um arquivo de cache e é carregado no cache antes da execução da transformação Pesquisa. Use o gerenciador de conexões de cache e, opcionalmente, a transformação Pesquisa para acessar o conjunto de dados. Para obter mais informações, consulte [Editor do Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md) e [Transformação de Cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
+-   O conjunto de dados de referência é gerado a partir de uma fonte de dados conectada ao fluxo de dados ou de um arquivo de cache e é carregado no cache antes da execução da transformação Pesquisa. Use o gerenciador de conexões de cache e, opcionalmente, a transformação Pesquisa para acessar o conjunto de dados. Para obter mais informações, consulte [Editor do Gerenciador de Conexões de Cache](../../connection-manager/cache-connection-manager.md) e [Transformação de Cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
 -   O conjunto de dados de referência é gerado usando uma tabela, exibição ou consulta SQL durante a execução da transformação Pesquisa As linhas com e sem entradas correspondentes no conjunto de dados de referência são armazenadas em cache.  
   
@@ -127,15 +127,15 @@ ms.locfileid: "89480898"
   
 -   [Implementar uma pesquisa no modo Sem Cache ou Cache Parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Definir as propriedades de um componente de fluxo de dados](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Vídeo, [Como implementar a transformação Pesquisa no modo de Cache Cheio](https://go.microsoft.com/fwlink/?LinkId=131031), em msdn.microsoft.com  
+-   Vídeo, [Como implementar a transformação Pesquisa no modo de Cache Cheio](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100)), em msdn.microsoft.com  
   
 -   Entrada de blog, [Práticas recomendadas para usar os modos de cache de transformação de pesquisa](https://go.microsoft.com/fwlink/?LinkId=146623), em blogs.msdn.com  
   
@@ -198,7 +198,7 @@ ms.locfileid: "89480898"
  Selecione uma tabela ou exibição existente na lista ou crie uma nova tabela clicando em **Nova**.  
   
 > [!NOTE]  
->  Se você especificar uma instrução SQL na página **Avançado** do **Editor da Transformação Pesquisa**, essa instrução SQL vai sobrescrever e substituir o nome da tabela selecionada aqui. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;Página Avançado&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+>  Se você especificar uma instrução SQL na página **Avançado** do **Editor da Transformação Pesquisa**, essa instrução SQL vai sobrescrever e substituir o nome da tabela selecionada aqui. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;Página Avançado&#41;]().  
   
  **Novo**  
  Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
@@ -270,7 +270,7 @@ ms.locfileid: "89480898"
  Modifique a instrução SQL usada para gerar o conjunto de dados de referência.  
   
 > [!NOTE]  
->  A instrução SQL opcional especificada nesta página substituirá o nome da tabela especificado na página **Conexão** do **Editor da Transformação Pesquisa**. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;Página Conexão&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+>  A instrução SQL opcional especificada nesta página substituirá o nome da tabela especificado na página **Conexão** do **Editor da Transformação Pesquisa**. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;Página Conexão&#41;]().  
   
  **Definir Parâmetros**  
  Mapeie colunas de entrada para parâmetros usando a caixa de diálogo **Definir Parâmetros da Consulta** .  
@@ -283,5 +283,4 @@ ms.locfileid: "89480898"
  [Transformação Pesquisa de Termos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Fluxo de Dados](../../../integration-services/data-flow/data-flow.md)   
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

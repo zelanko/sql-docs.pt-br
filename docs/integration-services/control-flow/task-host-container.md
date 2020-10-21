@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fd2ab8fe157992077618f426f68931c8c87d8ed7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1c57dbe96b038857a329b17d7d9e17b31565102
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495977"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192806"
 ---
 # <a name="task-host-container"></a>Contêiner Host da Tarefa
 
@@ -35,15 +35,14 @@ ms.locfileid: "88495977"
 ## <a name="configuration-of-the-task-host"></a>Configuração do host da tarefa  
  Você pode definir as propriedades na janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou programaticamente.  
   
- Para obter informações sobre como definir essas propriedades no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Definir as propriedades de uma tarefa ou de um contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obter informações sobre como definir essas propriedades no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Definir as propriedades de uma tarefa ou de um contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
  Para obter informações sobre como definir essas propriedades programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
-  
   

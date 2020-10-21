@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b328f2fc32cf784caef1192bc8143b3ed9d1ffbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b528471bdba9125950cc885e91ee2194e446d851
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494723"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196240"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88494723"
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  O registro do DAC só pode ser executado em um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. O registro do DAC não poderá ser executado se um DAC já estiver registrado para o banco de dados. Por exemplo, se o banco de dados foi criado através da implantação de um DAC, você não poderá executar o **Assistente para Registrar o Aplicativo da Camada de Dados**.  
   
- Você não poderá registrar um DAC se o banco de dados tiver objetos que não tenham suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
+ Você não poderá registrar um DAC se o banco de dados tiver objetos que não tenham suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  O registro de um DAC em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] requer, pelo menos, permissões VIEW DEFINITION de escopo de banco de dados e ALTER ANY LOGIN, permissões SELECT em **sys.sql_expression_dependencies**, e associação na função de servidor fixa **dbcreator** . Os membros da função de servidor fixa **sysadmin** ou a conta interna do administrador do sistema do SQL Server denominada **sa** também podem registrar um DAC. O registro de um DAC que não contém logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções **dbmanager** ou **serveradmin** . O registro de um DAC que contém logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções **loginmanager** or **serveradmin** .  
@@ -178,5 +178,4 @@ $registerunit.Register()
   
 ## <a name="see-also"></a>Consulte Também  
  [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
   

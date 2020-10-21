@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d5a3e10574188f4d365ed93b9e1e765b96b6dcba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71a22131a6852708f087ddda67cabc19cdbfd87e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477209"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193111"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Criando uma transformação síncrona com o componente Script
 
@@ -53,7 +53,7 @@ ms.locfileid: "88477209"
   
  Na página **Colunas de Entrada** do **Editor de Transformação Scripts**, a lista de colunas mostra as colunas disponíveis da saída do componente upstream no fluxo de dados. Selecione as colunas que você deseja transformar ou percorrer. Marque qualquer coluna que você queira transformar no local como De leitura/gravação.  
   
- Para obter mais informações sobre a página **Colunas de Entrada** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Colunas de Entrada&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md).  
+ Para obter mais informações sobre a página **Colunas de Entrada** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Colunas de Entrada&#41;](../data-flow/transformations/script-component.md).  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>Configurando entradas, saídas e colunas de saída  
  Um componente de transformação dá suporte a uma ou mais saídas.  
@@ -71,7 +71,7 @@ ms.locfileid: "88477209"
   
 -   Acrescente colunas novas a saídas de erro simuladas para erros em nível de linha. De maneira geral, múltiplas saídas no mesmo **ExclusionGroup** têm o mesmo conjunto de colunas de saída. Porém, se você estiver criando uma saída de erro simulada, pode ser que queira adicionar mais colunas para conter informações de erro. Para obter informações sobre como o mecanismo de fluxo de dados processa linhas de erro, consulte [Usando saídas de erro em um componente de fluxo de dados](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). Observe que no componente Script você deve escrever seu próprio código para preencher as colunas adicionais com informações de erro apropriadas. Para obter mais informações, consulte [Simulando uma saída de erro para o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
   
- Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
+ Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../data-flow/transformations/script-component.md).  
   
 ### <a name="adding-variables"></a>Adicionando variáveis  
  Se desejar usar variáveis existentes no script, adicione-as aos campos de propriedade **ReadOnlyVariables** e **ReadWriteVariables** na página **Script** do **Editor de Transformação Scripts**.  
@@ -80,7 +80,7 @@ ms.locfileid: "88477209"
   
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
- Para obter mais informações sobre a página **Script** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;Página Script&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Para obter mais informações sobre a página **Script** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;Página Script&#41;](../data-flow/transformations/script-component.md).  
   
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>Gerando scripts de um componente de transformação síncrono em modo de design de código  
  Depois de configurar os metadados do seu componente, você poderá escrever seu script personalizado. No **Editor de Transformação Scripts**, na página **Script**, clique em **Editar Script** para abrir o IDE do VSTA ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications), no qual você pode adicionar o script personalizado. A linguagem de scripts usada depende se você selecionou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic ou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# como a linguagem de scripts para a propriedade **ScriptLanguage** na página **Script**.  
@@ -267,4 +267,3 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
  [Compreendendo as transformações síncronas e assíncronas](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
  [Criar uma transformação assíncrona com o componente de Script](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
  [Desenvolvendo um componente de transformação personalizado com saídas síncronas](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
- 

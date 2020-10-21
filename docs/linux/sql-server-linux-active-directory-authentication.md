@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7c93711eae4a6a2eea397940811089f366e47829
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896961"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115919"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Usar autenticação do Active Directory com o SQL Server em Linux
 
@@ -53,9 +53,9 @@ Ingresse no host do SQL Server Linux com um controlador de domínio do Active Di
 ## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a> Criar usuário do AD (ou MSA) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e definir SPN
 
 > [!NOTE]
-> As seguintes etapas usam seu [nome de domínio totalmente qualificado](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se você estiver no **Azure**, deverá **[criar um](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** antes de continuar.
+> As seguintes etapas usam seu [nome de domínio totalmente qualificado](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Se você estiver no **Azure**, deverá **[criar um](/azure/virtual-machines/linux/portal-create-fqdn)** antes de continuar.
 
-1. No controlador de domínio, execute o comando do PowerShell [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) para criar um usuário do AD com uma senha que nunca expira. O exemplo a seguir dá à conta o nome `mssql`, mas o nome dela poderá ser qualquer coisa que você quiser. Você deverá inserir uma nova senha para a conta.
+1. No controlador de domínio, execute o comando do PowerShell [New-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617253(v=technet.10)) para criar um usuário do AD com uma senha que nunca expira. O exemplo a seguir dá à conta o nome `mssql`, mas o nome dela poderá ser qualquer coisa que você quiser. Você deverá inserir uma nova senha para a conta.
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -69,8 +69,8 @@ Ingresse no host do SQL Server Linux com um controlador de domínio do Active Di
 2. Defina o SPN (ServicePrincipalName) para essa conta usando a ferramenta **setspn.exe**. O SPN deve ser formatado exatamente como especificado no exemplo a seguir. É possível localizar o nome de domínio totalmente qualificado do computador host [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executando `hostname --all-fqdns` no host [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A porta TCP deve ser 1433, a menos que você tenha configurado [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para usar um número da porta diferente.
 
    ```PowerShell
-   setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
-   setspn -A MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>** mssql
+   setspn -A MSSQLSvc/<fully qualified domain name of host machine>:<tcp port> mssql
+   setspn -A MSSQLSvc/<netbios name of the host machine>:<tcp port> mssql
    ```
 
    > [!NOTE]
@@ -96,11 +96,11 @@ A configuração da autenticação do AD para o SQL Server em Linux exige uma co
    ```bash
    kinit user@CONTOSO.COM
    kvno user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
+   kvno MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > Os SPNs poderão levar vários minutos para serem propagados por meio de seu domínio, principalmente se ele for grande. Se você receber o erro `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, aguarde alguns minutos e tente novamente.</br></br> Os comandos acima só funcionarão se o servidor tiver ingressado em um domínio do AD, que foi abordado na seção anterior.
+   > Os SPNs poderão levar vários minutos para serem propagados por meio de seu domínio, principalmente se ele for grande. Se você receber o erro `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM`, aguarde alguns minutos e tente novamente.</br></br> Os comandos acima só funcionarão se o servidor tiver ingressado em um domínio do AD, que foi abordado na seção anterior.
 
 1. Usando [**ktpass**](/windows-server/administration/windows-commands/ktpass), adicione entradas keytab para cada SPN usando os seguintes comandos em um prompt de comando do computador Windows:
 

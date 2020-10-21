@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0136b994f064a01a66d4c0884499172b1dab894b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392642"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197200"
 ---
 # <a name="integration-services-tasks"></a>Tarefas do Integration Services
 
@@ -79,7 +79,7 @@ ms.locfileid: "88392642"
   
  Para obter mais informações sobre como adicionar uma tarefa a um pacote programaticamente, consulte [Adicionando tarefas programaticamente](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md).  
   
- Toda tarefa pode ser configurada individualmente usando as caixas de diálogo personalizadas de cada tarefa que o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] oferece, ou a janela Propriedades incluída no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Um pacote pode incluir várias tarefas do mesmo tipo, por exemplo, seis tarefas Execute SQL, sendo que cada tarefa pode ser configurada de forma diferente. Para obter mais informações, consulte [Definir as propriedades de tarefas ou contêineres](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Toda tarefa pode ser configurada individualmente usando as caixas de diálogo personalizadas de cada tarefa que o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] oferece, ou a janela Propriedades incluída no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Um pacote pode incluir várias tarefas do mesmo tipo, por exemplo, seis tarefas Execute SQL, sendo que cada tarefa pode ser configurada de forma diferente. Para obter mais informações, consulte [Definir as propriedades de tarefas ou contêineres](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="tasks-connections-and-groups"></a>Conexões e grupos de tarefas  
  Se a tarefa contiver mais de uma tarefa, elas estarão conectadas e sequenciadas no fluxo de controle por restrições de precedência. Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
@@ -88,5 +88,4 @@ ms.locfileid: "88392642"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  
   

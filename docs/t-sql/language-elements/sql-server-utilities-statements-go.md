@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 973c8eb74a26047dfa8472497e403385e3678326
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b342052d848597a7422adf5594e25a2b799c7b3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445397"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193260"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instruções de utilitários do SQL Server – GO
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88445397"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 GO [count]  
 ```  
   
@@ -57,7 +57,7 @@ GO [count]
   
  Os usuários precisam seguir as regras de lotes. Por exemplo, qualquer execução de um procedimento armazenado depois da primeira instrução em um lote deve incluir a palavra-chave EXECUTE. O escopo de variáveis locais (definidas pelo usuário) é limitado a um lote e não pode ser referenciado após um comando GO.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyMsg VARCHAR(50)  
@@ -81,7 +81,7 @@ GO
   
  Não use um ponto e vírgula como terminador de instrução depois de GO.
  
-```
+```sql
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
@@ -93,21 +93,21 @@ GO;
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria dois lotes. O primeiro lote contém apenas uma instrução `USE AdventureWorks2012` para definir o contexto do banco de dados. As instruções restantes usam uma variável local. Portanto, todas as declarações de variável local devem ser agrupadas em um único lote. Isso é feito sem que haja um comando `GO` até depois da última instrução que faz referência à variável.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NmbrPeople int  
+DECLARE @NmbrPeople INT  
 SELECT @NmbrPeople = COUNT(*)  
 FROM Person.Person;  
 PRINT 'The number of people as of ' +  
-      CAST(GETDATE() AS char(20)) + ' is ' +  
-      CAST(@NmbrPeople AS char (10));  
+      CAST(GETDATE() AS CHAR(20)) + ' is ' +  
+      CAST(@NmbrPeople AS CHAR(10));  
 GO  
 ```  
   
  O exemplo a seguir executa as instruções no lote duas vezes.  
   
-```  
+```sql  
 SELECT DB_NAME();  
 SELECT USER_NAME();  
 GO 2  

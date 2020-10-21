@@ -17,12 +17,12 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c880b9ff6a96a7bcd5365e3afc098467630b3a7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82efd353b95faba757622e37d0471f784d13d58d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465400"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192836"
 ---
 # <a name="system-databases"></a>Bancos de dados do sistema
 
@@ -38,7 +38,7 @@ ms.locfileid: "88465400"
 |[Banco de dados tempdb](../../relational-databases/databases/tempdb-database.md)|É um workspace para reter objetos temporários ou conjuntos de resultados intermediários.|  
 
 > [!IMPORTANT]
-> Para os bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure, apenas o banco de dados mestre e o banco de dados tempdb se aplicam. Para saber mais, confira [O que é um servidor do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Para obter uma discussão sobre o tempdb no contexto do Banco de Dados SQL do Azure, confira [Banco de dados tempdb no Banco de Dados SQL do Azure](tempdb-database.md#tempdb-database-in-sql-database). Para a Instância Gerenciada de SQL do Azure, todos os bancos de dados do sistema se aplicam. Para saber mais sobre Instâncias Gerenciadas no Banco de Dados SQL, confira [O que é uma Instância Gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> Para os bancos de dados individuais e pools elásticos do Banco de Dados SQL do Azure, apenas o banco de dados mestre e o banco de dados tempdb se aplicam. Para saber mais, confira [O que é um servidor do Banco de Dados SQL do Azure](/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Para obter uma discussão sobre o tempdb no contexto do Banco de Dados SQL do Azure, confira [Banco de dados tempdb no Banco de Dados SQL do Azure](tempdb-database.md#tempdb-database-in-sql-database). Para a Instância Gerenciada de SQL do Azure, todos os bancos de dados do sistema se aplicam. Para saber mais sobre Instâncias Gerenciadas no Banco de Dados SQL, confira [O que é uma Instância Gerenciada](/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="modifying-system-data"></a>modificando dados do sistema  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte aos usuários diretamente na atualização de informações de objetos do sistema como tabelas de sistema, procedimentos armazenados do sistema  e exibições de catálogo. Em lugar disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto completo de ferramentas administrativas que permitem aos usuários administrar totalmente seus sistemas e gerenciar todos os usuários e objetos de um banco de dados. Entre elas estão as seguintes:  
@@ -78,5 +78,4 @@ ms.locfileid: "88465400"
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
  [Bancos de dados](../../relational-databases/databases/databases.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d037d4f8a002a0c5636d005ec7b0be28adf3a1b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e46178bf0929eda71b91c7bec1ee26a7ed2a17fd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425708"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195274"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
 
@@ -94,7 +94,7 @@ ms.locfileid: "88425708"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -114,5 +114,4 @@ ms.locfileid: "88425708"
   
 -   [Como manipular dimensões de alteração lenta no SSIS](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)
 -   [Como otimizar o Assistente para Dimensões de Alteração Lenta](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)
-  
   

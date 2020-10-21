@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed482982ecee2de572bc4241f199a7d16abc47d1
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: b574c9efb9f6c5d5cda38731546403e1219c8a36
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875565"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193496"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e Unicode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -428,7 +428,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="locale"></a><a name="Locale_Defn"></a> Localidade    
-Uma localidade é um conjunto de informações associadas a uma localização ou uma cultura. As informações podem incluir o nome e o identificador do idioma falado, o script usado para escrever o idioma e as convenções culturais. As ordenações podem ser associadas a uma ou mais localidades. Para obter mais informações, consulte o artigo sobre [IDs de localidade atribuídas pela Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
+Uma localidade é um conjunto de informações associadas a uma localização ou uma cultura. As informações podem incluir o nome e o identificador do idioma falado, o script usado para escrever o idioma e as convenções culturais. As ordenações podem ser associadas a uma ou mais localidades. Para obter mais informações, consulte o artigo sobre [IDs de localidade atribuídas pela Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).    
     
 ###  <a name="code-page"></a><a name="Code_Page_Defn"></a> Página de código    
 Uma página de código é um conjunto de caracteres ordenado de um determinado script no qual um índice numérico ou valor de ponto de código é associado a cada caractere. Uma página de código do Windows geralmente é referenciada como um *conjunto de* *caracteres*. As páginas de código são usadas para oferecer suporte aos conjuntos de caracteres e layouts de teclado usados por diferentes localidades de sistema do Windows.     
@@ -655,4 +655,4 @@ Para obter mais informações, confira o seguinte conteúdo relacionado:
 [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md)     
 [Escolher um idioma ao criar um índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
-[Conjuntos de caracteres multibyte e de byte único](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
+[Conjuntos de caracteres multibyte e de byte único](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

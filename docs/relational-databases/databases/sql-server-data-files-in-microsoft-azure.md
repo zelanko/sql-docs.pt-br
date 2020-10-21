@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987580"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192846"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Arquivos de dados do SQL Server no Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ A diretriz básica é usar discos do Azure, a menos que você tenha um cenário 
 ### <a name="azure-storage-concepts"></a>Conceitos de Armazenamento do Azure  
 Ao usar o recurso de arquivos de dados do SQL Server no Azure, você precisará criar um contêiner e uma conta de armazenamento no Azure. Em seguida, você precisará criar uma credencial do SQL Server, que inclui as informações sobre a política do contêiner, assim como uma assinatura de acesso compartilhado que é necessária para acessar o contêiner.  
 
-No [Microsoft Azure](https://azure.microsoft.com), uma conta de [armazenamento do Azure](https://azure.microsoft.com/services/storage/) representa o nível mais alto do namespace para acesso aos blobs. Uma conta de armazenamento pode conter um número ilimitado de contêineres, contanto que o seu tamanho total esteja abaixo dos limites de armazenamento. Para obter as informações mais recentes sobre os limites de armazenamento, consulte [Assinatura e limites de serviço, cotas e restrições do Azure](https://docs.microsoft.com/azure/azure-subscription-service-limits). Um contêiner fornece um agrupamento de conjunto de [blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Todos os blobs devem estar em um contêiner. Uma conta pode conter um número ilimitado de contêineres. Da mesma maneira, um contêiner pode armazenar um número ilimitado de blobs. Há dois tipos de blobs que podem ser armazenados no Armazenamento do Azure: blobs de blocos e de páginas. Esse novo recurso usa blobs de página, que são mais eficientes quando os intervalos de bytes em um arquivo, são alterados com frequência. Você pode acessar blobs usando o seguinte formato de URL: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+No [Microsoft Azure](https://azure.microsoft.com), uma conta de [armazenamento do Azure](https://azure.microsoft.com/services/storage/) representa o nível mais alto do namespace para acesso aos blobs. Uma conta de armazenamento pode conter um número ilimitado de contêineres, contanto que o seu tamanho total esteja abaixo dos limites de armazenamento. Para obter as informações mais recentes sobre os limites de armazenamento, consulte [Assinatura e limites de serviço, cotas e restrições do Azure](/azure/azure-subscription-service-limits). Um contêiner fornece um agrupamento de conjunto de [blobs](/azure/storage/common/storage-introduction#blob-storage). Todos os blobs devem estar em um contêiner. Uma conta pode conter um número ilimitado de contêineres. Da mesma maneira, um contêiner pode armazenar um número ilimitado de blobs. Há dois tipos de blobs que podem ser armazenados no Armazenamento do Azure: blobs de blocos e de páginas. Esse novo recurso usa blobs de página, que são mais eficientes quando os intervalos de bytes em um arquivo, são alterados com frequência. Você pode acessar blobs usando o seguinte formato de URL: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
 
 ### <a name="azure-billing-considerations"></a>Considerações sobre cobrança do Azure  
 
@@ -91,7 +91,7 @@ ON
 >[!IMPORTANT]
 >se houver alguma referência ativa aos arquivos de dados em um contêiner, as tentativas de excluir as credenciais correspondentes do SQL Server apresentarão falha.
 
-Para saber mais, confira [Gerenciar o acesso aos recursos de Armazenamento do Azure](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
+Para saber mais, confira [Gerenciar o acesso aos recursos de Armazenamento do Azure](/azure/storage/blobs/storage-manage-access-to-resources).  
 
 ### <a name="security"></a>Segurança  
  Veja abaixo os requisitos e as considerações sobre segurança ao armazenar os Arquivos de Dados do SQL Server no Armazenamento do Azure.
@@ -120,7 +120,7 @@ Para saber mais, confira [Gerenciar o acesso aos recursos de Armazenamento do Az
   
 - Ao usar o recurso Arquivos de Dados do SQL Server no Azure, não haverá suporte para a replicação geográfica em sua conta de armazenamento. Se uma conta de armazenamento for replicada geograficamente e um failover geográfico acontecer, poderá haver corrupção de banco de dados.  
   
-- Para limitações de capacidade, consulte [Introdução ao armazenamento de Blobs](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
+- Para limitações de capacidade, consulte [Introdução ao armazenamento de Blobs](/azure/storage/blobs/storage-blobs-introduction).  
   
 - Não é possível armazenar dados OLTP in-memory no armazenamento de Blobs usando o recurso Arquivos de Dados do SQL Server no Armazenamento do Azure. Isso ocorre porque o OLTP in-memory tem uma dependência do **Fluxo de arquivos** e, na versão atual desse recurso, não há suporte para armazenamento de dados do **Fluxo de arquivos** no Armazenamento do Azure.  
   
@@ -166,10 +166,10 @@ Para saber mais, confira [Gerenciar o acesso aos recursos de Armazenamento do Az
     Resolução: você poderá ver este erro ao tentar remover uma credencial que ainda está sendo usada por um arquivo de banco de dados ativo no Armazenamento do Azure. Para descartar a credencial, primeiro exclua o blob associado que contém esse arquivo de banco de dados. Para excluir um blob que tem uma concessão ativa, primeiro você deve liberar a concessão.  
   
 - *A assinatura de acesso compartilhado não foi criada no contêiner corretamente.*    
-     Resolução: verifique se você criou uma assinatura de acesso compartilhado no contêiner corretamente. Analise as instruções fornecidas na lição 2 em [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
+     Resolução: verifique se você criou uma assinatura de acesso compartilhado no contêiner corretamente. Analise as instruções fornecidas na lição 2 em [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature).  
   
 - *A credencial do SQL Server não foi criada corretamente.*    
-    Resolução: Verifique se você usou “Assinatura de Acesso Compartilhado” para o campo **Identity** e criou um segredo corretamente. Analise as instruções fornecidas na lição 3 em [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../lesson-3-database-backup-to-url.md).  
+    Resolução: Verifique se você usou “Assinatura de Acesso Compartilhado” para o campo **Identity** e criou um segredo corretamente. Analise as instruções fornecidas na lição 3 em [Tutorial: usar o serviço de Armazenamento de Blobs do Microsoft Azure com os bancos de dados do SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url).  
   
  **Erros de blob de concessão:**  
   

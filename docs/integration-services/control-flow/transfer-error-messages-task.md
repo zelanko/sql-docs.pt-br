@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9eb09d094ff5ce907479dacd848ca2a6010cee92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa0bf307931b25b72a56e069e9f1c45b9e6c8b5d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392912"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192776"
 ---
 # <a name="transfer-error-messages-task"></a>Tarefa Transferir Mensagens de Erro
 
@@ -53,7 +53,7 @@ ms.locfileid: "88392912"
  A tarefa Transferir Mensagens de Erro não informa o progresso incremental da transferência de mensagem de erro; informa somente conclusão 0% e 100 %.  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução, definido na propriedade **ExecutionValue** da tarefa retorna o número de mensagens de erro que foram transferidas. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Mensagem de Erro, as informações sobre a transferência de mensagem de erro podem se tornar disponíveis a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ O valor de execução, definido na propriedade **ExecutionValue** da tarefa retorna o número de mensagens de erro que foram transferidas. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Mensagem de Erro, as informações sobre a transferência de mensagem de erro podem se tornar disponíveis a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Mensagens de Erro inclui as seguintes entradas de log personalizadas:  
@@ -81,7 +81,7 @@ ms.locfileid: "88392912"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-error-messages-task-editor-general-page"></a>Editor da Tarefa Transferir Mensagens de Erro (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Mensagens de Erro** para nomear e descrever a tarefa Transferir Mensagens de Erro. A tarefa Transferir Mensagens de Erro transfere uma ou mais mensagens de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
@@ -134,5 +134,4 @@ ms.locfileid: "88392912"
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
-  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ddfed49481df7de8c63db08c8a184247c30857a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465398"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194298"
 ---
 # <a name="modified-features-contained-database"></a>Recursos modificados (banco de dados independente)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88465398"
  A sintaxe para a instrução ALTER DATABASE, quando usada fora de um banco de dados independente, irá diferir da que é usada para bancos de dados dependentes. Estas alterações impedem o cruzamento do limite de banco de dados. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="create-database"></a>CREATE DATABASE  
- A sintaxe CREATE DATABASE para um banco de dados independente difere da que é usada em um banco de dados dependente. Veja [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) para obter informações sobre novos requisitos de sintaxe e concessões.  
+ A sintaxe CREATE DATABASE para um banco de dados independente difere da que é usada em um banco de dados dependente. Veja [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) para obter informações sobre novos requisitos de sintaxe e concessões.  
   
 ## <a name="temporary-tables"></a>Tabelas temporárias  
  São permitidas tabelas temporárias locais dentro de um banco de dados independente, mas o comportamento delas difere das usadas em bancos de dados dependentes. Em bancos de dados dependentes, os dados de tabelas temporárias são agrupados na ordenação de **tempdb**. Em um banco de dados independente, os dados de tabelas temporárias são agrupados na ordenação do banco de dados independente.  
@@ -55,5 +55,4 @@ ms.locfileid: "88465398"
 ## <a name="see-also"></a>Consulte Também  
  [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md)   
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)  
-  
   

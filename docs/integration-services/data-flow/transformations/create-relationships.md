@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 67dcda91fa83869c927b10d769af3866b8bcd146
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 118516d9d6c149b9a8c86840af60b96170e6f091
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477718"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192656"
 ---
 # <a name="create-relationships"></a>Criar Relações
 
@@ -55,8 +55,7 @@ ms.locfileid: "88477718"
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Editor de Transformação Pesquisa &#40;Guia Colunas&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [Editor de Transformação Pesquisa de Termos &#40;Guia Pesquisa de Termos&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
+ [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](./fuzzy-lookup-transformation.md)   
+ [Editor de Transformação Pesquisa &#40;Guia Colunas&#41;](./lookup-transformation.md)   
+ [Editor de Transformação Pesquisa de Termos &#40;Guia Pesquisa de Termos&#41;](./term-lookup-transformation.md)  
   

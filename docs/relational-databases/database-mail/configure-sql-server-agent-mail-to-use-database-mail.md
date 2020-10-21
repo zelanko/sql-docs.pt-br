@@ -13,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385802"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192572"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar o SQL Server Agent Mail para usar o Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88385802"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
   > [!NOTE]
-  > O SQL Agent na Instância Gerenciada sempre é configurado para usar o Database Mail, portanto, esse conteúdo não é aplicável na Instância Gerenciada. Na Instância Gerenciada, você precisa ter um perfil que precisa ser chamado **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** para associar o SQL Agent ao Database Mail. 
+  > O SQL Agent na Instância Gerenciada sempre é configurado para usar o Database Mail, portanto, esse conteúdo não é aplicável na Instância Gerenciada. Na Instância Gerenciada, você precisa ter um perfil que precisa ser chamado **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** para associar o SQL Agent ao Database Mail. 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
@@ -81,5 +81,4 @@ ms.locfileid: "88385802"
 -   [Operadores](../../ssms/agent/operators.md)  
   
      Os operadores são alias de pessoas ou grupos que podem receber notificação eletrônica.  
-  
   

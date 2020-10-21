@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d1d5d09d0c41de51d545ca68aa4509f8a6b240f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0405dabd99568e09bc07502544db5a181bf357a5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487758"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192416"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar a origem dos pacotes com assinaturas digitais
 
@@ -71,7 +71,7 @@ ms.locfileid: "88487758"
 |3|Bloquear assinaturas inválidas e não confiáveis e pacotes não assinados<br /><br /> Essa configuração também bloqueia assinaturas geradas automaticamente.|  
   
 > [!NOTE]  
->  A configuração recomendada para **BlockedSignatureStates** é 3. Essa configuração fornece maior proteção contra pacotes não assinados ou assinaturas que não são válidas nem confiáveis. Porém, a configuração recomendada talvez não seja apropriada em todas as circunstâncias. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico "[Introdução à assinatura de código](https://go.microsoft.com/fwlink/?LinkId=51414)", na biblioteca do MSDN.  
+>  A configuração recomendada para **BlockedSignatureStates** é 3. Essa configuração fornece maior proteção contra pacotes não assinados ou assinaturas que não são válidas nem confiáveis. Porém, a configuração recomendada talvez não seja apropriada em todas as circunstâncias. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico "[Introdução à assinatura de código](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))", na biblioteca do MSDN.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Para implementar uma política de assinatura para pacotes  
   
@@ -104,11 +104,11 @@ ms.locfileid: "88487758"
   
     -   Obtenha um certificado de uma autoridade de certificação comercial pública que emite certificados.  
   
-    -   Obtenha um certificado de um servidor de certificados, que permita que uma organização emita certificados internamente. É necessário adicionar o certificado raiz usado para assinar o certificado ao armazenamento **Autoridades de Certificação Raiz Confiáveis** . Para adicionar o certificado raiz, você pode usar o snap-in de Certificados para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Para obter mais informações, consulte o tópico “[Serviços de certificado](https://go.microsoft.com/fwlink/?LinkId=100755)” na biblioteca do MSDN.  
+    -   Obtenha um certificado de um servidor de certificados, que permita que uma organização emita certificados internamente. É necessário adicionar o certificado raiz usado para assinar o certificado ao armazenamento **Autoridades de Certificação Raiz Confiáveis** . Para adicionar o certificado raiz, você pode usar o snap-in de Certificados para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Para obter mais informações, consulte o tópico “[Serviços de certificado](/windows/win32/seccrypto/certificate-services)” na biblioteca do MSDN.  
   
-    -   Crie seu próprio certificado somente para teste. A Ferramenta de Criação de Certificado (Makecert.exe) gera certificados X.509 para teste. Para obter mais informações, consulte o tópico “[Ferramenta de Criação de Certificado (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)” na Biblioteca MSDN.  
+    -   Crie seu próprio certificado somente para teste. A Ferramenta de Criação de Certificado (Makecert.exe) gera certificados X.509 para teste. Para obter mais informações, consulte o tópico “[Ferramenta de Criação de Certificado (Makecert.exe)](/previous-versions/dotnet/netframework-2.0/bfsktky3(v=vs.80))” na Biblioteca MSDN.  
   
-     Para obter mais informações sobre certificados, consulte a Ajuda online do snap-in de Certificados. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico “[Assinando e verificando o código com o Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)” na biblioteca do MSDN.  
+     Para obter mais informações sobre certificados, consulte a Ajuda online do snap-in de Certificados. Para obter mais informações sobre como assinar ativos digitais, consulte o tópico “[Assinando e verificando o código com o Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))” na biblioteca do MSDN.  
   
 -   Verifique se o certificado foi habilitado para assinatura de código. Para saber se um certificado está habilitado para assinatura de código, revise as propriedades do certificado no snap-in de Certificados.  
   
@@ -153,5 +153,4 @@ ms.locfileid: "88487758"
 ## <a name="see-also"></a>Confira também  
  [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Visão geral de segurança &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
-  
   

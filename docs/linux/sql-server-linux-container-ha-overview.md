@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c4d14e0b7f76aaebd0a0bdac00c93267b91d0ab8
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: d7e15c070b17fd0a3682f5572c9b7cd3ce2c1dee
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785110"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115649"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Alta disponibilidade para contêineres do SQL Server
 
@@ -43,5 +43,5 @@ Para criar um contêiner no Kubernetes, confira [Implantar um contêiner do SQL 
 ## <a name="next-steps"></a>Próximas etapas
 
 Para implantar contêineres do SQL Server no AKS (Serviço de Kubernetes do Azure), confira estes exemplos:
-* [Implantar o SQL Server no contêiner do Docker](sql-server-linux-configure-docker.md)
+* [Implantar o SQL Server no contêiner do Docker](./sql-server-linux-docker-container-deployment.md)
 * [Implantar um contêiner do SQL Server no Kubernetes](tutorial-sql-server-containers-kubernetes.md)

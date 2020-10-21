@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430688"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193206"
 ---
 # <a name="derived-column-transformation"></a>Transformação Coluna Derivada
 
@@ -66,7 +66,7 @@ ms.locfileid: "88430688"
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "88430688"
  Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** automaticamente definirá a página de código para o tipo de dados DT_STR. Será possível atualizar a **Página de Código**.  
   
  **Configurar saída de erro**  
- Especifique como tratar os erros usando a caixa de diálogo [Configurar Saída de Erro](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
+ Especifique como tratar os erros usando a caixa de diálogo [Configurar Saída de Erro](../error-handling-in-data.md) .  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com  
+ Artigo técnico, [Exemplos de expressões SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), em social.technet.microsoft.com

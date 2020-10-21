@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2cd15daac2c287c2dc750e1f79032f855d5640d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7162d2eb4c718330fb3fec38dceddc4f0bf8e04e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349162"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192762"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarefa Transferir Objetos do SQL Server
 
@@ -86,7 +86,7 @@ ms.locfileid: "88349162"
  A tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não informa progresso incremental da transferência do objeto; informa somente conclusão 0% e 100 % .  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução armazenado na propriedade da tarefa **ExecutionValue** retorna o número de objetos transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Objetos do SQL Server, as informações sobre a transferência do objeto podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ O valor de execução armazenado na propriedade da tarefa **ExecutionValue** retorna o número de objetos transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Objetos do SQL Server, as informações sobre a transferência do objeto podem ser disponibilizadas para outros objetos do pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Objetos do SQL inclui as seguintes entradas de log personalizadas:  
@@ -117,7 +117,7 @@ ms.locfileid: "88349162"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>Configuração programática da tarefa Transferir Objetos do SQL Server  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  
@@ -331,7 +331,7 @@ ms.locfileid: "88349162"
 ## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Objetos SQL Server &#40;Página Geral&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Editor da Tarefa Transferir Objetos SQL Server &#40;Página Geral&#41;]()   
  [Página Expressões](../../integration-services/expressions/expressions-page.md)   
  [Formatos de dados para importação ou exportação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+ [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)

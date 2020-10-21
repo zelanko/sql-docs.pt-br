@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6427b808d31c9b1938b093da2bdf14d59bec90cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ed5f1b09cbbaa4d20c891a03d9846949eedc8bc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457358"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196432"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>Propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados
 
@@ -38,6 +38,5 @@ ms.locfileid: "88457358"
  Para obter mais informações, consulte [Destino de treinamento do modelo de Data Mining](../../integration-services/data-flow/data-mining-model-training-destination.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Propriedades comuns](./set-the-properties-of-a-data-flow-component.md)  
   

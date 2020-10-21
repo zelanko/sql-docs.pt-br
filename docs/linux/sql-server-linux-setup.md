@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 915aaabeedeb7c240495e635ebb679c252112385
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 363eca526099396001f8df688657e50be32a9c79
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897312"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115609"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Diretrizes de instalação para SQL Server em Linux
 
@@ -26,7 +26,7 @@ Este artigo fornece diretrizes para instalar, atualizar e desinstalar o SQL Serv
 Para ver outros cenários de implantação, confira:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
-- [Contêineres do Docker](../linux/sql-server-linux-configure-docker.md)
+- [Contêineres do Docker](./sql-server-linux-docker-container-deployment.md)
 - [Kubernetes – Clusters de Big Data](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]

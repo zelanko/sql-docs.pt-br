@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897204"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115787"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introdução ao envio de logs no Linux
 
@@ -30,7 +30,7 @@ Conforme descrito nesta imagem, uma sessão de envio de logs envolve as seguinte
 - Restaurar o arquivo de backup de log de transações nas Instâncias secundárias do SQL Server
 
 ## <a name="prerequisites"></a>Prerequisites
-- [Instalar o SQL Server Agent no Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+- [Instalar o SQL Server Agent no Linux](./sql-server-linux-setup-sql-agent.md)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurar um compartilhamento de rede para o envio de logs usando o CIFS 
 
@@ -319,5 +319,3 @@ Conforme descrito nesta imagem, uma sessão de envio de logs envolve as seguinte
     ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
-

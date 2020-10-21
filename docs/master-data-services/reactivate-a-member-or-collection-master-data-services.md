@@ -1,5 +1,6 @@
 ---
-title: Reativar um membro ou coleção (Master Data Services) | Microsoft Docs
+description: Reativar um membro ou coleção (Master Data Services)
+title: Reativar um membro ou coleção
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dce90b3bf8b151ec5ea24dda8ea3628852a8dcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257933"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Reativar um membro ou coleção (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode reativar um membro que estava:  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68093109"
   
 -   No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>Para reativar um membro ou coleção  
   
@@ -65,7 +66,7 @@ ms.locfileid: "68093109"
   
 7.  Na caixa de diálogo de confirmação, clique em **OK**. Uma nova transação é adicionada, mostrando **Ativo** na coluna **Novo Valor** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Excluir um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Membros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Coleções &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  

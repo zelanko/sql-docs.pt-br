@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: d0cd1e6c7af5fd4d2f8742e88b4b8853645fe5a7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442898"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115432"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Novidades do SQL Server 2019 no Linux
 
@@ -42,7 +42,7 @@ As atualizações foram feitas no SQL Server 2019 no Linux:
 | PolyBase em Linux | [Instalar o PolyBase](../relational-databases/polybase/polybase-linux-setup.md) no Linux para conectores não Hadoop.<br/><br/>[Mapeamento de tipo do PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Suporte ao CDC (captura de dados de alterações) | O CDC (captura de dados de alterações) agora é compatível no Linux para SQL Server 2019. |
 | Registro de Contêiner da Microsoft | O [Registro de Contêiner da Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) agora substitui o Docker Hub para novas imagens oficiais de contêiner da Microsoft, incluindo [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
-| Contêineres não raiz | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz a capacidade de criar contêineres mais seguros, iniciando o processo [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] como um usuário não raiz por padrão. Confira [criar e executar contêineres do SQL Server como um usuário não raiz](sql-server-linux-configure-docker.md#buildnonrootcontainer) para obter mais detalhes. |
+| Contêineres não raiz | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduz a capacidade de criar contêineres mais seguros, iniciando o processo [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] como um usuário não raiz por padrão. Confira [criar e executar contêineres do SQL Server como um usuário não raiz](./sql-server-linux-docker-container-security.md#buildnonrootcontainer) para obter mais detalhes. |
 
 ## <a name="next-steps"></a>Próximas etapas
 

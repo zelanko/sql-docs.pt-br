@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 77df45c3eb4cded79e4485e8c93262a6b5ed43fc
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f4f323e1649e022487ca9505ac5a6a949087b00f
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180010"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115509"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Como configurar o MSDTC (Coordenador de Transações Distribuídas da Microsoft) no Linux
 
@@ -204,8 +204,8 @@ Se um cliente em um sistema operacional Windows precisar se inscrever em uma tra
 
 | Sistema operacional | Versão mínima | Build do sistema operacional |
 |---|---|---|
-| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
-| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
+| [Windows Server](/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>Próximas etapas
 

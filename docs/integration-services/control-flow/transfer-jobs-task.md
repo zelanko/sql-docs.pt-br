@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5eaf7aca7e96aaf3aae3e095e92fecfa749cb1ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab4dfc14db0efacfe03ee7289c27f684b3e4a9eb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430968"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192783"
 ---
 # <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos
 
@@ -50,7 +50,7 @@ ms.locfileid: "88430968"
  A tarefa Transferir Trabalhos gera um evento de informação com o número de trabalhos transferidos e um evento de aviso quando um trabalho é substituído. A tarefa não informa o progresso incremental da transferência de trabalhos; informa só 0% e 100% concluídos.  
   
 ## <a name="execution-value"></a>Valor de execução  
- O valor de execução, definido na propriedade **ExecutionValue** da tarefa retorna o número de trabalhos que são transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Trabalhos, informações sobre a transferência de trabalhos podem se tornar disponíveis a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ O valor de execução, definido na propriedade **ExecutionValue** da tarefa retorna o número de trabalhos que são transferidos. Ao atribuir uma variável definida pelo usuário à propriedade **ExecValueVariable** da tarefa Transferir Trabalhos, informações sobre a transferência de trabalhos podem se tornar disponíveis a outros objetos no pacote. Para obter mais informações, consulte [Variáveis do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Usar variáveis em pacotes](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Entradas de log  
  A tarefa Transferir Trabalhos inclui as seguintes entradas de log personalizadas:  
@@ -78,7 +78,7 @@ ms.locfileid: "88430968"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-jobs-task-editor-general-page"></a>Editor da Tarefa Transferir Trabalhos (página Geral)
   Use a página **Geral** da caixa de diálogo do **Editor da Tarefa Transferir Trabalhos** para nomear e descrever a tarefa Transferir Trabalhos.  
@@ -151,5 +151,4 @@ ms.locfileid: "88430968"
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Fluxo de Controle](../../integration-services/control-flow/control-flow.md)  
-  
   

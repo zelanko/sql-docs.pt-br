@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178251"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115755"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Instalar Serviços do Machine Learning do SQL Server (R e Python) em Linux
 
@@ -47,7 +47,7 @@ Este artigo explica como instalar o [Serviços de Machine Learning do SQL Server
 
 * Você deve ter uma ferramenta para executar comandos T-SQL. 
 
-  * Você pode usar o [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), uma ferramenta de banco de dados gratuita que é executada no Linux, no Windows e no macOS.
+  * Você pode usar o [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), uma ferramenta de banco de dados gratuita que é executada no Linux, no Windows e no macOS.
 
 ## <a name="package-list"></a>Lista de pacotes
 
@@ -439,4 +439,4 @@ Os desenvolvedores do Python podem aprender a usar o Python com o SQL Server seg
 Os desenvolvedores do R podem começar com alguns exemplos simples e aprender os fundamentos de como o R funciona com o SQL Server. Para a próxima etapa, confira os links a seguir:
 
 + [Início Rápido: Executar o R no T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Análise interna no banco de dados para desenvolvedores de R](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Análise interna no banco de dados para desenvolvedores de R](../machine-learning/tutorials/r-taxi-classification-introduction.md)
