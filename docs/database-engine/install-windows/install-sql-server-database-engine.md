@@ -13,12 +13,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8638c87129cfcc567296c0cf20b6b4a9f2f2b08a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6a895fb07d21fe7411fc019d5320dc9d2f6037cb
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670439"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155018"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar o Mecanismo de Banco de Dados do SQL Server
 
@@ -40,7 +40,7 @@ Os seguintes recursos são instalados quando você seleciona o **Mecanismo de Ba
 -   [Replicação do SQL Server](../../relational-databases/replication/sql-server-replication.md) – é um componente opcional  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Serviços de Machine Learning](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R e Python) e [Extensões de Idioma](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) – componente opcional
+-   [Serviços de Machine Learning](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R e Python) e [Extensões de Idioma](../..//language-extensions/install/windows-java.md) (Java) – componente opcional
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d884f38d93d7e79094fd1e2074e92e37050ddfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb9a1e1dcb25f42e2d9a49c1e0e5c1a77a3f0ea
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477230"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193056"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Executar um pacote do SSIS com o SSMS (SQL Server Management Studio)
 
@@ -27,7 +27,7 @@ O SQL Server Management Studio é um ambiente integrado para gerenciar qualquer 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Antes de começar, verifique se você tem a última versão do SSMS (SQL Server Management Studio). Para baixar o SSMS, consulte [Baixar o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Antes de começar, verifique se você tem a última versão do SSMS (SQL Server Management Studio). Para baixar o SSMS, consulte [Baixar o SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md).
 
 Um servidor do Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
@@ -86,4 +86,4 @@ Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo
     - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Executar um pacote do SSIS no prompt de comando](./ssis-quickstart-run-cmdline.md)
     - [Executar um pacote do SSIS com o PowerShell](ssis-quickstart-run-powershell.md)
-    - [Executar um pacote do SSIS com o C#](./ssis-quickstart-run-dotnet.md) 
+    - [Executar um pacote do SSIS com o C#](./ssis-quickstart-run-dotnet.md)

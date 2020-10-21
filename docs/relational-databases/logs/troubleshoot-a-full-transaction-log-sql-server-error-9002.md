@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9eb0bd04dc50aac286b72983ee4b3d196f04c60c
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006543"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175911"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solução de problemas em um log de transação completa (SQL Server Erro 9002)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86006543"
  
  Para descobrir o que está impedindo o truncamento de log em um determinado caso, use as colunas **log_reuse_wait** e **log_reuse_wait_desc** da exibição de catálogo do **sys.database**. Para obter mais informações, veja [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Para descrições de fatores que podem adiar o truncamento de log, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-> **IMPORTANTE:**  
+> [!IMPORTANT]  
 >  Se o banco de dados estava em recuperação quando o erro 9002 aconteceu, depois de resolver o problema, recupere o banco de dados usando [ALTER DATABASE *database_name* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
  As alternativas para responder a um log de transações completo incluem:  
@@ -61,8 +61,8 @@ ms.locfileid: "86006543"
   
  **Para criar um backup de log de transações**  
   
-> **IMPORTANTE**  
->  Se o banco de dados estiver danificado, consulte [Backups da parte final do Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+> [!IMPORTANT]  
+> Se o banco de dados estiver danificado, consulte [Backups da parte final do Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -74,7 +74,8 @@ ms.locfileid: "86006543"
 ### <a name="move-the-log-file-to-a-different-disk"></a>Mover o arquivo de log para um disco diferente  
  Se você não puder liberar espaço de disco suficiente na unidade que contém o arquivo de log, pense em mover o arquivo para outra unidade com espaço suficiente.  
   
-> **IMPORTANTE:** Arquivos de log nunca devem ser colocados em sistemas de arquivos compactados.  
+> [!IMPORTANT]
+> Arquivos de log nunca devem ser colocados em sistemas de arquivos compactados.  
   
  **Mover um arquivo de log**  
   
@@ -91,7 +92,8 @@ ms.locfileid: "86006543"
   
 -   Ativar o crescimento automático usando a instrução ALTER DATABASE para definir um incremento de crescimento diferente de zero para a opção FILEGROWTH.  
   
-> **OBSERVAÇÃO** Em qualquer caso, se o limite de tamanho atual tiver sido alcançado, aumente o valor MAXSIZE.  
+> [!NOTE]
+> Em qualquer caso, se o limite de tamanho atual foi alcançado, aumente o valor MAXSIZE.  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>Adicionar um arquivo de log a um disco diferente  
  Adicione um arquivo de log novo ao banco de dados em um disco diferente que tenha espaço suficiente usando ALTER DATABASE <database_name> ADD LOG FILE.  

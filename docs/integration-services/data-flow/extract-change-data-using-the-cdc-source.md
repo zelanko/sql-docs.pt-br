@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6ae5739b4309c9f56d2f67a17573722f141ec5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb1fc17be92259e0fe642c90f760c375e5eacb0f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430878"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192720"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extrair dados de alteração por meio da origem CDC
 
@@ -76,8 +76,7 @@ ms.locfileid: "88430878"
 15. Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [Editor de Origem CDC &#40;página Colunas&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
+ [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](./cdc-source.md)   
+ [Editor de Origem CDC &#40;página Colunas&#41;](./cdc-source.md)   
+ [Editor de Origem CDC &#40;Página Saída de Erro&#41;](./cdc-source.md)  
   

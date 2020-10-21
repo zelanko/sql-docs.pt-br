@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aabae9ce08729c5dab6a0ea57c5e75900c9aaff8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8ff797225d3a97673bf0f1b108ce15eb6e8bd52
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430398"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193096"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Obtendo uma lista para o loop ForEach com a tarefa Script
 
@@ -252,6 +252,5 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## <a name="see-also"></a>Consulte Também  
  [Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md)   
- [Para configurar um contêiner Loop Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-  
+ [Para configurar um contêiner Loop Foreach](../control-flow/foreach-loop-container.md)  
   

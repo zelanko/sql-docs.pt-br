@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fdad63c6b5d97d9b6b8193babc67ad8a57a32f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a694df5f4920ecd70e4aa27def778712fbbf953
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425738"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195290"
 ---
 # <a name="script-component"></a>Componente Script
 
@@ -66,7 +66,7 @@ ms.locfileid: "88425738"
  No Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , o componente Script tem dois modos: modo do design de metadados e modo do design de código. No modo design de metadados, você pode adicionar e modificar as entradas e saídas do componente Script, mas não pode escrever código. Depois que todas as entradas e saídas são configuradas, você troca para o modo do design de código para escrever o script. O componente Script gera automaticamente o código base a partir dos metadados das entradas e saídas. Se você alterar os metadados depois que o componente Script gerar o código base, talvez seu código não seja compilado porque o código base atualizado pode ser incompatível com seu código.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Escrevendo o Script que o componente usa  
- O componente Script usa o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] VSTA (Tools for Applications) como o ambiente em que os scripts são escritos. Você acessa o VSTA no **Editor de Transformação Scripts**. Para obter mais informações, consulte [Editor de Transformação Scripts &#40;Página Script&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ O componente Script usa o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] VSTA (Tools for Applications) como o ambiente em que os scripts são escritos. Você acessa o VSTA no **Editor de Transformação Scripts**. Para obter mais informações, consulte [Editor de Transformação Scripts &#40;Página Script&#41;]().  
   
  O componente Script fornece um projeto VSTA que inclui uma classe gerada automaticamente, nomeada ScriptMain, que representa os metadados do componente. Por exemplo, se o componente Script for usado como uma transformação que tem três saídas, o ScriptMain incluirá um método para cada saída. O ScriptMain é o ponto de entrada para o script.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88425738"
 ### <a name="configuring-the-script-component-programmatically"></a>Configurando o componente Script programaticamente  
  Para obter mais informações sobre as propriedades que podem ser definidas na janela **Propriedades** ou programaticamente, clique em um dos seguintes tópicos:  
   
--   [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriedades comuns](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -181,7 +181,7 @@ ms.locfileid: "88425738"
  **Inputs and outputs**  
  Selecione uma entrada ou uma saída à esquerda para exibir suas propriedades na tabela à direita. As propriedades disponíveis para edição variam de acordo com a seleção. Muitas das propriedades exibidas são somente leitura. Para obter mais informações sobre as propriedades individuais, consulte os tópicos abaixo.  
   
- [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Propriedades comuns](../set-the-properties-of-a-data-flow-component.md)  
   
  [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -224,5 +224,4 @@ ms.locfileid: "88425738"
  [Transformações do Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [Estender o fluxo de dados com o componente de Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
-  
   

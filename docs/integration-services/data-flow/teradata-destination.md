@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: caa6cc656e37f4718e06c9af010b458dfa1b738d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484499"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194708"
 ---
 # <a name="teradata-destination"></a>Destino do Teradata
 
@@ -223,7 +223,7 @@ Use a página de Saída de Erro da caixa de diálogo Editor de Destino do Terada
 
 Selecione como o destino do Teradata deve tratar erros em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.
 
-**Tópicos relacionados**: [Tratamento de Erro em Dados](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Tópicos relacionados**: [Tratamento de Erro em Dados](./error-handling-in-data.md?view=sql-server-2017)
 
 **Truncation**
 

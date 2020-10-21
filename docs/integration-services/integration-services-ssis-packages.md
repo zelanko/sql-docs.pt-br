@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449808"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193844"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacotes do SSIS (Integration Services)
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449808"
 ### <a name="configurations"></a>Configurações  
  Uma configuração é um conjunto de pares propriedade-valor que define as propriedade do pacote e suas tarefas, contêineres, variáveis, conexões e manipuladores de eventos quando o pacote é executado. Usar configurações possibilita atualizar as propriedades sem modificar o pacote. Quando o pacote é executado, as informações de configuração são carregadas, atualizando os valores das propriedades. Por exemplo, uma configuração pode atualizar a cadeia de conexão da conexão.  
   
- A configuração é salva e implantada com o pacote quando este é instalado em um computador diferente. Os valores da configuração podem ser atualizados quando o pacote é instalado para dar suporte ao pacote em um ambiente diferente. Para obter mais informações, consulte [Criar configurações de pacote](../integration-services/packages/create-package-configurations.md).  
+ A configuração é salva e implantada com o pacote quando este é instalado em um computador diferente. Os valores da configuração podem ser atualizados quando o pacote é instalado para dar suporte ao pacote em um ambiente diferente. Para obter mais informações, consulte [Criar configurações de pacote](./packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="logging-and-log-providers"></a>Log e provedores de log  
  Um log é uma coleção de informações sobre o pacote coletada quando este é executado. Por exemplo, um log pode fornecer a hora inicial e final da execução de um pacote. Um provedor de log define o tipo de destino e o formato que o pacote e seus contêineres e tarefas podem usar para registrar informações em tempo de execução. Os logs são associados a um pacote, mas as tarefas e os contêineres do pacote podem registrar informações em qualquer log de pacote. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui vários provedores de log internos para registro em log. Por exemplo, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui provedores de log para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e arquivos de texto. Você também pode criar provedores de log personalizados e usá-los para registrar informações. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
@@ -117,5 +117,4 @@ ms.locfileid: "88449808"
 -   [Criar pacotes nas Ferramentas de Dados do SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   Consulte [Compilando pacotes de forma programática](../integration-services/building-packages-programmatically/building-packages-programmatically.md) no Guia do Desenvolvedor. 
-  
   

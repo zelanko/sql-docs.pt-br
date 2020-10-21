@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dc0705d65cf77dc0aa1f334fee2d78d2ca2e400
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733870"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193426"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85733870"
  Use esta página para selecionar um servidor de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o data warehouse de gerenciamento. O data warehouse de gerenciamento é um banco de dados relacional que armazenará dados coletados.  
   
 > [!NOTE]  
->  Você deve ter o nível apropriado de permissões para criar o data warehouse de gerenciamento no servidor. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). Você também deve ter o nível apropriado de permissões para criar logons para funções de data warehouse de gerenciamento.  
+>  Você deve ter o nível apropriado de permissões para criar o data warehouse de gerenciamento no servidor. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md). Você também deve ter o nível apropriado de permissões para criar logons para funções de data warehouse de gerenciamento.  
   
  **Nome do servidor**  
  Especifica o nome do servidor que hospedará o data warehouse de gerenciamento.  
@@ -139,5 +139,4 @@ ms.locfileid: "85733870"
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [Gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

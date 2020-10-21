@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf44509a479e66175d89c38c42595e418dc6c750
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495290"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192396"
 ---
 # <a name="system-variables"></a>Variáveis do sistema
 
@@ -109,6 +109,5 @@ ms.locfileid: "88495290"
  Essa regra se aplica também a variáveis definidas pelo usuário. Mas, enquanto os tipos de dados de variáveis do sistema não podem ser alterados e você precisa moldar o uso dessas variáveis para se ajustar aos tipos de dados, aqueles definidos pelo usuário são mais flexíveis. As variáveis definidas pelo usuário e usadas em associações de parâmetro são geralmente definidas com tipos de dados compatíveis aos tipos de dados dos parâmetros para os quais são mapeados.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Mapear parâmetros de consulta para variáveis em uma tarefa Executar SQL](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
-  
+ [Mapear parâmetros de consulta para variáveis em uma tarefa Executar SQL](./control-flow/execute-sql-task.md)  
   
