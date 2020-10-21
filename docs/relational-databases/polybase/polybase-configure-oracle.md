@@ -10,14 +10,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: c2d0edde6ca50074f05ff51eca0de38ec947f31a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 29a8d7074d88af68605831529ca0e92e58a6129e
+ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834036"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92134814"
 ---
-# <a name="configure-polybase-to-access-external-data-in-oracled"></a>Configurar o PolyBase para acessar dados externos no Oracled
+# <a name="configure-polybase-to-access-external-data-in-oracle"></a>Configurar o PolyBase para acessar dados externos no Oracle
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

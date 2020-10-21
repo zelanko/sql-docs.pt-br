@@ -1,5 +1,6 @@
 ---
-title: Excluir uma linha (Suplemento MDS para Excel) | Microsoft Docs
+description: Excluir uma linha (suplemento MDS para Excel)
+title: Excluir uma linha
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8ea865049ecbcfa41390671880e0b5bbeae38cb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1bb83bdbe463efb5ed93364cbe643f87be988cc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257622"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Excluir uma linha (suplemento MDS para Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], exclua uma linha de dados (um membro) do repositório do MDS quando você não desejar mais disponibilizá-la aos usuários.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "68092408"
   
 3.  Na caixa de diálogo de confirmação, clique em **Sim**.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral: Importando dados do Excel &#40;suplemento do MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral: Importando dados do Excel &#40;Suplemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

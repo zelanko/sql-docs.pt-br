@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ddf7e26e4eba9a3120d5a0052e29e8a763689556
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e80ddcc6a21eecfea98fbe44aa985066c1a92736
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449653"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193783"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Lição 2-2: Adicionar e configurar o contêiner Loop Foreach
 
@@ -90,8 +90,7 @@ Após essas modificações no pacote, quando ele for executado, o contêiner Loo
 [Etapa 3: Modificar o gerenciador de conexões de Arquivo Simples](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Confira também  
-[Configurar um contêiner Loop Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-[Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+[Configurar um contêiner Loop Foreach](./control-flow/foreach-loop-container.md)  
+[Usar variáveis em pacotes](./integration-services-ssis-variables.md)  
   
   

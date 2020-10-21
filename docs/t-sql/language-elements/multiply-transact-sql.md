@@ -21,12 +21,12 @@ ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4265eac0332833e2a3fdae2957e3ef37b7b62707
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a94c49a193d4ca0589fa733576acda27c2e0e92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467633"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193306"
 ---
 # <a name="-multiplication-transact-sql"></a>* (Multiplicação) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88467633"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql  
 expression * expression  
 ```  
   
@@ -53,7 +53,7 @@ expression * expression
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir recupera o número de identificação do produto, o nome, o preço de tabela e o novo preço de tabela de todas as bicicletas mountain bike na tabela `Product`. O novo preço de tabela é calculado usando o operador aritmético `*` para multiplicar `ListPrice` por `1.15`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID, Name, ListPrice, ListPrice * 1.15 AS NewPrice  
@@ -66,7 +66,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir recupera o nome e sobrenome dos funcionários na tabela `dimEmployee` e calcula o pagamento de `VacationHours` para cada um.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, BaseRate * VacationHours AS VacationPay  

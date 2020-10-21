@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ad75032f362b3cbdef46eb247d1fd524275055f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0434642595fb334c138e1c3d1764384760a38407
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919602"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193366"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "86919602"
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
-  
 KILL QUERY NOTIFICATION SUBSCRIPTION   
    { ALL | subscription_id }  
 ```  
@@ -68,14 +67,14 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>a. Removendo todas as assinaturas de notificação de consulta na instância.  
  O exemplo a seguir remove todas as assinaturas de notificação de consulta na instância.  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;  
 ```  
   
 ### <a name="b-removing-a-single-query-notification-subscription"></a>B. Removendo uma única assinatura de notificação de consulta  
  O exemplo a seguir remove a assinatura de notificação da consulta com a identificação `73`.  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   

@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa7cd3bd09f71555c826622030e3183d269abb4a
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 7b6583ce7fb4ae2d0b37d898b549a385cfc09763
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088886"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115427"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Perguntas frequentes sobre o SQL Server em Linux
 
@@ -95,7 +95,7 @@ As seções a seguir fornecem perguntas e respostas comuns sobre o SQL Server em
 
 1. **Posso executar uma instalação autônoma do SQL Server em Linux?**
 
-   Sim. Para obter uma discussão sobre a instalação autônoma, confira [Orientação de instalação do SQL Server em Linux](sql-server-linux-setup.md#unattended). Confira os scripts de exemplo [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md) e [Ubuntu](sample-unattended-install-ubuntu.md). Você também pode ler [este script de exemplo](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) criado pela equipe de consultoria do cliente SQL Server.
+   Sim. Para obter uma discussão sobre a instalação autônoma, confira [Orientação de instalação do SQL Server em Linux](sql-server-linux-setup.md#unattended). Confira os scripts de exemplo [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md) e [Ubuntu](sample-unattended-install-ubuntu.md). Você também pode ler [este script de exemplo](/archive/blogs/sqlcat/unattended-install-and-configuration-for-sql-server-2017-on-linux) criado pela equipe de consultoria do cliente SQL Server.
 
 ## <a name="tools"></a>Ferramentas
 
@@ -117,7 +117,7 @@ As seções a seguir fornecem perguntas e respostas comuns sobre o SQL Server em
 
 1. **Quais ferramentas estão disponíveis para monitorar o desempenho do SQL Server em Linux?**
 
-   Você pode usar [DMVs (exibições de gerenciamento dinâmico do sistema)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) para coletar vários tipos de informações sobre o SQL Server, incluindo informações de processo do Linux. Você pode usar o [Repositório de Consultas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) para melhorar o desempenho da consulta. Outras ferramentas, como o [Painel de Desempenho](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/) interno, funcionam remotamente no SSMS (SQL Server Management Studio) do Windows.
+   Você pode usar [DMVs (exibições de gerenciamento dinâmico do sistema)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) para coletar vários tipos de informações sobre o SQL Server, incluindo informações de processo do Linux. Você pode usar o [Repositório de Consultas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) para melhorar o desempenho da consulta. Outras ferramentas, como o [Painel de Desempenho](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in) interno, funcionam remotamente no SSMS (SQL Server Management Studio) do Windows.
 
    > [!TIP]
    > Uma forma de melhorar o desempenho é configurar corretamente o sistema operacional Linux e a instância do SQL Server. Para obter mais informações, confira [Práticas recomendadas de desempenho e diretrizes de configuração do SQL Server em Linux](sql-server-linux-performance-best-practices.md).
@@ -130,7 +130,7 @@ As seções a seguir fornecem perguntas e respostas comuns sobre o SQL Server em
 
 1. **O SQL Server em Linux dá suporte a várias instâncias no mesmo host?**
 
-   É recomendável executar vários contêineres em um host para ter várias instâncias distintas. Isso é facilmente obtido usando o Docker, mas cada contêiner precisa escutar em uma porta diferente. Para obter mais informações, confira [Executar vários contêineres de SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   É recomendável executar vários contêineres em um host para ter várias instâncias distintas. Isso é facilmente obtido usando o Docker, mas cada contêiner precisa escutar em uma porta diferente. Para obter mais informações, confira [Executar vários contêineres de SQL Server](./sql-server-linux-docker-container-deployment.md#multiple).
 
 1. **Há suporte para a Autenticação do Active Directory no Linux?**
 

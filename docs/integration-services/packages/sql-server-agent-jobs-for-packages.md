@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83eaa525c9cfa6ca80be2712fd0d21e42cc4f180
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04007ee3165838669fd1b0faefdcb20d09940af7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425188"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192464"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabalhos do SQL Server Agent para pacotes
 
@@ -45,17 +45,17 @@ ms.locfileid: "88425188"
 -   [Solucionando problemas de pacotes agendados](#trouble)  
   
 ##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent é o serviço instalado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite automatizar e agendar tarefas executando trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve estar sendo executado antes que os trabalhos possam ser executados automaticamente. Para obter mais informações, consulte [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent é o serviço instalado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite automatizar e agendar tarefas executando trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve estar sendo executado antes que os trabalhos possam ser executados automaticamente. Para obter mais informações, consulte [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
   
  O nó do **SQL Server Agent** é exibido no Pesquisador de Objetos em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quando você se conecta a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
- Para automatizar uma tarefa recorrente, crie um trabalho na caixa de diálogo **Novo Trabalho** . Para obter mais informações, consulte [Implementar trabalhos](https://docs.microsoft.com/sql/ssms/agent/implement-jobs).  
+ Para automatizar uma tarefa recorrente, crie um trabalho na caixa de diálogo **Novo Trabalho** . Para obter mais informações, consulte [Implementar trabalhos](../../ssms/agent/implement-jobs.md).  
   
- Depois de criar o trabalho, adicione pelo menos uma etapa. Um trabalho pode incluir várias etapas, e cada etapa pode executar uma tarefa diferente. Para obter mais informações, consulte [Gerenciar etapas de trabalho](https://docs.microsoft.com/sql/ssms/agent/manage-job-steps).  
+ Depois de criar o trabalho, adicione pelo menos uma etapa. Um trabalho pode incluir várias etapas, e cada etapa pode executar uma tarefa diferente. Para obter mais informações, consulte [Gerenciar etapas de trabalho](../../ssms/agent/manage-job-steps.md).  
   
- Depois de criar o trabalho e as etapas do trabalho, crie uma agenda para executar o trabalho. Entretanto, você também pode criar um trabalho agendado para execução manual. Para obter mais informações, veja [Criar e anexar agendamentos a trabalhos](https://docs.microsoft.com/sql/ssms/agent/create-and-attach-schedules-to-jobs).  
+ Depois de criar o trabalho e as etapas do trabalho, crie uma agenda para executar o trabalho. Entretanto, você também pode criar um trabalho agendado para execução manual. Para obter mais informações, veja [Criar e anexar agendamentos a trabalhos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- Você pode aperfeiçoar o trabalho configurando opções de notificação, como especificar um operador para enviar uma mensagem de email quando o trabalho for concluído ou adicionar alertas. Para obter mais informações, consulte [Alertas](https://docs.microsoft.com/sql/ssms/agent/alerts).  
+ Você pode aperfeiçoar o trabalho configurando opções de notificação, como especificar um operador para enviar uma mensagem de email quando o trabalho for concluído ou adicionar alertas. Para obter mais informações, consulte [Alertas](../../ssms/agent/alerts.md).  
   
 ##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  Quando você cria um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , é necessário adicionar pelo menos uma etapa e definir o tipo da etapa para o **Pacote do SQL Server Integration**. Um trabalho pode incluir várias etapas, e cada etapa pode executar um pacote diferente.  
@@ -64,14 +64,14 @@ ms.locfileid: "88425188"
   
  Para obter mais informações, consulte [Agendar um pacote usando o SQL Server Agent](#schedule).  
   
- Assista a um vídeo que demonstra como usar o Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar um pacote na página inicial de vídeos, [Como automatizar a execução de pacotes usando o SQL Server Agent (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), na Biblioteca MSDN.  
+ Assista a um vídeo que demonstra como usar o Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar um pacote na página inicial de vídeos, [Como automatizar a execução de pacotes usando o SQL Server Agent (vídeo do SQL Server)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100)), na Biblioteca MSDN.  
   
 ##  <a name="troubleshooting"></a><a name="trouble"></a> Solução de problemas  
  Uma etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não inicia um pacote, embora o pacote seja executado com êxito no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e na linha de comando. Há algumas razões comuns para esse problema e várias soluções recomendadas. Para obter mais informações, consulte os recursos a seguir.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Artigo da Base de Dados de Conhecimento, [Um pacote SSIS não é executado quando você chama o pacote SSIS a partir de uma etapa de trabalho do SQL Server Agent](https://support.microsoft.com/kb/918760)  
   
--   Vídeo, [Solução de problemas: execução de pacotes SSIS usando o SQL Server Agent (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772), na Biblioteca MSDN.  
+-   Vídeo, [Solução de problemas: execução de pacotes SSIS usando o SQL Server Agent (vídeo do SQL Server)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100)), na Biblioteca MSDN.  
   
  Depois que uma etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent iniciar um pacote, a execução do pacote poderá falhar ou o pacote poderá ser executado com êxito, mas com resultados inesperados. Você pode usar uma das ferramentas a seguir para solucionar esses problemas.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "88425188"
 
         > **OBSERVAÇÃO:** Se a senha for alterada para as credenciais usadas pela conta proxy, será necessário atualizar a senha da credencial. Caso contrário, a etapa do trabalho falhará.  
 
-        Para obter informações sobre como configurar a conta de serviço do SQL Server Agent, consulte [Definir a conta de inicialização do serviço para o SQL Server Agent &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
+        Para obter informações sobre como configurar a conta de serviço do SQL Server Agent, consulte [Definir a conta de inicialização do serviço para o SQL Server Agent &#40;SQL Server Configuration Manager&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md).  
 
 8.  Na caixa de listagem **Origem do Pacote** , clique na origem do pacote e configure as opções para a etapa do trabalho.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "88425188"
     ||**Senha**|  
     ||**Pacote**<br /><br /> Clique no botão de reticências e selecione o pacote.<br /><br /> Você está selecionando um pacote em uma pasta sob o nó de **Pacotes Armazenados** no **Pesquisador de Objetos**.|  
     |**Pacote**<br /><br /> Estas são as opções da guia para pacotes que estão armazenados no sistema de arquivos.|**Pacote**<br /><br /> Digite o caminho completo do arquivo do pacote ou clique no botão de reticências para selecionar o pacote.|  
-    |**Configurações**|Adicione um arquivo de configuração XML para executar o pacote com uma configuração específica. Use uma configuração de pacote para atualizar os valores das propriedades do pacote no runtime.<br /><br /> Essa opção corresponde à opção de **/ConfigFile** para **dtexec**.<br /><br /> Para compreender como são aplicadas as configurações de pacote, consulte [Package Configurations](../../integration-services/packages/package-configurations.md). Para obter informações sobre como criar uma configuração de pacote, consulte [Create Package Configurations](../../integration-services/packages/create-package-configurations.md).|  
+    |**Configurações**|Adicione um arquivo de configuração XML para executar o pacote com uma configuração específica. Use uma configuração de pacote para atualizar os valores das propriedades do pacote no runtime.<br /><br /> Essa opção corresponde à opção de **/ConfigFile** para **dtexec**.<br /><br /> Para compreender como são aplicadas as configurações de pacote, consulte [Package Configurations](./legacy-package-deployment-ssis.md). Para obter informações sobre como criar uma configuração de pacote, consulte [Create Package Configurations](./legacy-package-deployment-ssis.md).|  
     |**Arquivos de comando**|Especifique opções adicionais que deseja executar com **dtexec**em um arquivo separado.<br /><br /> Por exemplo, você pode incluir um arquivo que contém a opção de /Dump *errorcode* para gerar arquivos de despejo de depuração quando um ou mais eventos especificados ocorrerem durante a execução do pacote.<br /><br /> Você pode executar um pacote com conjuntos diferentes de opções criando vários arquivos e especificando o arquivo apropriado usando a opção **Arquivos de Comando** .<br /><br /> A opção **Arquivos de comando** corresponde à opção **/CommandFile** para **dtexec**.|  
     |**Fontes de dados**|Exiba os gerenciadores de conexões contidos no pacote. Para modificar uma cadeia de caracteres de conexão, clique no gerenciador de conexões e depois na cadeia de conexões.<br /><br /> Essa opção corresponde à opção de **/Connection** para **dtexec**.|  
     |**Opções de Execução**|**Reprovar o pacote nos avisos de validação**<br /> Indica se uma mensagem de aviso é considerada um erro. Se você selecionar essa opção e ocorrer um aviso durante a validação, o pacote falhará durante a validação. Essa opção corresponde à opção de **/WarnAsError** para **dtexec**.<br /><br /> **Validar pacote sem executar**<br /> Indica se a execução do pacote é interrompida depois da fase de validação, sem executar realmente o pacote. Essa opção corresponde à opção de **/Validate** para **dtexec**.<br /><br /> **Substituir a propriedade MacConcurrentExecutables**<br /> Especifica o número de arquivos executáveis que o pacote pode executar simultaneamente. O valor de -1 significa que o pacote pode executar um número máximo de arquivos executáveis igual ao número total de processadores no computador que executa o pacote mais dois. Essa opção corresponde à opção de **/MaxConcurrent** para **dtexec**.<br /><br /> **Ativar pontos de verificação do pacote**<br /> Indica se o pacote usará pontos de verificação durante sua execução. Para saber mais, confira [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).<br /><br /> Essa opção corresponde à opção de **/CheckPointing** para **dtexec**.<br /><br /> **Substituir opções de reinicialização**<br /> Indica se um novo valor está definido para a propriedade **CheckpointUsage** no pacote. Selecione um valor na caixa de listagem **Opção de Reinicialização** .<br /><br /> Essa opção corresponde à opção de **/Restart** para **dtexec**.<br /><br /> **Use o runtime de 32 bits**<br /> Indique se o pacote será executado usando a versão de 32 bits do utilitário dtexec em um computador de 64 bits que tenha a versão de 64 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent instalada.<br /><br /> Você pode precisar executar o pacote usando uma versão de 32 bits do dtexec, por exemplo, se o pacote usar um provedor OLE DB nativo que não esteja disponível em uma versão de 64 bits. Para obter mais informações, consulte [Considerações do Integration Services sobre versões de 64 bits](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Por padrão, quando você seleciona o tipo de etapa de trabalho **Pacote do SQL Server Integration Services** , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa o pacote usando a versão do utilitário dtexec invocada automaticamente pelo sistema. O sistema invoca a versão de 32 bits ou de 64 bits do utilitário, dependendo do processador do computador, e a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que está sendo executada no computador.|  
@@ -212,14 +212,13 @@ ms.locfileid: "88425188"
   
 -   Artigo da Base de Dados de Conhecimento [Um pacote do SSIS não é executado quando você chama o pacote do SSIS a partir de uma etapa de trabalho do SQL Server Agent](https://support.microsoft.com/kb/918760), no site do [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   Vídeo, [Solução de problemas: execução de pacotes SSIS usando o SQL Server Agent (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772), na Biblioteca MSDN  
+-   Vídeo, [Solução de problemas: execução de pacotes SSIS usando o SQL Server Agent (vídeo do SQL Server)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100)), na Biblioteca MSDN  
   
--   Vídeo, [Como automatizar a execução de pacotes usando o SQL Server Agent (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), na Biblioteca MSDN  
+-   Vídeo, [Como automatizar a execução de pacotes usando o SQL Server Agent (vídeo do SQL Server)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100)), na Biblioteca MSDN  
   
 -   Artigo técnico [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)(Verificando trabalhos do SQL Server Agent usando o Windows PowerShell), em mssqltips.com  
   
 -   Artigo técnico [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676)(Alerta automático para trabalhos do SQL Agent quando estão habilitados ou desabilitados), em mssqltips.com  
   
 -   Entrada de blog, [Configuring SQL Agent Jobs to Write to Windows Event Log](https://go.microsoft.com/fwlink/?LinkId=220745)(Configurando trabalhos do SQL Agent para gravação Log de Eventos do Windows), em mssqltips.com.  
-  
   

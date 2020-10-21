@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88a927a23696e5de7a1e079cb517078dc318b69c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495109"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193758"
 ---
 # <a name="use-annotations-in-packages"></a>Usar anotações em pacotes
 
@@ -31,7 +31,7 @@ ms.locfileid: "88495109"
   
  Quando você pressiona ENTER, o texto é quebrado para a próxima linha. A caixa de anotação automaticamente aumenta de tamanho à medida que você adiciona linhas de texto. As anotações de pacote são persistidas como texto não criptografado na seção CDATA do arquivo de pacote.  
   
- Para obter mais informações sobre as alterações ao formato do arquivo de pacote, consulte [Formato do pacote SSIS](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
+ Para obter mais informações sobre as alterações ao formato do arquivo de pacote, consulte [Formato do pacote SSIS](./integration-services-ssis-packages.md).  
   
  Quando você salva o pacote, o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer salva as anotações no pacote.  
   
@@ -56,4 +56,4 @@ ms.locfileid: "88495109"
   
 7.  Para adicionar uma anotação a um grupo, clique com o botão direito do mouse na anotação e clique em **Grupo**.  
   
-8.  Para salvar o pacote atualizado, no menu **Arquivo** , clique em **Salvar Tudo**.  
+8.  Para salvar o pacote atualizado, no menu **Arquivo** , clique em **Salvar Tudo**.

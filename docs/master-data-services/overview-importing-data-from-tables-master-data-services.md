@@ -1,5 +1,6 @@
 ---
-title: 'Visão geral: Importando dados de tabelas (Master Data Services) | Microsoft Docs'
+title: Importando dados de tabelas
+description: Importe dados de tabelas e faça alterações nos dados depois de criar um modelo para seus dados no Master Data Services.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 232900f14580db1e09fe0b54c4dfcd77e5310283
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257539"
 ---
-# <a name="overview-importing-data-from-tables-master-data-services"></a>Visão geral: Importando dados de tabelas (Master Data Services)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>Visão geral: importando dados de tabelas (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Depois de criar um modelo para seus dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode começar a adicionar dados e fazer alterações nos dados.   Você usa as tabelas de preparo do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimentos armazenados e o Master Data Manager.  
   
  Para obter instruções sobre como adicionar e modificar dados, consulte [Importar dados de tabelas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
 > [!NOTE]
->  Você também pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para adicionar dados ao repositório do MDS (banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) do Excel. Para obter mais informações, confira [Visão geral: importando dados do Excel &#40;Suplemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+>  Você também pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para adicionar dados ao repositório do MDS (banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) do Excel. Para obter mais informações, consulte [Visão geral: Importando dados do Excel &#40;Suplemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Ao adicionar e modificar dados, você pode fazer o seguinte.  
   
@@ -89,11 +90,11 @@ ms.locfileid: "68097377"
   
  O [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclui os seguintes tipos de procedimentos de preparo armazenados.  
   
--   stg.udp_\<name>_Leaf  
+-   stg.udp_ \<name> _Leaf  
   
--   stg.udp_\<name>_Consolidated  
+-   stg.udp_ \<name> _Consolidated  
   
--   stg.udp_\<name>_Relationship  
+-   stg.udp_ \<name> _Relationship  
   
  Para cada entidade no modelo, há três procedimentos armazenados que correspondem ao membro folha, membros consolidados e tabelas de preparo de relação.  A imagem a seguir mostra as tabelas de procedimentos de preparo armazenado para as entidades de moeda, cliente e produto.  
   

@@ -24,12 +24,12 @@ ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5fbab6186208058c4de223ae0001b5c8e3589f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e917d3fff239244ad063b42fb50f30832e391c08
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307967"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193396"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt; (Maior que) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ expression > expression
 ### <a name="a-using--in-a-simple-query"></a>a. Usando > em uma consulta simples  
  O exemplo a seguir retorna todas as linhas da tabela `HumanResources.Department` contendo um valor `DepartmentID` que seja superior ao valor 13.  
   
-```  
+```sql  
 --Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
@@ -83,10 +83,9 @@ DepartmentID Name
   
 ### <a name="b-using--to-compare-two-variables"></a>B. Usando > para comparar duas variáveis  
   
-```  
-DECLARE @a int = 45, @b int = 40;  
+```sql  
+DECLARE @a INT = 45, @b INT = 40;  
 SELECT IIF ( @a > @b, 'TRUE', 'FALSE' ) AS Result;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

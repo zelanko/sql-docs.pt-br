@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6949a8130601bf0bf3ffac5903d7584a16d7d83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 662b52803ddca54f5c660fa79c457cdc05ced3fa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449817"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193852"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parâmetros de pacote e projeto do SSIS (Integration Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88449817"
 
   Os parâmetros do[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permitem atribuir valores às propriedades nos pacotes em tempo de execução do pacote. Você pode criar *parâmetros de projeto* em nível de projeto e *parâmetros de pacote* em nível de pacote. Os parâmetros do projeto são usados para fornecer uma entrada externa que o projeto recebe para um ou mais pacotes no projeto. Os parâmetros do pacote permitem modificar a execução do pacote sem a necessidade de editar e reimplantar o pacote.  
   
- No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , você cria, modifica ou exclui parâmetros de projeto usando a janela **Project.params** . Você cria, modifica e exclui parâmetros de pacote usando a guia **Parâmetros** no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] . Você associa um novo parâmetro ou um existente à propriedade de uma tarefa usando a caixa de diálogo **Parametrizar** . Para saber mais sobre como usar a janela **Project.params** e a guia **Parâmetros** , consulte [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). Para obter mais informações sobre a caixa de diálogo **Parametrizar** , consulte [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
+ No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , você cria, modifica ou exclui parâmetros de projeto usando a janela **Project.params** . Você cria, modifica e exclui parâmetros de pacote usando a guia **Parâmetros** no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] . Você associa um novo parâmetro ou um existente à propriedade de uma tarefa usando a caixa de diálogo **Parametrizar** . Para saber mais sobre como usar a janela **Project.params** e a guia **Parâmetros** , consulte [Create Parameters](). Para obter mais informações sobre a caixa de diálogo **Parametrizar** , consulte [Parameterize Dialog Box]().  
   
 ## <a name="parameters-and-package-deployment-model"></a>Parâmetros e modelo de implantação de pacote  
  Em geral, se você estiver implantando um pacote usando o modelo de implantação de pacote, deverá usar configurações em vez de parâmetros.  
@@ -42,7 +42,7 @@ ms.locfileid: "88449817"
   
 -   [Procedimentos armazenados &#40;catálogo do Integration Services&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
--   [Caixa de diálogo Configurar](../integration-services/service/configure-dialog-box.md)  
+-   [Caixa de diálogo Configurar](./catalog/configure-dialog-box.md)  
   
 -   [Caixa de diálogo Executar Pacote](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88449817"
 ### <a name="parameter-validation"></a>Validação de parâmetro  
  Se não for possível resolver os valores dos parâmetros, haverá falha na execução do pacote correspondente. Para ajudar a evitar falhas, você pode validar projetos e pacotes usando a caixa de diálogo **Validar** em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A validação permite confirmar se todos os parâmetros têm os valores necessários ou se os valores necessários podem ser resolvidos com referências de ambiente específicas. A validação também verifica outros problemas comuns de pacotes.  
   
- Para obter mais informações, consulte [Validate Dialog Box](../integration-services/service/validate-dialog-box.md).  
+ Para obter mais informações, consulte [Validate Dialog Box](./catalog/validate-dialog-box.md).  
   
 ### <a name="parameter-example"></a>Exemplo de parâmetro  
  Este exemplo descreve um parâmetro denominado **pkgOptions** que é usado para especificar opções para o pacote no qual reside.  
@@ -166,7 +166,7 @@ Use o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para cr
     > **AVISO** Você pode editar no local na lista ou usar a janela **Propriedades** para modificar os valores de propriedades de parâmetro. Você pode excluir um parâmetro usando o botão da barra de ferramentas **Excluir (X)** . Usando o último botão da barra de ferramentas para abrir **Gerenciar Valores de Parâmetro** , você pode especificar um valor para um parâmetro que só seja usado quando você executar o pacote no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-A caixa de diálogo **Parametrizar** permite associar um parâmetro novo ou existente à propriedade de uma tarefa. Você abre a caixa de diálogo clicando com o botão direito em uma tarefa ou na guia Fluxo de Controle no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] e, em seguida, clique em **Parametrizar**. A lista a seguir descreve os elementos da interface de usuário na caixa de diálogo. Para obter mais informações sobre parâmetros, consulte [Parâmetros do SSIS (Integration Services)](https://msdn.microsoft.com/library/hh213214.aspx).
+A caixa de diálogo **Parametrizar** permite associar um parâmetro novo ou existente à propriedade de uma tarefa. Você abre a caixa de diálogo clicando com o botão direito em uma tarefa ou na guia Fluxo de Controle no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] e, em seguida, clique em **Parametrizar**. A lista a seguir descreve os elementos da interface de usuário na caixa de diálogo. Para obter mais informações sobre parâmetros, consulte [Parâmetros do SSIS (Integration Services)]().
   
 ### <a name="options"></a>Opções  
  **Propriedade**  
@@ -219,5 +219,4 @@ O Assistente de Implantação permite definir valores de parâmetros padrão de 
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Entrada de blog, o [Dica Rápida do SSIS: parâmetros necessários](https://go.microsoft.com/fwlink/?LinkId=239781), em mattmasson.com.  
-  
   

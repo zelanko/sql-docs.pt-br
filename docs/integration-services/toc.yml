@@ -50,9 +50,9 @@
     - name: Tutorial – Implantar e executar um pacote no Azure
       href: ../integration-services/lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
     - name: Conectar-se aos dados com a Autenticação do Windows
-      href: ../integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md
+      href: /azure/data-factory/ssis-azure-connect-with-windows-auth
     - name: Salvar arquivos e conectar-se aos compartilhamentos de arquivo
-      href: ../integration-services/lift-shift/ssis-azure-files-file-shares.md
+      href: /azure/data-factory/ssis-azure-files-file-shares
     - name: Conectar-se ao catálogo do SSIS no Azure
       href: ../integration-services/lift-shift/ssis-azure-connect-to-catalog-database.md
     - name: Validar pacotes implantados no Azure
@@ -327,7 +327,7 @@
           href: ../integration-services/control-flow/message-queue-task.md
           items:
             - name: Selecionar variáveis
-              href: ../integration-services/control-flow/select-variables.md
+              href: ./control-flow/message-queue-task.md
             - name: Selecionar um Pacote
               href: ../integration-services/control-flow/select-a-package.md
         - name: Tarefa de Notificação do Operador
@@ -630,7 +630,7 @@
       href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
       items:
         - name: Gerenciador de Conexões de Limpeza DQS
-          href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+          href: ./connection-manager/dqs-cleansing-connection-manager.md
         - name: Aplicar regras de qualidade de dados à fonte de dados
           href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
         - name: Mapear colunas para domínios compostos
@@ -657,9 +657,9 @@
         - name: Implementar uma pesquisa no modo Sem Cache ou Cache Parcial
           href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
         - name: Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
         - name: Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB
-          href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+          href: ./connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
         - name: Criar e implantar um cache para a Transformação Pesquisa
           href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
         - name: Criar Relações
@@ -668,7 +668,7 @@
           href: ../integration-services/data-flow/transformations/cache-transform.md
           items:
             - name: Gerenciador de conexões do cache
-              href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+              href: ./connection-manager/cache-connection-manager.md
     - name: Transformação Mesclar
       href: ../integration-services/data-flow/transformations/merge-transformation.md
     - name: Merge Join Transformation
@@ -1846,7 +1846,7 @@
 - name: Recursos
   items:
     - name: Fórum do SSIS >>
-      href: 'https://docs.microsoft.com/answers/topics/sql-server-integration-services.html'
+      href: /answers/topics/sql-server-integration-services.html
     - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
     - name: Blog do SSIS >>

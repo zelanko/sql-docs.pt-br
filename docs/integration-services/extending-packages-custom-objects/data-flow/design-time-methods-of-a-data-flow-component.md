@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6eaaacea73d119961f7db31e75ba7089387674c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd3951ce785fc8444009a0af9442a85a41b0fbfa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484228"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193156"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Métodos de tempo de design de um componente de fluxo de dados
 
@@ -105,7 +105,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- Para obter mais informações, consulte "Conversão do tipo generalizada" e "Implementando um conversor de tipo" na [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ Para obter mais informações, consulte "Conversão do tipo generalizada" e "Implementando um conversor de tipo" na [Biblioteca MSDN](../../../sql-server/index.yml).  
   
  Você pode especificar uma caixa de diálogo do editor personalizado para o valor da sua propriedade personalizada usando a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A>, conforme demonstrado no exemplo a seguir. Em primeiro lugar, é preciso criar um editor do tipo personalizado que herde do **System.Drawing.Design.UITypeEditor**, caso você não consiga localizar uma classe de editor do tipo de interface do usuário existente adequada às suas necessidades.  
   
@@ -139,9 +139,8 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- Para obter mais informações, consulte "Implementando um editor do tipo de interface do usuário" na [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ Para obter mais informações, consulte "Implementando um editor do tipo de interface do usuário" na [Biblioteca MSDN](../../../sql-server/index.yml).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Métodos de tempo de execução de um componente de fluxo de dados](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
-  
   

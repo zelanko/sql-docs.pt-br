@@ -11,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6405d6be70477297fb9ca02637c92b9e458144a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459168"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035876"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lição 1: criar e consultar objetos de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,11 +38,11 @@ Para executar [!INCLUDE[tsql](../includes/tsql-md.md)] instruções no [!INCLUDE
 ## <a name="prerequisites"></a>Pré-requisitos
 Para concluir este tutorial, você precisa de acesso ao SQL Server Management Studio e a uma instância do SQL Server. 
 
-- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 
 Se você não tiver uma instância de SQL Server, crie uma. Para criar uma, selecione a plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
 - **Windows**: [baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [baixe o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **macOS**: [baixe o SQL Server 2017 no Docker](../linux/quickstart-install-connect-docker.md).
 
 ## <a name="create-a-database"></a>Criar um banco de dados
 Como muitas instruções [!INCLUDE[tsql](../includes/tsql-md.md)], a instrução [`CREATE DATABASE`](statements/create-database-transact-sql.md) tem um parâmetro obrigatório: o nome do banco de dados.` CREATE DATABASE` também tem muitos parâmetros opcionais, como o local de disco onde você deseja armazenar os arquivos de banco de dados. Quando você executa `CREATE DATABASE` sem os parâmetros opcionais, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa valores padrão para muitos destes parâmetros.
@@ -241,7 +241,7 @@ Para obter informações sobre algumas funções que você pode usar para trabal
         [Funções matemáticas &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Funções de texto e imagem &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+        [Funções de texto e imagem &#40;Transact-SQL&#41;](./functions/text-and-image-functions-textptr-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
@@ -304,6 +304,5 @@ O próximo artigo ensina a configurar permissões em objetos de banco de dados. 
 Vá até o próximo artigo para saber mais:
 > [!div class="nextstepaction"]
 > [Próximas etapas](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   
   

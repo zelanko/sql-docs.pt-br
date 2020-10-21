@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4c2ec582a2900986906ee127ad48462dcb43c58
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 1696a1fdcf2e27b8c13b24cbc5ae5b7a43cb1eec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227214"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196805"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -141,7 +141,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Você pode especificar -1 para retornar o valor de severidade associado ao erro, conforme mostrado no exemplo a seguir.  
   
-```  
+```sql  
 RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');  
 ```  
   
@@ -186,7 +186,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  Normalmente, argumentos sucessivos substituem especificações de conversão sucessivas; o primeiro argumento substitui a primeira especificação de conversão, o segundo argumento substitui a segunda especificação de conversão e assim por diante. Por exemplo, na seguinte instrução `RAISERROR`, o primeiro argumento de `N'number'` substitui a primeira especificação de conversão de `%s`; e o segundo argumento de `5` substitui a segunda especificação de conversão de `%d.`  
   
-```  
+```sql  
 RAISERROR (N'This is message %s %d.', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -200,7 +200,7 @@ GO
   
  Por exemplo, as duas instruções `RAISERROR` a seguir retornam a mesma cadeia de caracteres. Uma especifica os valores de largura e de precisão na lista de argumentos; a outra os especifica na especificação de conversão.  
   
-```  
+```sql  
 RAISERROR (N'<\<%*.*s>>', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -225,7 +225,7 @@ GO
 > [!NOTE]  
 >  RAISERROR somente gera erros com estado de 1 a 127. Como o [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode gerar erros com o estado 0, recomendamos que você verifique o estado de erro retornado por ERROR_STATE antes de passá-lo como um valor ao parâmetro de estado de RAISERROR.  
   
-```  
+```sql  
 BEGIN TRY  
     -- RAISERROR with severity 11-19 will cause execution to   
     -- jump to the CATCH block.  
@@ -257,7 +257,7 @@ END CATCH;
 ### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. Criando uma mensagem ad hoc em sys.messages  
  O exemplo a seguir mostra como gerar uma mensagem armazenada na exibição do catálogo sys.messages. A mensagem foi adicionada à exibição do catálogo sys.messages usando o procedimento armazenado do sistema `sp_addmessage` como o número de mensagem `50005`.  
   
-```  
+```sql  
 sp_addmessage @msgnum = 50005,  
               @severity = 10,  
               @msgtext = N'<\<%7.3s>>';  
@@ -275,7 +275,7 @@ GO
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>C. Usando uma variável local para fornecer o texto da mensagem  
  O exemplo de código a seguir mostra como usar uma variável local para fornecer o texto da mensagem a uma instrução `RAISERROR`.  
   
-```  
+```sql  
 DECLARE @StringVariable NVARCHAR(50);  
 SET @StringVariable = N'<\<%7.3s>>';  
   

@@ -24,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a642ad617c1c466306f5beb3f11d41f9181b8458
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0751b396deef4a8617b18e9555aae50fdb835010
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459368"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193376"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +85,7 @@ test_expression [ NOT ] IN
 ### <a name="a-comparing-or-and-in"></a>a. Comparando OR e IN  
  O exemplo a seguir seleciona uma lista de nomes de funcionários que são engenheiros de design, designers de ferramentas ou assistentes de marketing.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -100,7 +100,7 @@ GO
   
  Entretanto, você recupera os mesmos resultados usando IN.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -131,7 +131,7 @@ Mary        Dempsey     Marketing Assistant
 ### <a name="b-using-in-with-a-subquery"></a>B. Usando IN com uma subconsulta  
  O exemplo a seguir encontra todas as IDs para os vendedores na tabela `SalesPerson` para funcionários com uma cota de venda maior que $ 250.000 por ano, e seleciona na tabela `Employee` os nomes de todos os funcionários em que `EmployeeID` corresponde aos resultados da subconsulta `SELECT`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -160,7 +160,7 @@ Tete         Mensa-Annan
 ### <a name="c-using-not-in-with-a-subquery"></a>C. Usando NOT IN com uma subconsulta  
  O exemplo a seguir localiza os vendedores que não têm uma cota maior que US$ 250.000. `NOT IN` localiza os vendedores que não correspondem aos itens da lista de valores.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -179,7 +179,7 @@ GO
 ### <a name="d-using-in-and-not-in"></a>D. Usando IN e NOT IN  
  O exemplo a seguir localiza todas as entradas na tabela `FactInternetSales` correspondentes aos valores `SalesReasonKey` na tabela `DimSalesReason`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -189,7 +189,7 @@ IN (SELECT SalesReasonKey FROM DimSalesReason);
   
  O exemplo a seguir localiza todas as entradas na tabela `FactInternetSalesReason` não correspondentes aos valores `SalesReasonKey` na tabela `DimSalesReason`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -200,7 +200,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ### <a name="e-using-in-with-an-expression-list"></a>E. Usando IN com uma lista de expressões  
  O exemplo a seguir localiza todas as IDs para os vendedores na tabela `DimEmployee` de funcionários que têm o nome `Mike` ou `Michael`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fbcb0fa1f7618a7cf6d2a78b18d9193e09f81f02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ea049a657b5d0392841f8bd6e44954d2774c13c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495831"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193219"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Carregar dados por meio do destino ODBC
 
@@ -56,8 +56,7 @@ ms.locfileid: "88495831"
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [Editor de Destinos ODBC &#40;Página Mapeamentos&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [Editor de Fonte ODBC &#40;Página Saída de Erro&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](./odbc-destination.md)   
+ [Editor de Destinos ODBC &#40;Página Mapeamentos&#41;](./odbc-destination.md)   
+ [Editor de Fonte ODBC &#40;Página Saída de Erro&#41;](./odbc-source.md)  
   

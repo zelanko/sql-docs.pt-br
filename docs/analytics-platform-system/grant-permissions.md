@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289694"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257469"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Conceder permissões T-SQL para data warehouse paralelos
 Conceda permissões T-SQL para operações de banco de dados em data warehouse paralelas.
@@ -63,7 +63,7 @@ Esta seção descreve como conceder permissões a logons para usar o console de 
   
 **Usar o console de administração**  
   
-Para usar o console de administração, um logon requer a permissão de **estado do servidor de exibição** no nível do servidor. A instrução SQL a seguir concede a permissão **View Server State** ao logon `KimAbercrombie` para que Kim possa usar o console de administração para monitorar o dispositivo de SQL Server PDW.  
+Para usar o console de administração, um logon requer a permissão de **estado do servidor de exibição** no nível do servidor. A instrução SQL a seguir concede a permissão **View Server State** ao logon para `KimAbercrombie` que Kim possa usar o console de administração para monitorar o dispositivo de SQL Server PDW.  
   
 ```sql  
 USE master;  
@@ -133,7 +133,7 @@ Se o destino dos dados for outro SQL Server PDW, o usuário deverá ter a permis
 ## <a name="grant-permissions-to-manage-databases"></a>Conceder permissões para gerenciar bancos de dados
 Esta seção descreve como conceder permissões a um usuário de banco de dados para gerenciar um banco de dados no dispositivo de SQL Server PDW.  
   
-Em algumas situações, uma empresa atribui um gerente para um banco de dados. O Gerenciador controla o acesso que os outros logons têm ao banco de dados, bem como a data e os objetos no banco de dado. Para gerenciar todos os objetos, funções e usuários em um banco de dados, conceda ao usuário a permissão **Control** no banco de dados. A instrução a seguir concede a permissão **Control** no banco de dados **AdventureWorksPDW2012** ao `KimAbercrombie`usuário.  
+Em algumas situações, uma empresa atribui um gerente para um banco de dados. O Gerenciador controla o acesso que os outros logons têm ao banco de dados, bem como a data e os objetos no banco de dado. Para gerenciar todos os objetos, funções e usuários em um banco de dados, conceda ao usuário a permissão **Control** no banco de dados. A instrução a seguir concede a permissão **Control** no banco de dados **AdventureWorksPDW2012** ao usuário `KimAbercrombie` .  
   
 ```sql
 USE AdventureWorksPDW2012;  
@@ -164,7 +164,7 @@ GRANT ALTER ANY LOGIN TO KimAbercrombie;
 ```  
   
 ### <a name="grant-permissions-to-manage-login-sessions"></a>Conceder permissões para gerenciar sessões de logon  
-A capacidade de exibir todas as sessões no servidor requer a permissão **View Server State** . A capacidade de encerrar as sessões de outros logons requer a permissão **ALTER ANY Connection** . O exemplo a seguir usa `KimAbercrombie` o logon criado anteriormente.  
+A capacidade de exibir todas as sessões no servidor requer a permissão **View Server State** . A capacidade de encerrar as sessões de outros logons requer a permissão **ALTER ANY Connection** . O exemplo a seguir usa o `KimAbercrombie` logon criado anteriormente.  
   
 ```sql  
 -- Grant permissions to view sessions and queries  
@@ -175,7 +175,7 @@ GRANT ALTER ANY CONNECTION TO KimAbercrombie;
 ```  
   
 ### <a name="grant-permission-to-manage-database-users"></a>Conceder permissão para gerenciar usuários de banco de dados  
-Criar e descartar usuários de banco de dados requer a permissão **ALTER ANY User** . O gerenciamento de usuários existentes requer a permissão **ALTER ANY User** ou **ALTER** Permission nesse usuário. O exemplo a seguir usa `KimAbercrombie` o logon criado anteriormente.  
+Criar e descartar usuários de banco de dados requer a permissão **ALTER ANY User** . O gerenciamento de usuários existentes requer a permissão **ALTER ANY User** ou **ALTER** Permission nesse usuário. O exemplo a seguir usa o `KimAbercrombie` logon criado anteriormente.  
   
 ```sql  
 -- Create a user  
@@ -188,7 +188,7 @@ GRANT ALTER ANY USER TO KimAbercrombie;
 ```  
   
 ### <a name="grant-permisson-to-manage-database-roles"></a>Conceder permissão para gerenciar funções de banco de dados  
-Criar e descartar funções de banco de dados definidas pelo usuário requer a permissão **ALTER ANY role** . O exemplo a seguir usa `KimAbercrombie` o logon e o uso criado anteriormente.  
+Criar e descartar funções de banco de dados definidas pelo usuário requer a permissão **ALTER ANY role** . O exemplo a seguir usa o `KimAbercrombie` logon e o uso criado anteriormente.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 O dispositivo SQL Server PDW pode ser monitorado usando o console de administração ou exibições do sistema SQL Server PDW. Os logons exigem a permissão de **servidor do modo de exibição** de nível de servidor para monitorar o dispositivo. Os logons exigem a permissão **ALTER ANY Connection** para encerrar conexões usando o console de administração ou o comando **Kill** . Para obter informações sobre as permissões necessárias para usar o console de administração, consulte [conceder permissões para usar o console de administração &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>Conceder permissão para monitorar o dispositivo usando exibições do sistema  
-As instruções SQL a seguir criam um logon `monitor_login` chamado e concedem a permissão **View Server State** ao `monitor_login` logon.  
+As instruções SQL a seguir criam um logon chamado `monitor_login` e concedem a permissão **View Server State** ao `monitor_login` logon.  
   
 ```sql  
 USE master;  
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>Conceder permissão para monitorar o dispositivo usando exibições do sistema e encerrar conexões  
-As instruções SQL a seguir criam um logon `monitor_and_terminate_login` chamado e concedem as permissões **View Server State** e **ALTER ANY Connection** para o `monitor_and_terminate_login` logon.  
+As instruções SQL a seguir criam um logon chamado `monitor_and_terminate_login` e concedem as permissões **View Server State** e **ALTER ANY Connection** para o `monitor_and_terminate_login` logon.  
   
 ```sql  
 USE master;  
@@ -246,7 +246,7 @@ GO
 Para criar logons de administrador, consulte [funções de servidor fixas](pdw-permissions.md#fixed-server-roles).  
   
 ## <a name="see-also"></a>Confira também
-[CRIAR LOGON](../t-sql/statements/create-login-transact-sql.md)  
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [CRIAR USUÁRIO](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [Carregar](load-overview.md)  

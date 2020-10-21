@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bbd5718a5c57bdb874af00ba57dafedc9dd8654
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430958"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195956"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
 
@@ -37,7 +37,7 @@ ms.locfileid: "88430958"
   
  Além disso, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece caminhos que conectam a saída de um componente com a entrada de outro. Os caminhos definem a sequência de componentes e permitem que você adicione anotações ao fluxo de dados ou exiba a origem da coluna.  
   
- Você conecta os componentes de fluxo de dados conectando a saída de fontes e destinos à entrada de transformações e destinos. Quando estiver criando um fluxo de dados, você geralmente conecta o segundo componente e componentes subsequentes à medida que os adiciona ao fluxo de dados. Depois de conectar o componente, as colunas de entrada estão disponíveis para usar na configuração do componente. Quando nenhuma coluna de entrada estiver disponível, você terá que completar a configuração do componente depois que ele estiver conectado ao fluxo de dados. Para obter mais informações, consulte [Caminhos do Integration Services](../../integration-services/data-flow/integration-services-paths.md) e [Conectar componentes com caminhos](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ Você conecta os componentes de fluxo de dados conectando a saída de fontes e destinos à entrada de transformações e destinos. Quando estiver criando um fluxo de dados, você geralmente conecta o segundo componente e componentes subsequentes à medida que os adiciona ao fluxo de dados. Depois de conectar o componente, as colunas de entrada estão disponíveis para usar na configuração do componente. Quando nenhuma coluna de entrada estiver disponível, você terá que completar a configuração do componente depois que ele estiver conectado ao fluxo de dados. Para obter mais informações, consulte [Caminhos do Integration Services](../../integration-services/data-flow/integration-services-paths.md) e [Conectar componentes com caminhos](./connect-components-in-a-data-flow.md).  
   
  O diagrama a seguir exibe um fluxo de dados que tem uma fonte, uma transformação com uma entrada e uma saída e um destino. O diagrama inclui as entradas, as saídas e as saídas de erro, além da entrada, da saída e das colunas externas.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "88430958"
 |Fonte SAP BI|A fonte SAP BI é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
 |Fonte Teradata|A fonte Teradata é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui um gerenciador de conexões e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
   
- Para ver uma demonstração de como utilizar os ganhos de desempenho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity, consulte [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369).  
+ Para ver uma demonstração de como utilizar os ganhos de desempenho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity, consulte [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](/previous-versions/dn912438(v=msdn.10)).  
   
 ## <a name="transformations"></a>Transformações  
  A capacidade das transformações varia amplamente. As transformações podem executar tarefas como atualizar, resumir, limpar, mesclar e distribuir dados. É possível modificar valores em colunas, pesquisar valores em tabelas, limpar dados e agregar valores de colunas.  
@@ -169,10 +169,10 @@ ms.locfileid: "88430958"
 |Destino SAP BI|O destino SAP BI é o componente de destino do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
 |Destino Teradata|O destino Teradata é o componente de destino do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui um gerenciador de conexões e uma fonte. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
   
- Para ver uma demonstração de como utilizar os ganhos de desempenho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity, consulte [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369).  
+ Para ver uma demonstração de como utilizar os ganhos de desempenho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity, consulte [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](/previous-versions/dn912438(v=msdn.10)).  
   
 ## <a name="connection-managers"></a>Gerenciadores de conexões  
- Muitos componentes de fluxo de dados se conectam às fontes de dados e você deve adicionar ao pacote os gerenciadores de conexões necessários para que o componente possa ser configurado corretamente. Você pode adicionar os gerenciadores de conexões conforme cria o fluxo de dados ou antes que você comece a criação do fluxo de dados. Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Muitos componentes de fluxo de dados se conectam às fontes de dados e você deve adicionar ao pacote os gerenciadores de conexões necessários para que o componente possa ser configurado corretamente. Você pode adicionar os gerenciadores de conexões conforme cria o fluxo de dados ou antes que você comece a criação do fluxo de dados. Para obter mais informações, consulte [Conexões do Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) e [Criar gerenciadores de conexões](../connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="external-metadata"></a>Metadados externos  
  Quando você cria um fluxo de dados em um pacote usando o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , são feitas cópias dos metadados das fontes e destinos nas colunas externas de fontes e destinos, servindo como um instantâneo do esquema. Quando o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] valida o pacote, o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] compara esse instantâneo com o esquema da fonte ou do destino e envia erros e avisos, dependendo das alterações.  
@@ -220,4 +220,4 @@ ms.locfileid: "88430958"
  [Conectar componentes em um fluxo de dados](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Vídeo, [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369), em technet.microsoft.com.  
+ Vídeo, [Desempenho do Microsoft Connector para Oracle da Attunity (vídeo do SQL Server)](/previous-versions/dn912438(v=msdn.10)), em technet.microsoft.com.

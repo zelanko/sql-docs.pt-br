@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d09e76a26e0364857c70469ef1308f21e298727b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 702773ea93f99fc3af6dcfa3b3847ae5a35c75f1
+ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395039"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92134854"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicação, controle de alterações e Change Data Capture – grupos de disponibilidade AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "87395039"
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
         ON r.group_id = g.group_id  
-    WHERE g.name = N'MY_AG_NAME;  
+    WHERE g.name = N'MY_AG_NAME';  
     ```  
   
      O nome do ouvinte do grupo de disponibilidade ou o nome de nó explícito pode ser usado para localizar a réplica secundária. Se o nome do ouvinte do grupo de disponibilidade for usado, o acesso será direcionado a qualquer réplica secundária adequada.  

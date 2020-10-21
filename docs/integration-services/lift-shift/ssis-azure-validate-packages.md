@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 41985e8d39de843c8319ac3ac5622c4cb8b4aa51
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: d92a41782ec094b323aaaec3eaff5fb584637dc7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195132"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192516"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Validar pacotes SSIS (SQL Server Integration Services) implantados no Azure
 
@@ -33,7 +33,7 @@ Para obter mais informações sobre o Assistente de Implantação de Pacotes, co
 ## <a name="validate-connection-managers"></a>Validar gerenciadores de conexões
 
 O assistente verifica se os seguintes problemas, que podem fazer a conexão falhar, ocorrem em determinados gerenciadores de conexão:
-- **Autenticação do Windows**. Se uma cadeia de conexão usar a autenticação do Windows, a validação emitirá um aviso. A autenticação do Windows exige etapas de configuração adicionais. Para obter mais informações, confira [Conectar-se a dados e a compartilhamentos de arquivos com a Autenticação do Windows](ssis-azure-connect-with-windows-auth.md).
+- **Autenticação do Windows**. Se uma cadeia de conexão usar a autenticação do Windows, a validação emitirá um aviso. A autenticação do Windows exige etapas de configuração adicionais. Para obter mais informações, confira [Conectar-se a dados e a compartilhamentos de arquivos com a Autenticação do Windows](/azure/data-factory/ssis-azure-connect-with-windows-auth).
 - **Caminho do arquivo**. Se uma cadeia de conexão contiver um caminho de arquivo local embutido em código como `C:\\...`, a validação emitirá um aviso. Os pacotes que contêm um caminho absoluto podem falhar.
 - **Caminho UNC**. Se uma cadeia de conexão contiver um caminho UNC, a validação gerará um aviso. Os pacotes que contêm um caminho UNC poderão falhar, geralmente porque um caminho UNC exige a autenticação do Windows para obter acesso.
 - **Nome do host**. Se uma propriedade de servidor contiver o nome do host em vez do endereço IP, a validação emitirá um aviso. Os pacotes que contêm o nome do host podem falhar, geralmente porque a rede virtual do Azure exige a configuração correta do DNS para ser compatível com a resolução de nome DNS.

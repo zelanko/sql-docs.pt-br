@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9e869aa4f5f5056ef29968b6ad0d7446b0849a25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d39e58c6dd4fa648d8d4118414925777eb3535b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417042"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038309"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo de dados geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88417042"
   
  O limite de distância máximo permite que a construção do buffer seja a mais flexível possível.  
   
- O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que tolerance = distância \* 0,001. Para obter mais informações sobre extensões, consulte [Referência de método do tipo de dados geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que tolerance = distância \* 0,001. Para obter mais informações sobre extensões, consulte [Referência de método do tipo de dados geography](./stequals-geography-data-type.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `LineString``geography`. Em seguida, usa `STBuffer()` para retornar a região dentro de 1 metro da instância.  
@@ -79,5 +79,4 @@ SELECT @g.STBuffer(1).ToString();
 ## <a name="see-also"></a>Consulte Também  
  [BufferWithTolerance &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [Métodos do OGC em instâncias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
   

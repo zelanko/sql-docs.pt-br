@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b647745e46b2326ab247cd2ef67ec480835dc16e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960ad33c2b4b166caa01205721101eafdc71e380
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430268"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193076"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Conectando-se a fontes de dados no componente de Script
 
@@ -27,7 +27,7 @@ ms.locfileid: "88430268"
 
   Um gerenciador de conexões é uma unidade conveniente que encapsula e armazena as informações necessárias para conexão com uma fonte de dados de um tipo específico. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
- Você pode tornar os gerenciadores de conexões existentes disponíveis para acesso por meio de script personalizado no componente de origem ou destino, clicando nos botões **Adicionar** e **Remover** na página **Gerenciadores de Conexões** do **Editor de Transformação Scripts**. Entretanto, você deverá gravar seu próprio código personalizado para carregar ou salvar seus dados e, possivelmente, abrir e fechar a conexão com a fonte de dados. Para obter mais informações sobre a página **Gerenciador de Conexões** do **Editor de Transformação Scripts**, consulte [Configurando o componente Script no Editor de Componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) e [Editor de Transformação Scripts &#40;Página Gerenciadores de Conexões&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ Você pode tornar os gerenciadores de conexões existentes disponíveis para acesso por meio de script personalizado no componente de origem ou destino, clicando nos botões **Adicionar** e **Remover** na página **Gerenciadores de Conexões** do **Editor de Transformação Scripts**. Entretanto, você deverá gravar seu próprio código personalizado para carregar ou salvar seus dados e, possivelmente, abrir e fechar a conexão com a fonte de dados. Para obter mais informações sobre a página **Gerenciador de Conexões** do **Editor de Transformação Scripts**, consulte [Configurando o componente Script no Editor de Componente Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) e [Editor de Transformação Scripts &#40;Página Gerenciadores de Conexões&#41;](../../data-flow/transformations/script-component.md).  
   
  O componente Script cria uma classe de coleção **Connections** no item do projeto **ComponentWrapper** que contém um acessador fortemente tipado para cada gerenciador de conexões que tem o mesmo nome que o gerenciador de conexões propriamente dito. Esta coleção é exposta pela propriedade **Connections** da classe **ScriptMain**. A propriedade de acessador retorna uma referência ao gerenciador de conexões como uma instância de <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>. Por exemplo, se você adicionou um gerenciador de conexões nomeado `MyADONETConnection` na página Gerenciadores de Conexões da caixa de diálogo, poderá obter uma referência a ele em seu script adicionando o seguinte código:  
   
@@ -61,6 +61,5 @@ ms.locfileid: "88430268"
   
 ## <a name="see-also"></a>Consulte Também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Criar Gerenciadores de Conexões](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [Criar Gerenciadores de Conexões](../../connection-manager/integration-services-ssis-connections.md)  
   
