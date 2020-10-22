@@ -1,1 +1,0 @@
-**ESTE TÓPICO APLICA-SE A:**![yes](media/yes.png)SQL Server 2016![yes](media/yes.png)SQL Server 2017![yes](media/yes.png)Servidor de relatório do Power BI
