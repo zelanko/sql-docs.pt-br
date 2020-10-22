@@ -3,21 +3,21 @@ title: Monitorar scripts usando DMVs
 description: Use DMVs (exibições de gerenciamento dinâmico) para monitorar a execução de script externo do Python e do R nos Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2019
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aee3aac6fa0f53314b28cc6064200fc398702dac
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173327"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115530"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorar os Serviços de Machine Learning do SQL Server usando DMVs (exibições de gerenciamento dinâmico)
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Use DMVs (exibições de gerenciamento dinâmico) para monitorar a execução de scripts externos (do Python e do R), os recursos usados, diagnosticar problemas e ajustar o desempenho no Serviços de Machine Learning do SQL Server.
 
@@ -79,12 +79,12 @@ WHERE name = 'external scripts enabled';
 
 A consulta retorna as seguintes colunas:
 
-| Coluna | Descrição |
-|--------|-------------|
-| IsMLServicesInstalled | Retornará 1 se os Serviços de Machine Learning do SQL Server estiverem instalados na instância. Caso contrário, retornará 0. |
-| ExternalScriptsEnabled | Retornará 1 se os scripts externos estiverem habilitados para a instância. Caso contrário, retornará 0. |
+| Coluna                       | Descrição |
+|------------------------------|-------------|
+| IsMLServicesInstalled        | Retornará 1 se os Serviços de Machine Learning do SQL Server estiverem instalados na instância. Caso contrário, retornará 0. |
+| ExternalScriptsEnabled       | Retornará 1 se os scripts externos estiverem habilitados para a instância. Caso contrário, retornará 0. |
 | ImpliedAuthenticationEnabled | Retornará 1 se a autenticação implícita estiver habilitada. Caso contrário, retornará 0. A configuração de autenticação implícita é confirmada ao verificar se há um logon para SQLRUserGroup. |
-| IsTcpEnabled | Retornará 1 se o protocolo TCP/IP estiver habilitado para a instância. Caso contrário, retornará 0. Para obter mais informações, veja [Configuração de protocolo de rede padrão do SQL Server](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
+| IsTcpEnabled                 | Retornará 1 se o protocolo TCP/IP estiver habilitado para a instância. Caso contrário, retornará 0. Para obter mais informações, veja [Configuração de protocolo de rede padrão do SQL Server](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
 
 ## <a name="active-sessions"></a>Sessões ativas
 
@@ -107,24 +107,24 @@ ON s.session_id = r.session_id;
 
 A consulta retorna as seguintes colunas:
 
-| Coluna | Descrição |
-|--------|-------------|
-| session_id | Identifica a sessão associada a cada conexão primária ativa. |
-| blocking_session_id | ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas). |
-| status | Status da solicitação. |
-| database_name | Nome do banco de dados atual para cada sessão. |
-| login_name | Nome do logon do SQL Server no qual a sessão está sendo executada atualmente. |
-| wait_time | Se a solicitação estiver bloqueada, esta coluna retornará a duração, em milissegundos, da espera atual. Não permite valor nulo. |
-| wait_type | Se a solicitação estiver bloqueada, esta coluna retornará o tipo de espera. Para obter informações sobre tipos de espera, confira [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
-| last_wait_type | Se esta solicitação tiver sido previamente bloqueada, esta coluna retornará o tipo da última espera. |
-| total_elapsed_time | Tempo total decorrido em milissegundos desde que a solicitação chegou. |
-| cpu_time | Tempo da CPU, em milissegundos, usado pela solicitação. |
-| reads | Número de leituras executadas por esta solicitação. |
-| logical_reads | Número de leituras lógicas executadas pela solicitação. |
-| writes | Número de gravações executadas por esta solicitação. |
-| Linguagem | Palavra-chave que representa uma linguagem de script com suporte. |
+| Coluna                | Descrição |
+|-----------------------|-------------|
+| session_id            | Identifica a sessão associada a cada conexão primária ativa. |
+| blocking_session_id   | ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas). |
+| status                | Status da solicitação. |
+| database_name         | Nome do banco de dados atual para cada sessão. |
+| login_name            | Nome do logon do SQL Server no qual a sessão está sendo executada atualmente. |
+| wait_time             | Se a solicitação estiver bloqueada, esta coluna retornará a duração, em milissegundos, da espera atual. Não permite valor nulo. |
+| wait_type             | Se a solicitação estiver bloqueada, esta coluna retornará o tipo de espera. Para obter informações sobre tipos de espera, confira [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
+| last_wait_type        | Se esta solicitação tiver sido previamente bloqueada, esta coluna retornará o tipo da última espera. |
+| total_elapsed_time    | Tempo total decorrido em milissegundos desde que a solicitação chegou. |
+| cpu_time              | Tempo da CPU, em milissegundos, usado pela solicitação. |
+| reads                 | Número de leituras executadas por esta solicitação. |
+| logical_reads         | Número de leituras lógicas executadas pela solicitação. |
+| writes                | Número de gravações executadas por esta solicitação. |
+| Linguagem              | Palavra-chave que representa uma linguagem de script com suporte. |
 | degree_of_parallelism | Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos solicitados. |
-| external_user_name | A conta de trabalho do Windows na qual o script foi executado. |
+| external_user_name    | A conta de trabalho do Windows na qual o script foi executado. |
 
 ## <a name="execution-statistics"></a>Estatísticas de execução
 
@@ -143,10 +143,10 @@ ORDER BY language, counter_name;
 
 A consulta retorna as seguintes colunas:
 
-| Coluna | Descrição |
-|--------|-------------|
-| Linguagem | Nome da linguagem de script externo registrada. |
-| counter_name | Nome de uma função de script externo registrada. |
+| Coluna        | Descrição |
+|---------------|-------------|
+| Linguagem      | Nome da linguagem de script externo registrada. |
+| counter_name  | Nome de uma função de script externo registrada. |
 | counter_value | Número total de instâncias nas quais a função de script externo registrada foi chamada no servidor. Esse valor é cumulativo, começando com a hora em que o recurso foi instalado na instância, e não pode ser redefinido. |
 
 ## <a name="performance-counters"></a>Contadores de desempenho
@@ -165,15 +165,15 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters** gera os seguintes contadores de desempenho para scripts externos:
 
-| Contador | Descrição |
-|---------|-------------|
-| Total de Execuções | Número de processos externos iniciados por chamadas locais ou remotas. |
-| Execuções paralelas | Número de vezes que um script incluiu a especificação _\@parallel_ e que o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] foi capaz de gerar e usar um plano de consulta paralela. |
-| Execuções de streaming | Número de vezes que o recurso de streaming foi invocado. |
-| Execuções de CC do SQL | Número execuções de scripts externos em que a chamada foi instanciada remotamente e em que o SQL Server foi usado como contexto de computação. |
-| Autenticação Implícita. Logons | Número de vezes que foi feita uma chamada de loopback de ODBC usando a autenticação implícita, ou seja, o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] executou a chamada em nome do usuário que estava enviando a solicitação de script. |
+| Contador                   | Descrição |
+|---------------------------|-------------|
+| Total de Execuções          | Número de processos externos iniciados por chamadas locais ou remotas. |
+| Execuções paralelas       | Número de vezes que um script incluiu a especificação _\@parallel_ e que o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] foi capaz de gerar e usar um plano de consulta paralela. |
+| Execuções de streaming      | Número de vezes que o recurso de streaming foi invocado. |
+| Execuções de CC do SQL         | Número execuções de scripts externos em que a chamada foi instanciada remotamente e em que o SQL Server foi usado como contexto de computação. |
+| Autenticação Implícita. Logons      | Número de vezes que foi feita uma chamada de loopback de ODBC usando a autenticação implícita, ou seja, o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] executou a chamada em nome do usuário que estava enviando a solicitação de script. |
 | Tempo total de execução (ms) | Tempo decorrido entre a chamada e a conclusão da chamada. |
-| Erros de Execução | Número de vezes que os scripts relataram erros. Essa contagem não inclui erros de R ou Python. |
+| Erros de Execução          | Número de vezes que os scripts relataram erros. Essa contagem não inclui erros de R ou Python. |
 
 ## <a name="memory-usage"></a>Uso de memória
 
@@ -193,11 +193,11 @@ FROM sys.dm_os_sys_info;
 
 A consulta retorna as seguintes colunas:
 
-| Coluna | Descrição |
-|--------|-------------|
-| physical_memory_kb | A quantidade total de memória física no computador. |
-| committed_kb | A memória comprometida, em KB (quilobytes), no gerenciador de memória. Não inclui a memória reservada no gerenciador de memória. |
-| external_pool_peak_memory_kb | A soma da quantidade máxima de memória usada, em quilobytes, para todos os pools de recursos externos. |
+| Coluna                       | Descrição                                                                                                           |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| physical_memory_kb           | A quantidade total de memória física no computador.                                                                   |
+| committed_kb                 | A memória comprometida, em KB (quilobytes), no gerenciador de memória. Não inclui a memória reservada no gerenciador de memória. |
+| external_pool_peak_memory_kb | A soma da quantidade máxima de memória usada, em quilobytes, para todos os pools de recursos externos.                          |
 
 ## <a name="memory-configuration"></a>Configuração de memória
 
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 A consulta retorna as seguintes colunas:
 
-| Coluna | Descrição |
-|--------|-------------|
-| name | Nome do pool de recursos externos ou do SQL Server. |
+| Coluna             | Descrição |
+|--------------------|-------------|
+| name               | Nome do pool de recursos externos ou do SQL Server. |
 | max_memory_percent | A memória máxima que SQL Server ou o pool de recursos externos pode usar. |
 
 ## <a name="resource-pools"></a>Pools de recursos
@@ -247,12 +247,12 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 A consulta retorna as seguintes colunas:
 
-| Coluna | Descrição |
-|--------|-------------|
-| pool_name | Nome do pool de recursos. Os pools de recursos do SQL Server são prefixados com `SQL Server` e os pools de recursos externos são prefixados com `External Pool`.
-| total_cpu_usage_hours | O uso cumulativo de CPU em milissegundos desde que as estatísticas do Resource Governor foram redefinidas. |
-| read_io_completed_total | O total de E/S lidas concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas. |
-| write_io_completed_total | O total de E/Ss de gravação concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas. |
+| Coluna                   | Descrição  |
+|--------------------------|--------------|
+| pool_name                | Nome do pool de recursos. Os pools de recursos do SQL Server são prefixados com `SQL Server` e os pools de recursos externos são prefixados com `External Pool`. |
+| total_cpu_usage_hours    | O uso cumulativo de CPU em milissegundos desde que as estatísticas do Resource Governor foram redefinidas. |
+| read_io_completed_total  | O total de E/S lidas concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas.              |
+| write_io_completed_total | O total de E/Ss de gravação concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas.             |
 
 ## <a name="installed-packages"></a>Pacotes instalados
 
@@ -267,7 +267,7 @@ Exiba os pacotes de R instalados nos Serviços de Machine Learning do SQL Server
 Execute a consulta abaixo para obter essa saída. A consulta usa um script de R para determinar os pacotes de R instalados com SQL Server.
 
 ```sql
-EXEC sp_execute_external_script @language = N'R'
+EXECUTE sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
 WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR(4000)
@@ -276,13 +276,13 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 As colunas retornadas são:
 
-| Coluna | Descrição |
-|--------|-------------|
-| Pacote | Nome do pacote instalado. |
-| Versão | Versão do pacote. |
+| Coluna  | Descrição                                                 |
+|---------|-------------------------------------------------------------|
+| Pacote | Nome do pacote instalado.                              |
+| Versão | Versão do pacote.                                     |
 | Depende | Lista os pacotes dos quais o pacote instalado depende. |
-| Licença | Licença para o pacote instalado. |
-| LibPath | Diretório em que você encontra o pacote. |
+| Licença | Licença para o pacote instalado.                          |
+| LibPath | Diretório em que você encontra o pacote.                   |
 
 ### <a name="installed-packages-for-python"></a>Pacotes instalados para Python
 
@@ -293,19 +293,20 @@ Exiba os pacotes do Python instalados nos Serviços de Machine Learning do SQL S
 Execute a consulta abaixo para obter essa saída. A consulta usa um script de Python para determinar os pacotes de Python instalados com SQL Server.
 
 ```sql
-EXEC sp_execute_external_script @language = N'Python'
+EXECUTE sp_execute_external_script @language = N'Python'
 , @script = N'
-import pip
-OutputDataSet = pandas.DataFrame([(i.key, i.version, i.location) for i in pip.get_installed_distributions()])'
+import pkg_resources
+import pandas
+OutputDataSet = pandas.DataFrame(sorted([(i.key, i.version, i.location) for i in pkg_resources.working_set]))'
 WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHAR(1000)));
 ```
 
 As colunas retornadas são:
 
-| Coluna | Descrição |
-|--------|-------------|
-| Pacote | Nome do pacote instalado. |
-| Versão | Versão do pacote. |
+| Coluna   | Descrição                               |
+|----------|-------------------------------------------|
+| Pacote  | Nome do pacote instalado.            |
+| Versão  | Versão do pacote.                   |
 | Location | Diretório em que você encontra o pacote. |
 
 ## <a name="next-steps"></a>Próximas etapas

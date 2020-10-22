@@ -9,15 +9,15 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 31d95c5881c68e6e897c18a935e4fa85799be60c
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 8113b373c328bac5a6ba95b7f4f40e5ab583503d
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892126"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098815"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>O que são os Serviços de Machine Learning do SQL Server (Python e R)?
-[!INCLUDE [SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Os Serviços de Machine Learning são um recurso no SQL Server que possibilita executar scripts do Python e do R usando dados relacionais. Você pode usar pacotes e estruturas de software livre, bem como os [pacotes do R e do Python da Microsoft](#packages) para análise preditiva e aprendizado de máquina. Os scripts são executados no banco de dados sem mover dados para fora do SQL Server ou pela rede. Este artigo explica os conceitos básicos dos Serviços de Machine Learning do SQL Server e como começar.
 

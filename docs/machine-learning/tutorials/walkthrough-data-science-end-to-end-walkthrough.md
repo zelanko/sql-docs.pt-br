@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7dbb9e32c1b5f68334ae1ccab17a85c23c069112
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179738"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192616"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desenvolvimento de SQL para cientistas de dados do R
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ Considerando que o passo a passo foi criado para apresentar os desenvolvedores d
 
 + [Permissões de banco de dados](../security/user-permission.md) e logon do usuário do Banco de Dados do SQL Server
 
-+ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + [Banco de dados de demonstração de Táxi de Nova York](demo-data-nyctaxi-in-sql.md)
 
@@ -47,7 +47,7 @@ Como alternativa, você pode executar a instrução em um computador que tenha [
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 > [!NOTE]
-> Se você estiver usando o [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/) ou a [Máquina Virtual de Ciência de Dados](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/), em vez do cliente R, o caminho para RevoScaleR será C:\Arquivos de Programas\Microsoft\ML Server\R_SERVER\library\RevoScaleR
+> Se você estiver usando o [Machine Learning Server](/machine-learning-server/) ou a [Máquina Virtual de Ciência de Dados](/azure/machine-learning/data-science-virtual-machine/), em vez do cliente R, o caminho para RevoScaleR será C:\Arquivos de Programas\Microsoft\ML Server\R_SERVER\library\RevoScaleR
 
 <a name="add-packages"></a>
 

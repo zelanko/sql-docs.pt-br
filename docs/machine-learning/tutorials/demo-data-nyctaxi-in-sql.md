@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9371d2f988642a5f5ab0e7b715130772a693bb52
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173683"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192636"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de táxi de Nova York para tutoriais de Python e R do SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Este artigo explica como configurar um banco de dados de exemplo que consiste em dados públicos da [Comissão táxi e limusines da Cidade de Nova York](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Esses dados são usados em vários tutoriais de R e Python para análise no banco de dados no SQL Server. Para fazer com que o código de exemplo seja executado mais rapidamente, criamos uma amostragem representativa de 1% dos dados. No seu sistema, o arquivo de backup do banco de dados terá um pouco mais de 90 MB, fornecendo 1,7 milhões de linhas na tabela de dados primária.
 
-Para concluir este exercício, você deve ter o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou outra ferramenta que possa restaurar um arquivo de backup de banco de dados e executar consultas T-SQL.
+Para concluir este exercício, você deve ter o [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) ou outra ferramenta que possa restaurar um arquivo de backup de banco de dados e executar consultas T-SQL.
 
 Os tutoriais e guias de início rápido que usam esse conjunto de dados incluem o seguinte:
 

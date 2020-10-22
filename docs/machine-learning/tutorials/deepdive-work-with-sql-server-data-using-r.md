@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fa8f5eab0c6d86f843d0f0c90ad49276e659171
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178618"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194498"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Criar um banco de dados e permissões (tutorial de SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este é o tutorial 1 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 1 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
-Este tutorial descreve como criar um banco de dados SQL Server e definir as permissões necessárias para concluir os outros tutoriais nesta série. Use o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou outro editor de consultas para concluir as seguintes tarefas:
+Este tutorial descreve como criar um banco de dados SQL Server e definir as permissões necessárias para concluir os outros tutoriais nesta série. Use o [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) ou outro editor de consultas para concluir as seguintes tarefas:
 
 > [!div class="checklist"]
 > * Criar um novo banco de dados para armazenar os dados de treinamento e pontuação dos dois modelos do R
@@ -94,11 +94,11 @@ Esta seção lista alguns problemas comuns que podem ocorrer durante a configura
 
 - **Como posso verificar a conectividade de banco de dados e verificar as consultas SQL?**
   
-    Antes de executar o código do R usando o servidor, é recomendável verificar se o banco de dados pode ser acessado no ambiente de desenvolvimento do R. O [Gerenciador de Servidores no Visual Studio](https://docs.microsoft.com/previous-versions/x603htbk(v=vs.140)) e o [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) são ferramentas gratuitas com recursos avançados de gerenciamento e conectividade de banco de dados.
+    Antes de executar o código do R usando o servidor, é recomendável verificar se o banco de dados pode ser acessado no ambiente de desenvolvimento do R. O [Gerenciador de Servidores no Visual Studio](/previous-versions/x603htbk(v=vs.140)) e o [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) são ferramentas gratuitas com recursos avançados de gerenciamento e conectividade de banco de dados.
   
-    Se você não quiser instalar as ferramentas de gerenciamento de banco de dados adicionais, será possível criar um teste de conexão com a instância do SQL Server usando o [Administrador de Fonte de Dados ODBC](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) no Painel de Controle. Se o banco de dados estiver configurado corretamente e você inserir o nome de usuário correto e a senha, você deverá conseguir ver o banco de dados que acabou de criar e selecioná-lo como o banco de dados padrão.
+    Se você não quiser instalar as ferramentas de gerenciamento de banco de dados adicionais, será possível criar um teste de conexão com a instância do SQL Server usando o [Administrador de Fonte de Dados ODBC](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) no Painel de Controle. Se o banco de dados estiver configurado corretamente e você inserir o nome de usuário correto e a senha, você deverá conseguir ver o banco de dados que acabou de criar e selecioná-lo como o banco de dados padrão.
   
-    Os motivos comuns para falhas de conexão incluem conexões remotas não habilitadas para o servidor e o protocolo de Pipes Nomeados não habilitado. Você pode encontrar mais dicas de solução de problemas neste artigo: [Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Os motivos comuns para falhas de conexão incluem conexões remotas não habilitadas para o servidor e o protocolo de Pipes Nomeados não habilitado. Você pode encontrar mais dicas de solução de problemas neste artigo: [Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
   
 - **O nome de minha tabela tem datareader como prefixo. Por quê?**
   

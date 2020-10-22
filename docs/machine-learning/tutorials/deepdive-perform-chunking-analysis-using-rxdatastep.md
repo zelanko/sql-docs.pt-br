@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a1dd8b47f7a251918eb87db9a8ec2dfd9d412a10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c636a33632a44e9cc5d1510bb73b5967a68f21ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179864"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195108"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Executar análise de agrupamento usando rxDataStep (tutorial do SQL Server e do RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este é o tutorial 12 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 12 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
 Neste tutorial, você usará a função **rxDataStep** para processar dados em partes, em vez de exigir que todo o conjunto de dados seja carregado na memória e processado de uma vez, como no R tradicional. As funções **rxDataStep** leem os dados em partes, aplicam as funções do R a cada parte de dados por vez e salvam os resultados resumidos para cada parte em uma fonte de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comum. Quando todos os dados tiverem sido lidos, os resultados serão combinados.
 
@@ -118,4 +118,4 @@ Neste tutorial, você usará a função **rxDataStep** para processar dados em p
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Tutoriais de R para SQL Server](sql-server-r-tutorials.md)
+> [Tutoriais de R para SQL Server](./r-tutorials.md)

@@ -12,12 +12,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b6e6b67a73fe61997c847b33e66400855e80a50
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0aa373bcbb6e71dab6bd3b579728222e13a3b952
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173419"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194469"
 ---
 # <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Tutorial do Python: categorizar clientes usando o cluster K-means com o aprendizado de máquina do SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -52,7 +52,7 @@ Na [parte quatro](python-clustering-model-deploy.md), você aprenderá a criar u
 ## <a name="prerequisites"></a>Pré-requisitos
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) com a opção de linguagem Python – siga as instruções de instalação no [guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md) ou no [guia de instalação do Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15). Você também pode [habilitar Serviços de Machine Learning em Clusters de Big Data do SQL Server](../../big-data-cluster/machine-learning-services.md).
+* [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) com a opção de linguagem Python – siga as instruções de instalação no [guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md) ou no [guia de instalação do Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%252fsql%252fmachine-learning%252ftoc.json&view=sql-server-linux-ver15). Você também pode [habilitar Serviços de Machine Learning em Clusters de Big Data do SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) com a opção de linguagem Python – siga as instruções de instalação no [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md).
@@ -63,7 +63,7 @@ Na [parte quatro](python-clustering-model-deploy.md), você aprenderá a criar u
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) para restaurar o banco de dados de exemplo na Instância Gerenciada de SQL do Azure.
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md). Você usará um notebook no Azure Data Studio para Python e para SQL. Para obter mais informações sobre notebooks, confira [Como usar notebooks no Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+* [Azure Data Studio](../../azure-data-studio/what-is.md). Você usará um notebook no Azure Data Studio para Python e para SQL. Para obter mais informações sobre notebooks, confira [Como usar notebooks no Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
 * Pacotes do Python adicionais – os exemplos nesta série de tutoriais usam pacotes do Python que você pode ou não ter instalado.
 

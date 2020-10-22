@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178423"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196230"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Criar gráficos e plotagens usando o SQL e o R (instruções passo a passo)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ Esta etapa pressupõe uma sessão do R em andamento com base nas etapas anterior
 
 ## <a name="create-a-histogram"></a>Criar um histograma
 
-1. Gere a primeira plotagem, usando a função [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) .  A função rxHistogram fornece funcionalidade semelhante a dos pacotes de R de software livre, mas pode ser executada em um contexto de execução remota.
+1. Gere a primeira plotagem, usando a função [rxHistogram](/r-server/r-reference/revoscaler/rxdatasource) .  A função rxHistogram fornece funcionalidade semelhante a dos pacotes de R de software livre, mas pode ser executada em um contexto de execução remota.
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -73,7 +73,7 @@ Normalmente, os servidores de banco de dados bloqueiam o acesso à Internet. Iss
 
     + A função personalizada *mapPlot* usa dois argumentos: um objeto de dados existente, definido anteriormente usando RxSqlServerData, e a representação do mapa passada do cliente.
     + Na linha que começa com a variável *ds*, rxImport é usado para carregar dados de memória da fonte de dados criada anteriormente, *inDataSource*. (Essa fonte de dados contém apenas 1.000 linhas. Se você quiser criar um mapa com mais pontos de dados, poderá substituir uma fonte de dados diferente.)
-    + Sempre que você usar funções do R de software livre, os dados deverão ser carregados em quadros de dados na memória local. No entanto, ao chamar a função [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport), você pode executar na memória do contexto de computação remota.
+    + Sempre que você usar funções do R de software livre, os dados deverão ser carregados em quadros de dados na memória local. No entanto, ao chamar a função [rxImport](/r-server/r-reference/revoscaler/rximport), você pode executar na memória do contexto de computação remota.
 
 2. Altere o contexto de computação para local e carregue as bibliotecas necessárias para criar os mapas.
 
@@ -89,7 +89,7 @@ Normalmente, os servidores de banco de dados bloqueiam o acesso à Internet. Iss
 
     + A linha que começa com `googmap` gera um mapa com as coordenadas especificadas no centro.
 
-3. Alterne para o contexto de computação do SQL Server e renderize os resultados encapsulando a função de gráfico em [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) como mostrado aqui. A função rxExec é parte do pacote **RevoScaleR** e dá suporte à execução de funções do R arbitrárias no contexto de computação remota.
+3. Alterne para o contexto de computação do SQL Server e renderize os resultados encapsulando a função de gráfico em [rxExec](/r-server/r-reference/revoscaler/rxexec) como mostrado aqui. A função rxExec é parte do pacote **RevoScaleR** e dá suporte à execução de funções do R arbitrárias no contexto de computação remota.
 
     ```R
     rxSetComputeContext(sqlcc)

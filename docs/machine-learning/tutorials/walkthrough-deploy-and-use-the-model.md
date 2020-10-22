@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179737"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193638"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implantar o modelo do R e usá-lo no SQL Server (passo a passo)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -216,7 +216,7 @@ O procedimento armazenado *PredictTipSingleMode* demonstra essa abordagem. Ele u
     ```
 
     >[!TIP]
-    > O RTVS (Ferramentas do R para Visual Studio) fornece uma ótima integração com o SQL Server e o R. Confira este artigo para obter mais exemplos de como usar o RODBC com uma conexão SQL Server: [Como trabalhar com SQL Server e R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > O RTVS (Ferramentas do R para Visual Studio) fornece uma ótima integração com o SQL Server e o R. Confira este artigo para obter mais exemplos de como usar o RODBC com uma conexão SQL Server: [Como trabalhar com SQL Server e R](/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -229,5 +229,5 @@ Também pode ser útil explorar estes exemplos e recursos adicionais:
 
 + [Cenários de ciência de dados e modelos da solução](data-science-scenarios-and-solution-templates.md)
 + [Análise avançada no banco de dados](r-taxi-classification-introduction.md)
-+ [Guias de instruções do Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
-+ [Recursos adicionais do Machine Learning Server](https://docs.microsoft.com//machine-learning-server/resources-more)
++ [Guias de instruções do Machine Learning Server](/machine-learning-server/r/how-to-introduction)
++ [Recursos adicionais do Machine Learning Server](//machine-learning-server/resources-more)

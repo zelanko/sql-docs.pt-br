@@ -1,4 +1,5 @@
 ---
+description: Propriedade Version (WMI MSReportServer_ConfigurationSetting)
 title: Propriedade Version (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 60c7c5b3e49dff88ff6f55c3f97052c7ae38ef92
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 97625bae09124de613728dcbde0a50adb3959e27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255823"
 ---
 # <a name="configurationsetting-property---version"></a>Propriedade de ConfigurationSetting – Version
   Retorna a versão do servidor de relatório no formato Major.Minor.Build.Revision. Somente leitura.  
@@ -40,6 +41,6 @@ public string Version;
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [Membros MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

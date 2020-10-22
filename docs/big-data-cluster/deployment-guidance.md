@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 870ff07f771f06acfb24e9883477b177af36d425
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725862"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257203"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Como implantar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes
 
@@ -23,7 +23,7 @@ ms.locfileid: "91725862"
 O cluster de Big Data do SQL Server é implantado como contêineres do Docker em um cluster do Kubernetes. Esta é uma visão geral das etapas de instalação e configuração:
 
 - Configure um cluster do Kubernetes em uma só VM, em um cluster de VMs, no AKS (Serviço de Kubernetes do Azure), no Red Hat OpenShift ou no ARO (Red Hat OpenShift no Azure).
-- Instale a ferramenta de configuração de cluster `azdata` no computador cliente.
+- Instale a ferramenta de configuração de cluster [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] no computador cliente.
 - Implante um cluster de Big Data do SQL Server em um cluster do Kubernetes.
 
 ## <a name="supported-platforms"></a>Plataformas compatíveis
@@ -77,7 +77,7 @@ Se você fizer a implantação no AKS, nenhuma configuração de armazenamento s
 
 Antes de implantar um cluster de Big Data do SQL Server 2019, primeiro [instale as ferramentas de Big Data](deploy-big-data-tools.md):
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - Azure Data Studio
 - [Extensão Virtualização de Dados](../azure-data-studio/extensions/data-virtualization-extension.md) para o Azure Data Studio
@@ -91,10 +91,10 @@ As seções a seguir fornecem mais detalhes sobre como configurar suas implanta�
 
 ## <a name="default-configurations"></a><a id="configfile"></a> Configurações padrão
 
-As opções de implantação de cluster de Big Data são definidas em arquivos de configuração JSON. Você pode iniciar a personalização da implantação do cluster nos perfis de implantação internos disponíveis no `azdata`. 
+As opções de implantação de cluster de Big Data são definidas em arquivos de configuração JSON. Você pode iniciar a personalização da implantação do cluster nos perfis de implantação internos disponíveis no [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
 
 > [!NOTE]
-> As imagens de contêiner necessárias para a implantação de cluster de Big Data estão hospedadas no Registro de Contêiner da Microsoft (`mcr.microsoft.com`), no repositório `mssql/bdc`. Por padrão, essas configurações já estão incluídas no arquivo de configuração `control.json` em cada um dos perfis de implantação incluídos no `azdata`. Além disso, a tag de imagem de contêiner para cada versão também é preenchida previamente no mesmo arquivo de configuração. Se você precisar efetuar pull das imagens de contêiner para seu próprio registro de contêiner privado e/ou modificar as configurações do repositório/registro de contêiner, siga as instruções no artigo [Instalação offline](deploy-offline.md)
+> As imagens de contêiner necessárias para a implantação de cluster de Big Data estão hospedadas no Registro de Contêiner da Microsoft (`mcr.microsoft.com`), no repositório `mssql/bdc`. Por padrão, essas configurações já estão incluídas no arquivo de configuração `control.json` em cada um dos perfis de implantação incluídos no [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Além disso, a tag de imagem de contêiner para cada versão também é preenchida previamente no mesmo arquivo de configuração. Se você precisar efetuar pull das imagens de contêiner para seu próprio registro de contêiner privado e/ou modificar as configurações do repositório/registro de contêiner, siga as instruções no artigo [Instalação offline](deploy-offline.md)
 
 Execute este comando para localizar os modelos disponíveis:
 
@@ -117,7 +117,7 @@ Os seguintes modelos estão disponíveis começando no SQL Server 2019 CU5:
 
 Você pode implantar um cluster de Big Data executando `azdata bdc create`. Isso solicitará que você escolha uma das configurações padrão e, em seguida, o guiará pela implantação.
 
-Na primeira vez que executar `azdata`, você deverá incluir `--accept-eula=yes` para aceitar o EULA (contrato de licença de usuário final).
+Na primeira vez que executar [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], você deverá incluir `--accept-eula=yes` para aceitar o EULA (contrato de licença de usuário final).
 
 ```bash
 azdata bdc create --accept-eula=yes
@@ -176,7 +176,7 @@ As variáveis de ambiente a seguir são usadas para configurações de seguranç
 |---|---|---|
 | `AZDATA_USERNAME` | Obrigatório |O nome de usuário do administrador do cluster de Big Data do SQL Server. Um logon sysadmin com o mesmo nome é criado na instância mestre do SQL Server. Como melhor prática de segurança, a conta `sa` está desabilitada. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
 | `AZDATA_PASSWORD` | Obrigatório |A senha das contas de usuário criadas acima. Em clusters implantados antes do SQL Server 2019 CU5, a mesma senha é usada para o usuário `root`, a fim de proteger o gateway do Knox e o HDFS. |
-| `ACCEPT_EULA`| Necessário para o primeiro uso de `azdata`| Defina como "sim". Quando definido como uma variável de ambiente, ele aplica o EULA ao SQL Server e ao `azdata`. Se não estiver definido como variável de ambiente, você poderá incluir `--accept-eula=yes` no primeiro uso do comando `azdata`.|
+| `ACCEPT_EULA`| Necessário para o primeiro uso de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]| Defina como "sim". Quando definido como uma variável de ambiente, ele aplica o EULA ao SQL Server e ao [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Se não estiver definido como variável de ambiente, você poderá incluir `--accept-eula=yes` no primeiro uso do comando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].|
 | `DOCKER_USERNAME` | Opcional | O nome de usuário para acessar as imagens de contêiner caso elas sejam armazenadas em um repositório privado. Confira o tópico [Implantações offline](deploy-offline.md) para obter mais detalhes sobre como usar um repositório privado do Docker para implantação de cluster de Big Data.|
 | `DOCKER_PASSWORD` | Opcional |A senha para acessar o repositório privado acima. |
 
@@ -424,7 +424,7 @@ Sql: ready                                                                      
 > [!IMPORTANT]
 > Ao usar o parâmetro `--all`, a saída desses comandos contém URLs para os painéis Kibana e Grafana para uma análise mais detalhada.
 
-Além de usar `azdata`, você também pode usar o Azure Data Studio para localizar os pontos de extremidade e as informações de status. Para obter mais informações sobre como exibir o status do cluster com `azdata` e o Azure Data Studio, confira [Como exibir o status de um cluster de Big Data](view-cluster-status.md).
+Além de usar [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], você também pode usar o Azure Data Studio para localizar os pontos de extremidade e as informações de status. Para obter mais informações sobre como exibir o status do cluster com [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] e o Azure Data Studio, confira [Como exibir o status de um cluster de Big Data](view-cluster-status.md).
 
 ## <a name="connect-to-the-cluster"></a><a id="connect"></a> Conectar-se ao cluster
 

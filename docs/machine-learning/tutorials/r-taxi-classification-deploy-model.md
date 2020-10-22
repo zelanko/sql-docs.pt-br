@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ffebcaa9afc8f2caa8717170d9746787c17593b3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173590"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196260"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Tutorial do R: executar previsões em procedimentos armazenados do SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + A instrução SELECT obtém o modelo serializado do banco de dados e armazena o modelo na variável `mod` do R para processamento adicional com o R.
 
-+ Os novos casos para pontuação são obtidos por meio da consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] especificada no `@inquery`, o primeiro parâmetro do procedimento armazenado. Conforme os dados da consulta são lidos, as linhas são salvas no quadro de dados padrão, `InputDataSet`. Esse quadro de dados é passado para a função [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) no [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), que gera as pontuações.
++ Os novos casos para pontuação são obtidos por meio da consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] especificada no `@inquery`, o primeiro parâmetro do procedimento armazenado. Conforme os dados da consulta são lidos, as linhas são salvas no quadro de dados padrão, `InputDataSet`. Esse quadro de dados é passado para a função [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) no [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), que gera as pontuações.
   
   `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -193,7 +193,7 @@ Se você chamar o procedimento armazenado de um aplicativo externo, verifique se
    @dropoff_longitude = -73.977303
    ```
 
-   Ou use essa forma mais curta com suporte para [parâmetros para um procedimento armazenado](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+   Ou use essa forma mais curta com suporte para [parâmetros para um procedimento armazenado](../../relational-databases/stored-procedures/specify-parameters.md):
   
    ```sql
    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

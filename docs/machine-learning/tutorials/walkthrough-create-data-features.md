@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e2f21808bcd45224027ae7ddc28c8a07f0d85db
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6e4b05970efde3519e29e51cfb3925ba1bbf4c16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173587"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192626"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Criar recursos de dados usando R e SQL Server (passo a passo)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ Primeiro, vamos fazer da maneira como os usuários do R estão acostumados: obte
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - O [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) pode usar uma consulta que consiste em uma consulta SELECT válida, fornecida como o argumento para o parâmetro _sqlQuery_ ou o nome de um objeto de tabela, fornecido como o parâmetro _table_.
+    - O [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) pode usar uma consulta que consiste em uma consulta SELECT válida, fornecida como o argumento para o parâmetro _sqlQuery_ ou o nome de um objeto de tabela, fornecido como o parâmetro _table_.
     
     - Se você quiser amostrar dados de uma tabela, deverá usar o parâmetro _sqlQuery_, definir parâmetros de amostragem usando a cláusula T-SQL TABLESAMPLE e definir o argumento _rowBuffering_ como FALSE.
 
@@ -91,7 +91,7 @@ Primeiro, vamos fazer da maneira como os usuários do R estão acostumados: obte
     rxSetComputeContext("local");
     ```
 
-5. Chame a função [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) para obter os dados de engenharia de recursos e aplique a função `env$ComputeDist` aos dados na memória.
+5. Chame a função [rxDataStep](/r-server/r-reference/revoscaler/rxdatastep) para obter os dados de engenharia de recursos e aplique a função `env$ComputeDist` aos dados na memória.
 
     ```R
     start.time <- proc.time();
@@ -109,7 +109,7 @@ Primeiro, vamos fazer da maneira como os usuários do R estão acostumados: obte
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + A função rxDataStep dá suporte a vários métodos para modificar dados no local. Para obter mais informações, confira este artigo:  [Como transformar e subdividir dados no Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + A função rxDataStep dá suporte a vários métodos para modificar dados no local. Para obter mais informações, confira este artigo:  [Como transformar e subdividir dados no Microsoft R](/r-server/r/how-to-revoscaler-data-transform)
     
     No entanto, vale a pena observar alguns pontos em relação a rxDataStep: 
     
@@ -117,7 +117,7 @@ Primeiro, vamos fazer da maneira como os usuários do R estão acostumados: obte
 
     O código anterior também pode produzir uma mensagem de aviso quando executado em conjuntos de dados maiores. Quando o número de linhas vezes que o número de colunas que está sendo criado excede um valor definido (o padrão é 3 milhões), o rxDataStep retorna um aviso e o número de linhas no quadro de dados retornado é truncado. Para remover o aviso, você pode modificar o argumento _maxRowsByCols_ na função rxDataStep. No entanto, se _maxRowsByCols_ for muito grande, você poderá enfrentar problemas ao carregar o quadro de dados na memória.
 
-7. Opcionalmente, você pode chamar [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) para inspecionar o esquema da fonte de dados transformada.
+7. Opcionalmente, você pode chamar [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo) para inspecionar o esquema da fonte de dados transformada.
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -127,7 +127,7 @@ Primeiro, vamos fazer da maneira como os usuários do R estão acostumados: obte
 
 Neste exercício, aprenda a realizar a mesma tarefa usando funções SQL em vez de funções personalizadas do R. 
 
-Alterne para o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou para outro editor de consultas para executar o script T-SQL.
+Alterne para o [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) ou para outro editor de consultas para executar o script T-SQL.
 
 1. Use uma função SQL chamada *fnCalculateDistance*. A função já deve existir no banco de dados NYCTaxi_Sample. No Pesquisador de Objetos, verifique se a função existe navegando neste caminho: Bancos de dados > NYCTaxi_Sample > Programabilidade > Funções > Funções de valor escalar > dbo.fnCalculateDistance.
 
@@ -252,4 +252,3 @@ Seus tempos podem variar significativamente dependendo da velocidade da rede e d
 
 > [!div class="nextstepaction"]
 > [Criar um modelo do R e salvar no SQL](walkthrough-build-and-save-the-model.md)
-

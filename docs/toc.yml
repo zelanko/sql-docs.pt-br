@@ -58,7 +58,7 @@
           items:
             - name: Instalar ferramentas de Big Data
               href: big-data-cluster/deploy-big-data-tools.md
-            - name: Instalar o azdata
+            - name: Instalar a CLI de dados do Azure
               items:
                 - name: Instalar
                   href: azdata/install/deploy-install-azdata.md
@@ -196,7 +196,7 @@
               href: big-data-cluster/data-ingestion-restore-database.md
         - name: Implantar e consumir aplicativos
           items:
-            - name: Implantar com o azdata
+            - name: Fazer implantação com a CLI de dados do Azure
               href: big-data-cluster/app-create.md
             - name: Implantar com o VS Code
               href: big-data-cluster/app-deployment-extension.md
@@ -402,9 +402,9 @@
               href: big-data-cluster/reference-config-master-instance.md
             - name: Apache Spark e Apache Hadoop
               href: big-data-cluster/reference-config-spark-hadoop.md
-        - name: referência do azdata
+        - name: Referência da CLI de dados do Azure
           items:
-            - name: azdata
+            - name: CLI de dados do Azure
               items:
                 - name: azdata
                   href: azdata/reference/reference-azdata.md

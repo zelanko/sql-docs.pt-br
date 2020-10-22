@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e2fcd1719c63d88eb20156aa2c4d84884cca1efc
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 31aafedd59bc94d5b80359c8335421569dd510bf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178823"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196290"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Criar tabela do SQL Server usando rxDataStep (tutorial do SQL Server e do RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este é o tutorial 11 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 11 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
 Neste tutorial, você aprenderá a mover dados entre os quadros de dados na memória, o contexto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os arquivos locais.
 
@@ -34,7 +34,7 @@ Este tutorial usa uma abordagem diferente e os dados de um arquivo salvo no [for
 
 **O que é XDF?**
 
-O formato XDF é um padrão de XML desenvolvido para dados de grande dimensão e é o formato de arquivo nativo usado pelo [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Trata-se de um formato de arquivo binário com uma interface de R que otimiza a análise e o processamento de linhas e colunas.  Você pode usá-lo para mover dados e armazenar subconjuntos de dados que são úteis para análise.
+O formato XDF é um padrão de XML desenvolvido para dados de grande dimensão e é o formato de arquivo nativo usado pelo [Machine Learning Server](/machine-learning-server/r/concept-what-is-xdf). Trata-se de um formato de arquivo binário com uma interface de R que otimiza a análise e o processamento de linhas e colunas.  Você pode usá-lo para mover dados e armazenar subconjuntos de dados que são úteis para análise.
 
 1. Defina o contexto de computação como a estação de trabalho local. **Permissões de DDL necessárias para esta etapa.**
 
@@ -50,7 +50,7 @@ O formato XDF é um padrão de XML desenvolvido para dados de grande dimensão e
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. Chame [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) nos dados na memória para exibir um resumo do conjunto de dados.
+3. Chame [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) nos dados na memória para exibir um resumo do conjunto de dados.
   
     ```R
     rxGetVarInfo(xdfAirDemo)

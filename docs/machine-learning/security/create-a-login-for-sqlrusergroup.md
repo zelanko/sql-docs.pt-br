@@ -8,17 +8,17 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180423"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92195750"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Criar um logon para SQLRUserGroup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Crie um [logon no SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando uma [conexão de loopback](../../machine-learning/concepts/security.md#implied-authentication) em seu script especificar uma *conexão confiável* e a identidade usada para executar um objeto que contém seu código for uma conta de usuário do Windows.
+Crie um [logon no SQL Server](../../relational-databases/security/authentication-access/create-a-login.md) para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando uma [conexão de loopback](../../machine-learning/concepts/security.md#implied-authentication) em seu script especificar uma *conexão confiável* e a identidade usada para executar um objeto que contém seu código for uma conta de usuário do Windows.
 
 As conexões confiáveis são aquelas que têm `Trusted_Connection=True` na cadeia de conexão. Quando o SQL Server recebe uma solicitação especificando uma conexão confiável, ele verifica se a identidade do usuário atual do Windows tem um logon. Para processos externos em execução como uma conta de trabalho (como MSSQLSERVER01 de **SQLRUserGroup**), a solicitação falha porque essas contas não têm um logon por padrão.
 

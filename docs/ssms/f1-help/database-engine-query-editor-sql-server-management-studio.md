@@ -7,7 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
-- sql23.swb.tsqlresults.f1
+- sql13.swb.tsqlresults.f1
+- sql13.swb.query.advanced.f1
+- sql13.swb.query.ansi.f1
+- sql13.swb.query.general.f1
+- sql13.swb.query.general.f1
+- sql13.swb.sqleditors.multiserverresultssettings
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035459"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344062"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Editor de Consulta do SSMS (SQL Server Management Studio)
 
@@ -300,8 +305,8 @@ Se o mecanismo de pesquisa de ajuda não localizar um tópico com uma palavra-ch
 | Arrastar texto de um local em um script e soltá-lo em um novo local.| [Arrastar e soltar texto](../scripting/drag-and-drop-text.md) |
 | Como definir indicadores para localizar partes importantes de código com mais facilidade. | [Gerenciar indicadores](../scripting/manage-bookmarks.md) |
 | Como imprimir scripts ou resultados em uma janela ou grade.| [Imprimir código e resultados](../scripting/print-code-and-results.md) |
-| Exibir e usar os recursos básicos do Editor de Consultas MDX. | [Criar Scripts do Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| Exibir e usar os recursos básicos do Editor de Consultas DMX. | [Criar uma Consulta DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| Exibir e usar os recursos básicos do Editor de Consultas MDX. | [Criar Scripts do Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
+| Exibir e usar os recursos básicos do Editor de Consultas DMX. | [Criar uma Consulta DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | Exibir e usar os recursos básicos do Editor de XML/A. | [Editor de XML](../scripting/xml-editor-sql-server-management-studio.md) |
 | Como usar os recursos do sqlcmd no Editor de Consultas do Mecanismo de Banco de Dados.| [Editar Scripts SQLCMD](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | Como usar snippets no Editor de Consulta do Mecanismo de Banco de Dados. Os snippets são modelos para instruções ou blocos geralmente usados, e podem ser personalizados ou estendidos para incluir snippets específicos de site.| [Snippets de código T-SQL](../scripting/add-transact-sql-snippets.md) |

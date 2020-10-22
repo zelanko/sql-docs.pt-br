@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ae9985ae7d203387eb268a50d97ee91849b33a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a5219b034abdd390a77e1dacd6b2b71d83a770e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180438"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195760"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Como usar dados de cubos OLAP no R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -30,7 +30,7 @@ Este artigo descreve a API, juntamente com uma visão geral do OLAP e do MDX par
 
 OLAP é a abreviação de processamento analítico online. As soluções OLAP são amplamente usadas para capturar e armazenar dados corporativos críticos ao longo do tempo. Os dados OLAP são consumidos por análise de negócios através de uma variedade de ferramentas, painéis e visualizações. Para obter mais informações, confira [Processamento analítico online](https://en.wikipedia.org/wiki/Online_analytical_processing).
 
-A Microsoft fornece o [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), que permite projetar, implantar e consultar dados OLAP na forma de _cubos_ ou _modelos de tabela_. Um cubo é um banco de dados multidimensional. As _dimensões_ são como facetas dos dados ou fatores no R: você usa as dimensões para identificar um subconjunto específico de dados que deseja resumir ou analisar. Por exemplo, o tempo é uma dimensão importante, tanto que muitas soluções OLAP incluem vários calendários definidos por padrão, a ser usada na divisão e no resumo de dados. 
+A Microsoft fornece o [Analysis Services](/analysis-services/analysis-services-overview), que permite projetar, implantar e consultar dados OLAP na forma de _cubos_ ou _modelos de tabela_. Um cubo é um banco de dados multidimensional. As _dimensões_ são como facetas dos dados ou fatores no R: você usa as dimensões para identificar um subconjunto específico de dados que deseja resumir ou analisar. Por exemplo, o tempo é uma dimensão importante, tanto que muitas soluções OLAP incluem vários calendários definidos por padrão, a ser usada na divisão e no resumo de dados. 
 
 Por motivos de desempenho, um banco de dados OLAP muitas vezes calcula resumos (ou _agregações_) com antecedência e, em seguida, os armazena para uma recuperação mais rápida. Os resumos são baseados em *medidas*, que representam fórmulas que podem ser aplicadas a dados numéricos. Você usa as dimensões para definir um subconjunto de dados e, em seguida, calcula a medida nesses dados. Por exemplo, você usa uma medida para calcular o total de vendas de determinada linha de produtos em vários trimestres, menos impostos, para relatar os custos médios de envio de um fornecedor específico, os salários cumulativos pagos do ano atual etc.
 
@@ -95,11 +95,11 @@ Você também pode ver e consultar as propriedades do servidor para determinar a
 
 Confira o seguinte artigo para obter informações gerais sobre os dois tipos de modelos:
 
-+ [Como comparar modelos multidimensionais e de tabela](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
++ [Como comparar modelos multidimensionais e de tabela](/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 
 Confira o seguinte artigo para obter informações sobre como consultar as propriedades do servidor:
 
-+ [Conjuntos de linhas de esquema OLE DB para OLAP](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
++ [Conjuntos de linhas de esquema OLE DB para OLAP](/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>Não há suporte para write-back
 
@@ -107,9 +107,9 @@ Não é possível gravar os resultados de cálculos personalizados do R novament
 
 Em geral, mesmo quando um cubo está habilitado para write-back, só há suporte para operações limitadas e uma configuração adicional pode ser necessária. Recomendamos que você use o MDX para essas operações.
 
-+ [Dimensões habilitadas para gravação](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
-+ [Partições habilitadas para gravação](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
-+ [Definir o acesso personalizado a dados de célula](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
++ [Dimensões habilitadas para gravação](/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [Partições habilitadas para gravação](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [Definir o acesso personalizado a dados de célula](/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ### <a name="long-running-mdx-queries-block-cube-processing"></a>Consultas MDX de execução longa bloqueiam o processamento do cubo
 

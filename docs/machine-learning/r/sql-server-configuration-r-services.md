@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: feaa53fa47591ecdb3f1f0bc66ab390def8fbbb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180459"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195770"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuração do SQL Server para uso com R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88180459"
 Este artigo é o segundo de uma série que descreve a otimização de desempenho para R Services com base em dois estudos de caso.  Este artigo fornece diretrizes sobre a configuração de hardware e de rede do computador usado para executar o SQL Server R Services. Ele também contém informações sobre maneiras de configurar as tabelas, o banco de dados ou a instância do SQL Server usada em uma solução. Como o uso de NUMA no SQL Server mistura os conceitos de otimização de hardware e de banco de dados, uma terceira seção aborda o ajuste da CPU e a governança de recursos em detalhes.
 
 > [!TIP]
-> Se você não estiver familiarizado com o SQL Server, recomendamos que também leia o guia de ajuste de desempenho do SQL Server: [Monitorar e ajustar para aumentar o desempenho](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
+> Se você não estiver familiarizado com o SQL Server, recomendamos que também leia o guia de ajuste de desempenho do SQL Server: [Monitorar e ajustar para aumentar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md).
 
 ## <a name="hardware-optimization"></a>Otimização de hardware
 
@@ -149,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 Se a consulta retornar um nó de memória único (nó 0), significa que você não tem NUMA de hardware ou o hardware está configurado como intercalado (não NUMA). O SQL Server também ignora o NUMA de hardware quando há quatro ou menos CPUs ou se pelo menos um nó tem apenas uma CPU.
 
-Se o computador tiver vários processadores, mas não tiver NUMA de hardware, você também poderá usar [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) para subdividir as CPUs em grupos menores.  No SQL Server 2016 e no SQL Server 2017, o recurso Soft-NUMA é habilitado automaticamente ao iniciar o serviço SQL Server.
+Se o computador tiver vários processadores, mas não tiver NUMA de hardware, você também poderá usar [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) para subdividir as CPUs em grupos menores.  No SQL Server 2016 e no SQL Server 2017, o recurso Soft-NUMA é habilitado automaticamente ao iniciar o serviço SQL Server.
 
 Quando o Soft-NUMA está habilitado, o SQL Server gerencia automaticamente os nós para você. No entanto, para otimizar cargas de trabalho específicas, você pode desabilitar a _afinidade flexível_ e configurar manualmente a afinidade de CPU para os nós de Soft-NUMA. Isso poderá proporcionar mais controle sobre quais cargas de trabalho são atribuídas a quais nós, especialmente se você estiver usando uma edição do SQL Server com suporte à governança de recursos. Ao especificar a afinidade de CPU e alinhar os pools de recursos com grupos de CPUs, você pode reduzir a latência e garantir que os processos relacionados sejam executados dentro do mesmo nó NUMA.
 
@@ -164,7 +164,7 @@ Para obter detalhes, incluindo o código de exemplo, confira este tutorial: [Dic
 
 **Outros recursos:**
 
-+ [Soft-NUMA no SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA no SQL Server](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     Como mapear nós soft-NUMA para CPUs
 
@@ -178,7 +178,7 @@ Um ponto problemático com o R é que ele geralmente é processado em uma única
 
 Há várias maneiras de melhorar o desempenho da engenharia de recursos. Você pode otimizar o código de R e manter a extração de recursos dentro do processo de modelagem ou pode mover o processo de engenharia de recursos para o SQL.
 
-- Usando R, você define uma função e a passa como o argumento para [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform) durante o treinamento. Se o modelo der suporte ao processamento paralelo, a tarefa de engenharia de recursos poderá ser processada usando várias CPUs. Usando essa abordagem, a equipe de ciência de dados observou uma melhoria de desempenho de 16% em termos de tempo de pontuação. No entanto, essa abordagem requer um modelo com suporte à paralelização e uma consulta que possa ser executada usando um plano paralelo.
+- Usando R, você define uma função e a passa como o argumento para [rxTransform](/r-server/r-reference/revoscaler/rxtransform) durante o treinamento. Se o modelo der suporte ao processamento paralelo, a tarefa de engenharia de recursos poderá ser processada usando várias CPUs. Usando essa abordagem, a equipe de ciência de dados observou uma melhoria de desempenho de 16% em termos de tempo de pontuação. No entanto, essa abordagem requer um modelo com suporte à paralelização e uma consulta que possa ser executada usando um plano paralelo.
 
 - Usar R com um contexto de computação SQL. Em um ambiente multiprocessador com recursos isolados disponíveis para execução de lotes separados, você pode ter maior eficiência isolando as consultas SQL usadas para cada lote, para extrair dados de tabelas e restringir os dados ao mesmo grupo de carga de trabalho. Os métodos usados para isolar os lotes incluem particionamento e uso do PowerShell para executar consultas separadas em paralelo.
 

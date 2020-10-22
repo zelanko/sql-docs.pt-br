@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d006c3e9662e8e2d4d6486b991d8543ef96b7565
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8a458b1eadff2cd4ef36c73a75eb90a3d25530fa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179918"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195805"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (pacote de R nos Serviços de Machine Learning do SQL Server)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ Você também pode executar o procedimento armazenado em um ambiente de R, trans
   
 ## <a name="full-reference-documentation"></a>Documentação de referência completa
 
-O pacote **sqlrutils** é distribuído em vários produtos da Microsoft, mas o uso é o mesmo com o pacote no SQL Server ou em outro produto. Como as funções são as mesmas, a [documentação para funções individuais do sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) é publicada em apenas uma localização sob a [referência de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para o Microsoft Machine Learning Server. Se existirem comportamentos específicos do produto, as discrepâncias serão indicadas na página de ajuda da função.
+O pacote **sqlrutils** é distribuído em vários produtos da Microsoft, mas o uso é o mesmo com o pacote no SQL Server ou em outro produto. Como as funções são as mesmas, a [documentação para funções individuais do sqlrutils](/machine-learning-server/r-reference/revoscaler/revoscaler) é publicada em apenas uma localização sob a [referência de R](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para o Microsoft Machine Learning Server. Se existirem comportamentos específicos do produto, as discrepâncias serão indicadas na página de ajuda da função.
 
 ## <a name="functions-list"></a>Lista de funções
 
@@ -43,16 +43,16 @@ A seção a seguir fornece uma visão geral das funções que você pode chamar 
 
 |Função | Descrição |
 |------|-------------|
-|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Executar um procedimento armazenado do SQL.|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Obter uma lista de parâmetros de entrada para o procedimento armazenado.| 
-|[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| Define a fonte de dados no SQL Server que será usada no quadro de dados de R. Você especifica o nome do data.frame no qual armazena os dados de entrada e uma consulta para obter os dados, ou um valor padrão. Só há suporte para consultas SELECT simples. | 
-|[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| Define um único parâmetro de entrada que será inserido no script T-SQL. Você deve fornecer o nome do parâmetro e seu tipo de dados de R.| 
-|[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| Gera um objeto de dados intermediário que será necessário se a função R retornar uma lista que contém um data.frame. O objeto *OutputData* é usado para armazenar o nome de um único data.frame obtido da lista.| 
-|[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | Gera um objeto de dados intermediário que será necessário se a função R retornar uma lista. O objeto *OutputParameter* armazena o nome e o tipo de dados de um único membro da lista, supondo que o membro **não** é um quadro de dados. |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Registrar o procedimento armazenado com um banco de dados.|
-|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Atribuir uma consulta a um parâmetro de dados de entrada do procedimento armazenado.| 
-|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Atribuir um valor a um parâmetro de entrada do procedimento armazenado.| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Um objeto de procedimento armazenado.|
+|[executeStoredProcedure](/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Executar um procedimento armazenado do SQL.|
+|[getInputParameters](/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Obter uma lista de parâmetros de entrada para o procedimento armazenado.| 
+|[InputData](/machine-learning-server/r-reference/sqlrutils/inputdata)| Define a fonte de dados no SQL Server que será usada no quadro de dados de R. Você especifica o nome do data.frame no qual armazena os dados de entrada e uma consulta para obter os dados, ou um valor padrão. Só há suporte para consultas SELECT simples. | 
+|[InputParameter](/machine-learning-server/r-reference/sqlrutils/inputparameter)| Define um único parâmetro de entrada que será inserido no script T-SQL. Você deve fornecer o nome do parâmetro e seu tipo de dados de R.| 
+|[OutputData](/machine-learning-server/r-reference/sqlrutils/outputdata)| Gera um objeto de dados intermediário que será necessário se a função R retornar uma lista que contém um data.frame. O objeto *OutputData* é usado para armazenar o nome de um único data.frame obtido da lista.| 
+|[OutputParameter](/machine-learning-server/r-reference/sqlrutils/outputparameter) | Gera um objeto de dados intermediário que será necessário se a função R retornar uma lista. O objeto *OutputParameter* armazena o nome e o tipo de dados de um único membro da lista, supondo que o membro **não** é um quadro de dados. |
+|[registerStoredProcedure](/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Registrar o procedimento armazenado com um banco de dados.|
+|[setInputDataQuery](/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Atribuir uma consulta a um parâmetro de dados de entrada do procedimento armazenado.| 
+|[setInputParameterValue](/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Atribuir um valor a um parâmetro de entrada do procedimento armazenado.| 
+|[StoredProcedure](/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Um objeto de procedimento armazenado.|
 
 
 ## <a name="how-to-use-sqlrutils"></a>Como usar o sqlrutils
@@ -107,4 +107,3 @@ O objeto de procedimento armazenado normalmente não tem quaisquer dados ou valo
 ## <a name="see-also"></a>Confira também
 
 [Como criar um procedimento armazenado usando sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
-

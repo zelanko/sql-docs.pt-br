@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 43453738d9351a18e4ed6e9887fdf75bb2e9521a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834050"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194444"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Início Rápido: criar e pontuar um modelo de previsão no Python com o machine learning do SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -95,7 +95,7 @@ Nesta etapa, você criará um procedimento armazenado que gera um modelo para pr
 
 Nesta etapa, você executa o procedimento para executar o código inserido, criando um modelo treinado e serializado como uma saída. 
 
-Os modelos que são armazenados para reutilização no seu banco de dados são serializados como um fluxo de bytes e armazenados em uma coluna VARBINARY(MAX) em uma tabela de banco de dados. Depois que o modelo é criado, treinado, serializado e salvo em um banco de dados, ele pode ser chamado por outros procedimentos ou pela função [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) em cargas de trabalho de pontuação.
+Os modelos que são armazenados para reutilização no seu banco de dados são serializados como um fluxo de bytes e armazenados em uma coluna VARBINARY(MAX) em uma tabela de banco de dados. Depois que o modelo é criado, treinado, serializado e salvo em um banco de dados, ele pode ser chamado por outros procedimentos ou pela função [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) em cargas de trabalho de pontuação.
 
 1. Execute o código a seguir para executar o procedimento. A instrução específica para executar um procedimento armazenado é `EXECUTE` na quarta linha.
 

@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee2a12b8b45169d43b9dc86077fb0879c7413226
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e3204c5ba30831f0355113f7882727decad08866
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178597"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195078"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Pontuar dados novos (tutorial do SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este é o tutorial 8 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 8 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
 Nesse tutorial, você usará o modelo de regressão logística que criou no tutorial anterior para pontuar outro conjunto de dados que usa as mesmas variáveis independentes como entradas.
 
@@ -59,7 +59,7 @@ Nesse tutorial, você usará o modelo de regressão logística que criou no tuto
   
 4. Como precaução, verifique a existência da tabela de saída. Se já existir uma com o mesmo nome, você obterá um erro ao tentar gravar na nova tabela.
   
-    Para fazer isso, faça uma chamada para as funções [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) e [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), passando o nome da tabela como entrada.
+    Para fazer isso, faça uma chamada para as funções [rxSqlServerTableExists](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) e [rxSqlServerDropTable](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), passando o nome da tabela como entrada.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
@@ -68,7 +68,7 @@ Nesse tutorial, você usará o modelo de regressão logística que criou no tuto
     + **rxSqlServerTableExists** consulta o driver ODBC e retorna TRUE se a tabela existir ou FALSE, caso contrário.
     + **rxSqlServerDropTable** executa a DDL e retornará TRUE se a tabela for removida com êxito; se não, retornará FALSE.
 
-5. Execute [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) para criar as pontuações e salvá-las na nova tabela definida na fonte de dados sqlScoreDS.
+5. Execute [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) para criar as pontuações e salvá-las na nova tabela definida na fonte de dados sqlScoreDS.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -80,7 +80,7 @@ Nesse tutorial, você usará o modelo de regressão logística que criou no tuto
         overwrite = TRUE)
     ```
   
-    A função **rxPredict** é outra função que dá suporte à execução em contextos de computação remota. Você pode usar a função **rxPredict** para criar pontuações de modelos baseados em [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) ou [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
+    A função **rxPredict** é outra função que dá suporte à execução em contextos de computação remota. Você pode usar a função **rxPredict** para criar pontuações de modelos baseados em [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) ou [rxGlm](/machine-learning-server/r-reference/revoscaler/rxglm).
   
     - O parâmetro *writeModelVars* é definido como **TRUE** aqui. Isso significa que as variáveis usadas para a estimativa serão incluídas na nova tabela.
   
@@ -118,7 +118,7 @@ Depois que a nova tabela foi criada, calcule e exiba um histograma das 10 mil po
 
      Neste exemplo, você também pode ver como é fácil usar objetos de fonte de dados **RxSqlServerData** para definir conjuntos de dados arbitrários com base em consultas SQL, funções ou procedimentos armazenados de fonte de dados e, em seguida, usá-los no seu código R. A variável não armazena os valores reais, apenas a definição de fonte de dados. A consulta é executada para gerar os valores somente quando você usá-los em uma função, como **rxImport**.
       
-2. Chame a função [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) para colocar os valores em um quadro de dados que pode ser compartilhado entre contextos de computação.
+2. Chame a função [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) para colocar os valores em um quadro de dados que pode ser compartilhado entre contextos de computação.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)

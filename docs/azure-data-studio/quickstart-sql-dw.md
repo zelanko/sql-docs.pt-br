@@ -1,29 +1,29 @@
 ---
 title: Conectar-se ao Azure Synapse Analytics e consultá-lo
-description: Este guia de início rápido mostra como usar o Azure Data Studio para conectar-se a um pool de SQL dedicado no Azure Synapse Analytics e executar uma consulta.
+description: Este início rápido mostra como usar o Azure Data Studio para se conectar a um pool de SQL dedicado do Azure Synapse Analytics.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
+ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
-ms.date: 09/24/2018
-ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.date: 10/15/2020
+ms.openlocfilehash: f0d6ba76868bb1b8a226145b2aa1306db46baa17
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005487"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115870"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Início Rápido: Usar o Azure Data Studio para se conectar e consultar dados usando o pool de SQL dedicado no Azure Synapse Analytics
 
-Este início rápido demonstra como usar o Azure Data Studio para se conectar usando o pool de SQL dedicado no Azure Synapse Analytics e usar instruções Transact-SQL para criar, inserir e selecionar dados. 
+Este início rápido mostra como usar o Azure Data Studio para se conectar a um pool de SQL dedicado do Azure Synapse Analytics.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 Para concluir este início rápido, você precisa do Azure Data Studio e de um pool de SQL dedicado no Azure Synapse Analytics.
 
-- [Instale o Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
+- [Instale o Azure Data Studio](./download-azure-data-studio.md).
 
 Se ainda não tiver um pool de SQL dedicado, confira [Criar um pool de SQL dedicado](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
@@ -40,9 +40,9 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Sy
 
 2. Este artigo usa o *Logon do SQL*, mas também há suporte para a *Autenticação do Windows*. Preencha os campos da seguinte maneira usando o nome do servidor, o nome de usuário e a *sua* senha para o SQL Server do Azure:
 
-   | Configuração       | Valor sugerido | Descrição |
-   | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve ser algo assim: **sqldwsample.database.windows.net** |
+   |   Configuração    | Valor sugerido | Descrição |
+   |--------------|-----------------|-------------| 
+   | **Nome do servidor** | O nome do servidor totalmente qualificado | Por exemplo, o nome será parecido com este: **sqlpoolservername.database.windows.net**. |
    | **Autenticação** | Logon do SQL| A autenticação do SQL é usada neste tutorial. |
    | **Nome de usuário** | A conta do administrador do servidor | Esta é a conta que você especificou quando criou o servidor. |
    | **Senha (Logon do SQL)** | A senha para sua conta do administrador do servidor | Esta é a senha que você especificou quando criou o servidor. |
@@ -50,18 +50,15 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Sy
    | **Nome do banco de dados** | *deixar em branco* | O nome do banco de dados ao qual conectar. |
    | **Grupo de Servidores** | Selecione <Default> | Se você criou um grupo de servidores, pode definir para um grupo de servidores específico. | 
 
-   ![Ícone de Nova Conexão](media/quickstart-sql-dw/new-connection-screen.png) 
-
 3. Se o servidor não tiver uma regra de firewall que permita que o Azure Data Studio se conecte, o formulário **Criar nova regra de firewall** será aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, confira [Regras de firewall](/azure/sql-database/sql-database-firewall-configure).
-
-   ![Nova regra de firewall](media/quickstart-sql-dw/firewall.png)  
 
 4. Depois de se conectar com êxito, o servidor será aberto na barra lateral *Servidores*.
 
-## <a name="create-the-tutorial-dedicated-sql-pool"></a>Criar pool de SQL dedicado do tutorial
-1. Clique com o botão direito do mouse no servidor no pesquisador de objetos e selecione **Nova Consulta**.
+## <a name="create-a-database-in-your-dedicated-sql-pool"></a>Crie um banco de dados no seu pool de SQL dedicado
 
-1. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
+1. Clique com o botão direito do mouse no servidor no pesquisador de objetos, e selecione **Nova Consulta**.
+
+2. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
 
    ```sql
     IF NOT EXISTS (
@@ -76,20 +73,16 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Sy
     GO
    ```
 
-
 ## <a name="create-a-table"></a>Criar uma tabela
 
 O editor de consultas ainda está conectado ao banco de dados *mestre*, mas queremos criar uma tabela no banco de dados *TutorialDB*. 
 
 1. Altere o contexto de conexão para **TutorialDB**:
 
-   ![Alterar contexto](media/quickstart-sql-database/change-context.png)
-
-
-1. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
+2. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
 
    > [!NOTE]
-   > Você pode acrescentar à consulta anterior ou substituí-la no editor. Observe que clicar em **Executar** executa apenas a consulta selecionada. Se nada estiver selecionado, clicar em **Executar** executará todas as consultas no editor.
+   > Você pode acrescentar à consulta anterior ou substituí-la no editor. Ao clicar em **Executar**, apenas a consulta selecionada será executada. Se nada estiver selecionado, ao clicar em **Executar**, todas as consultas no editor serão executadas.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -108,6 +101,8 @@ O editor de consultas ainda está conectado ao banco de dados *mestre*, mas quer
    GO
    ```
 
+    :::image type="content" source="media/quickstart-sql-dw/create-table.png" alt-text="Crie uma tabela no banco de dados TutorialDB":::
+
 
 ## <a name="insert-rows"></a>Inserir linhas
 
@@ -123,8 +118,10 @@ O editor de consultas ainda está conectado ao banco de dados *mestre*, mas quer
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Crie uma tabela no banco de dados TutorialDB":::
 
 ## <a name="view-the-result"></a>Exibir o resultado
+
 1. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
 
    ```sql
@@ -132,16 +129,14 @@ O editor de consultas ainda está conectado ao banco de dados *mestre*, mas quer
    SELECT * FROM dbo.Customers;
    ```
 
-1. Os resultados da consulta são exibidos:
+2. Os resultados da consulta são exibidos:
 
-   ![Selecionar resultados](media/quickstart-sql-dw/select-results.png)
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="Crie uma tabela no banco de dados TutorialDB":::
 
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Outros artigos nesta coleção se baseiam neste guia de início rápido. Se você planeja continuar trabalhando com guias de início rápido subsequentes, não limpe os recursos criados neste guia de início rápido. Se você não planeja continuar, use as etapas a seguir para excluir os recursos criados por este guia de início rápido no portal do Azure.
-Limpe os recursos excluindo os grupos de recursos de que você não precisa mais. Para obter detalhes, confira [Limpar recursos](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
-
+Se você não pretende continuar trabalhando com os bancos de dados de amostras criados neste artigo, [exclua o grupo de recursos](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Próximas etapas
 
