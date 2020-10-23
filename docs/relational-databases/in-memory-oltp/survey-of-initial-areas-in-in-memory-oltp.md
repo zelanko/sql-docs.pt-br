@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866674"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005681"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Pesquisa de áreas iniciais em OLTP in-memory
 
@@ -72,8 +72,8 @@ A análise in-memory refere-se aos SELECTs do SQL, que agregam dados transaciona
 Há dois cenários principais:  
   
 - *Análise operacional em lote* refere-se aos processos de agregação que são executados após o horário comercial ou no hardware secundário, que tem cópias dos dados transacionais.  
-  - [SQL Data Warehouse do Azure](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) também está relacionada à análise operacional em lote.  
-- *Análise operacional em tempo real* refere-se aos processos de agregação que são executados durante o horário comercial e no hardware principal que é usado para cargas de trabalho transacionais.  
+  - O [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) também está relacionado à análise operacional em lote.  
+- *Análise operacional em tempo real* refere-se aos processos de agregação executados durante o horário comercial e no hardware principal usado em cargas de trabalho transacionais.  
   
   
 O presente artigo se concentra em OLTP e não em Análises. Para obter informações sobre como os índices columnstore trazem as Análises para o SQL, confira:  
@@ -103,13 +103,13 @@ Uma sequência de postagens de blog excelente explica elegantemente os índices 
 
 #### <a name="defragment-a-columnstore-index"></a>Desfragmentar um índice columnstore
 
-1. [Desfragmentação de índice columnStore usando o comando REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+1. [Desfragmentação de índice columnstore usando o comando REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
 2. [Política de mesclagem do índice columnstore para REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### <a name="bulk-importation-of-data"></a>Importação em massa de dados
 
 1. [Repositório de coluna clusterizada: carregamento em massa](/archive/blogs/sqlserverstorageengine/clustered-column-store-index-bulk-loading-the-data)
-2. [índice columnstore clusterizado: Otimizações de carregamento de dados – registro em log mínimo](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
+2. [Índice columnstore clusterizado: Otimizações de carregamento de dados – registro em log mínimo](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
 3. [Índice columnstore clusterizado: Otimização de carregamento de dados – importação em massa paralela](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
 
 

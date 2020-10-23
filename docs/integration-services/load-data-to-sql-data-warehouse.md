@@ -1,6 +1,6 @@
 ---
-title: Carregar dados no SQL Data Warehouse do Azure com o SSIS (SQL Server Integration Services) | Microsoft Docs
-description: Mostra como criar um pacote do SSIS (SQL Server Integration Services) para mover dados de uma ampla variedade de fontes de dados para o SQL Data Warehouse do Azure.
+title: Carregar dados no Azure Synapse Analytics com o SSIS (SQL Server Integration Services) | Microsoft Docs
+description: Mostra como criar um pacote do SSIS (SQL Server Integration Services) para mover dados de uma ampla variedade de fontes para o Azure Synapse Analytics.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,20 +10,20 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 317a17d667c9c09009c3fcbd9bab6565108110ad
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3cd591bd087170e6f5a6329c4411b2674d19b4f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943188"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192496"
 ---
-# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Data Warehouse do Azure com o SSIS (SQL Server Integration Services)
+# <a name="load-data-into-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>Carregar dados no Azure Synapse Analytics com o SSIS (SQL Server Integration Services)
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
-Criar um pacote do SSIS (SQL Server Integration Services) para carregar dados no [SQL Data Warehouse do Azure](/azure/sql-data-warehouse/index). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
+Crie um pacote do SSIS (SQL Server Integration Services) para carregar dados no [Azure Synapse Analytics](/azure/sql-data-warehouse/index). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
 
 Este artigo mostra como fazer o seguinte:
 
@@ -46,7 +46,7 @@ O SSIS (SQL Server Integration Services) é um conjunto flexível de ferramentas
 
 1. O método preferencial, que fornece o melhor desempenho, é criar um pacote que use a [tarefa de upload do SQL DW do Azure](control-flow/azure-sql-dw-upload-task.md) para carregar os dados. Essa tarefa encapsula informações de origem e destino. Ela pressupõe que seus dados de origem são armazenados localmente em arquivos de texto delimitado.
 
-2. Como alternativa, você pode criar um pacote que usa uma tarefa de fluxo de dados que contém uma origem e um destino. Essa abordagem dá suporte a uma ampla variedade de fontes de dados, incluindo SQL Server e SQL Data Warehouse do Azure.
+2. Como alternativa, você pode criar um pacote que usa uma tarefa de fluxo de dados que contém uma origem e um destino. Essa abordagem permite uma ampla variedade de fontes de dados, incluindo o SQL Server e o Azure Synapse Analytics.
 
 ## <a name="prerequisites"></a>Prerequisites
 Para realizar este tutorial, você precisa do seguinte:
@@ -54,7 +54,7 @@ Para realizar este tutorial, você precisa do seguinte:
 1. **Do SSIS (SQL Server Integration Services)** . O SSIS é um componente do SQL Server e requer uma versão licenciada, ou uma versão de avaliação ou do desenvolvedor, do SQL Server. Para obter uma versão de avaliação do SQL Server, consulte [Avaliar SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (opcional). Para obter o Visual Studio Community Edition gratuito, confira [Visual Studio Community][Visual Studio Community]. Se não quiser instalar o Visual Studio, você poderá instalar apenas o SSDT (SQL Server Data Tools). O SSDT instala uma versão do Visual Studio com funcionalidade limitada.
 3. **Do SSDT (SQL Server Data Tools) para Visual Studio**. Para obter o SQL Server Data Tools para Visual Studio, confira [Baixar o SSDT (SQL Server Data Tools)][Download SQL Server Data Tools (SSDT)].
-4. **Um banco de dados do SQL Data Warehouse do Azure e permissões**. Este tutorial se conecta a uma instância do SQL Data Warehouse e carrega dados nela. Você precisa das permissões para se conectar, criar uma tabela e carregar dados.
+4. **Banco de dados e permissões do Azure Synapse Analytics**. Este tutorial se conecta a uma instância do SQL Data Warehouse e carrega dados nela. Você precisa das permissões para se conectar, criar uma tabela e carregar dados.
 
 ## <a name="create-a-new-integration-services-project"></a>Criar um novo projeto do Integration Services
 1. Inicie o Visual Studio.
@@ -80,7 +80,7 @@ Para continuar o tutorial com essa opção, você precisa do seguinte:
 
 - O [Feature Pack do Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. A tarefa de upload do SQL DW é um componente do Feature Pack.
 
-- Uma conta de [Armazenamento de Blobs do Azure](https://docs.microsoft.com/azure/storage/). A tarefa de upload do SQL DW carrega dados do Armazenamento de Blobs do Azure para o SQL Data Warehouse do Azure. Você pode carregar arquivos que já estão no Armazenamento de Blobs ou pode carregar arquivos do seu computador. Se selecionar arquivos em seu computador, a tarefa de upload do SQL DW carregará, primeiramente, os arquivos no Armazenamento de Blobs para preparo e, em seguida, carregará os arquivos no SQL Data Warehouse.
+- Uma conta de [Armazenamento de Blobs do Azure](/azure/storage/). A tarefa de upload do SQL DW carrega dados do Armazenamento de Blobs do Azure para o Azure Synapse Analytics. Você pode carregar arquivos que já estão no Armazenamento de Blobs ou pode carregar arquivos do seu computador. Se selecionar arquivos em seu computador, a tarefa de upload do SQL DW carregará, primeiramente, os arquivos no Armazenamento de Blobs para preparo e, em seguida, carregará os arquivos no SQL Data Warehouse.
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>Adicionar e configurar a tarefa de upload do SQL DW
 
@@ -98,11 +98,11 @@ Para obter mais controle, você pode criar manualmente um pacote que emula o tra
 
 1. Use a Tarefa de upload de Blobs do Azure para preparar os dados no Armazenamento de Blobs do Azure. Para obter a tarefa de Upload de Blobs do Azure, baixe o [Feature Pack do Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. Depois, use a tarefa Executar SQL do SSIS para inicializar um script do PolyBase que carrega os dados no SQL Data Warehouse. Para obter um exemplo que carrega os dados do Armazenamento de Blobs do Azure no SQL Data Warehouse (mas não com o SSIS), consulte [Tutorial: carregar dados no SQL Data Warehouse do Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+2. Depois, use a tarefa Executar SQL do SSIS para inicializar um script do PolyBase que carrega os dados no SQL Data Warehouse. Para obter um exemplo que carrega os dados do armazenamento de BLOBs do Azure no SQL Data Warehouse (mas não com o SSIS), veja [Tutorial: Carregar dados para o Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Opção 2 – Usar uma origem e um destino
 
-A segunda abordagem é um pacote típico que usa uma tarefa de fluxo de dados que contém uma origem e um destino. Essa abordagem dá suporte a uma ampla variedade de fontes de dados, incluindo SQL Server e SQL Data Warehouse do Azure.
+A segunda abordagem é um pacote típico que usa uma tarefa de fluxo de dados que contém uma origem e um destino. Essa abordagem permite uma ampla variedade de fontes de dados, incluindo o SQL Server e o Azure Synapse Analytics.
 
 Este tutorial usa o SQL Server como fonte de dados. O SQL Server é executado localmente ou em uma máquina virtual do Azure.
 
@@ -171,7 +171,7 @@ Para continuar o tutorial com essa opção, você precisa do seguinte:
 1. Clique duas vezes no adaptador de destino para abrir o **Editor de Destino ADO.NET**.
    
     ![Captura de tela do Editor de Destino ADO.NET. A guia Gerenciador de Conexões está visível e contém controles para configurar as propriedades de fluxo de dados.][11]
-2. Na guia **Gerenciador de Conexões** do **Editor de Destino ADO.NET**, clique no botão **Novo** próximo à lista do **Gerenciador de conexões** para abrir a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** e criar configurações de conexão para o banco de dados do SQL Data Warehouse do Azure, no qual este tutorial carrega os dados.
+2. Na guia **Gerenciador de Conexões** do **Editor de Destino ADO.NET**, clique no botão **Novo** próximo à lista do **Gerenciador de Conexões** para abrir a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** e criar configurações de conexão para o banco de dados do Azure Synapse Analytics, no qual este tutorial carrega dados.
 3. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique no botão **Novo** para abrir a caixa de diálogo **Gerenciador de Conexões** e criar uma conexão de dados.
 4. Na caixa de diálogo **Gerenciador de Conexões**, faça o seguinte.
    1. Para **Provedor**, selecione o Provedor de Dados SqlClient.
@@ -189,7 +189,7 @@ Para continuar o tutorial com essa opção, você precisa do seguinte:
    
    1. Altere o nome da tabela de destino para **SalesOrderDetail**.
    2. Remova a coluna **rowguid**. O tipo de dados **uniqueidentifier** não é compatível com o SQL Data Warehouse.
-   3. Altere o tipo de dados da coluna **LineTotal** para **money**. O tipo de dados **decimal** não é compatível com o SQL Data Warehouse. Para saber mais sobre tipos de dados compatíveis, confira [CREATE TABLE (SQL Data Warehouse do Azure, Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
+   3. Altere o tipo de dados da coluna **LineTotal** para **money**. O tipo de dados **decimal** não é compatível com o SQL Data Warehouse. Para saber mais sobre tipos de dados com suporte, confira [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
       
        ![Captura de tela da caixa de diálogo Criar tabela, com o código para criar uma tabela chamada SalesOrderDetail com LineTotal como uma coluna de dinheiro e sem nenhuma coluna rowguid.][12b]
    4. Clique em **OK** para criar a tabela e retornar ao **Editor de Destino ADO.NET**.
@@ -211,7 +211,7 @@ Quando a execução do pacote for concluída, você verá marcas de seleção ve
 
 ![Captura de tela mostrando os adaptadores de origem e de destino. Marcas de seleção verdes estão sobre cada adaptador e o texto "121317 linhas" está entre elas.][15]
 
-Parabéns! Você conseguiu usar o SQL Server Integration Services para carregar dados no SQL Data Warehouse do Azure.
+Parabéns! Você conseguiu usar o SQL Server Integration Services para carregar dados no Azure Synapse Analytics.
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -242,7 +242,7 @@ Parabéns! Você conseguiu usar o SQL Server Integration Services para carregar 
 <!-- MSDN references -->
 [PolyBase Guide]: ../relational-databases/polybase/polybase-guide.md
 [Download SQL Server Data Tools (SSDT)]: ../ssdt/download-sql-server-data-tools-ssdt.md
-[CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
+[CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
 [Data Flow]: ./data-flow/data-flow.md
 [Troubleshooting Tools for Package Development]: ./troubleshooting/troubleshooting-tools-for-package-development.md
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md

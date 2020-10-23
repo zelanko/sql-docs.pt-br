@@ -4,16 +4,16 @@ description: Este artigo fornece diretrizes e melhores práticas de desempenho p
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/16/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 41ed6122e2ff75220d0fc45a75d4769804d0638c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ddeb5d106de872b507c88a199050cfc883a63a4c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867216"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005689"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Melhores práticas de desempenho e diretrizes de configuração para o SQL Server em Linux
 
@@ -85,10 +85,10 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>Configurações de kernel para espaço de endereço virtual
 
-A configuração padrão de **vm.max_map_count** (que é 65536) pode não ser alta o suficiente para uma instalação do SQL Server. Por esse motivo, altere o valor de **vm.max_map_count** para 262144 para uma implantação do SQL Server e confira a seção [Configurações propostas do Linux usando um perfil MSSQL ajustado](#proposed-linux-settings-using-a-tuned-mssql-profile) para obter ajustes adicionais para esses parâmetros de kernel. O valor máximo para vm.max_map_count é 2147483647.
+A configuração padrão de **vm.max_map_count** (que é 65536) pode não ser alta o suficiente para uma instalação do SQL Server. Por esse motivo, altere o valor de **vm.max_map_count** para, no mínimo, 262144 em uma implantação do SQL Server e confira a seção [Configurações propostas do Linux usando um perfil MSSQL ajustado](#proposed-linux-settings-using-a-tuned-mssql-profile) para obter ajustes adicionais para esses parâmetros de kernel. O valor máximo para vm.max_map_count é 2147483647.
 
 ```bash
-sysctl -w vm.max_map_count=262144
+sysctl -w vm.max_map_count=1600000
 ```
 
 ### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>Configurações do Linux propostas usando um perfil mssql ajustado

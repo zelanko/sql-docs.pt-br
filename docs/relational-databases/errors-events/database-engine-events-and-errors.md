@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
-ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
+ms.openlocfilehash: 25afd0615066472ce8e7a63b757576b50629e15f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84158615"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194245"
 ---
 # <a name="database-engine-errors"></a>Erros do mecanismo de banco de dados
 
@@ -1625,7 +1625,8 @@ ORDER BY message_id
 |    3280    |    16    |    Não    |    Não há suporte para backups em dispositivos brutos. '%ls' é um dispositivo bruto.    |
 |    3281    |    10    |    Não    |    Retrocesso em '%ls' liberado e reiniciado.    |
 |    3283    |    16    |    Não    |    O arquivo "%ls" não foi iniciado corretamente. Examine os logs de erros para obter mais detalhes.    |
-|    3284    |    16    |    Não    |    A marca de arquivo no dispositivo '%ls' não está alinhada. Emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: '%d' parece um valor possível.    |
+|    3284    |    16    |    Não    |    A marca de arquivo no dispositivo '%ls' não está alinhada. Emita novamente a instrução de restauração com o mesmo tamanho de bloco usado para criar o conjunto de backup: "%d" parece um valor possível.    |
+|    3285    |    10    |    Sim    |    A marca de arquivo no dispositivo "% ls" parece não estar alinhada. A operação de restauração continuará usando a E/S menos eficiente.  Para evitar isso, emita novamente a instrução Restore com o mesmo tamanho de bloco usado para criar o conjunto de backup: "%d" parece um valor possível.    |
 |    3301    |    21    |    Sim    |    O log de transações contém um registro (logop %d) inválido. O log foi corrompido. Repare ou restaure o banco de dados usando um backup completo.    |
 |    3302    |    21    |    Sim    |    Ao refazer as operações registradas no banco de dados '%.*ls', não foi possível atingir o final do registro na ID do registro de log %S_LSN. Isso indica que a ID do registro de log %S_LSN está corrompida. Repare ou restaure o banco de dados usando um backup completo.    |
 |    [3313](mssqlserver-3313-database-engine-error.md)    |    21    |    Sim    |    Ocorreu um erro na ID do registro de log %S_LSN ao refazer uma operação registrada no banco de dados '%.*ls'. Em geral, a falha específica é registrada anteriormente como um erro no serviço Log de Eventos do Windows. Repare ou restaure o banco de dados usando um backup completo.    |
@@ -3813,7 +3814,7 @@ ORDER BY message_id
 |    8317    |    16    |    Não    |    Não é possível consultar o valor '%ls' associado à chave de registro 'HKLM\%ls'. Os contadores de desempenho do SQL Server estão desabilitados.    |
 |    8318    |    16    |    Não    |    Ocorreu uma falha de alocação de memória virtual durante inicialização dos contadores de desempenho. Os contadores de desempenho do SQL Server estão desabilitados.    |
 |    8319    |    16    |    Não    |    O objeto do núcleo do Windows '%ls' já existe. Ele não pertence à conta de serviço do SQL Server. Os contadores de desempenho do SQL Server estão desabilitados.    |
-|    8\.320    |    10    |    Não    |    \@\@REMSERVER será removido em uma versão futura do SQL Server. Evite usar esse recurso em novo trabalho de desenvolvimento e planeje modificar os aplicativos que utilizam o recurso atualmente. Use procedimentos armazenados de servidor vinculado e servidores vinculados em vez disso.    |
+|    8.320    |    10    |    Não    |    \@\@REMSERVER será removido em uma versão futura do SQL Server. Evite usar esse recurso em novo trabalho de desenvolvimento e planeje modificar os aplicativos que utilizam o recurso atualmente. Use procedimentos armazenados de servidor vinculado e servidores vinculados em vez disso.    |
 |    8350    |    10    |    Não    |    O uso das dicas NOLOCK ou READUNCOMMITTED na cláusula FROM de uma instrução UPDATE ou DELETE na tabela de destino da instrução ('%.*ls') foi preterido. Essas dicas não têm efeito neste local. A Microsoft recomenda a remoção dessas dicas da instrução. O suporte para essas dicas neste local será removido em uma versão futura do SQL Server.    |
 |    8351    |    16    |    Sim    |    Uma solicitação de controle de rastreamento não pôde ser processada porque parâmetros inválidos foram especificados durante o registro de eventos. Confirme se os parâmetros estão dentro de intervalos válidos.    |
 |    8352    |    16    |    Sim    |    Não é possível encontrar o modelo de rastreamento solicitado: ID = %ls.    |
@@ -9110,4 +9111,4 @@ ORDER BY message_id
 ## <a name="see-also"></a>Consulte Também
 
 [Noções básicas sobre erros do mecanismo de banco de dados](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-[Causa e resolução de erros do Mecanismo de Banco de Dados](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)
+[Causa e resolução de erros do Mecanismo de Banco de Dados](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))

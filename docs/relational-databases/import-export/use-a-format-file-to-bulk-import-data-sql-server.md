@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868057"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005577"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Usar um arquivo de formato para importação em massa de dados (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +33,9 @@ Este tópico ilustra o uso de um arquivo de formato operações de importação 
   * SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código do cliente ou na página de código implicada pela ordenação)
   * SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode)
   * SQLBINARY ou SQLVARYBIN (os dados são enviados sem nenhuma conversão).
-* O Banco de Dados SQL do Azure e o Azure SQL Data Warehouse dão suporte apenas ao [bcp](../../tools/bcp-utility.md).  Para obter informações adicionais, consulte:
-  * [Carregar dados no Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
-  * [Carregar dados do SQL Server no Azure SQL Data Warehouse (arquivos simples)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+* O Banco de Dados SQL do Azure e o Azure Synapse Analytics dão suporte somente a [bcp](../../tools/bcp-utility.md).  Para obter informações adicionais, consulte:
+  * [Carregar dados no Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Carregar dados do SQL Server no Azure Synapse Analytics (arquivos simples)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [Migrar seus dados](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>Condições de teste de exemplo

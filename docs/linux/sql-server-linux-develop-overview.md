@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 09bdea851ed3b9efeca1c69a09c12108706bbb22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9623feab13740d9b328d97a248742711871ffa3
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896506"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115479"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Como começar a desenvolver aplicativos para SQL Server em Linux
 
@@ -24,7 +24,7 @@ Você pode criar aplicativos que se conectam e usam o SQL Server em Linux de uma
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> Essas mesmas opções de desenvolvimento também permitem que você tenha o SQL Server como destino em outras plataformas. Os aplicativos podem ter o SQL Server como destino em execução local ou na nuvem em Linux, Windows ou Docker em macOS. Outra opção é ter o Banco de Dados SQL do Azure e o SQL Data Warehouse do Azure como destinos.
+> Essas mesmas opções de desenvolvimento também permitem que você tenha o SQL Server como destino em outras plataformas. Os aplicativos podem ter o SQL Server como destino em execução local ou na nuvem em Linux, Windows ou Docker em macOS. Outra opção é ter o Banco de Dados SQL do Azure e o Azure Synapse Analytics como destinos.
 
 ## <a name="try-the-tutorials"></a>Experimente os tutoriais
 
@@ -62,7 +62,7 @@ Para obter mais informações, confira os tópicos a seguir:
 
 Você pode usar a nova [extensão mssql](https://aka.ms/mssql-marketplace) para [Visual Studio Code](https://code.visualstudio.com) em Linux, macOS e Windows. Para obter instruções passo a passo, confira o seguinte tutorial:
 
-- [Usar o Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Usar o Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 
 Você também pode usar as novas ferramentas de linha de comando nativas para Linux. Essas ferramentas incluem as seguintes:
 

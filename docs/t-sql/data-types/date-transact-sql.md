@@ -23,12 +23,12 @@ ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fdec32c3c5b23da531b78100e41cf426f357cbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d6246c3b8318ae2596dfd1f4240692be7941e49
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468278"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175951"
 ---
 # <a name="date-transact-sql"></a>data (Transact-SQL)
 
@@ -65,7 +65,7 @@ A tabela a seguir mostra os formatos de literais de cadeia de caracteres válido
   
 |Em ordem alfabética|Descrição|  
 |------------------|-----------------|  
-|mês [dd][,] aaaa<br /><br /> mês dd[,] [aa<br /><br /> mês aaaa [dd]<br /><br /> [dd] mês[,] aaaa<br /><br /> dd mês[,][aa]aa<br /><br /> dd [aa]aa mês<br /><br /> [dd] aaaa mês<br /><br /> aaaa mês [dd]<br /><br /> aaaa [dd] mês|**mon** representa o nome completo do mês ou a abreviação do mês fornecida no idioma atual. As vírgulas são opcionais e não há diferenciação entre letras maiúsculas e minúsculas.<br /><br /> Para evitar ambiguidade, use anos de quatro dígitos.<br /><br /> Se o dia estiver ausente, o primeiro dia do mês será fornecido.|  
+|mês [dd][,] aaaa<br /><br /> mon dd[,] [yy]<br /><br /> mês aaaa [dd]<br /><br /> [dd] mês[,] aaaa<br /><br /> dd mês[,][aa]aa<br /><br /> dd [aa]aa mês<br /><br /> [dd] aaaa mês<br /><br /> aaaa mês [dd]<br /><br /> aaaa [dd] mês|**mon** representa o nome completo do mês ou a abreviação do mês fornecida no idioma atual. As vírgulas são opcionais e não há diferenciação entre letras maiúsculas e minúsculas.<br /><br /> Para evitar ambiguidade, use anos de quatro dígitos.<br /><br /> Se o dia estiver ausente, o primeiro dia do mês será fornecido.|  
   
 |ISO 8601|Descrição|  
 |--------------|----------------|  

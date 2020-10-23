@@ -8,16 +8,16 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ab9af4d073cbec00736bab6a24817502d353ffd8
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868150"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175932"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Usando SIDs de serviço para conceder permissões para serviços no SQL Server
 
-O SQL Server usa [SID (identificadores de segurança) por serviço](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation) para possibilitar a concessão de permissões diretamente a um serviço específico. Esse método é usado pelo SQL Server para conceder permissões para os serviços de mecanismo e de agente (NT SERVICE\MSSQL$<InstanceName> e NT SERVICE\SQLAGENT$<InstanceName>, respectivamente). Usando esse método, esses serviços podem acessar o mecanismo de banco de dados somente quando os serviços estão em execução.
+O SQL Server usa [SID (identificadores de segurança) por serviço](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation) (também conhecidos como entidade de segurança de serviço) para possibilitar a concessão de permissões diretamente a um serviço específico. Esse método é usado pelo SQL Server para conceder permissões para os serviços de mecanismo e de agente (NT SERVICE\MSSQL$<InstanceName> e NT SERVICE\SQLAGENT$<InstanceName>, respectivamente). Usando esse método, esses serviços podem acessar o mecanismo de banco de dados somente quando os serviços estão em execução.
 
 Esse mesmo método pode ser usado ao conceder permissões a outros serviços. Usar um SID de serviço elimina a sobrecarga de gerenciamento e manutenção de contas de serviço e dá um controle mais rigoroso e granular sobre as permissões concedidas aos recursos do sistema.
 
@@ -101,6 +101,35 @@ GO
 GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
+
+  > [!NOTE]
+  > Remover os logons de SID do serviço ou da função de servidor sysadmin pode causar problemas em vários componentes do SQL Server que se conectam ao Mecanismo de Banco de Dados do SQL Server. Alguns problemas incluem:
+  > - O SQL Server Agent não consegue iniciar nem se conectar a um serviço SQL Server
+  > - Os programas de instalação do SQL Server encontram o problema mencionado no seguinte artigo da base de dados de conhecimento da Microsoft: https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re
+  >
+  > Para uma instância padrão do SQL Server, você pode corrigir essa situação adicionando o SID do serviço usando os seguintes comandos Transact-SQL:
+  >
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQLSERVER] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQLSERVER]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLSERVERAGENT] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLSERVERAGENT]
+  > ```
+  > Para uma instância nomeada do SQL Server, use os seguintes comandos Transact-SQL:
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQL$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQL$SQL2019]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLAgent$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLAgent$SQL2019]
+  > 
+  > ```
+  > Nesse exemplo, `SQL2019` é o nome da instância do SQL Server.
 
 ## <a name="next-steps"></a>Próximas etapas
 

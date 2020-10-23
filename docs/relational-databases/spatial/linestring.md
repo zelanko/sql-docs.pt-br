@@ -14,15 +14,15 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1a16547649ce07eadf15942da8cb548e8e10bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea951183f9689597436b693e1238dab1a30c1c1c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455388"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006310"
 ---
 # <a name="linestring"></a>LineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Um **LineString** é um objeto unidimensional que representa uma sequência de pontos e os segmentos de linha que os conectam.  
   
 ## <a name="linestring-instances"></a>Instâncias LineString  
@@ -58,10 +58,10 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>Instâncias válidas  
-Para que uma instância **LineString** seja válida, ela deve atender aos critérios a seguir.  
+Para que uma instância LineString seja válida, ela deve atender aos critérios a seguir.  
   
 1.  A instância **LineString** deve ser aceita.  
-2.  Se uma instância **LineString** não for vazia, ela deverá conter, pelo menos, dois pontos distintos.  
+2.  Se uma instância LineString não estiver vazia, ela deverá conter, pelo menos, dois pontos distintos.  
 3.  A instância **LineString** não pode se sobrepor sobre um intervalo de dois ou mais pontos consecutivos.  
   
 As instâncias **LineString** a seguir são válidas.  

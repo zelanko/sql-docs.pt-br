@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688669"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005591"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -117,7 +117,10 @@ Este documento lista apenas os argumentos que pertencem ao SQL Graph. Para obter
  Cria uma tabela de borda.  
  
  *table_constraint*   
- Especifica as propriedades de uma restrição PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION ou CHECK ou uma definição DEFAULT adicionada a uma tabela
+ Especifica as propriedades de uma restrição PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION ou CHECK ou uma definição DEFAULT adicionada a uma tabela.
+ 
+ > [!NOTE]   
+ > A restrição CONNECTION aplica-se somente a um tipo de tabela de borda.
  
  ON { partition_scheme | filegroup | "default" }    
  Especifica o esquema de partição ou grupo de arquivos no qual a tabela é armazenada. Se partition_scheme for especificado, a tabela será uma tabela particionada cujas partições são armazenadas em um conjunto de um ou mais grupos de arquivos especificados em partition_scheme. Se filegroup for especificado, a tabela será armazenada no grupo de arquivos nomeado. O grupo de arquivos deve existir no banco de dados. Se "default" é especificado ou se ON não é especificado, a tabela é armazenada no grupo de arquivos padrão. O mecanismo de armazenamento de uma tabela como especificado em CREATE TABLE não pode ser alterado posteriormente.
@@ -125,7 +128,8 @@ Este documento lista apenas os argumentos que pertencem ao SQL Graph. Para obter
  ON {partition_scheme | filegroup | "default"}    
  Também pode ser especificado em uma restrição PRIMARY KEY ou UNIQUE. Essas restrições criam índices. Se filegroup for especificado, o índice será armazenado no grupo de arquivos nomeado. Se "default" é especificado ou se ON não é especificado, o índice é armazenado no mesmo grupo de arquivos da tabela. Se a restrição PRIMARY KEY ou UNIQUE criar um índice clusterizado, as páginas de dados da tabela serão armazenadas no mesmo grupo de arquivos que o índice. Se CLUSTERED for especificado ou se a restrição, de outro modo, criar um índice clusterizado e for especificado um partition_scheme diferente do partition_scheme ou do filegroup da definição da tabela ou vice-versa, somente a definição da restrição será respeitada, sendo as demais ignoradas.
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Comentários
+
 Não há suporte para a criação de uma tabela temporária como uma tabela de nó ou de borda.  
 
 Não há suporte para a criação de uma tabela de borda ou de nó como uma tabela temporal.
@@ -163,6 +167,16 @@ Os exemplos a seguir mostram como criar tabelas de `EDGE`
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+O exemplo a seguir mostra uma regra em que **apenas** pessoas podem ser amigas de outras pessoas, o que significa que esta borda não permite a referência a nenhum nó que não seja Person.
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

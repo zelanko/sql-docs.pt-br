@@ -2,7 +2,7 @@
 description: CREATE FUNCTION (Azure Synapse Analytics)
 title: CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,17 +14,17 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4dbe21949a1912eef8aad4de122a8b0a263eec7c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671159"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037049"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Cria uma função definida pelo usuário no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Uma função definida pelo usuário é uma rotina [!INCLUDE[tsql](../../includes/tsql-md.md)] que aceita parâmetros, executa uma ação, como um cálculo complexo, e retorna o resultado dessa ação como um valor. O valor retornado deve ser um valor escalar (único). Use essa instrução para criar uma rotina reutilizável que possa ser usada destas maneiras:  
+  Cria uma função definida pelo usuário no [!INCLUDE[ssSDW](../../includes/ssazuresynapse_md.md)] e no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Uma função definida pelo usuário é uma rotina [!INCLUDE[tsql](../../includes/tsql-md.md)] que aceita parâmetros, executa uma ação, como um cálculo complexo, e retorna o resultado dessa ação como um valor. Em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], o valor retornado deve ser um valor escalar (único). Em [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], a função CREATE pode retornar uma tabela usando a sintaxe para funções com valor de tabela embutidas (versão prévia) ou pode retornar um único valor usando a sintaxe para funções escalares. Use essa instrução para criar uma rotina reutilizável que possa ser usada destas maneiras:  
   
 -   Em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], como SELECT  
   
@@ -36,12 +36,14 @@ ms.locfileid: "91671159"
   
 -   Para substituir um procedimento armazenado  
   
+-   Usar uma função embutida como um predicado de filtro para uma política de segurança  
+  
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```syntaxsql
---Transact-SQL Scalar Function Syntax  
+-- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -62,10 +64,24 @@ RETURNS return_data_type
     [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
-  
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+```syntaxsql
+-- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
+CREATE FUNCTION [ schema_name. ] function_name
+( [ { @parameter_name [ AS ] parameter_data_type
+    [ = default ] }
+    [ ,...n ]
+  ]
+)
+RETURNS TABLE
+    [ WITH SCHEMABINDING ]
+    [ AS ]
+    RETURN [ ( ] select_stmt [ ) ]
+[ ; ]
+```
   
 ## <a name="arguments"></a>Argumentos  
  *schema_name*  
@@ -105,6 +121,14 @@ RETURNS return_data_type
   
  *scalar_expression*  
  Especifica o valor escalar que a função escalar retorna.  
+
+ *select_stmt* **APLICA-SE A**: Azure Synapse Analytics  
+ É a única instrução SELECT que define o valor retornado de uma função com valor de tabela embutida (versão prévia).
+
+ TABLE **APLICA-SE A**: Azure Synapse Analytics  
+ Especifica que o valor retornado da TVF (função com valor de tabela) é uma tabela. Somente constantes e @*local_variables* podem ser passadas para TVFs.
+
+ Em TVFs embutidas (versão prévia), o valor retornado TABLE é definido por meio de uma única instrução SELECT. As funções embutidas não têm variáveis de retorno associadas.
   
  **\<function_option>::=** 
   
@@ -134,21 +158,23 @@ RETURNS return_data_type
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  Especifica o atributo **OnNULLCall** de uma função de valor escalar. Se não for especificado, CALLED ON NULL INPUT será implícito por padrão. Isso significa que o corpo da função será executado mesmo que NULL seja passado como um argumento.  
   
-## <a name="best-practices"></a>Práticas Recomendadas  
+## <a name="best-practices"></a>Práticas recomendadas  
  Se uma função definida pelo usuário não for criada com a cláusula SCHEMABINDING, as alterações feitas nos objetos subjacentes poderão afetar a definição da função e produzir resultados inesperados quando ela for chamada. É recomendável que você implemente um dos seguintes métodos para garantir que a função não se torne desatualizada devido a alterações em seus objetos subjacentes:  
   
 -   Especifique a cláusula WITH SCHEMABINDING quando estiver criando a função. Isso garante que os objetos referenciados na definição da função não possam ser modificados, a menos que a função também seja modificada.  
   
 ## <a name="interoperability"></a>Interoperabilidade  
- As instruções a seguir são válidas em uma função:  
+ As seguintes instruções são válidas em uma função de valor escalar:  
   
 -   Instruções de atribuição.  
   
 -   Instruções de controle de fluxo com exceção das instruções TRY...CATCH.  
   
 -   Instruções DECLARE que definem variáveis de dados locais.  
+
+Em uma função com valor de tabela embutida (versão prévia), é permitida apenas uma instrução SELECT.
   
-## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
+## <a name="limitations-and-restrictions"></a>Limitações e restrições  
  Funções definidas pelo usuário não podem ser usadas para executar ações que modificam o estado do banco de dados.  
   
  Funções definidas pelo usuário podem ser aninhadas, isto é, uma função definida pelo usuário pode chamar outra. O nível de aninhamento é incrementado quando a execução da função é iniciada, e reduzido quando a execução da função chamada é concluída. Até 32 níveis de funções definidas pelo usuário podem ser aninhados. Se o máximo de níveis de aninhamento for excedido haverá falha em toda a cadeia de funções da chamada de aninhamento.   
@@ -193,8 +219,47 @@ GO
   
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
+
+## <a name="examples-sssdwfull"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+
+### <a name="a-creating-an-inline-table-valued-function-preview"></a>a. Criar uma função com valor de tabela embutida (versão prévia)
+ O exemplo a seguir cria uma função com valor de tabela embutida para retornar algumas informações importantes sobre módulos, filtrando pelo parâmetro `objectType`. Ele inclui um valor padrão para retornar todos os módulos quando a função é chamada com o parâmetro DEFAULT. Este exemplo usa algumas das exibições do catálogo do sistema mencionadas em [Metadados](#metadata).
+
+```sql
+CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        sm.object_id AS 'Object Id',
+        o.create_date AS 'Date Created',
+        OBJECT_NAME(sm.object_id) AS 'Name',
+        o.type AS 'Type',
+        o.type_desc AS 'Type Description', 
+        sm.definition AS 'Module Description'
+    FROM sys.sql_modules AS sm  
+    JOIN sys.objects AS o ON sm.object_id = o.object_id
+    WHERE o.type like '%' + @objectType + '%'
+);
+GO
+```
+A função pode então ser chamada para retornar todos os objetos de exibição (**V**) com:
+```sql
+select * from dbo.ModulesByType('V');
+```
+
+### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. Combinar resultados de uma função com valor de tabela embutida (versão prévia)
+ Este exemplo simples usa o TVF embutido criado anteriormente para demonstrar como é possível combinar os resultados com outras tabelas usando Cross Apply. Aqui, selecionamos todas as colunas de sys.objects e os resultados de `ModulesByType` para todas as linhas correspondentes na coluna *type*. Confira mais detalhes sobre como usar Apply em [Cláusula FROM e JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
+
+```sql
+SELECT * 
+FROM sys.objects o
+CROSS APPLY dbo.ModulesByType(o.type);
+GO
+```
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte também  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
  [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   

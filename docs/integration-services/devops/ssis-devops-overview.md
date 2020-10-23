@@ -9,18 +9,18 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823478"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194079"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services)
+# <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>Extensão do Azure DevOps para Ferramentas de DevOps do SSIS (SQL Server Integration Services)
 
 A extensão [Ferramentas de DevOps do SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) está disponível no Marketplace do **Azure DevOps**.
 
-Caso você não tenha uma organização do **Azure DevOps**, primeiro, inscreva-se no [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) e, em seguida, adicione a extensão **Ferramentas de DevOps do SSIS** seguindo [as etapas](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension).
+Caso você não tenha uma organização do **Azure DevOps**, primeiro, inscreva-se no [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) e, em seguida, adicione a extensão **Ferramentas de DevOps do SSIS** seguindo [as etapas](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension).
 
 As **Ferramentas de DevOps do SSIS** incluem a tarefa **Build do SSIS**, tarefa de versão **Implantação do SSIS** e a **tarefa de Configuração de Catálogo do SSIS**.
 
@@ -58,13 +58,13 @@ Nome da configuração de projeto a ser usada para o build. Se ele não for forn
 
 #### <a name="output-path"></a>Caminho de saída
 
-Caminho de uma pasta separada para salvar os resultados do build, que podem ser publicados como artefatos de compilação por meio da tarefa [publicar artefatos de compilação](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops).
+Caminho de uma pasta separada para salvar os resultados do build, que podem ser publicados como artefatos de compilação por meio da tarefa [publicar artefatos de compilação](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops).
 
 ### <a name="limitations-and-known-issues"></a>Limitações e problemas conhecidos
 
 - A tarefa Build do SSIS depende do Visual Studio e do Designer SSIS, que é obrigatório nos agentes de build. Portanto, para executar a tarefa Build do SSIS no pipeline, escolha **vs2017-win2016** para agentes hospedados pela Microsoft ou instale o Visual Studio e o Designer SSIS (VS2017 + SSDT2017 ou VS2019 + extensão Projetos do SSIS) em agentes auto-hospedados.
 
-- Para criar projetos do SSIS usando componentes prontos para uso (incluindo o feature pack do SSIS para o Azure e outros componentes de terceiros), os componentes prontos para uso precisam ser instalados no computador em que o agente de pipeline está em execução.  Para o agente hospedado pela Microsoft, o usuário pode adicionar uma [tarefa Script do PowerShell](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) ou uma [tarefa Script de Linha de Comando](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) para baixar e instalar os componentes antes de executar a tarefa Build do SSIS. Confira abaixo o exemplo de script do PowerShell para instalar o Feature Pack do Azure: 
+- Para criar projetos do SSIS usando componentes prontos para uso (incluindo o feature pack do SSIS para o Azure e outros componentes de terceiros), os componentes prontos para uso precisam ser instalados no computador em que o agente de pipeline está em execução.  Para o agente hospedado pela Microsoft, o usuário pode adicionar uma [tarefa Script do PowerShell](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) ou uma [tarefa Script de Linha de Comando](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) para baixar e instalar os componentes antes de executar a tarefa Build do SSIS. Confira abaixo o exemplo de script do PowerShell para instalar o Feature Pack do Azure: 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -172,7 +172,7 @@ Confira os detalhes de como [definir a configuração do JSON](#define-configura
 
 Caminho do arquivo JSON de configuração do catálogo do SSIS. Essa propriedade só é visível ao selecionar "Caminho do arquivo" como origem do arquivo de configuração.
 
-Para usar [variáveis de pipeline](/azure/devops/pipelines/process/variables) no arquivo JSON de configuração, você precisa adicionar uma [Tarefa de Transformação de Arquivo](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) antes dessa tarefa para substituir valores de configuração por variáveis de pipeline. Para obter mais informações, confira [Substituição de variável JSON](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+Para usar [variáveis de pipeline](/azure/devops/pipelines/process/variables) no arquivo JSON de configuração, você precisa adicionar uma [Tarefa de Transformação de Arquivo](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) antes dessa tarefa para substituir valores de configuração por variáveis de pipeline. Para obter mais informações, confira [Substituição de variável JSON](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution).
 
 #### <a name="inline-configuration-json"></a>JSON de configuração embutido
 

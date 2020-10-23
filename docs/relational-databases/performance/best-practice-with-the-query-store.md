@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 1ad9bb98b55e654efd60c028187d6085f698e1f9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891046"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194318"
 ---
 # <a name="best-practices-with-query-store"></a>Melhores prática com o Repositório de Consultas
 
@@ -434,7 +434,7 @@ Os sinalizadores de rastreamento globais 7745 e 7752 podem ser usados para melho
 > Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho just-in-time no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as melhorias de escalabilidade de desempenho em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) assim que possível. Sem esses aprimoramentos, quando o banco de dados está sob cargas de trabalho pesadas, pode ocorrer contenção de spinlock e o desempenho do servidor pode ficar lento. Em particular, você pode ver uma contenção pesada no spinlock `QUERY_STORE_ASYNC_PERSIST` ou no spinlock `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Após a aplicação dessa melhoria, o Repositório de Consultas não causará mais contenção de spinlock.
 
 > [!IMPORTANT]
-> Se você está usando o Repositório de Consultas para obter insights de carga de trabalho just-in-time no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), planeje instalar o aprimoramento de escalabilidade de desempenho em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 assim que possível. Sem essa melhoria, quando o banco de dados está sob cargas de trabalho ad-hoc pesadas, o Repositório de Consultas pode usar uma grande quantidade de memória e o desempenho do servidor pode ficar lento. Após a aplicação dessa melhoria, Repositório de Consultas impõe limites internos à quantidade de memória que seus diversos componentes podem usar e pode alterar automaticamente o modo de operação para somente leitura até que memória suficiente tenha sido retornada para o [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Observe que os limites de memória interna do Repositório de Consultas não são documentados porque estão sujeitos a alterações.  
+> Se você estiver usando o Repositório de Consultas para obter insights de carga de trabalho just-in-time no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] por meio do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), planeje instalar o aprimoramento de escalabilidade de desempenho em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 e no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8 assim que possível. Sem essa melhoria, quando o banco de dados está sob cargas de trabalho ad-hoc pesadas, o Repositório de Consultas pode usar uma grande quantidade de memória e o desempenho do servidor pode ficar lento. Após a aplicação dessa melhoria, Repositório de Consultas impõe limites internos à quantidade de memória que seus diversos componentes podem usar e pode alterar automaticamente o modo de operação para somente leitura até que memória suficiente tenha sido retornada para o [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Observe que os limites de memória interna do Repositório de Consultas não são documentados porque estão sujeitos a alterações.  
 
 ## <a name="see-also"></a>Confira também
 

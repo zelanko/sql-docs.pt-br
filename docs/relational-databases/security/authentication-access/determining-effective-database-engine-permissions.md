@@ -15,12 +15,12 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e3c6120613ee79acb8219f35678f17fd9239962a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005627"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006601"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinando permissões eficientes do Mecanismo de Banco de Dados
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ Este artigo descreve como determinar quem tem permissões para vários objetos n
 
 As funções de servidor fixas e as funções de banco de dados fixas têm permissões pré-configuradas que não podem ser alteradas. Para determinar quem é um membro de uma função de servidor fixa, execute a consulta a seguir:    
 > [!NOTE]
->  Não se aplica ao Banco de Dados SQL ou ao SQL Data Warehouse, em que a permissão de nível de servidor não está disponível. A coluna `is_fixed_role` de `sys.server_principals` foi adicionada no SQL Server 2012. Ela não é necessária para versões anteriores do SQL Server.  
+>  Não se aplica ao Banco de Dados SQL ou ao Azure Synapse Analytics em que a permissão de nível de servidor não esteja disponível. A coluna `is_fixed_role` de `sys.server_principals` foi adicionada no SQL Server 2012. Ela não é necessária para versões anteriores do SQL Server.  
 > ```sql
 > SELECT SP1.name AS ServerRoleName, 
 >  isnull (SP2.name, 'No members') AS LoginName   
@@ -107,7 +107,7 @@ Lembre-se de que um usuário do Windows pode ser membro de mais de um grupo do W
 
 A consulta a seguir retorna uma lista das permissões concedidas ou negadas no nível do servidor. Essa consulta pode ser executada no banco de dados mestre.   
 > [!NOTE]
->  As permissões de nível de servidor não podem ser concedidas ou consultadas no Banco de Dados SQL ou o SQL Data Warehouse.   
+>  As permissões de nível de servidor não podem ser concedidas nem consultadas no Banco de Dados SQL ou no Azure Synapse Analytics.   
 > ```sql
 > SELECT pr.type_desc, pr.name, 
 >  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

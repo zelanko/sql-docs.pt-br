@@ -17,12 +17,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891006"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005997"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,9 +40,12 @@ ms.locfileid: "91891006"
   
 -   Você pode aprimorar o desempenho de consultas com base nos tipos de consultas executadas com frequência e em sua configuração de hardware. Por exemplo, o otimizador de consulta pode processar consultas de junção de igualdade entre duas ou mais tabelas particionadas mais rápido, quando as colunas de particionamento são iguais às colunas nas quais as tabelas são unidas. Confira [Consultas](#queries) abaixo para obter mais informações.
   
-Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa classificação de dados para operações de E/S, ele classifica os dados primeiro pela partição. O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acessa uma unidade de cada vez e isso pode reduzir o desempenho. Para melhorar o desempenho da classificação de dados, distribua os arquivos de dados de suas partições em mais de um disco configurando um RAID. Dessa maneira, embora o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda classifique os dados por partição, ele pode acessar todas as unidades de cada partição ao mesmo tempo.  
+Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa classificação de dados para operações de E/S, ele classifica os dados primeiro pela partição. Para melhorar o desempenho da classificação de dados, distribua os arquivos de dados de suas partições em mais de um disco configurando um RAID. Dessa maneira, embora o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda classifique os dados por partição, ele pode acessar todas as unidades de cada partição ao mesmo tempo.  
   
 Além disso, você pode melhorar o desempenho habilitando o escalonamento de bloqueios em nível de partição em, e não em uma tabela inteira. Isso pode reduzir a contenção de bloqueio na tabela. Para reduzir a contenção de bloqueio permitindo o escalonamento de bloqueios para a partição, defina opção `LOCK_ESCALATION` da instrução `ALTER TABLE` como AUTO. 
+
+> [!TIP]
+> As partições de uma tabela ou um índice podem ser colocadas em um grupo de arquivos, por exemplo, o `PRIMARY`, ou em vários grupos de arquivos. Ao usar o armazenamento em camadas, a utilização de vários grupos de arquivos permite atribuir partições específicas a camadas de armazenamento específicas. Todos os outros benefícios de particionamento se aplicam, independentemente do número de grupos de arquivos usados ou do posicionamento de partição em grupos de arquivos específicos.
   
 ## <a name="components-and-concepts"></a>Componentes e conceitos  
 As condições a seguir são aplicáveis ao particionamento de tabela e de índice.  
@@ -114,6 +117,8 @@ Se você executar consultas que envolvem uma junção de igualdade (equi-join) e
 -  Definem o mesmo número de partições.
 -  Definem os mesmos valores de limite para partições.
 Desse modo, o otimizador de consulta pode processar a junção mais rapidamente, porque as próprias partições podem ser unidas. Se uma consulta unir duas tabelas que não estão colocadas ou não estão particionadas no campo de junção, a presença de partições pode realmente retardar o processamento da consulta em vez de acelerá-lo.
+
+Confira mais informações sobre o tratamento de partições no processamento de consultas em [Aperfeiçoamentos de processamento de consultas em tabelas e índices particionados](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes).
 
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>Alterações de comportamento em computação de estatísticas durante operações de índice particionadas  
  Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], as estatísticas não são criadas por meio do exame de todas as linhas da tabela quando um índice particionado é criado ou reconstruído. Em vez disso, o otimizador de consultas usa o algoritmo de amostragem padrão para gerar estatísticas. Depois de atualizar um banco de dados com índices particionados, você pode notar uma diferença nos dados de histograma destes índices. Esta alteração no comportamento pode não afetar o desempenho de consulta. Para obter as estatísticas dos índices particionados ao examinar todas as linhas da tabela, use `CREATE STATISTICS` ou `UPDATE STATISTICS` com a cláusula `FULLSCAN`.  

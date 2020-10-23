@@ -16,12 +16,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb9b80387573d0145c6510d9377ac959939dd536
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 1e101fe01c421dbd75b7d0426f13539fb0688e3d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332319"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005860"
 ---
 # <a name="specify-parameters"></a>Especificar parâmetros
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GO
 >  Se o valor padrão for uma cadeia de caracteres contendo pontuação ou espaços em branco inseridos, ou caso ela comece com um número (por exemplo, 6xxx), ela deverá ser colocada entre aspas simples.  
 
 > [!NOTE] 
-> Não há suporte para parâmetros padrão no SQL Data Warehouse do Azure ou no Parallel Data Warehouse. 
+> Não há suporte para parâmetros padrão no Azure Synapse Analytics ou no Parallel Data Warehouse. 
   
  Se nenhum valor puder ser especificado adequadamente como um padrão para o parâmetro, especifique NULL como o padrão. Convém levar o procedimento a retornar uma mensagem personalizada se ele for executado sem um valor para o parâmetro.  
   

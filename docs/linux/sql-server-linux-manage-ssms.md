@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0b118b1daa1b8b825d4b68ff1e436fd2f0b624f2
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883918"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115611"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usar o SQL Server Management Studio no Windows para gerenciar o SQL Server em Linux
 
@@ -24,7 +24,7 @@ Este artigo apresenta o [SSMS (SQL Server Management Studio)](../ssms/sql-server
 > [!TIP]
 > Caso não tenha um computador Windows para executar o SSMS, considere o uso do novo [Azure Data Studio](../azure-data-studio/index.yml). Ele fornece uma ferramenta gráfica para gerenciar o SQL Server e é executado no Linux e no Windows.
 
-O [SSMS (SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md) faz parte de um conjunto de ferramentas do SQL que a Microsoft oferece gratuitamente para suas necessidades de desenvolvimento e gerenciamento. O SSMS é um ambiente integrado para acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do SQL Server. Ele pode se conectar ao SQL Server em execução em qualquer plataforma local, em contêineres do Docker e na nuvem. Ele também se conecta ao Banco de Dados SQL do Azure e ao SQL Data Warehouse do Azure. O SSMS combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao SQL Server para desenvolvedores e administradores de todos os níveis de habilidades.
+O [SSMS (SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md) faz parte de um conjunto de ferramentas do SQL que a Microsoft oferece gratuitamente para suas necessidades de desenvolvimento e gerenciamento. O SSMS é um ambiente integrado para acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do SQL Server. Ele pode se conectar ao SQL Server em execução em qualquer plataforma local, em contêineres do Docker e na nuvem. Ele também se conecta ao Banco de Dados SQL do Azure e ao Azure Synapse Analytics. O SSMS combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao SQL Server para desenvolvedores e administradores de todos os níveis de habilidades.
 
 O SSMS oferece um amplo conjunto de funcionalidades de desenvolvimento e gerenciamento para o SQL Server, incluindo ferramentas para:
 
@@ -107,7 +107,7 @@ Enquanto estiver conectado ao banco de dados *mestre*, você poderá criar banco
 
 3. Na caixa de diálogo *Novo Banco de Dados*, insira um nome para o novo banco de dados e, em seguida, clique em *OK*
 
-O novo banco de dados será criado com êxito no servidor. Se preferir criar um banco de dados usando o T-SQL, confira [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md).
+O novo banco de dados será criado com êxito no servidor. Se preferir criar um banco de dados usando o T-SQL, confira [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-transact-sql.md).
 
 ### <a name="drop-a-database"></a>Remover um banco de dados
 
@@ -143,6 +143,6 @@ Quando um painel é expandido, o Monitor de Atividade consulta a instância em b
 ## <a name="see-also"></a>Confira também
 - [O que é o SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Exportar e importar um banco de dados com o SSMS](sql-server-linux-migrate-ssms.md)
-- [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
 - [Tutorial: Gravando instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Monitoramento de desempenho e atividade de servidor](../relational-databases/performance/server-performance-and-activity-monitoring.md)
