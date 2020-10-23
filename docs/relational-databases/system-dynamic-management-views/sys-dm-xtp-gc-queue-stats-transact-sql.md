@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
-title: sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5431cba1f886aee939d9a70d9b05fd65398184ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f1c2a816af4936d51473cd9770e6c52f46f277fa
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539216"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439488"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "89539216"
 ## <a name="user-scenario"></a>Cenário de uso  
  A saída mostra que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução em 4 núcleos ou a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem afinidade para 4 núcleos:  
   
- A saída mostra que não há nenhum item de trabalho nas filas para processar. Para a fila 0, o total de itens de trabalho retirados da fila desde a inicialização do SQL é 15625 e a profundidade máxima da fila foi 215625.  
+ A saída mostra que não há nenhum item de trabalho nas filas para processar. Para a fila 0, os itens de trabalho totais da fila desde a inicialização do SQL são 15625 e a profundidade máxima da fila foi 15625.  
   
 ```  
 queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth  last_service_ticks  

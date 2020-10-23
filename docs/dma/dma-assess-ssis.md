@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726309"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439400"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Executar uma avaliação de migração do serviço de integração SQL Server com Assistente de Migração de Dados
 
@@ -55,12 +55,12 @@ As instruções passo a passo a seguir ajudam você a executar sua primeira aval
 1. Adicional Insira um caminho de pasta que contenha pacotes SSIS.
 1. Adicional Insira a senha de criptografia do pacote, se aplicável.
 1. Clique em **conectar-se** ao SQL Server de origem.
-  ![Adicionar origem](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![Captura de tela mostrando o painel conectar a um servidor com a opção Inserir um caminho de pasta que contém pacotes SSIS e inserir senha de criptografia do pacote se a opção aplicável for chamada out.](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>Adicionar fontes para avaliar
 
 1. Selecione os tipos de armazenamento de pacote SSIS para avaliar e, em seguida, selecione **Adicionar**.
-![Adicionar origem](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![Captura de tela mostrando o painel adicionar fontes.](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. Selecione **adicionar fontes** para abrir o menu de atalho de conexão, se precisar avaliar várias pastas.
 1. Clique em **Iniciar avaliação**.
   ![Iniciar avaliação](media/dma-assess-ssis/dma-assess-ssis-assess.png)
