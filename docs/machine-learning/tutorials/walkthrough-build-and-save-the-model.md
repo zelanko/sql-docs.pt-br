@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178703"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196243"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Criar um modelo do R e salvar no SQL Server (passo a passo)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Nesta etapa, você aprenderá a criar um modelo de machine learning e salvá-lo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao salvar um modelo, você pode chamá-lo diretamente do código [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o procedimento armazenado do sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ou a função [PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
+Nesta etapa, você aprenderá a criar um modelo de machine learning e salvá-lo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao salvar um modelo, você pode chamá-lo diretamente do código [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o procedimento armazenado do sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ou a função [PREDICT (T-SQL)](../../t-sql/queries/predict-transact-sql.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -67,7 +67,7 @@ GO
 
 O modelo é um classificador binário que prevê a probabilidade de o motorista do táxi receber ou não uma gorjeta em uma corrida específica. Você usará a fonte de dados criada na lição anterior para treinar o classificador de gorjetas, usando a regressão logística.
 
-1. Chame a função [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) , incluída no pacote **RevoScaleR** , para criar um modelo de regressão logística. 
+1. Chame a função [rxLogit](/r-server/r-reference/revoscaler/rxlogit) , incluída no pacote **RevoScaleR** , para criar um modelo de regressão logística. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -109,7 +109,7 @@ O modelo é um classificador binário que prevê a probabilidade de o motorista 
 
 Agora que o modelo foi criado, você pode usá-lo para prever a probabilidade de o motorista receber uma gorjeta em uma corrida específica.
 
-1. Primeiro, use a função [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) para definir um objeto de fonte de dados para armazenar o resultado da pontuação.
+1. Primeiro, use a função [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) para definir um objeto de fonte de dados para armazenar o resultado da pontuação.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -123,7 +123,7 @@ Agora que o modelo foi criado, você pode usá-lo para prever a probabilidade de
   
     + Para criar a tabela que armazena os valores previstos, o logon do SQL que executa a função de dados rxSqlServer deve ter privilégios DDL no banco de dados. Se o logon não consegue criar tabelas, a instrução falha.
 
-2. Chame a função [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) para gerar resultados.
+2. Chame a função [rxPredict](/r-server/r-reference/revoscaler/rxpredict) para gerar resultados.
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -138,7 +138,7 @@ Agora que o modelo foi criado, você pode usá-lo para prever a probabilidade de
 
 ## <a name="plot-model-accuracy"></a>Plotar a precisão do modelo
 
-Para obter uma ideia da precisão do modelo, você pode usar a função [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) para plotar a Curva Operacional do Receptor. Com rxRoc é uma das novas funções fornecidas pelo pacote RevoScaleR que dá suporte a contextos de computação remota, você tem duas opções:
+Para obter uma ideia da precisão do modelo, você pode usar a função [rxRoc](/r-server/r-reference/revoscaler/rxroc) para plotar a Curva Operacional do Receptor. Com rxRoc é uma das novas funções fornecidas pelo pacote RevoScaleR que dá suporte a contextos de computação remota, você tem duas opções:
 
 + Você pode usar a função rxRoc para executar o gráfico no contexto de computação remota e retornar o gráfico ao cliente local.
 
@@ -173,7 +173,7 @@ Nesta seção, você experimentará ambas as técnicas.
 
 Você pode verificar se o contexto de computação é local executando `rxGetComputeContext()` no prompt de comando. O valor retornado deve ser "Contexto de Computação RxLocalSeq".
 
-1. Para o contexto de computação local, o processo é basicamente o mesmo. Use a função [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) para levar os dados especificados para seu ambiente local do R.
+1. Para o contexto de computação local, o processo é basicamente o mesmo. Use a função [rxImport](/r-server/r-reference/revoscaler/rximport) para levar os dados especificados para seu ambiente local do R.
 
     ```R
     scoredOutput = rxImport(scoredOutput)

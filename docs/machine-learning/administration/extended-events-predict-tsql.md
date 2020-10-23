@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: bbe54a44113ebadc07c837887f0d92e7bfb44cb4
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956838"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115134"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Monitorar instruções T-SQL PREDICT com eventos estendidos nos Serviços de Machine Learning do SQL Server
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Saiba como usar eventos estendidos para monitorar e solucionar problemas de instruções T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) nos Serviços de Machine Learning do SQL Server.
 
@@ -25,22 +25,22 @@ Saiba como usar eventos estendidos para monitorar e solucionar problemas de inst
 
 Os seguintes eventos estendidos estão disponíveis em todas as versões do SQL Server compatíveis com a instrução T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md). 
 
-|name |object_type|descrição| 
-|----|----|----|
-|predict_function_completed |event  |Detalhamento do tempo de execução interno|
-|predict_model_cache_hit |event|Ocorre quando um modelo é recuperado do cache de modelo da função PREDICT. Use esse evento junto com outros predict_model_cache_* para solucionar problemas causados pelo cache de modelo da função PREDICT.|
-|predict_model_cache_insert |event  |   Ocorre quando um modelo é inserido no cache de modelo da função PREDICT. Use esse evento junto com outros predict_model_cache_* para solucionar problemas causados pelo cache de modelo da função PREDICT.    |
-|predict_model_cache_miss   |event|Ocorre quando um modelo não é encontrado no cache de modelo da função PREDICT. Ocorrências frequentes desse evento podem indicar que o SQL Server precisa de mais memória. Use esse evento junto com outros predict_model_cache_* para solucionar problemas causados pelo cache de modelo da função PREDICT.|
-|predict_model_cache_remove |event| Ocorre quando um modelo é removido do cache de modelo da função PREDICT. Use esse evento junto com outros predict_model_cache_* para solucionar problemas causados pelo cache de modelo da função PREDICT.|
+| name                       | object_type | descrição |
+|----------------------------|-------------|-------------|
+| predict_function_completed | event       | Detalhamento do tempo de execução interno|
+| predict_model_cache_hit    | event       | Ocorre quando um modelo é recuperado do cache de modelo da função PREDICT. Use esse evento junto com outros predict_model_cache_* para solucionar problemas causados pelo cache de modelo da função PREDICT.|
+| predict_model_cache_insert | event       | Ocorre quando um modelo é inserido no cache de modelo da função PREDICT. Use esse evento junto com outros predict_model_cache_* para solucionar problemas causados pelo cache de modelo da função PREDICT.   |
+| predict_model_cache_miss   | event       | Ocorre quando um modelo não é encontrado no cache de modelo da função PREDICT. Ocorrências frequentes desse evento podem indicar que o SQL Server precisa de mais memória. Use esse evento junto com outros predict_model_cache_* para solucionar problemas causados pelo cache de modelo da função PREDICT.|
+| predict_model_cache_remove | event       | Ocorre quando um modelo é removido do cache de modelo da função PREDICT. Use esse evento junto com outros predict_model_cache_* para solucionar problemas causados pelo cache de modelo da função PREDICT.|
 
 ## <a name="query-for-related-events"></a>Consultar eventos relacionados
 
 Para exibir uma lista de todas as colunas retornadas para esses eventos, execute a seguinte consulta no SQL Server Management Studio:
 
 ```sql
-SELECT * 
-FROM sys.dm_xe_object_columns 
-WHERE object_name LIKE `predict%'
+SELECT *
+FROM sys.dm_xe_object_columns
+WHERE object_name LIKE 'predict%'
 ```
 
 ## <a name="examples"></a>Exemplos

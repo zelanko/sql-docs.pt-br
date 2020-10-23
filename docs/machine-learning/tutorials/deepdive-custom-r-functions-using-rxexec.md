@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6c8fab6b5ecc6a548c5213f4401494f6803acc42
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f03c64dc86e6d23113f3a35ae669f216b66489
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178783"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195148"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>Executar funções personalizadas do R no SQL Server usando o rxExec (tutorial do SQL Server e do RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este é o tutorial 14 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 14 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
 Neste tutorial, você usará dados simulados para demonstrar a execução de uma função personalizada do R executada em um servidor remoto.
 
-Você pode executar funções do R personalizadas no contexto do SQL Server passando sua função por meio do [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec), pressupondo que todas as bibliotecas exigidas pelo seu script também estejam instaladas no servidor e que essas bibliotecas sejam compatíveis com a distribuição base do R. 
+Você pode executar funções do R personalizadas no contexto do SQL Server passando sua função por meio do [rxExec](/machine-learning-server/r-reference/revoscaler/rxexec), pressupondo que todas as bibliotecas exigidas pelo seu script também estejam instaladas no servidor e que essas bibliotecas sejam compatíveis com a distribuição base do R. 
 
 A função **rxExec** no **RevoScaleR** fornece um mecanismo para executar qualquer script R que você precise. Além disso, a **rxExec** é capaz de distribuir explicitamente o trabalho entre vários núcleos em um único servidor, adicionando a escala aos scripts que, fora isso, são limitados às restrições de recursos do mecanismo nativo do R.
 

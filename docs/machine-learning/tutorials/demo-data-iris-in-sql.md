@@ -11,12 +11,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22695214f9f3b375d285a8b3bb03bc1471535b17
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494999"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192367"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Dados de demonstração do Iris para tutoriais de Python e R com machine learning do SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -130,7 +130,7 @@ Os tutoriais e guias de início rápido que usam esse conjunto de dados incluem 
     EXEC dbo.get_iris_dataset;
     ```
 
-    Se você for novato no T-SQL, lembre-se de que a instrução INSERT só adiciona novos dados; ela não verificará os dados existentes ou excluirá e recompilará a tabela. Para evitar a obtenção de várias cópias dos mesmos dados em uma tabela, você pode executar esta instrução primeiro: `TRUNCATE TABLE iris_data`. A instrução T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) exclui os dados existentes, mas mantém a estrutura da tabela intacta.
+    Se você for novato no T-SQL, lembre-se de que a instrução INSERT só adiciona novos dados; ela não verificará os dados existentes ou excluirá e recompilará a tabela. Para evitar a obtenção de várias cópias dos mesmos dados em uma tabela, você pode executar esta instrução primeiro: `TRUNCATE TABLE iris_data`. A instrução T-SQL [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) exclui os dados existentes, mas mantém a estrutura da tabela intacta.
 
 ## <a name="query-the-data"></a>Consultar os dados
 

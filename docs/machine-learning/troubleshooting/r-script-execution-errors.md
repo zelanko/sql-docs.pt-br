@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569906"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196325"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Erros comuns de script R no SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ No entanto, às vezes o código que funciona perfeitamente em um IDE ou utilitá
 
 2. Examine as mensagens para ver se os dados de entrada ou de saída contêm colunas com tipos de dados incompatíveis ou sem suporte. Por exemplo, consultas em um Banco de Dados SQL geralmente retornam GUIDs ou RowGUIDs, ambos sem suporte. Para obter mais informações, confira [Tipos de dados e bibliotecas do R](../r/r-libraries-and-data-types.md).
 
-3. Examine as páginas de ajuda para funções individuais do R para determinar se todos os parâmetros têm suporte para o contexto de computação do SQL Server. Para obter ajuda do ScaleR, use os comandos da Ajuda do R embutidos ou confira a [Referência de Pacote](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+3. Examine as páginas de ajuda para funções individuais do R para determinar se todos os parâmetros têm suporte para o contexto de computação do SQL Server. Para obter ajuda do ScaleR, use os comandos da Ajuda do R embutidos ou confira a [Referência de Pacote](/r-server/r-reference/revoscaler/revoscaler).
 
 Se o runtime do R estiver funcionando, mas o script retornar erros, recomendamos tentar depurar o script em um ambiente de desenvolvimento do R dedicado, como Ferramentas do R para Visual Studio.
 

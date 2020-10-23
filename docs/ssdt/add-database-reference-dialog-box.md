@@ -4,17 +4,21 @@ description: Saiba mais sobre referências de banco de dados e como usá-las. Ve
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
+f1_keywords:
+- sql.data.tools.adddatabasereference.dialog
+- sql.data.tools.newdatabase.dialog
+- sql.data.tools.criticalerror.dialog
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 95d56c0a307d49f7cb0e4a2ba09d1f68d4063226
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 4804032b47059ccfbd376cbe10f2433736893ef0
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519116"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358844"
 ---
 # <a name="add-database-reference-dialog-box"></a>Caixa de diálogo Adicionar Referência de Banco de Dados
 

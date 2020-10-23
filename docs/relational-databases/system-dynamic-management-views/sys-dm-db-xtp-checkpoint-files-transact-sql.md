@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
 description: Exibe informações sobre arquivos de ponto de verificação, incluindo tamanho do arquivo, local físico e ID da transação. Saiba como essa exibição difere em versões do SQL Server.
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb13f60dd50a324795b705b3b99d6cf842a23869
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 010b043bbaab3a5ce1712d32b1e94f800fa630d3
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542263"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412658"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "89542263"
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] é substancialmente diferente das versões mais recentes e é discutido no tópico em [SQL Server 2014](#bkmk_2014).  
   
- Para obter mais informações, consulte [criando e gerenciando armazenamento para objetos com otimização de memória](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
+ Para obter mais informações, consulte [criando e gerenciando armazenamento para objetos de Memory-Optimized](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior  
  A tabela a seguir descreve as colunas do `sys.dm_db_xtp_checkpoint_files` , começando com **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
 |Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|A ID do contêiner (representado como um arquivo com o tipo FILESTREAM em sys.database_files) da qual fazem parte os dados ou o arquivo delta. Junções com file_id em [Sys. database_files &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
-|container_guid|**uniqueidentifier**|GUID do contêiner, do qual a raiz, os dados ou o arquivo Delta fazem parte. Une-se com file_guid na tabela sys. database_files.|  
+|container_id|**int**|A ID do contêiner (representado como um arquivo com o tipo FILESTREAM em sys.database_files) da qual fazem parte os dados ou o arquivo delta. Junções com file_id em [sys.database_files &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_guid|**uniqueidentifier**|GUID do contêiner, do qual a raiz, os dados ou o arquivo Delta fazem parte. Une com file_guid na tabela sys.database_files.|  
 |checkpoint_file_id|**uniqueidentifier**|GUID do arquivo de ponto de verificação.|  
 |relative_file_path|**nvarchar(256)**|Caminho do arquivo relativo ao contêiner ao qual está mapeado.|  
 |file_type|**smallint**|-1 gratuitamente<br /><br /> 0 para arquivo de dados.<br /><br /> 1 para arquivo DELTA.<br /><br /> 2 para o arquivo raiz<br /><br /> 3 para arquivo de dados grandes|  
@@ -65,14 +65,14 @@ ms.locfileid: "89542263"
 |end_checkpoint_id|**bigint**|ID do ponto de verificação final.|  
 |last_updated_checkpoint_id|**bigint**|ID do último ponto de verificação que atualizou este arquivo.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 => UNENCRTPTED<br /><br /> 1 => CRIPTOGRAFADO COM A CHAVE 1<br /><br /> 2 => CRIPTOGRAFADO COM A CHAVE 2. Válido somente para arquivos ativos.|  
+|encryption_status_desc|**nvarchar(60)**|0 => NÃO CRIPTOGRAFADO<br /><br /> 1 => CRIPTOGRAFADO COM A CHAVE 1<br /><br /> 2 => CRIPTOGRAFADO COM A CHAVE 2. Válido somente para arquivos ativos.|  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  A tabela a seguir descreve as colunas para `sys.dm_db_xtp_checkpoint_files` , para **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
 |Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|A ID do contêiner (representado como um arquivo com o tipo FILESTREAM em sys.database_files) da qual fazem parte os dados ou o arquivo delta. Junções com file_id em [Sys. database_files &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_id|**int**|A ID do contêiner (representado como um arquivo com o tipo FILESTREAM em sys.database_files) da qual fazem parte os dados ou o arquivo delta. Junções com file_id em [sys.database_files &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|O GUID do contêiner do qual fazem parte os dados ou o arquivo delta.|  
 |checkpoint_file_id|**GUID**|ID dos dados ou arquivo delta.|  
 |relative_file_path|**nvarchar(256)**|Caminho para os dados ou arquivo delta, relativo ao local do contêiner.|  
@@ -86,7 +86,7 @@ ms.locfileid: "89542263"
 |deleted_row_count|**bigint**|Número de linhas excluídas no arquivo delta.|  
 |drop_table_deleted_row_count|**bigint**|O número de linhas nos arquivos de dados afetados por uma tabela. Aplica-se aos arquivos de dados quando o estado da coluna for igual a 1.<br /><br /> Mostra as contagens de linhas excluídas das tabelas removidas. As estatísticas drop_table_deleted_row_count são compiladas depois que a coleta de lixo de memória das linhas nas tabelas removidas é concluída e um ponto de verificação é realizado. Se você reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes que as estatísticas de tabelas removidas apareçam nessa coluna, as estatísticas serão atualizadas como parte da recuperação. O processo de recuperação não carrega linhas das tabelas removidas. As estatísticas das tabelas removidas são compiladas durante a fase de carregamento e relatadas nessa coluna quando a recuperação é concluída.|  
 |state|**int**|0-CRIADO<br /><br /> 1-EM CONSTRUÇÃO<br /><br /> 2 - ATIVO<br /><br /> 3-DESTINO DE MESCLAGEM<br /><br /> 4-FONTE MESCLADA<br /><br /> 5-NECESSÁRIO PARA BACKUP/HA<br /><br /> 6-EM TRANSIÇÃO PARA MARCA PARA EXCLUSÃO<br /><br /> 7-MARCAS PARA EXCLUSÃO|  
-|state_desc|**nvarchar(60)**|Pré-criado-um pequeno conjunto de pares de arquivos de dados e Delta, também conhecido como CFPs (pares de arquivos de ponto de verificação), é mantido pré-alocado para minimizar ou eliminar as esperas para alocar novos arquivos à medida que as transações são executadas. Eles são totalmente utilizados com um tamanho de arquivo de dados de 128 MB e tamanho de arquivo delta de 8 MB, mas não contêm dados. O número de CFPs é calculado como o número de processadores lógicos ou de agendadores (um por núcleo, sem número máximo) com um mínimo de 8. Essa é uma sobrecarga de armazenamento fixa em bancos de dados com tabelas com otimização de memória.<br /><br /> EM construção-conjunto de CFPs que armazena linhas de dados recentemente inseridas e possivelmente excluídas desde o último ponto de verificação.<br /><br /> ATIVO - Esses contêm as linhas inseridas e excluídas dos pontos de verificação fechados anteriores. Esses CFPs contêm todas as linhas inseridas e excluídas necessárias antes da aplicação da parte ativa do log de transações na reinicialização do banco de dados. O tamanho dessas CFPs será aproximadamente 2 vezes o tamanho das tabelas com otimização de memória na memória, supondo que a operação de mesclagem esteja atualmente com a carga de trabalho transacional.<br /><br /> DESTINO de MESCLAgem – o CFP armazena as linhas de dados consolidadas das CFP que foram identificadas pela política de mesclagem. Assim que a mesclagem for instalada, a opção MESCLAR DESTINO entrará no estado ATIVO.<br /><br /> ORIGEM MESCLAda-depois que a operação de mesclagem for instalada, os CFPs de origem serão marcados como origem MESCLAda. Observe que, o avaliador de política de mesclagem pode identificar várias mesclagens, mas um CFP só pode participar de uma operação de mesclagem.<br /><br /> NECESSÁRIO para BACKUP/HA-depois que a mesclagem tiver sido instalada e o CFP de destino de MESCLAgem fizer parte do ponto de verificação durável, a fonte de mesclagem CFPs passará para esse estado. Os CFPs nesse estado são necessários para exatidão operacional do banco de dados da tabela com otimização de memória.  Por exemplo, restaurar de um ponto de verificação durável para voltar no tempo. Um CFP pode ser marcado para coleta de lixo depois que o ponto de truncamento do log passar de seu intervalo de transações.<br /><br /> EM transição para marca de exclusão-esses CFPs não são necessários pelo mecanismo OLTP na memória e podem ser coletados como lixo. Esse estado indica que esses CFPs estão aguardando o thread em segundo plano para fazer a transição deles para o próximo estado, que é MARCA DE EXCLUSÃO.<br /><br /> MARCA de exclusão-esses CFPs estão aguardando para serem coletados pelo lixo pelo coletor de lixo de FileStream. ([sp_filestream_force_garbage_collection &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state_desc|**nvarchar(60)**|Pré-criado-um pequeno conjunto de pares de arquivos de dados e Delta, também conhecido como CFPs (pares de arquivos de ponto de verificação), é mantido pré-alocado para minimizar ou eliminar as esperas para alocar novos arquivos à medida que as transações são executadas. Eles são totalmente utilizados com um tamanho de arquivo de dados de 128 MB e tamanho de arquivo delta de 8 MB, mas não contêm dados. O número de CFPs é calculado como o número de processadores lógicos ou de agendadores (um por núcleo, sem número máximo) com um mínimo de 8. Essa é uma sobrecarga de armazenamento fixa em bancos de dados com tabelas com otimização de memória.<br /><br /> EM construção-conjunto de CFPs que armazena linhas de dados recentemente inseridas e possivelmente excluídas desde o último ponto de verificação.<br /><br /> ATIVO - Esses contêm as linhas inseridas e excluídas dos pontos de verificação fechados anteriores. Esses CFPs contêm todas as linhas inseridas e excluídas necessárias antes da aplicação da parte ativa do log de transações na reinicialização do banco de dados. O tamanho dessas CFPs será aproximadamente 2 vezes o tamanho das tabelas com otimização de memória na memória, supondo que a operação de mesclagem esteja atualmente com a carga de trabalho transacional.<br /><br /> DESTINO de MESCLAgem – o CFP armazena as linhas de dados consolidadas das CFP que foram identificadas pela política de mesclagem. Assim que a mesclagem for instalada, a opção MESCLAR DESTINO entrará no estado ATIVO.<br /><br /> ORIGEM MESCLAda-depois que a operação de mesclagem for instalada, os CFPs de origem serão marcados como origem MESCLAda. Observe que, o avaliador de política de mesclagem pode identificar várias mesclagens, mas um CFP só pode participar de uma operação de mesclagem.<br /><br /> NECESSÁRIO para BACKUP/HA-depois que a mesclagem tiver sido instalada e o CFP de destino de MESCLAgem fizer parte do ponto de verificação durável, a fonte de mesclagem CFPs passará para esse estado. Os CFPs nesse estado são necessários para exatidão operacional do banco de dados da tabela com otimização de memória.  Por exemplo, restaurar de um ponto de verificação durável para voltar no tempo. Um CFP pode ser marcado para coleta de lixo depois que o ponto de truncamento do log passar de seu intervalo de transações.<br /><br /> EM transição para marca de exclusão-esses CFPs não são necessários para o mecanismo de OLTP In-Memory e podem ser coletados como lixo. Esse estado indica que esses CFPs estão aguardando o thread em segundo plano para fazer a transição deles para o próximo estado, que é MARCA DE EXCLUSÃO.<br /><br /> MARCA de exclusão-esses CFPs estão aguardando para serem coletados pelo lixo pelo coletor de lixo de FileStream. ([sp_filestream_force_garbage_collection &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|O limite inferior de transações contidas no arquivo. Nulo se a coluna de estado for diferente de 2, 3 ou 4.|  
 |upper_bound_tsn|**bigint**|O limite superior de transações contidas no arquivo. Nulo se a coluna de estado for diferente de 2, 3 ou 4.|  
 |last_backup_page_count|**int**|Contagem de página lógica que é determinada no último backup. Aplica-se quando a coluna de estado estiver definida como 2, 3, 4 ou 5. NULL se a contagem de páginas não for conhecida.|  
@@ -99,7 +99,7 @@ ms.locfileid: "89542263"
  Requer a permissão `VIEW DATABASE STATE` no servidor.  
   
 ## <a name="use-cases"></a>Casos de uso  
- Você pode estimar o armazenamento usado pelo OLTP na memória da seguinte maneira:  
+ Você pode estimar o armazenamento usado pelo In-Memory OLTP da seguinte maneira:  
   
 ```  
 -- total storage used by In-Memory OLTP  

@@ -1,4 +1,5 @@
 ---
+description: Propriedade EditionName (WMI MSReportServer_Instance)
 title: Propriedade EditionName (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71247b471b9aa092f6e7c581d891355190006800
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1fd70173b42924d27872700eabc523bf5064cdb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258021"
 ---
 # <a name="msreportserver_instance-properties---editionname"></a>Propriedades de MSReportServer_Instance – EditionName
   Retorna o nome legível para o usuário da edição do servidor de relatório. Somente leitura.  
@@ -40,6 +41,6 @@ public string EditionName;
  **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [Membros MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

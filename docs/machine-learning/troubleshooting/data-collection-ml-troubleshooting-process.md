@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0f7cf6f904768f8394b690c1a45d3cfb4c9bd71
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173467"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194508"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>Coletar dados para a solução de problemas de machine learning do SQL
 
@@ -36,7 +36,7 @@ Dependendo da edição do SQL Server que você está usando, algumas funcionalid
 
 Em geral, a versão do Microsoft R instalada quando você seleciona o recurso R Services ou o recurso Serviços de Machine Learning é determinada pelo número de build do SQL Server. Se você atualizar o SQL Server ou aplicar um patch a ele, também será necessário realizar o mesmo procedimento aos respectivos componentes do R.
 
-Para obter uma lista de versões e links para downloads de componentes do R, confira [Instalar componentes de aprendizado de máquina sem acesso à Internet](/sql/machine-learning/install/sql-ml-component-install-without-internet-access). Em computadores com acesso à Internet, a versão necessária do R é identificada e instalada automaticamente.
+Para obter uma lista de versões e links para downloads de componentes do R, confira [Instalar componentes de aprendizado de máquina sem acesso à Internet](../install/sql-ml-component-install-without-internet-access.md). Em computadores com acesso à Internet, a versão necessária do R é identificada e instalada automaticamente.
 
 É possível atualizar os componentes do R Server separadamente do mecanismo de banco de dados SQL Server, em um processo conhecido como associação. Assim, a versão do R que você usa ao executar o código R no SQL Server pode ser diferente, dependendo da versão instalada do SQL Server e também de você ter migrado ou não o servidor para a versão mais recente do R.
 

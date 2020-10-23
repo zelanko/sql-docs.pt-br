@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 12767b789fee400130990f6451a8a29e5bce6605
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 307d1cf41c319debad4b0fc06b8ba0da516491bd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725085"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257315"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Consumir um aplicativo implantado em [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] usando um serviço Web RESTful
 
@@ -26,7 +26,7 @@ Este artigo descreve como consumir um aplicativo implantado em um cluster de Big
 ## <a name="prerequisites"></a>Prerequisites
 
 - [Cluster de Big Data do SQL Server](deployment-guidance.md)
-- [Utilitário de linha de comando azdata](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 - Um aplicativo implantado usando [azdata](app-create.md) ou a [Extensão de implantação de aplicativo](app-deployment-extension.md)
 
 > [!NOTE]

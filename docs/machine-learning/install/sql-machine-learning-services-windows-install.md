@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: f00bbceefd5691bf4f78111aaa73f03f35bfb812
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: abe3a4d1315ab8192a35e9e8a5a2c64f2a99158a
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956978"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155053"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Instalar Serviços de Machine Learning do SQL Server (R e Python) no Windows
 
@@ -110,7 +110,7 @@ Em instalações locais, você deve executar a instalação como um administrado
      Marque esta opção para adicionar os pacotes do Microsoft Python e o executável do Python 3.5. Depois, selecione as bibliotecas da distribuição do Anaconda.
      
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   Para saber mais sobre como instalar e usar o Java, confira [Instalar extensões de linguagem do SQL Server no Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
+   Para saber mais sobre como instalar e usar o Java, confira [Instalar extensões de linguagem do SQL Server no Windows](../../language-extensions/install/windows-java.md).
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"

@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2de422caf8567f1473d1436a27a094fef9144085
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206040"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257066"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>Solucionar problemas do notebook `pyspark`
 
@@ -30,7 +30,7 @@ Para solucionar problemas de sua sessão do PySpark de maneira eficiente, você 
 
 Essas etapas de solução de problemas exigem que você tenha:
 
-1. o `azdata` instalado e configurado corretamente para seu cluster.
+1. o [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] instalado e configurado corretamente para seu cluster.
 2. Familiaridade com a execução de comandos do Linux e algumas habilidades de solução de problemas de log.
 
 ## <a name="troubleshooting-steps"></a>Etapas para solucionar problemas
@@ -127,7 +127,7 @@ Essas etapas de solução de problemas exigem que você tenha:
 
 1. Verifique a ID do aplicativo e o application_master individual e os logs de contêiner.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Verificar a ID do aplicativo":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Falha na célula":::
 
 1. Examine os logs do aplicativo do YARN.
 
@@ -165,7 +165,7 @@ Essas etapas de solução de problemas exigem que você tenha:
 
 1. Examine a interface do usuário do Spark.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Interface do usuário do Spark":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Falha na célula":::
 
    Faça drill down das tarefas de estágios em busca de erros.
 

@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/17/2020
+ms.date: 10/19/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d5132ad1ea115e051a4c9d4ba898aa53ddeb98a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988737"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194270"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Página Propriedades Avançadas do Servidor – Servidor de Relatórios do Power BI e Reporting Services
 
@@ -57,7 +57,7 @@ Define valores de cabeçalho para todas as URLs correspondentes ao padrão regex
 <CustomHeaders>
     <Header>
         <Name>X-Frame-Options</Name>
-        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
         <Value>SAMEORIGIN</Value>
     </Header>
 </CustomHeaders>
@@ -93,8 +93,8 @@ O exemplo a seguir mostra como configurar o HSTS e outros cabeçalhos personaliz
 <CustomHeaders>
     <Header>
         <Name>Strict-Transport-Security</Name>
-        <Pattern>\/Reports\/mobilereport</Pattern>
-        <Value>max-age=86400</Value>
+        <Pattern>(.+)\/Reports\/mobilereport(.+)</Pattern>
+        <Value>max-age=86400; includeSubDomains=true</Value>
     </Header>
     <Header>
         <Name>Embed</Name>
@@ -104,7 +104,7 @@ O exemplo a seguir mostra como configurar o HSTS e outros cabeçalhos personaliz
 </CustomHeaders>
 ```
 
-O primeiro cabeçalho no XML acima adiciona o cabeçalho `Strict-Transport-Security: max-age=86400` às solicitações correspondentes.
+O primeiro cabeçalho no XML acima adiciona o cabeçalho `Strict-Transport-Security: max-age=86400; includeSubDomains=true` às solicitações correspondentes.
 - http://adventureworks/Reports/mobilereport/New%20Mobile%20Report – regex correspondente e configurará o cabeçalho HSTS
 - http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report – Falha na correspondência
 

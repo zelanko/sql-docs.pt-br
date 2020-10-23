@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fbd7b7f6c286a3d782ed8a40441260f3faea248e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035359"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412506"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -46,6 +46,7 @@ ms.locfileid: "92035359"
 |classifier_name|**sysname**|Para solicitações que utilizam recursos, o nome do classificador usado para atribuir recursos e importância.||
 |resource_allocation_percentage|**decimal (5, 2)**|A quantidade percentual de recursos alocados para a solicitação.</br>Aplica-se ao: Azure Synapse Analytics|
 |result_cache_hit|**int**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se ao: Azure Synapse Analytics| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores inteiros negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
+|Command2|**nvarchar9max)**|Mantém o texto completo da solicitação como enviado pelo usuário. Contém consultas com mais de 4000 caracteres.|Qualquer consulta ou texto de solicitação válido. NULL = consultas que têm 4000 caracteres de comprimento ou menos, para essas consultas, o texto completo pode ser encontrado na coluna comando.|
 ||||
   
 ## <a name="remarks"></a>Comentários 

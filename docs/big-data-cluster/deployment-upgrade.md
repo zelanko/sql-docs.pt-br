@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 058012d828dd9f6f327354809be4dfe67021744b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725844"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257186"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Como atualizar o [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -57,16 +57,16 @@ Esta seção explica como atualizar um BDC do SQL Server de uma versão com supo
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-1. Atualizar `azdata`.
+1. Atualizar [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
-   Siga as instruções para instalar o `azdata`. 
+   Siga as instruções para instalar o [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
    - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
    - [Linux com apt](../azdata/install/deploy-install-azdata-linux-package.md)
    - [Linux com yum](../azdata/install/deploy-install-azdata-yum.md)
    - [Linux com zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
-   >Se `azdata` tiver sido instalado com `pip`, você precisará removê-lo manualmente antes da instalação com o Windows Installer ou o gerenciador de pacotes do Linux.
+   >Se [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] tiver sido instalado com `pip`, você precisará removê-lo manualmente antes da instalação com o Windows Installer ou o gerenciador de pacotes do Linux.
 
 1. Atualize o Cluster de Big Data.
 
@@ -131,7 +131,7 @@ Não há suporte para uma atualização in-loco de uma CTP ou da versão Release
 
 ### <a name="backup-and-delete-the-old-cluster"></a>Fazer backup e excluir o cluster antigo
 
-Não há atualização in-loco para clusters de Big Data implantados antes do SQL Server 2019 GDR1. A única maneira de atualizar para uma nova versão é remover o cluster manualmente e recriá-lo. Cada versão tem uma versão exclusiva do `azdata` que não é compatível com a versão anterior. Além disso, se uma imagem de contêiner for baixada em um cluster implantado com outra versão mais antiga, a imagem mais recente poderá não ser compatível com as imagens mais antigas no cluster. A imagem mais nova será capturada se você estiver usando a marca de imagem `latest` no arquivo de configuração de implantação nas configurações do contêiner. Por padrão, cada versão tem uma tag de imagem específica correspondente à versão de lançamento do SQL Server. Para fazer a atualização para a última versão, use as seguintes etapas:
+Não há atualização in-loco para clusters de Big Data implantados antes do SQL Server 2019 GDR1. A única maneira de atualizar para uma nova versão é remover o cluster manualmente e recriá-lo. Cada versão tem uma versão exclusiva do [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] que não é compatível com a versão anterior. Além disso, se uma imagem de contêiner for baixada em um cluster implantado com outra versão mais antiga, a imagem mais recente poderá não ser compatível com as imagens mais antigas no cluster. A imagem mais nova será capturada se você estiver usando a marca de imagem `latest` no arquivo de configuração de implantação nas configurações do contêiner. Por padrão, cada versão tem uma tag de imagem específica correspondente à versão de lançamento do SQL Server. Para fazer a atualização para a última versão, use as seguintes etapas:
 
 1. Antes de excluir o cluster antigo, faça backup dos dados na instância mestra do SQL Server e no HDFS. Para a instância mestra do SQL Server, você poderá usar [Backup e restauração do SQL Server](data-ingestion-restore-database.md). Para o HDFS, você [pode copiar os dados com o `curl`](data-ingestion-curl.md).
 
@@ -142,18 +142,18 @@ Não há atualização in-loco para clusters de Big Data implantados antes do SQ
    ```
 
    > [!Important]
-   > Use a versão do `azdata` que corresponde ao cluster. Não exclua um cluster mais antigo com a versão mais recente do `azdata`.
+   > Use a versão do [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] que corresponde ao cluster. Não exclua um cluster mais antigo com a versão mais recente do [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    > [!Note]
    > A emissão de um comando `azdata bdc delete` resultará em todos os objetos criados dentro do namespace identificado com o nome do cluster de Big Data serem excluídos, mas não o próprio namespace. O namespace pode ser reutilizado para implantações subsequentes, desde que esteja vazio e nenhum outro aplicativo tenha sido criado dentro dele.
 
-1. Desinstale a versão antiga do `azdata`.
+1. Desinstale a versão antiga do [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Instalar a versão mais recente do `azdata`. Os comandos a seguir instalam `azdata` da versão mais recente:
+1. Instalar a versão mais recente do [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Os comandos a seguir instalam [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] da versão mais recente:
 
    **Windows:**
 
@@ -168,11 +168,11 @@ Não há atualização in-loco para clusters de Big Data implantados antes do SQ
    ```
 
    > [!IMPORTANT]
-   > Para cada versão, o caminho para a versão `n-1` do `azdata` muda. Mesmo que você tenha instalado o `azdata` anteriormente, precisará reinstalar com base no caminho mais recente antes de criar o cluster.
+   > Para cada versão, o caminho para a versão `n-1` do [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] muda. Mesmo que você tenha instalado o [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] anteriormente, precisará reinstalar com base no caminho mais recente antes de criar o cluster.
 
 ### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> Verificar a versão do azdata
 
-Antes de implantar um novo cluster de Big Data, verifique se você está usando a última versão do `azdata` com o parâmetro `--version`:
+Antes de implantar um novo cluster de Big Data, verifique se você está usando a última versão do [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] com o parâmetro `--version`:
 
 ```bash
 azdata --version
@@ -180,7 +180,7 @@ azdata --version
 
 ### <a name="install-the-new-release"></a>Instalar a nova versão
 
-Depois de remover o cluster de Big Data anterior e instalar o `azdata` mais recente, implante o novo cluster de Big Data usando as instruções de implantação atuais. Para obter mais informações, confira [Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes](deployment-guidance.md). Em seguida, restaure os bancos de dados ou os arquivos necessários.
+Depois de remover o cluster de Big Data anterior e instalar o [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] mais recente, implante o novo cluster de Big Data usando as instruções de implantação atuais. Para obter mais informações, confira [Como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Kubernetes](deployment-guidance.md). Em seguida, restaure os bancos de dados ou os arquivos necessários.
 
 ## <a name="next-steps"></a>Próximas etapas
 

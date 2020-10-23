@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956277"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155086"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Instalar um runtime personalizado de R para o SQL Server
 
@@ -37,7 +37,7 @@ Antes de instalar um runtime personalizado de R, instale o seguinte:
 
 + [SQL Server 2019 para Windows (Atualização Cumulativa 3 ou posterior)](../../database-engine/install-windows/install-sql-server.md).
 
-+ [Extensões de Linguagem do SQL Server no Windows com a estrutura de extensibilidade](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [Extensões de Linguagem do SQL Server no Windows com a estrutura de extensibilidade](../../language-extensions/install/windows-java.md).
 
 + [R versão 3.3 ou superior](https://cran.r-project.org/).
 
@@ -196,7 +196,7 @@ Antes de instalar um runtime personalizado de R, instale o seguinte:
 + [SQL Server 2019 para Linux (Atualização Cumulativa 3 ou posterior)](../../linux/sql-server-linux-setup.md).
 Antes de instalar o SQL Server em Linux, é necessário configurar um repositório da Microsoft. Para obter mais informações, confira [configurando repositórios](../../linux/sql-server-linux-change-repo.md).
 
-+ [Extensões de Linguagem do SQL Server no Linux com a estrutura de extensibilidade](../../linux/sql-server-linux-setup-language-extensions.md).
++ [Extensões de Linguagem do SQL Server no Linux com a estrutura de extensibilidade](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [R versão 3.3 ou superior](https://cran.r-project.org/).
 

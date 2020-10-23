@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 23f3eb157a76a9a197cf0f15a72ae0e51f7cf13b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180383"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196257"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizar dados do SQL Server usando o R (tutorial de SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este é o tutorial 6 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este é o tutorial 6 da [série de tutoriais do RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre como usar as [funções do RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
 Neste tutorial, você usará as funções do R para exibir a distribuição de valores na coluna *creditLine* por gênero.
 
@@ -84,13 +84,13 @@ Neste ponto, as modificações afetam apenas o objeto de fonte de dados em R. Ne
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualizar dados usando o rxHistogram
 
-1. Use o seguinte código R para chamar a função [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) e passar uma fórmula e fonte de dados. Você pode executá-lo localmente a princípio, para ver os resultados esperados e quanto tempo demora.
+1. Use o seguinte código R para chamar a função [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) e passar uma fórmula e fonte de dados. Você pode executá-lo localmente a princípio, para ver os resultados esperados e quanto tempo demora.
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    Internamente, **rxHistogram** chama a função [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) , que está incluída no pacote **RevoScaleR** . **rxCube** gera uma única lista (ou quadro de dados) que contém uma coluna para cada variável especificada na fórmula, além de uma coluna de contagens.
+    Internamente, **rxHistogram** chama a função [rxCube](/machine-learning-server/r-reference/revoscaler/rxcube) , que está incluída no pacote **RevoScaleR** . **rxCube** gera uma única lista (ou quadro de dados) que contém uma coluna para cada variável especificada na fórmula, além de uma coluna de contagens.
     
 2. Agora, defina o contexto de computação para o computador remoto do SQL Server e execute **rxHistogram** novamente.
   
@@ -108,7 +108,7 @@ Neste ponto, as modificações afetam apenas o objeto de fonte de dados em R. Ne
 
 Os gráficos de dispersão são frequentemente usados durante a exploração de dados para comparar a relação entre duas variáveis. Você pode usar pacotes R internos para essa finalidade, com entradas fornecidas por funções de **RevoScaleR**.
 
-1. Chame a função [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) para calcular a média de *fraudRisk* para cada combinação de *numTrans* e *numIntlTrans*:
+1. Chame a função [rxCube](/machine-learning-server/r-reference/revoscaler/rxcrosstabs) para calcular a média de *fraudRisk* para cada combinação de *numTrans* e *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -118,7 +118,7 @@ Os gráficos de dispersão são frequentemente usados durante a exploração de 
   
     O valor retornado padrão de **rxCube** é um *objeto rxCube*, que representa uma tabulação cruzada. 
   
-2. Chame a função [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) para converter os resultados em um quadro de dados que pode ser facilmente usado em uma das funções de plotagem do R padrão.
+2. Chame a função [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) para converter os resultados em um quadro de dados que pode ser facilmente usado em uma das funções de plotagem do R padrão.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -142,7 +142,7 @@ Os gráficos de dispersão são frequentemente usados durante a exploração de 
   
 Com essa análise rápida, você pode ver que o risco de fraude aumenta com o número de transações e o número de transações internacionais.
 
-Para saber mais sobre a função **rxCube** e tabelas cruzadas em geral, confira [Resumos de dados com RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+Para saber mais sobre a função **rxCube** e tabelas cruzadas em geral, confira [Resumos de dados com RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
 ## <a name="next-steps"></a>Próximas etapas
 
