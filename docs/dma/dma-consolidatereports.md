@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727797"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523913"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o Assistente de Migração de Dados
 
@@ -96,7 +96,7 @@ Crie um banco de dados chamado **EstateInventory** e uma tabela chamada **Databa
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server conteúdo da tabela](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![Captura de tela de um conteúdo de tabela SQL Server se você estiver usando uma tabela SQL Server.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Se esse banco de dados não estiver no computador ferramentas, verifique se o computador das ferramentas tem conectividade de rede com essa SQL Server instância.
 
@@ -113,7 +113,7 @@ Crie um banco de dados chamado **EstateInventory** e uma tabela chamada **Instan
 - Porta
 - AssessmentFlag
 
-![SQL Server conteúdo da tabela](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![Captura de tela de um conteúdo de tabela SQL Server se estiver usando um inventário de instância.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>Executando uma avaliação dimensionada
 

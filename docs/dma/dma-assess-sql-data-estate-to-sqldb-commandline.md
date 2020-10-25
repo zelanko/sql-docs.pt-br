@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867696"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496811"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD: avaliar a prontidão de um SQL Server espaço de dados migrando para o SQL do Azure 
 
@@ -28,7 +28,12 @@ Com muitas organizações tentando migrar para o Azure, é essencial avaliar as 
 
 [Assistente de migração de dados (DMA)](dma-overview.md) ajuda a avaliar uma instância de SQL Server para um destino do Azure SQL específico e avalia a prontidão dos bancos de dados SQL Server migrando para o SQL do Azure. Carregue os resultados da avaliação de DMA para o Hub de migrações para Azure para uma exibição de preparação centralizada de todo o espaço de dados. 
 
-Este artigo ensina a executar avaliações em escala e carregar os resultados para o Hub de migrações para Azure usando a interface de linha de comando DMA (DMACMD). Como alternativa, você pode usar a [GUI do DMA](dma-assess-sql-data-estate-to-sqldb.md) para executar a avaliação. 
+Este artigo ensina a executar avaliações em escala e carregar os resultados para o Hub de migrações para Azure usando a interface de linha de comando DMA (DMACMD). Como alternativa, você pode usar a [GUI do DMA](dma-assess-sql-data-estate-to-sqldb.md) para executar a avaliação.
+
+Para saber mais, confira o seguinte vídeo do channel9:
+
+>
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Pré-requisitos 
 
@@ -139,3 +144,4 @@ Considere as seguintes práticas recomendadas ao usar o DMACMD:
 * [AMD (Assistente de Migração de Dados)](../dma/dma-overview.md)
 * [Assistente de Migração de Dados: definições de configuração](../dma/dma-configurationsettings.md)
 * [Assistente de Migração de Dados: práticas recomendadas](../dma/dma-bestpractices.md)
+

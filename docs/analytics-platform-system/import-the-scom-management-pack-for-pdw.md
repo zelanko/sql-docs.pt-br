@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770359a9ddb04eb8aaf45af7dd5b95447c30f264
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401079"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523863"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importar o pacote de gerenciamento do SCOM – sistema de plataforma de análise
 Siga estas etapas para importar os pacotes de gerenciamento System Center Operations Manager (SCOM) para o sistema de plataforma de análise (APS). Os pacotes de gerenciamento são necessários para monitorar data warehouse paralelos do SCOM. 
@@ -50,7 +50,7 @@ Os pacotes de gerenciamento devem ser instalados. Confira [instalar os pacotes d
   
 7.  Clique em **Instalar**.  
   
-    ![Clique em instalar](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
+    ![Captura de tela mostrando o assistente para importar pacotes de gerenciamento na etapa selecionar pacotes de gerenciamento com a opção de instalação circulada em vermelho.](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
 8.  Após a conclusão, clique em **fechar**.  
   
@@ -70,7 +70,7 @@ Os pacotes de gerenciamento devem ser instalados. Confira [instalar os pacotes d
   
 4.  Clique em **Instalar**.  
   
-    ![Clique em instalar](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Outra captura de tela do assistente para importar pacotes de gerenciamento na etapa selecionar pacotes de gerenciamento com a opção de instalação circulava em vermelho.](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  Clique em **Fechar**.  
   

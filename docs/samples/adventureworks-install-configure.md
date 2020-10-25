@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f4140db7be7367105832ff564d927ba6bc40ed25
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1482104a0c8ffea7f7f2502b83b9b268b7bb08d2
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955887"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523941"
 ---
 # <a name="adventureworks-sample-databases"></a>Bancos de dados de exemplo do AdventureWorks
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ Para restaurar o banco de dados no SQL Server Management Studio, siga estas etap
 3. Abra o SQL Server Management Studio (SSMS) e conecte-se ao seu SQL Server no. 
 4. Clique com o botão direito do mouse em **bancos** de dados no **pesquisador de objetos**  >  **restaurar banco...** para iniciar o assistente para **restaurar banco de dados** . 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Escolha restaurar seu banco de dados clicando com o botão direito do mouse em bancos de dados no Pesquisador de objetos e selecionando restaurar banco de dados":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Captura de tela mostrando como optar por restaurar o banco de dados clicando com o botão direito do mouse no Pesquisador de objetos e selecionando restaurar banco de dados.":::
 
 
 1. Selecione **dispositivo** e, em seguida, selecione as reticências **(...)** para escolher um dispositivo. 
@@ -84,7 +84,7 @@ Para restaurar o banco de dados no SQL Server Management Studio, siga estas etap
 1. Verifique a guia **arquivos** para confirmar a **restauração como** local e os nomes de arquivo correspondem ao local e aos nomes de arquivo pretendidos no Assistente para **restaurar banco de dados** . 
 1. Selecione **OK** para restaurar o banco de dados. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Escolha restaurar seu banco de dados clicando com o botão direito do mouse em bancos de dados no Pesquisador de objetos e selecionando restaurar banco de dados":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Captura de tela mostrando como optar por restaurar o banco de dados clicando com o botão direito do mouse no Pesquisador de objetos e selecionando restaurar banco de dados.":::
 
 Para obter mais informações sobre como restaurar um banco de dados SQL Server, consulte [restaurar um backup de banco de dados usando o SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
@@ -117,25 +117,25 @@ Para restaurar o banco de dados no Azure Data Studio, siga estas etapas:
 1. Abra o Azure Data Studio Studio e conecte-se à sua instância do SQL Server.
 1. Clique com o botão direito do mouse no servidor e selecione **gerenciar**.
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Escolha restaurar seu banco de dados clicando com o botão direito do mouse em bancos de dados no Pesquisador de objetos e selecionando restaurar banco de dados":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Captura de tela mostrando como optar por restaurar o banco de dados clicando com o botão direito do mouse no Pesquisador de objetos e selecionando restaurar banco de dados.":::
 
 1. Selecione **restaurar**
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Escolha restaurar seu banco de dados clicando com o botão direito do mouse em bancos de dados no Pesquisador de objetos e selecionando restaurar banco de dados":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Captura de tela mostrando como optar por restaurar o banco de dados clicando com o botão direito do mouse no Pesquisador de objetos e selecionando restaurar banco de dados.":::
 
 1. Na guia **geral** , preencha os valores listados em **origem**.
     1. Em **restaurar de**, selecione *arquivo de backup*.
     1. Em **caminho do arquivo de backup**, selecione o local em que você armazenou o arquivo. bak. 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Escolha restaurar seu banco de dados clicando com o botão direito do mouse em bancos de dados no Pesquisador de objetos e selecionando restaurar banco de dados":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Captura de tela mostrando como optar por restaurar o banco de dados clicando com o botão direito do mouse no Pesquisador de objetos e selecionando restaurar banco de dados.":::
     
     Isso preenche automaticamente o restante dos campos, como **banco**de dados, **banco de dados de destino** e **restaurar para**o. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Escolha restaurar seu banco de dados clicando com o botão direito do mouse em bancos de dados no Pesquisador de objetos e selecionando restaurar banco de dados":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Captura de tela mostrando como optar por restaurar o banco de dados clicando com o botão direito do mouse no Pesquisador de objetos e selecionando restaurar banco de dados.":::
 
 1. Selecione **restaurar** para restaurar o banco de dados. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Escolha restaurar seu banco de dados clicando com o botão direito do mouse em bancos de dados no Pesquisador de objetos e selecionando restaurar banco de dados":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Captura de tela mostrando como optar por restaurar o banco de dados clicando com o botão direito do mouse no Pesquisador de objetos e selecionando restaurar banco de dados.":::
 
 ---
 
@@ -157,7 +157,7 @@ Siga estas etapas para usar um banco de dados de exemplo para criar um novo banc
 1. Preencha as informações solicitadas para criar seu banco de dados. 
 1. Na guia **configurações adicionais** , escolha **exemplo** como os dados existentes em **fonte de dados**: 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Escolha restaurar seu banco de dados clicando com o botão direito do mouse em bancos de dados no Pesquisador de objetos e selecionando restaurar banco de dados":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Captura de tela mostrando como optar por restaurar o banco de dados clicando com o botão direito do mouse no Pesquisador de objetos e selecionando restaurar banco de dados.":::
 
 1. Selecione **criar** para criar seu novo banco de dados SQL, que é a cópia restaurada do banco de dados AdventureWorksLT. 
 
@@ -172,7 +172,7 @@ Para implantar um banco de dados de exemplo do SQL Server para o banco de dados 
 1. Se você ainda não tiver feito isso, [restaure o banco de dados de exemplo para SQL Server](#restore-to-sql-server). 
 1. Clique com o botão direito do mouse no banco de dados restaurado em tarefas do **pesquisador de objetos**  >  **Tasks**  >  **implantar banco de dados no banco de dados SQL do Microsoft Azure.** 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Escolha restaurar seu banco de dados clicando com o botão direito do mouse em bancos de dados no Pesquisador de objetos e selecionando restaurar banco de dados":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Captura de tela mostrando como optar por restaurar o banco de dados clicando com o botão direito do mouse no Pesquisador de objetos e selecionando restaurar banco de dados.":::
 
 1. Siga o assistente para se conectar ao banco de dados SQL do Azure e implantar seu banco de dados. 
 

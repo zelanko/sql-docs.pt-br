@@ -1,7 +1,7 @@
 ---
 title: Gerar dados em exemplos de SQL WideWorldImporters
 description: Use essas instruções SQL para gerar e importar dados de exemplo até a data atual para os bancos de WideWorldImporters de exemplo.
-ms.date: 04/04/2018
+ms.date: 10/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f60ad250ea68f58a98fb93da9f3c5853ad68bd47
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942186"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523931"
 ---
 # <a name="wideworldimporters-data-generation"></a>Geração de dados WideWorldImporters
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,12 @@ Para gerar dados de exemplo até a data atual:
             @AreDatesPrinted = 1;
     ```
 
-    Essa instrução adiciona dados de exemplo de vendas e de compra ao banco de dado, até a data atual. Ele exibe o progresso da geração de dados por dia. A geração de dados pode levar cerca de 10 minutos para cada ano que precisa de dados. Devido a um fator aleatório na geração de dados, há algumas diferenças nos dados que são gerados entre as execuções.
+    Essa instrução adiciona dados de exemplo de vendas e de compra ao banco de dado, até a data atual. Ele exibe o progresso da geração de dados por dia. Devido a um fator aleatório na geração de dados, há algumas diferenças nos dados que são gerados entre as execuções.
 
     Para aumentar ou diminuir a quantidade de dados gerados para pedidos por dia, altere o valor do parâmetro `@AverageNumberOfCustomerOrdersPerDay` . Use os parâmetros `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` para determinar o volume do pedido para os dias de fim de semana.
+
+> [!TIP]
+> Forçar a [durabilidade atrasada](../relational-databases/logs/control-transaction-durability.md) no banco de dados pode melhorar a velocidade de geração de dado, especialmente quando o log de transações do banco está em um subsistema de armazenamento de alta latência. Lembre-se de possíveis implicações de [perda de dados](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) ao usar a durabilidade atrasada e considere habilitar apenas a durabilidade atrasada durante a geração de dados.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importar dados gerados no WideWorldImportersDW
 
@@ -75,7 +78,7 @@ Você pode usar o `Application.Configuration_PopulateLargeSaleTable` procediment
 
 `@EstimatedRowsFor2012`**bigint** (com um padrão de 12 milhões)
 
-#### <a name="result"></a>Result
+#### <a name="result"></a>Resultado
 
 Aproximadamente o número necessário de linhas é inserido na `Fact.Sale` tabela no ano de 2012. O procedimento limita artificialmente o número de linhas a 50.000 por dia. Você pode alterar essa limitação, mas a limitação ajuda a evitar a sobreinflaçãos acidentais da tabela.
 

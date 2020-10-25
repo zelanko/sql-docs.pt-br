@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726337"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523873"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Avaliar a prontidão de um SQL Server banco de dados migrando para o Azure SQL usando o Assistente de Migração de Dados
 
@@ -35,7 +35,7 @@ Este artigo fornece instruções passo a passo para aproveitar os [Assistente de
 
 Configure um novo projeto de migrações para Azure em uma assinatura do Azure e, em seguida, adicione uma ferramenta.
 
-Um projeto de migrações para Azure é usado para armazenar metadados de descoberta, avaliação e migração coletados do ambiente que você está avaliando ou migrando. Você também usa um projeto para acompanhar os ativos descobertos e orquestrar a avaliação e a migração.
+Um projeto das Migrações para Azure é usado para armazenar metadados de descoberta, avaliação e migração coletados do ambiente que você está avaliando ou migrando. Você também usa um projeto para acompanhar os ativos descobertos e orquestrar a avaliação e a migração.
 
 1. Entre no portal do Azure, selecione **todos os serviços**e, em seguida, procure migrações para Azure.
 2. Em **Serviços**, selecione **Migrações para Azure**.
@@ -132,11 +132,11 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 
 5. Após a conclusão da avaliação, selecione **carregar para migrações para Azure**.
 
-   ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
+   ![Captura de tela mostrando a Assistente de Migração de Dados com a opção carregar para migrar do Azure chamada out.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
 6. Entre no portal do Azure.
 
-   ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
+   ![Captura de tela da Assistente de Migração de Dados mostrando a janela de entrada de portal do Azure.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
 7. Selecione a assinatura e o projeto de migrações para Azure no qual você deseja carregar os resultados da avaliação e, em seguida, selecione **carregar**.
 
