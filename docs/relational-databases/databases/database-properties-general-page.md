@@ -10,15 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.general.f1
 - sql13.swb.databaseproperties.segments.f1
+- sql13.swb.databaseproperties.databasecapabilities.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 741ba510a628addbbf7c3150315a9aaaea7fa5ce
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e544c071a90a99fb8182348a2ce009690b0a5413
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192856"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358884"
 ---
 # <a name="database-properties-general-page"></a>Propriedades de Banco de Dados (página Geral)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "92192856"
  Exibe o número de usuários configurados para o banco de dados.  
   
  **Nome da Ordenação**  
- Exibe a ordenação usada para o banco de dados. A ordenação pode ser alterada na página **Opções**.  
+ Exibe a ordenação usada para o banco de dados. A ordenação pode ser alterada na página **Opções** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

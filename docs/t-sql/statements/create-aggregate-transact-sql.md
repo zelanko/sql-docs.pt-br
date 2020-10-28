@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c6ae2579cad1a04239f6d4abc4691982a49d0ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547539"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300241"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Um ou mais parâmetros na agregação definida pelo usuário. O valor de um parâmetro deve ser fornecido pelo usuário quando a função de agregação é executada. Especifique um nome de parâmetro usando um sinal de "arroba" ( **@** ) como o primeiro caractere. O nome do parâmetro precisa estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). Os parâmetros são locais à função.  
   
  *system_scalar_type*  
- É qualquer um dos tipos de dados escalares de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conter o valor do parâmetro de entrada ou o valor de retorno. Todos os tipos de dados escalares podem ser usados como um parâmetro para uma agregação definida pelo usuário, exceto **text**, **ntext** e **image**. Os tipos não escalares, como **cursor** e **tabela**, não podem ser especificado.  
+ É qualquer um dos tipos de dados escalares de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conter o valor do parâmetro de entrada ou o valor de retorno. Todos os tipos de dados escalares podem ser usados como um parâmetro para uma agregação definida pelo usuário, exceto **text** , **ntext** e **image** . Os tipos não escalares, como **cursor** e **tabela** , não podem ser especificado.  
   
  *udt_schema_name*  
  É o nome do esquema ao qual pertence o tipo de dado CLR definido pelo usuário. Se não for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] referenciará *udt_type_name* na seguinte ordem:  
@@ -82,7 +82,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  É o nome de um tipo de dado CLR definido pelo usuário já criado no banco de dados atual. Se *udt_schema_name* não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considerará que o tipo pertence ao esquema do usuário atual.  
   
  *assembly_name* [ **.** _class_name_ ]  
- Especifica o assembly a ser associado à função de agregação definida pelo usuário e, opcionalmente, o nome do esquema ao qual pertence o assembly e o nome da classe no assembly que implementa a agregação definida pelo usuário. O assembly já deve ter sido criado no banco de dados usando uma instrução CREATE ASSEMBLY. *class_name* precisa ser um identificador válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e corresponder ao nome de uma classe que exista no assembly. *class_name* poderá ser um nome qualificado de namespace se a linguagem de programação usada para escrever a classe usar namespaces, como C#. Se *class_name* não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumirá que ele é o mesmo que *aggregate_name*.  
+ Especifica o assembly a ser associado à função de agregação definida pelo usuário e, opcionalmente, o nome do esquema ao qual pertence o assembly e o nome da classe no assembly que implementa a agregação definida pelo usuário. O assembly já deve ter sido criado no banco de dados usando uma instrução CREATE ASSEMBLY. *class_name* precisa ser um identificador válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e corresponder ao nome de uma classe que exista no assembly. *class_name* poderá ser um nome qualificado de namespace se a linguagem de programação usada para escrever a classe usar namespaces, como C#. Se *class_name* não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumirá que ele é o mesmo que *aggregate_name* .  
   
 ## <a name="remarks"></a>Comentários  
  Por padrão, a capacidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em executar código CLR está desligada. Você pode criar, modificar e descartar objetos de banco de dados que referenciam módulos de código gerenciado, mas o código nesses módulos não será executado em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que a [opção clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) seja habilitada usando [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
@@ -93,7 +93,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Requer permissão CREATE AGGREGATE e também permissão REFERENCES no assembly que é especificado na cláusula EXTERNAL NAME.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir supõe que um aplicativo de exemplo StringUtilities.csproj é compilado. Para obter mais informações, confira [Exemplo de funções de utilitário de cadeia de caracteres](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ O exemplo a seguir supõe que um aplicativo de exemplo StringUtilities.csproj é compilado. Para obter mais informações, confira [Exemplo de funções de utilitário de cadeia de caracteres](/previous-versions/sql/sql-server-2016/ff878119(v=sql.130)).  
   
  O exemplo cria a agregação `Concatenate`. Antes que a agregação seja criada, o assembly `StringUtilities.dll` é registrado no banco de dados local.  
   
@@ -120,5 +120,4 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
   

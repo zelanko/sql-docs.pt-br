@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024374"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300439"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ Especifica o nome do novo índice.
   
 Se a tabela já tiver um índice columnstore clusterizado, você poderá especificar o mesmo nome que o do índice existente ou usar a opção DROP EXISTING para especificar um novo nome.  
   
-ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*
+ON [ *database_name* . [ *schema_name* ]. | *schema_name* . ] *table_name*
 
 Especifica o nome de uma, duas ou três partes da tabela a ser armazenada como um índice columnstore clusterizado. Se a tabela for um índice de heap ou clusterizado, ela será convertida de rowstore para columnstore. Se a tabela já for um columnstore, essa instrução recompilará o índice columnstore clusterizado. Para converter em um índice de repositório de coluna clusterizado ordenado, o índice existente deve ser um índice columnstore clusterizado.
   
@@ -219,11 +219,11 @@ Criar um índice columnstore não clusterizado na memória em uma tabela rowstor
 *index_name*  
    Especifica o nome do índice. O *index_name* precisa ser exclusivo na tabela, mas não precisa ser exclusivo no banco de dados. Os nomes de índice precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- **(** _column_  [ **,** ...*n* ] **)**  
+ **(** _column_  [ **,** ... *n* ] **)**  
     Especifica as colunas a serem armazenadas. Um índice columnstore não clusterizado é limitado a 1024 colunas.  
    Cada coluna deve ser de um tipo de dados com suporte para índices columnstore. Confira [Limitações e restrições](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obter uma lista dos tipos de dados compatíveis.  
 
-ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*  
+ON [ *database_name* . [ *schema_name* ]. | *schema_name* . ] *table_name*  
    Especifica o nome de uma, duas ou três partes da tabela que contém o índice.  
 
 #### <a name="with-options"></a>Opções WITH
@@ -243,7 +243,7 @@ ON [*database_name*. [*schema_name* ]. | *schema_name*. ] *table_name*
    Para obter mais informações, consulte [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  As operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  As operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
 - `ON` especifica que o índice columnstore não clusterizado permaneça online e disponível enquanto a nova cópia do índice está sendo criada.
@@ -380,8 +380,8 @@ Se a tabela subjacente tiver uma coluna de um tipo de dados não compatível com
 -   Não pode ter mais de 1024 colunas.
 -   Não pode ser criado como um índice baseado em restrição. É possível ter restrições exclusivas, restrições de chave primária e restrições de chave estrangeira em uma tabela com um índice columnstore. As restrições sempre são impostas com um índice de repositório de linha. As restrições não podem ser impostas com um índice columnstore (clusterizado ou não clusterizado).
 -   Não pode incluir uma coluna esparsa.  
--   Não pode ser alterado usando a instrução **ALTER INDEX**. Para alterar o índice não clusterizado, é preciso descartar e recriar o índice columnstore. Você pode usar **ALTER INDEX** para desabilitar e recompilar um índice columnstore.  
--   Ele não pode ser criado usando a palavra-chave **INCLUDE**.  
+-   Não pode ser alterado usando a instrução **ALTER INDEX** . Para alterar o índice não clusterizado, é preciso descartar e recriar o índice columnstore. Você pode usar **ALTER INDEX** para desabilitar e recompilar um índice columnstore.  
+-   Ele não pode ser criado usando a palavra-chave **INCLUDE** .  
 -   Não é possível incluir as palavras-chave **ASC** ou **DESC** para classificar o índice. Os índices columnstore são ordenados de acordo com os algoritmos de compactação. A classificação eliminará muitos dos benefícios de desempenho.  
 -   Não é possível incluir colunas de LOB (objeto grande) do tipo nvarchar(max), varchar(max) e varbinary(max) em índices de repositório de colunas não clusterizados. Somente índices columnstore clusterizados são compatíveis com tipos LOB, começando com a versão [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e o Banco de Dados SQL do Azure configurado na camada Premium, na camada Standard (S3 e posterior) e em todas as camadas de ofertas de vCore. Observe que as versões anteriores não são compatíveis com os tipos LOB em índices columnstore clusterizados e não clusterizados.
 
@@ -782,5 +782,3 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( PRODUCTKEY,SHIPDATE );
 WITH (DROP_EXISTING = ON)
 ```
-
-

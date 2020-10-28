@@ -18,12 +18,12 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 21b259f692a324e163ed74b32366f6c8ec21a90f
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 00cfd711ce130fa9c90c11000a6853082494e9bd
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688359"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300310"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,11 +45,11 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Especifica o nome da credencial no escopo do banco de dados que está sendo alterada.  
   
- IDENTITY **='***identity_name***'**  
- Especifica o nome da conta a ser usada ao conectar o servidor externamente. Para importar um arquivo do armazenamento de Blobs do Azure, o nome de identidade deve ser `SHARED ACCESS SIGNATURE`.  Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ IDENTITY **=' ***identity_name*** '**  
+ Especifica o nome da conta a ser usada ao conectar o servidor externamente. Para importar um arquivo do armazenamento de Blobs do Azure, o nome de identidade deve ser `SHARED ACCESS SIGNATURE`.  Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
- SECRET **='***secret***'**  
+ SECRET **=' ***secret*** '**  
  Especifica o segredo necessário para a autenticação de saída. *secret* é necessário para importar um arquivo de armazenamento de Blobs do Azure. *secret* pode ser opcional para outros fins.   
 > [!WARNING]
 >  O valor da chave SAS pode começar com um '?' (ponto de interrogação). Quando você usa a chave SAS, deve remover o '?' à esquerda. Caso contrário, seus esforços poderão ser bloqueados.    
@@ -90,5 +90,4 @@ GO
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
-  
   

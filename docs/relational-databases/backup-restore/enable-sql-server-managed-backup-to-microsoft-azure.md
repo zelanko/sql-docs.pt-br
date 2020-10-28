@@ -1,7 +1,7 @@
 ---
 title: Usar o backup gerenciado no Azure"
 description: Saiba como habilitar o Backup Gerenciado do SQL Server para o Microsoft Azure no nível do banco de dados e da instância e como habilitar notificações e monitorar a atividade de backup.
-ms.custom: seo-lt-2019
+ms.custom: seo-lt-2019, devx-track-azurecli
 ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 30c53bedf4f5946088e35c94e8902554c6da0049
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810172"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439473"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Habilitar o backup gerenciado do SQL Server no Azure
 

@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b25b64b9e6cde8f7546ca21f7c3383460b3e1fce
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d484d2e95f3b2f0030744a87f00c7dc3f220aa40
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688498"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300225"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -41,7 +41,7 @@ Carrega os arquivos de pacotes do R, Python ou Java em um banco de dados do cami
 Carrega arquivos de pacotes do R ou Python em um banco de dados do caminho de arquivo ou fluxo de bytes especificado. Essa instrução serve como um mecanismo genérico para o administrador de banco de dados carregar os artefatos necessários. 
 
 > [!NOTE]
-> Na Instância Gerenciada de SQL do Azure, use o **sqlmlutils** para instalar uma biblioteca. Para obter detalhes, confira [Instalar pacotes de Python com o sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current) e [Instalar novos pacotes de R com sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current).
+> Na Instância Gerenciada de SQL do Azure, use o **sqlmlutils** para instalar uma biblioteca. Para obter detalhes, confira [Instalar pacotes de Python com o sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) e [Instalar novos pacotes de R com sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -160,7 +160,7 @@ Especifica o nome do usuário ou da função que é a proprietária da bibliotec
 
 As bibliotecas que pertencem ao proprietário do banco de dados são consideradas globais para o banco de dados e o runtime. Em outras palavras, os proprietários do banco de dados podem criar bibliotecas que contêm um conjunto comum de bibliotecas ou pacotes que são compartilhados por muitos usuários. Quando uma biblioteca externa é criada por um usuário diferente do usuário `dbo`, a biblioteca externa é particular somente a esse usuário.
 
-Quando o usuário **RUser1** executa um script externo, o valor de `libPath` pode conter vários caminhos. O primeiro caminho é sempre o caminho para a biblioteca compartilhada criado pelo proprietário do banco de dados. A segunda parte de `libPath` especifica o caminho que contém os pacotes carregados individualmente por **RUser1**.
+Quando o usuário **RUser1** executa um script externo, o valor de `libPath` pode conter vários caminhos. O primeiro caminho é sempre o caminho para a biblioteca compartilhada criado pelo proprietário do banco de dados. A segunda parte de `libPath` especifica o caminho que contém os pacotes carregados individualmente por **RUser1** .
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
@@ -231,11 +231,11 @@ A instrução `CREATE EXTERNAL LIBRARY` carrega os bits de biblioteca no banco d
 
 As bibliotecas carregadas na instância podem ser públicas ou particulares. Se a biblioteca for criada por um membro de `dbo`, a biblioteca será pública e poderá ser compartilhada com todos os usuários. Caso contrário, a biblioteca será particular somente para esse usuário.
 
-Vários pacotes, chamados de *pacotes do sistema*, são pré-instalados em uma instância SQL. Os pacotes do sistema não podem ser adicionados, atualizados nem removidos pelo usuário.
+Vários pacotes, chamados de *pacotes do sistema* , são pré-instalados em uma instância SQL. Os pacotes do sistema não podem ser adicionados, atualizados nem removidos pelo usuário.
 
 ## <a name="permissions"></a>Permissões
 
-Requer a permissão `CREATE EXTERNAL LIBRARY`. Por padrão, todos os usuários que tenham o **dbo** ou que sejam membros da função **db_owner** têm permissões para criar uma biblioteca externa. Para todos os outros usuários, você deve conceder permissão explicitamente com uma instrução [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql), especificando CREATE EXTERNAL LIBRARY como privilégio.
+Requer a permissão `CREATE EXTERNAL LIBRARY`. Por padrão, todos os usuários que tenham o **dbo** ou que sejam membros da função **db_owner** têm permissões para criar uma biblioteca externa. Para todos os outros usuários, você deve conceder permissão explicitamente com uma instrução [GRANT](./grant-database-permissions-transact-sql.md), especificando CREATE EXTERNAL LIBRARY como privilégio.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 No SQL Server 2019, além da permissão 'CREATE EXTERNAL LIBRARY', o usuário também precisa referenciar a permissão em uma linguagem externa para criar bibliotecas externas para essa linguagem externa.
@@ -400,4 +400,4 @@ library(packageA)
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

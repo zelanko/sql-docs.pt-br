@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412506"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678900"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,14 +41,14 @@ ms.locfileid: "92412506"
 |database_id|**int**|Identificador do banco de dados usado pelo contexto explícito (por exemplo, USE DB_X).|Consulte a ID em [Sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |.|**nvarchar(4000)**|Mantém o texto completo da solicitação como enviado pelo usuário.|Qualquer consulta ou texto de solicitação válido. Consultas com mais de 4000 bytes são truncadas.|  
 |resource_class|**nvarchar (20)**|O grupo de cargas de trabalho usado para esta solicitação. |Classes de recurso estáticas</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de recurso dinâmicas</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|A importância definindo a solicitação executada em.  Essa é a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho.</br>Aplica-se ao: Azure Synapse Analytics|NULO</br>low</br>below_normal</br>normal (padrão)</br>above_normal</br>high|
-|group_name|**sysname** |Para solicitações que utilizam recursos, group_name é o nome do grupo de carga de trabalho sob o qual a solicitação está sendo executada.  Se a solicitação não utilizar recursos, group_name será NULL.</br>Aplica-se ao: Azure Synapse Analytics|
+|importance|**nvarchar(128)**|A importância definindo a solicitação executada em.  Essa é a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho.</br>Aplica-se a: SQL Data Warehouse do Azure|NULO</br>low</br>below_normal</br>normal (padrão)</br>above_normal</br>high|
+|group_name|**sysname** |Para solicitações que utilizam recursos, group_name é o nome do grupo de carga de trabalho sob o qual a solicitação está sendo executada.  Se a solicitação não utilizar recursos, group_name será NULL.</br>Aplica-se a: SQL Data Warehouse do Azure|
 |classifier_name|**sysname**|Para solicitações que utilizam recursos, o nome do classificador usado para atribuir recursos e importância.||
-|resource_allocation_percentage|**decimal (5, 2)**|A quantidade percentual de recursos alocados para a solicitação.</br>Aplica-se ao: Azure Synapse Analytics|
-|result_cache_hit|**int**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se ao: Azure Synapse Analytics| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores inteiros negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
-|Command2|**nvarchar9max)**|Mantém o texto completo da solicitação como enviado pelo usuário. Contém consultas com mais de 4000 caracteres.|Qualquer consulta ou texto de solicitação válido. NULL = consultas que têm 4000 caracteres de comprimento ou menos, para essas consultas, o texto completo pode ser encontrado na coluna comando.|
+|resource_allocation_percentage|**decimal (5, 2)**|A quantidade percentual de recursos alocados para a solicitação.</br>Aplica-se a: SQL Data Warehouse do Azure|
+|result_cache_hit|**int**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se a: SQL Data Warehouse do Azure| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores inteiros negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
+|client_correlation_id|**nvarchar(255)**|Nome opcional definido pelo usuário para uma sessão de cliente.  Para definir para uma sessão, chame sp_set_session_context ' client_correlation_id ', ' <CorrelationIDName> '.  Execute `SELECT SESSION_CONTEXT(N'client_correlation_id')` para recuperar seu valor.|
 ||||
-  
+
 ## <a name="remarks"></a>Comentários 
  Para obter informações sobre o máximo de linhas retidas por essa exibição, consulte a seção de metadados no tópico [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
@@ -57,18 +57,17 @@ O valor inteiro negativo na coluna result_cache_hit é um valor de bitmap de tod
 |Valor            |Descrição  |  
 |-----------------|-----------------|  
 |**1**|Impacto no cache do conjunto de resultados|  
-|**0x00** (**0**)|Erro de cache do conjunto de resultados|  
-|-**0x01** (**-1**)|O cache do conjunto de resultados está desabilitado no banco de dados.|  
-|-**0x02** (**-2**)|O cache do conjunto de resultados está desabilitado na sessão. | 
-|-**0x04** (**-4**)|O cache do conjunto de resultados está desabilitado devido a nenhuma fonte de dados para a consulta.|  
-|-**0x08** (**-8**)|O cache do conjunto de resultados está desabilitado devido a predicados de segurança em nível de linha.|  
-|-**0x10** (**-16**)|O cache do conjunto de resultados está desabilitado devido ao uso da tabela do sistema, da tabela temporária ou da tabela externa na consulta.|  
-|-**0x20** (**-32**)|O cache do conjunto de resultados está desabilitado porque a consulta contém constantes de tempo de execução, funções definidas pelo usuário ou funções não determinísticas.|  
-|-**0x40**(**-64**)|O cache do conjunto de resultados está desabilitado devido ao tamanho estimado do conjunto de resultados >10 GB.|  
-|-**0x80**(**-128**) |O cache do conjunto de resultados está desabilitado porque o conjunto de resultados contém linhas com tamanho grande (>64 KB).|  
-|-**0x100**(**-256**) |O cache do conjunto de resultados está desabilitado devido ao uso de mascaramento de dados dinâmicos granulares.|  
+|**0x00** ( **0** )|Erro de cache do conjunto de resultados|  
+|-**0x01** ( **-1** )|O cache do conjunto de resultados está desabilitado no banco de dados.|  
+|-**0x02** ( **-2** )|O cache do conjunto de resultados está desabilitado na sessão. | 
+|-**0x04** ( **-4** )|O cache do conjunto de resultados está desabilitado devido a nenhuma fonte de dados para a consulta.|  
+|-**0x08** ( **-8** )|O cache do conjunto de resultados está desabilitado devido a predicados de segurança em nível de linha.|  
+|-**0x10** ( **-16** )|O cache do conjunto de resultados está desabilitado devido ao uso da tabela do sistema, da tabela temporária ou da tabela externa na consulta.|  
+|-**0x20** ( **-32** )|O cache do conjunto de resultados está desabilitado porque a consulta contém constantes de tempo de execução, funções definidas pelo usuário ou funções não determinísticas.|  
+|-**0x40** ( **-64** )|O cache do conjunto de resultados está desabilitado devido ao tamanho estimado do conjunto de resultados >10 GB.|  
+|-**0x80** ( **-128** ) |O cache do conjunto de resultados está desabilitado porque o conjunto de resultados contém linhas com tamanho grande (>64 KB).|  
+|-**0x100** ( **-256** ) |O cache do conjunto de resultados está desabilitado devido ao uso de mascaramento de dados dinâmicos granulares.|  
 
-  
 ## <a name="permissions"></a>Permissões
 
  Requer a permissão VIEW SERVER STAT.  
@@ -82,4 +81,4 @@ O valor inteiro negativo na coluna result_cache_hit é um valor de bitmap de tod
   
 ## <a name="see-also"></a>Consulte Também
 
- [Exibições de gerenciamento dinâmico do Azure Synapse Analytics e Parallel data warehouse &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

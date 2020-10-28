@@ -10,12 +10,12 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005917"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300364"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Suporte do Azure Active Directory no SSDT (SQL Server Data Tools)
 
@@ -23,7 +23,7 @@ ms.locfileid: "92005917"
 
 O SSDT (SQL Server Data Tools) fornece vários métodos de autenticação do [Azure AD (Azure Active Directory)](/azure/active-directory/active-directory-whatis).
 
-No Visual Studio, abra o **Pesquisador de Objetos do SQL Server** (no menu **Exibir**) e selecione **Adicionar SQL Server**:
+No Visual Studio, abra o **Pesquisador de Objetos do SQL Server** (no menu **Exibir** ) e selecione **Adicionar SQL Server** :
 
 ![Caixa de diálogo de conexão do SSDT](media/azure-active-directory/interactive.png)
 
@@ -66,21 +66,21 @@ Se o método MFA for especificado, será necessário especificar o **Nome de usu
 
 #### <a name="password-entry"></a>Entrada de senha
 
-Quando o usuário se autentica com o recurso *Autenticação Interativa do Active Directory*, o sistema exibe uma janela de autenticação que exige inserir uma senha manualmente.
+Quando o usuário se autentica com o recurso *Autenticação Interativa do Active Directory* , o sistema exibe uma janela de autenticação que exige inserir uma senha manualmente.
 
 ![caixa de diálogo de entrada](media/azure-active-directory/sign-in.png)
 
 A imposição da MFA é fornecida pelo Microsoft Azure AD por meio dessa janela pop-up adicional da MFA.
 
 > [!NOTE]
-> Fluxos de trabalho automatizados seriam bloqueados pelo uso da *Autenticação Interativa do Active Directory*. Deve haver uma pessoa disponível para interagir com o processo de autenticação inserindo uma senha manualmente.
+> Fluxos de trabalho automatizados seriam bloqueados pelo uso da *Autenticação Interativa do Active Directory* . Deve haver uma pessoa disponível para interagir com o processo de autenticação inserindo uma senha manualmente.
 
 ## <a name="known-issues-and-limitations"></a>Limitações e problemas conhecidos
 
 - A *Autenticação Interativa do Active Directory* só tem suporte durante a conexão com os produtos Azure SQL listados no início deste artigo. Ela não é compatível com SQL Server (local ou em uma VM).
-- Não há suporte para a *Autenticação Interativa do Active Directory* na caixa de diálogo de conexão no *Gerenciador de Servidores*. É necessário se conectar usando o SSDT com o *Pesquisador de Objetos do SQL Server*.
+- Não há suporte para a *Autenticação Interativa do Active Directory* na caixa de diálogo de conexão no *Gerenciador de Servidores* . É necessário se conectar usando o SSDT com o *Pesquisador de Objetos do SQL Server* .
 - A integração de logon único com a conta conectada do Visual Studio não tem suporte para SSDT.
-- O SQLPackage.exe instalado no diretório Extensões durante a instalação do Visual Studio não deve ser usado nesse local. Para usar SQLPackage.exe com o Azure AD, acesse [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088) 
+- O SQLPackage.exe instalado no diretório Extensões durante a instalação do Visual Studio não deve ser usado nesse local. Para usar SQLPackage.exe com o Azure AD, acesse [Estrutura do Aplicativo da Camada de Dados](https://www.microsoft.com/download/details.aspx?id=55088) 
 - A Comparação de Dados do SSDT não é compatível com a autenticação do Azure AD.  
 
 
@@ -90,5 +90,4 @@ A imposição da MFA é fornecida pelo Microsoft Azure AD por meio dessa janela 
 [Autenticação do Azure Active Directory com o Banco de Dados SQL](/azure/sql-database/sql-database-aad-authentication-configure)  
 [Fórum do MSDN do SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [Blog da equipe do SSDT](/archive/blogs/ssdt/)  
-[Referência DACFx API](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
 [Baixar o SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

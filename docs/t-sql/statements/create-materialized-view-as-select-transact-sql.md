@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: cda76ce52f9b14c732cb4effb95c3ff523dd460b
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+ms.openlocfilehash: 3d6bc9b46d089a51a12d6b399dc4946d743b4480
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847336"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300590"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -111,7 +111,7 @@ Quando as agregações MIN/MAX são usadas na lista SELECT da definição da exi
   
 ## <a name="remarks"></a>Comentários
 
-Uma exibição materializada no data warehouse do Azure é semelhante a uma exibição indexada no SQL Server.Ela compartilha quase as mesmas restrições que a exibição indexada (confira [Criar exibições indexadas](/sql/relational-databases/views/create-indexed-views) para obter detalhes), exceto pelo fato de que uma exibição materializada dá suporte a funções de agregação.   
+Uma exibição materializada no data warehouse do Azure é semelhante a uma exibição indexada no SQL Server.Ela compartilha quase as mesmas restrições que a exibição indexada (confira [Criar exibições indexadas](../../relational-databases/views/create-indexed-views.md) para obter detalhes), exceto pelo fato de que uma exibição materializada dá suporte a funções de agregação.   
 
 >[!Note]
 >Embora CREATE MATERIALIZED VIEW não dê suporte a COUNT, DISTINCT, COUNT(DISTINCT expression) ou COUNT_BIG (DISTINCT expression), as consultas SELECT com essas funções ainda podem se beneficiar das exibições materializadas para obter um desempenho mais rápido, uma vez que o otimizador do SQL do Synapse pode regravar automaticamente essas agregações na consulta do usuário para corresponder às exibições materializadas existentes.  Para obter detalhes, confira a seção de exemplo deste artigo. 
@@ -140,13 +140,13 @@ ALTER TABLE SWITCH não tem suporte em tabelas referenciadas em exibições mate
 
 Depois de criadas, as exibições materializadas ficam visíveis no SQL Server Management Studio na pasta de exibições da instância do [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
-Os usuários podem executar [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) e [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) para determinar o espaço que está sendo consumido por uma exibição materializada.  
+Os usuários podem executar [SP_SPACEUSED](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md?view=azure-sqldw-latest) e [DBCC PDW_SHOWSPACEUSED](../database-console-commands/dbcc-pdw-showspaceused-transact-sql.md?view=azure-sqldw-latest) para determinar o espaço que está sendo consumido por uma exibição materializada.  
 
 Uma exibição materializada pode ser descartada por meio de DROP VIEW.  Você pode usar ALTER MATERIALIZED VIEW para desabilitar ou recriar uma exibição materializada.   
 
 O plano EXPLAIN e o gráfico Plano de Execução Estimado no SQL Server Management Studio podem mostrar se o otimizador de consulta considera uma exibição materializada na execução da consulta. e o gráfico Plano de Execução Estimado no SQL Server Management Studio podem mostrar se o otimizador de consulta considera uma exibição materializada na execução da consulta.
 
-Para descobrir se uma instrução SQL pode se beneficiar da nova exibição materializada, execute o comando `EXPLAIN` com `WITH_RECOMMENDATIONS`.  Para obter detalhes, confira [EXPLAIN (Transact-SQL)](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest).
+Para descobrir se uma instrução SQL pode se beneficiar da nova exibição materializada, execute o comando `EXPLAIN` com `WITH_RECOMMENDATIONS`.  Para obter detalhes, confira [EXPLAIN (Transact-SQL)](../queries/explain-transact-sql.md?view=azure-sqldw-latest).
 
 ## <a name="permissions"></a>Permissões
 
@@ -199,13 +199,13 @@ select DATEDIFF(ms,@timerstart,@timerend);
 ## <a name="see-also"></a>Confira também
 
 [Ajuste de desempenho com a Exibição Materializada](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
-[DROP VIEW](/sql/t-sql/statements/drop-view-transact-sql?view=azure-sqldw-latest)  
-[EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
-[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](./alter-materialized-view-transact-sql.md?view=azure-sqldw-latest)      
+[DROP VIEW](./drop-view-transact-sql.md?view=azure-sqldw-latest)  
+[EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest)   
+[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest)   
 [Exibições do catálogo do [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] e do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
 [Exibições do sistema com suporte no Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
 [Instruções T-SQL com suporte no Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

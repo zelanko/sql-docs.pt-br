@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34fd954475d308d8989be17063e9122bf821c3da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d3381300671d2303f8766351e19018d8122c861f
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547787"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300916"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -131,7 +131,7 @@ Especifica que nenhum thread está atribuído a uma CPU. O sistema operacional p
 Especifica a CPU ou o intervalo de CPUs ao qual atribuir threads.  
   
 { CPU_ID | CPU_ID TO CPU_ID } [ ,...n ]  
-É a lista de uma ou mais CPUs. IDs de CPU começam com 0 e são valores **integer**.  
+É a lista de uma ou mais CPUs. IDs de CPU começam com 0 e são valores **integer** .  
   
 NUMANODE = \<NUMA_node_range_spec>  
 Atribui threads a todas as CPUs que pertencem ao nó NUMA especificado ou ao intervalo de nós.  
@@ -140,7 +140,7 @@ Atribui threads a todas as CPUs que pertencem ao nó NUMA especificado ou ao int
 Especifica o nó NUMA ou o intervalo de nós NUMA.  
   
 { NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID } [ ,...n ]  
-É a lista de um ou mais nós NUMA. IDs de nó NUMA começam com 0 e são valores **integer**.  
+É a lista de um ou mais nós NUMA. IDs de nó NUMA começam com 0 e são valores **integer** .  
   
 **\<diagnostic_log> ::=**  
   
@@ -227,7 +227,7 @@ Para obter mais informações, veja [Alterar contexto do cluster HADR da instân
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 ATIVADO  
-Habilita a opção de extensão do pool de buffers. Essa opção estende o tamanho do pool de buffers usando o armazenamento não volátil. O armazenamento não volátil, como unidades de estado sólido (SSD), mantém páginas de dados limpas no pool. Para saber mais sobre esse recurso, confira [Extensão do pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md). A extensão do pool de buffers não está disponível em todas as edições do SQL Server. Para obter mais informações, consulte [Edições e recursos compatíveis com o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+Habilita a opção de extensão do pool de buffers. Essa opção estende o tamanho do pool de buffers usando o armazenamento não volátil. O armazenamento não volátil, como unidades de estado sólido (SSD), mantém páginas de dados limpas no pool. Para saber mais sobre esse recurso, confira [Extensão do pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md). A extensão do pool de buffers não está disponível em todas as edições do SQL Server. Para obter mais informações, consulte [Edições e recursos compatíveis com o SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
 Define o caminho do diretório e o nome de arquivo do cache de extensão do pool de buffers. A extensão do arquivo deve ser especificada como .BPE. Desative a opção BUFFER POOL EXTENSION antes que você possa alterar o FILENAME.  
@@ -484,5 +484,4 @@ GO
 [sys.dm_os_memory_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
 [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
 [Extensão do pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md)  
-  
   

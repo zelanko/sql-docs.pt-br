@@ -1,6 +1,6 @@
 ---
-title: Instalar o azdata com o apt
-description: Saiba como instalar a ferramenta azdata com o apt.
+title: Instalar a CLI de Dados do Azure (azdata) com o apt
+description: Saiba como instalar a ferramenta de CLI de Dados do Azure (azdata) com o apt.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -8,14 +8,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d268bc5ed31f844c28499b95054e5edbbd14848
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2f248978e09be4670d702805873a5ae6f4f7c9de
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725280"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257457"
 ---
-# <a name="install-azdata-with-apt"></a>Instalar `azdata` com apt
+# <a name="install-azure-data-cli-azdata-with-apt"></a>Instalar [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] com apt
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
@@ -28,7 +28,7 @@ Para distribuições do Linux com o `apt`, há um pacote para o `azdata-cli`. O 
 ## <a name="install-with-apt"></a>Instalar com apt
 
 >[!IMPORTANT]
-> O pacote RPM da CLI do `azdata-cli` depende do pacote python3. Em seu sistema, isso pode ser uma versão do Python que antecede o requisito do *Python 3.6.x*. Se isso é um problema para você, localize um pacote python3 substituto ou siga as instruções de instalação manual que usam [`pip`](../install/deploy-install-azdata-pip.md).
+> O pacote RPM da CLI do `azdata-cli` depende do pacote python3. Em seu sistema, isso pode ser uma versão do Python que antecede o requisito do *Python 3.6.x* . Se isso é um problema para você, localize um pacote python3 substituto ou siga as instruções de instalação manual que usam [`pip`](../install/deploy-install-azdata-pip.md).
 
 1. Instale as dependências necessárias para instalar o `azdata-cli`.
 

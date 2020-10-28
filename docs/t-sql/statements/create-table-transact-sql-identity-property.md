@@ -22,12 +22,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ebc5291ae6be0de2c1ea8961e05c4238db17b2d
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 8f9508420a8f629a189a1d623e5ac1d310a7f940
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688842"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257753"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Propriedade)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "90688842"
   Cria uma coluna de identidade em uma tabela. Esta propriedade é usada com as instruções CREATE TABLE e ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  A propriedade IDENTITY é diferente da propriedade**Identity** de SQL-DMO que expõe a propriedade de identidade de linha de uma coluna.  
+>  A propriedade IDENTITY é diferente da propriedade **Identity** de SQL-DMO que expõe a propriedade de identidade de linha de uma coluna.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,6 +45,8 @@ ms.locfileid: "90688842"
 IDENTITY [ (seed , increment) ]
 ```  
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
@@ -68,12 +70,12 @@ IDENTITY [ (seed , increment) ]
   
  A propriedade de identidade em uma coluna não garante o seguinte:  
   
--   **Exclusividade do valor** – a exclusividade precisa ser imposta usando uma restrição **PRIMARY KEY** ou **UNIQUE** ou um índice **UNIQUE**. - 
+-   **Exclusividade do valor** – a exclusividade precisa ser imposta usando uma restrição **PRIMARY KEY** ou **UNIQUE** ou um índice **UNIQUE** . - 
  
 > [!NOTE]
-> O Azure Synapse Analytics não dá suporte à restrição de **PRIMARY KEY** ou **UNIQUE** nem ao índice **UNIQUE**. Confira [Usando IDENTITY para criar chaves alternativas no pool de SQL do Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) para obter mais informações.
+> O Azure Synapse Analytics não dá suporte à restrição de **PRIMARY KEY** ou **UNIQUE** nem ao índice **UNIQUE** . Confira [Usando IDENTITY para criar chaves alternativas no pool de SQL do Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) para obter mais informações.
 
--   **Valores consecutivos em uma transação** – não é garantido que uma transação que insere várias linhas obtenha valores consecutivos para as linhas porque outras inserções simultâneas podem ocorrer na tabela. Se os valores precisarem ser consecutivos, a transação deverá usar um bloqueio exclusivo na tabela ou usar o nível de isolamento **SERIALIZABLE**.  
+-   **Valores consecutivos em uma transação** – não é garantido que uma transação que insere várias linhas obtenha valores consecutivos para as linhas porque outras inserções simultâneas podem ocorrer na tabela. Se os valores precisarem ser consecutivos, a transação deverá usar um bloqueio exclusivo na tabela ou usar o nível de isolamento **SERIALIZABLE** .  
   
 -   **Valores consecutivos após o reinício do servidor ou outras falhas** - o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode armazenar valores de identidade em cache por questões de desempenho e alguns dos valores atribuídos podem ser perdidos durante uma falha de banco de dados ou uma reinicialização do servidor. Isso pode resultar em intervalos no valor de identidade após a inserção. Se não forem aceitos intervalos, o aplicativo deverá usar seu próprio mecanismo para gerar valores de chave. Usar um gerador de sequência com a opção **NOCACHE** pode limitar os intervalos de transações que nunca são confirmadas.  
   

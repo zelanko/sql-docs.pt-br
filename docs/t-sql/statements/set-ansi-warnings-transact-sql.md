@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33d1b9e1369128bc3eeae3df1ca48c4dbbb69e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227066"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300833"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,10 +59,10 @@ SET ANSI_WARNINGS ON
   
 -   Quando definida como ON, se forem exibidos valores nulos em funções de agregação, como SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP ou COUNT, será gerada uma mensagem de aviso. Quando definido como OFF, nenhum aviso é emitido.  
   
--   Quando definida como ON, os erros de estouro aritmético e de divisão por zero fazem a instrução ser retornada e uma mensagem de erro é gerada. Quando definida como OFF, os erros de estouro aritmético e de divisão por zero fazem com que valores nulos sejam retornados. O comportamento em que um erro de estouro aritmético e ou divisão por zero faz valores nulos serem retornados ocorrerá se houver uma tentativa de INSERT ou UPDATE em uma coluna **character**, Unicode ou **binary** na qual a extensão do novo valor exceda o tamanho máximo da coluna. Se SET ANSI_WARNINGS está ON, INSERT ou UPDATE é cancelada, como especificado pelo padrão ISO. Espaços em branco à direita são ignorados em colunas de caracteres e valores nulos à direita são ignorados em colunas binárias. Quando OFF, os dados são truncados para o tamanho da coluna e a instrução obtém êxito.  
+-   Quando definida como ON, os erros de estouro aritmético e de divisão por zero fazem a instrução ser retornada e uma mensagem de erro é gerada. Quando definida como OFF, os erros de estouro aritmético e de divisão por zero fazem com que valores nulos sejam retornados. O comportamento em que um erro de estouro aritmético e ou divisão por zero faz valores nulos serem retornados ocorrerá se houver uma tentativa de INSERT ou UPDATE em uma coluna **character** , Unicode ou **binary** na qual a extensão do novo valor exceda o tamanho máximo da coluna. Se SET ANSI_WARNINGS está ON, INSERT ou UPDATE é cancelada, como especificado pelo padrão ISO. Espaços em branco à direita são ignorados em colunas de caracteres e valores nulos à direita são ignorados em colunas binárias. Quando OFF, os dados são truncados para o tamanho da coluna e a instrução obtém êxito.  
   
 > [!NOTE]  
-> Quando o truncamento ocorre em qualquer conversão de ou para dados **binary** ou **varbinary**, nenhum aviso ou erro é emitido, independentemente das opções SET.  
+> Quando o truncamento ocorre em qualquer conversão de ou para dados **binary** ou **varbinary** , nenhum aviso ou erro é emitido, independentemente das opções SET.  
   
 > [!NOTE]  
 > O ANSI_WARNINGS não é cumprido quando os parâmetros passam no procedimento armazenado, em uma função definida pelo usuário ou quando declaram ou definem variáveis em uma instrução de lote. Por exemplo, se a variável for definida como **char(3)** e, em seguida, configurada com um valor maior que três caracteres, os dados serão truncados até o tamanho definido e a instrução INSERT ou UPDATE terá êxito.  
@@ -76,7 +76,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui a opção de 
 > [!IMPORTANT]
 > SET ANSI_WARNINGS deve ser definido como ON para executar consultas distribuídas.  
   
-Clientes, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client, o provedor de OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Microsoft JDBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automaticamente definem ANSI_WARNINGS como ON com um sinalizador de conexão. Isso pode ser configurado em fontes de dados ODBC, em atributos de conexão ODBC, definidas no aplicativo antes de conectar. O padrão para SET ANSI_WARNINGS é OFF para conexões de aplicativos DB-Library. Para obter mais informações, confira [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) nas especificações do protocolo TDS. 
+Clientes, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client, o provedor de OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Microsoft JDBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automaticamente definem ANSI_WARNINGS como ON com um sinalizador de conexão. Isso pode ser configurado em fontes de dados ODBC, em atributos de conexão ODBC, definidas no aplicativo antes de conectar. O padrão para SET ANSI_WARNINGS é OFF para conexões de aplicativos DB-Library. Para obter mais informações, confira [LOGIN7](/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) nas especificações do protocolo TDS. 
 
 Quando ANSI_DEFAULTS é ON, ANSI_WARNINGS está habilitado.  
   
@@ -188,5 +188,4 @@ DROP TABLE T1;
  [Instruções SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
   

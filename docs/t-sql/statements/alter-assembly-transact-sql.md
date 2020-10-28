@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9edfba19ad84a0334f85e6990f0e3cd1c2ccee81
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 781d61c5cde33ae51b7ecb94d56a8c3cadff1595
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688689"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300219"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -104,7 +104,7 @@ ALTER ASSEMBLY assembly_name
   
 -   Restrições CHECK que referenciam métodos no assembly direta ou indiretamente.  
   
--   As colunas de um tipo de dado CLR definido pelo usuário que dependem do assembly e o tipo implementa um formato de serialização **UserDefined** (não **nativo**).  
+-   As colunas de um tipo de dado CLR definido pelo usuário que dependem do assembly e o tipo implementa um formato de serialização **UserDefined** (não **nativo** ).  
   
 -   Colunas de um tipo CLR definido pelo usuário que fazem referência a exibições criadas com o uso de WITH SCHEMABINDING.  
   
@@ -116,14 +116,14 @@ ALTER ASSEMBLY assembly_name
   
  Para obter mais informações, confira [Implementando assemblies](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
+ [ DROP FILE { *file_name* [ **,** _...n_ ] | ALL } ]  
  Remove do banco de dados o nome de arquivo associado ao assembly ou todos os arquivos associados ao assembly. Se for usado com ADD FILE a seguir, DROP FILE será executado em primeiro lugar. Isto permite que você substitua um arquivo com o mesmo nome de arquivo.  
   
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente nem no Banco de Dados SQL do Azure.  
   
- [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
- Carrega um arquivo a ser associado ao assembly, como código-fonte, arquivos de depuração ou outras informações relacionadas, no servidor tornando-o visível na exibição de catálogo **assembly_files**. *client_file_specifier* especifica o local do qual o arquivo deve ser carregado. Nesse caso, *file_bits* pode ser usado para especificar a lista de valores binários que compõem o arquivo. *file_name* especifica o nome sob o qual o arquivo deve ser armazenado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* precisará ser especificado se *file_bits* for especificado e será opcional se *client_file_specifier* for especificado. Se *file_name* não for especificado, a parte file_name de *client_file_specifier* será usada como *file_name*.  
+ [ ADD FILE FROM { *client_file_specifier* [ AS *file_name* ] | *file_bits* AS *file_name* }  
+ Carrega um arquivo a ser associado ao assembly, como código-fonte, arquivos de depuração ou outras informações relacionadas, no servidor tornando-o visível na exibição de catálogo **assembly_files** . *client_file_specifier* especifica o local do qual o arquivo deve ser carregado. Nesse caso, *file_bits* pode ser usado para especificar a lista de valores binários que compõem o arquivo. *file_name* especifica o nome sob o qual o arquivo deve ser armazenado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* precisará ser especificado se *file_bits* for especificado e será opcional se *client_file_specifier* for especificado. Se *file_name* não for especificado, a parte file_name de *client_file_specifier* será usada como *file_name* .  
   
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente nem no Banco de Dados SQL do Azure.  
@@ -144,7 +144,7 @@ ALTER ASSEMBLY assembly_name
   
 -   As assinaturas de métodos no assembly que são chamados a partir de outros assemblies.  
   
--   A lista de assemblies que dependem do assembly, referenciada na propriedade do assembly **DependentList**.  
+-   A lista de assemblies que dependem do assembly, referenciada na propriedade do assembly **DependentList** .  
   
 -   A capacidade de indexação de um método, a menos que não existam índices ou colunas computadas persistidas que dependam desse método, seja direta ou indiretamente.  
   
@@ -181,7 +181,7 @@ ALTER ASSEMBLY assembly_name
   
 -   Para alterar o conjunto de permissões de um assembly para UNSAFE, a permissão **UNSAFE ASSEMBLY** é necessária no servidor.  
   
--   A especificação de WITH UNCHECKED DATA, requer a permissão **ALTER ANY SCHEMA**.  
+-   A especificação de WITH UNCHECKED DATA, requer a permissão **ALTER ANY SCHEMA** .  
 
 
 ### <a name="permissions-with-clr-strict-security"></a>Permissões com a segurança estrita do CLR    
@@ -201,7 +201,7 @@ As seguintes permissões são necessárias para alterar um assembly CLR quando `
  O exemplo a seguir atualiza o assembly `ComplexNumber` à cópia mais recente dos módulos do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contêm sua implementação.  
   
 > [!NOTE]  
->  O assembly `ComplexNumber` pode ser criado com a execução dos scripts de exemplo UserDefinedDataType. Para obter mais informações, confira [Tipo definido pelo usuário](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
+>  O assembly `ComplexNumber` pode ser criado com a execução dos scripts de exemplo UserDefinedDataType. Para obter mais informações, confira [Tipo definido pelo usuário](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130)).  
   
  ```sql
  ALTER ASSEMBLY ComplexNumber 
@@ -233,5 +233,4 @@ ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
   

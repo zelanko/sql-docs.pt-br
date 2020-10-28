@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b8e0ae12bb4b0d0f7cce0ca5ff690af83531be0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 852957ca30b73c1b252c27a4581679f360f1e96e
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891146"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300731"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -91,7 +91,7 @@ BULK INSERT
 
 **'** _data_file_ **'** É o caminho completo do arquivo de dados que contém os dados a serem importados para a tabela ou a exibição especificada. BULK INSERT pode importar dados de um disco ou do Armazenamento de Blobs do Azure (incluindo rede, disco flexível, disco rígido e assim por diante).
 
-*data_file* deve especificar um caminho válido do servidor no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado. Se *data_file* for um arquivo remoto, especifique o nome UNC. Um nome UNC tem a forma \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*. Por exemplo:
+*data_file* deve especificar um caminho válido do servidor no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado. Se *data_file* for um arquivo remoto, especifique o nome UNC. Um nome UNC tem a forma \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName* . Por exemplo:
 
 ```sql
 BULK INSERT Sales.Orders
@@ -99,7 +99,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
 **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 e Banco de Dados SQL do Azure.
-Começando com o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, o data_file pode estar localizado no Armazenamento de Blobs do Azure. Nesse caso, você precisa especificar a opção **data_source_name**. Para obter um exemplo, confira [Como importar dados de um arquivo no Armazenamento de Blobs do Azure](#f-importing-data-from-a-file-in-azure-blob-storage).
+Começando com o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, o data_file pode estar localizado no Armazenamento de Blobs do Azure. Nesse caso, você precisa especificar a opção **data_source_name** . Para obter um exemplo, confira [Como importar dados de um arquivo no Armazenamento de Blobs do Azure](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
 > O Banco de Dados SQL do Azure é compatível apenas com leitura do Armazenamento de Blobs do Azure.
@@ -122,7 +122,7 @@ Uma situação na qual talvez você queira desabilitar as restrições (o compor
 > [!NOTE]
 > A opção de MAXERRORS não se aplica à verificação de restrição.
 
-CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } Especifica a página de código dos dados no arquivo de dados. CODEPAGE só será relevante se os dados contiverem colunas **char**, **varchar** ou **text** com valores de caractere maiores que **127** ou menores que **32**. Para obter um exemplo, confira [Como especificar uma página de código](#d-specifying-a-code-page).
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } Especifica a página de código dos dados no arquivo de dados. CODEPAGE só será relevante se os dados contiverem colunas **char** , **varchar** ou **text** com valores de caractere maiores que **127** ou menores que **32** . Para obter um exemplo, confira [Como especificar uma página de código](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
 > CODEPAGE não é uma opção compatível no Linux para [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Para [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)], somente a opção **'RAW'** é permitida para CODEPAGE.
@@ -132,8 +132,8 @@ CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** 
 
 |Valor de CODEPAGE|Descrição|
 |--------------------|-----------------|
-|ACP|Colunas do tipo de dados **char**, **varchar** ou **text** são convertidas da página de código do Windows [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] (ISO 1252) na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
-|OEM (padrão)|Colunas do tipo de dados **char**, **varchar** ou **text** são convertidas da página de código de OEM do sistema para a página de código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
+|ACP|Colunas do tipo de dados **char** , **varchar** ou **text** são convertidas da página de código do Windows [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] (ISO 1252) na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
+|OEM (padrão)|Colunas do tipo de dados **char** , **varchar** ou **text** são convertidas da página de código de OEM do sistema para a página de código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|Nenhuma conversão de uma página de código em outra ocorre; essa opção é a mais rápida.|
 |*code_page*|Especifique o número da página de código, por exemplo, 850.<br /><br /> **&#42;&#42; Importante &#42;&#42;** As versões anteriores à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] não são compatíveis com a página de código 65001 (codificação UTF-8).|
 | &nbsp; | &nbsp; |
@@ -145,9 +145,9 @@ DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenati
 |Valor DATAFILETYPE|Todos os dados representados em:|
 |------------------------|------------------------------|
 |**char** (padrão)|Formato de caractere.<br /><br /> Para obter mais informações, veja [Usar o formato de caractere para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).|
-|**native**|Tipos de dados (banco de dados) nativo. Crie o arquivo de dados nativo importando dados em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o utilitário **bcp**.<br /><br /> O valor nativo oferece uma alternativa de alto desempenho ao valor char. O formato nativo é recomendado quando você transfere dados em massa entre várias instâncias do SQL Server usando um arquivo de dados que não contém caracteres estendidos/DBCS (conjunto de caracteres de byte duplo).<br /><br /> Para obter mais informações, veja [Usar o formato nativo para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).|
+|**native**|Tipos de dados (banco de dados) nativo. Crie o arquivo de dados nativo importando dados em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o utilitário **bcp** .<br /><br /> O valor nativo oferece uma alternativa de alto desempenho ao valor char. O formato nativo é recomendado quando você transfere dados em massa entre várias instâncias do SQL Server usando um arquivo de dados que não contém caracteres estendidos/DBCS (conjunto de caracteres de byte duplo).<br /><br /> Para obter mais informações, veja [Usar o formato nativo para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).|
 |**widechar**|Caracteres Unicode.<br /><br /> Para obter mais informações, consulte [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).|
-|**widenative**|Tipos de dados nativos (banco de dados), exceto nas colunas **char**, **varchar** e **text** colunas, em que os dados são armazenados como Unicode. Crie o arquivo de dados **widenative** importando dados em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o utilitário **bcp**.<br /><br /> O valor **widenative** oferece uma alternativa de alto desempenho para **widechar**. Se o arquivo de dados contiver caracteres [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] estendidos, especifique **widenative**.<br /><br /> Para obter mais informações, veja [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|
+|**widenative**|Tipos de dados nativos (banco de dados), exceto nas colunas **char** , **varchar** e **text** colunas, em que os dados são armazenados como Unicode. Crie o arquivo de dados **widenative** importando dados em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o utilitário **bcp** .<br /><br /> O valor **widenative** oferece uma alternativa de alto desempenho para **widechar** . Se o arquivo de dados contiver caracteres [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] estendidos, especifique **widenative** .<br /><br /> Para obter mais informações, veja [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|
 | &nbsp; | &nbsp; |
 
 ERRORFILE **='** _file_name_ **'** Especifica o arquivo usado para coletar linhas com erros de formatação e que não podem ser convertidas em um conjunto de linhas OLE DB. Essas linhas são copiadas do arquivo de dados para esse arquivo de erro "no estado em que se encontram".
@@ -177,14 +177,14 @@ Para obter mais informações, veja como manter identificar valores, em [Manter 
 
 KEEPNULLS Especifica que as colunas vazias devem reter um valor nulo durante a operação de importação em massa, em vez de ter qualquer valor padrão para as colunas inseridas. Para obter mais informações, veja [Manter valores nulos ou usar os valores padrão durante a importação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).
 
-KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ Especifica o número aproximado de KB (kilobytes) de dados por lote como *kilobytes_per_batch*. Por padrão, KILOBYTES_PER_BATCH é desconhecido. Para obter informações sobre considerações de desempenho, consulte “Comentários”, posteriormente neste tópico.
+KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ Especifica o número aproximado de KB (kilobytes) de dados por lote como *kilobytes_per_batch* . Por padrão, KILOBYTES_PER_BATCH é desconhecido. Para obter informações sobre considerações de desempenho, consulte “Comentários”, posteriormente neste tópico.
 
 LASTROW **=** _last_row_ Especifica o número da última linha a ser carregada. O padrão é 0, que indica a última fila no arquivo de dados especificado.
 
 MAXERRORS **=** _max_errors_ Especifica o número máximo de erros de sintaxe permitido nos dados antes que a operação de importação em massa seja cancelada. Cada linha que não pode ser importada pela operação de importação em massa é ignorada e contada como um erro. Se *max_errors* não for especificado, o padrão será 10.
 
 > [!NOTE]
-> A opção MAX_ERRORS não se aplica a verificações de restrição ou à conversão dos tipos de dados **money** e **bigint**.
+> A opção MAX_ERRORS não se aplica a verificações de restrição ou à conversão dos tipos de dados **money** e **bigint** .
 
 ORDER ( { *column* [ ASC | DESC ] } [ **,** ... *n* ] ) Especifica como os dados do arquivo de dados são classificados. O desempenho da importação em massa será melhorado se os dados importados forem armazenados de acordo com o índice clusterizado na tabela, se houver. Se o arquivo de dados for classificado em outra ordem, ou seja, diferente da ordem de uma chave de índice clusterizado, ou se não houver nenhum índice clusterizado na tabela, a cláusula ORDER será ignorada. Os nomes das colunas fornecidos devem ser nomes de colunas válidas na tabela de destino. Por padrão, a operação de inserção em massa supõe que o arquivo de dados não esteja ordenado. Para obter uma importação em massa otimizada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também valida que os dados importados sejam classificados.
 
@@ -194,7 +194,7 @@ ROWS_PER_BATCH **=** _rows_per_batch_ Indica o número aproximado de linhas de d
 
 Por padrão, todos os dados de arquivo são enviados ao servidor como uma única transação, e o número de linhas no lote é desconhecido para o otimizador de consulta. Se você especificar ROWS_PER_BATCH (com um valor > 0), o servidor usará esse valor para otimizar a operação da importação em massa. O valor especificado para ROWS_PER_BATCH deve ser aproximadamente igual ao número real de linhas. Para obter informações sobre considerações de desempenho, consulte “Comentários”, posteriormente neste tópico.
 
-TABLOCK Especifica que um bloqueio no nível de tabela é adquirido durante a operação de importação em massa. Uma tabela pode ser carregada simultaneamente através de vários clientes se não tiver nenhum índice e TABLOCK for especificado. Por padrão, o comportamento de bloqueio é determinado pela opção de tabela **bloqueio de tabela em carregamento em massa**. Manter um bloqueio durante a operação de importação em massa reduz a contenção de bloqueio na tabela e em alguns casos pode melhorar significativamente o desempenho. Para obter informações sobre considerações de desempenho, consulte “Comentários”, posteriormente neste tópico.
+TABLOCK Especifica que um bloqueio no nível de tabela é adquirido durante a operação de importação em massa. Uma tabela pode ser carregada simultaneamente através de vários clientes se não tiver nenhum índice e TABLOCK for especificado. Por padrão, o comportamento de bloqueio é determinado pela opção de tabela **bloqueio de tabela em carregamento em massa** . Manter um bloqueio durante a operação de importação em massa reduz a contenção de bloqueio na tabela e em alguns casos pode melhorar significativamente o desempenho. Para obter informações sobre considerações de desempenho, consulte “Comentários”, posteriormente neste tópico.
 
 Para o índice columnstore. o comportamento de bloqueio é diferente, porque ele é dividido internamente em vários conjuntos de linhas. Cada thread carrega dados exclusivamente em cada conjunto de linhas usando um bloqueio X no conjunto de linhas, permitindo o carregamento paralelo de dados com sessões simultâneas de carregamento de dados. O uso da opção TABLOCK fará com que o thread pegue um bloqueio X na tabela (diferente do bloqueio BU para conjuntos de linhas tradicionais), o que impedirá que outros threads simultâneos carreguem dados simultaneamente.
 
@@ -212,7 +212,7 @@ WITH ( FORMAT='CSV');
 FIELDQUOTE **=** 'field_quote' **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Especifica um caractere que será usado como o caractere de aspas no arquivo CSV. Se não for especificado, o caractere de aspas (") será usado como o caractere de aspas, conforme definido no padrão [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
-FORMATFILE **=** '_format_file_path_' Especifica o caminho completo de um arquivo de formato. Um arquivo de formato descreve o arquivo de dados que contém as respostas armazenadas criadas usando o utilitário **bcp** na mesma tabela ou exibição. O arquivo de formato deverá ser usado se:
+FORMATFILE **=** ' _format_file_path_ ' Especifica o caminho completo de um arquivo de formato. Um arquivo de formato descreve o arquivo de dados que contém as respostas armazenadas criadas usando o utilitário **bcp** na mesma tabela ou exibição. O arquivo de formato deverá ser usado se:
 
 - O arquivo de dados contiver colunas maiores ou menos colunas que a tabela ou exibição.
 - As colunas estiverem em uma ordem diferente.
@@ -222,9 +222,9 @@ FORMATFILE **=** '_format_file_path_' Especifica o caminho completo de um arquiv
 **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 e Banco de Dados SQL do Azure.
 Começando com o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, o format_file_path pode estar localizado no Armazenamento de Blobs do Azure.
 
-FIELDTERMINATOR **='** _field_terminator_ **'** Especifica o terminador de campo a ser usado para arquivos de dados **char** e **widechar**. O terminador de campo padrão é \t (caractere de tabulação). Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
+FIELDTERMINATOR **='** _field_terminator_ **'** Especifica o terminador de campo a ser usado para arquivos de dados **char** e **widechar** . O terminador de campo padrão é \t (caractere de tabulação). Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-ROWTERMINATOR **='** _row_terminator_ **'** Especifica o terminador de linha a ser usado para arquivos de dados **char** e **widechar**. O terminador de linha padrão é **\r\n** (caractere de nova linha). Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
+ROWTERMINATOR **='** _row_terminator_ **'** Especifica o terminador de linha a ser usado para arquivos de dados **char** e **widechar** . O terminador de linha padrão é **\r\n** (caractere de nova linha). Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
 ## <a name="compatibility"></a>Compatibilidade
 
@@ -239,10 +239,10 @@ O BULK INSERT impõe validação estrita de dados e verificações de dados lido
 
 As conversões do tipo de dados de cadeia de caracteres em decimal usada em BULK INSERT seguem as mesmas regras que a função [!INCLUDE[tsql](../../includes/tsql-md.md)] [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), que rejeita cadeias de caracteres que representam valores numéricos que usam notação científica. Portanto, BULK INSERT trata essas cadeias de caracteres como valores inválidos e relata erros de conversão.
 
-Como solução alternativa para esse comportamento, use um arquivo de formato para importar em massa dados **float** de notação científica em uma coluna decimal. No arquivo de formato, descreva explicitamente a coluna como de dados **reais** ou **float**. Para obter mais informações sobre esses tipos de dados, veja [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).
+Como solução alternativa para esse comportamento, use um arquivo de formato para importar em massa dados **float** de notação científica em uma coluna decimal. No arquivo de formato, descreva explicitamente a coluna como de dados **reais** ou **float** . Para obter mais informações sobre esses tipos de dados, veja [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).
 
 > [!NOTE]
-> Arquivos de formato representam dados **real** como o **SQLFLT4** tipo de dados e dados **float** como o tipo de dados **SQLFLT8**. Para obter informações sobre arquivos de formato não XML, veja [Especificar o tipo de armazenamento de arquivos usando bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).
+> Arquivos de formato representam dados **real** como o **SQLFLT4** tipo de dados e dados **float** como o tipo de dados **SQLFLT8** . Para obter informações sobre arquivos de formato não XML, veja [Especificar o tipo de armazenamento de arquivos usando bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).
 
 #### <a name="example-of-importing-a-numeric-value-that-uses-scientific-notation"></a>Exemplo de importação de um valor numérico que usa notação científica
 
@@ -295,7 +295,7 @@ Para exportar ou importar dados SQLXML em massa, use um dos tipos de dados a seg
 
 ## <a name="general-remarks"></a>Comentários gerais
 
-Para obter uma comparação da instrução BULK INSERT, da instrução INSERT ... Instrução SELECT \* FROM OPENROWSET(BULK...) e o comando **bcp**, veja [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).
+Para obter uma comparação da instrução BULK INSERT, da instrução INSERT ... Instrução SELECT \* FROM OPENROWSET(BULK...) e o comando **bcp** , veja [Importação e exportação em massa de dados &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).
 
 Para obter informações sobre como preparar dados para importação em massa, veja [Preparar dados para exportação ou importação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
@@ -314,7 +314,7 @@ Antes do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, arquivo
 
 ## <a name="restrictions"></a><a name="Limitations"></a> Restrições
 
-Ao usar um arquivo de formato com BULK INSERT, você pode especificar até somente 1024 campos. Isso é o mesmo que o número máximo de colunas permitido em uma tabela. Se você usar um arquivo de formato com BULK INSERT com um arquivo de dados que contém mais de 1.024 campos, BULK INSERT gerará o erro 4822. O [utilitário BCP](../../tools/bcp-utility.md) não tem esta limitação, portanto, para arquivos de dados que contêm mais de 1.024 campos, use BULK INSERT sem um arquivo de formato ou o comando **bcp**.
+Ao usar um arquivo de formato com BULK INSERT, você pode especificar até somente 1024 campos. Isso é o mesmo que o número máximo de colunas permitido em uma tabela. Se você usar um arquivo de formato com BULK INSERT com um arquivo de dados que contém mais de 1.024 campos, BULK INSERT gerará o erro 4822. O [utilitário BCP](../../tools/bcp-utility.md) não tem esta limitação, portanto, para arquivos de dados que contêm mais de 1.024 campos, use BULK INSERT sem um arquivo de formato ou o comando **bcp** .
 
 ## <a name="performance-considerations"></a>Considerações sobre desempenho
 
@@ -330,7 +330,7 @@ Com o Banco de Dados SQL do Azure, considere o aumento temporário do nível de 
 
 Se um usuário usar um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o perfil de segurança da conta de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado. Um logon que usa a autenticação do SQL Server não pode ser autenticado fora do Mecanismo de Banco de Dados. Assim, quando um comando BULK INSERT é iniciado por um logon que usa a autenticação do SQL Server, a conexão aos dados é feita por meio do contexto de segurança da conta de processo do SQL Server (a conta usada pelo serviço de Mecanismo de Banco de Dados do SQL Server). Para ler a fonte de dados com êxito, você deve dar à conta usada pelo Mecanismo de Banco de Dados do SQL Server acesso ao banco de dados. Em contrapartida, se um usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fizer logon por meio da Autenticação do Windows, ele poderá acessar, no modo somente leitura, aqueles arquivos que podem ser acessados pela conta do usuário, a despeito do perfil de segurança do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Durante a execução da instrução BULK INSERT usando **sqlcmd** ou **osql**, de um computador, durante a inserção de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um segundo computador e durante a especificação de um *data_file* em um terceiro computador por meio de um caminho UNC, você poderá receber um erro 4861.
+Durante a execução da instrução BULK INSERT usando **sqlcmd** ou **osql** , de um computador, durante a inserção de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um segundo computador e durante a especificação de um *data_file* em um terceiro computador por meio de um caminho UNC, você poderá receber um erro 4861.
 
 Para resolver esse erro, use a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especifique um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que use o perfil de segurança da conta de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou configure o Windows para habilitar a delegação de conta de segurança. Para obter informações sobre como habilitar uma conta de usuário que seja confiável para a delegação, consulte a Ajuda do Windows.
 

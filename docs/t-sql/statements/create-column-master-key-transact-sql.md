@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 081941d580e51188f63c54953caa30004c83c6d0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645946"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300396"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ A tabela a seguir mostra os nomes de provedores de sistema:
     |'MSSQL_CERTIFICATE_STORE'|Repositório de Certificados do Windows| 
     |'MSSQL_CSP_PROVIDER'|Um repositório, como um HSM (módulo de segurança de hardware) compatível com o Microsoft CryptoAPI.|
     |'MSSQL_CNG_STORE'|Um repositório, como um HSM (módulo de segurança de hardware) (HSM) compatível com a Cryptography API Next Generation.|  
-    |'AZURE_KEY_VAULT'|Veja [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'AZURE_KEY_VAULT'|Veja [Introdução ao Azure Key Vault](/azure/key-vault/general/overview)|  
     |'MSSQL_JAVA_KEYSTORE'| Repositório de chaves Java.}
   
 
@@ -101,7 +101,7 @@ O caminho da chave no repositório de chave mestra de coluna. O caminho da chave
      Em que:  
   
     *CertificateStoreLocation*  
-    Local do repositório de certificados, que deve ser o Usuário Atual ou o Computador Local. Para obter mais informações, veja [Computador local e repositórios de certificados do usuário atual](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
+    Local do repositório de certificados, que deve ser o Usuário Atual ou o Computador Local. Para obter mais informações, veja [Computador local e repositórios de certificados do usuário atual](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores).  
   
     *CertificateStore*  
     Nome do repositório de certificados, por exemplo 'Meu'.  
@@ -176,7 +176,7 @@ Crie uma entrada de metadados de chave mestra de coluna antes de uma entrada de 
 
   
 ## <a name="permissions"></a>Permissões  
-Requer a permissão **ALTER ANY COLUMN MASTER KEY**.  
+Requer a permissão **ALTER ANY COLUMN MASTER KEY** .  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -252,4 +252,3 @@ WITH (
 * [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Visão geral do gerenciamento de chaves do Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [Gerenciar chaves para Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
-  

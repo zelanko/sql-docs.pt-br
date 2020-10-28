@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624813"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300285"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -43,9 +43,9 @@ Este artigo explica como usar a instrução COPY no [!INCLUDE[ssSDW](../../inclu
 
 Visite a seguinte documentação para obter exemplos abrangentes e guias de início rápido usando a instrução COPY:
 
-- [Início Rápido: dados de carregamento em massa usando a instrução COPY](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
-- [Início Rápido: exemplos usando a instrução COPY e métodos de autenticação compatíveis](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Início Rápido: como criar a instrução COPY usando uma interface do usuário avançada do Synapse Studio (versão prévia do workspace)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Início Rápido: dados de carregamento em massa usando a instrução COPY](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [Início Rápido: exemplos usando a instrução COPY e métodos de autenticação compatíveis](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [Início Rápido: como criar a instrução COPY usando uma interface do usuário avançada do Synapse Studio (versão prévia do workspace)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>Sintaxe  
 
@@ -141,9 +141,9 @@ Vários locais de arquivo só podem ser especificados na mesma conta de armazena
 |  **Armazenamento de Blobs do Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: O ponto de extremidade .blob ( **.blob**.core.windows.net) no seu caminho de localização externa é necessário nesse método de autenticação.
+1: O ponto de extremidade .blob ( **.blob** .core.windows.net) no seu caminho de localização externa é necessário nesse método de autenticação.
 
-2: O ponto de extremidade .dfs ( **.dfs**.core.windows.net) no seu caminho de localização externa é necessário nesse método de autenticação.
+2: O ponto de extremidade .dfs ( **.dfs** .core.windows.net) no seu caminho de localização externa é necessário nesse método de autenticação.
 
 
 > [!NOTE]  
@@ -179,7 +179,7 @@ Vários locais de arquivo só podem ser especificados na mesma conta de armazena
   - Funções de RBAC mínimas necessárias: colaborador de dados do blob de armazenamento ou proprietário de dados do blob de armazenamento para o usuário do AAD
 
 *ERRORFILE = local do diretório*</br>
-*ERRORFILE* aplica-se somente ao CSV. Especifica o diretório na instrução COPY em que as linhas rejeitadas e o arquivo de erro correspondente devem ser gravados. O caminho completo da conta de armazenamento ou o caminho relativo do contêiner pode ser especificado. Se o caminho especificado não existir, um será criado em seu nome. Um diretório filho é criado com o nome "_rejectedrows". O caractere "_ " garante que o diretório tenha escape para outro processamento de dados, a menos que explicitamente nomeado no parâmetro de localização. 
+*ERRORFILE* aplica-se somente ao CSV. Especifica o diretório na instrução COPY em que as linhas rejeitadas e o arquivo de erro correspondente devem ser gravados. O caminho completo da conta de armazenamento ou o caminho relativo do contêiner pode ser especificado. Se o caminho especificado não existir, um será criado em seu nome. Um diretório filho é criado com o nome " _rejectedrows". O caractere "_ " garante que o diretório tenha escape para outro processamento de dados, a menos que explicitamente nomeado no parâmetro de localização. 
 
 Dentro desse diretório, há uma pasta criada com base na hora do envio do carregamento no formato YearMonthDay – HourMinuteSecond (por exemplo, 20180330-173205). Nessa pasta, dois tipos de arquivos são gravados, o arquivo de motivo (erro) e o arquivo de dados (linha), cada um anexado previamente com o queryID, o distributionID e um GUID do arquivo. Já que os dados e o motivo estão em arquivos separados, arquivos correspondentes têm um prefixo correspondente.
 

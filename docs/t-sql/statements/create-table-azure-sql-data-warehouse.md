@@ -12,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 106be8b84605016e3fa0d9217d75355f7109221e
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989809"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300202"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -140,7 +140,7 @@ Armazena a tabela como um índice columnstore clusterizado. O índice columnstor
  
  `HEAP` Armazena a tabela como um heap. Esse comportamento é o padrão para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,... *n* ] )  
  Armazena a tabela como um índice clusterizado com uma ou mais colunas de chave. Esse comportamento armazena os dados por linha. Use *index_column_name* para especificar o nome de uma ou mais colunas de chave no índice.  Para obter mais informações, confira Tabelas rowstore nos Comentários gerais.
  
  `LOCATION = USER_DB` Essa opção foi preterida. Ela é aceita sintaticamente, mas não é mais necessária e não afeta mais o comportamento.   
@@ -149,7 +149,7 @@ Armazena a tabela como um índice columnstore clusterizado. O índice columnstor
 
 Para entender como escolher o melhor método de distribuição e usar tabelas distribuídas, confira [Distribuição de tabelas no [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH` ( *distribution_column_name* ) Atribui cada linha a uma distribuição, efetuando hash no valor armazenado em *distribution_column_name*. O algoritmo é determinístico, ou seja, ele sempre efetua hash no mesmo valor para a mesma distribuição.  A coluna de distribuição deve ser definida como NOT NULL porque todas as linhas que tiverem NULL são atribuídas à mesma distribuição.
+`DISTRIBUTION = HASH` ( *distribution_column_name* ) Atribui cada linha a uma distribuição, efetuando hash no valor armazenado em *distribution_column_name* . O algoritmo é determinístico, ou seja, ele sempre efetua hash no mesmo valor para a mesma distribuição.  A coluna de distribuição deve ser definida como NOT NULL porque todas as linhas que tiverem NULL são atribuídas à mesma distribuição.
 
 `DISTRIBUTION = ROUND_ROBIN` Distribui as linhas uniformemente entre todas as distribuições de modo round robin. Esse comportamento é o padrão para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
@@ -158,7 +158,7 @@ Para entender como escolher o melhor método de distribuição e usar tabelas di
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Opções de partição da tabela
 Para obter diretrizes sobre o uso de partições de tabela, confira [Particionando tabelas no [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,... *n* ] ] ))   
 Cria uma ou mais partições da tabela. Essas partições são fatias horizontais da tabela que permitem aplicar operações em subconjuntos de linhas, independentemente se a tabela está armazenada como um heap, um índice clusterizado ou um índice columnstore clusterizado. Ao contrário da coluna de distribuição, as partições da tabela não determinam a distribuição em que cada linha é armazenada. As partições da tabela determinam como as linhas são agrupadas e armazenadas em cada distribuição.  
 
 | Argumento | Explicação |
@@ -166,7 +166,7 @@ Cria uma ou mais partições da tabela. Essas partições são fatias horizontai
 |*partition_column_name*| Especifica a coluna que o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usará para particionar as linhas. Esta coluna pode ser de qualquer tipo de dados. O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] classifica os valores de coluna de partição em ordem crescente. A ordenação do menor ao maior vai da `LEFT` para a `RIGHT` na especificação `RANGE`. |  
 | `RANGE LEFT` | Especifica que o valor de limite pertence à partição à esquerda (valores mais baixos). O padrão é LEFT. |
 | `RANGE RIGHT` | Especifica que o valor de limite pertence à partição à direita (valores mais baixos). | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Especifica os valores de limite para a partição. *boundary_value* é uma expressão de constante. Ele não pode ser NULL. Ele deve corresponder ou ser implicitamente conversível no tipo de dados de *partition_column_name*. Ele não pode ser truncado durante a conversão implícita de modo que o tamanho e a escala do valor não correspondam ao tipo de dados de *partition_column_name*<br></br><br></br>Se você especificar a cláusula `PARTITION`, mas não especificar um valor de limite, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] criará uma tabela particionada com uma partição. Caso seja necessário, você pode dividir a tabela em duas partições posteriormente.<br></br><br></br>Se você especificar um valor de limite, a tabela resultante terá duas partições: uma para os valores menores do que o valor de limite e outra para os valores maiores que o valor de limite. Se você mover uma partição para uma tabela não particionada, a tabela não particionada receberá os dados, mas não terá os limites de partição em seus metadados.| 
+| `FOR VALUES` ( *boundary_value* [,... *n* ] ) | Especifica os valores de limite para a partição. *boundary_value* é uma expressão de constante. Ele não pode ser NULL. Ele deve corresponder ou ser implicitamente conversível no tipo de dados de *partition_column_name* . Ele não pode ser truncado durante a conversão implícita de modo que o tamanho e a escala do valor não correspondam ao tipo de dados de *partition_column_name*<br></br><br></br>Se você especificar a cláusula `PARTITION`, mas não especificar um valor de limite, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] criará uma tabela particionada com uma partição. Caso seja necessário, você pode dividir a tabela em duas partições posteriormente.<br></br><br></br>Se você especificar um valor de limite, a tabela resultante terá duas partições: uma para os valores menores do que o valor de limite e outra para os valores maiores que o valor de limite. Se você mover uma partição para uma tabela não particionada, a tabela não particionada receberá os dados, mas não terá os limites de partição em seus metadados.| 
 
  Confira [Criar uma tabela particionada](#PartitionedTable) na seção de exemplos.
 
@@ -178,16 +178,16 @@ Um CCI pode ser criado em colunas de qualquer tipo de dados compatível com o [!
 
 Os usuários podem consultar a coluna **column_store_order_ordinal** em **sys.index_columns** para obter as colunas nas quais uma tabela é ordenada e qual é a sequência na ordenação.  
 
-Confira [Ajuste de desempenho com índice columnstore clusterizado ordenado](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci) para obter detalhes.   
+Confira [Ajuste de desempenho com índice columnstore clusterizado ordenado](/azure/sql-data-warehouse/performance-tuning-ordered-cci) para obter detalhes.   
 
 ### <a name="data-type"></a><a name="DataTypes"></a> Tipo de dados
 
 O [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] é compatível com os tipos de dados mais usados. Abaixo há uma lista dos tipos de dados compatíveis, juntamente com seus detalhes e bytes de armazenamento. Para entender melhor os tipos de dados e como usá-los, confira [Tipos de dados para tabelas no [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
-Para ver uma tabela de conversões de tipo de dados, confira a seção Conversões implícitas de [CAST e CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
+Para ver uma tabela de conversões de tipo de dados, confira a seção Conversões implícitas de [CAST e CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md).
 
 >[!NOTE]
->Veja mais informações em [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).
+>Veja mais informações em [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md).
 
 `datetimeoffset` [ ( *n* ) ]  
  O valor padrão de *n* é 7.  
@@ -240,7 +240,7 @@ Igual a `datetime`, exceto que você pode especificar o número de segundos frac
  O número máximo total de dígitos decimais que podem ser armazenados, à esquerda e à direita do ponto decimal. A precisão precisa ser um valor de `1` até a precisão máxima de `38`. A precisão padrão é `18`.  
   
  *scale*  
- O número máximo de dígitos decimais que podem ser armazenados à direita do ponto decimal. *Scale* precisa ser um valor de `0` até *precision*. Você só poderá especificar *scale* se *precision* for especificado. A escala padrão é `0`, assim, `0` <= *scale* <= *precision*. Os tamanhos máximos de armazenamento variam, com base na precisão.  
+ O número máximo de dígitos decimais que podem ser armazenados à direita do ponto decimal. *Scale* precisa ser um valor de `0` até *precision* . Você só poderá especificar *scale* se *precision* for especificado. A escala padrão é `0`, assim, `0` <= *scale* <= *precision* . Os tamanhos máximos de armazenamento variam, com base na precisão.  
   
 | Precisão | Bytes de armazenamento  |  
 | ---------: |-------------: |  
@@ -326,7 +326,7 @@ Uma tabela columnstore é uma tabela armazenada em ordem de coluna por coluna. O
 Para converter uma tabela rowstore em uma tabela columnstore, remova todos os índices existentes na tabela e crie um índice columnstore clusterizado. Para obter um exemplo, confira [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
 Para obter mais informações, consulte estes artigos:
-- [Resumo de recursos com versão dos índices columnstore](https://msdn.microsoft.com/library/dn934994/)
+- [Resumo de recursos com versão dos índices columnstore](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
 - [Tabelas de indexação no [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Guia de Índices columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
@@ -341,7 +341,7 @@ Ao usar partições, a coluna de partição não pode ter uma ordenação soment
 CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
 ```  
  
- Se *boundary_value* for um valor literal que precise ser convertido implicitamente no tipo de dados em *partition_column_name*, ocorrerá uma discrepância. O valor literal é exibido por meio das exibições do sistema do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], mas o valor convertido é usado para operações do [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+ Se *boundary_value* for um valor literal que precise ser convertido implicitamente no tipo de dados em *partition_column_name* , ocorrerá uma discrepância. O valor literal é exibido por meio das exibições do sistema do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], mas o valor convertido é usado para operações do [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
 ### <a name="temporary-tables"></a>Tabelas temporárias
 
@@ -596,5 +596,4 @@ WITH
 [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
-  
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md?view=azure-sqldw-latest) 

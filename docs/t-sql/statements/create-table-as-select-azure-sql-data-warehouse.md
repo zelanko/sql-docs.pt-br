@@ -12,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ab6d2ce34991dfaf4d2266ca0b0d900eb93fdde6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0ab6f4ff4d5681d0dfeb30ded57447ddbb8b24a0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990149"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300542"
 ---
 # <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ CTAS (CREATE TABLE AS SELECT) é um dos recursos mais importantes do T-SQL dispo
 -   Consultar ou importar dados externos.  
 
 > [!NOTE]  
-> Como CTAS complementa os recursos de criação de uma tabela, este tópico tenta não repetir o tópico CREATE TABLE. Ele descreve as diferenças entre as instruções CTAS e CREATE TABLE. Para obter detalhes sobre CREATE TABLE, confira a instrução [CREATE TABLE (Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/). 
+> Como CTAS complementa os recursos de criação de uma tabela, este tópico tenta não repetir o tópico CREATE TABLE. Ele descreve as diferenças entre as instruções CTAS e CREATE TABLE. Para obter detalhes sobre CREATE TABLE, confira a instrução [CREATE TABLE (Azure Synapse Analytics)](./create-table-azure-sql-data-warehouse.md). 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,13 +81,13 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="arguments-bk"></a>
   
 ## <a name="arguments"></a>Argumentos  
-Para obter detalhes, confira a [seção Argumentos](https://msdn.microsoft.com/library/mt203953/#Arguments) em CREATE TABLE.  
+Para obter detalhes, confira a [seção Argumentos](./create-table-azure-sql-data-warehouse.md#Arguments) em CREATE TABLE.  
 
 <a name="column-options-bk"></a>
 
 ### <a name="column-options"></a>Opções de Coluna
 `column_name` [ ,...`n` ]   
- Os nomes de coluna não permitem as [opções de coluna](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) mencionadas em CREATE TABLE.  Nesse caso, você pode fornecer uma lista opcional de um ou mais nomes de coluna para a nova tabela. As colunas na nova tabela usarão os nomes que você especificar. Quando você especificar nomes de coluna, o número de colunas na lista de colunas deverá corresponder ao número de colunas nos resultados de select. Se você não especificar nenhum nome de coluna, a nova tabela de destino usará os nomes de coluna nos resultados da instrução select. 
+ Os nomes de coluna não permitem as [opções de coluna](./create-table-azure-sql-data-warehouse.md#ColumnOptions) mencionadas em CREATE TABLE.  Nesse caso, você pode fornecer uma lista opcional de um ou mais nomes de coluna para a nova tabela. As colunas na nova tabela usarão os nomes que você especificar. Quando você especificar nomes de coluna, o número de colunas na lista de colunas deverá corresponder ao número de colunas nos resultados de select. Se você não especificar nenhum nome de coluna, a nova tabela de destino usará os nomes de coluna nos resultados da instrução select. 
   
  Não é possível especificar nenhuma outra opções de coluna, como tipos de dados, ordenação ou nulidade. Cada um desses atributos é derivado dos resultados da instrução `SELECT`. No entanto, você pode usar a instrução SELECT para alterar os atributos. Para obter um exemplo, confira [Usar CTAS para alterar os atributos da coluna](#ctas-change-column-attributes-bk).   
 
@@ -98,14 +98,14 @@ Para obter detalhes, confira a [seção Argumentos](https://msdn.microsoft.com/l
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 A instrução CTAS requer uma opção de distribuição e não têm valores padrão. Isso é diferente de CREATE TABLE, que tem padrões. 
 
-Para obter detalhes e entender como escolher a melhor coluna de distribuição, veja a seção [Opções de distribuição da tabela](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions) em CREATE TABLE. 
+Para obter detalhes e entender como escolher a melhor coluna de distribuição, veja a seção [Opções de distribuição da tabela](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) em CREATE TABLE. 
 
 <a name="table-partition-options-bk"></a>
 
 ### <a name="table-partition-options"></a>Opções de partição da tabela
 A instrução CTAS cria uma tabela não particionada por padrão, mesmo quando a tabela de origem está particionada. Para criar uma tabela particionada com a instrução CTAS, você precisa especificar a opção de partição. 
 
-Para obter detalhes, veja a seção [Opções de partição da tabela](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions) em CREATE TABLE.
+Para obter detalhes, veja a seção [Opções de partição da tabela](./create-table-azure-sql-data-warehouse.md#TablePartitionOptions) em CREATE TABLE.
 
 <a name="select-options-bk"></a>
 
@@ -125,14 +125,14 @@ Os usuários podem definir MAXDOP como um valor inteiro para controlar o grau m�
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>Permissões  
-CTAS requer a permissão `SELECT` em todos os objetos referenciados em *select_criteria*.
+CTAS requer a permissão `SELECT` em todos os objetos referenciados em *select_criteria* .
 
-Para obter permissões para criar uma tabela, confira [Permissões](https://msdn.microsoft.com/library/mt203953/#Permissions) em CREATE TABLE. 
+Para obter permissões para criar uma tabela, confira [Permissões](./create-table-azure-sql-data-warehouse.md#Permissions) em CREATE TABLE. 
   
 <a name="general-remarks-bk"></a>
   
 ## <a name="general-remarks"></a>Comentários gerais
-Para obter detalhes, confira [Comentários gerais](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks) em CREATE TABLE.
+Para obter detalhes, confira [Comentários gerais](./create-table-azure-sql-data-warehouse.md#GeneralRemarks) em CREATE TABLE.
 
 <a name="limitations-bk"></a>
 
@@ -147,7 +147,7 @@ Para obter detalhes, confira [Limitações e restrições](https://msdn.microsof
 <a name="locking-behavior-bk"></a>
   
 ## <a name="locking-behavior"></a>Comportamento de bloqueio  
- Para obter detalhes, confira [Comportamento de bloqueio](https://msdn.microsoft.com/library/mt203953/#LockingBehavior) em CREATE TABLE.
+ Para obter detalhes, confira [Comportamento de bloqueio](./create-table-azure-sql-data-warehouse.md#LockingBehavior) em CREATE TABLE.
  
 <a name="performance-bk"></a>
  
@@ -847,8 +847,5 @@ OPTION (MAXDOP 1);
  [CREATE TABLE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](./create-external-table-transact-sql.md)  
   
-  
-
-

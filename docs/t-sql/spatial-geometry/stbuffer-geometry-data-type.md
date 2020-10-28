@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7644e25159a7df28d2de51d5e1a08a0e1b36ef05
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454227"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300377"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de dados geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
 
 ## <a name="arguments"></a>Argumentos
  *distance*  
- É um valor do tipo **float** (**duplo** no .NET Framework) que especifica a distância da instância de geometria em torno da qual o buffer será calculado.  
+ É um valor do tipo **float** ( **duplo** no .NET Framework) que especifica a distância da instância de geometria em torno da qual o buffer será calculado.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
@@ -49,12 +49,12 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
  Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Comentários  
- O `STBuffer()` calcula um buffer, como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), especificando *tolerance* = distance \* 0,001 e *relative* = **false**.  
+ O `STBuffer()` calcula um buffer, como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), especificando *tolerance* = distance \* 0,001 e *relative* = **false** .  
   
  Quando a *distância* for > 0, uma instância de **polígono** ou **MultiPolygon** será retornada.  
   
 > [!NOTE]  
->  Como distance é um **float**, um valor muito pequeno pode ser igualado a zero nos cálculos.  Quando isso ocorrer, uma cópia da instância de **geometry** de chamada será retornada.  Confira [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+>  Como distance é um **float** , um valor muito pequeno pode ser igualado a zero nos cálculos.  Quando isso ocorrer, uma cópia da instância de **geometry** de chamada será retornada.  Confira [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
   
  Quando *distance* = 0, uma cópia da instância de **geometry** de chamada é retornada.  
   
@@ -69,7 +69,7 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
   
  Um buffer negativo remove todos os incluídos na distância especificada do limite da geometria.  
   
- O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que tolerance = distância \* 0,001. Para obter mais informações sobre extensões, confira [Referência de método do tipo de dados geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ O erro entre o buffer teórico e o computado é max(tolerance, extents * 1.E-7), em que tolerance = distância \* 0,001. Para obter mais informações sobre extensões, confira [Referência de método do tipo de dados geometry](./spatial-types-geometry-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -169,5 +169,3 @@ Retorna um objeto geométrico que representa a união de todos os pontos cuja di
  [BufferWithTolerance &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Métodos OGC em instâncias geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
-  
-

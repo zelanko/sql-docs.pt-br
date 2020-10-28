@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f9db43b930baffc31529a3e36fb014225957a39
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529387"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255773"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -87,6 +87,9 @@ WITH (
     }  
     [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="orc"></a>[ORC](#tab/orc)
 ```syntaxsql  
 --Create an external file format for ORC file.  
@@ -98,6 +101,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### <a name="parquet"></a>[Parquet](#tab/parquet)
 ```syntaxsql
 --Create an external file format for PARQUET files.  
@@ -121,6 +127,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ---
   
 ## <a name="arguments"></a>Argumentos  
@@ -137,7 +146,7 @@ Especifica o formato dos dados externos.
 - ORC  
   Especifica um formato ORC (Optimized Row Columnar). Essa opção requer o Hive versão 0.11 ou superior no cluster do Hadoop externo. No Hadoop, o formato de arquivo ORC oferece melhor compactação e desempenho que o formato de arquivo RCFILE.
 
-- RCFILE (em combinação com SERDE_METHOD = *SERDE_method*) Especifica um formato RcFile (Record Columnar file). Essa opção requer que você especifique um método SerDe (serializador e desserializador) do Hive. Esse requisito é o mesmo para usar o Hive/HiveQL no Hadoop para consultar arquivos RC. Observe que o método SerDe diferencia maiúsculas de minúsculas.
+- RCFILE (em combinação com SERDE_METHOD = *SERDE_method* ) Especifica um formato RcFile (Record Columnar file). Essa opção requer que você especifique um método SerDe (serializador e desserializador) do Hive. Esse requisito é o mesmo para usar o Hive/HiveQL no Hadoop para consultar arquivos RC. Observe que o método SerDe diferencia maiúsculas de minúsculas.
 
   Exemplos de especificação de RCFile com os dois métodos SerDe compatíveis com o PolyBase.
 
@@ -248,7 +257,7 @@ Especifica um formato personalizado para todos os dados de data e hora que podem
   
 Observações sobre a tabela:  
   
--   Ano, mês e dia podem ter uma variedade de formatos e ordens. A tabela mostra apenas o formato **amd**. Mês pode ter um ou dois dígitos, ou três caracteres. Dia pode ter um ou dois dígitos. Ano pode ter dois ou quatro dígitos.
+-   Ano, mês e dia podem ter uma variedade de formatos e ordens. A tabela mostra apenas o formato **amd** . Mês pode ter um ou dois dígitos, ou três caracteres. Dia pode ter um ou dois dígitos. Ano pode ter dois ou quatro dígitos.
   
 -   Milissegundos (fffffff) não são necessários.
   

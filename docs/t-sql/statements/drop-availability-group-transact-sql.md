@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e6a2cb161ae00d9f77d50c7a702183927cc169d8
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: d2335b8015f0eb88821e94231ac8cf48d9bc0471
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380187"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300382"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91380187"
   Remove o grupo de disponibilidade especificado e todas as suas réplicas. Se uma instância de servidor que hospeda uma das réplicas de disponibilidade estiver offline quando você exclui um grupo de disponibilidade, ela removerá a réplica de disponibilidade local quando estiver online novamente. O cancelamento de um grupo de disponibilidade também exclui o ouvinte de grupo de disponibilidade associado, se houver.  
   
 > [!IMPORTANT]  
->  Se possível, remova o grupo de disponibilidade somente quando ele estiver conectado à instância do servidor que hospeda a réplica primária. Quando o grupo de disponibilidade é removido da réplica primária, são permitidas alterações nos bancos de dados primários antigos (sem proteção de alta disponibilidade). Quando um grupo de disponibilidade é excluído de uma réplica secundária, a réplica primária fica no estado **RESTORING**, e as alterações não são permitidas nos bancos de dados.  
+>  Se possível, remova o grupo de disponibilidade somente quando ele estiver conectado à instância do servidor que hospeda a réplica primária. Quando o grupo de disponibilidade é removido da réplica primária, são permitidas alterações nos bancos de dados primários antigos (sem proteção de alta disponibilidade). Quando um grupo de disponibilidade é excluído de uma réplica secundária, a réplica primária fica no estado **RESTORING** , e as alterações não são permitidas nos bancos de dados.  
   
  Para obter informações sobre maneiras alternativas de remover um grupo de disponibilidade, consulte [Remover um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
   
@@ -64,12 +64,12 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  Evite remover um grupo de disponibilidade quando o cluster WSFC (Windows Server Failover Clustering) não tem quorum. Caso seja necessário remover um grupo de disponibilidade enquanto o cluster perde quorum, o grupo de disponibilidade de metadados armazenado no cluster não será removido. Depois que o cluster recuperar o quorum, será necessário remover novamente o grupo de disponibilidade para removê-lo do cluster WSFC.  
   
--   Em uma réplica secundária, **DROP AVAILABILITY GROUP** apenas deve ser usado para fins de emergência. Isso ocorre porque, ao remover um grupo de disponibilidade, você o coloca offline. Se você remover o grupo de disponibilidade de uma réplica secundária, a réplica primária não poderá determinar se o estado **OFFLINE** ocorreu devido à perda de quorum, a um failover forçado ou a um comando **DROP AVAILABILITY GROUP**. A réplica primária passa para o estado **RESTORING** para evitar uma possível situação de separação. Para obter mais informações, consulte [How It Works: DROP AVAILABILITY GROUP Behaviors](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (Como funcionam os comportamentos de DROP AVAILABILITY GROUP) (blog CSS SQL Server Engineers).  
+-   Em uma réplica secundária, **DROP AVAILABILITY GROUP** apenas deve ser usado para fins de emergência. Isso ocorre porque, ao remover um grupo de disponibilidade, você o coloca offline. Se você remover o grupo de disponibilidade de uma réplica secundária, a réplica primária não poderá determinar se o estado **OFFLINE** ocorreu devido à perda de quorum, a um failover forçado ou a um comando **DROP AVAILABILITY GROUP** . A réplica primária passa para o estado **RESTORING** para evitar uma possível situação de separação. Para obter mais informações, consulte [How It Works: DROP AVAILABILITY GROUP Behaviors](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (Como funcionam os comportamentos de DROP AVAILABILITY GROUP) (blog CSS SQL Server Engineers).  
   
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Exige a permissão **ALTER AVAILABILITY GROUP** no grupo de disponibilidade, a permissão **CONTROL AVAILABILITY GROUP**, a permissão **ALTER ANY AVAILABILITY GROUP** ou a permissão **CONTROL SERVER**. Para remover um grupo de disponibilidade que não é hospedado pela instância de servidor local, você precisará da permissão **CONTROL SERVER** ou **CONTROL** nesse grupo de disponibilidade.  
+ Exige a permissão **ALTER AVAILABILITY GROUP** no grupo de disponibilidade, a permissão **CONTROL AVAILABILITY GROUP** , a permissão **ALTER ANY AVAILABILITY GROUP** ou a permissão **CONTROL SERVER** . Para remover um grupo de disponibilidade que não é hospedado pela instância de servidor local, você precisará da permissão **CONTROL SERVER** ou **CONTROL** nesse grupo de disponibilidade.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cancela o grupo de disponibilidade `AccountsAG`.  
@@ -80,11 +80,10 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [How It Works: DROP AVAILABILITY GROUP Behaviors](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (Como funcionam os comportamentos de DROP AVAILABILITY GROUP) (blog CSS SQL Server Engineers)  
+-   [How It Works: DROP AVAILABILITY GROUP Behaviors](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (Como funcionam os comportamentos de DROP AVAILABILITY GROUP) (blog CSS SQL Server Engineers)  
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Remover um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
-  
   

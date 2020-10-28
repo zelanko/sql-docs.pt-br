@@ -9,14 +9,14 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: f0d6ba76868bb1b8a226145b2aa1306db46baa17
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115870"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257328"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Início Rápido: Usar o Azure Data Studio para se conectar e consultar dados usando o pool de SQL dedicado no Azure Synapse Analytics
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Início Rápido: Usar o Azure Data Studio para se conectar e consultar dados usando um pool de SQL dedicado no Azure Synapse Analytics
 
 Este início rápido mostra como usar o Azure Data Studio para se conectar a um pool de SQL dedicado do Azure Synapse Analytics.
 
@@ -34,15 +34,15 @@ Lembre-se do nome do servidor e das credenciais de logon.
 
 Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Synapse Analytics.
 
-1. Na primeira vez que você executar o Azure Data Studio, a página **Conexão** deverá abrir. Se você não vir a página **Conexão**, clique em **Adicionar Conexão** ou no ícone **Nova Conexão** na barra lateral **SERVIDORES**:
+1. Na primeira vez que você executar o Azure Data Studio, a página **Conexão** deverá abrir. Se você não vir a página **Conexão** , clique em **Adicionar Conexão** ou no ícone **Nova Conexão** na barra lateral **SERVIDORES** :
    
    ![Ícone de Nova Conexão](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. Este artigo usa o *Logon do SQL*, mas também há suporte para a *Autenticação do Windows*. Preencha os campos da seguinte maneira usando o nome do servidor, o nome de usuário e a *sua* senha para o SQL Server do Azure:
+2. Este artigo usa o *Logon do SQL* , mas também há suporte para a *Autenticação do Windows* . Preencha os campos da seguinte maneira usando o nome do servidor, o nome de usuário e a *sua* senha para o SQL Server do Azure:
 
    |   Configuração    | Valor sugerido | Descrição |
    |--------------|-----------------|-------------| 
-   | **Nome do servidor** | O nome do servidor totalmente qualificado | Por exemplo, o nome será parecido com este: **sqlpoolservername.database.windows.net**. |
+   | **Nome do servidor** | O nome do servidor totalmente qualificado | Por exemplo, o nome será parecido com este: **sqlpoolservername.database.windows.net** . |
    | **Autenticação** | Logon do SQL| A autenticação do SQL é usada neste tutorial. |
    | **Nome de usuário** | A conta do administrador do servidor | Esta é a conta que você especificou quando criou o servidor. |
    | **Senha (Logon do SQL)** | A senha para sua conta do administrador do servidor | Esta é a senha que você especificou quando criou o servidor. |
@@ -52,13 +52,13 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Sy
 
 3. Se o servidor não tiver uma regra de firewall que permita que o Azure Data Studio se conecte, o formulário **Criar nova regra de firewall** será aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, confira [Regras de firewall](/azure/sql-database/sql-database-firewall-configure).
 
-4. Depois de se conectar com êxito, o servidor será aberto na barra lateral *Servidores*.
+4. Depois de se conectar com êxito, o servidor será aberto na barra lateral *Servidores* .
 
 ## <a name="create-a-database-in-your-dedicated-sql-pool"></a>Crie um banco de dados no seu pool de SQL dedicado
 
-1. Clique com o botão direito do mouse no servidor no pesquisador de objetos, e selecione **Nova Consulta**.
+1. Clique com o botão direito do mouse no servidor no pesquisador de objetos, e selecione **Nova Consulta** .
 
-2. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
+2. Cole o snippet a seguir no editor de consultas e clique em **Executar** :
 
    ```sql
     IF NOT EXISTS (
@@ -75,14 +75,14 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Sy
 
 ## <a name="create-a-table"></a>Criar uma tabela
 
-O editor de consultas ainda está conectado ao banco de dados *mestre*, mas queremos criar uma tabela no banco de dados *TutorialDB*. 
+O editor de consultas ainda está conectado ao banco de dados *mestre* , mas queremos criar uma tabela no banco de dados *TutorialDB* . 
 
-1. Altere o contexto de conexão para **TutorialDB**:
+1. Altere o contexto de conexão para **TutorialDB** :
 
-2. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
+2. Cole o snippet a seguir no editor de consultas e clique em **Executar** :
 
    > [!NOTE]
-   > Você pode acrescentar à consulta anterior ou substituí-la no editor. Ao clicar em **Executar**, apenas a consulta selecionada será executada. Se nada estiver selecionado, ao clicar em **Executar**, todas as consultas no editor serão executadas.
+   > Você pode acrescentar à consulta anterior ou substituí-la no editor. Ao clicar em **Executar** , apenas a consulta selecionada será executada. Se nada estiver selecionado, ao clicar em **Executar** , todas as consultas no editor serão executadas.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -106,7 +106,7 @@ O editor de consultas ainda está conectado ao banco de dados *mestre*, mas quer
 
 ## <a name="insert-rows"></a>Inserir linhas
 
-1. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
+1. Cole o snippet a seguir no editor de consultas e clique em **Executar** :
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -122,7 +122,7 @@ O editor de consultas ainda está conectado ao banco de dados *mestre*, mas quer
 
 ## <a name="view-the-result"></a>Exibir o resultado
 
-1. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
+1. Cole o snippet a seguir no editor de consultas e clique em **Executar** :
 
    ```sql
    -- Select rows from table 'Customers'
@@ -139,5 +139,6 @@ O editor de consultas ainda está conectado ao banco de dados *mestre*, mas quer
 Se você não pretende continuar trabalhando com os bancos de dados de amostras criados neste artigo, [exclua o grupo de recursos](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Próximas etapas
+Para obter mais informações, visite [Conectar-se ao SQL do Synapse com o Azure Data Studio](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio).
 
 Agora que você se conectou com êxito a um Azure Synapse Analytics e executou uma consulta, experimente o [Tutorial do editor de código](tutorial-sql-editor.md).

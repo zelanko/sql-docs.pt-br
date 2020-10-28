@@ -14,12 +14,12 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 571771403d665bd6d668fcce7037e06db6ffa33d
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037049"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300643"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,7 +106,7 @@ RETURNS TABLE
  *parameter_data_type*  
  É o tipo de dados de parâmetro. Para funções [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os tipos de dados escalares compatíveis com o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] são permitidos. O tipo de dados de carimbo de data/hora (rowversion) não é um tipo compatível.  
   
- [ =*default* ]  
+ [ = *default* ]  
  É um valor padrão para o parâmetro. Se um valor *default* for definido, a função poderá ser executada sem a necessidade de especificar um valor para esse parâmetro.  
   
  Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deverá ser especificada quando a função for chamada para recuperar o valor padrão. Esse comportamento é diferente do uso de parâmetros com valores padrão em procedimentos armazenados nos quais a omissão do parâmetro também indica o valor padrão.  
@@ -122,11 +122,11 @@ RETURNS TABLE
  *scalar_expression*  
  Especifica o valor escalar que a função escalar retorna.  
 
- *select_stmt* **APLICA-SE A**: Azure Synapse Analytics  
+ *select_stmt* **APLICA-SE A** : Azure Synapse Analytics  
  É a única instrução SELECT que define o valor retornado de uma função com valor de tabela embutida (versão prévia).
 
- TABLE **APLICA-SE A**: Azure Synapse Analytics  
- Especifica que o valor retornado da TVF (função com valor de tabela) é uma tabela. Somente constantes e @*local_variables* podem ser passadas para TVFs.
+ TABLE **APLICA-SE A** : Azure Synapse Analytics  
+ Especifica que o valor retornado da TVF (função com valor de tabela) é uma tabela. Somente constantes e @ *local_variables* podem ser passadas para TVFs.
 
  Em TVFs embutidas (versão prévia), o valor retornado TABLE é definido por meio de uma única instrução SELECT. As funções embutidas não têm variáveis de retorno associadas.
   
@@ -244,13 +244,13 @@ RETURN
 );
 GO
 ```
-A função pode então ser chamada para retornar todos os objetos de exibição (**V**) com:
+A função pode então ser chamada para retornar todos os objetos de exibição ( **V** ) com:
 ```sql
 select * from dbo.ModulesByType('V');
 ```
 
 ### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. Combinar resultados de uma função com valor de tabela embutida (versão prévia)
- Este exemplo simples usa o TVF embutido criado anteriormente para demonstrar como é possível combinar os resultados com outras tabelas usando Cross Apply. Aqui, selecionamos todas as colunas de sys.objects e os resultados de `ModulesByType` para todas as linhas correspondentes na coluna *type*. Confira mais detalhes sobre como usar Apply em [Cláusula FROM e JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
+ Este exemplo simples usa o TVF embutido criado anteriormente para demonstrar como é possível combinar os resultados com outras tabelas usando Cross Apply. Aqui, selecionamos todas as colunas de sys.objects e os resultados de `ModulesByType` para todas as linhas correspondentes na coluna *type* . Confira mais detalhes sobre como usar Apply em [Cláusula FROM e JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
 
 ```sql
 SELECT * 
@@ -260,8 +260,8 @@ GO
 ```
   
 ## <a name="see-also"></a>Consulte também  
- [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [ALTER FUNCTION (SQL Server PDW)](/previous-versions/sql/)   
+ [DROP FUNCTION (SQL Server PDW)](/previous-versions/sql/)  
   
   
 
