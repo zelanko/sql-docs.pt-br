@@ -1,4 +1,4 @@
-1. **Em todos os SQL Servers, crie um logon de servidor para Pacemaker**. O Transact-SQL a seguir cria um logon:
+1. **Em todos os SQL Servers, crie um logon de servidor para Pacemaker** . O Transact-SQL a seguir cria um logon:
 
    ```Transact-SQL
    USE [master]
@@ -10,7 +10,7 @@
 
   No momento da criação do grupo de disponibilidade, o usuário do Pacemaker precisará das permissões ALTERAR, CONTROLAR e EXIBIR DEFINIÇÃO no grupo de disponibilidade, após ele ser criado mas antes que os nós sejam adicionados a ele.
 
-1. **Em todos os SQL Servers, salve as credenciais do logon do SQL Server**.
+1. **Em todos os SQL Servers, salve as credenciais do logon do SQL Server** .
 
    ```bash
    echo 'pacemakerLogin' >> ~/pacemaker-passwd
