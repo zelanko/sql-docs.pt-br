@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542092"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907375"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Exibições do esquema de informações do sistema (Transact-SQL)
 
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>Permissões  
+A visibilidade dos metadados nas exibições do esquema de informações é limitada aos protegíveis que um usuário possui ou aos quais o usuário recebeu alguma permissão. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+
+> [!NOTE]  
+> As exibições do esquema de informações são definidas para todo o servidor e, portanto, não podem ser negadas no contexto de um banco de dados de usuário. Para REVOGAr ou negar acesso (SELECT), o banco de dados mestre deve ser usado. Por padrão, a função pública tem a permissão SELECT-Permission para todas as exibições de esquema de informações, mas o conteúdo é limitado com regras de visibilidade de metadados.
 
 ## <a name="see-also"></a>Consulte Também
 
