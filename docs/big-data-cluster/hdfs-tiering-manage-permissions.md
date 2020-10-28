@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 126bb1ae7daddbaeb4d0ab72440051807f71cd5c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ef2a1097d07494ca74ed2afe50c93922de83838c
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725827"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257166"
 ---
 # <a name="manage-hdfs-permissions-for-big-data-clusters-2019"></a>Gerenciar permissões do HDFS para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -22,7 +22,7 @@ ms.locfileid: "91725827"
 
 O HDFS como um sistema de arquivos é semelhante aos sistemas de arquivos baseados em Linux que usam POSIX para permissões de arquivo. Além do modelo de permissões POSIX tradicional, o HDFS também dá suporte a ACLs (listas de controle de acesso) do POSIX. Para obter mais informações, confira o artigo [Apache Hadoop sobre ACLs](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29).
 
-As seções a seguir apresentam exemplos de como usar a CLI do `azdata` para gerenciar permissões de arquivo e diretório do HDFS.
+As seções a seguir apresentam exemplos de como usar a [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] para gerenciar permissões de arquivo e diretório do HDFS.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -31,7 +31,7 @@ As seções a seguir apresentam exemplos de como usar a CLI do `azdata` para ger
   
 ## <a name="hdfs-shell"></a>Shell do HDFS
 
-A funcionalidade de shell do `hdfs` no `azdata` permite emitir comandos diretamente em um shell para gerenciar permissões de HDFS em arquivos e diretórios. O mecanismo subjacente usa chamadas WebHdfs para emitir os comandos
+A funcionalidade de shell do `hdfs` no [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] permite emitir comandos diretamente em um shell para gerenciar permissões de HDFS em arquivos e diretórios. O mecanismo subjacente usa chamadas WebHdfs para emitir os comandos
 
 O comando a seguir abrirá o shell.
 
@@ -72,7 +72,7 @@ acl modify: Change completed.
 }
 ```
 
-## <a name="create-a-directory-in-hdfs-using-azdata"></a>Criar um diretório no HDFS usando `azdata`
+## <a name="create-a-directory-in-hdfs-using-azure-data-cli-azdata"></a>Criar um diretório no HDFS usando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 
 Crie um diretório chamado `data` no caminho `/sales`.
 
@@ -110,7 +110,7 @@ azdata bdc hdfs chmod --path /sales/users --permission 1750
 
 ## <a name="setting-acls-on-files-and-directories"></a>Como configurar ACLs em arquivos e diretórios
 
-Para definir ACLs em arquivos e diretórios no HDFS, use os comandos `azdata`.
+Para definir ACLs em arquivos e diretórios no HDFS, use os comandos [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
 Definir ACLs em um diretório e fornecer ao usuário nomeado *`tom`* acesso para ler, gravar e executar ao diretório *`data`* . 
 
@@ -133,6 +133,6 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Referência de `azdata`](../azdata/reference/reference-azdata.md)
+- [Referência de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/reference/reference-azdata.md)
 
 - [O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

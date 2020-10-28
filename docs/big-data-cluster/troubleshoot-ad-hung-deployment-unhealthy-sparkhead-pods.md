@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a51f5efc0c4c9cd2a341efd158b271853c0fb936
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 521efff2d77f2d0b6423b61c9b9b74e507764ff0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898654"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257096"
 ---
 # <a name="ad-mode-deployment-hangs--unhealthy-sparkhead-pods"></a>Travamentos de implantação no modo do AD – pods `sparkhead` não íntegros
 
@@ -101,12 +101,12 @@ Extraia os logs e localize.
 `\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
 
 > [!TIP]
-> Há várias maneiras de coletar os logs. Em vez de copiar os logs com `azdata`, você pode usar um bloco de anotações no Azure Data Studio.
+> Há várias maneiras de coletar os logs. Em vez de copiar os logs com [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], você pode usar um bloco de anotações no Azure Data Studio.
 > No Azure Data Studio, conecte-se ao cluster de Kubernetes e execute um bloco de anotações de solução de problemas apropriado. Estes são exemplos de bloco de anotações:
 >
 > - TSG027 – Observar a implantação de cluster
 > - TSG061 – Obter a parte final de todos os logs de contêiner para os pods no namespace do BDC
-> - TSG001 - Executar copy-logs `azdata`
+> - TSG001 – Executar `azdata copy-logs`
 >
   
 ## <a name="inspect-the-logs"></a>Inspecionar os logs

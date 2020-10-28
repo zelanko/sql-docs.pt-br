@@ -1,7 +1,7 @@
 ---
 title: O que são Extensões de Linguagem do SQL Server?
 titleSuffix: ''
-description: As Extensões de Linguagem é um recurso do SQL Server usado para executar código externo. No SQL Server 2019, há suporte para Java, Python e R. Os dados relacionais podem ser usados no código externo usando a estrutura de extensibilidade.
+description: As Extensões de Linguagem são recursos do SQL Server usados para executar códigos externos. No SQL Server 2019, há suporte para Java, Python e R. Os dados relacionais podem ser empregados no código externo usando a estrutura de extensibilidade.
 author: dphansen
 ms.author: davidph
 ms.date: 10/07/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09d5643b3a39493843adc0ad2da716b7fda1b332
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c4482adb86f9a2f205bd64044a18f342cf3e13c5
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934901"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92154950"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>O que são Extensões de Linguagem do SQL Server?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -42,5 +42,5 @@ As Extensões de Linguagem oferecem várias vantagens:
 
 + Instalar um [runtime personalizado do Python para o SQL Server](../machine-learning/install/custom-runtime-python.md)
 + Instalar um [runtime personalizado do R para o SQL Server](../machine-learning/install/custom-runtime-r.md)
-+ Instalar as [Extensões de Linguagem do SQL Server no Windows](install/install-sql-server-language-extensions-on-windows.md) ou [no Linux](../linux/sql-server-linux-setup-language-extensions.md)
++ Instalar as [Extensões de Linguagem do SQL Server no Windows](install/windows-java.md) ou [no Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
 + Instalar o [SDK de Extensibilidade da Microsoft para Java](how-to/extensibility-sdk-java-sql-server.md)

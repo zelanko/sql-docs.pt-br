@@ -9,18 +9,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725857"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257196"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Definir configurações de implantação para recursos e serviços de cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Começando com um conjunto predefinido de perfis de configuração internos da ferramenta de gerenciamento `azdata`, você pode facilmente modificar as configurações padrão a fim de melhor atender aos seus requisitos de carga de trabalho do BDC. A estrutura dos arquivos de configuração permite que você atualize de forma granular as configurações de cada serviço do recurso.
+Começando com um conjunto predefinido de perfis de configuração internos da ferramenta de gerenciamento [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], você pode facilmente modificar as configurações padrão a fim de melhor atender aos seus requisitos de carga de trabalho do BDC. A estrutura dos arquivos de configuração permite que você atualize de forma granular as configurações de cada serviço do recurso.
 
 Assista a este vídeo de 13 minutos para obter uma visão geral da configuração do cluster de Big Data:
 
@@ -648,7 +648,7 @@ Para desabilitar o contêiner que executa o ElasticSearch para execução no mod
 }
 ```
 
-Você pode editar manualmente o `control.json` e adicionar a seção acima ao `spec` ou pode criar um arquivo de patch `elasticsearch-patch.json` como abaixo e usar a CLI do `azdata` para corrigir o arquivo `control.json`:
+Você pode editar manualmente o `control.json` e adicionar a seção acima ao `spec` ou criar um arquivo de patch `elasticsearch-patch.json` como abaixo e usar a [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] para corrigir o arquivo `control.json`:
 
 ```json
 {
@@ -677,8 +677,8 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Ativar/desativar coleta de métricas de pods e nós
 
-O SQL Server 2019 CU5 habilitou duas opções de recurso para controlar a coleta de métricas de pods e nós. Caso você esteja usando soluções diferentes para monitorar sua infraestrutura de Kubernetes, é possível desligar a coleção de métricas internas para nós de host e pods definindo *allowNodeMetricsCollection* e *allowPodMetricsCollection* como *false* no arquivo de configuração de implantação *control.json*. Para ambientes do OpenShift, essas configurações são definidas como *false* por padrão nos perfis de implantação internos, pois a coleta de métricas de pod e de nó exige capacidades privilegiadas.
-Execute este comando para atualizar os valores dessas configurações em seu arquivo de configuração personalizado usando a CLI *azdata*:
+O SQL Server 2019 CU5 habilitou duas opções de recurso para controlar a coleta de métricas de pods e nós. Caso você esteja usando soluções diferentes para monitorar sua infraestrutura de Kubernetes, é possível desligar a coleção de métricas internas para nós de host e pods definindo *allowNodeMetricsCollection* e *allowPodMetricsCollection* como *false* no arquivo de configuração de implantação *control.json* . Para ambientes do OpenShift, essas configurações são definidas como *false* por padrão nos perfis de implantação internos, pois a coleta de métricas de pod e de nó exige capacidades privilegiadas.
+Execute este comando para atualizar os valores dessas configurações em seu arquivo de configuração personalizado usando a CLI *azdata* :
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"

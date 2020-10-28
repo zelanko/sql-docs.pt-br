@@ -3,21 +3,21 @@ title: Monitorar scripts com relatórios personalizados
 description: Use relatórios personalizados no SSMS (SQL Server Management Studio) para monitorar a execução de scripts externos (do Python e do R), os recursos usados, diagnosticar problemas e ajustar o desempenho nos Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca6070ec0b4558ab907f6945ac57dc9bc9ab5f
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847356"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115278"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Monitorar a execução de script do Python e do R usando relatórios personalizados no SQL Server Management Studio
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Use relatórios personalizados no [SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md) para monitorar a execução de scripts externos (Python e R), os recursos usados, diagnosticar problemas e ajustar o desempenho nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md).
 
@@ -41,6 +41,11 @@ Para usar esses relatórios, siga estas etapas:
 
 1. Baixe os [Relatórios personalizados do SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) para Serviços de Machine Learning do SQL Server no GitHub.
 
+   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   >[!NOTE]
+   > O relatório personalizado **Serviços ML – Configurar Instância** não tem suporte na Instância Gerenciada de SQL do Azure.
+   ::: moniker-end
+
 2. Copie os relatórios para o Management Studio
 
     1. Localize a pasta de relatórios personalizados usada pelo SQL Server Management Studio. Por padrão, os relatórios personalizados são armazenados nessa pasta (em que **user_name** é o seu nome de usuário do Windows):
@@ -55,11 +60,11 @@ Para usar esses relatórios, siga estas etapas:
 
     1. No Management Studio, clique com botão direito do mouse do nó **Databases** para a instância em que você deseja executar os relatórios.
 
-    2. Clique em **relatórios**e, em seguida, clique em **relatórios personalizados**.
+    2. Clique em **relatórios** e, em seguida, clique em **relatórios personalizados** .
 
     3. Na caixa de diálogo **Abrir arquivo** , localize a pasta de relatórios personalizados.
 
-    4. Selecione um dos arquivos RDL baixados e, em seguida, clique em **Abrir**.
+    4. Selecione um dos arquivos RDL baixados e, em seguida, clique em **Abrir** .
 
 ## <a name="reports"></a>Relatórios
 

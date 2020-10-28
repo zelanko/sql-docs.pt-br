@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e3be3a3ea0d3f3b3d452bfea058ff85dd8a9141
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730677"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257242"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Conceitos de segurança do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ Os pontos de extremidade do cluster externo dão suporte à autenticação do AD
 
 Há cinco pontos de entrada para o cluster de Big Data
 
-* Instância mestra – ponto de extremidade TDS para acessar a instância mestra do SQL Server no cluster, usando ferramentas de banco de dados e aplicativos como o SSMS ou o Azure Data Studio. Ao usar comandos do HDFS ou do SQL Server no azdata, a ferramenta se conectará aos outros pontos de extremidade, dependendo da operação.
+* Instância mestra – ponto de extremidade TDS para acessar a instância mestra do SQL Server no cluster, usando ferramentas de banco de dados e aplicativos como o SSMS ou o Azure Data Studio. Ao usar comandos do HDFS ou do SQL Server na [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], a ferramenta se conectará aos outros pontos de extremidade, dependendo da operação.
 
 * Gateway para acessar arquivos HDFS, Spark (Knox) – ponto de extremidade HTTPS para acessar serviços como o webHDFS e o Spark.
 
@@ -59,16 +59,23 @@ Há dois níveis de verificações de autorização no cluster para gerenciar o 
 
 Um cluster de Big Data seguro implica no suporte uniforme e coerente a cenários de autenticação e autorização, tanto no SQL Server quanto no HDFS/Spark. Autenticação é o processo de verificar a identidade de um usuário ou serviço e de garantir que eles sejam quem alegam ser. Autorização refere-se à concessão ou negação de acesso a recursos específicos com base na identidade do usuário solicitante. Esta etapa é executada após um usuário ser identificado por meio da autenticação.
 
-A autorização no contexto de Big Data geralmente é executada por meio de ACLs (listas de controle de acesso), que associam identidades do usuário a permissões específicas. O HDFS dá suporte à autorização limitando o acesso a APIs de serviço, arquivos HDFS e execução de trabalhos.
+A autorização no contexto de Big Data é executada por meio de ACLs (listas de controle de acesso), que associam identidades de usuário a permissões específicas. O HDFS dá suporte à autorização limitando o acesso a APIs de serviço, arquivos HDFS e execução de trabalhos.
 
-## <a name="encryption-and-other-security-mechanisms"></a>Criptografia e outros mecanismos de segurança
+## <a name="encryption-in-flight-and-other-security-mechanisms"></a>Criptografia em trânsito e outros mecanismos de segurança
 
 A criptografia da comunicação entre clientes com os pontos de extremidade externos, bem como entre componentes dentro do cluster, é protegida com o TLS/SSL, usando certificados.
 
 Toda a comunicação do SQL Server com o SQL Server, como a instância mestra do SQL que se comunica com um pool de dados, é protegida usando logons do SQL.
 
 > [!IMPORTANT]
->  Os Clusters de Big Data usam etcd para armazenar as credenciais. Como prática recomendada é necessário garantir que o cluster do Kubernetes esteja configurado para usar a criptografia etcd em repouso. Por padrão, os segredos armazenados em etcd serão descriptografados. A documentação do Kubernetes fornece detalhes sobre esta tarefa administrativa: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ e https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+>  Os Clusters de Big Data usam `etcd` para armazenar as credenciais. Como prática recomendada, é necessário garantir que o cluster do Kubernetes esteja configurado para usar a criptografia `etcd` em repouso. Por padrão, os segredos armazenados em `etcd` serão descriptografados. A documentação do Kubernetes fornece detalhes sobre esta tarefa administrativa: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ e https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
+## <a name="data-encryption-at-rest"></a>Criptografia de dados em repouso
+
+A capacidade de criptografia em repouso de Clusters de Big Data do SQL Server dá suporte ao cenário principal de criptografia de nível de aplicativo para os componentes do SQL Server e do HDFS. Siga o artigo [Guia de configuração e conceitos de criptografia em repouso](encryption-at-rest-concepts-and-configuration.md) para obter um guia abrangente de uso dos recursos.
+
+> [!IMPORTANT]
+> A criptografia de volume é recomendada para todas as implantações de Cluster de Big Data do SQL Server. Os volumes de armazenamento fornecidos pelo cliente configurados em clusters do Kubernetes também devem ser criptografados, como uma abordagem abrangente da criptografia de dados em repouso. A capacidade de criptografia em repouso do Cluster de Big Data do SQL Server é uma camada de segurança adicional, fornecendo criptografia em nível de aplicativo aos arquivos de log e dados do SQL Server e suporte à zona de criptografia do HDFS.
 
 
 ## <a name="basic-administrator-login"></a>Logon de administrador básico
