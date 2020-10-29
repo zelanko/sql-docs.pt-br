@@ -1802,7 +1802,7 @@
           href: relational-databases/stored-procedures/specify-parameters.md
         - name: Conceder permissões
           href: relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md
-        - name: Parâmetros
+        - name: parâmetros
           href: relational-databases/stored-procedures/parameters.md
         - name: Propriedades
           href: relational-databases/stored-procedures/stored-procedure-properties-general-page.md
@@ -2907,7 +2907,7 @@
         - name: Comandos
           href: relational-databases/native-client-ole-db-commands/commands.md
           items:
-            - name: Parâmetros
+            - name: parâmetros
               href: relational-databases/native-client-ole-db-commands/command-parameters.md
             - name: Sintaxe
               href: relational-databases/native-client-ole-db-commands/command-syntax.md
@@ -7143,7 +7143,7 @@
             - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
             - name: Microsoft Q&A >>
-              href: 'https://https://docs.microsoft.com/answers/products/sql-server'
+              href: 'https://docs.microsoft.com/answers/products/sql-server'
             - name: Enviar comentários >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: Reddit >>
@@ -7996,8 +7996,6 @@
           href: tools/profiler-utility.md
         - name: aplicativo sqlagent90
           href: tools/sqlagent90-application.md
-        - name: sqlcmd
-          href: tools/sqlcmd-utility.md
         - name: SQLdiag
           href: tools/sqldiag-utility.md
         - name: sqlmaint
@@ -8291,6 +8289,8 @@
               href: tools/configuration-manager/viewing-the-windows-application-log.md
     - name: SQLCMD
       items:
+        - name: Visão geral do sqlcmd
+          href: tools/sqlcmd-utility.md
         - name: Iniciar o Utilitário
           href: ssms/scripting/sqlcmd-start-the-utility.md
         - name: Usar o Utilitário
