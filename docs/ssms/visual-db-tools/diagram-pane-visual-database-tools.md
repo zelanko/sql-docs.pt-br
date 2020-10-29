@@ -16,12 +16,12 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3c468994dcfa80b1db2ee8c6c49dd881dd7bcf85
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eaba2d8acd2a0443bfe2ed97fc53b50fcb667629
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417802"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439380"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Painel de Diagrama (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,27 +39,27 @@ Cada tabela ou objeto com valor de tabela é exibido como uma janela separada no
   
 ## <a name="options"></a>Opções  
 **Tabelas**  
-Lista as tabelas que você pode adicionar ao painel Diagrama. Para adicionar uma tabela, selecione-a e clique em **Adicionar**. Para adicionar várias tabelas de uma vez, selecione-as e clique em **Adicionar**.  
+Lista as tabelas que você pode adicionar ao painel Diagrama. Para adicionar uma tabela, selecione-a e clique em **Adicionar** . Para adicionar várias tabelas de uma vez, selecione-as e clique em **Adicionar** .  
   
 **Exibições**  
-Lista as exibições que você pode adicionar ao painel Diagrama. Para adicionar um modo de exibição, selecione-o e clique em **Adicionar**. Para adicionar vários modos de exibição de uma vez, selecione-os e clique em **Adicionar**.  
+Lista as exibições que você pode adicionar ao painel Diagrama. Para adicionar um modo de exibição, selecione-o e clique em **Adicionar** . Para adicionar vários modos de exibição de uma vez, selecione-os e clique em **Adicionar** .  
   
 **Funções**  
-Lista as funções definidas pelo usuário que você pode adicionar ao painel Diagrama. Para adicionar uma função, selecione-a e clique em **Adicionar**. Para adicionar várias funções de uma vez, selecione-as em clique em **Adicionar**.  
+Lista as funções definidas pelo usuário que você pode adicionar ao painel Diagrama. Para adicionar uma função, selecione-a e clique em **Adicionar** . Para adicionar várias funções de uma vez, selecione-as em clique em **Adicionar** .  
   
 **Tabelas Locais**  
 Lista as tabelas criadas por consultas em vez daquelas que pertencem ao banco de dados.  
   
 **Sinônimos**  
-Lista os sinônimos que você pode adicionar ao painel Diagrama. Para adicionar um sinônimo, selecione-o e clique em **Adicionar**. Para adicionar vários sinônimos de uma vez, selecione-os em clique em **Adicionar**.  
+Lista os sinônimos que você pode adicionar ao painel Diagrama. Para adicionar um sinônimo, selecione-o e clique em **Adicionar** . Para adicionar vários sinônimos de uma vez, selecione-os em clique em **Adicionar** .  
   
 |ícone|Tipo de objeto|  
 |--------|---------------|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi1.gif "Ícone de Ferramentas de Banco de Dados Visual")|Tabela|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi2.gif "Ícone de Ferramentas de Banco de Dados Visual")|Consulta ou Exibição|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi3.gif "Ícone de Ferramentas de Banco de Dados Visual")|Tabela vinculada|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dvudficon.gif "Ícone de Ferramentas de Banco de Dados Visual")|Função definida pelo usuário|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi5.gif "Ícone de Ferramentas de Banco de Dados Visual")|Exibição vinculada|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi1.gif":::|Tabela|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi2.gif":::|Consulta ou Exibição|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi3.gif":::|Tabela vinculada|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dvudficon.gif":::|Função definida pelo usuário|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi5.gif":::|Exibição vinculada|  
   
 Cada retângulo mostra as colunas de dados da tabela ou objeto com valor de tabela. As caixas de seleção e os símbolos são exibidos ao lado dos nomes das colunas para indicar como as colunas são usadas na consulta. As dicas de ferramentas exibem informações como tipo de dados e tamanho das colunas.  
   
@@ -67,11 +67,11 @@ A tabela a seguir lista as caixas de seleção e os símbolos usados no retângu
   
 |Caixa de seleção ou símbolo|Descrição|  
 |-----------------------|---------------|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi7.gif "Ícone de Ferramentas de Banco de Dados Visual")<br /><br />![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi8.gif "Ícone de Ferramentas de Banco de Dados Visual")<br /><br />![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbi9.gif "Ícone de Ferramentas de Banco de Dados Visual")<br /><br />![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbia.gif "Ícone de Ferramentas de Banco de Dados Visual")|Especifica se uma coluna de dados é exibida no conjunto de resultados da consulta (consulta  Select) ou se é usada em uma consulta Update, Insert From, Make Table ou Insert Into. Selecione a coluna a ser adicionada aos resultados. Se **(Todas as Colunas)** for selecionado, todas as colunas de dados serão exibidas na saída.<br /><br />O ícone usado com a caixa de seleção é alterado de acordo com o tipo de consulta que você está criando. Ao criar uma consulta Excluir, não podem ser selecionadas colunas individuais.|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbib.gif "Ícone de Ferramentas de Banco de Dados Visual")<br /><br />![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbic.gif "Ícone de Ferramentas de Banco de Dados Visual")|Indica que a coluna de dados está sendo usada para ordenar os resultados da consulta (faz parte de uma cláusula ORDER BY). O ícone é exibido como A-Z se a ordem de classificação for crescente ou Z-A se ordem de classificação for decrescente.|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbid.gif "Ícone de Ferramentas de Banco de Dados Visual")|Indica que a coluna de dados está sendo usada para criar um conjunto de resultados agrupado (faz parte de uma cláusula GROUP BY) em uma consulta de agregação.|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbie.gif "Ícone de Ferramentas de Banco de Dados Visual")|Indica que a coluna de dados está incluída em um critério de pesquisa da consulta (faz parte de um cláusula WHERE ou HAVING).|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbif.gif "Ícone de Ferramentas de Banco de Dados Visual")|Indica que os conteúdos da coluna de dados estão sendo resumidos para saída (são incluídos em uma função de agregação SUM, AVG ou outra função de agregação).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi7.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi8.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi9.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbia.gif":::|Especifica se uma coluna de dados é exibida no conjunto de resultados da consulta (consulta  Select) ou se é usada em uma consulta Update, Insert From, Make Table ou Insert Into. Selecione a coluna a ser adicionada aos resultados. Se **(Todas as Colunas)** for selecionado, todas as colunas de dados serão exibidas na saída.<br /><br />O ícone usado com a caixa de seleção é alterado de acordo com o tipo de consulta que você está criando. Ao criar uma consulta Excluir, não podem ser selecionadas colunas individuais.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbib.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbic.gif":::|Indica que a coluna de dados está sendo usada para ordenar os resultados da consulta (faz parte de uma cláusula ORDER BY). O ícone é exibido como A-Z se a ordem de classificação for crescente ou Z-A se ordem de classificação for decrescente.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbid.gif":::|Indica que a coluna de dados está sendo usada para criar um conjunto de resultados agrupado (faz parte de uma cláusula GROUP BY) em uma consulta de agregação.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbie.gif":::|Indica que a coluna de dados está incluída em um critério de pesquisa da consulta (faz parte de um cláusula WHERE ou HAVING).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbif.gif":::|Indica que os conteúdos da coluna de dados estão sendo resumidos para saída (são incluídos em uma função de agregação SUM, AVG ou outra função de agregação).|  
   
 > [!NOTE]  
 > O Designer de Consulta e Exibição não exibirá colunas de dados para uma tabela ou objeto com valor de tabela se você não tiver direitos de acesso suficientes às mesmas ou se o driver do banco de dados não puder retornar informações sobre as mesmas. Nesses casos, o Designer de Consulta e Exibição exibirá somente uma barra de título para a tabela ou objeto com estrutura de tabela.  
@@ -83,19 +83,19 @@ A forma do ícone no meio da linha de junção indica como são unidas as tabela
   
 |Ícone de linha de junção|Descrição|  
 |------------------|---------------|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbih.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção interna (criada usando o sinal de igual).|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbii.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção interna baseada no operador "maior que". (O operador exibido no ícone da linha de junção reflete o operador usado na junção.)|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbij.gif "Ícone de Ferramentas de Banco de Dados Visual")|A junção externa em que todas as linhas da tabela representada à esquerda serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbik.gif "Ícone de Ferramentas de Banco de Dados Visual")|A junção externa em que todas as linhas da tabela representada à direita serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbil.gif "Ícone de Ferramentas de Banco de Dados Visual")|A junção externa completa em que todas as linhas de ambas as tabelas serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|Junção interna (criada usando o sinal de igual).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|Junção interna baseada no operador "maior que". (O operador exibido no ícone da linha de junção reflete o operador usado na junção.)|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|A junção externa em que todas as linhas da tabela representada à esquerda serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|A junção externa em que todas as linhas da tabela representada à direita serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|A junção externa completa em que todas as linhas de ambas as tabelas serão incluídas, mesmo se não tiverem correspondências na tabela relacionada.|  
   
 Os ícones nas extremidades da linha de junção indicam o tipo de junção. A tabela a seguir lista os tipos de junções e os ícones que podem ser exibidos nas extremidades da linha de junção.  
   
 |Ícone nas extremidades da linha de junção|Descrição|  
 |-----------------------------|---------------|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbim.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção uma para uma|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbin.gif "Ícone de Ferramentas de Banco de Dados Visual")|Junção uma para muitas|  
-|![Ícone de Ferramentas de Banco de Dados Visual](../../ssms/visual-db-tools/media/dv3wbio.gif "Ícone de Ferramentas de Banco de Dados Visual")|O Designer de Consulta e Exibição não pode determinar o tipo de junção|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|Junção uma para uma|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|Junção uma para muitas|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif ":::|O Designer de Consulta e Exibição não pode determinar o tipo de junção|  
   
 ## <a name="see-also"></a>Consulte Também  
 [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

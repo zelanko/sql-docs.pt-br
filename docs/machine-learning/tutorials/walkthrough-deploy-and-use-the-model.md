@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193638"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793773"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implantar o modelo do R e usá-lo no SQL Server (passo a passo)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ Este artigo demonstra as duas maneiras mais comuns de usar um modelo em pontuaç
 
 ## <a name="batch-scoring"></a>Pontuação do lote
 
-Crie um procedimento armazenado, *PredictTipBatchMode*, que gera várias previsões, passando uma consulta ou tabela SQL como entrada. É retornada uma tabela de resultados, que você pode inserir diretamente em uma tabela ou gravar em um arquivo.
+Crie um procedimento armazenado, *PredictTipBatchMode* , que gera várias previsões, passando uma consulta ou tabela SQL como entrada. É retornada uma tabela de resultados, que você pode inserir diretamente em uma tabela ou gravar em um arquivo.
 
 - Obtém um conjunto de dados de entrada como uma consulta SQL
 - Chama o modelo de regressão logística treinado salvo na lição anterior
@@ -74,11 +74,11 @@ Crie um procedimento armazenado, *PredictTipBatchMode*, que gera várias previs�
 
     + Você usa uma instrução SELECT para chamar o modelo armazenado de uma tabela SQL. O modelo é recuperado da tabela como dados **varbinary(max)** , armazenado na variável SQL _\@lmodel2_ e passado como o parâmetro *mod* para o procedimento armazenado do sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Os dados usados como entradas para pontuação são definidos como uma consulta SQL e armazenados como uma cadeia de caracteres na variável SQL _\@input_. À medida que os dados são recuperados do banco de dados, eles são armazenados em uma estrutura de dados chamada *InputDataSet*, que é apenas o nome padrão dos dados de entrada para o procedimento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Você pode definir outro nome de variável, se necessário, usando o parâmetro _\@input_data_1_name_.
+    + Os dados usados como entradas para pontuação são definidos como uma consulta SQL e armazenados como uma cadeia de caracteres na variável SQL _\@input_ . À medida que os dados são recuperados do banco de dados, eles são armazenados em uma estrutura de dados chamada *InputDataSet* , que é apenas o nome padrão dos dados de entrada para o procedimento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Você pode definir outro nome de variável, se necessário, usando o parâmetro _\@input_data_1_name_ .
 
-    + Para gerar as pontuações, o procedimento armazenado chama a função rxPredict da biblioteca **RevoScaleR**.
+    + Para gerar as pontuações, o procedimento armazenado chama a função rxPredict da biblioteca **RevoScaleR** .
 
-    + O valor retornado, *Pontuação*, é a probabilidade, considerando o modelo, de o motorista receber uma gorjeta. Como opção, você poderia facilmente aplicar algum tipo de filtro aos valores retornados para categorizá-los em grupos "gorjeta" e "sem gorjeta".  Por exemplo, uma probabilidade inferior a 0,5 significa que uma gorjeta é improvável.
+    + O valor retornado, *Pontuação* , é a probabilidade, considerando o modelo, de o motorista receber uma gorjeta. Como opção, você poderia facilmente aplicar algum tipo de filtro aos valores retornados para categorizá-los em grupos "gorjeta" e "sem gorjeta".  Por exemplo, uma probabilidade inferior a 0,5 significa que uma gorjeta é improvável.
   
 2.  Para chamar o procedimento armazenado no modo de lote, você define a consulta obrigatória como entrada para o procedimento armazenado. Abaixo está a consulta SQL, que pode ser executada no SSMS para verificar se ela funciona.
 
@@ -192,13 +192,13 @@ O procedimento armazenado *PredictTipSingleMode* demonstra essa abordagem. Ele u
     END
     ```
 
-2. No SQL Server Management Studio, você pode usar o procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (ou **EXECUTE**) para chamar o procedimento armazenado e passar as entradas necessárias. Por exemplo, tente executar esta instrução no Management Studio:
+2. No SQL Server Management Studio, você pode usar o procedimento [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (ou **EXECUTE** ) para chamar o procedimento armazenado e passar as entradas necessárias. Por exemplo, tente executar esta instrução no Management Studio:
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    Os valores passados aqui referem-se, respectivamente, às variáveis _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ e _dropoff\_longitude_.
+    Os valores passados aqui referem-se, respectivamente, às variáveis _passenger\_count_ , _trip_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ e _dropoff\_longitude_ .
 
 3. Para executar essa mesma chamada do código de R, você simplesmente define uma variável de R que contenha a chamada de procedimento armazenado inteiro, como este:
 
@@ -206,9 +206,9 @@ O procedimento armazenado *PredictTipSingleMode* demonstra essa abordagem. Ele u
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    Os valores passados aqui referem-se, respectivamente, às variáveis _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ e _dropoff\_longitude_.
+    Os valores passados aqui referem-se, respectivamente, às variáveis _passenger\_count_ , _trip\_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ e _dropoff\_longitude_ .
 
-4. Chame `sqlQuery` (do pacote **RODBC**) e passe a cadeia de conexão junto com a variável de cadeia de caracteres que contêm a chamada de procedimento armazenado.
+4. Chame `sqlQuery` (do pacote **RODBC** ) e passe a cadeia de conexão junto com a variável de cadeia de caracteres que contêm a chamada de procedimento armazenado.
 
     ```R
     # predict with stored procedure in single mode
@@ -230,4 +230,4 @@ Também pode ser útil explorar estes exemplos e recursos adicionais:
 + [Cenários de ciência de dados e modelos da solução](data-science-scenarios-and-solution-templates.md)
 + [Análise avançada no banco de dados](r-taxi-classification-introduction.md)
 + [Guias de instruções do Machine Learning Server](/machine-learning-server/r/how-to-introduction)
-+ [Recursos adicionais do Machine Learning Server](//machine-learning-server/resources-more)
++ [Recursos adicionais do Machine Learning Server](/machine-learning-server/resources-more)

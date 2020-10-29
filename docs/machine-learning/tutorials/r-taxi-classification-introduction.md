@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: Nesta série de tutoriais em cinco partes, você aprenderá como incorporar o código R em procedimentos armazenados do SQL Server e funções do T-SQL com o aprendizado de máquina do SQL para prever tarifas de táxi em NYC usando a classificação binária.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f9f1b43b9c49cebaed706bf3c8448881c4df46
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173589"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412562"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Tutorial do R: prever as tarifas de táxi de Nova York com a classificação binária
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -73,7 +73,11 @@ Na [parte cinco](r-taxi-classification-deploy-model.md), você aprenderá a oper
 
 + [Conceder permissões para executar scripts do Python](../security/user-permission.md)
 
-+ Restaurar o [Banco de dados de demonstração de táxi de Nova York](demo-data-nyctaxi-in-sql.md)
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
++ A partir do SQL Server 2019, o mecanismo de isolamento exige que você conceda as permissões apropriadas ao diretório em que o arquivo de gráfico está armazenado. Confira mais informações sobre como definir essas permissões na [seção Permissões de arquivo em SQL Server 2019 no Windows: alterações de isolamento nos Serviços de Machine Learning](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
+
++ Restaurar o [Banco de dados de demonstração de Táxi de Nova York](demo-data-nyctaxi-in-sql.md)
 
 Todas as tarefas podem ser feitas usando procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] no Azure Data Studio ou no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 

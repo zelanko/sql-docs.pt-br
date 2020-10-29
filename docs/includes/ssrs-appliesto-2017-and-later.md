@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: 867199e9e505077a749246a5ad57bca20d81d0ac
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: d54a04288bd0d0369fa7a1430b9ae195313c1707
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80501781"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92438282"
 ---
- ![Sim](media/yes-icon.png)SQL Server Reporting Services (2017 e posteriores)
+ :::image type="icon" source="media/yes-icon.png":::SQL Server Reporting Services (2017 e posteriores)

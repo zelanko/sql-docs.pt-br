@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0bd60864615e1ffbf2aecac5eb41efa86407ba68
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988002"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734377"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Conectar as instâncias do SQL Server com o Azure Arc em escala
 
@@ -79,10 +79,10 @@ Cada computador precisa ter o [Azure PowerShell](/powershell/azure/install-az-ps
 
 Cada computador de destino precisa ter a [CLI do Azure instalada](/cli/azure/install-azure-cli). O script de registro entrará automaticamente no Azure com as credenciais da entidade de serviço se elas tiverem sido fornecidas e se não houver nenhum outro usuário já conectado. Siga as etapas a seguir para conectar as instâncias do SQL Server em vários computadores Linux.
 
-1. Crie a entidade de serviço usando o comando ['az ad sp create-for-rbac'](/cli/azure/ad/sp.md#az_ad_sp_create_for_rbac). 
+1. Crie a entidade de serviço usando o comando ['az ad sp create-for-rbac'](/cli/azure/ad/sp#az_ad_sp_create_for_rbac).
 
    ```azurecli-interactive
-   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>    
+   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
    ```
 
    ```output

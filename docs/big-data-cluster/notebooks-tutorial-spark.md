@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32cdcca2e4052374e7f26d59a3caf35f200cd47d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6961dd76f35316dbd3923bb24849011a20f184c0
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725794"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793733"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Executar um notebook de exemplo usando o Spark
 
@@ -44,7 +44,7 @@ Use as instruções a seguir para carregar o arquivo de notebook de exemplo **sp
 1. Execute o seguinte comando de **rotação** para baixar o arquivo do notebook do GitHub:
 
    ```bash
-   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
+   curl https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb -o transform-csv-files.ipynb
    ```
 
 ## <a name="open-the-notebook"></a>Abrir o notebook
@@ -53,11 +53,11 @@ As etapas a seguir mostram como abrir o arquivo do notebook no Azure Data Studio
 
 1. No Azure Data Studio, conecte-se à instância mestre do cluster de Big Data. Para obter mais informações, confira [Conectar-se a um cluster de Big Data](connect-to-big-data-cluster.md).
 
-1. Clique duas vezes na conexão do gateway HDFS/Spark na janela **Servidores**. Em seguida, selecione **Abrir Notebook**.
+1. Clique duas vezes na conexão do gateway HDFS/Spark na janela **Servidores** . Em seguida, selecione **Abrir Notebook** .
 
    ![Abrir notebook](media/notebook-tutorial-spark/azure-data-studio-open-notebook.png)
 
-1. Aguarde até que o **Kernel** e o contexto de destino (**Anexar a**) sejam preenchidos. Defina o **Kernel** como **PySpark3** e defina **Anexar a** como o endereço IP do seu ponto de extremidade do cluster de Big Data.
+1. Aguarde até que o **Kernel** e o contexto de destino ( **Anexar a** ) sejam preenchidos. Defina o **Kernel** como **PySpark3** e defina **Anexar a** como o endereço IP do seu ponto de extremidade do cluster de Big Data.
 
    ![Definir o kernel e Anexar a](media/notebook-tutorial-spark/set-kernel-and-attach-to.png)
 

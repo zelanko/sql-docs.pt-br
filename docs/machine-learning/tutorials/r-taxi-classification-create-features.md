@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: Na terceira parte desta série de tutoriais em cinco partes, você usará as funções do T-SQL para criar e armazenar recursos de dados de exemplo com o aprendizado de máquina do SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 25f61771524d170ade9914605916c6f2cffc6d3b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193698"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412568"
 ---
 # <a name="r-tutorial-create-data-features"></a>Tutorial do R: Criar recursos de dados
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,11 +40,11 @@ Na [parte cinco](./python-taxi-classification-deploy-model.md), você aprenderá
 
 ## <a name="about-feature-engineering"></a>Sobre a engenharia de recursos
 
-Após várias rodadas de exploração de dados, você reuniu algumas ideias sobre os dados e está pronto para passar para a *engenharia de recursos*. Esse processo de criação de recursos significativos com base nos dados brutos é uma etapa crítica para a criação de modelos analíticos.
+Após várias rodadas de exploração de dados, você reuniu algumas ideias sobre os dados e está pronto para passar para a *engenharia de recursos* . Esse processo de criação de recursos significativos com base nos dados brutos é uma etapa crítica para a criação de modelos analíticos.
 
 Neste conjunto de dados, os valores de distância baseiam-se na distância do medidor relatado e não representam necessariamente a distância geográfica nem a distância real percorrida. Portanto, você precisará calcular a distância direta entre os pontos de embarque e desembarque de passageiros, usando as coordenadas disponíveis no conjunto de dados NYC Taxi de origem. Você pode fazer isso usando a [fórmula de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) em uma função personalizada [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
-Você usará uma função personalizada do T-SQL, _fnCalculateDistance_, para calcular a distância usando a fórmula de Haversine e usará uma segunda função personalizada do T-SQL, _fnEngineerFeatures_, para criar uma tabela que contém todos os recursos.
+Você usará uma função personalizada do T-SQL, _fnCalculateDistance_ , para calcular a distância usando a fórmula de Haversine e usará uma segunda função personalizada do T-SQL, _fnEngineerFeatures_ , para criar uma tabela que contém todos os recursos.
 
 Em linhas gerais, o processo é o seguinte:
 
@@ -58,9 +58,9 @@ Em linhas gerais, o processo é o seguinte:
 
 A função _fnCalculateDistance_ deve ter sido baixada e registrada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte da preparação para este tutorial. Reserve um minuto para examinar o código.
   
-1. No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programação**, **Funções** e **Funções de valor escalar**.   
+1. No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programação** , **Funções** e **Funções de valor escalar** .   
 
-2. Clique com o botão direito do mouse em _fnCalculateDistance_e selecione **Modificar** para abrir o script [!INCLUDE[tsql](../../includes/tsql-md.md)] em uma nova janela de consulta.
+2. Clique com o botão direito do mouse em _fnCalculateDistance_ e selecione **Modificar** para abrir o script [!INCLUDE[tsql](../../includes/tsql-md.md)] em uma nova janela de consulta.
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
@@ -92,9 +92,9 @@ A função _fnCalculateDistance_ deve ter sido baixada e registrada no [!INCLUDE
 
 ## <a name="generate-the-features-using-_fnengineerfeatures_"></a>Gere os recursos usando _fnEngineerFeatures_
 
-Para adicionar os valores calculados a uma tabela que pode ser usada para treinar o modelo, você usará outra função, _fnEngineerFeatures_. A nova função chama a função do T-SQL criada anteriormente, _fnCalculateDistance_, para obter a distância direta entre os locais de embarque e desembarque de passageiros. 
+Para adicionar os valores calculados a uma tabela que pode ser usada para treinar o modelo, você usará outra função, _fnEngineerFeatures_ . A nova função chama a função do T-SQL criada anteriormente, _fnCalculateDistance_ , para obter a distância direta entre os locais de embarque e desembarque de passageiros. 
 
-1. Reserve um minuto para examinar a função personalizada do T-SQL no o código, _fnEngineerFeatures_, que deve ter sido criada como parte da preparação para esse passo a passo.
+1. Reserve um minuto para examinar a função personalizada do T-SQL no o código, _fnEngineerFeatures_ , que deve ter sido criada como parte da preparação para esse passo a passo.
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
