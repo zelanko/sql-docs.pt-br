@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 438bb53d76763ecb7179638591f0353cb1bedf6f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 7f95a343074ce2fb9f7f54c3121b0db6beafe34d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891886"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679232"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configurar Espaços de Armazenamento com um cache de write-back de NVDIMM-N
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91891886"
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Get-PhysicalDisk](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
+ ![Captura de tela de uma janela do Windows PowerShell mostrando a saída do cmdlet Get-PhysicalDisk.](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
   
 > [!NOTE]  
 >  Com dispositivos NVDIMM-N, você não precisa mais selecionar especificamente os dispositivos que podem ser destinos do cache de write-back.  
@@ -47,7 +47,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Selecionar FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Selecionar FriendlyName")  
+ ![Captura de tela de uma janela do Windows PowerShell mostrando a saída do cmdlet $pd.](../../relational-databases/performance/media/select-friendlyname.png "Selecionar FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>Criando o pool de armazenamento  
  Com a variável $pd que contém PhysicalDisks, é fácil criar o pool de armazenamento usando o cmdlet New-StoragePool do PowerShell.  
@@ -56,7 +56,7 @@ $pd | Select FriendlyName, MediaType, BusType
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
- ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
+ ![Captura de tela de uma janela do Windows PowerShell mostrando a saída do cmdlet New-StoragePool.](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
 ## <a name="creating-the-virtual-disk-and-volume"></a>Criando o disco virtual e o volume  
  Agora que um pool foi criado, a próxima etapa é criar um disco virtual e formatá-lo. Nesse caso, apenas um disco virtual será criado e o cmdlet New-Volume do PowerShell poderá ser usado para simplificar esse processo:  
@@ -65,15 +65,15 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
 New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
- ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
+ ![Captura de tela de uma janela do Windows PowerShell mostrando a saída do cmdlet New-Volume.](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
  O disco virtual foi criado, inicializado e formatado com NTFS. A captura de tela abaixo mostra que ele tem um tamanho de 300 GB e um tamanho de cache de gravação de 1 GB, que será hospedado nos NVDIMM-Ns.  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Captura de tela de uma janela do Windows PowerShell mostrando a saída do cmdlet Get-VirtualDisk.](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  Agora você pode exibir esse novo volume visível em seu servidor. Agora você pode usar essa unidade para o log de transações do SQL Server.  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![Captura de tela de uma janela do Explorador de Arquivos na página Este Computador mostrando a unidade Log_Space.](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## <a name="see-also"></a>Consulte Também  
  [Espaços de Armazenamento do Windows no Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867939"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679253"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erros comuns de Transparent Data Encryption com chaves gerenciadas pelo cliente no Azure Key Vault
 
@@ -28,13 +28,13 @@ ms.locfileid: "91867939"
 Este artigo descreve como identificar e resolver os problemas de acesso de chave do Azure Key Vault que fizeram com que um banco de dados configurado para usar [TDE (Transparent Data Encryption) com chaves gerenciadas pelo cliente no Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) se torne inacessível.
 
 ## <a name="introduction"></a>Introdução
-Quando o TDE está configurado para usar uma chave gerenciada pelo cliente no Azure Key Vault, o acesso contínuo a esse Protetor de TDE é necessário para que o banco de dados permaneça online.  Se o servidor SQL lógico perder o acesso ao protetor de TDE gerenciado pelo cliente no Azure Key Vault, um banco de dados começará a negar todas as conexões com a mensagem de erro adequada e alterará seu estado para *Inacessível* no portal do Azure.
+Quando o TDE está configurado para usar uma chave gerenciada pelo cliente no Azure Key Vault, o acesso contínuo a esse Protetor de TDE é necessário para que o banco de dados permaneça online.  Se o SQL Server lógico perder o acesso ao protetor de TDE gerenciado pelo cliente no Azure Key Vault, um banco de dados começará a negar todas as conexões com a mensagem de erro adequada e alterará o estado dele para *Inacessível* no portal do Azure.
 
 Durante as primeiras 8 horas, se o problema subjacente de acesso à chave do Azure Key Vault for resolvido, o banco de dados será reparado e colocado online automaticamente. Isso significa que para todos os cenários de interrupção de rede intermitente e temporário não é necessária ação do usuário, e o banco de dados será colocado online automaticamente. Na maioria dos casos, a ação do usuário é necessária para resolver o problema subjacente de acesso à chave do cofre de chaves. 
 
 Se um banco de dados inacessível não for mais necessário, ele poderá ser excluído imediatamente para interromper os custos. Todas as outras ações no banco de dados não são permitidas até que o acesso à chave do Azure Key Vault tenha sido restaurado e o banco de dados fique novamente online. A alteração da opção de TDE de chaves gerenciadas pelo cliente para chaves gerenciadas pelo servidor também não é possível enquanto um banco de dados criptografado com chaves gerenciadas pelo cliente está inacessível. Isso é necessário para proteger os dados contra o acesso não autorizado, enquanto as permissões para o protetor de TDE foram revogadas. 
 
-Depois que um banco de dados ficar inacessível por mais de 8 horas, ele não será mais reparado automaticamente. Se o acesso necessário à chave do cofre de chaves do Azure for restaurado após esse período, você deverá revalidar o acesso à chave manualmente para colocar novamente o banco de dados online. Nesse caso, colocar novamente o banco de dados online pode demorar, dependendo do tamanho do banco de dados. Depois que o banco de dados estiver novamente online, as configurações definidas anteriormente, como o [grupo de failover](/azure/sql-database/sql-database-auto-failover-group), histórico de PITR e todas as marcas **serão perdidas**. Portanto, é recomendável implementar um sistema de notificação usando [Grupos de Ações](/azure/azure-monitor/platform/action-groups) que permitem estar ciente e tratar os problemas subjacentes do cofre de chaves assim que possível. 
+Depois que um banco de dados ficar inacessível por mais de 8 horas, ele não será mais reparado automaticamente. Se o acesso necessário à chave do cofre de chaves do Azure for restaurado após esse período, você deverá revalidar o acesso à chave manualmente para colocar novamente o banco de dados online. Nesse caso, colocar novamente o banco de dados online pode demorar, dependendo do tamanho do banco de dados. Depois que o banco de dados estiver novamente online, as configurações definidas anteriormente, como o [grupo de failover](/azure/sql-database/sql-database-auto-failover-group), histórico de PITR e todas as marcas **serão perdidas** . Portanto, é recomendável implementar um sistema de notificação usando [Grupos de Ações](/azure/azure-monitor/platform/action-groups) que permitem estar ciente e tratar os problemas subjacentes do cofre de chaves assim que possível. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erros comuns que fazem com que os bancos de dados se tornem inacessíveis
 
@@ -80,7 +80,7 @@ Use o cmdlet ou o comando a seguir para configurar uma AppId (identidade do Azur
 
 - CLI do Azure: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) com a opção `--assign_identity`.
 
-No portal do Azure, vá até o cofre de chaves e depois às **Políticas de acesso**. Conclua estas etapas: 
+No portal do Azure, vá até o cofre de chaves e depois às **Políticas de acesso** . Conclua estas etapas: 
 
  1. Use o botão **Adicionar Novo** para adicionar a AppId ao servidor criado na etapa anterior. 
  1. Atribua as seguintes permissões de chave: Obter, Encapsular e Desencapsular 
@@ -159,9 +159,9 @@ Como identificar o URI da chave e o cofre de chaves:
 
 Confirme se a instância lógica do SQL Server tem permissões para o cofre de chaves e se as permissões estão corretas para acessar a chave:
 
-- No portal do Azure, vá até o cofre de chaves > **Políticas de acesso**. Localize a AppId da instância lógica do SQL Server.  
+- No portal do Azure, vá até o cofre de chaves > **Políticas de acesso** . Localize a AppId da instância lógica do SQL Server.  
 - Se a AppId estiver presente, verifique se ela tem as seguintes permissões de chave: Obter, Encapsular e Desencapsular.
-- Se a AppId não estiver presente, adicione-a usando o botão **Adicionar Novo**. 
+- Se a AppId não estiver presente, adicione-a usando o botão **Adicionar Novo** . 
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Obter o status de TDE do Log de atividades
 
