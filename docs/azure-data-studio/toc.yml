@@ -7,7 +7,7 @@
 - name: Visão geral
   items:
     - name: Azure Data Studio
-      href: what-is.md
+      href: what-is-azure-data-studio.md
 - name: Inícios rápidos
   items:
     - name: Conectar-se ao SQL Server e consultá-lo
