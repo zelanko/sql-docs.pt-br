@@ -4,22 +4,31 @@ description: Saiba mais sobre as alterações feitas no Assistente de Migração
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 23bd7c70522d1d691e4670c43bb7f07b5534c379
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: d7bcff5c96935dee5b696b0fa828cf3ba33eb56e
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005745"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036012"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>O que há de novo no SSMA para Oracle (OracleToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para alterações de Oracle em cada versão.
+
+## <a name="ssma-v815"></a>8.15 do SSMA v
+
+Além de várias melhorias de acessibilidade, a versão v 8.15 do SSMA para Oracle contém as seguintes alterações:
+
+* Adicionar configuração para usar especificação de tipo completo `%type` para `%rowtype` atributos e
+* Relatórios de avaliação do renovando para trabalhar em navegadores modernos
+* Autoridade de uso fornecida pelo banco de dados para autenticação do Azure AD
+* Melhorar a nomenclatura para instruções carregadas de arquivos
 
 ## <a name="ssma-v814"></a>8.14 do SSMA v
 
@@ -101,7 +110,7 @@ Além disso, o SSMA para Oracle agora permite filtrar objetos com base no estado
 
 Além de um conjunto direcionado de correções projetadas para melhorar a usabilidade e o desempenho, a versão do v 8.6 do SSMA para Oracle foi aprimorada com a adição de uma configuração que permite aos usuários omitir as propriedades estendidas do SSMA no código convertido.
 
-Para aproveitar essa configuração, no SSMA para Oracle, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão**geral e **, em**seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim**.
+Para aproveitar essa configuração, no SSMA para Oracle, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão** geral e **, em** seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim** .
 
 ![Omitir a configuração de propriedades estendidas](../oracle/media/ssma-omit-extended-properties.png)
 
@@ -187,7 +196,7 @@ A versão v 8.0 do SSMA para Oracle foi aprimorada com correções direcionadas 
 
   Alguns recursos, incluindo o testador e a migração de dados do lado do servidor, não têm suporte ao direcionar o Azure SQL Instância Gerenciada. Leia mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
 
-* **Supervisor de correção**após a conversão. Saiba mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+* **Supervisor de correção** após a conversão. Saiba mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
 * Seleção preliminar de banco de dados/esquema.
 
@@ -224,7 +233,7 @@ A versão v 7.8 do SSMA para Oracle contém as seguintes alterações:
   * Expressão de linha para a `IN` cláusula.
   * Conversões implícitas de tipo.
   * `UID` conversão para o banco de dados SQL do Azure.
-* Alterar o mapeamento de tipo realçado nas **configurações do projeto**.
+* Alterar o mapeamento de tipo realçado nas **configurações do projeto** .
 * A capacidade dos usuários de desabilitar a telemetria.
 
 ## <a name="ssma-v77"></a>7.7 do SSMA v
@@ -234,7 +243,7 @@ A versão v 7.7 do SSMA para Oracle contém as seguintes alterações:
 * O SSMA para Oracle foi aprimorado com correções direcionadas que melhoram a qualidade e a conversão de métricas.
 * Com base na demanda popular, a versão de 32 bits do SSMA para Oracle está de volta. Em comparação com a implementação anterior (antes da v 7.4), há dois pacotes do instalador, mas eles não podem ser instalados lado a lado. Como resultado, você deve escolher a versão mais apropriada com base nos componentes de conectividade que tem. É sempre preferível usar a versão de 64 bits, se possível.
 * SQL Server suporte a 2017 agora é oficial com o pacote de extensão Oracle com suporte no Linux também (nova opção de instalação remota). Observe que a funcionalidade do pacote de extensão é limitada quando instalada no Linux, já que não há suporte para os recursos de migração de dados do servidor e testador.
-* O SSMA para Oracle permite que você migre exibições materializadas como tabelas regulares (configuráveis por meio das configurações em **configurações do projeto**  ->  **sincronização**  ->  **descobrir tabelas para exibições materializadas**).
+* O SSMA para Oracle permite que você migre exibições materializadas como tabelas regulares (configuráveis por meio das configurações em **configurações do projeto**  ->  **sincronização**  ->  **descobrir tabelas para exibições materializadas** ).
 
 ## <a name="ssma-v76"></a>SSMA v 7.6
 

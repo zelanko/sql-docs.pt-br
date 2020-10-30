@@ -4,22 +4,31 @@ description: Saiba mais sobre as alterações feitas no Assistente de Migração
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 5aaa4ad6a29d9582a8c62a94fbb94c18f79bfcff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497914"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036052"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>O que há de novo no SSMA for Access (AccessToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para acessar alterações em cada versão.
+
+## <a name="ssma-v815"></a>8.15 do SSMA v
+
+Além de várias melhorias de acessibilidade, a versão v 8.15 do SSMA para Access contém as seguintes alterações:
+
+* Ignorar índices criados automaticamente para chaves estrangeiras
+* Relatórios de avaliação do renovando para trabalhar em navegadores modernos
+* Autoridade de uso fornecida pelo banco de dados para autenticação do Azure AD
+* Melhorar a nomenclatura para instruções carregadas de arquivos
 
 ## <a name="ssma-v814"></a>8.14 do SSMA v
 
@@ -78,7 +87,7 @@ A versão v 8.7 do SSMA para Access tem uma conversão aprimorada para `IIF` fun
 
 Além de um conjunto direcionado de correções projetadas para melhorar a usabilidade e o desempenho, a versão do v 8.6 do SSMA para acesso foi aprimorada com a adição de uma configuração que permite aos usuários omitir as propriedades estendidas do SSMA no código convertido.
 
-Para aproveitar essa configuração, no SSMA para acesso, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão**geral e **, em**seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim**.
+Para aproveitar essa configuração, no SSMA para acesso, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão** geral e **, em** seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim** .
 
 ![Omitir a configuração de propriedades estendidas](../access/media/ssma-omit-extended-properties.png)
 
@@ -130,7 +139,7 @@ A versão v 8.0 do SSMA para acesso é aprimorada com correções direcionadas p
 
   ![Projeto do SQL MI](../media/ssma-newproject-sqldbmi.png)
 
-* **Supervisor de correção**após a conversão. Saiba mais sobre isso [aqui](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
+* **Supervisor de correção** após a conversão. Saiba mais sobre isso [aqui](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
 
 * Seleção preliminar de banco de dados/esquema.
 

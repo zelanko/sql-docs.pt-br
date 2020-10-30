@@ -4,22 +4,30 @@ description: Saiba mais sobre as alterações feitas no Assistente de Migração
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: fdbe37ddb915e64c5f947a64078e574a8eed8bbd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 57b589ef62259904d63106298326dd537d33fc15
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497790"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036056"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>O que há de novo no SSMA para SAP ASE (SybaseToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para SAP ASE (anteriormente o SSMA para Sybase) alterações em cada versão.
+
+## <a name="ssma-v815"></a>8.15 do SSMA v
+
+Além de várias melhorias de acessibilidade, a versão v 8.15 do SSMA para SAP ASE contém as seguintes alterações:
+
+* Relatórios de avaliação do renovando para trabalhar em navegadores modernos
+* Autoridade de uso fornecida pelo banco de dados para autenticação do Azure AD
+* Melhorar a nomenclatura para instruções carregadas de arquivos
 
 ## <a name="ssma-v814"></a>8.14 do SSMA v
 
@@ -73,7 +81,7 @@ A versão v 8.7 do SSMA para SAP ASE tem correções secundárias e melhorias de
 
 Além de um conjunto direcionado de correções projetadas para melhorar a usabilidade e o desempenho, a versão do v 8.6 do SSMA para SAP ASE foi aprimorada com a adição de uma configuração que permite aos usuários omitir as propriedades estendidas do SSMA no código convertido.
 
-Para aproveitar essa configuração, no SSMA para SAP ASE, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão**geral e **, em**seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim**.
+Para aproveitar essa configuração, no SSMA para SAP ASE, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão** geral e **, em** seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim** .
 
 ![Omitir a configuração de propriedades estendidas](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -129,7 +137,7 @@ A versão v 8.0 do SSMA para SAP ASE foi aprimorada com correções direcionadas
 
   ![Projeto MI do banco de dados SQL](../media/ssma-newproject-sqldbmi.png)
 
-* **Supervisor de correção**após a conversão. Saiba mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+* **Supervisor de correção** após a conversão. Saiba mais sobre isso [aqui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
 * Seleção preliminar de banco de dados/esquema.
 
@@ -154,7 +162,7 @@ A versão v 7.9 do SSMA para SAP ASE contém as seguintes alterações:
 
 A versão v 7.8 do SSMA para SAP ASE contém as seguintes alterações:
 
-* Alterar o mapeamento de tipo realçado nas **configurações do projeto**.
+* Alterar o mapeamento de tipo realçado nas **configurações do projeto** .
 * A capacidade dos usuários de desabilitar a telemetria.
 
 ## <a name="ssma-v77"></a>7.7 do SSMA v
@@ -299,7 +307,7 @@ A versão de julho de 2010 do SSMA para Sybase adicionou:
 
 * Suporte para migrar para o SQL Server 2008 R2.
 * Um novo aplicativo de console do SSMA para execução de linha de comando.
-* Suporte para migração de dados usando mecanismos de migração de dados do lado do servidor e do cliente.
+* Suporte para migração de dados usando Server-Side e Client-Side mecanismos de migração de dados.
 * Suporte para a instrução "SELECT personalizado" na migração de dados.
 * Suporte para migração do Sybase ASE 15.0.3 e 15,5.
 
@@ -351,6 +359,6 @@ A versão de novembro de 2006 do SSMA para Sybase contém as seguintes alteraç�
 
 A versão de julho de 2006 do SSMA for Sybase foi a versão inicial.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Introdução com o SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
