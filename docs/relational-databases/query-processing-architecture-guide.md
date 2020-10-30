@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 62ea3f9484c232112317af9f0cb7bf8d8facde2f
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892436"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639019"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -127,9 +127,9 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tem três opções para exibir os planos de execução:        
-> -  O ***[Plano de Execução Estimado](../relational-databases/performance/display-the-estimated-execution-plan.md)***, que é o plano compilado, como produzido pelo Otimizador de Consulta.        
-> -  O ***[Plano de Execução Real](../relational-databases/performance/display-an-actual-execution-plan.md)***, que é o mesmo que o plano compilado, mais o contexto de execução. Isso inclui informações de runtime disponíveis depois que a execução é concluída, como avisos de execução ou em versões mais recentes do [!INCLUDE[ssde_md](../includes/ssde_md.md)], o tempo decorrido e o tempo de CPU usados durante a execução.        
-> -  As ***[Estatísticas de Consulta Dinâmica](../relational-databases/performance/live-query-statistics.md)***, que são o mesmo que o plano compilado, mais o contexto de execução. Isso inclui informações de runtime durante o progresso da execução e é atualizado a cada segundo. As informações de runtime incluem, por exemplo, o número real de linhas que fluem pelos operadores.       
+> -  O * *_[Plano de Execução Estimado](../relational-databases/performance/display-the-estimated-execution-plan.md)_* _, que é o plano compilado, conforme produzido pelo Otimizador de Consulta.        
+> -  O _*_ [Plano de Execução Real](../relational-databases/performance/display-an-actual-execution-plan.md) _*_ , que é o mesmo que o plano compilado, mais o contexto de execução. Isso inclui informações de runtime disponíveis depois que a execução é concluída, como avisos de execução ou em versões mais recentes do [!INCLUDE[ssde_md](../includes/ssde_md.md)], o tempo decorrido e o tempo de CPU usados durante a execução.        
+> -  As _*_ [Estatísticas de Consulta Dinâmica](../relational-databases/performance/live-query-statistics.md) _*_ , que são o mesmo que o plano compilado, mais o contexto de execução. Isso inclui informações de runtime durante o progresso da execução e é atualizado a cada segundo. As informações de runtime incluem, por exemplo, o número real de linhas que fluem pelos operadores.       
 
 ### <a name="processing-a-select-statement"></a>Processando uma instrução SELECT
 As etapas básicas usadas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para processar uma única instrução SELECT incluem o seguinte: 
@@ -145,10 +145,10 @@ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avalia algumas express�
 
 #### <a name="foldable-expressions"></a>Expressões dobráveis
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a dobra constante com os seguintes tipos de expressões:
-- Expressões aritméticas, como 1+1, 5/3*2, que contêm apenas constantes.
+- Expressões aritméticas, como 1+1, 5/3_2, que contêm apenas constantes.
 - Expressões lógicas, como 1=1 and 1>2 AND 3>4, que contêm apenas constantes.
 - Funções internas consideradas dobráveis pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], inclusive `CAST` e `CONVERT`. Geralmente, uma função intrínseca será dobrável se for uma função de suas entradas apenas e não outras informações contextuais, como opções SET, configurações de idioma, opções de banco de dados e chaves de codificação. Funções não determinísticas não são dobráveis. Funções internas determinísticas são dobráveis, com algumas exceções.
-- Métodos determinísticos de tipos CLR definidos pelo usuário e funções CLR determinísticas com valor escalar definidas pelo usuário (começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para saber mais, veja [Dobra constante para funções e métodos de CLR definidos pelo usuário](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Métodos determinísticos de tipos CLR definidos pelo usuário e funções CLR determinísticas com valor escalar definidas pelo usuário (começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para saber mais, veja [Dobra constante para funções e métodos de CLR definidos pelo usuário](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
 > Há uma exceção para tipos de objeto grandes. Se o tipo de saída do processo de dobra for um tipo de objeto grande (text,ntext, image, nvarchar(max), varchar(max), varbinary(max) ou XML), então [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dobrará a expressão.
@@ -426,8 +426,8 @@ O plano de execução de procedimentos armazenados e disparadores é executado s
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um pool de memória usado para armazenar planos de execução e buffers de dados. A porcentagem do pool alocada a planos de execução ou buffers de dados flutua dinamicamente, dependendo do estado do sistema. A parte do pool de memória usada para armazenar os planos de execução é conhecida como cache de planos.
 
 O cache de planos tem dois repositórios para todos os planos compilados:
--  O OBJCP (repositório de cache de **Planos de Objeto**) usado para os planos relacionados a objetos persistentes (procedimentos armazenados, funções e gatilhos).
--  O SQLCP (repositório de cache de **Planos do SQL**) usado para os planos relacionados a consultas parametrizadas automaticamente, dinâmicas ou preparadas.
+-  O OBJCP (repositório de cache de **Planos de Objeto** ) usado para os planos relacionados a objetos persistentes (procedimentos armazenados, funções e gatilhos).
+-  O SQLCP (repositório de cache de **Planos do SQL** ) usado para os planos relacionados a consultas parametrizadas automaticamente, dinâmicas ou preparadas.
 
 A consulta abaixo fornece informações sobre o uso de memória para esses dois repositórios de cache:
 
@@ -543,14 +543,14 @@ As consultas e os planos de execução são exclusivamente identificáveis no [!
 -  O **hash do plano de consulta** é um valor de hash binário calculado no plano de execução para determinada consulta e usado para identificar exclusivamente os planos de execução semelhantes. 
 -  O **hash de consulta** é um valor de hash binário calculado no texto do [!INCLUDE[tsql](../includes/tsql-md.md)] de uma consulta e é usado para identificar exclusivamente as consultas. 
 
-Um plano compilado pode ser recuperado do cache de planos usando um **identificador de plano**, que é um identificador transitório que permanece constante apenas enquanto o plano permanece no cache. O identificador do plano é um valor de hash derivado do plano compilado do lote inteiro. O identificador do plano de um plano compilado permanece o mesmo, mesmo se uma ou mais instruções no lote são recompiladas.
+Um plano compilado pode ser recuperado do cache de planos usando um **identificador de plano** , que é um identificador transitório que permanece constante apenas enquanto o plano permanece no cache. O identificador do plano é um valor de hash derivado do plano compilado do lote inteiro. O identificador do plano de um plano compilado permanece o mesmo, mesmo se uma ou mais instruções no lote são recompiladas.
 
 > [!NOTE]
 > Se um plano foi compilado para um lote em vez de uma só instrução, o plano de instruções individuais no lote pode ser recuperado usando o identificador de plano e os deslocamentos de instrução.     
 > A DMV `sys.dm_exec_requests` contém as colunas `statement_start_offset` e `statement_end_offset` para cada registro, que se referem à instrução atualmente em execução de um lote ou um objeto persistente em execução no momento. Para obter mais informações, confira [sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).       
 > A DMV `sys.dm_exec_query_stats` também contém essas colunas para cada registro, que se referem à posição de uma instrução em um lote ou um objeto persistente. Para obter mais informações, confira [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).     
 
-O texto real do [!INCLUDE[tsql](../includes/tsql-md.md)] de um lote é armazenado em um espaço de memória separado do cache de planos, chamado o cache do SQLMGR **(SQL Manager)** . O texto do [!INCLUDE[tsql](../includes/tsql-md.md)] de um plano compilado pode ser recuperado do cache do SQL Manager com um **Identificador SQL**, que é um identificador transitório que permanece constante apenas enquanto, pelo menos, um plano que o referencie permanece no cache de planos. O identificador SQL é um valor de hash derivado do texto do lote inteiro e tem a garantia de ser exclusivo em cada lote.
+O texto real do [!INCLUDE[tsql](../includes/tsql-md.md)] de um lote é armazenado em um espaço de memória separado do cache de planos, chamado o cache do SQLMGR **(SQL Manager)** . O texto do [!INCLUDE[tsql](../includes/tsql-md.md)] de um plano compilado pode ser recuperado do cache do SQL Manager com um **Identificador SQL** , que é um identificador transitório que permanece constante apenas enquanto, pelo menos, um plano que o referencie permanece no cache de planos. O identificador SQL é um valor de hash derivado do texto do lote inteiro e tem a garantia de ser exclusivo em cada lote.
 
 > [!NOTE]
 > Como um plano compilado, o texto do [!INCLUDE[tsql](../includes/tsql-md.md)] é armazenado por lote, incluindo os comentários. O identificador SQL contém o hash MD5 do texto do lote inteiro e tem a garantia de ser exclusivo em cada lote.
@@ -695,7 +695,9 @@ Os exemplos a seguir ilustram quais planos de execução são removidos do cache
 * Um plano de execução é referenciado frequentemente para que seu custo nunca seja zerado. O plano permanece no cache de planos e não é removido a menos que haja pressão de memória e o custo atual seja zero.
 * Um plano de execução ad hoc é inserido e não é referenciado novamente até que haja pressão de memória. Como os planos ad hoc são inicializados com um custo atual igual a zero, quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examina o plano de execução, ele vê o custo atual igual a zero e remove o plano do cache de planos. O plano de execução ad hoc permanece no cache de planos com um custo atual igual a zero quando não há pressão de memória.
 
-Para remover manualmente um único plano ou todos os planos do cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). Começando pelo [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` para limpar o cache (plano) de procedimento para o banco de dados no escopo.
+Para remover manualmente um único plano ou todos os planos do cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) também pode ser usado para limpar qualquer cache, incluindo o cache de planos. Começando pelo [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` para limpar o cache (plano) de procedimento para o banco de dados no escopo. Uma alteração em algumas definições de configuração por meio de [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) e [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) também fará com que os planos sejam removidos do cache de planos. Encontre a lista dessas definições de configuração na seção Comentários do artigo [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks). Uma alteração de configuração como essa registrará a seguinte mensagem informativa no log de erros:
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
 ### <a name="recompiling-execution-plans"></a>Recompilando planos de execução
 
@@ -1038,7 +1040,7 @@ Os constructos que inibem o paralelismo incluem:
 -   **Palavra-chave TOP**        
     Para saber mais, confira [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
-Um plano de execução de consulta pode conter o atributo **NonParallelPlanReason** no elemento **QueryPlan**, que descreve por que o paralelismo não foi usado.  Os valores para esse atributo incluem:
+Um plano de execução de consulta pode conter o atributo **NonParallelPlanReason** no elemento **QueryPlan** , que descreve por que o paralelismo não foi usado.  Os valores para esse atributo incluem:
 
 |NonParallelPlanReason Value|Descrição|
 |----|----|
@@ -1075,15 +1077,15 @@ O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 ### <a name="degree-of-parallelism"></a><a name="DOP"></a> Grau de Paralelismo
 O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta automaticamente o melhor grau de paralelismo para cada instância de uma execução de consulta paralela ou operação DDL (linguagem de definição de dados) do índice. Isso é feito baseado nos seguintes critérios: 
 
-1. Se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estiver **sendo executado em um computador que tenha mais de um microprocessador ou mais de uma CPU**, como um computador SMP (multiprocessamento simétrico). Apenas computadores que têm mais de uma CPU podem usar consultas paralelas. 
+1. Se o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estiver **sendo executado em um computador que tenha mais de um microprocessador ou mais de uma CPU** , como um computador SMP (multiprocessamento simétrico). Apenas computadores que têm mais de uma CPU podem usar consultas paralelas. 
 
-2. Se há **threads de trabalho suficientes disponíveis**. Cada operação de consulta ou índice exige um determinado número de threads de trabalho para execução. A execução de um plano paralelo exige mais threads de trabalho que um plano serial e o número de threads de trabalho exigidos aumenta conforme o grau de paralelismo. Quando o requisito de thread de trabalho do plano paralelo de um grau específico de paralelismo não puder ser atendido, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminuirá automaticamente o grau de paralelismo ou abandonará completamente o plano paralelo no contexto de carga de trabalho especificado. Depois, ele executará o plano consecutivo (um thread de trabalho). 
+2. Se há **threads de trabalho suficientes disponíveis** . Cada operação de consulta ou índice exige um determinado número de threads de trabalho para execução. A execução de um plano paralelo exige mais threads de trabalho que um plano serial e o número de threads de trabalho exigidos aumenta conforme o grau de paralelismo. Quando o requisito de thread de trabalho do plano paralelo de um grau específico de paralelismo não puder ser atendido, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminuirá automaticamente o grau de paralelismo ou abandonará completamente o plano paralelo no contexto de carga de trabalho especificado. Depois, ele executará o plano consecutivo (um thread de trabalho). 
 
-3. O **tipo de operação de consulta ou de índice executada**. As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Os usuários podem alterar o valor padrão 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se os testes adequados descobriram que um valor diferente é mais adequado para a carga de trabalho em execução. 
+3. O **tipo de operação de consulta ou de índice executada** . As operações de índice que criam ou reconstroem um índice, ou descartam um índice cluster e as consultas que usam ciclos de CPU frequentemente são as melhores opções para um plano paralelo. Por exemplo, junções de tabelas grandes, agregações grandes e classificação de conjuntos de resultados grandes são boas alternativas. As consultas simples, frequentemente encontradas em aplicativos de processamento de transações, localizam a coordenação adicional exigida para executar uma consulta em paralelo que supera o aumento de desempenho potencial. Para distinguir as consultas que se beneficiam de paralelismo das que não se beneficiam, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compara o custo estimado da execução da operação de consulta ou índice com o valor [limite de custo para paralelismo](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Os usuários podem alterar o valor padrão 5 usando [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) se os testes adequados descobriram que um valor diferente é mais adequado para a carga de trabalho em execução. 
 
-4. Se houver um **número suficiente de linhas para processar**. Se o otimizador de consulta determinar que o número de linhas é muito baixo, não apresentará os operadores de troca para distribuir as linhas. Por conseguinte, os operadores serão executados em série. A execução dos operadores em um plano consecutivo evita cenários quando os custos de inicialização, distribuição e coordenação excedem os ganhos alcançados pela execução de operador paralela.
+4. Se houver um **número suficiente de linhas para processar** . Se o otimizador de consulta determinar que o número de linhas é muito baixo, não apresentará os operadores de troca para distribuir as linhas. Por conseguinte, os operadores serão executados em série. A execução dos operadores em um plano consecutivo evita cenários quando os custos de inicialização, distribuição e coordenação excedem os ganhos alcançados pela execução de operador paralela.
 
-5. Se as **estatísticas de distribuição atuais estiverem disponíveis**. Se o grau mais alto de paralelismo não for possível, os graus inferiores serão considerados antes de o plano paralelo ser abandonado. Por exemplo, quando você criar um índice cluster em uma exibição, não poderão ser avaliadas estatísticas de distribuição, porque o índice cluster ainda não existirá. Nesse caso, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] não poderá fornecer o grau mais alto de paralelismo para a operação de índice. Porém, alguns operadores, como de classificação e verificação, ainda poderão se beneficiar da execução paralela.
+5. Se as **estatísticas de distribuição atuais estiverem disponíveis** . Se o grau mais alto de paralelismo não for possível, os graus inferiores serão considerados antes de o plano paralelo ser abandonado. Por exemplo, quando você criar um índice cluster em uma exibição, não poderão ser avaliadas estatísticas de distribuição, porque o índice cluster ainda não existirá. Nesse caso, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] não poderá fornecer o grau mais alto de paralelismo para a operação de índice. Porém, alguns operadores, como de classificação e verificação, ainda poderão se beneficiar da execução paralela.
 
 > [!NOTE]
 > As operações de índice paralelas somente estão disponíveis nas edições Enterprise, Developer e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -1299,7 +1301,7 @@ A ilustração a seguir é uma representação lógica da operação de busca se
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>Exibindo informações sobre particionamento em planos de execução de consultas
 
-Os planos de execução de consultas em tabelas e índices particionados podem ser examinados usando instruções `SET SHOWPLAN_XML` e `SET STATISTICS XML` de [!INCLUDE[tsql](../includes/tsql-md.md)] e `SET` ou usando a saída do plano de execução gráfica no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. Por exemplo, é possível exibir o plano de execução de tempo de compilação clicando no botão *Exibir Plano de Execução Estimado* na barra de ferramentas do Editor de Consultas e exibir o plano de tempo de execução, clicando no botão *Incluir Plano de Execução Real*. 
+Os planos de execução de consultas em tabelas e índices particionados podem ser examinados usando instruções `SET SHOWPLAN_XML` e `SET STATISTICS XML` de [!INCLUDE[tsql](../includes/tsql-md.md)] e `SET` ou usando a saída do plano de execução gráfica no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. Por exemplo, é possível exibir o plano de execução de tempo de compilação clicando no botão *Exibir Plano de Execução Estimado* na barra de ferramentas do Editor de Consultas e exibir o plano de tempo de execução, clicando no botão *Incluir Plano de Execução Real* . 
 
 Usando essas ferramentas, você pode averiguar as seguintes informações:
 

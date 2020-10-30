@@ -13,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
 ms.date: 06/12/2020
-ms.openlocfilehash: b2d4364d01b871364fda3ac42d98536e99269c29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 004a7b0a50a657632bb2b9970f0558857d416494
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763951"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257974"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>Opção de configuração do servidor xp_cmdshell
 
@@ -31,7 +31,10 @@ Antes de habilitar essa opção, é importante considerar as possíveis implica�
 - O código desenvolvido recentemente não deve usar o procedimento armazenado **xp_cmdshell** e, em geral, ele deve ser mantido desabilitado.
 - Alguns aplicativos herdados exigem que o **xp_cmdshell** seja habilitado. Se eles não puderem ser modificados para evitar o uso desse procedimento armazenado, habilite-o conforme descrito abaixo.
 
-Se precisar habilitar o **xp_cmdshell**, use o [Gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) ou execute o procedimento armazenado do sistema **sp_configure**, conforme mostrado no seguinte exemplo de código:  
+> [!NOTE]  
+> Se **xp_cmdshell** precisar ser usado, como uma melhor prática de segurança, é recomendável habilitá-lo apenas durante a tarefa real que o exige.
+
+Se precisar habilitar o **xp_cmdshell** , use o [Gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) ou execute o procedimento armazenado do sistema **sp_configure** , conforme mostrado no seguinte exemplo de código:  
   
 ``` sql
 -- To allow advanced options to be changed.  

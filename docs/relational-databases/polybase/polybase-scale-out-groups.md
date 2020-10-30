@@ -5,6 +5,8 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+f1_keywords:
+- sql13.swb.polybasescaleoutcluster.page.f1
 helpviewer_keywords:
 - PolyBase
 - PolyBase, scale-out groups
@@ -14,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892506"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523831"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escala horizontal do PolyBase
 
@@ -29,7 +31,7 @@ Uma instância do SQL Server autônoma com PolyBase pode se tornar um gargalo de
   
 Veja [Introdução ao PolyBase](./polybase-guide.md) e [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
-![grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Grupos de escala horizontal do PolyBase")  
+![Diagrama que mostra grupos de expansão do PolyBase.](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Grupos de escala horizontal do PolyBase")  
   
 ## <a name="head-node"></a>Nó de cabeçalho  
 
@@ -48,7 +50,7 @@ Por exemplo, digamos que você tenha uma tabela externa do SQL Server com 12 par
 > [!NOTE]
 >  isso é diferente das leituras de expansão no Hadoop. 
 
-![grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escala horizontal do PolyBase")
+![Leituras de expansão do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escala horizontal do PolyBase")
   
 ## <a name="distributed-query-processing"></a>Processamento de consulta distribuída  
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f076f67c09d28ff4725587e3470d56e81b1c9aef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c7e51f31643e61d5847395a92dae50c7ee5eaeb
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883821"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523991"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflito de replicação de mesclagem avançada – resolução em registro lógico
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85883821"
  Para especificar o acompanhamento de conflito e o nível de resolução para um artigo, confira [opções de Modificar Replicação de Mesclagem](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="conflict-detection"></a>Detecção de conflito  
- A forma pela qual os conflitos são detectados para registros lógicos é determinada por duas propriedades do artigo: **column_tracking** e **logical_record_level_conflict_detection**. O[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versões posteriores também dão suporte à detecção do nível de registro lógico.  
+ A forma pela qual os conflitos são detectados para registros lógicos é determinada por duas propriedades do artigo: **column_tracking** e **logical_record_level_conflict_detection** . O[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versões posteriores também dão suporte à detecção do nível de registro lógico.  
   
  A propriedade de artigo **logical_record_level_conflict_detection** pode ser definida como TRUE ou FALSE. O valor deve ser definido apenas para o artigo pai de alto nível, sendo ignorado pelos artigos filho. Se esse valor for FALSE, a replicação de mesclagem detectará conflitos como nas versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com base unicamente no valor da propriedade **column_tracking** do artigo. Se esse valor for TRUE, a replicação de mesclagem ignorará a propriedade **column_tracking** do artigo, e detectará um conflito se alterações forem feitas em qualquer lugar do registro lógico. Por exemplo, considere este cenário:  
   
  ![Registro lógico de três tabelas com valores](../../../relational-databases/replication/merge/media/logical-records-05.gif "Registro lógico de três tabelas com valores")  
   
- Um conflito é detectado caso dois usuários alterem quaisquer valores do registro lógico Customer2 nas tabelas **Customers**, **Orders**ou **OrderItems** . Esse exemplo invoca alterações feitas por meio da instrução UPDATE, mas o conflito pode igualmente ser detectado pelas alterações feitas com as instruções INSERT ou DELETE.  
+ Um conflito é detectado caso dois usuários alterem quaisquer valores do registro lógico Customer2 nas tabelas **Customers** , **Orders** ou **OrderItems** . Esse exemplo invoca alterações feitas por meio da instrução UPDATE, mas o conflito pode igualmente ser detectado pelas alterações feitas com as instruções INSERT ou DELETE.  
   
 ## <a name="conflict-resolution"></a>Resolução de conflitos  
  Por padrão, a replicação de mesclagem usa uma lógica fundamentada na prioridade para resolver conflitos. Se for feita uma alteração conflitante em dois bancos de dados de Assinante, a alteração do Assinante com alta prioridade de assinatura vence ou, se a prioridade for a mesma, a primeira alteração para alcançar o Publicador vence. Com a detecção em nível de linha e em nível de coluna, toda a linha vencedora substitui a linha perdedora.  
@@ -76,7 +76,7 @@ ms.locfileid: "85883821"
   
  Como os conflitos são resolvidos em nível de registro lógico, as alterações vencedoras feitas no Publicador substituem as alterações feitas nas tabelas do Assinante durante o processo de replicação.  
   
- ![Série de tabelas mostrando alterações nas linhas relacionadas](../../../relational-databases/replication/merge/media/logical-records-06.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
+ ![Primeira série de tabelas mostrando alterações nas linhas relacionadas.](../../../relational-databases/replication/merge/media/logical-records-06.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Detecção em nível de linha, resolução de registro lógico  
  Nesse exemplo, a publicação é configurada com:  
@@ -91,7 +91,7 @@ ms.locfileid: "85883821"
   
  Como os conflitos são resolvidos em nível de registro lógico, as alterações vencedoras feitas no Publicador substituem as alterações feitas nas tabelas do Assinante durante o processamento da replicação.  
   
- ![Série de tabelas mostrando alterações nas linhas relacionadas](../../../relational-databases/replication/merge/media/logical-records-07.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
+ ![Segunda série de tabelas mostrando alterações nas linhas relacionadas.](../../../relational-databases/replication/merge/media/logical-records-07.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Detecção de registro lógico, resolução de registro lógico  
  Nesse exemplo, a publicação é configurada com:  
@@ -100,11 +100,11 @@ ms.locfileid: "85883821"
   
 -   **logical_record_level_conflict_resolution** é TRUE  
   
- O Publicador e o Assinante são iniciados com o mesmo conjunto de dados. O Publicador altera a coluna **custcol1** na tabela **customers** . O Assinante altera a coluna **ordercol1** na tabela **orders** . Não há alterações na mesma linha ou colunas, mas, como as alterações são feitas no mesmo registro lógico de **custid**=1, as alterações são detectadas como conflito no nível do registro lógico.  
+ O Publicador e o Assinante são iniciados com o mesmo conjunto de dados. O Publicador altera a coluna **custcol1** na tabela **customers** . O Assinante altera a coluna **ordercol1** na tabela **orders** . Não há alterações na mesma linha ou colunas, mas, como as alterações são feitas no mesmo registro lógico de **custid** =1, as alterações são detectadas como conflito no nível do registro lógico.  
   
  Como os conflitos são também resolvidos no nível do registro lógico, durante a sincronização a alteração vencedora feita no Publicador substitui a alteração feita nas tabelas do Assinante.  
   
- ![Série de tabelas mostrando alterações nas linhas relacionadas](../../../relational-databases/replication/merge/media/logical-records-08.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
+ ![Terceira série de tabelas mostrando alterações nas linhas relacionadas.](../../../relational-databases/replication/merge/media/logical-records-08.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
   
 ## <a name="see-also"></a>Consulte Também  
  [Agrupar alterações em linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

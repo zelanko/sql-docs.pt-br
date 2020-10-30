@@ -12,36 +12,36 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dad9a87c5055e8dfd8292dca048b5f9d239c1e94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57485f68a1e9418e3d9d2402257599bf54e1ad7b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346782"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439310"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selecionar tabelas de origem e exibições (Assistente de Importação e Exportação do SQL Server)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Depois de especificar que deseja copiar uma tabela inteira ou de fornecer uma consulta, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Selecionar Tabelas e Exibições de Origem**. Nessa página, você seleciona as tabelas e as exibições existentes que deseja copiar. Em seguida, mapeia as tabelas de origem para tabelas de destino novas ou existentes. Opcionalmente, você também examina o mapeamento de colunas individuais e visualiza dados de exemplo.
+  Depois de especificar que deseja copiar uma tabela inteira ou de fornecer uma consulta, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Selecionar Tabelas e Exibições de Origem** . Nessa página, você seleciona as tabelas e as exibições existentes que deseja copiar. Em seguida, mapeia as tabelas de origem para tabelas de destino novas ou existentes. Opcionalmente, você também examina o mapeamento de colunas individuais e visualiza dados de exemplo.
 
 > [!TIP]
 > Se precisar copiar mais de um banco de dados do SQL Server ou objetos de banco de dados do SQL Server diferentes de tabelas e exibições, use o Assistente para Copiar Banco de Dados em vez do Assistente de Importação e Exportação. Para obter mais informações, consulte [Usar o Assistente para Copiar Banco de Dados](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="screen-shot---if-youre-going-to-copy-tables"></a>Captura de tela – se você pretende copiar tabelas  
- A captura de tela a seguir mostra um exemplo da página **Selecionar Tabelas e Exibições de Origem** do assistente depois de selecionar a opção **Copiar dados de uma ou mais tabelas ou exibições** na página **Especificar Cópia de Tabela ou Consulta**. Na lista, você pode ver todas as tabelas e as exibições disponíveis na fonte de dados.
+ A captura de tela a seguir mostra um exemplo da página **Selecionar Tabelas e Exibições de Origem** do assistente depois de selecionar a opção **Copiar dados de uma ou mais tabelas ou exibições** na página **Especificar Cópia de Tabela ou Consulta** . Na lista, você pode ver todas as tabelas e as exibições disponíveis na fonte de dados.
  
 Neste exemplo, a lista **Origem** contém todas as tabelas do banco de dados de exemplo AdventureWorks. A linha selecionada mostra que o usuário deseja copiar a tabela **Sales.Customer** da origem para a nova tabela **Sales.CustomerNew** no destino. 
    
- ![Página Selecionar tabelas do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/select-tables1.png "Página Selecionar tabelas do Assistente de Importação e Exportação")
+ ![Captura de tela mostrando a página Selecionar tabelas do Assistente de Importação e Exportação usada para copiar tabelas.](../../integration-services/import-export-data/media/select-tables1.png "Página Selecionar tabelas do Assistente de Importação e Exportação")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>Captura de tela – se você forneceu uma consulta  
- A captura de tela a seguir mostra um exemplo da página **Selecionar Tabelas e Exibições de Origem** do assistente depois de selecionar a opção **Gravar uma consulta para especificar os dados a serem transferidos** na página **Especificar Cópia de Tabela ou Consulta**. A lista **Origem** contém apenas uma única linha, na qual o item nomeado `[Query]` representa a consulta fornecida na página **Fornecer uma Consulta de Origem**.
+ A captura de tela a seguir mostra um exemplo da página **Selecionar Tabelas e Exibições de Origem** do assistente depois de selecionar a opção **Gravar uma consulta para especificar os dados a serem transferidos** na página **Especificar Cópia de Tabela ou Consulta** . A lista **Origem** contém apenas uma única linha, na qual o item nomeado `[Query]` representa a consulta fornecida na página **Fornecer uma Consulta de Origem** .
  
 Neste exemplo, o usuário deseja copiar os resultados de consulta da origem para a tabela **Sales.CustomerNew** no destino.  
     
- ![Página Selecionar tabelas do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/select-tables2.png "Página Selecionar tabelas do Assistente de Importação e Exportação")  
+ ![Captura de tela mostrando a página Selecionar tabelas do Assistente de Importação e Exportação se você forneceu uma consulta.](../../integration-services/import-export-data/media/select-tables2.png "Página Selecionar tabelas do Assistente de Importação e Exportação")  
 
 ## <a name="select-source-and-destination-tables"></a>Selecionar tabelas de origem e de destino 
 **Origem**  
@@ -64,7 +64,7 @@ Opcionalmente, clique em **Editar mapeamentos** para exibir a caixa de diálogo 
 Para obter mais informações, consulte [Mapeamentos de coluna](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
 
 **Visualização**  
-Opcionalmente, clique em **Visualização** para visualizar até 200 linhas de dados de exemplo na caixa de diálogo **Visualizar Dados**. Isso confirma se o assistente vai copiar os dados que você deseja copiar. Para obter mais informações, consulte [Visualizar dados](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
+Opcionalmente, clique em **Visualização** para visualizar até 200 linhas de dados de exemplo na caixa de diálogo **Visualizar Dados** . Isso confirma se o assistente vai copiar os dados que você deseja copiar. Para obter mais informações, consulte [Visualizar dados](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
   
 Depois de visualizar os dados, é recomendável alterar as opções selecionadas nas páginas anteriores do assistente. Para fazer essas alterações, retorne à página **Selecionar Tabelas e Exibições de Origem** , clique em **Voltar** para retornar às páginas anteriores, nas quais é possível alterar as seleções.  
 
@@ -75,22 +75,22 @@ Depois de visualizar os dados, é recomendável alterar as opções selecionadas
 
 ### <a name="excel-source-tables"></a>Tabelas de origem do Excel
 A lista de tabelas e de exibições de origem para uma fonte de dados do Excel inclui dois tipos de objetos do Excel.
--   **Planilhas**. Os nomes de planilha são seguidos pelo cifrão ($), por exemplo, **'Sheet1$'**.
+-   **Planilhas** . Os nomes de planilha são seguidos pelo cifrão ($), por exemplo, **'Sheet1$'** .
 -   **Intervalos nomeados.** Os intervalos nomeados, caso haja algum, são listados por nome.
 
-Se desejar carregar dados de ou para um intervalo de células específico sem nome, por exemplo, de ou para **[Sheet1$A1:B4]**, você precisará gravar uma consulta. Volte à página **Especificar Cópia ou Consulta de Tabela** e clique em **Gravar uma consulta para especificar os dados a serem transferidos**.
+Se desejar carregar dados de ou para um intervalo de células específico sem nome, por exemplo, de ou para **[Sheet1$A1:B4]** , você precisará gravar uma consulta. Volte à página **Especificar Cópia ou Consulta de Tabela** e clique em **Gravar uma consulta para especificar os dados a serem transferidos** .
 
 ### <a name="excel-destination-tables"></a>Tabelas de destino do Excel
 Se você estiver exportando dados para o Excel, será possível especificar o destino de uma das três maneiras a seguir.
--   **Planilha.** Para especificar uma planilha, acrescente o caractere $ ao final do nome da planilha e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$]**.
--   **Intervalo nomeado.** Para especificar um intervalo nomeado, basta usar o nome do intervalo, por exemplo, **MyDataRange**.
+-   **Planilha.** Para especificar uma planilha, acrescente o caractere $ ao final do nome da planilha e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$]** .
+-   **Intervalo nomeado.** Para especificar um intervalo nomeado, basta usar o nome do intervalo, por exemplo, **MyDataRange** .
 -   **Intervalo sem nome.** Para especificar um intervalo de células ainda não nomeado, acrescente o caractere $ ao final do nome da planilha, adicione a especificação do intervalo e adicione delimitadores no começo e no final da cadeia de caracteres, por exemplo, **[Sheet1$A1:B4]** .
 
 > [!TIP]
 > Ao usar o Excel como uma origem ou destino, é uma boa ideia clicar em **Editar Mapeamentos** e examinar os mapeamentos de tipo de dados na página **Mapeamentos de Colunas** . 
 
 ## <a name="whats-next"></a>E agora?  
- Depois de selecionar as tabelas e exibições existentes para copiar e mapeá-las para seus destinos, a próxima página será **Salvar e Executar Pacote**. Nesta página, especifique se deseja executar a operação de cópia imediatamente. Dependendo da sua configuração, você também poderá salvar o pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criado pelo assistente para personalizá-lo e reutilizá-lo posteriormente. Para obter mais informações, consulte [Salvar e Executar o Pacote](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
+ Depois de selecionar as tabelas e exibições existentes para copiar e mapeá-las para seus destinos, a próxima página será **Salvar e Executar Pacote** . Nesta página, especifique se deseja executar a operação de cópia imediatamente. Dependendo da sua configuração, você também poderá salvar o pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criado pelo assistente para personalizá-lo e reutilizá-lo posteriormente. Para obter mais informações, consulte [Salvar e Executar o Pacote](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Confira também
 [Começar com esse exemplo simples de Assistente de Importação e Exportação](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  

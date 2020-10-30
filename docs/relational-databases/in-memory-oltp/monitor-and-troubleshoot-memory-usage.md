@@ -12,12 +12,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcaae9b53ace5a79e3e1e2c5ccc3e0dc2449306c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 08a3bbf542911c31681f72c74ed783cf6ae79d99
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545170"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439526"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorar e solucionar problemas de uso da memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89545170"
   
 1.  Inicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Clicar em **Nova Consulta**.  
+2.  Clicar em **Nova Consulta** .  
   
 3.  Colar este código na nova janela de consulta e executar cada seção.  
 
@@ -140,11 +140,11 @@ ms.locfileid: "89545170"
   
 3.  No menu de contexto, selecione **Relatórios** -> **Relatórios Padrão** -> **Uso de Memória por Objetos com Otimização de Memória**  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
+ ![Captura de tela mostrando o Pesquisador de Objetos com a opção Relatórios > Relatórios Padrão > Uso de Memória por Objetos com Otimização para Memória selecionada.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
  Esse relatório mostra o consumo de memória pelo banco de dados criado anteriormente.  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
+ ![Captura de tela do relatório Uso Total de Memória por Objetos com Otimização para Memória.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> Usando DMVs  
  Há várias DMVs disponíveis para monitorar a memória consumida por tabelas com otimização de memória, índices, objetos de sistema e estruturas de tempo de execução.  

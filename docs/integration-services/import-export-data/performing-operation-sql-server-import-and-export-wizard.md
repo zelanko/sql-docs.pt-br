@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ce2552519eeecb654478f522d3dd3b8880d2697
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cda6ec744ca603c1a03df22bcb391b6d75bbff58
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88347272"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439340"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Executando Operação (Assistente de Importação e Exportação do SQL Server)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-Depois de examinar as escolhas que você fez no assistente e clicar em **Concluir** na página **Concluir o assistente** , o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Realizando Operação**. Nessa página, você pode ver o andamento e o resultado das operações que você configurou nas páginas anteriores. Você não precisa realizar nenhuma ação nesta página.
+Depois de examinar as escolhas que você fez no assistente e clicar em **Concluir** na página **Concluir o assistente** , o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Realizando Operação** . Nessa página, você pode ver o andamento e o resultado das operações que você configurou nas páginas anteriores. Você não precisa realizar nenhuma ação nesta página.
 
 ## <a name="screen-shot---operation-in-progress"></a>Captura de tela – Operação em andamento 
  A captura de tela a seguir mostra a página **Realizando Operação** do assistente enquanto a operação está em andamento.  
@@ -34,7 +34,7 @@ Depois de examinar as escolhas que você fez no assistente e clicar em **Conclui
 ## <a name="screen-shot---operation-completed"></a>Captura de tela – Operação concluída 
  A captura de tela a seguir mostra a página **Realizando Operação** do assistente depois da conclusão da operação. Clique em um item na coluna **Mensagem** para obter mais informações sobre a etapa correspondente.  
   
- ![Página Executando operação do Assistente de Importação e Exportação](../../integration-services/import-export-data/media/performing-operation2.png "Página Executando operação do Assistente de Importação e Exportação")  
+ ![Captura de tela da página Êxito do Assistente de Importação e Exportação.](../../integration-services/import-export-data/media/performing-operation2.png "Página Executando operação do Assistente de Importação e Exportação")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Observar o progresso da operação
  **Ação**  

@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44c696a3c912f52fef2ca5d5ece3411e59dba5d3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957003"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638999"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,16 @@ Remove todos os elementos do cache do plano, remove um plano específico do cach
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Sintaxe  
+Sintaxe para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
-Sintaxe para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
-
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 Sintaxe para [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
   
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  
@@ -95,7 +94,11 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>Comentários  
 Use DBCC FREEPROCCACHE para limpar o cache do plano cuidadosamente. A limpeza do cache (plano) de procedimento faz com que todos os planos sejam removidos e as execuções de consulta de entrada compilarão um novo plano, em vez de reutilizar um plano anteriormente armazenado em cache. 
 
-Isso pode causar uma queda repentina e temporária no desempenho da consulta conforme o número de novas compilações aumenta. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
+Isso pode causar uma queda repentina e temporária no desempenho da consulta conforme o número de novas compilações aumenta. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa:
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.` 
+
+Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
 
 As seguintes operações de reconfiguração também são limpas no cache de procedimento:
 -   contagem de bucket do cache de verificação de acesso  
@@ -182,7 +185,7 @@ DBCC FREEPROCCACHE WITH NO_INFOMSGS;
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. Limpando todas as entradas do cache associadas a um pool de recursos  
-O exemplo a seguir limpa todas as entradas do cache associadas a um pool de recursos especificado. A exibição `sys.dm_resource_governor_resource_pools` é consultada primeiro para obter o valor de *pool_name*.
+O exemplo a seguir limpa todas as entradas do cache associadas a um pool de recursos especificado. A exibição `sys.dm_resource_governor_resource_pools` é consultada primeiro para obter o valor de *pool_name* .
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  

@@ -9,20 +9,20 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 597792aa200edf6dcb9cfe49c95ab5e1befa0c55
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194079"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92343648"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>Extensão do Azure DevOps para Ferramentas de DevOps do SSIS (SQL Server Integration Services)
 
-A extensão [Ferramentas de DevOps do SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) está disponível no Marketplace do **Azure DevOps**.
+A extensão [Ferramentas de DevOps do SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) está disponível no Marketplace do **Azure DevOps** .
 
-Caso você não tenha uma organização do **Azure DevOps**, primeiro, inscreva-se no [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) e, em seguida, adicione a extensão **Ferramentas de DevOps do SSIS** seguindo [as etapas](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension).
+Caso você não tenha uma organização do **Azure DevOps** , primeiro, inscreva-se no [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) e, em seguida, adicione a extensão **Ferramentas de DevOps do SSIS** seguindo [as etapas](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension).
 
-As **Ferramentas de DevOps do SSIS** incluem a tarefa **Build do SSIS**, tarefa de versão **Implantação do SSIS** e a **tarefa de Configuração de Catálogo do SSIS**.
+As **Ferramentas de DevOps do SSIS** incluem a tarefa **Build do SSIS** , tarefa de versão **Implantação do SSIS** e a **tarefa de Configuração de Catálogo do SSIS** .
 
 - A tarefa **[Build do SSIS](#ssis-build-task)** dá suporte à criação de arquivos dtproj no modelo de implantação de projeto ou no modelo de implantação de pacote.
 
@@ -50,7 +50,7 @@ As **Ferramentas de DevOps do SSIS** incluem a tarefa **Build do SSIS**, tarefa 
 
 Caminho da pasta do projeto ou do arquivo a ser compilado. Se um caminho de pasta for especificado, a tarefa Build do SSIS pesquisará todos os arquivos dtproj de maneira recursiva nessa pasta e os criará.
 
-O caminho do projeto não pode estar *vazio*, definido como **.** para criar a partir da pasta raiz do repositório.
+O caminho do projeto não pode estar *vazio* , definido como **.** para criar a partir da pasta raiz do repositório.
 
 #### <a name="project-configuration"></a>Configuração do projeto
 
@@ -90,8 +90,8 @@ O caminho dos arquivos ISPAC ou SSISDeploymentManifest de origem que você desej
 
 Tipo do destino. Atualmente, a tarefa Implantação do SSIS dá suporte a dois tipos:
 
-- *Sistema de arquivos*: Implante arquivos SSISDeploymentManifest e os arquivos associados em um sistema de arquivos especificado. Há suporte para o compartilhamento de arquivo local e do Azure.
-- *SSISDB*: Implante arquivos ISPAC em um catálogo do SSIS especificado, que pode ser hospedado no SQL Server local ou no Azure-SSIS Integration Runtime.
+- *Sistema de arquivos* : Implante arquivos SSISDeploymentManifest e os arquivos associados em um sistema de arquivos especificado. Há suporte para o compartilhamento de arquivo local e do Azure.
+- *SSISDB* : Implante arquivos ISPAC em um catálogo do SSIS especificado, que pode ser hospedado no SQL Server local ou no Azure-SSIS Integration Runtime.
 
 #### <a name="destination-server"></a>Servidor de destino
 
@@ -314,9 +314,9 @@ O esquema JSON de configuração tem três camadas:
 |Propriedade  |Descrição  |Observações  |
 |---------|---------|---------|
 |name|Nome do parâmetro.|<li>O parâmetro pode ser um parâmetro de projeto ou um parâmetro de pacote. <li>O parâmetro será ignorado se ele não existir. <li>Se o parâmetro for uma propriedade do gerenciador de conexões, o nome deverá estar no formato **CM.\<Connection Manager Name>.\<Property Name>** . |
-|contêiner|Contêiner do parâmetro.|<li>Se o parâmetro for um parâmetro de projeto, o *contêiner* deverá ser o nome do projeto. <li>Se for um parâmetro de pacote, o *contêiner* deverá ser o nome do pacote com a extensão **.dtsx**.|
-|value|Valor do parâmetro.|<li>Quando *valueType* é *referenciado*: O valor é uma referência a uma variável de ambiente no tipo *cadeia de caracteres*. <li> Quando *valueType* é *literal*: Esse atributo dá suporte a qualquer valor JSON *booliano*, de *número* e *cadeia de caracteres* válido. <li> O valor será convertido para o tipo de parâmetro de destino. O erro ocorrerá se não for possível convertê-lo.<li> O valor de *null* é inválido. A tarefa ignorará esse objeto de parâmetro e emitir um aviso.|
-|valueType|Tipo do valor do parâmetro.|Os tipos válidos são: <br> *literal*: a atributo *valor* representa um valor literal. <br> *referenciado*: o atributo *valor* representa uma referência a uma variável de ambiente.|
+|contêiner|Contêiner do parâmetro.|<li>Se o parâmetro for um parâmetro de projeto, o *contêiner* deverá ser o nome do projeto. <li>Se for um parâmetro de pacote, o *contêiner* deverá ser o nome do pacote com a extensão **.dtsx** .|
+|value|Valor do parâmetro.|<li>Quando *valueType* é *referenciado* : O valor é uma referência a uma variável de ambiente no tipo *cadeia de caracteres* . <li> Quando *valueType* é *literal* : Esse atributo dá suporte a qualquer valor JSON *booliano* , de *número* e *cadeia de caracteres* válido. <li> O valor será convertido para o tipo de parâmetro de destino. O erro ocorrerá se não for possível convertê-lo.<li> O valor de *null* é inválido. A tarefa ignorará esse objeto de parâmetro e emitir um aviso.|
+|valueType|Tipo do valor do parâmetro.|Os tipos válidos são: <br> *literal* : a atributo *valor* representa um valor literal. <br> *referenciado* : o atributo *valor* representa uma referência a uma variável de ambiente.|
 
 ##### <a name="reference-attributes"></a>Atributo de referência
 
@@ -340,10 +340,16 @@ O esquema JSON de configuração tem três camadas:
 |name|Nome da variável de ambiente.|A variável de ambiente será criada se não existir.|
 |type|Tipo de dados da variável de ambiente.|Os tipos válidos são: <br> *booleano* <br> *byte* <br> *datetime* <br> decimal <br> *double* <br> *int16* <br> *int32* <br> *int64* <br> *sbyte* <br> *single* <br> *cadeia de caracteres* <br> *uint32* <br> *uint64*|
 |descrição|Descrição da variável de ambiente.|O valor de *nulo* será ignorado.|
-|value|Valor da variável de ambiente.|Esse atributo dá suporte a qualquer valor JSON booliano, de número e cadeia de caracteres válido.<br> O valor será convertido para o tipo especificado pelo atributo **type**. Ocorrerá um erro se houver falha na conversão.<br>O valor de *null* é inválido. A tarefa ignorará esse objeto de variável de ambiente e emitir um aviso.|
+|value|Valor da variável de ambiente.|Esse atributo dá suporte a qualquer valor JSON booliano, de número e cadeia de caracteres válido.<br> O valor será convertido para o tipo especificado pelo atributo **type** . Ocorrerá um erro se houver falha na conversão.<br>O valor de *null* é inválido. A tarefa ignorará esse objeto de variável de ambiente e emitir um aviso.|
 |sensitive|Se o valor da variável de ambiente é confidencial.|As entradas válidas são: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Notas de versão
+
+### <a name="version-103"></a>Versão 1.0.3
+
+Data de lançamento: 21 de outubro de 2020
+
+- Permitir a especificação de sufixo da cadeia de conexão para as tarefas Implantação do SSIS e Configuração do Catálogo do SSIS.
 
 ### <a name="version-102"></a>Versão 1.0.2
 

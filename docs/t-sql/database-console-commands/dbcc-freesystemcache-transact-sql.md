@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6edb71255096e8a3164361af07ca0d675f6a9e7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422890"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638979"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ DBCC FREESYSTEMCACHE
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
-( 'ALL' [,_pool\_name_ ] )  
+( 'ALL' [, _pool\_name_ ] )  
 ALL especifica todos os caches suportados.  
 _pool\_name_ especifica um cache de pool do Resource Governor. Somente as entradas associadas a esse pool são liberadas.  
   
@@ -62,7 +62,11 @@ NO_INFOMSGS
 Suprime todas as mensagens informativas.  
   
 ## <a name="remarks"></a>Comentários  
-A execução de DBCC FREESYSTEMCACHE limpa o cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária no desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação do armazenamento em cache '%s' (parte do cache de planos) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
+A execução de DBCC FREESYSTEMCACHE limpa o cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária no desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: 
+
+>`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
+
+ Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
 
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC FREESYSTEMCACHE retorna: "execução do DBCC concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".

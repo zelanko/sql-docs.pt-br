@@ -26,12 +26,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca728137fc4fb76ae4109233b43732a3befbfca6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecb1710f992535ca4e6ebca3a3f825c5e1bffc9a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478986"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496968"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -51,7 +51,7 @@ Renomeia um usuário de banco de dados ou altera seu esquema padrão.
         [Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -93,28 +93,28 @@ NAME = newUserName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } Especifica o primeiro esquema que será pesquisado pelo servidor quando ele resolver os nomes de objetos para este usuário. A configuração do esquema padrão como NULL remove um esquema padrão de um grupo do Windows. A opção NULL não pode ser usada com um usuário do Windows.
 
- PASSWORD **=** '*password*'  **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** ' *password* '  **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Especifica a senha do logon do usuário que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
 
 > [!NOTE]
 > Essa opção está disponível apenas para usuários contidos. Confira mais informações em [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- A senha do usuário atual que será substituída por '*password*'. As senhas diferenciam maiúsculas de minúsculas. *OLD_PASSWORD* é necessária para alterar uma senha, a menos que você tenha a permissão **ALTER ANY USER**. Exigir *OLD_PASSWORD* impede que os usuários com a permissão **IMPERSONATION** alterem a senha.
+ A senha do usuário atual que será substituída por ' *password* '. As senhas diferenciam maiúsculas de minúsculas. *OLD_PASSWORD* é necessária para alterar uma senha, a menos que você tenha a permissão **ALTER ANY USER** . Exigir *OLD_PASSWORD* impede que os usuários com a permissão **IMPERSONATION** alterem a senha.
 
 > [!NOTE]
 > Essa opção está disponível apenas para usuários contidos.
 
- DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores.
+ DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores.
 
  Especifica um idioma padrão a ser atribuído ao usuário. Se essa opção não for definida como NONE, o idioma padrão será definido como o idioma padrão do banco de dados. Se o idioma padrão do banco de dados for alterado mais tarde, o idioma padrão do usuário permanecerá inalterado. *DEFAULT_LANGUAGE* pode ser a lcid (ID local), o nome do idioma ou o alias do idioma.
 
 > [!NOTE]
 > Essa opção pode ser especificada apenas em um banco de dados independente e apenas para usuários contidos.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Aplica-se a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa. Isso permite que o usuário copie em massa dados criptografados entre tabelas ou bancos de dados sem descriptografá-los. O padrão é OFF.
 
@@ -132,7 +132,7 @@ NAME = newUserName
  Não é possível especificar DEFAULT_SCHEMA para um usuário que esteja mapeado para um certificado ou uma chave assimétrica.
 
 > [!IMPORTANT]
-> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin**. Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
+> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin** . Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
 
  É possível alterar o nome de um usuário que esteja mapeado para um grupo ou logon do Windows somente quando o SID do novo nome de usuário corresponde ao SID que está registrado no banco de dados. Essa verificação ajuda a prevenir a falsificação de logons do Windows no banco de dados.
 
@@ -162,7 +162,7 @@ O nome de um usuário mapeado para um logon do [!INCLUDE[ssNoVersion](../../incl
 
 ### <a name="permissions"></a>Permissões
 
- Para alterar o nome de um usuário requer a permissão **ALTER ANY USER**.
+ Para alterar o nome de um usuário requer a permissão **ALTER ANY USER** .
 
  Alterar o logon de um usuário de destino requer a permissão **CONTROL** no banco de dados.
 
@@ -196,7 +196,7 @@ GO
 
  O exemplo a seguir altera várias opções para um usuário de banco de dados contido em uma instrução.
 
-**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.
+**Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.
 
 ```sql
 ALTER USER Philip
@@ -226,7 +226,7 @@ GO
         **_\* Banco de Dados SQL \*_**
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -288,21 +288,21 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } Especifica o primeiro esquema que será pesquisado pelo servidor quando ele resolver os nomes de objetos para este usuário. A configuração do esquema padrão como NULL remove um esquema padrão de um grupo do Windows. A opção NULL não pode ser usada com um usuário do Windows.
 
- PASSWORD **=** '*password*'  **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** ' *password* '  **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Especifica a senha do logon do usuário que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
 
 > [!NOTE]
 > Essa opção está disponível apenas para usuários contidos. Confira mais informações em [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- A senha do usuário atual que será substituída por '*password*'. As senhas diferenciam maiúsculas de minúsculas. *OLD_PASSWORD* é necessária para alterar uma senha, a menos que você tenha a permissão **ALTER ANY USER**. Exigir *OLD_PASSWORD* impede que os usuários com a permissão **IMPERSONATION** alterem a senha.
+ A senha do usuário atual que será substituída por ' *password* '. As senhas diferenciam maiúsculas de minúsculas. *OLD_PASSWORD* é necessária para alterar uma senha, a menos que você tenha a permissão **ALTER ANY USER** . Exigir *OLD_PASSWORD* impede que os usuários com a permissão **IMPERSONATION** alterem a senha.
 
 > [!NOTE]
 > Essa opção está disponível apenas para usuários contidos.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Aplica-se a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa. Isso permite que o usuário copie em massa dados criptografados entre tabelas ou bancos de dados sem descriptografá-los. O padrão é OFF.
 
@@ -320,7 +320,7 @@ ALTER USER userName
  Não é possível especificar DEFAULT_SCHEMA para um usuário que esteja mapeado para um certificado ou uma chave assimétrica.
 
 > [!IMPORTANT]
-> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin**. Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
+> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin** . Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
 
  É possível alterar o nome de um usuário que esteja mapeado para um grupo ou logon do Windows somente quando o SID do novo nome de usuário corresponde ao SID que está registrado no banco de dados. Essa verificação ajuda a prevenir a falsificação de logons do Windows no banco de dados.
 
@@ -350,7 +350,7 @@ O nome de um usuário mapeado para um logon do [!INCLUDE[ssNoVersion](../../incl
 
 ### <a name="permissions"></a>Permissões
 
- Para alterar o nome de um usuário requer a permissão **ALTER ANY USER**.
+ Para alterar o nome de um usuário requer a permissão **ALTER ANY USER** .
 
  Alterar o logon de um usuário de destino requer a permissão **CONTROL** no banco de dados.
 
@@ -411,7 +411,7 @@ GO
         [Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**
+        **_\* Instância Gerenciada de SQL \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -476,7 +476,7 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } Especifica o primeiro esquema que será pesquisado pelo servidor quando ele resolver os nomes de objetos para este usuário. A configuração do esquema padrão como NULL remove um esquema padrão de um grupo do Windows. A opção NULL não pode ser usada com um usuário do Windows.
 
- PASSWORD **=** '*password*'
+ PASSWORD **=** ' *password* '
 
  Especifica a senha do logon do usuário que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.
 
@@ -485,7 +485,7 @@ ALTER USER userName
 
  OLD_PASSWORD **=** _'oldpassword'_
 
- A senha do usuário atual que será substituída por '*password*'. As senhas diferenciam maiúsculas de minúsculas. *OLD_PASSWORD* é necessária para alterar uma senha, a menos que você tenha a permissão **ALTER ANY USER**. Exigir *OLD_PASSWORD* impede que os usuários com a permissão **IMPERSONATION** alterem a senha.
+ A senha do usuário atual que será substituída por ' *password* '. As senhas diferenciam maiúsculas de minúsculas. *OLD_PASSWORD* é necessária para alterar uma senha, a menos que você tenha a permissão **ALTER ANY USER** . Exigir *OLD_PASSWORD* impede que os usuários com a permissão **IMPERSONATION** alterem a senha.
 
 > [!NOTE]
 > Essa opção está disponível apenas para usuários contidos.
@@ -515,7 +515,7 @@ ALTER USER userName
  Não é possível especificar DEFAULT_SCHEMA para um usuário que esteja mapeado para um certificado ou uma chave assimétrica.
 
 > [!IMPORTANT]
-> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin**. Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
+> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin** . Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
 
  É possível alterar o nome de um usuário que esteja mapeado para um grupo ou logon do Windows somente quando o SID do novo nome de usuário corresponde ao SID que está registrado no banco de dados. Essa verificação ajuda a prevenir a falsificação de logons do Windows no banco de dados.
 
@@ -555,15 +555,15 @@ Esses comentários se aplicam a autenticações como usuários do Windows que fo
 - Verifique se o tipo indicado do logon é `E` ou `X`.
 - A opção PASSWORD não pode ser usada para usuários do Azure AD.
 - Em todos os casos de migração, as funções e permissões de usuários ou grupos do Windows serão automaticamente transferidas para os novos usuários ou grupos do Azure AD.
-- Uma nova extensão de sintaxe, **FROM EXTERNAL PROVIDER**, está disponível para alterar usuários e grupos do SQL local para usuários e grupos do Azure AD. O domínio do Windows deve ser federado com o Azure AD, e todos os membros do domínio do Windows devem existir no Azure AD ao usar essa extensão. A sintaxe **FROM EXTERNAL PROVIDER** se aplica à Instância Gerenciada de SQL do Azure e deve ser usada caso os usuários do Windows não tenham logons na instância SQL original e precisem ser mapeados para usuários autônomos do banco de dados do Azure AD.
+- Uma nova extensão de sintaxe, **FROM EXTERNAL PROVIDER** , está disponível para alterar usuários e grupos do SQL local para usuários e grupos do Azure AD. O domínio do Windows deve ser federado com o Azure AD, e todos os membros do domínio do Windows devem existir no Azure AD ao usar essa extensão. A sintaxe **FROM EXTERNAL PROVIDER** se aplica à Instância Gerenciada de SQL do Azure e deve ser usada caso os usuários do Windows não tenham logons na instância SQL original e precisem ser mapeados para usuários autônomos do banco de dados do Azure AD.
 - Nesse caso, o userName permitido pode ser:
-- Um usuário do Windows (_domain\user_).
-- Um grupo do Windows (_MyWidnowsGroup_).
-- Um alias do Windows (_MyWindowsAlias_).
+- Um usuário do Windows ( _domain\user_ ).
+- Um grupo do Windows ( _MyWidnowsGroup_ ).
+- Um alias do Windows ( _MyWindowsAlias_ ).
 - O resultado do comando ALTER substitui o antigo nome de usuário pelo nome correspondente encontrado no Azure AD com base no SID original do userName antigo. O nome alterado é substituído e armazenado nos metadados do banco de dados:
-- (_domain\user_) será substituído por Azure AD user@domain.com.
-- (_domain\\MyWidnowsGroup_) será substituído pelo grupo do Azure AD.
-- (_MyWindowsAlias_) permanecerá inalterado, mas o SID desse usuário será verificado no Azure AD.
+- ( _domain\user_ ) será substituído por Azure AD user@domain.com.
+- ( _domain\\MyWidnowsGroup_ ) será substituído pelo grupo do Azure AD.
+- ( _MyWindowsAlias_ ) permanecerá inalterado, mas o SID desse usuário será verificado no Azure AD.
 
 > [!NOTE]
 > Se o SID do usuário original convertido para objectID não puder ser encontrado no Azure AD, o comando ALTER USER falhará.
@@ -584,7 +584,7 @@ Esses comentários se aplicam a autenticações como usuários do Windows que fo
 
 ### <a name="permissions"></a>Permissões
 
- Para alterar o nome de um usuário requer a permissão **ALTER ANY USER**.
+ Para alterar o nome de um usuário requer a permissão **ALTER ANY USER** .
 
  Alterar o logon de um usuário de destino requer a permissão **CONTROL** no banco de dados.
 
@@ -679,7 +679,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -731,7 +731,7 @@ ALTER USER userName
  Não é possível especificar DEFAULT_SCHEMA para um usuário que esteja mapeado para um certificado ou uma chave assimétrica.
 
 > [!IMPORTANT]
-> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin**. Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
+> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin** . Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
 
  Uma cláusula WITH LOGON habilita o remapeamento de um usuário para um logon diferente. Os usuários sem um logon, mapeados para um certificado ou mapeados para uma chave assimétrica não podem ser remapeados com essa cláusula. Somente os usuários do SQL e do Windows (ou grupos) podem ser remapeados. A cláusula WITH LOGIN não pode ser usada para alterar o tipo de usuário, como alterar uma conta do Windows para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -755,7 +755,7 @@ O nome de um usuário mapeado para um logon do [!INCLUDE[ssNoVersion](../../incl
 
 ### <a name="permissions"></a>Permissões
 
- Para alterar o nome de um usuário requer a permissão **ALTER ANY USER**.
+ Para alterar o nome de um usuário requer a permissão **ALTER ANY USER** .
 
  Alterar o logon de um usuário de destino requer a permissão **CONTROL** no banco de dados.
 
@@ -804,7 +804,7 @@ GO
         [Banco de Dados SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -856,7 +856,7 @@ ALTER USER userName
  Não é possível especificar DEFAULT_SCHEMA para um usuário que esteja mapeado para um certificado ou uma chave assimétrica.
 
 > [!IMPORTANT]
-> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin**. Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
+> O valor de DEFAULT_SCHEMA será ignorado se o usuário for membro da função de servidor fixa **sysadmin** . Todos os membros da função de servidor fixa **sysadmin** têm um esquema padrão de `dbo`.
 
  Uma cláusula WITH LOGON habilita o remapeamento de um usuário para um logon diferente. Os usuários sem um logon, mapeados para um certificado ou mapeados para uma chave assimétrica não podem ser remapeados com essa cláusula. Somente os usuários do SQL e do Windows (ou grupos) podem ser remapeados. A cláusula WITH LOGIN não pode ser usada para alterar o tipo de usuário, como alterar uma conta do Windows para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -880,7 +880,7 @@ O nome de um usuário mapeado para um logon do [!INCLUDE[ssNoVersion](../../incl
 
 ### <a name="permissions"></a>Permissões
 
- Para alterar o nome de um usuário requer a permissão **ALTER ANY USER**.
+ Para alterar o nome de um usuário requer a permissão **ALTER ANY USER** .
 
  Alterar o logon de um usuário de destino requer a permissão **CONTROL** no banco de dados.
 

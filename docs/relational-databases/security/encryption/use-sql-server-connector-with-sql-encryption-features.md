@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32d0e4ea4ca6457701ae5ed4710d5213b3fe164c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725954"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679010"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ Depois de concluir as Partes I a IV do tópico Setup Steps for Extensible Key Ma
  
 Você precisará criar uma credencial e um logon e criar uma chave de criptografia do banco de dados que fará criptografia dos dados e logs no banco de dados. Para criptografar um banco de dados a permissão **CONTROL** é exigida no banco de dados. O gráfico a seguir mostra a hierarquia da chave de criptografia ao usar o Cofre de Chaves do Azure.  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![Diagrama mostrando a hierarquia da chave de criptografia ao usar o Azure Key Vault.](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **Criar uma credencial do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uso pelo mecanismo do banco de dados para TDE**  
   
@@ -50,13 +50,13 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
      Modificar o script [!INCLUDE[tsql](../../../includes/tsql-md.md)] abaixo das seguintes maneiras:  
   
     -   Edite o argumento `IDENTITY` (`ContosoDevKeyVault`) para apontar para o Cofre de Chaves do Azure.
-        - Se você estiver usando o **Azure global**, substitua o argumento `IDENTITY` pelo nome do seu Azure Key Vault da Parte II.
+        - Se você estiver usando o **Azure global** , substitua o argumento `IDENTITY` pelo nome do seu Azure Key Vault da Parte II.
         - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China 21Vianet ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.   
   
     -   Substitua a primeira parte do argumento do `SECRET` pela **ID do Cliente** do Azure Active Directory da Parte I. Neste exemplo, a **ID do Cliente** é `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
-        >  É necessário remover os hifens da **ID do Cliente**.  
+        >  É necessário remover os hifens da **ID do Cliente** .  
   
     -   Conclua a segunda parte do argumento `SECRET` com o **Segredo do Cliente** da Parte I. Neste exemplo, o **Segredo do Cliente** da Parte 1 é `ReplaceWithAADClientSecret`. 
   
@@ -116,13 +116,13 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
     GO  
     ```  
   
-     Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], verifique se a TDE foi ativada conectando-se ao banco de dados com o Pesquisador de Objetos. Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Gerenciar Criptografia de Banco de Dados**.  
+     Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], verifique se a TDE foi ativada conectando-se ao banco de dados com o Pesquisador de Objetos. Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Gerenciar Criptografia de Banco de Dados** .  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![Captura de tela mostrando o Pesquisador de Objetos com a opção Tarefas > Gerenciar Criptografia de Banco de Dados selecionada.](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      Na caixa de diálogo **Gerenciar Criptografia de Banco de Dados** , confirme se a TDE está ativada e se a chave assimétrica está criptografando a DEK.  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![Captura de tela da caixa de diálogo Gerenciar Criptografia de Banco de Dados com a opção Definir Criptografia de Banco de Dados como Ativa selecionada e uma faixa amarela que indica Agora a TDE está ativada.](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      Como alternativa, você pode executar o seguinte script [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Um estado de criptografia de 3 indica um banco de dados criptografado.  
   
@@ -149,15 +149,15 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
      Modificar o script [!INCLUDE[tsql](../../../includes/tsql-md.md)] abaixo das seguintes maneiras:  
   
     -   Edite o argumento `IDENTITY` (`ContosoDevKeyVault`) para apontar para o Cofre de Chaves do Azure.
-        - Se você estiver usando o **Azure global**, substitua o argumento `IDENTITY` pelo nome do seu Azure Key Vault da Parte II.
+        - Se você estiver usando o **Azure global** , substitua o argumento `IDENTITY` pelo nome do seu Azure Key Vault da Parte II.
         - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China 21Vianet ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.    
   
     -   Substitua a primeira parte do argumento do `SECRET` pela **ID do Cliente** do Azure Active Directory da Parte I. Neste exemplo, a **ID do Cliente** é `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  É necessário remover os hifens da **ID do Cliente**.  
+        >  É necessário remover os hifens da **ID do Cliente** .  
   
-    -   Conclua a segunda parte do argumento `SECRET` com o **Segredo do Cliente** da Parte I. Neste exemplo, o **Segredo do Cliente** da Parte I é `Replace-With-AAD-Client-Secret`. A cadeia de caracteres final do argumento `SECRET` será uma sequência longa de letras e números, *sem hifens*.   
+    -   Conclua a segunda parte do argumento `SECRET` com o **Segredo do Cliente** da Parte I. Neste exemplo, o **Segredo do Cliente** da Parte I é `Replace-With-AAD-Client-Secret`. A cadeia de caracteres final do argumento `SECRET` será uma sequência longa de letras e números, *sem hifens* .   
   
         ```sql  
         USE master;  

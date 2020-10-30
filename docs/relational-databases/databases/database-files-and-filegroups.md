@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192276"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497005"
 ---
 # <a name="database-files-and-filegroups"></a>Arquivos e grupos de arquivos do banco de dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -212,6 +212,7 @@ Recomendações ao trabalhar com arquivos e grupos de arquivos:
 - Insira tabelas diferentes usadas nas mesmas consultas de junção em diferentes grupos de arquivos. Essa etapa aprimorará o desempenho por conta da busca por dados ingressados pela E/S paralela do disco.
 - Insira tabelas excessivamente acessadas e índices não clusterizados que pertençam às tabelas de diferentes grupos de arquivos. O uso de grupos de arquivos diferentes aprimorará o desempenho por causa da E/S paralela, caso os arquivos estejam localizados em discos físicos diferentes.
 - Não insira os arquivos de log de transações no mesmo disco físico que contém os outros arquivos e grupos de arquivos.
+- Caso você precise estender uma partição ou um volume no qual os arquivos de banco de dados residem usando ferramentas como o [Diskpart](/windows-server/administration/windows-commands/diskpart), faça backup de todos os bancos de dados do sistema e de usuário e interrompa os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] primeiro. Além disso, quando os volumes de disco forem estendidos com êxito, considere a possibilidade de executar o comando [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) para garantir a integridade física de todos os bancos de dados que residem no volume.
 
 Para obter mais informações sobre recomendações sobre o gerenciamento de arquivos de log de transações, consulte [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 

@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499227"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439460"
 ---
 # <a name="index-json-data"></a>Indexar dados JSON
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ Não é preciso reescrever as consultas. Se você usar expressões com a funçã
 ### <a name="execution-plan-for-this-example"></a>Plano de execução para este exemplo
 Este é o plano de execução para a consulta no exemplo.  
   
-![Plano de execução](../../relational-databases/json/media/jsonindexblog1.png "Plano de execução")  
+![Captura de tela mostrando o plano de execução deste exemplo.](../../relational-databases/json/media/jsonindexblog1.png "Plano de execução")  
   
 Em vez de uma verificação de tabela completa, o SQL Server usa uma busca de índice no índice não clusterizado e localiza as linhas que atendem às condições especificadas. Em seguida, ele usa uma pesquisa de chave na tabela `SalesOrderHeader` para buscar outras colunas referenciadas na consulta – neste exemplo, `SalesOrderNumber` e `OrderDate`.  
  
@@ -138,13 +138,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Se você examinar o plano de execução real, verá que ele usa valores classificados do índice não clusterizado.  
   
- ![Plano de execução](../../relational-databases/json/media/jsonindexblog2.png "Plano de execução")  
+ ![Captura de tela mostrando um plano de execução que usa valores classificados do índice não clusterizado.](../../relational-databases/json/media/jsonindexblog2.png "Plano de execução")  
   
  Embora a consulta tenha uma cláusula `ORDER BY`, o plano de execução não usa um operador Sort. O índice JSON já é ordenado de acordo com a regras do Sérvio Cirílico. Portanto, o SQL Server pode usar o índice não clusterizado nos quais os resultados já estão classificados.  
   
  No entanto, se alterar a ordenação da expressão `ORDER BY` (por exemplo, se adicionar `COLLATE French_100_CI_AS_SC` após a função `JSON_VALUE`), você obterá um plano de execução de consulta diferente.  
   
- ![Plano de execução](../../relational-databases/json/media/jsonindexblog3.png "Plano de execução")  
+ ![Captura de tela mostrando outro plano de execução.](../../relational-databases/json/media/jsonindexblog3.png "Plano de execução")  
   
  Como a ordem dos valores no índice não segue as regras de ordenação do Francês, o SQL Server não pode usar o índice para ordenar os resultados. Portanto, ele adiciona um operador Sor que classifica os resultados usando as regras de ordenação do Francês.  
  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05f9a1bad426ad38b832597876522e67d1f01d73
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a268de26245955dd6be838e822f1cb84b693324
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537040"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497026"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89537040"
 ### <a name="the-data-file"></a>O arquivo de dados  
  Um arquivo de dados contém linhas de uma ou mais tabelas com otimização de memória que foram inseridas por várias transações como parte das operações INSERT ou UPDATE. Por exemplo, uma linha pode ser de uma tabela com otimização de memória T1 e a linha seguinte pode ser da tabela com otimização de memória T2. As linhas são acrescentadas ao arquivo de dados na ordem das transações no log de transações, tornando o acesso aos dados sequencial. Isso permite uma taxa de transferência de E/S significativamente melhor em comparação com a E/S aleatória.  
   
- Quando o arquivo de dados estiver cheio, as linhas inseridas por novas transações serão armazenadas em outro arquivo de dados. Com o tempo, as linhas de tabelas com otimização de memória duráveis são armazenadas em um de mais arquivos de dados e em cada arquivo de dados que contém linhas de um intervalo não contíguo, mas contíguo de transações. Por exemplo, um arquivo de dados com o carimbo de data/hora de confirmação de transação no intervalo de (100, 200) tem todas as linhas inseridas por transações com o carimbo de data/hora de confirmação maior que 100 e menor que ou igual a 200. O carimbo de data/hora de confirmação é um número que aumenta de forma monotônica atribuído a uma transação quando está pronto para confirmação. Cada transação tem um carimbo de data/hora de confirmação exclusivo.  
+ Quando o arquivo de dados estiver cheio, as linhas inseridas por novas transações serão armazenadas em outro arquivo de dados. Com o tempo, as linhas de tabelas com otimização de memória duráveis são armazenadas em um de mais arquivos de dados, e cada arquivo que contém linhas forma um intervalo não contíguo, mas contíguo de transações. Por exemplo, um arquivo de dados com o carimbo de data/hora de confirmação de transação no intervalo de (100, 200) tem todas as linhas inseridas por transações com o carimbo de data/hora de confirmação maior que 100 e menor que ou igual a 200. O carimbo de data/hora de confirmação é um número que aumenta de forma monotônica atribuído a uma transação quando está pronto para confirmação. Cada transação tem um carimbo de data/hora de confirmação exclusivo.  
   
  Quando uma linha é excluída ou atualizada, ela não é removida, nem alterada no local no arquivo de dados, mas as linhas excluídas são rastreadas em outro tipo de arquivo: o arquivo delta. As operações de atualização são processadas como uma tupla de operações de exclusão e inserção para cada linha. Isso elimina a E/S aleatória no arquivo de dados.  
  

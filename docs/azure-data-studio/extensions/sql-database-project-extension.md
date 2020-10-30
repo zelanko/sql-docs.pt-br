@@ -8,17 +8,18 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: 65006891a6633a75482f9a32c328dea0d8bf76fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.date: 10/22/2020
+ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91122973"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496739"
 ---
 # <a name="sql-database-projects-extension-preview"></a>Extensão de Projetos de Banco de Dados SQL (versão prévia)
 
 A extensão de Projetos do Banco de Dados SQL (versão prévia) é uma extensão para o desenvolvimento de Banco de Dados SQL em um ambiente de desenvolvimento baseado em projeto. 
+
 
 ## <a name="features"></a>Recursos
 
@@ -32,16 +33,20 @@ A extensão de Projetos do Banco de Dados SQL (versão prévia) é uma extensão
 8. Implantar projeto único.
 9. Carregar detalhes de conexão (autenticação do Windows para SQL) e variáveis SQLCMD usando o perfil de implantação.
 
+Assista a este vídeo rápido de 10 minutos para obter uma introdução à extensão de Projetos do Banco de Dados SQL no Azure Data Studio:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
+
 ## <a name="install-the-sql-database-projects-extension"></a>Instalar a extensão de Projetos de Banco de Dados SQL
 
-1. Abra o gerenciador de extensões para acessar as extensões disponíveis.  Para isso, selecione o ícone de extensões ou **Extensões** no menu **Exibir**.
+1. Abra o gerenciador de extensões para acessar as extensões disponíveis.  Para isso, selecione o ícone de extensões ou **Extensões** no menu **Exibir** .
 2. Identificar a extensão de *Projetos de Banco de Dados SQL* digitando todo ou parte do nome na caixa de pesquisa de extensão. Selecione uma extensão disponível para exibir os detalhes.
 
    ![Instalar a extensão](media/sql-database-projects-extension/install-database-projects.png)
 
-3. Selecione a extensão que você deseja e **Instale**-a.
+3. Selecione a extensão que você deseja e **Instale** -a.
 4. Selecione **Recarregar** para habilitar a extensão (necessário apenas na primeira vez que você instala uma extensão).
-5. Selecione o ícone arquivos na barra de atividade ou selecione **Explorer** no menu **Exibir**. Um novo viewlet de **Projetos** será disponibilizado.
+5. Selecione o ícone arquivos na barra de atividade ou selecione **Explorer** no menu **Exibir** . Um novo viewlet de **Projetos** será disponibilizado.
 
    > [!NOTE]
    > O SDK do .NET Core é necessário para a funcionalidade de build do projeto, e será solicitada a instalação do SDK do .NET Core se a extensão não conseguir detectá-lo.  É possível baixar e instalar o SDK do .NET Core (v 3.1 ou posterior) em [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).

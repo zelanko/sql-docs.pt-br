@@ -146,7 +146,7 @@ Um dos benefícios dos grupos de disponibilidade é que a alta disponibilidade e
  
 Fora de um grupo de disponibilidade com um tipo de cluster Nenhum, um grupo de disponibilidade requer que todas as réplicas sejam parte do mesmo cluster subjacente, seja um WSFC ou Pacemaker. Isso significa que, na figura acima, o WSFC é estendido para trabalhar em dois data centers diferentes, o que adiciona complexidade. independentemente da plataforma (Windows Server ou Linux). Transferir clusters em distância adiciona complexidade. Introduzido no SQL Server 2016, um grupo de disponibilidade distribuído permite que um grupo de disponibilidade abranja grupos de disponibilidade configurados em diferentes clusters. Isso separa a necessidade de ter os nós todos participando no mesmo cluster, o que facilita a configuração de recuperação de desastres. Para obter mais informações sobre grupos de disponibilidade distribuídos, veja [Grupos de disponibilidade distribuídos](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
-![Grupos de Disponibilidade Distribuídos](media/sql-server-ha-story/image11.png)
+![Um diagrama de um grupo de disponibilidade distribuído.](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Instâncias do cluster de failover do AlwaysOn
 
@@ -216,7 +216,7 @@ Antes de abordar os cenários de interoperabilidade e de multiplataforma, dois f
 
 Os grupos de disponibilidade distribuídos são projetados para abranger as configurações do grupo de disponibilidade, esses dois clusters subjacentes abaixo dos grupos de disponibilidade sendo duas diferentes distribuições do Linux e de WSFCs ou uma em um WSFC e a outra no Linux. Um grupo de disponibilidade distribuído será o principal método para ter uma solução de plataforma cruzada. Um grupo de disponibilidade distribuído também é a principal solução para migrações, como converter de uma infraestrutura do SQL Server com base no Windows Server para uma com base em Linux, se isso for o que sua empresa deseja fazer. Conforme observado acima, os grupos de disponibilidade e, especialmente, os grupos de disponibilidade distribuídos, devem minimizar o tempo que um aplicativo estaria indisponível para uso. Um exemplo de um grupo de disponibilidade distribuído que abrange um WSFC e o Pacemaker é mostrado abaixo.
 
-![Grupos de Disponibilidade Distribuídos](media/sql-server-ha-story/image9.png)
+![Diagrama mostrando um grupo de disponibilidade distribuído que abrange um WSFC e o Pacemaker.](media/sql-server-ha-story/image9.png)
  
 Se um grupo de disponibilidade estiver configurado com um tipo de cluster Nenhum, isso poderá abranger o Windows Server e o Linux, bem como várias distribuições do Linux. Como esta não é uma configuração de alta disponibilidade verdadeira, ela não deve ser usada para implantações de missão crítica, mas para cenários de escala de leitura ou migração/atualização.
 
@@ -233,7 +233,7 @@ Desde seu lançamento no SQL Server 2012, as réplicas secundárias tiveram a ca
 
 O dimensionamento de cópias legíveis de um banco de dados por meio de grupos de disponibilidade foi introduzido com grupos de disponibilidade distribuídos no SQL Server 2016. Isso permitiria que as empresas tivessem cópias de somente leitura do banco de dados não apenas localmente, mas regional e globalmente com uma quantidade mínima de configuração e reduziria o tráfego de rede e a latência ao executar as consultas localmente. Cada réplica primária de um grupo de disponibilidade pode propagar dois grupos de disponibilidade, mesmo se não for a cópia de leitura/gravação completa, então cada grupo de disponibilidade distribuído poderá oferecer suporte a até 27 cópias dos dados que podem ser lidos. 
 
-![Grupos de Disponibilidade Distribuídos](media/sql-server-ha-story/image11.png)
+![Diagrama mostrando um grupo de disponibilidade distribuído relacionado à escala de leitura.](media/sql-server-ha-story/image11.png)
 
 Começando com o SQL Server 2017, é possível criar uma solução de somente leitura quase em tempo real com grupos de disponibilidade configurados com um tipo de cluster Nenhum. Se a meta é usar grupos de disponibilidade para réplicas secundárias legíveis e não de disponibilidade, isso elimina a complexidade do uso de um WSFC ou Pacemaker, além de oferecer os benefícios legíveis de um grupo de disponibilidade em um método de implantação mais simples. 
 

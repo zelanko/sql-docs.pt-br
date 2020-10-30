@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 276cb3535e3ee0623816aa329446e81b2feaf12e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: d0dd2b33c5f37b58e1442c4ba4cef2a4f38f293c
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745616"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439270"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>Tutorial: Habilitar o widget de insight de exemplo de uso do espaço de tabela usando Azure Data Studio
 
@@ -27,7 +27,7 @@ Este tutorial demonstra como habilitar um widget de insight no painel de banco d
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azure. Para criar o banco de dados *TutorialDB*, siga um destes guias de início rápido:
+Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azure. Para criar o banco de dados *TutorialDB* , siga um destes guias de início rápido:
 
 * [Conectar e consultar o SQL Server usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Conectar e consultar o Banco de Dados SQL do Azure usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -36,19 +36,19 @@ Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azu
 
 O Azure Data Studio tem um widget de exemplo interno para monitorar o espaço usado pelas tabelas em um banco de dados.
 
-1. Abra as *Configurações do Usuário* pressionando **Ctrl+Shift+P** para abrir a *Paleta de Comandos*.
+1. Abra as *Configurações do Usuário* pressionando **Ctrl+Shift+P** para abrir a *Paleta de Comandos* .
 
-2. Digite *configurações* na caixa de pesquisa e selecione **Preferências: Abrir Configurações do Usuário**.
+2. Digite *configurações* na caixa de pesquisa e selecione **Preferências: Abrir Configurações do Usuário** .
 
-3. Digite *dashboard* na caixa de Pesquisa de Configurações e localize **dashboard.database.widgets**.
+3. Digite *dashboard* na caixa de Pesquisa de Configurações e localize **dashboard.database.widgets** .
 
-4. Para personalizar as configurações de **dashboard.database.widgets**, é necessário editar a entrada **dashboard.database.widgets** na seção **CONFIGURAÇÕES DO USUÁRIO**.
+4. Para personalizar as configurações de **dashboard.database.widgets** , é necessário editar a entrada **dashboard.database.widgets** na seção **CONFIGURAÇÕES DO USUÁRIO** .
 
-   ![Pesquisar configurações](media/tutorial-table-space-sql-server/search-settings.png)
+   ![Captura de tela mostrando a seção CONFIGURAÇÕES DO USUÁRIO com a seção Painel > Widgets de Banco de Dados em destaque.](media/tutorial-table-space-sql-server/search-settings.png)
 
-   Se não houver um **dashboard.database.widgets** na seção **CONFIGURAÇÕES DO USUÁRIO**, passe o mouse sobre o texto **dashboard.database.widgets** na coluna CONFIGURAÇÕES PADRÃO, clique no ícone de *engrenagem* que aparece à esquerda do texto e clique em **Copiar como JSON de Configuração**. Se o pop-up disser **Substituir nas Configurações**, não clique! Vá para a coluna **CONFIGURAÇÕES DO USUÁRIO** à direita e localize a seção **dashboard.database.widgets** e avance para a próxima etapa.
+   Se não houver um **dashboard.database.widgets** na seção **CONFIGURAÇÕES DO USUÁRIO** , passe o mouse sobre o texto **dashboard.database.widgets** na coluna CONFIGURAÇÕES PADRÃO, clique no ícone de *engrenagem* que aparece à esquerda do texto e clique em **Copiar como JSON de Configuração** . Se o pop-up disser **Substituir nas Configurações** , não clique! Vá para a coluna **CONFIGURAÇÕES DO USUÁRIO** à direita e localize a seção **dashboard.database.widgets** e avance para a próxima etapa.
 
-5. Na seção **dashboard.database.widgets**, adicione as seguintes linhas:
+5. Na seção **dashboard.database.widgets** , adicione as seguintes linhas:
 
    ```json
         {
@@ -65,13 +65,13 @@ O Azure Data Studio tem um widget de exemplo interno para monitorar o espaço us
 
    A seção **dashboard.database.widgets** deve ser semelhante à seguinte imagem:
 
-    ![Pesquisar configurações](./media/tutorial-table-space-sql-server/insight-table-space.png)
+    ![Captura de tela do arquivo settings.json com o primeiro objeto da matriz dashboard.database.widgets.](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 6. Pressione **Ctrl + S** para salvar as configurações.
 
-7. Abra o painel do banco de dados clicando com o botão direito do mouse em **TutorialDB** e clique em **Gerenciar**.
+7. Abra o painel do banco de dados clicando com o botão direito do mouse em **TutorialDB** e clique em **Gerenciar** .
 
-8. Exiba o widget de insight de *espaço de tabela*, conforme mostrado na imagem a seguir:
+8. Exiba o widget de insight de *espaço de tabela* , conforme mostrado na imagem a seguir:
 
    ![Widget](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 

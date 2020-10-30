@@ -1,6 +1,6 @@
 Descarta um grupo de carga de trabalho do Administrador de Recursos definido pelo usuário existente.
 
-![Ícone de link do tópico](../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Convenções de sintaxe Transact-SQL](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Sintaxe
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac19c1c8e0dfc2e8a8cf4711400eb3c5cb29b5f2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 3800029fb04f058f6f2a0f00ed3f859d1385782e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784828"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523861"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurar o Grupo de Disponibilidade Always On do SQL Server no Windows e no Linux (multiplataforma)
 
@@ -69,7 +69,7 @@ As etapas para criar o AG são as mesmas que para criar um AG para cargas de tra
 
    A imagem a seguir mostra essa etapa completa.
 
-   ![Habilitar Grupos de Disponibilidade do Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Captura de tela de uma janela do Git Bash mostrando o comando.](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. Configure o arquivo de hosts em ambos os servidores ou registre os nomes de servidor com DNS.
 
@@ -110,7 +110,7 @@ As etapas para criar o AG são as mesmas que para criar um AG para cargas de tra
 
    No diagrama, a propriedade e o grupo a seguir são definidos corretamente para o certificado e a chave.
 
-   ![Habilitar Grupos de Disponibilidade do Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Captura de tela de uma janela do Git Bash mostrando o .cer e o .pvk na pasta /var/opt/mssql/data.](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. Na réplica secundária, crie um logon de banco de dados e uma senha e crie uma chave mestra.

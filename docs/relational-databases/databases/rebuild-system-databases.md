@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 2365440fd87789a30e67c8c5effcbf0e85b8bc24
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210621"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638989"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -107,10 +107,10 @@ ms.locfileid: "91210621"
     |--------------------|-----------------|  
     |/QUIET ou /Q|Especifica que a Instalação é executada sem nenhuma interface do usuário.|  
     |/ACTION=REBUILDDATABASE|Especifica que Instalação recria os bancos de dados do sistema.|  
-    |/INSTANCENAME=*InstanceName*|É o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para a instância padrão, digite MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos ou contas individuais do Windows a serem adicionados à função de servidor fixa **sysadmin** . Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, digite **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da conta **sa** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **&#42;&#42; Observação de Segurança &#42;&#42;** A conta **sa** é uma conta conhecida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, geralmente, é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon **sa** .<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Especifica uma nova ordenação no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, a ordenação atual do servidor é usada.<br /><br /> **\*\* Importante \*\*** A alteração da ordenação no nível do servidor não altera a ordenação de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão a nova ordenação.<br /><br /> Para obter mais informações, veja [Definir ou alterar a ordenação do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
+    |/INSTANCENAME= *InstanceName*|É o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para a instância padrão, digite MSSQLSERVER.|  
+    |/SQLSYSADMINACCOUNTS = *contas*|Especifica os grupos ou contas individuais do Windows a serem adicionados à função de servidor fixa **sysadmin** . Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser** . Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, digite **NT AUTHORITY\SYSTEM** .|  
+    |[ /SAPWD= *StrongPassword* ]|Especifica a senha da conta **sa** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> **&#42;&#42; Observação de Segurança &#42;&#42;** A conta **sa** é uma conta conhecida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, geralmente, é visada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon **sa** .<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
+    |[ /SQLCOLLATION= *CollationName* ]|Especifica uma nova ordenação no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, a ordenação atual do servidor é usada.<br /><br /> **\*\* Importante \*\*** A alteração da ordenação no nível do servidor não altera a ordenação de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão a nova ordenação.<br /><br /> Para obter mais informações, veja [Definir ou alterar a ordenação do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NúmeroDeArquivos ]|Especifica o número de arquivos de dados tempdb. Esse valor pode ser aumentado para até 8 ou o número de núcleos, o que for maior.<br /><br /> Valor padrão: 8 ou o número de núcleos, o que for menor.|  
     |[ /SQLTEMPDBFILESIZE=TamanhoDoArquivoEmMB ]|Especifica o tamanho inicial de cada arquivo de dados tempdb em MB. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 8|  
     |[ /SQLTEMPDBFILEGROWTH=TamanhoDoArquivoEmMB ]|Especifica o incremento de aumento do arquivo de cada arquivo de dados tempdb em MB. Um valor 0 indica que o crescimento automático está desativado e nenhum espaço adicional é permitido. A instalação permite o tamanho de até 1.024 MB.<br /><br /> Valor padrão: 64|  
@@ -149,15 +149,15 @@ ms.locfileid: "91210621"
   
 1.  Inicie o programa de Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (setup.exe) da mídia de distribuição.  
   
-2.  Na área de navegação à esquerda, clique em **Manutenção**e em **Reparar**.  
+2.  Na área de navegação à esquerda, clique em **Manutenção** e em **Reparar** .  
   
 3.  A regra de suporte à Instalação e as rotinas de arquivos são executadas para garantir que o sistema tenha os pré-requisitos instalados e que o computador aprove as regras de validação da Instalação. Clique em **OK** ou em **Instalar** para continuar.  
   
-4.  Na página Selecionar Instância, selecione a instância a ser reparada e, em seguida, clique em **Avançar**.  
+4.  Na página Selecionar Instância, selecione a instância a ser reparada e, em seguida, clique em **Avançar** .  
   
-5.  As regras de reparo são executadas para validar a operação. Para continuar, clique em **Avançar**.  
+5.  As regras de reparo são executadas para validar a operação. Para continuar, clique em **Avançar** .  
   
-6.  Na página **Pronto para Reparar** , clique em **Reparar**. A página Concluído indica que a operação foi concluída.  
+6.  Na página **Pronto para Reparar** , clique em **Reparar** . A página Concluído indica que a operação foi concluída.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Criar um novo banco de dados msdb  
 
@@ -172,7 +172,7 @@ ms.locfileid: "91210621"
   
      Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Em outra janela da linha de comando, desanexe o banco de dados **msdb**, executando o seguinte comando, substituindo *\<servername>* pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  Em outra janela da linha de comando, desanexe o banco de dados **msdb** , executando o seguinte comando, substituindo *\<servername>* pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  Usando o Windows Explorer, renomeie os arquivos de banco de dados **msdb** . Por padrão, eles estão na subpasta DATA da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -190,11 +190,11 @@ ms.locfileid: "91210621"
   
 10. Faça um backup do banco de dados **msdb** .  
 
-##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Recompilar o banco de dados Tempdb  
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Recompilar o banco de dados tempdb  
 
 Se o banco de dados **tempdb** estiver danificado e o mecanismo de banco de dados falhar ao iniciar, você poderá recompilar **tempdb** sem a necessidade de recompilar todos os bancos de dados do sistema.
   
-1. Renomeie os arquivos Tempdb.mdf e Templog.ldf atuais, se não estiverem ausentes. 
+1. Renomeie os arquivos tempdb.mdf e templog.ldf atuais, se não estiverem ausentes. 
 1. Inicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um prompt de comando usando o comando a seguir. 
 
    ```sql
@@ -209,7 +209,7 @@ Se o banco de dados **tempdb** estiver danificado e o mecanismo de banco de dado
 1. Conecte-se ao servidor usando **sqlcmd** e use o procedimento armazenado a seguir para redefinir o status do banco de dados tempdb.
 
    ```sql
-   exec master..sp_resetstatus Tempdb
+   exec master..sp_resetstatus tempdb
    ```
 
 1. Desligue o servidor pressionando CTRL + C na janela do prompt de comando

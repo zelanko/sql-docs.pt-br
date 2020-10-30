@@ -4,7 +4,7 @@ title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -25,18 +25,21 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098845"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679078"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
-Executa operações de inserção, atualização ou exclusão em uma tabela de destino usando os resultados de uma união com uma tabela de origem. Por exemplo, sincronize duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela com base nas diferenças encontradas na outra tabela.  
+Executa operações de inserção, atualização ou exclusão em uma tabela de destino usando os resultados de uma união com uma tabela de origem. Por exemplo, sincronize duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela com base nas diferenças encontradas na outra tabela. 
+
+> [!NOTE]
+> Atualmente, o comando MERGE está em versão prévia no Azure Synapse Analytics.
   
 **Dica de desempenho:** O comportamento condicional descrito para a instrução de MERGE funciona melhor quando as duas tabelas têm uma mistura complexa de características coincidentes. Por exemplo, inserindo uma linha se ela não existir ou atualizando uma linha se ela tiver correspondência. Ao simplesmente atualizar uma tabela com base nas linhas de outra tabela, melhore o desempenho e a escalabilidade com as instruções básicas INSERT, UPDATE e DELETE. Por exemplo:  
   
@@ -143,7 +146,7 @@ Se *target_table* for uma exibição, qualquer ação com ela deverá atender à
 *target_table* não pode ser uma tabela remota. *target_table* não pode ter regras definidas nela.  
   
 [ AS ] *table_alias*  
-Um nome alternativo para fazer referência a uma tabela para a *target_table*.  
+Um nome alternativo para fazer referência a uma tabela para a *target_table* .  
   
 USING \<table_source>  
 Especifica a fonte de dados que corresponde às linhas de dados em *target_table* com base em \<merge_search condition>. O resultado dessa correspondência dita as ações a serem tomadas pelas cláusulas WHEN da instrução MERGE. \<table_source> pode ser uma tabela remota ou uma tabela derivada que acessa tabelas remotas.
@@ -167,7 +170,7 @@ Especifica que todas as linhas de *target_table, que correspondem às linhas ret
 A instrução MERGE pode ter, no máximo, duas cláusulas WHEN MATCHED. Se duas cláusulas forem especificadas, a primeira deverá ser acompanhada de uma cláusula AND \<search_condition>. Para qualquer linha especificada, a segunda cláusula WHEN MATCHED será aplicada somente se a primeira não for. Se houver duas cláusulas WHEN MATCHED, uma delas deverá especificar uma ação UPDATE e a outra, uma ação DELETE. Quando UPDATE for especificado na cláusula \<merge_matched> e mais de uma linha de \<table_source> corresponder a uma linha em *target_table* com base em \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. A instrução MERGE não pode atualizar a mesma linha mais de uma vez, nem atualizar e excluir a mesma linha.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Especifica que uma linha é inserida em *target_table* para cada linha retornada por \<table_source> ON \<merge_search_condition> que não corresponde a uma linha em *target_table*, mas atende a um condição de pesquisa adicional, se houver. Os valores a serem inseridos são especificados pela cláusula \<merge_not_matched>. A instrução MERGE só pode ter uma cláusula WHEN NOT MATCHED [ BY TARGET ].
+Especifica que uma linha é inserida em *target_table* para cada linha retornada por \<table_source> ON \<merge_search_condition> que não corresponde a uma linha em *target_table* , mas atende a um condição de pesquisa adicional, se houver. Os valores a serem inseridos são especificados pela cláusula \<merge_not_matched>. A instrução MERGE só pode ter uma cláusula WHEN NOT MATCHED [ BY TARGET ].
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Especifica que todas as linhas de *target_table, que não correspondem às linhas retornadas por \<table_source> ON \<merge_search_condition> e que atendem a qualquer condição de pesquisa adicional, são atualizadas ou excluídas de acordo com a cláusula \<merge_matched>.  
@@ -212,10 +215,10 @@ Especifica que as linhas que correspondem a linhas em *target_table* são exclu�
 \<merge_not_matched>  
 Especifica os valores a serem inseridos na tabela de destino.  
   
-(*column_list*)  
+( *column_list* )  
 Uma lista de uma ou mais colunas da tabela de destino na qual inserir dados. As colunas devem ser especificadas como um nome de parte única. Caso contrário, haverá falha na instrução MERGE. *column_list* deve ser colocada entre parênteses e separada por vírgulas.  
   
-VALUES ( *values_list*)  
+VALUES ( *values_list* )  
 Uma lista de constantes, variáveis ou expressões separadas por vírgulas que retorna valores a serem inseridos na tabela de destino. As expressões não podem conter uma instrução EXECUTE.  
   
 DEFAULT VALUES  
@@ -233,6 +236,7 @@ Especifica o padrão de correspondência do grafo. Para obter mais informações
 >[!NOTE]
 > No Azure Synapse Analytics, o comando MERGE (versão prévia) tem as diferenças a seguir em comparação com o banco de dados SQL do Azure e o SQL Server.  
 > - Uma atualização MERGE é implementada como um par de exclusão e inserção. A contagem de linhas afetadas em uma atualização MERGE inclui as linhas excluídas e inseridas. 
+> - Durante a versão prévia, o comando MERGE não funciona em tabelas com restrições UNIQUE.  Isso será corrigido em breve em uma versão posterior.
 > - O suporte para tabelas com tipos de distribuição diferentes é descrito nesta tabela:
 
 >|Cláusula MERGE no Azure Synapse Analytics|Tabela de distribuição TARGET com suporte| Tabela de distribuição SOURCE com suporte|Comentário|  
@@ -260,9 +264,9 @@ Para cada ação de inserção, atualização ou exclusão especificada na instr
   
 Se a tabela de destino tiver um gatilho INSTEAD OF habilitado definido para uma ação de inserção, atualização ou exclusão realizada por uma instrução MERGE, ela deverá ter um gatilho INSTEAD OF habilitado para todas as ações especificadas na instrução MERGE.  
   
-Se algum gatilho INSTEAD OF UPDATE ou INSTEAD OF DELETE for definido em *target_table*, as operações de atualização ou de exclusão não serão executadas. Em vez disso, os gatilhos serão disparados e as tabelas **inserted** e **deleted** serão populadas adequadamente.  
+Se algum gatilho INSTEAD OF UPDATE ou INSTEAD OF DELETE for definido em *target_table* , as operações de atualização ou de exclusão não serão executadas. Em vez disso, os gatilhos serão disparados e as tabelas **inserted** e **deleted** serão populadas adequadamente.  
   
-Se algum gatilho INSTEAD OF INSERT for definido em *target_table*, a operação de inserção não será executada. Em vez disso, a tabela será populada adequadamente.  
+Se algum gatilho INSTEAD OF INSERT for definido em *target_table* , a operação de inserção não será executada. Em vez disso, a tabela será populada adequadamente.  
   
 ## <a name="permissions"></a>Permissões
 

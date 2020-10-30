@@ -30,12 +30,12 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ae2f5840120a24cbb0a1c0426c70e36084bd407
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: ef45a3ade9123288b8d89a44dbfb18b8e626ed5d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004810"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678941"
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +85,7 @@ Cada logon pertence à função de servidor fixa `public` e cada usuário de ban
  Essas contas de entidade de segurança não têm senhas que podem ser alteradas por administradores, pois são baseadas em certificados emitidos para a Microsoft.
   
 ## <a name="the-guest-user"></a>O Usuário convidado  
- Cada banco de dados inclui um `guest`. As permissões concedidas ao usuário `guest` são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O usuário `guest` não pode ser descartado, mas pode ser desabilitado revogando sua permissão CONNECT. A permissão CONNECT pode ser revogada executando `REVOKE CONNECT FROM GUEST;` em qualquer banco de dados diferente de `master` ou `tempdb`.  
+ Cada banco de dados inclui um `guest`. As permissões concedidas ao usuário `guest` são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O usuário `guest` não pode ser removido, mas pode ser desabilitado pela revogação da permissão CONNECT. A permissão CONNECT pode ser revogada executando `REVOKE CONNECT FROM GUEST;` em qualquer banco de dados diferente de `master` ou `tempdb`.  
   
   
 ## <a name="related-tasks"></a>Related Tasks  

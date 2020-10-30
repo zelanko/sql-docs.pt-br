@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991847"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439390"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ A partir do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], o padrão para a mai
 > [!NOTE]
 > Até, e incluindo, o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o sinalizador de rastreamento 1118 pode ser usado para alterar a alocação padrão para sempre usar extensões uniformes. Para obter mais informações sobre este sinalizador de rastreamento, consulte [DBCC TRACEON – Sinalizadores de rastreamento](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> A partir do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], a funcionalidade fornecida pelo FT 1118 é habilitada automaticamente para o tempdb. Para bancos de dados de usuário, esse comportamento é controlado pela opção `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, com o valor padrão definido como OFF, e o sinalizador de rastreamento 1118 não tem nenhum efeito. Para obter mais informações, veja [Opções ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> Do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] em diante, a funcionalidade fornecida pelo TF 1118 é habilitada automaticamente no tempdb e em todos os bancos de dados de usuários. Para bancos de dados de usuário, esse comportamento é controlado pela opção `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, com o valor padrão definido como OFF, e o sinalizador de rastreamento 1118 não tem nenhum efeito. Para obter mais informações, veja [Opções ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a função do sistema `sys.dm_db_database_page_allocations` pode relatar informações de alocação de página para um banco de dados, uma tabela, um índice e uma partição.
 
@@ -182,7 +182,7 @@ Quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] precisar ins
 
 O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] só alocará uma extensão nova a uma unidade de alocação quando não conseguir encontrar uma página rapidamente em uma extensão existente com espaço suficiente para manter a linha que estiver sendo inserida. 
 
-<a name="ProportionalFill"></a> O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] aloca as extensões disponíveis no grupo de arquivos usando um **algoritmo de alocação de preenchimento proporcional**. Se, em um grupo de arquivos com dois arquivos, um deles tiver duas vezes mais espaço livre do que o outro, serão alocadas duas páginas do arquivo com o espaço disponível para cada página alocada do outro arquivo. Isso significa que todo arquivo em um grupo de arquivos deve ter uma porcentagem semelhante de espaço usado. 
+<a name="ProportionalFill"></a> O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] aloca as extensões disponíveis no grupo de arquivos usando um **algoritmo de alocação de preenchimento proporcional** . Se, em um grupo de arquivos com dois arquivos, um deles tiver duas vezes mais espaço livre do que o outro, serão alocadas duas páginas do arquivo com o espaço disponível para cada página alocada do outro arquivo. Isso significa que todo arquivo em um grupo de arquivos deve ter uma porcentagem semelhante de espaço usado. 
 
 ## <a name="tracking-modified-extents"></a>Controlando extensões modificadas 
 

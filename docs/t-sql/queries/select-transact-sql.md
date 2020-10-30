@@ -26,31 +26,31 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d3bc17bec08636983f5a8c85395da758720a3e0
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: faece054ca8f125e8c3594eb588ffa8cf97ddc16
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227200"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344908"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Recupera linhas do banco de dados e permite a seleção de uma ou várias linhas ou colunas de uma ou várias tabelas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A sintaxe completa da instrução SELECT é complexa, mas as cláusulas principais podem ser assim resumidas:  
   
-[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
+[ WITH { [[ XMLNAMESPACES ,]](../../t-sql/xml/with-xmlnamespaces.md) [[ \<common_table_expression> ]](../../t-sql/queries/with-common-table-expression-transact-sql.md) } ]
   
- SELECT *select_list* [ INTO *new_table* ]  
+ [SELECT *select_list*](../../t-sql/queries/select-clause-transact-sql.md) [ [INTO *new_table*](../../t-sql/queries/select-into-clause-transact-sql.md) ]  
   
- [ FROM *table_source* ] [ WHERE *search_condition* ]  
+ [ [FROM *table_source*](../../t-sql/queries/from-transact-sql.md) ] [ [WHERE *search_condition*](../../t-sql/queries/where-transact-sql.md) ]  
   
- [ GROUP BY *group_by_expression* ]  
+ [ [GROUP BY *group_by_expression*](../../t-sql/queries/select-group-by-transact-sql.md) ]  
   
- [ HAVING *search_condition* ]  
+ [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
- [ ORDER BY *order_expression* [ ASC | DESC ] ]  
+ [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
- Os operadores UNION, EXCEPT e INTERSECT podem ser usados entre consultas para combinar ou comparar os resultados em um único conjunto de resultados.  
+ Os operadores [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT e INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) podem ser usados entre consultas para combinar ou comparar os resultados em um só conjunto de resultados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,8 +62,7 @@ ms.locfileid: "91227200"
 <SELECT statement> ::=    
     [ WITH { [ XMLNAMESPACES ,] [ <common_table_expression> [,...n] ] } ]  
     <query_expression>   
-    [ ORDER BY { order_by_expression | column_position [ ASC | DESC ] }   
-  [ ,...n ] ]   
+    [ ORDER BY <order_by_expression> ] 
     [ <FOR Clause>]   
     [ OPTION ( <query_hint> [ ,...n ] ) ]   
 <query_expression> ::=   
@@ -188,10 +187,10 @@ SELECT <select_criteria>
 > [!WARNING]
 > A sequência anterior geralmente é verdadeira. No entanto, há casos incomuns em que a sequência pode ser diferente.
 >
-> Por exemplo, suponha que você tenha um índice clusterizado em uma exibição e a exibição exclui algumas linhas de tabela e lista de colunas SELECT da exibição usa um CONVERT que altera um tipo de dados de *varchar* para *integer*. Nessa situação, CONVERT pode ser executado antes da execução da cláusula WHERE. Isso é um tanto incomum. Geralmente, há uma maneira de modificar a exibição para evitar a sequência diferente, se isso é importante em seu caso. 
+> Por exemplo, suponha que você tenha um índice clusterizado em uma exibição e a exibição exclui algumas linhas de tabela e lista de colunas SELECT da exibição usa um CONVERT que altera um tipo de dados de *varchar* para *integer* . Nessa situação, CONVERT pode ser executado antes da execução da cláusula WHERE. Isso é um tanto incomum. Geralmente, há uma maneira de modificar a exibição para evitar a sequência diferente, se isso é importante em seu caso. 
 
 ## <a name="permissions"></a>Permissões  
- A seleção de dados exige a permissão **SELECT** na tabela ou exibição, que pode ser herdada de um escopo superior, como a permissão **SELECT** no esquema ou a permissão **CONTROL** na tabela. Ou exige a associação à função de banco de dados fixa **db_datareader** ou **db_owner** ou à função de servidor fixa **sysadmin**. A criação de uma nova tabela com **SELECT INTO** também exige a permissão **CREATE TABLE** e a permissão **ALTER SCHEMA** no esquema que tem a nova tabela.  
+ A seleção de dados exige a permissão **SELECT** na tabela ou exibição, que pode ser herdada de um escopo superior, como a permissão **SELECT** no esquema ou a permissão **CONTROL** na tabela. Ou exige a associação à função de banco de dados fixa **db_datareader** ou **db_owner** ou à função de servidor fixa **sysadmin** . A criação de uma nova tabela com **SELECT INTO** também exige a permissão **CREATE TABLE** e a permissão **ALTER SCHEMA** no esquema que tem a nova tabela.  
   
 ## <a name="examples"></a>Exemplos:   
 O exemplo a seguir usa o banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].

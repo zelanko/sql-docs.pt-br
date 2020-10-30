@@ -25,12 +25,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0355e777d05ba9b8257f57a65999e6973c53b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875859d70488bd536223e400e183bcc88a3b4d99
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458849"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497008"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ Altera as propriedades de uma conta de logon do [!INCLUDE[ssNoVersion](../../inc
         [Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -159,7 +159,7 @@ Se MUST_CHANGE for especificado, CHECK_EXPIRATION e CHECK_POLICY deverão ser de
 
 Se CHECK_POLICY for definido como OFF, CHECK_EXPIRATION não poderá ser definido como ON. Uma instrução ALTER LOGON com essa combinação de opções falhará.
 
-Você não pode usar ALTER LOGIN com o argumento DISABLE para negar acesso a um grupo do Windows. Por exemplo, ALTER LOGIN [*domain\group*] DISABLE retornará a seguinte mensagem de erro:
+Você não pode usar ALTER LOGIN com o argumento DISABLE para negar acesso a um grupo do Windows. Por exemplo, ALTER LOGIN [ *domain\group* ] DISABLE retornará a seguinte mensagem de erro:
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -284,7 +284,7 @@ GO
         **_\* Banco de Dados SQL \*_**
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -398,7 +398,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 O exemplo seguinte mapeia o logon `Mary5` para a credencial de EKM `EKMProvider1`.
 
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
+**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
 
 ```sql
 ALTER LOGIN Mary5
@@ -428,7 +428,7 @@ GO
 
 O exemplo seguinte altera a senha do logon `TestUser` para um valor em que o hash já foi aplicado.
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
+**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -456,7 +456,7 @@ GO
         [Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Banco de Dados SQL<br />Instância Gerenciada \*_**
+        **_\* Instância Gerenciada de SQL \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -590,7 +590,7 @@ Se MUST_CHANGE for especificado, CHECK_EXPIRATION e CHECK_POLICY deverão ser de
 
 Se CHECK_POLICY for definido como OFF, CHECK_EXPIRATION não poderá ser definido como ON. Uma instrução ALTER LOGON com essa combinação de opções falhará.
 
-Você não pode usar ALTER_LOGIN com o argumento DISABLE para negar acesso a um grupo do Windows. Isso ocorre por design. Por exemplo, ALTER_LOGIN [*domain\group*] DISABLE retornará a seguinte mensagem de erro:
+Você não pode usar ALTER_LOGIN com o argumento DISABLE para negar acesso a um grupo do Windows. Isso ocorre por design. Por exemplo, ALTER_LOGIN [ *domain\group* ] DISABLE retornará a seguinte mensagem de erro:
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -655,7 +655,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 O exemplo seguinte mapeia o logon `Mary5` para a credencial de EKM `EKMProvider1`.
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e Instância Gerenciada de SQL do Azure.
+**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e Instância Gerenciada de SQL do Azure.
 
 ```sql
 ALTER LOGIN Mary5
@@ -685,7 +685,7 @@ GO
 
 O exemplo seguinte altera a senha do logon `TestUser` para um valor em que o hash já foi aplicado.
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e Instância Gerenciada de SQL do Azure.
+**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior e Instância Gerenciada de SQL do Azure.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -721,7 +721,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -832,7 +832,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 O exemplo seguinte mapeia o logon `Mary5` para a credencial de EKM `EKMProvider1`.
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
+**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
 
 ```sql
 ALTER LOGIN Mary5
@@ -862,7 +862,7 @@ GO
 
 O exemplo seguinte altera a senha do logon `TestUser` para um valor em que o hash já foi aplicado.
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
+**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -890,7 +890,7 @@ GO
         [Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -972,7 +972,7 @@ Se MUST_CHANGE for especificado, CHECK_EXPIRATION e CHECK_POLICY deverão ser de
 
 Se CHECK_POLICY for definido como OFF, CHECK_EXPIRATION não poderá ser definido como ON. Uma instrução ALTER LOGON com essa combinação de opções falhará.
 
-Você não pode usar ALTER_LOGIN com o argumento DISABLE para negar acesso a um grupo do Windows. Isso ocorre por design. Por exemplo, ALTER_LOGIN [*domain\group*] DISABLE retornará a seguinte mensagem de erro:
+Você não pode usar ALTER_LOGIN com o argumento DISABLE para negar acesso a um grupo do Windows. Isso ocorre por design. Por exemplo, ALTER_LOGIN [ *domain\group* ] DISABLE retornará a seguinte mensagem de erro:
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -1035,7 +1035,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 O exemplo seguinte mapeia o logon `Mary5` para a credencial de EKM `EKMProvider1`.
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
+**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
 
 ```sql
 ALTER LOGIN Mary5
@@ -1065,7 +1065,7 @@ GO
 
 O exemplo seguinte altera a senha do logon `TestUser` para um valor em que o hash já foi aplicado.
 
-**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
+**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.
 
 ```sql
 ALTER LOGIN TestUser WITH

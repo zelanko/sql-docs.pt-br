@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 67106682f9302c7849b8f5523e88aa1dd2aa4475
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51db0074dda0a311dfbea84f51144d8b48ab90ce
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444734"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496889"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "88444734"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -59,7 +59,7 @@ ms.locfileid: "88444734"
         [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Instância Gerenciada do<br />Banco de Dados SQL \*_** &nbsp;
+        **_\* Instância Gerenciada de SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -80,7 +80,7 @@ ms.locfileid: "88444734"
         [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Banco de Dados SQL<br />Instância Gerenciada](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Instância Gerenciada de SQL](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -93,7 +93,7 @@ ms.locfileid: "88444734"
 
 Cria um grupo de carga de trabalho. Grupos de carga de trabalho são contêineres para um conjunto de solicitações e são a base de como o gerenciamento de cargas de trabalho é configurado em um sistema. Os grupos de cargas de trabalho fornecem a capacidade de reservar recursos para ter isolamento da cargas de trabalho, conter recursos, definir recursos por solicitação e aderir às regras de execução. Quando a instrução for concluída, as configurações estarão em vigor.
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif"::: [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ```syntaxsql
 CREATE WORKLOAD GROUP group_name

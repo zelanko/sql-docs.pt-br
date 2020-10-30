@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ec09eb43fdd00d57860abf1f40e5010084eded97
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867000"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524026"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar alterações a linhas relacionadas com registros lógicos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "91867000"
   
  ![Registro lógico de três tabelas, somente com nomes de coluna](../../../relational-databases/replication/merge/media/logical-records-01.gif "Registro lógico de três tabelas, somente com nomes de coluna")  
   
- A tabela **Customers** é a tabela pai nesta relação e tem uma coluna de chave primária **CustID**. A tabela **Orders** tem uma coluna de chave primária **OrderID**, com uma restrição de chave estrangeira na coluna **CustID** que faz referência à coluna **CustID** na tabela **Customers** . De forma semelhante, a tabela **OrderItems** tem uma coluna de chave primária **OrderItemID**, com uma restrição de chave estrangeira na coluna **OrderID** que faz referência à coluna **OrderID** na tabela **Orders** .  
+ A tabela **Customers** é a tabela pai nesta relação e tem uma coluna de chave primária **CustID** . A tabela **Orders** tem uma coluna de chave primária **OrderID** , com uma restrição de chave estrangeira na coluna **CustID** que faz referência à coluna **CustID** na tabela **Customers** . De forma semelhante, a tabela **OrderItems** tem uma coluna de chave primária **OrderItemID** , com uma restrição de chave estrangeira na coluna **OrderID** que faz referência à coluna **OrderID** na tabela **Orders** .  
   
  Neste exemplo, um registro lógico consiste de todas as linhas na tabela **Orders** que são relacionadas a um valor **CustID** único e todas as linhas na tabela **OrderItems** são relacionadas a aquelas linhas na tabela **Orders** . Este diagrama exibe todas as linhas nas três tabelas que estão no registro lógico para Customer2:  
   
- ![Registro lógico de três tabelas com valores](../../../relational-databases/replication/merge/media/logical-records-02.gif "Registro lógico de três tabelas com valores")  
+ ![Primeira captura de tela de um registro lógico de três tabelas com valores.](../../../relational-databases/replication/merge/media/logical-records-02.gif "Registro lógico de três tabelas com valores")  
   
  Definir uma relação de registro lógico entre artigos, consulte [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91867000"
 ### <a name="the-application-of-changes-as-a-unit"></a>A aplicação de alterações como uma unidade  
  Se o processamento de mesclagem for interrompido, como no caso de uma conexão descartada, o conjunto parcialmente completado de alterações replicadas relacionadas será revertido se forem usados registros lógicos. Por exemplo, considere o caso onde um Assinante adiciona um novo pedido com **OrderID** = 6 e duas novas linhas na tabela **OrderItems** com **OrderItemID** = 10 e **OrderItemID** = 11 para **OrderID** = 6.  
   
- ![Registro lógico de três tabelas com valores](../../../relational-databases/replication/merge/media/logical-records-04.gif "Registro lógico de três tabelas com valores")  
+ ![Segunda captura de tela de um registro lógico de três tabelas com valores.](../../../relational-databases/replication/merge/media/logical-records-04.gif "Registro lógico de três tabelas com valores")  
   
  Se o processo de replicação for interrompido depois da linha **Pedidos** , para **OrderID** = 6 está concluído, mas, antes que os **OrderItems** 10 e 11 sejam concluídos e os registros lógicos não sejam usados, o valor de **OrderTotal** para **OrderID** = 6 não será consistente com a soma dos valores **OrderAmount** das linhas **OrderItems** . Se forem usados registros lógicos, a linha **Orders** para **OrderID** = 6 não será confirmada até que as alterações **OrderItems** sejam replicadas.  
   
@@ -131,11 +131,11 @@ ms.locfileid: "91867000"
   
      ![Tabela filho com mais de uma tabela pai](../../../relational-databases/replication/merge/media/logical-records-03.gif "Tabela filho com mais de uma tabela pai")  
   
-     Você não pode usar um registro lógico para representar as três tabelas nessa relação, porque as linhas em **ClassMembers** não são associadas com uma linha de chave primária única. As tabelas **Classes** e **ClassMembers** poderiam ainda formar um registro lógico, como poderiam as tabelas **ClassMembers** e **Students**, mas não todas as três.  
+     Você não pode usar um registro lógico para representar as três tabelas nessa relação, porque as linhas em **ClassMembers** não são associadas com uma linha de chave primária única. As tabelas **Classes** e **ClassMembers** poderiam ainda formar um registro lógico, como poderiam as tabelas **ClassMembers** e **Students** , mas não todas as três.  
   
 -   A publicação não pode conter relações de filtro de junção circulares.  
   
-     Usando o exemplo com as tabelas **Customers**, **Orders**e **OrderItems**, você não poderia usar registros lógicos se a tabela **Orders** também tivesse uma restrição de chave estrangeira que fez referência à tabela **OrderItems** .  
+     Usando o exemplo com as tabelas **Customers** , **Orders** e **OrderItems** , você não poderia usar registros lógicos se a tabela **Orders** também tivesse uma restrição de chave estrangeira que fez referência à tabela **OrderItems** .  
   
 ## <a name="performance-implications-of-logical-records"></a>Implicações de desempenho de registros lógicos  
  O recurso de registro lógico vem com um custo de desempenho. Se não forem usados registros lógicos, o agente de replicação poderá processar todas as alterações para um determinado artigo ao mesmo tempo, e como as alterações são aplicadas no modo linha por linha, os requisitos de bloqueio e log de transação, necessários para aplicar as alterações, serão mínimos.  

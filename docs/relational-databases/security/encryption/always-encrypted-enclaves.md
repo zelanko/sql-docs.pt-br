@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 64680ae71e34d1da94bf0ec8b2ab1ef75cd3c4d3
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867243"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679022"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -63,7 +63,7 @@ O processo de atestado do SQL Server é compatível com enclaves seguros de VBS 
 
 ## <a name="supported-client-drivers"></a>Drivers de cliente com suporte
 
-Para usar o Always Encrypted com enclaves seguros, um aplicativo precisa usar um driver de cliente compatível com esse recurso. Você precisa configurar o aplicativo e o driver do cliente para habilitar computações enclave e atestado de enclave. Para obter detalhes, incluindo a lista de drivers de cliente com suporte, confira [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md).
+Para usar o Always Encrypted com enclaves seguros, um aplicativo precisa usar um driver de cliente compatível com esse recurso. Você precisa configurar o aplicativo e o driver do cliente para habilitar computações enclave e atestado de enclave. Para obter detalhes, incluindo a lista de drivers de cliente compatíveis, confira [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md).
 
 ## <a name="enclave-enabled-keys"></a>Chaves habilitadas para enclave
 

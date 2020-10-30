@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 61790d066d6cdf0d3e2a520cca740823b78fc6dc
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115823"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524041"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Criar e executar trabalhos do SQL Server Agent no Linux
 
@@ -60,7 +60,7 @@ Para usar o SQL Server Agent no Linux, primeiro você deve habilitar o SQL Serve
 
 ## <a name="create-a-sample-database"></a>Criar banco de dados de exemplo
 
-Use as etapas a seguir para criar um banco de dados de exemplo chamado **SampleDB**. Esse banco de dados é usado para o trabalho de backup diário.
+Use as etapas a seguir para criar um banco de dados de exemplo chamado **SampleDB** . Esse banco de dados é usado para o trabalho de backup diário.
 
 1. Em seu computador Linux, abra uma sessão de terminal Bash.
 
@@ -78,7 +78,7 @@ Use as etapas a seguir para criar um banco de dados de exemplo chamado **SampleD
 
 ## <a name="create-a-job-with-transact-sql"></a>Criar um trabalho com o Transact-SQL
 
-As etapas a seguir criam um trabalho de SQL Server Agent no Linux com comandos Transact-SQL. O trabalho executa um backup diário do banco de dados de exemplo, **SampleDB**.
+As etapas a seguir criam um trabalho de SQL Server Agent no Linux com comandos Transact-SQL. O trabalho executa um backup diário do banco de dados de exemplo, **SampleDB** .
 
 > [!TIP]
 > Você pode usar qualquer cliente T-SQL para executar esses comandos. Por exemplo, no Linux, você pode usar o [sqlcmd](sql-server-linux-setup-tools.md) ou o [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md). Em um Windows Server remoto, você também pode executar consultas no SSMS (SQL Server Management Studio) ou usar a interface do usuário para gerenciamento de trabalho, que é descrita na próxima seção.
@@ -155,7 +155,7 @@ Você também pode criar e gerenciar trabalhos remotamente usando o SSMS (SQL Se
 
 1. Inicie o SSMS no Windows e conecte-se à sua instância do SQL Server do Linux. Para obter mais informações, confira [Gerenciar SQL Server em Linux com o SSMS](sql-server-linux-manage-ssms.md).
 
-1. Verifique se você criou um banco de dados de exemplo chamado **SampleDB**.
+1. Verifique se você criou um banco de dados de exemplo chamado **SampleDB** .
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 
@@ -179,9 +179,9 @@ Você também pode criar e gerenciar trabalhos remotamente usando o SSMS (SQL Se
 
 1. Crie uma nova agenda de trabalho.
 
-   ![Agenda do trabalho](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
+   ![Captura de tela da caixa de diálogo Novo Trabalho com a opção Agendamentos realçada e Nova Opção em destaque.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
-   ![Agenda do trabalho](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
+   ![Captura de tela da caixa de diálogo Novo Trabalho com a opção OK em destaque.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
 1. Inicie seu trabalho.
 
