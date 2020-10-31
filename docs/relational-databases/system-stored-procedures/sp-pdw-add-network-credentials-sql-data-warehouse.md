@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 87757b771e7c140454d8cdceac8dc1a77600f94b
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 212e8e5ab05204a6497282e79c4134dcff844299
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059335"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067303"
 ---
 # <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,24 +34,23 @@ ms.locfileid: "92059335"
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'  
 ```  
-
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>Argumentos  
- '*target_server_name*'  
+ ' *target_server_name* '  
  Especifica o nome do host do servidor de destino ou o endereço IP. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] acessará esse servidor usando as credenciais de nome de usuário e senha passadas para este procedimento armazenado.  
   
  Para se conectar por meio da rede InfiniBand, use o endereço IP de InfiniBand do servidor de destino.  
   
  *target_server_name* é definido como nvarchar (337).  
   
- '*user_name*'  
+ ' *user_name* '  
  Especifica o user_name que tem permissões para acessar o servidor de destino. Se já existirem credenciais para o servidor de destino, elas serão atualizadas para as novas credenciais.  
   
  *user_name* é definido como nvarchar (513).  
   
- '*senha*"  
- Especifica a senha para *user_name*.  
+ ' *senha* "  
+ Especifica a senha para *user_name* .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
