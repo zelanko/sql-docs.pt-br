@@ -1802,7 +1802,7 @@
           href: relational-databases/stored-procedures/specify-parameters.md
         - name: Conceder permissões
           href: relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md
-        - name: parâmetros
+        - name: Parâmetros
           href: relational-databases/stored-procedures/parameters.md
         - name: Propriedades
           href: relational-databases/stored-procedures/stored-procedure-properties-general-page.md
@@ -2907,7 +2907,7 @@
         - name: Comandos
           href: relational-databases/native-client-ole-db-commands/commands.md
           items:
-            - name: parâmetros
+            - name: Parâmetros
               href: relational-databases/native-client-ole-db-commands/command-parameters.md
             - name: Sintaxe
               href: relational-databases/native-client-ole-db-commands/command-syntax.md
@@ -10180,6 +10180,8 @@
   items:
     - name: Visão geral
       href: sql-server/azure-arc/overview.md
+    - name: Notas de versão
+      href: sql-server/azure-arc/release-notes.md
     - name: Conectar
       href: sql-server/azure-arc/connect.md
     - name: Conectar em escala
@@ -16285,7 +16287,7 @@
                   href: t-sql/language-elements/rollback-work-transact-sql.md
                 - name: SAVE TRANSACTION
                   href: t-sql/language-elements/save-transaction-transact-sql.md
-            - name: Variáveis
+            - name: variáveis
               href: t-sql/language-elements/variables-transact-sql.md
               items:
                 - name: SET @local_variable

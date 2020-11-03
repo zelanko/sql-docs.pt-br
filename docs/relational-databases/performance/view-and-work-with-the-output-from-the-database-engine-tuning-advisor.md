@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890906"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734670"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Exibir e trabalhar com a Saída do DTA (Orientador de Otimização do Mecanismo de Banco de Dados)
 
@@ -96,7 +96,7 @@ ms.locfileid: "91890906"
   
 3.  Depois do término da nova sessão de ajuste, ou depois de a ferramenta carregar a sessão existente, clique em **Aplicar Recomendações** no menu **Ações** .  
   
-4.  Na caixa de diálogo **Aplicar Recomendações** , escolha **Aplicar agora** ou **Agendar para mais tarde**. Se você escolher **Agendar para mais tarde**, selecione a data e o horário apropriados.  
+4.  Na caixa de diálogo **Aplicar Recomendações** , escolha **Aplicar agora** ou **Agendar para mais tarde**. Se você escolher **Agendar para mais tarde** , selecione a data e o horário apropriados.  
   
 5.  Clique em **OK** para aplicar as recomendações.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "91890906"
   
 2.  Copie e cole a [Amostra de arquivo de entrada XML com a configuração especificada pelo usuário &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) no editor XML ou em um editor de texto. Use este exemplo para criar um arquivo de entrada XML para sua sessão de ajuste. Para obter informações sobre como executar esta tarefa, consulte a seção "Criar arquivos de entrada XML" em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-3.  Edite os elementos de **TuningOptions** e **Configuration** no exemplo de arquivo de entrada XML. No elemento de **TuningOptions** , especifique quais estruturas de design físicas deseja que o Orientador de Otimização do Mecanismo de Banco de Dados considere durante a sessão de ajuste. No elemento de **Configuration** , especifique as estruturas de design físicas que correspondem à configuração hipotética de estruturas de design de bancos de dados físicos que devem ser analisadas pelo Orientador de Otimização do Mecanismo de Banco de Dados. Para obter informações sobre quais atributos e elementos filho você pode usar com as **TuningOptions** e os elementos pai de **Configuration**, consulte [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Edite os elementos de **TuningOptions** e **Configuration** no exemplo de arquivo de entrada XML. No elemento de **TuningOptions** , especifique quais estruturas de design físicas deseja que o Orientador de Otimização do Mecanismo de Banco de Dados considere durante a sessão de ajuste. No elemento de **Configuration** , especifique as estruturas de design físicas que correspondem à configuração hipotética de estruturas de design de bancos de dados físicos que devem ser analisadas pelo Orientador de Otimização do Mecanismo de Banco de Dados. Para obter informações sobre quais atributos e elementos filho você pode usar com as **TuningOptions** e os elementos pai de **Configuration** , consulte [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Salve o arquivo de entrada com uma extensão **.xml** .  
   
@@ -176,7 +176,7 @@ ms.locfileid: "91890906"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     O esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados também está disponível online em [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta).  
+     O esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados também está disponível online em [https://schemas.microsoft.com/sqlserver/2004/07/dta/](https://schemas.microsoft.com/sqlserver/2004/07/dta/).  
   
 6.  Depois de criar uma carga de trabalho e um arquivo de entrada XML, você estará pronto para enviar o arquivo de entrada ao utilitário de linha de comando **dta** para análise. Verifique se foi especificado um nome do arquivo de saída XML para o argumento do utilitário **- ox** . Isso cria um arquivo de saída XML com uma configuração recomendada especificada no elemento de **Configuration** . Se quiser executar o Orientador de Otimização do Mecanismo de Banco de Dados novamente para verificar outra configuração hipotética baseada na saída, você poderá copiar e colar o conteúdo dos elementos **Configuration** do arquivo de saída em um arquivo de entrada XML novo ou no original. Para obter informações sobre como usar um arquivo de entrada XML com o utilitário **dta** , consulte a seção “Ajustar um banco de dados usando o utilitário dta" em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -203,11 +203,11 @@ ms.locfileid: "91890906"
 4.  Clique duas vezes em um nome de sessão de ajuste e suas informações serão carregadas no Orientador de Otimização do Mecanismo de Banco de Dados. Depois que as informações de sessão são carregadas, você pode escolher quaisquer das guias para exibir as informações sobre essa sessão de ajuste.  
   
 ### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>Avaliar sessões de ajuste existentes como configurações hipotéticas  
- Use as etapas a seguir para avaliar uma sessão de ajuste existente. A avaliação de uma sessão de ajuste existente envolve exibir e editar suas recomendações e depois fazer um reajuste. Por exemplo, você decide só deseja criar índices na **tabela1**, portanto exclui a criação de exibições indexadas e particionamento de uma recomendação de ajuste existente. O Orientador de Otimização do Mecanismo de Banco de Dados cria uma nova sessão de ajuste e ajusta a carga de trabalho com relação a seus bancos de dados usando as recomendações editadas como uma configuração hipotética. Isso significa que o Orientador de Otimização do Mecanismo de Banco de Dados ajusta a carga de trabalho com relação aos bancos de dados como se as recomendações editadas tivessem sido implementadas, permitindo a execução de uma análise hipotética limitada. É uma análise hipotética limitada porque você pode só escolher um subconjunto de uma recomendação existente ao usar a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados. Para executar um teste de hipóteses completo, especificando uma configuração hipotética completamente nova que não é subconjunto de nenhuma sessão de ajuste prévia, use o arquivo de entrada XML do Orientador de Otimização do Mecanismo de Banco de Dados com o utilitário de linha de comando **dta** .  
+ Use as etapas a seguir para avaliar uma sessão de ajuste existente. A avaliação de uma sessão de ajuste existente envolve exibir e editar suas recomendações e depois fazer um reajuste. Por exemplo, você decide só deseja criar índices na **tabela1** , portanto exclui a criação de exibições indexadas e particionamento de uma recomendação de ajuste existente. O Orientador de Otimização do Mecanismo de Banco de Dados cria uma nova sessão de ajuste e ajusta a carga de trabalho com relação a seus bancos de dados usando as recomendações editadas como uma configuração hipotética. Isso significa que o Orientador de Otimização do Mecanismo de Banco de Dados ajusta a carga de trabalho com relação aos bancos de dados como se as recomendações editadas tivessem sido implementadas, permitindo a execução de uma análise hipotética limitada. É uma análise hipotética limitada porque você pode só escolher um subconjunto de uma recomendação existente ao usar a interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados. Para executar um teste de hipóteses completo, especificando uma configuração hipotética completamente nova que não é subconjunto de nenhuma sessão de ajuste prévia, use o arquivo de entrada XML do Orientador de Otimização do Mecanismo de Banco de Dados com o utilitário de linha de comando **dta** .  
   
 ##### <a name="to-evaluate-an-existing-tuning-session"></a>Para avaliar uma sessão de ajuste existente  
   
-1.  Depois de iniciar o Orientador de Otimização do Mecanismo de Banco de Dados, clique duas vezes em uma sessão de ajuste na metade superior do **Monitor de Sessão**, que carrega as informações da sessão no Orientador de Otimização do Mecanismo de Banco de Dados.  
+1.  Depois de iniciar o Orientador de Otimização do Mecanismo de Banco de Dados, clique duas vezes em uma sessão de ajuste na metade superior do **Monitor de Sessão** , que carrega as informações da sessão no Orientador de Otimização do Mecanismo de Banco de Dados.  
   
 2.  Clique na guia **Progresso** para verificar o log de ajuste que contém informações de erro sobre os eventos na carga de trabalho que o Orientador de Otimização do Mecanismo de Banco de Dados não pôde ajustar. Essas informações podem ajudar a avaliar a eficácia da carga de trabalho.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "91890906"
   
 6.  No menu **Ações** , clique em **Avaliar Recomendações**. O Orientador de Otimização do Mecanismo de Banco de Dados cria uma nova sessão de ajuste que usa a recomendação editada como configuração hipotética. Para exibir a configuração hipotética em XML, escolha **Clique aqui para ver a seção de configuração**.  
   
-7.  Na guia **Geral** , digite um **Nome de sessão**e verifique se a **Carga de trabalho** correta está especificada.  
+7.  Na guia **Geral** , digite um **Nome de sessão** e verifique se a **Carga de trabalho** correta está especificada.  
   
 8.  Na guia **Opções de Ajuste** , você pode especificar um tempo de ajuste ou qualquer uma das **Opções Avançadas**.  
   
@@ -230,11 +230,11 @@ ms.locfileid: "91890906"
   
 ##### <a name="to-create-new-tuning-sessions-by-cloning-existing-sessions"></a>Para criar novas sessões de ajuste pela clonagem de sessões existentes  
   
-1.  Depois de iniciar o Orientador de Otimização do Mecanismo de Banco de Dados, clique duas vezes em uma sessão de ajuste na metade superior do **Monitor de Sessão**, que carrega as informações da sessão no Orientador de Otimização do Mecanismo de Banco de Dados.  
+1.  Depois de iniciar o Orientador de Otimização do Mecanismo de Banco de Dados, clique duas vezes em uma sessão de ajuste na metade superior do **Monitor de Sessão** , que carrega as informações da sessão no Orientador de Otimização do Mecanismo de Banco de Dados.  
   
 2.  No menu **Ações** , clique em **Clonar Sessão**.  
   
-3.  Na guia **Geral** , digite um **Nome de sessão**e verifique se a **Carga de trabalho** correta está especificada.  
+3.  Na guia **Geral** , digite um **Nome de sessão** e verifique se a **Carga de trabalho** correta está especificada.  
   
 4.  Na guia **Opções de Ajuste** , você pode especificar um tempo de ajuste, as estruturas físicas de projeto que o Orientador de Otimização do Mecanismo de Banco de Dados deve considerar para a criação e o que ele deve descartar na recomendação.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "91890906"
 ##  <a name="user-interface-descriptions"></a><a name="UI"></a> Descrições da interface do usuário  
   
 ### <a name="sessions-monitor"></a>Monitoramento de sessões  
- O**Monitor de Sessão** exibe informações sobre as sessões abertas no Orientador de Otimização do Mecanismo de Banco de Dados. Selecione um nome de sessão no **Monitor de Sessão**para exibir informações sobre a sessão na janela Propriedades.  
+ O **Monitor de Sessão** exibe informações sobre as sessões abertas no Orientador de Otimização do Mecanismo de Banco de Dados. Selecione um nome de sessão no **Monitor de Sessão** para exibir informações sobre a sessão na janela Propriedades.  
   
 ### <a name="recommendations-tab"></a>Guia Recomendações  
  A guia **Recomendações** aparece depois que o Orientador de Otimização do Mecanismo de Banco de Dados conclui a análise da carga de trabalho. Essa grade contém as recomendações para todos os objetos considerados. Quando houver recomendações de partição, elas serão apresentadas na grade superior, e as recomendações de índice, na grade inferior. As grades não aparecem quando não há recomendações.  

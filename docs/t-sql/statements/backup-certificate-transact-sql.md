@@ -29,12 +29,12 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
-ms.openlocfilehash: 1944728a05db49a194b2c1f070695fd16ee095d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479000"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067472"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -71,6 +71,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
         ENCRYPTION BY PASSWORD ='encryption_password'   
       )   
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -78,18 +79,18 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *certname*  
  É o nome do certificado do qual fazer backup.
 
- TO FILE = '*path_to_file*'  
+ TO FILE = ' *path_to_file* '  
  Especifica o caminho completo, incluindo o nome, do arquivo no qual o certificado deve ser salvo. Esse pode ser um caminho local ou um caminho UNC para um local de rede. Se apenas um nome de arquivo for especificado, o arquivo será salvo na pasta de dados de usuário da instância padrão (que pode ou não ser a pasta DATA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para o SQL Server Express LocalDB, a pasta de dados de usuário da instância padrão é o caminho especificado pela variável de ambiente `%USERPROFILE%` para a conta que criou a instância.  
 
  WITH PRIVATE KEY especifica que a chave privada do certificado deve ser salva em um arquivo. Esta cláusula é opcional.
 
- FILE = '*path_to_private_key_file*'  
+ FILE = ' *path_to_private_key_file* '  
  Especifica o caminho completo, incluindo o nome, do arquivo no qual a chave privada deve ser salva. Esse pode ser um caminho local ou um caminho UNC para um local de rede. Se apenas um nome de arquivo for especificado, o arquivo será salvo na pasta de dados de usuário da instância padrão (que pode ou não ser a pasta DATA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para o SQL Server Express LocalDB, a pasta de dados de usuário da instância padrão é o caminho especificado pela variável de ambiente `%USERPROFILE%` para a conta que criou a instância.  
 
- ENCRYPTION BY PASSWORD = '*encryption_password*'  
+ ENCRYPTION BY PASSWORD = ' *encryption_password* '  
  É a senha usada para criptografar a chave privada antes de gravá-la no arquivo de backup. A senha está sujeita a verificações de complexidade.  
   
- DECRYPTION BY PASSWORD = '*decryption_password*'  
+ DECRYPTION BY PASSWORD = ' *decryption_password* '  
  É a senha usada para descriptografar a chave privada antes do backup da chave. Esse argumento não será necessário se o certificado for criptografado pela chave mestra. 
   
 ## <a name="remarks"></a>Comentários  

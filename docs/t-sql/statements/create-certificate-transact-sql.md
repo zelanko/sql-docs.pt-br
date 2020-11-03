@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ae27e25e16022aa1ec497188bee7fde68a9bca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458818"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067414"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -112,6 +112,7 @@ CREATE CERTIFICATE certificate_name
 <date_options> ::=  
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -125,7 +126,7 @@ CREATE CERTIFICATE certificate_name
  ASSEMBLY *assembly_name*  
  Especifica um assembly assinado que já foi carregado no banco de dados.  
   
- [ EXECUTABLE ] FILE = '*path_to_file*'  
+ [ EXECUTABLE ] FILE = ' *path_to_file* '  
  Especifica o caminho completo, incluindo nome de arquivo, para um arquivo codificado por DER que contém o certificado. Se a opção EXECUTABLE for usada, o arquivo será um DLL que assinado pelo certificado. *path_to_file* pode ser um caminho local ou um caminho UNC para um local de rede. O arquivo é acessado no contexto de segurança da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa conta deve ter as permissões de sistema de arquivos necessárias.  
 
 > [!IMPORTANT]
@@ -133,35 +134,35 @@ CREATE CERTIFICATE certificate_name
   
  BINARY = *asn_encoded_certificate*  
  Bytes de certificado codificado ASN especificados como uma constante binária.  
- **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
+ **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
  WITH PRIVATE KEY  
  Especifica que a chave privada do certificado foi carregada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa cláusula é inválida quando o certificado é criado com base em um assembly. Para carregar a chave privada de um certificado criado de um assembly, use [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
   
- FILE ='*path_to_private_key*'  
+ FILE =' *path_to_private_key* '  
  Especifica o caminho completo, incluindo o nome de arquivo, até a chave privada. *path_to_private_key* pode ser um caminho local ou um caminho UNC para um local de rede. O arquivo é acessado no contexto de segurança da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa conta deve ter as permissões de sistema de arquivos necessárias.  
   
 > [!IMPORTANT]  
 > Essa opção não está disponível em um banco de dados independente ou em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  BINARY = *private_key_bits*  
- **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Aplica-se ao** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Bits de chave privada especificados como constante binária. Estes bits podem estar no formato criptografado. Se criptografado, o usuário deve fornecer uma senha de descriptografia. Verificações de diretiva de senha não são executadas nesta senha. Os bits de chave privada devem estar em um formato de arquivo PVK.  
   
- DECRYPTION BY PASSWORD = '*key_password*'  
+ DECRYPTION BY PASSWORD = ' *key_password* '  
  Especifica a senha necessária para descriptografar uma chave privada recuperada de um arquivo. Essa cláusula será opcional se a chave privada for protegida por uma senha nula. Não é recomendável salvar uma chave privada em um arquivo sem proteção de senha. Se uma senha for necessária, mas nenhuma senha for especificada, a instrução falhará.  
   
- ENCRYPTION BY PASSWORD = '*password*'  
+ ENCRYPTION BY PASSWORD = ' *password* '  
  Especifica a senha usada para criptografar a chave privada. Use esta opção somente se quiser criptografar o certificado com uma senha. Se essa cláusula for omitida, a chave privada será criptografada usando a chave mestra do banco de dados. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Password Policy](../../relational-databases/security/password-policy.md).  
   
- SUBJECT = '*certificate_subject_name*'  
+ SUBJECT = ' *certificate_subject_name* '  
  O termo *subject* refere-se a um campo nos metadados do certificado conforme definido pelo padrão X.509. O assunto não deve ter mais do que 64 caracteres, e esse limite é aplicado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Linux. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Windows, a entidade pode ter até 128 caracteres. Os assuntos que excederem 128 caracteres serão truncados quando forem armazenados no catálogo, mas o BLOB (objeto binário grande) que contém o certificado manterá o nome completo do assunto.  
   
- START_DATE = '*datetime*'  
+ START_DATE = ' *datetime* '  
  É a data na qual o certificado se torna válido. Se não especificada, START_DATE será definida com a data atual. START_DATE está na hora UTC e pode ser especificado em qualquer formato que possa ser convertido em uma data e hora.  
   
- EXPIRY_DATE = '*datetime*'  
+ EXPIRY_DATE = ' *datetime* '  
  É a data na qual o certificado expira. Se não for especificada, EXPIRY_DATE será definida com uma data um ano após START_DATE. EXPIRY_DATE está na hora UTC e pode ser especificado em qualquer formato que possa ser convertido em uma data e hora. O Service Broker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica a data de expiração. O backup com criptografia usando certificados também verifica a data de validade e não permitirá que um novo backup seja criado com um certificado expirado, mas permitirá as restaurações com um certificado expirado. No entanto, a expiração não é imposta quando o certificado é usado para criptografia de banco de dados ou Always Encrypted.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  

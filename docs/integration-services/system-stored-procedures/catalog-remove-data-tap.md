@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edf15fb4e6e9d58389ed110c3bca9db1cca147ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca55276a6108cd53ffae82fd4c40089023da20fb
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430028"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243594"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
@@ -38,7 +38,10 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  O identificador exclusivo do toque de dados criado por meio do procedimento armazenado catalog.add_data_tap. O *data_tap_id* é **bigint**.  
   
 ## <a name="remarks"></a>Comentários  
- Quando um pacote contém mais de uma tarefa de fluxo de dados com o mesmo nome, o toque de dados é adicionado à primeira tarefa de fluxo de dados com o determinado nome.  
+
+- Quando um pacote contém mais de uma tarefa de fluxo de dados com o mesmo nome, o toque de dados é adicionado à primeira tarefa de fluxo de dados com o determinado nome.  
+  
+- Para remover coletas de dados, a instância da execução deve estar no estado criado (um valor de 1 na coluna **status** da exibição [catalog.operations &#40;banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="return-codes"></a>Códigos de retorno  
  0 (êxito)  
@@ -47,9 +50,6 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
   
 ## <a name="result-set"></a>Conjunto de resultados  
  Nenhum  
-  
-## <a name="remarks"></a>Comentários  
- Para remover coletas de dados, a instância da execução deve estar no estado criado (um valor de 1 na coluna **status** da exibição [catalog.operations &#40;banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

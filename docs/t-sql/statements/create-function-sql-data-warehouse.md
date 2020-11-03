@@ -14,12 +14,12 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 571771403d665bd6d668fcce7037e06db6ffa33d
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 47073d130f6a3881c7765d74f40fa06658b02f78
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300643"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067374"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -66,8 +66,6 @@ RETURNS return_data_type
 }  
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-
 ```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
 CREATE FUNCTION [ schema_name. ] function_name
@@ -82,6 +80,8 @@ RETURNS TABLE
     RETURN [ ( ] select_stmt [ ) ]
 [ ; ]
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>Argumentos  
  *schema_name*  
@@ -250,7 +250,7 @@ select * from dbo.ModulesByType('V');
 ```
 
 ### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. Combinar resultados de uma função com valor de tabela embutida (versão prévia)
- Este exemplo simples usa o TVF embutido criado anteriormente para demonstrar como é possível combinar os resultados com outras tabelas usando Cross Apply. Aqui, selecionamos todas as colunas de sys.objects e os resultados de `ModulesByType` para todas as linhas correspondentes na coluna *type* . Confira mais detalhes sobre como usar Apply em [Cláusula FROM e JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
+ Este exemplo simples usa o TVF embutido criado anteriormente para demonstrar como é possível combinar os resultados com outras tabelas usando Cross Apply. Aqui, selecionamos todas as colunas de sys.objects e os resultados de `ModulesByType` para todas as linhas correspondentes na coluna *type*. Confira mais detalhes sobre como usar Apply em [Cláusula FROM e JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
 
 ```sql
 SELECT * 
@@ -264,5 +264,4 @@ GO
  [DROP FUNCTION (SQL Server PDW)](/previous-versions/sql/)  
   
   
-
 

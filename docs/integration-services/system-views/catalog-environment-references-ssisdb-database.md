@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0eb92cb3370343345a487b16852ec05dddf338a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 617f7b5132f6df2cd8acd02579512b880ece4ff2
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495272"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243623"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (Banco de Dados SSISDB)
 
@@ -38,8 +38,10 @@ ms.locfileid: "88495272"
 |last_validation_time|**datatimeoffset(7)**|A hora da última validação.|  
   
 ## <a name="remarks"></a>Comentários  
- Esta exibição mostra uma linha para cada referência de ambiente no catálogo.  
+- Esta exibição mostra uma linha para cada referência de ambiente no catálogo.  
   
+- Um projeto pode ter referências de ambiente relativas ou absolutas. As referências relativas fazem referência ao ambiente pelo nome e requerem que ele resida na mesma pasta do projeto. As referências absolutas fazem referência ao ambiente por nome e pasta. Elas podem fazer referência a ambientes que residam em uma pasta diferente da pasta do projeto. Um projeto pode fazer referência a vários ambientes.  
+
 ## <a name="permissions"></a>Permissões  
  Esta exibição requer uma das seguintes permissões:  
   
@@ -51,8 +53,4 @@ ms.locfileid: "88495272"
   
 > [!NOTE]  
 >  Se você tiver a permissão READ em um projeto, também terá a permissão READ em todas as referências de pacotes e ambientes associadas ao projeto. A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
-  
-## <a name="remarks"></a>Comentários  
- Um projeto pode ter referências de ambiente relativas ou absolutas. As referências relativas fazem referência ao ambiente pelo nome e requerem que ele resida na mesma pasta do projeto. As referências absolutas fazem referência ao ambiente por nome e pasta. Elas podem fazer referência a ambientes que residam em uma pasta diferente da pasta do projeto. Um projeto pode fazer referência a vários ambientes.  
-  
   
