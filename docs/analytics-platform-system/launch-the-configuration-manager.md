@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: be69331ec9f9daa091035d6ef21142c4f40d6a84
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "74401051"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235163"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Iniciar o Configuration Manager no Analytics Platform System
 Este tópico fornece instruções para iniciar o **Configuration Manager** para o dispositivo de sistema de plataforma de análise.  
@@ -22,20 +22,20 @@ Este tópico fornece instruções para iniciar o **Configuration Manager** para 
 ## <a name="before-you-begin"></a>Antes de começar  
   
 ### <a name="prerequisites"></a>Pré-requisitos  
-O**Configuration Manager** do sistema de plataforma de análise só pode ser executado pelo administrador de domínio do dispositivo. Para executar essa ferramenta, você precisa da senha para o administrador do domínio do dispositivo. Para criar administradores de APS adicionais, consulte [criar um administrador de domínio aps &#40;aps&#41;](create-an-aps-domain-administrator-aps.md).  
+O **Configuration Manager** do sistema de plataforma de análise só pode ser executado pelo administrador de domínio do dispositivo. Para executar essa ferramenta, você precisa da senha para o administrador do domínio do dispositivo. Para criar administradores de APS adicionais, consulte [criar um administrador de domínio aps &#40;aps&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="launch-the-configuration-manager-tool"></a><a name="Accessing"></a>Iniciar a ferramenta de Configuration Manager  
-Para executar o Configuration Manager, use Área de Trabalho Remota para se conectar ao nó de controle do PDW (**_PDW_region_-CTL01**) e faça logon como _appliance_domain_**\Administrador**. Ao iniciar o programa de **Configuration Manager** , use a opção **Executar como administrador** para garantir que suas credenciais de administrador sejam usadas.  
+Para executar o Configuration Manager, use Área de Trabalho Remota para se conectar ao nó de controle do PDW ( **_PDW_region_ -CTL01** ) e faça logon como _appliance_domain_**\Administrador** . Ao iniciar o programa de **Configuration Manager** , use a opção **Executar como administrador** para garantir que suas credenciais de administrador sejam usadas.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Para iniciar a partir de uma janela do navegador  
   
 1.  Abra um navegador e navegue até o diretório `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-2.  Clique com o botão direito do mouse em `dwconfig.exe` e clique em **Executar como administrador**.  
+2.  Clique com o botão direito do mouse em `dwconfig.exe` e clique em **Executar como administrador** .  
   
 #### <a name="to-launch-from-a-command-prompt"></a>Para iniciar a partir de um prompt de comando  
   
-1.  Na área de trabalho, abra o menu **Iniciar** , clique em **programas**, clique em **acessórios**, clique com o botão direito do mouse em **prompt de comando** e clique em **Executar como administrador**.  
+1.  Na área de trabalho, abra o menu **Iniciar** , clique em **programas** , clique em **acessórios** , clique com o botão direito do mouse em **prompt de comando** e clique em **Executar como administrador** .  
   
 2.  No prompt de comando, digite o seguinte comando para alterar os diretórios: `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"` .  
   
@@ -43,9 +43,9 @@ Para executar o Configuration Manager, use Área de Trabalho Remota para se cone
   
 Depois que o **Configuration Manager** for iniciado, você verá todas as funcionalidades disponíveis listadas no painel esquerdo. O restante desta seção discute como executar cada ação disponível na ferramenta.  
   
-Para fechar e sair **Configuration Manager**, clique em **sair** no canto inferior direito de qualquer tela.  
+Para fechar e sair **Configuration Manager** , clique em **sair** no canto inferior direito de qualquer tela.  
   
-![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
+![Captura de tela da caixa de diálogo Microsoft Analytics Platform System Configuration Manager mostrando a topologia do dispositivo.](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>Consulte Também  
 [Monitore o dispositivo usando o console de administração &#40;o sistema de plataforma de análise&#41;](monitor-the-appliance-by-using-the-admin-console.md)  

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412853"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243535"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -52,7 +52,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  Assim como a função [BottomPercent](../mdx/bottompercent-mdx.md) , a função **TopPercent** sempre interrompe a hierarquia.  
   
-## <a name="example"></a>Exemplo  
+## <a name="examples"></a>Exemplos  
+
+### <a name="a-return-toppercent"></a>a. Retornar TopPercent
+
  O exemplo a seguir retorna as melhores cidades que ajudam a fazer os 10% principais das vendas do revendedor para a categoria Bike. O resultado é classificado em ordem decrescente, começando com a cidade que tem o valor mais alto de vendas.  
   
 ```  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>Exemplo  
- O passo a seguir ajudará a entender o efeito de valores negativos no *Numeric_Expression*. Primeiro, vamos criar algum contexto onde podemos apresentar o comportamento.  
+### <a name="b-understand-the-effect-of-negative-values"></a>B. Entender o efeito de valores negativos
+
+ O passo a seguir ajudará a entender o efeito de valores negativos no *Numeric_Expression* . Primeiro, vamos criar algum contexto onde podemos apresentar o comportamento.  
   
  A consulta a seguir retorna uma tabela de Resellers 'Sales Amount', 'Total Product Cost' e 'Gross Profit', em ordem decrescente de lucro. Observe que somente há valores negativos para lucro; portanto, a menor perda aparecerá no início.  
   

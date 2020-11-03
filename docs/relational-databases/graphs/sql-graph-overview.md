@@ -16,12 +16,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494183"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235618"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Processamento do Graph com o SQL Server e o Banco de Dados SQL do Azure
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -55,11 +55,11 @@ CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![pessoa-amigos-tabelas](../../relational-databases/graphs/media/person-friends-tables.png "Nó Person e tabelas de borda de amigos")  
+![O diagrama que mostra os nós e as bordas é armazenado como tabelas.](../../relational-databases/graphs/media/person-friends-tables.png "Nó Person e tabelas de borda de amigos")  
 Os nós e as bordas são armazenados como tabelas  
 
 ### <a name="query-language-extensions"></a>Extensões de linguagem de consulta  
-A nova `MATCH` cláusula é introduzida para dar suporte à correspondência de padrões e à navegação de vários saltos por meio do grafo. A `MATCH` função usa sintaxe de estilo de arte ASCII para correspondência de padrões. Por exemplo:   
+A nova `MATCH` cláusula é introduzida para dar suporte à correspondência de padrões e à navegação de vários saltos por meio do grafo. A `MATCH` função usa sintaxe de estilo de arte ASCII para correspondência de padrões. Por exemplo:  
 
 ```   
 -- Find friends of John

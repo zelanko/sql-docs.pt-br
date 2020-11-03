@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9eba640bc529487772510e06a7c66210be3e43a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463435"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235183"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introdução ao Console de SSMA para MySQL (MySQLToSQL)
 Esta seção descreve o procedimento para iniciar e começar a usar o aplicativo de console do MySQL. Também listados aqui, estão as convenções usadas em uma janela de saída típica do console do SSMA.  
@@ -26,7 +26,7 @@ Esta seção descreve o procedimento para iniciar e começar a usar o aplicativo
 ## <a name="launching-ssma-console"></a>Iniciando o console do SSMA  
 Use as etapas a seguir para iniciar o aplicativo de console do SSMA:  
   
-1.  Vá para **Iniciar** e aponte para **todos os programas**.  
+1.  Vá para **Iniciar** e aponte para **todos os programas** .  
   
 2.  Clique no **Assistente de migração do SQL Server para o atalho do prompt de comando do MySQL** .  
   
@@ -52,7 +52,7 @@ Recursos adicionais:
 ## <a name="ssma-console-output-conventions"></a>Convenções de saída do console do SSMA  
 Após a execução dos comandos e opções do script do SSMA, o programa de console exibe os resultados e as mensagens (informações, erro, etc.) para o usuário no console do ou, se necessário, redireciona para um arquivo de saída XML. Cada tipo de mensagem na saída é representado por uma cor exclusiva. Por exemplo, a mensagem de texto na cor branca denota comandos de arquivo de script; a cor verde representa um prompt para entrada do usuário e assim por diante.  
   
-![SSMAConsoleOutput_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
+![Captura de tela mostrando um exemplo da saída do MySQL do console do SSMA.](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
   
 Interpretação de cores da saída do console na tabela a seguir:  
   

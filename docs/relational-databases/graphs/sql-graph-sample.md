@@ -15,24 +15,24 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331046"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235536"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Criar um banco de dados de grafo e executar algumas consultas de correspondência de padrões usando o T-SQL
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-Este exemplo fornece um [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para criar um banco de dados de grafo com nós e bordas e, em seguida, usar a nova cláusula match para corresponder a alguns padrões e percorrer o grafo. Este script de exemplo funcionará no banco de dados SQL do Azure e no[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Este exemplo fornece um [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para criar um banco de dados de grafo com nós e bordas e, em seguida, usar a nova cláusula match para corresponder a alguns padrões e percorrer o grafo. Este script de exemplo funcionará no banco de dados SQL do Azure e no [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>Esquema de exemplo
 
 Este exemplo cria um esquema do grafo, como mostrado na Figura 1, para uma rede social hipotética que tem pessoas, nós restaurante e cidade. Esses nós são conectados entre si usando amigos, gostas, vidas e bordas localizadas.
 
-![Person-cidades-restaurantes-Tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Exemplo de banco de dados SQL Graph")  
+![O diagrama que mostra um esquema de exemplo com os nós restaurante, cidade, pessoa e vida, está em dia, gosta de bordas.](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Exemplo de banco de dados SQL Graph")  
 Figura 1: esquema de exemplo com os nós restaurante, cidade, pessoa e vida, localizado, que gosta de bordas.
 
 ## <a name="sample-script"></a>Exemplo de Script
@@ -167,4 +167,4 @@ Esse script usa a nova sintaxe T-SQL para criar tabelas de nó e borda. Mostra c
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Criar nó de gráfico ou tabela de borda  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Inserir em uma tabela de nó ou borda  |
-|[CORRESPONDER &#40;&#41;Transact-SQL](../../t-sql/queries/match-sql-graph.md)  |Usar MATCH para corresponder a um padrão ou percorrer o grafo  |
+|[CORRESPONDER &#40;&#41;Transact-SQL ](../../t-sql/queries/match-sql-graph.md)  |Usar MATCH para corresponder a um padrão ou percorrer o grafo  |

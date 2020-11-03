@@ -15,12 +15,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d676d32426678720f76de1ff04c355a54998dd1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408732"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235571"
 ---
 # <a name="sql-graph-architecture"></a>Arquitetura do SQL Graph  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -31,7 +31,7 @@ Saiba como o SQL Graph é arquitetado. Conhecer os conceitos básicos tornará m
 Os usuários podem criar um grafo por banco de dados. Um grafo é uma coleção de tabelas de nó e borda. As tabelas de nó ou de borda podem ser criadas em qualquer esquema no banco de dados, mas todas pertencem a um grafo lógico. Uma tabela de nó é uma coleção de tipos semelhantes de nós. Por exemplo, uma tabela de nó Person contém todos os nós Person que pertencem a um grafo. Da mesma forma, uma tabela de borda é uma coleção de tipos de bordas semelhantes. Por exemplo, uma tabela de borda de amigos mantém todas as bordas que conectam uma pessoa a outra pessoa. Como os nós e as bordas são armazenados em tabelas, a maioria das operações com suporte em tabelas regulares tem suporte em tabelas de nó ou borda. 
  
  
-![SQL-Graph-Architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "Arquitetura do banco de dados SQL Graph")   
+![Diagrama mostrando a arquitetura do banco de dados do SQL Graph.](../../relational-databases/graphs/media/sql-graph-architecture.png "Arquitetura do banco de dados SQL Graph")   
 
 Figura 1: arquitetura de banco de dados do SQL Graph
  
@@ -56,7 +56,7 @@ De forma semelhante à `$node_id` coluna, é recomendável que os usuários crie
 
 A Figura 2 mostra como as tabelas de nó e borda são armazenadas no banco de dados. 
 
-![pessoa-amigos-tabelas](../../relational-databases/graphs/media/person-friends-tables.png "Nó Person e tabelas de borda de amigos")   
+![Diagrama mostrando a representação de tabela de nó e borda.](../../relational-databases/graphs/media/person-friends-tables.png "Nó Person e tabelas de borda de amigos")   
 
 Figura 2: representação de tabela de nó e borda
 
