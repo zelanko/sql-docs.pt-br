@@ -1,5 +1,5 @@
 ---
-description: Extending the Data Flow with the Script Component
+description: Estendendo o fluxo de dados com o componente Script
 title: Estender o fluxo de dados com o componente Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -32,14 +32,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 08/17/2020
 ms.locfileid: "88425388"
 ---
-# <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
+# <a name="extending-the-data-flow-with-the-script-component"></a>Estendendo o fluxo de dados com o componente Script
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   O componente Script estende as capacidades de fluxo de dados dos pacotes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] com o código personalizado escrito em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# que é compilado e executado no tempo de execução do pacote. O componente Script simplifica o desenvolvimento de uma origem de fluxo de dados personalizada, transformação ou destino quando as origens, transformações e destinos incluídos no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] não atendem totalmente aos seus requisitos. Após a configuração do componente com as entradas e saídas esperadas, ele grava todo o código de infraestrutura necessário, permitindo que você se concentre exclusivamente no código que é exigido para seu processamento personalizado.  
   
- Um componente Script interage com o pacote recipiente e com o fluxo de dados por meio das classes geradas automaticamente nos itens de projeto **ComponentWrapper** e **BufferWrapper**, que são instâncias das classes <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> e <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, respectivamente. Essas classes tornam conexões, variáveis e outros itens de pacote disponíveis como objetos com tipo e gerenciam entradas e saídas. O componente Script também pode usar o namespace [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e a biblioteca de classe [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], como também assemblies personalizados, para implementar a funcionalidade personalizada.  
+ Um componente Script interage com o pacote recipiente e com o fluxo de dados por meio das classes geradas automaticamente nos itens de projeto **ComponentWrapper** e **BufferWrapper** , que são instâncias das classes <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> e <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, respectivamente. Essas classes tornam conexões, variáveis e outros itens de pacote disponíveis como objetos com tipo e gerenciam entradas e saídas. O componente Script também pode usar o namespace [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e a biblioteca de classe [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], como também assemblies personalizados, para implementar a funcionalidade personalizada.  
   
  O componente Script e o código de infraestrutura gerado para você simplificam significativamente o processo de desenvolvimento de um componente de fluxo de dados personalizado. Entretanto, para compreender como o componente Script funciona, pode ser útil ler a seção [Desenvolver um componente de fluxo de dados personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) para compreender as etapas envolvidas no desenvolvimento de um componente do fluxo de dados personalizado.  
   

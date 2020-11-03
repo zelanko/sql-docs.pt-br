@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544659"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294392"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "89544659"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]número de versão principal. Pode ser NULL.|  
 |**software_minor_version**|**tinyint**|Número de versão secundário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pode ser NULL.|  
 |**software_build_version**|**smallint**|Número de compilação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pode ser NULL.|  
-|**time_zone**|**smallint**|Diferença entre a hora local (onde a operação de backup está acontecendo) e o UTC (Tempo Universal Coordenado) em intervalos de 15 minutos. Os valores podem ser de -48 a +48, inclusive. Um valor de 127 indica que é desconhecido. Por exemplo, -20 é Hora Padrão do Leste dos EUA ou cinco horas após o UTC. Pode ser NULL.|  
+|**time_zone**|**smallint**|Diferença entre a hora local (em que a operação de backup está ocorrendo) e o UTC (tempo Universal Coordenado) em intervalos de 15 minutos no momento em que a operação de backup foi iniciada. Os valores podem ser de -48 a +48, inclusive. Um valor de 127 indica que é desconhecido. Por exemplo, -20 é Hora Padrão do Leste dos EUA ou cinco horas após o UTC. Pode ser NULL.|  
 |**mtf_minor_version**|**tinyint**|Número de versão secundário de formato de fita da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Pode ser NULL.|  
 |**first_lsn**|**numeric(25,0)**|Número de sequência de log do primeiro ou mais antigo registro de log no conjunto de backup. Pode ser NULL.|  
 |**last_lsn**|**numeric(25,0)**|Número de sequência de log do próximo registro de log após o conjunto de backup. Pode ser NULL.|  
@@ -92,7 +92,7 @@ ms.locfileid: "89544659"
 |**is_copy_only**|**bit**|1 = Um backup somente cópia. Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|ID da bifurcação de recuperação inicial. Isso corresponde a **FirstRecoveryForkID** de HEADERONLY de restauração.<br /><br /> Para backups de dados, **first_recovery_fork_guid** é igual a **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|ID da bifurcação de recuperação final. Isso corresponde a **RecoveryForkID** de HEADERONLY de restauração.<br /><br /> Para backups de dados, **first_recovery_fork_guid** é igual a **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Se **first_recovery_fork_guid** não for igual a **last_recovery_fork_guid**, esse será o número de sequência de log do ponto de bifurcação. Caso contrário, o valor será NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Se **first_recovery_fork_guid** não for igual a **last_recovery_fork_guid** , esse será o número de sequência de log do ponto de bifurcação. Caso contrário, o valor será NULL.|  
 |**database_guid**|**uniqueidentifier**|ID exclusiva para o banco de dados. Isso corresponde a **BindingId** de RESTORE HEADERONLY. Quando o banco de dados é restaurado, um valor novo é atribuído.|  
 |**family_guid**|**uniqueidentifier**|ID exclusiva do banco de dados original na criação. Este valor permanece o mesmo quando o banco de dados é restaurado, mesmo para um nome diferente.|  
 |**differential_base_lsn**|**numeric(25,0)**|LSN base para backups diferenciais. Para um backup diferencial com base em um único; as alterações com LSNs maior ou igual a **differential_base_lsn** são incluídas no backup diferencial.<br /><br /> Para um diferencial multibase, o valor é NULL e o LSN base deve ser determinado no nível do arquivo (consulte [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Para tipos de backup não diferencial, o valor é sempre NULL.|  
