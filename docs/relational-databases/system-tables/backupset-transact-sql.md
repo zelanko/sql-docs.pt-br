@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
-ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
+ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93294392"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328593"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "93294392"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]número de versão principal. Pode ser NULL.|  
 |**software_minor_version**|**tinyint**|Número de versão secundário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pode ser NULL.|  
 |**software_build_version**|**smallint**|Número de compilação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pode ser NULL.|  
-|**time_zone**|**smallint**|Diferença entre a hora local (em que a operação de backup está ocorrendo) e o UTC (tempo Universal Coordenado) em intervalos de 15 minutos no momento em que a operação de backup foi iniciada. Os valores podem ser de -48 a +48, inclusive. Um valor de 127 indica que é desconhecido. Por exemplo, -20 é Hora Padrão do Leste dos EUA ou cinco horas após o UTC. Pode ser NULL.|  
+|**time_zone**|**smallint**|Diferença entre a hora local (em que a operação de backup está ocorrendo) e o UTC (tempo Universal Coordenado) em intervalos de 15 minutos usando as informações de fuso horário no momento em que a operação de backup foi iniciada. Os valores podem ser de -48 a +48, inclusive. Um valor de 127 indica que é desconhecido. Por exemplo, -20 é Hora Padrão do Leste dos EUA ou cinco horas após o UTC. Pode ser NULL.|  
 |**mtf_minor_version**|**tinyint**|Número de versão secundário de formato de fita da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Pode ser NULL.|  
 |**first_lsn**|**numeric(25,0)**|Número de sequência de log do primeiro ou mais antigo registro de log no conjunto de backup. Pode ser NULL.|  
 |**last_lsn**|**numeric(25,0)**|Número de sequência de log do próximo registro de log após o conjunto de backup. Pode ser NULL.|  

@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678900"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328585"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,11 +41,11 @@ ms.locfileid: "92678900"
 |database_id|**int**|Identificador do banco de dados usado pelo contexto explícito (por exemplo, USE DB_X).|Consulte a ID em [Sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |.|**nvarchar(4000)**|Mantém o texto completo da solicitação como enviado pelo usuário.|Qualquer consulta ou texto de solicitação válido. Consultas com mais de 4000 bytes são truncadas.|  
 |resource_class|**nvarchar (20)**|O grupo de cargas de trabalho usado para esta solicitação. |Classes de recurso estáticas</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de recurso dinâmicas</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|A importância definindo a solicitação executada em.  Essa é a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho.</br>Aplica-se a: SQL Data Warehouse do Azure|NULO</br>low</br>below_normal</br>normal (padrão)</br>above_normal</br>high|
-|group_name|**sysname** |Para solicitações que utilizam recursos, group_name é o nome do grupo de carga de trabalho sob o qual a solicitação está sendo executada.  Se a solicitação não utilizar recursos, group_name será NULL.</br>Aplica-se a: SQL Data Warehouse do Azure|
+|importance|**nvarchar(128)**|A importância definindo a solicitação executada em.  Essa é a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho.</br>Aplica-se ao: Azure Synapse Analytics|NULO</br>low</br>below_normal</br>normal (padrão)</br>above_normal</br>high|
+|group_name|**sysname** |Para solicitações que utilizam recursos, group_name é o nome do grupo de carga de trabalho sob o qual a solicitação está sendo executada.  Se a solicitação não utilizar recursos, group_name será NULL.</br>Aplica-se ao: Azure Synapse Analytics|
 |classifier_name|**sysname**|Para solicitações que utilizam recursos, o nome do classificador usado para atribuir recursos e importância.||
-|resource_allocation_percentage|**decimal (5, 2)**|A quantidade percentual de recursos alocados para a solicitação.</br>Aplica-se a: SQL Data Warehouse do Azure|
-|result_cache_hit|**int**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se a: SQL Data Warehouse do Azure| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores inteiros negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
+|resource_allocation_percentage|**decimal (5, 2)**|A quantidade percentual de recursos alocados para a solicitação.</br>Aplica-se ao: Azure Synapse Analytics|
+|result_cache_hit|**int**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se ao: Azure Synapse Analytics| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores inteiros negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
 |client_correlation_id|**nvarchar(255)**|Nome opcional definido pelo usuário para uma sessão de cliente.  Para definir para uma sessão, chame sp_set_session_context ' client_correlation_id ', ' <CorrelationIDName> '.  Execute `SELECT SESSION_CONTEXT(N'client_correlation_id')` para recuperar seu valor.|
 ||||
 
@@ -81,4 +81,4 @@ O valor inteiro negativo na coluna result_cache_hit é um valor de bitmap de tod
   
 ## <a name="see-also"></a>Consulte Também
 
- [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Exibições de gerenciamento dinâmico do Azure Synapse Analytics e Parallel data warehouse &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
