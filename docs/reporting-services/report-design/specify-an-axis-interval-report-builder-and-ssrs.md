@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c9ca24186a1b3b2a9fed9f1b3fa9454aa020f9b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6b756d7db3a41787da2a9a1a30f1c82b9a72317c
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934941"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907174"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Especificar um intervalo do eixo (Construtor de Relatórios e SSRS)
 Saiba como alterar o número de rótulos e marcas no eixo das categorias (x) em um gráfico, definindo o intervalo do eixo um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -36,24 +36,24 @@ Para tentar definir o intervalo do eixo com dados de exemplo, confira o [Tutoria
 
 Neste gráfico de coluna, o intervalo de rótulos horizontal é definido como Auto.
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![Captura de tela da visualização do gráfico de colunas do construtor de relatórios com o intervalo do eixo x definido como Automático.](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
 1.  Clique com o botão direito do mouse no eixo da categoria e clique em **Propriedades do Eixo Horizontal**.   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![Captura de tela de um gráfico de colunas do construtor de relatórios mostrando como definir rótulos do eixo x.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  Na caixa de diálogo **Propriedades do Eixo Horizontal** > guia **Opções de Eixo**, defina **Intervalo** como **1** para mostrar cada rótulo do grupo de categorias. Para mostrar alternadamente o rótulo dos grupo de categorias no eixo x, digite **2**. 
+2.  Na caixa de diálogo **Propriedades do Eixo Horizontal** > guia **Opções de Eixo** , defina **Intervalo** como **1** para mostrar cada rótulo do grupo de categorias. Para mostrar alternadamente o rótulo dos grupo de categorias no eixo x, digite **2**. 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![Captura de tela de um gráfico de colunas do construtor de relatórios mostrando como definir o intervalo do eixo x como um.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    Agora, o gráfico de colunas exibe todos os seus rótulos do eixo horizontal.
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  Quando você define um intervalo do eixo, todos os rótulos automáticos são desabilitados. Se um valor para o intervalo do eixo for especificado, poderá ocorrer um comportamento imprevisível do rótulo, dependendo da quantidade de categorias existentes no eixo de categoria.  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     Agora, o gráfico de colunas exibe todos os seus rótulos do eixo horizontal.
+     
+     ![Captura de tela da visualização do gráfico de colunas do construtor de relatórios mostrando os rótulos do eixo x.](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  Quando você define um intervalo do eixo, todos os rótulos automáticos são desabilitados. Se um valor para o intervalo do eixo for especificado, poderá ocorrer um comportamento imprevisível do rótulo, dependendo da quantidade de categorias existentes no eixo de categoria.  
 
 ## <a name="change-the-label-interval-in-properties-pane"></a>Alterar o intervalo de rótulo no painel Propriedades
 
@@ -63,13 +63,13 @@ Também é possível definir o intervalo de rótulo no painel Propriedades.
 
 3. No painel Propriedades, defina LabelInterval como **1**.
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Captura de tela do gráfico de colunas do construtor de relatórios mostrando como definir o intervalo dos rótulos.](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     O gráfico tem a mesma aparência no modo design. 
     
 5.  Clique em **Executar** para visualizar o relatório.
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Captura de tela da visualização do gráfico de colunas do construtor de relatórios mostrando um intervalo de rótulos como um.](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Agora o gráfico exibe todos os seus rótulos.
   
@@ -79,7 +79,7 @@ Por padrão, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] defin
   
 1.  Clique com o botão direito do mouse no eixo do gráfico que deseja alterar e clique em **Propriedades do Eixo**. 
   
-2.  Na caixa de diálogo **Propriedades do Eixo Horizontal** > guia **Opções de Eixo**, defina **Intervalo** como **Automático**. O gráfico exibirá o número ideal de rótulos de categorias que podem se ajustar ao longo do eixo.  
+2.  Na caixa de diálogo **Propriedades do Eixo Horizontal** > guia **Opções de Eixo** , defina **Intervalo** como **Automático**. O gráfico exibirá o número ideal de rótulos de categorias que podem se ajustar ao longo do eixo.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

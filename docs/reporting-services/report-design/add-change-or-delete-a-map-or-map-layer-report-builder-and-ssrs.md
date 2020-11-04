@@ -26,19 +26,19 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3c5b3c399dfe95e1cbfa521e1a67044d4c5be8e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: e33750c6c62b1de3b889399fca46dbf5aa83b3fd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935209"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907274"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Adicionar, alterar ou excluir um mapa ou uma camada do mapa (Construtor de Relatórios e SSRS)
   Um mapa é uma coleção de camadas. Quando você adiciona um mapa a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , define a primeira camada. Você pode criar mais camadas usando o assistente de camada do mapa.  
   
  A maneira mais fácil para adicionar, remover ou alterar as opções de uma camada é usar o assistente de camada do mapa. Você também pode alterar manualmente as opções do painel Mapa. Para exibir o painel **Mapa** , clique no mapa na superfície de design do relatório. A figura seguinte exibe as partes do painel:  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Captura de tela da seção Camadas do Mapa destacando a barra de ferramentas, a visibilidade, o nome, o tipo de fonte de dados espacial e o tipo de camada, além das opções Ajustar Nível de Zoom e Ajustar Centro de Exibição.](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  As camadas do mapa são desenhadas de baixo para cima para que apareçam no painel Mapa. Na figura anterior, a camada da peça é desenhada primeiro e a camada de polígono é desenhada por último. As camadas desenhadas posteriormente podem ocultar elementos do mapa nas camadas desenhadas antes. Você pode alterar a ordem das camadas usando as teclas de direção na barra de ferramentas do painel Mapa. Para mostrar ou ocultar camadas, alterne o ícone de visibilidade. Você pode alterar a transparência de uma camada na página **Visibilidade** da caixa de diálogo **Dados da Camada** .  
   
@@ -46,12 +46,12 @@ ms.locfileid: "91935209"
   
 |Símbolo|Descrição|Quando usar|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Assistente de Camada do Mapa|Para adicionar uma camada usando um assistente, clique em **Assistente de nova camada**.|  
-|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Adicionar Camada|Para adicionar uma camada manualmente, clique em **Adicionar Camada**e clique no tipo de camada do mapa a ser adicionada.|  
-|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Camada de Polígono|Adicione uma camada do mapa que exiba áreas ou formas com base em conjuntos de coordenadas de polígonos.|  
-|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Camada de Linha|Adicione uma camada do mapa que exiba caminhos ou rotas com base em conjuntos de coordenadas de linha.|  
-|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Camada de Ponto|Adicione uma camada do mapa que exiba locais com base em conjuntos de coordenadas de ponto.|  
-|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|Camada de Peça|Adicione uma camada do mapa que exiba peças de Mapa do Bing que correspondam à área de exibição do mapa atual definida pelo visor.|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmaplayerwizard.gif":::|Assistente de Camada do Mapa|Para adicionar uma camada usando um assistente, clique em **Assistente de nova camada**.|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmapaddlayer.gif":::|Adicionar Camada|Para adicionar uma camada manualmente, clique em **Adicionar Camada** e clique no tipo de camada do mapa a ser adicionada.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif":::|Camada de Polígono|Adicione uma camada do mapa que exiba áreas ou formas com base em conjuntos de coordenadas de polígonos.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaplinelayer.gif":::|Camada de Linha|Adicione uma camada do mapa que exiba caminhos ou rotas com base em conjuntos de coordenadas de linha.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappointlayer.gif":::|Camada de Ponto|Adicione uma camada do mapa que exiba locais com base em conjuntos de coordenadas de ponto.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaptilelayer.gif":::|Camada de Peça|Adicione uma camada do mapa que exiba peças de Mapa do Bing que correspondam à área de exibição do mapa atual definida pelo visor.|  
   
  Na parte inferior do painel Mapa fica a área de exibição de Mapa. Para alterar o centro ou as opções de zoom do mapa, use as teclas de direção para ajustar o centro do visor e o controle deslizante para ajustar o nível de zoom.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "91935209"
   
 ##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> Para adicionar uma camada com o assistente de camada do mapa  
   
--   Na Faixa de Opções, no menu **Inserir** , clique em **Mapa**e em **Mapa Wizard.** . O assistente o permite a adição de uma camada ao mapa existente. A maioria das páginas de assistente são idênticas entre o assistente de mapa e o assistente de camada do mapa.  
+-   Na Faixa de Opções, no menu **Inserir** , clique em **Mapa** e em **Mapa Wizard.** . O assistente o permite a adição de uma camada ao mapa existente. A maioria das páginas de assistente são idênticas entre o assistente de mapa e o assistente de camada do mapa.  
   
      Para obter mais informações, consulte [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -76,20 +76,20 @@ ms.locfileid: "91935209"
   
 1.  Clique no mapa até que o painel Mapa apareça.  
   
-2.  Na barra de ferramentas, clique no botão **Adicionar Camada** e, na lista suspensa, clique no tipo de camada que você deseja adicionar: **ponto**, **linha** ou **polígono**.  
+2.  Na barra de ferramentas, clique no botão **Adicionar Camada** e, na lista suspensa, clique no tipo de camada que você deseja adicionar: **ponto** , **linha** ou **polígono**.  
   
     > [!NOTE]  
     >  Embora seja possível adicionar uma camada do mapa e configurá-la manualmente, é recomendável usar o assistente de camada do mapa para adicionar novas camadas. Para iniciar o assistente por meio da barra de ferramentas do painel Mapa, clique no botão do assistente de camada (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Clique com o botão direito do mouse na camada e clique em **Dados da Camada**.  
   
-4.  Em **Usar dados espaciais de**, selecione a fonte de dados espaciais. As opções variam com base na seleção.  
+4.  Em **Usar dados espaciais de** , selecione a fonte de dados espaciais. As opções variam com base na seleção.  
   
      Para visualizar dados analíticos de seu relatório nesta camada, faça o seguinte:  
   
     1.  Clique em **Dados Analíticos**.  
   
-    2.  Em **Conjunto de dados analítico**, clique no nome do conjunto de dados que contém os dados analíticos e os campos de correspondência para criar uma relação entre dados analíticos e espaciais.  
+    2.  Em **Conjunto de dados analítico** , clique no nome do conjunto de dados que contém os dados analíticos e os campos de correspondência para criar uma relação entre dados analíticos e espaciais.  
   
     3.  Clique em **Adicionar**.  
   
@@ -125,11 +125,11 @@ ms.locfileid: "91935209"
   
 2.  Clique com o botão direito do mouse na camada e clique em **Dados da Camada**.  
   
-3.  Em **Usar dados espaciais de**, selecione **Dados inseridos no relatório**.  
+3.  Em **Usar dados espaciais de** , selecione **Dados inseridos no relatório**.  
   
-4.  Para carregar elementos do mapa de um relatório existente ou criar elementos do mapa com base em um arquivo ESRI, clique em **Procurar**, aponte para o arquivo e clique em **Abrir**. Os elementos do mapa são inseridos nesta definição de relatório. Os dados espaciais para os quais você aponta devem corresponder ao tipo da camada. Por exemplo, para uma camada de ponto, você deve apontar para dados espaciais que especifiquem conjuntos de coordenadas de ponto.  
+4.  Para carregar elementos do mapa de um relatório existente ou criar elementos do mapa com base em um arquivo ESRI, clique em **Procurar** , aponte para o arquivo e clique em **Abrir**. Os elementos do mapa são inseridos nesta definição de relatório. Os dados espaciais para os quais você aponta devem corresponder ao tipo da camada. Por exemplo, para uma camada de ponto, você deve apontar para dados espaciais que especifiquem conjuntos de coordenadas de ponto.  
   
-5.  Em **Campo espacial**, especifique o nome do campo que contém dados espaciais. Talvez seja necessário determinar esse nome com base na fonte de dados espaciais.  
+5.  Em **Campo espacial** , especifique o nome do campo que contém dados espaciais. Talvez seja necessário determinar esse nome com base na fonte de dados espaciais.  
   
     > [!NOTE]  
     >  Se você não souber o nome do campo e navegou para um Arquivo de Forma ESRI, use a opção **Link para arquivo de forma ESRI** , em vez desta opção.  
@@ -142,9 +142,9 @@ ms.locfileid: "91935209"
   
 2.  Clique com o botão direito do mouse na camada e clique em **Dados da Camada**.  
   
-3.  Em **Usar dados espaciais de**, selecione **Link para Arquivo de Forma ESRI**.  
+3.  Em **Usar dados espaciais de** , selecione **Link para Arquivo de Forma ESRI**.  
   
-4.  Em **Nome do arquivo**, digite o local de um Arquivo de Forma ou clique em **Procurar** para selecionar um Arquivo de Forma ESRI.  
+4.  Em **Nome do arquivo** , digite o local de um Arquivo de Forma ou clique em **Procurar** para selecionar um Arquivo de Forma ESRI.  
   
     > [!NOTE]  
     >  Se o Arquivo de Forma estiver em seu computador local, os dados espaciais serão inseridos na definição de relatório. Para recuperar os dados dinamicamente quando o relatório for processado, carregue o arquivo ESRI .shp e seu arquivo de suporte .dbf no servidor de relatório. Para obter mais informações, consulte [Carregar um arquivo ou relatório](../reports/upload-a-file-or-report-report-manager.md).  
@@ -157,11 +157,11 @@ ms.locfileid: "91935209"
   
 2.  Clique com o botão direito do mouse na camada e clique em **Dados da Camada**.  
   
-3.  Em **Usar dados espaciais de**, selecione **Campo espacial em um conjunto de dados**.  
+3.  Em **Usar dados espaciais de** , selecione **Campo espacial em um conjunto de dados**.  
   
-4.  Em **Nome de conjunto de dados**, clique no nome de um conjunto de dados no relatório que contém os dados espaciais desejados.  
+4.  Em **Nome de conjunto de dados** , clique no nome de um conjunto de dados no relatório que contém os dados espaciais desejados.  
   
-5.  Em **Nome do campo espacial**, clique no nome do campo no conjunto de dados que contém dados espaciais.  
+5.  Em **Nome do campo espacial** , clique no nome do campo no conjunto de dados que contém dados espaciais.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -176,7 +176,7 @@ ms.locfileid: "91935209"
   
 3.  Clique com o botão direito do mouse na camada lado a lado no painel Mapa e clique em **Propriedades da Peça**.  
   
-4.  Em **Opções da peça**, selecione um estilo de peça. Se as peças de mapas do Bing estiverem disponíveis, a camada na superfície de design será atualizada com o estilo selecionado.  
+4.  Em **Opções da peça** , selecione um estilo de peça. Se as peças de mapas do Bing estiverem disponíveis, a camada na superfície de design será atualizada com o estilo selecionado.  
   
     > [!NOTE]  
     >  Também é possível adicionar uma camada de peça quando você adiciona uma camada de polígonos, linhas ou pontos no assistente de Mapa ou de Camada do Mapa. Na página **Escolher as opções de dados espaciais e de exibição do mapa** , selecione a opção **Adicionar um plano de fundo do Bing Maps a esta exibição do mapa**.  
@@ -197,7 +197,7 @@ ms.locfileid: "91935209"
   
 3.  Clique em **Visibilidade**.  
   
-4.  Em **Opções de Transparência**, digite um valor que represente a transparência percentual, por exemplo, **40**. A transparência zero (0)% significa que a camada é opaca. Uma transparência de 100% significa que você não visualizará a camada no relatório.  
+4.  Em **Opções de Transparência** , digite um valor que represente a transparência percentual, por exemplo, **40**. A transparência zero (0)% significa que a camada é opaca. Uma transparência de 100% significa que você não visualizará a camada no relatório.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -209,7 +209,7 @@ ms.locfileid: "91935209"
   
 3.  Clique em **Visibilidade**.  
   
-4.  Em **Opções de Transparência**, digite um valor que represente a transparência percentual, por exemplo, **40**.  
+4.  Em **Opções de Transparência** , digite um valor que represente a transparência percentual, por exemplo, **40**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

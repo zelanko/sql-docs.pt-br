@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 9e6dde5a520b845cac47fbfd3c4820d35958c9ba
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881912"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907254"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Construtor de Relatórios e SSRS)
   Para visualizar dados comerciais em uma tela de fundo geográfica, você pode acrescentar um mapa ao seu relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . O tipo de mapa selecionado depende de qual informação você deseja comunicar no seu relatório. Você pode adicionar um mapa que só exibe locais ou um mapa de bolhas que varia o tamanho da bolha com base no número de residências em uma área, ou um mapa de marcador que varia o estilo de marcador com base no produto mais lucrativo para cada loja, ou um mapa de linha que exibe rotas entre lojas.  
@@ -58,7 +58,7 @@ ms.locfileid: "84881912"
  Para visualizar dados em um mapa, os dados analíticos e os dados espaciais devem ter uma relação. Quando os dados espaciais e os dados analíticos são provenientes da mesma origem, a relação é conhecida. Quando os dados espaciais e os dados analíticos vêm de origens diferentes, você deve especificar campos de correspondência para relacioná-los.  
   
 ### <a name="spatial-data"></a>Dados espaciais  
- Os dados espaciais consistem em conjuntos de coordenadas. Os dados espaciais de uma fonte de dados podem ser um único ponto, vários pontos, uma única linha, várias linhas ou um conjunto de polígonos. Cada conjunto de coordenadas define um *elemento do mapa*, por exemplo, um polígono que representa a estrutura de um município, uma linha que representa uma estrada ou um ponto que representa o local de uma cidade.  
+ Os dados espaciais consistem em conjuntos de coordenadas. Os dados espaciais de uma fonte de dados podem ser um único ponto, vários pontos, uma única linha, várias linhas ou um conjunto de polígonos. Cada conjunto de coordenadas define um *elemento do mapa* , por exemplo, um polígono que representa a estrutura de um município, uma linha que representa uma estrada ou um ponto que representa o local de uma cidade.  
   
  Os dados espaciais se baseiam em um dos seguintes sistemas de coordenadas:  
   
@@ -138,7 +138,7 @@ ms.locfileid: "84881912"
  Neste exemplo, o nome da cidade apenas não é o bastante para identificar exclusivamente a população. Por exemplo, há muitas cidades denominadas Albany nos Estados Unidos. Para denominar uma cidade específica, você deve especificar a área além do nome de cidade.  
   
 ##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Entendendo o visor do mapa  
- Depois que especificar dados do mapa para um relatório, você poderá limitar a área de exibição do mapa especificando um *visor*do mapa. Por padrão, o visor corresponde à mesma área do mapa inteiro. Para cortar o mapa, você pode especificar o centro, o nível de zoom e as coordenadas máxima e mínima que definem a área que você deseja incluir no relatório. Para aprimorar a exibição do mapa no relatório, você pode mover as legendas, a escala de distância e a escala de cores para fora do visor. A figura seguinte mostra um visor:  
+ Depois que especificar dados do mapa para um relatório, você poderá limitar a área de exibição do mapa especificando um *visor* do mapa. Por padrão, o visor corresponde à mesma área do mapa inteiro. Para cortar o mapa, você pode especificar o centro, o nível de zoom e as coordenadas máxima e mínima que definem a área que você deseja incluir no relatório. Para aprimorar a exibição do mapa no relatório, você pode mover as legendas, a escala de distância e a escala de cores para fora do visor. A figura seguinte mostra um visor:  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
@@ -180,7 +180,7 @@ ms.locfileid: "84881912"
   
  Para trabalhar com camadas, selecione um mapa na superfície de design do relatório para exibir o painel de Mapa. O painel de Mapa exibe a lista de camadas definidas para o mapa. Use esse painel para selecionar uma camada para alterar as opções, alterar a ordem de desenho das camadas, adicionar uma camada ou executar o assistente de Camada do Mapa, ocultar ou mostrar uma camada e alterar o centro de exibição e o nível de zoom do visor do mapa. A figura seguinte mostra um visor:  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Captura de tela da seção Camadas do Mapa destacando a barra de ferramentas, a visibilidade, o nome, o tipo de fonte de dados espacial e o tipo de camada, além das opções Ajustar Nível de Zoom e Ajustar Centro de Exibição.](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  Para obter mais informações sobre as camadas do mapa, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ccffdc3beca07d53302b7a7dceff0e30bbb6331
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: eb16c276b9cc716f52e6ce73da5ec4ba3843dfbd
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891216"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678892"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Instalar o primeiro servidor de relatório no modo do SharePoint
 
@@ -72,7 +72,7 @@ ms.locfileid: "91891216"
  Esta etapa instala um servidor de relatório do Reporting Services no modo do SharePoint e o suplemento Reporting Services para produtos do SharePoint. Dependendo do que já está instalado no computador, você poderá não ver algumas das páginas de instalação descritas nas etapas a seguir.  
  
  > [!IMPORTANT]
- > Para o SharePoint 2016, o servidor do SharePoint no qual o Reporting Services será instalado precisa ter a função de servidor **Custom**. A implantação do Reporting Services terá êxito em um servidor do SharePoint que não está na função **Custom**, mas durante a próxima janela de manutenção do SharePoint, MinRole interromperá o serviço Reporting Services, pois detecta que o Reporting Services no modo integrado do SharePoint não indica suporte para nenhuma das outras funções de servidor do SharePoint. O aplicativo do serviço Reporting Services dá suporte somente à função **Custom**.
+ > Para o SharePoint 2016, o servidor do SharePoint no qual o Reporting Services será instalado precisa ter a função de servidor **Custom**. A implantação do Reporting Services terá êxito em um servidor do SharePoint que não está na função **Custom** , mas durante a próxima janela de manutenção do SharePoint, MinRole interromperá o serviço Reporting Services, pois detecta que o Reporting Services no modo integrado do SharePoint não indica suporte para nenhuma das outras funções de servidor do SharePoint. O aplicativo do serviço Reporting Services dá suporte somente à função **Custom**.
  
  > [!NOTE]
  > Se você planeja instalar o serviço do Power Pivot também, no SharePoint 2016, instale-o antes de instalar o Reporting Services. O serviço do Power Pivot não pode ser instalado em um servidor do SharePoint na função **Personalizada**.
@@ -143,7 +143,7 @@ ms.locfileid: "91891216"
   
      Selecione **Avançar**.  
   
-     ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
+     ![Captura de tela da página Seleção de Recursos com as opções Reporting Services – SharePoint e Suplemento do Reporting Services para Produtos do SharePoint selecionadas.](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
 9. Se você selecionou os serviços do Mecanismo de Banco de Dados, aceite a instância padrão de **MSSQLSERVER** na página **Configuração da Instância** e clique em **Avançar**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "91891216"
     > [!NOTE]
     > Quando a instalação do SQL Server estiver concluída, siga as outras seções deste tópico para configurar o ambiente do SharePoint. Isso inclui a instalação do serviço compartilhado do Reporting Services e criação dos aplicativos do serviço Reporting Services.  
   
-     ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
+     ![Captura de tela da seção Modo Integrado do SharePoint do Reporting Services com a opção Instalar apenas selecionada e em destaque.](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
 13. Examine todos os avisos e selecione **Avançar** na página **Regras de Configuração de Recurso** se você parar nesta página.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "91891216"
   
 2.  Selecione o grupo **Produtos do Microsoft SharePoint 2016** ou **Produtos do Microsoft SharePoint 2013** .  
   
-3.  Clique com o botão direito do mouse no **Shell de Gerenciamento do SharePoint 2016**ou **Shell de Gerenciamento do SharePoint 2013**e selecione **Executar como administrador**. 
+3.  Clique com o botão direito do mouse no **Shell de Gerenciamento do SharePoint 2016** ou **Shell de Gerenciamento do SharePoint 2013** e selecione **Executar como administrador**. 
 
     > [!NOTE]
     > Os comandos do SharePoint não são reconhecidos na janela padrão do Windows PowerShell. Use o **Shell de Gerenciamento do SharePoint**.  
@@ -229,7 +229,7 @@ ms.locfileid: "91891216"
 3.  O status do serviço Reporting Services será alterado de **Interrompido** para **Iniciado**. Se o serviço Reporting Services não estiver na lista, use o PowerShell para instalar o serviço.  
   
     > [!NOTE]  
-    >  Se o serviço Reporting Services permanecer com o status **Iniciando** e não for alterado para **Iniciado**, verifique se o serviço "Administração do SharePoint 2013" foi iniciado no Gerenciador do Servidor do Windows.  
+    >  Se o serviço Reporting Services permanecer com o status **Iniciando** e não for alterado para **Iniciado** , verifique se o serviço "Administração do SharePoint 2013" foi iniciado no Gerenciador do Servidor do Windows.  
   
 ##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Etapa 3: criar um aplicativo de serviço do Reporting Services  
  Esta seção fornece as etapas para criar um aplicativo de serviço e uma descrição das propriedades, se você estiver analisando um aplicativo de serviço existente.  
@@ -249,11 +249,11 @@ ms.locfileid: "91891216"
   
      Selecione ou crie uma conta de segurança para o pool de aplicativos. Não se esqueça de especificar uma conta de usuário do domínio. Uma conta de usuário de domínio habilita o uso do recurso de conta gerenciado do SharePoint que o deixa atualizar senhas e informações de conta em um único local. Contas de domínio também serão obrigatórias se você pretender diminuir a implantação para incluir instâncias de serviço adicionais a serem executadas sob a mesma identidade.  
   
-6.  No **Servidor de Banco de Dados**, você pode usar o servidor atual ou escolher outro SQL Server.  
+6.  No **Servidor de Banco de Dados** , você pode usar o servidor atual ou escolher outro SQL Server.  
   
 7.  Em **Nome do Banco de Dados** , o valor padrão é `ReportingService_<guid>`, que é o nome de um banco de dados exclusivo. Se você digitar um novo valor, digite um valor exclusivo. Este é o novo banco de dados a ser criado especificamente para o aplicativo de serviços.  
   
-8.  Em **Autenticação de Banco de dados**, o padrão é Autenticação do Windows. Se você escolher **Autenticação SQL**, consulte a documentação do SharePoint para conhecer as práticas recomendadas sobre como usar esse tipo de autenticação em uma implantação do SharePoint.  
+8.  Em **Autenticação de Banco de dados** , o padrão é Autenticação do Windows. Se você escolher **Autenticação SQL** , consulte a documentação do SharePoint para conhecer as práticas recomendadas sobre como usar esse tipo de autenticação em uma implantação do SharePoint.  
   
 9. Na seção **Associação de Aplicativo Web** , selecione o Aplicativo Web a ser provisionado para acesso pelo Aplicativo de Serviço do Reporting Services atual. Você pode associar um aplicativo de serviço do Reporting Services a um aplicativo Web. Se todos os aplicativos Web atuais já estiverem associados a um aplicativo de serviço do Reporting Services, uma mensagem de aviso será exibida.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "91891216"
   
 #### <a name="to-activate-or-verify-the-power-view-site-collection-feature"></a>Para ativar ou verificar o recurso de conjunto de sites do Power View  
   
-1.  As etapas a seguir pressupõem que o site do SharePoint esteja configurado para **versão da experiência**2013, pra o SharePoint 2013.  
+1.  As etapas a seguir pressupõem que o site do SharePoint esteja configurado para **versão da experiência** 2013, pra o SharePoint 2013.  
   
      Abra o navegador para o site do SharePoint desejado. Por exemplo, https://\<servername>/sites/bi  
   

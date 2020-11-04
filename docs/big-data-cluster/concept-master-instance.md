@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57de001599923d46139883f2f8a691f9d682abf3
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773649"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914305"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>O que é a instância mestre em um cluster de Big Data do SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Este artigo descreve a função da *instância mestre do SQL Server* em um cluster de Big Data do SQL Server 2019. A instância mestre é uma Instância do SQL Server em execução em um cluster de Big Data para gerenciar a conectividade, as consultas de expansão, os bancos de dados de usuários e de metadados e os serviços de aprendizado de máquina.
+Este artigo descreve a função da *instância mestra do SQL Server* em um cluster de Big Data do SQL Server. A instância mestre é uma Instância do SQL Server em execução em um cluster de Big Data do SQL Server para gerenciar a conectividade, as consultas de expansão, os bancos de dados de usuários e de metadados e os serviços de aprendizado de máquina.
 
 A instância mestra do SQL Server fornece a seguinte funcionalidade:
 
@@ -36,8 +36,8 @@ A instância mestre do SQL Server contém o mecanismo de consulta de expansão u
 
 Além dos bancos de dados do sistema do SQL Server padrão, a instância mestre do SQL também contém o seguinte:
 
-- Um banco de dados de metadados que contém metadados da tabela do HDFS
-- Um mapa de fragmentos do plano de dados
+- Um banco de dados contendo metadados da tabela do HDFS.
+- Um mapa de fragmentos do plano de dados.
 - Detalhes de tabelas externas que fornecem acesso ao plano de dados do cluster.
 - Fontes de dados externas do PolyBase e tabelas externas definidas em bancos de dado do usuário.
 
@@ -51,9 +51,9 @@ Como parte de um cluster de Big Data do SQL Server, os serviços de aprendizado 
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Vantagens dos serviços de aprendizado de máquina em um cluster de Big Data
 
-O SQL Server 2019 facilita o ingresso de Big Data nos dados dimensionais normalmente armazenados no banco de dados empresarial. O valor dos Big Data aumenta muito quando eles não estão apenas nas mãos de partes de uma organização, mas também estão incluídos em relatórios, painéis e aplicativos. Ao mesmo tempo, os cientistas de dados podem continuar usando as ferramentas do ecossistema do Spark/HDFS e ter acesso fácil e em tempo real aos dados na instância mestre do SQL Server e em fontes de dados externas acessíveis _por meio_ da instância mestre do SQL Server.
+O [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] facilita o ingresso de Big Data nos dados dimensionais normalmente armazenados no banco de dados empresarial. O valor dos Big Data aumenta muito quando eles não estão apenas nas mãos de partes de uma organização, mas também estão incluídos em relatórios, painéis e aplicativos. Ao mesmo tempo, os cientistas de dados podem continuar usando as ferramentas do ecossistema do Spark/HDFS e ter acesso fácil e em tempo real aos dados na instância mestre do SQL Server e em fontes de dados externas acessíveis _por meio_ da instância mestre do SQL Server.
 
-Com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], você pode fazer mais com seus data lakes empresariais. Desenvolvedores e analistas do SQL Server podem:
+Com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], você pode fazer mais com seus data lakes empresariais. Desenvolvedores e analistas do SQL Server podem:
 
 * Criar aplicativos que consomem dados de data lakes corporativos.
 * Explorar todos os dados com consultas Transact-SQL.

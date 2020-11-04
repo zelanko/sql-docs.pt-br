@@ -8,12 +8,12 @@ description: Saiba como criar uma marca para o seu portal da Web, mudando a apar
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2079a44a4b9f3977ae09f83685efa122e9467a96
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888121"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907194"
 ---
 # <a name="branding-the-web-portal"></a>Identidade visual do portal da Web
 
@@ -85,7 +85,7 @@ Por exemplo, se o arquivo colors.json tiver os valores a seguir.
 "primaryContrast":"#ffffff"   
 ```
 
-A saída processada procuraria a variável LESS **\@primaryButtonBg** e veria que ela é mapeada para a propriedade json chamada **primary**, que neste exemplo é #009900. Portanto, geraria o CSS apropriado.  
+A saída processada procuraria a variável LESS **\@primaryButtonBg** e veria que ela é mapeada para a propriedade json chamada **primary** , que neste exemplo é #009900. Portanto, geraria o CSS apropriado.  
 
 ```css
     .btn-primary {   
@@ -98,8 +98,8 @@ Todos os botões primários seriam processados na cor verde-escuro com texto em 
   
 O arquivo colors.json, para o Reporting Services, tem duas categorias principais nas quais os itens são agrupados.  
   
-- **Interface**: inclui itens que são específicos ao portal da Web do Reporting Services.  
-- **Tema**: inclui itens que são específicos aos relatórios móveis que você cria.  
+- **Interface** : inclui itens que são específicos ao portal da Web do Reporting Services.  
+- **Tema** : inclui itens que são específicos aos relatórios móveis que você cria.  
   
 A seção da interface é dividida nos seguintes agrupamentos.  
   
@@ -116,7 +116,7 @@ A seção da interface é dividida nos seguintes agrupamentos.
 
 Na primeira vez que você se conecta a um servidor com o Publicador de Relatório Móveis, que tem um pacote de marca implantado, o tema será adicionado aos temas disponíveis para uso no menu superior direito do aplicativo.  
   
-![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![Captura de tela da caixa de diálogo Escolher uma paleta de cores.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 Assim, você poderá usar esse tema para todos os relatórios móveis que criar, mesmo se eles não forem para o mesmo servidor no qual seu tema está implantado.   
   
@@ -134,11 +134,11 @@ Para adicionar, baixar ou remover um pacote de marca, você pode fazer o seguint
   
 2.  Selecione **Configurações de Site**.  
   
-    ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
+    ![Captura de tela da lista suspensa Configurações com a opção Configurações do Site destacada.](../reporting-services/media/ssrsgearmenu.png)  
   
 3.  Selecione **Identidade Visual**.  
   
-    ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
+    ![Captura de tela da página Configurações do Site com a opção Identidade Visual selecionada.](../reporting-services/media/ssrsbranding.png) 
   
 **Pacote de marca instalado atualmente** exibirá o nome do pacote que foi carregado ou exibirá Nenhum.  
   
@@ -150,7 +150,7 @@ Você também pode **Baixar** ou **Remover** o pacote. A remoção do pacote red
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

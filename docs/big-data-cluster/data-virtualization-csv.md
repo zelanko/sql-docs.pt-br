@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6981eea5cb4d327303755adc74d5610637eb70b0
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588252"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523846"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>Virtualizar dados CSV do pool de armazenamento (Clusters de Big Data)
 
@@ -71,7 +71,7 @@ Clique em **Próximo**.
 
 O Azure Data Studio fornece uma visualização dos dados importados.
 
-![Credenciais da fonte de dados externa](media/data-virtualization/130-csv-preview-data.png)
+![Captura de tela mostrando a janela Criar Tabela Externa de CSV com uma visualização dos dados importados.](media/data-virtualization/130-csv-preview-data.png)
 
 Quando terminar de ver a versão prévia, clique em **Avançar** para continuar
 
@@ -79,7 +79,7 @@ Quando terminar de ver a versão prévia, clique em **Avançar** para continuar
 
 Na próxima janela, você poderá modificar as colunas da tabela externa que pretende criar. É possível alterar o nome da coluna, alterar o tipo de dados e permitir linhas anuláveis. 
 
-![Credenciais da fonte de dados externa](media/data-virtualization/140-csv-modify-columns.png)
+![Captura de tela da janela Criar Tabela Externa de CSV mostrando a Etapa 3 Modificar Colunas.](media/data-virtualization/140-csv-modify-columns.png)
 
 Depois de verificar as colunas de destino, clique em **Avançar**.
 
@@ -89,9 +89,9 @@ Essa etapa fornece um resumo das suas seleções. Ela fornece o nome do SQL Serv
 
 ![Tela de resumo](media/data-virtualization/150-csv-virtualize-data-summary.png)
 
-Se você clicar em **Criar Tabela**, o SQL Server criará a tabela externa no banco de dados de destino.
+Se você clicar em **Criar Tabela** , o SQL Server criará a tabela externa no banco de dados de destino.
 
-Se você clicar em **Gerar Script**, o Azure Data Studio criará a consulta T-SQL para criar a tabela externa.
+Se você clicar em **Gerar Script** , o Azure Data Studio criará a consulta T-SQL para criar a tabela externa.
 
 Depois de criada, a tabela pode ser consultada diretamente usando o T-SQL na instância do SQL Server.
 

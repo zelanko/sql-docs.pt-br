@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b42c68daa49145ba4703c8cd141dc433aa7d64df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 149c074b0aacc56f192b27cfea0894fe2cd73778
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448325"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907294"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Adicionar o detalhamento de um relatório móvel para outros relatórios móveis ou URLs
 Você pode adicionar o detalhamento de qualquer grade de dados, gráfico ou medidor em um relatório móvel do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para outro ou URL personalizada. 
@@ -23,11 +23,11 @@ Um *detalhamento*  é um link de um relatório de origem que abre outro relatór
   
 Quando você exibir o relatório móvel de origem no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e selecionar um elemento com um destino do detalhamento, vá para o destino, outro relatório móvel ou uma URL.  
 
-Itens de relatório com detalhamento, uma URL ou outro relatório móvel, contêm o ícone de detalhamento ![mobile-report-drill-through-icon](../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png) no canto superior direito.
+Itens de relatório com detalhamento, seja em uma URL ou em outro relatório móvel, contêm o ícone de detalhamento :::image type="icon" source="../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png"::: no canto superior direito.
 
-![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
+![Captura de tela de um medidor de relatório móvel com um detalhamento.](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png)
 
->**Dica**: crie o relatório de destino e salve-o em um portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] primeiro. Se você planeja transmitir parâmetros do relatório de origem, adicione também os parâmetros ao relatório de destino. Em seguida, você pode definir o detalhamento do relatório de origem para o relatório de destino. [Adicione parâmetros a um relatório móvel](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Dica** : crie o relatório de destino e salve-o em um portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] primeiro. Se você planeja transmitir parâmetros do relatório de origem, adicione também os parâmetros ao relatório de destino. Em seguida, você pode definir o detalhamento do relatório de origem para o relatório de destino. [Adicione parâmetros a um relatório móvel](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Configurar o detalhamento para um relatório móvel  
 
@@ -42,7 +42,7 @@ Itens de relatório com detalhamento, uma URL ou outro relatório móvel, contê
  
 4. Depois de selecionar um relatório móvel de destino, você pode ver seus parâmetros de entrada disponíveis, incluindo propriedades que podem ser vinculadas a controles do navegador e parâmetros configurados em conjuntos de dados do relatório móvel de destino.  
 
-   ![móvel-relatório-detalhamento-destino](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
+   ![Captura de tela da caixa de diálogo Configurar relatório de destino mostrando os Parâmetros de relatório disponíveis.](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
    
    *Propriedades de detalhamento do relatório móvel de destino*  
   
@@ -53,9 +53,9 @@ Itens de relatório com detalhamento, uma URL ou outro relatório móvel, contê
 1. Na exibição de Layout no [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], selecione uma visualização que dá suporte a destinos de detalhamento.    
 2. No painel **Propriedades Visuais** , selecione **Destino de Detalhamento** > **URL Personalizada**.  Isso abrirá a caixa de diálogo de configuração de detalhamento.  
   
-3. Em **Definir a URL de detalhamento**, insira a URL de destino para ir para ao clicar na visualização e selecione dos **Parâmetros disponíveis** listados à direita. Uma visualização da URL personalizada combinada com parâmetros de exemplo resolvidos (se fornecidos) é exibida no painel abaixo.  
+3. Em **Definir a URL de detalhamento** , insira a URL de destino para ir para ao clicar na visualização e selecione dos **Parâmetros disponíveis** listados à direita. Uma visualização da URL personalizada combinada com parâmetros de exemplo resolvidos (se fornecidos) é exibida no painel abaixo.  
   
-   ![móvel-relatório-detalhamento-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
+   ![Captura de tela da caixa de diálogo Definir URL de detalhamento.](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   
    *Detalhamento para propriedades da URL personalizada*  
   
@@ -69,7 +69,7 @@ Se você não definir um valor padrão para o relatório de destino, considere o
 
 1. No portal da Web, selecione as reticências (...) no relatório de destino que você deseja ocultar e selecione Gerenciar.
 
-2. Em **Propriedades**, selecione **Ocultar na exibição lado a lado**.
+2. Em **Propriedades** , selecione **Ocultar na exibição lado a lado**.
 
 Você pode optar por exibir itens ocultos no portal da Web: 
 
@@ -77,7 +77,7 @@ Você pode optar por exibir itens ocultos no portal da Web:
 
 Itens ocultos são exibidos em uma cor mais clara.
     
-### <a name="see-also"></a>Confira também  
+### <a name="see-also"></a>Veja também  
  
 * [Adicionar parâmetros a um relatório móvel do Reporting Services](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 

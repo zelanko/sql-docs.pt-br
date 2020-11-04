@@ -9,18 +9,18 @@ ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9c3374b0820233e20ee73b85947ed2b8a61847c0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: b07b1480412dc8dd67535f58fcc4d223a9e91baa
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866818"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914312"
 ---
-# <a name="what-are-compute-pools-sql-server-big-data-clusters"></a>O que são pools de computação em Clusters de Big Data do SQL Server?
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>O que são pools de computação em um cluster de Big Data do SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Este artigo descreve a função dos *pools de computação do SQL Server* em Clusters de Big Data do SQL Server. Os pools de computação fornecem recursos computacionais de expansão para um cluster de Big Data. Eles são usados para descarregar o trabalho computacional ou os conjuntos de resultados intermediários da instância mestra do SQL Server. As seções a seguir descrevem a arquitetura, a funcionalidade e os cenários de uso de um pool de computação.
+Este artigo descreve a função dos *pools de computação do SQL Server* em um cluster de Big Data do SQL Server. Os pools de computação fornecem recursos computacionais de expansão para um cluster de Big Data do SQL Server. Eles são usados para descarregar o trabalho computacional ou os conjuntos de resultados intermediários da instância mestra do SQL Server. As seções a seguir descrevem a arquitetura, a funcionalidade e os cenários de uso de um pool de computação.
 
 Você também pode assistir a este vídeo de cinco minutos para obter uma introdução aos pools de computação:
 
@@ -34,7 +34,7 @@ Um pool de computação é composto por um ou mais pods de computação em execu
 
 ## <a name="scale-out-groups"></a>Grupos de expansão
 
-Um pool de computação pode funcionar como um grupo de expansão do PolyBase para consultas distribuídas em diferentes fontes de dados externas, como o SQL Server, o Oracle, o MongoDB, o Teradata e o HDFS. Usando pods do computação no Kubernetes, os Clusters de Big Data podem automatizar a criação e a configuração de pods do computação para os grupos de expansão do PolyBase.
+Um pool de computação pode funcionar como um grupo de expansão do PolyBase para consultas distribuídas em diferentes fontes de dados externas, como o SQL Server, o Oracle, o MongoDB, o Teradata e o HDFS. Usando pods do computação no Kubernetes, os clusters de Big Data do SQL Server podem automatizar a criação e a configuração de pods de computação para os grupos de escala horizontal do PolyBase.
 
 ## <a name="compute-pool-scenarios"></a>Cenários de pool de computação
 
@@ -46,7 +46,7 @@ Entre os cenários em que o pool de computação é usado estão:
 
 - Cenários em que as consultas enviadas à instância mestra usam tabelas **particionadas** com fontes de dados externas do SQL Server, do Oracle, do MongoDB e do Teradata. Para esse cenário, a dica de consulta OPTION (FORCE SCALEOUTEXECUTION) precisa estar habilitada.
 
-- Cenários em que as consultas enviadas à instância mestra usam uma ou mais tabelas localizadas na [Camada do HDFS](hdfs-tiering.md).
+- Cenários em que as consultas enviadas à instância mestra usam uma ou mais tabelas localizadas na [camada do HDFS](hdfs-tiering.md).
 
 Entre os cenários em que o pool de computação **não** é usado estão:
 

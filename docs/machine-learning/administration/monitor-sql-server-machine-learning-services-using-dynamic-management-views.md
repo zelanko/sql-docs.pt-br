@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115530"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679216"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorar os Serviços de Machine Learning do SQL Server usando DMVs (exibições de gerenciamento dinâmico)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -251,8 +251,8 @@ A consulta retorna as seguintes colunas:
 |--------------------------|--------------|
 | pool_name                | Nome do pool de recursos. Os pools de recursos do SQL Server são prefixados com `SQL Server` e os pools de recursos externos são prefixados com `External Pool`. |
 | total_cpu_usage_hours    | O uso cumulativo de CPU em milissegundos desde que as estatísticas do Resource Governor foram redefinidas. |
-| read_io_completed_total  | O total de E/S lidas concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas.              |
-| write_io_completed_total | O total de E/Ss de gravação concluídas desde que as estatísticas do Administrador de Recursos foram redefinidas.             |
+| read_io_completed_total  | O total de E/S lidas concluídas desde que as estatísticas do Resource Governor foram redefinidas.              |
+| write_io_completed_total | O total de E/S gravadas concluídas desde que as estatísticas do Resource Governor foram redefinidas.             |
 
 ## <a name="installed-packages"></a>Pacotes instalados
 

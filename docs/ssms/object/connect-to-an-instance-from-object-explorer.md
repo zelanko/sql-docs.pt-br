@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037640"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523958"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Conectar ao SQL Server ou ao Banco de Dados SQL do Azure
 
@@ -27,25 +27,25 @@ O [SSMS (SQL Server Management Studio)](../download-sql-server-management-studio
   
 ## <a name="connecting-to-a-server"></a>Conectando a um servidor  
 
-1. Em **Pesquisador de Objetos**, clique em **Conectar > Mecanismo de Banco de Dados...**.
+1. Em **Pesquisador de Objetos** , clique em **Conectar > Mecanismo de Banco de Dados...**.
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![conectar](../media/connect-to-server/connect-db-engine.png)
 
-1. Preencha o formulário **Conectar ao Servidor** e clique em **Conectar**:
+1. Preencha o formulário **Conectar ao Servidor** e clique em **Conectar** :
 
    ![conectar-se ao servidor](../media/connect-to-server/connect.png)
 
 1. Se estiver conectando-se a um Azure SQL Server, talvez será necessário entrar para criar uma regra de firewall. Clique em **Entrar...** (caso contrário, vá para a etapa 6 abaixo)
 
-   ![firewall](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![Captura de tela da caixa de diálogo Nova Regra de Firewall com a opção Entrar em destaque.](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. Depois de entrar com êxito, o formulário é preenchido previamente com o seu endereço IP específico. Se o seu endereço IP é alterado com frequência, pode ser mais fácil permitir acesso a um intervalo, portanto selecione a opção mais adequada ao seu ambiente. 
 
-   ![firewall](../media/connect-to-server/new-firewall-rule.png)
+   ![Captura de tela da caixa de diálogo Nova Regra de Firewall com a opção Adicionar meu endereço IP do cliente selecionada e a opção OK destacada.](../media/connect-to-server/new-firewall-rule.png)
 
 1. Para criar a regra de firewall e conectar-se ao servidor, clique em **OK**.
 
-1. Após a conexão ser bem-sucedida, o servidor aparecerá no **Pesquisador de Objetos**:
+1. Após a conexão ser bem-sucedida, o servidor aparecerá no **Pesquisador de Objetos** :
 
    ![connected](../media/connect-to-server/connected.png)
 

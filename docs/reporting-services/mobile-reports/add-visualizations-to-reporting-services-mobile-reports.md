@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed45f77f509d3206340a2f52e6d3b31ac6824d87
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79447983"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907184"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Adicionar visualizações a relatórios móveis do Reporting Services
 Os gráficos são uma parte essencial da visualização de dados. Saiba mais sobre os gráficos que você pode usar nos relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cobrir diversos cenários. 
@@ -39,15 +39,15 @@ Cada métrica ou valor individual exibido em um gráfico é conhecido como uma s
 ### <a name="change-aggregation"></a>Agregação de alteração 
 Para campos numéricos em gráficos, a agregação padrão é soma. Você pode alterá-lo para média, contagem, mínimo, máximo, primeiro ou último.
 
-* Selecione a guia **Dados** e, em **Propriedades de dados**, selecione **Opções** ao lado do campo numérico > selecione uma agregação diferente.
+* Selecione a guia **Dados** e, em **Propriedades de dados** , selecione **Opções** ao lado do campo numérico > selecione uma agregação diferente.
 
 ### <a name="set-or-clear-filters"></a>Definir ou limpar filtros
 
 Se você adicionar um navegador para filtrar o relatório móvel, poderá decidir quais gráficos você quer filtrar.
 
-1. Selecione a guia **Dados** e, em **Propriedades de dados**, selecione **Opções**.
+1. Selecione a guia **Dados** e, em **Propriedades de dados** , selecione **Opções**.
 
-2. Em **Filtrado por**, você vê os navegadores que você pode marcar ou desmarcar.
+2. Em **Filtrado por** , você vê os navegadores que você pode marcar ou desmarcar.
 
 Leia mais sobre [como adicionar navegadores para filtrar um relatório móvel](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md).
    
@@ -55,7 +55,7 @@ Leia mais sobre [como adicionar navegadores para filtrar um relatório móvel](.
   
 O gráfico de tempo é o gráfico mais básico do [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. O eixo de hora (e data) do gráfico é definido automaticamente para o primeiro campo de data/hora válido na tabela de dados.  
 
-![mobile-report-time-chart](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
+![Captura de tela de um gráfico de tempo do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
 1. Arraste um **Gráfico em tempo** da guia **Layout** para a superfície de design e redimensione-o.
 
@@ -65,27 +65,27 @@ O gráfico de tempo é o gráfico mais básico do [!INCLUDE[SS_MobileReptPub_Sho
 
 3. No painel **Propriedades de dados** , a **Série Principal** é **SimulatedTable**. Clique a seta na caixa > selecione a tabela.
 
-5. Se você definir **Estrutura de dados** como **Por colunas** (na guia **Layout** > painel **Propriedades de visual**), no painel **Propriedades de dados**, poderá selecionar várias colunas de valores numéricos.
+5. Se você definir **Estrutura de dados** como **Por colunas** (na guia **Layout** > painel **Propriedades de visual** ), no painel **Propriedades de dados** , poderá selecionar várias colunas de valores numéricos.
 
-   Se você definir **Estrutura de dados** como **Por linhas**, aqui no painel **Propriedades de dados** , você poderá selecionar um **Campo de Nome da Série** e uma coluna de valores numéricos.
+   Se você definir **Estrutura de dados** como **Por linhas** , aqui no painel **Propriedades de dados** , você poderá selecionar um **Campo de Nome da Série** e uma coluna de valores numéricos.
    
 Leia mais sobre [como agrupar dados por colunas ou linhas](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   
 ## <a name="category-charts"></a>Gráficos de categoria  
   
-Ao contrário de um gráfico de tempo, em um gráfico de categoria, você agrupa um campo que não é um campo de data/hora no eixo x. Esse agrupamento, chamado de *coordenada de categoria*, precisa estar em um campo de cadeia de caracteres, não em um campo numérico.
+Ao contrário de um gráfico de tempo, em um gráfico de categoria, você agrupa um campo que não é um campo de data/hora no eixo x. Esse agrupamento, chamado de *coordenada de categoria* , precisa estar em um campo de cadeia de caracteres, não em um campo numérico.
 
-![mobile-report-category-chart](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
+![Captura de tela do gráfico de categorias do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
 1. Arraste um **Gráfico de categoria** da guia **Layout** para a superfície de design, redimensione-o e [obtenha dados para ele](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), se necessário.
 
-2. Selecione a guia **Dados** e, no painel **Propriedades de dados** , em **coordenada de categoria**, selecione uma tabela e um campo para o agrupamento. Este campo ficará no eixo x do gráfico resultante.
+2. Selecione a guia **Dados** e, no painel **Propriedades de dados** , em **coordenada de categoria** , selecione uma tabela e um campo para o agrupamento. Este campo ficará no eixo x do gráfico resultante.
 
-3. Em **Série Principal**, selecione a tabela e os campos numéricos a serem agregados para cada categoria. 
+3. Em **Série Principal** , selecione a tabela e os campos numéricos a serem agregados para cada categoria. 
   
 ## <a name="totals-charts"></a>Gráfico de totais  
 
-![mobile-report-totals-chart](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
+![Captura de tela do gráfico de totais do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
   
 Gráfico de totais realiza duas coisas distintas: 
 * Ele não apresenta várias séries – apenas a soma ou o total da série principal definida. 
@@ -97,11 +97,11 @@ Leia mais sobre [como agrupar dados por colunas ou linhas](../../reporting-servi
   
 Gráficos de tempo, categoria e totais também estão disponíveis como *gráficos de comparação*. Em um gráfico de comparação, você pode especificar não apenas uma série principal, mas também uma segunda série de comparação. A série principal e a comparação podem ser exibidas de três maneiras diferentes.
 
-![mobile-report-comparison-time-chart](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
+![Captura de tela de um gráfico de tempo de comparação do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
 1. Arraste um dos **Gráficos de comparação** (tempo, categoria ou totais) da guia **Layout** para a superfície de design, redimensione-o e [obtenha dados para ele](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), se necessário.
 
-2. No painel **Propriedades visuais** , em **Visualização da série**, selecione um dos seguintes: 
+2. No painel **Propriedades visuais** , em **Visualização da série** , selecione um dos seguintes: 
    * Barra versus barra fina
    * Linha versus barra
    * Barra versus área de etapa 
@@ -110,26 +110,26 @@ Em gráficos de comparação, você pode optar por ter as mesmas cores do gráfi
 
 * No painel **Propriedades visuais** , defina **Reutilizar cores na série de comparação** para **Ativado**.
 
-   Se for definido como **Ativado**, a paleta de cores será reiniciada entre o desenho das séries principal e de comparação e, portanto, os valores relacionados nas séries principal e de comparação serão os mesmos. 
+   Se for definido como **Ativado** , a paleta de cores será reiniciada entre o desenho das séries principal e de comparação e, portanto, os valores relacionados nas séries principal e de comparação serão os mesmos. 
 
-   Se for definido como **Desativado**, a paleta de cores continuará sua rotação normal ao desenhar a série principal após a série de comparação, impedindo a coordenação de cores potencialmente confusa entre os dois conjuntos da série.  
+   Se for definido como **Desativado** , a paleta de cores continuará sua rotação normal ao desenhar a série principal após a série de comparação, impedindo a coordenação de cores potencialmente confusa entre os dois conjuntos da série.  
   
 ## <a name="pie-and-funnel-charts"></a>Gráficos de pizza e de funil  
   
 Gráficos de pizza e funil estão entre as visualizações mais simples. Você pode estruturar os dados por linhas ou colunas. 
 * Os **gráficos de pizza** nos relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] podem ser pizza, rosca ou rosca com um total no centro. Os gráficos de pizza são úteis para mostrar o tamanho relativo das diferentes partes de um todo. Um número excessivo de fatias dificulta a leitura.
-* Em geral, os**gráficos de funil** são usados para mostrar os estágios de um processo, como vendas.
+* Em geral, os **gráficos de funil** são usados para mostrar os estágios de um processo, como vendas.
 
-![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
+![Captura de tela de um gráfico de funil do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### <a name="structure-pie-and-funnel-chart-data-by-rows-or-by-columns"></a>Estruturar dados do gráfico de pizza e de funil por linhas ou colunas
 1. Arraste um **Gráfico de pizza** ou um **Gráfico de funil** da guia **Layout** para a superfície de design, redimensione-o e [obtenha dados para ele](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), se necessário.
-2. No painel **Propriedades visuais** , em **Estrutura de dados**, selecione:
+2. No painel **Propriedades visuais** , em **Estrutura de dados** , selecione:
    * **Por colunas**
    * **Por linhas**
-3. Se você selecionou **Por colunas**, selecione a guia **Dados** e, no painel **Propriedades de dados** em **Série Principal**, selecione a tabela e todos os campos que você quer agregar no gráfico de pizza ou de funil. Os nomes de campo serão usados para rotular cada área do gráfico resultante.
+3. Se você selecionou **Por colunas** , selecione a guia **Dados** e, no painel **Propriedades de dados** em **Série Principal** , selecione a tabela e todos os campos que você quer agregar no gráfico de pizza ou de funil. Os nomes de campo serão usados para rotular cada área do gráfico resultante.
 
-   Se você selecionou **Por linhas**, selecione a guia **Dados** e, no painel **Propriedades de dados** em **Coluna da Categoria**, selecione a tabela e a coluna com os valores a serem usados para o agrupamento e os rótulos da pizza. Em Coluna da Série Principal, selecione um campo numérico para os valores no gráfico.
+   Se você selecionou **Por linhas** , selecione a guia **Dados** e, no painel **Propriedades de dados** em **Coluna da Categoria** , selecione a tabela e a coluna com os valores a serem usados para o agrupamento e os rótulos da pizza. Em Coluna da Série Principal, selecione um campo numérico para os valores no gráfico.
 
 Leia mais sobre [como agrupar dados por colunas ou linhas](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md). 
 
@@ -137,14 +137,14 @@ Leia mais sobre [como agrupar dados por colunas ou linhas](../../reporting-servi
   
 Os mapas de árvore exibem métricas aplicando seus valores ao tamanho e à cor dos blocos em uma grade retangular. 
 
-![mobile-report-group-treemap](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
+![Captura de tela de um mapa de árvore de grupos do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
 1. Arraste um **Mapa de árvore** da guia **Layout** para a superfície de design, redimensione-o e [obtenha dados para ele](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), se necessário.
 2.  Selecione a guia **Dados** e, no painel **Propriedades de dados** : 
 
      * Em **O Tamanho Representa** , selecione um campo numérico para o tamanho dos blocos.
      * Em **A Cor Representa** , selecione um campo numérico para a cor dos blocos. 
-     * [opcional] **Valor do Centro Personalizado**: só é possível usar o **Valor do Centro Personalizado** quando o tipo de visualização é HeatMapWithCustomCenterValue.
+     * [opcional] **Valor do Centro Personalizado** : só é possível usar o **Valor do Centro Personalizado** quando o tipo de visualização é HeatMapWithCustomCenterValue.
      
          O valor central decide a cor de uma caixa. Quanto melhor a métrica comparada ao valor central, mais verde ela ficará. Quanto pior a métrica, mais vermelha ela ficará.
      
@@ -175,15 +175,15 @@ Os gráficos de cascata são uma boa opção:
 
 1. Arraste um **Gráfico de cascata** da guia **Layout** para a superfície de design, redimensione-o e [obtenha dados para ele](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md), se necessário.
 
-    ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
+    ![Captura de tela de um ícone de gráfico de cascata do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
-2.  Selecione a guia **Dados** e, no painel **Propriedades de Dados** , selecione um campo de categoria em seus dados para **Coordenada de Categoria**, e um campo numérico para **Série Principal**: 
+2.  Selecione a guia **Dados** e, no painel **Propriedades de Dados** , selecione um campo de categoria em seus dados para **Coordenada de Categoria** , e um campo numérico para **Série Principal** : 
 
-    ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
+    ![Captura de tela de dados de cascata do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
 3. Selecione a guia **Layout** para ver o gráfico de cascata na visualização.
 
-   ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
+   ![Captura de tela de um gráfico de cascata do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    
    Os meses com perda, como fevereiro, junho e julho, estão em vermelho. 
    Os meses com ganho, como setembro, outubro e novembro, estão em verde. 

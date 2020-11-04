@@ -9,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 640f8a5b04f9045f905f86ef6d34924ea849bd80
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448205"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907077"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 Em [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], adicione os *navegadores* para filtrar os dados nas visualizações por hora ou por seleção. 
 
 Navegadores são semelhantes às segmentações no Power BI e Tabelas Dinâmicas do Excel, mas os navegadores também têm algumas características exclusivas.
 
-Os**navegadores baseados em tempo** filtram tabelas selecionando linhas que se enquadram no intervalo de tempo específico. 
+Os **navegadores baseados em tempo** filtram tabelas selecionando linhas que se enquadram no intervalo de tempo específico. 
 
-Os**navegadores baseados em seleção** filtram tabelas selecionando linhas em que um valor de coluna específico corresponde ao valor de chave desejado; ou, em casos de árvores hierárquicas, em que um valor de coluna específico pertence à subárvore do valor de chave selecionado. Há dois tipos de navegadores de seleção:
+Os **navegadores baseados em seleção** filtram tabelas selecionando linhas em que um valor de coluna específico corresponde ao valor de chave desejado; ou, em casos de árvores hierárquicas, em que um valor de coluna específico pertence à subárvore do valor de chave selecionado. Há dois tipos de navegadores de seleção:
 * Listas de seleção são tabelas de coluna única que você pode usar para filtrar o relatório móvel, semelhante à segmentações no Power BI e Excel.
 * Grades de scorecard filtram o relatório móvel e também podem conter 
   
@@ -42,7 +42,7 @@ Por padrão, o navegador de tempo filtra todos os elementos visuais no relatóri
   
 Você pode desconectar uma visualização do navegador de tempo.   
 1. Selecione a visualização e a guia **Dados** .  
-2. Em **Propriedades de Dados**, selecione **Opções**.  
+2. Em **Propriedades de Dados** , selecione **Opções**.  
 3. Desmarque a caixa de seleção **Filtrado por** .  
   
    ![SSMRP_ClearTimeFilter](../../reporting-services/mobile-reports/media/ssmrp-cleartimefilter.png)  
@@ -53,25 +53,25 @@ A lista de seleção filtra os dados em um relatório móvel correspondendo o va
 
 1. Na guia **Layout** , arraste **Lista de seleção** para a superfície de design e redimensione-a como desejar.
 
-2. Selecione a guia **Dados** e, no painel **Propriedades de dados** em **Chaves**, selecione a tabela e a coluna que será o filtro. 
+2. Selecione a guia **Dados** e, no painel **Propriedades de dados** em **Chaves** , selecione a tabela e a coluna que será o filtro. 
 
-3. Em **Rótulos**, selecione a coluna com o rótulo que será exibido. A coluna de chave e a coluna de rótulo podem ser as mesmas.  
+3. Em **Rótulos** , selecione a coluna com o rótulo que será exibido. A coluna de chave e a coluna de rótulo podem ser as mesmas.  
   
    No caso de dados de árvore hierárquica, selecione uma coluna de chave pai.  
   
-4. Depois de definir as propriedades de dados em **Tabelas Filtradas pela Lista de Seleção**, selecione as tabelas a serem filtrados e a coluna de filtragem. Essa coluna precisa corresponder os valores da coluna de chave da lista de seleção. 
+4. Depois de definir as propriedades de dados em **Tabelas Filtradas pela Lista de Seleção** , selecione as tabelas a serem filtrados e a coluna de filtragem. Essa coluna precisa corresponder os valores da coluna de chave da lista de seleção. 
 
 Para cada visualização no relatório móvel que você deseja que a lista de seleção filtre:
 
 1. Selecione a visualização, selecione a guia **Dados** e, no painel **Propriedades de dados** , selecione **Opções** ao lado do nome do campo.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Captura de tela das Opções da Coluna de Categoria expandidas com a opção Filtrar por Estado/Regiões selecionada.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. Em **Filtrado por**, escolha a lista de seleção.
+2. Em **Filtrado por** , escolha a lista de seleção.
 
 Quando você exibe o relatório móvel na Visualização ou no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e selecione um valor na lista de seleção, ele filtra as outras visualizações no relatório móvel.
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![Captura de tela mostrando o relatório móvel com Washington selecionado na lista Estados/Regiões e as cidades de Washington representadas nos resultados retornados.](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## <a name="scorecard-grid"></a>Grade de scorecard  
   
@@ -79,9 +79,9 @@ As funções de filtro da grade de scorecard, assim como o filtro da lista de se
 
 1. Na guia **Layout** , arraste a **Guia de scorecard** para a superfície de design e redimensione-a como desejar.
 
-2. Selecione a guia **Dados** e, no painel **Propriedades de dados** em **Chaves**, selecione a tabela e a coluna que será o filtro. 
+2. Selecione a guia **Dados** e, no painel **Propriedades de dados** em **Chaves** , selecione a tabela e a coluna que será o filtro. 
 
-3. Em **Rótulos**, selecione a coluna com o rótulo que será exibido. A coluna de chave e a coluna de rótulo podem ser as mesmas.  
+3. Em **Rótulos** , selecione a coluna com o rótulo que será exibido. A coluna de chave e a coluna de rótulo podem ser as mesmas.  
   
 4. Para adicionar um indicador de pontuação, no painel **Colunas de Dados** , selecione **Adicionar pontuação**.   
   
@@ -96,13 +96,13 @@ As funções de filtro da grade de scorecard, assim como o filtro da lista de se
 
 7. Nomeie o indicador de valor conforme desejado, escolha sua coluna de origem na tabela e selecione como ele será formatado.  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![Captura de tela mostrando as opções disponíveis para uma nova pontuação.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
-8. Depois de definir as propriedades de dados em **Tabelas Filtradas pela Lista de Seleção**, selecione as tabelas a serem filtrados e a coluna de filtragem. Essa coluna precisa corresponder os valores da coluna de chave da lista de seleção. 
+8. Depois de definir as propriedades de dados em **Tabelas Filtradas pela Lista de Seleção** , selecione as tabelas a serem filtrados e a coluna de filtragem. Essa coluna precisa corresponder os valores da coluna de chave da lista de seleção. 
 
 Quando você exibe o relatório móvel na Visualização ou no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e selecione um valor na grade de scorecard, ele filtra as outras visualizações no relatório móvel.
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![Captura de tela da grade de scorecard do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## <a name="set-which-visualizations-are-filtered"></a>Definir quais visualizações são filtradas  
   
@@ -112,9 +112,9 @@ Você pode decidir quais visualizações no relatório móvel um navegador filtr
 
 1. Selecione a visualização, selecione a guia **Dados** e, no painel **Propriedades de dados** , selecione **Opções** ao lado do nome do campo.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Outra captura de tela das Opções da Coluna de Categoria expandidas com a opção Filtrar por Estado/Regiões selecionada.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. Em **Filtrado por**, escolha o navegador. Cada visualização pode ser filtrada por vários navegadores.
+2. Em **Filtrado por** , escolha o navegador. Cada visualização pode ser filtrada por vários navegadores.
   
 ## <a name="cascading-filters"></a>Filtros em cascata   
   

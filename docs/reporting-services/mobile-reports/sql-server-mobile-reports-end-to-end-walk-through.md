@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462350"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907242"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Passo a passo completo
 Realize a criação de relatórios móveis para qualquer tamanho de tela com o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , e exiba-os nos aplicativos móveis do Power BI.
@@ -78,10 +78,10 @@ Use uma ferramenta de cliente existente do [!INCLUDE[PRODUCT_NAME](../../include
    
 4. No campo Nome, digite o nome do servidor onde você salvou a fonte de dados, neste formato:   
    
-   Nome: https://*localhost*/ReportServer  
+   Nome: https:// *localhost* /ReportServer  
    Itens do tipo: Fontes de dados (*.rsds)  
    
-5. Clique em **Abrir**e navegue até a fonte de dados que você criou no servidor.  
+5. Clique em **Abrir** e navegue até a fonte de dados que você criou no servidor.  
    
 6. Selecione a fonte de dados e clique em **Abrir** novamente.    
   
@@ -115,7 +115,7 @@ Crie KPIs direitamente no portal da Web do [!INCLUDE[PRODUCT_NAME](../../include
      
 5. Escolha a agregação desejada. Os KPIs só podem exibir um número, para que o campo seja agregado e mostre esse número.
 
-   ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
+   ![Captura de tela da seção Escolher um campo de AWSalesYTD mostrando a seção Média de Agregação.](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
 6. Clique em **OK**.
 
@@ -183,12 +183,12 @@ Ao abrir pela primeira vez o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilerep
   
 4. Selecione o servidor e selecione o conjunto de dados que você criou.  
    
-3. Novamente na guia **Dados** , no painel **Propriedades de Dados** , altere **Tamanho Representa**, **Cor Representa**e outras propriedades para os campos em seus próprios dados. 
+3. Novamente na guia **Dados** , no painel **Propriedades de Dados** , altere **Tamanho Representa** , **Cor Representa** e outras propriedades para os campos em seus próprios dados. 
    
-   *  **Tamanho Representa**, **Cor Representa**e **Valor Central Personalizado** precisam ser campos com valores numéricos. 
+   *  **Tamanho Representa** , **Cor Representa** e **Valor Central Personalizado** precisam ser campos com valores numéricos. 
    *  **Agrupar por** é uma categoria, portanto, é um campo de texto.
    
-   ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
+   ![Captura de tela da seção Propriedades de dados.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
 6. Selecione **Visualizar** para ver o mapa de árvore atualizado com seus dados.  
 
@@ -200,19 +200,19 @@ Vamos adicionar um medidor para ver como as vendas anuais até o momento se comp
 
 2. Novamente, ela começa com dados simulados. 
 
-   Observe que em **Propriedades visuais**, por padrão **Valores maiores são melhores**e o **Rótulo delta** é uma **Porcentagem de destino**. Há **Paradas de intervalo** que você pode alterar, mas por enquanto elas estão certas.
+   Observe que em **Propriedades visuais** , por padrão **Valores maiores são melhores** e o **Rótulo delta** é uma **Porcentagem de destino**. Há **Paradas de intervalo** que você pode alterar, mas por enquanto elas estão certas.
 
-   ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
+   ![Captura de tela da seção Definir intervalos das propriedades da visualização de rosca do relatório móvel.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
 3. Na guia **Dados** , selecione a tabela com os dados e selecione o campo **Valor Principal** e o campo ao qual você deseja compará-lo em **Valor de Comparação**.
 
 4. Você pode escolher agregações diferentes para obter um número para o **Valor Principal** e outro para o **Valor de Comparação**. Por padrão, é uma soma.
 
-   ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
+   ![Captura de tela das Opções ou do Valor de Comparação.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
 5. Selecione **Visualizar** para ver a aparência. 
 
-   ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
+   ![Captura de tela da visualização de rosca do relatório móvel.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
 ## <a name="add-a-selection-list-as-a-filter"></a>Adicionar uma lista de seleção como um filtro
 
@@ -220,11 +220,11 @@ As listas de seleção atuam como segmentações de dados no Power BI e Excel. P
 
 1. Na guia **Layout** , arraste uma lista de seleção à direita do mapa de árvore e arraste o canto inferior direito para deixá-lo com dois quadrados de largura e com a altura da tela, de cinco quadrados. 
 
-   ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
+   ![Captura de tela da lista de seleção do relatório móvel.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. Na guia **Dados** , **Propriedades de dados**, defina **Chaves** e **Rótulos** para um campo em que você deseja filtrar seus dados.
+2. Na guia **Dados** , **Propriedades de dados** , defina **Chaves** e **Rótulos** para um campo em que você deseja filtrar seus dados.
 
-   ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
+   ![Captura de tela da seção de Propriedades de dados da lista de seleção do relatório móvel.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
 ## <a name="create-a-mobile-report-for-phones"></a>Criar um relatório móvel para telefones  
   
@@ -232,7 +232,7 @@ Agora que você criou elementos visuais no layout mestre, poderá criar um relat
   
 1. No canto superior direito, clique no ícone da tela > **Telefone**.  
   
-2. Na guia Layout, em **Instâncias de Controle**, veja os dois gráficos que você criou.   
+2. Na guia Layout, em **Instâncias de Controle** , veja os dois gráficos que você criou.   
   
 3. Arraste o mapa de árvore até a tela do telefone e deixe-o com quatro colunas de largura e com três linhas de altura.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255483"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907104"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Manter os cabeçalhos visíveis ao rolar por um relatório (Construtor de Relatórios e SSRS)
   Para impedir que os rótulos de linha e coluna rolem para fora da exibição depois da renderização de um relatório, você pode congelar os títulos de linha ou coluna.  
@@ -28,11 +28,11 @@ ms.locfileid: "84255483"
   
  A imagem a seguir mostra uma tabela.  
   
- ![Table](../../reporting-services/report-design/media/table.png "Tabela")  
+ ![Captura de tela de uma tabela.](../../reporting-services/report-design/media/table.png "Tabela")  
   
  A imagem a seguir mostra uma matriz.  
   
- ![Matriz](../../reporting-services/report-design/media/matrix.png "Matriz")  
+ ![Captura de tela de uma matriz.](../../reporting-services/report-design/media/matrix.png "Matriz")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,7 +41,7 @@ ms.locfileid: "84255483"
   
 1.  Clique com o botão direito do mouse na alça de canto, na linha ou na coluna de uma região de dados tablix e, em seguida, clique em **Propriedades do Tablix**.  
   
-2.  Na guia **Geral** , em **Cabeçalhos de Linha** ou **Cabeçalhos de Coluna**, selecione **O cabeçalho deve permanecer visível ao rolar**.  
+2.  Na guia **Geral** , em **Cabeçalhos de Linha** ou **Cabeçalhos de Coluna** , selecione **O cabeçalho deve permanecer visível ao rolar**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

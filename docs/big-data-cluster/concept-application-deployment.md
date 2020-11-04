@@ -10,16 +10,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: ac26973c4d1ff8b2a9e689f3aa372d3888f939d6
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257256"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914289"
 ---
-# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>O que é a implantação de aplicativos em um cluster de Big Data?
+# <a name="what-is-application-deployment-on-a-sql-server-big-data-cluster"></a>O que é a implantação de aplicativos em um cluster de Big Data do SQL Server?
 
-A implantação de aplicativos permite a implantação de aplicativos no cluster de Big Data fornecendo interfaces para criar, gerenciar e executar aplicativos. Os aplicativos implantados no cluster de Big Data se beneficiam do poder computacional do cluster e podem acessar os dados disponíveis no cluster. Isso aumenta a escalabilidade e o desempenho dos aplicativos, ao mesmo tempo que gerencia os aplicativos nos quais os dados residem. Os runtimes do aplicativo compatíveis com os Clusters de Big Data do SQL Server são o R, o Python, o SSIS e o MLeap.
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+A implantação de aplicativos permite que esse tipo de implantação ocorra no cluster de Big Data do SQL Server, fornecendo interfaces para criar, gerenciar e executar aplicativos. Os aplicativos implantados no cluster de Big Data do SQL Server se beneficiam do poder computacional do cluster e podem acessar os dados disponíveis nele. Isso aumenta a escalabilidade e o desempenho dos aplicativos, ao mesmo tempo que gerencia os aplicativos nos quais os dados residem. Os runtimes de aplicativos compatíveis com [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] são o R, Python, SSIS e MLeap.
 
 As seções a seguir descrevem a arquitetura e a funcionalidade da implantação de aplicativos.
 
@@ -67,9 +69,9 @@ Além disso, a funcionalidade **CAP_AUDIT_WRITE** é uma funcionalidade opcional
 ```yml
 ...
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
+- SETUID
+- SETGID
+- CHOWN
 - SYS_PTRACE
 - AUDIT_WRITE
 ...

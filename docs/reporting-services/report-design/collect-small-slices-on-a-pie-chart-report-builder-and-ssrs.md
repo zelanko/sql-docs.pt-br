@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4e51e1a12f28ae18ff6ba833ace19a1a97ba72dd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462060"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907234"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Coletar fatias pequenas em um gráfico de pizza (Construtor de Relatórios e SSRS)
 Gráficos de pizza com muitas fatias podem parecer desorganizados. Saiba como reunir várias fatias pequenas de um gráfico de pizza em uma única fatia nos relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
@@ -23,7 +23,7 @@ Gráficos de pizza com muitas fatias podem parecer desorganizados. Saiba como re
  
  O [Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) explica como reunir fatias pequenas em uma única fatia, caso você deseje experimentar isso com os dados de exemplo primeiro.
  
- ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![Captura de tela de um gráfico de pizza do construtor de relatórios mostrando a fatia Outros.](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  Também é possível coletar pequenas fatias em um segundo gráfico de pizza que é retirado de uma fatia coletada do primeiro gráfico de pizza. O segundo gráfico de pizza é desenhado à direita do gráfico de pizza original.  
   
@@ -40,7 +40,7 @@ Gráficos de pizza com muitas fatias podem parecer desorganizados. Saiba como re
   
 4.  Defina a propriedade CollectedStyle como **SingleSlice**.  
 
-    ![report-builder-pie-chart-single-slice-property](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Captura de tela de um gráfico de pizza do construtor de relatórios mostrando como configurar a propriedade de uma única fatia.](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
   
 5.  Defina o valor do limite coletado e o tipo de limite. Os exemplos a seguir são maneiras comuns de configurar limites coletados.  
   
@@ -51,7 +51,7 @@ Gráficos de pizza com muitas fatias podem parecer desorganizados. Saiba como re
          Defina a propriedade CollectedThreshold como **10**.  
   
         > [!NOTE]  
-        >  Se você definir CollectedStyle como **SingleSlice**, CollectedThreshold com um valor maior que **100** e CollectedThresholdUsePercent como **True**, o gráfico gerará uma exceção porque não é possível calcular um percentual. Para resolver esse problema, defina CollectedThreshold com um valor menor que **100**.  
+        >  Se você definir CollectedStyle como **SingleSlice** , CollectedThreshold com um valor maior que **100** e CollectedThresholdUsePercent como **True** , o gráfico gerará uma exceção porque não é possível calcular um percentual. Para resolver esse problema, defina CollectedThreshold com um valor menor que **100**.  
   
     -   **Por valor de dados.** Por exemplo, para coletar qualquer fatia no gráfico de pizza que seja menor do que 5000 em uma única fatia:  
   
@@ -69,7 +69,7 @@ Gráficos de pizza com muitas fatias podem parecer desorganizados. Saiba como re
   
 2.  Defina a propriedade CollectedStyle como **CollectedPie**.  
   
-3.  Defina a propriedade CollectedThreshold como um valor que represente o limite no qual pequenas fatias serão coletadas em uma fatia. Quando a propriedade CollectedStyle é definida como **CollectedPie**, CollectedThresholdUsePercentproperty é sempre definido como **True**, e o limite coletado é sempre medido como uma porcentagem.  
+3.  Defina a propriedade CollectedThreshold como um valor que represente o limite no qual pequenas fatias serão coletadas em uma fatia. Quando a propriedade CollectedStyle é definida como **CollectedPie** , CollectedThresholdUsePercentproperty é sempre definido como **True** , e o limite coletado é sempre medido como uma porcentagem.  
   
 4.  (Opcional) Defina as propriedades CollectedColor, CollectedLabel, CollectedLegendText e CollectedToolTip. Todas as outras propriedades denominadas "Coletadas" não se aplicam ao gráfico de pizza coletado.  
   

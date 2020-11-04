@@ -9,18 +9,18 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd3d46ece53f15b694b28083e36d5cb991e2b411
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 4a0e171861d01d7a3afe7904905d373aa5e57639
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358114"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678723"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 Aplica-se ao [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-O artigo a seguir fornece referência para os comandos **sql** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos **sql** na ferramenta **azdata**. Para obter mais informações sobre outros comandos de **azdata** , confira [referência de azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Comandos
 
@@ -39,7 +39,7 @@ Exibir notebook.  Isso mostra todas as células.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
-Exibir notebook.  Isso mostra todas as células, a menos que uma célula com erro na saída seja encontrada.  Nesse caso, a saída para.
+Exibir notebook.  Isso mostra todas as células, a menos que seja encontrada uma célula com erro na saída.  Nesse caso, a saída para.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```
@@ -112,7 +112,7 @@ Aumentar o detalhamento do log. Use --debug para logs de depuração completos.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre outros comandos de **azdata**, confira [referência de azdata](reference-azdata.md). 
+Para obter mais informações sobre outros comandos de **azdata** , confira [referência de azdata](reference-azdata.md). 
 
-Para obter mais informações sobre como instalar a ferramenta **azdata**, confira [Instalar azdata](..\install\deploy-install-azdata.md).
+Para obter mais informações sobre como instalar a ferramenta **azdata** , confira [Instalar azdata](..\install\deploy-install-azdata.md).
 

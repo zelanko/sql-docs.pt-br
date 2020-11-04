@@ -9,30 +9,30 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e8bc204c3f93d4a4ebbd26876bc8c3e23bad8047
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257236"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914285"
 ---
-# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>O que é o pool de armazenamento ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
+# <a name="what-is-the-storage-pool-in-a-sql-server-big-data-cluster"></a>O que é o pool de armazenamento em um cluster de Big Data do SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Este artigo descreve a função do *Pool de armazenamento do SQL Server* em um BDC ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]). As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de armazenamento do SQL.
+Este artigo descreve a função do *pool de armazenamento do SQL Server* em um cluster de Big Data do SQL Server. As seções a seguir descrevem a arquitetura e a funcionalidade de um pool de armazenamento.
 
 ## <a name="storage-pool-architecture"></a>Arquitetura do pool de armazenamento
 
-O pool de armazenamento é o cluster do HDFS local (Hadoop) no ecossistema BDC do SQL Server. Ele fornece armazenamento persistente para dados não estruturados e semiestruturados. Arquivos de dados, como Parquet ou texto delimitado, podem ser armazenados no pool de armazenamento. Para persistir o armazenamento, cada pod no pool tem um Volume Persistente anexado a ele. Os arquivos do pool de armazenamento podem ser acessados via o [PolyBase](../relational-databases/polybase/polybase-guide.md) por meio do SQL Server ou diretamente usando um Gateway do Apache Knox.
+O pool de armazenamento é o cluster do HDFS local (Hadoop) em um cluster de Big Data do SQL Server. Ele fornece armazenamento persistente para dados não estruturados e semiestruturados. Arquivos de dados, como Parquet ou texto delimitado, podem ser armazenados no pool de armazenamento. Para persistir o armazenamento, cada pod no pool tem um volume persistente anexado a ele. Os arquivos do pool de armazenamento podem ser acessados via o [PolyBase](../relational-databases/polybase/polybase-guide.md) por meio do SQL Server ou diretamente usando um Gateway do Apache Knox.
 
-Uma configuração do HDFS clássico consiste em um conjunto de computadores de hardware de mercadoria com armazenamento anexado. Os dados são distribuídos em blocos em todos os nós para fins de tolerância a falhas e aproveitamento do processamento paralelo. Um dos nós no cluster funciona como o Nó de Nome e contém as informações de metadados sobre os arquivos localizados nos nós de dados.
+Uma configuração do HDFS clássico consiste em um conjunto de computadores de hardware de mercadoria com armazenamento anexado. Os dados são distribuídos em blocos em todos os nós para fins de tolerância a falhas e aproveitamento do processamento paralelo. Um dos nós no cluster funciona como o nó de nome e contém as informações de metadados sobre os arquivos localizados nos nós de dados.
 
 ![Configuração do HDFS clássico](media/concept-storage-pool/classic-hdfs-setup.png)
 
 O pool de armazenamento consiste em nós de armazenamento que são membros de um cluster HDFS. Ele executa um ou mais pods do Kubernetes e cada pod hospeda os seguintes contêineres:
 
-- Um contêiner Hadoop vinculado a um Volume Persistente (armazenamento). Todos os contêineres desse tipo juntos formam o cluster Hadoop. No contêiner Hadoop, há um processo do gerenciador de nós do YARN que pode criar processos de trabalho do Apache Spark sob demanda. O nó de cabeçalho do Spark hospeda o metastore do hive, o histórico do Spark e os contêineres do histórico de trabalhos do YARN.
+- Um contêiner Hadoop vinculado a um volume persistente (armazenamento). Todos os contêineres desse tipo juntos formam o cluster Hadoop. No contêiner Hadoop, há um processo do gerenciador de nós do YARN que pode criar processos de trabalho do Apache Spark sob demanda. O nó de cabeçalho do Spark hospeda o metastore do hive, o histórico do Spark e os contêineres do histórico de trabalhos do YARN.
 - Uma instância do SQL Server para ler dados do HDFS usando a tecnologia OpenRowSet.
 - `collectd` para coletar dados de métricas.
 - `fluentbit` para coletar dados de log.

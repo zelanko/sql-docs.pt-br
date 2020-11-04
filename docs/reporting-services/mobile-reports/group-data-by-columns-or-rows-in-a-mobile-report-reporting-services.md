@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d775b0346ce2838abeec4bebce55762afd3b0adc
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448234"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907324"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Agrupar dados por colunas ou linhas em um relatório móvel | Reporting Services
 Você pode organizar os dados por colunas ou linhas em vários tipos de gráficos no [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. Acompanhe esse passo a passo.
@@ -29,17 +29,17 @@ As etapas a seguir usam uma tabela de totais de comparação com dados simulados
 
 2. Selecione a guia **Dados** . Você verá que a tabela SimulatedTable contém uma série de colunas, **Metric1** a **Metric5** e **Comparison1** a **Comparison5**. 
 
-   ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
+   ![Captura de tela das colunas do grupo de dados do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
-3. No painel **Propriedades de dados** , a **Série Principal** é **SimulatedTable**. Selecione a seta na caixa ao lado de **Série Principal**e você verá que **Metric1** a **Metric5** está selecionado.
+3. No painel **Propriedades de dados** , a **Série Principal** é **SimulatedTable**. Selecione a seta na caixa ao lado de **Série Principal** e você verá que **Metric1** a **Metric5** está selecionado.
 
-   ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
+   ![Captura de tela das opções ao lado da Série Principal.](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
    Da mesma forma para a **Série de Comparação** -- **Comparison1** a **Comparison5** são selecionados.
    
 4. Selecione **Visualização**.
 
-   ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
+   ![Captura de tela da visualização do Gráfico de Totais de Comparações.](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
    Cada barra no gráfico representa uma coluna na tabela. As barras mais espessas são as colunas Métricas e as barras mais finas são as colunas de Comparação.
 
@@ -47,17 +47,17 @@ As etapas a seguir usam uma tabela de totais de comparação com dados simulados
 
 6. Na guia **Layout** , no painel **Propriedades visuais** , altere a **Estrutura de dados** de **Por colunas** para **Por linhas**.  
 
-7. Selecione a guia **Dados** . Agora a tabela SimulatedTable tem uma coluna **Category**, junto com as colunas **Metric** e **Comparison**, com a Categoria A a E. 
+7. Selecione a guia **Dados** . Agora a tabela SimulatedTable tem uma coluna **Category** , junto com as colunas **Metric** e **Comparison** , com a Categoria A a E. 
 
-   ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
+   ![Captura de tela das linhas do grupo de dados do relatório móvel.](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
 8.  No painel **Propriedades de dados** , agora há uma caixa Coluna de Categoria, que lista a coluna Categoria de SimulatedTable. Na Série Principal, você pode escolher qual coluna deve ser usada para os valores. Por padrão, [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] seleciona Metric1 a Metric5 para a Série Principal e Comparison1 a Comparison5 para a Série de Comparação. 
 
-    ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
+    ![Captura de tela das opções ao lado da Série de Comparações.](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
 9. Selecione **Visualização**.
 
-   ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
+   ![Captura de tela da visualização do Gráfico de Totais de Comparações atualizado.](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 
    Agora cada barra no gráfico representa os valores para cada categoria na coluna Categoria.
 

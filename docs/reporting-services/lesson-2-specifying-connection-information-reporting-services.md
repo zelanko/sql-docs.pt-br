@@ -9,38 +9,38 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3000abfed5258f02d47148ce351a6390cb225c7
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258459"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678884"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lição 2: Especificar informações de conexão (Reporting Services)
 
 Na lição 1, você adicionou um relatório paginado do [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] ao seu projeto do Tutorial.
   
-Nesta lição, você definirá uma *fonte de dados*, as informações de conexão que o relatório usa para acessar dados de um banco de dados relacional ou de outras fontes.
+Nesta lição, você definirá uma *fonte de dados* , as informações de conexão que o relatório usa para acessar dados de um banco de dados relacional ou de outras fontes.
 
 Neste relatório, você adicionará o banco de dados de exemplo AdventureWorks2016 como sua fonte de dados. Este tutorial assume que esse banco de dados está localizado na instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instalada no computador local.  
 
 ## <a name="to-set-up-a-connection"></a>Para configurar uma conexão  
 
-1. No painel **Dados do Relatório**, selecione **Nova** > **Fonte de Dados**. Se o painel **Dados do Relatório** não estiver visível, selecione o menu **Exibição** > **Dados de Relatório**.
+1. No painel **Dados do Relatório** , selecione **Nova** > **Fonte de Dados**. Se o painel **Dados do Relatório** não estiver visível, selecione o menu **Exibição** > **Dados de Relatório**.
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![Captura de tela do painel Dados do Relatório com as opções Nova > Fonte de Dados selecionadas.](media/ssrs-table-tutorial-2-new-data-source.png)
 
     A caixa de diálogo **Propriedades da Fonte de Dados** é aberta exibindo a seção **Geral**.
 
     ![Caixa de diálogo Propriedades da Fonte de Dados](media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png)
 
-2. Na caixa de texto **Nome**, digite "AdventureWorks2016".
+2. Na caixa de texto **Nome** , digite "AdventureWorks2016".
 
 3. Selecione o botão de opção **Conexão inserida**.
 
-4. Na caixa de seleção suspensa **Tipo**, selecione "Microsoft SQL Server".
+4. Na caixa de seleção suspensa **Tipo** , selecione "Microsoft SQL Server".
   
-5. Na caixa de texto **Cadeia de conexão**, digite a seguinte cadeia de caracteres:
+5. Na caixa de texto **Cadeia de conexão** , digite a seguinte cadeia de caracteres:
 
     `Data source=localhost; initial catalog=AdventureWorks2016`
 
@@ -53,7 +53,7 @@ Neste relatório, você adicionará o banco de dados de exemplo AdventureWorks20
     >
     > Para obter mais informações sobre cadeias de conexão, você pode conferir a seção `See also` abaixo.
 
-6. Selecione a guia **Credenciais** e, na seção **Alterar as credenciais usadas para se conectar à fonte de dados**, selecione o botão de opção **Usar a Autenticação do Windows (segurança integrada)** .
+6. Selecione a guia **Credenciais** e, na seção **Alterar as credenciais usadas para se conectar à fonte de dados** , selecione o botão de opção **Usar a Autenticação do Windows (segurança integrada)** .
 
 7. Selecione **OK** para concluir o processo.
 

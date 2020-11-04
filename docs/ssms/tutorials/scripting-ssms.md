@@ -6,10 +6,6 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.topic: tutorial
 keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Gerar script
-author: markingmyname
-ms.author: maghan
-ms.reviewer: sstein
-ms.date: 03/13/2018
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - source controls [SQL Server Management Studio], tutorials
@@ -19,12 +15,16 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein
+ms.date: 03/13/2018
+ms.openlocfilehash: 9d8d86fbe427b232831fa3713b94f067e0089a4b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038957"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638929"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>gerar script de objetos no SQL Server Management Studio
 
@@ -37,7 +37,7 @@ Este tutorial ensina a gerar scripts T-SQL (Transact-SQL) para vários objetos e
 > * Procedimentos armazenados
 > * Eventos estendidos
 
-Para gerar script de qualquer objeto no **Pesquisador de Objetos**, clique duas vezes e selecione a opção **Gerar script de objeto como**. Este tutorial mostra o processo.
+Para gerar script de qualquer objeto no **Pesquisador de Objetos** , clique duas vezes e selecione a opção **Gerar script de objeto como**. Este tutorial mostra o processo.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -59,13 +59,13 @@ Você pode gerar o código T-SQL associado para uma tarefa sempre que você usa 
 
 2. Expanda o nó **Bancos de Dados** .
 
-3. Clique com o botão direito do mouse no banco de dados do **Adventureworks2016** > **Tarefas** > **Backup**:
+3. Clique com o botão direito do mouse no banco de dados do **Adventureworks2016** > **Tarefas** > **Backup** :
 
     ![Fazer o backup de um banco de dados](media/scripting-ssms/backupdb.png)
 
 4. Configure o backup como desejar. Para este tutorial, tudo foi deixado nos valores padrão. Entretanto, as alterações feitas na janela também serão refletidas no script. 
 
-5. Selecione **Script** > **Ação do Script para a Nova Janela de Consulta**:
+5. Selecione **Script** > **Ação do Script para a Nova Janela de Consulta** :
 
     ![Gerar backup de banco de dados de script – ação de script](media/scripting-ssms/scriptdbbackup.PNG)
 6. Examine o T-SQL populado na janela de consulta.
@@ -75,19 +75,19 @@ Você pode gerar o código T-SQL associado para uma tarefa sempre que você usa 
 
 ### <a name="script-t-sql-when-you-shrink-the-transaction-log"></a>Gerar script de T-SQL ao reduzir o log de transações
 
-1. Clique com o botão direito do mouse no banco de dados do **AdventureWorks2016TasksShrinkFiles** > **Tarefas** > **Reduzir** > **Arquivos**:
+1. Clique com o botão direito do mouse no banco de dados do **AdventureWorks2016TasksShrinkFiles** > **Tarefas** > **Reduzir** > **Arquivos** :
 
      ![Reduzir arquivos](media/scripting-ssms/shrinkfiles.png)
 
-2. Selecione **Log** da caixa de listagem suspensa **Tipo de arquivo**:
+2. Selecione **Log** da caixa de listagem suspensa **Tipo de arquivo** :
 
     ![Reduzir o log de transações](media/scripting-ssms/shrinktlog.png)
 
-3. Selecione **Gerar script** e **Gerar script de ação para área de transferência**:
+3. Selecione **Gerar script** e **Gerar script de ação para área de transferência** :
 
     ![Script para área de transferência](media/scripting-ssms/scriptactiontoclipboard.png)
 
-4. Abra uma janela **Nova Consulta** e cole. (Clique com o botão direito do mouse na janela. Selecione **Colar**).
+4. Abra uma janela **Nova Consulta** e cole. (Clique com o botão direito do mouse na janela. Selecione **Colar** ).
 
     ![Colar script](media/scripting-ssms/paste.png)
 
@@ -103,7 +103,7 @@ A seção a seguir ensina como gerar o script do banco de dados, tanto usando a 
 
 2. Expanda o nó **Bancos de Dados** .
 
-3. Clique com o botão direito do mouse no banco de dados do **AdventureWorks2016** > **Gerar script de banco de dados como** > **Criar para** > **Janela do Editor de Nova Consulta**:
+3. Clique com o botão direito do mouse no banco de dados do **AdventureWorks2016** > **Gerar script de banco de dados como** > **Criar para** > **Janela do Editor de Nova Consulta** :
 
     ![Gerar script de banco de dados](media/scripting-ssms/scriptdb.png)
 
@@ -111,7 +111,7 @@ A seção a seguir ensina como gerar o script do banco de dados, tanto usando a 
 
     ![Banco de dados gerado por script](media/scripting-ssms/scriptedoutdb.png) Essa opção gera scripts apenas das opções de configuração do banco de dados.
 
-5. No teclado, selecione Ctrl + F para abrir a caixa de diálogo **Localizar**. Selecione a seta para baixo para abrir a opção **Substituir**. Na linha superior **Localizar**, digite AdventureWorks2016; na linha inferior **Substituir**, digite AdventureWorks2016a.
+5. No teclado, selecione Ctrl + F para abrir a caixa de diálogo **Localizar**. Selecione a seta para baixo para abrir a opção **Substituir**. Na linha superior **Localizar** , digite AdventureWorks2016; na linha inferior **Substituir** , digite AdventureWorks2016a.
 
 6. Clique em **Substituir tudo** para substituir todas as instâncias do *AdventureWorks2016* pelo *AdventureWorks2016a*. 
 
@@ -125,7 +125,7 @@ A seção a seguir ensina como gerar o script do banco de dados, tanto usando a 
 
 2. Expanda o nó **Bancos de Dados** .
 
-3. Clique com botão direito **AdventureWorks2016** > **Tarefas** > **Gerar Scripts**:
+3. Clique com botão direito **AdventureWorks2016** > **Tarefas** > **Gerar Scripts** :
 
     ![Gerar scripts para banco de dados](media/scripting-ssms/generatescriptsfordb.png)
 
@@ -152,7 +152,7 @@ A seção a seguir ensina como gerar o script do banco de dados, tanto usando a 
 
 7. Selecione **Avançar** no **Resumo**. Selecione **Avançar** novamente para gerar o script em uma janela **Nova Consulta**.
 
-8. No teclado, abra a caixa de diálogo **Localizar** (Ctrl + F). Selecione a seta para baixo para abrir a opção **Substituir**. Na linha superior de **Localizar**, digite *AdventureWorks2016*. Na linha inferior de **Substituir**, digite *AdventureWorks2016b*.
+8. No teclado, abra a caixa de diálogo **Localizar** (Ctrl + F). Selecione a seta para baixo para abrir a opção **Substituir**. Na linha superior de **Localizar** , digite *AdventureWorks2016*. Na linha inferior de **Substituir** , digite *AdventureWorks2016b*.
 
 9. Clique em **Substituir tudo** para substituir todas as instâncias do *AdventureWorks2016* pelo *AdventureWorks2016b*.
 
@@ -172,7 +172,7 @@ Esta seção aborda como gerar o script de tabelas do banco de dados. Use essa o
 
 4. Expanda o nó **Tabelas**.
 
-5. Clique com o botão direito do mouse em **dbo.ErrorLog** > **Gerar script da tabela como** > **Soltar e criar em** > **Nova janela de edição de consultas**:
+5. Clique com o botão direito do mouse em **dbo.ErrorLog** > **Gerar script da tabela como** > **Soltar e criar em** > **Nova janela de edição de consultas** :
 
     ![Gerar script de tabela](media/scripting-ssms/scripttable.png)
 
@@ -193,9 +193,9 @@ Nesta seção, você aprenderá a soltar e criar um procedimento armazenado.
 
 4. Expanda o nó **Procedimento Armazenado**.
 
-5. Clique com o botão direito do mouse no procedimento armazenado **dbo.uspGetBillOfMaterials** > **Gerar script de procedimento armazenado como** > **Soltar e criar para** > **Janela do Editor de Nova Consulta**:
+5. Clique com o botão direito do mouse no procedimento armazenado **dbo.uspGetBillOfMaterials** > **Gerar script de procedimento armazenado como** > **Soltar e criar para** > **Janela do Editor de Nova Consulta** :
 
-    ![Gerar script de procedimentos armazenados](media/scripting-ssms/scriptstoredprocedure.PNG)
+    ![Gerar script de procedimentos armazenados](media/scripting-ssms/script-stored-procedure.png)
 
 ## <a name="script-extended-events"></a>Gerar script de eventos estendidos
 
@@ -209,11 +209,11 @@ Esta seção aborda como gerar o script de [eventos estendidos](../../relational
 
 4. Expanda o nó **Sessões**.
 
-5. Clique com o botão direito do mouse na sessão estendida de seu interesse em > **Criar Script de Sessão como** > **CREATE To** > **Nova Janela do Editor de Consulta**:
+5. Clique com o botão direito do mouse na sessão estendida de seu interesse em > **Criar Script de Sessão como** > **CREATE To** > **Nova Janela do Editor de Consulta** :
 
     ![Sessão estendida da Janela do Editor de Nova Consulta](media/scripting-ssms/scriptxevents.png)
 
-6. Na **Janela do Editor de Nova Consulta**, modifique o novo nome da sessão de *system_health* para *system_health2*. Selecione **Executar** para executar a consulta.
+6. Na **Janela do Editor de Nova Consulta** , modifique o novo nome da sessão de *system_health* para *system_health2*. Selecione **Executar** para executar a consulta.
 
 7. Clique com o botão direito do mouse em **Sessões** no **Pesquisador de Objetos**. Selecione **Atualizar** para ver a nova sessão de evento estendido. O ícone verde ao lado da sessão indica que a sessão está em execução. O ícone vermelho indica que a sessão está interrompida.
 

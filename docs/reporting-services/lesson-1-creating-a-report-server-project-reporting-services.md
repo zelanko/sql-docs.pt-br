@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
-ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
+ms.openlocfilehash: ac84fb8cf355103b28fbac8f5411943aa4ee51a8
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89468341"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679051"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Lição 1: Criar um projeto do Servidor de Relatório (Reporting Services)
 
@@ -27,39 +27,39 @@ Criar relatórios com o Designer de Relatórios significa que você cria um proj
 
 ## <a name="to-create-a-report-server-project"></a>Para criar um projeto do servidor de relatórios
   
-1. No menu **Arquivo**, selecione **Novo** > **Projeto**.  
+1. No menu **Arquivo** , selecione **Novo** > **Projeto**.  
 
-    ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
+    ![Captura de tela do Visual Studio mostrando Arquivo > Novo > Projeto selecionado.](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-2. Na coluna mais à esquerda em **Instalado**, selecione **Reporting Services**. Em alguns casos, talvez ele esteja no grupo **Business Intelligence**.
+2. Na coluna mais à esquerda em **Instalado** , selecione **Reporting Services**. Em alguns casos, talvez ele esteja no grupo **Business Intelligence**.
 
-    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
+    ![Captura de tela da caixa de diálogo Novo Projeto mostrando Reporting Services selecionado e o modelo de Projeto do Servidor de Relatório realçado.](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > No VS, se você não vir o Reporting Services na coluna esquerda, adicione o Designer de Relatórios ao instalar a carga de trabalho do SSDT. No menu **Ferramentas**, selecione **Obter Ferramentas e Funcionalidades...**  e selecione **SQL Server Data Tools** nas cargas de trabalho exibidas. Se você não vir os objetos de serviços de relatórios na coluna central, adicione as extensões do Reporting Services. No menu **Ferramentas**, selecione **Extensões e Atualizações** > **Online**. Na coluna central, selecione **Projetos do Microsoft Reporting Services** > **Baixar** nas extensões exibidas. Para SSDT, confira [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md). No Visual Studio 2019, se as etapas anteriores não funcionaram, tente instalar a [extensão do Projeto do Microsoft Reporting Service](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
+    > No VS, se você não vir o Reporting Services na coluna esquerda, adicione o Designer de Relatórios ao instalar a carga de trabalho do SSDT. No menu **Ferramentas** , selecione **Obter Ferramentas e Funcionalidades...**  e selecione **SQL Server Data Tools** nas cargas de trabalho exibidas. Se você não vir os objetos de serviços de relatórios na coluna central, adicione as extensões do Reporting Services. No menu **Ferramentas** , selecione **Extensões e Atualizações** > **Online**. Na coluna central, selecione **Projetos do Microsoft Reporting Services** > **Baixar** nas extensões exibidas. Para SSDT, confira [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md). No Visual Studio 2019, se as etapas anteriores não funcionaram, tente instalar a [extensão do Projeto do Microsoft Reporting Service](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
 
 
 3. Selecione o ícone **Projeto do Servidor de Relatório** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;na coluna central da caixa de diálogo **Novo Projeto**.
 
-4. Na caixa de texto **Nome**, digite "Tutorial" como o nome do projeto. Por padrão, a caixa de texto **Local** exibe o caminho para a pasta "Documentos\Visual Studio 20xx\Projetos\". O Designer de Relatórios cria a pasta Tutorial nesse caminho e cria o projeto do Tutorial nessa pasta. Se o projeto não pertencer a uma solução VS, então o VS também cria um arquivo de solução (.sln).
+4. Na caixa de texto **Nome** , digite "Tutorial" como o nome do projeto. Por padrão, a caixa de texto **Local** exibe o caminho para a pasta "Documentos\Visual Studio 20xx\Projetos\". O Designer de Relatórios cria a pasta Tutorial nesse caminho e cria o projeto do Tutorial nessa pasta. Se o projeto não pertencer a uma solução VS, então o VS também cria um arquivo de solução (.sln).
 
 5. Selecione **OK** para criar o projeto. O projeto Tutorial é exibido no painel **Gerenciador de Soluções** à direita.
   
 ## <a name="creating-a-report-definition-file-rdl"></a>Criar um arquivo de definição de relatório (RDL)  
   
-1. No painel **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Relatórios**. Se você não vir o painel **Gerenciador de Soluções**, selecione o menu **Exibir** > **Gerenciador de Soluções**.
+1. No painel **Gerenciador de Soluções** , clique com o botão direito do mouse na pasta **Relatórios**. Se você não vir o painel **Gerenciador de Soluções** , selecione o menu **Exibir** > **Gerenciador de Soluções**.
 
 2. Selecione **Adicionar** > **Novo Item**.
 
-    ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
+    ![Captura de tela de Gerenciador de Soluções mostrando Relatórios > Adicionar > Novo Item selecionado.](../reporting-services/media/ssrs-ssdt-add-report.png)
 
-3. Na janela **Adicionar Novo Item**, selecione o ícone **Relatório**.
+3. Na janela **Adicionar Novo Item** , selecione o ícone **Relatório**.
 
 4. Digite "Pedidos de Vendas.rdl" na caixa de texto **Nome**.
 
 5. Selecione o botão **Adicionar** no canto inferior direito da caixa de diálogo **Adicionar Novo Item** para concluir o processo. O Designer de Relatórios abre e exibe o novo arquivo do relatório de Pedido de Vendas no modo de exibição de Design.
 
-    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+    ![Captura de tela do Visual Studio mostrando o Designer de Relatórios e o relatório de Pedidos de Vendas no modo de exibição de Design.](media/ssrs-ssdt-01-new-report-designer.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 

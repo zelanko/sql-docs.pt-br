@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862686"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793813"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Quais são as Atualizações de Segurança Estendidas para o SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ A Microsoft recomenda aplicar patches de ESU assim que eles estiverem disponíve
 ## <a name="what-are-extended-security-updates"></a>O que são Atualizações de Segurança Estendidas
 As ESUs (Atualizações de Segurança Estendidas) para [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] incluem o provisionamento de atualizações de segurança para clientes que adquiriram uma assinatura de atualização de suporte estendida.
 
-As ESUs serão disponibilizadas **se necessário**, depois que uma vulnerabilidade de segurança for descoberta e classificada como **Crítica** pelo [MSRC (Microsoft Security Response Center)](https://portal.msrc.microsoft.com). Portanto, não há um ritmo regular de versão para ESUs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+As ESUs serão disponibilizadas **se necessário** , depois que uma vulnerabilidade de segurança for descoberta e classificada como **Crítica** pelo [MSRC (Microsoft Security Response Center)](https://portal.msrc.microsoft.com). Portanto, não há um ritmo regular de versão para ESUs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 As ESUs não incluem:
 - Novos recursos
@@ -56,7 +56,7 @@ Se você migrar suas cargas de trabalho para as máquinas virtuais do Azure (Iaa
 
 As Máquinas Virtuais do Azure que executam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **Windows Server 2008 R2 e versões posteriores** receberão ESUs automaticamente por meio de canais de atualização [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existentes quando a máquina virtual estiver configurada para usar a [aplicação de patch automatizada](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-As VMs (Máquinas Virtuais) do Azure que executam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **Windows Server 2008** ou VMs que ***não* foram configuradas para [aplicação de patch automatizada](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** precisarão baixar e implantar manualmente os patches da ESU, conforme descrito na seção [ambientes locais ou hospedados](#on-premises-or-hosted-environments).
+As VMs (Máquinas Virtuais) do Azure que executam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **Windows Server 2008** ou VMs que **_não_ foram configuradas para [aplicação de patch automatizada](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** precisarão baixar e implantar manualmente os patches da ESU, conforme descrito na seção [ambientes locais ou hospedados](#on-premises-or-hosted-environments).
 
 ### <a name="on-premises-or-hosted-environments"></a>Ambientes locais ou hospedados
 Se você tiver o Software Assurance, poderá comprar uma assinatura da ESU (Atualização de Segurança Estendida) por até três anos após o fim da data de suporte, em um EA (Contrato Enterprise), EAS (Contrato Enterprise Subscription), um SCE (Registro de Servidor e Nuvem) ou um EES (Registro para Soluções de Educação). Você pode comprar ESUs somente para os servidores que precisa cobrir. As ESUs podem ser compradas diretamente da Microsoft ou de um parceiro de licenciamento da Microsoft. 
@@ -84,12 +84,12 @@ Para criar o Registro do SQL Server, siga estas etapas:
 1. Digite `SQL Server registry` na caixa de pesquisa.  
 1. Escolha a opção **Registro do SQL Server** publicada pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] e, em seguida, selecione **Criar**. 
 
-   ![Escolha o serviço de Registro do SQL Server](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![Captura de tela do portal do Azure que mostra como criar um registro do SQL Server.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. Em **Detalhes do Projeto**, escolha sua assinatura na lista suspensa. Em seguida, escolha um **Grupo de recursos** ou selecione **Criar** para criar um grupo de recursos para o novo serviço de Registro do SQL Server. 
-1. Em **Detalhes do Serviço**, forneça um nome e uma região para o novo recurso de **Registro do SQL Server**: 
+1. Em **Detalhes do Projeto** , escolha sua assinatura na lista suspensa. Em seguida, escolha um **Grupo de recursos** ou selecione **Criar** para criar um grupo de recursos para o novo serviço de Registro do SQL Server. 
+1. Em **Detalhes do Serviço** , forneça um nome e uma região para o novo recurso de **Registro do SQL Server** : 
 
-   ![Escolha o serviço de Registro do SQL Server](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![Captura de tela do registro do SQL Server mostrando a guia Básico.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
 1. Selecione **Analisar + criar** para analisar os detalhes de seu **Registro do SQL Server**. Selecione **Criar** depois que a validação tiver sido aprovada. 
 
@@ -103,11 +103,11 @@ Para registrar uma instância única do [!INCLUDE[ssNoVersion](../../includes/ss
 
 1. Faça logon no [Portal do Azure](https://portal.azure.com). 
 1. Vá para o recurso **Registro do SQL Server**. 
-1. Selecione **+ Registrar** no painel **Visão Geral**: 
+1. Selecione **+ Registrar** no painel **Visão Geral** : 
 
    ![escolha Registrar para registrar uma instância do SQL Server](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
 
-1. Forneça as informações necessárias conforme detalhado nesta tabela e, em seguida, selecione **Registrar**: 
+1. Forneça as informações necessárias conforme detalhado nesta tabela e, em seguida, selecione **Registrar** : 
 
    |**Valor**| **Descrição**|
    | :-------| :------------- |
@@ -123,7 +123,7 @@ Para registrar uma instância única do [!INCLUDE[ssNoVersion](../../includes/ss
 
    <sup>1</sup> Necessário apenas para máquinas virtuais do Azure. 
 
-A instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada recentemente agora está visível na seção **Registrar instâncias do SQL Server** do painel **Visão Geral**: 
+A instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada recentemente agora está visível na seção **Registrar instâncias do SQL Server** do painel **Visão Geral** : 
 
 ![Instâncias do SQL Server Registradas](media/sql-server-extended-security-updates/registered-sql-instance.png)
 
@@ -135,7 +135,7 @@ Várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 1. Faça logon no [Portal do Azure](https://portal.azure.com). 
 1. Vá para o recurso **Registro do SQL Server**. 
-1. Selecione **Registrar em Massa** no painel **Visão Geral**:  
+1. Selecione **Registrar em Massa** no painel **Visão Geral** :  
 
    ![Escolher registro em massa para registrar várias instâncias do SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
@@ -223,7 +223,7 @@ Para configurar a redundância regional, siga estas etapas:
 1. Crie o segundo serviço de **registro do SQL Server** na segunda região e, em seguida, registre em massa o outro arquivos csv nele. Por exemplo, crie o segundo serviço de **registro do SQL Server** na região **Leste dos EUA** e registre em massa seus SQL Servers usando o arquivo upload2.csv. 
 
 
-Depois que seus dados forem registrados com os dois recursos diferentes de **registro do SQL Server**, você poderá fazer baixar as atualizações de segurança de qualquer região, com base na disponibilidade do serviço. 
+Depois que seus dados forem registrados com os dois recursos diferentes de **registro do SQL Server** , você poderá fazer baixar as atualizações de segurança de qualquer região, com base na disponibilidade do serviço. 
 
 
 ## <a name="faq"></a>Perguntas frequentes
@@ -323,7 +323,7 @@ Para obter conselhos sobre como otimizar o desempenho do [!INCLUDE[ssNoVersion](
 - [Página de fim do suporte do SQL Server 2008/2008 R2](https://aka.ms/sqleos)
 - [Perguntas frequentes sobre Atualizações de Segurança Estendidas](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [Gerenciar atualizações do Windows com a Automação do Azure](/azure/automation/automation-tutorial-update-management)
+- [Gerenciar atualizações do Windows com a Automação do Azure](/azure/automation/update-management/overview)
 - [Aplicação de patch automatizada da VM do SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Guia de migração de dados da Microsoft](https://datamigration.microsoft.com/)
 - [Migrações para Azure: opções de lift-and-shift para mover seu SQL Server 2008/2008 R2 atual para uma VM do Azure](https://azure.microsoft.com/services/azure-migrate/)

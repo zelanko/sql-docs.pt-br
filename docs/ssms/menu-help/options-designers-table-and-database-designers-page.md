@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94d40ea597c0d9c09fd463e8a5cd8f9e965b6908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e62c2d30e4678c8b41223003db35b13e8d15ac
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370841"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679246"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Opções (Designers – página de Designers de Tabela e Banco de Dados)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Use esta página para determinar o comportamento padrão do designer. Para acessar as configurações, no menu **Ferramentas** , clique em **Opções**, expanda  a pasta **Designers** e clique em **Designer de Tabela**.  
+Use esta página para determinar o comportamento padrão do designer. Para acessar as configurações, no menu **Ferramentas** , clique em **Opções** , expanda  a pasta **Designers** e clique em **Designer de Tabela**.  
   
 ## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
 **Substituir valor de tempo limite da cadeia de caracteres da conexão para atualizações do designer de tabela**  
@@ -73,7 +73,7 @@ Selecione o modo que você deseja ver tabelas no designer:
   
 -   **Apenas nome**  
   
-    Mostra apenas o cabeçalho da tabela com seu nome.  
+    Mostra apenas o cabeçalho da tabela com o nome.  
   
 -   **Custom**  
   

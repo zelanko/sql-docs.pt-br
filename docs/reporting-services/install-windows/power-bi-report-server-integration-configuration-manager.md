@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 47964ebf5702542452227589e1426948825cc216
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891296"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678869"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integração de servidor de relatório do Power BI (Configuration Manager)
 
@@ -129,7 +129,7 @@ Esta seção resume as etapas básicas e as tecnologias envolvidas ao integrar s
 
 Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas e, em vez disso, a ID do aplicativo e as URLS serão recuperadas do banco de dados ReportServer e o fluxo continuará com a etapa 5.
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![Diagrama mostrando o que ocorre quando um usuário fixa o item de um relatório em um dashboard.](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **Quando uma assinatura é acionada para atualizar um bloco do painel:**
 
@@ -143,7 +143,7 @@ Na segunda vez que um usuário fixar um item, as etapas de 1 a 4 são ignoradas 
 
 5. Se o token não for válido e o erro será retornado e registrado no servidor de relatório.  Nenhum status ou outra informação é enviada para o painel.
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![Diagrama mostrando o que ocorre quando uma assinatura é acionada para atualizar um bloco do dashboard.](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

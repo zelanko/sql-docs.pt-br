@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41895890a5528a1ddac90a4c9f9eea05d80fac93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36bf305d4685f18e1c6df9129716ae9de84d4f84
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448297"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907284"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Adicionar parâmetros a um relatório móvel | Reporting Services
 Você pode criar um relatório móvel do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] com parâmetros, para que você e os leitores do relatório possam filtrar seus relatórios. Um relatório com parâmetros também pode ser o destino de um [detalhamento de um relatório de origem](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
@@ -31,7 +31,7 @@ Depois de adicionar parâmetros a um relatório móvel, você cria uma URL para 
   
 3. No canto superior direito, selecione **Adicionar Dados**.  
   
-4. Selecione **Servidor de Relatório**e um servidor.  
+4. Selecione **Servidor de Relatório** e um servidor.  
   
 5. Navegue até os conjuntos de dados compartilhados no servidor e escolha um que têm parâmetros.  
   
@@ -49,11 +49,11 @@ Depois de adicionar parâmetros a um relatório móvel, você cria uma URL para 
      
 8. Selecione **Visualização** para ver a aparência do relatório. Neste relatório, a lista de seleção usa o parâmetro Category.
 
-   ![sql-server-mobile-report-publisher-Selection-List-View-No-Selection](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
+   ![Captura de tela da versão prévia do relatório com a Lista de seleção 1 destacada.](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
    
 9. Quando você seleciona um valor na lista de seleção, o relatório é filtrado para esse valor, nesse caso, Acessórios.
 
-   ![sql-server-mobile-report-publisher-Selection-List-Category-Selected](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
+   ![Captura de tela da versão prévia do relatório com a Lista de seleção 1 destacada e a opção Acessórios selecionada.](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
   
 ### <a name="see-also"></a>Confira também  
 -  [Abrir um relatório móvel com parâmetros de cadeia de caracteres de consulta específicos](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)

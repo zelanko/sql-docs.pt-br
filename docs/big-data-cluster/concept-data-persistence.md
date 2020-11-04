@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 563dc8fbbb7f866dd91f7a982813fe2e5b0a2e83
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765685"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907354"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistência de dados com o cluster de Big Data do SQL Server em Kubernetes
 
@@ -36,7 +36,7 @@ Estes são alguns aspectos importantes a serem considerados quando você estiver
 
 - Ao calcular os requisitos de dimensionamento do pool de armazenamento, considere o fator de replicação com o qual o HDFS está configurado.  O fator de replicação é configurável no momento da implantação no arquivo de configuração da implantação do cluster. O valor padrão para os perfis de DevTest (ou seja, `aks-dev-test` ou `kubeadm-dev-test`) é 2 e, para os perfis que recomendamos para implantações de produção (ou seja, `kubeadm-prod`), é 3. Como melhor prática, recomendamos que você configure sua implantação de produção do cluster de Big Data com um fator de replicação para o HDFS de pelo menos 3. O valor do fator de replicação afetará o número de instâncias no pool de armazenamento: no mínimo, você precisa implantar um número de instâncias do pool de armazenamento equivalente ao valor do fator de replicação. Além disso, você precisa dimensionar o armazenamento adequadamente e levar em conta os dados sendo replicados no HDFS tantas vezes quanto for o valor do fator de replicação. Encontre mais informações sobre a replicação de dados no HDFS [aqui](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
-- Da versão SQL Server 2019 CU1 em diante, não é possível modificar uma definição de configuração de armazenamento após a implantação. Esta restrição impede você não apenas de modificar o tamanho da declaração de volume persistente para cada instância, mas também de expandir operações de dimensionamento após a implantação. Portanto, é muito importante planejar o layout de armazenamento antes de implantar um cluster de Big Data.
+- A partir da versão SQL Server 2019 CU1, o BDC não habilita a experiência de atualização da configuração de armazenamento pós-implantação. Essa restrição evita que você use operações do BDC para modificar o tamanho da declaração de volume persistente para cada instância ou dimensionar qualquer pool pós-implantação. Portanto, é muito importante planejar o layout de armazenamento antes de implantar um cluster de Big Data. No entanto, você pode expandir o tamanho do volume persistente usando APIs do Kubernetes diretamente. Nesse caso, os metadados do BDC não serão atualizados, e você verá inconsistências em relação aos tamanhos de volume nos metadados do cluster de configuração.
 
 - Ao implantar no Kubernetes como aplicativos em contêineres e usar recursos como conjuntos com estado e armazenamento persistente, o Kubernetes garante que os pods sejam reiniciados em caso de problemas de integridade e anexados ao mesmo armazenamento persistente. Mas caso haja uma falha de nó e um pod precise ser reiniciado em outro nó, haverá um risco maior de não disponibilidade se o armazenamento for local para o nó com falha. Para reduzir esse risco, é necessário configurar a redundância adicional e habilitar [recursos de alta disponibilidade](deployment-high-availability.md) ou usar o armazenamento com redundância remota. Veja abaixo uma visão geral das opções de armazenamento para vários componentes nos Clusters de Big Data:
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 204885c83b400be7f134a7c8a5e622f3c3488797
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448285"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907304"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Adicionar medidores a relatórios móveis | Reporting Services
 Medidores são os visuais mais básicos e amplamente usados em relatórios móveis. Eles exibem um único valor em um conjunto de dados – apenas o valor ou o valor comparado a uma meta.
@@ -25,7 +25,7 @@ Medidores são os visuais mais básicos e amplamente usados em relatórios móve
   
 No Publicador de Relatórios Móveis do Microsoft SQL Server, todos os medidores têm pelo menos uma propriedade em comum: um valor principal, definido como um campo numérico em uma das tabelas de dados no relatório móvel.  
 
-Todos os medidores, exceto pelo medidor de Número, também podem exibir um valor de comparação, ou *delta*, – a relação entre o valor principal e um valor de comparação. O valor de comparação é, muitas vezes, o objetivo e o medidor é um indicador visual do progresso para esse objetivo, ou o delta entre o valor real e o objetivo.
+Todos os medidores, exceto pelo medidor de Número, também podem exibir um valor de comparação, ou *delta* , – a relação entre o valor principal e um valor de comparação. O valor de comparação é, muitas vezes, o objetivo e o medidor é um indicador visual do progresso para esse objetivo, ou o delta entre o valor real e o objetivo.
 
 Os medidores só podem representar um valor agregado para o valor principal e um valor agregado para o valor de comparação. As agregações de medidor são padrão – soma, média, mínimo, máximo e assim por diante. Por padrão, o valor do medidor é uma soma, que exibe o total de todos os valores contidos nos dados filtrados atuais disponíveis no controle do medidor. 
 
@@ -43,7 +43,7 @@ Você pode filtrar os valores de medidor conectando-os a navegadores no relatór
 
 4. [opcional] Para alterar a agregação, selecione **Opções** e selecione uma agregação diferente.
    
-   >**Observação**: quando alterar a agregação para o valor principal, provavelmente você também precisará alterar a agregação para o valor de comparação, embora em alguns casos você possa querer combinar os métodos de agregação.  
+   >**Observação** : quando alterar a agregação para o valor principal, provavelmente você também precisará alterar a agregação para o valor de comparação, embora em alguns casos você possa querer combinar os métodos de agregação.  
 
 ## <a name="filter-a-gauge"></a>Filtrar um medidor
   
@@ -53,7 +53,7 @@ Se o relatório móvel tiver navegadores, você poderá associar um medidor a um
 
 2. Em Filtrado por, selecione o navegador que você deseja filtrar o medidor.
 
-   ![mobile-report-gauge-navigator](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
+   ![Captura de tela das Opções do Valor Principal expandidas com a opção Filtrar por Lista de Produtos selecionada.](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
  
 ## <a name="set-visual-properties-for-a-gauge"></a>Definir propriedades visuais para um medidor
   

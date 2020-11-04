@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 6068c871bd96908e501c552e0388050aedfa47bf
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681395"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907224"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Exibir valores de porcentagem em um gráfico de pizza (Construtor de Relatórios e SSRS)
 Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], por padrão, a legenda mostra as categorias. É recomendável ter percentuais na legenda ou nas próprias fatias da pizza.   
 
-![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![Captura de tela de um gráfico de pizza mostrando as porcentagens das fatias da pizza.](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
  O [Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) explica como adicionar percentuais a fatias de pizza, caso você deseje testar isso com os dados de exemplo primeiro.
  
@@ -34,13 +34,13 @@ Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
   
 4.  Digite **#PERCENT** para a opção **Dados do rótulo** .  
   
-5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, digite "#PERCENT{P*n*}" em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite "#PERCENT{P0}".  
+5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, digite "#PERCENT{P *n* }" em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite "#PERCENT{P0}".  
   
 ## <a name="to-display-percentage-values-in-the-legend-of-a-pie-chart"></a>Para exibir valores percentuais na legenda de um gráfico de pizza  
   
 1.  Na superfície de design, clique com o botão direito do mouse no gráfico de pizza e selecione **Propriedades da Série**. A caixa de diálogo **Propriedades da Série** é exibida.  
   
-2.  Em **Legenda**, digite **#PERCENT** para a propriedade **Texto da legenda personalizada** .  
+2.  Em **Legenda** , digite **#PERCENT** para a propriedade **Texto da legenda personalizada** .  
   
 ## <a name="see-also"></a>Consulte Também  
 * [Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
