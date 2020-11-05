@@ -6,13 +6,13 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.tsqlquery.f1
-- sql13.swb.tsqlresults.f1
 - sql13.swb.query.advanced.f1
 - sql13.swb.query.ansi.f1
 - sql13.swb.query.general.f1
-- sql13.swb.query.general.f1
+- sql13.swb.query.grid.f1
 - sql13.swb.sqleditors.multiserverresultssettings
+- sql13.swb.tsqlquery.f1
+- sql13.swb.tsqlresults.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -43,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: 7450a77549d05dab5a024b39be6d2b4aef6c09de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344062"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364824"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Editor de Consulta do SSMS (SQL Server Management Studio)
 
@@ -70,7 +70,7 @@ Você pode usar o Editor de Consultas para criar e executar scripts que contenha
 
 Quando o Editor de Consultas está aberto, a barra de ferramentas do Editor SQL é exibida com os botões a seguir.
 
-Você também pode adicionar a barra de ferramentas Editor de Consultas selecionando o menu **Exibir** , **Barras de Ferramentas**e, em seguida, **Editor SQL**. Se você adicionar a barra de ferramentas do SQL Editor quando nenhuma janela do Editor de Consultas estiver aberta, todos os botões ficarão indisponíveis.
+Você também pode adicionar a barra de ferramentas Editor de Consultas selecionando o menu **Exibir** , **Barras de Ferramentas** e, em seguida, **Editor SQL**. Se você adicionar a barra de ferramentas do SQL Editor quando nenhuma janela do Editor de Consultas estiver aberta, todos os botões ficarão indisponíveis.
 
 ![Barra de ferramentas do Editor](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 
@@ -158,7 +158,7 @@ Você também pode retornar os resultados para texto selecionando Ctrl+D ou no [
 
 ### <a name="results-to-file-using-the-editor-toolbar"></a>Resultados em Arquivo usando a barra de ferramentas do editor
 
-Quando a consulta é executada, a caixa de diálogo **Salvar Resultados** é exibida. Em **Salvar em**, selecione a pasta na qual você deseja salvar o arquivo. Em **Nome do arquivo**, digite o nome do arquivo e selecione **Salvar** para salvar os resultados da consulta como um arquivo de **Relatório** com a extensão .rpt. Para opções avançadas, selecione a seta para baixo no botão **Salvar** e selecione **Salvar com Codificação**.
+Quando a consulta é executada, a caixa de diálogo **Salvar Resultados** é exibida. Em **Salvar em** , selecione a pasta na qual você deseja salvar o arquivo. Em **Nome do arquivo** , digite o nome do arquivo e selecione **Salvar** para salvar os resultados da consulta como um arquivo de **Relatório** com a extensão .rpt. Para opções avançadas, selecione a seta para baixo no botão **Salvar** e selecione **Salvar com Codificação**.
 
 Você também pode retornar os resultados para texto selecionando Ctrl+Shift+F ou no [menu de contexto](#results-using-the-context-menu).
 
@@ -188,7 +188,7 @@ Abre uma caixa de diálogo que você pode usar para especificar valores para par
 
 ## <a name="context-menu"></a>Menu de contexto
 
-Você pode acessar o menu de contexto *clicando com o botão direito do mouse* em qualquer lugar no editor de consultas. As opções no menu de contexto são semelhantes à Barra de Ferramentas do Editor SQL. Com o menu de contexto, você vê as mesmas opções que **Conectar** e **Executar**, mas também tem outras opções listadas como **Inserir Snippet** e **Envolver Com**.
+Você pode acessar o menu de contexto *clicando com o botão direito do mouse* em qualquer lugar no editor de consultas. As opções no menu de contexto são semelhantes à Barra de Ferramentas do Editor SQL. Com o menu de contexto, você vê as mesmas opções que **Conectar** e **Executar** , mas também tem outras opções listadas como **Inserir Snippet** e **Envolver Com**.
 
 ![Opções](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
@@ -264,7 +264,7 @@ Você pode selecionar qualquer uma das opções desejadas de *Resultado* no menu
 
 - **Resultados em Grade** – Retorna os resultados da consulta como uma ou mais grades na janela **Resultados**.
 
-- **Resultados em Arquivo** – Quando a consulta é executada, a caixa de diálogo **Salvar Resultados** é exibida. Em **Salvar em**, selecione a pasta na qual você deseja salvar o arquivo. Em **Nome do arquivo**, digite o nome do arquivo e selecione **Salvar** para salvar os resultados da consulta como um arquivo de **Relatório** com a extensão .rpt. Para opções avançadas, selecione a seta para baixo no botão **Salvar** e selecione **Salvar com Codificação**.
+- **Resultados em Arquivo** – Quando a consulta é executada, a caixa de diálogo **Salvar Resultados** é exibida. Em **Salvar em** , selecione a pasta na qual você deseja salvar o arquivo. Em **Nome do arquivo** , digite o nome do arquivo e selecione **Salvar** para salvar os resultados da consulta como um arquivo de **Relatório** com a extensão .rpt. Para opções avançadas, selecione a seta para baixo no botão **Salvar** e selecione **Salvar com Codificação**.
 
 ### <a name="properties-window-using-the-context-menu"></a>Janela Propriedades usando o menu de contexto
 

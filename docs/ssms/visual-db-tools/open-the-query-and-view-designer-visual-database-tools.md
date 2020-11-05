@@ -1,8 +1,6 @@
 ---
-description: Abrir o Designer de Consulta e Exibição (Visual Database Tools)
 title: Abrir o designer de consulta e de exibição
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+description: Abrir o Designer de Consulta e Exibição (Visual Database Tools)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,15 +14,19 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56d9aec3b6768a45ddad6fec107fded037656eb1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: ea9bd06205846401d4e6bd65690f0af4e34bdf63
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88369282"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067327"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>Abrir o Designer de Consulta e Exibição (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb.md)]
+
 O Designer de Consulta e Exibição é aberto quando a definição de uma exibição é aberta; mostra os resultados de uma consulta ou exibição, ou cria ou abre uma consulta. Consiste em quatro painéis separados:  
   
 -   O painel Diagrama apresenta uma exibição gráfica das tabelas ou objetos com valor de tabela selecionados na conexão de dados. Mostra também todas as relações de junção entre eles.  
@@ -43,7 +45,7 @@ O Designer de Consulta e Exibição é aberto quando a definição de uma exibi�
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse na exibição que você deseja abrir e depois clique em **Design** ou **Abrir Exibição**.  
   
-    Se você escolher **Design**, o Designer de Consulta e Exibição será aberto na forma determinada pelas opções selecionadas na caixa de diálogo **Opções** . Se você escolher **Abrir Exibição**, apenas o painel de Resultados será aberto por padrão.  
+    Se você escolher **Design** , o Designer de Consulta e Exibição será aberto na forma determinada pelas opções selecionadas na caixa de diálogo **Opções** . Se você escolher **Abrir Exibição** , apenas o painel de Resultados será aberto por padrão.  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>Para abrir o Designer de Consulta e Exibição para uma consulta existente  
   

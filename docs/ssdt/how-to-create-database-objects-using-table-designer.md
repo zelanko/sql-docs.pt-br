@@ -7,18 +7,19 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
+- Microsoft.Data.Relational.Design.PW.RelationshipsDescriptor.OnDelete
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 410b2674f407018b895ed84781bedf5fa8766feb
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518776"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364388"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Como fazer: Criar objetos de banco de dados usando o Designer de Tabela
 
@@ -28,7 +29,7 @@ Por exemplo, você pode criar um novo banco de dados no nó **Bancos de Dados**.
   
 ### <a name="to-create-a-new-database"></a>Para criar um novo banco de dados  
   
-1.  No **Pesquisador de Objetos do SQL Server**, no nó **SQL Server**, expanda sua instância de servidor conectada.  
+1.  No **Pesquisador de Objetos do SQL Server** , no nó **SQL Server** , expanda sua instância de servidor conectada.  
   
 2.  Clique com o botão direito do mouse no nó **Bancos de Dados** e selecione **Adicionar Novo Banco de Dados**.  
   
@@ -52,9 +53,9 @@ Por exemplo, você pode criar um novo banco de dados no nó **Bancos de Dados**.
     CREATE TABLE [dbo].[Suppliers]  
     ```  
   
-4.  Clique na linha vazia na Grade de Colunas para adicionar uma nova coluna à tabela.  Insira **CompanyName** para o campo **Nome**, **nvarchar (128)** para **Tipo de Dados** e desmarque o campo **Permitir Nulos**. À medida que você se move pelas guias nos campos, observe que o Painel de Script é atualizado imediatamente.  
+4.  Clique na linha vazia na Grade de Colunas para adicionar uma nova coluna à tabela.  Insira **CompanyName** para o campo **Nome** , **nvarchar (128)** para **Tipo de Dados** e desmarque o campo **Permitir Nulos**. À medida que você se move pelas guias nos campos, observe que o Painel de Script é atualizado imediatamente.  
   
-5.  Adicione outra nova coluna. Insira **Endereço** para o campo **Nome**, **nvarchar (MAX)** para **Tipo de Dados** e desmarque o campo **Permitir Nulos**.  
+5.  Adicione outra nova coluna. Insira **Endereço** para o campo **Nome** , **nvarchar (MAX)** para **Tipo de Dados** e desmarque o campo **Permitir Nulos**.  
   
     > [!WARNING]  
     > Quando você estiver editando objetos de um banco de dados conectado, não os salve em sua unidade local. Para salvar corretamente suas alterações no banco de dados, execute as etapas no próximo procedimento [Como atualizar um banco de dados conectados com o Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
