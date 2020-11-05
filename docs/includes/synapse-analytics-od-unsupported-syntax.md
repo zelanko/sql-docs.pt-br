@@ -1,2 +1,2 @@
 > [!NOTE]
-> Não há suporte para essa sintaxe pelo SQL sob demanda (versão prévia) no Azure Synapse Analytics.
+> Não há suporte a essa sintaxe para o pool de SQL sem servidor (versão prévia) no Azure Synapse Analytics.
