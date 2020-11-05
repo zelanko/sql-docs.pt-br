@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_copies (Banco de Dados SQL do Azure)
-title: sys. dm_database_copies (banco de dados SQL do Azure) | Microsoft Docs
+title: sys.dm_database_copies (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.service: sql-database
@@ -20,19 +20,19 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 178fda9bb96fc84acd1527f172c6a6728a1ec22e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543916"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364768"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Banco de Dados SQL do Azure)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Retorna informações sobre a cópia do banco de dados.  
   
-Para retornar informações sobre links de replicação geográfica, use as exibições [Sys. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) ou [Sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponível no banco de dados SQL V12).
+Para retornar informações sobre links de replicação geográfica, use as exibições [Sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) ou [Sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponível no banco de dados SQL V12).
   
   
 |Nome da coluna|Tipo de Dados|Descrição|  
@@ -60,6 +60,6 @@ Para retornar informações sobre links de replicação geográfica, use as exib
  Essa exibição só está disponível no banco de dados **mestre** para o logon da entidade de segurança no nível do servidor.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar a exibição **Sys. dm_database_copies** no banco de dados **mestre** do servidor de origem ou de destino [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Quando a cópia do banco de dados for concluída com êxito e o novo banco de dados ficar ONLINE, a linha na exibição **Sys. dm_database_copies** será removida automaticamente.  
+ Você pode usar a exibição **Sys.dm_database_copies** no banco de dados **mestre** do servidor de origem ou de destino [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Quando a cópia do banco de dados for concluída com êxito e o novo banco de dados ficar ONLINE, a linha na exibição de **Sys.dm_database_copies** será removida automaticamente.  
   
   

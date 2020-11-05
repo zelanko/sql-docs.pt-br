@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1a924af8d72239e3d185e27c491ecd48d9f38ad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc1d2d3dc8b9763d19410b2a9773fb7766d22140
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547412"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364729"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de **todos**.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname** , com um padrão de **todos**.  
   
-`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname**, com um padrão de **todos**.  
+`[ @subscriber = ] 'subscriber'` É o nome do Assinante. o *assinante* é **sysname** , com um padrão de **todos**.  
   
-`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados do Assinante. *subscriber_db* é **sysname**, com um padrão de **todos**.  
+`[ @subscriber_db = ] 'subscriber_db'` É o nome do banco de dados do Assinante. *subscriber_db* é **sysname** , com um padrão de **todos**.  
   
-`[ @upload_first = ] 'upload_first'` É se as alterações no Assinante são carregadas antes da reinicialização da assinatura. *upload_first* é **nvarchar (5)**, com um padrão de false. Se **for true**, as alterações serão carregadas antes que a assinatura seja reinicializada. Se **for false**, as alterações não serão carregadas.  
+`[ @upload_first = ] 'upload_first'` É se as alterações no Assinante são carregadas antes da reinicialização da assinatura. *upload_first* é **nvarchar (5)** , com um padrão de false. Se **for true** , as alterações serão carregadas antes que a assinatura seja reinicializada. Se **for false** , as alterações não serão carregadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -59,10 +59,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
   
  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
   
-## <a name="example"></a>Exemplo  
+## <a name="examples"></a>Exemplos  
+
+### <a name="a-reinitialize-the-push-subscription-and-lose-pending-changes"></a>a. Reinicializar a assinatura push e perder as alterações pendentes
+
  [!code-sql[HowTo#sp_reinitmergepushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_1.sql)]  
   
-## <a name="example"></a>Exemplo  
+### <a name="b-reinitialize-the-push-subscription-and-upload-pending-changes"></a>B. Reinicializar a assinatura push e carregar alterações pendentes
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>Permissões  

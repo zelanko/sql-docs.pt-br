@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae2e3cb2ec6506810d1682926d96ec1fe1734174
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06b65044129dd302d516eabe3b9c13f6352d3035
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549544"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364796"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname**, com um padrão de todos.  
+`[ @publisher = ] 'publisher'` É o nome do Publicador. o *Publicador* é **sysname** , com um padrão de todos.  
   
-`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de todos.  
+`[ @publisher_db = ] 'publisher_db'` É o nome do banco de dados do Publicador. *publisher_db* é **sysname** , com um padrão de todos.  
   
-`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname**, com um padrão de todos.  
+`[ @publication = ] 'publication'` É o nome da publicação. a *publicação* é **sysname** , com um padrão de todos.  
   
-`[ @upload_first = ] 'upload_first'` É se as alterações no Assinante são carregadas antes da reinicialização da assinatura. *upload_first* é **nvarchar (5)**, com um padrão de false. Se **for true**, as alterações serão carregadas antes que a assinatura seja reinicializada. Se **for false**, as alterações não serão carregadas.  
+`[ @upload_first = ] 'upload_first'` É se as alterações no Assinante são carregadas antes da reinicialização da assinatura. *upload_first* é **nvarchar (5)** , com um padrão de false. Se **for true** , as alterações serão carregadas antes que a assinatura seja reinicializada. Se **for false** , as alterações não serão carregadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -57,10 +57,14 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
   
  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
   
-## <a name="example"></a>Exemplo  
- [!code-sql[HowTo#sp_reinitmergepullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_1.sql)]  
+## <a name="examples"></a>Exemplos  
+
+### <a name="a-reinitialize-the-pull-subscription-and-lose-pending-changes"></a>a. Reinicializar a assinatura pull e perder as alterações pendentes
+
+[!code-sql[HowTo#sp_reinitmergepullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_1.sql)]  
   
-## <a name="example"></a>Exemplo  
+### <a name="b-reinitialize-the-pull-subscription-and-upload-pending-changes"></a>B. Reinicializar a assinatura pull e carregar alterações pendentes
+
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
 ## <a name="permissions"></a>Permissões  

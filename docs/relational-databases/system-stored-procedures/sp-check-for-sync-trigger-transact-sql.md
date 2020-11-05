@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85908cad93f729ad1c3029aff35be7a2cb91fcef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ddd0563d0a58ec50fc43ed1ac78478068b553ab0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539083"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364832"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,10 +40,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [** @tabid =** ] '*tabid*'  
+ [ **@tabid =** ] ' *tabid* '  
  É a ID de objeto da tabela onde gatilhos de atualização imediata estão sendo verificados. *tabid* é **int** sem padrão.  
   
- [** @trigger_op =** ] '*trigger_output_parameters*' saída  
+ [ **@trigger_op =** ] ' *trigger_output_parameters* ' saída  
  Especifica se o parâmetro de saída deve retornar o tipo de gatilho de onde ele está sendo chamado. *trigger_output_parameters* é **Char (10)** e pode ser um desses valores.  
   
 |Valor|Descrição|  
@@ -53,17 +53,19 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Confirmar**|Gatilho DELETE|  
 |NULL (padrão)||  
   
-`[ @fonpublisher = ] fonpublisher` Especifica o local em que o procedimento armazenado é executado. *fonpublisher* é **bit**, com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
+`[ @fonpublisher = ] fonpublisher` Especifica o local em que o procedimento armazenado é executado. *fonpublisher* é **bit** , com um valor padrão de 0. Se for 0 a execução será no Assinante e se for 1 a execução será no Editor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- 0 indica que o procedimento armazenado não está sendo chamado dentro do contexto de um gatilho da atualização imediata. 1 indica que ele está sendo chamado dentro do contexto de um gatilho de atualização imediata e é o tipo de gatilho que está sendo retornado em * \@ trigger_op*.  
+ 0 indica que o procedimento armazenado não está sendo chamado dentro do contexto de um gatilho da atualização imediata. 1 indica que ele está sendo chamado dentro do contexto de um gatilho de atualização imediata e é o tipo de gatilho que está sendo retornado em *\@ trigger_op*.  
   
 ## <a name="remarks"></a>Comentários  
  **sp_check_for_sync_trigger** é usado na replicação de instantâneo e na replicação transacional.  
   
- **sp_check_for_sync_trigger** é usado para coordenar entre os gatilhos de replicação e definidos pelo usuário. Esse procedimento armazenado determina se ele está sendo chamado dentro do contexto de um gatilho de replicação. Por exemplo, você pode chamar o procedimento **sp_check_for_sync_trigger** no corpo de um gatilho definido pelo usuário. Se **sp_check_for_sync_trigger** retornar **0**, o gatilho definido pelo usuário continuará processando. Se **sp_check_for_sync_trigger** retornar **1**, o gatilho definido pelo usuário será encerrado. Isso assegura que o gatilho definido pelo usuário não seja disparado quando o gatilho de replicação atualizar a tabela.  
+ **sp_check_for_sync_trigger** é usado para coordenar entre os gatilhos de replicação e definidos pelo usuário. Esse procedimento armazenado determina se ele está sendo chamado dentro do contexto de um gatilho de replicação. Por exemplo, você pode chamar o procedimento **sp_check_for_sync_trigger** no corpo de um gatilho definido pelo usuário. Se **sp_check_for_sync_trigger** retornar **0** , o gatilho definido pelo usuário continuará processando. Se **sp_check_for_sync_trigger** retornar **1** , o gatilho definido pelo usuário será encerrado. Isso assegura que o gatilho definido pelo usuário não seja disparado quando o gatilho de replicação atualizar a tabela.  
   
-## <a name="example"></a>Exemplo  
+## <a name="examples"></a>Exemplos
+
+### <a name="a-add-code-to-a-trigger-on-a-subscriber-table"></a>a. Adicionar código a um gatilho em uma tabela de assinante
  O exemplo a seguir mostra código que pode ser usado em um gatilho, em uma tabela de Assinante.  
   
 ```  
@@ -74,7 +76,7 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## <a name="example"></a>Exemplo  
+### <a name="b-add-code-to-a-trigger-on-a-publisher-table"></a>B. Adicionar código a um gatilho em uma tabela do Publicador
  O código também pode ser adicionado a um gatilho em uma tabela no Publicador; o código é semelhante, mas a chamada para **sp_check_for_sync_trigger** inclui um parâmetro adicional.  
   
 ```  
