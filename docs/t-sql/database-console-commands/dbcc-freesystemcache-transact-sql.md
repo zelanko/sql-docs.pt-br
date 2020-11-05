@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 0069e1fc2a6991df71291fd377aaa76e10f23256
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638979"
+ms.locfileid: "92734634"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,13 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>Argumentos
 ( 'ALL' [, _pool\_name_ ] )  
 ALL especifica todos os caches suportados.  
-_pool\_name_ especifica um cache de pool do Resource Governor. Somente as entradas associadas a esse pool são liberadas.  
+_pool\_name_ especifica um cache de pool do Resource Governor. Somente as entradas associadas a esse pool são liberadas. Para listar os nomes de pool disponíveis, execute:
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+A maioria dos caches, mas não todos, pode ser liberada individualmente usando esse comando.
   
 MARK_IN_USE_FOR_REMOVAL  
 Libera de forma assíncrona as entradas usadas no momento de seus respectivos caches quando elas deixam de ser usadas. As novas entradas criadas no cache não serão afetadas depois que o DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL for executado.  
@@ -62,7 +68,7 @@ NO_INFOMSGS
 Suprime todas as mensagens informativas.  
   
 ## <a name="remarks"></a>Comentários  
-A execução de DBCC FREESYSTEMCACHE limpa o cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária no desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: 
+A execução de DBCC FREESYSTEMCACHE limpa o cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária no desempenho de consultas. Para cada repositório em cache limpo no cache de planos, o log de erros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa:
 
 >`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
 

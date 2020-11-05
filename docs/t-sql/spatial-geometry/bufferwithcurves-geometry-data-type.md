@@ -16,12 +16,12 @@ ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a3a8ff7006a2ac48f8b357cd820d0c47e162885
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1249cafc3fd10cdded36ed7d73f190c38d02f5d
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427068"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235512"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de dados geometria)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -57,7 +57,7 @@ Tipo de retorno do SQL Server: **geometry**
 ## <a name="remarks"></a>Comentários  
  A ilustração a seguir mostra um exemplo de uma instância de geometria retornado por este método.  
   
- ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
+ ![Diagrama que mostra um exemplo de uma instância de geometria retornada por este método.](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
   
  A tabela a seguir mostra os resultados retornados para obter valores de distância diferentes.  
   
@@ -69,7 +69,7 @@ Tipo de retorno do SQL Server: **geometry**
 |distância > 0|Todas as dimensões|Instância de **CurvePolygon** ou **GeometryCollection**|  
   
 > [!NOTE]  
->  Como *distance* é um **float**, um valor muito pequeno pode ser igualado a zero nos cálculos. Quando isto ocorre, uma cópia da instância de **geometry** de chamada é retornada. Consulte [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Como *distance* é um **float** , um valor muito pequeno pode ser igualado a zero nos cálculos. Quando isto ocorre, uma cópia da instância de **geometry** de chamada é retornada. Consulte [float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
  Um buffer negativo remove todos os pontos incluídos na distância especificada do limite da geometria. A ilustração a seguir mostra um buffer negativo como a área sombreada mais clara do círculo. A linha pontilhada é o limite do polígono original e a linha sólida é o limite do polígono resultante.  
   

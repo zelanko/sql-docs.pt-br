@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: bd604ea3ad643aa7f70d0be2a1ee7727810b6705
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: e2c200bc57bc62a54a9850e85e13b9c9f15c49f0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745706"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243375"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Tutorial: Usar o editor Transact-SQL para criar objetos de banco de dados – Azure Data Studio
 
@@ -30,7 +30,7 @@ Neste tutorial, você aprenderá a usar o [!INCLUDE[name-sos-short](../includes/
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azure. Para criar o banco de dados *TutorialDB*, siga um destes guias de início rápido:
+Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azure. Para criar o banco de dados *TutorialDB* , siga um destes guias de início rápido:
 
 - [Conectar e consultar o SQL Server usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Conectar e consultar o Banco de Dados SQL do Azure usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -40,7 +40,7 @@ Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azu
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] fornece um widget de pesquisa para localizar rapidamente objetos de banco de dados. A lista de resultados fornece um menu de contexto com tarefas comuns relevantes para o objeto selecionado, como *Editar Dados* para uma tabela.
 
-1. Abra a barra lateral SERVIDORES (**Ctrl+G**), expanda **Bancos de dados** e selecione **TutorialDB**. 
+1. Abra a barra lateral SERVIDORES ( **Ctrl+G** ), expanda **Bancos de dados** e selecione **TutorialDB**. 
 
 1. Abra o *Painel do TutorialDB* clicando com o botão direito do mouse em **TutorialDB** e selecionando **Gerenciar** no menu de contexto:
 
@@ -64,13 +64,13 @@ O Azure Data Studio fornece muitos snippets de T-SQL internos para criar instru�
 
 1. Abra um novo editor de consultas pressionando **Ctrl + N**.
 
-2. Digite **sql** no editor, use a seta para baixo até chegar em **sqlCreateStoredProcedure** e pressione a tecla *Tab* (ou *Enter*) para carregar o snippet de criação de procedimento armazenado.
+2. Digite **sql** no editor, use a seta para baixo até chegar em **sqlCreateStoredProcedure** e pressione a tecla *Tab* (ou *Enter* ) para carregar o snippet de criação de procedimento armazenado.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![Captura de tela que mostra o Editor de Consultas com SQL tipado no editor e a opção sqlCreateStoredProcedure destacada.](./media/tutorial-sql-editor/snippet-list.png)
 
-3. O snippet de criação de procedimento armazenado tem dois campos configurados para edição rápida, *StoredProcedureName* e *SchemaName*. Selecione *StoredProcedureName*, clique com o botão direito do mouse e selecione **Alterar Todas as Ocorrências**. Agora, digite *getCustomer* e todas as entradas de *StoredProcedureName* serão alteradas para *getCustomer*.
+3. O snippet de criação de procedimento armazenado tem dois campos configurados para edição rápida, *StoredProcedureName* e *SchemaName*. Selecione *StoredProcedureName* , clique com o botão direito do mouse e selecione **Alterar Todas as Ocorrências**. Agora, digite *getCustomer* e todas as entradas de *StoredProcedureName* serão alteradas para *getCustomer*.
 
-   ![snippet](./media/tutorial-sql-editor/snippet.png)
+   ![Captura de tela que mostra o Editor de Consultas com a opção Alterar Todas as Ocorrências destacada.](./media/tutorial-sql-editor/snippet.png)
 
 5. Altere todas as ocorrências de *SchemaName* para *dbo*. 
 6. O snippet contém parâmetros de espaço reservado e texto de corpo que precisam ser atualizados. A instrução *EXECUTE* também contém texto de espaço reservado porque não sabe quantos parâmetros o procedimento terá. Para este tutorial, atualize o snippet de forma que ele se pareça com o código a seguir:
@@ -117,7 +117,7 @@ O Azure Data Studio possibilita exibir a definição de um objeto usando o recur
 
 1. Abra um novo editor pressionando **Ctrl + N**. 
 
-2. Digite *sql* no editor, use a seta para baixo até chegar em *sqlCreateStoredProcedure* e pressione a tecla *Tab* (ou *Enter*) para carregar o snippet de criação de procedimento armazenado.
+2. Digite *sql* no editor, use a seta para baixo até chegar em *sqlCreateStoredProcedure* e pressione a tecla *Tab* (ou *Enter* ) para carregar o snippet de criação de procedimento armazenado.
 3. Digite *setCustomer* para *StoredProcedureName* e *dbo* para *SchemaName*
 
 3. Substitua os espaços reservados @param pela definição de parâmetro a seguir:
@@ -177,13 +177,13 @@ O Azure Data Studio possibilita exibir a definição de um objeto usando o recur
    GO
    ```
 
-8. Para criar o procedimento armazenado *setCustomer*, pressione **F5**.
+8. Para criar o procedimento armazenado *setCustomer* , pressione **F5**.
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Use Salvar resultados da consulta como JSON para testar o procedimento armazenado setCustomer
 
 O procedimento armazenado *setCustomer* criado na seção anterior requer que dados JSON sejam passados para o parâmetro *\@json_val*. Esta seção mostra como obter um trecho de JSON formatado corretamente para passar para o parâmetro para que você possa testar o procedimento armazenado.
 
-1. Na barra lateral **SERVIDORES**, clique com o botão direito do mouse na tabela *dbo.Customers* e clique em **Selecionar 1000 Linhas Superiores**.
+1. Na barra lateral **SERVIDORES** , clique com o botão direito do mouse na tabela *dbo.Customers* e clique em **Selecionar 1000 Linhas Superiores**.
 
 2. Selecione a primeira linha na visualização dos resultados, certifique-se de que a linha inteira esteja selecionada (clique no número 1 na coluna à extrema esquerda) e selecione **Salvar como JSON**.  
 3. Altere a pasta para uma localização da qual você se lembrará para que possa excluir o arquivo posteriormente (por exemplo, a área de trabalho) e clique em **Salvar**. O arquivo formatado em JSON é aberto.
@@ -225,7 +225,7 @@ Neste tutorial, você aprendeu a:
 > * Conheça mais detalhes sobre o objeto de banco de dados usando Inspecionar Definição e Ir para Definição
 
 
-Para saber como habilitar o widget das **cinco consultas mais lentas**, conclua o seguinte tutorial:
+Para saber como habilitar o widget das **cinco consultas mais lentas** , conclua o seguinte tutorial:
 
 > [!div class="nextstepaction"]
 > [Habilitar o widget de insight de exemplo de consultas lentas](tutorial-qds-sql-server.md)

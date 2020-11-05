@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 15ae1302fcff002816e8e8e7a5e37b6fbe8bd503
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727845"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235443"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -87,16 +87,16 @@ ms.locfileid: "91727845"
 Em grupos de disponibilidade Always On, o RTO e o RPO são calculados e exibidos para os bancos de dados hospedados nas réplicas secundárias. No painel da réplica primária, o RTO e o RPO são agrupados pela réplica secundária. 
 
 Para exibir o RTO e o RPO dentro do painel, faça o seguinte:
-1. No SQL Server Management Studio, expanda o nó **alta disponibilidade Always On**, clique com o botão direito do mouse no nome do seu grupo de disponibilidade e selecione **Mostrar painel**. 
+1. No SQL Server Management Studio, expanda o nó **alta disponibilidade Always On** , clique com o botão direito do mouse no nome do seu grupo de disponibilidade e selecione **Mostrar painel**. 
 1. Selecione **Adicionar/remover colunas** na guia **Agrupar por**. Verifique o **Tempo estimado para recuperação (segundos)** [RTO] e também a **Perda de dados estimada (tempo)** [RPO]. 
 
-   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+   ![Captura de tela que mostra o painel de RPO e RTO.](media/rto-rpo-dashboard.png)
 
 ### <a name="calculation-of-secondary-database-rto"></a>Cálculo do RTO do banco de dados secundário 
 O cálculo do tempo de recuperação determina quanto tempo é necessário para recuperar o *banco de dados secundário* após um failover.  O tempo de failover geralmente é curto e constante. O tempo de detecção depende de configurações no nível do cluster e não de cada uma das réplicas de disponibilidade. 
 
 
-Para um banco de dados secundário (DB_sec), o cálculo e a exibição do respectivo RTO é baseado em seus valores de **redo_queue_size** e **redo_rate**:
+Para um banco de dados secundário (DB_sec), o cálculo e a exibição do respectivo RTO é baseado em seus valores de **redo_queue_size** e **redo_rate** :
 
 ![Cálculo de RTO](media/calculate-rto.png)
 
@@ -116,9 +116,9 @@ Para o banco de dados primário, o **last_commit_time** é a hora em que última
 
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>Contadores de desempenho usados em fórmulas de RTO/RPO
 
-- **redo_queue_size** (KB) [*usado no RTO*]: O tamanho da fila de restauração é o tamanho dos logs de transação entre o **last_received_lsn** e o **last_redone_lsn**. **last_received_lsn** é a ID de bloco de log que identifica o ponto até o qual todos os blocos de log foram recebidos pela réplica secundária que hospeda este banco de dados secundário. **Last_redone_lsn** é o número de sequência de log real do último registro de log que foi desfeito no banco de dados secundário. Com base nesses dois valores, podemos encontrar IDs do bloco de log inicial (**last_received_lsn**) e do bloco de log final (**last_redone_lsn**). O espaço entre esses dois blocos de log pode então representar como os blocos de log de transação talvez ainda não tenham sido refeitos. Isso é medido em quilobytes (KB).
--  **redo_rate** (KB/s) [*usado no RTO*]: Um valor cumulativo que representa, em um período de tempo decorrido, quanto do log de transações (KB) foi refeito no banco de dados secundário em quilobytes/segundo (KB/s). 
-- **last_commit_time** (Datetime) [*usado no RPO*]: Para o banco de dados primário, o **last_commit_time** é a hora em que última transação foi confirmada. Para o banco de dados secundário, o **last_commit_time** é a hora de confirmação mais recente da transação no banco de dados primário, que também foi protegido com êxito no banco de dados secundário. Uma vez que esse valor na réplica secundária deve ser sincronizado com o mesmo valor na réplica primária, qualquer lacuna existente entre esses dois valores é a estimativa de perda de dados (RPO).  
+- **redo_queue_size** (KB) [ *usado no RTO* ]: O tamanho da fila de restauração é o tamanho dos logs de transação entre o **last_received_lsn** e o **last_redone_lsn**. **last_received_lsn** é a ID de bloco de log que identifica o ponto até o qual todos os blocos de log foram recebidos pela réplica secundária que hospeda este banco de dados secundário. **Last_redone_lsn** é o número de sequência de log real do último registro de log que foi desfeito no banco de dados secundário. Com base nesses dois valores, podemos encontrar IDs do bloco de log inicial ( **last_received_lsn** ) e do bloco de log final ( **last_redone_lsn** ). O espaço entre esses dois blocos de log pode então representar como os blocos de log de transação talvez ainda não tenham sido refeitos. Isso é medido em quilobytes (KB).
+-  **redo_rate** (KB/s) [ *usado no RTO* ]: Um valor cumulativo que representa, em um período de tempo decorrido, quanto do log de transações (KB) foi refeito no banco de dados secundário em quilobytes/segundo (KB/s). 
+- **last_commit_time** (Datetime) [ *usado no RPO* ]: Para o banco de dados primário, o **last_commit_time** é a hora em que última transação foi confirmada. Para o banco de dados secundário, o **last_commit_time** é a hora de confirmação mais recente da transação no banco de dados primário, que também foi protegido com êxito no banco de dados secundário. Uma vez que esse valor na réplica secundária deve ser sincronizado com o mesmo valor na réplica primária, qualquer lacuna existente entre esses dois valores é a estimativa de perda de dados (RPO).  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>Estimar o RTO e o RPO usando DMVs
 
@@ -206,7 +206,7 @@ Para o banco de dados primário, o **last_commit_time** é a hora em que última
   ```sql
    exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
   ```
-3. A saída exibe o valor de RTO do banco de dados de réplica secundária de destino. Salve a *group_id*, a *replica_id* e a *group_database_id* para usar com o procedimento armazenado de estimativa de RPO. 
+3. A saída exibe o valor de RTO do banco de dados de réplica secundária de destino. Salve a *group_id* , a *replica_id* e a *group_database_id* para usar com o procedimento armazenado de estimativa de RPO. 
    
    Saída de exemplo:
 <br>O RTO de banco de dados DB_sec' é 0
@@ -299,7 +299,7 @@ Para o banco de dados primário, o **last_commit_time** é a hora em que última
       end
  ```
 
-2. Execute **proc_calculate_RPO** com a *group_id*, a *replica_id* e a *group_database_id* do banco de dados secundário de destino. 
+2. Execute **proc_calculate_RPO** com a *group_id* , a *replica_id* e a *group_database_id* do banco de dados secundário de destino. 
 
  ```sql
    exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
@@ -330,105 +330,105 @@ Para criar as políticas, siga as instruções abaixo em todas as instâncias de
 
 1.  [Inicie o serviço SQL Server Agent](~/ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md) se ainda não tiver iniciado.  
   
-2.  No SQL Server Management Studio, no menu **Ferramentas**, clique em **Opções**.  
+2.  No SQL Server Management Studio, no menu **Ferramentas** , clique em **Opções**.  
   
-3.  Na guia **SQL Server Always On**, selecione **Habilitar política Always On definida pelo usuário** e clique em **OK**.  
+3.  Na guia **SQL Server Always On** , selecione **Habilitar política Always On definida pelo usuário** e clique em **OK**.  
   
      Essa configuração permite que você exiba as políticas personalizadas configuradas corretamente no Painel Always On.  
   
 4.  Crie uma [condição de gerenciamento baseado em políticas](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) usando as seguintes especificações:  
   
-    -   **Nome**: `RTO`  
+    -   **Nome** : `RTO`  
   
-    -   **Faceta**: **Estado da Réplica de Banco de Dados**  
+    -   **Faceta** : **Estado da Réplica de Banco de Dados**  
   
-    -   **Campo**: `Add(@EstimatedRecoveryTime, 60)`  
+    -   **Campo** : `Add(@EstimatedRecoveryTime, 60)`  
   
-    -   **Operador**: **<=**  
+    -   **Operador** : **<=**  
   
-    -   **Valor**: `600`  
+    -   **Valor** : `600`  
   
      Essa condição falha quando o tempo de failover potencial ultrapassa 10 minutos, incluindo uma sobrecarga de 60 segundos para detecção de falha e failover.  
   
 5.  Crie uma segunda [condição de gerenciamento baseado em políticas](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) usando as seguintes especificações:  
   
-    -   **Nome**: `RPO`  
+    -   **Nome** : `RPO`  
   
-    -   **Faceta**: **Estado da Réplica de Banco de Dados**  
+    -   **Faceta** : **Estado da Réplica de Banco de Dados**  
   
-    -   **Campo**: `@EstimatedDataLoss`  
+    -   **Campo** : `@EstimatedDataLoss`  
   
-    -   **Operador**: **<=**  
+    -   **Operador** : **<=**  
   
-    -   **Valor**: `3600`  
+    -   **Valor** : `3600`  
   
      Essa condição de falha quando a possível perda de dados excede 1 hora.  
   
 6.  Crie uma terceira [condição de gerenciamento baseado em políticas](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) usando as seguintes especificações:  
   
-    -   **Nome**: `IsPrimaryReplica`  
+    -   **Nome** : `IsPrimaryReplica`  
   
-    -   **Faceta**: **Grupo de disponibilidade**  
+    -   **Faceta** : **Grupo de disponibilidade**  
   
-    -   **Campo**: `@LocalReplicaRole`  
+    -   **Campo** : `@LocalReplicaRole`  
   
-    -   **Operador**: **=**  
+    -   **Operador** : **=**  
   
-    -   **Valor**: `Primary`  
+    -   **Valor** : `Primary`  
   
      Essa condição verifica se a réplica de disponibilidade local de um determinado grupo de disponibilidade é a réplica primária.  
   
 7.  Crie uma [política de gerenciamento baseado em políticas](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md) usando as seguintes especificações:  
   
-    -   Página **geral**:  
+    -   Página **geral** :  
   
-        -   **Nome**: `CustomSecondaryDatabaseRTO`  
+        -   **Nome** : `CustomSecondaryDatabaseRTO`  
   
-        -   **Verificar condição**: `RTO`  
+        -   **Verificar condição** : `RTO`  
   
-        -   **Em relação aos destinos**: **Cada DatabaseReplicaState** em **IsPrimaryReplica AvailabilityGroup**  
+        -   **Em relação aos destinos** : **Cada DatabaseReplicaState** em **IsPrimaryReplica AvailabilityGroup**  
   
              Essa configuração garante que a política seja avaliada apenas em grupos de disponibilidade para os quais a réplica de disponibilidade local seja a réplica primária.  
   
-        -   **Modo de avaliação**: **Ao agendar**  
+        -   **Modo de avaliação** : **Ao agendar**  
   
-        -   **Agendamento**: **CollectorSchedule_Every_5min**  
+        -   **Agendamento** : **CollectorSchedule_Every_5min**  
   
-        -   **Habilitado**: **selecionado**  
+        -   **Habilitado** : **selecionado**  
   
-    -   Página **descrição**:  
+    -   Página **descrição** :  
   
-        -   **Categoria**: **Avisos do banco de dados de disponibilidade**  
+        -   **Categoria** : **Avisos do banco de dados de disponibilidade**  
   
              Essa configuração permite que os resultados da avaliação de política sejam exibidos no Painel Always On.  
   
-        -   **Descrição**: **A réplica atual tem um RTO que excede 10 minutos, considerando uma sobrecarga de 1 minuto para descoberta e failover. Você deve investigar problemas de desempenho na respectiva instância de servidor imediatamente.**  
+        -   **Descrição** : **A réplica atual tem um RTO que excede 10 minutos, considerando uma sobrecarga de 1 minuto para descoberta e failover. Você deve investigar problemas de desempenho na respectiva instância de servidor imediatamente.**  
   
-        -   **Texto a ser exibido**: **RTO excedido!**  
+        -   **Texto a ser exibido** : **RTO excedido!**  
   
 8.  Crie uma segunda [política de gerenciamento baseado em políticas](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md) usando as seguintes especificações:  
   
-    -   Página **geral**:  
+    -   Página **geral** :  
   
-        -   **Nome**: `CustomAvailabilityDatabaseRPO`  
+        -   **Nome** : `CustomAvailabilityDatabaseRPO`  
   
-        -   **Verificar condição**: `RPO`  
+        -   **Verificar condição** : `RPO`  
   
-        -   **Em relação aos destinos**: **Cada DatabaseReplicaState** em **IsPrimaryReplica AvailabilityGroup**  
+        -   **Em relação aos destinos** : **Cada DatabaseReplicaState** em **IsPrimaryReplica AvailabilityGroup**  
   
-        -   **Modo de avaliação**: **Ao agendar**  
+        -   **Modo de avaliação** : **Ao agendar**  
   
-        -   **Agendamento**: **CollectorSchedule_Every_30min**  
+        -   **Agendamento** : **CollectorSchedule_Every_30min**  
   
-        -   **Habilitado**: **selecionado**  
+        -   **Habilitado** : **selecionado**  
   
-    -   Página **descrição**:  
+    -   Página **descrição** :  
   
-        -   **Categoria**: **Avisos do banco de dados de disponibilidade**  
+        -   **Categoria** : **Avisos do banco de dados de disponibilidade**  
   
-        -   **Descrição**: **O banco de dados de disponibilidade excedeu o RPO de 1 hora. Você deve investigar problemas de desempenho nas réplicas de disponibilidade imediatamente.**  
+        -   **Descrição** : **O banco de dados de disponibilidade excedeu o RPO de 1 hora. Você deve investigar problemas de desempenho nas réplicas de disponibilidade imediatamente.**  
   
-        -   **Texto a ser exibido**: **RPO excedido!**  
+        -   **Texto a ser exibido** : **RPO excedido!**  
   
  Ao terminar, dois novos trabalhos do SQL Server Agent serão criados, um para cada agendamento de avaliação de política. Esses trabalhos devem ter nomes que começam com **syspolicy_check_schedule**.  
   

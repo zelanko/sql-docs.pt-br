@@ -20,12 +20,12 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b4d115487f15c8af7083b9006cf2724d6b81011
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: cba74e40373a4b00a93d41ebc49e2a849df98572
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114839"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235490"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,10 +49,10 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
  É o valor a ser retornado. *scalar_expression* pode ser uma coluna, subconsulta ou outra expressão arbitrária que resulta em um único valor. Outras funções analíticas não são permitidas.  
 
  [ IGNORE NULLS | RESPECT NULLS ]     
- **Aplica-se ao**: SQL do Azure no Edge
+ **Aplica-se ao** : SQL do Azure no Edge
 
- IGNORE NULLS – ignore os valores nulos no conjunto de dados ao computar o último valor em uma partição.     
- RESPEITAR NULOS – respeitar valores nulos no conjunto de dados ao computar o último valor em uma partição.     
+ IGNORE NULLS – Ignore os valores nulos no conjunto de dados quando computar o primeiro valor em uma partição.     
+ RESPECT NULLS – Respeite os valores nulos no conjunto de dados quando computar o primeiro valor em uma partição.     
  
   Para obter mais informações, confira [Como inserir valores ausentes](/azure/azure-sql-edge/imputing-missing-values/).
   

@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6b1685a4d93d14b3cd49a4c9a4a031943a5b9f7e
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864058"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243825"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conexão ao mecanismo de banco de dados
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ Os bancos de dados de exemplo e os exemplos não estão incluídos no [!INCLUDE[
 
 ##### <a name="to-start-sql-server-management-studio"></a>Para iniciar o SQL Server Management Studio
 - Nas versões atuais do Windows, na página **Inicial** , digite SSMS e clique em **Microsoft SQL Server Management Studio**.  
-- Quando estiver usando versões mais antigas do Windows, no menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]e clique em **SQL Server Management Studio**.  
+- Quando estiver usando versões mais antigas do Windows, no menu **Iniciar** , aponte para **Todos os Programas** , aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]e clique em **SQL Server Management Studio**.  
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>Para iniciar o SQL Server Configuration Manager  
-- Nas versões atuais do Windows, na página **Iniciar** , digite **Configuration Manager**e clique em **SQL Server *versão* Configuration Manager**.   
-- Quando estiver usando versões mais antigas do Windows, no menu **Iniciar** , aponte para **Todos os Programas**, para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
+- Nas versões atuais do Windows, na página **Iniciar** , digite **Configuration Manager** e clique em **SQL Server *versão* Configuration Manager**.   
+- Quando estiver usando versões mais antigas do Windows, no menu **Iniciar** , aponte para **Todos os Programas** , para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], para **Ferramentas de Configuração** e clique em **SQL Server Configuration Manager**.  
 
 ## <a name="connecting-with-management-studio"></a><a name="connect"></a>Conectando-se ao Management Studio  
 - É fácil se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)] por meio de ferramentas executadas no mesmo computador se você sabe o nome da instância e está se conectando como um membro do grupo de Administradores local no computador. Os procedimentos seguintes devem ser executados no mesmo computador que hospeda o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -58,13 +58,13 @@ Os bancos de dados de exemplo e os exemplos não estão incluídos no [!INCLUDE[
 1.  Faça logon no Windows como membro do grupo Administradores e abra o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  Na caixa de diálogo **Conectar ao Servidor** , clique em **Cancelar**.  
 3.  Se Servidores Registrados não aparecer, no menu **Exibir** , clique em **Servidores Registrados**.
-4.  Com **Mecanismo de Banco de Dados** selecionado na barra de ferramentas Servidores Registrados, expanda **Mecanismo do Banco de Dados**, clique com o botão direito do mouse em **Grupos do Servidor Local**, aponte para **Tarefas**e clique em **Registrar Servidores Locais**. Expanda **Grupos de Servidores Locais** para ver todas as instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] instaladas no computador exibido. A instância padrão é sem-nome e é mostrada como o nome do computador. Uma instância nomeada é exibida como o nome do computador seguido de uma barra invertida (\\) e do nome da instância. Para o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], a instância é chamada *<computer_name>* \sqlexpress, exceto se o nome for alterado durante a instalação.  
+4.  Com **Mecanismo de Banco de Dados** selecionado na barra de ferramentas Servidores Registrados, expanda **Mecanismo do Banco de Dados** , clique com o botão direito do mouse em **Grupos do Servidor Local** , aponte para **Tarefas** e clique em **Registrar Servidores Locais**. Expanda **Grupos de Servidores Locais** para ver todas as instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] instaladas no computador exibido. A instância padrão é sem-nome e é mostrada como o nome do computador. Uma instância nomeada é exibida como o nome do computador seguido de uma barra invertida (\\) e do nome da instância. Para o [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], a instância é chamada *<computer_name>* \sqlexpress, exceto se o nome for alterado durante a instalação.  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Para verificar se o Mecanismo de Banco de Dados está sendo executado
 
 1.  Em Servidores Registrados, se o nome de sua instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiver um ponto verde, com uma seta branca próximo ao nome, o [!INCLUDE[ssDE](../includes/ssde-md.md)] está sendo executado e nenhuma ação adicional é necessária.  
 
-2.  Se o nome de sua instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiver um ponto vermelho, com um quadrado branco próximo ao nome, o [!INCLUDE[ssDE](../includes/ssde-md.md)] foi interrompido. Clique com o botão direito do mouse no nome do [!INCLUDE[ssDE](../includes/ssde-md.md)], clique em **Controle de Serviços**e em **Iniciar**. Depois de uma caixa de diálogo de confirmação, o [!INCLUDE[ssDE](../includes/ssde-md.md)] deverá iniciar e o círculo deverá ficar verde com uma seta branca.  
+2.  Se o nome de sua instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiver um ponto vermelho, com um quadrado branco próximo ao nome, o [!INCLUDE[ssDE](../includes/ssde-md.md)] foi interrompido. Clique com o botão direito do mouse no nome do [!INCLUDE[ssDE](../includes/ssde-md.md)], clique em **Controle de Serviços** e em **Iniciar**. Depois de uma caixa de diálogo de confirmação, o [!INCLUDE[ssDE](../includes/ssde-md.md)] deverá iniciar e o círculo deverá ficar verde com uma seta branca.  
 
 ##### <a name="to-connect-to-the-database-engine"></a>Para conectar-se ao Mecanismo de Banco de Dados  
 
@@ -75,11 +75,11 @@ Pelo menos uma conta de administrador foi selecionada quando o [!INCLUDE[ssNoVer
 
 2.  Selecione **Mecanismo de Banco de Dados**.
 
-![object-explorer](../relational-databases/media/object-explorer.png)
+![Captura de tela do Pesquisador de Objetos que mostra a lista suspensa Conectar e a opção Mecanismo de Banco de Dados destacadas.](../relational-databases/media/object-explorer.png)
 
 3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para a instância nomeada do SQL Server, o nome do servidor é _\<computer_name\>_ **\\** _\<instance_name\>_ , por exemplo, **ACCTG_SRVR\SQLEXPRESS**. A captura de tela a seguir mostra a conexão à instância padrão (sem nome) do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] em um computador chamado “PracticeComputer”. O usuário conectado no Windows é Marina do domínio Contoso. Ao usar a Autenticação do Windows, não é possível alterar o nome de usuário. 
 
-![connect-to-server](../relational-databases/media/connect-to-server.png)
+![Captura de tela da caixa de diálogo Conectar ao Servidor com a caixa de texto Nome do servidor destacada.](../relational-databases/media/connect-to-server.png)
 
 4.  Clique em **Conectar**.
 
@@ -94,14 +94,14 @@ Agora que você se conectou ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 ##### <a name="create-a-windows-authentication-login"></a>Crie um logon de autenticação do Windows 
 
-1.  Na tarefa anterior, você se conectou ao [!INCLUDE[ssDE](../includes/ssde-md.md)] usando o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. No Pesquisador de Objetos, expanda sua instância de servidor, expanda **Segurança**, clique com o botão direito do mouse em **Logons**e clique em **Novo Logon**. A caixa de diálogo **Logon – Novo** é exibida.  
+1.  Na tarefa anterior, você se conectou ao [!INCLUDE[ssDE](../includes/ssde-md.md)] usando o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. No Pesquisador de Objetos, expanda sua instância de servidor, expanda **Segurança** , clique com o botão direito do mouse em **Logons** e clique em **Novo Logon**. A caixa de diálogo **Logon – Novo** é exibida.  
 
 2.  Na página **Geral** , na caixa **Nome de logon** , digite um logon de Windows no formato: `<domain>\\<login>`
 
-![new-login](../relational-databases/media/new-login.png)
+![Captura de tela da caixa de diálogo Logon – Novo com a caixa de texto Nome de logon destacada.](../relational-databases/media/new-login.png)
 
 3.  Na caixa **Banco de dados padrão** , selecione [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , caso esteja disponível. Caso contrário, selecione **mestre**.  
-4.  Na página **Funções do Servidor** , se o novo logon for um administrador, clique em **sysadmin**; caso contrário, deixe este espaço em branco.  
+4.  Na página **Funções do Servidor** , se o novo logon for um administrador, clique em **sysadmin** ; caso contrário, deixe este espaço em branco.  
 5.  Na página **Mapeamento de Usuário** , selecione **Mapa** para o banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , caso ele esteja disponível. Caso contrário, selecione **mestre**. Observe que a caixa **Usuário** é populada com o logon. Depois de fechada, a caixa de diálogo criará esse usuário no banco de dados.  
 6.  Na caixa **Esquema Padrão** , digite **dbo** para mapear o logon para o esquema de proprietário de banco de dados.   
 7.  Aceite as configurações padrão nas caixas **Protegíveis** e **Status** e clique em **OK** para criar o logon.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678d3b76d33babe7e2097eafefcd21ff78702f84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93781a1eb3e18c4eb623f33d294274f02db4f9a
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408632"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036103"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Índices columnstore – novidades
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,25 +29,26 @@ ms.locfileid: "88408632"
 ## <a name="feature-summary-for-product-releases"></a>Resumo de recursos para versões do produto  
  Esta tabela resume os principais recursos para índices columnstore, e os produtos nos quais eles estão disponíveis.  
 
-|Recurso do índice columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|Execução em modo de lote para consultas com multithread|sim|sim|sim|sim|sim|sim| 
-|Execução em modo de lote para consultas com thread único|||sim|sim|sim|sim|  
-|Opção de compactação de arquivamento||sim|sim|sim|sim|sim|  
-|Isolamento de instantâneo e isolamento de instantâneo de leitura confirmada|||sim|sim|sim|sim| 
-|Especificação do índice columnstore durante a criação de uma tabela|||sim|sim|sim|sim|  
-|Suporte a índices columnstore pelo Always On|sim|sim|sim|sim|sim|sim| 
-|Suporte ao índice columnstore não clusterizado somente leitura pelo secundário legível Always On|sim|sim|sim|sim|sim|sim|  
-|Suporte ao índice columnstore atualizável pelo secundário legível Always On|||sim|sim|||  
-|Índice columnstore não clusterizado somente leitura no heap ou árvore B|sim|sim|sim <sup>1</sup>|sim <sup>1</sup>|sim <sup>1</sup>|sim <sup>1</sup>|  
-|Índice columnstore não clusterizado atualizável no heap ou árvore B|||sim|sim|sim|sim|  
-|Índices adicionais de árvore B permitidos em um heap ou árvore B com um índice columnstore não clusterizado|sim|sim|sim|sim|sim|sim|  
-|Índice columnstore clusterizado e atualizável||sim|sim|sim|sim|sim|  
-|Índice de árvore B em um índice columnstore clusterizado|||sim|sim|sim|sim|  
-|Índice columnstore em uma tabela com otimização de memória|||sim|sim|sim|sim|  
-|Suporte ao uso de uma condição filtrada pela definição de índice columnstore não clusterizado|||sim|sim|sim|sim|  
-|Opção de atraso de compactação para índices columnstore em `CREATE TABLE` e `ALTER TABLE`|||sim|sim|sim|sim|
-|O índice columnstore pode ter uma coluna computada não persistente||||sim|||   
+|Recurso do índice columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|Execução em modo de lote para consultas com multithread|sim|sim|sim|sim|sim|sim|sim| 
+|Execução em modo de lote para consultas com thread único|||sim|sim|sim|sim|sim|  
+|Opção de compactação de arquivamento||sim|sim|sim|sim|sim|sim|  
+|Isolamento de instantâneo e isolamento de instantâneo de leitura confirmada|||sim|sim|sim|sim|sim| 
+|Especificação do índice columnstore durante a criação de uma tabela|||sim|sim|sim|sim|sim|  
+|Suporte a índices columnstore pelo Always On|sim|sim|sim|sim|sim|sim|sim| 
+|Suporte ao índice columnstore não clusterizado somente leitura pelo secundário legível Always On|sim|sim|sim|sim|sim|sim|sim|  
+|Suporte ao índice columnstore atualizável pelo secundário legível Always On|||sim||simsim|||  
+|Índice columnstore não clusterizado somente leitura no heap ou árvore B|sim|sim|sim <sup>1</sup>|sim <sup>1</sup>|sim <sup>1</sup>|sim <sup>1</sup>|sim <sup>1</sup>|  
+|Índice columnstore não clusterizado atualizável no heap ou árvore B|||sim|sim|sim|sim|sim|  
+|Índices adicionais de árvore B permitidos em um heap ou árvore B com um índice columnstore não clusterizado|sim|sim|sim|sim|sim|sim|sim|  
+|Índice columnstore clusterizado e atualizável||sim|sim|sim||simsim|sim|  
+|Índice de árvore B em um índice columnstore clusterizado|||sim|sim||simsim|sim|  
+|Índice columnstore em uma tabela com otimização de memória|||sim|sim||simsim|sim|  
+|Suporte ao uso de uma condição filtrada pela definição de índice columnstore não clusterizado|||sim|sim|sim|sim|sim|  
+|Opção de atraso de compactação para índices columnstore em `CREATE TABLE` e `ALTER TABLE`|||sim|sim|sim|sim|sim|
+|O índice columnstore pode ter uma coluna computada não persistente||||sim|sim|||   
+|Suporte de mesclagem em segundo plano do motor de tupla||||||sim|sim|sim|
   
  <sup>1</sup> Para criar um índice columnstore não clusterizado somente leitura, armazene o índice em um grupo de arquivos somente leitura.  
  
@@ -58,13 +59,13 @@ ms.locfileid: "88408632"
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] adiciona esses novos recursos.
 
 ### <a name="functional"></a>Funcional
-- A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], o motor de tupla recebe a ajuda de uma tarefa de mesclagem em segundo plano que compacta automaticamente os rowGroups OPEN delta menores que existiram por algum tempo, conforme determinado por um limite interno, ou mescla os rowGroups COMPACTADOS dos quais foi excluído um grande número de linhas. Anteriormente, era necessária uma operação de reorganização de índice para mesclar rowgroups com dados parcialmente excluídos. Isso melhora a qualidade do índice columnstore ao longo do tempo. 
+- Desde o [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], o motor de tupla recebe a ajuda de uma tarefa de mesclagem em segundo plano que compacta automaticamente os rowgroups OPEN delta menores que existiram por algum tempo, conforme determinado por um limite interno, ou mescla os rowgroups COMPRESSED dos quais foi excluído um grande número de linhas. Anteriormente, era necessária uma operação de reorganização de índice para mesclar rowgroups com dados parcialmente excluídos. Isso melhora a qualidade do índice columnstore ao longo do tempo. 
 
-## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] adiciona esses novos recursos.
+## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] adiciona esses novos recursos.
 
 ### <a name="functional"></a>Funcional
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] dá suporte a colunas computadas não persistentes em índices columnstore clusterizados. Não há suporte para colunas computadas em índices columnstore clusterizados. Você não pode criar um índice não clusterizado em um índice columnstore que tenha uma coluna computada. 
+- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] dá suporte a colunas computadas não persistentes em índices columnstore clusterizados. Não há suporte para colunas computadas em índices columnstore clusterizados. Você não pode criar um índice não clusterizado em um índice columnstore que tenha uma coluna computada. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  O[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adiciona aprimoramentos importantes para melhorar o desempenho e a flexibilidade dos índices columnstore. Esses aprimoramentos melhoram os cenários de data warehouse e habilitam a análise operacional em tempo real.  

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 3be7312cceacd7d6cef6c60fbe54515c7577c5f2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7a73a233a84d532f55dc61797f44e5d39013722f
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194091"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067316"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure
 
@@ -36,7 +36,7 @@ Para executar o pacote no Banco de Dados SQL do Azure, obtenha as informações 
 
 1. Faça logon no [Portal do Azure](https://portal.azure.com/).
 2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL**. 
-3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
+3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar** , passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
 
 ## <a name="connect-to-the-ssisdb-database"></a>Conectar-se ao banco de dados SSISDB
@@ -52,7 +52,7 @@ Aqui estão as duas coisas mais importantes para lembrar. Essas etapas estão de
 
 1. Abra o SQL Server Management Studio.
 
-2. **Conecte-se ao servidor**. Na caixa de diálogo **Conectar ao Servidor**, insira as informações a seguir:
+2. **Conecte-se ao servidor**. Na caixa de diálogo **Conectar ao Servidor** , insira as informações a seguir:
 
    | Configuração       | Valor sugerido | Descrição | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -62,7 +62,7 @@ Aqui estão as duas coisas mais importantes para lembrar. Essas etapas estão de
    | **Logon** | A conta do administrador do servidor | A conta que você especificou quando criou o servidor. |
    | **Senha** | A senha para sua conta do administrador do servidor | A senha que você especificou quando criou o servidor. |
 
-3. **Conecte-se ao banco de dados SSISDB**. Selecione **Opções** para expandir a caixa de diálogo **Conectar ao Servidor**. Na caixa de diálogo **conectar ao servidor**, selecione a guia **Propriedades de Conexão**. No campo **Conectar-se ao banco de dados**, selecione ou insira `SSISDB`.
+3. **Conecte-se ao banco de dados SSISDB**. Selecione **Opções** para expandir a caixa de diálogo **Conectar ao Servidor**. Na caixa de diálogo **conectar ao servidor** , selecione a guia **Propriedades de Conexão**. No campo **Conectar-se ao banco de dados** , selecione ou insira `SSISDB`.
 
 4. Depois, selecione **Conectar**. A janela Pesquisador de Objetos será aberta no SSMS. 
 
@@ -89,18 +89,18 @@ Para saber mais sobre como implantar pacotes e conhecer o Assistente de Implanta
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>Implantar um projeto com o Assistente de Implantação
 1. Na página **Introdução** do Assistente de Implantação, examine a introdução. Selecione **Avançar** para abrir a página **Selecionar Origem**.
 
-2. Na página **Selecionar Origem**, selecione o projeto existente do SSIS a ser implantado.
+2. Na página **Selecionar Origem** , selecione o projeto existente do SSIS a ser implantado.
     -   Para implantar um arquivo de implantação do projeto que você criou, selecione **Arquivo de implantação do projeto** e insira o caminho para o arquivo .ispac.
-    -   Para implantar um projeto que reside em um catálogo do SSIS, selecione **Catálogo do Integration Services** e, em seguida, insira o nome do servidor e o caminho para o projeto no catálogo.
+    -   Para implantar um projeto que reside em um catálogo do SSIS, selecione **Catálogo do Integration Services** e, em seguida, insira o nome do servidor e o caminho para o projeto no catálogo. Somente os projetos que residem no SSISDB hospedado pelo SQL Server podem ser implantados novamente nesta etapa.
     -   Selecione **Avançar** para ver a página **Selecionar Destino**.
   
-3.  Na página **Selecionar Destino**, selecione o destino para o projeto.
+3.  Na página **Selecionar Destino** , selecione o destino para o projeto.
     -   Insira o nome do servidor totalmente qualificado no formato `<server_name>.database.windows.net`.
     -   Forneça informações de autenticação e selecione **Conectar**.
     -   Em seguida, selecione **Procurar** para selecionar a pasta de destino no SSISDB.
     -   Selecione **Avançar** para abrir a página **Examinar**. (O botão **Avançar** é habilitado somente depois de selecionar **Conectar**.)
   
-4.  Na página **Examinar**, examine as configurações selecionadas.
+4.  Na página **Examinar** , examine as configurações selecionadas.
     -   Você pode alterar suas seleções selecionando **Anterior** ou selecionando qualquer uma das etapas no painel esquerdo.
     -   Selecione **Implantar** para iniciar o processo de implantação.
 
@@ -182,15 +182,15 @@ Write-Host "All done."
 
 2. Clique com o botão direito do mouse e selecione **Executar** para abrir a caixa de diálogo **Executar Pacote**.
 
-3.  Na caixa de diálogo **Executar Pacote**, configure a execução de pacote usando as configurações nas guias **Parâmetros**, **Gerenciadores de Conexões** e **Avançado**.
+3.  Na caixa de diálogo **Executar Pacote** , configure a execução de pacote usando as configurações nas guias **Parâmetros** , **Gerenciadores de Conexões** e **Avançado**.
 
 4.  Selecione **OK** para executar o pacote.
 
 ## <a name="monitor-the-running-package-in-ssms"></a>Monitorar o pacote em execução no SSMS
 
-Para exibir o status de operações do Integration Services em execução no momento no servidor do Integration Services, tais como implantação, validação e execução de pacotes, use a caixa de diálogo **Operações Ativas** no SSMS. Para abrir a caixa de diálogo **Operações Ativas**, clique com o botão direito do mouse em **SSISDB** e, em seguida, selecione **Operações Ativas**.
+Para exibir o status de operações do Integration Services em execução no momento no servidor do Integration Services, tais como implantação, validação e execução de pacotes, use a caixa de diálogo **Operações Ativas** no SSMS. Para abrir a caixa de diálogo **Operações Ativas** , clique com o botão direito do mouse em **SSISDB** e, em seguida, selecione **Operações Ativas**.
 
-Você também pode selecionar um pacote no Pesquisador de Objetos, clicar com o botão direito do mouse e selecionar, sucessivamente, **Relatórios**, **Relatórios Padrão** e **Todas as Execuções**.
+Você também pode selecionar um pacote no Pesquisador de Objetos, clicar com o botão direito do mouse e selecionar, sucessivamente, **Relatórios** , **Relatórios Padrão** e **Todas as Execuções**.
 
 Para obter mais informações sobre como monitorar pacotes em execução no SSMS, consulte [Monitorar pacotes em execução e outras operações](../performance/monitor-running-packages-and-other-operations.md).
 

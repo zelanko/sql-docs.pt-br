@@ -2,7 +2,7 @@
 description: Definir ou alterar a ordenação de banco de dados
 title: Definir ou alterar a ordenação de banco de dados | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 10/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -14,12 +14,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32f5807bffcb74b3ca2c7c15ec294154530a9ad5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193456"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907368"
 ---
 # <a name="set-or-change-the-database-collation"></a>Definir ou alterar a ordenação de banco de dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92193456"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
--   As ordenações somente Unicode do Windows podem ser usadas somente com a cláusula COLLATE para aplicar ordenações aos tipos de dados **nchar**, **nvarchar**e **ntext** em dados nos níveis de coluna e de expressão. Não é possível usá-los com a cláusula COLLATE para alterar a ordenação de uma instância de banco de dados ou de servidor.  
+-   As ordenações somente Unicode do Windows podem ser usadas somente com a cláusula COLLATE para aplicar ordenações aos tipos de dados **nchar** , **nvarchar** e **ntext** em dados nos níveis de coluna e de expressão. Não é possível usá-los com a cláusula COLLATE para alterar a ordenação de uma instância de banco de dados ou de servidor.  
   
 -   Se a ordenação especificada ou a ordenação usada pelo objeto referenciado usar uma página de código sem suporte no Windows, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibirá um erro.  
 
@@ -60,13 +60,39 @@ Você pode encontrar os nomes de ordenação com suporte no [Windows Collation N
   
 Ao alterar a ordenação de banco de dados, você altera o seguinte:  
   
--   Qualquer coluna **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** nas tabelas do sistema são alteradas para a nova ordenação.  
+-   Qualquer coluna **char** , **varchar** , **text** , **nchar** , **nvarchar** ou **ntext** nas tabelas do sistema são alteradas para a nova ordenação.  
   
--   Todos os parâmetros **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** e valores de retorno escalar para procedimentos armazenados e funções definidas pelo usuário existentes são alterados para a nova ordenação.  
+-   Todos os parâmetros **char** , **varchar** , **text** , **nchar** , **nvarchar** ou **ntext** e valores de retorno escalar para procedimentos armazenados e funções definidas pelo usuário existentes são alterados para a nova ordenação.  
   
--   Os tipos de dados do sistema **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** e todos os tipos de dados definidos pelo usuário com base nesses tipos de dados do sistema são alterados para a nova ordenação padrão.  
+-   Os tipos de dados do sistema **char** , **varchar** , **text** , **nchar** , **nvarchar** ou **ntext** e todos os tipos de dados definidos pelo usuário com base nesses tipos de dados do sistema são alterados para a nova ordenação padrão.  
   
 Você pode alterar a ordenação de qualquer novo objeto que seja criado em um banco de dados de usuário usando a cláusula `COLLATE` da instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Essa instrução **não altera** a ordenação das colunas em nenhuma tabela existente definida pelo usuário. Isso pode ser alterado usando a cláusula `COLLATE` de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+
+> [!IMPORTANT]
+> Alterar a ordenação de um banco de dados ou de colunas individuais **não modifica** os dados subjacentes já armazenados em tabelas existentes. A menos que o seu aplicativo manipule explicitamente a conversão de dados e a comparação entre diferentes ordenações, é recomendável que você migre os dados existentes no banco de dados para a nova ordenação. Isso elimina o risco de que os aplicativos modifiquem incorretamente os dados, o que decorreria em possíveis resultados incorretos ou na perda de dados silenciosa.   
+
+Quando uma ordenação de banco de dados for alterada, somente as novas tabelas herdarão a nova ordenação de banco de dados por padrão. Há várias alternativas para converter dados existentes para a nova ordenação:
+-  Converter os dados in-loco. Para converter a ordenação de uma coluna em uma tabela existente, confira [Definir ou alterar a ordenação de colunas](../../relational-databases/collations/set-or-change-the-column-collation.md). Essa operação é fácil de implementar, mas pode se tornar um problema de bloqueio para grandes tabelas e aplicativos ocupados. Confira o seguinte exemplo de uma conversão in-loco da coluna `MyString` para uma nova ordenação:
+
+   ```sql
+   ALTER TABLE dbo.MyTable
+   ALTER COLUMN MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8;
+   ```
+
+-  Copiar dados para novas tabelas que usam a nova ordenação e substitua as tabelas originais no mesmo banco de dados. Crie uma tabela no banco de dados atual que herdará a ordenação de banco de dados, copie os dados entre a tabela antiga e a nova tabela, remova a tabela original e renomeie a nova tabela com o nome da tabela original. Essa é uma operação mais rápida do que uma conversão in-loco, mas pode se tornar um desafio lidar com esquemas complexos com dependências como restrições de Chave Estrangeira, restrições de Chave Primária e Gatilhos. Ela também exigiria uma sincronização de dados final entre a nova tabela e a original antes do limiar final se os dados continuassem sendo alterados pelos aplicativos. Confira o seguinte exemplo de uma conversão "copiar e substituir" da coluna `MyString` em uma nova ordenação:
+
+   ```sql
+   CREATE TABLE dbo.MyTable2 (MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8); 
+   
+   INSERT INTO dbo.MyTable2 
+   SELECT * FROM dbo.MyTable; 
+   
+   DROP TABLE dbo.MyTable; 
+   
+   EXEC sp_rename 'dbo.MyTable2', 'dbo.MyTable’;
+   ```
+
+-  Copiar dados para um novo banco de dados que usa a nova ordenação e substitua o banco de dados original. Crie um banco de dados usando a nova ordenação e transfira os dados do banco de dados original com ferramentas como o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou o Assistente de Importação/Exportação no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Essa é uma abordagem mais simples para esquemas complexos. Ela também exigiria uma sincronização de dados final entre o novo banco de dados e o original antes do limiar final se os dados continuassem sendo alterados pelos aplicativos.
   
 ###  <a name="security"></a><a name="Security"></a> Segurança  
   
@@ -79,7 +105,7 @@ Você pode alterar a ordenação de qualquer novo objeto que seja criado em um b
   
 #### <a name="to-set-or-change-the-database-collation"></a>Para definir ou alterar a ordenação de banco de dados  
   
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda essa instância e expanda **Bancos de Dados**.  
+1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda essa instância e expanda **Bancos de Dados**.  
   
 2.  Se você estiver criando um novo banco de dados, clique com o botão direito do mouse em **Bancos de Dados** e clique em **Novo Banco de Dados**. Se você não desejar a ordenação padrão, clique na página **Opções** e selecione uma ordenação na lista suspensa **Ordenação**.  
   

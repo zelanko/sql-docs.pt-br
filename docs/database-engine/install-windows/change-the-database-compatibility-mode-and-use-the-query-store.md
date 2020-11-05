@@ -15,12 +15,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09451cc9897962566905f66400cb185a5d2211da
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895396"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243691"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Alterar o nível de compatibilidade do banco de dados e usar o Repositório de Consultas
 
@@ -46,7 +46,7 @@ O processo de atualização para habilitar a nova funcionalidade do processador 
   
 O fluxo de trabalho recomendado para atualizar o processador de consulta para a versão mais recente do código está documentado em [Manter a estabilidade do desempenho durante a atualização para a seção do SQL Server mais recente de Cenários de uso do repositório de consultas](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), conforme mostrado abaixo.  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![Diagrama que mostra o fluxo de trabalho recomendado para atualizar o processador de consultas para a versão mais recente do código.](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
 
 Do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 em diante, os usuários podem ser guiados por meio do fluxo de trabalho recomendado usar o Assistente de Ajuste de Consulta. Para obter mais informações, veja [Atualizando bancos de dados usando o Assistente de Ajuste de Consulta](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

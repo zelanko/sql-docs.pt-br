@@ -9,12 +9,12 @@ ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 32ff32e3d342d63e6de7976213bf4a48ec915778
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: b929bd76f77f021fbc1821811beb7e86be8edd2e
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784910"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235661"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurar a instância de cluster de failover – iSCSI – SQL Server em Linux
 
@@ -47,7 +47,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7-setiscsinetwork][6]
+    ![Captura de tela do comando iface e da resposta para o comando.][6]
  
 2.  Edite `/var/lib/iscsi/ifaces/iSCSIIfaceName`. Verifique se ele tem os seguintes valores preenchidos completamente:
 
@@ -58,7 +58,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
 
     Consulte o seguinte exemplo:
 
-    ![iSCSITargetSettings][2]
+    ![Captura de tela do arquivo com os arquivos completamente preenchidos.][2]
 
 3.  Localize o destino iSCSI.
 
@@ -68,7 +68,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
 
      \<iSCSINetName> é o nome exclusivo/amigável para a rede, \<TargetIPAddress> é o endereço IP do destino iSCSI e \<TargetPort> é a porta do destino iSCSI. 
 
-    ![iSCSITargetResults][3]
+    ![Captura de tela do comando discovery e da resposta para o comando.][3]
 
  
 4.  Fazer logon no destino
@@ -95,7 +95,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30-iSCSIattachedDisks][7]
+    ![Captura de tela do comando grep e da resposta para o comando mostrando os discos SCSI anexados.][7]
 
 7.  Crie um volume físico no disco iSCSI.
 
@@ -197,7 +197,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
         ls /var/opt/mssql/data
         ```
     
-        ![45-CopyMove][8]
+        ![Captura de tela do comando ls e da resposta para o comando.][8]
 
    * Digite `exit` para voltar ao usuário raiz.
 
@@ -321,7 +321,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
 
    *    Para testar, crie um banco de dados nessa pasta. O exemplo mostrado a seguir usa o sqlcmd para criar um banco de dados, alternar o contexto para ele, verificar se os arquivos existem no nível do sistema operacional e, em seguida, exclui a localização temporária. Você pode usar o SSMS.
   
-        ![50-ExampleCreateSSMS][9]
+        ![Captura de tela do comando sqlcmd e da resposta para o comando.][9]
 
    *    Desmontar o compartilhamento 
 
@@ -355,7 +355,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
 
     \<ListOfVGsNotUsedByPacemaker> é a lista de grupos de volumes da saída da Etapa 20 que não será usada pelo FCI. Coloque cada um entre aspas e separe por uma vírgula. Um exemplo é mostrado abaixo.
 
-    ![55-ListOfVGs][11]
+    ![Captura de tela que mostra um exemplo de um valor volume_list.][11]
 
 17. Quando o Linux for iniciado, ele montará o sistema de arquivos. Para garantir que apenas o Pacemaker possa montar o disco iSCSI, recompile a imagem do sistema de arquivos raiz. 
 

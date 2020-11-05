@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 51f971caef999424e002a49ab357e33fd1f0657a
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301884"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243565"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Ações e grupos de ações de auditoria do SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "86301884"
 |BATCH_STARTED_GROUP|Esse evento é gerado sempre que qualquer operação de lote de texto, procedimento armazenado ou gerenciamento de transações começa a ser executada. Ele é gerado antes da execução e audita o lote inteiro ou o texto do procedimento armazenado, conforme enviado do cliente. **Adicionado no SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Esse evento é gerado para relatar mensagens de auditoria relacionadas à segurança de transporte do Service Broker. Equivalente a [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Esse evento é gerado quando um banco de dados é criado, alterado ou descartado. Esse evento é gerado sempre que um banco de dados é criado, alterado ou descartado. Equivalente a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Esse evento é gerado quando um usuário de banco de dados independente faz logoff de um banco de dados.|  
+|DATABASE_LOGOUT_GROUP|Esse evento é gerado quando um usuário de banco de dados independente faz logoff de um banco de dados equivalente à [Classe de Evento de Logoff de Auditoria](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Esse evento é gerado para relatar mensagens de auditoria relacionadas à segurança de transporte de espelhamento de banco de dados. Equivalente a [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|Esse evento é gerado sempre que objetos de banco de dados, como tipo de mensagem, assembly, contrato, são acessados. Ele é gerado para qualquer acesso a qualquer banco de dados. Observação: isso poderia gerar grandes registros de auditoria.<br /><br /> Equivalente a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Esse evento é gerado quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, como esquemas. Ele é gerado sempre que um objeto de banco de dados é criado, alterado ou descartado. Observação: isso poderia gerar volumes muito grandes de registros de auditoria.<br /><br /> Equivalente a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
@@ -141,7 +141,7 @@ ms.locfileid: "86301884"
 |BATCH_COMPLETED_GROUP|Esse evento é gerado sempre que qualquer operação de lote de texto, procedimento armazenado ou de gerenciamento de transações conclui a execução. Ele é gerado depois que o lote é concluído e audita o lote inteiro ou o texto do procedimento armazenado, conforme enviado do cliente, incluindo o resultado.|  
 |BATCH_STARTED_GROUP|Esse evento é gerado sempre que qualquer operação de lote de texto, procedimento armazenado ou gerenciamento de transações começa a ser executada. Ele é gerado antes da execução e audita o lote inteiro ou o texto do procedimento armazenado, conforme enviado do cliente.|  
 |DATABASE_CHANGE_GROUP|Esse evento é gerado quando um banco de dados é criado, alterado ou descartado. Equivalente a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Esse evento é gerado quando um usuário de banco de dados independente faz logoff de um banco de dados. Equivalente à [classe de evento Audit Backup and Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|DATABASE_LOGOUT_GROUP|Esse evento é gerado quando um usuário de banco de dados independente faz logoff de um banco de dados.|  
 |DATABASE_OBJECT_ACCESS_GROUP|Esse evento é gerado sempre que são acessados objetos de banco de dados, como certificados e chaves assimétricas. Equivalente a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Esse evento é gerado quando uma instrução CREATE, ALTER ou DROP é executada em objetos de banco de dados, como esquemas. Equivalente a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Esse evento é gerado quando há uma alteração de proprietário para objetos dentro do escopo do banco de dados. Equivalente a [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  

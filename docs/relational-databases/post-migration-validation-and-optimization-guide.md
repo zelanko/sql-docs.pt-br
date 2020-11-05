@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891126"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235444"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Validação pós-migração e guia de otimização
 
@@ -32,7 +32,7 @@ Abaixo estão alguns dos cenários comuns de desempenho encontrados após a migr
 
 ## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Regressões de consulta devido à alteração na versão CE
 
-**Aplica-se a: migração de ** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Aplica-se a: migração de** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Ao migrar de versões mais antigas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ou mais recente e atualizar o [nível de compatibilidade do banco de dados](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) para o mais recente disponível, uma carga de trabalho poderá ser exposta ao risco de regressão de desempenho.
 
@@ -44,7 +44,7 @@ Para obter mais informações sobre as alterações do Otimizador de Consulta in
 
 Altere o [nível de compatibilidade do banco de dados](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) para a versão de origem e siga o fluxo de trabalho de atualização recomendado conforme mostrado na figura a seguir:
 
-![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![Diagrama que mostra o fluxo de trabalho de atualização recomendado.](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 
 Para obter mais informações sobre este tópico, consulte [Manter a estabilidade do desempenho durante a atualização para a versão mais recente do SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -94,7 +94,7 @@ Um possível problema surge quando essa primeira compilação pode não ter usad
 > [!NOTE]
 > Para migrações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se esse problema existe na origem de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrar para uma versão mais recente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no estado em que se encontra não resolverá esse cenário.
 
-O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode considerar apenas informações que são conhecidas no tempo de compilação. Se uma carga de trabalho se baseia em predicados que podem ser conhecidos apenas no tempo de execução, a possibilidade de escolher um plano ineficaz aumenta. Para um plano de melhor qualidade, os predicados devem ser **SARGable** ou **S**earch **Arg**ument**able** (argumentos pesquisáveis).
+O Otimizador de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode considerar apenas informações que são conhecidas no tempo de compilação. Se uma carga de trabalho se baseia em predicados que podem ser conhecidos apenas no tempo de execução, a possibilidade de escolher um plano ineficaz aumenta. Para um plano de melhor qualidade, os predicados devem ser **SARGable** ou **S** earch **Arg** ument **able** (argumentos pesquisáveis).
 
 Alguns exemplos de predicados não SARGable:
 -   Conversões implícitas de dados, como VARCHAR para NVARCHAR ou INT para VARCHAR. Procure os avisos de CONVERT_IMPLICIT de runtime nos Planos de Execução Reais. Converter de um tipo para outro também pode causar perda de precisão.

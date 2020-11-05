@@ -9,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 218c4685b7305a1442f85e9b10da7144c6189ea3
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784882"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235648"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurar a instância de cluster de failover – NFS – SQL Server em Linux
 
@@ -36,7 +36,7 @@ Ao configurar as pastas a serem compartilhadas no servidor NFS, siga estas opç�
 
 Verifique se seus padrões de segurança foram impostos para acesso. Ao configurar a pasta, verifique se apenas os servidores que participam do FCI devem ver a pasta NFS. Um exemplo de um /etc/exports modificado em uma solução NFS baseada em Linux é mostrado abaixo, em que a pasta está restrita a FCIN1 e FCIN2.
 
-![05-nfsacl][1]
+![A captura de tela de um exemplo de um /etc/exports modificado em uma solução NFS baseada em Linux é mostrada abaixo, na qual a pasta está restrita a FCIN1 e FCIN2.][1]
 
 ## <a name="instructions"></a>Instruções
 
@@ -132,7 +132,7 @@ Verifique se seus padrões de segurança foram impostos para acesso. Ao configur
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![Captura de tela do comando mount e da resposta para o comando que mostra nenhuma opção.][2]
 
    * Alterne para o usuário mssql. Você não receberá nenhuma confirmação se tiver êxito.
 
@@ -228,7 +228,7 @@ Verifique se seus padrões de segurança foram impostos para acesso. Ao configur
 
    * Para testar, crie um banco de dados nessa pasta. O exemplo a seguir usa o sqlcmd para criar um banco de dados, alternar o contexto para ele, verificar se os arquivos existem no nível do sistema operacional e, em seguida, exclui a localização temporária. Você pode usar o SSMS.
 
-    ![15-createtestdatabase][4]
+    ![Captura de tela do comando sqlcmd e da resposta para o comando.][4]
  
    * Desmontar o compartilhamento 
 

@@ -21,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d04e4fe2f3adc13b02b5aafb4f2cc49ab05d09d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7353735a34874248e3796763c608bff24a83f649
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923672"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907364"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "86923672"
  Adicionar um artigo envolve: adicionar o artigo à publicação; criar um novo instantâneo para a publicação; sincronizar a assinatura para aplicar o esquema e os dados para o novo artigo.  
   
 > [!NOTE]
->  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **\@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **\@processing_order** de **sp_addmergearticle** e especifique o valor **2** para o parâmetro **\@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **\@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. É possível usar números diferentes para cada artigo, desde que o número para a função seja menor que o número para a tabela.  
+>  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **\@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **\@processing_order** de **sp_addmergearticle** e especifique o valor **2** para o parâmetro **\@processing_order** de **sp_changemergearticle** , especificando o nome da tabela para o parâmetro **\@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. É possível usar números diferentes para cada artigo, desde que o número para a função seja menor que o número para a tabela.  
   
 1.  Adicione um ou mais artigos com um dos métodos seguintes:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "86923672"
  Como observado anteriormente, em alguns casos, descartar um artigo exige descartar assinaturas, recriá-las e, então, sincronizá-las. Para obter mais informações, consulte [Assinar publicações](../../../relational-databases/replication/subscribe-to-publications.md) e [Sincronizar dados](../../../relational-databases/replication/synchronize-data.md).  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** ou superior e **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** ou superior dão suporte a remover tabelas usando o comando DLL **DROP TABLE** para artigos que participam da Replicação Transacional. Se a publicação der suporte para DROP TABLE DDL, a operação de DROP TABLE removerá a tabela da publicação e do banco de dados. O agente do leitor de log lançará um comando de limpeza para o banco de dados de distribuição da tabela removida e fará a limpeza dos metadados do publicador. Se o leitor de log não tiver processado todos os registros de log que fazem referência à tabela removida, ele ignorará novos comandos associados à tabela removida. Registros já processados serão entregues ao banco de dados de distribuição. Eles poderão ser aplicados ao banco de dados do Assinante se o Agente de Distribuição processá-los antes que o Leitor de Log limpar os artigos obsoletos (removidos). A configuração **padrão** para todas as publicações de replicação transacional é não dar suporte a DLL de DROP TABLE. O artigo [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) apresenta mais detalhes sobre essa melhoria.
+ > O **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** ou superior e o **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** ou superior dão suporte à remoção de tabelas com o comando DDL **DROP TABLE** para artigos que participam da Replicação Transacional. Se a publicação der suporte para DROP TABLE DDL, a operação de DROP TABLE removerá a tabela da publicação e do banco de dados. O agente do leitor de log lançará um comando de limpeza para o banco de dados de distribuição da tabela removida e fará a limpeza dos metadados do publicador. Se o leitor de log não tiver processado todos os registros de log que fazem referência à tabela removida, ele ignorará novos comandos associados à tabela removida. Registros já processados serão entregues ao banco de dados de distribuição. Eles poderão ser aplicados ao banco de dados do Assinante se o Agente de Distribuição processá-los antes que o Leitor de Log limpar os artigos obsoletos (removidos). A configuração **padrão** para todas as publicações de replicação transacional é não dar suporte ao DDL de DROP TABLE. O artigo [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) apresenta mais detalhes sobre essa melhoria.
 
   
 ## <a name="see-also"></a>Consulte Também  

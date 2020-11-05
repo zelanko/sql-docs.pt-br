@@ -2,7 +2,7 @@
 title: Permissões (Mecanismo de Banco de Dados) | Microsoft Docs
 description: Consulte esta lista completa de permissões do SQL Server para saber mais sobre quais permissões se aplicam a plataformas que você usa.
 ms.custom: ''
-ms.date: 01/03/2017
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081945"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243606"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92081945"
 Todo protegível do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem permissões associadas que podem ser concedidas a uma entidade de segurança. As permissões no [!INCLUDE[ssDE](../../includes/ssde-md.md)] são gerenciadas no nível do servidor atribuídas a funções de logon e de servidor, e no nível do banco de dados atribuídas a funções de usuários do banco de dados e funções de banco de dados. O modelo para o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tem o mesmo sistema para as permissões de banco de dados, mas as permissões no nível do servidor não estão disponíveis. Este tópico contém a lista completa de permissões. Para obter uma implementação típica das permissões, veja [Introdução às permissões do Mecanismo de Banco de Dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 O número total de permissões para o [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] é 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] expõe 254 permissões. A maioria das permissões se aplica a todas as plataformas, mas algumas delas, não. Por exemplo, permissões de nível de servidor não podem ser concedidas no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], e algumas permissões só fazem sentido no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] expôs 238 permissões. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expôs 230 permissões. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expôs 219 permissões. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expôs 214 permissões. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expôs 195 permissões. O tópico [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica os tópicos que são novos em versões recentes.
+As novas permissões estão sendo introduzidas gradualmente na nova versão. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] expôs 238 permissões. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expôs 230 permissões. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expôs 219 permissões. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expôs 214 permissões. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expôs 195 permissões. O tópico [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica quais permissões são novas em versões recentes.
 
 Depois de compreender as permissões, aplique permissões em nível de servidor a logons e a usuários de permissões no nível de banco de dados com as instruções [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)e [DENY](../../t-sql/statements/deny-transact-sql.md) . Por exemplo:   
 ```sql
@@ -364,7 +364,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Resumo do algoritmo de verificação de permissão  
- A verificação de permissões pode ser uma tarefa complexa. O algoritmo de verificação de permissão inclui a sobreposição de associações de grupo e o encadeamento de propriedades, as permissões explícita e implícita, e pode ser afetado pelas permissões em classes de protegíveis que contêm a entidade protegível. O processo geral do algoritmo é coletar todas as permissões pertinentes. Se nenhum bloqueio DENY for localizado, o algoritmo irá procurar uma permissão GRANT que fornece acesso suficiente. O algoritmo contém três elementos essenciais, o **contexto de segurança**, o **espaço de permissão**e a **permissão necessária**.  
+ A verificação de permissões pode ser uma tarefa complexa. O algoritmo de verificação de permissão inclui a sobreposição de associações de grupo e o encadeamento de propriedades, as permissões explícita e implícita, e pode ser afetado pelas permissões em classes de protegíveis que contêm a entidade protegível. O processo geral do algoritmo é coletar todas as permissões pertinentes. Se nenhum bloqueio DENY for localizado, o algoritmo irá procurar uma permissão GRANT que fornece acesso suficiente. O algoritmo contém três elementos essenciais, o **contexto de segurança** , o **espaço de permissão** e a **permissão necessária**.  
   
 > [!NOTE]  
 >  Não é possível conceder, negar ou revogar permissões para sa, dbo, o proprietário da entidade, information_schema, sys ou para você mesmo.  
@@ -406,7 +406,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
   
 3.  Agrega as identidades em nível de servidor e de banco de dados e as identidades do módulo assinado associadas ao chamador para criar o **contexto de segurança**.  
   
-4.  Para esse **contexto de segurança**, reúna todas as permissões concedidas ou negadas ao **espaço de permissão**. A permissão pode ser declarada explicitamente como GRANT, GRANT WITH GRANT ou DENY; ou as permissões podem ser implícitas ou de cobertura GRANT ou DENY. Por exemplo, a permissão CONTROL em um esquema implica CONTROL em uma tabela. E CONTROL em uma tabela implica SELECT. Portanto, se CONTROL foi concedida no esquema, SELECT será concedida na tabela. Se CONTROL foi negada na tabela, SELECT será negada na tabela.  
+4.  Para esse **contexto de segurança** , reúna todas as permissões concedidas ou negadas ao **espaço de permissão**. A permissão pode ser declarada explicitamente como GRANT, GRANT WITH GRANT ou DENY; ou as permissões podem ser implícitas ou de cobertura GRANT ou DENY. Por exemplo, a permissão CONTROL em um esquema implica CONTROL em uma tabela. E CONTROL em uma tabela implica SELECT. Portanto, se CONTROL foi concedida no esquema, SELECT será concedida na tabela. Se CONTROL foi negada na tabela, SELECT será negada na tabela.  
   
     > [!NOTE]  
     >  Uma permissão GRANT no nível de coluna substitui DENY no nível de objeto.  

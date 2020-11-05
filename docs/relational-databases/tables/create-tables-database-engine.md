@@ -14,12 +14,12 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de52eb6abbcbcbb23638c07663d78a80ccffd22f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d1826e8c9291dbfb92b7cccbd48ac0bf34fe690
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463812"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235463"
 ---
 # <a name="create-tables-database-engine"></a>Criar tabelas (Mecanismo de Banco de Dados)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -38,15 +38,15 @@ Esta tarefa requer a permissão CREATE TABLE no banco de dados e a permissão AL
  
 ## <a name="using-table-designer"></a>Uso do Designer de Tabela  
   
-1.  No SSMS, no **Pesquisador de Objetos**, conecte-se à instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contém o banco de dados a ser modificado.  
+1.  No SSMS, no **Pesquisador de Objetos** , conecte-se à instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contém o banco de dados a ser modificado.  
   
-2.  No **Pesquisador de Objetos**, expanda o nó **Bancos de Dados** e, em seguida, expanda o banco de dados que conterá a nova tabela.  
+2.  No **Pesquisador de Objetos** , expanda o nó **Bancos de Dados** e, em seguida, expanda o banco de dados que conterá a nova tabela.  
   
 3.  No Pesquisador de Objetos, clique com o botão direito do mouse no nó **Tabelas** do banco de dados e clique em **Nova Tabela**.  
   
 4.  Digite nomes de coluna, escolha tipos de dados e opte por permitir ou não nulos para cada coluna, conforme ilustrado a seguir:  
   
-     ![AddColumnsinTableDesigner](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
+     ![Captura de tela que mostra a opção Permitir Nulos selecionada na coluna ModifiedDate.](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
 5.  Para especificar mais propriedades para uma coluna, como valores de identidade ou de coluna computada, clique na coluna e na guia propriedades de coluna, escolha as propriedades adequadas. Para obter mais informações sobre as propriedades de coluna, veja [Propriedades de coluna da tabela &#40;SQL Server Management Studio&#41;](../../relational-databases/tables/table-column-properties-sql-server-management-studio.md).  
   
@@ -54,27 +54,27 @@ Esta tarefa requer a permissão CREATE TABLE no banco de dados e a permissão AL
   
 7.  Para criar relações de chave estrangeira, restrições de verificação ou índices, clique com o botão direito do mouse no painel Designer de Tabela e selecione um objeto da lista, conforme mostrado na ilustração a seguir:  
   
-     ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
+     ![Captura de tela que mostra a opção Relações.](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   
      Para obter mais informações sobre esses objetos, consulte [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) e [Indexes](../../relational-databases/indexes/indexes.md).  
   
 8.  Por padrão, a tabela está contida no esquema **dbo** . Para especificar um esquema diferente para a tabela, clique com o botão direito do mouse no painel Designer de Tabela e selecione **Propriedades** , conforme ilustrado a seguir. Na lista suspensa **Esquema** , selecione o esquema apropriado.  
   
-     ![Specifyatableschema](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
+     ![Captura de tela do painel Propriedades que mostra a opção Esquema.](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
   
      Para obter mais informações sobre esquemas, consulte [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
   
-9. No menu **Arquivo**, escolha **Salvar** *nome da tabela*.  
+9. No menu **Arquivo** , escolha **Salvar** *nome da tabela*.  
   
 10. Na caixa de diálogo **Escolher Nome** , digite um nome para a tabela e clique em **OK**.  
   
-11. Para exibir a nova tabela, em **Pesquisador de Objetos**, expanda o nó **Tabelas** e pressione **F5** para atualizar a lista de objetos. A nova tabela é exibida na lista de tabelas.  
+11. Para exibir a nova tabela, em **Pesquisador de Objetos** , expanda o nó **Tabelas** e pressione **F5** para atualizar a lista de objetos. A nova tabela é exibida na lista de tabelas.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ## <a name="using-query-editor"></a>Uso do Editor de Consultas  
   
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   

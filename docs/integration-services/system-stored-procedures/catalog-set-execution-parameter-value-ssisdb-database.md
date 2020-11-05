@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425108"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243636"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (Banco de Dados SSISDB)
 
@@ -114,7 +114,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|Um ou mais códigos de evento|  
   
-## <a name="example"></a>Exemplo  
+## <a name="examples"></a>Exemplos  
+
+### <a name="a-generate-dump-files-for-errors"></a>a. Gerar arquivos de despejo para erros
+
  O exemplo a seguir especifica que o servidor do Integration Services gera arquivos de despejo quando ocorre um erro durante a execução de um pacote.  
   
 ```sql
@@ -122,7 +125,8 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## <a name="example"></a>Exemplo  
+### <a name="b-generate-dump-files-for-events"></a>B. Gerar arquivos de despejo para eventos
+
  O exemplo a seguir especifica que o servidor do Integration Services gera arquivos de despejo quando ocorrem eventos durante a execução de um pacote e especifica o evento que faz com que o servidor gere os arquivos.  
   
 ```sql

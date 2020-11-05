@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300178"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043845"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -119,7 +119,7 @@ Observações e orientação adicionais ao definir o local:
 - Especifique o `Driver={<Name of Driver>}` ao se conectar por meio de `ODBC`.
 - `wasbs` é opcional, mas recomendado, para acessar as Contas de Armazenamento do Azure, pois os dados serão enviados usando uma conexão TLS/SSL segura.
 - As APIs `abfs` ou `abfss` não têm suporte ao acessar as Contas de Armazenamento do Azure.
-- Não há suporte para a opção de Namespace Hierárquico para as Contas de Armazenamento do Azure (V2). Verifique se essa opção permanece **desabilitada** .
+- Não há suporte para a opção de Namespace Hierárquico para as Contas de Armazenamento do Azure (V2). Verifique se essa opção permanece **desabilitada**.
 - Para garantir consultas do PolyBase com êxito durante um failover `Namenode` do Hadoop, considere usar um endereço IP virtual para o `Namenode` do cluster do Hadoop. Se você não fizer isso, execute um comando [ALTER EXTERNAL DATA SOURCE][alter_eds] para apontar para o novo local.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -493,7 +493,7 @@ Especifica uma credencial no escopo do banco de dados para a autenticação na f
 
 Observações e orientações adicionais ao criar uma credencial:
 
-- Para carregar dados do Armazenamento do Azure no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use uma Chave de Armazenamento do Azure.
+- Para carregar dados do Armazenamento do Azure no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use um token SAS (Assinatura de Acesso Compartilhado).
 - `CREDENTIAL` será necessário apenas se os dados tiverem sido protegidos. `CREDENTIAL` não é necessário para conjuntos de dados que permitem acesso anônimo.
 - Quando o `TYPE` = `BLOB_STORAGE`, credencial usada precisa ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Além disso, o token SAS deve ser configurado da seguinte maneira:
   - Excluir o `?` à esquerda quando configurado como o segredo

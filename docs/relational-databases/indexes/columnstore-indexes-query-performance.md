@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7e2aaa0e01a5ca5295bc9f315c44cd7358b1d9f
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408792"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036102"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Índices columnstore – desempenho de consultas
 
@@ -95,7 +95,7 @@ ms.locfileid: "88408792"
  Confira mais detalhes sobre rowgroups nas [Diretrizes de design de índice columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### <a name="batch-mode-execution"></a>Execução em modo de lote    
- A execução em modo de lote refere-se ao processamento de um conjunto de linhas, normalmente até 900, agrupadas para eficiência de execução. Por exemplo, a consulta `SELECT SUM (Sales) FROM SalesData` agrega as vendas totais da tabela SalesData. Na execução em modo de lote, o mecanismo de execução de consulta calcula a agregação de 900 valores em grupo. Isso estende aos metadados os custos de acesso e outros tipos de sobrecarga em todas as linhas em um lote, em vez de pagar o custo para cada linha; assim, o caminho do código é reduzido significativamente. Processamento de modo de lote opera nos dados compactados quando possível e elimina alguns dos operadores de troca usados pelo processamento de modo de linha. Isso acelera a execução de consultas de análise em ordens de magnitude.    
+ A [execução em modo de lote](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) refere-se ao processamento de um conjunto de linhas, normalmente até 900, agrupadas para eficiência de execução. Por exemplo, a consulta `SELECT SUM (Sales) FROM SalesData` agrega as vendas totais da tabela SalesData. Na execução em modo de lote, o mecanismo de execução de consulta calcula a agregação de 900 valores em grupo. Isso estende aos metadados os custos de acesso e outros tipos de sobrecarga em todas as linhas em um lote, em vez de pagar o custo para cada linha; assim, o caminho do código é reduzido significativamente. Processamento de modo de lote opera nos dados compactados quando possível e elimina alguns dos operadores de troca usados pelo processamento de modo de linha. Isso acelera a execução de consultas de análise em ordens de magnitude.    
     
  Nem todos os operadores de execução de consulta podem ser executados em modo de lote. Por exemplo, operações DML como Insert, Delete ou Update são executadas em uma linha por vez. O modo de lote destina-se a operadores voltados à aceleração do desempenho de consultas, como Scan, Join, Aggregate, sort e outros mais. Como o índice columnstore foi introduzido no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], há um esforço contínuo para expandir os operadores que podem ser executados no modo de lote. A tabela abaixo mostra os operadores executados no modo de lote, de acordo com a versão do produto.    
     
@@ -119,6 +119,8 @@ ms.locfileid: "88408792"
 |agregações de janela||NA|NA|sim|Novo operador do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
 <sup>1</sup> Aplica-se ao [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], às camadas Premium do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], às camadas Standard – S3 e posterior, a todas as camadas do vCore e ao [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+
+Para obter mais informações, confira o [Guia da Arquitetura de Processamento de Consultas](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
     
 ### <a name="aggregate-pushdown"></a>Aplicação de agregação    
  Um caminho de execução normal para a computação de agregação para buscar as linhas qualificadas do nó SCAN e agregar os valores no Modo de Lote. Embora isso ofereça bom desempenho, no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a operação de agregação pode ser enviada por push para o nó SCAN para melhorar o desempenho da computação de agregação em ordens de magnitude além da execução do Modo de Lote, desde que as seguintes condições sejam atendidas: 

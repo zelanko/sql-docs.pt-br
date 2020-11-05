@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintaxe de criação de banco de dados para SQL Server, Banco de Dados SQL do Azure, Azure Synapse Analytics e Analytics Platform System
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 211ed452674eb5cfc8d33d648fbefc66913ba4bd
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496911"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235393"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -176,9 +176,9 @@ CREATE DATABASE database_snapshot_name
 
 *database_name* É o nome do novo banco de dados. Nomes de bancos de dados devem ser exclusivos dentro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md).
 
-*database_name* pode conter um máximo de 128 caracteres, a menos que um nome lógico não esteja especificado para o arquivo de log. Se não for especificado um nome de arquivo de log lógico, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará o *logical_file_name* e *os_file_name* para o log acrescentando um sufixo a *database_name* . Isso limita o *database_name* a 123 caracteres de modo que o nome do arquivo lógico gerado não seja maior do que 128 caracteres.
+*database_name* pode conter um máximo de 128 caracteres, a menos que um nome lógico não esteja especificado para o arquivo de log. Se não for especificado um nome de arquivo de log lógico, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará o *logical_file_name* e *os_file_name* para o log acrescentando um sufixo a *database_name*. Isso limita o *database_name* a 123 caracteres de modo que o nome do arquivo lógico gerado não seja maior do que 128 caracteres.
 
-Se o nome do arquivo de dados não for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará *database_name* como o *logical_file_name* e como o *os_file_name* . O caminho padrão é obtido do Registro. O caminho padrão pode ser alterado usando as **Propriedades do Servidor (Página Configurações de Banco de Dados)** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A alteração do caminho padrão exige o reinício do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Se o nome do arquivo de dados não for especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará *database_name* como o *logical_file_name* e como o *os_file_name*. O caminho padrão é obtido do Registro. O caminho padrão pode ser alterado usando as **Propriedades do Servidor (Página Configurações de Banco de Dados)** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A alteração do caminho padrão exige o reinício do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 CONTAINMENT = { NONE | PARTIAL }
 
@@ -426,7 +426,7 @@ Para obter descrições de NAME e FILENAME e seus valores, confira as descriçõ
 > [!NOTE]
 > Quando você cria um instantâneo do banco de dados, as outras opções \<filespec> e a palavra-chave PRIMARY não são permitidas.
 
-AS SNAPSHOT OF *source_database_name* Especifica que o banco de dados que está sendo criado é um instantâneo de banco de dados do banco de dados de origem especificado por *source_database_name* . O instantâneo e o banco de dados de origem devem estar na mesma instância.
+AS SNAPSHOT OF *source_database_name* Especifica que o banco de dados que está sendo criado é um instantâneo de banco de dados do banco de dados de origem especificado por *source_database_name*. O instantâneo e o banco de dados de origem devem estar na mesma instância.
 
 Para saber mais, confira [Instantâneos do banco de dados](#database-snapshots) na seção Comentários.
 
@@ -464,7 +464,7 @@ Ao criar um banco de dados, torne os arquivos de dados tão grandes quanto poss�
 
 ## <a name="database-snapshots"></a>Instantâneos do banco de dados
 
-É possível usar a instrução `CREATE DATABASE` para criar uma exibição estática somente leitura, um *instantâneo do banco de dados* do *banco de dados de origem* . Um instantâneo do banco de dados é transacionalmente consistente com o banco de dados de origem pois existia no momento da criação do banco de dados. Um banco de dados de origem pode ter vários instantâneos.
+É possível usar a instrução `CREATE DATABASE` para criar uma exibição estática somente leitura, um *instantâneo do banco de dados* do *banco de dados de origem*. Um instantâneo do banco de dados é transacionalmente consistente com o banco de dados de origem pois existia no momento da criação do banco de dados. Um banco de dados de origem pode ter vários instantâneos.
 
 > [!NOTE]
 > Quando você cria um instantâneo do banco de dados, a instrução `CREATE DATABASE` não pode fazer referência a arquivos de log, arquivos offline, arquivos de restauração e arquivos extintos.
@@ -979,7 +979,7 @@ CATALOG_COLLATION Especifica a ordenação padrão do catálogo de metadados. *D
 BACKUP_STORAGE_REDUNDANCY Especifica como a restauração pontual e os backups de retenção de longo prazo de um banco de dados são replicados. A restauração geográfica ou a capacidade de recuperar-se da interrupção regional só estará disponível quando o banco de dados for criado com redundância de armazenamento de backup 'GEO'. A menos que especificado explicitamente, os bancos de dados criados com o T-SQL usam o armazenamento de backup com redundância geográfica. 
 
 > [!IMPORTANT]
-> A opção BACKUP_STORAGE_REDUNDANCY do Banco de Dados SQL do Azure está disponível em versão prévia pública apenas na região Sudeste da Ásia do Azure.  
+> A opção BACKUP_STORAGE_REDUNDANCY do Banco de Dados SQL do Azure está disponível em versão prévia pública no Sul do Brasil e está em disponibilidade geral apenas na região Sudeste da Ásia do Azure.  
 
 EDITION Especifica a camada de serviço do banco de dados.
 
@@ -1165,7 +1165,7 @@ O argumento `CATALOG_COLLATION` só está disponível durante a criação do ban
 
 Copiar um banco de dados que usa a instrução `CREATE DATABASE` é uma operação assíncrona. Portanto, uma conexão com o servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] não é necessária para a duração completa do processo de cópia. A instrução `CREATE DATABASE` retornará o controle para o usuário depois que a entrada no sys.databases for criada, mas antes que a operação de cópia de banco de dados seja concluída. Em outras palavras, a instrução `CREATE DATABASE` é retornada com êxito quando a cópia do banco de dados ainda está em andamento.
 
-- Monitoramento do processo de cópia em um servidor [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]: Consulte as colunas `percentage_complete` ou `replication_state_desc` em [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) ou na coluna `state` na exibição **sys.databases** . A exibição [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) pode ser usada e retornará o status das operações de banco de dados, incluindo a cópia do banco de dados.
+- Monitoramento do processo de cópia em um servidor [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]: Consulte as colunas `percentage_complete` ou `replication_state_desc` em [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) ou na coluna `state` na exibição **sys.databases**. A exibição [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) pode ser usada e retornará o status das operações de banco de dados, incluindo a cópia do banco de dados.
 
 Quando o processo de cópia é concluído com êxito, o banco de dados de destino fica transacionalmente consistente com o banco de dados de origem.
 
@@ -1548,37 +1548,37 @@ WITH (
 
 *database_name* O nome do novo banco de dados. Para obter mais informações sobre nomes de banco de dados permitidos, consulte "Regras de nomenclatura de objeto" e "Nomes de banco de dados reservados" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-AUTOGROW = ON | **OFF** Especifica se os parâmetros *replicated_size* , *distributed_size* e *log_size* para esse banco de dados aumentarão automaticamente, conforme necessário, além de seus tamanhos especificados. O valor padrão é **OFF** .
+AUTOGROW = ON | **OFF** Especifica se os parâmetros *replicated_size* , *distributed_size* e *log_size* para esse banco de dados aumentarão automaticamente, conforme necessário, além de seus tamanhos especificados. O valor padrão é **OFF**.
 
 Se AUTOGROW for ON, *replicated_size* , *distributed_size* e *log_size* aumentará conforme necessário (não em blocos do tamanho inicial especificado) com cada inserção de dados, atualização ou outra ação que exige mais armazenamento do que já foi alocado.
 
 Se AUTOGROW for OFF, os tamanhos não aumentarão automaticamente. O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retornará um erro durante a tentativa de uma ação que exige que *replicated_size* , *distributed_size* ou *log_size* aumente além do valor especificado.
 
-AUTOGROW é ON ou OFF para todos os tamanhos. Por exemplo, não é possível definir AUTOGROW ON para *log_size* , mas não defini-lo para *replicated_size* .
+AUTOGROW é ON ou OFF para todos os tamanhos. Por exemplo, não é possível definir AUTOGROW ON para *log_size* , mas não defini-lo para *replicated_size*.
 
-*replicated_size* [GB] Um número positivo. Define o tamanho (em gigabytes de inteiro ou decimal) para o espaço total alocado a tabelas replicadas e os dados correspondentes *em cada nó de Computação* . Para os requisitos de *replicated_size* mínimo e máximo, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*replicated_size* [GB] Um número positivo. Define o tamanho (em gigabytes de inteiro ou decimal) para o espaço total alocado a tabelas replicadas e os dados correspondentes *em cada nó de Computação*. Para os requisitos de *replicated_size* mínimo e máximo, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Se AUTOGROW for ON, as tabelas replicadas terão permissão para aumentar além desse limite.
 
-Se AUTOGROW for OFF, um erro será retornado, caso um usuário tente criar uma nova tabela replicada, inserir dados em uma tabela replicada existente ou atualizar uma tabela replicada existente de uma maneira que aumente o tamanho além de *replicated_size* .
+Se AUTOGROW for OFF, um erro será retornado, caso um usuário tente criar uma nova tabela replicada, inserir dados em uma tabela replicada existente ou atualizar uma tabela replicada existente de uma maneira que aumente o tamanho além de *replicated_size*.
 
-*distributed_size* [GB] Um número positivo. O tamanho, em gigabytes de inteiro ou decimal, para o espaço total alocado para tabelas distribuídas (e os dados correspondentes) *entre o dispositivo* . Para os requisitos de *distributed_size* mínimo e máximo, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*distributed_size* [GB] Um número positivo. O tamanho, em gigabytes de inteiro ou decimal, para o espaço total alocado para tabelas distribuídas (e os dados correspondentes) *entre o dispositivo*. Para os requisitos de *distributed_size* mínimo e máximo, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Se AUTOGROW for ON, as tabelas distribuídas terão permissão para aumentar além desse limite.
 
-Se AUTOGROW for OFF, um erro será retornado, caso um usuário tente criar uma nova tabela distribuída, inserir dados em uma tabela distribuída existente ou atualizar uma tabela distribuída existente de uma maneira que aumente o tamanho além de *distributed_size* .
+Se AUTOGROW for OFF, um erro será retornado, caso um usuário tente criar uma nova tabela distribuída, inserir dados em uma tabela distribuída existente ou atualizar uma tabela distribuída existente de uma maneira que aumente o tamanho além de *distributed_size*.
 
-*log_size* [GB] Um número positivo. O tamanho (em gigabytes de inteiro ou decimal) para o log de transações *entre o dispositivo* .
+*log_size* [GB] Um número positivo. O tamanho (em gigabytes de inteiro ou decimal) para o log de transações *entre o dispositivo*.
 
 Para os requisitos de *log_size* mínimo e máximo, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Se AUTOGROW for ON, o arquivo de log poderá aumentar além desse limite. Use a instrução [DBCC SHRINKLOG (Azure Synapse Analytics)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) para reduzir o tamanho dos arquivos de log para seu tamanho original.
 
-Se AUTOGROW for OFF, um erro será retornado para o usuário para qualquer ação que aumente o tamanho do log em um nó de Computação individual para além de *log_size* .
+Se AUTOGROW for OFF, um erro será retornado para o usuário para qualquer ação que aumente o tamanho do log em um nó de Computação individual para além de *log_size*.
 
 ## <a name="permissions"></a>Permissões
 
-Exige a permissão `CREATE ANY DATABASE` no banco de dados mestre ou a associação à função de servidor fixa **sysadmin** .
+Exige a permissão `CREATE ANY DATABASE` no banco de dados mestre ou a associação à função de servidor fixa **sysadmin**.
 
 O exemplo a seguir fornece a permissão para criar um banco de dados para o usuário Fay de banco de dados.
 
@@ -1601,7 +1601,7 @@ Para obter informações sobre restrições mínimas e máximas em bancos de dad
 
 No momento em um banco de dados é criado, deve haver espaço livre suficiente disponível *em cada nó de Computação* para alocar o total combinado dos seguintes tamanhos:
 
-- Banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com tabelas com o tamanho de *replicated_table_size* .
+- Banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com tabelas com o tamanho de *replicated_table_size*.
 - Banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com tabelas com o tamanho do ( *distributed_table_size* /número de nós de Computação).
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra em log o tamanho de ( *log_size* /número de nós de Computação).
 
