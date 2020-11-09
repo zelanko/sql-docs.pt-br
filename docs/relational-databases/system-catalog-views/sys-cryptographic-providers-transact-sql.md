@@ -1,6 +1,6 @@
 ---
 description: sys.cryptographic_providers (Transact-SQL)
-title: sys. cryptographic_providers (Transact-SQL) | Microsoft Docs
+title: sys.cryptographic_providers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 898522531177d562ce15f81512efd49b47762958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 305ea4a72855dd5ba136740dcc9b4321826384ad
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402392"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384767"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,15 +38,12 @@ ms.locfileid: "88402392"
 |**provider_id**|**int**|Número de identificação do provedor criptográfico.|  
 |**name**|**sysname**|Nome do provedor criptográfico.|  
 |**guid**|**uniqueidentifier**|GUID de provedor exclusivo.|  
-|**version**|**nvarchar(50)**|Versão do provedor no formato '*AA.BB.cccc.DD*'.|  
+|**version**|**nvarchar(50)**|Versão do provedor no formato ' *AA.BB.cccc.DD* '.|  
 |**dll_path**|**nvarchar(512)**|Caminho para a DLL que implementa a interface de aplicativo (API) do Gerenciamento Extensível de Chaves.|  
 |**is_enabled**|**bit**|Indica se o provedor está habilitado no servidor ou não.<br /><br /> 0 = Não habilitado (padrão)<br /><br /> 1 = habilitado|  
   
-## <a name="remarks"></a>Comentários  
- A exibição **Sys. cryptographic_providers** é visível para o público.  
-  
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ A exibição de **Sys.cryptographic_providers** é visível para o público.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 911b56023ea78ec75e605a39a39b705724101dee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59cc4c80781f899701f872bd1e8cdd1eea823358
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719933"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384717"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapeando dados de parâmetro CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85719933"
 |-|-|-|  
 |**Tipo de dados do SQL Server**|Tipo (em System.Data.SqlTypes ou Microsoft.SqlServer.Types)|**Tipo de dados CLR (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64, anulável\<Int64>**|  
-|**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
+|**binary**|**SqlBytes, SqlBinary**|**Byte []**|  
 |**bit**|**SqlBoolean**|**Booliano, anulável\<Boolean>**|  
 |**char**|Nenhum|Nenhum|  
 |**cursor**|Nenhum|Nenhum|  
@@ -51,9 +51,9 @@ ms.locfileid: "85719933"
 |**DATETIMEOFFSET**|**Nenhuma**|**DateTimeOffset, anulável\<DateTimeOffset>**|  
 |**decimal**|**SqlDecimal**|**Decimal, anulável\<Decimal>**|  
 |**float**|**SqlDouble**|**Double, anulável\<Double>**|  
-|**gráfico**|**SqlGeography**<br /><br /> **Geography** é definido no Microsoft.SqlServer.Types.dll, que é instalado com SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|Nenhum|  
-|**Geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** é definido no Microsoft.SqlServer.Types.dll, que é instalado com SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|Nenhum|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** é definido no Microsoft.SqlServer.Types.dll, que é instalado com SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|Nenhum|  
+|**geografia**|**SqlGeography**<br /><br /> **Geography** é definido no Microsoft.SqlServer.Types.dll, que é instalado com SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=100430).|Nenhum|  
+|**geometria**|**SqlGeometry**<br /><br /> **SqlGeometry** é definido no Microsoft.SqlServer.Types.dll, que é instalado com SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=100430).|Nenhum|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** é definido no Microsoft.SqlServer.Types.dll, que é instalado com SQL Server e pode ser baixado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=100430).|Nenhum|  
 |**imagem**|Nenhum|Nenhum|  
 |**int**|**SqlInt32**|**Int32, anulável\<Int32>**|  
 |**money**|**SqlMoney**|**Decimal, anulável\<Decimal>**|  
@@ -62,8 +62,8 @@ ms.locfileid: "85719933"
 |**numeric**|**SqlDecimal**|**Decimal, anulável\<Decimal>**|  
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SqlChars** é uma correspondência melhor para transferência e acesso de dados, e **SqlString** é uma correspondência melhor para executar operações de cadeia de caracteres.|**String, Char[]**|  
 |**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, String, Char [], Nullable\<char>**|  
-|**real**|**SqlSingle** (o intervalo de **SqlSingle**, no entanto, é maior do que o **real**)|**Única, anulável\<Single>**|  
-|**rowversion**|Nenhum|**Byte[]**|  
+|**real**|**SqlSingle** (o intervalo de **SqlSingle** , no entanto, é maior do que o **real** )|**Única, anulável\<Single>**|  
+|**rowversion**|Nenhum|**Byte []**|  
 |**smallint**|**SqlInt16**|**Int16, anulável\<Int16>**|  
 |**smallmoney**|**SqlMoney**|**Decimal, anulável\<Decimal>**|  
 |**sql_variant**|Nenhum|**Objeto**|  
@@ -74,15 +74,15 @@ ms.locfileid: "85719933"
 |**tinyint**|**SqlByte**|**Byte, anulável\<Byte>**|  
 |**uniqueidentifier**|**SqlGuid**|**GUID, anulável\<Guid>**|  
 |**Tipo definido pelo usuário (UDT)**|Nenhum|A mesma classe que é associada ao tipo definido pelo usuário no mesmo assembly ou em um assembly dependente.|  
-|**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
+|**varbinary**|**SqlBytes, SqlBinary**|**Byte []**|  
 |**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte [], anulável\<byte>**|  
 |**varchar**|Nenhum|Nenhum|  
 |**xml**|**SqlXml**|Nenhum|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Conversão automática de tipo de dados com parâmetros out  
- Um método CLR pode retornar informações para o código ou programa de chamada, marcando um parâmetro de entrada com o modificador **out** (Microsoft Visual C#) ou ** \<Out()> ByRef** (Microsoft Visual Basic) se o parâmetro de entrada for um tipo de dados CLR no **sistema. o namespace Data. SqlTypes** e o programa de chamada especifica seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados equivalente como o parâmetro de entrada, uma conversão de tipo ocorre automaticamente quando o método CLR retorna o tipo de dados.  
+ Um método CLR pode retornar informações para o código ou programa de chamada, marcando um parâmetro de entrada com o modificador **out** (Microsoft Visual C#) ou **\<Out()> ByRef** (Microsoft Visual Basic) se o parâmetro de entrada for um tipo de dados CLR no **sistema. o namespace Data. SqlTypes** e o programa de chamada especifica seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados equivalente como o parâmetro de entrada, uma conversão de tipo ocorre automaticamente quando o método CLR retorna o tipo de dados.  
   
- Por exemplo, o procedimento armazenado CLR a seguir tem um parâmetro de entrada de tipo de dados CLR **SqlInt32** que é marcado com **out** (C#) ou ** \<Out()> ByRef** (Visual Basic):  
+ Por exemplo, o procedimento armazenado CLR a seguir tem um parâmetro de entrada de tipo de dados CLR **SqlInt32** que é marcado com **out** (C#) ou **\<Out()> ByRef** (Visual Basic):  
   
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
@@ -121,7 +121,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |Conteúdo atualizado|  
 |---------------------|  
-|Os tipos **geography**, **SqlGeometry**e **SqlHierarchyId** foram adicionados à tabela de mapeamento.|  
+|Os tipos **geography** , **SqlGeometry** e **SqlHierarchyId** foram adicionados à tabela de mapeamento.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tipos de dados do SQL Server no .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
