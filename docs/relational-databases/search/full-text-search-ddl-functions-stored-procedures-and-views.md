@@ -25,7 +25,7 @@ ms.locfileid: "88498579"
   
  Essa lista não inclui objetos preteridos.  
   
- Para obter a lista de objetos de banco de dados que oferecem suporte à pesquisa semântica, consulte [Pesquisa de semântica DDL, funções, procedimentos armazenados e exibições](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
+ Para obter a lista de objetos de banco de dados que oferecem suporte à pesquisa semântica, consulte [Pesquisa semântica DDL, funções, procedimentos armazenados e exibições](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
   
 ##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instruções DDL (linguagem de definição de dados) Transact-SQL  
   

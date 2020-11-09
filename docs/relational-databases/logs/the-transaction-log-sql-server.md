@@ -62,11 +62,11 @@ O Agente de Leitor de Log monitora o log de transações de cada banco de dados 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Suporte a soluções de recuperação de desastres e alta disponibilidade
 As soluções do servidor em espera, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], o espelhamento de banco de dados e o envio de logs dependem muito do log de transações. 
 
-Em um **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cenário**, cada atualização de um banco de dados, a réplica primária, é imediatamente reproduzida em cópias completas e separadas do banco de dados, as réplicas secundárias. A réplica primária envia imediatamente cada registro de log para as réplicas secundárias, que aplica os registros de log de entrada nos bancos de dados de grupo de disponibilidade, efetuando roll forward de forma contínua. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+Em um **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cenário** , cada atualização de um banco de dados, a réplica primária, é imediatamente reproduzida em cópias completas e separadas do banco de dados, as réplicas secundárias. A réplica primária envia imediatamente cada registro de log para as réplicas secundárias, que aplica os registros de log de entrada nos bancos de dados de grupo de disponibilidade, efetuando roll forward de forma contínua. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
-Em um **cenário de envio de logs**, o servidor primário envia o log de transações ativas do banco de dados primário para um ou mais destinos. Cada servidor secundário restaura o log a seu banco de dados secundário local. Para obter mais informações, consulte [Sobre o Envio de Logs](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
+Em um **cenário de envio de logs** , o servidor primário envia o log de transações ativas do banco de dados primário para um ou mais destinos. Cada servidor secundário restaura o log a seu banco de dados secundário local. Para obter mais informações, consulte [Sobre o Envio de Logs](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
 
-Em um **cenário de espelhamento de banco de dados**, cada atualização de um banco de dados, o banco de dados principal, é imediatamente reproduzida em uma cópia completa e separada do banco de dados, o banco de dados espelho. A instância do servidor principal envia imediatamente cada registro de log para a instância do servidor espelho, a qual aplica os registros de log de entrada ao banco de dados espelho, efetuando roll forward de forma contínua. Para obter mais informações, veja [Espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
+Em um **cenário de espelhamento de banco de dados** , cada atualização de um banco de dados, o banco de dados principal, é imediatamente reproduzida em uma cópia completa e separada do banco de dados, o banco de dados espelho. A instância do servidor principal envia imediatamente cada registro de log para a instância do servidor espelho, a qual aplica os registros de log de entrada ao banco de dados espelho, efetuando roll forward de forma contínua. Para obter mais informações, veja [Espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
 ##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>Características de log de transações
 Características do log de transações [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]: 
@@ -96,7 +96,7 @@ Para evitar a falta de espaço, a menos que o truncamento de log seja atrasado p
 > O truncamento de log não reduz o tamanho do arquivo de log físico. Para reduzir o tamanho físico de um arquivo de log físico, você deve reduzir o arquivo de log. Para obter informações sobre como encolher o tamanho do arquivo de log físico, consulte [Gerenciar o tamanho do arquivo de log de transações](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > No entanto, tenha em mente os [Fatores que podem atrasar o truncamento de log](#FactorsThatDelayTruncation). Se o espaço de armazenamento for necessário novamente após a redução de um log, o log de transações aumentará novamente e, fazendo isso, introduzirá uma sobrecarga de desempenho durante as operações de aumento do log.
   
-##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Fatores que podem atrasar o truncamento de log  
  Quando os registros de log permanecem ativos por muito tempo, o truncamento do log de transações é atrasado e esse log poderá ocupar todo o espaço, como mencionado anteriormente nesse tópico.  
   
 > [!IMPORTANT]
@@ -124,7 +124,7 @@ Para evitar a falta de espaço, a menos que o truncamento de log seja atrasado p
 |16|XTP_CHECKPOINT|Um ponto de verificação do OLTP in-memory precisa ser executado. Para tabelas com otimização de memória, um ponto de verificação automático é obtido quando o arquivo de log de transações se torna maior que 1,5 GB desde o último ponto de verificação (inclui as tabelas baseadas em disco e com otimização de memória)<br /> Para obter mais informações, confira [Operação de ponto de verificação para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) e [Processo de log e ponto de verificação para tabelas com otimização na memória] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
 ##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> Operações que podem ser minimamente registradas em log  
-O*registro mínimo em log* envolve o registro somente das informações que são necessárias para recuperar a transação sem oferecer suporte à recuperação pontual. Este tópico identifica as operações com registro mínimo em log no [modelo de recuperação](../backup-restore/recovery-models-sql-server.md) bulk-logged (como também no modelo de recuperação simples, exceto quando há um backup em execução).  
+O *registro mínimo em log* envolve o registro somente das informações que são necessárias para recuperar a transação sem oferecer suporte à recuperação pontual. Este tópico identifica as operações com registro mínimo em log no [modelo de recuperação](../backup-restore/recovery-models-sql-server.md) bulk-logged (como também no modelo de recuperação simples, exceto quando há um backup em execução).  
   
 > [!NOTE]
 > O log mínimo não tem suporte para tabelas com otimização de memória.  
@@ -144,10 +144,10 @@ Quando a replicação transacional está habilitada, as operações `SELECT INTO
   
 -   Atualizações parciais em tipos de dados de valor grande, usando a cláusula `.WRITE` na instrução [UPDATE](../../t-sql/queries/update-transact-sql.md) ao inserir ou acrescentar novos dados. Observe que o log mínimo não é usado quando valores existentes estão sendo atualizados. Para obter mais informações sobre tipos de dados de valor grandes, consulte [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
--   Instruções[WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) e [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) ao inserir ou anexar novos dados em colunas de tipos de dados **text**, **ntext**, e **image** . Observe que o log mínimo não é usado quando valores existentes estão sendo atualizados.  
+-   Instruções [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) e [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) ao inserir ou anexar novos dados em colunas de tipos de dados **text** , **ntext** , e **image** . Observe que o log mínimo não é usado quando valores existentes estão sendo atualizados.  
   
     > [!WARNING]
-    > As instruções `WRITETEXT` e `UPDATETEXT` foram **preteridas**; evite usá-las em novos aplicativos.  
+    > As instruções `WRITETEXT` e `UPDATETEXT` foram **preteridas** ; evite usá-las em novos aplicativos.  
   
 -   Se o banco de dados for definido como o modelo de recuperação simples ou bulk-logged, algumas operações INDEX DDL terão log mínimo, independentemente de elas serem executadas offline ou online. As operações de índice de log mínimo são:  
   
@@ -156,7 +156,7 @@ Quando a replicação transacional está habilitada, as operações `SELECT INTO
     -   Operações[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD ou DBCC DBREINDEX.  
   
         > [!WARNING]
-        > A instrução `DBCC DBREINDEX` foi **preterido**; não a use em novos aplicativos.  
+        > A instrução `DBCC DBREINDEX` foi **preterido** ; não a use em novos aplicativos.  
   
         > [!NOTE]
         > As operações de build de índice usam o log mínimo, mas podem ser atrasadas quando há um backup em execução simultânea. Esse atraso é causado pelos requisitos de sincronização de páginas do pool de buffers com log mínimo ao usar o modelo de recuperação simples ou bulk-logged. 
