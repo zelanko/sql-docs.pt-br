@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e80892bfef7ee2c8cf22aef1b491ab5ea0c0addd
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987992"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235560"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Conectar o SQL Server ao Azure Arc
 
@@ -24,6 +24,10 @@ Você pode conectar a instância do SQL Server local com o Azure Arc seguindo es
 * Seu computador precisa ter pelo menos uma instância do SQL Server instalada
 * Para computadores Windows, o Azure PowerShell precisa estar instalado. Siga as instruções para [instalar o Azure PowerShell](/powershell/azure/install-az-ps).
 * Para computadores Linux, você precisa ter baixado a CLI do Azure e conectado-se usando sua conta do Azure. Siga as instruções para [instalar a CLI do Azure](/cli/azure/install-azure-cli-apt).
+* O provedor de recursos **Microsoft.AzureData** foi registrado. Para obter mais informações sobre os provedores de recursos, confira Provedores e tipos de recursos do Azure.
+    * No PowerShell, execute `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`
+    * No Linux, execute `az provider register --namespace 'Microsoft.AzureData`
+
 
 
 ## <a name="generate-a-registration-script-for-sql-server"></a>Gerar um script de registro para o SQL Server

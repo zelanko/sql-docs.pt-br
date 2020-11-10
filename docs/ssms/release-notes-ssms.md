@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734644"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364776"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas sobre a versão do SQL Server Management Studio (SSMS)
 
@@ -123,7 +123,7 @@ O SSMS 18.7 é a última versão de GA (disponibilidade geral) do SSMS. Se você
 | Analysis Services | Corrigido um problema que poderia resultar em um erro ao tentar se conectar ao SSAS por meio do msmdpump.dll. Confira os [Comentários do Usuário do SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). |
 | Backup/restauração | Corrigido um problema em que a seleção de "Exibir Propriedades de Conexão" gerava um erro SMO de propriedade HostDistribution ausente para o SQL 2016 e anterior. |
 | Designer de Banco de Dados | Corrigido um problema que causava falha do SSMS ao manipular números decimais. |
-| Diagramas de banco de dados | Corrigido um problema que poderia fazer com que o SSMS falhasse ou travasse ao usar Diagramas de Banco de Dados nos quais a caixa de diálogo "Adicionar Tabela" não fosse exibida corretamente. |
+| Diagramas de banco de dados | Corrigido um problema que poderia fazer com que o SSMS falhasse ou parasse de responder ao usar Diagramas de Banco de Dados nos quais a caixa de diálogo "Adicionar Tabela" não fosse exibida corretamente. |
 | Espelhamento de banco de dados | Corrigido um problema que causava falha da configuração do espelho. Confira os [Comentários do Usuário do SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281). |
 | SSMS geral | Corrigido um problema ao tentar se conectar a um Banco de Dados SQL do Azure, o que poderia levar vários segundos (logon do SQL em um banco de dados de usuário). |
 | SSMS geral | Corrigido um problema em que o SSMS não manipulava/exibia o deadlock capturado (arquivos .xdl). |
@@ -164,7 +164,7 @@ O SSMS 18.7 é a última versão de GA (disponibilidade geral) do SSMS. Se você
 
 ### <a name="186"></a>18.6
 
-![baixar](media/download-icon.png) [Baixar o SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2146265)
+![baixar](media/download-icon.png) [Baixar o SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Número da versão: 18.6
 - Número de build: 15.0.18338.0

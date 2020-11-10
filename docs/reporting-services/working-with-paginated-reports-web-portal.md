@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1ebe16bd9b9474b892346ec2a8dd6f25254c6d0b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935414"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243755"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabalhando com relatórios paginados (portal da Web)
 
@@ -30,7 +30,7 @@ Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.
   
 2.  Selecione **Relatório Paginado**.  
   
-    ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
+    ![Captura de tela mostrando a Nova lista suspensa com a opção Relatório Paginado em destaque.](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  Isso iniciará o Construtor de Relatórios ou solicitará que você o baixe.  
   
@@ -45,28 +45,28 @@ Para gerenciar um relatório paginado existente, você pode fazer o seguinte.
   
 1.  Selecione as **reticências (...)** do conjunto de dados que deseja gerenciar.  
       
-    ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
+    ![Captura de tela mostrando o usuário selecionando a opção de reticências para o conjunto de dados.](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
 2.  Selecione **Gerenciar** , o que levará você até a tela de edição.  
     
-    ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
+    ![Captura de tela mostrando a opção de reticências selecionada e a opção GERENCIAR em destaque.](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## <a name="properties"></a>Propriedades  
   
-Na tela de propriedades, você pode alterar o **nome** a e **descrição** do relatório paginado. Você também pode **Excluir**, **Mover**, **Criar um relatório vinculado**, **Editar no Construtor de Relatórios**, **Baixar** ou **Substituir**.  
+Na tela de propriedades, você pode alterar o **nome** a e **descrição** do relatório paginado. Você também pode **Excluir** , **Mover** , **Criar um relatório vinculado** , **Editar no Construtor de Relatórios** , **Baixar** ou **Substituir**.  
     
-![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
+![Captura de tela mostrando a tela Propriedades da caixa de diálogo Editar Vendas da Empresa.](../reporting-services/media/ssrswebportal-report-properties.png)  
    
 ## <a name="parameters"></a>Parâmetros  
   
 Você pode modificar os parâmetros existentes de um relatório paginado. Para adicionar um novo parâmetro, você deve editar o relatório no Construtor de Relatórios ou no SQL Server Data Tools.  
   
-![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
+![Captura de tela mostrando a tela Parâmetros da caixa de diálogo Editar Vendas da Empresa.](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
 ## <a name="data-source"></a>fonte de dados  
 Você pode apontar para uma fonte de dados compartilhada ou inserir informações de conexão para uma fonte de dados personalizada.  
   
-![ssRSWebPortal-relatório de datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
+![Captura de tela mostrando a tela Fontes de Dados da caixa de diálogo Editar Vendas da Empresa.](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 As opções a seguir são usadas para especificar uma fonte de dados personalizada.  
   
@@ -122,7 +122,7 @@ Para usar essa opção, a conta de execução autônoma deve estar previamente c
 ## <a name="subscriptions"></a>Assinaturas  
 Uma assinatura do Reporting Services é uma configuração que fornece um relatório em um momento específico ou em resposta a um evento, em um formato de arquivo que você especificar. Por exemplo, toda quarta-feira, salvar o relatório MonthlySales.rdl como um documento do Microsoft Word em um compartilhamento de arquivo. As assinaturas podem ser usadas para agendar e automatizar a entrega de um relatório e com um conjunto específico de valores de parâmetros do relatório. Para obter mais informações, consulte [Trabalhando com assinaturas](working-with-subscriptions-web-portal.md).
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
+![Captura de tela mostrando a tela Assinaturas da caixa de diálogo Editar Vendas da Empresa.](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Itens Dependentes  
 Use a página Itens Dependentes para exibir uma lista de itens que fazem referência a este relatório. O ícone para cada tipo de item indica do que se trata. Em seguida, selecione as **reticências (...)** em cada item para gerenciar esses itens mais detalhadamente.  
@@ -136,11 +136,11 @@ Quando o assunto é armazenar dados em cache para um relatório paginado, há op
   
 3.  **Sempre executar esse relatório contra instantâneos gerados previamente** armazenará os dados e o layout do relatório em cache durante um determinado período de tempo. Você pode executar um relatório como instantâneo de relatório para evitar que o relatório seja executado em momentos arbitrários (durante um backup agendado, por exemplo). O instantâneo pode ser atualizado em uma agenda. [Saiba mais]  
   
-![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
+![Captura de tela mostrando a tela Cache da caixa de diálogo Editar Vendas da Empresa com a opção Sempre executar este relatório com os dados mais recentes selecionada.](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
 A seleção de **Armazenar cópias deste relatório em cache e utilizá-las quando disponíveis** apresentará algumas opções adicionais.  
   
-![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+![Captura de tela mostrando a tela Cache da caixa de diálogo Editar Vendas da Empresa com a opção Armazenar cópias deste relatório em cache e usá-las quando disponíveis selecionada.](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
 Para obter mais informações, consulte [Trabalhando com instantâneos](working-with-snapshots-web-portal.md).
   
@@ -163,7 +163,7 @@ Para criar um novo plano de atualização de cache, escolha **Novo Plano de Atua
   
 Quando terminar, selecione **Criar Plano de Atualização do Cache**.  
   
-![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
+![Captura de tela da caixa de diálogo Editar Vendas da Empresa mostrando a opção Criar Plano de Atualização do Cache.](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > O SQL Server Agent precisa estar em execução para criar um plano de atualização do cache.  

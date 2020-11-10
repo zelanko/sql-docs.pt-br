@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 97502e9f1e8c5784afb2d8ad05f8fb2a05dab57a
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 36e9563d26030181c943ace428ca4eb3176bdd43
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935558"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043837"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Adicionar os tipos de conteúdo do Reporting Services a uma biblioteca do SharePoint
 
@@ -23,7 +23,7 @@ ms.locfileid: "91935558"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece tipos de conteúdo predefinidos do SharePoint usados para gerenciar arquivos de fonte de dados compartilhada (.rsds), modelos de relatórios (.smdl) e arquivos de definição de relatório (.rdl) do Construtor de Relatórios. A adição de um tipo de conteúdo do **Construtor de Relatórios**, do **Modelo de Relatório**ou da **Fonte de Dados de Relatório** a uma biblioteca ativa o comando **Novo** para que você possa criar novos documentos desse tipo.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece tipos de conteúdo predefinidos do SharePoint usados para gerenciar arquivos de fonte de dados compartilhada (.rsds), modelos de relatórios (.smdl) e arquivos de definição de relatório (.rdl) do Construtor de Relatórios. A adição de um tipo de conteúdo do **Construtor de Relatórios** , do **Modelo de Relatório** ou da **Fonte de Dados de Relatório** a uma biblioteca ativa o comando **Novo** para que você possa criar novos documentos desse tipo.
 
 > [!NOTE]
 > A integração do Reporting Services ao SharePoint não está mais disponível após o SQL Server 2016.
@@ -63,17 +63,17 @@ ms.locfileid: "91935558"
   
     -   No SharePoint 2013, clique no ícone **Configurações** . ![Configurações do SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint")  
   
-    -   No SharePoint 2010, clique em **Ações do Site**e, depois, em **Configurações de Site**.  
+    -   No SharePoint 2010, clique em **Ações do Site** e, depois, em **Configurações de Site**.  
   
 3.  Clique em **Recursos do conjunto de sites**.  
   
 4.  Localize o **Recurso de Integração do Servidor de Relatório** e clique em **Desativar**.  
   
-     ![rs_reportserver_integration_active](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
+     ![Captura de tela do Recurso de Integração do Servidor de Relatório mostrando as opções Desativar e Ativar.](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
   
 5.  Atualize o navegador e clique em **Ativar** para o **Recurso de Integração do Servidor de Relatório**.  
   
-     ![rs-reportserver-integration-deactivate](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
+     ![Captura de tela do Recurso de Integração do Servidor de Relatório mostrando a opção Ativar.](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> Para habilitar o gerenciamento de tipo de conteúdo para uma única biblioteca de documentos (SharePoint 2013)  
   
@@ -103,11 +103,11 @@ ms.locfileid: "91935558"
   
 3.  Clique em **Configurações da Biblioteca**.  
   
-4.  Em **Tipos de Conteúdo**, clique em **Adicionar a partir de tipos de conteúdo de site existentes**.  
+4.  Em **Tipos de Conteúdo** , clique em **Adicionar a partir de tipos de conteúdo de site existentes**.  
   
-5.  Em **Selecionar tipos de conteúdo de site de**, selecione **Tipos de Conteúdo do SQL Server Reporting Services**.  
+5.  Em **Selecionar tipos de conteúdo de site de** , selecione **Tipos de Conteúdo do SQL Server Reporting Services**.  
   
-6.  Na lista **Tipos Disponíveis de Conteúdo do Site** , clique em **Construtor de Relatórios**e em **Adicionar** para mover o tipo de conteúdo selecionado para a lista **Tipos de conteúdo a serem adicionados** .  
+6.  Na lista **Tipos Disponíveis de Conteúdo do Site** , clique em **Construtor de Relatórios** e em **Adicionar** para mover o tipo de conteúdo selecionado para a lista **Tipos de conteúdo a serem adicionados** .  
   
 7.  Para adicionar os tipos de conteúdo **Modelo de Relatório** e **Fonte de Dados do Relatório** , repita a etapa anterior.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "91935558"
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a> Para habilitar o gerenciamento de tipo de conteúdo para uma única biblioteca de documentos (SharePoint 2010)  
   
-1.  Abra a biblioteca para a qual você deseja habilitar vários tipos de conteúdo. Na barra de menus da biblioteca, os seguintes menus serão exibidos: **Novo**, **Carregar**, **Ações** e **Configurações**. Se **Configurações**não aparecer, você não terá permissão para adicionar um tipo de conteúdo.  
+1.  Abra a biblioteca para a qual você deseja habilitar vários tipos de conteúdo. Na barra de menus da biblioteca, os seguintes menus serão exibidos: **Novo** , **Carregar** , **Ações** e **Configurações**. Se **Configurações** não aparecer, você não terá permissão para adicionar um tipo de conteúdo.  
   
 2.  Na faixa de opções **Ferramentas de Biblioteca** , clique em **Biblioteca**.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "91935558"
   
 3.  No grupo da faixa de opções **Configurações** , clique em **Configurações da Biblioteca**.  
   
-4.  Em **Configurações Gerais**, clique em **Configurações avançadas**.  
+4.  Em **Configurações Gerais** , clique em **Configurações avançadas**.  
   
 5.  Na seção **Tipos de Conteúdo** , selecione **Sim** para permitir o gerenciamento de tipos de conteúdo.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "91935558"
   
 3.  No grupo da faixa de opções **Configurações** , clique em **Configurações da Biblioteca**.  
   
-4.  Em **Tipos de Conteúdo**, clique em **Adicionar a partir de tipos de conteúdo de site existentes**.  
+4.  Em **Tipos de Conteúdo** , clique em **Adicionar a partir de tipos de conteúdo de site existentes**.  
   
-5.  Na seção **Selecionar Tipos de Conteúdo** , em **Selecionar tipos de conteúdo de site de**, clique na seta para selecionar **Tipos de Conteúdo do SQL Server Reporting Services**.  
+5.  Na seção **Selecionar Tipos de Conteúdo** , em **Selecionar tipos de conteúdo de site de** , clique na seta para selecionar **Tipos de Conteúdo do SQL Server Reporting Services**.  
   
-6.  Na lista **Tipos Disponíveis de Conteúdo do Site** , clique em **Construtor de Relatórios**e em **Adicionar** para mover o tipo de conteúdo selecionado para a lista **Tipos de conteúdo a serem adicionados** .  
+6.  Na lista **Tipos Disponíveis de Conteúdo do Site** , clique em **Construtor de Relatórios** e em **Adicionar** para mover o tipo de conteúdo selecionado para a lista **Tipos de conteúdo a serem adicionados** .  
   
 7.  Para adicionar os tipos de conteúdo **Modelo de Relatório** e **Fonte de Dados do Relatório** , repita a etapa anterior.  
   

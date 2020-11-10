@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: b44e664d75735a6283d12f218b904fbdd07ad481
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1af364896504dff41ab01095a69e8f581e792096
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396528"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243700"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novidades do SQL Server Reporting Services (SSRS)
 
@@ -29,7 +29,7 @@ Para obter informações sobre o Servidor de Relatórios do Power BI, consulte [
 
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+**Baixar** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 O [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) está disponível para download no Centro de Download da Microsoft.
 
@@ -67,7 +67,7 @@ A versão lançada recentemente do Construtor de Relatórios é totalmente compa
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
 
-**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+**Baixar** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 Para baixar o SQL Server 2017 Reporting Services, acesse o **[Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
@@ -117,7 +117,7 @@ Para criar Relatórios Móveis, você precisará do [!INCLUDE[SS_MobileReptPub_S
 
 Para saber mais sobre o [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], veja o [Portal da Web SSRS Modo Nativo](../reporting-services/web-portal-ssrs-native-mode.md).  
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
+![Captura de tela mostrando o portal do SQL Server Reporting Services.](../reporting-services/media/ssrsportal.png "ssRSPortal")  
 
 #### <a name="custom-branding-for-the-ssrswebportal-non-markdown"></a>Identidade visual personalizada para o [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -129,7 +129,7 @@ Para obter mais informações sobre identidade visual personalizada, consulte [I
 
 Você pode criar KPIs contextuais no [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] para a pasta atual. Quando criar KPIs, escolha campos do conjunto de dados e resuma os valores. Você também pode escolher o conteúdo relacionado a drill-through para ver mais detalhes.
 
-![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
+![Captura de tela mostrando KPIs no portal do SQL Server Reporting Services.](../reporting-services/media/ssrs-webportal-kpi.png)
 
 Para obter mais informações, consulte [Working with KPIs in the web portal](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb) (Trabalhando com KPIs no portal da Web)
 
@@ -194,13 +194,13 @@ Para obter mais informações sobre o suporte ao navegador, veja [Suporte ao nav
 
 ![observação](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "observação") A atualização é gerenciada pelas assinaturas do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, depois que o item é fixado, você pode editar a assinatura e configurar outro agendamento de atualização.
 
-![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
+![Captura de tela mostrando a caixa de diálogo Fixar ao Dashboard do Power BI.](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
 Para obter mais informações, consulte [Integração do Servidor de Relatórios do Power BI &#40;Gerenciador de Configurações&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) e [Fixar itens do Reporting Services nos painéis do Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
 **Renderização e Exportação do PowerPoint:** O formato Microsoft PowerPoint (PPTX) é uma nova extensão de renderização do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Você pode exportar relatórios no formato PPTX de aplicativos comuns; Construtor de Relatórios, Designer de Relatórios (no SSDT) e o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Por exemplo, a imagem a seguir mostra o menu de exportação do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
-![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
+![Captura de tela mostrando a lista suspensa Exportar com a opção do PowerPoint em destaque.](../reporting-services/media/ssrs-export-powerpoint.png) 
 
 Você também pode selecionar o formato PPTX para saída de assinatura e usar o acesso à URL do Servidor de Relatório para renderizar e exportar um relatório. Por exemplo, o seguinte comando de URL no seu navegador exporta um relatório de uma instância nomeada do servidor de relatório.  
 
@@ -214,13 +214,13 @@ Para saber mais, confira [Export a Report Using URL Access](../reporting-service
 
 Para obter mais informações, consulte [Habilitar e desabilitar a impressão do lado do cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
-![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
+![Captura de tela da caixa de diálogo Imprimir.](../reporting-services/media/ssrs-pdf-printing.png)
 
 ### <a name="subscription-improvements"></a>Aprimoramentos de Assinatura  
 
 |Recurso|Modo de servidor com suporte|  
 |-------------|---------------------------|  
-|**Habilitar e desabilitar assinaturas**. Novas opções de interface de usuário para desabilitar e habilitar rapidamente as assinaturas. As assinaturas desabilitadas mantêm suas outras propriedades de configuração, como o cronograma, e podem ser facilmente habilitadas.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Para saber mais, confira [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|nativo|  
+|**Habilitar e desabilitar assinaturas**. Novas opções de interface de usuário para desabilitar e habilitar rapidamente as assinaturas. As assinaturas desabilitadas mantêm suas outras propriedades de configuração, como o cronograma, e podem ser facilmente habilitadas.<br /><br /> ![Captura de tela mostrando as opções Habilitar, Desabilitar e Excluir.](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Para saber mais, confira [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|nativo|  
 |**Descrição da assinatura**. Quando você cria uma nova assinatura, você pode incluir uma descrição do relatório como parte das propriedades de assinatura. A descrição será incluída na página de resumo da assinatura.|Modo do SharePoint e Nativo|  
 |**Alterar o proprietário da assinatura**. Interface de usuário aprimorada para alterar rapidamente o proprietário de uma assinatura. As versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] permitem que os administradores alterem os proprietários de assinatura usando o script. A partir da versão [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , você pode alterar os proprietários da assinatura usando a interface do usuário ou o script. Alterar o proprietário da assinatura é uma tarefa administrativa comum quando os usuários deixam ou alteraram funções em sua organização.|Modo do SharePoint e Nativo|  
 |**Credenciais compartilhadas para assinaturas de compartilhamento de arquivos**. Agora existem dois fluxos de trabalho com as assinaturas de compartimento de arquivos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Novidades desta versão, o administrador do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode configurar uma conta única de compartilhamento de arquivo que pode ser usada para várias assinaturas. A conta de compartilhamento de arquivo é configurada no gerenciador de configuração do modo nativo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], **Especificar uma conta de compartilhamento de arquivo**. Na página de configuração da assinatura, os usuários escolhem **Usar uma conta de compartilhamento de arquivo**.<br /><br /> Configure assinaturas individuais com credenciais específicas para o compartilhamento de arquivos de destino.<br /><br /> Você também pode combinar as duas abordagens e fazer com que algumas assinaturas de compartilhamento de arquivos usem a conta de compartilhamento de arquivos central, enquanto outras assinaturas usam credenciais específicas.|nativo|

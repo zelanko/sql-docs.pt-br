@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a924e8e6ed7a19904ddc9c8cded38683b849edeb
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245663"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043740"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)
 Neste tutorial, você cria um gráfico de pizza em um relatório paginado do Reporting Services. Você adiciona percentuais e combina fatias pequenas em uma única fatia.
@@ -23,7 +23,7 @@ Gráficos de pizza e de rosca exibem dados como uma proporção do todo. Eles n�
 
 A ilustração a seguir mostra o gráfico de pizza que será criado. 
  
-![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
+![Captura de tela do gráfico de pizza do construtor de relatórios.](../reporting-services/media/report-builder-pie-chart-final.png)
   
 Se houver muitos pontos de dados em um gráfico de pizza, os rótulos dos pontos de dados podem ficar muito cheios para serem lidos. Nesse caso, considere a combinação de um número de fatias pequenas em uma fatia maior. Gráficos de pizza são mais fáceis de ler quando você agrega os dados em poucos pontos de dados.  
  
@@ -49,7 +49,7 @@ Nesta seção, você usa o Assistente de Gráfico para criar um conjunto de dado
   
 3.  No painel direito, clique em **Assistente de Gráfico**.  
   
-4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados**e em **Avançar**.  
+4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados** e em **Avançar**.  
   
 5.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório, selecione uma fonte de dados e clique em **Avançar**. Talvez seja necessário inserir um nome de usuário e uma senha.  
   
@@ -82,7 +82,7 @@ Nesta seção, você usa o Assistente de Gráfico para criar um conjunto de dado
 Você pode escolher um dos diversos tipos de gráfico predefinidos.  
 
   
-1.  Na página **Escolher um tipo de gráfico** , clique em **Pizza**e em **Avançar**. A página **Organizar campos de gráfico** será aberta.  
+1.  Na página **Escolher um tipo de gráfico** , clique em **Pizza** e em **Avançar**. A página **Organizar campos de gráfico** será aberta.  
   
     Na página **Organizar campos de gráfico** , arraste o campo Produto até o painel **Categorias** . Esse painel define o número de fatias do gráfico de pizza. Neste exemplo, haverá oito fatias, uma para cada produto.  
   
@@ -94,7 +94,7 @@ Você pode escolher um dos diversos tipos de gráfico predefinidos.
   
     O gráfico é adicionado à superfície de design. Os valores reais do gráfico de pizza não estão visíveis – você vê Produto 1, Produto 2, etc., para dar uma ideia da aparência do gráfico.  
     
-    ![report-builder-pie-chart-first-design](../reporting-services/media/report-builder-pie-chart-first-design.png)
+    ![Captura de tela do gráfico de pizza do construtor de relatórios no modo de exibição de design.](../reporting-services/media/report-builder-pie-chart-first-design.png)
   
 6.  Clique no gráfico para exibir suas alças. Arraste o canto inferior direito do gráfico para aumentá-lo. Observe que o tamanho da superfície de design do relatório também aumenta para acomodar o tamanho do gráfico.  
   
@@ -102,7 +102,7 @@ Você pode escolher um dos diversos tipos de gráfico predefinidos.
   
 O relatório exibe o gráfico de pizza com oito fatias, uma para cada produto. Agora você verá os produtos reais e o tamanho de cada fatia representa as vendas do produto. Três das fatias são bastante finas.  
 
-![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
+![Captura de tela mostrando uma visualização do gráfico de pizza do construtor de relatórios.](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
 ## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Exibir as porcentagens em cada fatia do gráfico  
 Em cada fatia da pizza, é possível exibir uma porcentagem dessa fatia comparada à pizza inteira.  
@@ -116,12 +116,12 @@ Em cada fatia da pizza, é possível exibir uma porcentagem dessa fatia comparad
   
 4.  Na caixa **Rotular dados** , selecione **#PERCENT**.  
     
-5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, na caixa **Rotular dados** após **#PERCENT**, digite **{Pn}** , em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite **#PERCENT{P0}** .  
+5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, na caixa **Rotular dados** após **#PERCENT** , digite **{Pn}** , em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite **#PERCENT{P0}** .  
 
 6.  Para exibir valores como porcentagens, a propriedade UseValueAsLabel deve ser falsa. Se for solicitado que você defina esse valor na caixa de diálogo **Confirmar Ação** , clique em **Sim**.  
   
     > [!NOTE]  
-    > O**Formato de Número** na caixa de diálogo **Propriedades do Rótulo de Série** não tem nenhum efeito quando você formata percentuais. Isso formata os rótulos como porcentagens, mas não calcula qual porcentagem do gráfico de pizza cada fatia representa.  
+    > O **Formato de Número** na caixa de diálogo **Propriedades do Rótulo de Série** não tem nenhum efeito quando você formata percentuais. Isso formata os rótulos como porcentagens, mas não calcula qual porcentagem do gráfico de pizza cada fatia representa.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -129,7 +129,7 @@ Em cada fatia da pizza, é possível exibir uma porcentagem dessa fatia comparad
   
 O relatório exibe a porcentagem do todo para cada fatia da pizza.  
 
-![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![Captura de tela mostrando uma visualização do gráfico de pizza do construtor de relatórios com percentuais em cada fatia.](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
 ## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Combinar pequenas fatias em uma fatia  
 Três das fatias do gráfico são bastante pequenas. Você pode combinar várias fatias pequenas em uma maior fatia “Outras” que representa todas elas.  
@@ -144,7 +144,7 @@ Três das fatias do gráfico são bastante pequenas. Você pode combinar várias
   
 5.  Defina a propriedade **CollectedStyle** como **SingleSlice**.  
 
-    ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Captura de tela mostrando como definir uma propriedade de uma fatia no gráfico de pizza do construtor de relatórios.](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  Verifique se a propriedade **CollectedThreshold** está definida como 5.  
   
@@ -154,7 +154,7 @@ Três das fatias do gráfico são bastante pequenas. Você pode combinar várias
   
 Na legenda, agora você vê a categoria “Outros”. A nova fatia da pizza combina todas as fatias que estavam abaixo de 5% em uma fatia que representa 6% da pizza inteira.  
 
-![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Captura de tela mostrando como o gráfico de pizza do construtor de relatórios começa em 90 graus da parte superior do gráfico.](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
 ## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Iniciar valores do gráfico de pizza na parte superior 
 
@@ -166,13 +166,13 @@ Nesta seção, vamos fazer com que o primeiro valor seja iniciado na parte super
 
 2. Clique na própria pizza.
 
-3. No painel Propriedades, em **Atributos Personalizados**, altere PieStartAngle de **0** para **270**.
+3. No painel Propriedades, em **Atributos Personalizados** , altere PieStartAngle de **0** para **270**.
 
 4. Clique em **Executar** para visualizar o relatório.
 
 Agora, as fatias do gráfico de pizza estão em ordem alfabética, começando na parte superior e terminando na fatia “Outros”.
 
-![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Captura de tela mostrando como o gráfico de pizza do construtor de relatórios começa na parte superior.](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Adicionar um título de relatório  
   
@@ -182,15 +182,15 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
 
 2. Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas de Câmeras e Filmadoras**, pressione ENTER e digite **Como um Percentual do Total de Vendas**para que fique assim:  
+2.  Digite **Vendas de Câmeras e Filmadoras** , pressione ENTER e digite **Como um Percentual do Total de Vendas** para que fique assim:  
   
     **Vendas de Câmeras e Filmadoras**  
   
     **Como um Percentual do Total de Vendas**  
   
-3.  Selecione **Vendas de Câmeras e Filmadoras**, na guia **Início** > seção **Fonte** > clique em **Negrito**.  
+3.  Selecione **Vendas de Câmeras e Filmadoras** , na guia **Início** > seção **Fonte** > clique em **Negrito**.  
   
-4.  Selecione **Como um Percentual do Total de Vendas** e, na guia **Início** > seção **Fonte**, defina o tamanho da fonte como **10**.  
+4.  Selecione **Como um Percentual do Total de Vendas** e, na guia **Início** > seção **Fonte** , defina o tamanho da fonte como **10**.  
   
 5.  (Opcional) Talvez seja necessário aumentar a altura da caixa de texto Título para acomodar as duas linhas de texto.  
   
@@ -206,7 +206,7 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
   
 2.  No menu **Arquivo** , clique em **Salvar**.  
   
-3.  Em **Nome**, digite **Gráfico de Pizza de Vendas**.  
+3.  Em **Nome** , digite **Gráfico de Pizza de Vendas**.  
   
 4.  Clique em **Save** (Salvar).  
   

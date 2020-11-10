@@ -2,7 +2,7 @@
 title: Notas sobre a versão do ODBC Driver for SQL Server no Windows
 description: Este artigo de notas sobre a versão descreve as alterações em cada versão do Microsoft ODBC Driver for SQL Server no Windows.
 ms.custom: ''
-ms.date: 07/29/2020
+ms.date: 10/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898814"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043808"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notas sobre a versão do Microsoft ODBC Driver for SQL Server no Windows
 
@@ -169,6 +169,7 @@ Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?lin
 | Modo de autenticação de Identidade Gerenciada do Azure Active Directory (atribuída pelo usuário e pelo sistema). | Veja [Usando o Azure Active Directory com o Driver ODBC](../using-azure-active-directory.md). |
 | Capacidade de transmitir parâmetros de entrada em relação a colunas Always Encrypted. | Veja [Limitações do driver ODBC ao usar o Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Transações distribuídas XA. | [Usando Transações XA](../use-xa-with-dtc.md). |
+| Pacote Redistribuível do Visual C++ atualizado | Atualização da dependência de runtime para o Pacote Redistribuível do Visual C++ 2017 ([Download para x64](https://aka.ms/vs/15/release/vc_redist.x64.exe) [Download para x86](https://aka.ms/vs/15/release/vc_redist.x86.exe)) |
 | Correções de bugs. | Veja [Correções de bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

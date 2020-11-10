@@ -10,18 +10,18 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 073776c042c0a0da136347c8e1658603b755208f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378335"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364378"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>Solução de problemas de BDC (Clusters de Big Data) com notebooks
 
 Esta página é um índice de notebooks para Clusters de Big Data do SQL Server. Esses notebooks executáveis (.ipynb) foram criados para o SQL Server 2019 para auxiliar na solução de problemas de Clusters de Big Data.
 
-Cada notebook foi criado para conferir suas próprias dependências. Um **Executar todas as células** vai ser concluído com êxito ou gerar uma exceção com uma dica de hiperlink para um outro notebook resolver a dependência ausente. Siga o hiperlink de dica para o notebook subsequente, pressione **Executar todas as células** e, tendo êxito, volte para o notebook original e pressione **Executar todas as células** .
+Cada notebook foi criado para conferir suas próprias dependências. Um **Executar todas as células** vai ser concluído com êxito ou gerar uma exceção com uma dica de hiperlink para um outro notebook resolver a dependência ausente. Siga o hiperlink de dica para o notebook subsequente, pressione **Executar todas as células** e, tendo êxito, volte para o notebook original e pressione **Executar todas as células**.
 
 Depois que todas as dependências forem instaladas mas **Executar todas as células** falhar, cada notebook analisará os resultados e, sempre que possível, produzirá um hiperlink de dica para outro notebook a fim de ajudar a resolver o problema.
 
@@ -62,7 +62,7 @@ Um conjunto de notebooks para diagnosticar situações e estados com um cluster 
 |TSG079 – Gerar despejo de núcleo do controlador|Use esse notebook para gerar um despejo de núcleo do controlador.|
 |TSG086 – Executar top em todos os contêineres|Use esse notebook para executar top em todos os contêineres.|
 |TSG087 – Usar a CLI do Hadoop FS no pod do namenode|Use esse notebook para usar a CLI do Hadoop FS no pod do namenode.|
-|TSG108 – Ver o mapa de configurações de atualização do controlador|Use esse notebook para solucionar a falha ao executar uma atualização de cluster de Big Data usando **azdata bdc upgrade** .|
+|TSG108 – Ver o mapa de configurações de atualização do controlador|Use esse notebook para solucionar a falha ao executar uma atualização de cluster de Big Data usando **azdata bdc upgrade**.|
 |TSG112 – Verificações pré-implantação do Active Directory|Use esse notebook para validar se uma configuração de BDC (cluster de Big Data) é válida para uma implantação do AD (Active Directory).|
 |TSG115 – Conversor de log de segurança de SQL Server em Linux|Use esse notebook para analisar os logs gerados pelos agentes secuirty.ldap e security.kerberos para SQL Server em Linux. Para habilitar esses agentes, coloque as linhas abaixo em /var/opt/mssql/logger.ini no computador que executa o SQL Server em Linux. Observação: esse arquivo diferencia maiúsculas de minúsculas.|
 |TSG116 – Conversor de log de suporte de segurança do BDC do SQL|Use esse notebook para analisar os logs gerados pelo serviço de suporte de segurança no BDC do SQL. Para obter os logs, copiaremos os logs de depuração do cluster e os extrairemos. Siga as etapas abaixo – execute "azdata bdc debug copy-logs -n <namespace> *". Isso criará vários arquivos .tar.gz – Extraia o conteúdo de debuglogs-* <namespace>-<date>-<time>.tar.gz – Localize o log de suporte de segurança armazenado em ./<namespace>/control-<…>/security-support/supervisol/log/secsupp-stderr---<…>.log.|
@@ -80,7 +80,7 @@ Um conjunto de notebooks destinados a reparar situações e estados conhecidos d
 |Name |Descrição |
 |---|---|---|---|
 |TSG005 – Loop de encaminhamento detectado|Use esse notebook para lidar com situações em que um loop de encaminhamento foi detectado, já que o utilitário dnsmasq pode colocar um loopback local em resolv.conf, o que pode fazer com que os pods do controlador entrem em um CrashLoopBackOff durante a implantação inicial do cluster: https://askubuntu.com/questions/627899/nameserver-127-0-1-1-in-resolv-conf-wont-go-away|
-|TSG011 – Reiniciar o servidor sparkhistory|Use esse notebook para reiniciar o servidor sparkhistory, pois o processo Java do sparkhistory pode travar durante a inicialização. A reinicialização do servidor sparkhistory (supervisorctl restart sparkhistory) pode resolver esse problema.|
+|TSG011 – Reiniciar o servidor sparkhistory|Use esse notebook para reiniciar o servidor sparkhistory, pois o processo Java do sparkhistory pode parar de responder durante a inicialização. A reinicialização do servidor sparkhistory (supervisorctl restart sparkhistory) pode resolver esse problema.|
 |TSG018 – Encerrar o processo sqlservr no pool mestre| Use esse notebook quando o desligamento do T-SQL não reciclar com êxito o processo ./sqlservr. Use esse notebook para encerrar o processo principal sqlservr que será reiniciado automaticamente pelo processo de front-end ./sqlservr.|
 |TSG024 – O Namenode está no modo de segurança| Use esse notebook quando o HDFS entrar por conta própria em modo de segurança. Por exemplo, se muitos pods forem reciclados muito rapidamente no pool de armazenamento, o modo de segurança poderá ser habilitado automaticamente.|
 |TSG028 – Reiniciar o gerenciador de nós em todos os nós do pool de armazenamento| Use esse notebook quando for necessário reiniciar o gerenciador de nós em todos os nós do pool de armazenamento.|
@@ -104,4 +104,3 @@ Um conjunto de notebooks destinados a reparar situações e estados conhecidos d
 ## <a name="next-steps"></a>Próximas etapas
 
 Para obter mais informações sobre clusters de Big Data, confira [O que são [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
-

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60dfa5cf08b11789fde744f41a2c139f922d286
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245653"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043799"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
 
@@ -22,7 +22,7 @@ Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], vo
   
 Minigráficos e barras de dados são gráficos pequenos e simples que transmitem muitas informações em um espaço pequeno, geralmente em tabelas e matrizes dos relatórios do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . A ilustração a seguir mostra um relatório semelhante ao que você criará.  
   
-![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
+![Captura de tela mostrando o minigráfico do construtor de relatórios.](../reporting-services/media/report-builder-sparkline-final.png)  
      
 Tempo estimado para concluir este tutorial: 30 minutos.  
   
@@ -44,15 +44,15 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
 4.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados** > **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
   
     > [!NOTE]  
-    > Este tutorial não precisa de dados específicos. Ele só precisa de uma conexão com um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para a etapa 10. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Este tutorial não precisa de dados específicos. Ele só precisa de uma conexão com um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados** , será possível selecioná-la e ir para a etapa 10. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Clique em **Nova**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
-6.  Em **Nome**, digite **Vendas de Produtos**, um nome para a fonte de dados.  
+6.  Em **Nome** , digite **Vendas de Produtos** , um nome para a fonte de dados.  
   
-7.  Em **Selecionar um tipo de conexão**, verifique se a opção **Microsoft SQL Server** está selecionada.  
+7.  Em **Selecionar um tipo de conexão** , verifique se a opção **Microsoft SQL Server** está selecionada.  
   
-8.  Em **Cadeia de conexão**, digite o seguinte texto:  
+8.  Em **Cadeia de conexão** , digite o seguinte texto:  
   
     `Data Source\=<servername>`  
   
@@ -121,7 +121,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 4.  Na barra de ferramentas do designer de consultas, clique em Executar ( **!** ).  
   
-    A consulta é executada e exibe o conjunto de resultados dos campos **SalesDate**, **Subcategory**, **Product**, **Sales**e **Quantity**.  
+    A consulta é executada e exibe o conjunto de resultados dos campos **SalesDate** , **Subcategory** , **Product** , **Sales** e **Quantity**.  
   
 5.  Clique em **Próximo**.  
   
@@ -133,11 +133,11 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 8.  Arraste **SalesDate** até **Grupos de colunas**.  
 
-    ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![Captura de tela mostrando como organizar campos.](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. Clique em **Próximo**.  
   
-10. Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
+10. Na página **Escolher o layout** , em **Opções** , verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
     O painel Visualizar do assistente exibe uma tabela com três linhas. Ao executar o relatório, cada linha será exibida da seguinte forma:  
   
@@ -147,7 +147,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
     *  A terceira linha aparecerá uma vez para a tabela a fim de exibir totais gerais.  
     
-    ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![Captura de tela mostrando como escolher um layout.](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
 11. Clique em **Próximo**.  
   
@@ -157,7 +157,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
     Pesquisar o painel Agrupamento. Se você não conseguir ver o painel Agrupamento, no menu **Exibir** , clique em **Agrupamento**. O painel Grupos de Linhas mostra um grupo de linhas: **Product**. O painel Grupos de Colunas mostra um grupo de colunas: **SalesDate**. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
     
-    ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![Captura de tela mostrando o painel de agrupamento do construtor de relatórios.](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. Clique em **Executar** para visualizar o relatório.  
 
@@ -168,15 +168,15 @@ Por padrão, os dados de resumo do campo **Sales** exibem um número geral. Form
   
 2.  Clique na célula da segunda linha (sob a linha dos cabeçalhos de coluna) na coluna **SalesDate** . Mantenha pressionada a tecla Ctrl e selecione todas as células que contêm `[Sum(Sales)]`. 
 
-    ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![Captura de tela mostrando como selecionar vendas somadas.](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  Na guia **Início** > grupo **Número**, clique em **Moeda**. As células são alteradas para mostrar a moeda formatada.  
+3.  Na guia **Início** > grupo **Número** , clique em **Moeda**. As células são alteradas para mostrar a moeda formatada.  
 
-    ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![Captura de tela mostrando as vendas de Sim substituídas por valores de moeda de espaço reservado.](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [ **$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [ **$12,345.00** ]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Captura de tela mostrando a opção Valores de Exemplo selecionada.](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (Opcional) Formatar dados como datas  
 Por padrão, o campo **SalesDate** exibe informações de data e hora. É possível formatá-lo para exibir somente a data.  
@@ -197,13 +197,13 @@ Os valores de **SalesDate** são exibidos no formato de data padrão e os valore
   
 2.  Selecione a coluna Total na tabela.  
   
-3.  Clique com o botão direito do mouse, aponte para **Inserir Coluna**e clique em **Esquerda**.  
+3.  Clique com o botão direito do mouse, aponte para **Inserir Coluna** e clique em **Esquerda**.  
 
-    ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
+    ![Captura de tela mostrando como inserir uma coluna à esquerda.](../reporting-services/media/report-builder-add-column-left.png)
   
 4.  Na nova coluna, clique com o botão direito do mouse na célula da linha `[Product]` > **Inserir** > **Minigráfico**.  
 
-    ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![Captura de tela mostrando como inserir um minigráfico.](../reporting-services/media/report-builder-insert-sparkline.png)
   
 5.  Na caixa de diálogo **Selecionar Tipo de Minigráfico** , verifique se o primeiro minigráfico na linha **Coluna** está selecionado e clique em **OK**.  
   
@@ -211,7 +211,7 @@ Os valores de **SalesDate** são exibidos no formato de data padrão e os valore
   
 7.  Clique no sinal de adição (+) na caixa Valores e em **Sales**. 
 
-    ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![Captura de tela mostrando como adicionar valores ao minigráfico do construtor de relatórios. ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     Os valores no campo **Sales** agora são os valores do minigráfico.  
   
@@ -223,7 +223,7 @@ Os valores de **SalesDate** são exibidos no formato de data padrão e os valore
   
     Além disso, para cada linha, a barra mais alta é a altura da linha. Isso também é confuso, porque os maiores valores de cada linha não são iguais: o maior valor de Budget Movie-Maker é US$ 10.400, mas o maior valor de Slim Digital é US$ 26.576 – mais de duas vezes maior. Além disso, as barras maiores nessas duas linhas têm aproximadamente a mesma altura. Todos os minigráficos precisam usar a mesma escala.  
   
-     ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![Captura de tela mostrando um minigráfico do construtor de relatórios que está desalinhado.](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Alinhar os minigráficos vertical e horizontalmente  
 Os minigráficos são difíceis de ler quando todos não apresentam as mesmas medidas. Os eixos horizontal e vertical de cada um deles precisa corresponder ao resto.  
@@ -250,7 +250,7 @@ Os minigráficos são difíceis de ler quando todos não apresentam as mesmas me
   
 Agora todas as barras em cada minigráfico são alinhadas às barras dos outros minigráficos, e as alturas são relativas.  
   
-![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
+![Captura de tela mostrando um minigráfico do construtor de relatórios que está alinhado.](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (Opcional) Alterar larguras da coluna  
 Por padrão, cada célula da tabela contém uma caixa de texto. Uma caixa de texto é expandida verticalmente para acomodar o texto quando a página é renderizada. No relatório renderizado, cada linha é expandida até a altura da caixa de texto renderizada mais alta da linha. A altura da linha na superfície de design não tem nenhum efeito na altura da linha no relatório renderizado.  
@@ -276,11 +276,11 @@ O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas por Data**e clique fora da caixa de texto.  
+2.  Digite **Vendas por Data** e clique fora da caixa de texto.  
   
 3.  Marque a caixa de texto que contém **Vendas de Produtos**.  
   
-4.  Na guia Início > grupo **Fonte** > para **Cor**, selecione **Azul-petróleo**.  
+4.  Na guia Início > grupo **Fonte** > para **Cor** , selecione **Azul-petróleo**.  
   
 7.  Selecione **Negrito**.  
   
@@ -299,7 +299,7 @@ Salve o relatório em um servidor de relatório ou no computador. Se você não 
   
     A mensagem "Conectando-se a um servidor de relatório" é exibida. Quando a conexão for concluída, você verá o conteúdo da pasta do relatório que o administrador do servidor de relatório especificou como o local padrão para relatórios.  
   
-4.  Em **Nome**, substitua o nome padrão por **Vendas de Produtos**.  
+4.  Em **Nome** , substitua o nome padrão por **Vendas de Produtos**.  
   
 5.  Clique em **Save** (Salvar).  
   
@@ -309,9 +309,9 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
-2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu computador**e procure a pasta na qual você quer salvar o relatório.  
+2.  Clique em **Área de Trabalho** , **Meus Documentos** ou **Meu computador** e procure a pasta na qual você quer salvar o relatório.  
   
-3.  Em **Nome**, substitua o nome padrão por **Vendas de Produtos**.  
+3.  Em **Nome** , substitua o nome padrão por **Vendas de Produtos**.  
   
 4.  Clique em **Save** (Salvar).  
   

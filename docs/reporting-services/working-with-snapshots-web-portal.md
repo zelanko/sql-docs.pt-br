@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c17541ff08f136b3c8c26418117df63c71b9195b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247415"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243795"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Trabalhando com instantâneos (portal da Web)
 
@@ -31,7 +31,7 @@ Você pode criar um instantâneo de cache para permitir um carregamento mais rá
   
 Você pode criar um instantâneo fazendo o seguinte.  
   
-![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
+![Captura de tela mostrando a tela Cache da caixa de diálogo Editar Vendas da Empresa com três círculos magenta com os números 1, 2 e 3, que designam as três etapas abaixo da captura de tela.](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
 1.  Na página **Cache** , selecione **Sempre executar esse relatório contra instantâneos gerados previamente** para habilitar as opções para a criação de um instantâneo.  
   
@@ -49,7 +49,7 @@ O histórico de relatório é sempre exibido no contexto do relatório de origem
   
 Para gerar um instantâneo de histórico, o relatório deve ser executado de modo autônomo (ou seja, ele deve usar credenciais armazenadas; relatórios com parâmetros devem conter valores de parâmetro padrão para todos os parâmetros). Histórico de Relatórios pode ser gerado manualmente ou como uma operação agendada. As propriedades de histórico no relatório determinam os modos pelos quais o histórico do relatório pode ser criado.  
   
-![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
+![Captura de tela mostrando a tela Instantâneos de Histórico da caixa de diálogo Editar Vendas da Empresa com três círculos magenta com os números 1, 2 e 3, que designam as três etapas abaixo da captura de tela.](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
 1.  Para criar um instantâneo de histórico, selecione **+ Novo Instantâneo de Histórico**. Com isso, o relatório será processado e uma entrada será adicionada à lista.  
   
@@ -61,7 +61,7 @@ Para gerar um instantâneo de histórico, o relatório deve ser executado de mod
   
 Selecionar **Agenda e Configurações** fornecerá opções adicionais para agendar e controlar a retenção dos instantâneos criados.  
   
-![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
+![Captura de tela mostrando as seções Agendamento e Avançado.](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
 Como opção, você pode criar uma agenda para a criação de instantâneos. Você também pode impedir que outras pessoas criem novos instantâneos. Desmarcar a opção **Permitir que as pessoas criem instantâneos manualmente** desabilitará o botão **+ Novo Instantâneo de Histórico**.  
   

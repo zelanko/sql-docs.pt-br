@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: cd6c70f92cb409ee6742590709743897bb3e77f7
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85061047"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364438"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Criar um mapa de documentos (Construtor de Relatórios e SSRS)
 
@@ -40,8 +40,7 @@ O mapa do documento fornece um conjunto de links de navegação aos itens de rel
   
  Para obter mais informações, consulte [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md).  
   
-##  <a name="AddRptItemToMap"></a>   
-#### <a name="to-add-a-report-item-to-a-document-map"></a>Para adicionar um item de relatório a um mapa do documento  
+##  <a name="to-add-a-report-item-to-a-document-map"></a><a name="AddRptItemToMap"></a> Para adicionar um item de relatório a um mapa do documento  
   
 1.  No modo de exibição Design, selecione o item de relatório (por exemplo, tabela, matriz ou medidor) que você deseja adicionar ao mapa do documento. As propriedades do item de relatório aparecem no painel Propriedades.  
   
@@ -58,8 +57,7 @@ O mapa do documento fornece um conjunto de links de navegação aos itens de rel
 4.  Clique em **Executar**. O relatório é executado e o mapa do documento exibe os rótulos criados. Clique em qualquer link para ir para a página do relatório relacionada ao item.  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### <a name="to-add-unique-group-values-to-a-document-map"></a>Para adicionar valores de grupo exclusivos a um mapa do documento  
+##  <a name="to-add-unique-group-values-to-a-document-map"></a><a name="AddUniqueValuesToMap"></a> Para adicionar valores de grupo exclusivos a um mapa do documento  
   
 1.  Na exibição Design, selecione a tabela, matriz ou lista que contém o grupo que você deseja exibir no mapa do documento. O painel Agrupamento exibe os grupos de linhas e colunas.  
   
@@ -75,8 +73,7 @@ O mapa do documento fornece um conjunto de links de navegação aos itens de rel
   
 7.  Clique em **Executar**. O relatório é executado e o mapa do documento exibe os valores do grupo. Clique em qualquer link para ir para a página do relatório relacionada ao item.  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Para ocultar o mapa do documento quando exibir um relatório  
+##  <a name="to-hide-the-document-map-when-you-view-a-report"></a><a name="HideMapWhenViewRpt"></a> Para ocultar o mapa do documento ao exibir um relatório  
   
 1.  No portal da Web, navegue até o relatório que contém o mapa do documento.  
   

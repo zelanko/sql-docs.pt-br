@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 318dfd44b3c931b124372ce5ea60681b8c1e7e99
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985712"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235477"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de Versão do SQL Server 2016.
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -86,7 +86,7 @@ Melhorias de compatibilidade e diagnóstico no SQL Server 2016 SP2.
 | |O grafo deadlock XML foi aprimorado para deadlocks que envolvem operadores em modo de lote, com a adição de atributos ao recurso SyncPoint.| |
 |Recarregamento dinâmico de alguns parâmetros de perfil de agente de replicação   |   Na implementação atual dos agentes de replicação, qualquer alteração no parâmetro de perfil de agente requer o agente seja interrompido e reiniciado. Esta melhoria permite que os parâmetros sejam recarregados dinamicamente sem a necessidade de reiniciar o agente de replicação.   |      |
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![Captura de tela de uma barra horizontal.](media/horizontal-bar.png)
 
 ## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) O SQL Server 2016 SP1 inclui todas as atualizações cumulativas até o SQL Server 2016 RTM CU3, incluindo a Atualização de Segurança MS16-136. Ele contém um rollup de soluções fornecidas nas atualizações cumulativas do SQL Server 2016 até, e incluindo, a atualização cumulativa mais recente, CU3, e a Atualização de Segurança MS16-136 lançada em 8 de novembro de 2016.
@@ -134,7 +134,7 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 - [Informações de versão do SQL Server 2016 Service Pack 1](https://support.microsoft.com/kb/3182545)
 - ![info_tip](../sql-server/media/info-tip.png) Visite o [Centro de Atualização do SQL Server](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) para obter links e informações sobre todas as versões compatíveis, incluindo service packs do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![Outra captura de tela de uma barra horizontal.](media/horizontal-bar.png)
 
 ##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Mecanismo de Banco de Dados (GA)](#bkmk_ga_instalpatch)
@@ -159,7 +159,7 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 
  - Instalar a  [KB 3164398 – Atualização crítica para os pré-requisitos MSVCRT do SQL Server 2016](https://support.microsoft.com/kb/3164398).
 
-    Se você usar a **KB 3164398**, é possível instalá-la durante a instalação do SQL Server, por meio do Microsoft Update ou no Centro de Download da Microsoft.
+    Se você usar a **KB 3164398** , é possível instalá-la durante a instalação do SQL Server, por meio do Microsoft Update ou no Centro de Download da Microsoft.
 
     - **Durante a instalação do SQL Server 2016:** se o computador que está executando a instalação do SQL Server tiver acesso à Internet, a instalação do SQL Server verificará a atualização como parte da instalação geral do SQL Server. Se você aceitar a atualização, a instalação baixará e atualizará os binários durante a instalação.
 
@@ -207,7 +207,7 @@ Além disso, execute os seguintes procedimentos armazenados do Repositório de C
 
 
 ###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> Documentação do produto (GA)
- **Problema e impacto ao cliente:** Uma versão para download da documentação do SQL Server 2016 ainda não está disponível. Quando você usa o Gerenciador da Biblioteca da Ajuda para tentar **Instalar o conteúdo online**, a documentação do SQL Server 2012 e do SQL Server 2014 é exibida, mas não existem opções para a documentação do SQL Server 2016.
+ **Problema e impacto ao cliente:** Uma versão para download da documentação do SQL Server 2016 ainda não está disponível. Quando você usa o Gerenciador da Biblioteca da Ajuda para tentar **Instalar o conteúdo online** , a documentação do SQL Server 2012 e do SQL Server 2014 é exibida, mas não existem opções para a documentação do SQL Server 2016.
 
  **Solução alternativa:** use uma das seguintes soluções alternativas:
 

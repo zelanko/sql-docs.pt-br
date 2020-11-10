@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: b8db1d2a7fe18264c81d7585e02babef65b3346d
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462380"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364568"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funções do Construtor de Relatórios – Função Multilookup
   Retorna o conjunto de primeiros valores correspondentes para o conjunto de nomes especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -31,19 +31,19 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>parâmetros  
  *source_expression*  
- (**VariantArray**) Uma expressão avaliada no escopo atual e que especifica o conjunto de nomes ou chaves a serem procurados. Por exemplo, para um parâmetro de vários valores, `=Parameters!IDs.value`.  
+ ( **VariantArray** ) Uma expressão avaliada no escopo atual e que especifica o conjunto de nomes ou chaves a serem procurados. Por exemplo, para um parâmetro de vários valores, `=Parameters!IDs.value`.  
   
  *destination_expression*  
- (**Variant**) Uma expressão avaliada para cada linha em um conjunto de dados e que especifica o nome ou a chave para correspondência. Por exemplo, `=Fields!ID.Value`.  
+ ( **Variant** ) Uma expressão avaliada para cada linha em um conjunto de dados e que especifica o nome ou a chave para correspondência. Por exemplo, `=Fields!ID.Value`.  
   
  *result_expression*  
- (**Variant**) Uma expressão avaliada para a linha do conjunto de dados em que *source_expression* = *destination_expression*e que especifica o valor a ser recuperado. Por exemplo, `=Fields!Name.Value`.  
+ ( **Variant** ) Uma expressão avaliada para a linha do conjunto de dados em que *source_expression* = *destination_expression* e que especifica o valor a ser recuperado. Por exemplo, `=Fields!Name.Value`.  
   
  *conjunto de dados*  
  Uma constante que especifica o nome do conjunto de dados no relatório. Por exemplo, "Cores".  
   
 ## <a name="return"></a>Retorno  
- Retorna **VariantArray**ou **Nothing** se não houver correspondência.  
+ Retorna **VariantArray** ou **Nothing** se não houver correspondência.  
   
 ## <a name="remarks"></a>Comentários  
  Use **Multilookup** para recuperar um conjunto de valores de um conjunto de dados para os pares nome/valor em que cada par tem uma relação de um para um. **MultiLookup** é o equivalente a chamar **Lookup** para um conjunto de nomes ou chaves. Por exemplo, para um parâmetro de vários valores que é baseado em identificadores de chave primária, você pode usar **Multilookup** em uma expressão em uma caixa de texto de uma tabela para recuperar valores associados de um conjunto de dados que não está associado ao parâmetro ou à tabela.  
@@ -84,7 +84,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) e [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="examples"></a>Exemplos
+
+### <a name="a-use-multilookup-function"></a>a. Usar a função MultiLookup
  Suponha que um conjunto de dados denominado "Category" contenha o campo CategoryList, que é um campo que contém uma lista separada por vírgulas de identificadores de categoria, por exemplo, "2, 4, 2, 1".  
   
  O conjunto de dados CategoryNames contém o identificador de categoria e o nome da categoria, como mostra a tabela a seguir.  
@@ -106,7 +108,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
    ", ")  
 ```  
   
-## <a name="example"></a>Exemplo  
+### <a name="b-use-multilookup-with-multivalue-parameter"></a>B. Usar MultiLookup com um parâmetro de vários valores  
  Suponha que um conjunto de dados ProductColors contenha um campo identificador de cor ColorID e um campo de valor de cor Color, como mostra a tabela a seguir.  
   
 |ColorID|Color|  

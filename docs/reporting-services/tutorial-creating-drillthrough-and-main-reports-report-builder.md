@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e5d34588bef3022f340d6a52dded1b03aad30d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238377"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364638"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
 Este tutorial ensina como criar dois tipos de relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : um relatório de detalhamento e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. 
@@ -56,19 +56,19 @@ Uma conexão de dados contém as informações necessárias para estabelecer con
   
 #### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
   
-1.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados**e clique em **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
+1.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados** e clique em **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
   
 2.  Clique em **Nova**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
-3.  Em **Nome**, digite **Detalhes de Vendas Online e do Revendedor** como o nome da fonte de dados.  
+3.  Em **Nome** , digite **Detalhes de Vendas Online e do Revendedor** como o nome da fonte de dados.  
   
-4.  Em **Selecione um tipo de conexão**, selecione **Microsoft SQL Server Analysis Services**e clique em **Compilar**.  
+4.  Em **Selecione um tipo de conexão** , selecione **Microsoft SQL Server Analysis Services** e clique em **Compilar**.  
   
-5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  Em **Fonte de dados** , verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  Em **Nome do servidor**, digite o nome de um servidor em que uma instância do Analysis Services está instalada.  
+6.  Em **Nome do servidor** , digite o nome de um servidor em que uma instância do Analysis Services está instalada.  
   
-7.  Em **Selecionar ou inserir um nome de banco de dados**, selecione o cubo Contoso.  
+7.  Em **Selecionar ou inserir um nome de banco de dados** , selecione o cubo Contoso.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -102,7 +102,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta**, no painel Metadados, clique no botão **(…)** .  
+1.  Na página **Criar uma consulta** , no painel Metadados, clique no botão **(…)** .  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
@@ -119,13 +119,13 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 4.  Para abrir a lista **Expressão de Filtro** , clique na seta para baixo na coluna **Expressão de Filtro** .  
   
-5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online**, em **Revendedor**e em **OK**.  
+5.  Na lista de expressões de filtro, expanda **Todo o Canal** , clique em **Online** , em **Revendedor** e em **OK**.  
   
     A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
   
-6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** (abaixo de **Nome do Canal**).  
+6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** (abaixo de **Nome do Canal** ).  
   
-7.  Abra a lista **Expressão de Filtro** , expanda **Toda a Região de Vendas**, clique em **América do Norte**e em **OK**.  
+7.  Abra a lista **Expressão de Filtro** , expanda **Toda a Região de Vendas** , clique em **América do Norte** e em **OK**.  
   
     A consulta agora tem um filtro para incluir apenas vendas na América do Norte.  
   
@@ -135,7 +135,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 9. Para abrir a lista **Expressão de Filtro** , clique na seta para baixo na coluna **Expressão de Filtro** .  
   
-10. Na lista de expressões de filtro, expanda **Toda a Data**, clique em **Ano 2009**e clique em **OK**.  
+10. Na lista de expressões de filtro, expanda **Toda a Data** , clique em **Ano 2009** e clique em **OK**.  
   
     A consulta agora inclui um filtro para incluir apenas o ano calendário 2009.  
   
@@ -143,7 +143,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 1.  Expanda a dimensão Produto e arraste o membro Nome da Categoria do Produto até a coluna **Hierarquia** abaixo de **Ano Civil**.  
   
-2.  Abra a lista **Expressão de Filtro** , clique em **Todos os Produtos**e em **OK**.  
+2.  Abra a lista **Expressão de Filtro** , clique em **Todos os Produtos** e em **OK**.  
   
 3.  Clique na caixa de seleção **Parâmetro** . A consulta agora inclui o parâmetro ProductProductCategoryName.  
   
@@ -158,7 +158,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 3.  Na dimensão Produto, arraste Nome da Subcategoria do Produto até o painel de dados e coloque-o à direita de Nome da Categoria do Produto.  
   
-4.  No painel Metadados, expanda **Medida**e Vendas.  
+4.  No painel Metadados, expanda **Medida** e Vendas.  
   
 5.  Arraste a medida Valor das Vendas até o painel de dados e coloque-a à direita de Nome da Subcategoria do Produto.  
   
@@ -166,7 +166,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 7.  Clique em **Próximo**.  
   
-## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. Organizar dados em grupos  
+## <a name="1c-organize-drillthrough-report-data-into-groups"></a><a name="DLayout"></a>1c. Organizar dados do Relatório Detalhado em grupos  
 Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -186,18 +186,18 @@ Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com
   
     Para exibir as outras funções de agregação disponíveis, abra a lista suspensa (não altere a função de agregação).  
   
-5.  Arraste Sales_Return_Amount até **Valores**e coloque-o abaixo de `[Sum(Sales_Amount)]`.  
+5.  Arraste Sales_Return_Amount até **Valores** e coloque-o abaixo de `[Sum(Sales_Amount)]`.  
   
     As etapas 4 e 5 especificam os dados a serem exibidos na matriz.  
   
 6.  Clique em **Próximo**.  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. Adicionar subtotais e totais  
+## <a name="1d-add-drillthrough-report-subtotals-and-totals"></a><a name="DTotals"></a>1d. Adicionar subtotais e totais do Relatório Detalhado  
 Depois de criar grupos, é possível adicionar e formatar linhas onde os valores de agregação dos campos serão exibidos. Também é possível escolher mostrar todos os dados ou permitir que um usuário expanda e recolha dados agrupados de forma interativa.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para adicionar subtotais e totais  
   
-1.  Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
+1.  Na página **Escolher o layout** , em **Opções** , verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  
   
@@ -227,11 +227,11 @@ Em vez de mostrar vendas e devoluções de vendas como valores de moeda, o relat
   
 1.  Para mudar para o modo design, clique em **Design**.  
   
-2.  No grupo Total da matriz, clique com o botão direito do mouse na coluna **Valor das Vendas** , clique em **Inserir Coluna**e em **Direita**.  
+2.  No grupo Total da matriz, clique com o botão direito do mouse na coluna **Valor das Vendas** , clique em **Inserir Coluna** e em **Direita**.  
   
     Uma coluna vazia é adicionada à direita de **Valor das Vendas**.  
   
-3.  Na faixa de opções, clique em **Retângulo**e clique na célula vazia à direita da célula `[Sum(Sales_Amount)]` no grupo de linhas [Product_Subcategory].  
+3.  Na faixa de opções, clique em **Retângulo** e clique na célula vazia à direita da célula `[Sum(Sales_Amount)]` no grupo de linhas [Product_Subcategory].  
   
 4.  Na faixa de opções, clique no ícone **Minigráfico** e clique na célula em que o retângulo foi adicionado.  
   
@@ -268,7 +268,7 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 5.  Clique no botão **(fx)** à direita da lista **Valor** .  
   
-6.  Na caixa de diálogo **Expressão** , no painel Categoria, clique em **Conjunto de Dados**e, na lista **Valores** , clique duas vezes em `First(Product_Category_Name)`.  
+6.  Na caixa de diálogo **Expressão** , no painel Categoria, clique em **Conjunto de Dados** e, na lista **Valores** , clique duas vezes em `First(Product_Category_Name)`.  
   
     A caixa **Expressão** contém a seguinte expressão:  
   
@@ -280,7 +280,7 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 O título do relatório inclui o nome da primeira categoria de produto. Posteriormente, depois que você executar esse relatório como um relatório detalhado, o nome da categoria do produto será alterado dinamicamente para refletir o nome da categoria do produto que foi clicada no relatório principal.  
   
-## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. Atualizar propriedades de parâmetros  
+## <a name="5-set-hidden-parameter-property"></a><a name="DParameter"></a>5. Definir propriedade de parâmetro oculto  
 Por padrão, os parâmetros estão visíveis, o que não é apropriado para este relatório. Você atualizará as propriedades dos parâmetros do relatório detalhado.  
   
 #### <a name="to-hide-a-parameter"></a>Para ocultar um parâmetro  
@@ -349,24 +349,24 @@ Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do
  
 2.  Na caixa de diálogo **Introdução** , verifique se a opção **Novo Relatório** está selecionada e clique em **Assistente de Tabela ou Matriz**.  
   
-## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. Especificar uma conexão de dados  
+## <a name="1a-add-embedded-data-source"></a><a name="MConnection"></a>1a. Adicionar fonte de dados inserida  
 Você adicionará uma fonte de dados inserida ao relatório principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
   
-1.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados**e clique em **Avançar**.  
+1.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados** e clique em **Avançar**.  
   
 2.  Clique em **Nova**.  
   
-3.  Em **Nome**, digite **Principal de Vendas Online e do Revendedor** como o nome da fonte de dados.  
+3.  Em **Nome** , digite **Principal de Vendas Online e do Revendedor** como o nome da fonte de dados.  
   
-4.  Em **Selecione um tipo de conexão**, selecione **Microsoft SQL Server Analysis Services**e clique em **Compilar**.  
+4.  Em **Selecione um tipo de conexão** , selecione **Microsoft SQL Server Analysis Services** e clique em **Compilar**.  
   
-5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  Em **Fonte de dados** , verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  Em **Nome do servidor**, digite o nome de um servidor em que uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] está instalada.  
+6.  Em **Nome do servidor** , digite o nome de um servidor em que uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] está instalada.  
   
-7.  Em **Selecionar ou inserir um nome de banco de dados**, selecione o cubo Contoso.  
+7.  Em **Selecionar ou inserir um nome de banco de dados** , selecione o cubo Contoso.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -388,12 +388,12 @@ Você adicionará uma fonte de dados inserida ao relatório principal.
   
 14. Clique em **Próximo**.  
   
-## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. Criar uma consulta MDX  
+## <a name="1b-create-embedded-dataset"></a><a name="MMDXQuery"></a>1b. Criar conjunto de dados inserido  
 Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o designer de consulta para criar filtros, parâmetros e membros calculados como também o próprio conjunto de dados.  
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na página **Criar uma consulta**, no painel Metadados, na seção de cubo, clique nas reticências **(…)** .  
+1.  Na página **Criar uma consulta** , no painel Metadados, na seção de cubo, clique nas reticências **(…)** .  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
@@ -410,13 +410,13 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 4.  Para abrir a lista **Expressão de Filtro** , clique na seta para baixo na coluna **Expressão de Filtro** .  
   
-5.  Na lista de expressões de filtro, expanda **Todo o Canal**, clique em **Online** , em **Revendedor**e em **OK**.  
+5.  Na lista de expressões de filtro, expanda **Todo o Canal** , clique em **Online** , em **Revendedor** e em **OK**.  
   
     A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
   
 6.  Expanda a dimensão Região de Vendas e arraste Grupo da Região de Vendas até a coluna **Hierarquia** , abaixo de **Nome do Canal**.  
   
-7.  Abra a lista **Expressão de Filtro** , expanda **Toda a Região de Vendas**, clique em **América do Norte**e em **OK**.  
+7.  Abra a lista **Expressão de Filtro** , expanda **Toda a Região de Vendas** , clique em **América do Norte** e em **OK**.  
   
     A consulta agora tem um filtro para incluir apenas vendas na América do Norte.  
   
@@ -426,7 +426,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 9. Para abrir a lista **Expressão de Filtro** , clique na seta para baixo na coluna **Expressão de Filtro** .  
   
-10. Na lista de expressões de filtro, expanda **Toda a Data**, clique em **Ano 2009**e clique em **OK**.  
+10. Na lista de expressões de filtro, expanda **Toda a Data** , clique em **Ano 2009** e clique em **OK**.  
   
     A consulta agora inclui um filtro para incluir apenas o ano calendário 2009.  
   
@@ -434,7 +434,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 1.  Expanda a dimensão Produto e arraste o membro Nome da Categoria do Produto até a coluna **Hierarquia** , abaixo de **Grupo da Região de Vendas**.  
   
-2.  Abra a lista **Expressão de Filtro** , clique em **Todos os Produtos**e em **OK**.  
+2.  Abra a lista **Expressão de Filtro** , clique em **Todos os Produtos** e em **OK**.  
   
 3.  Clique na caixa de seleção **Parâmetro** . A consulta agora inclui o parâmetro ProductProductCategoryName.  
   
@@ -452,13 +452,13 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
     [Measures].[Sales Quantity] - [Measures].[Sales Return Quantity]  
     ```  
   
-4.  Na caixa Nome, digite **Qtd Líquida**e clique em **OK**.  
+4.  Na caixa Nome, digite **Qtd Líquida** e clique em **OK**.  
   
     O painel Membros Calculados lista o membro calculado **Qtd Líquida** .  
   
-5.  Clique com o botão direito do mouse em **Membros Calculados**e clique em **Novo Membro Calculado**.  
+5.  Clique com o botão direito do mouse em **Membros Calculados** e clique em **Novo Membro Calculado**.  
   
-6.  No painel Metadados, expanda **Medidas**e Vendas.  
+6.  No painel Metadados, expanda **Medidas** e Vendas.  
   
 7.  Arraste a medida Valor das Vendas até a caixa **Expressão** , digite o caractere de subtração (-), arraste a medida Valor de Devolução das Vendas até a caixa **Expressão** e coloque-a após o caractere de subtração.  
   
@@ -468,7 +468,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  Na caixa **Nome** , digite  **Vendas Líquidas**e clique em **OK**. O painel Membros Calculados lista o membro calculado **Vendas Líquidas** .  
+8.  Na caixa **Nome** , digite  **Vendas Líquidas** e clique em **OK**. O painel Membros Calculados lista o membro calculado **Vendas Líquidas** .  
   
 ### <a name="to-create-the-dataset"></a><a name="MSkip"></a>Para criar o conjunto de dados  
   
@@ -476,7 +476,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 2.  Na dimensão Produto, arraste Nome da Categoria do Produto até o painel de dados e coloque-o à direita de Nome do Canal.  
   
-3.  Em **Membros Calculados**, arraste `Net QTY` até o painel de dados e coloque-o à direita de Nome da Categoria do Produto.  
+3.  Em **Membros Calculados** , arraste `Net QTY` até o painel de dados e coloque-o à direita de Nome da Categoria do Produto.  
   
 4.  Em Membros Calculados, arraste Vendas Líquidas até o painel de dados e coloque-o à direita de `Net QTY`.  
   
@@ -486,7 +486,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
 6.  Clique em **Próximo**.  
   
-## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. Organizar dados em grupos  
+## <a name="1c-organize-main-report-data-into-groups"></a><a name="MLayout"></a>1c. Organizar dados do Relatório Principal em grupos  
 Quando seleciona os campos nos quais agrupar os dados, você cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -505,12 +505,12 @@ Quando seleciona os campos nos quais agrupar os dados, você cria uma matriz com
   
     As etapas 3 e 4 especificam os dados a serem exibidos na matriz.  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. Adicionar subtotais e totais  
+## <a name="1d-add-main-report-subtotals-and-totals"></a><a name="MTotals"></a>1d. Adicionar subtotais e totais do Relatório Principal  
 Você pode mostrar subtotais e totais gerais em relatórios. Os dados no relatório principal são exibidos como um indicador; você removerá o total geral depois de concluir o assistente.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Para adicionar subtotais e totais gerais  
   
-1.  Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
+1.  Na página **Escolher o layout** , em **Opções** , verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Quando você executar o relatório, cada linha será exibida da seguinte maneira: a primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados da categoria do produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
   
@@ -544,13 +544,13 @@ Para habilitar o detalhamento, especifique uma ação em uma caixa de texto no r
   
 4.  Selecione **Ir para relatório**.  
   
-5.  Em **Especificar um relatório**, clique em **Procurar**e localize o relatório de detalhamento chamado ResellerVSOnlineDrillthrough.  
+5.  Em **Especificar um relatório** , clique em **Procurar** e localize o relatório de detalhamento chamado ResellerVSOnlineDrillthrough.  
   
 6.  Para adicionar um parâmetro para executar o relatório de detalhamento, clique em **Adicionar**.  
   
 7.  Na lista **Nome** , selecione ProductProductCategoryName.  
   
-8.  Em **Valor**, digite `[Product_Category_Name.UniqueName]`.  
+8.  Em **Valor** , digite `[Product_Category_Name.UniqueName]`.  
   
     Product_Category_Name é um campo do conjunto de dados.  
   
@@ -606,7 +606,7 @@ Use indicadores para mostrar o estado de quantidades e vendas dos canais Online 
   
 6.  Para visualizar o relatório, clique em **Executar**.  
   
-## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. Atualizar propriedades de parâmetros  
+## <a name="5-set-internal-parameter-property"></a><a name="MParameter"></a>5. Definir propriedade de parâmetro interno  
 Por padrão, os parâmetros estão visíveis, o que não é apropriado para este relatório. Você atualizará as propriedades dos parâmetros para tornar os parâmetros internos.  
   
 #### <a name="to-make-the-parameter-internal"></a>Para tornar o parâmetro interno  
@@ -655,7 +655,7 @@ Salve o relatório principal em uma biblioteca do SharePoint.
   
 5.  Navegue para a biblioteca onde você deseja salvar o relatório.  
   
-6.  Em **Nome**, substitua o nome padrão por **ResellerVSOnlineMain**.  
+6.  Em **Nome** , substitua o nome padrão por **ResellerVSOnlineMain**.  
   
     > [!IMPORTANT]  
     > Salve o relatório principal no mesmo local onde você salvou o relatório detalhado. Para salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, confirme se a ação **Ir para o relatório** no relatório principal aponta para o local correto do relatório de detalhamento.  

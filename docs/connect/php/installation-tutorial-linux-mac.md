@@ -1,7 +1,7 @@
 ---
 title: Instalação do Linux e macOS para Drivers for PHP
 description: Estas instruções mostram como instalar os Microsoft Drivers for PHP for SQL Server em Linux ou macOS.
-ms.date: 09/22/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 8d256e7cabf26b280988afe08d8e795466141688
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 66c505f588d6f250c0e18dc88a79b21ed658f2b5
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115541"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243729"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial de instalação de Linux e macOS para Drivers da Microsoft para PHP para SQL Server
 As instruções a seguir pressupõem a existência de um ambiente limpo e mostram como instalar o PHP 7.x, o Microsoft ODBC Driver, o servidor Web Apache e os Drivers da Microsoft para PHP para SQL Server no Ubuntu 16.04, 18.04 e 20.04, no Red Hat 7 e 8, no Debian 8, 9 e 10, no SUSE 12 e 15, no Alpine 3.11 e no macOS 10.13, 10.14 e 10.15. Essas instruções aconselham a instalar os drivers usando PECL, mas também é possível baixar os binários predefinidos na página de projetos do GitHub [Drivers da Microsoft para PHP e para SQL Server](https://github.com/Microsoft/msphpsql/releases) e instalá-los seguindo as instruções em [Como carregar os Drivers da Microsoft para PHP e para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obter uma explicação do carregamento da extensão e por que não adicionamos as extensões ao php.ini, confira a seção sobre [carregar os drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-Estas instruções instalam o PHP 7.4 por padrão usando `pecl install`. Talvez seja necessário executar primeiro `pecl channel-update pecl.php.net`. Observe que algumas distribuições compatíveis com Linux têm como padrão o PHP 7.1 ou anterior que não é compatível com a versão mais recente dos drivers PHP para SQL Server. Confira as observações no início de cada seção para instalar o PHP 7.2 ou 7.3.
+Estas instruções instalam o PHP 7.4 por padrão usando `pecl install`. Talvez seja necessário executar primeiro `pecl channel-update pecl.php.net`. Algumas distribuições do Linux com suporte têm como padrão o PHP 7.1 ou anterior, que não tem suporte para a versão mais recente dos drivers PHP para o SQL Server. Consulte as observações no início de cada seção para instalar o PHP 7.2 ou 7.3.
 
 As instruções para instalar o Gerenciador de Processos do PHP FastCGI e o PHP-FPM no Ubuntu também estão incluídas. Isso será necessário caso esteja usando o servidor Web nginx em vez do Apache.
 
@@ -267,7 +267,7 @@ Para testar sua instalação, confira [Testar a instalação](#testing-your-inst
 ## <a name="installing-the-drivers-on-suse-12-and-15"></a>Instalar os drivers no Suse 12 e 15
 
 > [!NOTE]
-> Nas instruções a seguir, substitua `<SuseVersion>` por sua versão do Suse: se você estiver usando o Suse Enterprise Linux 15, ela será SLE_15 ou SLE_15_SP1. Para o Suse 12, use SLE_12_SP4 (ou acima, se aplicável). Nem todas as versões do PHP estão disponíveis para todas as versões do Suse Linux. Confira `http://download.opensuse.org/repositories/devel:/languages:/php` para ver quais versões do Suse têm a versão padrão do PHP disponível, ou `http://download.opensuse.org/repositories/devel:/languages:/php:/` para ver quais versões do PHP estão disponíveis relativamente às versões do Suse.
+> Nas instruções a seguir, substitua `<SuseVersion>` por sua versão do Suse: se você estiver usando o Suse Enterprise Linux 15, ela será SLE_15 ou SLE_15_SP1. Para o Suse 12, use SLE_12_SP4 (ou acima, se aplicável). Nem todas as versões do PHP estão disponíveis para todas as versões do Suse Linux. Confira `http://download.opensuse.org/repositories/devel:/languages:/php` para ver quais versões do Suse têm a versão padrão do PHP disponível ou `http://download.opensuse.org/repositories/devel:/languages:/php:/` para ver quais versões do PHP estão disponíveis relativamente às versões do Suse.
 
 > [!NOTE]
 > Pacotes para PHP 7.4 não estão disponíveis para o Suse 12. Para instalar o PHP 7.2, substitua a URL do repositório abaixo pela seguinte URL: `https://download.opensuse.org/repositories/devel:/languages:/php:/php72/<SuseVersion>/devel:languages:php:php72.repo`.
@@ -367,7 +367,7 @@ brew tap
 brew tap homebrew/core
 brew install php@7.4
 ```
-O PHP já deve estar no seu caminho: execute `php -v` para verificar se você está executando a versão correta do PHP. Se o PHP não está no seu caminho ou não tem a versão correta, execute o seguinte:
+Agora, o PHP deve estar no seu caminho. Execute `php -v` para verificar se você está executando a versão correta do PHP. Se o PHP não está no seu caminho ou não tem a versão correta, execute o seguinte:
 ```bash
 brew link --force --overwrite php@7.4
 ```
@@ -407,7 +407,7 @@ Para testar sua instalação, confira [Testar a instalação](#testing-your-inst
 ## <a name="testing-your-installation"></a>Testar a instalação
 
 Para testar esta amostra de script, crie um arquivo chamado testsql.php na raiz do documento do seu sistema. Ou seja, `/var/www/html/` no Ubuntu, no Debian e no RedHat, `/srv/www/htdocs` no SUSE, `/var/www/localhost/htdocs` no Alpine ou `/usr/local/var/www` no macOS. Copie o script a seguir para esse arquivo, substituindo o servidor, o banco de dados, o nome de usuário e a senha, conforme apropriado.
-```
+```php
 <?php
 $serverName = "yourServername";
 $connectionOptions = array(
@@ -415,6 +415,15 @@ $connectionOptions = array(
     "uid" => "yourUsername",
     "pwd" => "yourPassword"
 );
+
+function exception_handler($exception) {
+    echo "<h1>Failure</h1>";
+    echo "Uncaught exception: " , $exception->getMessage();
+    echo "<h1>PHP Info for troubleshooting</h1>";
+    phpinfo();
+}
+
+set_exception_handler('exception_handler');
 
 // Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
@@ -434,7 +443,7 @@ if ($stmt === false) {
 }
 ?>
 
-<h1> Results : </h1>
+<h1> Success Results : </h1>
 
 <?php
 while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
@@ -447,6 +456,7 @@ sqlsrv_close($conn);
 function formatErrors($errors)
 {
     // Display errors
+    echo "<h1>SQL Error:</h1>";
     echo "Error information: <br/>";
     foreach ($errors as $error) {
         echo "SQLSTATE: ". $error['SQLSTATE'] . "<br/>";
@@ -456,7 +466,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-Aponte seu navegador para https://localhost/testsql.php (https://localhost:8080/testsql.php no macOS). Agora, você pode se conectar ao banco de dados do SQL Server/SQL do Azure.
+Aponte seu navegador para https://localhost/testsql.php (https://localhost:8080/testsql.php no macOS). Agora, você pode se conectar ao banco de dados do SQL Server/SQL do Azure. Se você não vir uma mensagem de êxito mostrando informações sobre a versão do SQL, confira em [Recursos de suporte](support-resources-for-the-php-sql-driver.md) os locais a serem acessados para obter ajuda.
 
 ## <a name="see-also"></a>Consulte Também  
 [Introdução aos Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245693"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043729"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
 Neste tutorial, você usa um assistente no [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para criar um gráfico de barras em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Em seguida, adicione um filtro e aprimore o gráfico. 
@@ -27,7 +27,7 @@ Um gráfico de barras exibe os dados de categoria horizontalmente. Ele pode ajud
   
 A ilustração a seguir mostra o gráfico de barras que você criará, com as vendas de 2014 e 2015 dos cinco principais vendedores, das maiores até as menores vendas de 2015.  
   
-![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
+![Captura de tela de um gráfico de barras do construtor de relatórios.](../reporting-services/media/report-builder-bar-chart.png) 
   
  
 > [!NOTE]  
@@ -56,7 +56,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
 3.  No painel direito, clique em **Assistente de Gráfico**.  
   
-4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados**e em **Avançar**.  
+4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados** e em **Avançar**.  
   
 5.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório, selecione uma fonte de dados e clique em **Avançar**. Talvez seja necessário inserir um nome de usuário e uma senha.  
   
@@ -92,9 +92,9 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
  
 1.  Na página **Escolher um tipo de gráfico** , o gráfico de colunas é o tipo de gráfico padrão.  
   
-2.  Clique em **Barra**e em **Avançar**.  
+2.  Clique em **Barra** e em **Avançar**.  
   
-    Na página **Organizar campos de gráfico**, há quatro campos no painel **Campos disponíveis**: FirstName, LastName, SalesYear2015 e SalesYear2014.  
+    Na página **Organizar campos de gráfico** , há quatro campos no painel **Campos disponíveis** : FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
 3.  Arraste LastName para o painel Categorias.  
   
@@ -121,7 +121,7 @@ Por padrão, apenas alguns valores no eixo vertical são exibidos. É possível 
   
 2.  Clique com o botão direito do mouse no eixo vertical e clique em **Propriedades do Eixo Vertical**.  
   
-3.  Em **Alcance e intervalo do eixo**, na caixa **Intervalo** , digite **1**.  
+3.  Em **Alcance e intervalo do eixo** , na caixa **Intervalo** , digite **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -167,7 +167,7 @@ Quando você classifica dados em um gráfico, está alterando a ordem de valores
   
 4.  Clique em **Classificar**. A página **Alterar opções de classificação** exibe uma lista de expressões de classificação. Por padrão, essa lista contém uma expressão de classificação que é igual à expressão do grupo de categorias original.  
   
-5.  Em **Classificar por**, clique em **[SalesYear2015]** .  
+5.  Em **Classificar por** , clique em **[SalesYear2015]** .  
   
 6.  Na lista **Ordem** , selecione **A a Z** para que os nomes sejam exibidos das maiores para as menores vendas de 2015.
   
@@ -188,7 +188,7 @@ Para melhorar a capacidade de leitura dos valores do gráfico, mova a legenda do
   
 3.  Selecione **Propriedades da Legenda**.  
   
-4.  Em **Posição da legenda**, selecione uma posição diferente. Por exemplo, defina a posição para a opção da metade inferior.  
+4.  Em **Posição da legenda** , selecione uma posição diferente. Por exemplo, defina a posição para a opção da metade inferior.  
   
     Quando a legenda estiver posicionada na parte superior ou inferior de um gráfico, o layout da legenda será alterado de vertical para horizontal. Você pode selecionar um layout diferente na lista suspensa **Layout** .  
   
@@ -246,13 +246,13 @@ Você pode adicionar um filtro ao gráfico para especificar os dados do conjunto
   
 5.  Clique em **Adicionar**. Um novo filtro em branco é exibido.  
   
-6.  Em **Expressão**, digite **[Sum(SalesYear2015)]** . Esse procedimento cria a expressão subjacente `=Sum(Fields!SalesYear2015.Value)`, que poderá ser vista se você clicar no botão **fx** .  
+6.  Em **Expressão** , digite **[Sum(SalesYear2015)]** . Esse procedimento cria a expressão subjacente `=Sum(Fields!SalesYear2015.Value)`, que poderá ser vista se você clicar no botão **fx** .  
   
 7.  Verifique se o tipo de dados é **Text**.  
   
-8.  Em **Operador**, selecione **N Superior** na lista suspensa.  
+8.  Em **Operador** , selecione **N Superior** na lista suspensa.  
   
-9. Em **Valor**, digite a seguinte expressão: **=5**  
+9. Em **Valor** , digite a seguinte expressão: **=5**  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -266,15 +266,15 @@ O gráfico mostra os cinco primeiros nomes de vendedores dos dados de vendas de 
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Gráfico de Barras de Vendas**, pressione ENTER e digite **Cinco Primeiros Vendedores de 2015**, como neste exemplo:  
+2.  Digite **Gráfico de Barras de Vendas** , pressione ENTER e digite **Cinco Primeiros Vendedores de 2015** , como neste exemplo:  
   
     **Gráfico de Barras de Vendas**  
   
     **Cinco Primeiros Vendedores de 2015**  
   
-3.  Selecione **Gráfico de Barras de Vendas**e clique no botão **Negrito** .  
+3.  Selecione **Gráfico de Barras de Vendas** e clique no botão **Negrito** .  
   
-4.  Selecione **Cinco Primeiros Vendedores de 2015**e, na seção **Fonte** da guia **Início** , defina o tamanho da fonte como **10**.  
+4.  Selecione **Cinco Primeiros Vendedores de 2015** e, na seção **Fonte** da guia **Início** , defina o tamanho da fonte como **10**.  
   
 5.  (Opcional) Talvez seja necessário aumentar a altura da caixa de texto Título e mover para baixo a parte superior do gráfico de barras, para acomodar as duas linhas de texto.  
   
@@ -288,7 +288,7 @@ O gráfico mostra os cinco primeiros nomes de vendedores dos dados de vendas de 
   
 2.  Clique em **Arquivo** > **Salvar Como**.  
   
-3.  Em **Nome**, digite **Gráfico de Barras de Vendas**.  
+3.  Em **Nome** , digite **Gráfico de Barras de Vendas**.  
 
     Você pode salvá-lo no computador ou no servidor de relatório.
   

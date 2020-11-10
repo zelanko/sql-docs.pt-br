@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 833efefc3cf79e6a4939a46e15fd80acb493f541
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248115"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243797"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
 
@@ -22,7 +22,7 @@ Neste tutorial, você treina como formatar texto de várias maneiras em um relat
 
 Depois de configurar o relatório em branco com a fonte de dados e o conjunto de dados, é possível escolher os formatos que você quer explorar. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
   
-![report-build-format-report](../reporting-services/media/report-build-format-report.png) 
+![Captura de tela de um relatório formatado do construtor de relatórios.](../reporting-services/media/report-build-format-report.png) 
   
 Em uma etapa, você comete um erro de propósito, para poder ver o porquê do erro. Em seguida, você corrige o erro para obter o efeito desejado.  
     
@@ -51,14 +51,14 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
 
     Se o painel **Dados do Relatório** não estiver visível, na guia **Exibir** , marque **Dados do Relatório**.
   
-2.  Na caixa **Nome**, digite: **TextDataSource**  
+2.  Na caixa **Nome** , digite: **TextDataSource**  
   
 3.  Clique em **Usar uma conexão inserida no meu relatório**.  
   
 4.  Verifique se o tipo de conexão é Microsoft SQL Server e, na caixa **Cadeia de conexão** , digite: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > A expressão `<servername>`, por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Este tutorial não precisa de dados específicos. Ele só precisa de uma conexão com um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para o próximo procedimento, “Para criar uma fonte de dados”. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > A expressão `<servername>`, por exemplo, Report001, especifica um computador no qual há uma instância do Mecanismo de Banco de Dados do SQL Server instalada. Este tutorial não precisa de dados específicos. Ele só precisa de uma conexão com um banco de dados do SQL Server. Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados** , será possível selecioná-la e ir para o próximo procedimento, “Para criar uma fonte de dados”. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -68,7 +68,7 @@ Para obter informações sobre os requisitos, consulte [Pré-requisitos para tut
   
 2.  Verifique se a fonte de dados é **TextDataSource**.  
   
-3.  Na caixa **Nome**, digite: **TextDataset.**  
+3.  Na caixa **Nome** , digite: **TextDataset.**  
   
 4.  Verifique se o tipo de consulta **Texto** está selecionado e, em seguida, clique em **Designer de Consulta**.  
   
@@ -131,13 +131,13 @@ Se você quiser que um campo do conjunto de dados seja exibido em um relatório,
   
 2.  Clique em **Executar**.  
   
-    Apenas um registro, **Fernando Ross**, está visível, o primeiro registro na consulta em ordem alfabética. O campo não se repete para mostrar os outros registros nesse campo.  
+    Apenas um registro, **Fernando Ross** , está visível, o primeiro registro na consulta em ordem alfabética. O campo não se repete para mostrar os outros registros nesse campo.  
   
 3.  Clique em **Design** para retornar à exibição de design.  
   
 4.  Selecione a expressão `<Expr>` na caixa de texto.  
   
-5.  No painel Propriedades, na propriedade **Valor** , você vê o seguinte (se o painel Propriedades não estiver visível, na guia **Exibir** , marque **Propriedades**):  
+5.  No painel Propriedades, na propriedade **Valor** , você vê o seguinte (se o painel Propriedades não estiver visível, na guia **Exibir** , marque **Propriedades** ):  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
@@ -182,9 +182,9 @@ Crie essa tabela para que você tenha um local para colocar os hiperlinks e o te
   
 2.  Na página **Escolher um conjunto de dados** do Assistente de Nova Tabela ou Matriz, clique em **Escolher um conjunto de dados existente neste relatório ou em um conjunto de dados compartilhado** > **TextDataset (neste Relatório)** > **Avançar**.  
   
-3.  Na página **Organizar campos** , arraste os campos **Territory**, **LinkText**e **Product** até **Grupos de Linhas**, arraste o campo **Sales** até **Valores**e clique em **Avançar**.  
+3.  Na página **Organizar campos** , arraste os campos **Territory** , **LinkText** e **Product** até **Grupos de Linhas** , arraste o campo **Sales** até **Valores** e clique em **Avançar**.  
 
-    ![report-builder-text-arrange-fields](../reporting-services/media/report-builder-text-arrange-fields.png)
+    ![Captura de tela mostrando como organizar campos de texto no construtor de relatórios.](../reporting-services/media/report-builder-text-arrange-fields.png)
   
 4.  Na página **Escolher o layout** , desmarque a caixa de seleção **Expandir/recolher grupos** para que seja possível ver toda a tabela e clique em **Avançar**. 
   
@@ -194,7 +194,7 @@ Crie essa tabela para que você tenha um local para colocar os hiperlinks e o te
   
     A tabela parece correta, mas tem duas linhas totais. A coluna **LinkText** não precisa de uma linha Total.  
     
-    ![report-builder-format-2-totals](../reporting-services/media/report-builder-format-2-totals.png)
+    ![Captura de tela mostrando dois totais no relatório do construtor de relatórios.](../reporting-services/media/report-builder-format-2-totals.png)
   
 8.  Clique em **Design** para retornar à exibição de design.  
   
@@ -202,13 +202,13 @@ Crie essa tabela para que você tenha um local para colocar os hiperlinks e o te
   
 11. Com essas três células selecionadas, clique com o botão direito do mouse em uma delas e clique em **Excluir Linhas**.  
 
-    ![report-builder-format-delete-rows](../reporting-services/media/report-builder-format-delete-rows.png)
+    ![Captura de tela mostrando como excluir linhas de um relatório do construtor de relatórios.](../reporting-services/media/report-builder-format-delete-rows.png)
   
 12. Clique em **Executar**.  
 
     Agora ele tem somente uma linha Total.
     
-    ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
+    ![Captura de tela mostrando um total no relatório do construtor de relatórios.](../reporting-services/media/report-builder-format-one-total.png)
   
 ## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Adicionar um hiperlink ao relatório  
 Nesta seção, você adiciona um hiperlink ao texto na tabela da seção anterior.  
@@ -225,13 +225,13 @@ Nesta seção, você adiciona um hiperlink ao texto na tabela da seção anterio
   
 7.  Selecione `[LinkText]`.  
   
-8.  Na guia **Início** > **Fonte**, selecione **Sublinhado** e altere **Cor** para **Azul**.  
+8.  Na guia **Início** > **Fonte** , selecione **Sublinhado** e altere **Cor** para **Azul**.  
   
 9. Clique em **Executar**.  
   
     O texto agora se parece com um link.  
     
-    ![report-builder-format-hyperlink](../reporting-services/media/report-builder-format-hyperlink.png)
+    ![Captura de tela mostrando texto com hiperlink no relatório do construtor de relatórios.](../reporting-services/media/report-builder-format-hyperlink.png)
   
 10. Clique em um link. Se o computador estiver conectado à Internet, um navegador abrirá um tópico da Ajuda do Construtor de Relatórios.  
   
@@ -251,15 +251,15 @@ Nesta seção, você gira um texto na tabela das seções anteriores.
     > [!NOTE]  
     > Quando as propriedades no painel Propriedades estiverem organizadas em categorias, WritingMode estará na categoria **Localização** . Verifique se você selecionou a célula, e não o texto WritingMode é uma propriedade da caixa de texto, não do texto.  
 
-    ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+    ![Captura de tela do campo Território no relatório do construtor de relatórios.](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  Na guia **Início** > seção **Parágrafo**, selecione **Meio** e **Centro** para localizar o texto no centro da célula vertical e horizontalmente.  
+6.  Na guia **Início** > seção **Parágrafo** , selecione **Meio** e **Centro** para localizar o texto no centro da célula vertical e horizontalmente.  
   
 8.  Clique em Executar ( **!** ).  
   
 Agora o texto na célula `[Territory]` é executado verticalmente da parte inferior para a parte superior das células.  
 
-![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
+![Captura de tela mostrando os valores de Território girados 270 graus.](../reporting-services/media/report-builder-format-rotate-270.png)
 
 ## <a name="format-currency"></a><a name="FormatCurrency"></a>Formatar moeda  
   
@@ -269,9 +269,9 @@ Agora o texto na célula `[Territory]` é executado verticalmente da parte infer
   
 3.  Na guia **Início** > grupo **Número** > botão **Moeda**.  
   
-4.  (Opcional) Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [**US$ 12.345,00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+4.  (Opcional) Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [ **US$ 12.345,00** ]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
 
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Captura de tela da opção Valores de Exemplo no construtor de relatórios.](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (Opcional) Na guia **Início** , no grupo **Número** , clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.  
   
@@ -279,13 +279,13 @@ Agora o texto na célula `[Territory]` é executado verticalmente da parte infer
   
 O relatório agora exibe dados formatados e é mais fácil de ler.  
 
-![report-build-format-report](../reporting-services/media/report-build-format-report.png)
+![Captura de tela mostrando o relatório de formato de build de relatório reformatado.](../reporting-services/media/report-build-format-report.png)
     
 ## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Exibindo texto com formatação HTML  
   
 1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
-2.  Na guia **Inserir** , clique em **Caixa de Texto**e, na superfície de design, clique e arraste para criar uma caixa de texto abaixo da tabela, com cerca de 10 centímetros de largura e 8 centímetros de altura.  
+2.  Na guia **Inserir** , clique em **Caixa de Texto** e, na superfície de design, clique e arraste para criar uma caixa de texto abaixo da tabela, com cerca de 10 centímetros de largura e 8 centímetros de altura.  
   
 3.  Copiar esse texto e cole-o na caixa de texto:  
   
@@ -313,7 +313,7 @@ O relatório agora exibe dados formatados e é mais fácil de ler.
   
     Essa é uma propriedade do texto, não da caixa de texto, portanto, em uma caixa de texto você pode ter uma mistura de texto sem formatação e texto que usa marcas HTML como estilos.  
   
-6.  Na página **Geral** , em **Tipo de marcação**, clique em **HTML – Interpretar marcas HTML como estilos**.  
+6.  Na página **Geral** , em **Tipo de marcação** , clique em **HTML – Interpretar marcas HTML como estilos**.  
   
 7.  Clique em **OK**.  
   
@@ -321,7 +321,7 @@ O relatório agora exibe dados formatados e é mais fácil de ler.
   
 O texto na caixa de texto é exibido como um título, um parágrafo e uma lista com marcadores.  
   
-![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
+![Captura de tela mostrando texto formatado em um relatório do construtor de relatórios.](../reporting-services/media/report-builder-format-html.png)
 
 ## <a name="save-the-report"></a><a name="Save"></a>Salvar o relatório  
 É possível salvar relatórios em um servidor de relatório, em uma biblioteca do SharePoint ou no computador.  
@@ -338,7 +338,7 @@ Neste tutorial, salve o relatório em um servidor de relatório. Se você não t
   
     A mensagem "Conectando-se a um servidor de relatório" é exibida. Quando a conexão for concluída, você verá o conteúdo da pasta do relatório que o administrador do servidor de relatório especificou como o local padrão para relatórios.  
   
-4.  Em **Nome**, substitua o nome padrão por um nome de sua escolha.
+4.  Em **Nome** , substitua o nome padrão por um nome de sua escolha.
 
 5.  Clique em **Save** (Salvar).  
   
@@ -348,9 +348,9 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
-2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu Computador**e, em seguida, navegue até a pasta na qual você deseja salvar o relatório.  
+2.  Clique em **Área de Trabalho** , **Meus Documentos** ou **Meu Computador** e, em seguida, navegue até a pasta na qual você deseja salvar o relatório.  
   
-3.  Em **Nome**, substitua o nome padrão por um nome de sua escolha. 
+3.  Em **Nome** , substitua o nome padrão por um nome de sua escolha. 
   
 4.  Clique em **Save** (Salvar).  
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f4802ee3beb72e34ed2b85e8857ac69c61557018
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245643"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043707"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Adicionar um KPI ao relatório (Construtor de Relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
@@ -23,7 +23,7 @@ Os KPIs são valores mensuráveis com importância comercial. Nesse cenário, o 
   
 A ilustração a seguir é semelhante ao relatório que você criará.  
   
-![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
+![Captura de tela de um relatório de KPI do construtor de relatórios.](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
 > Neste tutorial, as etapas do assistente são consolidadas em dois procedimentos: um para criar o conjunto de dados e um para criar uma tabela. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados, criar um conjunto de dados e executar o assistente, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -125,7 +125,7 @@ O Assistente de Tabela ou Matriz fornece um design inicial no qual os dados ser�
   
     Quando você executar o relatório, a tabela exibirá cada data, todas as ordens de cada data e todos os produtos, quantidades e totais de vendas de cada pedido.  
   
-7.  Na página Escolher o Layout, em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
+7.  Na página Escolher o Layout, em **Opções** , verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
 8.  Verifique se a opção **Bloqueado, subtotal abaixo** está selecionada.  
   
@@ -139,13 +139,13 @@ O Assistente de Tabela ou Matriz fornece um design inicial no qual os dados ser�
   
       A tabela é adicionada à superfície de design. A tabela tem cinco colunas e cinco linhas. O painel Grupos de Linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados. O painel Grupos de Colunas está vazio.  
       
-      ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
+      ![Captura de tela mostrando grupos de linhas.](../reporting-services/media/report-builder-kpi-row-groups.png)
   
 12. Clique em **Executar** para visualizar o relatório.  
   
 Para cada produto vendido em uma data específica, a tabela exibe o nome do produto, a quantidade vendida e o total da venda. Os dados são organizados primeiro pela data da venda e depois pela subcategoria. 
 
-![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
+![Captura de tela mostrando uma tabela de KPI básica do construtor de relatórios.](../reporting-services/media/report-builder-kpi-basic-table.png)
     
 ### <a name="format-dates-and-currency"></a>Formatar datas e moeda
 Vamos aumentar a largura das colunas e definir o formato para as datas e a moeda.
@@ -160,7 +160,7 @@ Vamos aumentar a largura das colunas e definir o formato para as datas e a moeda
 
    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [$12,345.00]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Captura de tela da opção Valores de Exemplo do construtor de relatórios selecionada.](../reporting-services/media/report-builder-placeholder-value-button.png)
 
 5. (Opcional) Na guia **Início** , no grupo **Número** , clique no botão **Diminuir Decimais** duas vezes para exibir valores em dólares sem centavos.
 
@@ -172,7 +172,7 @@ Vamos aumentar a largura das colunas e definir o formato para as datas e a moeda
 
 12. Clique em **Executar** para visualizar o relatório.  
  
-![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
+![Captura de tela do relatório de KPI do construtor de relatórios com números formatados.](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
 ## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Usar cores do plano de fundo para exibir um KPI  
 As cores do plano de fundo podem ser definidas como uma expressão avaliada quando você executa o relatório.  
@@ -183,7 +183,7 @@ As cores do plano de fundo podem ser definidas como uma expressão avaliada quan
 
     Verifique se você selecionou a célula, não o texto na célula, para exibir **Propriedades da Caixa de Texto**. 
     
-    ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
+    ![Captura de tela da opção Propriedades da Caixa de Texto do construtor de relatórios.](../reporting-services/media/report-builder-text-box-properties.png)
   
 2.  Em **Preencher** , clique no botão **fx** ao lado da opção **Cor de preenchimento** e insira a seguinte expressão no campo **Definir expressão para: BackgroundColor** :  
   
@@ -197,7 +197,7 @@ As cores do plano de fundo podem ser definidas como uma expressão avaliada quan
   
 Na linha de subtotal que exibe as vendas de uma subcategoria, a cor do plano de fundo da célula é vermelha, amarela ou verde, dependendo da soma das vendas.  
 
-![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
+![Captura de tela do relatório de KPI do construtor de relatórios com cores em determinadas células.](../reporting-services/media/report-builder-kpi-colors.png)
   
 ## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Exibir um KPI usando um medidor  
 Um medidor representa um único valor em um conjunto de dados. Este tutorial usa um medidor linear horizontal porque sua forma e simplicidade facilitam a leitura, mesmo quando é menor e usado em uma célula da tabela. Para obter mais informações, consulte [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
@@ -208,7 +208,7 @@ Um medidor representa um único valor em um conjunto de dados. Este tutorial usa
   
 2.  Na tabela, clique com o botão direito do mouse na alça da coluna Sales > **Inserir Coluna** > **Direita**. Uma nova coluna é adicionada à tabela.  
 
-    ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
+    ![Captura de tela mostrando como inserir uma coluna no relatório de KPI do construtor de relatórios.](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  Digite **KPI Linear** no título de coluna.  
   
@@ -224,17 +224,17 @@ Um medidor representa um único valor em um conjunto de dados. Este tutorial usa
   
     Quando você solta o campo `Sales` no medidor, o campo é inserido na lista **Valores** e é agregado por meio da função Sum interna.  
    
-    ![report-builder-kpi-drag-sales-field](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
+    ![Captura de tela mostrando como arrastar o campo Vendas para um relatório de KPI do construtor de relatórios.](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
 9. No painel **Dados do Medidor** , clique na seta ao lado de **LinearPointer1** > **Propriedades do Ponteiro**.  
   
-10. Na caixa de diálogo **Propriedades do Ponteiro Linear** > guia **Opções de Ponteiro** > **Tipo de Ponteiro**, verifique se a opção **Barra** está selecionada. 
+10. Na caixa de diálogo **Propriedades do Ponteiro Linear** > guia **Opções de Ponteiro** > **Tipo de Ponteiro** , verifique se a opção **Barra** está selecionada. 
  
 11. Clique em **OK**.  
   
 12. Clique com o botão direito do mouse na escala do medidor e clique em **Propriedades da Escala**.  
   
-13. Na caixa de diálogo **Propriedades da Escala Linear** > guia **Geral**, defina **Máximo** como 25.000.  
+13. Na caixa de diálogo **Propriedades da Escala Linear** > guia **Geral** , defina **Máximo** como 25.000.  
 
     > [!NOTE]  
     > Em vez de uma constante como 25.000, é possível usar uma expressão para calcular dinamicamente o valor da opção **Máximo** . A expressão usaria a agregação do recurso de agregação e semelhante à expressão `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
@@ -252,7 +252,7 @@ Um medidor representa um único valor em um conjunto de dados. Este tutorial usa
   
     O comprimento horizontal da barra verde no medidor é alterado de acordo com o valor do KPI.  
   
-![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
+![Captura de tela mostrando uma coluna de KPI Linear adicionada ao relatório de KPI do construtor de relatórios.](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Exibir um KPI usando um indicador  
 Indicadores são medidores pequenos e simples que comunicam valores de dados em um relance. Por conta de seu tamanho e simplicidade, os indicadores costumam ser usados em tabelas e matrizes. Para obter mais informações, consulte [Indicadores &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
@@ -269,7 +269,7 @@ Indicadores são medidores pequenos e simples que comunicam valores de dados em 
   
 5.  Na guia **Inserir** > **Visualizações de Dados** > clique duas vezes em **Indicador.**  
   
-6.  Na caixa de diálogo **Selecionar Tipo de Indicador** , em **Formas**, selecione o primeiro tipo de forma, **3 Semáforos (Não Coroados)** .  
+6.  Na caixa de diálogo **Selecionar Tipo de Indicador** , em **Formas** , selecione o primeiro tipo de forma, **3 Semáforos (Não Coroados)** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -279,7 +279,7 @@ Indicadores são medidores pequenos e simples que comunicam valores de dados em 
   
 9. Na guia **Valores e Estados** , na caixa **Valor** , selecione **[Sum(Sales)]** . Não altere nenhuma outra opção.  
   
-    Por padrão, a sincronização de dados ocorre na região de dados e o valor **Tablix1**, o nome da região de dados da tabela no relatório, é exibido na caixa **Escopo de sincronização** .  
+    Por padrão, a sincronização de dados ocorre na região de dados e o valor **Tablix1** , o nome da região de dados da tabela no relatório, é exibido na caixa **Escopo de sincronização** .  
   
     Nesse relatório, é possível alterar também o escopo de um indicador colocado na célula do subtotal da subcategoria para sincronização no campo SalesDate.  
   
@@ -287,7 +287,7 @@ Indicadores são medidores pequenos e simples que comunicam valores de dados em 
 
 11. Clique em **Executar** para visualizar o relatório.  
 
-![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
+![Captura de tela mostrando uma coluna de KPI de Alerta adicionada ao relatório de KPI do construtor de relatórios.](../reporting-services/media/report-builder-kpi-stoplight.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Adicionar um título de relatório  
 Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Nesta seção, você usa a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
@@ -298,9 +298,9 @@ Você pode aprimorar o texto ainda mais com a aplicação de estilos, tamanhos e
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **KPIs de Vendas de Produtos**e clique fora da caixa de texto.  
+2.  Digite **KPIs de Vendas de Produtos** e clique fora da caixa de texto.  
   
-3.  Opcionalmente, clique com o botão direito do mouse na caixa de texto que contém **KPI de Vendas de Produtos**, clique em **Propriedades da Caixa de Texto**e, na guia Fonte, selecione estilos, tamanhos e cores de fontes diferentes.  
+3.  Opcionalmente, clique com o botão direito do mouse na caixa de texto que contém **KPI de Vendas de Produtos** , clique em **Propriedades da Caixa de Texto** e, na guia Fonte, selecione estilos, tamanhos e cores de fontes diferentes.  
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
@@ -317,7 +317,7 @@ Salve o relatório em um servidor de relatório ou no computador. Se você não 
   
     A mensagem "Conectando-se a um servidor de relatório" é exibida. Quando a conexão for concluída, você verá o conteúdo da pasta do relatório que o administrador do servidor de relatório especificou como o local padrão para relatórios.  
   
-4.  Em **Nome**, substitua o nome padrão por **KPI de Vendas de Produtos**.  
+4.  Em **Nome** , substitua o nome padrão por **KPI de Vendas de Produtos**.  
   
 5.  Clique em **Save** (Salvar).  
   
@@ -327,12 +327,12 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
-2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu computador**e procure a pasta na qual você quer salvar o relatório.  
+2.  Clique em **Área de Trabalho** , **Meus Documentos** ou **Meu computador** e procure a pasta na qual você quer salvar o relatório.  
   
 > [!NOTE]  
-> Se você não tiver acesso a um servidor de relatório, clique em **Área de Trabalho**, **Meus Documentos**ou **Meu computador** e salve o relatório no computador.  
+> Se você não tiver acesso a um servidor de relatório, clique em **Área de Trabalho** , **Meus Documentos** ou **Meu computador** e salve o relatório no computador.  
   
-1.  Em **Nome**, substitua o nome padrão por **KPI de Vendas de Produtos**.  
+1.  Em **Nome** , substitua o nome padrão por **KPI de Vendas de Produtos**.  
   
 2.  Clique em **Save** (Salvar).  
   

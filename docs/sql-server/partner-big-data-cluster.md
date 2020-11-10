@@ -9,12 +9,12 @@ ms.technology: big-data-cluster
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 1e2a4b6790375b9db06376e12ac649bf37093902
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 54ef7f11e15a5cb75833701420fb53d9f28ebaa9
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793783"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235483"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>Parceiros de Clusters de Big Data do SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -24,8 +24,8 @@ Para compatibilidade com a implementação de soluções com Clusters de Big Dat
 
 | Partner (parceiro) | Descrição | Links |
 | --- | --- | --- |
-|![dellemc][1] |A Dell EMC vende armazenamento de dados, segurança de informações, virtualização, análise, computação em nuvem e outros produtos e serviços que permitem que as organizações armazenem, gerenciem, protejam e analisem dados.|[Marketplace][dellemc_marketplace]<br>[Site][dellemc_website]<br>[Folha de dados][dellemc_datasheet]<br>[Twitter][dellemc_twitter]<br>[Vídeo][dellemc_youtube]<br>[Blog][dellemc_blog] |
-|![HPE][2] |Desempenho empresarial para o Microsoft SQL Server<br>Nossas soluções de armazenamento fornecem o Microsoft SQL Server sem preocupações. A integração aprimora o gerenciamento de dados de cópia, aprimora a proteção de dados, acelera o DevOps e fornece uma passagem para a nuvem.|[Site][hpe_website]<br>[Folha de dados][hpe_datasheet]<br>[Baixar a avaliação][hpe_download]<br>[Twitter][hpe_twitter]<br>[Vídeo][hpe_youtube]<br>[Blog][hpe_download]|
+|![Logotipo do dellemc][1] |A Dell EMC vende armazenamento de dados, segurança de informações, virtualização, análise, computação em nuvem e outros produtos e serviços que permitem que as organizações armazenem, gerenciem, protejam e analisem dados.|[Marketplace][dellemc_marketplace]<br>[Logotipo do site][dellemc_website]<br>[Folha de dados][dellemc_datasheet]<br>[Twitter][dellemc_twitter]<br>[Vídeo][dellemc_youtube]<br>[Blog][dellemc_blog] |
+|![Logotipo do HPE][2] |Desempenho empresarial para o Microsoft SQL Server<br>Nossas soluções de armazenamento fornecem o Microsoft SQL Server sem preocupações. A integração aprimora o gerenciamento de dados de cópia, aprimora a proteção de dados, acelera o DevOps e fornece uma passagem para a nuvem.|[Site][hpe_website]<br>[Folha de dados][hpe_datasheet]<br>[Baixar a avaliação][hpe_download]<br>[Twitter][hpe_twitter]<br>[Vídeo][hpe_youtube]<br>[Blog][hpe_download]|
 |![NetApp][3] |O NetApp StorageGRID é um armazenamento de objeto definido por software. Ele pode ser implantado como combinações de dispositivos apenas de software feitos sob medida e em ambientes virtualizados.<br/><br/>Em um namespace, o StorageGRID pode ser dimensionado em vários data centers localizados em todo o mundo. O StorageGRID oferece armazenamento maciço de objetos S3 com o gerenciamento de dados dinâmicos, permitindo que os clientes executem fluxos de trabalho de última geração localmente, aproveitando os recursos de nuvem pública. O exclusivo mecanismo de política de gerenciamento de dados do StorageGRID garante níveis otimizados de desempenho e durabilidade, bem como o cumprimento dos requisitos de localidade de dados. |[Site][netapp_website]<br>[Folha de dados][netapp_datasheet]<br>[Twitter][netapp_twitter]<br>[Vídeo][netapp_youtube]<br>[Docs][netapp_docs]|
 |![PureStorage][5] |O Pure Storage capacita a inovação para criar um mundo melhor usando dados ao fornecer uma plataforma simples Evergreen&trade; que permite às organizações transformar dados em inteligência e vantagem.  Pronto para o BDC (Cluster de Big Data), o Pure Storage tem uma malha de armazenamento altamente escalonável para plataformas de orquestração de contêineres compatíveis com Kubernetes. O FlashBlade da Pure é uma plataforma de armazenamento simples de gerenciar, de alto desempenho, que pode ser utilizada por camadas de HDFS do Cluster de Big Data do SQL Server 2019, permitindo a escala para petabytes de armazenamento utilizável e largura de banda de E/S na ordem de dezenas de gigabytes. O FlashArray, bem como o FlashBlade, é perfeito para obter sucesso com o Cluster de Big Data. |[Site][purestorage_website]<br>[Folha de dados][purestorage_datasheet]<br>[Twitter][purestorage_twitter]<br>[Docs][purestorage_docs]|
 |![StreamSets][4] |O StreamSets fornece uma solução sem código para operar pipelines de dados para Clusters de Big Data: <br/><ul><li> Crie e opere fluxos de dados contínuos com ferramentas visuais e intuitivas, acabando com a necessidade de saber como codificar para sistemas de Big Data</li><li>Desenvolva aplicativos de análise complexos em Apache Spark usando uma interface do usuário intuitiva do tipo "arrastar e soltar" </li><li>Ingira e processe dados em escala de uma ampla variedade de fontes de dados com integração nativa em SQL Server e HDFS</li><li>Acelere a migração de bancos de dados relacionais, clusters Hadoop e repositórios NoSQL em Clusters de Big Data</li></ul>   | [Site][streamsets_website]<br>[Blog][streamsets_blog]<br>[Vídeo][streamsets_youtube]<br>[Documentação][streamsets_docs]|

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 23796da12c2b987dfad6f023d40e9975cb301e28
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245683"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043771"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
 Neste tutorial, você cria um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com um gráfico de colunas, exibindo uma série como um conjunto de barras verticais agrupadas por categoria. 
@@ -27,7 +27,7 @@ Gráficos de colunas são úteis para:
   
 A ilustração seguinte mostra o gráfico de coluna que você criará, com uma média móvel.  
   
-![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
+![Captura de tela mostrando um gráfico de colunas do construtor de relatórios.](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
 > Neste tutorial, as etapas do assistente são consolidadas em um procedimento. Para obter instruções passo a passo sobre como procurar um servidor de relatório, escolher uma fonte de dados e criar um conjunto de dados, consulte o primeiro tutorial desta série: [Tutorial: Criação de um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
@@ -54,7 +54,7 @@ Nesta seção, você aprende a usar o Assistente de Gráfico para criar um conju
   
 3.  No painel direito, clique em **Assistente de Gráfico**.  
   
-4.  Na página **Escolher um conjunto de dados**, clique em **Criar um conjunto de dados**e em **Avançar**.  
+4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados** e em **Avançar**.  
   
 5.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório, selecione uma fonte de dados e clique em **Avançar**. Talvez seja necessário inserir um nome de usuário e uma senha.  
   
@@ -105,13 +105,13 @@ Você pode escolher um dentre vários tipos de gráficos predefinidos e modifica
   
     O gráfico é adicionado à superfície de design. Observe que o novo gráfico de colunas mostra apenas dados representacionais. A legenda indica Data de Vendas A, Data de Vendas B, etc., apenas para dar uma ideia da aparência do relatório. 
     
-    ![report-builder-column-chart-1-design-view](../reporting-services/media/report-builder-column-chart-1-design-view.png)
+    ![Captura de tela de uma coluna do construtor de relatórios no modo de exibição de design.](../reporting-services/media/report-builder-column-chart-1-design-view.png)
   
 7.  Clique no gráfico para exibir suas alças. Arraste o canto inferior direito do gráfico para aumentar o tamanho do gráfico. Observe que o tamanho da superfície de design de relatório aumenta para acomodar o tamanho do gráfico.  
   
 8.  Clique em **Executar** para visualizar o relatório.  
 
-    ![report-builder-column-chart-1-preview](../reporting-services/media/report-builder-column-chart-1-preview.png)
+    ![Captura de tela mostrando uma visualização do gráfico de colunas do construtor de relatórios.](../reporting-services/media/report-builder-column-chart-1-preview.png)
 
 Observe que o gráfico não rotula cada categoria no eixo horizontal. Por padrão, somente rótulos que se ajustam próximo ao eixo são incluídos. 
   
@@ -122,7 +122,7 @@ Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensio
   
 2.  Clique com o botão direito do mouse no eixo horizontal > **Propriedades do Eixo Horizontal**.  
   
-3.  Na guia **Número** , em **Categoria**, selecione **Data**.  
+3.  Na guia **Número** , em **Categoria** , selecione **Data**.  
   
 5.  Na caixa **Tipo** , selecione **31 de janeiro de 2000**.  
   
@@ -132,7 +132,7 @@ Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensio
   
 A data é exibida no formato selecionado. O gráfico ainda não rotula cada categoria no eixo horizontal. 
 
-![report-builder-column-chart-2-preview](../reporting-services/media/report-builder-column-chart-2-preview.png)
+![Captura de tela do gráfico de colunas do construtor de relatórios exibindo o formato de data.](../reporting-services/media/report-builder-column-chart-2-preview.png)
   
 É possível personalizar a exibição de rótulo como o giro dos rótulos e a especificação do intervalo.  
   
@@ -144,21 +144,21 @@ A data é exibida no formato selecionado. O gráfico ainda não rotula cada cate
   
 3.  Clique com o botão direito do mouse no eixo horizontal > **Propriedades do Eixo Horizontal**.  
   
-5.  Na guia **Rótulos** , em **Alterar as opções de ajuste automático do rótulo do eixo**, selecione **Desabilitar ajuste automático**.  
+5.  Na guia **Rótulos** , em **Alterar as opções de ajuste automático do rótulo do eixo** , selecione **Desabilitar ajuste automático**.  
   
-7.  Em **Ângulo de rotação do rótulo**, selecione **-90**.  
+7.  Em **Ângulo de rotação do rótulo** , selecione **-90**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     O texto de exemplo para o eixo horizontal gira 90 graus.  
     
-    ![report-builder-column-chart-rotate-x-axis](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
+    ![Captura de tela do gráfico de colunas do construtor de relatórios com o texto do eixo x girado no modo de exibição de design.](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
   
 9. Clique em **Executar** para visualizar o relatório.  
   
 No gráfico, os rótulos são girados.  
 
-![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
+![Captura de tela mostrando uma visualização do gráfico de colunas do construtor de relatórios com o texto do eixo x girado.](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
 ## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Mover a legenda  
 A legenda é criada automaticamente de categoria e dados de série. Você pode mover a legenda abaixo da área de gráfico de um gráfico de colunas.  
@@ -167,7 +167,7 @@ A legenda é criada automaticamente de categoria e dados de série. Você pode m
   
 2.  Clique com o botão direito do mouse na legenda, no gráfico, > **Propriedades da Legenda**.  
   
-3.  Em **Layout e Posição**, selecione uma posição diferente. Por exemplo, selecione a opção intermediária inferior.  
+3.  Em **Layout e Posição** , selecione uma posição diferente. Por exemplo, selecione a opção intermediária inferior.  
   
     Quando a legenda estiver posicionada na parte superior ou inferior de um gráfico, o layout da legenda será alterado de vertical para horizontal. Você pode selecionar um layout diferente na caixa **Layout** .  
   
@@ -192,7 +192,7 @@ Por padrão, o eixo vertical exibe valores em um formato geral que é dimensiona
   
 2. Clique nos rótulos do eixo vertical no lado esquerdo do gráfico para selecioná-los.  
   
-3.  Na guia **Início**, no grupo **Número**, clique no botão **Moeda**. Os rótulos do eixo são alterados para mostrar o formato da moeda.  
+3.  Na guia **Início** , no grupo **Número** , clique no botão **Moeda**. Os rótulos do eixo são alterados para mostrar o formato da moeda.  
   
 4.  Clique no botão **Diminuir Decimal** duas vezes, para mostrar o número arredondado para o valor mais próximo.  
   
@@ -214,7 +214,7 @@ Por padrão, o eixo vertical exibe valores em um formato geral que é dimensiona
   
 12. Clique em **Executar** para visualizar o relatório.  
 
-    ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
+    ![Captura de tela mostrando uma visualização do formato do gráfico de colunas do construtor de relatórios com o eixo y rotulado corretamente.](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
 ## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Mostrar todos os rótulos no eixo horizontal (x)
 
@@ -226,13 +226,13 @@ Observe que apenas alguns dos rótulos no eixo x são mostrados. Nesta seção, 
 
 3. No painel Propriedades, defina LabelInterval como 1.
 
-    ![report-builder-column-chart-set-label-interval](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Captura de tela mostrando como definir o intervalo de rótulos do gráfico de colunas do construtor de relatórios.](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     O gráfico tem a mesma aparência no modo design. 
     
 5.  Clique em **Executar** para visualizar o relatório.
 
-    ![report-builder-column-chart-label-interval-one-preview](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Captura de tela mostrando uma visualização do gráfico de colunas do construtor de relatórios com o intervalo de rótulos definido como um.](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Agora o gráfico exibe todos os seus rótulos.
   
@@ -246,13 +246,13 @@ Uma média móvel é uma média dos dados na série, calculada ao longo do tempo
   
 3.  Clique com o botão direito do mouse no campo **[Sum(Sales)]** na área **Valores** e clique em **Adicionar Série Calculada**.  
 
-     ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
+     ![Captura de tela mostrando como adicionar uma série calculada ao gráfico de colunas do construtor de relatórios.](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
-4.  Em **Fórmula**, verifique se a opção **Média móvel** está selecionada.  
+4.  Em **Fórmula** , verifique se a opção **Média móvel** está selecionada.  
   
-5.  Em **Definir Parâmetros da Fórmula**, em **Período**, selecione **4**.  
+5.  Em **Definir Parâmetros da Fórmula** , em **Período** , selecione **4**.  
   
-6.  Na guia **Borda** , em **Largura da linha**, selecione **3pt**.  
+6.  Na guia **Borda** , em **Largura da linha** , selecione **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -260,7 +260,7 @@ Uma média móvel é uma média dos dados na série, calculada ao longo do tempo
   
 O gráfico exibe uma linha que mostra a média móvel para o total de vendas por data, a cada quatro datas. Leia mais sobre como [adicionar uma média móvel a um gráfico](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md). 
 
-![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
+![Captura de tela de um gráfico de colunas do construtor de relatórios que ilustra uma média móvel.](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
 ## <a name="10-add-a-report-title"></a><a name="Title"></a>10. Adicionar um título de relatório  
   
@@ -268,15 +268,15 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
   
 2.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-3.  Digite **Gráfico de Vendas**, pressione ENTER e digite **Janeiro a dezembro de 2015**, da seguinte forma:  
+3.  Digite **Gráfico de Vendas** , pressione ENTER e digite **Janeiro a dezembro de 2015** , da seguinte forma:  
   
     **Gráfico de Vendas**  
   
     **Janeiro a dezembro de 2015**  
   
-4.  Selecione **Gráfico de Vendas** e, na guia **Início**, > seção **Fonte** > **Negrito**.  
+4.  Selecione **Gráfico de Vendas** e, na guia **Início** , > seção **Fonte** > **Negrito**.  
   
-5.  Selecione **Janeiro a dezembro de 2015** e, na guia **Início**, > seção **Fonte** > defina o tamanho da fonte como **10**.  
+5.  Selecione **Janeiro a dezembro de 2015** e, na guia **Início** , > seção **Fonte** > defina o tamanho da fonte como **10**.  
   
 6.  (Opcional) Talvez seja necessário aumentar a altura da caixa de texto **Título** para acomodar as duas linhas de texto. Mova para baixo as setas com duas pontas ao clicar no meio da borda inferior. Além disso, talvez seja necessário arrastar a parte superior do gráfico para que não haja sobreposição do título.  
   
@@ -294,7 +294,7 @@ O gráfico exibe uma linha que mostra a média móvel para o total de vendas por
 
     Você pode salvá-lo no computador ou no servidor de relatório.
   
-3.  Em **Nome**, digite **Gráfico de Colunas do Pedido de Vendas**.  
+3.  Em **Nome** , digite **Gráfico de Colunas do Pedido de Vendas**.  
   
 4.  Clique em **Save** (Salvar).  
   

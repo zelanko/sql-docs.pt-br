@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 695b6d02494430b134ce46ac14d802443b41046b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243593"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243785"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Trabalhar com conjuntos de dados compartilhados – portal da Web
 
@@ -32,7 +32,7 @@ Para criar um novo conjunto de dados compartilhado, você pode fazer o seguinte.
   
 2.  Selecione **Conjunto de dados**.  
   
-    ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![Captura de tela mostrando a lista suspensa Novo com a opção Conjunto de dados em destaque.](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  Isso iniciará o Construtor de Relatórios ou solicitará que você o baixe.  
   
@@ -51,17 +51,17 @@ Para gerenciar um conjunto de dados compartilhado existente, você pode fazer o 
   
 1.  Selecione as **reticências (...)** do conjunto de dados que deseja gerenciar.  
   
-    ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![Captura de tela mostrando o usuário selecionando a opção de reticências para o conjunto de dados.](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  Selecione **Gerenciar** , o que levará você até a tela de edição.  
   
-    ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
+    ![Captura de tela mostrando a opção de reticências selecionada e a opção GERENCIAR em destaque.](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## <a name="properties"></a>Propriedades
   
-Na tela de propriedades, você pode alterar o **nome** a e **descrição** do conjunto de dados. Você também pode **Excluir**, **Mover**, **Editar no Construtor de Relatórios**, **Baixar** ou **Substituir**.  
+Na tela de propriedades, você pode alterar o **nome** a e **descrição** do conjunto de dados. Você também pode **Excluir** , **Mover** , **Editar no Construtor de Relatórios** , **Baixar** ou **Substituir**.  
   
-![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
+![Captura de tela mostrando a tela Propriedades da caixa de diálogo Editar Vendas da Empresa.](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## <a name="caching"></a>Cache
   
@@ -71,17 +71,17 @@ Quando o assunto é armazenar dados em cache para um conjunto de dados, há opç
   
 2.  **Armazenar cópias deste relatório em cache e utilizá-las quando disponíveis** colocará uma cópia temporária dos dados em um cache para uso com os itens que usam esse conjunto de dados. O cache normalmente melhora o desempenho porque os dados são retornados do cache, em vez de haver uma nova execução da consulta de conjunto de dados.  
   
-![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
+![Captura de tela mostrando a tela Cache da caixa de diálogo Editar Vendas da Empresa com a opção Sempre executar este relatório com os dados mais recentes selecionada.](../reporting-services/media/ssrsdataset-caching1.png)  
   
 A seleção de **Armazenar cópias deste relatório em cache e utilizá-las quando disponíveis** apresentará algumas opções adicionais.  
   
-![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
+![Captura de tela mostrando a tela Cache da caixa de diálogo Editar Vendas da Empresa com a opção Armazenar cópias deste relatório em cache e usá-las quando disponíveis selecionada.](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### <a name="cache-expiration"></a>Validade do cache  
   
 Você pode controlar se deseja expirar o cache do conjunto de dados compartilhados após um determinado período, ou se prefere fazer isso com base em uma agenda. Você pode usar uma agenda compartilhada  
   
-![ssRSDataset-Caching3](../reporting-services/media/ssrsdataset-caching3.png)  
+![Captura de tela mostrando a opção O cache expira segundo um agendamento selecionada.](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > A configuração de uma expiração não atualiza o cache. Sem um plano de atualização de cache, os dados serão atualizados na próxima execução do conjunto de dados.  
@@ -98,7 +98,7 @@ Para criar um novo plano de atualização de cache, escolha **Novo Plano de Atua
   
 Quando terminar, selecione **Criar Plano de Atualização do Cache**.  
   
-![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
+![Captura de tela da caixa de diálogo Editar Vendas da Empresa mostrando a opção Criar Plano de Atualização do Cache.](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > O SQL Server Agent precisa estar em execução para criar um plano de atualização do cache.  

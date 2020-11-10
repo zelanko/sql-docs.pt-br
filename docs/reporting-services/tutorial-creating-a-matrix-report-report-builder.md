@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a0b49b2cf9ac1e131e74ba39c1430492823e39e5
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247445"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043785"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Criar um relatório de matriz (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] com uma matriz de dados de vendas de exemplo em grupos de linhas e colunas aninhados. 
 
 Você também cria um grupo de colunas adjacentes, formata colunas e gira o texto. A ilustração a seguir mostra um relatório semelhante ao que você criará.  
   
-![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
+![Captura de tela de um relatório de matriz do construtor de relatórios.](../reporting-services/media/report-builder-matrix-tutorial.png)
    
 Tempo estimado para concluir este tutorial: 20 minutos.  
   
@@ -120,11 +120,11 @@ Use o assistente para fornecer um design inicial no qual exibir dados. O painel 
   
     As etapas 5 e 6 especificam os dados a serem exibidos nas células de dados da matriz.
     
-    ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
+    ![Captura de tela mostrando o assistente de relatório para organizar campos do construtor de relatórios.](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
 7.  Clique em **Próximo**.  
   
-8.  Na página Escolher o Layout, em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
+8.  Na página Escolher o Layout, em **Opções** , verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
 9. Verifique se a opção **Bloqueado, subtotal abaixo** está selecionada.  
   
@@ -136,7 +136,7 @@ Use o assistente para fornecer um design inicial no qual exibir dados. O painel 
   
     A matriz é adicionada à superfície de design. O painel Grupos de Linhas mostra dois grupos de linhas: Território e SalesDate. O painel Grupos de Colunas mostra dois grupos de colunas: Subcategoria e Produto. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
     
-    ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
+    ![Captura de tela mostrando os Grupos de Linhas e os Grupos de Colunas do construtor de relatórios.](../reporting-services/media/report-builder-row-and-column-groups.png)
   
 14. Clique em **Executar** para visualizar o relatório.  
   
@@ -144,7 +144,7 @@ Use o assistente para fornecer um design inicial no qual exibir dados. O painel 
 
 14. Expanda uma subcategoria. Você pode ver que o relatório fica muito grande rapidamente.
 
-![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
+![Captura de tela que mostra um relatório de matriz do construtor de relatórios expandido.](../reporting-services/media/report-builder-expand-matrix.png)
   
 ## <a name="3-format-data"></a><a name="FormatData"></a>3. Formatar dados  
 Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo SalesDate exibe informações de data e hora. Nesta seção, você formata o campo Sales para exibir o número como moeda e o campo SalesDate para exibir apenas a data. Ative/desative **Estilos de Espaço Reservado** para exibir caixas de texto formatadas e texto de espaço reservado como valores de exemplo.  
@@ -157,9 +157,9 @@ Por padrão, os dados resumidos do campo Sales exibem um número geral e o campo
   
 3.  Na guia **Início** > **Número** > **Moeda**. As células são alteradas para mostrar a moeda formatada.  
   
-    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [ **$12,345.00**]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
+    Se a configuração regional for Inglês (Estados Unidos), o texto de exemplo padrão será [ **$12,345.00** ]. Se um valor de moeda de exemplo não estiver visível, no grupo **Números** , clique em **Estilos de Espaço Reservado** > **Valores de Exemplo**.  
     
-    ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
+    ![Captura de tela da opção Valores de Exemplo do construtor de relatórios.](../reporting-services/media/report-builder-placeholder-value.png)
   
 4.  Clique na célula que contém `[SalesDate]`.  
   
@@ -180,7 +180,7 @@ Nesta seção, você adiciona um grupo de colunas adjacente ao grupo de colunas 
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Clique com o botão direito do mouse na célula que contém `[Subcategory]`, aponte para **Adicionar Grupo**e clique em **Adjacente à Direita**.  
+2.  Clique com o botão direito do mouse na célula que contém `[Subcategory]`, aponte para **Adicionar Grupo** e clique em **Adjacente à Direita**.  
   
     A caixa de diálogo **Grupo Tablix** é aberta.  
   
@@ -212,10 +212,10 @@ Nesta seção, você adiciona um grupo de colunas adjacente ao grupo de colunas 
   
 O relatório inclui colunas nomeadas Monday e Tuesday. O conjunto de dados contém apenas dados referentes a esses dois dias.  
 
-![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
+![Captura de tela mostrando os dias da semana exibidos no relatório de matriz do construtor de relatórios.](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> Se os dados incluíssem outros dias, o relatório também incluiria colunas para eles. Cada coluna tem o cabeçalho da coluna, **Vendas**, e os totais de vendas por território.  
+> Se os dados incluíssem outros dias, o relatório também incluiria colunas para eles. Cada coluna tem o cabeçalho da coluna, **Vendas** , e os totais de vendas por território.  
   
 ## <a name="5-change-column-widths"></a><a name="Width"></a>5. Alterar a Largura das Colunas  
 Um relatório que inclua uma matriz normalmente se expande horizontalmente, bem como verticalmente, quando executado. O controle da expansão horizontal será especialmente importante se você planejar exportar o relatório para formatos como Microsoft Word ou Adobe PDF, usados em relatórios impressos. Se o relatório se expandir horizontalmente em várias páginas, será difícil compreender o relatório impresso. Para minimizar a expansão horizontal, é possível redimensionar colunas seguindo exclusivamente a largura necessária para exibir os dados sem quebra de texto. Também é possível renomear colunas para que os títulos se ajustem à largura necessária para exibir os dados.  
@@ -234,7 +234,7 @@ Um relatório que inclua uma matriz normalmente se expande horizontalmente, bem 
   
     As barras em cinza ao longo da parte superior e ao lado da tabela são os identificadores de coluna e de linha.  
     
-    ![report-builder-column-handles](../reporting-services/media/report-builder-column-handles.png)
+    ![Captura de tela dos identificadores de coluna e de linha no relatório de matriz do construtor de relatórios.](../reporting-services/media/report-builder-column-handles.png)
   
 5.  Para redimensionar a coluna QTY mais à esquerda, aponte para a linha entre os identificadores de coluna de forma que o cursor seja alterado para uma seta dupla. Arraste a coluna para a esquerda até que ela tenha 1,27 centímetros de largura.  
   
@@ -276,17 +276,17 @@ Um título é exibido na parte superior do relatório. É possível colocar o t�
   
 1.  Clique em **Design** para retornar à exibição de design.  
   
-2.  Selecione a caixa de texto na parte superior do corpo do relatório que contém **Clique para adicionar título**e pressione a tecla Delete.  
+2.  Selecione a caixa de texto na parte superior do corpo do relatório que contém **Clique para adicionar título** e pressione a tecla Delete.  
   
 3.  Na guia **Inserir** > **Cabeçalho** > **Adicionar Cabeçalho**.  
   
     Um cabeçalho é adicionado à parte superior do corpo do relatório.  
   
-4.  Na guia **Inserir** , clique em **Caixa de Texto**e arraste uma caixa de texto para dentro do cabeçalho do relatório. Crie a caixa de texto com 15,24 centímetros de comprimento e 1,90 centímetros de altura e posicione-a no lado esquerdo do cabeçalho do relatório.  
+4.  Na guia **Inserir** , clique em **Caixa de Texto** e arraste uma caixa de texto para dentro do cabeçalho do relatório. Crie a caixa de texto com 15,24 centímetros de comprimento e 1,90 centímetros de altura e posicione-a no lado esquerdo do cabeçalho do relatório.  
   
 5.  Na caixa de texto, digite **Vendas por Região, Subcategoria e Dia**.  
   
-6.  Selecione o texto digitado na guia **Início** > **Fonte**:
+6.  Selecione o texto digitado na guia **Início** > **Fonte** :
     * **Tamanho 24 pt**
     * **Cor bordô**
  
@@ -309,7 +309,7 @@ Neste tutorial, salve o relatório em um servidor de relatório. Se você não t
   
     A mensagem "Conectando-se a um servidor de relatório" é exibida. Quando a conexão for estabelecida, você verá o conteúdo da pasta de relatório que o administrador do servidor de relatório especificou como o local de relatório padrão.  
   
-4.  Em **Nome**, substitua o nome padrão por **SalesByTerritorySubcategory**.  
+4.  Em **Nome** , substitua o nome padrão por **SalesByTerritorySubcategory**.  
   
 5.  Clique em **Save** (Salvar).  
   
@@ -319,9 +319,9 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
-2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu Computador**e, em seguida, navegue até a pasta na qual você deseja salvar o relatório.  
+2.  Clique em **Área de Trabalho** , **Meus Documentos** ou **Meu Computador** e, em seguida, navegue até a pasta na qual você deseja salvar o relatório.  
   
-3.  Em **Nome**, substitua o nome padrão por **SalesByTerritorySubcategory**.  
+3.  Em **Nome** , substitua o nome padrão por **SalesByTerritorySubcategory**.  
   
 4.  Clique em **Save** (Salvar).  
   
@@ -336,9 +336,9 @@ Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima pa
   
 2.  Selecione a célula que contém `[Territory].` 
 
-    >**Observação**: selecione a célula, não o texto. A propriedade WritingMode só está disponível para a célula.
+    >**Observação** : selecione a célula, não o texto. A propriedade WritingMode só está disponível para a célula.
     
-     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+     ![Captura de tela mostrando a célula Território no relatório de matriz do construtor de relatórios.](../reporting-services/media/report-builder-select-territory-cell.png)
   
 3.  No painel Propriedades, localize a propriedade WritingMode e altere-a de **Padrão** para **Rotate270**.  
   
@@ -346,7 +346,7 @@ Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima pa
   
 4.  Verificar se a propriedade CanGrow está definida como **True**.  
   
-5.  Na guia **Início** > seção **Parágrafo**, selecione **Meio** e **Centro** para localizar o texto no centro da célula vertical e horizontalmente.  
+5.  Na guia **Início** > seção **Parágrafo** , selecione **Meio** e **Centro** para localizar o texto no centro da célula vertical e horizontalmente.  
  
 6. Redimensione a coluna Territory para ter 1,27 centímetro de largura e exclua o título da coluna.  
 6.  Clique em **Executar** para visualizar o relatório.  

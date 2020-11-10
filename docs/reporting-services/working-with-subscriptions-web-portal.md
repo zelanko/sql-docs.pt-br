@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243544"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243739"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Trabalhando com assinaturas (portal da web)
 
@@ -44,7 +44,7 @@ As assinaturas têm suporte para relatórios que podem ser executados de modo au
 ## <a name="type-of-subscription"></a>Tipo de assinatura  
 Você pode selecionar entre uma **Assinatura padrão** e uma **Assinatura controlada por dados**.  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![Captura de tela mostrando a seção Tipo de Assinatura.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 Uma assinatura controlada por dados é uma assinatura que consulta um banco de dados de assinante para obter informações de assinatura cada vez que a assinatura é executada. Assinaturas controladas por dados usam resultados de consulta para determinar os destinatários da assinatura, as configurações de entrega e os valores de parâmetro do relatório. Em tempo de execução, o servidor de relatórioss executa uma consulta para obter valores usados nas configurações da assinatura.   
   
@@ -57,7 +57,7 @@ Selecione a extensão de entrega a ser usada para distribuir o relatório.
   
 A disponibilidade de uma extensão de entrega depende se ela está instalada e configurada no servidor de relatório. O email do Servidor de Relatório é a extensão de entrega padrão, mas deve ser configurado antes de ser usado. Entrega de Compartilhamento de Arquivo não requer configuração, mas você deve definir uma pasta compartilhada antes de usá-la.  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![Captura de tela mostrando as seções Destino e Opções de Entrega (Compartilhamento de Arquivo do Windows).](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 Dependendo da extensão de entrega selecionada, as configurações a seguir são exibidas:  
   
@@ -68,7 +68,7 @@ Dependendo da extensão de entrega selecionada, as configurações a seguir são
 ## <a name="data-driven-subscription-dataset"></a>Conjunto de dados de assinatura controlada por dados  
 Para uma assinatura controlada por dados, você precisará definir o conjunto de dados usado para a assinatura. Selecione **Editar conjunto de dados** para fornecer essas informações.  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![Captura de tela mostrando a seção Conjunto de dados.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 Primeiro você precisa fornecer uma **fonte de dados** a ser usada na consulta. Pode ser uma fonte de dados compartilhada ou você pode fornecer uma fonte de dados personalizada.  
   
@@ -80,7 +80,7 @@ Para um resultado melhor, execute a consulta no SQL Server Management Studio pri
   
 -   Linhas no conjunto de resultados determinam o número de entregas de relatório geradas. Se você tiver 10.000 linhas, o servidor de relatório gerará 10.000 notificações e entregas.  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![Captura de tela mostrando a seção Consulta.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
 Você pode validar a consulta. Você também pode definir um **tempo limite de consulta**.  
   
