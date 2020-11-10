@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0de7a61b92599b82aabc0f0197c02098c7758384
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300514"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384770"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -168,7 +168,7 @@ DELETE
   
  Há duas formas de excluir operações com base no que é especificado na cláusula WHERE:  
   
--   Exclusões pesquisadas especificam um critério de pesquisa para qualificar as linhas a serem excluídas. Por exemplo, WHERE *column_name* = *value* .  
+-   Exclusões pesquisadas especificam um critério de pesquisa para qualificar as linhas a serem excluídas. Por exemplo, WHERE *column_name* = *value*.  
   
 -   Exclusões posicionadas usam a cláusula CURRENT OF para especificar um cursor. A operação de exclusão ocorre na posição atual do cursor. Isso pode ser mais preciso do que uma instrução DELETE pesquisada que usa uma cláusula WHERE *search_condition* para qualificar as linhas a serem excluídas. Uma instrução DELETE pesquisada exclui várias linhas se o critério de pesquisa não identificar exclusivamente uma única linha.  
   
@@ -364,7 +364,7 @@ GO
 **Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Excluindo dados de uma tabela remota por meio de um servidor vinculado  
- O exemplo a seguir exclui uma linhas de uma tabela remota. O exemplo começa criando um link com a fonte de dados remota usando [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). O nome do servidor vinculado, `MyLinkServer`, é especificado, em seguida, como parte do nome de objeto de quatro partes no formulário *server.catalog.schema.object* .  
+ O exemplo a seguir exclui uma linhas de uma tabela remota. O exemplo começa criando um link com a fonte de dados remota usando [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). O nome do servidor vinculado, `MyLinkServer`, é especificado, em seguida, como parte do nome de objeto de quatro partes no formulário *server.catalog.schema.object*.  
   
 ```sql
 USE master;  
@@ -400,13 +400,13 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. Excluindo dados de uma tabela remota por meio da função OPENDATASOURCE  
- O exemplo a seguir exclui linhas de uma tabela remota especificando a função do conjunto de linhas [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Especifique um nome do servidor válido para a fonte de dados usando o formato *server_name* ou *server_name\instance_name* .  
+ O exemplo a seguir exclui linhas de uma tabela remota especificando a função do conjunto de linhas [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Especifique um nome do servidor válido para a fonte de dados usando o formato *server_name* ou *server_name\instance_name*.  
   
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
-WHERE DepartmentID = 17;'  
+WHERE DepartmentID = 17;
 ```  
   
 ###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Capturando os resultados da instrução DELETE  

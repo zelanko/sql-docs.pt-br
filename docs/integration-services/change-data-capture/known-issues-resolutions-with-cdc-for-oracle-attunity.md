@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523901"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384722"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Erros conhecidos e soluções com o Change Data Capture para Oracle da Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ A **versão 1.1.0.102** contém estas correções:
 - A instância da CDA para Oracle trava quando você a inicia e não captura alterações. A memória do servidor da Oracle pode aumentar até que ele fique sem memória ou falhe.
 - [2672759](https://support.microsoft.com/kb/2672759): Mensagem de erro quando você usa o Serviço Microsoft Change Data Capture para Oracle da Attunity: "ORA-00600: código de erro interno". Adicione o rastreamento de nível SOURCE e confirme se você encontra o mesmo erro ORA-00600. Corrigido por um download de patch do Oracle.
 - Várias partições
-    - Quando você usa mais de 10 partições em uma tabela do Oracle, a instância da CDA não pode capturar todas as alterações da tabela. Quando a tabela do Oracle é definida com mais de 10 partições, são capturadas somente as alterações das últimas 10 partições. Corrigido na versão _Service Pack 1 para SQL Server 2012_ . Confira a [página de download do SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580). 
+    - Quando você usa mais de 10 partições em uma tabela do Oracle, a instância da CDA não pode capturar todas as alterações da tabela. Quando a tabela do Oracle é definida com mais de 10 partições, são capturadas somente as alterações das últimas 10 partições. Corrigido na versão _Service Pack 1 para SQL Server 2012_. Confira a [página de download do SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575). 
 - As alterações são perdidas
-    - A captura de eventos pode entrar em um loop infinito e interromper a captura de novas alterações de dados (relacionado ao bug 5623813 do Oracle). Quando um ambiente RAC do Oracle está executando uma interrupção ou retomada da instância da CDA, as alterações podem ser ignoradas/perdidas. Isso significa que o Change Data Capture do SQL Server não terá linhas importantes e, portanto, haverá perda de dados no sistema de data warehouse ou no sistema assinante. Corrigido na versão _Service Pack 1 para SQL Server 2012_ . Confira a [página de download do SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)
+    - A captura de eventos pode entrar em um loop infinito e interromper a captura de novas alterações de dados (relacionado ao bug 5623813 do Oracle). Quando um ambiente RAC do Oracle está executando uma interrupção ou retomada da instância da CDA, as alterações podem ser ignoradas/perdidas. Isso significa que o Change Data Capture do SQL Server não terá linhas importantes e, portanto, haverá perda de dados no sistema de data warehouse ou no sistema assinante. Corrigido na versão _Service Pack 1 para SQL Server 2012_. Confira a [página de download do SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)
 - Larguras duplas em colunas no SQL
     - Ao criar uma instância da CDA para Oracle, nos scripts a serem executados no SQL Server, o comprimento de uma coluna de tipo de dados de largura variável é duplicado em tabelas do SQL Server criadas no script. Por exemplo, se você tentar controlar as alterações em uma coluna VARCHAR2(10) em uma tabela do Oracle, a coluna correspondente na tabela SQL Server será NVARCHAR(20) no script de implantação. Corrigido em qualquer das seguintes atualizações: _Atualização cumulativa 2 para SQL Server 2012 SP1_ e _Atualização cumulativa 5 para SQL Server 2012_ , conforme descrito em KB [2769673](https://support.microsoft.com/kb/2769673). 
 - Os dados da DDL estão truncados
@@ -115,7 +115,7 @@ Escolha uma hora de início e selecione um local para o arquivo de log. Em segui
 
 ### <a name="detailed-errors"></a>Erros detalhados
 
-Você pode aumentar o nível de rastreamento coletado pela instância e repetir o cenário para coletar um log mais detalhado. Para fazer isso, selecione **Propriedades** em **Ações** e, em seguida, adicione uma nova propriedade na grade **Configurações Avançadas** na guia **Avançado** . Defina o nome da propriedade como `trace` e, em seguida, defina o valor como `SOURCE`. 
+Você pode aumentar o nível de rastreamento coletado pela instância e repetir o cenário para coletar um log mais detalhado. Para fazer isso, selecione **Propriedades** em **Ações** e, em seguida, adicione uma nova propriedade na grade **Configurações Avançadas** na guia **Avançado**. Defina o nome da propriedade como `trace` e, em seguida, defina o valor como `SOURCE`. 
 
 ![Captura de tela mostrando a opção Propriedades em Ações.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
@@ -151,7 +151,7 @@ Para resolver esse erro, conceda ao usuário atualmente configurado as permissõ
 
 A lista de todas as permissões necessárias é detalhada no arquivo de ajuda incluído na pasta `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm` de instalação, em Arquivos de Programas.  Consulte a página intitulada "Conectar-se a um banco de dados de origem Oracle" no arquivo .chm para obter a lista completa.
 
-Você pode definir a conta de usuário selecionando o CDCInstance no painel esquerdo e selecionando o botão Propriedades no painel ações mais à direita na janela do **CDC Designer** . Você pode alterar a conta de autenticação de mineração de logs do Oracle na página de diálogo Propriedades.
+Você pode definir a conta de usuário selecionando o CDCInstance no painel esquerdo e selecionando o botão Propriedades no painel ações mais à direita na janela do **CDC Designer**. Você pode alterar a conta de autenticação de mineração de logs do Oracle na página de diálogo Propriedades.
 
 ![Captura de tela mostrando a guia Oracle da caixa de diálogo Propriedades de testTA.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 

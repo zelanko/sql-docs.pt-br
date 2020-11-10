@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aac745594f2dcd23974cc91cb0f9c57ebff91f29
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720709"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384893"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexões do SSIS (Integration Services)
 
@@ -74,7 +74,7 @@ ms.locfileid: "91720709"
 ### <a name="package-level-and-project-level-connection-managers"></a>Gerenciadores de conexões no nível de projeto e no nível de pacote
 Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de projeto. O gerenciador de conexões criado no nível de projeto está disponível para todos os pacotes no projeto. Por outro lado, o gerenciador de conexões criado no nível de pacote está disponível para aquele pacote específico.  
   
- Use gerenciadores de conexões que são criados no nível de projeto em vez de fontes de dados, para compartilhar conexões com origens. Para adicionar um gerenciador de conexões no nível de projeto, o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve usar o modelo de implantação de projeto. Quando um projeto é configurado para usar este modelo, a pasta **Gerenciadores de Conexões** é exibida no **Gerenciador de Soluções**e a pasta **Fontes de Dados** é removida do **Gerenciador de Soluções**.  
+ Use gerenciadores de conexões que são criados no nível de projeto em vez de fontes de dados, para compartilhar conexões com origens. Para adicionar um gerenciador de conexões no nível de projeto, o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deve usar o modelo de implantação de projeto. Quando um projeto é configurado para usar este modelo, a pasta **Gerenciadores de Conexões** é exibida no **Gerenciador de Soluções** e a pasta **Fontes de Dados** é removida do **Gerenciador de Soluções**.  
   
 > [!NOTE]  
 >  Se você quiser usar fontes de dados em seu pacote, precisará converter o projeto para o modelo de implantação do pacote.  
@@ -115,7 +115,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
 |Type|Descrição|Tópico|  
 |----------|-----------------|-----------|  
 |ORACLE|Conecta-se a um servidor \<version info\> da Oracle.|O gerenciador de conexões Oracle é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
-|SAPBI|Conecta a um sistema SAP NetWeaver BI versão 7.|O gerenciador de conexões SAP BI é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui uma origem e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440).|  
+|SAPBI|Conecta a um sistema SAP NetWeaver BI versão 7.|O gerenciador de conexões SAP BI é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui uma origem e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44277).|  
 |TERADATA|Conecta-se a um servidor \<version info\> Teradata.|O gerenciador de conexões Teradata é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
   
 ### <a name="custom-connection-managers"></a>Gerenciadores de conexões personalizados  
@@ -126,12 +126,12 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
   
  Para criar automaticamente e configurar gerenciadores de conexões ao criar um novo pacote, é possível usar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O assistente também ajuda a criar e configurar origens e destinos que usam os gerenciadores de conexões. Para obter mais informações, consulte [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
- Para criar manualmente um novo gerenciador de conexões e adicioná-lo a um pacote existente, use a área **Gerenciadores de Conexões** que aparece nas guias **Fluxo de Controle**, **Fluxo de Dados**e **Manipuladores de Eventos** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Na área **Gerenciador de Conexões** , você escolhe o tipo de gerenciador de conexões a ser criado e então define as propriedades do gerenciador de conexões usando uma caixa de diálogo que o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece. Para obter mais informações, consulte a seção “Usando a área Gerenciadores de Conexões”, mais adiante neste tópico.  
+ Para criar manualmente um novo gerenciador de conexões e adicioná-lo a um pacote existente, use a área **Gerenciadores de Conexões** que aparece nas guias **Fluxo de Controle** , **Fluxo de Dados** e **Manipuladores de Eventos** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Na área **Gerenciador de Conexões** , você escolhe o tipo de gerenciador de conexões a ser criado e então define as propriedades do gerenciador de conexões usando uma caixa de diálogo que o Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece. Para obter mais informações, consulte a seção “Usando a área Gerenciadores de Conexões”, mais adiante neste tópico.  
   
  Depois que o gerenciador de conexões for adicionado a um pacote, você poderá usá-lo em suas tarefas, contêineres Loop Foreach, fontes, transformações e destinos. Para obter mais informações, consulte [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md), [Contêiner Foreach Loop](../../integration-services/control-flow/foreach-loop-container.md) e [Fluxo de Dados](../../integration-services/data-flow/data-flow.md).  
   
 ### <a name="using-the-connection-managers-area"></a>Usando a área de gerenciadores de conexões  
- Você pode criar gerenciadores de conexões enquanto a guia **Fluxo de Controle**, **Fluxo de Dados**ou **Manipuladores de Eventos** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] estiver ativa.  
+ Você pode criar gerenciadores de conexões enquanto a guia **Fluxo de Controle** , **Fluxo de Dados** ou **Manipuladores de Eventos** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] estiver ativa.  
   
  O diagrama a seguir mostra a área **Gerenciadores de Conexões** na guia **Fluxo de Controle** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -142,7 +142,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
   
  No tempo de execução, a versão correta é usada e não importa se você especificou a versão de 32 bits do provedor no tempo de design. A versão de 64 bits do provedor pode ser executada mesmo que o pacote esteja sendo executado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-  Ambas as versões do provedor têm o mesmo ID. Para especificar se o tempo de execução do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa uma versão de 64 bits disponível do provedor, você define a propriedade Run64BitRuntime do projeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se a propriedade Run64BitRuntime estiver definida como **true**, o tempo de execução encontrará e usará o provedor de 64 bits; se Run64BitRuntime for **false**, o tempo de execução encontrará e usará o provedor de 32 bits. Para obter mais informações sobre as propriedades que podem ser definidas em projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Ambientes do SSIS (Integration Services) e do Studio](../integration-services-ssis-development-and-management-tools.md).   
+  Ambas as versões do provedor têm o mesmo ID. Para especificar se o tempo de execução do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa uma versão de 64 bits disponível do provedor, você define a propriedade Run64BitRuntime do projeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se a propriedade Run64BitRuntime estiver definida como **true** , o tempo de execução encontrará e usará o provedor de 64 bits; se Run64BitRuntime for **false** , o tempo de execução encontrará e usará o provedor de 32 bits. Para obter mais informações sobre as propriedades que podem ser definidas em projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Ambientes do SSIS (Integration Services) e do Studio](../integration-services-ssis-development-and-management-tools.md).   
 
 ## <a name="add-a-connection-manager"></a>Adicionar um gerenciador de conexão
 ###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Adicionar um gerenciador de conexões ao criar um pacote  
@@ -191,7 +191,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
   
      A área **Gerenciadores de Conexões** lista o gerenciador de conexões adicionado.  
   
-5.  Como opção, clique com o botão direito do mouse no gerenciador de conexões, clique em **Renomear**e modifique o nome padrão do gerenciador de conexões.  
+5.  Como opção, clique com o botão direito do mouse no gerenciador de conexões, clique em **Renomear** e modifique o nome padrão do gerenciador de conexões.  
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Item Selecionado** no menu **Arquivo** .  
   
@@ -199,7 +199,7 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Gerenciadores de Conexões**e clique em **Novo Gerenciador de Conexões**.  
+2.  No **Gerenciador de Soluções** , clique com o botão direito do mouse em **Gerenciadores de Conexões** e clique em **Novo Gerenciador de Conexões**.  
   
 3.  Na caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** , selecione o tipo de gerenciador de conexões e clique em **Adicionar**.  
   
@@ -227,10 +227,10 @@ Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de 
   
      O gerenciador de conexões que você adicionou aparecerá sob o nó **Gerenciadores de Conexões** no **Gerenciador de Soluções**. Ele também aparecerá na guia **Gerenciadores de Conexões** na janela **Designer SSIS** para todos os pacotes no projeto. O nome do gerenciador de conexões nesta guia terá um prefixo **(projeto)** para diferenciar este gerenciador de conexões de nível de projeto dos gerenciadores de conexões de nível de pacote.  
   
-4.  Como opção, clique com o botão direito do mouse no gerenciador de conexões na janela **Gerenciador de Soluções** no nó **Gerenciadores de Conexões** ou na guia **Gerenciadores de Conexões** da janela **Designer SSIS** , clique em **Renomear**e modifique o nome padrão do gerenciador de conexões.  
+4.  Como opção, clique com o botão direito do mouse no gerenciador de conexões na janela **Gerenciador de Soluções** no nó **Gerenciadores de Conexões** ou na guia **Gerenciadores de Conexões** da janela **Designer SSIS** , clique em **Renomear** e modifique o nome padrão do gerenciador de conexões.  
   
     > [!NOTE]  
-    >  Na guia **Gerenciadores de Conexões** da janela **Designer SSIS**, você não poderá substituir o prefixo **(projeto)** do nome do gerenciador de conexões. Isso ocorre por design.  
+    >  Na guia **Gerenciadores de Conexões** da janela **Designer SSIS** , você não poderá substituir o prefixo **(projeto)** do nome do gerenciador de conexões. Isso ocorre por design.  
 
 ### <a name="add-ssis-connection-manager-dialog-box"></a>Caixa de diálogo Adicionar Gerenciador de Conexões SSIS
 Use a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** para selecionar o tipo de conexão a adicionar a um pacote.  
@@ -239,7 +239,7 @@ Use a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** para selecio
   
 #### <a name="options"></a>Opções  
  **Tipo de gerenciador de conexões**  
- Selecione um tipo de conexão e clique em **Adicionar**ou clique duas vezes em um tipo de conexão, para especificar propriedades de conexão usando o editor para cada tipo de conexão.  
+ Selecione um tipo de conexão e clique em **Adicionar** ou clique duas vezes em um tipo de conexão, para especificar propriedades de conexão usando o editor para cada tipo de conexão.  
   
  **Adicionar**  
  Especifique propriedades de conexão usando o editor para cada tipo de conexão.  
