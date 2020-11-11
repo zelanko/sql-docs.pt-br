@@ -41,9 +41,9 @@ Para restaurar um banco de dados criptografado, você precisa ter acesso ao cert
     
 Se você restaurar um banco de dados de versão anterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse banco de dados será atualizado automaticamente para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Isso impede que o banco de dados seja usado com uma versão anterior da [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. No entanto, isso se relaciona com a atualização dos metadados e não afeta o [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Se o nível de compatibilidade de um banco de dados de usuário for 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade for 90 ou inferior antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se o banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da definição da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados que serão indexados, a importação poderá demorar várias horas, e a recompilação será até dez vezes mais demorada.     
+Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se o banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da definição da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar** , os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados que serão indexados, a importação poderá demorar várias horas, e a recompilação será até dez vezes mais demorada.     
     
-Quando a opção de atualização for definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
+Quando a opção de atualização for definida como **Importar** , se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
 Para obter informações sobre a restauração do serviço de armazenamento de Blobs do Microsoft Azure, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -51,7 +51,7 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
 ### <a name="a-restore-a-full-database-backup"></a>a. Restaurar um backup de banco de dados completo   
     
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
+1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
     
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**    
     
@@ -68,7 +68,7 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
          Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . 
          
-        -   Caixa de diálogo**Selecionar dispositivos de backup**  
+        -   Caixa de diálogo **Selecionar dispositivos de backup**  
         
             **Tipo de mídia de backup**  
          Selecione um tipo de mídia na lista suspensa **Tipo de mídia de backup** .  Observação: A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.
@@ -94,7 +94,7 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
              Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .    
     
-         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados**, selecione o nome do banco de dados que deve ser restaurado.    
+         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados** , selecione o nome do banco de dados que deve ser restaurado.    
     
          > [!NOTE]
          > Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.    
@@ -109,7 +109,7 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
 8. Para exibir ou selecionar as opções avançadas, na página **Opções** , no painel **Opções de restauração** , você pode selecionar qualquer uma das seguintes opções, de acordo com sua situação:    
 
-   1. Opções**WITH** (não necessárias):    
+   1. Opções **WITH** (não necessárias):    
     
      - **Substituir o banco de dados existente (WITH REPLACE)**    
     
@@ -138,7 +138,7 @@ Para obter mais informações sobre essas opções de restauração, veja [Resta
 ### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>B. Restaurar um backup anterior de disco sobre um banco de dados existente
 O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o banco de dados existente `Sales` .
 
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
+1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
 4.  Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup. Clique em **OK** depois de selecionar os arquivos de backup em disco.
@@ -166,14 +166,14 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o
 ### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>C.  Restaurar um backup anterior de disco com um novo nome de banco de dados no local em que o banco de dados original ainda existe
 O exemplo a seguir restaura um backup anterior de disco do `Sales` e cria um novo banco de dados chamado `SalesTest`.  O banco de dados original, `Sales`, ainda existe no servidor.
 
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
+1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
 4.  Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup. Clique em **OK** depois de selecionar os arquivos de backup em disco.
 5.  Clique em **OK** para retornar à página **Geral** .
 6.  Na seção **Destino** , a caixa **Banco de Dados** é preenchida automaticamente com o nome do banco de dados a ser restaurado. Para alterar o nome do banco de dados, digite o novo nome na caixa **Banco de Dados** .
 7.  Clique em **Opções** no painel **Selecionar uma página** .
-8.  Na seção **Backup da parte final do log** , desmarque a opção “**Fazer backup da parte final do log antes da restauração**”.
+8.  Na seção **Backup da parte final do log** , desmarque a opção “ **Fazer backup da parte final do log antes da restauração** ”.
 
     > [!IMPORTANT]
     > Não desmarcar essa opção resultará na alteração do estado de restauração do banco de dados existente, `Sales`.
@@ -188,7 +188,7 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e cria um nov
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  Restaurar backups anteriores de disco em um ponto específico
 O exemplo a seguir restaura um banco de dados para seu estado de `1:23:17 PM` em `May 30, 2016` e mostra uma operação de restauração que envolve vários backups de log. Atualmente, o banco de dados não existe no servidor.
 
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
+1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
 4.  Clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecione dispositivos de backup** . Clique em **Adicionar** e navegue até o backup completo e todos os backups de log de transações relevantes.  Clique em **OK** depois de selecionar os arquivos de backup em disco.
@@ -204,7 +204,7 @@ O exemplo a seguir restaura um banco de dados para seu estado de `1:23:17 PM` em
 
 #### <a name="common-steps"></a>Etapas comuns
 Os dois exemplos a seguir executam uma restauração de `Sales` de um backup localizado no serviço de armazenamento do Microsoft Azure.  O nome da Conta de armazenamento é `mystorageaccount`.  O contêiner é chamado `myfirstcontainer`.  Para resumir, as seis primeiras etapas são listadas aqui uma vez e todos os exemplos serão iniciados na **Etapa 7**.
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
+1.  No **Pesquisador de Objetos** , conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...** .
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
 4.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .    
@@ -239,7 +239,7 @@ Neste exemplo, atualmente, o banco de dados `Sales` não existe no servidor.
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Restaurar o backup local no armazenamento do Microsoft Azure (URL)
 O banco de dados `Sales` será restaurado para o contêiner de armazenamento do Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` de um backup localizado em `E:\MSSQL\BAK`.  A credencial do SQL Server para o contêiner do Azure já foi criada.  Uma credencial do SQL Server para o contêiner de destino já deve existir, pois não pode ser criada por meio da tarefa **Restaurar** .  Atualmente, o banco de dados `Sales` não existe no servidor.
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
+1.  No **Pesquisador de Objetos** , conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...** .
 3.  Na página **Geral** , selecione **Dispositivo** na seção **Fonte** .
 4.  Clique no botão Procurar (...) para abrir a caixa de diálogo **Selecione dispositivos de backup** .  

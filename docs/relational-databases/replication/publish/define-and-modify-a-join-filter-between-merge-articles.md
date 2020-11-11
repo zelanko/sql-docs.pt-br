@@ -60,13 +60,13 @@ ms.locfileid: "85898036"
   
 1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione um filtro de linha existente ou filtro de junção no painel **Tabelas Filtradas**.  
   
-2.  Clique em **Adicionar**e depois, em **Adicionar Junção para Estender o Filtro Selecionado**.  
+2.  Clique em **Adicionar** e depois, em **Adicionar Junção para Estender o Filtro Selecionado**.  
   
 3.  Crie a instrução de junção: selecione **Usar o construtor para criar a instrução** ou **Gravar a instrução de junção manualmente**.  
   
-    -   Se você selecionar para usar o construtor, use as colunas na grade (**Conjunção**, **Coluna da Tabela Filtrada**, **Operador**e **Coluna da Tabela Unida**) para criar uma instrução de junção.  
+    -   Se você selecionar para usar o construtor, use as colunas na grade ( **Conjunção** , **Coluna da Tabela Filtrada** , **Operador** e **Coluna da Tabela Unida** ) para criar uma instrução de junção.  
   
-         Cada coluna da grade contém uma caixa de combinação suspensa que permite a seleção de duas colunas e um operador ( **=** , **<>** , **<=** , **\<**, **>=** , **>** e **like**). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione a conjunção (AND ou OR) na coluna **Conjunção** e, depois, insira mais duas colunas e um operador.  
+         Cada coluna da grade contém uma caixa de combinação suspensa que permite a seleção de duas colunas e um operador ( **=** , **<>** , **<=** , **\<**, **>=** , **>** e **like** ). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione a conjunção (AND ou OR) na coluna **Conjunção** e, depois, insira mais duas colunas e um operador.  
   
     -   Se você selecionar para gravar a instrução manualmente, grave a instrução de junção na área de texto **Instrução de Junção** . Use as caixas de listagens **Colunas da tabela filtrada** e **Colunas da tabela unida** para arrastar e soltar colunas na área de texto **Instrução de junção** .  
   
@@ -125,7 +125,7 @@ ms.locfileid: "85898036"
      Isso define um filtro de junção entre os dois artigos.  
   
     > [!CAUTION]  
-    >  Somente defina `@join_unique_key` como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garanta exclusividade. Se `@join_unique_key` for definido incorretamente como **1**, poderá ocorrer não convergência de dados.  
+    >  Somente defina `@join_unique_key` como **1** se você tiver uma restrição na coluna de junção na tabela subjacente para o artigo pai que garanta exclusividade. Se `@join_unique_key` for definido incorretamente como **1** , poderá ocorrer não convergência de dados.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Este exemplo define um artigo para uma publicação de mesclagem em que o artigo da tabela `SalesOrderDetail` é filtrado em relação à tabela `SalesOrderHeader` que, por sua vez, é filtrada usando um filtro de linha estático. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  

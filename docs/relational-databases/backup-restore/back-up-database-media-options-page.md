@@ -44,39 +44,39 @@ ms.locfileid: "85719945"
 
  A opção **Substituir mídia** será desabilitada se você selecionou **URL** como destino de backup na página **Geral**.
   
- Há suporte somente para a opção **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes** nas opções de criptografia. Se você selecionar as opções na seção **Fazer backup na mídia existente**, as opções de criptografias na página **Opções de Backup** serão desabilitadas.  
+ Há suporte somente para a opção **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes** nas opções de criptografia. Se você selecionar as opções na seção **Fazer backup na mídia existente** , as opções de criptografias na página **Opções de Backup** serão desabilitadas.  
   
 > [!NOTE]  
 >  Para obter informações sobre conjuntos de mídias, consulte [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-**Fazer backup no conjunto de mídias existente**: Faz o backup de um banco de dados em um conjunto de mídias existente. A seleção desse botão de opção habilita três opções.  
+**Fazer backup no conjunto de mídias existente** : Faz o backup de um banco de dados em um conjunto de mídias existente. A seleção desse botão de opção habilita três opções.  
   
  Escolha uma das seguintes opções:  
   
- - **Acrescentar ao conjunto de backup existente**: Anexe o conjunto de backup ao conjunto de mídias existente, preservando qualquer backup anterior.  
+ - **Acrescentar ao conjunto de backup existente** : Anexe o conjunto de backup ao conjunto de mídias existente, preservando qualquer backup anterior.  
   
- - **Substituir todos os conjuntos de backup existentes**: Substitua pelo backup atual quaisquer backups anteriores no conjunto de mídias existente.  
+ - **Substituir todos os conjuntos de backup existentes** : Substitua pelo backup atual quaisquer backups anteriores no conjunto de mídias existente.  
   
- - **Verificar nome do conjunto de mídias e expiração do conjunto de backup**: Opcionalmente, ao efetuar o backup para um conjunto de mídias existente, solicite que a operação de backup verifique o nome e a data de validade dos conjuntos de backup.  
+ - **Verificar nome do conjunto de mídias e expiração do conjunto de backup** : Opcionalmente, ao efetuar o backup para um conjunto de mídias existente, solicite que a operação de backup verifique o nome e a data de validade dos conjuntos de backup.  
   
- - **Nome do conjunto de mídias**:  Se a opção **Verificar nome do conjunto de mídias e validade do conjunto de backup** for marcada, opcionalmente, especifique o nome do conjunto de mídias a ser usado para essa operação de backup.  
+ - **Nome do conjunto de mídias** :  Se a opção **Verificar nome do conjunto de mídias e validade do conjunto de backup** for marcada, opcionalmente, especifique o nome do conjunto de mídias a ser usado para essa operação de backup.  
   
- - **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes**:  Use um conjunto de mídias novo, apagando os conjuntos de backup anteriores.  
+ - **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes** :  Use um conjunto de mídias novo, apagando os conjuntos de backup anteriores.  
   
  Clicando-se nessa opção as seguintes opções são habilitadas:  
   
- - **Novo nome do conjunto de mídias**: Opcionalmente, digite um nome novo para os conjuntos de mídias.  
+ - **Novo nome do conjunto de mídias** : Opcionalmente, digite um nome novo para os conjuntos de mídias.  
   
- - **Descrição do novo conjunto de mídias**:  Opcionalmente, digite uma descrição significativa do novo conjunto de mídias. Essa descrição deve ser específica o suficiente para comunicar o conteúdo com precisão.  
+ - **Descrição do novo conjunto de mídias** :  Opcionalmente, digite uma descrição significativa do novo conjunto de mídias. Essa descrição deve ser específica o suficiente para comunicar o conteúdo com precisão.  
   
 ### <a name="reliability"></a>Confiabilidade  
  As opções do painel **Log de transações** controlam o gerenciamento de erro pela operação de backup.  
   
- - **Verificar backup quando concluído**:  Verifique se o conjunto de backup está completo e se todos os volumes estão legíveis.  
+ - **Verificar backup quando concluído** :  Verifique se o conjunto de backup está completo e se todos os volumes estão legíveis.  
   
- - **Executar soma de verificação antes de gravar na mídia**: Verifique as somas de verificação antes de gravar na mídia de backup. A seleção dessa opção é o equivalente a especificar a opção CHECKSUM na instrução BACKUP de [!INCLUDE[tsql](../../includes/tsql-md.md)]. A seleção dessa opção pode aumentar a carga de trabalho e diminuir a taxa de transferência da operação de backup. Para obter informações sobre somas de verificação de backup, veja [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+ - **Executar soma de verificação antes de gravar na mídia** : Verifique as somas de verificação antes de gravar na mídia de backup. A seleção dessa opção é o equivalente a especificar a opção CHECKSUM na instrução BACKUP de [!INCLUDE[tsql](../../includes/tsql-md.md)]. A seleção dessa opção pode aumentar a carga de trabalho e diminuir a taxa de transferência da operação de backup. Para obter informações sobre somas de verificação de backup, veja [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- - **Continuar se houver erro**: A operação de backup deve continuar mesmo tendo-se encontrado um ou mais erros.  
+ - **Continuar se houver erro** : A operação de backup deve continuar mesmo tendo-se encontrado um ou mais erros.  
   
 ### <a name="transaction-log"></a>Log de transações  
  As opções do painel **Log de transações** controlam o comportamento de um backup de log de transações. Essas opções são relevantes apenas no modelo de recuperação completa ou modelo de recuperação bulk-logged. Elas são habilitadas apenas se o **Log de transações** tiver sido selecionado no campo **Tipo de backup** na página [Geral](../../relational-databases/backup-restore/back-up-database-general-page.md) da caixa de diálogo **Fazer Backup de Banco de Dados**.  
@@ -88,7 +88,7 @@ ms.locfileid: "85719945"
  Faça backup do log de transações e trunque-o para liberar espaço de log. O banco de dados permanece online. Essa é a opção padrão.  
   
  **Fazer backup da parte final do log e deixar o banco de dados no estado de restauração**  
- Faça o backup da parte final do log e deixe o banco de dados em um estado de restauração. Essa opção cria um *backup da parte final do log*, que faz o backup de logs que ainda não tiveram seus backups executados (o log ativo), normalmente, em preparação para a restauração de um banco de dados. O banco de dados ficará indisponível para usuários até que seja completamente restaurado.  
+ Faça o backup da parte final do log e deixe o banco de dados em um estado de restauração. Essa opção cria um *backup da parte final do log* , que faz o backup de logs que ainda não tiveram seus backups executados (o log ativo), normalmente, em preparação para a restauração de um banco de dados. O banco de dados ficará indisponível para usuários até que seja completamente restaurado.  
   
  A seleção dessa opção equivale à especificação de WITH NO_TRUNCATE, NORECOVERY em uma instrução [BACKUP](../../t-sql/statements/backup-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Para obter mais informações, veja [Backups da parte final do log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
@@ -98,9 +98,9 @@ ms.locfileid: "85719945"
 > [!NOTE]  
 >  Para obter informações sobre como usar dispositivos de fita, veja [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- - **Descarregar a fita após o backup**: Depois que o backup for concluído, descarregue a fita.  
+ - **Descarregar a fita após o backup** : Depois que o backup for concluído, descarregue a fita.  
   
- - **Rebobinar a fita antes de descarregar**: antes de descarregar, libere e rebobine a fita. Isso só será habilitado se **Descarregar a fita após o backup** for selecionado.  
+ - **Rebobinar a fita antes de descarregar** : antes de descarregar, libere e rebobine a fita. Isso só será habilitado se **Descarregar a fita após o backup** for selecionado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
