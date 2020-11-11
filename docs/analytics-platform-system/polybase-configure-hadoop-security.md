@@ -1,6 +1,6 @@
 ---
 title: Configurar a segurança do Hadoop do polybase
-description: Explica como configurar o polybase em paralelo data warehouse para se conectar ao Hadoop externo.
+description: Fornece uma referência para várias definições de configuração que afetam a conectividade do polybase do APS com o Hadoop.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,12 +9,12 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3c0db3807b45d28f99ef1a3da571675bd6d8ac48
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243492"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520953"
 ---
 # <a name="configure-polybase-hadoop-security"></a>Configurar a segurança do Hadoop do polybase
 
@@ -42,7 +42,7 @@ Uma maneira comum de proteger a comunicação em um cluster Hadoop é alterando 
    </property> 
 ```
 
-## <a name="kerberos-configuration"></a><a id="kerberossettings"></a>Configuração do Kerberos  
+## <a name="kerberos-configuration"></a><a id="kerberossettings"></a> Configuração do Kerberos  
 
 Observe que, quando o PolyBase é autenticado em um cluster protegido pelo Kerberos, ele espera que a configuração de hadoop.rpc.protection seja 'Autenticar' por padrão. Isso faz com que a comunicação de dados entre os nós do Hadoop não seja criptografada. Para usar as configurações de 'Privacidade' ou 'Integridade' para o hadoop.rpc.protection, atualize o arquivo core-site.xml no servidor do PolyBase. Para obter mais informações, confira a seção anterior [Conectando-se ao cluster Hadoop com a configuração Hadoop.rpc.protection](#rpcprotection).
 
@@ -114,7 +114,7 @@ Para se conectar a um cluster Hadoop protegido por Kerberos usando MIT KDC, as s
 
 4. Crie um objeto de credencial com escopo de banco de dados para especificar as informações de autenticação de cada usuário do Hadoop. Veja [Objetos T-SQL do PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).
 
-## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Configuração da zona de criptografia do Hadoop
+## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a> Configuração da zona de criptografia do Hadoop
 Se você estiver usando a área de criptografia do Hadoop, modifique core-site.xml e hdfs-site.xml conforme a seguir. Forneça o endereço IP em que o serviço KMS está sendo executado com o número da porta correspondente. A porta padrão para o KMS no CDH é 16000.
 
 **core-site.xml**
