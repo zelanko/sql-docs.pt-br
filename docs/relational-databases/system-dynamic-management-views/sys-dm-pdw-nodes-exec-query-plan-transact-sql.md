@@ -13,17 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ec94a367ca0cc9bb354fd35cbc214d8e83ede584
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 06c5acb9480f52d0cadf84c54aa39bbc9bae12d9
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059525"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584929"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.pdw_nodes_dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Retorna o plano de execução em formato XML para o lote especificado pelo identificador de plano. O plano especificado pelo identificador do plano pode estar em cache ou estar sendo executado.  
+
+> [!note] 
+> No Synapse SQL, a adição de espaços em branco em uma consulta constitui como uma alteração de consulta que faz com que o hash de consulta seja recalculado e o plano de execução em cache anterior não seja reutilizado.
+
 
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -42,7 +46,7 @@ Os mesmos comentários em [Sys.dm_exec_query_plan](./sys-dm-exec-query-plan-tran
 ## <a name="permissions"></a>Permissões  
  Exigir a função de servidor **sysadmin** ou `VIEW SERVER STATE` a permissão no servidor.  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Consulte também  
  [Exibições de gerenciamento dinâmico do Azure Synapse Analytics e Parallel data warehouse &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
  ## <a name="next-steps"></a>Próximas etapas

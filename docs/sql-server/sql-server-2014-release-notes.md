@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 623c0e6b5a1bafa033ddc9a6fd34a1911d6ecf5b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f2b94f4458e29090559e2fdf7d5819cddb30842f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988532"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384845"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ O SQL Server 2014 SP1 contém correções fornecidas no SQL Server 2014 Atualiza
 - [Baixar o Service Pack 1 para Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
 - [O SQL Server 2014 Service Pack 1 foi lançado – atualizado](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
-- [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
+- [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46694)
 
 
 ## <a name="before-you-install-sql-server-2014-rtm"></a>Antes de instalar o SQL Server 2014 RTM
@@ -114,7 +114,7 @@ Não há suporte para essa ação.
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Versão incorreta do StreamInsight Client na mídia/ISO/CAB do SQL Server 2014  
 A versão incorreta de StreamInsight.msi e StreamInsightClient.msi está localizada no caminho a seguir em mídia/ISO/CAB do SQL Server (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
-**Solução alternativa:** Baixe e instale a versão correta na [página de download do SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Solução alternativa:** Baixe e instale a versão correta na [página de download do SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=57474).  
   
 ### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>Documentação do Produto RTM
   
@@ -270,7 +270,7 @@ DATEPART(weekday, @d)
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>O registro com o SSMS adiciona metadados do DAC com IDs de instância incompatíveis  
 **Problema:** Ao registrar ou excluir um pacote de aplicativos da camada de dados (.dacpac) com o SQL Server Management Studio, as tabelas de sysdac* não são atualizadas corretamente para permitir que um usuário consulte o histórico do dacpac para o banco de dados.  O instance_id para o sysdac_history_internal e o sysdac_instances_internal não correspondem para permitir uma junção.  
   
-**Solução alternativa:** Esse problema é corrigido com a redistribuição do feature pack da [Estrutura do aplicativo da camada de dados](https://www.microsoft.com/download/details.aspx?id=42295).  Depois que a atualização for aplicada, todas as novas entradas de histórico usarão o valor listado para instance_id na tabela sysdac_instances_internal.  
+**Solução alternativa:** Esse problema é corrigido com a redistribuição do feature pack da [Estrutura do aplicativo da camada de dados](https://www.microsoft.com/download/details.aspx?id=100297).  Depois que a atualização for aplicada, todas as novas entradas de histórico usarão o valor listado para instance_id na tabela sysdac_instances_internal.  
   
 Se você já tiver o problema com valores de instance_id incompatíveis, a única maneira de corrigir os valores incompatíveis é se conectar ao servidor como um usuário com privilégios para gravar no banco de dados MSDB e atualizar os valores de instance_id para correspondência.  Se há vários eventos de registro e cancelamento de registro do mesmo banco de dados, talvez seja necessário examinar a data/hora para ver quais registros correspondem ao valor atual de instance_id.  
   
@@ -359,7 +359,7 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 **Solução alternativa:**  
   
-1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, confira a seção "Provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2012 SP1" [Feature Pack do Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, confira a seção "Provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2012 SP1" [Feature Pack do Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35575).  
   
 2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
@@ -374,7 +374,7 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
   
 **Solução alternativa:**  
   
-1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, confira a seção "Provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2012 SP1" [Feature Pack do Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale o provedor nos servidores de aplicativos que executam os Serviços do Excel. Para obter mais informações, confira a seção "Provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2012 SP1" [Feature Pack do Microsoft SQL Server 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35575).  
   
 2.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
@@ -411,7 +411,7 @@ Esse problema se deve ao fato dos ouvintes do grupo de disponibilidade exigirem 
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>O Supervisor de Atualização do SQL Server 2014 relata problemas de atualização irrelevantes do SQL Server Reporting Services  
 **Problema:** O SSUA (Supervisor de Atualização do SQL Server) enviado com a mídia do SQL Server 2014 informa incorretamente vários erros ao analisar o servidor do SQL Server Reporting Services.  
   
-**Solução alternativa:** Esse problema foi corrigido no Supervisor de Atualização do SQL Server fornecido no [SQL Server 2014 Feature Pack para SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Solução alternativa:** Esse problema foi corrigido no Supervisor de Atualização do SQL Server fornecido no [SQL Server 2014 Feature Pack para SSUA](https://www.microsoft.com/download/details.aspx?id=57474).  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>O Supervisor de Atualização do SQL Server 2014 relata um erro ao analisar o servidor do SQL Server Integration Services  
 **Problema:** O SSUA (Supervisor de Atualização do SQL Server) fornecido com a mídia SQL Server 2014 relata um erro ao analisar o servidor do SQL Server Integration Services.  O erro que é exibido para o usuário é:  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Solução alternativa:** Esse problema foi corrigido no Supervisor de Atualização do SQL Server fornecido no [SQL Server 2014 Feature Pack para SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Solução alternativa:** Esse problema foi corrigido no Supervisor de Atualização do SQL Server fornecido no [SQL Server 2014 Feature Pack para SSUA](https://www.microsoft.com/download/details.aspx?id=57474).  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

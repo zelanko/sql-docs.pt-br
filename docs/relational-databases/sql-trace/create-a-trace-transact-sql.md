@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb19a7e3dc1ef6c1fc2bcc1c1416c79b2a6c5e4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402572"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364788"
 ---
 # <a name="create-a-trace-transact-sql"></a>Criar um rastreamento (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88402572"
   
 ### <a name="to-create-a-trace"></a>Para criar um rastreamento  
   
-1.  Execute **sp_trace_create** com os parâmetros exigidos para criar um novo rastreamento. O novo rastreamento estará em um estado parado (*status* é **0**).  
+1.  Execute **sp_trace_create** com os parâmetros exigidos para criar um novo rastreamento. O novo rastreamento estará em um estado parado ( *status* é **0** ).  
   
 2.  Execute **sp_trace_setevent** com os parâmetros exigidos para selecionar os eventos e as colunas para rastrear.  
   
@@ -36,11 +36,13 @@ ms.locfileid: "88402572"
      **sp_trace_setevent** e **sp_trace_setfilter** só podem ser executados em rastreamentos existentes que estejam parados.  
   
     > [!IMPORTANT]  
-    >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do SQL Server Profiler (<strong>sp_trace_*xx*</strong>) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
+    >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do SQL Server Profiler ( <strong>sp_trace_ *xx*</strong>) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
   
-## <a name="example"></a>Exemplo  
+## <a name="examples"></a>Exemplos
+
  O código a seguir demonstra a criação de um rastreamento usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ele está em três partes: criação do rastreamento, população do arquivo de rastreamento e interrupção do rastreamento. Personalize o rastreamento adicionando os eventos que deseja rastrear. Para obter a lista de eventos e colunas, veja [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
+### <a name="a-create-a-trace"></a>a. Criar um rastreamento
  O seguinte código cria um rastreamento, acrescenta eventos ao rastreamento e depois inicia o rastreamento:  
   
 ```  
@@ -73,7 +75,7 @@ GO
   
 ```  
   
-## <a name="example"></a>Exemplo  
+### <a name="b-populate-the-trace-file"></a>B. Popular o arquivo de rastreamento
  Agora que o rastreamento foi criado e iniciado, execute o código a seguir para popular o rastreamento com atividade.  
   
 ```  
@@ -84,7 +86,7 @@ GO
   
 ```  
   
-## <a name="example"></a>Exemplo  
+### <a name="c-stop-the-trace"></a>C. Parar o rastreamento
  O rastreamento pode ser interrompido e reiniciado a qualquer momento. Neste exemplo, execute o código a seguir para interromper o rastreamento, fechar o rastreamento e excluir sua definição.  
   
 ```  
@@ -100,7 +102,7 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## <a name="example"></a>Exemplo  
+### <a name="d-examine-the-trace-file"></a>D. Examinar o arquivo de rastreamento
  Para examinar o arquivo de rastreamento, abra o arquivo SampleTrace.trc usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  

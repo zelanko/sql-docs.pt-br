@@ -1,7 +1,7 @@
 ---
 description: DistinctCount (MDX)
 title: DistinctCount (MDX) | Microsoft Docs
-ms.date: 06/04/2018
+ms.date: 11/12/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 286debd54299942ad6f885d918390e2ece53fc0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28807d1a24f97a6b197ad56d0434399ab53cd742
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484038"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584843"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (MDX)
 
@@ -61,7 +61,9 @@ DistinctCount(Set_Expression)
  `SELECT {MEASURES.SETDISTINCTCOUNT} ON 0`  
   
  `FROM [Adventure Works]`  
-  
+ 
+A função DistinctCount retorna o número distinto de itens em um conjunto; Neste exemplo, o segundo parâmetro opcional é usado para excluir itens que não têm um valor para uma determinada tupla. Nesse caso, há quatro itens distintos no conjunto no primeiro parâmetro, mas a função retorna três porque apenas Austrália, Canadá e França têm dados de 1º de julho de 2001 para o valor de vendas pela Internet.
+ 
 ## <a name="see-also"></a>Consulte Também  
  [Contagem &#40;definida&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

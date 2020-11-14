@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a1251ed1fa5d3fc7a520259fdfc360ac5b5fb22c
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
+ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379772"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93405043"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -36,6 +36,9 @@ Uma função com valor de tabela que divide uma cadeia de caracteres em linhas d
 STRING_SPLIT requer que o nível de compatibilidade seja, no mínimo, 130. Quando o nível for inferior a 130, o SQL Server não conseguirá localizar a função STRING_SPLIT.
 
 Para alterar o nível de compatibilidade de um banco de dados, consulte [Exibir ou alterar o nível de compatibilidade de um banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
+
+> [!NOTE]
+> A configuração de compatibilidade não é necessária para STRING_SPLIT no Azure Synapse Analytics.
 
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +53,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>Argumentos
 
  *cadeia de caracteres*  
- É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo de caractere (ou seja, **nvarchar**, **varchar**, **nchar** ou **char**).  
+ É uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de qualquer tipo de caractere (ou seja, **nvarchar** , **varchar** , **nchar** ou **char** ).  
   
  *separator*  
  É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de caractere único de qualquer tipo de caractere (por exemplo, **nvarchar(1)** , **varchar(1)** , **nchar(1)** ou **char(1)** ) usada como separador de subcadeias de caracteres concatenadas.  
@@ -65,7 +68,7 @@ Retorna uma tabela de coluna única cujas linhas são as subcadeias de caractere
 
 As linhas de saída podem estar em outra ordem. A ordem _não_ é a garantia de corresponder à ordem das subcadeias de caracteres na cadeia de caracteres de entrada. É possível substituir a ordem de classificação final usando uma cláusula ORDER BY na instrução SELECT (`ORDER BY value`).
 
-0x0000 (**char(0)** ) é um caractere indefinido em ordenações do Windows e não pode ser incluído em STRING_SPLIT.
+0x0000 ( **char(0)** ) é um caractere indefinido em ordenações do Windows e não pode ser incluído em STRING_SPLIT.
 
 Subcadeias de caracteres de comprimento zero vazias estão presentes quando a cadeia de caracteres de entrada contém duas ou mais ocorrências consecutivas do caractere delimitador. As subcadeias de caracteres vazias são tratadas da mesma forma que são as subcadeias de caracteres sem formatação. É possível filtrar as linhas que contêm a subcadeia de caracteres vazia usando a cláusula WHERE (`WHERE value <> ''`). Se a cadeia de caracteres de entrada for NULL, a função com valor de tabela STRING_SPLIT retornará uma tabela vazia.  
 

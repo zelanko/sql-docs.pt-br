@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fae846be15fd8606315aa0e66efeb25c745ff98a
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866279"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384535"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Onde encontrar o suplemento Reporting Services para produtos do SharePoint
 
@@ -59,7 +59,7 @@ O suplemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoV
 
 ##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a><a name="bkmk_sql11"></a> Suplemento do Reporting Services do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para produtos do SharePoint 2010
 
-Na versão do SQL Server 2016, o suplemento pode ser instalado como parte do assistente de instalação do SQL Server, na página Seleção de Recursos. Para baixar e instalar o suplemento separadamente, a versão mais atualizada desse arquivo está disponível online na página do Centro de Download da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , na página do [suplemento do Microsoft® SQL Server® 2012 Reporting Services para Tecnologias do Microsoft SharePoint 2010](https://go.microsoft.com/fwlink/?LinkID=207242) .
+Na versão do SQL Server 2016, o suplemento pode ser instalado como parte do assistente de instalação do SQL Server, na página Seleção de Recursos. Para baixar e instalar o suplemento separadamente, a versão mais atualizada desse arquivo está disponível online na página do Centro de Download da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , na página do [suplemento do Microsoft® SQL Server® 2012 Reporting Services para Tecnologias do Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=56052) .
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -1,6 +1,6 @@
 ---
-title: Carregar dados no Azure Synapse Analytics com o SSIS (SQL Server Integration Services) | Microsoft Docs
-description: Mostra como criar um pacote do SSIS (SQL Server Integration Services) para mover dados de uma ampla variedade de fontes para o Azure Synapse Analytics.
+title: Carregar dados no Azure Synapse Analytics com o SSIS (SQL Server Integration Services)
+description: Mostra como criar um pacote do SSIS (SQL Server Integration Services) para mover dados de uma ampla variedade de fontes para um pool de SQL dedicado no Azure Synapse Analytics.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,20 +10,18 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 3cd591bd087170e6f5a6329c4411b2674d19b4f3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7b582e5722b19db3569aaa0f154f5b78864a2838
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192496"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328502"
 ---
-# <a name="load-data-into-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>Carregar dados no Azure Synapse Analytics com o SSIS (SQL Server Integration Services)
+# <a name="load-data-into-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>Carregar dados em um pool de SQL dedicado no Azure Synapse Analytics com o SSIS (SQL Server Integration Services)
 
-[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[asa](../includes/applies-to-version/asa.md)]
 
-
-
-Crie um pacote do SSIS (SQL Server Integration Services) para carregar dados no [Azure Synapse Analytics](/azure/sql-data-warehouse/index). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
+Criar um pacote do SSIS (SQL Server Integration Services) para carregar os dados em um pool de SQL dedicado no Azure Synapse Analytics](/azure/sql-data-warehouse/index). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
 
 Este artigo mostra como fazer o seguinte:
 
@@ -41,8 +39,8 @@ Uma introdução detalhada ao SSIS está além do escopo deste artigo. Para sabe
 
 - [Como criar um pacote ETL](ssis-how-to-create-an-etl-package.md)
 
-## <a name="options-for-loading-data-into-sql-data-warehouse-with-ssis"></a>Opções de carregamento de dados no SQL Data Warehouse com o SSIS
-O SSIS (SQL Server Integration Services) é um conjunto flexível de ferramentas que oferece uma variedade de opções para se conectar ao SQL Data Warehouse e carregar dados nele.
+## <a name="options-for-loading-data-into-azure-synapse-analytics-with-ssis"></a>Opções para carregar dados no Azure Synapse Analytics com o SSIS
+O SSIS (SQL Server Integration Services) é um conjunto flexível de ferramentas que oferece uma variedade de opções para se conectar ao Azure Synapse Analytics e carregar dados nele.
 
 1. O método preferencial, que fornece o melhor desempenho, é criar um pacote que use a [tarefa de upload do SQL DW do Azure](control-flow/azure-sql-dw-upload-task.md) para carregar os dados. Essa tarefa encapsula informações de origem e destino. Ela pressupõe que seus dados de origem são armazenados localmente em arquivos de texto delimitado.
 
@@ -54,11 +52,11 @@ Para realizar este tutorial, você precisa do seguinte:
 1. **Do SSIS (SQL Server Integration Services)** . O SSIS é um componente do SQL Server e requer uma versão licenciada, ou uma versão de avaliação ou do desenvolvedor, do SQL Server. Para obter uma versão de avaliação do SQL Server, consulte [Avaliar SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (opcional). Para obter o Visual Studio Community Edition gratuito, confira [Visual Studio Community][Visual Studio Community]. Se não quiser instalar o Visual Studio, você poderá instalar apenas o SSDT (SQL Server Data Tools). O SSDT instala uma versão do Visual Studio com funcionalidade limitada.
 3. **Do SSDT (SQL Server Data Tools) para Visual Studio**. Para obter o SQL Server Data Tools para Visual Studio, confira [Baixar o SSDT (SQL Server Data Tools)][Download SQL Server Data Tools (SSDT)].
-4. **Banco de dados e permissões do Azure Synapse Analytics**. Este tutorial se conecta a uma instância do SQL Data Warehouse e carrega dados nela. Você precisa das permissões para se conectar, criar uma tabela e carregar dados.
+4. **Banco de dados e permissões do Azure Synapse Analytics**. Este tutorial se conecta a um pool de SQL dedicado na instância do Azure Synapse Analytics e carrega dados nela. Você precisa das permissões para se conectar, criar uma tabela e carregar dados.
 
 ## <a name="create-a-new-integration-services-project"></a>Criar um novo projeto do Integration Services
 1. Inicie o Visual Studio.
-2. No menu **Arquivo**, selecione **Novo | Projeto**.
+2. No menu **Arquivo** , selecione **Novo | Projeto**.
 3. Navegue até os tipos de projeto **Instalados | Modelos | Business Intelligence | Integration Services**.
 4. Selecione **Projeto do Integration Services**. Forneça valores de **Nome** e **Localização** e, em seguida, selecione **OK**.
 
@@ -80,11 +78,11 @@ Para continuar o tutorial com essa opção, você precisa do seguinte:
 
 - O [Feature Pack do Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. A tarefa de upload do SQL DW é um componente do Feature Pack.
 
-- Uma conta de [Armazenamento de Blobs do Azure](/azure/storage/). A tarefa de upload do SQL DW carrega dados do Armazenamento de Blobs do Azure para o Azure Synapse Analytics. Você pode carregar arquivos que já estão no Armazenamento de Blobs ou pode carregar arquivos do seu computador. Se selecionar arquivos em seu computador, a tarefa de upload do SQL DW carregará, primeiramente, os arquivos no Armazenamento de Blobs para preparo e, em seguida, carregará os arquivos no SQL Data Warehouse.
+- Uma conta de [Armazenamento de Blobs do Azure](https://docs.microsoft.com/azure/storage/). A tarefa de upload do SQL DW carrega dados do Armazenamento de Blobs do Azure para o Azure Synapse Analytics. Você pode carregar arquivos que já estão no Armazenamento de Blobs ou pode carregar arquivos do seu computador. Se selecionar arquivos em seu computador, a tarefa Carregar do SQL DW carregará, primeiramente, os arquivos no Armazenamento de Blobs para preparo, e depois os carregará para seu pool de SQL dedicado.
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>Adicionar e configurar a tarefa de upload do SQL DW
 
-1. Arraste uma tarefa de upload do SQL DW da caixa de ferramentas até o centro da superfície de design (na guia **Fluxo de controle**).
+1. Arraste uma tarefa de upload do SQL DW da caixa de ferramentas até o centro da superfície de design (na guia **Fluxo de controle** ).
 
 2. Clique duas vezes na tarefa para abrir o **editor da tarefa de upload do SQL DW**.
 
@@ -98,7 +96,7 @@ Para obter mais controle, você pode criar manualmente um pacote que emula o tra
 
 1. Use a Tarefa de upload de Blobs do Azure para preparar os dados no Armazenamento de Blobs do Azure. Para obter a tarefa de Upload de Blobs do Azure, baixe o [Feature Pack do Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. Depois, use a tarefa Executar SQL do SSIS para inicializar um script do PolyBase que carrega os dados no SQL Data Warehouse. Para obter um exemplo que carrega os dados do armazenamento de BLOBs do Azure no SQL Data Warehouse (mas não com o SSIS), veja [Tutorial: Carregar dados para o Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
+2. Depois, use a tarefa Executar SQL do SSIS para inicializar um script do PolyBase que carrega os dados em seu pool de SQL dedicado. Para obter um exemplo que carrega os dados do Armazenamento de Blobs do Azure no pool de SQL dedicado (mas não com o SSIS), confira [Tutorial: Carregar dados para o Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Opção 2 – Usar uma origem e um destino
 
@@ -106,7 +104,7 @@ A segunda abordagem é um pacote típico que usa uma tarefa de fluxo de dados qu
 
 Este tutorial usa o SQL Server como fonte de dados. O SQL Server é executado localmente ou em uma máquina virtual do Azure.
 
-Para se conectar ao SQL Server e ao SQL Data Warehouse, você pode usar um gerenciador de conexões ADO.NET e um destino e uma origem ou um gerenciador de conexões OLE DB e uma origem e um destino. Este tutorial usa o ADO.NET porque ele tem menos opções de configuração. O OLE DB pode resultar em um desempenho ligeiramente melhor do que o ADO.NET.
+Para conectar-se ao SQL Server e a um pool de SQL dedicado, você pode usar uma fonte, um destino e um gerenciador de conexões ADO.NET ou um gerenciador de conexões OLE DB com uma fonte e um destino. Este tutorial usa o ADO.NET porque ele tem menos opções de configuração. O OLE DB pode resultar em um desempenho ligeiramente melhor do que o ADO.NET.
 
 Como atalho, é possível usar o Assistente de Importação e Exportação do SQL Server para criar o pacote básico. Em seguida, salve o pacote e abra-o no Visual Studio ou no SSDT para exibi-lo e personalizá-lo. Para obter mais informações, consulte [Importar e exportar dados com o Assistente para Importação e Exportação do SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
@@ -114,12 +112,12 @@ Como atalho, é possível usar o Assistente de Importação e Exportação do SQ
 
 Para continuar o tutorial com essa opção, você precisa do seguinte:
 
-1. **De dados de exemplo**. Este tutorial usa dados de exemplo armazenados no SQL Server, no banco de dados de exemplo AdventureWorks, como os dados de origem a serem carregados no SQL Data Warehouse. Para obter o banco de dados de exemplo AdventureWorks, confira [Bancos de dados de exemplo AdventureWorks][AdventureWorks 2014 Sample Databases].
+1. **De dados de exemplo**. Este tutorial usa dados de exemplo armazenados no SQL Server, no banco de dados de exemplo AdventureWorks, como os dados de origem a serem carregados em um pool de SQL dedicado. Para obter o banco de dados de exemplo AdventureWorks, confira [Bancos de dados de exemplo AdventureWorks][AdventureWorks 2014 Sample Databases].
 
-2. **De uma regra de firewall**. Você precisa criar uma regra de firewall no SQL Data Warehouse com o endereço IP do seu computador local antes de carregar dados no SQL Data Warehouse.
+2. **De uma regra de firewall**. Crie uma regra de firewall em seu pool de SQL dedicado com o endereço IP do seu computador local antes de carregar dados no pool de SQL dedicado.
 
 ### <a name="create-the-basic-data-flow"></a>Criar o fluxo de dados básico
-1. Arraste uma Tarefa Fluxo de Dados da Caixa de ferramentas até o centro da superfície de design (na guia **Fluxo de Controle**).
+1. Arraste uma Tarefa Fluxo de Dados da Caixa de ferramentas até o centro da superfície de design (na guia **Fluxo de Controle** ).
    
     ![Captura de tela do Visual Studio mostrando uma Tarefa de Fluxo de Dados sendo arrastada para a guia Fluxo de Controle do painel Design.][02]
 2. Clique duas vezes na Tarefa Fluxo de Dados para mudar para a guia Fluxo de Dados.
@@ -132,32 +130,32 @@ Para continuar o tutorial com essa opção, você precisa do seguinte:
 1. Clique duas vezes no adaptador de fonte para abrir o **Editor de Origem ADO.NET**.
    
     ![Captura de tela do Editor de Origem ADO.NET. A guia Gerenciador de Conexões está visível e os controles estão disponíveis para configurar as propriedades de fluxo de dados.][03]
-2. Na guia **Gerenciador de Conexões** do **Editor de Origem ADO.NET**, clique no botão **Novo** próximo à lista do **Gerenciador de conexões do ADO.NET** para abrir a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** e criar configurações de conexão para o banco de dados do SQL Server do qual este tutorial carrega os dados.
+2. Na guia **Gerenciador de Conexões** do **Editor de Origem ADO.NET** , clique no botão **Novo** próximo à lista do **Gerenciador de conexões do ADO.NET** para abrir a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** e criar configurações de conexão para o banco de dados do SQL Server do qual este tutorial carrega os dados.
    
     ![Captura de tela da caixa de diálogo Configurar Gerenciador de Conexões ADO.NET. Há controles disponíveis para configurar gerenciadores de conexões.][04]
-3. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique no botão **Novo** para abrir a caixa de diálogo **Gerenciador de Conexões** e criar uma conexão de dados.
+3. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** , clique no botão **Novo** para abrir a caixa de diálogo **Gerenciador de Conexões** e criar uma conexão de dados.
    
     ![Captura de tela da caixa de diálogo Gerenciador de Conexões. Há controles disponíveis para configurar uma conexão de dados.][05]
-4. Na caixa de diálogo **Gerenciador de Conexões**, faça o seguinte.
+4. Na caixa de diálogo **Gerenciador de Conexões** , faça o seguinte.
    
-   1. Para **Provedor**, selecione o Provedor de Dados SqlClient.
-   2. Para **Nome do servidor**, digite o nome do SQL Server.
-   3. Na seção **Fazer logon no servidor**, selecione ou insira as informações de autenticação.
-   4. Na seção **Conectar a um banco de dados**, selecione o banco de dados de exemplo AdventureWorks.
+   1. Para **Provedor** , selecione o Provedor de Dados SqlClient.
+   2. Para **Nome do servidor** , digite o nome do SQL Server.
+   3. Na seção **Fazer logon no servidor** , selecione ou insira as informações de autenticação.
+   4. Na seção **Conectar a um banco de dados** , selecione o banco de dados de exemplo AdventureWorks.
    5. Clique em **Testar Conexão**.
       
        ![Captura de tela de uma caixa de diálogo exibindo um botão OK e um texto que indica que a conexão de teste foi bem-sucedida.][06]
    6. Na caixa de diálogo que relata os resultados do teste de conexão, clique em **OK** para retornar para a caixa de diálogo **Gerenciador de Conexões**.
-   7. Na caixa de diálogo **Gerenciador de Conexões**, clique em **OK** para retornar para a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**.
-5. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique em **OK** para retornar para o **Editor de Origem ADO.NET**.
-6. No **Editor de Origem ADO.NET**, na lista **Nome da tabela ou da exibição**, selecione a tabela **Sales.SalesOrderDetail**.
+   7. Na caixa de diálogo **Gerenciador de Conexões** , clique em **OK** para retornar para a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**.
+5. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** , clique em **OK** para retornar para o **Editor de Origem ADO.NET**.
+6. No **Editor de Origem ADO.NET** , na lista **Nome da tabela ou da exibição** , selecione a tabela **Sales.SalesOrderDetail**.
    
     ![Captura de tela do Editor de Origem ADO.NET. Na lista Nome da tabela ou da exibição, a tabela Sales.SalesOrderDetail está selecionada.][07]
 7. Clique em **Visualização** para ver as primeiras 200 linhas de dados da tabela de origem na caixa de diálogo **Visualizar Resultados da Consulta**.
    
     ![Captura de tela da caixa de diálogo Visualizar Resultados da Consulta. Várias linhas de dados de vendas da tabela de origem estão visíveis.][08]
-8. Na caixa de diálogo **Visualizar Resultados da Consulta**, clique em **Fechar** para retornar para o **Editor de Origem ADO.NET**.
-9. No **Editor de Origem ADO.NET**, clique em **OK** terminar a configuração da fonte de dados.
+8. Na caixa de diálogo **Visualizar Resultados da Consulta** , clique em **Fechar** para retornar para o **Editor de Origem ADO.NET**.
+9. No **Editor de Origem ADO.NET** , clique em **OK** terminar a configuração da fonte de dados.
 
 ### <a name="connect-the-source-adapter-to-the-destination-adapter"></a>Conectar o adaptador de fonte ao adaptador de destino
 1. Selecione o adaptador de fonte na superfície de design.
@@ -171,29 +169,29 @@ Para continuar o tutorial com essa opção, você precisa do seguinte:
 1. Clique duas vezes no adaptador de destino para abrir o **Editor de Destino ADO.NET**.
    
     ![Captura de tela do Editor de Destino ADO.NET. A guia Gerenciador de Conexões está visível e contém controles para configurar as propriedades de fluxo de dados.][11]
-2. Na guia **Gerenciador de Conexões** do **Editor de Destino ADO.NET**, clique no botão **Novo** próximo à lista do **Gerenciador de Conexões** para abrir a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** e criar configurações de conexão para o banco de dados do Azure Synapse Analytics, no qual este tutorial carrega dados.
-3. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique no botão **Novo** para abrir a caixa de diálogo **Gerenciador de Conexões** e criar uma conexão de dados.
-4. Na caixa de diálogo **Gerenciador de Conexões**, faça o seguinte.
-   1. Para **Provedor**, selecione o Provedor de Dados SqlClient.
-   2. Para **Nome do servidor**, digite o nome do SQL Data Warehouse.
-   3. Na seção **Fazer logon no servidor**, selecione **Usar autenticação do SQL Server** e insira as informações de autenticação.
-   4. Na seção **Conectar a um banco de dados**, selecione um banco de dados do SQL Data Warehouse existente.
+2. Na guia **Gerenciador de Conexões** do **Editor de Destino ADO.NET** , clique no botão **Novo** próximo à lista do **Gerenciador de Conexões** para abrir a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** e criar configurações de conexão para o banco de dados do Azure Synapse Analytics, no qual este tutorial carrega dados.
+3. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** , clique no botão **Novo** para abrir a caixa de diálogo **Gerenciador de Conexões** e criar uma conexão de dados.
+4. Na caixa de diálogo **Gerenciador de Conexões** , faça o seguinte.
+   1. Para **Provedor** , selecione o Provedor de Dados SqlClient.
+   2. Para **Nome do servidor** , insira o nome do pool de SQL dedicado.
+   3. Na seção **Fazer logon no servidor** , selecione **Usar autenticação do SQL Server** e insira as informações de autenticação.
+   4. Na seção **Conectar-se a um banco de dados** , selecione um banco de dados do pool de SQL dedicado existente.
    5. Clique em **Testar Conexão**.
    6. Na caixa de diálogo que relata os resultados do teste de conexão, clique em **OK** para retornar para a caixa de diálogo **Gerenciador de Conexões**.
-   7. Na caixa de diálogo **Gerenciador de Conexões**, clique em **OK** para retornar para a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**.
-5. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique em **OK** para retornar para o **Editor de Destino ADO.NET**.
-6. No **Editor de Destino ADO.NET**, clique em **Novo**, ao lado da lista **Usar uma tabela ou exibição**, para abrir a caixa de diálogo **Criar Tabela** e criar uma tabela de destino com uma lista de colunas que corresponda à tabela de origem.
+   7. Na caixa de diálogo **Gerenciador de Conexões** , clique em **OK** para retornar para a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**.
+5. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** , clique em **OK** para retornar para o **Editor de Destino ADO.NET**.
+6. No **Editor de Destino ADO.NET** , clique em **Novo** , ao lado da lista **Usar uma tabela ou exibição** , para abrir a caixa de diálogo **Criar Tabela** e criar uma tabela de destino com uma lista de colunas que corresponda à tabela de origem.
    
     ![Captura de tela da caixa de diálogo Criar Tabela. O código SQL para criar uma tabela de destino está visível.][12a]
-7. Na caixa de diálogo **Criar Tabela**, faça o seguinte.
+7. Na caixa de diálogo **Criar Tabela** , faça o seguinte.
    
    1. Altere o nome da tabela de destino para **SalesOrderDetail**.
-   2. Remova a coluna **rowguid**. O tipo de dados **uniqueidentifier** não é compatível com o SQL Data Warehouse.
-   3. Altere o tipo de dados da coluna **LineTotal** para **money**. O tipo de dados **decimal** não é compatível com o SQL Data Warehouse. Para saber mais sobre tipos de dados com suporte, confira [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
+   2. Remova a coluna **rowguid**. O tipo de dados **uniqueidentifier** não é compatível com o pool de SQL dedicado.
+   3. Altere o tipo de dados da coluna **LineTotal** para **money**. O tipo de dados **decimal** não é compatível com o pool de SQL dedicado. Para saber mais sobre tipos de dados com suporte, confira [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
       
        ![Captura de tela da caixa de diálogo Criar tabela, com o código para criar uma tabela chamada SalesOrderDetail com LineTotal como uma coluna de dinheiro e sem nenhuma coluna rowguid.][12b]
    4. Clique em **OK** para criar a tabela e retornar ao **Editor de Destino ADO.NET**.
-8. No **Editor de Destino ADO.NET**, selecione a guia **Mapeamentos** para ver como as colunas da fonte são mapeadas para as colunas do destino.
+8. No **Editor de Destino ADO.NET** , selecione a guia **Mapeamentos** para ver como as colunas da fonte são mapeadas para as colunas do destino.
    
     ![Captura de tela da guia Mapeamentos do Editor de Destino ADO.NET. As linhas conectam colunas com nomes idênticos nas tabelas de origem e de destino.][13]
 9. Clique em **OK** para concluir a configuração do destino.
