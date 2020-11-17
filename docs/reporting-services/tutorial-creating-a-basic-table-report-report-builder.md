@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bffaef60422d47484968ad30b5bc8d625549a74e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bc7e78fb2b4101df84c2d54162d62ec8b95f6aab
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247465"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418003"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  
@@ -49,7 +49,7 @@ Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre 
   
 ### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
   
-1.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados**e clique em **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
+1.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados** e clique em **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
   
 2.  Clique em **Nova**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
@@ -175,7 +175,7 @@ Depois de criar grupos, é possível adicionar e formatar linhas nas quais exibi
   
     2.  A segunda linha será repetida uma vez para cada item de linha no pedido de vendas e exibirá o nome do produto, a quantidade do pedido e o total da linha.  
   
-    3.  A terceira linha será repetida uma vez para cada pedido de vendas para exibir subtotais por pedido.  
+    3.  A terceira linha será repetida uma vez para cada categoria de pedido de vendas para exibir subtotais por categoria.  
   
     4.  A quarta será repetida uma vez para cada data de pedido de vendas para exibir subtotais por dia.  
   
@@ -269,7 +269,7 @@ O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Vendas de Produtos**e clique fora da caixa de texto.  
+2.  Digite **Vendas de Produtos** e clique fora da caixa de texto.  
   
 3.  Clique com o botão direito do mouse na caixa de texto que contém **Vendas de Produtos** e clique em **Propriedades da Caixa de Texto**.  
   
@@ -306,7 +306,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 1.  Clique em **Arquivo** > **Salvar Como**.  
   
-2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu computador**e procure a pasta na qual você quer salvar o relatório.  
+2.  Clique em **Área de Trabalho**, **Meus Documentos** ou **Meu computador** e procure a pasta na qual você quer salvar o relatório.  
   
 3.  Em **Nome**, substitua **Sem Título** por **Vendas de Produtos**.  
   

@@ -9,12 +9,12 @@ ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 08645672c1aa8b7b980b4ffe86b4029a691fa1cf
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990009"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447102"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implantar o cluster de Big Data do SQL Server com alta disponibilidade
 
@@ -211,6 +211,8 @@ Esses são problemas e limitações conhecidos de grupos de disponibilidade cont
 - Para restaurar com êxito um banco de dados habilitado para TDE de um backup criado em outro servidor, você deve garantir que os [certificados necessários](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) sejam restaurados no mestre de instância do SQL Server, bem como no mestre AG contido. Confira [aqui](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) para obter um exemplo de como fazer backup e restaurar os certificados.
 - Determinadas operações, como a execução de definições de configuração do servidor com `sp_configure`, exigem uma conexão com o banco de dados `master` de instância do SQL Server, não com o grupo de disponibilidade `master`. Você não pode usar o ponto de extremidade primário correspondente. Siga [as instruções](#instance-connect) para expor um ponto de extremidade e conectar-se à instância do SQL Server e executar `sp_configure`. Você só pode usar a autenticação do SQL ao expor manualmente o ponto de extremidade para conectar-se ao banco de dados `master` da instância do SQL Server.
 - Embora o banco de dados msdb contido esteja incluído no grupo de disponibilidade e os trabalhos do SQL Agent sejam replicados nele, os trabalhos são executados apenas por agendamento na réplica primária.
+- Não há suporte para o recurso de replicação em grupos de disponibilidade contidos. As instâncias do SQL Server que fazem parte de um AG contido não podem funcionar como distribuidor ou editor, seja no nível de instância ou no AG contido.
+- Não há suporte para criar grupos de arquivo ao criar o banco de dados. Como alternativa, você pode criar o banco de dados primeiro e emitir uma instrução ALTER DATABASE para adicionar qualquer grupo de arquivo.
 - Antes do SQL Server 2019 CU2, os bancos de dados criados como resultado de fluxos de trabalho que não `CREATE DATABASE` e `RESTORE DATABASE` como `CREATE DATABASE FROM SNAPSHOT` não são adicionados automaticamente ao grupo de disponibilidade. [Conecte-se à instância](#instance-connect) e adicione o banco de dados ao grupo de disponibilidade manualmente.
 
 ## <a name="next-steps"></a>Próximas etapas

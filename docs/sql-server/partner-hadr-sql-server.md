@@ -1,6 +1,6 @@
 ---
 title: Parceiros de alta disponibilidade e recuperação de desastre do SQL Server
-description: Lista de parceiros terceirizados com soluções para monitorar o servidor.
+description: Listas de parceiros terceirizados com soluções para fornecer alta disponibilidade e recuperação de desastre a seus serviços do SQL Server.
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017
@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: dd40556746f729d0a64b9eebf6550c774d267126
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 46a9fe5630f832d5d9d2bf57f94c25b30a301083
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235613"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521053"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Parceiros de alta disponibilidade e recuperação de desastre do SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

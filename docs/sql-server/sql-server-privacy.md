@@ -1,28 +1,28 @@
 ---
 description: Suplemento de privacidade do SQL Server
 title: Suplemento de privacidade do SQL Server | Microsoft Docs
-ms.date: 09/30/2020
+ms.date: 11/11/2020
 ms.prod: sql
 ms.technology: release-landing
-ms.reviewer: mikeray
+ms.reviewer: wopeter
 ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: jaszymas
-ms.author: jaszymas
-ms.openlocfilehash: f8356b5c07e6d85d9359276740fdd30adc200493
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 87cd9ec5266002f91fea682591e82dfecd403ab5
+ms.sourcegitcommit: 4545b502e3cae7136411fd9a7c15450315665f38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793803"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94549998"
 ---
 # <a name="sql-server-privacy-supplement"></a>Suplemento de privacidade do SQL Server
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-Este artigo resume os recursos habilitados para Internet que podem coletar e enviar os dados anônimos de diagnóstico e uso de recursos à Microsoft. O SQL Server pode coletar informações padrão do computador e dados de uso e desempenho que podem ser transmitidas à Microsoft e analisadas com a finalidade de aprimorar a qualidade, a segurança e a confiabilidade do produto.
+Este artigo resume os recursos habilitados para Internet que podem coletar e enviar os dados anônimos de diagnóstico e uso de recursos à Microsoft. O SQL Server pode coletar informações padrão do computador e dados de uso e desempenho que podem ser transmitidas à Microsoft e analisadas com a finalidade de aprimorar a qualidade, a segurança e a confiabilidade do produto. Se você instalar o SQL Server em uma máquina virtual no serviço do Microsoft Azure, as informações do ambiente poderão ser enviadas à Microsoft para que ela possa instalar a Extensão do Agente de IaaS do SQL Server e registrar seu recurso de máquina virtual no provedor de recursos de VM SQL, conforme descrito [aqui](/azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register).
 
 Este artigo funciona como um adendo à [Política de privacidade geral da Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). A classificação de dados neste artigo aplica-se somente às versões do produto SQL Server local. Ela não se aplica aos itens:
 

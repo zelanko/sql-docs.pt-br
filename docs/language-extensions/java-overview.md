@@ -1,74 +1,54 @@
 ---
 title: O que é a Extensão da Linguagem Java?
-description: No SQL Server 2019, há suporte para as extensões de linguagem Java, Python e R. As Extensões de Linguagem são recursos do SQL Server usados para executar códigos externos.  Os dados relacionais podem ser empregados no código externo usando a estrutura de extensibilidade.
-author: cawrites
-ms.author: chadam
-ms.date: 10/06/2020
+titleSuffix: SQL Server Language Extensions
+description: A Extensão de Linguagem Java é um recurso do SQL Server usado para executar código Java externo. Os dados relacionais podem ser empregados no código Java externo usando a estrutura de extensibilidade.
+author: dphansen
+ms.author: davidph
+ms.date: 11/10/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f6b7f2c21aa79ee5c0c9657cf817d9801b5d2891
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+ms.openlocfilehash: 6489ce49a1236f65ef5ff2fec677327bd6a7f84e
+ms.sourcegitcommit: 4545b502e3cae7136411fd9a7c15450315665f38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175900"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94549978"
 ---
 # <a name="what-is-java-language-extension"></a>O que é a Extensão da Linguagem Java?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-As Extensões de Linguagem é um recurso do SQL Server usado para executar código externo. Os dados relacionais podem ser usados no código externo usando a [estrutura de extensibilidade](concepts/extensibility-framework.md).
+A Extensão de Linguagem Java é um recurso do SQL Server usado para executar código Java externo. Os dados relacionais podem ser usados no código Java externo usando a [estrutura de extensibilidade](concepts/extensibility-framework.md). A Extensão de Linguagem Java faz parte das [Extensões de Linguagem do SQL Server](language-extensions-overview.md).
 
-No SQL Server 2019, há suporte para Java. O runtime do Java padrão é o Zulu Open JRE. Você também pode usar outro Java JRE ou SDK.
+O runtime do Java padrão é o Zulu Open JRE. Você também pode usar outro Java JRE ou SDK.
 
-> [!NOTE]
-> Para executar o Python ou o R no SQL Server, confira a documentação do [machine learning do SQL](../machine-learning/index.yml). Com o SQL Server 2019 e posterior, você pode usar um runtime personalizado do Python e do R com as extensões de linguagem. Para obter mais informações, confira o [runtime personalizado do Python](../machine-learning/install/custom-runtime-python.md) e o [runtime personalizado do R](../machine-learning/install/custom-runtime-r.md).
+## <a name="what-you-can-do-with-the-java-language-extension"></a>O que você pode fazer com a Extensão de Linguagem Java
 
-## <a name="what-you-can-do-with-language-extensions"></a>O que você pode fazer com as Extensões de Linguagem
+A Extensão de Linguagem Java usa a estrutura de extensibilidade para executar código Java externo. A execução de código é isolada dos principais processos de mecanismo, mas totalmente integrada à execução de consulta do SQL Server. Você pode executar o código Java na fonte dos dados, eliminando a necessidade de efetuar pull dos dados na rede.
 
-As Extensões de Linguagem usam a estrutura de extensibilidade para executar código externo. A execução de código é isolada dos principais processos de mecanismo, mas totalmente integrada à execução de consulta do SQL Server. Você pode executar o código na fonte dos dados, eliminando a necessidade de efetuar pull dos dados na rede.
+A linguagem Java externa é definida com [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql). O procedimento armazenado do sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) é usado como a interface para executar o código Java.
 
-As linguagens externas são definidas com [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql). O procedimento armazenado do sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) é usado como a interface para executar o código.
+## <a name="get-started-with-java-language-extension"></a>Introdução à Extensão de Linguagem Java
 
-As Extensões de Linguagem oferecem várias vantagens:
+1. [Instale a Extensão de Linguagem Java do SQL Server no Windows](install/windows-java.md) ou [no Linux](../linux/sql-server-linux-setup-language-extensions-java.md).
 
-+ Segurança de dados. Aproximar a execução de linguagem externa da fonte de dados evita uma movimentação de dados desperdiçadora ou insegura.
-+ Velocidade. Os bancos de dados são otimizados para operações baseadas em conjunto. Inovações recentes em bancos de dados, como tabelas na memória, agilizam resumos e agregações e são um complemento perfeito para a ciência de dados.
-+ Facilidade de implantação e integração. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é o ponto central de operações para muitas outras tarefas e aplicativos de gerenciamento de dados. Ao usar dados no banco de dados, você garante que os dados usados pelo Java sejam consistentes e atualizados.
+1. Configure ferramentas de desenvolvimento.
 
-## <a name="how-to-get-started"></a>Como começar
+    + Use o IDE de sua preferência para desenvolver código Java.
+    + Instale o [SDK de Extensibilidade da Microsoft para Java](how-to/extensibility-sdk-java-sql-server.md) a fim de executar código Java no SQL Server.
+    + Use o [Azure Data Studio](../azure-data-studio/what-is.md) para executar código externo no SQL Server.
+    + Use o procedimento armazenado do sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) para executar seu código Java no SQL Server.
 
-### <a name="step-1-install-the-software"></a>Etapa 1: Instalar o software
+1. Escreva seu primeiro código Java.
 
-+ [Extensões de Linguagem do SQL Server no Windows](install/windows-java.md)
-+ [Extensões de Linguagem do SQL Server no Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
-
-### <a name="step-2-configure-a-development-tool"></a>Etapa 2: Configurar uma ferramenta de desenvolvimento
-
-Normalmente, os desenvolvedores escrevem código em seu próprio laptop ou estação de trabalho de desenvolvimento. Com extensões de linguagem no SQL Server, não há necessidade de alterar esse processo. Após a conclusão da instalação, você poderá executar código Java no SQL Server.
-
-+ **Use o IDE de sua preferência** para desenvolver código Java.
-
-+ **Instale o [SDK de Extensibilidade da Microsoft para Java](how-to/extensibility-sdk-java-sql-server.md)** para executar código Java no SQL Server
-
-+ **Use o [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) ou o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)** para executar código externo no SQL Server
-
-+ **Use o procedimento armazenado do sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** para executar seu código Java no SQL Server.
-
-### <a name="step-3-write-your-first-code"></a>Etapa 3: Escrever seu primeiro código
-
-Executar código Java de dentro do script T-SQL:
-
-+ [Tutorial: Expressões regulares com Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
+    + [Tutorial: Expressões regulares com Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
 ## <a name="limitations"></a>Limitações
 
-+ O número de valores nos buffers de entrada e saída não pode exceder `MAX_INT (2^31-1)`, pois esse é o número máximo de elementos que pode ser alocado em uma matriz em Java.
+O número de valores nos buffers de entrada e saída não pode exceder `MAX_INT (2^31-1)`, pois esse é o número máximo de elementos que pode ser alocado em uma matriz em Java.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-+ Instalar um [runtime personalizado do Python para o SQL Server](../machine-learning/install/custom-runtime-python.md)
-+ Instalar um [runtime personalizado do R para o SQL Server](../machine-learning/install/custom-runtime-r.md)
-+ Instalar as [Extensões de Linguagem do SQL Server no Windows](../language-extensions/install/windows-java.md) ou [no Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
++ Instalar a [Extensão de Linguagem Java do SQL Server no Windows](install/windows-java.md) ou [no Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
 + Instalar o [SDK de Extensibilidade da Microsoft para Java](how-to/extensibility-sdk-java-sql-server.md)

@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios) | Microsoft Docs'
-description: Saiba como criar um relatório paginado do Reporting Services com um gráfico de colunas, exibindo uma série como um conjunto de barras verticais agrupadas por categoria.
+description: Saiba como usar um assistente no Construtor de Relatórios para criar um gráfico de barras no relatório paginado do Reporting Services.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 9b18950488cb0fed336feb3df61e5a4e66b56603
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043729"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521116"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
 Neste tutorial, você usa um assistente no [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para criar um gráfico de barras em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Em seguida, adicione um filtro e aprimore o gráfico. 
@@ -94,7 +94,7 @@ Em que você cria um conjunto de dados inserido, escolhe uma fonte de dados comp
   
 2.  Clique em **Barra** e em **Avançar**.  
   
-    Na página **Organizar campos de gráfico** , há quatro campos no painel **Campos disponíveis** : FirstName, LastName, SalesYear2015 e SalesYear2014.  
+    Na página **Organizar campos de gráfico**, há quatro campos no painel **Campos disponíveis**: FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
 3.  Arraste LastName para o painel Categorias.  
   
@@ -121,7 +121,7 @@ Por padrão, apenas alguns valores no eixo vertical são exibidos. É possível 
   
 2.  Clique com o botão direito do mouse no eixo vertical e clique em **Propriedades do Eixo Vertical**.  
   
-3.  Em **Alcance e intervalo do eixo** , na caixa **Intervalo** , digite **1**.  
+3.  Em **Alcance e intervalo do eixo**, na caixa **Intervalo** , digite **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -167,7 +167,7 @@ Quando você classifica dados em um gráfico, está alterando a ordem de valores
   
 4.  Clique em **Classificar**. A página **Alterar opções de classificação** exibe uma lista de expressões de classificação. Por padrão, essa lista contém uma expressão de classificação que é igual à expressão do grupo de categorias original.  
   
-5.  Em **Classificar por** , clique em **[SalesYear2015]** .  
+5.  Em **Classificar por**, clique em **[SalesYear2015]** .  
   
 6.  Na lista **Ordem** , selecione **A a Z** para que os nomes sejam exibidos das maiores para as menores vendas de 2015.
   
@@ -188,7 +188,7 @@ Para melhorar a capacidade de leitura dos valores do gráfico, mova a legenda do
   
 3.  Selecione **Propriedades da Legenda**.  
   
-4.  Em **Posição da legenda** , selecione uma posição diferente. Por exemplo, defina a posição para a opção da metade inferior.  
+4.  Em **Posição da legenda**, selecione uma posição diferente. Por exemplo, defina a posição para a opção da metade inferior.  
   
     Quando a legenda estiver posicionada na parte superior ou inferior de um gráfico, o layout da legenda será alterado de vertical para horizontal. Você pode selecionar um layout diferente na lista suspensa **Layout** .  
   
@@ -246,13 +246,13 @@ Você pode adicionar um filtro ao gráfico para especificar os dados do conjunto
   
 5.  Clique em **Adicionar**. Um novo filtro em branco é exibido.  
   
-6.  Em **Expressão** , digite **[Sum(SalesYear2015)]** . Esse procedimento cria a expressão subjacente `=Sum(Fields!SalesYear2015.Value)`, que poderá ser vista se você clicar no botão **fx** .  
+6.  Em **Expressão**, digite **[Sum(SalesYear2015)]** . Esse procedimento cria a expressão subjacente `=Sum(Fields!SalesYear2015.Value)`, que poderá ser vista se você clicar no botão **fx** .  
   
 7.  Verifique se o tipo de dados é **Text**.  
   
-8.  Em **Operador** , selecione **N Superior** na lista suspensa.  
+8.  Em **Operador**, selecione **N Superior** na lista suspensa.  
   
-9. Em **Valor** , digite a seguinte expressão: **=5**  
+9. Em **Valor**, digite a seguinte expressão: **=5**  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -266,7 +266,7 @@ O gráfico mostra os cinco primeiros nomes de vendedores dos dados de vendas de 
   
 1.  Na superfície de design, clique em **Clique para adicionar título**.  
   
-2.  Digite **Gráfico de Barras de Vendas** , pressione ENTER e digite **Cinco Primeiros Vendedores de 2015** , como neste exemplo:  
+2.  Digite **Gráfico de Barras de Vendas**, pressione ENTER e digite **Cinco Primeiros Vendedores de 2015**, como neste exemplo:  
   
     **Gráfico de Barras de Vendas**  
   
@@ -288,7 +288,7 @@ O gráfico mostra os cinco primeiros nomes de vendedores dos dados de vendas de 
   
 2.  Clique em **Arquivo** > **Salvar Como**.  
   
-3.  Em **Nome** , digite **Gráfico de Barras de Vendas**.  
+3.  Em **Nome**, digite **Gráfico de Barras de Vendas**.  
 
     Você pode salvá-lo no computador ou no servidor de relatório.
   

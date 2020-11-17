@@ -6,21 +6,23 @@ ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-author: pensivebrian
-ms.author: broneill
-ms.reviewer: drswkier; sstein
-ms.date: 09/29/2020
-ms.openlocfilehash: c4a7fb02521a20dffa95c45cc8a345c243c4ae0e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan; sstein
+ms.date: 11/4/2020
+ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005537"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384495"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 O **SqlPackage.exe** é um utilitário de linha de comando que automatiza as seguintes tarefas de desenvolvimento de banco de dados:  
   
+- [Versão](#version): retorna o número de build do aplicativo SqlPackage.  Adicionada na versão 18.6.
+
 - [Extrair](#extract-parameters-and-properties): cria um arquivo (.dacpac) de instantâneo de um banco de dados do SQL Server dinâmico ou do Banco de Dados SQL do Azure.  
   
 - [Publicar](#publish-parameters-properties-and-sqlcmd-variables): atualiza um esquema de banco de dados incrementalmente para que corresponda ao esquema de um arquivo .dacpac de origem. Se o banco de dados não existir no servidor, a operação de publicação irá criá-lo. Caso contrário, um banco de dados existente é atualizado.  
@@ -69,7 +71,10 @@ Crie um script SQL que gera as diferenças de dois arquivos .dacpac:
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
-Exibe a versão do SqlPackage:
+
+## <a name="version"></a>Versão
+
+Exibe a versão do sqlpackage como um número de build.  Pode ser usada em prompts interativos, bem como em [pipelines automatizados](sqlpackage-pipelines.md).
 
 ```
 sqlpackage.exe /Version

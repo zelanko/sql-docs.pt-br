@@ -3,22 +3,22 @@ title: Aprimorar o desempenho usando a função de criação de perfil de códig
 description: Colete informações úteis para aprimorar o desempenho e obtenha resultados mais rápidos sobre computações de R no SQL Server usando as funções de criação de perfil de R. A função *rprof* coleta e retorna informações sobre chamadas de função internas.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 12/12/2018
+ms.date: 10/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e65171fa0222c0c581f692bede727dc4366c9c53
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d15f31dc2c289df910b06de8cb1f48647dbde33c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180428"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384745"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Use as funções de criação de perfil de código R para melhorar o desempenho
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Além de usar recursos do SQL Server e ferramentas para monitorar a execução do script R, você pode usar ferramentas de desempenho fornecidas por outros pacotes de R para obter mais informações sobre chamadas de função internas. 
+Este artigo descreve as ferramentas de desempenho fornecidas pelos pacotes do R para obter informações sobre chamadas de função internas. É possível usar essas informações para aprimorar o desempenho de seu código.
 
 > [!TIP]
 > Este artigo fornece recursos básicos para você começar. Para obter diretrizes de especialistas, recomendamos a seção *Performance (Desempenho)* no livro ["Advanced R" (R avançado), de Hadley Wickham](http://adv-r.had.co.nz).
@@ -59,9 +59,11 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>Depuração e criação de perfil em R
 
-A documentação do Microsoft R Open, que é instalado por padrão, inclui um manual sobre o desenvolvimento de extensões para a linguagem R que aborda a [criação de perfis e depuração](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) em detalhes. Você pode encontrar a mesma documentação em seu computador em C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual.
+A documentação do Microsoft R Open, que é instalado por padrão, inclui um manual sobre o desenvolvimento de extensões para a linguagem R que aborda a [criação de perfis e depuração](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) em detalhes.
 
-## <a name="see-also"></a>Confira também
+## <a name="next-steps"></a>Próximas etapas
 
-+ [Pacote utils de R](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ ["Advanced R" (R avançado) por Hadley Wickham](http://adv-r.had.co.nz)
++ Para obter mais informações sobre como otimizar scripts R no SQL Server, confira [Ajuste de desempenho e otimização de dados para R](r-and-data-optimization-r-services.md).
++ Para obter informações mais completas sobre o ajuste de desempenho no SQL Server, confira a [Central de Desempenho para o Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database).
++ Para obter mais informações sobre o pacote utils, confira [O pacote utils do R](https://www.rdocumentation.org/packages/utils/versions/3.5.1).
++ Para discussões aprofundadas sobre a programação em R, confira ["R avançado", de Hadley Wickham](http://adv-r.had.co.nz).

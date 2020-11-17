@@ -4,19 +4,19 @@ titleSuffix: ''
 description: Os Serviços de Machine Learning são um recurso no SQL Server que possibilita executar scripts do Python e do R usando dados relacionais. Você pode usar pacotes e estruturas de software livre, bem como os pacotes do R e do Python da Microsoft para análise preditiva e aprendizado de máquina. Os scripts são executados no banco de dados sem mover dados para fora do SQL Server ou pela rede. Este artigo explica os conceitos básicos dos Serviços de Machine Learning do SQL Server e como começar.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/19/2020
+ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8113b373c328bac5a6ba95b7f4f40e5ab583503d
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 96e72d5046e095e25cf890c60059b3120d1bed80
+ms.sourcegitcommit: 3bde506b2fa3bc82813dbe658d567b1b9eb4278b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098815"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94498482"
 ---
-# <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>O que são os Serviços de Machine Learning do SQL Server (Python e R)?
+# <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>O que são os Serviços de Machine Learning do SQL Server com Python e R?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Os Serviços de Machine Learning são um recurso no SQL Server que possibilita executar scripts do Python e do R usando dados relacionais. Você pode usar pacotes e estruturas de software livre, bem como os [pacotes do R e do Python da Microsoft](#packages) para análise preditiva e aprendizado de máquina. Os scripts são executados no banco de dados sem mover dados para fora do SQL Server ou pela rede. Este artigo explica os conceitos básicos dos Serviços de Machine Learning do SQL Server e como começar.
@@ -25,7 +25,7 @@ Para aprendizado de máquina em outras plataformas do SQL, confira a [documenta�
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Para executar o Java no SQL Server, confira a [Documentação das extensões de linguagem](../language-extensions/language-extensions-overview.md).
+> Para executar o Java no SQL Server, confira a [Documentação da Extensão de Linguagem Java](../language-extensions/java-overview.md).
 ::: moniker-end
 
 ## <a name="execute-python-and-r-scripts-in-sql-server"></a>Executar scripts do Python e do R no SQL Server

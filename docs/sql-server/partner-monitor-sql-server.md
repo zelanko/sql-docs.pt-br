@@ -1,6 +1,6 @@
 ---
 title: Monitorar os parceiros do SQL Server | Microsoft Docs
-description: Lista de parceiros terceirizados com soluções para monitorar o servidor.
+description: Listas de parceiros terceirizados com soluções para monitorar os serviços do SQL Server.
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 11/02/2017
@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 82f02f877ea271a5c663a8d9139c940cdbcc1faa
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 77795d78f755d8eec0093dcc418583d8a5086318
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235452"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521193"
 ---
 # <a name="sql-server-monitoring-partners"></a>Parceiros de monitoramento do SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
