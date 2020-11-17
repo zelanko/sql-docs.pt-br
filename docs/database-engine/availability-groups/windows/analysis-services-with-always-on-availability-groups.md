@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c56b8595955caef35d5ff1e591eed417a831a48
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: febd24b17458a37a6ff12c8b17f55527311a0aee
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726554"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584752"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services com grupos de disponibilidade AlwaysOn
 
@@ -128,7 +128,7 @@ ms.locfileid: "91726554"
   
 2.  Em Gerenciador de Conexões, em Provedor, escolha um provedor que ofereça suporte ao protocolo TDS. O SQL Server Native Client 11.0 oferece suporte a esse protocolo.  
   
-3.  Em Gerenciador de Conexões, em Nome do Servidor, insira o nome do *ouvinte de grupo de disponibilidade*e escolha um banco de dados que esteja disponível no grupo.  
+3.  Em Gerenciador de Conexões, em Nome do Servidor, insira o nome do *ouvinte de grupo de disponibilidade* e escolha um banco de dados que esteja disponível no grupo.  
   
      O ouvinte de grupo de disponibilidade redireciona uma conexão de cliente a uma réplica primária para solicitações de leitura/gravação ou para uma réplica secundária quando você especifica a intenção de leitura na cadeia de conexão. Como funções de réplica serão alteradas durante um failover (em que a primária se torna a secundária e uma secundária se torna primária), você sempre deve especificar o ouvinte de forma que a conexão de cliente seja redirecionada conformemente.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "91726554"
   
      Defina **Intenção de Aplicativo** como **READONLY** se você estiver configurando uma conexão de cliente somente leitura para uma réplica secundária. Caso contrário, mantenha o **READWRITE** padrão para redirecionar a conexão para a réplica primária.  
   
-5.  Em Informações da Representação, selecione **Usar um nome de usuário e uma senha específicos do Windows**e insira uma conta de usuário de domínio do Windows que tenha um mínimo de permissões **db_datareader** no banco de dados.  
+5.  Em Informações da Representação, selecione **Usar um nome de usuário e uma senha específicos do Windows** e insira uma conta de usuário de domínio do Windows que tenha um mínimo de permissões **db_datareader** no banco de dados.  
   
      Não escolha **Usar as credenciais do usuário atual** ou **Herdar**. Você pode escolher **Usar a conta de serviço**, mas apenas se essa conta tiver permissões de leitura no banco de dados.  
   

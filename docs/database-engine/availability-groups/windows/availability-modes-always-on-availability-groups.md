@@ -15,19 +15,19 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b37371faa975998484763af08d592a7a2ef0326b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: bb9a9743f6a23d75d7819fb4e48e4233ed2104fd
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725340"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584619"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Diferenças entre os modos de disponibilidade de um Grupo de Disponibilidade AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  No [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o *modo de disponibilidade* é uma propriedade de réplica que determina se uma determinada réplica de disponibilidade pode ser executada em modo de confirmação síncrona. Para cada réplica de disponibilidade, o modo de disponibilidade deve ser configurado para o modo de confirmação síncrona, modo de confirmação assíncrona ou modo somente configuração.  Se a réplica primária for configurada para o *modo de confirmação assíncrona*, ela não aguardará qualquer réplica secundária gravar registros de log de transação de entrada no disco (para *proteger o log*). Se uma determinada réplica secundária for configurada para modo de confirmação assíncrona, a réplica primária não aguardará que essa réplica secundária proteja o log. Se a réplica primária e uma determinada réplica secundária forem ambas configuradas para *modo de confirmação síncrona*, a réplica primária aguardará que a réplica secundária confirme que protegeu o log (a menos que a réplica secundária não execute ping na réplica primária dentro do *período do tempo limite de sessão*dela). 
+  No [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o *modo de disponibilidade* é uma propriedade de réplica que determina se uma determinada réplica de disponibilidade pode ser executada em modo de confirmação síncrona. Para cada réplica de disponibilidade, o modo de disponibilidade deve ser configurado para o modo de confirmação síncrona, modo de confirmação assíncrona ou modo somente configuração.  Se a réplica primária for configurada para o *modo de confirmação assíncrona*, ela não aguardará qualquer réplica secundária gravar registros de log de transação de entrada no disco (para *proteger o log*). Se uma determinada réplica secundária for configurada para modo de confirmação assíncrona, a réplica primária não aguardará que essa réplica secundária proteja o log. Se a réplica primária e uma determinada réplica secundária forem ambas configuradas para *modo de confirmação síncrona*, a réplica primária aguardará que a réplica secundária confirme que protegeu o log (a menos que a réplica secundária não execute ping na réplica primária dentro do *período do tempo limite de sessão* dela). 
   
 
 > [!NOTE]  
@@ -36,11 +36,11 @@ ms.locfileid: "91725340"
 ##  <a name="supported-availability-modes"></a><a name="SupportedAvModes"></a> Modos de disponibilidade com suporte  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é compatível com três modos de disponibilidade: modo de confirmação assíncrona, modo de confirmação síncrona e apenas configuração da seguinte maneira:  
   
--   O*Modo de confirmação assíncrona* é uma solução de recuperação de desastre que funciona bem quando as réplicas de disponibilidade são distribuídas em distâncias consideráveis. Se cada réplica secundária estiver sendo executada no modo de confirmação assíncrona, a réplica primária não esperará que nenhuma réplica secundária proteja o log. Em vez disso, imediatamente após gravar um registro de log no arquivo de log local, a réplica primária enviará a confirmação de transação ao cliente. A réplica primária é executada com latência de transação mínima em relação a uma réplica secundária configurada para o modo de confirmação assíncrona.  Se a réplica primária atual estiver configurada para o modo de disponibilidade de confirmação assíncrona, ela confirmará transações de forma assíncrona para todas as réplicas secundárias, independentemente de suas configurações de modo de disponibilidade individuais.  
+-   O *Modo de confirmação assíncrona* é uma solução de recuperação de desastre que funciona bem quando as réplicas de disponibilidade são distribuídas em distâncias consideráveis. Se cada réplica secundária estiver sendo executada no modo de confirmação assíncrona, a réplica primária não esperará que nenhuma réplica secundária proteja o log. Em vez disso, imediatamente após gravar um registro de log no arquivo de log local, a réplica primária enviará a confirmação de transação ao cliente. A réplica primária é executada com latência de transação mínima em relação a uma réplica secundária configurada para o modo de confirmação assíncrona.  Se a réplica primária atual estiver configurada para o modo de disponibilidade de confirmação assíncrona, ela confirmará transações de forma assíncrona para todas as réplicas secundárias, independentemente de suas configurações de modo de disponibilidade individuais.  
   
      Para obter mais informações, consulte [Modo de disponibilidade de confirmação assíncrona](#AsyncCommitAvMode), posteriormente neste tópico.  
   
--   O*Modo de confirmação síncrona* enfatiza a alta disponibilidade sobre o desempenho, à custa do aumento da latência da transação. No modo de confirmação síncrona, as transações aguardam para enviar a confirmação de transação para o cliente até que a réplica secundária proteja o log no disco. Quando sincronização de dados começar em um banco de dados secundário, a réplica secundária começará a aplicar registros de log de entrada do banco de dados primário correspondente. Assim que todo registro de log for protegido, o banco de dados secundário entrará no estado SYNCHRONIZED. Portanto, cada nova transação é protegida pela réplica secundária antes de o registro de log ser gravado no arquivo de log local. Quando todos os bancos de dados secundários de uma determinada réplica secundária são sincronizados, o modo de confirmação síncrona oferece suporte ao failover manual e, opcionalmente, ao failover automático.  
+-   O *Modo de confirmação síncrona* enfatiza a alta disponibilidade sobre o desempenho, à custa do aumento da latência da transação. No modo de confirmação síncrona, as transações aguardam para enviar a confirmação de transação para o cliente até que a réplica secundária proteja o log no disco. Quando sincronização de dados começar em um banco de dados secundário, a réplica secundária começará a aplicar registros de log de entrada do banco de dados primário correspondente. Assim que todo registro de log for protegido, o banco de dados secundário entrará no estado SYNCHRONIZED. Portanto, cada nova transação é protegida pela réplica secundária antes de o registro de log ser gravado no arquivo de log local. Quando todos os bancos de dados secundários de uma determinada réplica secundária são sincronizados, o modo de confirmação síncrona oferece suporte ao failover manual e, opcionalmente, ao failover automático.  
   
      Para obter mais informações, consulte [Modo de disponibilidade de confirmação síncrona](#SyncCommitAvMode), posteriormente neste tópico.  
 

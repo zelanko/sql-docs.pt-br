@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], session timeout
 - session timeout [SQL Server]
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f97d06e0e82d305c089a72595ec6652f6bee2c61
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2ed683fc46e41ace933d478cd7872f0b2e47af31
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726507"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584552"
 ---
 # <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>Modificar o período do tempo limite da sessão para uma réplica do grupo de disponibilidade
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

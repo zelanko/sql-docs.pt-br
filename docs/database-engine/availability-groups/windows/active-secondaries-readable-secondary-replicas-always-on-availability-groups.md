@@ -15,14 +15,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724597"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584856"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarregar a carga de trabalho somente leitura na réplica secundária de um grupo de disponibilidade Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -153,7 +153,7 @@ ms.locfileid: "91724597"
 ###  <a name="indexing"></a><a name="bkmk_Indexing"></a> Indexação  
  Para otimizar cargas de trabalho somente leitura nas réplicas secundárias legíveis, talvez você queira criar índices nas tabelas nos bancos de dados secundários. Como você não pode fazer alterações de esquema ou de dados nos bancos de dados secundários, crie índices nos bancos de dados primários e permita que as alterações sejam transferidas para o banco de dados secundário por meio do processo de refazer.  
   
- Para monitorar a atividade de uso de índice em uma réplica secundária, consulte as colunas **user_seeks**, **user_scans**e **user_lookups** da exibição de gerenciamento dinâmico [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) .  
+ Para monitorar a atividade de uso de índice em uma réplica secundária, consulte as colunas **user_seeks**, **user_scans** e **user_lookups** da exibição de gerenciamento dinâmico [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) .  
   
 ###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> Estatísticas para bancos de dados somente leitura  
  As estatísticas em colunas de tabelas e exibições indexadas são usadas para otimizar os planos da consulta. Para grupos de disponibilidade, as estatísticas que são criadas e mantidas nos bancos de dados primários são automaticamente persistidas nos bancos de dados secundários como parte da aplicação dos registros dos logs de transação. No entanto, a carga de trabalho somente leitura nos bancos de dados secundários talvez precise de estatísticas diferentes daquelas criadas nos bancos de dados primários. No entanto, como os bancos de dados secundários são restritos ao acesso somente leitura, não é possível criar estatísticas nos bancos de dados secundários.  

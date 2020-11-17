@@ -1,15 +1,11 @@
 ---
+title: CREATE XML INDEX (Transact-SQL)
 description: CREATE XML INDEX (Transact-SQL)
-title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- XML_TSQL
 - CREATE_XML_INDEX_TSQL
 - XML INDEX
 - CREATE_XML_TSQL
@@ -17,7 +13,6 @@ f1_keywords:
 - CREATE XML
 - CREATE XML INDEX
 - XML_INDEX_TSQL
-- FOR_XML_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -28,12 +23,15 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a1ca67466a58dea0b374d9da14e66de64ba02d81
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/10/2017
+ms.openlocfilehash: bd8f6e580290a0b10c833f9ee94158c69eb09229
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300511"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674214"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -87,13 +85,13 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 -   Deve existir um índice XML primário em uma coluna **xml** antes que um índice XML secundário possa ser criado na coluna.  
   
--   Um índice XML apenas pode ser criado em uma única coluna **xml** . Não é possível criar um índice XML em uma coluna não **xml** nem criar um índice relacional em uma coluna **xml** .  
+-   Um índice XML apenas pode ser criado em uma única coluna **xml**. Não é possível criar um índice XML em uma coluna não **xml** nem criar um índice relacional em uma coluna **xml**.  
   
--   Não é possível criar um índice XML, seja primário ou secundário, em uma coluna **xml** em uma exibição, em uma variável com valor de tabela com colunas **xml** ou variáveis do tipo **xml** .  
+-   Não é possível criar um índice XML, seja primário ou secundário, em uma coluna **xml** em uma exibição, em uma variável com valor de tabela com colunas **xml** ou variáveis do tipo **xml**.  
   
 -   Não é possível criar um índice XML primário em uma coluna **xml** computada.  
   
--   As configurações da opção SET devem ser iguais às necessárias para exibições indexadas e índices de coluna computada. Especificamente, a opção ARITHABORT deve ser definida como ON quando um índice XML é criado e ao inserir, excluir ou atualizar valores na coluna **xml** .  
+-   As configurações da opção SET devem ser iguais às necessárias para exibições indexadas e índices de coluna computada. Especificamente, a opção ARITHABORT deve ser definida como ON quando um índice XML é criado e ao inserir, excluir ou atualizar valores na coluna **xml**.  
   
  Para obter mais informações, veja [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
@@ -103,7 +101,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Nomes de índice XML primários não podem começar com os seguintes caracteres: **#** , **##** , **@** ou **@@** .  
   
  *xml_column_name*  
- É a coluna **xml** na qual o índice se baseia. Somente uma coluna **xml** pode ser especificada em uma única definição de índice XML; no entanto, vários índices XML secundários podem ser criados em uma coluna **xml** .  
+ É a coluna **xml** na qual o índice se baseia. Somente uma coluna **xml** pode ser especificada em uma única definição de índice XML; no entanto, vários índices XML secundários podem ser criados em uma coluna **xml**.  
   
  USING XML INDEX *xml_index_name*  
  Especifica o índice XML primário a ser usado na criação de um índice XML secundário.  
@@ -146,7 +144,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF ou *fillfactor* não está especificado  
  As páginas de nível intermediário são preenchidas até próximo de sua capacidade, deixando espaço suficiente para pelo menos uma linha do tamanho máximo que o índice pode ter, considerando o conjunto de chaves em páginas intermediárias.  
   
- A opção PAD_INDEX só é útil quando FILLFACTOR é especificado, porque PAD_INDEX usa a porcentagem especificada por FILLFACTOR. Se a porcentagem especificada para FILLFACTOR não for grande o suficiente para permitir uma linha, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] substituirá a porcentagem internamente para permitir o valor mínimo. O número de linhas em uma página de índice intermediária nunca é menor do que dois, independentemente de quão baixo seja o valor de *fillfactor* .  
+ A opção PAD_INDEX só é útil quando FILLFACTOR é especificado, porque PAD_INDEX usa a porcentagem especificada por FILLFACTOR. Se a porcentagem especificada para FILLFACTOR não for grande o suficiente para permitir uma linha, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] substituirá a porcentagem internamente para permitir o valor mínimo. O número de linhas em uma página de índice intermediária nunca é menor do que dois, independentemente de quão baixo seja o valor de *fillfactor*.  
   
  FILLFACTOR **=** _fillfactor_  
  Especifica uma porcentagem que indica quanto o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher o nível folha de cada página de índice durante a criação ou recriação do índice. *fillfactor* deve ser um valor inteiro de 1 a 100. O padrão é 0. Se *fillfactor* for 100 ou 0, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] criará índices com páginas folha preenchidas até a capacidade máxima.  
@@ -162,10 +160,10 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Para obter mais informações, veja [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
- Especifica se os resultados de classificação temporários devem ser armazenados no **tempdb** . O padrão é OFF.  
+ Especifica se os resultados de classificação temporários devem ser armazenados no **tempdb**. O padrão é OFF.  
   
  ATIVADO  
- Os resultados de classificação intermediários usados para criar o índice são armazenados no **tempdb** . Isso poderá reduzir o tempo necessário para criar um índice se **tempdb** estiver em um conjunto de discos diferente do banco de dados de usuário. Entretanto, isso aumenta o espaço em disco usado durante a criação do índice.  
+ Os resultados de classificação intermediários usados para criar o índice são armazenados no **tempdb**. Isso poderá reduzir o tempo necessário para criar um índice se **tempdb** estiver em um conjunto de discos diferente do banco de dados de usuário. Entretanto, isso aumenta o espaço em disco usado durante a criação do índice.  
   
  OFF  
  Os resultados intermediários de classificação são armazenados no mesmo banco de dados que o índice.  

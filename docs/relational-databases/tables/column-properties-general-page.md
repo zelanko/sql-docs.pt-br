@@ -14,12 +14,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f70e0d563760cf0e511b673ea7f838f6aabdde4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75a8df34472bd8e29b7d4422612ccc6977a70dda
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488640"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674230"
 ---
 # <a name="column-properties-general-page"></a>Propriedades da coluna (página Geral)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88488640"
  O tipo de dados que a coluna pode conter. Se o tipo de dados for um tipo de dados de sistema, então o tipo de dados de sistema será exibido. Se o tipo de dados for um tipo definido pelo usuário, o tipo de dados de sistema que corresponde ao tipo de dados definido pelo usuário será exibido.  
   
  **Chave Primária**  
- Indica se a coluna é uma chave primária. Os valores possíveis são **True**e **False**.  
+ Indica se a coluna é uma chave primária. Os valores possíveis são **True** e **False**.  
   
  **Permitir Nulos**  
  Indica se a coluna aceita valores nulos. Os valores possíveis são **True** e **False**.  
