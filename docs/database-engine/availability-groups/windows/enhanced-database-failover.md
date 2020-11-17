@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], enhanced database failover
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
-author: MashaMSFT
+author: cawrites
 ms.reviewer: mikeray
-ms.author: mathoma
-ms.openlocfilehash: d994548398bd47414f8564aeee48e2c3105aca5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.author: chadam
+ms.openlocfilehash: 8a0e98398868676c6b7e5c3cdcaae1172a7a785a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894433"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584266"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Habilitar o failover avançado de banco de dados para um banco de dados em um grupo de disponibilidade Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
