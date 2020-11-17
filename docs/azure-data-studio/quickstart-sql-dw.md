@@ -6,15 +6,15 @@ ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu, jrasnick
+ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 1b0fe9ee55f9e0e1243ea72e8160b39a95876a55
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793693"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570917"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Início Rápido: Usar o Azure Data Studio para se conectar e consultar dados usando um pool de SQL dedicado no Azure Synapse Analytics
 
@@ -34,15 +34,15 @@ Lembre-se do nome do servidor e das credenciais de logon.
 
 Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Synapse Analytics.
 
-1. Na primeira vez que você executar o Azure Data Studio, a página **Conexão** deverá abrir. Se você não vir a página **Conexão** , clique em **Adicionar Conexão** ou no ícone **Nova Conexão** na barra lateral **SERVIDORES** :
+1. Na primeira vez que você executar o Azure Data Studio, a página **Conexão** deverá abrir. Se você não vir a página **Conexão**, clique em **Adicionar Conexão** ou no ícone **Nova Conexão** na barra lateral **SERVIDORES**:
    
    ![Captura de tela da página Conexão com o ícone de Nova Conexão em destaque.](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. Este artigo usa o *Logon do SQL* , mas também há suporte para a *Autenticação do Windows* . Preencha os campos da seguinte maneira usando o nome do servidor, o nome de usuário e a *sua* senha para o SQL Server do Azure:
+2. Este artigo usa o *Logon do SQL*, mas também há suporte para a *Autenticação do Windows*. Preencha os campos da seguinte maneira usando o nome do servidor, o nome de usuário e a *sua* senha para o SQL Server do Azure:
 
    |   Configuração    | Valor sugerido | Descrição |
    |--------------|-----------------|-------------| 
-   | **Nome do servidor** | O nome do servidor totalmente qualificado | Por exemplo, o nome será parecido com este: **sqlpoolservername.database.windows.net** . |
+   | **Nome do servidor** | O nome do servidor totalmente qualificado | Por exemplo, o nome será parecido com este: **sqlpoolservername.database.windows.net**. |
    | **Autenticação** | Logon do SQL| A autenticação do SQL é usada neste tutorial. |
    | **Nome de usuário** | A conta do administrador do servidor | Esta é a conta que você especificou quando criou o servidor. |
    | **Senha (Logon do SQL)** | A senha para sua conta do administrador do servidor | Esta é a senha que você especificou quando criou o servidor. |
@@ -52,13 +52,13 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Sy
 
 3. Se o servidor não tiver uma regra de firewall que permita que o Azure Data Studio se conecte, o formulário **Criar nova regra de firewall** será aberto. Preencha o formulário para criar uma nova regra de firewall. Para obter detalhes, confira [Regras de firewall](/azure/sql-database/sql-database-firewall-configure).
 
-4. Depois de se conectar com êxito, o servidor será aberto na barra lateral *Servidores* .
+4. Depois de se conectar com êxito, o servidor será aberto na barra lateral *Servidores*.
 
 ## <a name="create-a-database-in-your-dedicated-sql-pool"></a>Crie um banco de dados no seu pool de SQL dedicado
 
-1. Clique com o botão direito do mouse no servidor no pesquisador de objetos, e selecione **Nova Consulta** .
+1. Clique com o botão direito do mouse no servidor no pesquisador de objetos, e selecione **Nova Consulta**.
 
-2. Cole o snippet a seguir no editor de consultas e clique em **Executar** :
+2. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
 
    ```sql
     IF NOT EXISTS (
@@ -75,14 +75,14 @@ Use o Azure Data Studio para estabelecer uma conexão com o servidor do Azure Sy
 
 ## <a name="create-a-table"></a>Criar uma tabela
 
-O editor de consultas ainda está conectado ao banco de dados *mestre* , mas queremos criar uma tabela no banco de dados *TutorialDB* . 
+O editor de consultas ainda está conectado ao banco de dados *mestre*, mas queremos criar uma tabela no banco de dados *TutorialDB*. 
 
-1. Altere o contexto de conexão para **TutorialDB** :
+1. Altere o contexto de conexão para **TutorialDB**:
 
-2. Cole o snippet a seguir no editor de consultas e clique em **Executar** :
+2. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
 
    > [!NOTE]
-   > Você pode acrescentar à consulta anterior ou substituí-la no editor. Ao clicar em **Executar** , apenas a consulta selecionada será executada. Se nada estiver selecionado, ao clicar em **Executar** , todas as consultas no editor serão executadas.
+   > Você pode acrescentar à consulta anterior ou substituí-la no editor. Ao clicar em **Executar**, apenas a consulta selecionada será executada. Se nada estiver selecionado, ao clicar em **Executar**, todas as consultas no editor serão executadas.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -106,7 +106,7 @@ O editor de consultas ainda está conectado ao banco de dados *mestre* , mas que
 
 ## <a name="insert-rows"></a>Inserir linhas
 
-1. Cole o snippet a seguir no editor de consultas e clique em **Executar** :
+1. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -118,11 +118,11 @@ O editor de consultas ainda está conectado ao banco de dados *mestre* , mas que
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Crie uma tabela no banco de dados TutorialDB":::
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Criar linhas na tabela":::
 
 ## <a name="view-the-result"></a>Exibir o resultado
 
-1. Cole o snippet a seguir no editor de consultas e clique em **Executar** :
+1. Cole o snippet a seguir no editor de consultas e clique em **Executar**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -131,7 +131,7 @@ O editor de consultas ainda está conectado ao banco de dados *mestre* , mas que
 
 2. Os resultados da consulta são exibidos:
 
-    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="Crie uma tabela no banco de dados TutorialDB":::
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="Exibir os resultados":::
 
 
 ## <a name="clean-up-resources"></a>Limpar os recursos

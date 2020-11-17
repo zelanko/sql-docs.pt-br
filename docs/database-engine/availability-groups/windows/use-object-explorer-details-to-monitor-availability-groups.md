@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cc56fad8481141cb208b8fb218c281d12c1e3027
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894161"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583716"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85894161"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para monitorar os grupos de disponibilidade, as réplicas de disponibilidade e os bancos de dados de disponibilidade**  
   
-1.  No menu Exibir, clique em **Detalhes do Pesquisador de Objetos**ou pressione a tecla **F7** .  
+1.  No menu Exibir, clique em **Detalhes do Pesquisador de Objetos** ou pressione a tecla **F7** .  
   
 2.  No Pesquisador de Objetos, conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual você deseja monitorar um grupo de disponibilidade e clique no nome do servidor para expandir a árvore de servidores.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85894161"
  A tela de detalhes **Grupos de Disponibilidade** exibe as seguintes colunas:  
   
  **Nome**  
- Lista as pastas de Ouvintes **Réplicas de Disponibilidade**, **Bancos de Dados de Disponibilidade**e **Grupo de Disponibilidade** do grupo de disponibilidade selecionado.  
+ Lista as pastas de Ouvintes **Réplicas de Disponibilidade**, **Bancos de Dados de Disponibilidade** e **Grupo de Disponibilidade** do grupo de disponibilidade selecionado.  
   
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Detalhes da réplica de disponibilidade  
  A tela de detalhes **Replica de Disponibilidade** exibe as seguintes colunas:  

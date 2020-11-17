@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 545b3ef714c36712b7b7973294a14e56eb78dad4
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 96ef99a120c050f098d6d690055479e5711c11bb
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670799"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583328"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ Na maioria dos casos, você pode usar o Assistente de Novo Grupo de Disponibilid
 
 6. Em seguida, especifique o tipo de cluster. Os tipos de cluster possíveis dependem da versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do sistema operacional. Escolha **WSFC**, **EXTERNAL** ou **NONE**. Para obter detalhes, consulte [Página Especificar Nome do Grupo de Disponibilidade](specify-availability-group-name-page.md)
  
-6.  Na página **Selecionar Bancos de Dados** , a grade lista bancos de dados de usuário na instância do servidor conectada que estão qualificados para se tornarem os *bancos de dados de disponibilidade*. Selecione um ou mais dos bancos de dados listados para participarem do novo grupo de disponibilidade. Inicialmente, esses bancos de dados serão os *bancos de dados primários*iniciais.  
+6.  Na página **Selecionar Bancos de Dados** , a grade lista bancos de dados de usuário na instância do servidor conectada que estão qualificados para se tornarem os *bancos de dados de disponibilidade*. Selecione um ou mais dos bancos de dados listados para participarem do novo grupo de disponibilidade. Inicialmente, esses bancos de dados serão os *bancos de dados primários* iniciais.  
   
      Para cada banco de dados listado, a coluna **Tamanho** exibe o tamanho do banco de dados, se conhecido. A coluna **Status** indica se determinado banco de dados atende aos [pré-requisitos](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)de bancos de dados de disponibilidade. Se os pré-requisitos não forem atendidos, uma descrição breve do status indicará o motivo pelo qual o banco de dados não se qualifica, por exemplo, se ele não usar o modelo de recuperação completa. Para obter mais informações, clique na descrição do status.  
   

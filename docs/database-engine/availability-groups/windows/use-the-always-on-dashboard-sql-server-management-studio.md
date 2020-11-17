@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 80b7f3e83af181676f09a6dc38b3652ae6142c89
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670379"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583651"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade Always On (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -189,7 +189,7 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
 >  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade, veja [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
 ##  <a name="group-by-availability-group-information"></a>Agrupar por informações do grupo de disponibilidade  
- Para agrupar as informações, clique em **Agrupar por**e selecione uma das opções a seguir:  
+ Para agrupar as informações, clique em **Agrupar por** e selecione uma das opções a seguir:  
   
 -   **Réplicas de disponibilidade**    
 -   **Bancos de dados de disponibilidade** 

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 702773ea93f99fc3af6dcfa3b3847ae5a35c75f1
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a38c7d3bdb94881a3fdc7c54b4a10d0e7cce406f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134854"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583980"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicação, controle de alterações e Change Data Capture – grupos de disponibilidade AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

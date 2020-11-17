@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 260af6fa8615969a895425aa3d2145071b78eb72
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670042"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583938"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91670042"
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> Fontes de dados de relatório e grupos de disponibilidade  
  O comportamento de fontes de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] com base no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pode variar, dependendo de como o administrador configurou o ambiente do AG.  
   
- Para utilizar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para fontes de dados de relatório, você precisará configurar a cadeia de conexão da fonte de dados de relatório para usar o *Nome DNS do Ouvinte*do grupo de disponibilidade. As fontes de dados com suporte são as seguintes:  
+ Para utilizar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para fontes de dados de relatório, você precisará configurar a cadeia de conexão da fonte de dados de relatório para usar o *Nome DNS do Ouvinte* do grupo de disponibilidade. As fontes de dados com suporte são as seguintes:  
   
 -   Fontes de dados ODBC usando SQL Native Client.  
   

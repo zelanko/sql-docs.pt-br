@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: eee9b2874fe879a544725bf2243075703149e34d
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725197"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570913"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Painel da Instância Gerenciada de SQL do Azure para o Azure Data Studio (versão prévia)
 
@@ -50,7 +50,7 @@ O painel superior mostra os seguintes detalhes:
 
 Ao selecionar o segundo painel na guia **Instância Gerenciada**, você recebe recomendações e alertas para ajudar a otimizar sua instância gerenciada.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Propriedades da Instância Gerenciada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Recomendações para a Instância Gerenciada":::
 
 Você pode ver algumas das seguintes recomendações:
 
@@ -67,7 +67,7 @@ Examine periodicamente essas recomendações, investigue as causas raiz e adote 
 
 O terceiro painel na guia **Instância Gerenciada** mostra o estado das réplicas de banco de dados em sua instância gerenciada.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Propriedades da Instância Gerenciada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Réplicas da Instância Gerenciada":::
 
 Na camada de serviço de uso geral, cada banco de dados tem uma única réplica (primária). Em uma instância de nível comercialmente crítico, cada banco de dados tem uma réplica primária e três secundárias, uma das quais é usada para cargas de trabalho somente leitura. No painel **Réplicas**, você pode monitorar o processo de sincronização e verificar se todas as réplicas secundárias estão sincronizadas com a réplica primária.
 
@@ -75,7 +75,7 @@ Na camada de serviço de uso geral, cada banco de dados tem uma única réplica 
 
 O quarto painel da **Instância Gerenciada** mostra as entradas de log de erros do SQL mais recentes e relevantes.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Propriedades da Instância Gerenciada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Entradas de log da Instância Gerenciada":::
 
 Embora sua instância gerenciada gere um grande número de entradas de log, a maioria contém informações internas/do sistema. Além disso, algumas entradas de log mostram nomes de bancos de dados físicos (valores `GUID`) em vez de nomes de banco de dados lógicos reais.
 
@@ -87,9 +87,9 @@ Se você tiver problemas com a extensão da Instância Gerenciada de SQL, acesse
 
 ## <a name="code-of-conduct"></a>Código de conduta
 
-Este projeto adotou o [Código de Conduta de Software Livre da Microsoft][https://opensource.microsoft.com/codeofconduct/ ].
+Este projeto adotou o [Código de Conduta de Software Livre da Microsoft](https://opensource.microsoft.com/codeofconduct/).
 
-Para saber mais, confira as [Perguntas frequentes sobre o Código de Conduta][https://opensource.microsoft.com/codeofconduct/faq/ ] ou contate [opencode@microsoft.com ][mailto:opencode@microsoft.com- ] caso tenha outras dúvidas ou comentários.
+Para saber mais, confira as [Perguntas frequentes sobre o Código de Conduta](https://opensource.microsoft.com/codeofconduct/faq/) ou contate o [opencode@microsoft.com](mailto:opencode@microsoft.com) caso tenha outras dúvidas ou comentários.
 
 ## <a name="next-steps"></a>Próximas etapas
 

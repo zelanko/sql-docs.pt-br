@@ -187,7 +187,7 @@ object_id   TableName                   index_id    IndexName                   
 3. Expanda a tabela na qual você deseja verificar a fragmentação de um índice.
 4. Expanda a pasta **Índices** .
 5. Clique com o botão direito do mouse no índice cuja fragmentação você deseja verificar e selecione **Propriedades**.
-6. Em **Selecione uma página** , selecione **Fragmentação**.
+6. Em **Selecione uma página**, selecione **Fragmentação**.
 
 As informações a seguir estão disponíveis na página **Fragmentação** :
 
@@ -199,7 +199,7 @@ As informações a seguir estão disponíveis na página **Fragmentação** :
 |**Profundidade**|O número de níveis no índice, inclusive o nível folha.|
 |**Registros encaminhados**|O número de registros em um heap com ponteiros encaminhados a outro local de dados (Esse estado ocorre durante uma atualização, quando não há espaço suficiente para armazenar a nova linha no local original.)|
 |**Linhas fantasmas**|O número de linhas que estão marcadas como excluídas, mas ainda não foram removidas. Essas linhas serão removidas por um thread de limpeza, quando o servidor não estiver ocupado. Esse valor não inclui linhas que estejam sendo retidas devido a uma transação de isolamento de instantâneo pendente.|
-|**Tipo de índice**|O tipo do índice. Os valores possíveis são **Índice cluster** , **Índice não cluster** e **XML Primário**. As tabelas também podem ser armazenadas como um heap (sem-índices), mas nesse caso a página Propriedades do Índice não pode ser aberta.|
+|**Tipo de índice**|O tipo do índice. Os valores possíveis são **Índice cluster**, **Índice não cluster** e **XML Primário**. As tabelas também podem ser armazenadas como um heap (sem-índices), mas nesse caso a página Propriedades do Índice não pode ser aberta.|
 |**Linhas em nível folha**|O número de linhas em nível folha.|
 |**Tamanho máximo da linha**|O tamanho máximo da linha em nível folha.|
 |**Tamanho mínimo da linha**|O tamanho mínimo da linha em nível folha.|
@@ -405,9 +405,9 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
 
 Estatísticas:
 
-- Quando um índice é **criado** ou **recompilado** , as estatísticas são criadas ou atualizadas por meio do exame de todas as linhas da tabela. No entanto, começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], as estatísticas não são criadas nem atualizadas por meio do exame de todas as linhas da tabela quando um índice particionado é criado ou reconstruído. Em vez disso, o Otimizador de consultas usa o algoritmo de amostragem padrão para gerar essas estatísticas. Para obter estatísticas em índices particionados por meio do exame de todas as linhas da tabela, use [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ou [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) com a cláusula `FULLSCAN`.
+- Quando um índice é **criado** ou **recompilado**, as estatísticas são criadas ou atualizadas por meio do exame de todas as linhas da tabela. No entanto, começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], as estatísticas não são criadas nem atualizadas por meio do exame de todas as linhas da tabela quando um índice particionado é criado ou reconstruído. Em vez disso, o Otimizador de consultas usa o algoritmo de amostragem padrão para gerar essas estatísticas. Para obter estatísticas em índices particionados por meio do exame de todas as linhas da tabela, use [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ou [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) com a cláusula `FULLSCAN`.
 
-- Quando um índice é **reorganizado** , as estatísticas não são atualizadas.
+- Quando um índice é **reorganizado**, as estatísticas não são atualizadas.
 
 Um índice não pode ser reorganizado quando `ALLOW_PAGE_LOCKS` está definido como OFF.
 

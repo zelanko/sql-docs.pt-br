@@ -1,7 +1,7 @@
 ---
 title: Montagem ADLS Gen2 para camadas do HDFS
 titleSuffix: How to mount ADLS Gen2
-description: Este artigo explica como configurar a camada do HDFS para montar um sistema de arquivos externo do Azure Data Lake Storage no HDFS em um cluster de Big Data do SQL Server 2019.
+description: Este artigo fornece um exemplo de como configurar a camada do HDFS com uma fonte de dados do Azure Data Lake Storage Gen2.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4bfb894112f071cc7a628146265ede17b3f0a14
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730646"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521033"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Como montar o ADLS Gen2 para a camada do HDFS em um cluster de Big Data
 
@@ -43,7 +43,7 @@ A seção a seguir descreve como configurar o Azure Data Lake Storage Gen2 para 
 
 Para usar as credenciais do OAuth para montagem, é necessário seguir as etapas abaixo:
 
-1. Acesse o [portal do Azure](https://portal.azure.com)
+1. Vá para o [Portal do Azure](https://portal.azure.com)
 1. Navegue para o "Azure Active Directory". Você deve ver esse serviço na barra de navegação à esquerda.
 1. Na barra de navegação à direita, selecione "Registros de aplicativo" e crie um registro
 1. Crie um "Aplicativo Web" e siga o assistente. **Lembre-se do nome do aplicativo que você cria aqui**. Você precisará adicionar esse nome à sua conta do ADLS como um usuário autorizado. Observe também a ID do cliente do aplicativo na visão geral ao selecionar o aplicativo.
