@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5b833a97fceeaf09b5eb6ffb86ac3abeb06e6bb0
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2f3ca5b9f222e52b7913d5688b6e8c6adfbd526d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987910"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869674"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migrando dados do DB2 para o SQL Server (DB2ToSQL)
 Depois de sincronizar com êxito os objetos convertidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode migrar dados do DB2 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -66,7 +66,7 @@ Para exibir as mensagens de migração, verifique se o painel de saída está vi
   
     -   Para migrar dados para todos os esquemas, marque a caixa de seleção ao lado de **esquemas**.  
   
-    -   Para migrar dados ou omitir tabelas individuais, primeiro expanda o esquema, expanda **tabelas**e marque ou desmarque a caixa de seleção ao lado da tabela.  
+    -   Para migrar dados ou omitir tabelas individuais, primeiro expanda o esquema, expanda **tabelas** e marque ou desmarque a caixa de seleção ao lado da tabela.  
   
 3.  Para migrar dados, surgem dois casos:  
   
@@ -91,7 +91,7 @@ Para exibir as mensagens de migração, verifique se o painel de saída está vi
   
 5.  Na caixa de diálogo **conectar ao DB2** , insira as credenciais de conexão e clique em **conectar**. Para obter mais informações sobre como se conectar ao DB2, consulte [conectando-se ao banco de dados DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    Para se conectar ao banco de dados de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , insira as credenciais de conexão na caixa de diálogo **conectar a SQL Server** e clique em **conectar**. Para obter mais informações sobre como se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [conectando-se ao SQL Server](./connecting-to-sql-server-db2etosql.md)  
+    Para se conectar ao banco de dados de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , insira as credenciais de conexão na caixa de diálogo **conectar a SQL Server** e clique em **conectar**. Para obter mais informações sobre como se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [conectando-se ao SQL Server](./connecting-to-sql-server-db2tosql.md)  
   
     As mensagens serão exibidas no painel de **saída** . Quando a migração for concluída, o **relatório de migração de dados** será exibido. Se algum dado não for migrado, clique na linha que contém os erros e, em seguida, clique em **detalhes**. Ao concluir o relatório, clique em **fechar**. Para obter mais informações sobre o relatório de migração de dados, consulte [relatório de migração de dados (SSMA Common)](../sybase/data-migration-report-sybasetosql.md)  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9372a12b6ebaa47096c4ad8b6429db61b00a6188
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d0ac703c8ea155f33ecb713b98a26f0c39b5a695
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987452"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870065"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Conectando-se ao banco de dados DB2 (DB2ToSQL)
 
@@ -49,7 +49,7 @@ Quando você se conecta a um banco de dados, o SSMA lê os metadados do banco de
 
 3. Na caixa **Gerenciador** , você pode selecionar **DB2 para zOs**, **DB2 para LUW** ou **DB2 para i**
 
-4. Na caixa **modo** , selecione o modo **padrão**ou o **modo de cadeia de conexão**.
+4. Na caixa **modo** , selecione o modo **padrão** ou o **modo de cadeia de conexão**.
 
    Use o modo padrão para especificar o nome do servidor e a porta. Use o modo de nome de serviço para especificar manualmente o nome do serviço DB2. Use o modo de cadeia de conexão para fornecer uma cadeia de conexão completa.
 
@@ -86,7 +86,7 @@ Os metadados sobre o banco de dados DB2 não são atualizados automaticamente. O
 
 1. Certifique-se de que você está conectado ao banco de dados.
 2. No Gerenciador de metadados do DB2, marque a caixa de seleção ao lado de cada esquema ou objeto de banco de dados que você deseja atualizar.
-3. Clique com o botão direito do mouse em **esquemas**ou o esquema individual ou objeto de banco de dados e selecione **Atualizar do banco de dados**.
+3. Clique com o botão direito do mouse em **esquemas** ou o esquema individual ou objeto de banco de dados e selecione **Atualizar do banco de dados**.
 
    Se você não tiver uma conexão ativa, o SSMA exibirá a caixa de diálogo **conectar ao DB2** para que você possa se conectar.
   
@@ -101,7 +101,7 @@ Os metadados sobre o banco de dados DB2 não são atualizados automaticamente. O
 
 ## <a name="next-step"></a>Próxima etapa
 
-- A próxima etapa do processo de migração é [conectar-se a SQL Server](./connecting-to-sql-server-db2etosql.md).
+- A próxima etapa do processo de migração é [conectar-se a SQL Server](./connecting-to-sql-server-db2tosql.md).
 
 ## <a name="see-also"></a>Consulte Também
 

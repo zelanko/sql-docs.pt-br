@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2dbcef29550276241cb638b6224914e43e2e88ec
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f56387f8081ce14c68d355327c2829bf6e33c8cc
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988452"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869474"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Trabalhando com projetos do SSMA (DB2ToSQL)
 Para migrar bancos de dados DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, você primeiro cria um projeto do SSMA. O projeto é um arquivo que contém as seguintes informações:  
@@ -28,7 +28,7 @@ Para migrar bancos de dados DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 -   Configurações do projeto.  
   
-Quando você abre um projeto, ele é desconectado do DB2 e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isso permite que você trabalhe offline. Para obter informações sobre como se reconectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [conectando-se a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+Quando você abre um projeto, ele é desconectado do DB2 e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isso permite que você trabalhe offline. Para obter informações sobre como se reconectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [conectando-se a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md).  
   
 ## <a name="reviewing-default-project-settings"></a>Revisando configurações de projeto padrão  
 O SSMA contém várias configurações para converter e carregar objetos de banco de dados, migrar e sincronizar o SSMA com o DB2 e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . As configurações padrão são apropriadas para muitos usuários. No entanto, antes de criar um novo projeto do SSMA, você deve revisar as configurações. Se desejar, você poderá alterar as configurações padrão que serão usadas para todos os seus novos projetos.  
@@ -107,7 +107,7 @@ Quando você abre um projeto, ele é desconectado do DB2 e do [!INCLUDE[ssNoVers
   
 1.  Use um dos seguintes procedimentos:  
   
-    -   No menu **arquivo** , aponte para **projetos recentes**e clique no projeto que você deseja abrir.  
+    -   No menu **arquivo** , aponte para **projetos recentes** e clique no projeto que você deseja abrir.  
   
     -   No menu **arquivo** , selecione **Abrir projeto**, localize o arquivo de projeto. o2ssproj, selecione o arquivo e clique em **abrir**.  
   
@@ -121,4 +121,4 @@ A próxima etapa do processo de migração é [conectar-se ao banco de dados DB2
 ## <a name="see-also"></a>Consulte Também  
 [Migrar bancos de dados DB2 para SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [Conectando-se ao banco de dados DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
-[Conectando-se ao SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[Conectando-se ao SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
