@@ -7,14 +7,13 @@ ms.date: 06/13/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 19fe9aaaa29f4b9d3e4454aa131e0ed6c261b557
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1b3c857d5ba86fa1cb10097cf91ee5d591b67f94
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178911"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869788"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitar ou desabilitar o gerenciamento de pacotes para SQL Server
 [!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -57,7 +56,7 @@ Para habilitar ou desabilitar o gerenciamento de pacotes no SQL Server, use o ut
 
 4. Repita o comando para cada banco de dados em que os pacotes devem ser instalados.
 
-5. Para verificar se as novas funções foram criadas com êxito, em SQL Server Management Studio, clique no banco de dados, expanda **Segurança**e expanda **Funções de Banco de Dados**.
+5. Para verificar se as novas funções foram criadas com êxito, em SQL Server Management Studio, clique no banco de dados, expanda **Segurança** e expanda **Funções de Banco de Dados**.
 
     Você também pode executar uma consulta em sys.database_principals como a seguinte:
 

@@ -4,16 +4,16 @@ description: Este tutorial mostra como usar Extensões de Linguagem do SQL Serve
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc69f01a3cc05f1f1b128ac7ed9fd99d84c7e757
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 21d981c75881d0d971b0f27757015792237f12e3
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155044"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870124"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Tutorial: Pesquisar uma cadeia de caracteres usando regex (expressões regulares) em Java
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]

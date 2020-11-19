@@ -7,14 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: e68c51930cae4762723f098089d0913792748c61
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1526f1c9eaaf4924ec248b523bd44148398e031b
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956667"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870103"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>Usar o RevoScaleR para instalar pacotes de R
 
@@ -162,7 +161,7 @@ Este exemplo remove o pacote **forecast** e suas dependências do contexto de co
 
 ### <a name="synchronize-packages-between-database-and-file-system"></a>Sincronizar pacotes entre o banco de dados e o sistema de arquivos
 
-O exemplo a seguir verifica o banco de dados **TestDB**e determina se todos os pacotes estão instalados no sistema de arquivos. Se alguns pacotes estiverem ausentes, eles serão instalados no sistema de arquivos.
+O exemplo a seguir verifica o banco de dados **TestDB** e determina se todos os pacotes estão instalados no sistema de arquivos. Se alguns pacotes estiverem ausentes, eles serão instalados no sistema de arquivos.
 
 ```R
 # Instantiate the compute context
