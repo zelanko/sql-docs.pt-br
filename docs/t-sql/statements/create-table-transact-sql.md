@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b37413dd6450999e6671858073805dea5a5424e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412579"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521134"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -356,45 +356,45 @@ column_name <data_type>
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* É o nome do banco de dados no qual a tabela é criada. *database_name* precisa especificar o nome de um banco de dados existente. Caso não seja especificado, *database_name* usará o banco de dados atual como padrão. O logon para a conexão atual precisa estar associado a uma ID de usuário existente no banco de dados especificado por *database_name* , e essa ID de usuário precisa ter permissões CREATE TABLE.
+*database_name* É o nome do banco de dados no qual a tabela é criada. *database_name* precisa especificar o nome de um banco de dados existente. Caso não seja especificado, *database_name* usará o banco de dados atual como padrão. O logon para a conexão atual precisa estar associado a uma ID de usuário existente no banco de dados especificado por *database_name*, e essa ID de usuário precisa ter permissões CREATE TABLE.
 
 *schema_name* É o nome do esquema ao qual a nova tabela pertence.
 
 *table_name* É o nome da nova tabela. Os nomes de tabela precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). *table_name* pode ter no máximo 128 caracteres, exceto para nomes de tabelas temporárias locais [nomes com o prefixo de sinal numérico (#)], que não podem exceder 116 caracteres.
 
-AS FileTable **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
+AS FileTable **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
 
 Cria a nova tabela como uma FileTable. Você não especifica colunas porque uma FileTable tem um esquema fixo. Para obter mais informações, confira [FileTables](../../relational-databases/blob/filetables-sql-server.md).
 
 *column_name*
-*computed_column_expression* É uma expressão que define o valor de uma coluna computada. Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, a menos que a coluna esteja marcada como PERSISTED. A coluna é computada a partir de uma expressão que usa outras colunas da mesma tabela. Por exemplo, uma coluna computada pode ter a definição **cost** AS **price** \* **qty** . A expressão pode ser o nome de uma coluna não computada, constante, função, variável e qualquer combinação dessas, conectada por um ou mais operadores. A expressão não pode ser uma subconsulta nem conter um tipo de dados do alias.
+*computed_column_expression* É uma expressão que define o valor de uma coluna computada. Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, a menos que a coluna esteja marcada como PERSISTED. A coluna é computada a partir de uma expressão que usa outras colunas da mesma tabela. Por exemplo, uma coluna computada pode ter a definição **cost** AS **price** \* **qty**. A expressão pode ser o nome de uma coluna não computada, constante, função, variável e qualquer combinação dessas, conectada por um ou mais operadores. A expressão não pode ser uma subconsulta nem conter um tipo de dados do alias.
 
 As colunas computadas podem ser usadas em listas de seleção, cláusulas WHERE, cláusulas ORDER BY ou em qualquer outro local em que expressões regulares possam ser usadas, com as seguintes exceções:
 
 - As colunas computadas devem ser marcadas como PERSISTED para participar de uma restrição FOREIGN KEY ou CHECK.
 - Uma coluna computada poderá ser usada como uma coluna de chave em um índice ou como parte de uma restrição PRIMARY KEY ou UNIQUE, se o valor for definido por uma expressão determinística e o tipo de dados do resultado for permitido nas colunas de índice.
 
-   Por exemplo, se a tabela tiver as colunas de inteiros **a** e **b** , a coluna computada **a+b** poderá ser indexada, mas não a coluna computada **a+DATEPART(dd, GETDATE())** , pois o valor poderá ser alterado em chamadas subsequentes.
+   Por exemplo, se a tabela tiver as colunas de inteiros **a** e **b**, a coluna computada **a+b** poderá ser indexada, mas não a coluna computada **a+DATEPART(dd, GETDATE())** , pois o valor poderá ser alterado em chamadas subsequentes.
 
 - Uma coluna computada não pode ser o destino de uma instrução INSERT ou UPDATE.
 
 > [!NOTE]
 > Cada linha de uma tabela pode ter valores diferentes para as colunas envolvidas em uma coluna computada; sendo assim, a coluna computada pode não ter o mesmo valor para cada linha.
 
-Com base nas expressões usadas, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina automaticamente a nulidade das colunas computadas. O resultado da maioria das expressões será considerado nulo mesmo se somente colunas não nulas estejam presentes, pois a falta de fluxo ou excesso de fluxo produzirá também resultados NULL. Use a função `COLUMNPROPERTY` com a propriedade **AllowsNull** para investigar a nulidade de qualquer coluna computada de uma tabela. Uma expressão que permite valor nulo pode se tornar uma expressão que não permite valor nulo pela especificação de `ISNULL` com a constante *check_expression* , em que a constante é um valor não nulo substituído para qualquer resultado NULL. A permissão REFERENCES no tipo é necessária para colunas computadas com base em expressões do tipo de dados CLR definido pelo usuário.
+Com base nas expressões usadas, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina automaticamente a nulidade das colunas computadas. O resultado da maioria das expressões será considerado nulo mesmo se somente colunas não nulas estejam presentes, pois a falta de fluxo ou excesso de fluxo produzirá também resultados NULL. Use a função `COLUMNPROPERTY` com a propriedade **AllowsNull** para investigar a nulidade de qualquer coluna computada de uma tabela. Uma expressão que permite valor nulo pode se tornar uma expressão que não permite valor nulo pela especificação de `ISNULL` com a constante *check_expression*, em que a constante é um valor não nulo substituído para qualquer resultado NULL. A permissão REFERENCES no tipo é necessária para colunas computadas com base em expressões do tipo de dados CLR definido pelo usuário.
 
 PERSISTED Especifica que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] armazenará fisicamente os valores computados na tabela e atualizará os valores quando for atualizada qualquer outra coluna da qual a coluna computada depende. A marcação de uma coluna computada como `PERSISTED` permite a criação de um índice em uma coluna computada que seja determinística, mas não precisa. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). As colunas computadas usadas como colunas de particionamento de uma tabela particionada precisam ser explicitamente marcadas como `PERSISTED`. *computed_column_expression* precisa ser determinística quando `PERSISTED` é especificado.
 
-ON { *partition_scheme* | *filegroup* |  **"default"** } Especifica o esquema de partição ou o grupo de arquivos no qual a tabela está armazenada. Se *partition_scheme* for especificado, a tabela será uma tabela particionada cujas partições são armazenadas em um conjunto de um ou mais grupos de arquivos especificados em *partition_scheme* . Se *filegroup* for especificado, a tabela será criada no grupo de arquivos nomeado. O grupo de arquivos deve existir no banco de dados. Se **"default"** for especificado ou se ON não for especificado, a tabela será armazenada no grupo de arquivos padrão. O mecanismo de armazenamento de uma tabela como especificado em CREATE TABLE não pode ser alterado posteriormente.
+ON { *partition_scheme* | *filegroup* |  **"default"** } Especifica o esquema de partição ou o grupo de arquivos no qual a tabela está armazenada. Se *partition_scheme* for especificado, a tabela será uma tabela particionada cujas partições são armazenadas em um conjunto de um ou mais grupos de arquivos especificados em *partition_scheme*. Se *filegroup* for especificado, a tabela será criada no grupo de arquivos nomeado. O grupo de arquivos deve existir no banco de dados. Se **"default"** for especificado ou se ON não for especificado, a tabela será armazenada no grupo de arquivos padrão. O mecanismo de armazenamento de uma tabela como especificado em CREATE TABLE não pode ser alterado posteriormente.
 
-ON { *partition_scheme* | *filegroup* |  **"default"** } também pode ser especificado em uma restrição PRIMARY KEY ou UNIQUE. Essas restrições criam índices. Se *filegroup* for especificado, o índice será armazenado no grupo de arquivos nomeado. Se **"default"** for especificado ou se ON não for especificado, o índice será armazenado no mesmo grupo de arquivos da tabela. Se a restrição `PRIMARY KEY` ou `UNIQUE` criar um índice clusterizado, as páginas de dados da tabela serão armazenadas no mesmo grupo de arquivos do índice. Se `CLUSTERED` for especificado ou se a restrição de outra forma criar um índice clusterizado e for especificado um *partition_scheme* diferente do *partition_scheme* ou do *filegroup* da definição da tabela ou vice-versa, somente a definição da restrição será respeitada e as demais serão ignoradas.
+ON {*partition_scheme* | *filegroup* |  **"default"** } também pode ser especificado em uma restrição PRIMARY KEY ou UNIQUE. Essas restrições criam índices. Se *filegroup* for especificado, o índice será armazenado no grupo de arquivos nomeado. Se **"default"** for especificado ou se ON não for especificado, o índice será armazenado no mesmo grupo de arquivos da tabela. Se a restrição `PRIMARY KEY` ou `UNIQUE` criar um índice clusterizado, as páginas de dados da tabela serão armazenadas no mesmo grupo de arquivos do índice. Se `CLUSTERED` for especificado ou se a restrição de outra forma criar um índice clusterizado e for especificado um *partition_scheme* diferente do *partition_scheme* ou do *filegroup* da definição da tabela ou vice-versa, somente a definição da restrição será respeitada e as demais serão ignoradas.
 
 > [!NOTE]
 > Nesse contexto, *default* não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e precisa ser delimitado, como em ON **"default"** ou ON **[** default **]** . Se **"default"** é especificado, a opção `QUOTED_IDENTIFIER` deve ser definida como ON na sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 >
 > Depois de criar uma tabela particionada, considere a configuração da opção `LOCK_ESCALATION` da tabela como `AUTO`. Isso pode melhorar a simultaneidade ao permitir que os bloqueios escalem para o nível da partição (HoBT) em vez da tabela. Para obter mais informações, consulte [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).
 
-TEXTIMAGE_ON { *filegroup*|  **"default"** } Indica que **text** , **ntext** , **image** , **xml** , **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e colunas do tipo de dado CLR definido pelo usuário (incluindo geometry e geography) são armazenados no grupo de arquivos especificado.
+TEXTIMAGE_ON { *filegroup*|  **"default"** } Indica que **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e colunas do tipo de dado CLR definido pelo usuário (incluindo geometry e geography) são armazenados no grupo de arquivos especificado.
 
 `TEXTIMAGE_ON` não será permitido se não houver colunas de valor grande na tabela. `TEXTIMAGE_ON` não poderá ser especificado se *partition_scheme* for especificado. Se **"default"** for especificado ou se `TEXTIMAGE_ON` não for especificado, as colunas de valores grandes serão armazenadas no grupo de arquivos padrão. O armazenamento de qualquer dado de coluna de valor grande especificado em `CREATE TABLE` não poderá ser alterado posteriormente.
 
@@ -405,7 +405,7 @@ TEXTIMAGE_ON { *filegroup*|  **"default"** } Indica que **text** , **ntext** , *
 >
 > Nesse contexto, default não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e precisa ser delimitado, como em `TEXTIMAGE_ON "default"` ou `TEXTIMAGE_ON [default]`. Se **"default"** é especificado, a opção `QUOTED_IDENTIFIER` deve ser definida como ON na sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
-FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e posterior). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte para `FILESTREAM`.
+FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e posterior). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte para `FILESTREAM`.
 
 Especifica o grupo de arquivos para obter dados de FILESTREAM.
 
@@ -442,7 +442,7 @@ Para tabelas com otimização de memória, veja [Tipos de dados compatíveis par
 
 *scale* É a escala do tipo de dados especificado. Para obter mais informações sobre valores de escala válidos, veja [Precisão, escala e comprimento](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).
 
-**max** Aplica-se apenas aos tipos de dados **varchar** , **nvarchar** e **varbinary** para armazenar 2^31 bytes de caractere e dados binários e 2^30 bytes de dados Unicode.
+**max** Aplica-se apenas aos tipos de dados **varchar**, **nvarchar** e **varbinary** para armazenar 2^31 bytes de caractere e dados binários e 2^30 bytes de dados Unicode.
 
 CONTENT Especifica que cada instância do tipo de dados **xml** em *column_name* pode conter vários elementos de nível superior. CONTENT aplica-se apenas a tipo de dados **xml** e poderá ser especificado somente se *xml_schema_collection* também for especificado. Caso não seja especificado, CONTENT será o comportamento padrão.
 
@@ -456,7 +456,7 @@ DEFAULT Especifica o valor fornecido para a coluna quando um valor não for forn
 
 *memory_optimized_constant_expression* É uma constante, NULL ou uma função de sistema compatível usada como valor padrão para a coluna. Deve haver suporte nos procedimentos armazenados compilados de modo nativo. Para obter mais informações sobre as funções integradas em procedimentos armazenados compilados nativamente, veja [Recursos compatíveis em módulos T-SQL compilados nativamente](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).
 
-IDENTITY Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece um valor incremental exclusivo para a coluna. Geralmente, as colunas de identidade são usadas com restrições PRIMARY KEY para servir como o identificador exclusivo de linha para a tabela. A propriedade `IDENTITY` pode ser atribuída às colunas **tinyint** , **smallint** , **int** , **bigint** , **decimal(p,0)** ou **numeric(p,0)** . Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Devem ser especificados tanto o valor de semente como o de incremento ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).
+IDENTITY Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece um valor incremental exclusivo para a coluna. Geralmente, as colunas de identidade são usadas com restrições PRIMARY KEY para servir como o identificador exclusivo de linha para a tabela. A propriedade `IDENTITY` pode ser atribuída às colunas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)** . Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Devem ser especificados tanto o valor de semente como o de incremento ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).
 
 *seed* É o valor usado para a primeira linha carregada na tabela.
 
@@ -464,21 +464,21 @@ IDENTITY Indica que a nova coluna é uma coluna de identidade. Quando uma nova l
 
 NOT FOR REPLICATION Na instrução `CREATE TABLE`, a cláusula `NOT FOR REPLICATION` pode ser especificada para a propriedade IDENTITY e para restrições FOREIGN KEY e CHECK. Se essa cláusula for especificada para a propriedade `IDENTITY`, os valores não serão incrementados em colunas de identidade quando os agentes de replicação executarem inserções. Se essa cláusula for especificada para uma restrição, ela não será aplicada quando os agentes de replicação executarem operações insert, update ou delete.
 
-GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica que uma coluna `datetime2` especificada será usada pelo sistema para registrar a hora de início na qual um registro é válido ou a hora de término na qual um registro é válido. A coluna precisa ser definida como `NOT NULL`. Se você tentar especificá-las como `NULL`, o sistema gerará um erro. Se você não especificar explicitamente NOT NULL para uma coluna de período, o sistema definirá a coluna como `NOT NULL` por padrão. Use esse argumento junto com os argumentos `PERIOD FOR SYSTEM_TIME` e `WITH SYSTEM_VERSIONING = ON` para habilitar o controle de versão do sistema em uma tabela. Para saber mais, veja [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 Você pode marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM** _`<table>`_ não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal. Para alterar o atributo **HIDDEN** para uma coluna de período existente, **PERIOD** deve ser descartado e recriado com um sinalizador oculto diferente.
 
-INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] ( *column_name* [ ASC | DESC ] [ ,... *n* ] ) **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] ) **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica a criação de um índice na tabela. Isso pode ser um índice clusterizado ou um índice não clusterizado. O índice conterá as colunas listadas e classificará os dados em ordem crescente ou decrescente.
 
-INDEX *index_name* CLUSTERED COLUMNSTORE **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+INDEX *index_name* CLUSTERED COLUMNSTORE **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica o armazenamento de toda a tabela em formato de coluna com um índice columnstore clusterizado. Isso sempre inclui todas as colunas na tabela. Os dados não estão classificados em ordem alfabética ou numérica, uma vez que as linhas são organizadas para obter benefícios de compactação de columnstore.
 
-INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE ( *column_name* [ ,... *n* ] ) **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] ) **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica a criação de um índice não clusterizado columnstore na tabela. A tabela subjacente pode ser um heap rowstore ou um índice clusterizado, ou pode ser um índice columnstore clusterizado. Em todos os casos, a criação de um índice columnstore não clusterizado em uma tabela armazena uma segunda cópia dos dados para as colunas no índice.
 
@@ -502,7 +502,7 @@ ON **"default"** Cria o índice especificado no grupo de arquivos padrão.
 
 Nesse contexto, default não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e precisa ser delimitado, como em ON **"default"** ou ON **[default]** . Se "default" é especificado, a opção `QUOTED_IDENTIFIER` deve ser definida como ON na sessão atual. Essa é a configuração padrão. Para saber mais, confira [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
-[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e posterior).
+[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e posterior).
 
 Especifica a colocação de dados FILESTREAM para a tabela quando um índice clusterizado é criado. A cláusula FILESTREAM_ON permite mover os dados FILESTREAM para outro grupo de arquivos ou esquema de partição FILESTREAM.
 
@@ -516,7 +516,7 @@ Se a tabela não estiver particionada, a coluna FILESTREAM não poderá ser part
 
 Para obter mais informações, veja [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md).
 
-ROWGUIDCOL Indica que a nova coluna é uma coluna GUID de linha. Somente uma coluna **uniqueidentifier** por tabela pode ser designada como a coluna ROWGUIDCOL. A aplicação da propriedade ROWGUIDCOL permite que a coluna seja referenciada usando `$ROWGUID`. A propriedade ROWGUIDCOL pode ser atribuída somente a uma coluna **uniqueidentifier** . As colunas de tipo de dados definido pelo usuário não podem ser designadas com ROWGUIDCOL.
+ROWGUIDCOL Indica que a nova coluna é uma coluna GUID de linha. Somente uma coluna **uniqueidentifier** por tabela pode ser designada como a coluna ROWGUIDCOL. A aplicação da propriedade ROWGUIDCOL permite que a coluna seja referenciada usando `$ROWGUID`. A propriedade ROWGUIDCOL pode ser atribuída somente a uma coluna **uniqueidentifier**. As colunas de tipo de dados definido pelo usuário não podem ser designadas com ROWGUIDCOL.
 
 A propriedade ROWGUIDCOL não impõe exclusividade dos valores armazenados na coluna. ROWGUIDCOL também não gera automaticamente valores para novas linhas inseridas na tabela. Para gerar valores exclusivos para cada coluna, use a função [NEWID](../../t-sql/functions/newid-transact-sql.md) ou [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) em instruções [INSERT](../../t-sql/statements/insert-transact-sql.md) ou use essas funções como o padrão para a coluna.
 
@@ -534,7 +534,7 @@ Se você está usando o Always Encrypted com enclaves seguros, a criptografia al
 
 As colunas devem ser de um tipo de dados qualificado.
 
-ALGORITHM **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
+ALGORITHM **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
 
 Deve ser **'AEAD_AES_256_CBC_HMAC_SHA_256'** .
 
@@ -542,7 +542,7 @@ Para mais informações, incluindo restrições de recursos, veja [Always Encryp
 
 SPARSE Indica que a coluna é uma coluna esparsa. O armazenamento de colunas esparsas é otimizado para obter valores nulos. Colunas esparsas não podem ser designadas como NOT NULL. Para obter restrições adicionais e mais informações sobre colunas esparsas, consulte [Usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).
 
-MASKED WITH ( FUNCTION = ' *mask_function* ') **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
+MASKED WITH ( FUNCTION = ' *mask_function* ') **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
 
 Especifica uma máscara de dados dinâmicos. *mask_function* é o nome da função de mascaramento com os parâmetros apropriados. Quatro funções estão disponíveis:
 
@@ -553,7 +553,7 @@ Especifica uma máscara de dados dinâmicos. *mask_function* é o nome da funç�
 
 Para parâmetros de função, consulte [Máscara de Dados Dinâmicos](../../relational-databases/security/dynamic-data-masking.md).
 
-FILESTREAM **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e posterior)
+FILESTREAM **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e posterior)
 
 Válido somente para colunas **varbinary(max)** . Especifica o armazenamento FILESTREAM para dados de BLOB **varbinary(max)** .
 
@@ -563,7 +563,7 @@ A coluna ROWGUIDCOL não pode ser descartada e as restrições relacionadas não
 
 Quando o atributo de armazenamento FILESTREAM é especificado para uma coluna, todos os valores da coluna são armazenados em um contêiner de dados FILESTREAM no sistema de arquivos.
 
-COLLATE *collation_name* Especifica a ordenação da coluna. O nome da ordenação tanto pode ser um nome de ordenação do Windows como um nome de ordenação SQL. *collation_name* é aplicável somente a colunas dos tipos de dados **char** , **varchar** , **text** , **nchar** , **nvarchar** e **ntext** . Se não for especificado, à coluna será atribuída a ordenação do tipo de dados definido pelo usuário, se a coluna for de um tipo de dados definido pelo usuário, ou a ordenação do banco de dados atual.
+COLLATE *collation_name* Especifica a ordenação da coluna. O nome da ordenação tanto pode ser um nome de ordenação do Windows como um nome de ordenação SQL. *collation_name* é aplicável somente a colunas dos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Se não for especificado, à coluna será atribuída a ordenação do tipo de dados definido pelo usuário, se a coluna for de um tipo de dados definido pelo usuário, ou a ordenação do banco de dados atual.
 
 Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, consulte [Nome de ordenação do Windows](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de ordenação do SQL](../../t-sql/statements/sql-server-collation-name-transact-sql.md).
 
@@ -585,7 +585,7 @@ Em uma instrução `CREATE TABLE`, CLUSTERED pode ser especificado apenas para u
 
 FOREIGN KEY REFERENCES É uma restrição que fornece integridade referencial para os dados na coluna ou colunas. As restrições FOREIGN KEY requerem que cada valor na coluna exista na coluna ou colunas referenciadas correspondentes na tabela referenciada. As restrições FOREIGN KEY podem fazer referência somente a colunas que sejam restrições PRIMARY KEY ou UNIQUE na tabela ou colunas referenciadas em um UNIQUE INDEX na tabela referenciada. As chaves estrangeiras em colunas computadas também devem ser marcadas como PERSISTED.
 
-[ _schema\_name_ **.** ] *referenced_table_name* ] É o nome da tabela referenciada pela restrição FOREIGN KEY e o esquema ao qual ela pertence.
+[ _schema\_name_ **.** ] *referenced_table_name*] É o nome da tabela referenciada pela restrição FOREIGN KEY e o esquema ao qual ela pertence.
 
 **(** *ref_column* [ **,** ... *n* ] **)** É uma coluna, ou lista de colunas, da tabela referenciada pela restrição FOREIGN KEY.
 
@@ -603,11 +603,11 @@ Não especifique CASCADE se a tabela for incluída em uma publicação de mescla
 
 `ON DELETE CASCADE` não poderá ser definido se um `INSTEAD OF` gatilho `ON DELETE` já existir na tabela.
 
-Por exemplo, no banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], a tabela **ProductVendor** tem uma relação referencial com a tabela **Vendor** . A chave estrangeira **ProductVendor.BusinessEntityID** referencia a chave primária **Vendor.BusinessEntityID** .
+Por exemplo, no banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], a tabela **ProductVendor** tem uma relação referencial com a tabela **Vendor**. A chave estrangeira **ProductVendor.BusinessEntityID** referencia a chave primária **Vendor.BusinessEntityID**.
 
-Se uma instrução `DELETE` for executada em uma linha da tabela **Vendor** e uma ação `ON DELETE CASCADE` for especificada para **ProductVendor.BusinessEntityID** , o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificará se há uma ou mais linhas dependentes na tabela **ProductVendor** . Se existir alguma, as linhas dependentes da tabela **ProductVendor** serão excluídas, além da linha referenciada na tabela **Vendor** .
+Se uma instrução `DELETE` for executada em uma linha da tabela **Vendor** e uma ação `ON DELETE CASCADE` for especificada para **ProductVendor.BusinessEntityID**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificará se há uma ou mais linhas dependentes na tabela **ProductVendor**. Se existir alguma, as linhas dependentes da tabela **ProductVendor** serão excluídas, além da linha referenciada na tabela **Vendor**.
 
-Por outro lado, se `NO ACTION` for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gerará um erro e reverterá a ação de exclusão da linha **Vendor** , caso haja, pelo menos, uma linha na tabela **ProductVendor** que a referencie.
+Por outro lado, se `NO ACTION` for especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gerará um erro e reverterá a ação de exclusão da linha **Vendor**, caso haja, pelo menos, uma linha na tabela **ProductVendor** que a referencie.
 
 ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT } Especifica qual ação ocorrerá nas linhas da tabela alterada quando essas linhas tiverem uma relação referencial e a linha referenciada for atualizada na tabela pai. O padrão é NO ACTION.
 
@@ -623,9 +623,9 @@ Não especifique `CASCADE` se a tabela for incluída em uma publicação de mesc
 
 `ON UPDATE CASCADE`, `SET NULL` ou `SET DEFAULT` não poderá ser definido se um `INSTEAD OF` gatilho `ON UPDATE` já existir na tabela que está sendo alterada.
 
-Por exemplo, no banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], a tabela **ProductVendor** tem uma relação referencial com a tabela **Vendor** : A chave estrangeira **ProductVendor.BusinessEntity** faz referência à chave primária **Vendor.BusinessEntityID** .
+Por exemplo, no banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], a tabela **ProductVendor** tem uma relação referencial com a tabela **Vendor**: A chave estrangeira **ProductVendor.BusinessEntity** faz referência à chave primária **Vendor.BusinessEntityID**.
 
-Se uma instrução UPDATE for executada em uma linha da tabela **Vendor** e uma ação ON UPDATE CASCADE for especificada para **ProductVendor.BusinessEntityID** , o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificará se há uma ou mais linhas dependentes na tabela **ProductVendor** . Se existir alguma, as linhas dependentes da tabela **ProductVendor** serão atualizadas, além da linha referenciada na tabela **Vendor** .
+Se uma instrução UPDATE for executada em uma linha da tabela **Vendor** e uma ação ON UPDATE CASCADE for especificada para **ProductVendor.BusinessEntityID**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verificará se há uma ou mais linhas dependentes na tabela **ProductVendor**. Se existir alguma, as linhas dependentes da tabela **ProductVendor** serão atualizadas, além da linha referenciada na tabela **Vendor**.
 
 De modo inverso, se NO ACTION for especificada, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] gerará um erro e reverterá a ação de atualização da linha **Vendor** se houver pelo menos uma linha da tabela **ProductVendor** que a referencie.
 
@@ -651,11 +651,11 @@ WITH FILLFACTOR **=** _fillfactor_ Especifica o quanto o [!INCLUDE[ssDE](../../i
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS É o nome da coluna de conjunto. Um conjunto de colunas é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. Para obter mais informações sobre conjuntos de colunas, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).
 
-PERIOD FOR SYSTEM_TIME ( *system_start_time_column_name* , *system_end_time_column_name* ) **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* ) **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica os nomes das colunas que o sistema usará para registrar o período para o qual um registro é válido. Use esse argumento junto com os argumentos GENERATED ALWAYS AS ROW { START | END } e WITH SYSTEM_VERSIONING = ON para habilitar o controle de versão do sistema em uma tabela. Para saber mais, veja [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-COMPRESSION_DELAY **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+COMPRESSION_DELAY **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Para uma otimização de memória, atraso especifica o número mínimo de minutos que uma linha deve permanecer na tabela, inalterada, antes de ser elegível para compactação no índice columnstore. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleciona linhas específicas a serem compactadas de acordo com a hora da última atualização. Por exemplo, se as linhas estiverem sendo alteradas com frequência durante um período de duas horas, você poderá definir `COMPRESSION_DELAY = 120 Minutes` para garantir que as atualizações sejam concluídas antes de o SQL Server compactar a linha.
 
@@ -677,17 +677,17 @@ PAGE A tabela ou as partições especificadas são compactadas usando a compacta
 
 COLUMNSTORE
 
-**Aplica-se a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. COLUMNSTORE especifica para compactar com a compactação columnstore de maior desempenho. Essa é a opção típica.
 
-COLUMNSTORE_ARCHIVE **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+COLUMNSTORE_ARCHIVE **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Aplica-se somente a índices columnstore, incluindo índices columnstore não clusterizados e clusterizados. COLUMNSTORE_ARCHIVE compactará ainda mais a tabela ou a partição para um tamanho menor. Isso pode ser usado para fins de arquivamento, ou em outras situações que exijam menos armazenamento e possam dispensar mais tempo para armazenamento e recuperação.
 
 Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ... *n* ] **)** Especifica as partições às quais se aplica a configuração DATA_COMPRESSION. Se a tabela não for particionada, o argumento `ON PARTITIONS` ON PARTITIONS gerará um erro. Se a cláusula `ON PARTITIONS` não for fornecida, a opção `DATA_COMPRESSION` será aplicada a todas as partições de uma tabela particionada.
+ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ...*n* ] **)** Especifica as partições às quais se aplica a configuração DATA_COMPRESSION. Se a tabela não for particionada, o argumento `ON PARTITIONS` ON PARTITIONS gerará um erro. Se a cláusula `ON PARTITIONS` não for fornecida, a opção `DATA_COMPRESSION` será aplicada a todas as partições de uma tabela particionada.
 
 *partition_number_expression* pode ser especificado das seguintes maneiras:
 
@@ -732,18 +732,18 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF } Quando ON, bloqueios de linha são permit
 
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF } Quando ON, bloqueios de página são permitidos ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de página são usados. Quando definidos como OFF, os bloqueios de página não são usados. O padrão é ON.
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Se aplica ao** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e a versões posteriores. <BR>
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Se aplica ao**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e a versões posteriores. <BR>
 Especifica se a contenção de inserção de última página será ou não otimizada. O padrão é OFF. Para saber mais, confira a seção [Chaves sequenciais](./create-index-transact-sql.md#sequential-keys) da página CREATE INDEX.
 
 FILETABLE_DIRECTORY = *directory_name*
 
-**Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
 
 Especifica o nome do diretório FileTable compatível com Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação. Se esse valor não for especificado, o nome de filetable será usado.
 
 FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
 
-**Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte para `FILETABLE`.
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] não dá suporte para `FILETABLE`.
 
 Especifica o nome da ordenação a ser aplicado à coluna **Name** da FileTable. A ordenação não deve diferenciar maiúsculas de minúsculas para ser compatível com a semântica de nomenclatura de arquivos do sistema operacional Windows. Se esse valor não for especificado, a ordenação padrão do banco de dados será usada. Se a ordenação padrão do banco de dados diferenciar maiúsculas de minúsculas, será gerado um erro e a operação CREATE TABLE falhará.
 
@@ -752,26 +752,26 @@ Especifica o nome da ordenação a ser aplicado à coluna **Name** da FileTable.
 database_default Especifica que a ordenação padrão do banco de dados deve ser usada. Esse ordenação não deve diferenciar maiúsculas de minúsculas.
 
 FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *nome_da_restrição*
-**Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
 
 Especifica o nome a ser usado para a restrição de chave primária que é criada automaticamente no FileTable. Se esse valor não for especificado, o sistema gerará um nome para a restrição.
 
 FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *nome_da_restrição*
-**Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
 
 Especifica o nome a ser usado para a restrição exclusiva criada automaticamente na coluna **stream_id** na FileTable. Se esse valor não for especificado, o sistema gerará um nome para a restrição.
 
 FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *nome_da_restrição*
-**Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior).
 
 Especifica o nome a ser usado para a restrição exclusiva criada automaticamente nas colunas **parent_path_locator** e **name** na FileTable. Se esse valor não for especificado, o sistema gerará um nome para a restrição.
 
-SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* . *history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
+SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ] **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 Habilitará o controle de versão do sistema da tabela se o tipo de dados, a restrição de nulidade e os requisitos de restrição de chave primária forem atendidos. Se o argumento `HISTORY_TABLE` não for usado, o sistema gerará uma nova tabela de histórico correspondendo ao esquema da tabela atual no mesmo grupo de arquivos da tabela atual, criando um vínculo entre as duas tabelas e permitindo que o sistema registre o histórico de cada registro da tabela atual na tabela de histórico. O nome desta tabela de histórico será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Por padrão, a tabela de histórico é **PAGE** compactado. Se o argumento `HISTORY_TABLE` for usado para criar um vínculo e usar uma tabela de histórico existente, o vínculo será criado entre a tabela atual e a tabela especificada. Se a tabela atual estiver particionada, a tabela de histórico será criada no grupo de arquivos padrão porque a configuração de particionamento não será replicada automaticamente da tabela atual para a tabela de histórico. Se o nome de uma tabela de histórico estiver especificado durante a criação da tabela de histórico, você deverá especificar o nome do esquema e da tabela. Ao criar um link para uma tabela de histórico existente, você pode optar por executar uma verificação de consistência de dados. Essa verificação de consistência de dados garante que os registros existentes não se sobreponham. A execução da verificação de consistência dos dados é o padrão. Use esse argumento junto com os argumentos `PERIOD FOR SYSTEM_TIME` e `GENERATED ALWAYS AS ROW { START | END }` para habilitar o controle de versão do sistema em uma tabela. Para saber mais, veja [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
-**Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
 
 Cria a nova tabela com o Stretch Database habilitado ou desabilitado. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -779,11 +779,11 @@ Cria a nova tabela com o Stretch Database habilitado ou desabilitado. Para obter
 
 Quando você habilitar Stretch para uma tabela especificando `ON`, pode opcionalmente especificar `MIGRATION_STATE = OUTBOUND` para começar a migração de dados imediatamente ou `MIGRATION_STATE = PAUSED` para adiar a migração de dados. O valor padrão é `MIGRATION_STATE = OUTBOUND`. Para obter mais informações sobre como habilitar o Stretch para uma tabela, consulte [Habilitar o Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).
 
-**Pré-requisitos** . Antes de habilitar o Stretch para uma tabela, você precisa habilitar o Stretch no servidor e no banco de dados. Para obter mais informações, consulte [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
+**Pré-requisitos**. Antes de habilitar o Stretch para uma tabela, você precisa habilitar o Stretch no servidor e no banco de dados. Para obter mais informações, consulte [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
 
-**Permissões** . Habilitar o Stretch para um banco de dados ou uma tabela exige permissões db_owner. Habilitar o Stretch em uma tabela também requer permissões ALTER na tabela.
+**Permissões**. Habilitar o Stretch para um banco de dados ou uma tabela exige permissões db_owner. Habilitar o Stretch em uma tabela também requer permissões ALTER na tabela.
 
-[ FILTER_PREDICATE = { null | *predicate* } ] **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
+[ FILTER_PREDICATE = { null | *predicate* } ] **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
 
 Opcionalmente, especifique um predicado de filtro para selecionar linhas para migrar de uma tabela que contém dados atuais e históricos. O predicado deve chamar uma função com valor de tabela embutido determinística. Para obter mais informações, veja [Habilitar Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) e [Selecionar linhas a serem migradas usando uma função de filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 
@@ -792,9 +792,9 @@ Opcionalmente, especifique um predicado de filtro para selecionar linhas para mi
 
 Se você não especificar um predicado de filtro, a tabela inteira será migrada.
 
-Quando você especifica um predicado de filtro, também precisa especificar *MIGRATION_STATE* .
+Quando você especifica um predicado de filtro, também precisa especificar *MIGRATION_STATE*.
 
-MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 - Especifique `OUTBOUND` para migrar dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 - Especifique `INBOUND` para copiar os dados remotos na tabela do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] novamente para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e para desabilitar o Stretch na tabela. Para obter mais informações, consulte [Desabilitar Stretch Database e trazer de volta dados remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
@@ -817,35 +817,35 @@ Especifica a coluna que deve ser usada para determinar se as linhas da tabela s�
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS }}       
   Especifica a política de período de retenção para a tabela. O período de retenção é especificado como uma combinação de um valor inteiro positivo e a unidade de parte de data.   
 
-MEMORY_OPTIMIZED **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). A Instância Gerenciada de SQL do Azure não dá suporte a tabelas com otimização de memória.
+MEMORY_OPTIMIZED **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). A Instância Gerenciada de SQL do Azure não dá suporte a tabelas com otimização de memória.
 
 O valor ON indica que a tabela é otimizada para memória. Tabelas com otimização de memória são parte do recurso de OLTP in-memory, que é usado para otimização de desempenho do processamento de transações. Para começar com o OLTP in-memory, confira [Início Rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Para obter informações mais detalhadas sobre as tabelas com otimização de memória, veja [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md).
 
 O valor padrão OFF indica que a tabela é baseada em disco.
 
-DURABILITY **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+DURABILITY **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 O valor de `SCHEMA_AND_DATA` indica que a tabela é durável, o que significa que as alterações são persistidas em disco e sobrevivem à reinicialização ou ao failover. SCHEMA_AND_DATA é o valor padrão.
 
 O valor de `SCHEMA_ONLY` indica que a tabela é não durável. O esquema da tabela é mantido, mas as atualizações de dados não são mantidas após uma reinicialização ou failover do banco de dados. `DURABILITY = SCHEMA_ONLY` só é permitido com `MEMORY_OPTIMIZED = ON`.
 
 > [!WARNING]
-> Quando uma tabela for criada com **DURABILITY = SCHEMA_ONLY** , e **READ_COMMITTED_SNAPSHOT** depois forem alterado usando **ALTER DATABASE** , os dados na tabela serão perdidos.
+> Quando uma tabela for criada com **DURABILITY = SCHEMA_ONLY**, e **READ_COMMITTED_SNAPSHOT** depois forem alterado usando **ALTER DATABASE**, os dados na tabela serão perdidos.
 
-BUCKET_COUNT **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+BUCKET_COUNT **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Indica o número de buckets que devem ser criados no índice de hash. O valor máximo para BUCKET_COUNT em índices de hash é 1.073.741.824. Para obter mais informações sobre o número de buckets, veja [Índices para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
 Bucket_count é um argumento obrigatório.
 
-INDEX **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+INDEX **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Índices de coluna e tabela podem ser especificados como parte da instrução CREATE TABLE. Para obter detalhes sobre como adicionar e remover índices em tabelas com otimização de memória, confira: [Alterando tabelas com otimização de memória](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
-HASH **Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+HASH **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Indica que um índice de HASH foi criado.
 
@@ -865,7 +865,7 @@ Quando uma tabela é criada, a opção QUOTED IDENTIFIER sempre é armazenada co
 
 Você pode criar tabelas temporárias locais e globais. Tabelas temporárias locais são visíveis apenas na sessão atual e tabelas temporárias globais são visíveis em todas as sessões. Não é possível particionar tabelas temporárias.
 
-Prefixe os nomes de tabelas temporárias locais usando um único sinal numérico (# *table_name* ) e prefixe os nomes de tabelas temporárias globais com dois sinais numéricos (## *table_name* ).
+Prefixe os nomes de tabelas temporárias locais usando um único sinal numérico (#*table_name*) e prefixe os nomes de tabelas temporárias globais com dois sinais numéricos (##*table_name*).
 
 As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] referenciam a tabela temporária usando o valor especificado para *table_name* na instrução `CREATE TABLE`, por exemplo:
 
@@ -1022,7 +1022,7 @@ Antes de criar uma tabela particionada usando CREATE TABLE, crie uma função de
   CHECK CONSTRAINTS e regras oferecem a mesma função de validação dos dados durante instruções INSERT e UPDATE.
 
 - Se existirem uma regra e uma ou mais restrições CHECK para uma coluna, ou colunas, todas as restrições serão avaliadas.
-- Restrições de verificação não podem ser definidas em colunas **text** , **ntext** ou **image** .
+- Restrições de verificação não podem ser definidas em colunas **text**, **ntext** ou **image**.
 
 ## <a name="additional-constraint-information"></a>Informações adicionais sobre restrições
 
@@ -1044,13 +1044,13 @@ Quando a nulidade da coluna não é especificada explicitamente, ela segue as re
 
 |Tipo de dados de coluna|Regra|
 |----------------------|----------|
-|Tipo de dados de alias|O [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa a nulidade especificada durante a criação do tipo de dados. Para determinar a nulidade padrão do tipo de dados, use **sp_help** .|
+|Tipo de dados de alias|O [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa a nulidade especificada durante a criação do tipo de dados. Para determinar a nulidade padrão do tipo de dados, use **sp_help**.|
 |tipo de dados CLR definido pelo usuário|A nulidade é determinada de acordo com a definição de coluna.|
 |Tipo de dados fornecido pelo sistema|Se o tipo de dados fornecido pelo sistema tiver apenas uma opção, ele prevalece. Tipos de dados **timestamp** devem ser tipos de dados NOT NULL. Quando qualquer configuração de sessão é definida como ON com o uso de SET:<br />**ANSI_NULL_DFLT_ON** = ON, NULL é atribuído. <br />**ANSI_NULL_DFLT_OFF** = ON, NOT NULL é atribuído.<br /><br /> Quando qualquer configuração de banco de dados for configurada com o uso de ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON, NULL é atribuído. <br />**ANSI_NULL_DEFAULT_OFF** = ON, NOT NULL é atribuído.<br /><br /> Para exibir a configuração de banco de dados de ANSI_NULL_DEFAULT, use a exibição do catálogo **sys.databases**|
 
 Quando nenhuma das opções ANSI_NULL_DFLT estiver definida para a sessão e o banco de dados estiver configurado com o padrão (ANSI_NULL_DEFAULT é OFF), o padrão de NOT NULL será atribuído.
 
-Se a coluna for uma coluna computada, seu nulidade sempre será determinada automaticamente pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para descobrir a nulidade desse tipo de coluna, use a função `COLUMNPROPERTY` com a propriedade **AllowsNull** .
+Se a coluna for uma coluna computada, seu nulidade sempre será determinada automaticamente pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para descobrir a nulidade desse tipo de coluna, use a função `COLUMNPROPERTY` com a propriedade **AllowsNull**.
 
 > [!NOTE]
 > O driver ODBC e o driver OLE DB do SQL Server usam como padrão ANSI_NULL_DFLT_ON definido como ON. Os usuários de ODBC and OLE DB podem configurar essa opção nas fontes de dados ODBC ou usando os atributos ou as propriedades de conexão definidas pelo aplicativo.
@@ -1340,7 +1340,7 @@ CREATE TABLE T1
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. Criando uma tabela temporal baseada em disco com controle de versão do sistema
 
-**Aplica-se a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Os exemplos a seguir mostram como criar uma tabela temporal vinculada a uma nova tabela de histórico e como criar uma tabela temporal vinculada a uma tabela de histórico existente. Observe que a tabela temporal deve ter uma chave primária definida para ser habilitada para a tabela a ser habilitada para controle de versão do sistema. Para obter exemplos mostrando como adicionar ou remover o controle de versão do sistema em uma tabela existente, veja controle de versão do sistema em [Exemplos](../../t-sql/statements/alter-table-transact-sql.md#Example_Top). Para casos de uso, veja [Tabelas temporais](../../relational-databases/tables/temporal-tables.md).
 
@@ -1390,7 +1390,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. Criando uma tabela temporal com otimização de memória e controle de versão do sistema
 
-**Aplica-se a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 O exemplo a seguir mostra como criar uma versão do sistema com tabela temporal com otimização de memória vinculada a uma nova tabela de histórico baseada em disco.
 
@@ -1603,7 +1603,7 @@ SELECT * FROM tempdb.sys.database_files;
 
 ### <a name="w-enable-data-retention-policy-on-a-table"></a>W. Habilitar a política de retenção de dados em uma tabela
 
-O exemplo a seguir cria uma tabela com a retenção de dados habilitada e um período de retenção igual a 1 semana. Este exemplo só se aplica ao **SQL do Azure no Edge** .
+O exemplo a seguir cria uma tabela com a retenção de dados habilitada e um período de retenção igual a 1 semana. Este exemplo só se aplica ao **SQL do Azure no Edge**.
 
 ```sql
 CREATE TABLE [dbo].[data_retention_table] 

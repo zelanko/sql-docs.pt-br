@@ -8,17 +8,40 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059184"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584799"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](./download-azure-data-studio.md)**
+
+## <a name="november-2020"></a>Novembro de 2020
+
+12 de novembro de 2020 &nbsp; / &nbsp; versão: 1.24.0
+
+&nbsp;
+
+| Alterar | Detalhes |
+| ------ | ------- |
+| Correções de bugs | Para obter uma lista completa das correções, confira [Bugs e problemas no GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Caixa de diálogo de conexão | Adicionada uma nova guia Procurar para a caixa de diálogo de conexão. |
+| Atualização de extensões | Atualização liberada para a extensão do Postgres. |
+| Novos recursos de notebook | Novos recursos adicionados ao SQL para suporte a notebook. <br/> Novos recursos adicionados ao suporte à parametrização de notebook. <br/>  Novos recursos adicionados ao streaming de resultados para notebooks do SQL. |
+| Instalação do Python | O pacote PROSE foi removido da instalação padrão do Python. |
+
+### <a name="known-issues-1240"></a>Problemas conhecidos (1.24.0)
+
+| Novo item | Detalhes | Solução alternativa |
+|----------|---------|------------|
+| Extensão do Azure Arc | [Problema conhecido:](https://github.com/microsoft/azuredatastudio/issues/13319) O botão "Script para Notebook" em implantações de Arc MIAA e PG não realiza a validação de campo antes de gerar o script do notebook. Isso significa que, se os usuários inserirem a senha errada nas entradas de confirmação de senha, eles poderão acabar com um notebook com o valor errado para a senha.| O botão "Implantar" funciona conforme o esperado, por isso os usuários devem usá-lo. |
+| Pesquisador de Objetos | As versões do ADS anteriores à 1.24.0 têm uma alteração da falha no Pesquisador de Objetos devido às alterações do mecanismo relacionadas ao [SQL sob demanda do Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Para continuar utilizando o Pesquisador de Objetos no Azure Data Studio com o SQL sob demanda do Azure Synapse Analytics, você precisa do Azure Data Studio 1.24.0 ou posterior. |
+
+Confira os [comentários sobre o Azure Data Studio](https://github.com/microsoft/azuredatastudio) para descobrir outros problemas conhecidos e fornecer comentários à equipe do produto.
 
 ## <a name="october-2020"></a>Outubro de 2020
 

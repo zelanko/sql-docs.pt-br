@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 07c59ceb0ec51d4d9fd357fcc154892091c3caaf
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868193"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631762"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -550,7 +550,7 @@ GO
   
 -   O intervalo representa o modo de bloqueio que protege o intervalo entre duas entradas consecutivas de índice.  
 -   A fila representa o modo de bloqueio que protege a entrada de índice.  
--   O modo representa o modo de bloqueio combinado em uso. Os modos de bloqueio de intervalo de chave consistem de duas partes. A primeira representa o tipo de bloqueio utilizado para bloquear o intervalo de índice (Range*T*), e a segunda representa o tipo de bloqueio utilizado para bloquear uma chave específica (*K*). As duas partes são conectadas por um hífen (-), como Intervalo*T*-*K*.  
+-   O modo representa o modo de bloqueio combinado em uso. Os modos de bloqueio de intervalo de chave consistem de duas partes. A primeira representa o tipo de bloqueio utilizado para bloquear o intervalo de índice (Range *T*), e a segunda representa o tipo de bloqueio utilizado para bloquear uma chave específica (*K*). As duas partes são conectadas por um hífen (-), como Intervalo *T*-*K*.  
   
     |Intervalo|Linha|Mode|Descrição|  
     |-----------|---------|----------|-----------------|  
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Evento Estendido do Deadlock
 Começando com o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o xEvent (Evento Estendido) do `xml_deadlock_report` deve ser usado em vez da classe de evento de grafo de Deadlock no Rastreamento do SQL ou Criador de Perfil do SQL.
 
-Além disso, a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando ocorrem deadlocks, a sessão ***system\_health*** já captura todos os xEvents `xml_deadlock_report` que contém o grafo de deadlock. Como a sessão *system\_health* está habilitada por padrão, não é necessário que uma sessão xEvent separada seja configurada para capturar as informações de deadlock. 
+Além disso, a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], quando ocorrem deadlocks, a sessão **_system\_health_* _ já captura todos os xEvents `xml_deadlock_report` que contêm o grafo de deadlock. Como a sessão _system\_health* está habilitada por padrão, não é necessário que uma sessão xEvent separada seja configurada para capturar as informações de deadlock. 
 
 O grafo de deadlock capturado geralmente tem três nós distintos:
 -   **victim-list**. O identificador de processo da vítima do deadlock.
@@ -1950,7 +1950,7 @@ GO
   
  O único bloqueio aceito que referencia `HumanResources.Employee` é um bloqueio de estabilidade (Sch-S) de esquema. Nesse caso, a seriabilidade não é mais garantida.  
   
- No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], a opção `LOCK_ESCALATION` de `ALTER TABLE` pode não favorecer bloqueios de tabela e habilitar bloqueios HoBT em tabelas particionadas. Essa opção não é uma dica de bloqueio, mas pode ser usada para reduzir o escalonamento do bloqueio. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
+ No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], a opção `LOCK_ESCALATION` de `ALTER TABLE` pode não favorecer bloqueios de tabela e habilitar bloqueios HoBT em tabelas particionadas. Essa opção não é uma dica de bloqueio, mas pode ser usada para reduzir o escalonamento de bloqueios. Para obter mais informações, veja [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="customizing-locking-for-an-index"></a><a name="Customize"></a> Personalizando bloqueio de um índice  
  O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa uma estratégia de bloqueio dinâmico que escolhe automaticamente a melhor granularidade de bloqueio para as consultas, na maioria dos casos. É recomendável substituir os níveis de bloqueio padrão que têm bloqueio de página e de linha ativado, a não ser que os padrões de acesso a tabela e ao índice sejam bem compreendidos e consistentes e haja um problema de contenção de recursos a ser resolvida. Substituir um nível de bloqueio pode impedir significativamente o acesso simultâneo a uma tabela ou índice. Por exemplo, a especificação de apenas bloqueios em nível de tabela em uma tabela grande que os usuários acessam excessivamente pode provocar gargalos, porque os usuários precisam esperar que o bloqueio em nível de tabela seja liberado para acessar a tabela.  
