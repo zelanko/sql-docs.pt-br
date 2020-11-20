@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f336c3c2c475523d2081bcf01189e67b77fe19
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401188"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947911"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Baixar e aplicar atualizações da Microsoft para o Analytics Platform System
 Este tópico discute como baixar atualizações do catálogo Microsoft Update para o Windows Server Update Services (WSUS) e aplicar essas atualizações aos servidores do dispositivo do Analytics Platform System. Microsoft Update instalará todas as atualizações aplicáveis para o Windows e o SQL Server. O WSUS é instalado na máquina virtual do VMM do dispositivo.  
@@ -63,9 +63,11 @@ Antes de executar essas etapas, você precisa:
   
 #### <a name="approve-microsoft-updates-in-wsus"></a>Aprovar atualizações da Microsoft no WSUS  
   
-1.  No painel esquerdo, no console do WSUS, clique em **todas as atualizações**.  
+1. Recusar quaisquer pacotes cumulativos de atualizações que não sejam do **System Center**.
+
+2. No painel esquerdo, no console do WSUS, clique em **todas as atualizações**.  
   
-2.  No painel **todas as atualizações** , clique no menu suspenso **aprovação** , defina **aprovação** como qualquer, **exceto recusada**. Clique no menu suspenso **status** , defina **status** como **any**. Clique em **Atualizar**.  
+3.  No painel **todas as atualizações** , clique no menu suspenso **aprovação** , defina **aprovação** como qualquer, **exceto recusada**. Clique no menu suspenso **status** , defina **status** como **any**. Clique em **Atualizar**.  
   
     Clique com o botão direito do mouse na coluna **título** e selecione **status do arquivo** para verificar o status do arquivo após a conclusão do download.  
   
@@ -73,19 +75,19 @@ Antes de executar essas etapas, você precisa:
   
     ![Selecione todas as atualizações e altere o status para Qualquer.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
   
-3.  Selecione todas as atualizações e, em seguida, clique no link **aprovar** no painel direito.  
+4.  Selecione todas as atualizações e, em seguida, clique no link **aprovar** no painel direito.  
   
     Você também pode clicar com o botão direito do mouse nas atualizações selecionadas e, em seguida, clicar em **aprovar**. Você pode ser solicitado a aceitar os "termos de licença para software Microsoft". Nesse caso, clique em **aceito** na janela para continuar.  
   
     ![Selecione todas as atualizações aplicáveis e clique em Aprovar.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Selecione o grupo de servidores de dispositivo que você criou em [configurar Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
+5.  Selecione o grupo de servidores de dispositivo que você criou em [configurar Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  Clique **Aprovado para Instalação**e clique em **OK**.  
+6.  Clique **Aprovado para Instalação** e clique em **OK**.  
   
     ![Aprove as atualizações do seu grupo de computadores.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
-6.  Na caixa de diálogo **progresso da aprovação** , quando o processo de aprovação estiver concluído, clique em **fechar**.  
+7.  Na caixa de diálogo **progresso da aprovação** , quando o processo de aprovação estiver concluído, clique em **fechar**.  
   
     ![Feche a janela quando as atualizações forem aprovadas.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
   
@@ -105,7 +107,7 @@ Antes de executar essas etapas, você precisa:
   
 #### <a name="apply-microsoft-updates"></a>Aplicar atualizações da Microsoft  
   
-1.  Antes de começar, abra o [utilitário monitorar o dispositivo usando o console de administração &#40;&#41;do sistema de plataforma de análise ](monitor-the-appliance-by-using-the-admin-console.md), clique na guia **estado do dispositivo** e verifique se as colunas do **cluster** e da **rede** mostram verde (ou na) para todos os nós. Se houver alertas em uma dessas colunas, o dispositivo poderá não ser capaz de instalar as atualizações corretamente. Resolva todos os alertas existentes nas colunas de **rede** e de **cluster** antes de continuar.  
+1.  Antes de começar, abra o [utilitário monitorar o dispositivo usando o console de administração &#40;&#41;do sistema de plataforma de análise](monitor-the-appliance-by-using-the-admin-console.md), clique na guia **estado do dispositivo** e verifique se as colunas do **cluster** e da **rede** mostram verde (ou na) para todos os nós. Se houver alertas em uma dessas colunas, o dispositivo poderá não ser capaz de instalar as atualizações corretamente. Resolva todos os alertas existentes nas colunas de **rede** e de **cluster** antes de continuar.  
   
 2.  Faça logon no nó _<domain_name>_ **-HST01** como administrador de domínio de malha.  
   
@@ -123,7 +125,7 @@ Antes de executar essas etapas, você precisa:
   
 5.  No menu suspenso **status** , selecione **qualquer** e clique em **Atualizar**.  
   
-6.  Expanda **Serviços**de *<appliance name>* atualização,-VMM, **atualizações**, **todas**as *<appliance name>* atualizações, em que é o nome do dispositivo.  
+6.  Expanda **serviços de atualização**, *<appliance name>* -VMM, **atualizações**, **todas as atualizações**, em que *<appliance name>* é o nome do dispositivo.  
   
 7.  Na janela **todas as atualizações** , defina **aprovação** como **qualquer, exceto recusada**.  
   
