@@ -2,7 +2,7 @@
 title: Painel de Desempenho | Microsoft Docs
 description: Saiba mais sobre o Painel de Desempenho do SQL Server Management Studio, que fornece insights rápidos sobre o SQL Server e a Instância Gerenciada de SQL do Azure.
 ms.custom: ''
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863351"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674169"
 ---
 # <a name="performance-dashboard"></a>Painel de Desempenho
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,8 +78,9 @@ O relatório **Esperas** filtra todas as esperas ociosas e suspensas. Para obter
 
 Os relatórios de **Consultas Dispendiosas** são redefinidos quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é reiniciado, pois os dados nas DMVs subjacentes são desmarcados. Do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, informações detalhadas sobre consultas dispendiosas podem ser encontradas no Repositório de Consultas. 
 
+
 > [!NOTE]
-> O Painel de Desempenho foi inicialmente lançado como um download autônomo para [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) e depois atualizado para [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
+> O Painel de Desempenho foi inicialmente lançado como um download autônomo para [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) e depois atualizado para [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063). Embora o renderizador de relatórios do SQL Server Management Studio não dê suporte ao acesso por meio da área de transferência ao texto contido nos relatórios, o texto pode ser acessado por meio de relatórios autônomos.  Baixe os relatórios autônomos se precisar copiar o texto de consulta deles.
 
 ## <a name="permissions"></a>Permissões  
 Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requer permissões `VIEW SERVER STATE` e `ALTER TRACE`. Em [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.

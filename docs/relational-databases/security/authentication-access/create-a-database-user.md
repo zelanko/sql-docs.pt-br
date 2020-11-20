@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c18c98192c2806f0b946e5025127151c68009682
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005696"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521169"
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86005696"
 ##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Noções básicas sobre os tipos de usuários  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] apresenta seis opções ao criar um usuário de banco de dados. O gráfico a seguir mostra as seis opções na caixa verde e indica o que elas representam.  
   
- ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
+ ![Diagrama que explica os diferentes tipos de usuários.](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### <a name="selecting-the-type-of-user"></a>Selecionando o tipo de usuário  
  **Logon ou usuário que não está mapeado para um logon**  
@@ -51,7 +51,7 @@ ms.locfileid: "86005696"
   
  Se a pessoa ou grupo que precisa acessar o banco de dados não tiver um logon e se eles só precisarem de acesso para um ou alguns bancos de dados, crie um **usuário Windows** ou um **usuário do SQL com senha**. Também chamado de usuário de banco de dados independente, ele não está associado com logon no banco de dados mestre. Essa será uma excelente opção quando você quiser mover facilmente o banco de dados entre instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para usar essa opção no [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], um administrador deve primeiro habilitar bancos de dados independentes para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], e o banco de dados deve ser habilitado para ser independente. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-> **IMPORTANTE:** Ao conectar-se como um usuário de banco de dados independente, você deverá fornecer o nome do banco de dados como parte da cadeia de conexão. Para especificar o banco de dados no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], na caixa de diálogo **Conectar a** , clique em **Opções**e depois clique na guia **Propriedades de Conexão** .  
+> **IMPORTANTE:** Ao conectar-se como um usuário de banco de dados independente, você deverá fornecer o nome do banco de dados como parte da cadeia de conexão. Para especificar o banco de dados no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], na caixa de diálogo **Conectar a** , clique em **Opções** e depois clique na guia **Propriedades de Conexão** .  
   
  Selecione **Usuário do SQL com senha** ou um **Usuário do SQL com logon** com base em um **logon de autenticação do SQL Server**, quando a pessoa que está conectada não pode autenticar com o Windows. Isso é comum quando as pessoas fora de sua organização (por exemplo, os clientes) estão se conectando ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -105,7 +105,7 @@ ms.locfileid: "86005696"
      Insira o idioma padrão do usuário.  
   
      **Esquema padrão**  
-     Insira o esquema que terá a propriedade dos objetos criados por esse usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Esquema**. **Esquema padrão** estará disponível se você ou selecionar **Usuário do SQL com logon**, **Usuário do SQL sem logon**ou **Usuário do Windows** na lista **Tipo de usuário** .  
+     Insira o esquema que terá a propriedade dos objetos criados por esse usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Esquema**. **Esquema padrão** estará disponível se você ou selecionar **Usuário do SQL com logon**, **Usuário do SQL sem logon** ou **Usuário do Windows** na lista **Tipo de usuário** .  
   
      **Nome de certificado**  
      Insira o certificado a ser usado para o usuário de banco de dados. Opcionalmente, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Certificado**. **Nome de certificado** estará disponível se você selecionar **Usuário mapeado para um certificado** na lista **Tipo de Usuário** .  

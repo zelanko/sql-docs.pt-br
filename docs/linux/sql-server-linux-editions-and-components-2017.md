@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 6d3a6d83b14c401ca6fc7ff6c773ef9565662a0f
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 11ac66182122cba239634cdf07f4b6683d2479cb
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115433"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674164"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edições e recursos compatíveis do SQL Server 2017 no Linux
 
@@ -210,6 +210,7 @@ Para obter informações sobre os recursos do SSIS (Integration Services) compat
 |Tipos de dados planares e geodésicos|Sim|Sim|Sim|Sim| 
 |Bibliotecas espaciais avançadas|Sim|Sim|Sim|Sim|   
 |Importação/exportação de formatos de dados espaciais padrão da indústria|Sim|Sim|Sim|Sim|   
+
 ## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Recursos e serviços sem suporte
 
 Os seguintes recursos e serviços não estão disponíveis no SQL Server 2017 no Linux. O suporte para esses recursos será habilitado gradativamente com o passar do tempo.
@@ -225,6 +226,7 @@ Os seguintes recursos e serviços não estão disponíveis no SQL Server 2017 no
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Assemblies de CLR com definição de permissão EXTERNAL_ACCESS ou UNSAFE |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Backup para URL – blob de páginas<sup>1</sup>|
 | **SQL Server Agent** |  Subsistemas: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alertas |
 | &nbsp; | Agente de Leitor de Log |
@@ -241,6 +243,8 @@ Os seguintes recursos e serviços não estão disponíveis no SQL Server 2017 no
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
   
+<sup>1</sup> O Backup para URL é compatível com os blobs de blocos usando a [Assinatura de Acesso Compartilhado](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## <a name="next-steps"></a>Próximas etapas
  [Edições e recursos compatíveis com o SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Edições e recursos compatíveis com o SQL Server 2017 – Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  

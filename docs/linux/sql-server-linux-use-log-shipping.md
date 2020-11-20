@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115787"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521085"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introdução ao envio de logs no Linux
 
@@ -20,8 +20,7 @@ ms.locfileid: "92115787"
 
 O envio de logs do SQL Server é uma configuração de HA, em que um banco de dados de um servidor primário é replicado em um ou mais servidores secundários. Resumindo: um backup do banco de dados de origem é restaurado no servidor secundário. Em seguida, o servidor primário cria backups de log de transações periodicamente e os servidores secundários os restauram, atualizando a cópia secundária do banco de dados. 
 
-  ![Envio de logs](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![Diagrama mostrando o fluxo de trabalho de envio de logs.](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 Conforme descrito nesta imagem, uma sessão de envio de logs envolve as seguintes etapas:
 

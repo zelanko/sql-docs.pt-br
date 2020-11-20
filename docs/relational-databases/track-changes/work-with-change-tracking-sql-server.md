@@ -23,12 +23,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69e648dddc84de1c136fbf1830e7eeb639bcb5e7
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 28719dc4bc770e2fbb58bc7f6e70b68a84895127
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512302"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447116"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabalhar com o controle de alterações (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "88512302"
  É usada para obter a versão atual que será usada na próxima vez ao consultar alterações. Essa versão representa a versão da última transação confirmada.  
   
  Função CHANGE_TRACKING_MIN_VALID_VERSION()  
- Esta função é usada para obter a versão mínima válida que o cliente pode ter e também obter os resultados válidos de CHANGETABLE(). O cliente deverá comparar a última versão de sincronização com o valor retornado por essa função. Se a última versão de sincronização for menor que a versão retornada por essa função, o cliente não poderá obter os resultados válidos de CHANGETABLE() e deverá reinicializar os dados.  
+ Esta função é usada para obter a versão mínima válida que o cliente pode ter e também obter os resultados válidos de CHANGETABLE(). O cliente deve comparar a última versão de sincronização com o valor retornado por essa função. Se a última versão de sincronização for menor que a versão retornada por essa função, o cliente não poderá obter os resultados válidos de CHANGETABLE() e deverá reinicializar os dados.  
   
 ### <a name="obtaining-initial-data"></a>Obtendo dados iniciais  
  Antes que um aplicativo possa obter as alterações pela primeira vez, ele deverá enviar uma consulta para obter os dados iniciais e a versão de sincronização. O aplicativo deve obter os dados adequados diretamente da tabela e usar a função CHANGE_TRACKING_CURRENT_VERSION() para obter a versão inicial. Essa versão passará para CHANGETABLE(CHANGES ...) na primeira vez em que as alterações forem obtidas.  

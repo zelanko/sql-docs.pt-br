@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 599f0edf2a62413aaa44ccaff191bfac034aa3d9
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: eb38c37dcb5a570364675fece213c8c6868173ec
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418013"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570943"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Adicionar recursos a uma instância do SQL Server (Instalação)
 
@@ -52,7 +52,7 @@ Antes de continuar, examine os artigos em [Planejando uma instalação do SQL Se
 
 4. Na página Atualizações de Produto, as atualizações de produto do SQL Server mais recentes disponíveis são exibidas. Caso você não deseje incluir as atualizações, desmarque a caixa de seleção **Incluir atualizações de produto SQL Server**. Se nenhuma atualização de produto for descoberta, a Instalação do SQL Server não exibirá esta página e avançará automaticamente para a página **Instalar Arquivos de Instalação**.
 
-5. Na página Instalar Arquivos de Instalação, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de Instalação. Se uma atualização para a Instalação do SQL Server for localizada e especificada para ser incluída, ela também será instalada. selecione **Instalar** para instalar arquivos de Suporte à Instalação.  
+5. Na página Instalar Arquivos de Instalação, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de Instalação. Se uma atualização para a Instalação do SQL Server for localizada e especificada para ser incluída, ela também será instalada. Selecione **Instalar** para instalar arquivos de Suporte à Instalação.  
 
 6. O Verificador de Configuração do Sistema verificará o estado do sistema do computador antes da continuação da instalação.  
 
@@ -62,7 +62,7 @@ Antes de continuar, examine os artigos em [Planejando uma instalação do SQL Se
 
     Os pré-requisitos dos recursos selecionados são exibidos no painel à direita. A Instalação do SQL Server instalará os pré-requisitos que ainda não estiverem instalados durante a etapa descrita posteriormente neste procedimento.
 
-    O Verificador de Configuração do Sistema verificará o estado do sistema do computador antes da continuação da instalação. selecione **Avançar** para continuar.
+    O Verificador de Configuração do Sistema verificará o estado do sistema do computador antes da continuação da instalação. Selecione **Avançar** para continuar.
 
 9. A página Requisitos de Espaço em Disco calcula o espaço em disco necessário para os recursos especificados, e compara os requisitos com o espaço em disco disponível no computador em que a Instalação estiver sendo executada.
 
@@ -114,7 +114,7 @@ Antes de continuar, examine os artigos em [Planejando uma instalação do SQL Se
 
 19. Use a página Configuração do Distributed Replay Controller para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Controller. Usuários que têm permissões administrativas terão acesso ilimitado ao serviço Distributed Replay Controller.
 
-    selecione o botão **Adicionar Usuário Atual** para adicionar os usuários aos quais você deseja conceder permissões de acesso para o serviço de controlador do Distributed Replay. selecione o botão **Adicionar** para adicionar permissões de acesso para o serviço de controlador do Distributed Replay. selecione o botão **Remover** para remover as permissões de acesso do serviço de controlador do Distributed Replay.
+    Selecione o botão **Adicionar Usuário Atual** para adicionar os usuários aos quais você deseja conceder permissões de acesso ao serviço de controlador do Distributed Replay. Selecione o botão **Adicionar** para adicionar permissões de acesso ao serviço de controlador do Distributed Replay. Selecione o botão **Remover** para remover as permissões de acesso ao serviço de controlador do Distributed Replay.
 
     Para continuar, selecione **Avançar**.
 

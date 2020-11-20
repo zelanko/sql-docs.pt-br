@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bca6797111b59257e96e447fc3d9e4ba9ba8bb80
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e60a5d8bdb987e3be2016b8b0395f05e83f9f7a9
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890876"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631752"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   O Gerenciamento Baseado em Políticas é um sistema baseado em política para gerenciar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usado para criar condições que contêm expressões de condição. Em seguida, crie políticas que se aplicam as condições a objetos de destino de banco de dados.  
+   O Gerenciamento Baseado em Políticas é um sistema baseado em política para gerenciar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use-o para criar condições que contenham expressões de condição. Em seguida, crie políticas que se aplicam as condições a objetos de destino de banco de dados.  
 
 Por exemplo, como o administrador de banco de dados, é recomendável garantir que alguns servidores não tenham o Database Mail habilitado, para que você possa criar uma condição e uma política que define essa opção do servidor. 
    

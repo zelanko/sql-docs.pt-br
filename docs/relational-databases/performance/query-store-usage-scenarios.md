@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a5c182e7425e51a06b170178ee2716c42c58e115
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890759"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521213"
 ---
 # <a name="query-store-usage-scenarios"></a>Cenários de uso do Repositório de Consultas
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91890759"
   
 -   Forçar o plano anterior no histórico, caso seja provado que ele é melhor. Usar o botão **Forçar plano** em **Consultas Regredidas** para forçar o plano selecionado para a consulta.  
   
- ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
+ ![Captura de tela do Repositório de Consultas mostrando um resumo do plano.](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  Para obter uma descrição detalhada do cenário, veja o blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Repositório de Consultas: um gravador de dados de voo para seu banco de dados).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91890759"
   
  A maneira mais fácil de começar a exploração é abrir as **Principais Consultas de Consumo de Recursos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A interface do usuário é separada em três painéis: um histograma que representa as principais consultas de consumo de recursos (esquerdo), um resumo do plano para a consulta selecionada (direito) e o plano de consulta visual para o plano selecionado (inferior). Clique no botão **Configurar** para controlar quantas consultas você deseja analisar e o intervalo de tempo de interesse. Além disso, você pode escolher entre diferentes dimensões de consumo de recursos (duração, CPU, memória, E/S, número de execução) e a linha de base (Média, Mín., Máx., Total, Desvio Padrão).  
   
- ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
+ ![Captura de tela do Repositório de Consultas mostrando que você pode identificar e ajustar as principais consultas que consomem recursos.](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
  Veja o resumo do plano à direita para analisar o histórico de execução e saber mais sobre os diferentes planos e suas estatísticas de runtime. Use o painel inferior para examinar os diferentes planos ou para compará-los visualmente, renderizados lado a lado (use o botão Comparar).  
   
@@ -99,11 +99,11 @@ Em qualquer um desses cenários, aplique o fluxo de trabalho a seguir:
   
 A ilustração a seguir mostra a análise do Repositório de Consultas (etapa 4) no caso de criação de índice ausente. Abra o painel **Principais Consultas de Consumo de Recursos** /Resumo do plano para obter essa visão da consulta que deve ser afetada pela criação do índice:  
   
-![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
+![Captura de tela mostrando a análise do Repositório de Consultas (etapa 4) em caso de criação de índice ausente.](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
 Além disso, você pode comparar os planos antes e depois da criação do índice renderizando-os lado a lado. (Opção da barra de ferramentas "Comparar os planos para a consulta selecionada em uma janela separada", que é marcada com um quadrado vermelho.)  
   
-![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
+![Captura de tela mostrando o Repositório de Consultas e a opção Comparar os planos para a consulta selecionada em uma barra de ferramentas em janela separada.](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
 Planejar antes da criação do índice (plan_id  = 1, acima) tem dica de índice ausente, e como pode ser visto, essa Verificação de Índice Clusterizado foi o operador mais caro na consulta (retângulo vermelho).  
   
@@ -116,7 +116,7 @@ Antes do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], os usuários eram ex
   
 A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] todas as alterações do otimizador de consulta são associadas ao [nível de compatibilidade do banco de dados](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) mais recente, portanto, os planos não são alterados diretamente no ponto de atualização, mas sim quando um usuário altera o `COMPATIBILITY_LEVEL` para o mais recente. Esse recurso, em combinação com o Repositório de Consultas, fornece um excelente nível de controle sobre o desempenho da consulta no processo de atualização. O fluxo de trabalho de atualização recomendado é mostrado na figura a seguir:  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![Diagrama que mostra o fluxo de trabalho de atualização recomendado.](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
 1.  Atualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem alterar o nível de compatibilidade do banco de dados. Isso não expõe as últimas alterações do otimizador de consulta, mas ainda fornece os recursos mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo o Repositório de Consultas.  
   
@@ -138,9 +138,9 @@ A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] todas as alteraç�
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identifique e melhore as cargas de trabalho ad hoc  
 Algumas cargas de trabalho não possuem consultas dominantes que você pode ajustar para melhorar o desempenho geral do aplicativo. Geralmente, essas cargas de trabalho são caracterizadas por um número relativamente grande de consultas diferentes, cada uma delas consumindo parte dos recursos do sistema. Sendo exclusivas, essas consultas são executadas muito raramente (em geral, apenas uma vez, por isso, ad hoc), de modo que o respectivo consumo do runtime não é crítico. Por outro lado, considerando que esse aplicativo está gerando novas consultas o tempo todo, uma parte significativa dos recursos do sistema é gasto na compilação de consulta, o que não é ideal. Essa não é uma situação ideal para o Repositório de Consultas, uma vez que o número grande de consultas e planos enchem o espaço que você reservou, o que significa que o Repositório de Consultas provavelmente acabará no modo somente leitura muito rapidamente. Se você ativou a **Política de Limpeza Baseada em Tamanho** ([altamente recomendado](best-practice-with-the-query-store.md) para manter o Repositório de Consultas sempre funcionando), o processo em segundo plano limpará as estruturas do Repositório de Consultas na maior parte do tempo, também usando recursos significativos do sistema.  
   
- A exibição**Principais Consultas de Consumo de Recursos** fornece a primeira indicação da natureza ad hoc da carga de trabalho:  
+ A exibição **Principais Consultas de Consumo de Recursos** fornece a primeira indicação da natureza ad hoc da carga de trabalho:  
   
-![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![Captura de tela exibindo as Consultas com Maior Consumo de Recursos mostrando que a maioria das consultas que consomem mais recursos é executada apenas uma vez.](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
 Use a métrica **Contagem de Execução** para analisar se as consultas principais são ad hoc (isso exige que você execute o Repositório de Consultas com `QUERY_CAPTURE_MODE = ALL`). No diagrama acima, você pode ver que 90% das suas **Principais Consultas de Consumo de Recursos** são executadas apenas uma vez.  
   
@@ -157,7 +157,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 Esse é um resultado potencial que você pode obter em caso de carga de trabalho com consultas ad hoc:  
   
-![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
+![Captura de tela do resultado potencial que pode ser obtido em caso de carga de trabalho com consultas ad hoc.](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
 O resultado da consulta mostra que, apesar do grande número de consultas e planos no Repositório de Consultas, os respectivos query_hash e query_plan_hash, na verdade, não são diferentes. Uma taxa entre textos de consulta exclusiva e query_hash exclusivo, que é muito maior que 1, é uma indicação de que a carga de trabalho é uma boa candidata à parametrização, pois a única diferença entre as consultas é a constante literal (parâmetro) fornecida como parte do texto de consulta.  
   
@@ -199,7 +199,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 Depois de aplicar algumas dessas etapas, **Principais Consultas de Consumo de Recursos** mostrará uma imagem diferente da sua carga de trabalho.  
   
-![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![Captura de tela exibindo as Consultas com Maior Consumo de Recursos mostrando uma imagem diferente de sua carga de trabalho.](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 Em alguns casos, seu aplicativo pode gerar muitas consultas diferentes que não são boas candidatas à parametrização automática. Nesse caso, você vê um grande número de consultas no sistema, mas a taxa entre consultas exclusivas e o `query_hash` exclusivo será, provavelmente, próximo a 1.  
   

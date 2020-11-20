@@ -1,6 +1,6 @@
 ---
 title: MSSQLSERVER_53 | Microsoft Docs
-description: O cliente do SQL Server não pode se conectar ao servidor. Veja uma explicação do erro e as possíveis resoluções.
+description: O cliente do SQL Server não pode se conectar ao servidor. Confira uma explicação do erro 53 e possíveis soluções.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eb84c9bc2f1aaa213d09137141298dc9e81adc48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e38abeb865418637336b88f8e1a72380c826a8e8
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716969"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521061"
 ---
 # <a name="mssqlserver_53"></a>MSSQLSERVER_53
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

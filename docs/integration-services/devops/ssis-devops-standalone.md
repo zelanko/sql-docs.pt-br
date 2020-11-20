@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1d0e6b5fe9303269f5941ba11d231e1ca18def11
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098803"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521090"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>Ferramentas autônomas de DevOps do SSIS (SQL Server Integration Services) (versão prévia)
 
@@ -128,6 +128,12 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>Notas de versão
+
+### <a name="version-011-preview"></a>Versão 0.1.1 versão prévia
+
+Data de lançamento: 11 de novembro de 2020
+
+- Corrigido um problema de falha no SSISDeploy.exe ao carregar um assembly e implantar o ispac no catálogo do SSIS.
 
 ### <a name="version-010-preview"></a>Versão 0.1.0 Versão prévia
 
