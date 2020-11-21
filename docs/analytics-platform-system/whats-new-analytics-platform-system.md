@@ -9,17 +9,27 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5e0193fb7e749b7127d59743557e58cb049e734c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778465"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011814"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de expansão
 Veja o que há de novo nas atualizações de dispositivo mais recentes para Microsoft Analytics Platform System (APS). O APS é um dispositivo local de expansão que hospeda o MPP SQL Server paralelo data warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.7"></a>
+## <a name="aps-cu77"></a>APS CU 7.7
+Data de lançamento – novembro de 2020
+
+### <a name="scvmm2016"></a>SCVMM2016
+APS CU 7.7 software atualiza a VM do VMM para o Windows Server 2016 e instala o SCVMM2016. O SCVMM 2012 R2 que está em uso no momento tem uma data de fim de vida de julho de 2022. O SCVMM mais recente precisa ter suporte para fazer com que CU 7.7 uma atualização obrigatória. Os clientes são incentivados a atualizar para CU 7.7 assim que possível.
+
+### <a name="ssis-destination-adapter-for-sql-server-2019-as-target"></a>Adaptador de destino SSIS para SQL Server 2019 como destino
+Novo adaptador de destino SSIS APS que dá suporte a SQL Server 2019, pois o destino de implantação pode ser baixado do [site de download](https://www.microsoft.com/download/details.aspx?id=57472).
+
 <a name="h2-aps-cu7.6"></a>
 ## <a name="aps-cu76"></a>APS CU7.6
 Data de lançamento – abril de 2020
@@ -87,7 +97,7 @@ Para obter mais informações, consulte [Configurando o TLS 1.2 no APS](configur
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>Suporte à zona de criptografia do Hadoop para polybase
 O polybase agora pode se comunicar com as zonas de criptografia do Hadoop. Consulte as alterações de configuração do APS que são necessárias em [Configurar a segurança do Hadoop](polybase-configure-hadoop-security.md#encryptionzone).
 
-### <a name="insert-select-maxdop-options"></a>Inserir-selecionar opções de MAXDOP
+### <a name="insert-select-maxdop-options"></a>Opções do Insert-Select MAXDOP
 Adicionamos uma [opção de recurso](appliance-feature-switch.md) que permite que você escolha as configurações de MAXDOP maiores que 1 para operações de inserção e seleção. Agora você pode definir a configuração MAXDOP como 0, 1, 2 ou 4. O padrão é 1.
 
 > [!IMPORTANT]  
@@ -163,7 +173,7 @@ O HASH de dicas de consulta e o grupo de pedidos agora têm suporte. Para obter 
 ### <a name="feature-switch"></a>Opção de recurso
 O APS AU7 introduz a opção de recurso no [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled e DmsProcessStopMessageTimeoutInSeconds agora são opções configuráveis que podem ser alteradas por administradores.
 
-### <a name="known-issues"></a>Problemas Conhecidos
+### <a name="known-issues"></a>Problemas conhecidos
 Com o software APS AU7, é fornecida uma atualização de BIOS da Intel que corrige um problema descrito como *ataques de canal lateral de execução especulativa*. Os ataques visam explorar o que é chamado de *vulnerabilidades Spectre e Meltdown*. Embora sejam empacotados junto com o APS, a atualização do BIOS é instalada manualmente e não como parte da instalação do software APS AU7.
 
 A Microsoft aconselha todos os clientes a instalarem o BIOS atualizado. A Microsoft mediu o efeito de KVAS (sombra de endereço virtual) de kernel, KPTI (indireção de tabela de página de kernel) e IBP (mitigação de previsão de ramificação indireta) em várias cargas de trabalho do SQL em vários ambientes. As medidas encontraram uma degradação significativa em algumas cargas de trabalho. Com base nos resultados, a recomendação é que você teste o efeito de desempenho da habilitação da atualização do BIOS antes de implantá-las em um ambiente de produção. Consulte as diretrizes de SQL Server [aqui](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
