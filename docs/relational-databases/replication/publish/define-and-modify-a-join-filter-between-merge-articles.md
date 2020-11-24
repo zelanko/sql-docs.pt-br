@@ -110,7 +110,7 @@ ms.locfileid: "85898036"
   
 1.  Defina a filtragem para o artigo ao qual está sendo feita a junção, que é também conhecido como o artigo pai.  
   
-    -   Para um artigo filtrado usando um filtro de linha com parâmetros, consulte [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+    -   Para um artigo filtrado usando um filtro de linha com parâmetros, confira [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
     -   Para um artigo filtrado usando um filtro de linha estático, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   

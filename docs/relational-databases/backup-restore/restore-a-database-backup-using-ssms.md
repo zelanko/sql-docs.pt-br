@@ -27,7 +27,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 07/01/2020
 ms.locfileid: "85718013"
 ---
-# <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
+# <a name="restore-a-database-backup-using-ssms"></a>Restaurar um backup de banco de dados usando o SSMS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico explica como restaurar um backup completo do banco de dados usando o SQL Server Management Studio.    
