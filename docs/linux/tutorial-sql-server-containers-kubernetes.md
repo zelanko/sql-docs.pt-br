@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: db9b5c98bd073fcf92f7fd93a24c551f5bca0804
+ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155105"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810516"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implantar um contêiner do SQL Server no Kubernetes com o AKS (Serviços de Kubernetes do Azure)
 
@@ -66,7 +66,7 @@ Crie a senha SA no cluster Kubernetes. O Kubernetes pode gerenciar informações
 
 O comando a seguir cria uma senha para a conta SA:
 
-   ```azurecli
+   ```console
    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
@@ -111,7 +111,7 @@ Configure um [volume persistente](https://kubernetes.io/docs/concepts/storage/pe
 
 1. Crie a declaração de volume persistente no Kubernetes.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
@@ -123,7 +123,7 @@ Configure um [volume persistente](https://kubernetes.io/docs/concepts/storage/pe
 
 1. Verifique a declaração de volume persistente.
 
-   ```azurecli
+   ```console
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
@@ -131,7 +131,7 @@ Configure um [volume persistente](https://kubernetes.io/docs/concepts/storage/pe
 
    Na etapa anterior, a declaração de volume persistente é denominada `mssql-data`. Para ver os metadados sobre a declaração de volume persistente, execute o seguinte comando:
 
-   ```azurecli
+   ```console
    kubectl describe pvc mssql-data
    ```
 
@@ -145,7 +145,7 @@ Configure um [volume persistente](https://kubernetes.io/docs/concepts/storage/pe
 
 1. Verifique o volume persistente.
 
-   ```azurecli
+   ```console
    kubectl describe pv
    ```
 
@@ -244,7 +244,7 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base na imagem do
 
 1. Crie a implantação.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
@@ -265,7 +265,7 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base na imagem do
 
 1. Verifique se os serviços estão em execução. Execute o comando a seguir:
 
-   ```azurecli
+   ```console
    kubectl get services 
    ```
 
@@ -281,13 +281,13 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base na imagem do
 
 1. Confirme também se o contêiner está sendo executado como não raiz executando o seguinte comando:
 
-    ```azurecli
+    ```console
     kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
     ```
 
     em seguida, execute 'whoami' para ver o nome de usuário como mssql. Que é um usuário não raiz.
 
-    ```azurecli
+    ```console
     whoami
     ```
 
@@ -320,7 +320,7 @@ Para verificar a falha e a recuperação, exclua o pod. Execute as seguintes eta
 
 1. Listar o pod que está executando o SQL Server.
 
-   ```azurecli
+   ```console
    kubectl get pods
    ```
 
@@ -328,7 +328,7 @@ Para verificar a falha e a recuperação, exclua o pod. Execute as seguintes eta
 
 1. Excluir o pod.
 
-   ```azurecli
+   ```console
    kubectl delete pod mssql-deployment-0
    ```
 

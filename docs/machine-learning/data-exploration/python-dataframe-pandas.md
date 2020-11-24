@@ -2,19 +2,19 @@
 title: Inserir dados de uma tabela SQL em um dataframe Pandas do Python
 titleSuffix: SQL machine learning
 description: Saiba como ler dados de uma tabela SQL e inseri-los em um dataframe Pandas usando o Python.
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 549507edaeec804776e830864bc93526e22eaea0
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 041291804f6fbefe4832398b7c56b2ab97940008
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956826"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870200"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>Inserir dados de uma tabela SQL em um dataframe Pandas do Python
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ Este artigo descreve como inserir dados SQL em um dataframe [Pandas](https://pan
 ## <a name="prerequisites"></a>Pré-requisitos
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server. Para saber como instalá-lo, confira [SQL Server para Windows](../../database-engine/install-windows/install-sql-server.md) ou [para Linux](../../linux/sql-server-linux-overview.md).
+* [SQL Server para Windows](../../database-engine/install-windows/install-sql-server.md) ou [para Linux](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Banco de Dados SQL do Azure. Para saber como se inscrever, confira [Banco de Dados SQL do Azure](/azure/sql-database/sql-database-get-started-portal)
+* [Banco de Dados SQL do Azure](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Instância Gerenciada de SQL do Azure. Para saber como se inscrever, confira [Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/instance-create-quickstart).
+* [Instância Gerenciada do SQL do Azure](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) para restaurar o banco de dados de exemplo na Instância Gerenciada de SQL do Azure.
 ::: moniker-end
 
-* Azure Data Studio. Para saber como instalá-lo, confira [Azure Data Studio](../../azure-data-studio/what-is.md).
+* Azure Data Studio. Para instalá-lo, confira [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 * [Restaure o banco de dados de exemplo](../../samples/adventureworks-install-configure.md) para obter os dados de exemplo usados neste artigo.
 
@@ -62,7 +62,7 @@ Instale os seguintes pacotes do Python:
 
   1. No notebook do Azure Data Studio, selecione **Gerenciar Pacotes**.
   2. No painel **Gerenciar Pacotes**, selecione a guia **Adicionar Novo**.
-  3. Para cada pacote a seguir, insira o nome do pacote, clique em **Pesquisar**e em **Instalar**.
+  3. Para cada pacote a seguir, insira o nome do pacote, clique em **Pesquisar** e em **Instalar**.
 
 ## <a name="insert-data"></a>Inserir dados
 

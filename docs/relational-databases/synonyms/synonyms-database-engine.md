@@ -16,12 +16,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc5d297364c5f2967536f94fde15441e4e21524
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74f5c5dcf2f2e1891daca22d70ebb9d9f1d9119f
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551515"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983110"
 ---
 # <a name="synonyms-database-engine"></a>Sinônimos (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,8 +53,6 @@ Um sinônimo pertence a um esquema e, como outros objetos de um esquema, seu nom
     :::column-end:::
     :::column:::
         Função com valor de tabela de assembly (CLR)
-
-        Funções de agregação de assembly (CLR)
 
         Funções de agregação de assembly (CLR)
 
