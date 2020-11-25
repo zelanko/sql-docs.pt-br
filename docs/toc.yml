@@ -1872,15 +1872,6 @@
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
         - name: Restrições do Microsoft Edge
           href: relational-databases/tables/graph-edge-constraints.md
-          items:
-            - name: Criar
-              href: relational-databases/tables/create-edge-constraints.md
-            - name: Excluir
-              href: relational-databases/tables/delete-edge-constraint.md
-            - name: Modificar
-              href: relational-databases/tables/modify-edge-constraint.md
-            - name: Visualizar
-              href: relational-databases/tables/view-edge-constraint-properties.md
         - name: Chaves primárias
           href: relational-databases/tables/primary-and-foreign-key-constraints.md
           items:
