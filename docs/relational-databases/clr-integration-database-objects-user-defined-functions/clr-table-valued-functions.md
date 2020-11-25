@@ -1,5 +1,5 @@
 ---
-title: Funções com valor de tabela do CLR | Microsoft Docs
+title: Funções Table-Valued do CLR | Microsoft Docs
 description: Uma função com valor de tabela retorna uma tabela. No SQL Server integração CLR, você pode gravar funções com valor de tabela no código gerenciado.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca80594050e73bf20ecfd589f18a5eca43e4dbde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4295ca970e503ad1785846d63e5ed479923f4303
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727898"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125285"
 ---
 # <a name="clr-table-valued-functions"></a>Funções com valor de tabela CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "85727898"
  A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estende a funcionalidade das funções com valor de tabela permitindo definir uma função com valor de tabela em qualquer idioma gerenciado. Os dados são retornados de uma função com valor de tabela por meio de um objeto **IEnumerable** ou **IEnumerator** .  
   
 > [!NOTE]  
->  Para funções com valor de tabela, as colunas do tipo de tabela de retorno não podem incluir colunas de carimbo de data/hora ou colunas de tipo de dados de cadeia de caracteres não Unicode (como **Char**, **varchar**e **Text**). Não tem suporte para a restrição NOT NULL.  
+>  Para funções com valor de tabela, as colunas do tipo de tabela de retorno não podem incluir colunas de carimbo de data/hora ou colunas de tipo de dados de cadeia de caracteres não Unicode (como **Char**, **varchar** e **Text**). Não tem suporte para a restrição NOT NULL.  
   
- Para obter mais informações sobre funções com valor de tabela CLR, confira MSSQLTips ' [Introduction to SQL Server funções de valor de tabela CLR!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ Para obter mais informações sobre as funções Table-Valued do CLR, confira [a introdução a SQL Server funções de valor de tabela CLR!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Diferenças entre as funções com valor de tabela Transact-SQL e CLR  
  As funções com valor de tabela do [!INCLUDE[tsql](../../includes/tsql-md.md)] materializam os resultados chamando a função em uma tabela intermediária. Como elas usam uma tabela intermediária, podem dar suporte a restrições e índices exclusivos nos resultados. Esses recursos podem ser extremamente úteis quando resultados grandes são retornados.  
@@ -99,7 +99,8 @@ public class TabularEventLog
     [SqlFunction(FillRowMethodName = "FillRow")]  
     public static IEnumerable InitMethod(String logname)  
     {  
-        return new EventLog(logname).Entries;    }  
+        return new EventLog(logname).Entries;
+    }  
   
     public static void FillRow(Object obj, out SqlDateTime timeWritten, out SqlChars message, out SqlChars category, out long instanceId)  
     {  

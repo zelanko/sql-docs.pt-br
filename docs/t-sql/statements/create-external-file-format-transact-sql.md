@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255773"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947921"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ Os seguintes formatos de arquivo são compatíveis:
   
 - Texto delimitado  
   
-- RCFile do Hive  
+- RCFile do Hive – não se aplica ao Azure Synapse Analytics.
   
 - ORC do Hive
   
@@ -146,7 +146,7 @@ Especifica o formato dos dados externos.
 - ORC  
   Especifica um formato ORC (Optimized Row Columnar). Essa opção requer o Hive versão 0.11 ou superior no cluster do Hadoop externo. No Hadoop, o formato de arquivo ORC oferece melhor compactação e desempenho que o formato de arquivo RCFILE.
 
-- RCFILE (em combinação com SERDE_METHOD = *SERDE_method* ) Especifica um formato RcFile (Record Columnar file). Essa opção requer que você especifique um método SerDe (serializador e desserializador) do Hive. Esse requisito é o mesmo para usar o Hive/HiveQL no Hadoop para consultar arquivos RC. Observe que o método SerDe diferencia maiúsculas de minúsculas.
+- RCFILE (em combinação com SERDE_METHOD = *SERDE_method*) Especifica um formato RcFile (Record Columnar file). Essa opção requer que você especifique um método SerDe (serializador e desserializador) do Hive. Esse requisito é o mesmo para usar o Hive/HiveQL no Hadoop para consultar arquivos RC. Observe que o método SerDe diferencia maiúsculas de minúsculas.
 
   Exemplos de especificação de RCFile com os dois métodos SerDe compatíveis com o PolyBase.
 
@@ -257,7 +257,7 @@ Especifica um formato personalizado para todos os dados de data e hora que podem
   
 Observações sobre a tabela:  
   
--   Ano, mês e dia podem ter uma variedade de formatos e ordens. A tabela mostra apenas o formato **amd** . Mês pode ter um ou dois dígitos, ou três caracteres. Dia pode ter um ou dois dígitos. Ano pode ter dois ou quatro dígitos.
+-   Ano, mês e dia podem ter uma variedade de formatos e ordens. A tabela mostra apenas o formato **amd**. Mês pode ter um ou dois dígitos, ou três caracteres. Dia pode ter um ou dois dígitos. Ano pode ter dois ou quatro dígitos.
   
 -   Milissegundos (fffffff) não são necessários.
   

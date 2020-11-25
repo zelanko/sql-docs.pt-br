@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195800"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129426"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalação e configuração do Master Data Services
 
@@ -80,7 +80,7 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
   
 6.  Na página **Tipo de Instalação** do **Assistente para Adicionar Funções e Recursos**, aceite o valor padrão (**Instalação baseada em função ou em recurso**) e clique em **Avançar**.  
   
-7.  Clique em **Selecionar um servidor no pool de servidores**e clique no servidor em que você instalou o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+7.  Clique em **Selecionar um servidor no pool de servidores** e clique no servidor em que você instalou o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
      ![mds_AddRolesFeaturesWizard_ServerSelectionPage](../master-data-services/media/mds-addrolesfeatureswizard-serverselectionpage.png) 
   
@@ -126,13 +126,13 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
   
 1.  Inicie o [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]e clique em **Configuração do Banco de Dados** no painel esquerdo.  
   
-2.  Clique em **Criar Banco de Dados**e em **Avançar** no **Assistente para Criar Banco de Dados**.  
+2.  Clique em **Criar Banco de Dados** e em **Avançar** no **Assistente para Criar Banco de Dados**.  
   
 3.  Na página **servidor de banco de dados** , especifique a instância de SQL Server. 
 
     >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Adiciona suporte para SQL Server Instância Gerenciada. Defina o valor de **SQL Server instância** como o host da instância gerenciada. Por exemplo, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Selecione o **tipo de autenticação** e clique em **testar conexão** para confirmar que você pode se conectar ao banco de dados usando as credenciais para o tipo de autenticação selecionado. Clique em **Avançar**.
+4. Selecione o **tipo de autenticação** e clique em **testar conexão** para confirmar que você pode se conectar ao banco de dados usando as credenciais para o tipo de autenticação selecionado. Clique em **Próximo**.
 
     >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] o, para se conectar à instância gerenciada, use um dos seguintes tipos de autenticação:
     >
@@ -146,7 +146,7 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Digite um nome no campo **Nome do banco de dados** . Opcionalmente, para selecionar uma ordenação do Windows, desmarque a caixa de seleção **Ordenação padrão do SQL Server** e clique em uma ou mais das opções disponíveis como **Diferenciar maiúsculas de minúsculas**. Clique em **Avançar**.
+4.  Digite um nome no campo **Nome do banco de dados** . Opcionalmente, para selecionar uma ordenação do Windows, desmarque a caixa de seleção **Ordenação padrão do SQL Server** e clique em uma ou mais das opções disponíveis como **Diferenciar maiúsculas de minúsculas**. Clique em **Próximo**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -174,7 +174,7 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
   
 9. Em [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], clique em **Configuração da Web** no painel esquerdo.  
   
-10. Na caixa de listagem **Site** , clique em **Site Padrão**e em **Criar** para criar um aplicativo Web.  
+10. Na caixa de listagem **Site** , clique em **Site Padrão** e em **Criar** para criar um aplicativo Web.  
   
     > [!NOTE]  
     >  Quando você seleciona **Site Padrão**, é necessário criar um aplicativo Web. Se você selecionar **Criar novo site** na caixa de listagem, o aplicativo será criado automaticamente.  
@@ -194,6 +194,9 @@ Se você estiver interessado em fazer alterações na instalação do [!INCLUDE[
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      Para obter mais informações sobre a caixa de diálogo **Criar Aplicativo Web**, consulte [Caixa de diálogo Criar Aplicativo Web &#40;Gerenciador de Configuração do Master Data Services&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
+
+    > [!NOTE] 
+    >  Se o seu domínio implementar a [Associação de canal ldap 2020 e os requisitos de assinatura LDAP para o Windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). Você verá o problema "as credenciais não puderam ser verificadas no Active Directory". Quando você usa a conta de domínio para criar o pool de aplicativos. Para solução alternativa, em vez de usuário de domínio, use um **usuário do computador local**. Isso pode ignorar a verificação de credenciais com Active Directory. Depois de criar o aplicativo Web, você pode alterar a identidade para o usuário do domínio no **Gerenciador do serviços de informações da Internet (IIS)**.
   
 12. Na página **Configuração da Web** da caixa **Aplicativo Web** , clique no aplicativo criado e em **Selecionar** na seção  **Associar Aplicativo ao Banco de Dados** .  
   

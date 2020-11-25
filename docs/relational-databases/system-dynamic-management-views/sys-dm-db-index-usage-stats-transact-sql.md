@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_usage_stats (Transact-SQL)
-title: sys. dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b61a4f897aeebdc50d4ae173488b1fbbc6e8a72c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 772d4ec17e2dd2a5789f324f4ce26cbb219a1aa7
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548924"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96128779"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "89548924"
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, todas as linhas que contêm dados que não pertencem ao locatário conectado serão filtradas.  
   
 > [!NOTE]  
->  **Sys. dm_db_index_usage_stats** não retorna informações sobre índices com otimização de memória. Para obter informações sobre o uso de índice com otimização de memória, consulte [Sys. dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+>  **Sys.dm_db_index_usage_stats** não retorna informações sobre índices com otimização de memória ou índices espaciais. Para obter informações sobre o uso de índice com otimização de memória, consulte [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Para chamar essa exibição de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use **Sys. dm_pdw_nodes_db_index_usage_stats**.  
+>  Para chamar essa exibição de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use **Sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "89548924"
   
  Quando um índice é usado, uma linha é adicionada a **sys.dm_db_index_usage_stats** se já não existir uma para ele. Quando a linha é adicionada, seus contadores são definidos como zero inicialmente.  
   
- Durante a atualização para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , as entradas em sys. dm_db_index_usage_stats são removidas. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , as entradas são retidas como estavam antes do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+ Durante a atualização para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , as entradas em sys.dm_db_index_usage_stats são removidas. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , as entradas são retidas como estavam antes do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
 ## <a name="permissions"></a>Permissões  
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   

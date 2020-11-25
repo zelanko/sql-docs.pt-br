@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 155ff6d21fdb0a40e042463b809c1ed14bbe70df
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458142"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983155"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQLServer, Objeto Batch Resp Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,9 @@ Cada contador no objeto contém as seguintes instâncias:
   
 |Item|Descrição|  
 |----------|-----------------|  
-|**Tempo de CPU:Solicitações**|O tempo de CPU gasto na solicitação.|  
+|**Tempo de CPU:Solicitações**|O número de solicitações com base no tempo de CPU.|  
 |**Tempo de CPU:Total(ms)**|O tempo total de CPU gasto no lote.|  
-|**Tempo Decorrido:Solicitações**|O tempo decorrido da solicitação.|  
+|**Tempo Decorrido:Solicitações**|O número de solicitações com base no tempo decorrido.|  
 |**Tempo Decorrido:Total(ms)**|O tempo decorrido do lote.|  
 
 ## <a name="see-also"></a>Consulte Também
