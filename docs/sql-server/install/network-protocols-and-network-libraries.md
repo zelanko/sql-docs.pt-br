@@ -19,14 +19,14 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5fafee4f77a665f9409f5b7b6d1a4359765ed3ba
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880448"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127514"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de rede e bibliotecas de rede
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85880448"
   
 #### <a name="to-disable-smb"></a>Para desabilitar o SMB  
   
-1.  No menu **Iniciar** , aponte para **Configurações**e clique em **Conexões Discadas e de Rede**.  
+1.  No menu **Iniciar** , aponte para **Configurações** e clique em **Conexões Discadas e de Rede**.  
   
      Clique com o botão direito do mouse na conexão com a Internet e clique em **Propriedades**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "85880448"
   
 3.  Siga as etapas de desinstalação.  
   
-4.  Selecione **Compartilhamento arquivos/impressoras p/ redes Microsoft**e clique em **Desinstalar**.  
+4.  Selecione **Compartilhamento arquivos/impressoras p/ redes Microsoft** e clique em **Desinstalar**.  
   
 5.  Siga as etapas de desinstalação.  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 336822b6ad2ff420c987e42c033e2efae20c2536
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894902"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127542"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar um computador multihomed para acesso ao SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85894902"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>Para determinar os endereços IP e as portas usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Clique em **Iniciar**, escolha **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
+1.  Clique em **Iniciar**, escolha **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], para **Ferramentas de Configuração** e clique em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
   
 2.  No **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, no painel do console, expanda **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuração de Rede**, expanda **Protocolos para \<instance name>** e clique duas vezes em **TCP/IP**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85894902"
   
 1.  No computador no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, faça logon como um administrador.  
   
-2.  Clique em **Iniciar**, em **Executar**, digite **wf.msc**e clique em **OK**.  
+2.  Clique em **Iniciar**, em **Executar**, digite **wf.msc** e clique em **OK**.  
   
 3.  Na caixa de diálogo **Controle de Conta de Usuário** , clique em **Continuar** para usar as credenciais de Administrador para abrir o snap-in Firewall do Windows com Segurança Avançada.  
   
@@ -95,22 +95,22 @@ ms.locfileid: "85894902"
   
 5.  No painel esquerdo, clique em **Regras de Entrada**.  
   
-6.  Clique com o botão direito do mouse em **Regras de Entrada**e clique em **Nova Regra** para abrir o **Assistente para Nova Regra de Entrada**.  
+6.  Clique com o botão direito do mouse em **Regras de Entrada** e clique em **Nova Regra** para abrir o **Assistente para Nova Regra de Entrada**.  
   
-7.  Você pode criar uma regra para o programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No entanto, como este exemplo usa uma porta fixa, selecione **Porta**e clique em **Avançar**.  
+7.  Você pode criar uma regra para o programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No entanto, como este exemplo usa uma porta fixa, selecione **Porta** e clique em **Avançar**.  
   
 8.  Na página **Protocolos e Portas** , selecione **TCP**.  
   
 9. Selecione **Portas locais especificadas**. Digite os números das portas separados por vírgulas e clique em **Avançar**. Neste exemplo, você configurará a porta padrão; portanto, digite **1433**.  
   
-10. Na página **Ação** , examine as opções. Neste exemplo, você não está usando o firewall para forçar conexões seguras. Portanto, clique em **Permitir a conexão**e clique em **Avançar**.  
+10. Na página **Ação** , examine as opções. Neste exemplo, você não está usando o firewall para forçar conexões seguras. Portanto, clique em **Permitir a conexão** e clique em **Avançar**.  
   
     > [!NOTE]  
     >  Seu ambiente pode exigir conexões seguras. Se você selecionar uma das opções de conexões seguras, poderá ser necessário configurar um certificado e a opção **Forçar Criptografia** . Para obter mais informações sobre conexões seguras, veja [Habilitar conexões criptografadas com o Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) e [Habilitar conexões criptografadas com o Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 11. Na página **Perfil** , selecione um ou mais perfis para a regra. Se você não estiver familiarizado com os perfis de firewall, clique no link **Saber mais sobre perfis** no programa de firewall.  
   
-    -   Se o computador for um servidor e estiver disponível apenas quando está conectado a um domínio, seleciona **Domínio**e clique em **Avançar**.  
+    -   Se o computador for um servidor e estiver disponível apenas quando está conectado a um domínio, seleciona **Domínio** e clique em **Avançar**.  
   
     -   Se o computador for um computador móvel (por exemplo um laptop), ele provavelmente usará vários perfis ao conectar-se a diferentes redes. Em um computador móvel, você pode configurar recursos de acesso diferentes para perfis diferentes. Por exemplo, você pode permitir acesso quando o computador usa o perfil Domínio mas não permitir acesso quando ele usa o perfil Público.  
   
@@ -126,17 +126,17 @@ ms.locfileid: "85894902"
   
 2.  Na caixa de diálogo **Propriedades da Regra** , selecione a guia **Escopo** .  
   
-3.  Na área **Endereço IP Local** , selecione **Estes endereços IP**e clique em **Adicionar**.  
+3.  Na área **Endereço IP Local** , selecione **Estes endereços IP** e clique em **Adicionar**.  
   
-4.  Na caixa de diálogo **Endereço IP** , selecione **Este endereço IP ou sub-rede**e digite um dos endereços IP a ser configurado.  
+4.  Na caixa de diálogo **Endereço IP** , selecione **Este endereço IP ou sub-rede** e digite um dos endereços IP a ser configurado.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  Na área **Endereço IP Remoto** , selecione **Estes endereços IP**e clique em **Adicionar**.  
+6.  Na área **Endereço IP Remoto** , selecione **Estes endereços IP** e clique em **Adicionar**.  
   
 7.  Use a caixa de diálogo **Endereço IP** para configurar a conectividade para o endereço IP selecionado no computador. É possível habilitar conexões de endereços IP especificados, intervalos de endereços IP, sub-redes inteiras ou de certos computadores. Para configurar essa opção corretamente, você deve ter um bom entendimento da rede. Para obter informações sobre a rede, consulte o administrador da rede.  
   
-8.  Para fechar a caixa de diálogo **Endereço IP** , clique em **OK**e em **OK** novamente para fechar a caixa de diálogo **Propriedades da Regra** .  
+8.  Para fechar a caixa de diálogo **Endereço IP** , clique em **OK** e em **OK** novamente para fechar a caixa de diálogo **Propriedades da Regra** .  
   
 9. Para configurar os outros endereços IP em um computador multihomed, repita esse procedimento usando outro endereço IP e outra regra.  
   

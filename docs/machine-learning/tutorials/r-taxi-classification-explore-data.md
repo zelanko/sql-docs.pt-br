@@ -11,10 +11,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92412540"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>Tutorial do R: Explorar e visualizar dados
@@ -51,7 +51,7 @@ Na [parte cinco](r-taxi-classification-deploy-model.md), você aprenderá a oper
 
 Em geral, o desenvolvimento de uma solução de ciência de dados inclui intensiva exploração e visualização de dados. Primeiro, reserve um minuto para examinar os dados de exemplo se você ainda não fez isso.
 
-No conjunto de dados público original, os identificadores de táxi e os registros de corrida eram fornecidos em arquivos separados. No entanto, para facilitar o uso dos dados de exemplo, os dois conjuntos de dados originais foram unidos nas colunas _medallion_ , _hack\_license_ e _pickup\_datetime_.  Também foram obtidas amostras dos registros para que fosse obtido apenas 1% do número original de registros. O conjunto de dados resultante com redução da resolução tem 1.703.957 linhas e 23 colunas.
+No conjunto de dados público original, os identificadores de táxi e os registros de corrida eram fornecidos em arquivos separados. No entanto, para facilitar o uso dos dados de exemplo, os dois conjuntos de dados originais foram unidos nas colunas _medallion_, _hack\_license_ e _pickup\_datetime_.  Também foram obtidas amostras dos registros para que fosse obtido apenas 1% do número original de registros. O conjunto de dados resultante com redução da resolução tem 1.703.957 linhas e 23 colunas.
 
 **Identificadores de táxi**
   
@@ -69,7 +69,7 @@ No conjunto de dados público original, os identificadores de táxi e os registr
   
   Este passo a passo demonstra apenas a tarefa de classificação binária; sinta-se à vontade para tentar criar modelos para as outras duas tarefas de aprendizado de máquina, regressão e classificação de várias classes.
   
-+ Os valores usados para as colunas de rótulo se baseiam na coluna _tip\_amount_ , usando estas regras de negócio:
++ Os valores usados para as colunas de rótulo se baseiam na coluna _tip\_amount_, usando estas regras de negócio:
   
   |Nome de coluna derivada|Regra|
   |-|-|
@@ -150,7 +150,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
 
    Pressione ENTER em cada prompt para aceitar os padrões, exceto para essas alterações:
 
-   + Em **comprimento do prefixo de gráfico do campo** , digite 0.
+   + Em **comprimento do prefixo de gráfico do campo**, digite 0.
   
    + Digite **Y** se você desejar salvar os parâmetros de saída para reutilização posterior.
   

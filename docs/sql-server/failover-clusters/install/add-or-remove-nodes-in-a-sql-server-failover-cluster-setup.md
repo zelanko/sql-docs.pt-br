@@ -16,14 +16,14 @@ helpviewer_keywords:
 - cluster maintenance [SQL Server]
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a560f2d421675b3e01e8c1350b37112187dc3aa8
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5c65c099af7ffc6346aaf0e73a26c5ee7e16f7ce
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988562"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121314"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Adicionar ou remover nós em uma instância de cluster de failover (instalação)
 

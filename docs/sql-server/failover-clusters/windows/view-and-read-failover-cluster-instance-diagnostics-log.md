@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4a4d15d2a1475acfc5c4924e68a60b48f698c4ae
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364699"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127571"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Exibir e ler o log de diagnóstico da instância do cluster de failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Todos os erros críticos e eventos de aviso para a DLL de Recursos do SQL Server são gravados no log de eventos do Windows. Um log em execução das informações de diagnóstico específicas do SQL Server é capturado pelo procedimento armazenado do sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) e gravado nos arquivos de log de diagnóstico do cluster de failover do SQL Server (também conhecidos como logs *SQLDIAG* ).  
+  Todos os erros críticos e eventos de aviso para a DLL de Recursos do SQL Server são gravados no log de eventos do Windows. Um log em execução das informações de diagnóstico específicas do SQL Server é capturado pelo procedimento armazenado do sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) e gravado nos arquivos de log de diagnóstico do cluster de failover do SQL Server (também conhecidos como logs *SQLDIAG*).  
   
 -   **Antes de começar:**  [Recomendações](#Recommendations), [Segurança](#Security)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "93364699"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para exibir os arquivos de log de diagnóstico:**  
   
-1.  No menu **Arquivo** , selecione **Abrir** , **Arquivo** e escolha o arquivo de log de diagnóstico a ser exibido.  
+1.  No menu **Arquivo** , selecione **Abrir**, **Arquivo** e escolha o arquivo de log de diagnóstico a ser exibido.  
   
 2.  Os eventos são exibidos como linhas no painel direito e, por padrão, **nome** e **carimbo de data/hora** são as únicas duas colunas exibidas.  
   
@@ -94,7 +94,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Para obter um exemplo desse procedimento, veja [Exemplo (Transact-SQL)](#TsqlExample), mais adiante nesta seção.  
   
- Usando a instrução DDL (Linguagem de Definição de Dados), **ALTER SERVER CONFIGURATION** , você pode iniciar ou parar o registro em log dos dados de diagnóstico capturados pelo procedimento [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), além de definir os parâmetros de configuração do log SQLDIAG, como a contagem de substituições de arquivos de log, o tamanho do arquivo de log e o local do arquivo. Para obter detalhes da sintaxe, consulte [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
+ Usando a instrução DDL (Linguagem de Definição de Dados), **ALTER SERVER CONFIGURATION**, você pode iniciar ou parar o registro em log dos dados de diagnóstico capturados pelo procedimento [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), além de definir os parâmetros de configuração do log SQLDIAG, como a contagem de substituições de arquivos de log, o tamanho do arquivo de log e o local do arquivo. Para obter detalhes da sintaxe, consulte [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
 ###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Exemplos (Transact-SQL)  
   

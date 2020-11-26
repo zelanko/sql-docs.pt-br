@@ -12,14 +12,14 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d900bbc6b8183e4a903886878cf61ce68ac39573
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895138"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127519"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuração de modos de quorum WSFC e votação (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85895138"
 ##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> Detecção de integridade de cluster por quorum  
  Cada nó em um cluster do WSFC participa da comunicação de pulsação periódica para compartilhar o status de integridade do nó com os outros nós. Nós sem resposta são considerados como em estado com falha.  
   
- Um conjunto de nós de *quorum* é uma maioria dos nós de votação e testemunhas no cluster WSFC. A integridade geral e o status de um cluster WSFC são determinados por um *voto de quorum*periódico.  A presença de um quorum significa que o cluster está íntegro e é capaz de fornecer tolerância a falhas no nível de nó.  
+ Um conjunto de nós de *quorum* é uma maioria dos nós de votação e testemunhas no cluster WSFC. A integridade geral e o status de um cluster WSFC são determinados por um *voto de quorum* periódico.  A presença de um quorum significa que o cluster está íntegro e é capaz de fornecer tolerância a falhas no nível de nó.  
   
  A ausência de um quorum indica que o cluster não está íntegro.  A integridade do cluster WSFC geral deve ser mantida para assegurar que os nós secundários de integridade estejam disponíveis para nós primários para failover.  Se o voto de quorum falhar, o cluster WSFC será definido offline por precaução.  Isso também fará com que todas as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registradas com o cluster sejam interrompidas.  
   

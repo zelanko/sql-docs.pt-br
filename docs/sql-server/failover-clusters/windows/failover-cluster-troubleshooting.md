@@ -12,14 +12,14 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 75090ce180ff6e71796c9363e39768f09ec3f91b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988282"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121096"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Diagnóstico e solução de problemas do cluster de failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -93,7 +93,7 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
   
  **Resolução 1**: verifique nos logs de eventos se existem sinais de problemas de rede, como falhas de adaptador ou problemas de DNS. Verifique se você consegue executar ping no controlador de domínio.  
   
- **Problema 2: as senhas da conta de serviço do ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não são idênticas em todos os nós do cluster ou o nó não reinicia um serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] migrado de um nó com falha.  
+ **Problema 2: as senhas da conta de serviço do** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não são idênticas em todos os nós do cluster ou o nó não reinicia um serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] migrado de um nó com falha.  
   
  **Resolução 2:** altere as senhas das contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager. Se você não fizer isso e alterar as senhas de contas de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um nó, também deverá alterar as senhas em todos os outros nós. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager faz isso automaticamente.  
   
@@ -168,11 +168,11 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
   
  Para habilitar completamente o MS DTC, use as seguintes etapas:  
   
-1.  No Painel de Controle, abra **Ferramentas Administrativas**e **Gerenciamento do Computador**.  
+1.  No Painel de Controle, abra **Ferramentas Administrativas** e **Gerenciamento do Computador**.  
   
-2.  No painel da esquerda do Gerenciamento do Computador, expanda **Serviços e Aplicativos**e clique em **Serviços**.  
+2.  No painel da esquerda do Gerenciamento do Computador, expanda **Serviços e Aplicativos** e clique em **Serviços**.  
   
-3.  No painel direito do Gerenciamento do Computador, clique com o botão direito do mouse em **Coordenador de Transações Distribuídas**e selecione **Propriedades**.  
+3.  No painel direito do Gerenciamento do Computador, clique com o botão direito do mouse em **Coordenador de Transações Distribuídas** e selecione **Propriedades**.  
   
 4.  Na janela **Coordenador de Transações Distribuídas** , clique na guia **Geral** e clique em **Parar** para interromper o serviço.  
   

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1459c50d87f2f7ccc58e20bd7e21d27ace700f66
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497665"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120875"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
