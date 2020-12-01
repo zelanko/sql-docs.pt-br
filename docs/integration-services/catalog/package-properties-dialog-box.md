@@ -15,10 +15,10 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2294c3b934aaef7691849b34f53cc6f4dc76d28d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88351522"
 ---
 # <a name="package-properties-dialog-box"></a>Caixa de diálogo Propriedades do Pacote

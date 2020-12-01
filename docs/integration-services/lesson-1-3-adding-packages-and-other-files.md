@@ -12,10 +12,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449699"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lição 1-3 – adicionar pacotes e outros arquivos
@@ -48,15 +48,15 @@ Na próxima tarefa, você adicionará configurações aos pacotes DataTransfer e
   
 ### <a name="to-add-packages-to-the-deployment-tutorial-project"></a>Para adicionar pacotes ao projeto do Tutorial de Implantação  
   
-1.  Se o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ainda não estiver aberto, clique em **Iniciar**, aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**e clique em **SQL Server Data Tools**.  
+1.  Se o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ainda não estiver aberto, clique em **Iniciar**, aponte para **Todos os Programas**, aponte para **Microsoft SQL Server** e clique em **SQL Server Data Tools**.  
   
-2.  No menu **Arquivo** , clique em **Abrir**, em **Projeto/Solução**, clique na pasta **Tutorial de Implantação** , clique em **Abrir**e clique duas vezes em **Deployment Tutorial.sln**.  
+2.  No menu **Arquivo** , clique em **Abrir**, em **Projeto/Solução**, clique na pasta **Tutorial de Implantação** , clique em **Abrir** e clique duas vezes em **Deployment Tutorial.sln**.  
   
-3.  No Gerenciador de Soluções, clique com o botão direito do mouse no Tutorial de Implantação, clique em **Adicionar**e em **Pacote Existente**.  
+3.  No Gerenciador de Soluções, clique com o botão direito do mouse no Tutorial de Implantação, clique em **Adicionar** e em **Pacote Existente**.  
   
 4.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de Arquivos**.  
   
-5.  Clique no botão Procurar **(…)** , vá para C:\Arquivos de Programas\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, selecione **DataTransfer.dtsx**e clique em **Abrir**.  
+5.  Clique no botão Procurar **(…)** , vá para C:\Arquivos de Programas\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, selecione **DataTransfer.dtsx** e clique em **Abrir**.  
   
 6.  Clique em **OK**.  
   
@@ -64,7 +64,7 @@ Na próxima tarefa, você adicionará configurações aos pacotes DataTransfer e
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>Para adicionar arquivos auxiliares ao projeto do Tutorial de Implantação  
   
-1.  No Gerenciador de Soluções, clique com o botão direito do mouse no Tutorial de Implantação, clique em **Adicionar**e em **Item Existente**.  
+1.  No Gerenciador de Soluções, clique com o botão direito do mouse no Tutorial de Implantação, clique em **Adicionar** e em **Item Existente**.  
   
 2.  Na caixa de diálogo **Adicionar Item Existente – Tutorial de Implantação** , vá para C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data, selecione orders.xml, orders.xsd e NewCustomers.txt e clique em **Adicionar**.  
   

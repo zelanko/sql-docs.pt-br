@@ -26,10 +26,10 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d476bd87096a68be5154cb57563f08ad982e7d3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425318"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Referenciando outros assemblies em soluções de script

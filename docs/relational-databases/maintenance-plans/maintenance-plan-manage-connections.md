@@ -14,10 +14,10 @@ ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ce9ac0469125a6077799e5bab0a69cdc1d06d82b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420830"
 ---
 # <a name="maintenance-plan-manage-connections"></a>Plano de manutenção (Gerenciar Conexões)

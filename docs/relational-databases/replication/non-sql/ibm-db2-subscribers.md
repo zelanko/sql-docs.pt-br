@@ -18,10 +18,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327062"
 ---
 # <a name="ibm-db2-subscribers"></a>Assinantes do IBM DB2
@@ -42,7 +42,7 @@ ms.locfileid: "88327062"
   
 2.  Crie uma cadeia de conexão para o Assinante. A cadeia de conexão pode ser criada em qualquer editor de texto, mas recomendamos que você use o Data Access Tool. Para criar a cadeia de caracteres no Data Access Tool:  
   
-    1.  Clique em **Iniciar**, **Programas**, **Microsoft OLE DB Provider para DB2**e, então, **Data Access Tool**.  
+    1.  Clique em **Iniciar**, **Programas**, **Microsoft OLE DB Provider para DB2** e, então, **Data Access Tool**.  
   
     2.  No **Data Access Tool**, siga as etapas para prover informações sobre o servidor de DB2. Quando você concluir a ferramenta, um UDL (vínculo de dados universal) é criado com uma cadeia de conexão associada (o UDL não é usado de fato pela replicação, mas a cadeia de conexão é).  
   

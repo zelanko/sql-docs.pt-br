@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408112"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices em colunas computadas
@@ -95,9 +95,9 @@ A propriedade **IsPrecise** da função COLUMNPROPERTY relata se uma *computed_c
 
 ## <a name="data-type-requirements"></a>Requisitos de tipo de dados
   
--   A *computed_column_expression* definida para a coluna computada não pode ser avaliada para os tipos de dados **text**, **ntext**ou **image** .  
+-   A *computed_column_expression* definida para a coluna computada não pode ser avaliada para os tipos de dados **text**, **ntext** ou **image** .  
 -   Colunas computadas derivadas dos tipos de dados **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** podem ser indexadas, desde que o tipo de dados da coluna computada seja permitido como uma coluna de chave de índice.  
--   Colunas computadas derivadas dos tipos de dados **image**, **ntext**e **text** podem ser colunas (incluídas) não chave em um índice não clusterizado, desde que o tipo de dados da coluna computada seja permitida como uma coluna de índice não chave.  
+-   Colunas computadas derivadas dos tipos de dados **image**, **ntext** e **text** podem ser colunas (incluídas) não chave em um índice não clusterizado, desde que o tipo de dados da coluna computada seja permitida como uma coluna de índice não chave.  
 
 
 ## <a name="set-option-requirements"></a>Requisitos de opção SET

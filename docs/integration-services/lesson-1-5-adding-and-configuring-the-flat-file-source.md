@@ -12,10 +12,10 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cfc6ffa21bf3f6c1205b1c9c667cc6e75868cece
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88390862"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lição 1-5: Adicionar e configurar a fonte de Arquivo Simples
@@ -31,9 +31,9 @@ Para esta tarefa, configure a fonte de arquivo simples para usar o gerenciador d
   
 1.  Para abrir o designer de **Fluxo de Dados**, seja clicando duas vezes na tarefa de fluxo de dados **Extrair Dados de Moeda de Exemplo** ou clicando na guia **Fluxo de Dados**.  
   
-2.  Na **Caixa de Ferramentas do SSIS**, expanda **Outras Fontes**e arraste uma **Fonte de Arquivo Simples** até a superfície de design da guia **Fluxo de Dados** .  
+2.  Na **Caixa de Ferramentas do SSIS**, expanda **Outras Fontes** e arraste uma **Fonte de Arquivo Simples** até a superfície de design da guia **Fluxo de Dados** .  
   
-3.  Na superfície de design **Fluxo de Dados**, clique com o botão direito do mouse na **Fonte de Arquivo Simples** recém-adicionada, selecione **Renomear**e altere o nome para **Extrair Dados de Moeda de Exemplo**.  
+3.  Na superfície de design **Fluxo de Dados**, clique com o botão direito do mouse na **Fonte de Arquivo Simples** recém-adicionada, selecione **Renomear** e altere o nome para **Extrair Dados de Moeda de Exemplo**.  
   
 4.  Clique duas vezes na Fonte de Arquivo Simples para abrir a caixa de diálogo **Editor da Fonte de Arquivo Simples**.  
   

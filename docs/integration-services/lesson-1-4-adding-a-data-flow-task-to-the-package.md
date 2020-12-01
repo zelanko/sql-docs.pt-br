@@ -12,10 +12,10 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4d920b5f78d2d3e6dd3e557cbac4e50ad7952884
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449644"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Lição 1-4: Adicionar uma tarefa de Fluxo de Dados ao pacote

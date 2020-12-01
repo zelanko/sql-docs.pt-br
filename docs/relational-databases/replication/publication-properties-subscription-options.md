@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420490"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriedades da Publicação, Opções de Assinatura
@@ -66,7 +66,7 @@ ms.locfileid: "88420490"
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se deve haver permissão para que os arquivos de backup sejam usados para inicializar assinaturas. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Permitir Assinantes não SQL Server**  
- Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação é compatível com não assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A definição dessa opção como **True** define outras propriedades da publicação como compatíveis com não assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se houver assinaturas, essa opção será somente leitura; ela não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata**, **Permitir assinaturas de atualização enfileirada**ou **Permitir assinaturas ponto a ponto** forem definidas como **Verdadeiro**. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação é compatível com não assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A definição dessa opção como **True** define outras propriedades da publicação como compatíveis com não assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se houver assinaturas, essa opção será somente leitura; ela não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata**, **Permitir assinaturas de atualização enfileirada** ou **Permitir assinaturas ponto a ponto** forem definidas como **Verdadeiro**. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformação de dados  
  **Permitir transformações de dados**  
@@ -77,7 +77,7 @@ ms.locfileid: "88420490"
   
 ### <a name="peer-to-peer-replication"></a>Replicação ponto a ponto  
  **Permitir assinaturas ponto a ponto**  
- Aplica-se apenas ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação oferece suporte a replicação ponto a ponto. Definir essa opção como **Verdadeiro** define outras propriedades de publicação para dar suporte a replicação ponto a ponto. Essa opção será somente leitura se existirem assinaturas. Essa opção não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata** , **Permitir assinaturas de atualização enfileirada**ou **Permitir Assinantes não SQL Server** for definida como **Verdadeiro**. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+ Aplica-se apenas ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação oferece suporte a replicação ponto a ponto. Definir essa opção como **Verdadeiro** define outras propriedades de publicação para dar suporte a replicação ponto a ponto. Essa opção será somente leitura se existirem assinaturas. Essa opção não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata** , **Permitir assinaturas de atualização enfileirada** ou **Permitir Assinantes não SQL Server** for definida como **Verdadeiro**. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Permitir a detecção de conflitos ponto a ponto**  
  Aplica-se apenas ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores. Especifica se a detecção de conflito está habilitada para esta publicação. Para usar detecção de conflito, todos os nós devem ser executados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou uma versão posterior, e a detecção deve estar habilitada para todos os nós. Para usar a detecção de conflitos, você também deve especificar um valor para **Identificação do originador do par**. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  

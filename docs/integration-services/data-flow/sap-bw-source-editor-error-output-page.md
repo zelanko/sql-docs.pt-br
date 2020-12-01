@@ -14,10 +14,10 @@ ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85da6a04026b7ae9b0db9a7c22cdb926c6afbd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430718"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Editor de Origem de SAP BW (página Saída de Erro)

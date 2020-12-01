@@ -14,10 +14,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425598"
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
@@ -73,19 +73,19 @@ ms.locfileid: "88425598"
   
 3.  Na janela **Variáveis** , crie as variáveis que conterão o conjunto de registros e os valores de coluna da linha atual:  
   
-    1.  Crie uma variável denominada **BonusRecordset**e defina seu tipo como **Object**.  
+    1.  Crie uma variável denominada **BonusRecordset** e defina seu tipo como **Object**.  
   
          A variável **BonusRecordset** contém o conjunto de registros.  
   
-    2.  Crie uma variável denominada **EmailAddress**e defina seu tipo como **String**.  
+    2.  Crie uma variável denominada **EmailAddress** e defina seu tipo como **String**.  
   
          A variável **EmailAddress** contém o endereço de email do vendedor.  
   
-    3.  Crie uma variável denominada **FirstName**e defina seu tipo como **String**.  
+    3.  Crie uma variável denominada **FirstName** e defina seu tipo como **String**.  
   
          A variável **FirstName** contém o nome do vendedor.  
   
-    4.  Crie uma variável denominada **Bonus**e defina seu tipo como **Double**.  
+    4.  Crie uma variável denominada **Bonus** e defina seu tipo como **Double**.  
   
          A variável **Bonus** contém o valor do bônus do vendedor.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "88425598"
   
 4.  Na guia **Fluxo de Dados** , adicione um destino do Conjunto de Registros e conecte o destino após a fonte OLE DB.  
   
-5.  Abra o **Editor de Destino do Conjunto de Registros**e defina o destino com as seguintes configurações:  
+5.  Abra o **Editor de Destino do Conjunto de Registros** e defina o destino com as seguintes configurações:  
   
     1.  Na guia **Propriedades do Componente** , para a propriedade **VariableName** , selecione **User::BonusRecordset**.  
   
@@ -134,15 +134,15 @@ ms.locfileid: "88425598"
   
 1.  Na guia **Fluxo de Controle** do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, adicione um contêiner Loop Foreach e conecte esse contêiner após a tarefa de fluxo de dados.  
   
-2.  Abra o **Editor de Loop Foreach**e defina o contêiner com as seguintes configurações:  
+2.  Abra o **Editor de Loop Foreach** e defina o contêiner com as seguintes configurações:  
   
-    1.  Na página **Coleção** , para **Enumerador**, selecione **Enumerador ADO Foreach**e, para **Variável de origem do objeto ADO**, selecione **User::BonusRecordset**.  
+    1.  Na página **Coleção** , para **Enumerador**, selecione **Enumerador ADO Foreach** e, para **Variável de origem do objeto ADO**, selecione **User::BonusRecordset**.  
   
     2.  Na página **Mapeamentos de Variáveis** , mapeia **User::EmailAddress** para índice 0, **User::FirstName** para índice 1 e **User::Bonus** para índice 2.  
   
 3.  Na guia **Fluxo de Controle** , dentro do contêiner Loop Foreach, adicione uma tarefa Enviar Email.  
   
-4.  Abra o **Editor da Tarefa Enviar Email**e, na página **Email** , defina a tarefa com as seguintes configurações:  
+4.  Abra o **Editor da Tarefa Enviar Email** e, na página **Email** , defina a tarefa com as seguintes configurações:  
   
     1.  Para **SmtpConnection**, selecione o gerenciador de conexões SMTP configurado anteriormente.  
   

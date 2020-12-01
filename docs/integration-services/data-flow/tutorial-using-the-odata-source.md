@@ -12,10 +12,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425668"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutorial: Usando o OData Source
@@ -31,7 +31,7 @@ ms.locfileid: "88425668"
   
 2.  Clique em **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
   
-3.  Na caixa de diálogo **Novo Projeto** , expanda **Instalado**, **Modelos**, **Business Intelligence**e clique em **Integration Services**.  
+3.  Na caixa de diálogo **Novo Projeto** , expanda **Instalado**, **Modelos**, **Business Intelligence** e clique em **Integration Services**.  
   
 4.  Selecione **Projeto do Integration Services** como tipo de projeto.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "88425668"
   
 6.  Insira a URL do serviço OData para **Local do documento de serviço**. Essa URL pode ser igual àquela do documento do serviço ou à de um feed ou entidade específica. Para os fins deste tutorial, insira a URL para o documento de serviço: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   
-7.  Verifique se a **Autenticação do Windows** está selecionada como **autenticação** a ser usada para acessar o serviço OData. A**Autenticação do Windows** está selecionada por padrão.  
+7.  Verifique se a **Autenticação do Windows** está selecionada como **autenticação** a ser usada para acessar o serviço OData. A **Autenticação do Windows** está selecionada por padrão.  
   
 8.  Clique em **Testar Conexão** para testar a conexão e clique em **OK** para criar uma instância do Gerenciador de Conexões OData.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "88425668"
   
 13. Clique em **Colunas** no painel de navegação esquerdo para mudar para a página **Colunas** .  
   
-14. Selecione **EmployeeID**, **FirstName**e **LastName** em **Colunas Externas Disponíveis** marcando as caixas de seleção.  
+14. Selecione **EmployeeID**, **FirstName** e **LastName** em **Colunas Externas Disponíveis** marcando as caixas de seleção.  
   
 15. Clique em **OK** para fechar a caixa de diálogo **Editor do OData Source** .  
   

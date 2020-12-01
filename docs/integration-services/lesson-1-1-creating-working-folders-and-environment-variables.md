@@ -12,10 +12,10 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449734"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lição 1-1 – criar pastas de trabalho e variáveis de ambiente

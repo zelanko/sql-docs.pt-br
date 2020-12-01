@@ -19,10 +19,10 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 704df574cc67a4321faea90795b248adb2859123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445080"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo de dados geometry)

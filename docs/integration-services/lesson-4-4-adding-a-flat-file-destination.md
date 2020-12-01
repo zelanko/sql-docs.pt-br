@@ -12,10 +12,10 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 99266f19a7bb1476f16b5896deb8dfa3602e4032
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449633"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lição 4-4: Adicionar um destino de Arquivo Simples

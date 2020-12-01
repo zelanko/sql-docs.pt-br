@@ -16,10 +16,10 @@ ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f2c85d7c440f32aee7b6b6fb76019fdb2eef2c2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88324875"
 ---
 # <a name="improve-access-to-trace-data"></a>Aprimorar o acesso aos dados de rastreamento
@@ -32,7 +32,7 @@ ms.locfileid: "88324875"
   
 ### <a name="to-change-the-temp-environment-variable-in-windows-operating-systems"></a>Para alterar a variável de ambiente TEMP em sistemas operacionais Windows  
   
-1.  No menu **Iniciar** , escolha **Painel de Controle**e clique em **Sistema**.  
+1.  No menu **Iniciar** , escolha **Painel de Controle** e clique em **Sistema**.  
   
 2.  Na caixa de diálogo **Propriedades do Sistema** , clique na guia **Avançado** e clique em **Variáveis de Ambiente**.  
   

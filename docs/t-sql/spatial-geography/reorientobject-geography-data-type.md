@@ -19,10 +19,10 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9d4f8bf9f9b8409f9ab46af0b1fd0a728e80e505
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88417022"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (tipo de dados geography)

@@ -12,10 +12,10 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 575353cd2cf770ed42d439fd31647ccaef3e01bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449739"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Lição 1-1: Criar um novo projeto do Integration Services

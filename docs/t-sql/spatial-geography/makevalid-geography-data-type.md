@@ -16,16 +16,16 @@ ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7a3ca43dea611fb3fb74167032bd72f045e39b41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88422410"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (tipos de dados de geografia)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  Converte uma instância de**geografia** que não é válida em uma instância de **geography** válida com um tipo do OGC (Open Geospatial Consortium) válido.  
+  Converte uma instância de **geografia** que não é válida em uma instância de **geography** válida com um tipo do OGC (Open Geospatial Consortium) válido.  
   
  Se um objeto de entrada retornar False para STIsValid(), `MakeValid()` converterá a instância que não é válida em uma instância válida.  
   

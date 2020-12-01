@@ -17,10 +17,10 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09ef796494f084fda4cbe27d5fc0ac33b2cfb402
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430658"
 ---
 # <a name="identify-similar-data-rows-with-the-fuzzy-grouping-transformation"></a>Identificar linhas de dados semelhantes com a transformação Agrupamento Difuso

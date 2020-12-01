@@ -16,10 +16,10 @@ ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fe3418284131577051e48f8300bd89df2abc0ec1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88444943"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo de dados geometry)

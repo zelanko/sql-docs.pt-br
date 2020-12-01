@@ -22,10 +22,10 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "87823921"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de segurança do agente de replicação

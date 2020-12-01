@@ -12,10 +12,10 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33eeb6e462c096505fc4fbd1088e7f5b36b37618
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449654"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>Lição 1-3: Adicionar e configurar um gerenciador de conexões OLE DB

@@ -12,10 +12,10 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c8f3f026833037c66581ffa95e2e1a736b07091c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88390312"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>Lição 3-1 – copiar o pacote de implantação

@@ -12,10 +12,10 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ee2861b40dbe132e7c95b52802bd10ccd46c20c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88426088"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Como editar as propriedades de instância CDC

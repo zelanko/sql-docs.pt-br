@@ -14,10 +14,10 @@ ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b27c9c0e575775449d2f3a25c5a20bd6667b5cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425718"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>Colunas da Dimensão de Alteração Lenta (Assistente para Dimensões de Alteração Lenta)
@@ -34,7 +34,7 @@ ms.locfileid: "88425718"
  Selecione uma coluna de dimensão na lista.  
   
  **Alterar Tipo**  
- Selecione um **Atributo Fixo**ou um dos dois tipos de atributos de alteração. Use **Atributo Fixo** caso o valor em uma coluna não deva ser alterado; assim o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tratará as alterações como erros. Use **Atributo de alteração** para substituir os valores existentes por com valores alterados. Use **Atributo Histórico** para salvar valores alterados em novos registros, marcando os registros anteriores como desatualizados.  
+ Selecione um **Atributo Fixo** ou um dos dois tipos de atributos de alteração. Use **Atributo Fixo** caso o valor em uma coluna não deva ser alterado; assim o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tratará as alterações como erros. Use **Atributo de alteração** para substituir os valores existentes por com valores alterados. Use **Atributo Histórico** para salvar valores alterados em novos registros, marcando os registros anteriores como desatualizados.  
   
  **Remover**  
  Selecione uma coluna de dimensão e a remova da lista de colunas mapeadas clicando em **Remover**.  

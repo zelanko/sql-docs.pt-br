@@ -14,10 +14,10 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88393422"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Dependência Funcional (tarefa Criação de Perfil de Dados)
@@ -49,7 +49,7 @@ ms.locfileid: "88393422"
 ## <a name="request-properties-options"></a>Opções de Propriedades da Solicitação  
  Para uma **Solicitação de Perfil de Dependência Funcional**, o painel **Propriedades da Solicitação** exibe os seguintes grupos de opções:  
   
--   **Dados**que incluem as opções **DeterminantColumns** e **DependentColumn**  
+-   **Dados** que incluem as opções **DeterminantColumns** e **DependentColumn**  
   
 -   **Geral**  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88393422"
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
 |**DictionarySort**|Classifica e compara dados com base nas regras de classificação e comparação, conforme definidas em dicionários do idioma ou alfabeto associado.|  
   
- Se **DictionarySort**for selecionado, também é possível selecionar qualquer combinação das opções relacionadas na tabela a seguir. Por padrão, nenhuma destas opções adicionais está selecionada.  
+ Se **DictionarySort** for selecionado, também é possível selecionar qualquer combinação das opções relacionadas na tabela a seguir. Por padrão, nenhuma destas opções adicionais está selecionada.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
