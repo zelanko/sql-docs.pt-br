@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636086"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419781"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurar Distributed Replay para Assistente para Experimentos de Banco de Dados
 
@@ -61,12 +61,12 @@ Essa configuração só é necessária no computador do controlador.
 
 1. Abra dcomcnfg.exe.
 2. Expanda **serviços de componentes**  >  **computadores**  >  **meu computador**  >  **configuração do DCOM**.
-3. Em **configuração do DCOM**, clique com o botão direito do mouse em **DReplayController**e selecione **Propriedades**.
+3. Em **configuração do DCOM**, clique com o botão direito do mouse em **DReplayController** e selecione **Propriedades**.
 4. Selecione a guia **Segurança**.
-5. Em **permissões de inicialização e ativação**, selecione **Personalizar**e, em seguida, selecione **Editar**.
+5. Em **permissões de inicialização e ativação**, selecione **Personalizar** e, em seguida, selecione **Editar**.
 6. Adicione o usuário que iniciará a reprodução. Forneça as permissões de inicialização local do usuário e ativação local. Se o usuário planeja iniciar ou ativar remotamente, conceda ao usuário permissões de inicialização remota e ativação remota.
 7. Selecione **OK** para confirmar as alterações e retornar à guia **segurança** .
-8. Em **permissões de acesso**, selecione **Personalizar**e, em seguida, selecione **Editar**.
+8. Em **permissões de acesso**, selecione **Personalizar** e, em seguida, selecione **Editar**.
 9. Adicione o usuário que iniciará a reprodução. Conceda permissões de acesso local ao usuário. Se o usuário planeja acessar o serviço do controlador remotamente, conceda ao usuário permissões de acesso remoto.
 10. Selecione **OK** para confirmar as alterações e retornar à guia **segurança** .
 11. Selecione **OK** para confirmar as alterações.
@@ -99,7 +99,7 @@ Para obter mais opções de configuração, consulte [configurar Distributed Rep
 
 Você pode usar as ferramentas de administração do Distributed Replay para testar rapidamente se Distributed Replay está funcionando corretamente no ambiente. O teste da configuração pode ser especialmente útil em um ambiente no qual vários computadores cliente são registrados com um controlador. Talvez seja necessário instalar o SQL Server Management Studio (SSMS) para obter as ferramentas de administração.
 
-1. Vá para o local de instalação do SSMS e procure a ferramenta de administração de Distributed Replay dreplay.exe e seus componentes dependentes.
+1. Vá para o local de instalação do SSMS e procure a ferramenta de administração de Distributed Replay dreplay.exe e seus componentes dependentes. Atualmente, o [SSMS 17](../ssms/release-notes-ssms.md#1791) é a versão mais recente do SSMS para incluir dreplay.exe.
 2. Em um prompt de comando, execute `dreplay.exe status -f 1` .
 
 Se as etapas anteriores tiverem sido bem-sucedidas, a saída do console indicará que o controlador pode ver seus clientes em um `READY` estado.
@@ -126,6 +126,6 @@ As etapas a seguir devem ser executadas para cada repetição:
 2. Forneça permissões para que o usuário da conta de serviço do cliente acesse os bancos de dados na instância do SQL Server. As permissões são necessárias para que as consultas sejam executadas na instância de SQL Server.
 3. Inicie a reprodução.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - Para saber como reproduzir um rastreamento capturado em um ambiente de teste atualizado, consulte [reproduzir um rastreamento no Assistente para experimentos de banco de dados](database-experimentation-assistant-replay-trace.md).
