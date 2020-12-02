@@ -12,10 +12,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457119"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lição 4-3: Adicionar redirecionamento de fluxo de erro
@@ -34,7 +34,7 @@ Por padrão as duas colunas extras em uma saída de erro do [!INCLUDE[ssISnovers
   
 ## <a name="configure-an-error-output"></a>Configurar uma saída de erro  
   
-1.  Na **Caixa de Ferramentas do SSIS**, expanda **Comum**e arraste o **Componente Script** para a superfície de design da guia **Fluxo de Dados** . Coloque **Script** à direita da transformação **Pesquisa de Códigos de Moeda** .  
+1.  Na **Caixa de Ferramentas do SSIS**, expanda **Comum** e arraste o **Componente Script** para a superfície de design da guia **Fluxo de Dados** . Coloque **Script** à direita da transformação **Pesquisa de Códigos de Moeda** .  
   
 2.  Na caixa de diálogo **Selecionar Tipo de Componente do Script**, selecione **Transformação** e selecione **OK**.  
   

@@ -11,10 +11,10 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
 ms.openlocfilehash: 4ab6f98a868dc504cf13fa770cd0d5ad5ceb1788
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88462021"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lição 1-6: Adicionar e configurar as transformações de Pesquisa
@@ -38,7 +38,7 @@ Em ambos os casos, a transformação Pesquisa utilizará o gerenciador de conex�
   
 ## <a name="add-and-configure-the-lookup-currency-key-transformation"></a>Adicionar e configurar a transformação Pesquisar Chave de Moeda  
   
-1.  Na **Caixa de Ferramentas do SSIS**, expanda **Comum**e arraste **Pesquisa** para a superfície de design da guia **Fluxo de Dados** . Coloque **Pesquisa** diretamente abaixo da fonte **Extrair Dados de Exemplo de Moeda**.  
+1.  Na **Caixa de Ferramentas do SSIS**, expanda **Comum** e arraste **Pesquisa** para a superfície de design da guia **Fluxo de Dados** . Coloque **Pesquisa** diretamente abaixo da fonte **Extrair Dados de Exemplo de Moeda**.  
   
 2.  Selecione a fonte de arquivo simples **Extrair Dados de Exemplo de Moeda** e arraste a seta azul para a transformação **Pesquisa** recém-adicionada, para poder conectar assim os dois componentes.  
   

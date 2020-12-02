@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88464982"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
@@ -38,7 +38,7 @@ ms.locfileid: "88464982"
 
 -   É possível pesquisar palavras ou frases em qualquer ordem ou pesquisar palavras ou frases em uma ordem especificada.
   
--   Você pode especificar o número máximo de condições não relacionadas à pesquisa ou *distância máxima*que separa a primeira e o último critério de pesquisa para constituir uma correspondência.  
+-   Você pode especificar o número máximo de condições não relacionadas à pesquisa ou *distância máxima* que separa a primeira e o último critério de pesquisa para constituir uma correspondência.  
 
 -   Se você especificar o número máximo de condições, também poderá especificar as correspondências que contêm condições de pesquisa na ordem especificada.
 
