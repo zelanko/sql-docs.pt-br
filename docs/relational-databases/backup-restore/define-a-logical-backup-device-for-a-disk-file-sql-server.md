@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database backups [SQL Server], disks
 - backing up databases [SQL Server], disks
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4f2e54b5d8873e34eaff65fd6f9ec6a86feb32c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1f601cd1a2d6a69920bb818bcdccec92b46a2e43
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748246"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129270"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>Definir um dispositivo de backup lógico para um arquivo de disco (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "85748246"
   
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], em Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
-2.  Expanda **Objetos de Servidor**e clique com o botão direito do mouse em **Dispositivos de Backup**.  
+2.  Expanda **Objetos de Servidor** e clique com o botão direito do mouse em **Dispositivos de Backup**.  
   
 3.  Clique em **Novo Dispositivo de Backup**. A caixa de diálogo **Dispositivo de Backup** é aberta.  
   

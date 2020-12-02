@@ -2,8 +2,8 @@
 title: 'Início Rápido: Fazer backup e restaurar banco de dados'
 titleSuffix: SQL Server
 description: Neste artigo, saiba como criar um banco de dados, fazer um backup do banco de dados e restaurar o backup no SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d658358fa8e09b967b921d162b8f443032a16ddc
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669955"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129201"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Início Rápido: Backup e restauração de banco de dados local do SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

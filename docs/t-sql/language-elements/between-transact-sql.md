@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417182"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128339"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="result-value"></a>Valor do resultado  
  BETWEEN retornará **TRUE** se o valor de *test_expression* for maior ou igual ao valor de *begin_expression* e menor ou igual ao valor de *end_expression*.  
   
- NOT BETWEEN retornará **TRUE** se o valor de *test_expression* for menor que o valor de *begin_expression* ou maior que o valor de *end_expression *.  
+ NOT BETWEEN retornará **TRUE** se o valor de *test_expression* for menor que o valor de *begin_expression* ou maior que o valor de *end_expression*.  
   
 ## <a name="remarks"></a>Comentários  
  Para especificar um intervalo exclusivo, use os operadores maior que (>) e menor que (<). Se qualquer entrada para o predicado BETWEEN ou NOT BETWEEN for NULL, o resultado será UNKNOWN.  

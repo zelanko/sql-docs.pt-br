@@ -27,11 +27,11 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638999"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128590"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -185,7 +185,7 @@ DBCC FREEPROCCACHE WITH NO_INFOMSGS;
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. Limpando todas as entradas do cache associadas a um pool de recursos  
-O exemplo a seguir limpa todas as entradas do cache associadas a um pool de recursos especificado. A exibição `sys.dm_resource_governor_resource_pools` é consultada primeiro para obter o valor de *pool_name* .
+O exemplo a seguir limpa todas as entradas do cache associadas a um pool de recursos especificado. A exibição `sys.dm_resource_governor_resource_pools` é consultada primeiro para obter o valor de *pool_name*.
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  

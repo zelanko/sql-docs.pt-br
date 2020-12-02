@@ -14,11 +14,11 @@ ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: de66aa15b385ee2aef206e026550aca95e770f12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470305"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127886"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>Excluir uma política do Gerenciamento Baseado em Políticas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

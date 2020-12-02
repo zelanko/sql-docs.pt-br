@@ -20,11 +20,11 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85b62ff41c9b413c49ff6312e918f648fba430cd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194818"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127289"
 ---
 # <a name="excel-destination"></a>Destino do Excel
 
@@ -103,7 +103,7 @@ ms.locfileid: "92194818"
   
 #### <a name="data-access-mode--sql-command"></a>Modo de acesso aos dados = Comando SQL  
  **Texto do comando SQL**  
- Digite o texto de uma consulta SQL, crie a consulta clicando em **Construir Consulta**ou localize o arquivo que contém o texto da consulta clicando em **Procurar**.  
+ Digite o texto de uma consulta SQL, crie a consulta clicando em **Construir Consulta** ou localize o arquivo que contém o texto da consulta clicando em **Procurar**.  
   
  **Construir Consulta**  
  Use a caixa de diálogo **Construtor de Consultas** para construir a consulta SQL visualmente.  

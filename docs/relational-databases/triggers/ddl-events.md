@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25cdef293ced7b58ea41f71f78a1046c6b5dd0ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463784"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128629"
 ---
 # <a name="ddl-events"></a>Eventos DDL
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -197,7 +197,7 @@ ms.locfileid: "88463784"
         CREATE_FULLTEXT_CATALOG (aplica-se à instrução CREATE FULLTEXT CATALOG e **sp_fulltextcatalog** quando *create* é especificado.)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_CATALOG (Aplica-se à instrução ALTER_FULLTEXT_CATALOG, a **sp_fulltextcatalog** , quando *start_incremental*, *start_full*, *Stop*ou *Rebuild* é especificado, e a **sp_fulltext_database** , quando *enable* é especificado.)
+        ALTER_FULLTEXT_CATALOG (Aplica-se à instrução ALTER_FULLTEXT_CATALOG, a **sp_fulltextcatalog** , quando *start_incremental*, *start_full*, *Stop* ou *Rebuild* é especificado, e a **sp_fulltext_database** , quando *enable* é especificado.)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_CATALOG (aplica-se à instrução DROP FULLTEXT CATALOG e **sp_fulltextcatalog** , quando *drop* é especificado.)
@@ -208,7 +208,7 @@ ms.locfileid: "88463784"
         CREATE_FULLTEXT_INDEX (aplica-se à instrução CREATE FULLTEXT INDEX e **sp_fulltexttable** , quando *create* é especificado.)
     :::column-end:::
     :::column:::
-        ALTER_FULLTEXT_INDEX (Aplica-se à instrução ALTER_FULLTEXT_INDEX, a **sp_fulltextcatalog** quando *start_full*, *start_incremental*ou *stop* é especificado, e a **sp_fulltext_column**e **sp_fulltext_table** , quando qualquer ação que não seja *create* ou *drop* for especificada.)
+        ALTER_FULLTEXT_INDEX (Aplica-se à instrução ALTER_FULLTEXT_INDEX, a **sp_fulltextcatalog** quando *start_full*, *start_incremental* ou *stop* é especificado, e a **sp_fulltext_column** e **sp_fulltext_table** , quando qualquer ação que não seja *create* ou *drop* for especificada.)
     :::column-end:::
     :::column:::
         DROP_FULLTEXT_INDEX (aplica-se à instrução DROP FULLTEXT INDEX e **sp_fulltexttable** , quando *drop* é especificado.)
@@ -355,13 +355,13 @@ ms.locfileid: "88463784"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_ROLE (aplica-se à instrução CREATE ROLE, **sp_addrole**e **sp_addgroup**.)
+        CREATE_ROLE (aplica-se à instrução CREATE ROLE, **sp_addrole** e **sp_addgroup**.)
     :::column-end:::
     :::column:::
         ALTER_ROLE
     :::column-end:::
     :::column:::
-        DROP_ROLE (aplica-se à instrução DROP ROLE, **sp_droprole**e **sp_dropgroup**.)
+        DROP_ROLE (aplica-se à instrução DROP ROLE, **sp_droprole** e **sp_dropgroup**.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -407,7 +407,7 @@ ms.locfileid: "88463784"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_SCHEMA (aplica-se à instrução CREATE SCHEMA, **sp_addrole**, **sp_adduser**, **sp_addgroup**e **sp_grantdbaccess**.)
+        CREATE_SCHEMA (aplica-se à instrução CREATE SCHEMA, **sp_addrole**, **sp_adduser**, **sp_addgroup** e **sp_grantdbaccess**.)
     :::column-end:::
     :::column:::
         ALTER_SCHEMA (Aplica-se à instrução ALTER SCHEMA e a **sp_changeobjectowner**.)
@@ -568,13 +568,13 @@ ms.locfileid: "88463784"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_USER (aplica-se à instrução CREATE USER, **sp_adduser**e **sp_grantdbaccess**.)
+        CREATE_USER (aplica-se à instrução CREATE USER, **sp_adduser** e **sp_grantdbaccess**.)
     :::column-end:::
     :::column:::
         ALTER_USER (Aplica-se à instrução ALTER USER e a **sp_change_users_login**.)
     :::column-end:::
     :::column:::
-        DROP_USER (aplica-se à instrução DROP USER, **sp_dropuser**e **sp_revokedbaccess**.)
+        DROP_USER (aplica-se à instrução DROP USER, **sp_dropuser** e **sp_revokedbaccess**.)
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -724,13 +724,13 @@ ms.locfileid: "88463784"
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_LOGIN (aplica-se à instrução CREATE LOGIN, **sp_addlogin**, **sp_grantlogin**, **xp_grantlogin**e **sp_denylogin** quando usado em um logon não inexistente que deve ser criado implicitamente.)
+        CREATE_LOGIN (aplica-se à instrução CREATE LOGIN, **sp_addlogin**, **sp_grantlogin**, **xp_grantlogin** e **sp_denylogin** quando usado em um logon não inexistente que deve ser criado implicitamente.)
     :::column-end:::
     :::column:::
-        ALTER_LOGIN (Aplica-se à instrução ALTER LOGIN, **sp_defaultdb**, **sp_defaultlanguage**, **sp_password**e **sp_change_users_login** , quando *Auto_Fix* é especificado.)
+        ALTER_LOGIN (Aplica-se à instrução ALTER LOGIN, **sp_defaultdb**, **sp_defaultlanguage**, **sp_password** e **sp_change_users_login** , quando *Auto_Fix* é especificado.)
     :::column-end:::
     :::column:::
-        DROP_LOGIN (aplica-se à instrução DROP LOGIN, **sp_droplogin**, **sp_revokelogin**e **xp_revokelogin**.)
+        DROP_LOGIN (aplica-se à instrução DROP LOGIN, **sp_droplogin**, **sp_revokelogin** e **xp_revokelogin**.)
     :::column-end:::
 :::row-end:::  
 :::row:::

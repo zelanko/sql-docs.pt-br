@@ -12,11 +12,11 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495879"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127231"
 ---
 # <a name="create-new-infoobject"></a>Criar Novo InfoObject
 
@@ -40,19 +40,19 @@ ms.locfileid: "88495879"
   
 4.  Na página **Gerenciador de Conexões** , na caixa do grupo **Criar Objetos SAP BW** , execute uma destas etapas para criar um InfoObject:  
   
-    1.  Para criar um InfoObject diretamente, selecione **InfoObject**e clique em **Criar** para abrir a caixa de diálogo **Criar Novo InfoObject** .  
+    1.  Para criar um InfoObject diretamente, selecione **InfoObject** e clique em **Criar** para abrir a caixa de diálogo **Criar Novo InfoObject** .  
   
-    2.  Para criar um InfoObject ao criar um InfoCube, selecione **InfoCube**e clique em **Criar**. Na caixa de diálogo **Criar InfoCube para os Dados da Transação** , na coluna **IObject** de uma das linhas na lista, selecione **Criar** para abrir a caixa de diálogo **Criar Novo InfoObject** .  
-  
-        > [!NOTE]  
-        >  Cada linha na tabela representa uma coluna no fluxo de dados do pacote.  
-  
-    3.  Para criar um InfoObject ao criar um InfoSource para dados transacionais, selecione **InfoSource**e clique em **Criar**. Na caixa de diálogo **Criar InfoSource** , selecione **Dados da Transação**e clique em **OK**. Na caixa de diálogo **Criar InfoSource para os Dados da Transação** , na coluna **IObject** de uma das linhas na lista, selecione **Criar** para abrir a caixa de diálogo **Criar Novo InfoObject** .  
+    2.  Para criar um InfoObject ao criar um InfoCube, selecione **InfoCube** e clique em **Criar**. Na caixa de diálogo **Criar InfoCube para os Dados da Transação** , na coluna **IObject** de uma das linhas na lista, selecione **Criar** para abrir a caixa de diálogo **Criar Novo InfoObject** .  
   
         > [!NOTE]  
         >  Cada linha na tabela representa uma coluna no fluxo de dados do pacote.  
   
-    4.  Para criar um InfoObject ao criar um InfoSource para dados mestres, selecione **InfoSource**e clique em **Criar**. Na caixa de diálogo **Criar InfoSource** , selecione **Dados Mestres**e clique em **OK**. Na caixa de diálogo **Criar InfoSource para Dados Mestres** , clique em **Novo** para abrir a caixa de diálogo **Criar Novo InfoObject** .  
+    3.  Para criar um InfoObject ao criar um InfoSource para dados transacionais, selecione **InfoSource** e clique em **Criar**. Na caixa de diálogo **Criar InfoSource** , selecione **Dados da Transação** e clique em **OK**. Na caixa de diálogo **Criar InfoSource para os Dados da Transação** , na coluna **IObject** de uma das linhas na lista, selecione **Criar** para abrir a caixa de diálogo **Criar Novo InfoObject** .  
+  
+        > [!NOTE]  
+        >  Cada linha na tabela representa uma coluna no fluxo de dados do pacote.  
+  
+    4.  Para criar um InfoObject ao criar um InfoSource para dados mestres, selecione **InfoSource** e clique em **Criar**. Na caixa de diálogo **Criar InfoSource** , selecione **Dados Mestres** e clique em **OK**. Na caixa de diálogo **Criar InfoSource para Dados Mestres** , clique em **Novo** para abrir a caixa de diálogo **Criar Novo InfoObject** .  
   
  Você também pode abrir a caixa de diálogo **Criar Novo InfoObject** clicando em **Novo** na seção **Atributos** da caixa de diálogo **Criar Novo InfoObject** .  
   

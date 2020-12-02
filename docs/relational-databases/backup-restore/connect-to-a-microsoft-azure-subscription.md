@@ -8,21 +8,21 @@ ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3073607520bc6ebe25debf39e9ccc3a4b5b29d64
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 541f17e5e01f81702b387664cbf2f666c0d21703
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809872"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129307"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Conectar-se a uma Assinatura do Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Use **Conectar-se a uma Assinatura da Microsoft** para registrar um contêiner de blobs do Azure existente na instância do SQL Server.  A caixa de diálogo criará uma assinatura de acesso compartilhado e uma política de acesso armazenado em um contêiner de blobs do Azure e, em seguida, criará uma Credencial do SQL Server.  Essa caixa de diálogo é exibida ao usar a tarefa Fazer Backup ou Restaurar do SQL Server Management Studio e a operação envolve um dispositivo URL.
 
 ## <a name="limitation"></a>Limitações
-A opção**Conectar-se a uma Assinatura da Microsoft** só funcionará com uma Conta do Armazenamento do Azure criada por meio do modelo de implantação do Gerenciamento de Serviço (Clássico).  Para obter mais informações sobre os modelos de implantação do Azure, veja [Azure Resource Manager versus implantação clássica](/azure/azure-resource-manager/management/deployment-models).
+A opção **Conectar-se a uma Assinatura da Microsoft** só funcionará com uma Conta do Armazenamento do Azure criada por meio do modelo de implantação do Gerenciamento de Serviço (Clássico).  Para obter mais informações sobre os modelos de implantação do Azure, veja [Azure Resource Manager versus implantação clássica](/azure/azure-resource-manager/management/deployment-models).
 
 ## <a name="options"></a>Opções
 **Entrar**     

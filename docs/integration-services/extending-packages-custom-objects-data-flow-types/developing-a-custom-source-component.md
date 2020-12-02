@@ -23,11 +23,11 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba5222b35e6e55329e746f316a0503c27092441a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484322"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127093"
 ---
 # <a name="developing-a-custom-source-component"></a>Desenvolvendo um componente de fonte personalizado
 

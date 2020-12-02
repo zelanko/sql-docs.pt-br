@@ -27,11 +27,11 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d405c656af3265d09340ceeef42ac0423efd6a85
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734617"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128103"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 É o nome da função de partição a ser modificada.  
   
 SPLIT RANGE ( *boundary_value* )  
-Adiciona uma partição à função de partição. *boundary_value* determina o intervalo da nova partição e deve ser diferente dos intervalos de limite existentes da função de partição. Com base em *boundary_value* , o [!INCLUDE[ssDE](../../includes/ssde-md.md)] divide um dos intervalos existentes em dois. Desses dois intervalos, aquele com o novo *boundary_value* é a nova partição.  
+Adiciona uma partição à função de partição. *boundary_value* determina o intervalo da nova partição e deve ser diferente dos intervalos de limite existentes da função de partição. Com base em *boundary_value*, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] divide um dos intervalos existentes em dois. Desses dois intervalos, aquele com o novo *boundary_value* é a nova partição.  
   
 É preciso que haja um grupo de arquivos online. E, o esquema de partição que usa a função de partição como NEXT USED para armazenar a nova partição tem que marcar o grupo de arquivos. Uma instrução CREATE PARTITION SCHEME atribui grupos de arquivos a partições. A instrução CREATE PARTITION FUNCTION cria menos partições do que grupos de arquivos para armazená-las. Uma instrução CREATE PARTITION SCHEME pode separar mais grupos de arquivos do que o necessário. Se isso acontecer, você acabará com grupos de arquivos não atribuídos. Além disso, o esquema de partição marca um dos grupos de arquivos como NEXT USED. Esse grupo de arquivos armazena a nova partição. Se não houver grupos de arquivos, o esquema de partições será marcado como NEXT USED e você precisará usar uma instrução ALTER PARTITION SCHEME. 
 
@@ -73,8 +73,8 @@ Se você criar todas as partições no mesmo grupo de arquivos, esse grupo de ar
 > [!NOTE]  
 >  Limitações com índice columnstore: somente partições vazias podem ser divididas quando existe um índice columnstore na tabela. Você precisará remover ou desabilitar o índice columnstore antes de executar esta operação.  
   
-MERGE [ RANGE ( *boundary_value* ) ]  
-Descarta uma partição e mescla os valores que existirem na partição em uma partição restante. RANGE ( *boundary_value* ) precisa ser um valor de limite existente da partição a ser removida. Esse argumento remove o grupo de arquivos que originalmente continha *boundary_value* do esquema de partição, a menos que uma partição restante o utilize ou marque com a propriedade NEXT USED. A partição mesclada existe no grupo de arquivos que originalmente não continha *boundary_value*. *boundary_value* é uma expressão constante que pode fazer referência a variáveis (incluindo variáveis de tipo definido pelo usuário) ou funções (incluindo funções definidas pelo usuário). Ela não pode referenciar uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* tem que corresponder ou ser implicitamente conversível para o tipo de dados de sua coluna de particionamento correspondente. Você também não pode truncar *boundary_value* durante a conversão implícita de forma que o tamanho e a escala do valor não correspondam aos valores correspondentes ao *input_parameter_type*.  
+MERGE [ RANGE ( *boundary_value*) ]  
+Descarta uma partição e mescla os valores que existirem na partição em uma partição restante. RANGE (*boundary_value*) precisa ser um valor de limite existente da partição a ser removida. Esse argumento remove o grupo de arquivos que originalmente continha *boundary_value* do esquema de partição, a menos que uma partição restante o utilize ou marque com a propriedade NEXT USED. A partição mesclada existe no grupo de arquivos que originalmente não continha *boundary_value*. *boundary_value* é uma expressão constante que pode fazer referência a variáveis (incluindo variáveis de tipo definido pelo usuário) ou funções (incluindo funções definidas pelo usuário). Ela não pode referenciar uma expressão [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* tem que corresponder ou ser implicitamente conversível para o tipo de dados de sua coluna de particionamento correspondente. Você também não pode truncar *boundary_value* durante a conversão implícita de forma que o tamanho e a escala do valor não correspondam aos valores correspondentes ao *input_parameter_type*.  
   
 > [!NOTE]  
 >  Limitações com índice columnstore: duas partições não vazias contendo um índice columnstore não podem ser mescladas. Você precisará remover ou desabilitar o índice columnstore antes de executar esta operação  

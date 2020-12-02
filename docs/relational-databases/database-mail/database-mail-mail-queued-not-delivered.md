@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8e70b32c2cee28acf4b886f0bf738f4ed8857619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448809"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128801"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Database Mail: Email na fila, não entregue 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

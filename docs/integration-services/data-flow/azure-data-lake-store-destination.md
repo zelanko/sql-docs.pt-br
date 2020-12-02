@@ -15,11 +15,11 @@ ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55a30f509074401bcf940639e9e4df14d0a58add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457458"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127354"
 ---
 # <a name="azure-data-lake-store-destination"></a>Destino do Azure Data Lake Store
 

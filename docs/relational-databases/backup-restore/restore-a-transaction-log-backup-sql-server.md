@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring transaction logs [SQL Server], restoring backups
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6c983279a1fe317b2e7975b972e5471b9724b65d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717951"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129113"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar um backup de log de transações (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "85717951"
   
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], em Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
-2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
+2.  Expanda **Bancos de Dados** e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, **Restaurar**e clique em **Log de Transações**, o que abre a caixa de diálogo **Restaurar Log de Transações** .  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, **Restaurar** e clique em **Log de Transações**, o que abre a caixa de diálogo **Restaurar Log de Transações** .  
   
     > [!NOTE]  
     >  Se a opção **Log de Transações** estiver acinzentada, talvez seja necessário restaurar um backup completo ou diferencial primeiro. Use a caixa de diálogo **Backup de banco de dados** .  
@@ -163,7 +163,7 @@ ms.locfileid: "85717951"
   
     -   **Acesso restrito ao banco de dados restaurado (WITH RESTRICTED_USER)**  
   
-         Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator**ou **sysadmin**.  
+         Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator** ou **sysadmin**.  
   
          Marcar essa opção é sinônimo de usar a opção **RESTRICTED_USER** em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** .  
   

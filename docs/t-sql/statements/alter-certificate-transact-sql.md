@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
 ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067459"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128142"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -89,20 +89,20 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY especifica que a chave privada do certificado está carregada no SQL Server.
 
- FILE =' *path_to_private_key* '  
+ FILE ='*path_to_private_key*'  
  Especifica o caminho completo, incluindo o nome de arquivo, até a chave privada. Esse parâmetro pode ser um caminho local ou um caminho de UNC a um local de rede. Esse arquivo será acessado dentro do contexto de segurança da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao usar essa opção, verifique se a conta de serviço tem acesso ao arquivo especificado.
  
  Se apenas um nome de arquivo for especificado, o arquivo será salvo na pasta de dados de usuário padrão para a instância. Essa pasta pode (ou não) ser a pasta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA. Para o SQL Server Express LocalDB, a pasta de dados de usuário padrão para a instância é o caminho especificado pela variável de ambiente `%USERPROFILE%` para a conta que criou a instância.  
   
- BINARY =' *private_key_bits* '  
- **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
+ BINARY ='*private_key_bits*'  
+ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
  Bits de chave privada especificados como constante binária. Estes bits podem estar no formato criptografado. Se criptografado, o usuário deve fornecer uma senha de descriptografia. Verificações de diretiva de senha não são executadas nesta senha. Os bits de chave privada devem estar em um formato de arquivo PVK.  
   
- DECRYPTION BY PASSWORD =' *current_password* '  
+ DECRYPTION BY PASSWORD ='*current_password*'  
  Especifica a senha que é obrigatória para descriptografar a chave privada.  
   
- ENCRYPTION BY PASSWORD =' *new_password* '  
+ ENCRYPTION BY PASSWORD ='*new_password*'  
  Especifica a senha usada para criptografar a chave privada do certificado no banco de dados. A *new_password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Password Policy](../../relational-databases/security/password-policy.md).  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  

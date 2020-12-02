@@ -17,11 +17,11 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 732de7f6d7c9e75d436dca721b370f63a46a4c60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430318"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125640"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparando a tarefa Script e o componente Script
 

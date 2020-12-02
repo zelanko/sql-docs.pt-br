@@ -15,11 +15,11 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e1f2398e59fb7a0fee48f2d4c4e4a171c6044ca7
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807063"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127421"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurar a opção max worker threads de configuração de servidor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ O valor padrão de **max worker threads** é 0. Isso habilita o [!INCLUDE[ssNoVe
   
 -   O thread pooling ajuda a otimizar o desempenho quando um grande número de clientes é conectado ao servidor. Normalmente, é criado um thread de sistema operacional separado para cada solicitação de consulta. Porém, com centenas de conexões para o servidor, usam um thread por solicitação de consulta pode consumir quantias grandes de recursos do sistema. A opção **max worker threads** habilita o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a criar um pool de threads de trabalho para atender a um número maior de solicitações de consulta, o que melhora o desempenho.  
   
--   A seguinte tabela mostra o número máximo automaticamente configurado de threads de trabalho (quando o valor é definido para 0) com base nas várias combinações de CPUs, arquitetura de computador e versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usando a fórmula: ***Máximo de trabalhos padrão* + ((* CPUs lógicas *– 4) * *trabalhos por CPU*)**.  
+-   A seguinte tabela mostra o número máximo automaticamente configurado de threads de trabalho (quando o valor é definido para 0) com base nas várias combinações de CPUs, arquitetura de computador e versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usando a fórmula: **_Máximo de trabalhos padrão_ + ((* CPUs lógicas *– 4) * *trabalhos por CPU*)**.  
   
     |Número de CPUs|Computador de 32 bits (até [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Computador de 64 bits (até [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|Computador de 64 bits (começando em [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  

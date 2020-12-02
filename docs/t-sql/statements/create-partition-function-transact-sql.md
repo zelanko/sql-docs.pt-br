@@ -29,11 +29,11 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 571da08ba525e2d6dcf143fc6e207266cd1a816d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547766"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127989"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  A coluna real, conhecida como uma coluna de particionamento, é especificada na instrução CREATE TABLE ou CREATE INDEX.  
   
  *boundary_value*  
- Especifica os valores de limite para cada partição de uma tabela particionada ou índice que usa *partition_function_name*. Se *boundary_value*estiver vazio, a função de partição mapeará para uma única partição toda a tabela ou todo o índice usando *partition_function_name*. É possível usar somente uma coluna de divisão, especificada em uma instrução CREATE TABLE ou CREATE INDEX.  
+ Especifica os valores de limite para cada partição de uma tabela particionada ou índice que usa *partition_function_name*. Se *boundary_value* estiver vazio, a função de partição mapeará para uma única partição toda a tabela ou todo o índice usando *partition_function_name*. É possível usar somente uma coluna de divisão, especificada em uma instrução CREATE TABLE ou CREATE INDEX.  
   
  *boundary_value* é uma expressão constante que pode fazer referência a variáveis. Isso inclui variáveis ou funções de tipo definido pelo usuário e funções definidas pelo usuário. Não pode fazer referência a expressões [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* deve corresponder ou poder ser implicitamente convertido no tipo de dados fornecido em *input_parameter_type*, e não pode ser truncado durante conversão implícita de modo que o tamanho e a escala do valor não sejam equivalentes a seu *input_parameter_type* correspondente.  
 

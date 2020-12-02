@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e181ce4851e2d00867c25942e8842b200525a3bf
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 32a48093f40d048532ff58a1f91f450e52d6019b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810870"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129016"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup Gerenciado do SQL Server para o Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "91810870"
 ##  <a name="supportability"></a><a name="support_limits"></a> Suporte  
  As seguintes limitações e considerações de suporte são específicas para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
--   Há suporte para o backup de bancos de dados de sistema **master**, **model**e **msdb** . Não há suporte para o backup de **tempdb** . 
+-   Há suporte para o backup de bancos de dados de sistema **master**, **model** e **msdb** . Não há suporte para o backup de **tempdb** . 
   
 -   Para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], há suporte para todos os modelos de recuperação (Completo, Bulk-logged e Simples).  
   

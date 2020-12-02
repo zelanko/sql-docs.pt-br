@@ -16,11 +16,11 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f3cd306d2cf6097fdb5e178f92e41d45de198783
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430828"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127169"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extrair dados por meio da origem XML
 

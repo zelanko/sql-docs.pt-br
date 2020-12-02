@@ -23,11 +23,11 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: eac401156014952142c39851b1e703605997c245
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549390"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128006"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

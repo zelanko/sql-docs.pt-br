@@ -20,11 +20,11 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869402"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127761"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes (stoplists) para pesquisa de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,9 +51,9 @@ Use [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-t
   
 1.  No Pesquisador de Objetos, expanda o servidor.  
   
-2.  Expanda **Bancos de Dados**e o banco de dados no qual você deseja criar a lista de palavras irrelevantes (stoplist) de texto completo.  
+2.  Expanda **Bancos de Dados** e o banco de dados no qual você deseja criar a lista de palavras irrelevantes (stoplist) de texto completo.  
   
-3.  Expanda **Armazenamento**e clique com o botão direito do mouse em **Lista de Palavras Irrelevantes de Texto Completo**.  
+3.  Expanda **Armazenamento** e clique com o botão direito do mouse em **Lista de Palavras Irrelevantes de Texto Completo**.  
   
 4.  Selecione **Nova lista de palavras irrelevantes de texto completo**.  
   
@@ -90,15 +90,15 @@ Use [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alte
   
 1.  No Pesquisador de Objetos, expanda o servidor.  
   
-2.  Expanda **Bancos de Dados**e, em seguida, expanda o banco de dados.  
+2.  Expanda **Bancos de Dados** e, em seguida, expanda o banco de dados.  
   
-3.  Expanda **Armazenamento**e, depois, selecione **Listas de Palavras Irrelevantes de Texto Completo**.  
+3.  Expanda **Armazenamento** e, depois, selecione **Listas de Palavras Irrelevantes de Texto Completo**.  
   
 4.  Clique com o botão direito do mouse na lista de palavras irrelevantes cujas propriedades você deseja alterar e selecione **Propriedades**.  
   
 5.  Na caixa de diálogo [Propriedades da lista de palavras irrelevantes de texto completo](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) :  
   
-    1.  Na caixa de listagem **Ação** , selecione uma das seguintes ações: **Adicionar palavra irrelevante**, **Excluir palavra irrelevante**, **Excluir todas as palavras irrelevantes**ou **Limpar lista de palavras irrelevantes**.  
+    1.  Na caixa de listagem **Ação** , selecione uma das seguintes ações: **Adicionar palavra irrelevante**, **Excluir palavra irrelevante**, **Excluir todas as palavras irrelevantes** ou **Limpar lista de palavras irrelevantes**.  
   
     2.  Se a caixa de texto **Palavra irrelevante** estiver habilitada para a ação selecionada, insira uma única palavra irrelevante. Essa palavra irrelevante deve ser exclusiva; ou seja, ainda não deve estar na lista de palavras irrelevantes para o idioma selecionado.  
   

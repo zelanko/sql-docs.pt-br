@@ -14,14 +14,14 @@ helpviewer_keywords:
 - backups [SQL Server], errors
 - database backups [SQL Server], errors
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 003fbc933de445b6540c797d57b02dbad834e0bf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cddc94d853dffef5e030ccc388c0b95bbc5f745a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759049"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129055"
 ---
 # <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>Especifique backup ou restauração para continuar ou parar após o erro
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

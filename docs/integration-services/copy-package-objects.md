@@ -17,11 +17,11 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d19b63fe653700839f4ea3443fc0676890fdcc9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194894"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127397"
 ---
 # <a name="copy-package-objects"></a>Copiar objetos de pacote
 
@@ -36,7 +36,7 @@ ms.locfileid: "92194894"
   
 2.  No Gerenciador de Soluções, clique duas vezes nos pacotes que deseja copiar.  
   
-3.  No Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] , clique na guia do pacote que contém os itens a serem copiados e clique na guia **Fluxo de Controle**, **Fluxo de Dados**ou **Manipulador de Eventos** .  
+3.  No Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] , clique na guia do pacote que contém os itens a serem copiados e clique na guia **Fluxo de Controle**, **Fluxo de Dados** ou **Manipulador de Eventos** .  
   
 4.  Selecione os itens de fluxo de controle ou de dados que deseja copiar. Para selecionar vários itens de uma vez, pressione a tecla Shift e clique no item ou selecione os itens como um grupo, arrastando o ponteiro pelos itens que deseja selecionar.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "92194894"
   
 2.  No Gerenciador de Soluções, clique duas vezes no pacote.  
   
-3.  No Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] , clique na guia **Fluxo de Controle**, **Fluxo de Dados**ou **Manipulador de Eventos** .  
+3.  No Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] , clique na guia **Fluxo de Controle**, **Fluxo de Dados** ou **Manipulador de Eventos** .  
   
 4.  Na área **Gerenciadores de Conexões** , clique com o botão direito do mouse no gerenciador de conexões e clique em **Copiar**. Você pode copiar apenas um gerenciador de conexões por vez.  
   
-5.  Se quiser copiar os itens para um pacote diferente, clique no pacote para o qual deseja copiar e, em seguida, clique na guia **Fluxo de Controle**, **Fluxo de Dados**ou **Manipulador de Eventos** .  
+5.  Se quiser copiar os itens para um pacote diferente, clique no pacote para o qual deseja copiar e, em seguida, clique na guia **Fluxo de Controle**, **Fluxo de Dados** ou **Manipulador de Eventos** .  
   
 6.  Clique com o botão direito do mouse na área **Gerenciadores de Conexões** e clique em **Colar**.  
   

@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 244b815a0e670cd0e697c037c62d66cc78159d81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737717"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129105"
 ---
 # <a name="restore-database-options-page"></a>Restaurar o banco de dados (página Opções)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85737717"
  Para obter mais informações, veja [Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Acesso restrito ao banco de dados restaurado [WITH RESTRICTED_USER]**  
- Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator**ou **sysadmin**.  
+ Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator** ou **sysadmin**.  
   
  A seleção dessa é sinônimo do uso da opção RESTRICTED_USER na instrução RESTORE.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85737717"
  Para determinar o estado do banco de dados após a operação de armazenamento, você deve selecionar uma das opções do painel **Estado de recuperação** .  
   
  **RESTORE WITH RECOVERY**  
- Recupera o banco de dados após a restauração do backup final marcado na grade **Conjuntos de backup a serem restaurados**na [página Geral](../../relational-databases/backup-restore/restore-database-general-page.md). Essa é a opção padrão e equivale à especificação de WITH RECOVERY em uma instrução [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Recupera o banco de dados após a restauração do backup final marcado na grade **Conjuntos de backup a serem restaurados** na [página Geral](../../relational-databases/backup-restore/restore-database-general-page.md). Essa é a opção padrão e equivale à especificação de WITH RECOVERY em uma instrução [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  No modelo de recuperação completa ou modelo de recuperação bulk-logged, selecione esta opção somente se estiver restaurando todos os arquivos de logs agora.  

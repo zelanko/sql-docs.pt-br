@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], restoring
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2e2348d17f2ccb3181441e2d816af83b6636f0f6
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c0c8e6d6f8895b9bce7470f2222ba6b18d7d2144
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809732"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129064"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar o banco de dados mestre (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

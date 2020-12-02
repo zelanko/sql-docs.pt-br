@@ -23,11 +23,11 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482279"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127796"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurar e gerenciar separadores de palavras e lematizadores para pesquisa (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

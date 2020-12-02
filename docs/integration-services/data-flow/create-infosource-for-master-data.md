@@ -12,11 +12,11 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8077abe2c92b9ce724b8e40613dde65ec5335f37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495883"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127271"
 ---
 # <a name="create-infosource-for-master-data"></a>Criar InfoSource para Dados Mestres
 
@@ -38,9 +38,9 @@ ms.locfileid: "88495883"
   
 3.  No **Editor de Destino SAP BW**, clique em **Gerenciador de Conexões** para abrir a página **Gerenciador de Conexões** do editor.  
   
-4.  Na página **Gerenciador de Conexões** , na caixa de grupo **Criar Objetos SAP BW** , selecione **InfoSource**e clique em **Criar**.  
+4.  Na página **Gerenciador de Conexões** , na caixa de grupo **Criar Objetos SAP BW** , selecione **InfoSource** e clique em **Criar**.  
   
-5.  Na caixa de diálogo **Criar InfoSource** , selecione **Dados Mestres**e clique em **OK**.  
+5.  Na caixa de diálogo **Criar InfoSource** , selecione **Dados Mestres** e clique em **OK**.  
   
 ## <a name="options"></a>Opções  
  **Nome do InfoObject**  

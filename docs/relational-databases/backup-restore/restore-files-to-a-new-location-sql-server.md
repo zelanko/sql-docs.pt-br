@@ -16,14 +16,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], restoring
 - restoring filegroups [SQL Server]
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dc4ecbdd67658c0081ddddc14e82f3b79da160ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cc22ea59333e864fdaab76a9c465f3249184adac
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737669"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129079"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Restaurar arquivos para um novo local (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "85737669"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda essa instância e expanda **Bancos de Dados**.  
   
-2.  Clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas**e para **Restaurar**, e clique em **Arquivos e Grupos de Arquivos**.  
+2.  Clique com o botão direito do mouse no banco de dados desejado, aponte para **Tarefas** e para **Restaurar**, e clique em **Arquivos e Grupos de Arquivos**.  
   
 3.  Na página **Geral** , na caixa de listagem **Banco de dados de destino** , digite o banco de dados a ser restaurado. Você pode digitar um novo banco de dados ou escolher um banco de dados existente na lista suspensa. A lista inclui todos os bancos de dados do servidor, excluindo os bancos de dados do sistema **mestre** e **tempdb**.  
   

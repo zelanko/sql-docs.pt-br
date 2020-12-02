@@ -22,11 +22,11 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c6a9ed30e92358d269fa4d6c0e270bd4a16e3bdb
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688127"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126258"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ ALTER SERVICE service_name
  Para alterar a AUTHORIZATION para um serviço, use a instrução ALTER AUTHORIZATION.  
   
 ## <a name="permissions"></a>Permissões  
- A permissão para alterar um serviço assume como padrão o proprietário do serviço, os membros das funções de banco de dados fixas **db_ddladmin** ou **db_owner**e os membros da função de servidor fixa **sysadmin**.  
+ A permissão para alterar um serviço assume como padrão o proprietário do serviço, os membros das funções de banco de dados fixas **db_ddladmin** ou **db_owner** e os membros da função de servidor fixa **sysadmin**.  
   
 ## <a name="examples"></a>Exemplos  
   

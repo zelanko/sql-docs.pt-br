@@ -15,14 +15,14 @@ helpviewer_keywords:
 - removing backup devices
 - backing up databases [SQL Server], backup devices
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 50f92b7fcc6e15e8866ba50ad3ecc85ec617826d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5e1272f4f55b049ad36e3f811adddc14fc665bf1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748114"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129233"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>Excluir um dispositivo de backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "85748114"
   
 1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
   
-2.  Expanda **Objetos de Servidor**e depois **Dispositivos de Backup**.  
+2.  Expanda **Objetos de Servidor** e depois **Dispositivos de Backup**.  
   
 3.  Clique com o botão direito do mouse no dispositivo desejado e clique em **Excluir**.  
   

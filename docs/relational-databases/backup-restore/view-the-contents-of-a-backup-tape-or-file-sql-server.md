@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database backups [SQL Server], viewing content
 - backing up databases [SQL Server], viewing content
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5b424852e69f38d82e7b912629b6ec7d15c7dd12
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 55a8f43eeb7a426044de7b38cd143cdbf77ea4ad
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85746618"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96128922"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Exibir o conteúdo de um arquivo ou fita de backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "85746618"
   
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], em Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
-2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
+2.  Expanda **Bancos de Dados** e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados do qual deseja fazer backup, aponte para **Tarefas**e clique em **Fazer Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
+3.  Clique com o botão direito do mouse no banco de dados do qual deseja fazer backup, aponte para **Tarefas** e clique em **Fazer Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
   
 4.  Na seção **Destino** da página **Geral** , clique em **Disco** ou **Fita**. Na caixa de listagem **Backup para** , procure o arquivo em disco ou fita que deseja.  
   

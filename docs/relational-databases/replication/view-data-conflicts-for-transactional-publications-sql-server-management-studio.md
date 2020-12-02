@@ -16,11 +16,11 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f95994ac6c663020074c5ef3971c1e0a895b3a10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720572"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127778"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Exibir conflitos de dados para publicações transacionais (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85720572"
   
     -   Selecionar uma linha na grade superior para exibir informações sobre aquela linha na grade inferior.  
   
-    -   Selecione uma ou mais linhas na grade superior e, então, clique em **Remover**para remover as linhas da tabela de metadados de conflito.  
+    -   Selecione uma ou mais linhas na grade superior e, então, clique em **Remover** para remover as linhas da tabela de metadados de conflito.  
   
     -   Clique no botão propriedades ( **...** ) para exibir mais informações sobre uma coluna envolvida em um conflito.  
   

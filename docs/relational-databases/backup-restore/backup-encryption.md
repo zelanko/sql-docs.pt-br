@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b06c0cc9b3b50510282c620ff86aa1a478fae419
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989813"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129336"
 ---
 # <a name="backup-encryption"></a>Criptografia de backup
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ A conta que faz operações de backup em um banco de dados criptografado requer 
   
 1. [Backup de Banco de Dados &#40;página Opções de Backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) Na página **Opções de Backup**, selecione **Criptografia**; em seguida, especifique o algoritmo de criptografia e o certificado ou a chave assimétrica a serem usados na criptografia.  
   
-1. [Usando o Assistente de Plano de Manutenção](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Ao selecionar uma tarefa de backup, na guia **Opções** da página **Define Backup ()Task (Definir ()Tarefa de Backup)** , selecione **Criptografia de Backup**e especifique o algoritmo de criptografia e o certificado ou a chave a serem usados na criptografia.  
+1. [Usando o Assistente de Plano de Manutenção](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Ao selecionar uma tarefa de backup, na guia **Opções** da página **Define Backup ()Task (Definir ()Tarefa de Backup)** , selecione **Criptografia de Backup** e especifique o algoritmo de criptografia e o certificado ou a chave a serem usados na criptografia.  
   
 ### <a name="using-transact-sql"></a>Usando o Transact-SQL  
  Esta é uma instrução TSQL de exemplo para criptografar o arquivo de backup:  

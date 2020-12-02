@@ -15,11 +15,11 @@ ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2f7db713ef6aa1c18c3506a842624bfd514c4807
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457489"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127346"
 ---
 # <a name="azure-blob-destination"></a>Destino de Blob do Azure
 

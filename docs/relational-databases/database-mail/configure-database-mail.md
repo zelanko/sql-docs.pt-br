@@ -41,11 +41,11 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192586"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126913"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "92192586"
   
 2.  Expanda o nó **Gerenciamento** .  
   
-3.  Clique com o botão direito do mouse em **Database Mail**e clique em **Configurar o Database Mail**.  
+3.  Clique com o botão direito do mouse em **Database Mail** e clique em **Configurar o Database Mail**.  
   
 4.  Conclua os diálogos do Assistente:  
 
@@ -116,7 +116,7 @@ ms.locfileid: "92192586"
  Use a página **Selecionar Tarefa de Configuração** para indicar qual tarefa você concluirá sempre que usar o assistente. Se você mudar de ideia antes de concluir o assistente, use o botão **Voltar** para voltar para essa página e selecionar outra tarefa.  
   
 > [!NOTE]  
->  Se o Database Mail não foi habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim**equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
+>  Se o Database Mail não foi habilitado, você receberá a mensagem: **O recurso Database Mail não está disponível.  Deseja habilitar este recurso?** Responder **Sim** equivale a habilitar o Database Mail usando a [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do procedimento armazenado do sistema **sp_configure** .  
   
  **Instalar Database Mail executando as seguintes tarefas**  
  Execute todas as tarefas exigidas para instalar o Database Mail pela primeira vez. Essa opção inclui todas as outras três opções.  
@@ -455,7 +455,7 @@ ms.locfileid: "92192586"
   
 4.  No menu **Consulta** , selecione **Especificar Valores para Parâmetros de Modelo**. A janela **Substituir Parâmetros de Modelo** é exibida.  
   
-5.  Digite os valores para **profile_name**, **account_name**, **SMTP_servername**, **email_address**e **display_name**. O SQL Server Management Studio preenche o modelo com os valores fornecidos por você.  
+5.  Digite os valores para **profile_name**, **account_name**, **SMTP_servername**, **email_address** e **display_name**. O SQL Server Management Studio preenche o modelo com os valores fornecidos por você.  
   
 6.  Execute o script para criar a configuração.  
   

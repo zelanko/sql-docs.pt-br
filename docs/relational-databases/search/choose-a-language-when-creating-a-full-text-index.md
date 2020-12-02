@@ -21,11 +21,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475528"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127772"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Escolher um idioma ao criar um índice de texto completo
 
@@ -72,7 +72,7 @@ ms.locfileid: "88475528"
  Ao criar um índice de texto completo, você precisa especificar um nome de idioma válido para cada coluna. Se um nome de idioma for válido, mas não for retornado pela exibição de catálogo [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) , a pesquisa de texto completo reverterá para o nome de idioma mais próximo disponível da mesma família de idiomas, se houver. Caso contrário, a pesquisa de texto completo reverterá para o separador de palavras Neutro. Esse comportamento de reversão poderá afetar a precisão da recuperação. Portanto, é altamente recomendável especificar um nome de idioma válido e disponível para cada coluna quando você criar um índice de texto completo.  
   
 > [!NOTE]  
->  O LCID é usado em todos os tipos de dados qualificados para indexação de texto completo (como **char** ou **nchar**). Se você tiver a ordem de classificação de uma coluna de tipo **char**, **varchar**ou **text** definida com uma configuração de idioma diferente do idioma identificado pelo LCID, o LCID será usado de qualquer forma durante a indexação de texto completo e a consulta dessas colunas.  
+>  O LCID é usado em todos os tipos de dados qualificados para indexação de texto completo (como **char** ou **nchar**). Se você tiver a ordem de classificação de uma coluna de tipo **char**, **varchar** ou **text** definida com uma configuração de idioma diferente do idioma identificado pelo LCID, o LCID será usado de qualquer forma durante a indexação de texto completo e a consulta dessas colunas.  
   
   
 ##  <a name="word-breaking"></a><a name="breaking"></a> Quebra de palavras  

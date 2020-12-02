@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2709846194c14dc08653efa761edd6660620872a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485363"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128657"
 ---
 # <a name="create-nested-triggers"></a>Criar gatilhos aninhados
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,11 +62,11 @@ AS
   
      Essa recursão ocorre quando um gatilho é acionado e executa uma ação que faz com que o mesmo gatilho seja acionado novamente. Por exemplo, um aplicativo atualiza a tabela **T3**; isso faz com que o gatilho **Trig3** seja acionado. **Trig3** atualiza a tabela **T3** novamente; isso faz com que o gatilho **Trig3** seja acionado novamente.  
   
-     A recursão direta também pode ocorrer quando o mesmo gatilho é chamado novamente, mas após um gatilho de um tipo diferente (AFTER ou INSTEAD OF) ter sido chamado. Em outras palavras, a recursão direta de um gatilho INSTEAD OF pode ocorrer quando o mesmo gatilho INSTEAD OF é chamado pela segunda vez, mesmo se um ou mais gatilhos AFTER forem chamados no meio disso. Da mesma maneira, a recursão direta de um gatilho AFTER pode ocorrer quando o mesmo gatilho AFTER é chamado pela segunda vez, mesmo se um ou mais gatilhos INSTEAD OF forem chamados no meio disso. Por exemplo, um aplicativo atualiza a tabela **T4**. Essa atualização faz com que o gatilho INSTEAD OF **Trig4** seja acionado. **Trig4** atualiza a tabela **T5**. Essa atualização faz com que o gatilho AFTER **Trig5** seja acionado. **Trig5** atualiza a tabela **T4**e essa atualização faz com que o gatilho INSTEAD OF **Trig4** seja acionado novamente. Essa cadeia de eventos é considerada uma recursão direta para **Trig4**.  
+     A recursão direta também pode ocorrer quando o mesmo gatilho é chamado novamente, mas após um gatilho de um tipo diferente (AFTER ou INSTEAD OF) ter sido chamado. Em outras palavras, a recursão direta de um gatilho INSTEAD OF pode ocorrer quando o mesmo gatilho INSTEAD OF é chamado pela segunda vez, mesmo se um ou mais gatilhos AFTER forem chamados no meio disso. Da mesma maneira, a recursão direta de um gatilho AFTER pode ocorrer quando o mesmo gatilho AFTER é chamado pela segunda vez, mesmo se um ou mais gatilhos INSTEAD OF forem chamados no meio disso. Por exemplo, um aplicativo atualiza a tabela **T4**. Essa atualização faz com que o gatilho INSTEAD OF **Trig4** seja acionado. **Trig4** atualiza a tabela **T5**. Essa atualização faz com que o gatilho AFTER **Trig5** seja acionado. **Trig5** atualiza a tabela **T4** e essa atualização faz com que o gatilho INSTEAD OF **Trig4** seja acionado novamente. Essa cadeia de eventos é considerada uma recursão direta para **Trig4**.  
   
 -   Recursão indireta  
   
-     Essa recursão ocorre quando um gatilho é acionado e executa uma ação que faz com que outro gatilho do mesmo tipo (AFTER ou INSTEAD OF) seja acionado. Esse segundo gatilho executa uma ação que faz com que o gatilho original seja acionado novamente. Em outras palavras, a recursão indireta pode ocorrer quando um gatilho INSTEAD OF for chamado pela segunda vez, mas não até que outro gatilho INSTEAD OF seja chamado no meio disso. Da mesma maneira, a recursão indireta pode ocorrer quando um gatilho AFTER for chamado pela segunda vez, mas não até que outro gatilho AFTER seja chamado no meio disso. Por exemplo, um aplicativo atualiza a tabela **T1**. Essa atualização faz com que o gatilho AFTER **Trig1** seja acionado. **Trig1** atualiza a tabela **T2**e essa atualização faz com que o gatilho AFTER **Trig2** seja acionado. **Trig2** , por sua vez, atualiza a tabela **T1** , o que faz com que o gatilho AFTER **Trig1** seja acionado novamente.  
+     Essa recursão ocorre quando um gatilho é acionado e executa uma ação que faz com que outro gatilho do mesmo tipo (AFTER ou INSTEAD OF) seja acionado. Esse segundo gatilho executa uma ação que faz com que o gatilho original seja acionado novamente. Em outras palavras, a recursão indireta pode ocorrer quando um gatilho INSTEAD OF for chamado pela segunda vez, mas não até que outro gatilho INSTEAD OF seja chamado no meio disso. Da mesma maneira, a recursão indireta pode ocorrer quando um gatilho AFTER for chamado pela segunda vez, mas não até que outro gatilho AFTER seja chamado no meio disso. Por exemplo, um aplicativo atualiza a tabela **T1**. Essa atualização faz com que o gatilho AFTER **Trig1** seja acionado. **Trig1** atualiza a tabela **T2** e essa atualização faz com que o gatilho AFTER **Trig2** seja acionado. **Trig2** , por sua vez, atualiza a tabela **T1** , o que faz com que o gatilho AFTER **Trig1** seja acionado novamente.  
   
  Somente a recursão direta de gatilhos AFTER é impedida quando a opção do banco de dados RECURSIVE_TRIGGERS estiver definida como OFF. Para desabilitar a recursão indireta de gatilhos AFTER, defina também a opção do servidor **nested triggers** como **0**.  
   

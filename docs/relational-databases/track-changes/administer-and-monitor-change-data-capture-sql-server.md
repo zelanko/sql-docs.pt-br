@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dfc040c4157cfd44a27a0b05a3bef42a1591aa2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446373"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128640"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
 
@@ -173,7 +173,7 @@ O coletor de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
     GO  
     ```  
   
-3. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Gerenciamento**e, em seguida, **Coleta de Dados**. Clique com o botão direito do mouse em **Coletor de Dados de Desempenho de CDA** e clique em **Iniciar Conjunto de Coleta de Dados**.  
+3. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Gerenciamento** e, em seguida, **Coleta de Dados**. Clique com o botão direito do mouse em **Coletor de Dados de Desempenho de CDA** e clique em **Iniciar Conjunto de Coleta de Dados**.  
   
 4. No data warehouse configurado na etapa 1, localize a tabela custom_snapshots.cdc_log_scan_data. Essa tabela fornece um instantâneo histórico dos dados das sessões de verificação de log. Esses dados podem ser usados para analisar a latência, a taxa de transferência e outras medidas de desempenho ao longo do tempo.  
 

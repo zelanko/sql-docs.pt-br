@@ -17,14 +17,14 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16255027d2fa0617066fcff0d2a208e70c96a9f9
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718022"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126908"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Gerenciar a tabela suspect_pages (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85718022"
   
      A tabela **suspect_pages** contém uma linha por página que falhou com um erro 824 até o limite de 1.000 linhas. A tabela a seguir mostra erros registrados na coluna **event_type** da tabela **suspect_pages** .  
   
-    |Descrição do erro|Valor**event_type**|  
+    |Descrição do erro|Valor **event_type**|  
     |-----------------------|---------------------------|  
     |Erro 823 causado por um erro CRC de sistema operacional ou erro 824 diferente de uma soma de verificação inválida ou uma página danificada (por exemplo, uma ID de página inválida).|1|  
     |Soma de verificação inválida|2|  
@@ -128,7 +128,7 @@ ms.locfileid: "85718022"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda essa instância e expanda **Bancos de Dados**.  
   
-2.  Expanda **Bancos de Dados do Sistema**, expanda **msdb**, expanda **Tabelas**e então expanda **Tabelas do Sistema**.  
+2.  Expanda **Bancos de Dados do Sistema**, expanda **msdb**, expanda **Tabelas** e então expanda **Tabelas do Sistema**.  
   
 3.  Expanda **dbo.suspect_pages** e clique com o botão direito do mouse em **Editar 200 Primeiras Linhas**.  
   

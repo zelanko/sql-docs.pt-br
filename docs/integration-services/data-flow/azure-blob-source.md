@@ -15,11 +15,11 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ce39fed32923ae46bd499c32d5b58660db5dcd8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457475"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127366"
 ---
 # <a name="azure-blob-source"></a>Fonte de Blobs do Azure
 

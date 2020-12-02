@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809262"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129281"
 ---
 # <a name="create-a-full-database-backup"></a>Criar um backup de banco de dados completo
 
@@ -62,7 +62,7 @@ As permissões `BACKUP DATABASE` e `BACKUP LOG` usam como padrão os membros da 
 
 1. Depois de se conectar à instância adequada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no **Pesquisador de Objetos**, expanda a árvore do servidor.
 
-1. Expanda **Bancos de Dados**e selecione um banco de dados de usuário ou expanda **Bancos de Dados de Sistema** e selecione um banco de dados de sistema.
+1. Expanda **Bancos de Dados** e selecione um banco de dados de usuário ou expanda **Bancos de Dados de Sistema** e selecione um banco de dados de sistema.
 
 1. Clique com o botão direito do mouse no banco de dados do qual deseja fazer backup, aponte para **Tarefas** e clique em **Fazer Backup...** .
 
@@ -138,7 +138,7 @@ Neste exemplo, será feito backup do banco de dados `SQLTestDB` em disco no loca
 
 1. Depois de se conectar à instância adequada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no **Pesquisador de Objetos**, expanda a árvore do servidor.
 
-1. Expanda **Banco de Dados**, clique com o botão direito do mouse em `SQLTestDB`, aponte para **Tarefas**e clique em **Fazer Backup...** .
+1. Expanda **Banco de Dados**, clique com o botão direito do mouse em `SQLTestDB`, aponte para **Tarefas** e clique em **Fazer Backup...** .
 
 1. Clique em **OK**.
 
@@ -152,7 +152,7 @@ Neste exemplo, o banco de dados `SQLTestDB` terá o backup feito em um disco em 
 
 1. Depois de se conectar à instância adequada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no **Pesquisador de Objetos**, expanda a árvore do servidor.
 
-1. Expanda **Banco de Dados**, clique com o botão direito do mouse em `SQLTestDB`, aponte para **Tarefas**e clique em **Fazer Backup...** .
+1. Expanda **Banco de Dados**, clique com o botão direito do mouse em `SQLTestDB`, aponte para **Tarefas** e clique em **Fazer Backup...** .
 
 1. Na página **Geral** , na seção **Destino** , selecione a opção **Disco** na lista suspensa **Fazer backup em:** .
 
@@ -212,7 +212,7 @@ Se você não tiver um contêiner de blobs do Azure em uma conta de armazenament
 
 1. Depois de se conectar à instância adequada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no **Pesquisador de Objetos**, expanda a árvore do servidor.
 
-1. Expanda **Banco de Dados**, clique com o botão direito do mouse em `SQLTestDB`, aponte para **Tarefas**e clique em **Fazer Backup...** .
+1. Expanda **Banco de Dados**, clique com o botão direito do mouse em `SQLTestDB`, aponte para **Tarefas** e clique em **Fazer Backup...** .
 
 1. Na página **Geral** , na seção **Destino** , selecione a opção **URL** na lista suspensa **Fazer backup em:** .
 

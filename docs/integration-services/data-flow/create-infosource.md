@@ -12,11 +12,11 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4672ce48890af7202445d283d15c2c167550f5a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495896"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127257"
 ---
 # <a name="create-infosource"></a>Criar InfoSource
 
@@ -38,7 +38,7 @@ ms.locfileid: "88495896"
   
 3.  No **Editor de Destino SAP BW**, clique em **Gerenciador de Conexões** para abrir a página **Gerenciador de Conexões** do editor.  
   
-4.  Na página **Gerenciador de Conexões** , na caixa de grupo **Criar Objetos SAP BW** , selecione **InfoSource**e clique em **Criar**.  
+4.  Na página **Gerenciador de Conexões** , na caixa de grupo **Criar Objetos SAP BW** , selecione **InfoSource** e clique em **Criar**.  
   
 ## <a name="options"></a>Opções  
  **Dados da transação**  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 546029b8615745c64d62da49af5299893d4d7c15
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631370"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129022"
 ---
 # <a name="tail-log-backups-sql-server"></a>Backups da parte final do log (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

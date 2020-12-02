@@ -14,11 +14,11 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430898"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127224"
 ---
 # <a name="data-streaming-destination"></a>Destino do Fluxo de Dados
 
@@ -37,7 +37,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="data-feed-publishing-components"></a>Componentes de publicação de feed de dados  
  Os Componentes de publicação de feed de dados incluem: Provedor OLE DB para SSIS, Destino do Fluxo de Dados e o Assistente de Publicação de Pacote do SSIS. O assistente permite que você publique um pacote do SSIS como uma exibição SQL em uma instância de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O assistente ajuda você na criação de um servidor vinculado que use o Provedor OLE DB para SSIS e uma exibição SQL que representa uma consulta no servidor vinculado. Execute a exibição para consultar os resultados do pacote do SSIS como um conjunto de dados tabulares.  
   
- Para confirmar se o provedor SSISOLEDB está instalado no SQL Server Management Studio, expanda **Objetos de Servidor**, **Servidores Vinculados**, **Provedores**e confirme se o provedor **SSISOLEDB** é exibido. Clique duas vezes em **SSISOLEDB**, habilite **Permitir Inprocess** se ele não estiver habilitado e clique em **OK**.  
+ Para confirmar se o provedor SSISOLEDB está instalado no SQL Server Management Studio, expanda **Objetos de Servidor**, **Servidores Vinculados**, **Provedores** e confirme se o provedor **SSISOLEDB** é exibido. Clique duas vezes em **SSISOLEDB**, habilite **Permitir Inprocess** se ele não estiver habilitado e clique em **OK**.  
   
 ## <a name="publish-an-ssis-package-as-a-sql-view"></a>Publicar um pacote do SSIS como uma exibição SQL  
  O procedimento a seguir descreve as etapas para publicar um pacote do SSIS como uma exibição do SQL.  

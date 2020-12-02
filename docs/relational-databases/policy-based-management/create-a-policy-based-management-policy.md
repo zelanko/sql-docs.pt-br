@@ -14,11 +14,11 @@ ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8a27cb717d8a54de804469d210e0eaaf3b622dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494037"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127918"
 ---
 # <a name="create-a-policy-based-management-policy"></a>Criar uma política do Gerenciamento Baseado em Políticas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "88494037"
   
 9. Na caixa **Modo de Avaliação** , selecione como essa política se comportará. Condições diferentes podem ter modos de avaliação válidos diferentes. Para obter mais informações sobre quais modos de avaliação são válidos, veja [Administrar servidores usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
-10. Se a política for avaliada em um agendamento, clique em **Ao Agendar**e em **Escolher** para selecionar um agendamento ou clique em **Novo** para criar um novo agendamento.  
+10. Se a política for avaliada em um agendamento, clique em **Ao Agendar** e em **Escolher** para selecionar um agendamento ou clique em **Novo** para criar um novo agendamento.  
   
 11. Para limitar a política a um subconjunto dos tipos de destino, na caixa **Restrição de servidor** , selecione a partir das condições de limitação ou crie uma nova condição.  
   

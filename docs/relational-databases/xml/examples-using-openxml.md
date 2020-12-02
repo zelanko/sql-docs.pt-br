@@ -28,11 +28,11 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729970"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126313"
 ---
 # <a name="examples-using-openxml"></a>Exemplos: uso do OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Especificando ColPattern para mapeamento entre colunas do conjunto de linhas e os elementos e atributos XML  
  Este exemplo mostra como o padrão Xpath é especificado no parâmetro *ColPattern* opcional para fornecer mapeamento entre colunas do conjunto de linhas e os elementos e atributos XML.  
   
- O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente e do pedido como um conjunto de linhas (**CustomerID**, **OrderDate**, **ProdID**e **Qty**) do documento XML.  
+ O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente e do pedido como um conjunto de linhas (**CustomerID**, **OrderDate**, **ProdID** e **Qty**) do documento XML.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
   
@@ -345,7 +345,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Especificando TableName na cláusula WITH  
  Este exemplo especifica *TableName* na cláusula WITH em vez de *SchemaDeclaration*. Isso será útil se você tiver uma tabela que tem a estrutura desejada e nenhum padrão de coluna, parâmetro *ColPattern* , é necessário.  
   
- O documento XML neste exemplo é composto dos elementos <`Customer`> e <`Order`>. A instrução OPENXML recupera informações de pedido em um conjunto de linhas de três colunas (**oid**, **date**e **amount**) do documento XML.  
+ O documento XML neste exemplo é composto dos elementos <`Customer`> e <`Order`>. A instrução OPENXML recupera informações de pedido em um conjunto de linhas de três colunas (**oid**, **date** e **amount**) do documento XML.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
   
@@ -355,7 +355,7 @@ O4    10000.0       NULL
   
 -   Não há nenhum *SchemaDeclaration* na cláusula WITH. Em vez disso, um nome de tabela é especificado. Portanto o esquema da tabela é usado como o esquema do conjunto de linhas.  
   
--   O valor do parâmetro *flags* é definido como **1** e indica o mapeamento centrado em atributo. Portanto os atributos dos elementos identificados por *rowpattern*são mapeados para as colunas do conjunto de linhas com o mesmo nome.  
+-   O valor do parâmetro *flags* é definido como **1** e indica o mapeamento centrado em atributo. Portanto os atributos dos elementos identificados por *rowpattern* são mapeados para as colunas do conjunto de linhas com o mesmo nome.  
   
  Em seguida, a instrução SELECT recupera todas as colunas no conjunto de linhas fornecido pelo OPENXML.  
   
@@ -464,7 +464,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Especificando rowpattern terminando com um atributo  
- O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações sobre os detalhes do pedido em um conjunto de linhas de três colunas (**ProductID**, **Quantity**e **OrderID**) do documento XML.  
+ O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações sobre os detalhes do pedido em um conjunto de linhas de três colunas (**ProductID**, **Quantity** e **OrderID**) do documento XML.  
   
  Primeiro, o **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
   
@@ -612,11 +612,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     Os atributos **id** (ID do estudante), **name**e **attends** . O atributo **attends** é um atributo com vários valores.  
+     Os atributos **id** (ID do estudante), **name** e **attends** . O atributo **attends** é um atributo com vários valores.  
   
 -   \<Class>  
   
-     Os atributos **id** (ID da aula), **name**e **attendedBy** . O atributo **attendedBy** é um atributo com vários valores.  
+     Os atributos **id** (ID da aula), **name** e **attendedBy** . O atributo **attendedBy** é um atributo com vários valores.  
   
  O atributo **attends** em \<Student> e o atributo **attendedBy** em \<Class> representam uma relação **m:n** entre as tabelas Student e Class. Um estudante pode assistir muitas aulas e uma aula pode ter muitos estudantes.  
   
