@@ -3,18 +3,18 @@ title: Instalar por meio de um prompt de comando
 description: Execute a configuração da linha de comando do SQL Server para adicionar os Serviços de Machine Learning com Python e R em uma instância do mecanismo de banco de dados do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956757"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122754"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Instalar os Serviços de Machine Learning do SQL Server com R e Python na linha de comando
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +37,9 @@ Você pode especificar a interação silenciosa, básica ou completa com a inter
 
 ## <a name="command-line-arguments"></a>Argumentos de linha de comando
 
-O argumento FEATURES é obrigatório, assim como os contratos de termo de licenciamento. 
+O argumento **/FEATURES** é obrigatório, assim como os contratos de termo de licenciamento. 
 
-Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao modo silencioso completo usando o parâmetro /Q ou o modo Silencioso Simples usando o parâmetro /QS. A opção /QS mostra apenas o andamento, não aceita nenhuma entrada e não exibe nenhuma mensagem de erro, se encontrado. O parâmetro /QS só tem suporte quando /Action=install é especificado.
+Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao modo silencioso completo usando o parâmetro **/Q** ou o modo Silencioso Simples usando o parâmetro **/QS**. A opção **/QS** mostra apenas o andamento, não aceita entradas e não exibe mensagens de erro, se encontrado. O parâmetro **/QS** só tem suporte quando **/Action=install** é especificado.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | Argumentos | Descrição |
