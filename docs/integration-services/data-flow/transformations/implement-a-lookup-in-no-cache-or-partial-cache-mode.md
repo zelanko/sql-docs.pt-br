@@ -17,10 +17,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194157"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar uma pesquisa no modo Sem Cache ou Cache Parcial
@@ -53,7 +53,7 @@ ms.locfileid: "92194157"
   
 4.  Clique duas vezes na fonte ou transformação anterior para configurar o componente.  
   
-5.  Clique duas vezes na transformação Pesquisa e em **Editor de Transformação Pesquisa**e, na página **Geral** , selecione **Cache parcial** ou **Sem cache**.  
+5.  Clique duas vezes na transformação Pesquisa e em **Editor de Transformação Pesquisa** e, na página **Geral** , selecione **Cache parcial** ou **Sem cache**.  
   
 6.  Para a lista **Especificar como lidar com linhas sem entradas correspondentes** , selecione uma opção de tratamento de erros da lista.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "92194157"
   
 8.  Siga uma das etapas a seguir:  
   
-    -   Clique em **Usar uma tabela ou uma exibição**e selecione uma tabela ou exibição ou clique em **Nova** para criar uma tabela ou exibição.  
+    -   Clique em **Usar uma tabela ou uma exibição** e selecione uma tabela ou exibição ou clique em **Nova** para criar uma tabela ou exibição.  
   
-    -   Clique em **Use os resultados de uma consulta SQL**e crie uma consulta na janela **Comando SQL** .  
+    -   Clique em **Use os resultados de uma consulta SQL** e crie uma consulta na janela **Comando SQL** .  
   
          - ou -  
   
@@ -101,7 +101,7 @@ ms.locfileid: "92194157"
   
     -   Na lista **Alocação do cache** , selecione a porcentagem do cache a ser usado para armazenar as linhas sem entradas correspondentes.  
   
-12. Para modificar a instrução SQL que gera os conjuntos de dados de referência, selecione **Modificar a instrução SQL**e altere a instrução SQL exibida na caixa de texto.  
+12. Para modificar a instrução SQL que gera os conjuntos de dados de referência, selecione **Modificar a instrução SQL** e altere a instrução SQL exibida na caixa de texto.  
   
      Se a instrução incluir parâmetros, clique em **Parâmetros** para mapear os parâmetros para colunas de entrada.  
   

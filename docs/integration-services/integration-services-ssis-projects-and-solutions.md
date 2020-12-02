@@ -20,10 +20,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1918d6cac049fd863426ce320ab774067c350ea5
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92678935"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Projetos e soluções do Integration Services (SSIS)
@@ -40,7 +40,7 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
  Projetos são armazenados em soluções. Você pode primeiro criar uma solução e, então, adicionar um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à solução. Se não existir uma solução, ela será criada automaticamente pelo [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] quando o projeto for criado pela primeira vez. Uma solução pode conter vários projetos de tipos diferentes.  
   
 > [!TIP]  
->  Por padrão, quando você cria um novo projeto no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], a solução não é mostrada no painel **Gerenciador de Soluções** . Para alterar este comportamento padrão, no menu **Ferramentas** , clique em **Opções** . Na caixa de diálogo **Opções** , expanda **Projetos e Soluções** e clique em **Geral** . Na página **Geral** , selecione **Sempre mostrar solução** .  
+>  Por padrão, quando você cria um novo projeto no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], a solução não é mostrada no painel **Gerenciador de Soluções**. Para alterar este comportamento padrão, no menu **Ferramentas** , clique em **Opções**. Na caixa de diálogo **Opções** , expanda **Projetos e Soluções** e clique em **Geral**. Na página **Geral** , selecione **Sempre mostrar solução**.  
 
 ## <a name="solutions-contain-projects"></a>As soluções contêm projetos  
  Uma solução é um contêiner que agrupa e gerencia os projetos que você usa quando desenvolve soluções empresariais completas. Uma solução permite que você manipule vários projetos como uma unidade e una um ou mais projetos relacionados que contribuam para uma solução empresarial.  
@@ -90,7 +90,7 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
 ## <a name="version-targeting-in-integration-services-projects"></a>Direcionamento de versão nos projetos do Integration Services  
  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], você pode criar, manter e executar pacotes direcionados ao SQL Server 2017, ao SQL Server 2016, ao SQL Server 2014 ou ao SQL Server 2012.  
   
- No Gerenciador de Soluções, clique com o botão direito do mouse em um projeto do Integration Services e selecione **Propriedades** para abrir as páginas de propriedades do projeto. Na guia **Geral** de **Propriedades de Configuração** , selecione a propriedade **TargetServerVersion** e, em seguida, escolha SQL Server 2017, SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
+ No Gerenciador de Soluções, clique com o botão direito do mouse em um projeto do Integration Services e selecione **Propriedades** para abrir as páginas de propriedades do projeto. Na guia **Geral** de **Propriedades de Configuração**, selecione a propriedade **TargetServerVersion** e, em seguida, escolha SQL Server 2017, SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
   
  ![Propriedade TargetServerVersion na caixa de diálogo Propriedades do projeto](../integration-services/media/targetserverversion2.png "Propriedade TargetServerVersion na caixa de diálogo Propriedades do projeto")  
 
@@ -98,9 +98,9 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
   
 1.  Abra o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-2.  No menu **Arquivo** , aponte para **Novo** e clique em **Projeto** .  
+2.  No menu **Arquivo** , aponte para **Novo** e clique em **Projeto**.  
   
-3.  Na caixa de diálogo **Novo Projeto** , selecione **Business Intelligence** e, em seguida, selecione o modelo **Projeto do Integration Services** .  
+3.  Na caixa de diálogo **Novo Projeto**, selecione **Business Intelligence** e, em seguida, selecione o modelo **Projeto do Integration Services**.  
   
      O modelo **Projeto do Integration Services** cria um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém um único pacote vazio.
 
@@ -110,13 +110,13 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
   
      O nome da solução é automaticamente atualizado para corresponder ao nome do projeto.  
   
-5.  Para criar uma pasta separada para o arquivo de solução, selecione **Criar diretório para solução** . Essa é a opção padrão.  
+5.  Para criar uma pasta separada para o arquivo de solução, selecione **Criar diretório para solução**. Essa é a opção padrão.  
   
 6.  Se o software de controle do código-fonte estiver instalado no computador, selecione **Adicionar ao controle do código-fonte** para associar o projeto ao controle do código-fonte.  
   
-7.  Se o software de controle do código-fonte for o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, a caixa de diálogo **Logon do Visual SourceSafe** será aberta. Em **Logon do Visual SourceSafe** , forneça um nome de usuário, uma senha e o nome do banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe. Clique em **Procurar** para localizar o banco de dados.  
+7.  Se o software de controle do código-fonte for o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, a caixa de diálogo **Logon do Visual SourceSafe** será aberta. Em **Logon do Visual SourceSafe**, forneça um nome de usuário, uma senha e o nome do banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe. Clique em **Procurar** para localizar o banco de dados.  
   
-    > **OBSERVAÇÃO:** para exibir e alterar o plug-in de controle do código-fonte selecionado e configurar o ambiente de controle do código-fonte, clique em **Opções** no menu **Ferramentas** e expanda o nó **Controle do Código-fonte** .  
+    > **OBSERVAÇÃO:** para exibir e alterar o plug-in de controle do código-fonte selecionado e configurar o ambiente de controle do código-fonte, clique em **Opções** no menu **Ferramentas** e expanda o nó **Controle do Código-fonte**.  
   
 8.  Clique em **OK** para adicionar a solução ao **Gerenciador de Soluções** e adicionar o projeto à solução.  
 
@@ -124,7 +124,7 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
   
 1.  No [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], clique em **Novo** > **Projeto** no menu **Arquivo** .  
   
-2.  Na área **Modelos Instalados** da janela **Novo Projeto** , expanda **Business Intelligence** e clique em **Integration Services** .  
+2.  Na área **Modelos Instalados** da janela **Novo Projeto** , expanda **Business Intelligence** e clique em **Integration Services**.  
   
 3.  Selecione **Assistente de Importação de Projeto do Integration Services** da lista de tipos de projetos.  
   
@@ -138,11 +138,11 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
   
 8.  Clique em **Avançar** para alternar para a página **Selecionar Origem** .  
   
-9. Se estiver fazendo a importação de um arquivo **.ispac** , digite o caminho, incluindo o nome de arquivo na caixa de texto **Caminho** . Clique em **Procurar** para navegar até a pasta onde você deseja que a solução seja armazenada e digite o nome do arquivo na caixa de texto **Nome de arquivo** e clique em **Abrir** .  
+9. Se estiver fazendo a importação de um arquivo **.ispac**, digite o caminho, incluindo o nome de arquivo na caixa de texto **Caminho**. Clique em **Procurar** para navegar até a pasta onde você deseja que a solução seja armazenada e digite o nome do arquivo na caixa de texto **Nome de arquivo** e clique em **Abrir**.  
   
-     Se estiver fazendo a importação de um **Catálogo do Integration Services** , digite o nome da instância de banco de dados na caixa de texto **Nome do servidor** ou clique em **Procurar** e selecione a instância de banco de dados que contém o catálogo.  
+     Se estiver fazendo a importação de um **Catálogo do Integration Services**, digite o nome da instância de banco de dados na caixa de texto **Nome do servidor** ou clique em **Procurar** e selecione a instância de banco de dados que contém o catálogo.  
   
-     Clique em **Procurar** ao lado da caixa de texto **Caminho** , expanda a pasta no catálogo, selecione o projeto que você deseja importar e clique em **OK** .  
+     Clique em **Procurar** ao lado da caixa de texto **Caminho** , expanda a pasta no catálogo, selecione o projeto que você deseja importar e clique em **OK**.  
   
      Clique em **Avançar** para alternar para a página **Revisar** .  
   
@@ -159,34 +159,34 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra a solução à qual deseja adicionar um novo projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e siga um destes procedimentos:  
   
-    -   Clique com o botão direito do mouse na solução, escolha **Adicionar** e clique em **Novo Projeto** .  
+    -   Clique com o botão direito do mouse na solução, escolha **Adicionar** e clique em **Novo Projeto**.  
   
-    -   No menu **Arquivo** , aponte para **Adicionar** e clique em **Novo Projeto** .  
+    -   No menu **Arquivo**, aponte para **Adicionar** e clique em **Novo Projeto**.  
   
-2.  Na caixa de diálogo **Adicionar Novo Projeto** , clique em **Projeto do Integration Services** no painel **Modelos** .  
+2.  Na caixa de diálogo **Adicionar Novo Projeto**, clique em **Projeto do Integration Services** no painel **Modelos**.  
   
 3.  Se preferir, edite o nome e o local do projeto.  
   
-4.  Clique em **OK** .  
+4.  Clique em **OK**.  
   
 ### <a name="add-an-existing-project-to-a-solution"></a>Adicionar um projeto existente a uma solução  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra a solução à qual deseja adicionar um projeto existente do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e siga um destes procedimentos:  
   
-    -   Clique com o botão direito do mouse na solução, aponte a **Adicionar** e escolha **Projeto Existente** .  
+    -   Clique com o botão direito do mouse na solução, aponte a **Adicionar** e escolha **Projeto Existente**.  
   
-    -   No menu **Arquivo** , clique em **Adicionar** e escolha **Projeto Existente** .  
+    -   No menu **Arquivo**, clique em **Adicionar** e escolha **Projeto Existente**.  
   
-2.  Na caixa de diálogo **Adicionar Projeto Existente** , navegue até o local ao qual deseja adicionar o projeto e clique em **Abrir** .  
+2.  Na caixa de diálogo **Adicionar Projeto Existente**, navegue até o local ao qual deseja adicionar o projeto e clique em **Abrir**.  
   
-3.  O projeto é adicionado à pasta da solução no **Gerenciador de Soluções** .  
+3.  O projeto é adicionado à pasta da solução no **Gerenciador de Soluções**.  
   
 ## <a name="remove-a-project-from-a-solution"></a>Remover um projeto de uma solução
  Você só pode remover um projeto de uma solução quando a solução estiver visível em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Assim que a solução estiver visível, você poderá remover tudo, exceto um projeto. Quando restar apenas um projeto, o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] não exibirá mais a pasta da solução e o último projeto não poderá ser removido.  
    
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra a solução da qual deseja remover um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-2.  No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e, em seguida, clique em **Descarregar Projeto** .  
+2.  No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e, em seguida, clique em **Descarregar Projeto**.  
   
 3.  Clique em **OK** para confirmar a remoção.  
 
@@ -198,7 +198,7 @@ Os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residem
   
     -   Clique em **Novo Item** e selecione um modelo no painel **Modelos** na caixa de diálogo **Adicionar Novo Item** .  
   
-    -   Clique em **Item Existente** , navegue até a caixa de diálogo **Adicionar Item Existente** para localizar o item que deseja adicionar ao projeto e clique em **Adicionar** .  
+    -   Clique em **Item Existente**, navegue até a caixa de diálogo **Adicionar Item Existente** para localizar o item que deseja adicionar ao projeto e clique em **Adicionar**.  
   
 3.  O novo item será exibido na pasta apropriada no Gerenciador de Soluções.  
 
@@ -209,11 +209,11 @@ Você pode copiar objetos em um projeto do [!INCLUDE[ssISnoversion](../includes/
   
 2.  Expanda o projeto e pasta de item do qual deseja copiar.  
   
-3.  Clique com o botão direito do mouse no item e clique em **Copiar** .  
+3.  Clique com o botão direito do mouse no item e clique em **Copiar**.  
   
-4.  Clique com o botão direito do mouse no projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a ser copiado e clique em **Colar** .  
+4.  Clique com o botão direito do mouse no projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a ser copiado e clique em **Colar**.  
   
-     Os itens são copiados automaticamente na pasta correta. Se você copiar itens que não são pacotes no projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os itens serão copiados na pasta **Diversos** .  
+     Os itens são copiados automaticamente na pasta correta. Se você copiar itens que não são pacotes no projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os itens serão copiados na pasta **Diversos**.  
 
 ## <a name="next-steps"></a>Próximas etapas
 

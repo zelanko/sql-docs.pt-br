@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384853"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novidades do Integration Services no SQL Server 2016
@@ -243,7 +243,7 @@ O recurso de implantação de pacotes incremental permite que você implante um 
  Ao atualizar projetos do SSIS das versões anteriores para a versão atual, os gerenciadores de conexões de nível de projeto continuam a funcionar conforme o esperado e as anotações e o layout do pacote são mantidos.  
 
 ####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> A propriedade AutoAdjustBufferSize calcula automaticamente o tamanho do buffer do fluxo de dados  
- Quando você define o valor da nova propriedade **AutoAdjustBufferSize** para **true** , o mecanismo de fluxo de dados calcula automaticamente o tamanho do buffer para o fluxo de dados. Para obter mais informações, consulte [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
+ Quando você define o valor da nova propriedade **AutoAdjustBufferSize** para **true**, o mecanismo de fluxo de dados calcula automaticamente o tamanho do buffer para o fluxo de dados. Para obter mais informações, consulte [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
 
 ####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> Modelos de fluxo de controle reutilizáveis  
  Salve um contêiner ou tarefa de fluxo de controle frequentemente utilizada em um arquivo de modelo autônomo e reutilizar várias vezes em um ou mais pacotes em um projeto, pelo uso de modelos de fluxo de controle. Essa capacidade de reutilização facilita o desenvolvimento e manutenção dos pacotes do SSIS. Para obter mais informações, consulte [Reutilizar o fluxo de controle entre pacotes usando partes do pacote do fluxo de controle](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
@@ -325,7 +325,7 @@ A versão mais recente do Feature Pack do Azure inclui a tarefa Carregar do SQL 
 ####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> Suporte multiplataforma e a várias versões no Designer SSIS  
  Agora você pode usar o Designer SSIS no SSDT (SQL Server Data Tools) para Visual Studio 2015 para criar, manter e executar pacotes destinados ao SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Para obter o SSDT, consulte [Baixar o SQL Server Data Tools mais recente](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
- No Gerenciador de Soluções, clique com o botão direito do mouse em um projeto do Integration Services e selecione **Propriedades** para abrir as páginas de propriedades do projeto. Na guia **Geral** de **Propriedades de Configuração** , selecione a propriedade **TargetServerVersion** e, em seguida, escolha o SQL Server 2012, SQL Server 2014 ou SQL Server 2016.  
+ No Gerenciador de Soluções, clique com o botão direito do mouse em um projeto do Integration Services e selecione **Propriedades** para abrir as páginas de propriedades do projeto. Na guia **Geral** de **Propriedades de Configuração**, selecione a propriedade **TargetServerVersion** e, em seguida, escolha o SQL Server 2012, SQL Server 2014 ou SQL Server 2016.  
    
  ![Propriedade TargetServerVersion na caixa de diálogo Propriedades do projeto](../integration-services/media/targetserverversion2.png "Propriedade TargetServerVersion na caixa de diálogo Propriedades do projeto")  
 

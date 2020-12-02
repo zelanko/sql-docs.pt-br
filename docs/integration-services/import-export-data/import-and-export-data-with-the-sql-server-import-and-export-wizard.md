@@ -24,10 +24,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8146e56063f73ddc054595c588e396ff4fcb8c0
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384715"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importar e exportar dados com o Assistente de Importação e Exportação do SQL Server
@@ -55,7 +55,7 @@ Se você desejar executar o assistente, mas não tiver o [!INCLUDE[msCoName](../
 |**Arquivos de texto** (arquivos simples)|Não é necessário ter arquivos adicionais.<br/><br/>Para obter mais informações, consulte [Conectar-se a uma fonte de dados de arquivo simples](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).|
 |**Arquivos do Microsoft Excel e Microsoft Access**|O Microsoft Office não instala todos os arquivos que você precisa para se conectar a arquivos de Excel e Access como fontes de dados. Obtenha o seguinte download – [Pacotes Redistribuíveis do Mecanismo de Banco de Dados do Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Para obter mais informações, consulte [Conectar-se a uma fonte de dados do Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) ou [Conectar-se a uma fonte de dados do Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
 |**Fontes de dados do Azure**<br/>Atualmente apenas o Armazenamento de blobs do Azure.|O SQL Server Data Tools não instala os arquivos necessários para se conectar ao Armazenamento de Blobs do Azure como uma fonte de dados. Baixe o seguinte download – [Feature Pack do Microsoft SQL Server 2016 Integration Services para o Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Para obter mais informações, veja [Conectar-se ao Armazenamento de Blobs do Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|
-|**Bancos de dados de software livre**<br/>PostgreSQL, MySql e outros.|Para se conectar a essas fontes de dados, você precisa baixar arquivos adicionais.<br/><br/>- Para **PostgreSQL** , consulte [Conectar-se a uma fonte de dados do PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>- Para **MySql** , consulte [Conectar-se a uma fonte de dados do MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
+|**Bancos de dados de software livre**<br/>PostgreSQL, MySql e outros.|Para se conectar a essas fontes de dados, você precisa baixar arquivos adicionais.<br/><br/>- Para **PostgreSQL**, consulte [Conectar-se a uma fonte de dados do PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>- Para **MySql**, consulte [Conectar-se a uma fonte de dados do MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
 |**Qualquer outra fonte de dados para a qual um driver ou provedor está disponível**|Normalmente, é necessário baixar arquivos adicionais para se conectar aos seguintes tipos de fontes de dados.<br/><br/>- Qualquer fonte para a qual um **Driver ODBC** está disponível. Para obter mais informações, consulte [Conectar-se a uma fonte de dados ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).<br/>- Qualquer fonte para a qual um **Provedor de Dados .NET Framework** está disponível.<br/>- Qualquer fonte para a qual um **Provedor OLE DB** está disponível.<br/><br/>Às vezes, componentes de terceiros que fornecem funcionalidades de origem e destino para outras fontes de dados são comercializados como produtos complementares do SSIS (SQL Server Integration Services).|
 
 ## <a name="how-do-i-connect-to-my-data"></a>Como fazer para me conectar aos meus dados?

@@ -22,10 +22,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194178"
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
@@ -118,7 +118,7 @@ ms.locfileid: "92194178"
   
  Para criar o arquivo na primeira iteração do loop e então acrescentar filas nas iterações subsequentes do loop, você precisa fazer o seguinte na hora do design:  
   
-1.  Defina a propriedade WriteOption como **CreateOnce** ou **CreateAlways**e execute uma iteração do loop. O arquivo é criado. Isto assegura que os metadados de dados acrescentados e o arquivo correspondam.  
+1.  Defina a propriedade WriteOption como **CreateOnce** ou **CreateAlways** e execute uma iteração do loop. O arquivo é criado. Isto assegura que os metadados de dados acrescentados e o arquivo correspondam.  
   
 2.  Redefina a propriedade WriteOption como **Append** e defina a propriedade ValidateExternalMetadata como **False**.  
   

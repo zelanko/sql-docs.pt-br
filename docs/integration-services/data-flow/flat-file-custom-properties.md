@@ -12,11 +12,11 @@ ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06e9cacfa5514648fc69bff0148a4448af536de0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194177"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123473"
 ---
 # <a name="flat-file-custom-properties"></a>Propriedades personalizadas de arquivo simples
 

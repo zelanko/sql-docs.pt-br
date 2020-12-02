@@ -22,10 +22,10 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b68f0dc3ac5b5591dc556c81bc083a62aa8d4606
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195228"
 ---
 # <a name="using-variables-in-the-script-task"></a>Usando variáveis na tarefa Script

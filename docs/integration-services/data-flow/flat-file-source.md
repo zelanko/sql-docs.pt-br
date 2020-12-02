@@ -22,11 +22,11 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a0646c394be5d00bea32f69b137e32c03d1663e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197091"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123467"
 ---
 # <a name="flat-file-source"></a>Fonte de Arquivo Simples
 
@@ -87,7 +87,7 @@ ms.locfileid: "92197091"
  Crie um novo gerenciador de conexões, usando a caixa de diálogo **Editor de Gerenciador de Conexões de Arquivo Simples** .  
   
  **Reter valores nulos da origem como valores nulos no fluxo de dados**  
- Especifique se os valores nulos devem ser mantidos na extração dos dados. O valor padrão dessa propriedade é **false**. Quando o valor é f**alse**, a fonte de Arquivo Simples substitui valores nulos dos dados de origem por valores padrão apropriados para cada coluna, como cadeias de caracteres vazias, no caso de colunas de cadeia de caracteres, e zero, no caso de colunas numéricas.  
+ Especifique se os valores nulos devem ser mantidos na extração dos dados. O valor padrão dessa propriedade é **false**. Quando o valor é f **alse**, a fonte de Arquivo Simples substitui valores nulos dos dados de origem por valores padrão apropriados para cada coluna, como cadeias de caracteres vazias, no caso de colunas de cadeia de caracteres, e zero, no caso de colunas numéricas.  
   
  **Visualização**  
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A visualização pode exibir até 200 linhas.  

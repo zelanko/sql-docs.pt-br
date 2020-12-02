@@ -21,11 +21,11 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c99a1d737e2b3d5c928f1b555915a14443b30584
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194688"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123445"
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
 
@@ -107,7 +107,7 @@ ms.locfileid: "92194688"
   
  A transformação Agregação é assíncrona. Isto significa que ela não consome e publica dados linha por linha. Em vez de consumir o conjunto de linhas inteiro, ela executa seus agrupamentos e agregações e, depois, publica os resultados.  
   
- Essa transformação não transpassa nenhuma coluna, mas cria colunas novas no fluxo de dados para os dados que publica. Somente as colunas de entrada às quais se aplicam funções de agregação ou as que a transformação usa para agrupamento são copiadas para a saída da transformação. Por exemplo, uma entrada da transformação Agregação pode ter três colunas: **CountryRegion**, **City**e **Population**. A transformação faz o agrupamento pela coluna **CountryRegion** e aplica a função Sum à coluna **Population** . Por isso, a saída não inclui a coluna **City** .  
+ Essa transformação não transpassa nenhuma coluna, mas cria colunas novas no fluxo de dados para os dados que publica. Somente as colunas de entrada às quais se aplicam funções de agregação ou as que a transformação usa para agrupamento são copiadas para a saída da transformação. Por exemplo, uma entrada da transformação Agregação pode ter três colunas: **CountryRegion**, **City** e **Population**. A transformação faz o agrupamento pela coluna **CountryRegion** e aplica a função Sum à coluna **Population** . Por isso, a saída não inclui a coluna **City** .  
   
  Você também pode adicionar várias saídas à transformação Agregação e direcionar cada agregação a uma saída diferente. Por exemplo, se a transformação Agregação aplicar as funções Sum e Average, cada agregação poderá ser direcionada para uma saída diferente.  
   

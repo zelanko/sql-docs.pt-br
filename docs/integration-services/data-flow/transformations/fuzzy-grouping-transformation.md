@@ -30,10 +30,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195946"
 ---
 # <a name="fuzzy-grouping-transformation"></a>transformação Agrupamento Difuso
@@ -56,7 +56,7 @@ ms.locfileid: "92195946"
   
 -   **_key_in**, uma coluna que identifica exclusivamente cada linha.  
   
--   **_key_out**, uma coluna que identifica um grupo de linhas duplicadas. A coluna **_key_out** tem o valor da coluna **_key_in** na linha de dados canônica. Linhas com o mesmo valor em **_key_out** fazem parte do mesmo grupo. O valor **_key_out**de um grupo corresponde ao valor **_key_in** na linha de dados canônica.  
+-   **_key_out**, uma coluna que identifica um grupo de linhas duplicadas. A coluna **_key_out** tem o valor da coluna **_key_in** na linha de dados canônica. Linhas com o mesmo valor em **_key_out** fazem parte do mesmo grupo. O valor **_key_out** de um grupo corresponde ao valor **_key_in** na linha de dados canônica.  
   
 -   **_score**, um valor entre 0 e 1 que indica a semelhança da linha de entrada à linha canônica.  
   

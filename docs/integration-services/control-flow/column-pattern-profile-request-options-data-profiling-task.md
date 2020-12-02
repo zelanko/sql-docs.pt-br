@@ -14,11 +14,11 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425968"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123558"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88425968"
  Todos os delimitadores são normalizados em um único espaço como parte do processo de geração de tokens, enquanto os símbolos são retidos.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Compreendendo o uso da tabela de marcas  
- Como opção, é possível agrupar tokens relacionados com uma única marca armazenando marcas e os seus termos relacionados em uma tabela especial criada em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . É necessário que a tabela de marcas tenha duas colunas de cadeias de caracteres: "Marca" e "Termo". Essas colunas podem ser dos tipos **char**, **nchar**, **varchar**ou **nvarchar**, mas não **text** ou **ntext**. É possível combinar várias marcas e os termos correspondentes em uma única tabela. Uma Solicitação de Perfil de Padrão de Coluna pode usar uma só tabela de marcas. É possível usar um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] separado para se conectar à tabela de marcas. Portanto, a tabela de marcas pode estar localizada em um banco de dados diferente ou em um servidor diferente do banco de dados de origem.  
+ Como opção, é possível agrupar tokens relacionados com uma única marca armazenando marcas e os seus termos relacionados em uma tabela especial criada em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . É necessário que a tabela de marcas tenha duas colunas de cadeias de caracteres: "Marca" e "Termo". Essas colunas podem ser dos tipos **char**, **nchar**, **varchar** ou **nvarchar**, mas não **text** ou **ntext**. É possível combinar várias marcas e os termos correspondentes em uma única tabela. Uma Solicitação de Perfil de Padrão de Coluna pode usar uma só tabela de marcas. É possível usar um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] separado para se conectar à tabela de marcas. Portanto, a tabela de marcas pode estar localizada em um banco de dados diferente ou em um servidor diferente do banco de dados de origem.  
   
  Por exemplo, é possível agrupar os valores "Leste", "Oeste", "Norte" e "Sul" que podem aparecer em endereços usando uma única marca: "Direção". A tabela a seguir é um exemplo de uma tabela de marcas desse tipo.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88425968"
 ## <a name="request-properties-options"></a>Opções de Propriedades da Solicitação  
  Para uma **Solicitação de Perfil de Padrão de Coluna**, o painel **Propriedades da Solicitação** exibe os seguintes grupos de opções:  
   
--   **Dados**que incluem as opções **TableOrView** e **Column**  
+-   **Dados** que incluem as opções **TableOrView** e **Column**  
   
 -   **Geral**  
   

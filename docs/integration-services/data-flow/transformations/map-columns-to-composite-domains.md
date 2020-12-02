@@ -12,10 +12,10 @@ ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cc1bddc579ccce64b4068fd2a5235481fc7b7629
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193196"
 ---
 # <a name="map-columns-to-composite-domains"></a>Mapear colunas para domínios compostos
@@ -39,7 +39,7 @@ ms.locfileid: "92193196"
   
 4.  Para cada coluna listada no campo **Coluna de Entrada** , selecione um domínio único no campo **Domínio** . Selecione somente domínios únicos que estão no domínio composto.  
   
-5.  Quando necessário, modifique os nomes que aparecem nos campos **Alias de Origem**, **Alias de Saída**e **Alias de Status** .  
+5.  Quando necessário, modifique os nomes que aparecem nos campos **Alias de Origem**, **Alias de Saída** e **Alias de Status** .  
   
 6.  Conforme o necessário, defina as propriedades na guia **Avançado** . Para obter mais informações sobre as propriedades, consulte [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "92193196"
   
 4.  Para a coluna listada no campo **Coluna de Entrada** , selecione o domínio composto no campo **Domínio** .  
   
-5.  Quando necessário, modifique os nomes que aparecem nos campos **Alias de Origem**, **Alias de Saída**e **Alias de Status** .  
+5.  Quando necessário, modifique os nomes que aparecem nos campos **Alias de Origem**, **Alias de Saída** e **Alias de Status** .  
   
 6.  Conforme o necessário, defina as propriedades na guia **Avançado** . Para obter mais informações sobre as propriedades, consulte [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md).  
   

@@ -27,10 +27,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195578"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
@@ -69,7 +69,7 @@ ms.locfileid: "92195578"
   
 1.  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seja localmente ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-2.  Em **Pesquisador de Objetos**, clique com o botão direito do mouse em **Bancos de Dados**e selecione o item de menu **Importar Aplicativo da Camada de Dados** para iniciar o assistente.  
+2.  Em **Pesquisador de Objetos**, clique com o botão direito do mouse em **Bancos de Dados** e selecione o item de menu **Importar Aplicativo da Camada de Dados** para iniciar o assistente.  
   
 3.  Conclua as etapas das caixas de diálogo do assistente:  
   

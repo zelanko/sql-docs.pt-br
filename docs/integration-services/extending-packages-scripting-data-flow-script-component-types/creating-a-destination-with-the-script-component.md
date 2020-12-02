@@ -18,11 +18,11 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f02b74a6e5e28fc44a1bab9eb3f101b91610d481
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193120"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123068"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Criando um destino com o componente Script
 

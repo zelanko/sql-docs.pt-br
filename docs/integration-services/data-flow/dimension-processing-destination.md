@@ -22,11 +22,11 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a93e031afddb7533cea5251c4882da2760fbfe
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195388"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123495"
 ---
 # <a name="dimension-processing-destination"></a>Destino de processamento de dimensões
 

@@ -12,11 +12,11 @@ ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c7bdaa7f8d7a049794f3965b3fe9d50b3dbb958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391712"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123343"
 ---
 # <a name="delete-packages"></a>Excluir pacotes
 

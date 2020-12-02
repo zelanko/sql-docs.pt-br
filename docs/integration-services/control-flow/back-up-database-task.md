@@ -20,11 +20,11 @@ ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63e02be4fe2c7fdd1c0293cd5e76dcb9e0adca22
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725953"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123604"
 ---
 # <a name="back-up-database-task"></a>Tarefa de Backup de Banco de Dados
 

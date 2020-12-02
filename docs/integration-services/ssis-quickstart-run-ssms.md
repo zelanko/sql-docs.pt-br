@@ -10,10 +10,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beb9a1e1dcb25f42e2d9a49c1e0e5c1a77a3f0ea
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193056"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Executar um pacote do SSIS com o SSMS (SQL Server Management Studio)
@@ -76,7 +76,7 @@ Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo
 
 2. Clique com o botão direito do mouse e selecione **Executar**. A caixa de diálogo **Executar Pacote** se abre.
 
-3.  Configure a execução de pacote usando as configurações nas guias **Parâmetros**, **Gerenciadores de Conexões**e **Avançado** na caixa de diálogo Executar Pacote .
+3.  Configure a execução de pacote usando as configurações nas guias **Parâmetros**, **Gerenciadores de Conexões** e **Avançado** na caixa de diálogo Executar Pacote .
 
 4.  Clique em OK para executar o pacote.
 

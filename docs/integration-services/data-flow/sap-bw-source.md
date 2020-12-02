@@ -12,10 +12,10 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8d62e20117bf23511a1d261142a3618dcbd5095a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195321"
 ---
 # <a name="sap-bw-source"></a>Origem SAP BW
@@ -73,13 +73,13 @@ ms.locfileid: "92195321"
   
     2.  Configurar, salvar e ativar o DTP.  
   
-    3.  No menu, clique em **Ir para**e clique em **Configurações do Gerenciador de Lotes**.  
+    3.  No menu, clique em **Ir para** e clique em **Configurações do Gerenciador de Lotes**.  
   
     4.  Atualizar **Número de Processos** para 1 para o processamento em série.  
   
 4.  Crie uma cadeia de processo:  
   
-    1.  Ao configurar a cadeia de processo, selecione **Iniciar usando a cadeia ou a API de metadados** como **Opções de Agendamento** de **Iniciar Processo**e adicione o DTP criado anteriormente como o nó subsequente.  
+    1.  Ao configurar a cadeia de processo, selecione **Iniciar usando a cadeia ou a API de metadados** como **Opções de Agendamento** de **Iniciar Processo** e adicione o DTP criado anteriormente como o nó subsequente.  
   
     2.  Salvar e ativar a cadeia do processo.  
   

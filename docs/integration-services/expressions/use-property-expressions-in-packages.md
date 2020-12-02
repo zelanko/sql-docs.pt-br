@@ -21,10 +21,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8775714da1c59e86a6ba62661610a0f5abbd11e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193171"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expressões de propriedade em pacotes
@@ -57,7 +57,7 @@ ms.locfileid: "92193171"
   
  Uma propriedade pode usar só uma expressão de propriedade e uma expressão de propriedade só pode ser aplicada a uma propriedade. Entretanto, você pode construir várias expressões de propriedade idênticas e atribuí-las a diferentes propriedades.  
   
- Algumas propriedades são definidas usando valores de enumeradores. Ao fazer referência ao membro do enumerador em uma expressão de propriedade, é preciso usar valores numéricos equivalentes ao nome amigável do membro do enumerador. Por exemplo, se uma expressão de propriedade define a propriedade **LoggingMode** , que usa um valor da enumeração **DTSLoggingMode** , a expressão de propriedade deve usar 0, 1 ou 2 em vez dos nomes amigáveis **Enabled**, **Disabled**ou **UseParentSetting**. Para obter mais informações, consulte [Constantes enumeradas em expressões de propriedade](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
+ Algumas propriedades são definidas usando valores de enumeradores. Ao fazer referência ao membro do enumerador em uma expressão de propriedade, é preciso usar valores numéricos equivalentes ao nome amigável do membro do enumerador. Por exemplo, se uma expressão de propriedade define a propriedade **LoggingMode** , que usa um valor da enumeração **DTSLoggingMode** , a expressão de propriedade deve usar 0, 1 ou 2 em vez dos nomes amigáveis **Enabled**, **Disabled** ou **UseParentSetting**. Para obter mais informações, consulte [Constantes enumeradas em expressões de propriedade](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interface de Usuário da Expressão de Propriedade  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um conjunto de ferramentas para construir e gerenciar as expressões de propriedade.  
@@ -119,7 +119,7 @@ ms.locfileid: "92193171"
  As expressões de exemplo a seguir mostram como usar as variáveis de sistema, operadores, funções e literais de cadeia de caracteres em expressões de propriedade.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Expressão de Propriedade para a Propriedade LoggingMode de um Pacote  
- A expressão de propriedade a seguir pode ser usada para definir a propriedade LoggingMode de um pacote. A expressão usa as funções DAY e GETDATE para obter um valor inteiro que represente o dia em uma data. Se o dia for o 1º ou 15º, o log será ativado; caso contrário, será desativado. O valor 1 é o número inteiro equivalente do membro do enumerador LoggingMode **Enabled**e o valor 2 é o inteiro equivalente ao membro **Disabled**. Na expressão, use o valor numérico em vez do nome de membro de enumerador.  
+ A expressão de propriedade a seguir pode ser usada para definir a propriedade LoggingMode de um pacote. A expressão usa as funções DAY e GETDATE para obter um valor inteiro que represente o dia em uma data. Se o dia for o 1º ou 15º, o log será ativado; caso contrário, será desativado. O valor 1 é o número inteiro equivalente do membro do enumerador LoggingMode **Enabled** e o valor 2 é o inteiro equivalente ao membro **Disabled**. Na expressão, use o valor numérico em vez do nome de membro de enumerador.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   

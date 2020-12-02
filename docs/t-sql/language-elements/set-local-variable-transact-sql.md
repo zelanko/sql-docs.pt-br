@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49ddfeda6b720d774e2b1d7c089fb295d185e40a
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93067371"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Define a variável local especificada, criada anteriormente com a instrução DECLARE @ *local_variable* , com o valor especificado.  
+Define a variável local especificada, criada anteriormente com a instrução DECLARE @*local_variable*, com o valor especificado.  
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,7 +70,7 @@ SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression
 
 ## <a name="arguments"></a>Argumentos
 **@** _local_variable_  
-O nome de uma variável de qualquer tipo, exceto **cursor** , **text** , **ntext** , **image** ou **table**. Os nomes de variável devem começar com um sinal de arroba ( **@** ). Os nomes de variável precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
+O nome de uma variável de qualquer tipo, exceto **cursor**, **text**, **ntext**, **image** ou **table**. Os nomes de variável devem começar com um sinal de arroba ( **@** ). Os nomes de variável precisam seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
 *property_name*  
 Uma propriedade de um tipo definido pelo usuário.  
@@ -82,7 +82,7 @@ Um campo público de um tipo definido pelo usuário.
 O nome de um tipo de dados CLR (Common Language Runtime) definido pelo usuário.  
   
 `{ . | :: }`  
-Especifica um método de um tipo de dados CLR definido pelo usuário. Para um método de instância (não estático), use um ponto ( **.** ). Para um método estático, use dois sinais de dois-pontos ( **::** ). Para invocar um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário, você deve ter a permissão EXECUTE no tipo.  
+Especifica um método de um tipo de dados CLR definido pelo usuário. Para um método de instância (não estático), use um ponto (**.**). Para um método estático, use dois sinais de dois-pontos (**::**). Para invocar um método, uma propriedade ou um campo de um tipo de dados CLR definido pelo usuário, você deve ter a permissão EXECUTE no tipo.  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 Um método de um tipo definido pelo usuário que obtém um ou mais argumentos para modificar o estado de uma instância de um tipo. Os métodos estáticos devem ser públicos.  
@@ -159,7 +159,7 @@ Especifica que uma mensagem de aviso é enviada ao cliente quando o cursor é co
 FOR *select_statement*  
 É uma instrução SELECT padrão que define o conjunto de resultados de um cursor. As palavras-chave FOR BROWSE e INTO não são permitidas em *select_statement* de uma declaração de cursor.  
   
-Se DISTINCT, UNION, GROUP BY ou HAVING forem usados ou uma expressão de agregação for incluída em *select_list* , o cursor será criado como STATIC.  
+Se DISTINCT, UNION, GROUP BY ou HAVING forem usados ou uma expressão de agregação for incluída em *select_list*, o cursor será criado como STATIC.  
   
 Se cada tabela subjacente não tiver um índice exclusivo e um cursor ISO SCROLL ou um cursor [!INCLUDE[tsql](../../includes/tsql-md.md)] KEYSET for solicitado, ele será automaticamente um cursor STATIC.  
   
@@ -169,7 +169,7 @@ READ ONLY
 Impede que esse cursor faça atualizações. O cursor não pode ser referenciado em uma cláusula WHERE CURRENT OF em uma instrução UPDATE ou DELETE. Essa opção anula a funcionalidade padrão de um cursor para ser atualizado. Essa palavra-chave é diferente do READ_ONLY anterior, pois tem um espaço em vez de um sublinhado entre READ e ONLY.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-Define colunas atualizáveis em um cursor. Se OF *column_name* [ **,**... *n* ] for fornecido, somente as colunas listadas permitirão modificações. Quando nenhuma lista for fornecida, todas as colunas poderão ser atualizadas, a menos que o cursor tenha sido definido como READ_ONLY.  
+Define colunas atualizáveis em um cursor. Se OF *column_name* [**,**...*n*] for fornecido, somente as colunas listadas permitirão modificações. Quando nenhuma lista for fornecida, todas as colunas poderão ser atualizadas, a menos que o cursor tenha sido definido como READ_ONLY.  
   
 ## <a name="remarks"></a>Comentários  
 Depois de uma variável ser declarada, ela é inicializada como NULL. Use a instrução SET para atribuir um valor que não é NULL a uma variável declarada. A instrução SET que atribui um valor à variável retorna um único valor. Ao inicializar várias variáveis, use uma instrução SET separada para cada variável local.  

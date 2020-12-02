@@ -12,10 +12,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3e1b6c318bd971e5352ad0191ccad51e20f5560a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193790"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lição 2-1 – compilar o utilitário de implantação
@@ -31,15 +31,15 @@ Antes de compilar o utilitário de implantação, você deve modificar as propri
   
 ### <a name="to-set-the-deployment-utility-properties"></a>Para definir as propriedades do utilitário de implantação  
   
-1.  Se o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ainda não estiver aberto, clique em **Iniciar**, aponte para **Todos os Programas**, **Microsoft SQL Server**e clique em **Business Intelligence Development Studio**.  
+1.  Se o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ainda não estiver aberto, clique em **Iniciar**, aponte para **Todos os Programas**, **Microsoft SQL Server** e clique em **Business Intelligence Development Studio**.  
   
-2.  No menu **Arquivo** , clique em **Abrir**, em **Projeto/Solução**, clique na pasta **Tutorial de Implantação** , clique em **Abrir**e clique duas vezes em **Deployment Tutorial.sln**.  
+2.  No menu **Arquivo** , clique em **Abrir**, em **Projeto/Solução**, clique na pasta **Tutorial de Implantação** , clique em **Abrir** e clique duas vezes em **Deployment Tutorial.sln**.  
   
 3.  No Gerenciador de Soluções, clique com o botão direito do mouse em Tutorial de Implantação e clique em **Propriedades**.  
   
 4.  Na caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** , expanda Propriedades de Configurações e clique em Utilitário de Implantação.  
   
-5.  No painel direito da caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** , verifique se a opção **AllowConfigurationChanges** está definida como **true**, defina **CreateDeploymentUtility** como **true**e, opcionalmente, atualize o valor padrão de **DeploymentOutputPath**.  
+5.  No painel direito da caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** , verifique se a opção **AllowConfigurationChanges** está definida como **true**, defina **CreateDeploymentUtility** como **true** e, opcionalmente, atualize o valor padrão de **DeploymentOutputPath**.  
   
 6.  Clique em **OK**.  
   

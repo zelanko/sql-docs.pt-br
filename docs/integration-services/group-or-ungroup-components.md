@@ -17,10 +17,10 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7cd88383577694d5bef248baea5004056d239136
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195193"
 ---
 # <a name="group-or-ungroup-components"></a>Agrupa ou desagrupa componentes
@@ -28,7 +28,7 @@ ms.locfileid: "92195193"
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  As guias **Fluxo de Controle**, **Fluxo de dados**e **Manipuladores de Eventos** no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] dão suporte a agrupamento recolhível. Se um pacote tem muitos componentes, as guias podem ficar cheias, tornando difícil visualizar todos os componentes ao mesmo tempo e localizar o item com o qual você quer trabalhar. O recurso de agrupamento desmontável, que pode conservar espaço na superfície de trabalho, e assim tornar mais fácil o trabalho com pacotes grandes.  
+  As guias **Fluxo de Controle**, **Fluxo de dados** e **Manipuladores de Eventos** no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] dão suporte a agrupamento recolhível. Se um pacote tem muitos componentes, as guias podem ficar cheias, tornando difícil visualizar todos os componentes ao mesmo tempo e localizar o item com o qual você quer trabalhar. O recurso de agrupamento desmontável, que pode conservar espaço na superfície de trabalho, e assim tornar mais fácil o trabalho com pacotes grandes.  
   
  Você seleciona os componentes que deseja agrupar, então os agrupa e, depois, expande ou recolhe os grupos para se adequarem ao seu trabalho. Expandir um grupo lhe dá acesso às propriedades dos componentes no grupo. As restrições de precedência que conectam tarefas e contêineres são automaticamente incluídas no grupo.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "92195193"
   
 2.  No Gerenciador de Soluções, clique duas vezes no pacote para abri-lo.  
   
-3.  Clique na guia **Fluxo de Controle**, **Fluxo de Dados**ou **Manipuladores de Eventos** .  
+3.  Clique na guia **Fluxo de Controle**, **Fluxo de Dados** ou **Manipuladores de Eventos** .  
   
 4.  Na superfície de design da guia, selecione os componentes que você deseja agrupar, clique com o botão direito do mouse no componente selecionado e clique em **Agrupar**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "92195193"
   
 2.  No Gerenciador de Soluções, clique duas vezes no pacote para abri-lo.  
   
-3.  Clique na guia **Fluxo de Controle**, **Fluxo de Dados**ou **Manipuladores de Eventos** .  
+3.  Clique na guia **Fluxo de Controle**, **Fluxo de Dados** ou **Manipuladores de Eventos** .  
   
 4.  Na superfície de design da guia, selecione o grupo que contém o componente que você deseja desagrupar, clique com o botão direito do mouse no componente selecionado e clique em **Desagrupar**.  
   

@@ -17,10 +17,10 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 75cc3aaec07d038ed6218a7a20268e94f23d3949
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93067302"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
@@ -63,7 +63,7 @@ ms.locfileid: "93067302"
  **Superfície do Designer**  
  Executa design e mantém os planos de manutenção. Use a superfície de designer para adicionar tarefas de manutenção a um plano, remover tarefas de um plano, especificar os links com precedência entre tarefas e para indicar a ramificação ou paralelismo de uma tarefa.  
   
- Um link de precedência entre duas tarefas estabelece uma relação entre elas. A segunda tarefa (a *tarefa dependente* ) é executada somente se o resultado da execução da primeira tarefa (a *tarefa precedente* ) corresponde aos critérios especificados. Normalmente o resultado da execução especificado é **Êxito** , **Falha** ou **Conclusão**. A superfície do designer do plano de manutenção baseia-se na superfície do designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
+ Um link de precedência entre duas tarefas estabelece uma relação entre elas. A segunda tarefa (a *tarefa dependente*) é executada somente se o resultado da execução da primeira tarefa (a *tarefa precedente*) corresponde aos critérios especificados. Normalmente o resultado da execução especificado é **Êxito**, **Falha** ou **Conclusão**. A superfície do designer do plano de manutenção baseia-se na superfície do designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obter informações, consulte [Restrições de precedência](../../integration-services/control-flow/precedence-constraints.md).  
   
  Por exemplo, poderá ser especificada a execução de uma tarefa Índice de Desfragmentação somente se a tarefa anterior Verificar a Integridade do Banco de Dados for completada com êxito. O recurso de vinculação de precedência de tarefa também permite que sejam tratadas condições de erro ou falha em um plano. Por exemplo, se a tarefa Verificar a Integridade do Banco de Dados falhar, uma tarefa Notificar Operador poderá notificar o usuário ou o operador sobre a falha.  
   
@@ -79,14 +79,14 @@ ms.locfileid: "93067302"
   
  Para especificar links de precedência entre duas tarefas, primeiro arraste as tarefas para a superfície de design e então clique na tarefa que ocorre primeiro (a tarefa precedente), e arraste a seta até a tarefa dependente. Quando foi estabelecido um link de precedência, o designer exibe uma seta vinculando as duas tarefas, com a tarefa precedente apontando para a tarefa dependente. Por padrão, quando um link é estabelecido pela primeira vez, a restrição do link é definida de modo que a tarefa dependente só execute se o resultado da tarefa precedente for **Êxito**.  
   
- Para alterar as propriedades de um link de precedência, clique duas vezes no link para iniciar o **Editor de Restrição de Precedência**. Isso fornece muitas opções para especificar as condições lógicas que determinam se a tarefa dependente será executada. Por exemplo, o **Resultado da execução** pode ser definido como **Falha** , caso a tarefa dependente somente execute se a tarefa precedente falhar. A alteração da propriedade do resultado da execução de um link para **Êxito** , **Falha** ou **Conclusão** também pode ser feita clicando com o botão direito do mouse no link e selecionando do menu de contexto.  
+ Para alterar as propriedades de um link de precedência, clique duas vezes no link para iniciar o **Editor de Restrição de Precedência**. Isso fornece muitas opções para especificar as condições lógicas que determinam se a tarefa dependente será executada. Por exemplo, o **Resultado da execução** pode ser definido como **Falha**, caso a tarefa dependente somente execute se a tarefa precedente falhar. A alteração da propriedade do resultado da execução de um link para **Êxito**, **Falha** ou **Conclusão** também pode ser feita clicando com o botão direito do mouse no link e selecionando do menu de contexto.  
   
- Para especificar ramificação de tarefa, primeiro crie links de precedência entre duas tarefas. Então, coloque outra tarefa dependente na superfície de design que executa quando ocorre um resultado diferente da primeira tarefa dependente. Clique na tarefa de precedência e arraste a segunda seta da tarefa de precedência para a tarefa dependente. Para alterar o resultado de execução ( **Êxito** , **Falha** , **Conclusão** ) que faz com que uma tarefa dependente execute, clique duas vezes na seta do link e altere o campo **Resultado de execução** . Alternativamente, clique com o botão direito do mouse no link e selecione o valor de resultado de execução desejado no menu de atalho.  
+ Para especificar ramificação de tarefa, primeiro crie links de precedência entre duas tarefas. Então, coloque outra tarefa dependente na superfície de design que executa quando ocorre um resultado diferente da primeira tarefa dependente. Clique na tarefa de precedência e arraste a segunda seta da tarefa de precedência para a tarefa dependente. Para alterar o resultado de execução (**Êxito**, **Falha**, **Conclusão**) que faz com que uma tarefa dependente execute, clique duas vezes na seta do link e altere o campo **Resultado de execução** . Alternativamente, clique com o botão direito do mouse no link e selecione o valor de resultado de execução desejado no menu de atalho.  
   
  Para especificar paralelismo de tarefa, vincule duas ou mais tarefas dependentes a uma única tarefa precedente. Altere as propriedades dos links de precedência de modo que os links que apontam para tarefas dependentes que executam em paralelo tenham o mesmo valor em seus campos de resultado de execução.  
   
 ## <a name="additional-features-available-from-the-shortcut-menu"></a>Recursos adicionais disponíveis no menu de atalho  
- Para ver opções adicionais, selecione uma ou mais tarefas na superfície de design e, então, clique com o botão direito do mouse para abrir o menu de atalho. Além das opções comuns **Cortar** , **Copiar** , **Colar** , **Excluir** e **Selecionar Tudo** , para algumas tarefas estão disponíveis as seguintes opções especiais.  
+ Para ver opções adicionais, selecione uma ou mais tarefas na superfície de design e, então, clique com o botão direito do mouse para abrir o menu de atalho. Além das opções comuns **Cortar**, **Copiar**, **Colar**, **Excluir** e **Selecionar Tudo**, para algumas tarefas estão disponíveis as seguintes opções especiais.  
   
  **Adicionar Anotação**  
  Adiciona uma nota descritiva à superfície de design.  

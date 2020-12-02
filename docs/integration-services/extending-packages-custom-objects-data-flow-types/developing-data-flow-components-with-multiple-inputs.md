@@ -12,11 +12,11 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e73d9b4a6f23473e0dcb7600507dc29fd795679a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484291"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123211"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Desenvolvendo componentes de fluxo de dados com várias entradas
 
@@ -61,7 +61,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
  Ao implementar esse método, você define o status de um elemento na matriz Booliana *canProcess* para cada uma das entradas do componente. (As entradas são identificadas pelos valores de suas IDs na matriz *inputIDs*.) Quando você define o valor de um elemento na matriz *canProcess* como **true** para uma entrada, o mecanismo de fluxo de dados chama o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> do componente e fornece mais dados para a entrada especificada.  
   
- Embora mais dados de upstream estejam disponíveis, o valor do elemento da matriz *canProcess* de pelo menos uma entrada deve sempre ser **true**ou o processamento será interrompido.  
+ Embora mais dados de upstream estejam disponíveis, o valor do elemento da matriz *canProcess* de pelo menos uma entrada deve sempre ser **true** ou o processamento será interrompido.  
   
  O mecanismo de fluxo de dados chama o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> antes de enviar cada buffer de dados para determinar quais entradas estão esperando o recebimento de mais dados. Quando o valor de retorno indica que uma entrada está bloqueada, o mecanismo de fluxo de dados armazena buffers de dados adicionais em cache temporariamente para aquela entrada em vez de enviá-los ao componente.  
   

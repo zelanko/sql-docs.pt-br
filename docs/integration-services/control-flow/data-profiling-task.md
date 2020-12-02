@@ -18,11 +18,11 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430988"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123539"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
 
@@ -87,15 +87,15 @@ ms.locfileid: "88430988"
 |FunctionalDependencyProfile|Colunas do tipo **integer** , do tipo **char** e do tipo **datetime**|  
 |InclusionProfile|Colunas do tipo **integer** , do tipo **char** e do tipo **datetime**|  
   
- \* Na tabela anterior de tipos de dados válidos, os tipos **integer**, **char**, **datetime**e **numeric** incluem os seguintes tipos de dados específicos:  
+ \* Na tabela anterior de tipos de dados válidos, os tipos **integer**, **char**, **datetime** e **numeric** incluem os seguintes tipos de dados específicos:  
   
- Entre os tipos de número inteiro estão **bit**, **tinyint**, **smallint**, **int**e **bigint**.  
+ Entre os tipos de número inteiro estão **bit**, **tinyint**, **smallint**, **int** e **bigint**.  
   
- Tipos de caracteres incluem **char**, **nchar**, **varchar**e **nvarchar** , mas não incluem **varchar(max)** nem **nvarchar(max)**.  
+ Tipos de caracteres incluem **char**, **nchar**, **varchar** e **nvarchar** , mas não incluem **varchar(max)** nem **nvarchar(max)**.  
   
- Entre os tipos de data e hora estão **datetime**, **smalldatetime**e **timestamp**.  
+ Entre os tipos de data e hora estão **datetime**, **smalldatetime** e **timestamp**.  
   
- Tipos numéricos incluem tipos **integer** (exceto **bit**), **money**, **smallmoney**, **decimal**, **float**, **real**e **numeric**.  
+ Tipos numéricos incluem tipos **integer** (exceto **bit**), **money**, **smallmoney**, **decimal**, **float**, **real** e **numeric**.  
   
  \* Não há suporte para os tipos \* **image**, **text**, **XML**, **udt** e **variant** em perfis que não sejam o Perfil Razão Nula de Coluna.  
   

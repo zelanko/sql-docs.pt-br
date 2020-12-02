@@ -20,10 +20,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193818"
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
@@ -261,7 +261,7 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
   
  Quando você usa a janela **Propriedades** para definir as expressões em uma variável definida pelo usuário:  
   
--   O valor de uma variável pode ser definido pela propriedade Value ou Expression. Por padrão, a propriedade EvaluateAsExpression está definida como **False** e o valor da variável é definido pela propriedade Value. Para usar uma expressão para definir o valor, você deve definir antes EvaluateAsExpression como **True**e fornecer uma expressão na propriedade Expression. A propriedade Value é definida automaticamente como o resultado de avaliação da expressão.  
+-   O valor de uma variável pode ser definido pela propriedade Value ou Expression. Por padrão, a propriedade EvaluateAsExpression está definida como **False** e o valor da variável é definido pela propriedade Value. Para usar uma expressão para definir o valor, você deve definir antes EvaluateAsExpression como **True** e fornecer uma expressão na propriedade Expression. A propriedade Value é definida automaticamente como o resultado de avaliação da expressão.  
   
 -   A propriedade ValueType contém o tipo de dados do valor na propriedade Value. Quando Value é definido por uma expressão, ValueType é atualizado automaticamente para um tipo de dados compatível com o resultado da avaliação da expressão. Por exemplo, se Value contiver 0 e a propriedade ValueType contiver **Int32** e você definir Expression como GETDATE(), Value conterá a data e hora atuais e ValueType será definido como **DateTime**.  
   
@@ -291,7 +291,7 @@ Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades
   
      Além disso, você pode exibir a janela **Variáveis** mapeando o comando View.Variables para uma combinação de teclas de sua escolha na página **Teclado** da caixa de diálogo **Opções** .  
   
-4.  Opcionalmente, na janela **Variáveis** , clique em **Opções de Grade**e selecione as colunas para serem exibidas na janela **Variáveis** e selecione os filtros para serem aplicados na lista de variáveis.  
+4.  Opcionalmente, na janela **Variáveis** , clique em **Opções de Grade** e selecione as colunas para serem exibidas na janela **Variáveis** e selecione os filtros para serem aplicados na lista de variáveis.  
   
 5.  Selecione a variável na lista e atualize os valores nas colunas **Nome**, **Tipo de Dados**, **Valor**, **Namespace**, **Gerar Evento de Alteração**, **Descrição,** e **Expressão** .  
   

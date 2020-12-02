@@ -14,10 +14,10 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a55d74c1f7f75065cafa560cf1c6cc0bc70e2f99
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195218"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Página geral da opções dos Designers do Integration Services
@@ -27,7 +27,7 @@ ms.locfileid: "92195218"
 
   Use a página **Geral** da página **Designers do Integration Services** na caixa de diálogo **Opções** para especificar as opções de carregamento, exibição e atualização de pacotes.  
   
- Para abrir a página **Geral** , em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no menu **Ferramentas** , clique em **Opções**, expanda **Designers do Business Intelligence**e selecione **Designers do Integration Services**.  
+ Para abrir a página **Geral** , em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no menu **Ferramentas** , clique em **Opções**, expanda **Designers do Business Intelligence** e selecione **Designers do Integration Services**.  
   
 ## <a name="options"></a>Opções  
  **Verificar assinatura digital ao carregar um pacote**  

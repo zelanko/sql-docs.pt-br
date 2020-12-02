@@ -12,10 +12,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193718"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novidades do Integration Services no SQL Server 2017

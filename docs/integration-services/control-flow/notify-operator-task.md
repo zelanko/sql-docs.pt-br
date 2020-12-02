@@ -18,10 +18,10 @@ ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d6bcdb94260a5fe1190e6f96ada085f004458c54
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194228"
 ---
 # <a name="notify-operator-task"></a>Tarefa de Notificação do Operador
