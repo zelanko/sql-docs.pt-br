@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424168"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130281"
 ---
 # <a name="disable-indexes-and-constraints"></a>Desabilitar índices e restrições
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "88424168"
  Exibe o nome da tabela ou exibição na qual o índice foi criado.  
   
  **Tipo de Índice**  
- Exibe o tipo de índice: **Clusterizado**, **Não clusterizado**, **Espacial**ou **XML**.  
+ Exibe o tipo de índice: **Clusterizado**, **Não clusterizado**, **Espacial** ou **XML**.  
   
  **Status**  
  Exibe o status atual da operação de desabilitação. Os possíveis valores após a execução são:  

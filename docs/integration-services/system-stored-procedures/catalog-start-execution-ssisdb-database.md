@@ -12,11 +12,11 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f1a69ba2746d688f1d134546370514f826f9cee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477083"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129626"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (Banco de dados SSISDB)
 

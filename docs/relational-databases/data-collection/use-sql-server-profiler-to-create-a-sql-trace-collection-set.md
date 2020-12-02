@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386422"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128834"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Usar o SQL Server Profiler para criar um conjunto de coleta do Rastreamento do SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "88386422"
   
 10. Na barra de ferramentas, clique em **Parar Rastreamento Selecionado** ou **Pausar Rastreamento Selecionado**.  
   
-11. No menu **Arquivo** , aponte para **Exportar**, para **Definição de Rastreamento de Script**e clique em **Para o Conjunto de Coleta de Rastreamento do SQL**.  
+11. No menu **Arquivo** , aponte para **Exportar**, para **Definição de Rastreamento de Script** e clique em **Para o Conjunto de Coleta de Rastreamento do SQL**.  
   
 12. Na caixa de diálogo **Salvar como** , digite o nome desejado para a definição de rastreamento na caixa **Nome do arquivo** e salve-o no local desejado. Para este exemplo, o nome do arquivo é o mesmo que o nome do rastreamento (SPgt80).  
   
@@ -103,9 +103,9 @@ ms.locfileid: "88386422"
   
 5.  No Pesquisador de Objetos, verifique se o conjunto de coleta foi criado. Para fazer isso, execute estas etapas:  
   
-    1.  Clique com o botão direito do mouse em **Gerenciamento**e clique em **Atualizar**.  
+    1.  Clique com o botão direito do mouse em **Gerenciamento** e clique em **Atualizar**.  
   
-    2.  Expanda **Gerenciamento**e expanda **Coleta de Dados**.  
+    2.  Expanda **Gerenciamento** e expanda **Coleta de Dados**.  
   
      O conjunto de coleta **SPROC_CollectionSet** aparece no mesmo nível do nó **Conjuntos de Coleta de Dados do Sistema** . Por padrão, o conjunto de coleta é desabilitado.  
   
@@ -127,11 +127,11 @@ BEGIN TRANSACTION
 BEGIN TRY  
   
 -- Define collection set  
--- ***  
--- *** Replace 'SqlTrace Collection Set Name Here' in the   
--- *** following script with the name you want  
--- *** to use for the collection set.  
--- ***  
+-- **_  
+-- _*_ Replace 'SqlTrace Collection Set Name Here' in the   
+-- _*_ following script with the name you want  
+-- _*_ to use for the collection set.  
+-- _*_  
 DECLARE @collection_set_id int;  
 EXEC [dbo].[sp_syscollector_create_collection_set]  
     @name = N'SPROC_CollectionSet',  
@@ -171,11 +171,11 @@ SELECT @collector_type_GUID = collector_type_uid
   WHERE name = N'Generic SQL Trace Collector Type';  
   
 -- Create the trace collection item.  
--- ***  
--- *** Replace 'SqlTrace Collection Item Name Here' in   
--- *** the following script with the name you want to  
--- *** use for the collection item.  
--- ***  
+-- _*_  
+-- _*_ Replace 'SqlTrace Collection Item Name Here' in   
+-- _*_ the following script with the name you want to  
+-- _*_ use for the collection item.  
+-- _**  
 EXEC [dbo].[sp_syscollector_create_collection_item]  
    @collection_set_id = @collection_set_id,  
    @collector_type_uid = @collector_type_GUID,  

@@ -1,11 +1,11 @@
 ---
-title: sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 description: Retorna o status atual dos semáforos de recursos usados para restringir a otimização de consultas simultâneas
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: language-reference
 f1_keywords:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646396"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96503320"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -54,7 +54,7 @@ O banco de dados SQL do Azure requer a permissão VIEW DATABASE STATE no banco d
 ## <a name="remarks"></a>Comentários  
 SQL Server usa uma abordagem de gateway em camadas para limitar o número de compilações simultâneas permitidas.  São usados três gateways, incluindo pequeno, médio e grande. Os gateways ajudam a evitar o esgotamento de recursos de memória geral por uma maior memória de compilação, exigindo consumidores.
 
-Aguarda um resultado de gateway em compilação atrasada. Além dos atrasos na compilação, as solicitações limitadas terão uma acumulação de RESOURCE_SEMAPHORE_QUERY_COMPILE de tipo de espera associada. O tipo de espera RESOURCE_SEMAPHORE_QUERY_COMPILE pode indicar que as consultas estão usando uma grande quantidade de memória para compilação e que a memória foi esgotada ou, como alternativa, há memória suficiente disponível em geral, no entanto, as unidades disponíveis em um gateway específico foram esgotadas. A saída de **Sys. dm_exec_query_optimizer_memory_gateways** pode ser usada para solucionar problemas de cenários em que não havia memória suficiente para compilar um plano de execução de consulta.  
+Aguarda um resultado de gateway em compilação atrasada. Além dos atrasos na compilação, as solicitações limitadas terão uma acumulação de RESOURCE_SEMAPHORE_QUERY_COMPILE de tipo de espera associada. O tipo de espera RESOURCE_SEMAPHORE_QUERY_COMPILE pode indicar que as consultas estão usando uma grande quantidade de memória para compilação e que a memória foi esgotada ou, como alternativa, há memória suficiente disponível em geral, no entanto, as unidades disponíveis em um gateway específico foram esgotadas. A saída de **Sys.dm_exec_query_optimizer_memory_gateways** pode ser usada para solucionar cenários em que não havia memória suficiente para compilar um plano de execução de consulta.  
 
 ## <a name="examples"></a>Exemplos  
 

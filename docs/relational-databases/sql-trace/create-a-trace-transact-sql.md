@@ -15,11 +15,11 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364788"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130187"
 ---
 # <a name="create-a-trace-transact-sql"></a>Criar um rastreamento (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "93364788"
   
 ### <a name="to-create-a-trace"></a>Para criar um rastreamento  
   
-1.  Execute **sp_trace_create** com os parâmetros exigidos para criar um novo rastreamento. O novo rastreamento estará em um estado parado ( *status* é **0** ).  
+1.  Execute **sp_trace_create** com os parâmetros exigidos para criar um novo rastreamento. O novo rastreamento estará em um estado parado (*status* é **0**).  
   
 2.  Execute **sp_trace_setevent** com os parâmetros exigidos para selecionar os eventos e as colunas para rastrear.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "93364788"
      **sp_trace_setevent** e **sp_trace_setfilter** só podem ser executados em rastreamentos existentes que estejam parados.  
   
     > [!IMPORTANT]  
-    >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do SQL Server Profiler ( <strong>sp_trace_ *xx*</strong>) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
+    >  Ao contrário dos procedimentos armazenados comuns, os parâmetros de todos os procedimentos armazenados do SQL Server Profiler (<strong>sp_trace_ *xx*</strong>) são estritamente tipados e não são compatíveis com a conversão automática de tipo de dados. Se esses parâmetros não forem chamados pelos tipos de dados com parâmetros de entrada corretos, como especificado na descrição do argumento, o procedimento armazenado retornará um erro.  
   
 ## <a name="examples"></a>Exemplos
 

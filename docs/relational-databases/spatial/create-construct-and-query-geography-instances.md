@@ -16,11 +16,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006333"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130191"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Criar, construir e consultar instâncias de geografia
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "92006333"
  [STEndpoint &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimensão  
- Uma instância **geography** não vazia pode ser zero, uni ou bidimensional. Instâncias **geography** com dimensional zero, como **Point** e **MultiPoint**, não têm comprimento nem área. Objetos unidimensionais, como **LineString, CircularString**, **CompoundCurve**e **MultiLineString**, têm comprimento. Instâncias bidimensionais, como **Polygon, CurvePolygon**e **MultiPolygon**, têm área e comprimento. Instâncias vazias relatam uma dimensão de -1 e uma **GeometryCollection** relata a dimensão máxima de seu conteúdo.  
+ Uma instância **geography** não vazia pode ser zero, uni ou bidimensional. Instâncias **geography** com dimensional zero, como **Point** e **MultiPoint**, não têm comprimento nem área. Objetos unidimensionais, como **LineString, CircularString**, **CompoundCurve** e **MultiLineString**, têm comprimento. Instâncias bidimensionais, como **Polygon, CurvePolygon** e **MultiPolygon**, têm área e comprimento. Instâncias vazias relatam uma dimensão de -1 e uma **GeometryCollection** relata a dimensão máxima de seu conteúdo.  
   
  **Para retornar a dimensão de uma instância**  
  [STDimension &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -175,13 +175,13 @@ ms.locfileid: "92006333"
  [STArea &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> Empty (vazio)  
- Uma instância _empty_**geography** não tem pontos. O tamanho de instâncias **LineString, CircularString**, **CompoundCurve**e **MultiLineString** é 0. A área das instâncias **Polygon, CurvePolygon** e **MultiPolygon** vazias é 0.  
+ Uma instância _empty_**geography** não tem pontos. O tamanho de instâncias **LineString, CircularString**, **CompoundCurve** e **MultiLineString** é 0. A área das instâncias **Polygon, CurvePolygon** e **MultiPolygon** vazias é 0.  
   
  **Para determinar se uma instância está vazia**  
  [STIsEmpty &#40;tipo de dados geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Fechamento  
- Uma instância _closed_**geography** é uma figura cujos pontos inicial e final são os mesmos. As instâncias**Polygon** são consideradas fechadas. As instâncias**Point** não estão fechadas.  
+ Uma instância _closed_**geography** é uma figura cujos pontos inicial e final são os mesmos. As instâncias **Polygon** são consideradas fechadas. As instâncias **Point** não estão fechadas.  
   
  Um anel é uma instância de **LineString** simples e fechada.  
   

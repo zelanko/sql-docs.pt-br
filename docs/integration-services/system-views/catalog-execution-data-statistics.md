@@ -12,11 +12,11 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 24452ceffc1660e57b087395ded3923e47802314
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495211"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129486"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 

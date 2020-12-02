@@ -12,11 +12,11 @@ ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 18e7cb22f94e33328ed08968052d03b0261c73df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425058"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129647"
 ---
 # <a name="catalogset_folder_description-ssisdb-database"></a>catalog.set_folder_description (Banco de Dados SSISDB)
 

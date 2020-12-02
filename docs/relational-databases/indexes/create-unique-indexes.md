@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ab82f18d59bd6a2f8df0c236cd44031b740ee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486863"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130257"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "88486863"
   
 ###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Benefícios de um índice exclusivo  
   
--   Índices exclusivos de multicolunas garantem que cada combinação de valores na chave de índice é exclusivo. Por exemplo, se um índice exclusivo for criado em uma combinação de colunas **LastName**, **FirstName**e **MiddleName** , duas linhas na tabela não poderão ter a mesma combinação de valores que essas colunas.  
+-   Índices exclusivos de multicolunas garantem que cada combinação de valores na chave de índice é exclusivo. Por exemplo, se um índice exclusivo for criado em uma combinação de colunas **LastName**, **FirstName** e **MiddleName** , duas linhas na tabela não poderão ter a mesma combinação de valores que essas colunas.  
   
 -   Contanto que os dados em cada coluna sejam exclusivos, você pode criar um índice clusterizado exclusivo e vários índices exclusivos não clusterizados na mesma tabela.  
   

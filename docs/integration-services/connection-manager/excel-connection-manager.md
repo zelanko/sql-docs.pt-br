@@ -19,11 +19,11 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa3a520812d2b28e67b5b863d4480d7d01afaa57
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728077"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130089"
 ---
 # <a name="excel-connection-manager"></a>Gerenciador de conexões do Excel
 

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408492"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130263"
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "88408492"
   
 4.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
   
-5.  Na caixa de diálogo **Selecionar Colunas de **_table\_name_, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
+5.  Na caixa de diálogo **Selecionar Colunas de**_table\_name_, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
   
 6.  Clique em **OK**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "88408492"
   
 7.  Selecione o novo índice na caixa de texto **Índice ou Chave Exclusiva/Primária Selecionada** .  
   
-8.  Na grade, selecione **Criar como Clusterizado**e selecione **Sim** na lista suspensa, à direita da propriedade.  
+8.  Na grade, selecione **Criar como Clusterizado** e selecione **Sim** na lista suspensa, à direita da propriedade.  
   
 9. Clique em **fechar**  
   

@@ -16,11 +16,11 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 420e34cc54d83d2f9f01aee1b794c7f37080c493
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724521"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130109"
 ---
 # <a name="ado-connection-manager"></a>Gerenciador de conexões ADO
 

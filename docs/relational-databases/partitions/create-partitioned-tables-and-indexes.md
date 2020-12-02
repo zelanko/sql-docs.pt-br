@@ -31,11 +31,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482514"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130222"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Criar tabelas e índices particionados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "88482514"
   
 #### <a name="to-create-a-partitioned-table"></a>Para criar uma tabela particionada  
   
-1.  Clique com o botão direito do mouse na tabela que você deseja particionar, aponte para **Armazenamento**e clique em **Criar Partição...**.  
+1.  Clique com o botão direito do mouse na tabela que você deseja particionar, aponte para **Armazenamento** e clique em **Criar Partição...**.  
   
 2.  No **Assistente para Criar Partição**, na página **Bem-vindo ao Assistente para Criar Partição** , clique em **Avançar**.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "88482514"
      As opções adicionais a seguir estão disponíveis nessa página:  
   
      **Definir Limites...**  
-     Abre a caixa de diálogo **Definir Valores de Limite** para selecionar os valores de limite e os intervalos de datas que deseja para suas partições. Essa opção estará disponível somente quando você tiver selecionado uma coluna de particionamento que contenha um dos seguintes tipos de dados: **date**, **datetime**, **smalldatetime**, **datetime2**ou **datetimeoffset**.  
+     Abre a caixa de diálogo **Definir Valores de Limite** para selecionar os valores de limite e os intervalos de datas que deseja para suas partições. Essa opção estará disponível somente quando você tiver selecionado uma coluna de particionamento que contenha um dos seguintes tipos de dados: **date**, **datetime**, **smalldatetime**, **datetime2** ou **datetimeoffset**.  
   
      **Estimar armazenamento**  
      Calcula o número de linhas, o espaço necessário e o espaço disponível para armazenamento para cada grupo de arquivos especificado para as partições. Esses valores são exibidos na grade como valores somente leitura.  
@@ -243,7 +243,7 @@ ms.locfileid: "88482514"
      Fornece qualquer mensagem de aviso ou erro retornada pelo processo.  
   
      **Report**  
-     Cria um relatório contendo os resultados do Assistente para Criar Partição. As opções são **Exibir Relatório**, **Salvar Relatório no Arquivo**, **Copiar Relatório na Área de Transferência**e **Enviar Relatório como Email**.  
+     Cria um relatório contendo os resultados do Assistente para Criar Partição. As opções são **Exibir Relatório**, **Salvar Relatório no Arquivo**, **Copiar Relatório na Área de Transferência** e **Enviar Relatório como Email**.  
   
      **Exibir Relatório**  
      Abre a caixa de diálogo **Exibir Relatório** , que contém um relatório de texto do progresso do Assistente para Criar Partições.  

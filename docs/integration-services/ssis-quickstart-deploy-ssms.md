@@ -12,11 +12,11 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/21/2018
 ms.openlocfilehash: fc86054be556dbb34d212b24172e50fbf52f8980
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344547"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129971"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Implantar um projeto do SSIS com o SSMS (SQL Server Management Studio)
 
@@ -50,8 +50,8 @@ Você não pode usar as informações neste guia de início rápido para implant
 Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
 
 1. Faça logon no [Portal do Azure](https://portal.azure.com/).
-2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL** . 
-3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar** , passe o mouse sobre o nome do servidor. 
+2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL**. 
+3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
 
 ## <a name="authentication-methods-for-deployment"></a>Métodos de autenticação para implantação
@@ -66,7 +66,7 @@ Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo
 
 1. Abra o SQL Server Management Studio.
 
-2. Na caixa de diálogo **Conectar ao Servidor** , insira as informações a seguir:
+2. Na caixa de diálogo **Conectar ao Servidor**, insira as informações a seguir:
 
    | Configuração       | Valor sugerido | Obter mais informações | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -76,32 +76,32 @@ Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo
    | **Logon** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
    | **Senha** | A senha para sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
 
-3. Clique em **Conectar** . A janela Pesquisador de Objetos será aberta no SSMS. 
+3. Clique em **Conectar**. A janela Pesquisador de Objetos será aberta no SSMS. 
 
 4. No Pesquisador de Objetos, expanda **Catálogos do Integration Services** e, em seguida, expanda **SSISDB** para exibir os objetos no banco de dados do Catálogo do SSIS.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Iniciar o Assistente de Implantação do Integration Services
 1. No Pesquisador de Objetos, com o nó **Catálogos do Integration Services** e o nó **SSISDB** expandidos, expanda uma pasta.
 
-2.  Selecione o nó **Projetos** .
+2.  Selecione o nó **Projetos**.
 
-3.  Clique com o botão direito do mouse no nó **Projetos** e selecione **Implantar projeto** . O Assistente de Implantação do Integration Services será aberto. Implante um projeto do catálogo atual ou do sistema de arquivos.
+3.  Clique com o botão direito do mouse no nó **Projetos** e selecione **Implantar projeto**. O Assistente de Implantação do Integration Services será aberto. Implante um projeto do catálogo atual ou do sistema de arquivos.
 
 ## <a name="deploy-a-project-with-the-wizard"></a>Implantar um projeto com o assistente
-1. Na página **Introdução** do assistente, examine a introdução. Clique em **Avançar** para abrir a página **Selecionar Origem** .
+1. Na página **Introdução** do assistente, examine a introdução. Clique em **Avançar** para abrir a página **Selecionar Origem**.
 
-2. Na página **Selecionar Origem** , selecione o projeto existente do SSIS a ser implantado.
+2. Na página **Selecionar Origem**, selecione o projeto existente do SSIS a ser implantado.
     -   Para implantar um arquivo de implantação de projeto que você criou compilando um projeto no ambiente de desenvolvimento, selecione **Arquivo de implantação de projeto** e insira o caminho do arquivo .ispac.
     -   Para implantar um projeto que já tenha sido implantado em um banco de dados de catálogo do SSIS, selecione **Catálogo do Integration Services** e, em seguida, insira o nome do servidor e o caminho para o projeto no catálogo.
     Clique em **Avançar** para ver a página **Selecionar Destino** .
   
-3.  Na página **Selecionar Destino** , selecione o destino para o projeto.
+3.  Na página **Selecionar Destino**, selecione o destino para o projeto.
     -   Insira o nome do servidor totalmente qualificado. Se o servidor de destino for um servidor de Banco de Dados SQL do Azure, o nome estará neste formato `<server_name>.database.windows.net`.
-    -   Forneça informações de autenticação e selecione **Conectar** . Confira os [métodos de autenticação na implantação](#authentication-methods-for-deployment) neste artigo.
+    -   Forneça informações de autenticação e selecione **Conectar**. Confira os [métodos de autenticação na implantação](#authentication-methods-for-deployment) neste artigo.
     -   Em seguida, selecione **Procurar** para selecionar a pasta de destino no SSISDB.
-    -   Selecione **Avançar** para abrir a página **Examinar** . (O botão **Avançar** é habilitado somente depois de selecionar **Conectar** .)
+    -   Selecione **Avançar** para abrir a página **Examinar**. (O botão **Avançar** é habilitado somente depois de selecionar **Conectar**.)
   
-4.  Na página **Examinar** , examine as configurações selecionadas.
+4.  Na página **Examinar**, examine as configurações selecionadas.
     -   Você pode alterar suas seleções clicando em **Anterior** ou clicando em qualquer uma das etapas no painel esquerdo.
     -   Clique em **Implantar** para começar o processo de implantação.
 

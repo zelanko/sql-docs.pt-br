@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869257"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131020"
 ---
 # <a name="create-a-push-subscription"></a>Criar uma assinatura push
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

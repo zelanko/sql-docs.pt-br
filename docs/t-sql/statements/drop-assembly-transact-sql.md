@@ -24,11 +24,11 @@ ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 601d7bdff19c6e6d8f4daec58c28c048891bcc82
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380181"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131331"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867465"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130934"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar a pesquisa semântica em tabelas e colunas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ GO
   
  **Exemplo 2: criar um índice de texto completo e um índice semântico em várias colunas com população de índice atrasada**  
   
- O exemplo a seguir cria um catálogo de texto completo, **documents_catalog**, no banco de dados de exemplo AdventureWorks2012. Em seguida, o exemplo cria um índice de texto completo que usa esse novo catálogo. O índice de texto completo criado nas colunas **Title**, **DocumentSummary**e **Document** da tabela **Production.Document** , enquanto o índice semântico está apenas na coluna **Document** . Esse índice de texto completo usa o catálogo de texto completo padrão e um índice de chave exclusiva existente, **PK_Document_DocumentID**. Conforme recomendado, essa chave de índice é criada em uma coluna de inteiros, **DocumentID**. O exemplo especifica o LCID para inglês, 1033, que é o idioma dos dados nas colunas.  
+ O exemplo a seguir cria um catálogo de texto completo, **documents_catalog**, no banco de dados de exemplo AdventureWorks2012. Em seguida, o exemplo cria um índice de texto completo que usa esse novo catálogo. O índice de texto completo criado nas colunas **Title**, **DocumentSummary** e **Document** da tabela **Production.Document** , enquanto o índice semântico está apenas na coluna **Document** . Esse índice de texto completo usa o catálogo de texto completo padrão e um índice de chave exclusiva existente, **PK_Document_DocumentID**. Conforme recomendado, essa chave de índice é criada em uma coluna de inteiros, **DocumentID**. O exemplo especifica o LCID para inglês, 1033, que é o idioma dos dados nas colunas.  
   
  Este exemplo também especifica que o controle de alterações está desativado sem nenhuma população. Posteriormente, fora do horário de pico, o exemplo usa uma instrução **ALTER FULLTEXT INDEX** para iniciar uma população completa no novo índice e habilitar o controle de alterações automático.  
   

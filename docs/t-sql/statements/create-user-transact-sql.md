@@ -31,11 +31,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43214b8f1e0b81b75c34c33b8b8b7df53bdd8d03
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300525"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131389"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -177,7 +177,7 @@ CREATE USER user_name
 
 ## <a name="arguments"></a>Argumentos
  *user_name*  
- Especifica o nome pelo qual o usuário é identificado nesse banco de dados. *user_name* é um **sysname** . Pode ter até 128 caracteres. Ao criar um usuário baseado em uma entidade de segurança do Windows, o nome da entidade de segurança do Windows se tornará o nome do usuário, a menos que outro nome de usuário seja especificado.  
+ Especifica o nome pelo qual o usuário é identificado nesse banco de dados. *user_name* é um **sysname**. Pode ter até 128 caracteres. Ao criar um usuário baseado em uma entidade de segurança do Windows, o nome da entidade de segurança do Windows se tornará o nome do usuário, a menos que outro nome de usuário seja especificado.  
   
  LOGIN *login_name*  
  Especifica o logon para o qual o usuário do banco de dados está sendo criado. *login_name* deve se um logon válido no servidor. Pode ser um logon baseado em uma entidade de segurança do Windows (usuário ou grupo) ou um logon que usa a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando esse logon do SQL Server entra no banco de dados, ele adquire o nome e a ID do usuário de banco de dados que está sendo criado. Ao criar um logon mapeado de uma entidade de segurança do Windows, use o formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Para obter exemplos, veja [Resumo da sintaxe](#SyntaxSummary).  
@@ -187,11 +187,11 @@ CREATE USER user_name
  WITH DEFAULT_SCHEMA = *schema_name*  
  Especifica o primeiro esquema que será pesquisado pelo servidor quando ele resolver os nomes de objetos para esse usuário de banco de dados.  
   
- ' *windows_principal* '  
+ '*windows_principal*'  
  Especifica a entidade de segurança do Windows para a qual o usuário de banco de dados está sendo criado. A *windows_principal* pode ser um usuário do Windows ou um grupo do Windows. O usuário será criado mesmo que a *windows_principal* não tenha um logon. Ao conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se a *windows_principal* não tiver um logon, a entidade de segurança do Windows deverá autenticar-se no [!INCLUDE[ssDE](../../includes/ssde-md.md)] por meio de associação em um grupo do Windows que tenha um logon, ou a cadeia de conexão deverá especificar o banco de dados contido como o catálogo inicial. Ao criar um usuário de uma entidade de segurança do Windows, use o formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Para obter exemplos, veja [Resumo da sintaxe](#SyntaxSummary). Os usuários baseados em usuários do Active Directory estão limitados a nomes com menos de 21 caracteres.
   
- ' *Azure_Active_Directory_principal* '  
- **Aplica-se a** : [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+ '*Azure_Active_Directory_principal*'  
+ **Aplica-se a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
  Especifica a entidade de segurança do Azure Active Directory para a qual o usuário de banco de dados está sendo criado. A *Azure_Active_Directory_principal* pode ser um usuário, um grupo ou um aplicativo do Azure Active Directory. (Os usuários do Azure Active Directory não podem ter logons de Autenticação do Windows em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; somente os usuários de banco de dados.) A cadeia de conexão deve especificar o banco de dados independente como catálogo inicial.
 
@@ -202,14 +202,14 @@ CREATE USER user_name
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
   - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
 
-- DisplayName do objeto do Azure Active Directory para Grupos e Aplicativos do Azure AD. Se tivesse o grupo de segurança *Nurses* , você usaria:  
+- DisplayName do objeto do Azure Active Directory para Grupos e Aplicativos do Azure AD. Se tivesse o grupo de segurança *Nurses*, você usaria:  
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  Para saber mais, confira [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview) (Conectando-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory).  
   
-WITH PASSWORD = ' *password* '  
- **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+WITH PASSWORD = '*password*'  
+ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Pode ser usado apenas em um banco de dados independente. Especifica a senha do usuário que está sendo criado. Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]armazenadas, informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal.  
   
@@ -217,17 +217,17 @@ WITHOUT LOGIN
  Especifica que o usuário não deve ser mapeado para um logon existente.  
   
 CERTIFICATE *cert_name*  
- **Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica o certificado para o qual o usuário do banco de dados está sendo criado.  
   
 ASYMMETRIC KEY *asym_key_name*  
- **Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica a chave assimétrica para a qual o usuário de banco de dados está sendo criado.  
   
 DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
- **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica o idioma padrão do novo usuário. Se for especificado um idioma padrão para o usuário e o idioma padrão do banco de dados for alterado posteriormente, o idioma padrão dos usuários permanecerá conforme especificado. Se nenhum idioma padrão for especificado, o idioma padrão do usuário será o idioma padrão do banco de dados. Se o idioma padrão do usuário não for especificado, e o idioma padrão do banco de dados for alterado posteriormente, o idioma padrão do usuário será alterado para o novo idioma padrão do banco de dados.  
   
@@ -235,12 +235,12 @@ DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> 
 >  *DEFAULT_LANGUAGE* é usado apenas para um usuário de banco de dados independente.  
   
 SID = *sid*  
- **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
+ **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
  Aplica-se somente a usuários com senhas (autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) em um banco de dados independente. Especifica o SID do novo usuário de banco de dados. Se esta opção não for selecionada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomeará um SID automaticamente. Use o parâmetro do SID para criar usuários em vários bancos de dados que têm a mesma identidade (SID). Isso é útil ao criar usuários em vários bancos de dados para preparar-se para failover Always On. Para determinar o SID de um usuário, veja sys.database_principals.  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **Aplica-se a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa. Isso permite que o usuário copie em massa dados criptografado entre tabelas ou bancos de dados sem descriptografá-los. O padrão é OFF.  
   
@@ -273,7 +273,7 @@ GO
   
  As informações sobre usuários de banco de dados estão visíveis na exibição do catálogo [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).
 
-Uma nova extensão de sintaxe, **FROM EXTERNAL PROVIDER** , está disponível para a criação de logons do Azure AD no nível de servidor na Instância Gerenciada de SQL. Os logons do Azure AD permitem o mapeamento de entidades de segurança do Azure AD no nível de banco de dados para logons do Azure AD no nível de servidor. Para criar um usuário do Azure AD com base em um logon do Azure AD, use a seguinte sintaxe:
+Uma nova extensão de sintaxe, **FROM EXTERNAL PROVIDER**, está disponível para a criação de logons do Azure AD no nível de servidor na Instância Gerenciada de SQL. Os logons do Azure AD permitem o mapeamento de entidades de segurança do Azure AD no nível de banco de dados para logons do Azure AD no nível de servidor. Para criar um usuário do Azure AD com base em um logon do Azure AD, use a seguinte sintaxe:
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
@@ -298,7 +298,7 @@ Ao criar o usuário no banco de dados da Instância Gerenciada de SQL, o login_n
   
 **Usuários que se autenticam no banco de dados**  
   
- A lista a seguir mostra a sintaxe possível para usuários que pode ser usada apenas em um banco de dados contido. Os usuários criados não serão relacionados a nenhum logon no banco de dados **mestre** . As opções de esquema e de idioma padrão não estão listadas.  
+ A lista a seguir mostra a sintaxe possível para usuários que pode ser usada apenas em um banco de dados contido. Os usuários criados não serão relacionados a nenhum logon no banco de dados **mestre**. As opções de esquema e de idioma padrão não estão listadas.  
   
 > [!IMPORTANT]  
 >  Esta sintaxe concede acesso de usuário ao banco de dados e também concede novo acesso ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -309,7 +309,7 @@ Ao criar o usuário no banco de dados da Instância Gerenciada de SQL, o login_n
   
 **Usuários baseados em entidades de segurança do Windows sem logons no mestre**  
   
- A lista a seguir mostra a sintaxe possível para usuários que têm acesso ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] por meio de um grupo do Windows, mas que não têm um logon no **mestre** . Essa sintaxe pode ser usada em todos os tipos de bancos de dados. As opções de esquema e de idioma padrão não estão listadas.  
+ A lista a seguir mostra a sintaxe possível para usuários que têm acesso ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] por meio de um grupo do Windows, mas que não têm um logon no **mestre**. Essa sintaxe pode ser usada em todos os tipos de bancos de dados. As opções de esquema e de idioma padrão não estão listadas.  
   
  Essa sintaxe é semelhante a usuários baseados em logons no mestre, mas essa categoria de usuário não tem um logon no mestre. O usuário deve ter acesso ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] por meio de um logon de grupo do Windows.  
   
@@ -336,11 +336,11 @@ Ao criar o usuário no banco de dados da Instância Gerenciada de SQL, o login_n
  A criação de um usuário concede acesso a um banco de dados, mas não concede automaticamente nenhum acesso aos objetos em um banco de dados. Após a criação de um usuário, as ações comuns são adicionar usuários às funções de banco de dados que têm permissão para acessar objetos de banco de dados ou conceder permissões de objeto ao usuário. Para obter informações sobre como criar um sistema de permissões, veja [Introdução às permissões do mecanismo de banco de dados](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 ### <a name="special-considerations-for-contained-databases"></a>Considerações especiais para bancos de dados contidos  
- Ao conectar-se a um banco de dados contido, se o usuário não tiver um logon no banco de dados **mestre** , a cadeia de conexão deverá incluir o nome do banco de dados contido como o catálogo inicial. O parâmetro de catálogo inicial sempre é necessário para um usuário com senha de banco de dados contido.  
+ Ao conectar-se a um banco de dados contido, se o usuário não tiver um logon no banco de dados **mestre**, a cadeia de conexão deverá incluir o nome do banco de dados contido como o catálogo inicial. O parâmetro de catálogo inicial sempre é necessário para um usuário com senha de banco de dados contido.  
   
  Em um banco de dados contido, a criação de usuários ajuda a separar o banco de dados da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], de forma que o banco de dados possa ser movido facilmente para outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Usuários de bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Para alterar um usuário de banco de dados de um usuário baseado em logon de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um usuário de banco de dados independente com senha, veja [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- Em um banco de dados independente, os usuários não precisam ter logons no banco de dados **mestre** . Os administradores do [!INCLUDE[ssDE](../../includes/ssde-md.md)] devem entender que o acesso a um banco de dados independente pode ser concedido no nível do banco de dados e não no nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Em um banco de dados independente, os usuários não precisam ter logons no banco de dados **mestre**. Os administradores do [!INCLUDE[ssDE](../../includes/ssde-md.md)] devem entender que o acesso a um banco de dados independente pode ser concedido no nível do banco de dados e não no nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Ao usar os usuários do banco de dados independente em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure o acesso usando uma regra de firewall no nível de banco de dados, em vez de uma regra de firewall de nível de servidor. Para obter mais informações, veja [sp_set_database_firewall_rule &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
@@ -380,7 +380,7 @@ GO
 ### <a name="c-creating-a-database-user-from-a-certificate"></a>C. Criando um usuário de banco de dados de um certificado  
  O exemplo a seguir cria um usuário de banco de dados `JinghaoLiu` a partir do certificado `CarnationProduction50`.  
   
-**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -419,7 +419,7 @@ GO
 ### <a name="e-creating-a-contained-database-user-with-password"></a>E. Criando um usuário com senha de banco de dados independente  
  O exemplo a seguir cria um usuário com senha de banco de dados contido. Este exemplo pode ser executado apenas em um banco de dados contido.  
   
-**Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior. Este exemplo funciona em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] se DEFAULT_LANGUAGE for removido.  
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior. Este exemplo funciona em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] se DEFAULT_LANGUAGE for removido.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -434,7 +434,7 @@ GO
 ### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. Criando um usuário de banco de dados independente para um logon de domínio  
  O exemplo a seguir cria um usuário de banco de dados contido para um logon denominado Fritz em um domínio denominado Contoso. Este exemplo pode ser executado apenas em um banco de dados contido.  
   
-**Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -446,7 +446,7 @@ GO
 ### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. Criando um usuário de banco de dados independente com uma SID específica  
  O exemplo a seguir cria um usuário de banco de dados independente autenticado do SQLServer chamado CarmenW. Este exemplo pode ser executado apenas em um banco de dados contido.  
   
-**Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -458,7 +458,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. Criando um usuário para copiar os dados criptografados  
  O exemplo a seguir cria um usuário que pode copiar os dados protegidos pelo recurso Always Encrypted de um conjunto de tabelas contendo colunas criptografadas para outro conjunto de tabelas com colunas criptografadas (no mesmo banco de dados ou em outro).  Para obter mais informações, veja [Migrar dados confidenciais protegidos por Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-**Aplica-se a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
 CREATE USER [Chin]   
@@ -479,7 +479,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Ao criar um **USER** com base em um logon do Azure AD, especifique o *user_name* como o mesmo *login_name* de **LOGIN** .
+> Ao criar um **USER** com base em um logon do Azure AD, especifique o *user_name* como o mesmo *login_name* de **LOGIN**.
 
 Há suporte para a criação de um usuário do Azure AD como um grupo com base em um logon do Azure AD que é um grupo.
 

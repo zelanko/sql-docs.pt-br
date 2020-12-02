@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495463"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130003"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implantar um projeto do SSIS por meio do prompt de comando com ISDeploymentWizard.exe
 
@@ -76,7 +76,7 @@ Confira os [métodos de autenticação para implantação](ssis-quickstart-deplo
     -   Selecione **Avançar** para abrir a página **Examinar**. (O botão **Avançar** é habilitado somente depois de selecionar **Conectar**.)
 
 4.  Na página **Examinar**, examine as configurações selecionadas.
-    -   Você pode alterar suas seleções clicando em **Anterior**ou clicando em qualquer uma das etapas no painel esquerdo.
+    -   Você pode alterar suas seleções clicando em **Anterior** ou clicando em qualquer uma das etapas no painel esquerdo.
     -   Clique em **Implantar** para começar o processo de implantação.
 
 5.  Se você estiver implantando em um servidor de Banco de Dados SQL do Azure, a página **Validar** será aberta e verificará os pacotes no projeto quanto a problemas conhecidos que podem impedir que os pacotes sejam executados conforme o esperado no Integration Runtime do Azure-SSIS. Para obter mais informações, consulte [Validar pacotes do SSIS implantados no Azure](lift-shift/ssis-azure-validate-packages.md).

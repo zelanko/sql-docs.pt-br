@@ -20,11 +20,11 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196361"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130068"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
 
@@ -309,7 +309,7 @@ Inicie o assistente:
   
 #### <a name="select-source"></a>Selecionar fonte
 
- Para implantar um arquivo de implantação do projeto que você criou, selecione **Arquivo de implantação do projeto** e insira o caminho para o arquivo .ispac. Para implantar um projeto residente no catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , selecione **Catálogo do Integration Services**e insira o nome do servidor e o caminho para o projeto no catálogo. Clique em **Avançar** para ver a página **Selecionar Destino** .  
+ Para implantar um arquivo de implantação do projeto que você criou, selecione **Arquivo de implantação do projeto** e insira o caminho para o arquivo .ispac. Para implantar um projeto residente no catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , selecione **Catálogo do Integration Services** e insira o nome do servidor e o caminho para o projeto no catálogo. Clique em **Avançar** para ver a página **Selecionar Destino** .  
   
 #### <a name="select-destination"></a>Selecionar Destino
 
@@ -317,7 +317,7 @@ Inicie o assistente:
   
 #### <a name="review-and-deploy"></a>Revisar (e implantar)
 
- A página permite revisar as configurações que você selecionou. Você pode alterar suas seleções clicando em **Anterior**ou clicando em qualquer uma das etapas no painel esquerdo. Clique em **Implantar** para começar o processo de implantação.  
+ A página permite revisar as configurações que você selecionou. Você pode alterar suas seleções clicando em **Anterior** ou clicando em qualquer uma das etapas no painel esquerdo. Clique em **Implantar** para começar o processo de implantação.  
   
 #### <a name="results"></a>Resultados
 
@@ -386,7 +386,7 @@ Inicie o assistente:
   
 6.  Na página **Permissões** , conceda ou negue permissões para usuários e funções selecionados fazendo o seguinte.  
   
-    1.  Clique em **Procurar**e selecione um ou mais usuários e funções na caixa de diálogo **Procurar Todas as Entidades de Segurança** .  
+    1.  Clique em **Procurar** e selecione um ou mais usuários e funções na caixa de diálogo **Procurar Todas as Entidades de Segurança** .  
   
     2.  Na área **Logons ou funções** , selecione o usuário ou função ao qual você quer conceder ou negar permissões.  
   
@@ -409,13 +409,13 @@ Inicie o assistente:
   
     1.  Na guia **Parâmetros** na página **Parâmetros** , clique no botão Procurar ao lado do campo **Valor** .  
   
-    2.  Clique em **Usar variável de ambiente**e selecione a variável de ambiente que você criou.  
+    2.  Clique em **Usar variável de ambiente** e selecione a variável de ambiente que você criou.  
   
 13. Para mapear a variável de ambiente para uma propriedade de gerenciador de conexões, siga os procedimentos a seguir. Os parâmetros são gerados automaticamente no servidor do SSIS para as propriedades do gerenciador de conexões.  
   
     1.  Na guia **Gerenciadores de Conexões** na página **Parâmetros**, clique no botão **Procurar** ao lado do campo **Valor**.  
   
-    2.  Clique em **Usar variável de ambiente**e selecione a variável de ambiente que você criou.  
+    2.  Clique em **Usar variável de ambiente** e selecione a variável de ambiente que você criou.  
   
 14. Clique em **OK** duas vezes para salvar as alterações.  
 

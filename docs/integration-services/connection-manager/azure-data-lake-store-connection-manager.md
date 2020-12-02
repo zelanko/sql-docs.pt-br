@@ -14,11 +14,11 @@ author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
 ms.openlocfilehash: aff32d53b663aa34b036fcfdb9202f7dadcd1ff5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724517"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130622"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gerenciador de conexões do Azure Data Lake Store
 

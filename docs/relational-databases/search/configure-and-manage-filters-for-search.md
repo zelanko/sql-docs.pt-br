@@ -15,11 +15,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebeaebbc4a082bcb7051dc3d6c784b6ce1ec11fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420350"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130968"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar e gerenciar filtros para pesquisa
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88420350"
 ## <a name="filters-and-document-types"></a>Filtros e tipos de documento
 Um determinado filtro é específico a um determinado tipo de documento (.doc, .pdf, .xls, .xml e assim por diante). Estes filtros implementam a interface IFilter. Para obter mais informações sobre estes tipos de documento, veja a exibição de catálogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   
-Documentos binários podem ser armazenados em uma única coluna **varbinary(max)** ou **image** . Para cada documento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolhe o filtro correto com base na extensão de arquivo. Como a extensão de arquivo não é visível quando o arquivo é armazenado em uma coluna **varbinary(max)** ou **image** , a extensão de arquivo (.doc, .xls, .pdf e assim por diante) deve ser armazenada em outra coluna da tabela, chamada de coluna de tipo. Essa coluna de tipo pode ser do tipo de dados com base em quaisquer caracteres e contém a extensão do arquivo de documento, como .doc para um documento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Na tabela **Document** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], a coluna **Document** é do tipo **varbinary(max)** e a coluna de tipo **FileExtension**é do tipo **nvarchar(8)**.  
+Documentos binários podem ser armazenados em uma única coluna **varbinary(max)** ou **image** . Para cada documento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolhe o filtro correto com base na extensão de arquivo. Como a extensão de arquivo não é visível quando o arquivo é armazenado em uma coluna **varbinary(max)** ou **image** , a extensão de arquivo (.doc, .xls, .pdf e assim por diante) deve ser armazenada em outra coluna da tabela, chamada de coluna de tipo. Essa coluna de tipo pode ser do tipo de dados com base em quaisquer caracteres e contém a extensão do arquivo de documento, como .doc para um documento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Na tabela **Document** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], a coluna **Document** é do tipo **varbinary(max)** e a coluna de tipo **FileExtension** é do tipo **nvarchar(8)**.  
 
 **Para exibir a coluna de tipo em um índice de texto completo existente**  
   

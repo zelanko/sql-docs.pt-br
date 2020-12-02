@@ -25,11 +25,11 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d915b70f3f17c1be5c87361ab2810a82d18d6525
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192426"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130021"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
 
@@ -81,11 +81,11 @@ ms.locfileid: "92192426"
   
  Em geral, você altera o nível de proteção conforme listado nas seguintes etapas:  
   
-1.  Durante o desenvolvimento, deixe o nível de proteção de pacotes definido como o valor padrão, **EncryptSensitiveWithUserKey**. Essa configuração ajuda a garantir que somente o desenvolvedor veja os valores confidenciais no pacote. Ou, você pode considerar o uso de **EncryptAllWithUserKey**ou de **DontSaveSensitive**.  
+1.  Durante o desenvolvimento, deixe o nível de proteção de pacotes definido como o valor padrão, **EncryptSensitiveWithUserKey**. Essa configuração ajuda a garantir que somente o desenvolvedor veja os valores confidenciais no pacote. Ou, você pode considerar o uso de **EncryptAllWithUserKey** ou de **DontSaveSensitive**.  
   
-2.  Na hora de implantar os pacotes, você precisa alterar o nível de proteção para um que não dependa da chave de usuário do desenvolvedor. Portanto, normalmente, você precisa selecionar **EncryptSensitiveWithPassword**ou **EncryptAllWithPassword**. Criptografe os pacotes atribuindo uma senha forte temporária que também seja conhecida pela equipe de operações no ambiente de produção.  
+2.  Na hora de implantar os pacotes, você precisa alterar o nível de proteção para um que não dependa da chave de usuário do desenvolvedor. Portanto, normalmente, você precisa selecionar **EncryptSensitiveWithPassword** ou **EncryptAllWithPassword**. Criptografe os pacotes atribuindo uma senha forte temporária que também seja conhecida pela equipe de operações no ambiente de produção.  
   
-3.  Após a implantação dos pacotes no ambiente de produção, a equipe de operações pode criptografar novamente os pacotes implantados atribuindo uma senha forte conhecida somente por eles. Ou, eles podem criptografar os pacotes implantados selecionando **EncryptSensitiveWithUserKey** ou **EncryptAllWithUserKey**e usando as credenciais locais da conta que executará os pacotes.  
+3.  Após a implantação dos pacotes no ambiente de produção, a equipe de operações pode criptografar novamente os pacotes implantados atribuindo uma senha forte conhecida somente por eles. Ou, eles podem criptografar os pacotes implantados selecionando **EncryptSensitiveWithUserKey** ou **EncryptAllWithUserKey** e usando as credenciais locais da conta que executará os pacotes.  
 
 ## <a name="set-or-change-the-protection-level-of-packages"></a><a name="set_protection"></a> Definir ou alterar o nível de proteção de pacotes
   Para controlar o acesso ao conteúdo de pacotes e aos valores confidenciais que eles contêm, como senhas, defina o valor da propriedade **ProtectionLevel** . Os pacotes contidos em um projeto precisam ter o mesmo nível de proteção que o projeto, para criar o projeto. Se você alterou a configuração de propriedade **ProtectionLevel** no projeto, precisa atualizar manualmente a configuração da propriedade para os pacotes.  
@@ -153,7 +153,7 @@ ms.locfileid: "92192426"
  Digite a senha novamente.  
 
 ## <a name="package-password-dialog-box"></a><a name="password_dialog"></a> Caixa de diálogo Senha do Pacote
-  Use a caixa de diálogo **Senha do Pacote** para digitar a senha de um pacote criptografado com uma senha. É necessário digitar uma senha se o pacote usar o nível de proteção **Criptografar dados confidenciais com senha**ou **Criptografar tudo com senha** .  
+  Use a caixa de diálogo **Senha do Pacote** para digitar a senha de um pacote criptografado com uma senha. É necessário digitar uma senha se o pacote usar o nível de proteção **Criptografar dados confidenciais com senha** ou **Criptografar tudo com senha** .  
   
 ### <a name="options"></a>Opções  
  **Senha**  

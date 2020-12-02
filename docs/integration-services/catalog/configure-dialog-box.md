@@ -16,11 +16,11 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cdbcc9b0a03b0afefe56152dc6b29c7ae59ea4cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395002"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130683"
 ---
 # <a name="configure-dialog-box"></a>Caixa de diálogo Configurar
 
