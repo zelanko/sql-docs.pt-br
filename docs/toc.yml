@@ -1736,7 +1736,7 @@
               href: relational-databases/indexes/columnstore-indexes-query-performance.md
             - name: Análise operacional em tempo real
               href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-            - name: data warehouse
+            - name: Azure Synapse Analytics
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: Desfragmentar
               href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -10265,7 +10265,7 @@
                   href: samples/wide-world-importers-oltp-install-configure.md
                 - name: recursos do SQL Server
                   href: samples/wide-world-importers-oltp-use-of-sql-server-features.md
-            - name: data warehouse
+            - name: Azure Synapse Analytics
               items:
                 - name: Catálogo do banco de dados
                   href: samples/wide-world-importers-dw-database-catalog.md

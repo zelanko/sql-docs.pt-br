@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 91c491facec15ea50ee93641ff9482b20e5bbf1a
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892486"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96123986"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no OpenShift local e no Red Hat OpenShift no Azure
 
@@ -37,7 +37,7 @@ Este artigo descreve as etapas de implantação específicas da plataforma OpenS
 > [!IMPORTANT]
 > Os pré-requisitos abaixo precisam ser executados por um administrador de cluster OpenShift (função de cluster de administrador de cluster) que tenha permissões suficientes para criar esses objetos no nível de cluster. Para obter mais informações sobre as funções de cluster do OpenShift, confira [Como usar o RBAC para definir e aplicar permissões](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Verifique se a configuração de `pidsLimit` do OpenShift está atualizada para acomodar cargas de trabalho do SQL Server. O valor padrão no OpenShift é muito baixo para cargas de trabalho semelhantes a de produção. Recomendamos usar um valor de, pelo menos, `4096`, mas o valor ideal dependerá da configuração de `max worker threads` no SQL Server e do número de processadores da CPU no nó do host do OpenShift. 
+1. Verifique se a configuração de `pidsLimit` do OpenShift está atualizada para acomodar cargas de trabalho do SQL Server. O valor padrão no OpenShift é muito baixo para cargas de trabalho semelhantes a de produção. Comece com pelo menos `4096`, mas o valor ideal depende da configuração de `max worker threads` no SQL Server e do número de processadores da CPU no nó do host do OpenShift. 
     - Para descobrir como atualizar o `pidsLimit` para o cluster do OpenShift, use [estas instruções]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md). Observe que as versões do OpenShift anteriores a `4.3.5` apresentavam um defeito que fazia com que o valor atualizado não entrasse em vigor. Lembre-se de atualizar o OpenShift para a última versão. 
     - Para ajudar você a calcular o valor ideal dependendo do ambiente e das cargas de trabalho planejadas do SQL Server, use a estimativa e os exemplos abaixo:
 
@@ -49,7 +49,13 @@ Este artigo descreve as etapas de implantação específicas da plataforma OpenS
     > [!NOTE]
     > Outros processos (por exemplo, backups, CLR, texto completo, SQLAgent) também adicionam uma sobrecarga; portanto, adicione um buffer ao valor estimado.
 
-2. Crie uma SCC (restrição de contexto de segurança) personalizada usando o [`bdc-scc.yaml`](#bdc-sccyaml-file) anexado.
+1. Baixe a SCC (restrição de contexto de segurança) personalizada [`bdc-scc.yaml`](#bdc-sccyaml-file):
+
+    ```console
+    curl https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml -o bdc-scc.yaml
+    ```
+
+1. Aplique a SCC ao cluster.
 
     ```console
     oc apply -f bdc-scc.yaml
@@ -104,7 +110,7 @@ Este artigo descreve as etapas de implantação específicas da plataforma OpenS
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   Para uma implantação no ARO, recomendamos começar com um dos perfis `aro-` , que inclui valores padrão para `serviceType` e `storageClass` apropriados para esse ambiente. Por exemplo:
+   Para uma implantação no ARO, comece com um dos perfis `aro-`, que inclui valores padrão para `serviceType` e `storageClass` apropriados para esse ambiente. Por exemplo:
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -129,19 +135,19 @@ Este artigo descreve as etapas de implantação específicas da plataforma OpenS
 
 1. Após a implantação bem-sucedida, você poderá fazer logon e listar os pontos de extremidade do cluster externo:
 
-```console
-   azdata login -n mssql-cluster
-   azdata bdc endpoint list
-```
+   ```console
+      azdata login -n mssql-cluster
+      azdata bdc endpoint list
+   ```
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>Configurações específicas do OpenShift nos arquivos de configuração de implantação
 
 O SQL Server 2019 CU5 apresenta duas opções de recurso para controlar a coleta de métricas de pod e nó. Esses parâmetros são definidos como `false` por padrão nos perfis internos do OpenShift, já que os contêineres de monitoramento exigem um [contexto de segurança com privilégios](https://www.openshift.com/blog/managing-sccs-in-openshift), o que flexibilizará algumas das restrições de segurança para o namespace no qual BDC foi implantado.
 
 ```json
-    "security": {
-      "allowNodeMetricsCollection": false,
-      "allowPodMetricsCollection": false
+    "security": {
+      "allowNodeMetricsCollection": false,
+      "allowPodMetricsCollection": false
 }
 ```
 
@@ -164,47 +170,9 @@ O nome da classe de armazenamento padrão do ARO é managed-premium (em oposiç�
 
 ## <a name="bdc-sccyaml-file"></a>Arquivo `bdc-scc.yaml`
 
-```yaml
-apiVersion: security.openshift.io/v1
-kind: SecurityContextConstraints
-metadata:
-  annotations:
-    kubernetes.io/description: SQL Server BDC custom scc is based on 'nonroot' scc plus additional capabilities.
-  generation: 2
-  name: bdc-scc
-allowHostDirVolumePlugin: false
-allowHostIPC: false
-allowHostNetwork: false
-allowHostPID: false
-allowHostPorts: false
-allowPrivilegeEscalation: true
-allowPrivilegedContainer: false
-allowedCapabilities:
-  - SETUID
-  - SETGID
-  - CHOWN
-  - SYS_PTRACE
-defaultAddCapabilities: null
-fsGroup:
-  type: RunAsAny
-readOnlyRootFilesystem: false
-requiredDropCapabilities:
-  - KILL
-  - MKNOD
-runAsUser:
-  type: MustRunAsNonRoot
-seLinuxContext:
-  type: MustRunAs
-supplementalGroups:
-  type: RunAsAny
-volumes:
-  - configMap
-  - downwardAPI
-  - emptyDir
-  - persistentVolumeClaim
-  - projected
-  - secret
-```
+O arquivo SCC para essa implantação é:
+
+:::code language="yaml" source="../../sql-server-samples/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml":::
 
 ## <a name="next-steps"></a>Próximas etapas
 

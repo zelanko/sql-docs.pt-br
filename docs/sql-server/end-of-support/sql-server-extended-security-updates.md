@@ -2,20 +2,20 @@
 title: O que são Atualizações de Segurança Estendidas?
 description: Saiba como usar o Registro do SQL Server para obter Atualizações de Segurança Estendidas para os produtos de fim de suporte e fim da vida do SQL Server, como o SQL Server 2008 e o SQL Server 2008 R2.
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793813"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121300"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Quais são as Atualizações de Segurança Estendidas para o SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ A Microsoft recomenda aplicar patches de ESU assim que eles estiverem disponíve
 ## <a name="what-are-extended-security-updates"></a>O que são Atualizações de Segurança Estendidas
 As ESUs (Atualizações de Segurança Estendidas) para [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] incluem o provisionamento de atualizações de segurança para clientes que adquiriram uma assinatura de atualização de suporte estendida.
 
-As ESUs serão disponibilizadas **se necessário** , depois que uma vulnerabilidade de segurança for descoberta e classificada como **Crítica** pelo [MSRC (Microsoft Security Response Center)](https://portal.msrc.microsoft.com). Portanto, não há um ritmo regular de versão para ESUs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+As ESUs serão disponibilizadas **se necessário**, depois que uma vulnerabilidade de segurança for descoberta e classificada como **Crítica** pelo [MSRC (Microsoft Security Response Center)](https://portal.msrc.microsoft.com). Portanto, não há um ritmo regular de versão para ESUs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 As ESUs não incluem:
 - Novos recursos
@@ -86,8 +86,8 @@ Para criar o Registro do SQL Server, siga estas etapas:
 
    ![Captura de tela do portal do Azure que mostra como criar um registro do SQL Server.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. Em **Detalhes do Projeto** , escolha sua assinatura na lista suspensa. Em seguida, escolha um **Grupo de recursos** ou selecione **Criar** para criar um grupo de recursos para o novo serviço de Registro do SQL Server. 
-1. Em **Detalhes do Serviço** , forneça um nome e uma região para o novo recurso de **Registro do SQL Server** : 
+1. Em **Detalhes do Projeto**, escolha sua assinatura na lista suspensa. Em seguida, escolha um **Grupo de recursos** ou selecione **Criar** para criar um grupo de recursos para o novo serviço de Registro do SQL Server. 
+1. Em **Detalhes do Serviço**, forneça um nome e uma região para o novo recurso de **Registro do SQL Server**: 
 
    ![Captura de tela do registro do SQL Server mostrando a guia Básico.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
@@ -103,11 +103,11 @@ Para registrar uma instância única do [!INCLUDE[ssNoVersion](../../includes/ss
 
 1. Faça logon no [Portal do Azure](https://portal.azure.com). 
 1. Vá para o recurso **Registro do SQL Server**. 
-1. Selecione **+ Registrar** no painel **Visão Geral** : 
+1. Selecione **+ Registrar** no painel **Visão Geral**: 
 
    ![escolha Registrar para registrar uma instância do SQL Server](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
 
-1. Forneça as informações necessárias conforme detalhado nesta tabela e, em seguida, selecione **Registrar** : 
+1. Forneça as informações necessárias conforme detalhado nesta tabela e, em seguida, selecione **Registrar**: 
 
    |**Valor**| **Descrição**|
    | :-------| :------------- |
@@ -123,7 +123,7 @@ Para registrar uma instância única do [!INCLUDE[ssNoVersion](../../includes/ss
 
    <sup>1</sup> Necessário apenas para máquinas virtuais do Azure. 
 
-A instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada recentemente agora está visível na seção **Registrar instâncias do SQL Server** do painel **Visão Geral** : 
+A instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada recentemente agora está visível na seção **Registrar instâncias do SQL Server** do painel **Visão Geral**: 
 
 ![Instâncias do SQL Server Registradas](media/sql-server-extended-security-updates/registered-sql-instance.png)
 
@@ -135,7 +135,7 @@ Várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 1. Faça logon no [Portal do Azure](https://portal.azure.com). 
 1. Vá para o recurso **Registro do SQL Server**. 
-1. Selecione **Registrar em Massa** no painel **Visão Geral** :  
+1. Selecione **Registrar em Massa** no painel **Visão Geral**:  
 
    ![Escolher registro em massa para registrar várias instâncias do SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
@@ -207,6 +207,39 @@ Para baixar as ESUs, siga estas etapas:
 
 1. Baixe as atualizações de segurança aqui, se e quando elas forem disponibilizadas. 
 
+## <a name="supported-regions-and-data-residency"></a>Residência de dados e regiões com suporte
+
+O serviço de **registro do SQL Server** (versão prévia) está disponível em um subconjunto das regiões do Azure. A tabela a seguir mostra as regiões com suporte e o tipo de residência de dados em cada uma.
+
+| **Região** | **Residência de dadosResidência de dados** |
+|:--|:--|
+|Leste da Austrália|Localização geográfica|
+|Australia Southeast|Localização geográfica|
+|Canadá Central|Localização geográfica|
+|França Central|Localização geográfica|
+|Japan East|Localização geográfica|
+|Oeste do Japão|Localização geográfica|
+|Coreia Central|Localização geográfica|
+|Sul da Coreia|Localização geográfica|
+|Centro-Norte dos EUA|Localização geográfica|
+|Norte da Europa|Localização geográfica|
+|Centro-Sul dos Estados Unidos|Localização geográfica|
+|Sudeste Asiático|Região única|
+|Sul da Índia|Localização geográfica|
+|Norte da África do Sul|Localização geográfica|
+|Sul do Reino Unido|Localização geográfica|
+|Oeste do Reino Unido|Localização geográfica|
+|Oeste dos EUA|Localização geográfica|
+|Leste dos EUA|Localização geográfica|
+|Centro dos EUA|Localização geográfica|
+|Leste da Ásia|Localização geográfica|
+|Europa Ocidental|Localização geográfica|
+|Centro-Oeste dos EUA|Localização geográfica|
+|Oeste dos EUA 2|Localização geográfica|
+|Leste dos EUA 2|Localização geográfica|
+
+Nas regiões com residência geográfica, o serviço de registro do SQL mantém os backups de dados em uma conta de GRS (armazenamento com redundância geográfica).  Nas regiões com a residência de região única, o serviço de registro do SQL mantém os backups de dados em uma conta de ZRS (armazenamento com redundância de zona). Para obter mais informações, confira a [Central de Confiabilidade](https://azuredatacentermap.azurewebsites.net/).
+
 ## <a name="configure-regional-redundancy"></a>Configurar redundância regional 
 
 Os clientes que exigem redundância regional para seus **registros do SQL Server** podem criar dados de registro em duas regiões distintas. Os clientes podem, então, baixar atualizações de segurança de qualquer região com base na disponibilidade do serviço de **registro do SQL Server**. 
@@ -223,7 +256,7 @@ Para configurar a redundância regional, siga estas etapas:
 1. Crie o segundo serviço de **registro do SQL Server** na segunda região e, em seguida, registre em massa o outro arquivos csv nele. Por exemplo, crie o segundo serviço de **registro do SQL Server** na região **Leste dos EUA** e registre em massa seus SQL Servers usando o arquivo upload2.csv. 
 
 
-Depois que seus dados forem registrados com os dois recursos diferentes de **registro do SQL Server** , você poderá fazer baixar as atualizações de segurança de qualquer região, com base na disponibilidade do serviço. 
+Depois que seus dados forem registrados com os dois recursos diferentes de **registro do SQL Server**, você poderá fazer baixar as atualizações de segurança de qualquer região, com base na disponibilidade do serviço. 
 
 
 ## <a name="faq"></a>Perguntas frequentes

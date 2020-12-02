@@ -1,7 +1,7 @@
 ---
 title: Ciclo de vida de suporte do driver do SqlClient
 description: Página que contém informações sobre o ciclo de vida de suporte do produto.
-ms.date: 09/08/2020
+ms.date: 11/19/2020
 dev_langs:
 - csharp
 - vb
@@ -12,13 +12,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b9b461454db98de77ed6003477b7a02114067eb
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+ms.reviewer: v-jizho2
+ms.openlocfilehash: 30155a584de4e22692601a1dcf9551a67d4f580f
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614589"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011790"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Ciclo de vida de suporte do driver do SqlClient
 
@@ -36,6 +36,7 @@ Novas versões estáveis (GA) serão publicadas a cada seis meses em uma cadênc
 
 | Versão | Data de lançamento da oficial | Versão de patch mais recente | Data de lançamento do patch | Nível de Suporte  | Fim do suporte |
 | -- | -- | -- | -- | -- | -- |
+| 2.1 | 19 de novembro de 2020 | 2.1.0 | 19 de novembro de 2020 | Current | |
 | 2.0 | 16 de junho de 2020 | 2.0.1 | 25 de agosto de 2020 | Current | |
 | 1.1 | 20 de novembro de 2019 | 1.1.3 | 15 de maio de 2020 | LTS | 21 de novembro de 2022 |
 | 1,0 | 28 de agosto de 2019 | 1.0.19269.1 | 26 de setembro de 2019 | Current | 20 de fevereiro de 2020 |
@@ -50,8 +51,9 @@ As versões atuais recebem suporte por três meses após uma versão com LTS ou 
 
 ## <a name="sql-version-compatibility-with-microsoftdatasqlclient"></a>Compatibilidade da versão do SQL com Microsoft.Data.SqlClient
 
-|Versão do banco de dados&nbsp;&#8594;<br />&#8595; Versão do Driver|Banco de Dados SQL do Azure|Azure Synapse Analytics|Instância Gerenciada do Azure SQL|SQL Server 2019|Microsoft SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
+|Versão do banco de dados&nbsp;&#8594;<br />&#8595; Versão do driver|Banco de Dados SQL do Azure|Azure Synapse Analytics|Instância Gerenciada do Azure SQL|SQL Server 2019|Microsoft SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
 |---|---|---|---|---|---|---|---|---|
-|2.0|Sim|Sim|Sim|Sim|Sim|Sim|Sim|Sim|
+|2.1|Sim|Sim|Sim|Sim|Sim|Sim|Sim|Sim|
+|2,0|Sim|Sim|Sim|Sim|Sim|Sim|Sim|Sim|
 |1,1|Sim|Sim|Sim|Sim|Sim|Sim|Sim|Sim|
 |1.0|Sim|Sim|Sim|Sim|Sim|Sim|Sim|Sim|

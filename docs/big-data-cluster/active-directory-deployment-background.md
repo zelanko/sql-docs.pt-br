@@ -9,20 +9,20 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 144b769ce42b192099678cda4cfe6fb2935c1c2f
+ms.sourcegitcommit: af663bdca0df8a1f34a14667390662f6f0e17766
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257326"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924163"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Implantar vários [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no mesmo domínio do Active Directory
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Este artigo explica as atualizações do SQL Server 2019 CU 5 que habilitam a capacidade para que vários Clusters de Big Data do SQL Server 2019 sejam implantados e integrados ao mesmo Domínio do Active Directory.
+Este artigo explica as atualizações do SQL Server 2019 CU5 que habilitam a capacidade para que vários Clusters de Big Data do SQL Server 2019 sejam implantados e integrados ao mesmo Domínio do Active Directory.
 
-Antes da CU5, havia dois problemas impedindo a implantação de vários BDCs (clusters de Big Data) em um domínio do AD.
+Antes do SQL 2019 CU5, havia dois problemas impedindo a implantação de vários BDCs (clusters de Big Data) em um domínio do AD.
 
 - Conflito de nomenclatura para nomes da entidade de serviço e domínio DNS
 - Nome da entidade de segurança da conta do domínio
@@ -35,11 +35,11 @@ O nome de domínio fornecido no momento da implantação é usado como domínio 
 
 ### <a name="domain-account-principal-names"></a>Nome da entidade de segurança da conta do domínio
 
-Durante uma implantação do BDC com um domínio do Active Directory, várias entidades de segurança de conta são geradas para serviços em execução dentro do BDC. Essas entidades são basicamente contas de usuário do AD. Antes da CU5 os nomes dessas contas não seriam exclusivos entre clusters. Isso se manifesta na tentativa de criar o mesmo nome de conta de usuário para um serviço específico no BDC em dois clusters diferentes. O segundo cluster que está sendo implantado vai se deparar com um conflito no AD e não poderá criar sua conta.
+Durante uma implantação do BDC com um domínio do Active Directory, várias entidades de segurança de conta são geradas para serviços em execução dentro do BDC. Essas entidades são basicamente contas de usuário do AD. Antes do SQL 2019 CU5 os nomes dessas contas não seriam exclusivos entre clusters. Isso se manifesta na tentativa de criar o mesmo nome de conta de usuário para um serviço específico no BDC em dois clusters diferentes. O segundo cluster que está sendo implantado vai se deparar com um conflito no AD e não poderá criar sua conta.
 
 ## <a name="resolution-for-collisions"></a>Resolução para colisões
 
-### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---cu5"></a>Solução para o problema com SPNs e domínio DNS – CU5
+### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---sql-2019-cu5"></a>Solução para o problema com SPNs e domínio DNS – SQL 2019 CU5
 
 Como os SPNs devem diferir em dois clusters, o nome de domínio DNS passado no momento da implantação deve ser diferente. Você pode especificar nomes DNS diferentes usando a configuração introduzida recentemente no arquivo de configuração de implantação: `subdomain`. Se o subdomínio diferir entre dois clusters e a comunicação interna puder ocorrer nesse subdomínio, os SPNs incluirão o subdomínio, alcançando a exclusividade necessária.
 
@@ -63,7 +63,7 @@ O subdomínio só se aplica ao DNS. Portanto, o novo nome de conta de usuário d
 
 ## <a name="semantics"></a>Semântica
 
-Em suma, essas são as semânticas dos parâmetros adicionados na CU5 para vários clusters em um domínio:
+Em suma, estas são as semânticas dos parâmetros adicionados no SQL 2019 CU5 para vários clusters em um domínio:
 
 ### `subdomain`
 
@@ -138,7 +138,7 @@ Abaixo está um exemplo de especificação de ponto de extremidade para pontos d
 
 Isso não é obrigatório, mas é recomendado. Fornecer UOs separadas para clusters separados ajuda você a gerenciar as contas de usuário geradas.
 
-### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>Como reverter para o comportamento de antes da versão CU5?
+### <a name="how-to-revert-back-to-the-pre-cu5-behavior-in-sql-2019"></a>Como reverter para o comportamento de antes da versão SQL 2019 CU5?
 
 Pode haver cenários em que você não poderá acomodar o parâmetro `subdomain` recém-introduzido. Por exemplo, você precisa implantar uma versão anterior à CU5 e já atualizou a [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Isso é muito improvável, mas se você precisar reverter para o comportamento de antes da versão CU5, defina o parâmetro `useSubdomain` como `false` na seção do Active Directory do `control.json`.
 

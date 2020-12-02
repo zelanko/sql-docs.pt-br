@@ -6,12 +6,12 @@ metadata:
   title: Documentação do Microsoft SQL | Microsoft Docs
   description: 'Saiba como usar o SQL Server e o SQL do Azure para gerencias suas necessidades de banco de dados, tanto localmente quanto na nuvem. (link rápido: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: 74d8bef8777f43355896af4ab16e5c2ef91a92d7
-  ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+  ms.openlocfilehash: 2aceef5d8f718cc0720727e32a53b1986ef16c1a
+  ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/30/2020
-  ms.locfileid: "91603435"
+  ms.lasthandoff: 12/01/2020
+  ms.locfileid: "96443059"
 highlightedContent:
   items:
   - title: Experimente o SQL Server 2019
@@ -46,8 +46,8 @@ productDirectory:
       text: Instância Gerenciada do Azure SQL
     - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
       text: SQL do Azure no Edge
-    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-      text: Azure Synapse Analytics (SQL DW)
+    - url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
+      text: Azure Synapse Analytics
   - title: SQL Server no Linux
     imageSrc: media/index/linux.svg
     links:
@@ -176,8 +176,8 @@ additionalContent:
         url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
       - text: Virtualização de dados com Polybase
         url: relational-databases/polybase/polybase-guide.md
-      - text: Azure Synapse Analytics (SQL DW)
-        url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      - text: Azure Synapse Analytics
+        url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
       - text: Microsoft Analytics Platform System
         url: analytics-platform-system/index.md
       - text: Serviços de Machine Learning do SQL Server (R e Python)
