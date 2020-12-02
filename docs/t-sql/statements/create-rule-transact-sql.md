@@ -31,11 +31,11 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e0b6c3ae3d269b8617d3d032c8aa2d947c211834
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688772"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124009"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

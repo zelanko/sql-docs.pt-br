@@ -16,11 +16,11 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725337"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123709"
 ---
 # <a name="cache-connection-manager"></a>Gerenciador de conexões do cache
 

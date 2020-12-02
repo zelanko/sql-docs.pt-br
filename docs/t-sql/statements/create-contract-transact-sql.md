@@ -23,11 +23,11 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 63c809cdc5b676e87b50e13b7ba67a9577e66e6a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549369"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124104"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

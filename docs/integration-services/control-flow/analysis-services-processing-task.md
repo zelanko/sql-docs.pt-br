@@ -17,11 +17,11 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727567"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123677"
 ---
 # <a name="analysis-services-processing-task"></a>Tarefa Processamento do Analysis Services
 

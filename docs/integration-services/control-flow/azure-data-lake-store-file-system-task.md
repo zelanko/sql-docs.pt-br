@@ -13,11 +13,11 @@ author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
 ms.openlocfilehash: 27ee71393bfbad6c824de25bd95c9ca465cf2a51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496069"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123651"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Tarefa do sistema de arquivos do Azure Data Lake Store
 

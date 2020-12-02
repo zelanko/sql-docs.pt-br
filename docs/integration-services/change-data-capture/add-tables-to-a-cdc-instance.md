@@ -14,11 +14,11 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e025963ad981e05696af4676155efe642ee49893
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484799"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123757"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Adicionar tabelas a uma instância CDC
 

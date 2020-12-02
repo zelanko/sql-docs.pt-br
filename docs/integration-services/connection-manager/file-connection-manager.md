@@ -21,11 +21,11 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebe86146e2ce4f25f05c9948071d3fc7a4d4edb8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728042"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123696"
 ---
 # <a name="file-connection-manager"></a>Gerenciador de conexões de arquivos
 
