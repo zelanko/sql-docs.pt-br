@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cba74e40373a4b00a93d41ebc49e2a849df98572
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235490"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124732"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
  É o valor a ser retornado. *scalar_expression* pode ser uma coluna, subconsulta ou outra expressão arbitrária que resulta em um único valor. Outras funções analíticas não são permitidas.  
 
  [ IGNORE NULLS | RESPECT NULLS ]     
- **Aplica-se ao** : SQL do Azure no Edge
+ **Aplica-se ao**: SQL do Azure no Edge
 
  IGNORE NULLS – Ignore os valores nulos no conjunto de dados quando computar o primeiro valor em uma partição.     
  RESPECT NULLS – Respeite os valores nulos no conjunto de dados quando computar o primeiro valor em uma partição.     

@@ -8,14 +8,14 @@ ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 121155e824df7bde4e8420eacdb2a56784864d62
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3f098dc361d4e30a82dee198bb8203d19b412613
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243600"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125437"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Aplicativos de backup do SQL Server – VSS (Serviço de Cópias de Sombra de Volume) e Gravador do SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,9 +29,9 @@ O SQL Server fornece suporte para a criação de instantâneos de dados do SQL S
 
 ## <a name="definition-of-terms"></a>Definições de termos
 
-- **Interface de Dispositivo Virtual** : o SQL Server fornece uma interface de programação de aplicativo chamada VDI (Interface de Dispositivo Virtual) que ajuda os fornecedores de software independentes a integrarem o SQL Server aos produtos, fornecendo suporte para operações de backup e restauração. Essas APIs foram projetadas para fornecer confiabilidade e desempenho máximos e dão suporte à gama completa de funcionalidades de backup e restauração do SQL Server, incluindo a gama completa de funcionalidades de backup dinâmico e de instantâneo. Para obter mais informações, confira [Especificação da Interface de Dispositivo de Backup Virtual do SQL Server 2005](https://www.microsoft.com/download/details.aspx?id=17282). 
+- **Interface de Dispositivo Virtual**: o SQL Server fornece uma interface de programação de aplicativo chamada VDI (Interface de Dispositivo Virtual) que ajuda os fornecedores de software independentes a integrarem o SQL Server aos produtos, fornecendo suporte para operações de backup e restauração. Essas APIs foram projetadas para fornecer confiabilidade e desempenho máximos e dão suporte à gama completa de funcionalidades de backup e restauração do SQL Server, incluindo a gama completa de funcionalidades de backup dinâmico e de instantâneo. Para obter mais informações, confira [Especificação da Interface de Dispositivo de Backup Virtual do SQL Server 2005](https://www.microsoft.com/download/details.aspx?id=17282). 
 
-- **Solicitante** : um processo (automatizado ou GUI) que solicita que um ou mais conjuntos de instantâneos sejam tirados de um ou mais volumes originais. Neste documento, um solicitante também é usado para implicar um aplicativo de backup que está criando um instantâneo de bancos de dados do SQL Server.
+- **Solicitante**: um processo (automatizado ou GUI) que solicita que um ou mais conjuntos de instantâneos sejam tirados de um ou mais volumes originais. Neste documento, um solicitante também é usado para implicar um aplicativo de backup que está criando um instantâneo de bancos de dados do SQL Server.
 
 ## <a name="about-vss"></a>Sobre o VSS
 
@@ -124,14 +124,14 @@ O restante deste tópico pressupõe que os backups baseados em componentes sejam
 ## <a name="features-supported-by-sql-writer"></a>Recursos compatíveis com o Gravador do SQL
 
 
-- **Texto completo** : o Gravador do SQL relata os contêineres de catálogo de texto completo com especificações de arquivo recursivo nos componentes de banco de dados no documento de metadados do gravador.  Eles são incluídos automaticamente no backup quando o componente de banco de dados é selecionado
-- **Backup/restauração diferenciais** : o Gravador do SQL dá suporte a backup/restauração diferenciais por meio de dois mecanismos diferenciais do VSS: Arquivo parcial e arquivo diferenciado pela hora da última modificação.
-- **Arquivo Parcial** :   o Gravador do SQL usa o mecanismo de Arquivo Parcial do VSS para relatar os intervalos de bytes alterados nos arquivos de banco de dados.  
-- **Arquivo Diferenciado pela Hora da Última Modificação** : o Gravador do SQL usa o mecanismo Arquivo Diferenciado pela Hora da Última Modificação do VSS para relatar os arquivos alterados em catálogos de texto completo.
-- **Restauração com movimentação** : o Gravador do SQL dá suporte à especificação de Novo Destino do VSS durante a restauração.  A especificação de Novo Destino do VSS permite que um arquivo de log/banco de dados ou um contêiner de catálogo de texto completo seja realocado como parte da operação de restauração.
-- **Renomeação de banco de dados** : um solicitante poderá precisar restaurar um Banco de Dados SQL com um novo nome, especialmente se o banco de dados for restaurado lado a lado com o banco de dados original. O Gravador do SQL dá suporte à renomeação de um banco de dados durante a operação de restauração, desde que o banco de dados permaneça dentro da instância original do SQL.
-- **Backup somente cópia** : às vezes, é necessário fazer um backup destinado a uma finalidade especial, por exemplo, quando você precisa fazer uma cópia de um banco de dados para fins de teste.  Esse backup não deve afetar os procedimentos gerais de backup e restauração do banco de dados. O uso da opção COPY_ONLY especifica que o backup é feito "fora de banda" e não deve afetar a sequência normal de backups. O Gravador do SQL dá suporte ao tipo de backup "somente cópia" com instâncias do SQL Server.
-- **Recuperação automática de instantâneo do banco de dados** :   normalmente, um instantâneo de um banco de dados do SQL Server obtido com a estrutura VSS está em um estado não recuperado. Os dados no instantâneo não podem ser acessados com segurança antes de passarem pela fase de recuperação para reverter as transações em andamento e colocar o banco de dados em um estado consistente. É possível que um aplicativo de backup do VSS solicite a recuperação automática dos instantâneos, como parte do processo de criação de instantâneo.
+- **Texto completo**: o Gravador do SQL relata os contêineres de catálogo de texto completo com especificações de arquivo recursivo nos componentes de banco de dados no documento de metadados do gravador.  Eles são incluídos automaticamente no backup quando o componente de banco de dados é selecionado
+- **Backup/restauração diferenciais**: o Gravador do SQL dá suporte a backup/restauração diferenciais por meio de dois mecanismos diferenciais do VSS: Arquivo parcial e arquivo diferenciado pela hora da última modificação.
+- **Arquivo Parcial**:   o Gravador do SQL usa o mecanismo de Arquivo Parcial do VSS para relatar os intervalos de bytes alterados nos arquivos de banco de dados.  
+- **Arquivo Diferenciado pela Hora da Última Modificação**: o Gravador do SQL usa o mecanismo Arquivo Diferenciado pela Hora da Última Modificação do VSS para relatar os arquivos alterados em catálogos de texto completo.
+- **Restauração com movimentação**: o Gravador do SQL dá suporte à especificação de Novo Destino do VSS durante a restauração.  A especificação de Novo Destino do VSS permite que um arquivo de log/banco de dados ou um contêiner de catálogo de texto completo seja realocado como parte da operação de restauração.
+- **Renomeação de banco de dados**: um solicitante poderá precisar restaurar um Banco de Dados SQL com um novo nome, especialmente se o banco de dados for restaurado lado a lado com o banco de dados original. O Gravador do SQL dá suporte à renomeação de um banco de dados durante a operação de restauração, desde que o banco de dados permaneça dentro da instância original do SQL.
+- **Backup somente cópia**: às vezes, é necessário fazer um backup destinado a uma finalidade especial, por exemplo, quando você precisa fazer uma cópia de um banco de dados para fins de teste.  Esse backup não deve afetar os procedimentos gerais de backup e restauração do banco de dados. O uso da opção COPY_ONLY especifica que o backup é feito "fora de banda" e não deve afetar a sequência normal de backups. O Gravador do SQL dá suporte ao tipo de backup "somente cópia" com instâncias do SQL Server.
+- **Recuperação automática de instantâneo do banco de dados**:   normalmente, um instantâneo de um banco de dados do SQL Server obtido com a estrutura VSS está em um estado não recuperado. Os dados no instantâneo não podem ser acessados com segurança antes de passarem pela fase de recuperação para reverter as transações em andamento e colocar o banco de dados em um estado consistente. É possível que um aplicativo de backup do VSS solicite a recuperação automática dos instantâneos, como parte do processo de criação de instantâneo.
 
 Esses novos recursos e o uso deles são descritos mais detalhadamente em Detalhes da opção de backup e restauração neste tópico.
 
@@ -239,7 +239,7 @@ Um exemplo de Documento de Metadados do Gravador é fornecido no final deste doc
 Nesta fase, um solicitante examina o Documento de Metadados do Gravador e cria e preenche um **Documento de Componente de Backup** com cada componente que precisa ser copiado em backup. Ele também especifica as opções de backup e os parâmetros necessários como parte desse documento. Para o Gravador do SQL, cada instância do banco de dados que precisa ser copiada em backup é um componente separado.
 
 #### <a name="backup-components-document"></a>Documento de componentes de backup
-Este é um documento XML criado por um solicitante (com a interface **IVssBackupComponents** ) no decorrer da configuração de uma operação de restauração ou backup. O Documento de Componentes de Backup contém uma lista dos componentes explicitamente incluídos, de um ou mais gravadores, que participam de uma operação de backup ou restauração. Ele não contém informações de componentes implicitamente incluídos. Por outro lado, um Documento de Metadados do Gravador contém somente os componentes do gravador que podem participar de um backup. Os detalhes estruturais de um documento de componente de backup são descritos na documentação da API do VSS.
+Este é um documento XML criado por um solicitante (com a interface **IVssBackupComponents**) no decorrer da configuração de uma operação de restauração ou backup. O Documento de Componentes de Backup contém uma lista dos componentes explicitamente incluídos, de um ou mais gravadores, que participam de uma operação de backup ou restauração. Ele não contém informações de componentes implicitamente incluídos. Por outro lado, um Documento de Metadados do Gravador contém somente os componentes do gravador que podem participar de um backup. Os detalhes estruturais de um documento de componente de backup são descritos na documentação da API do VSS.
 
 #### <a name="prebackup-tasks"></a>Tarefas pré-backup
 As tarefas pré-backup no VSS concentram-se na criação de uma cópia de sombra dos volumes que contêm dados para backup. O aplicativo de backup salvará os dados da cópia de sombra, não do volume real.
@@ -247,7 +247,7 @@ As tarefas pré-backup no VSS concentram-se na criação de uma cópia de sombra
 Os solicitantes normalmente esperam os gravadores durante a preparação para o backup e enquanto a cópia de sombra está sendo criada. Se o Gravador do SQL estiver participando da operação de backup, ele precisará configurar os arquivos e também estar pronto para o backup e a cópia de sombra.
 
 #### <a name="prepare-for-backup"></a>Preparação do backup
-O solicitante precisará definir o tipo de operação de backup que precisa ser executado ( **IVssBackupComponents::SetBackupState** ) e, em seguida, notificar os gravadores por meio do VSS, a fim de se preparar para uma operação de backup usando **IVssBackupComponents::PrepareForBackup**.
+O solicitante precisará definir o tipo de operação de backup que precisa ser executado (**IVssBackupComponents::SetBackupState**) e, em seguida, notificar os gravadores por meio do VSS, a fim de se preparar para uma operação de backup usando **IVssBackupComponents::PrepareForBackup**.
 
 O Gravador do SQL recebe acesso ao Documento de Componente de Backup, que fornece detalhes de quais bancos de dados precisam ser copiados em backup. Todos os volumes de backup devem ser incluídos no conjunto de instantâneos de volume. O Gravador do SQL detectará os bancos de dados subdivididos (com volumes de backup fora do conjunto de instantâneos) e falhará o backup durante o evento PostSnapshot.
 
@@ -308,8 +308,8 @@ A figura a seguir mostra o diagrama de fluxo de dados durante uma operação de 
 
 Em todos os cenários de restauração baseada em componentes do VSS, a restauração de banco de dados é processada pelo Gravador do SQL em duas fases distintas.
 
-- **Pré-restauração** :  o Gravador do SQL processa a validação, o fechamento de identificadores de arquivo etc.
-- **Pós-restauração** :  o Gravador do SQL anexa o banco de dados e realiza a recuperação de pane, se necessário.
+- **Pré-restauração**:  o Gravador do SQL processa a validação, o fechamento de identificadores de arquivo etc.
+- **Pós-restauração**:  o Gravador do SQL anexa o banco de dados e realiza a recuperação de pane, se necessário.
 
 Entre essas duas fases, o aplicativo de backup é responsável por mover os dados relevantes abaixo do SQL.
 
@@ -339,7 +339,7 @@ Essa é meramente uma ação específica do solicitante. É responsabilidade do 
 
 #### <a name="cleanup-and-termination"></a>Limpeza e término
 
-Depois que todos os dados forem restaurados nos locais corretos, uma chamada de um solicitante notificando que a operação de restauração foi concluída ( **IvssBackupComponents::PostRestore** ) permitirá que o Gravador do SQL saiba que as ações pós-restauração podem ser iniciadas.  O Gravador do SQL neste ponto executará a fase de restauração da recuperação de pane. Se a recuperação não for solicitada, ou seja, SetAdditionalRestores(true) não for especificado pelo solicitante, a fase desfazer da etapa de recuperação também será executada durante essa fase.
+Depois que todos os dados forem restaurados nos locais corretos, uma chamada de um solicitante notificando que a operação de restauração foi concluída (**IvssBackupComponents::PostRestore**) permitirá que o Gravador do SQL saiba que as ações pós-restauração podem ser iniciadas.  O Gravador do SQL neste ponto executará a fase de restauração da recuperação de pane. Se a recuperação não for solicitada, ou seja, SetAdditionalRestores(true) não for especificado pelo solicitante, a fase desfazer da etapa de recuperação também será executada durante essa fase.
 
 ## <a name="backup-and-restore-option-details"></a>Detalhes da opção de backup e restauração
 
@@ -409,7 +409,7 @@ Uma operação de backup diferencial faz backup apenas dos dados que foram alter
 
 ### <a name="backup"></a>Backup
 
-O solicitante pode emitir um backup diferencial configurando a opção DIFFERENTIAL ( **VSS_BT_DIFFERENTIAL** ) no Documento de Componente de Backup ( **IVssBackupComponents::SetBackupState** ) ao iniciar uma operação de backup com o VSS.  O Gravador do SQL transmitirá as informações de arquivo parcial (retornadas a ele pelo SQL Server) para o VSS.  O solicitante pode obter essas informações de arquivo chamando as APIs do VSS ( **IVssComponent::GetPartialFile** ). Essas informações de arquivo parcial permitem que o solicitante escolha apenas os intervalos de bytes alterados para backup nos arquivos de banco de dados.
+O solicitante pode emitir um backup diferencial configurando a opção DIFFERENTIAL (**VSS_BT_DIFFERENTIAL**) no Documento de Componente de Backup (**IVssBackupComponents::SetBackupState**) ao iniciar uma operação de backup com o VSS.  O Gravador do SQL transmitirá as informações de arquivo parcial (retornadas a ele pelo SQL Server) para o VSS.  O solicitante pode obter essas informações de arquivo chamando as APIs do VSS (**IVssComponent::GetPartialFile**). Essas informações de arquivo parcial permitem que o solicitante escolha apenas os intervalos de bytes alterados para backup nos arquivos de banco de dados.
 
 Durante a fase Tarefas pré-backup, o Gravador do SQL garantirá que exista uma só base diferencial para cada banco de dados selecionado.
 

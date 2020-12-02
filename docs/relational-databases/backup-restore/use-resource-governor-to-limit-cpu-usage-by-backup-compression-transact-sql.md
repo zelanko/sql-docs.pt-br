@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], compression
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b018053582e6bddafe744be1d9a0411132fc3e06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6285ec4a9f06bb44d6502af44aa964b666bb58c1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730876"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125479"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

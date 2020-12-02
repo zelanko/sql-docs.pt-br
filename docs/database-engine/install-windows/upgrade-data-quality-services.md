@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ee0e76644b21493debd81c1b9b420e1a08a335c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 4a1a020d691b1908f45b4b683f41d9720999c4c6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670349"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125769"
 ---
 # <a name="upgrade-data-quality-services"></a>Atualizar o Data Quality Services
 
@@ -74,7 +74,7 @@ Este artigo fornece informações sobre como fazer upgrade da instalação exist
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  O instalador solicita que você faça backup dos bancos de dados do DQS antes de continuar. Se você já tiver feito backup de seus bancos de dados do DQS, digite **Y** ou **Sim**e pressione ENTER para continuar com a atualização.  
+    4.  O instalador solicita que você faça backup dos bancos de dados do DQS antes de continuar. Se você já tiver feito backup de seus bancos de dados do DQS, digite **Y** ou **Sim** e pressione ENTER para continuar com a atualização.  
   
     5.  Uma mensagem de conclusão é exibida depois da atualização bem-sucedida do esquema de bancos de dados do DQS.  
   

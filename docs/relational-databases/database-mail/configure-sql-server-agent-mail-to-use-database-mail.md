@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192572"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125253"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar o SQL Server Agent Mail para usar o Database Mail
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "92192572"
   
 -   No Pesquisador de Objetos, expanda uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Clique com o botão direito do mouse em **SQL Server Agent**e então clique em **Propriedades**.  
+-   Clique com o botão direito do mouse em **SQL Server Agent** e então clique em **Propriedades**.  
   
 -   Clique em **Sistema de Alerta**.  
   

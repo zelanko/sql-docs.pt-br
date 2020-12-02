@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bec1ae2badef02e407b4562732af9cda85fc989
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 321c56d6e528586a44e4f94619e7c28709ab6998
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670209"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125730"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Fazer upgrade para outra edição do SQL Server (Instalação)
 
@@ -44,7 +44,7 @@ Para instalações locais, você deve executar a Instalação como um administra
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em setup.exe ou inicie a Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em Ferramentas de Configuração. Para instalar a partir de um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
-2.  Para atualizar uma instância existente do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] para uma edição diferente, na Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Manutenção**e selecione **Atualização de Edição**.  
+2.  Para atualizar uma instância existente do [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] para uma edição diferente, na Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Manutenção** e selecione **Atualização de Edição**.  
   
 3.  Se os arquivos de suporte à Instalação forem necessários, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os instalará. Se você for instruído a reiniciar o computador, reinicie-o antes de continuar.  
   

@@ -16,31 +16,31 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f3e65de977926076ec10ef1609bf712c9579faa
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 4cf535ee95b91a0e9b6ed3ba2b8745478736a142
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243815"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125662"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Exibir e ler arquivos de log da Instalação do SQL Server
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-A Instalação do SQL Server cria arquivos de log em uma pasta com carimbo de data/hora em **\%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log** por padrão, em que *nnn* são números que correspondem à versão do SQL que está sendo instalada. O formato de nome da pasta com carimbo de data/hora é AAAAMMDD_hhmmss. Quando a Instalação é executada em um modo autônomo, os logs são criados em % temp%\sqlsetup*.log. Todos os arquivos da pasta de log são arquivados no arquivo Log\*.cab em sua respectiva pasta de log.  
+A Instalação do SQL Server cria arquivos de log em uma pasta com carimbo de data/hora em **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** por padrão, em que *nnn* são números que correspondem à versão do SQL que está sendo instalada. O formato de nome da pasta com carimbo de data/hora é AAAAMMDD_hhmmss. Quando a Instalação é executada em um modo autônomo, os logs são criados em % temp%\sqlsetup*.log. Todos os arquivos da pasta de log são arquivados no arquivo Log\*.cab em sua respectiva pasta de log.  
 
    | Arquivo           | Caminho |
    | :------        | :----------------------------- |
-   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log |
-   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss |
-   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss|
-   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
-   | **Arquivos de log MSI** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
-   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss |
-   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn* \Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **Arquivos de log MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **Para instalações autônomas** | %temp%\sqlsetup*.log |
 
 
@@ -86,7 +86,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
   > Observe que ao aplicar patches, pode haver diversas subpastas (uma para cada instância na qual o patch está sendo aplicado e uma para recursos compartilhados) que contêm um conjunto similar de arquivos (ou seja, %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### <a name="location"></a>Location  
- O arquivo summary.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\.
+ O arquivo summary.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
   
  Para localizar erros no arquivo de texto resumido, pesquise o arquivo usando as palavras-chave "error" ou "failed".
   
@@ -96,7 +96,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
  O arquivo de base summary_engine é semelhante ao arquivo de resumo e é gerado durante o fluxo de trabalho principal.
   
 ### <a name="location"></a>Location  
- O arquivo Summary_\<MachineName>_YYYYMMDD_HHMMss.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
+ O arquivo Summary_\<MachineName>_YYYYMMDD_HHMMss.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
   
   
 ## <a name="detailtxt-file"></a>Arquivo Detail.txt
@@ -105,7 +105,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
  O arquivo Detail.txt é gerado para o fluxo de trabalho principal, como instalação ou atualização, e fornece os detalhes da execução. Os logs do arquivo são gerados com base na hora em que cada ação para a instalação foi invocada. O arquivo de texto mostra a ordem na qual as ações foram executadas, bem como suas dependências.  
   
 ### <a name="location"></a>Location  
- O arquivo detail.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
+ O arquivo detail.txt está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
  Se ocorrer um erro durante o processo de Instalação, a exceção ou o erro será registrado no final desse arquivo. Para localizar os erros nesse arquivo, primeiro examine o final do arquivo e depois efetue uma pesquisa do arquivo pelas palavras-chave "error" ou "exception"
     
@@ -121,7 +121,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
 -   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>Location  
- Os arquivos de log MSI estão localizados em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
+ Os arquivos de log MSI estão localizados em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
   
  No final do arquivo, há um resumo da execução, que inclui o status de êxito ou falha e propriedades. Para localizar o erro no arquivo MSI, pesquise "value 3" e revise o texto antes e depois.  
   
@@ -131,7 +131,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
  O arquivo de configuração contém as configurações de entrada que são fornecidas durante instalação. Pode ser usado para reiniciar a instalação sem ser necessário inserir as configurações manualmente. Entretanto, as senhas das contas, o PID e alguns parâmetros não são salvos no arquivo de configuração. As configurações podem ser adicionadas ao arquivo ou fornecidas por meio da linha de comando ou da interface do usuário de Instalação. Para obter mais informações, veja [Instalar o SQL Server 2016 usando um arquivo de configuração](./install-sql-server-using-a-configuration-file.md).  
   
 ### <a name="location"></a>Location  
- O arquivo ConfigurationFile.ini está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
+ O arquivo ConfigurationFile.ini está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="systemconfigurationcheck_reporthtm-file"></a>Arquivo SystemConfigurationCheck_Report.htm
   
@@ -139,7 +139,7 @@ As seções a seguir descrevem arquivos de log da Instalação do [!INCLUDE[ssNo
  O relatório de verificação da configuração do sistema contém uma breve descrição de cada regra executada, bem como o status de execução.
   
 ### <a name="location"></a>Location  
-O arquivo SystemConfigurationCheck_Report.htm está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn* \Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
+O arquivo SystemConfigurationCheck_Report.htm está localizado em %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   

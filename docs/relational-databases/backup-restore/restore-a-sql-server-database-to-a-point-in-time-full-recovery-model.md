@@ -14,14 +14,14 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 984e57d309dbed6a2aeb29dcaa260ae8f07896c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 05f3dd9658ca51e1208476f8d11b387a79eb0234
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429098"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96125570"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar um banco de dados do SQL Server até um ponto determinado (modelo de recuperação completa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,9 +63,9 @@ ms.locfileid: "88429098"
   
 1.  No Pesquisador de Objetos, conecte-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda a árvore de servidores.  
   
-2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema**e selecione um banco de dados do sistema.  
+2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, aponte para **Restaurar**e clique em **Banco de Dados**.  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, aponte para **Restaurar** e clique em **Banco de Dados**.  
   
 4.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das seguintes opções:  
   
@@ -156,7 +156,7 @@ ms.locfileid: "88429098"
   
 3.  Restaurar o último backup de banco de dados diferencial e, se houver, sem recuperar o banco de dados (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Aplique cada backup de log de transações na mesma sequência em que eles foram criados, especificando a hora que você pretende parar o log de restauração (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_hora_**,** RECOVERY).  
+4.  Aplique cada backup de log de transações na mesma sequência em que eles foram criados, especificando a hora que você pretende parar o log de restauração (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=**_hora_**,** RECOVERY).  
   
     > [!NOTE]  
     >  As opções RECOVERY e STOPAT. Se o backup de log de transações não contiver o tempo solicitado (por exemplo, se o tempo especificado estiver além do tempo coberto pelo log de transações), um aviso será gerado e o banco de dados permanecerá sem-recuperação.  

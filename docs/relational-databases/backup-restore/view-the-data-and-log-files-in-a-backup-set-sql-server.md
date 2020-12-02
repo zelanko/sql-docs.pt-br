@@ -16,14 +16,14 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], viewing backup sets
 - backing up [SQL Server], viewing backup sets
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9ef29203af39a465f18f1eecfc62515818959d5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 77cbe9eebacbf1656dc018f6811805636aded45f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85746609"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125294"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Exibir os dados e arquivos de log em um conjunto de backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85746609"
   
 1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], em Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
-2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
+2.  Expanda **Bancos de Dados** e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
 3.  Clique com o botão direito do mouse no banco de dados e clique em **Propriedades**, o que abrirá a caixa de diálogo **Propriedades do Banco de Dados** .  
   

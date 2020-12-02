@@ -15,11 +15,11 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869287"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125136"
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "91869287"
   
     -   Clique em **Iniciar**, digite **wmimgmt.msc** na caixa **Iniciar Pesquisa** e pressione ENTER.  
   
-    -   Clique em **Iniciar**, clique em **Executar**, digite **wmimgmt.msc**e pressione ENTER.  
+    -   Clique em **Iniciar**, clique em **Executar**, digite **wmimgmt.msc** e pressione ENTER.  
   
 2.  Por padrão, o snap-in Controle WMI gerencia o computador local.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "91869287"
   
 ##### <a name="to-view-log-files-for-instances-that-are-offline"></a>Para exibir arquivos de log para instâncias que estão offline  
   
-1.  Se você desejar exibir arquivos de log offline em uma instância local, tenha certeza de iniciar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] com permissões elevadas. Para fazer isto, quando você iniciar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em **SQL Server Management Studio**e clique em **Executar como administrador**.  
+1.  Se você desejar exibir arquivos de log offline em uma instância local, tenha certeza de iniciar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] com permissões elevadas. Para fazer isto, quando você iniciar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em **SQL Server Management Studio** e clique em **Executar como administrador**.  
   
 2.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no menu **Exibir** , clique em **Servidores Registrados**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "91869287"
   
     -   Se a instância estiver em **Grupos de servidores Locais**, expanda **Grupos de servidores Locais**, expanda o grupo de servidores (se a instância for um membro de um grupo), clique com o botão direito do mouse na instância e clique em **Exibir o Log do SQL Server**.  
   
-    -   Se a instância for o próprio Servidor de Gerenciamento Central, expanda **Servidores de Gerenciamento Central**, clique com o botão direito do mouse na instância, aponte para **Ações de Servidor de Gerenciamento Central**e clique em **Exibir Log do SQL Server**.  
+    -   Se a instância for o próprio Servidor de Gerenciamento Central, expanda **Servidores de Gerenciamento Central**, clique com o botão direito do mouse na instância, aponte para **Ações de Servidor de Gerenciamento Central** e clique em **Exibir Log do SQL Server**.  
   
     -   Se a instância estiver em **Servidores de Gerenciamento Central**, expanda **Servidores de Gerenciamento Central**, expanda o Servidor de Gerenciamento Central, clique com o botão direito do mouse na instância (ou expanda um grupo de servidores e clique com o botão direito do mouse na instância) e clique em **Exibir Log do SQL Server**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "91869287"
   
     -   Para se conectar como o usuário atual, verifique se a caixa de seleção **Conectar-se como outro usuário** está desmarcada e clique em **OK**.  
   
-    -   Para se conectar como outro usuário, marque a caixa de seleção **Conectar-se como outro usuário** e clique em **Definir Usuário**. Quando for solicitado, insira as credenciais de usuário (com o nome de usuário no formato *domain_name*\\*user_name*), clique em **OK**e em **OK** novamente para se conectar.  
+    -   Para se conectar como outro usuário, marque a caixa de seleção **Conectar-se como outro usuário** e clique em **Definir Usuário**. Quando for solicitado, insira as credenciais de usuário (com o nome de usuário no formato *domain_name*\\*user_name*), clique em **OK** e em **OK** novamente para se conectar.  
   
     > [!NOTE]  
     >  Se os arquivos de log levarem muito tempo para carregar, você poderá clicar em **Parar** na barra de ferramentas do Visualizador do Arquivo de Log.  

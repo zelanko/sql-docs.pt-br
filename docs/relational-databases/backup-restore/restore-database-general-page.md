@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5c322f8c798a7b4a319df67e56565af54ceac20f
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cda87fffca686f8e86c7b617e502952341bd459f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662175"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125543"
 ---
 # <a name="restore-database-general-page"></a>Restaurar banco de dados (página Geral)
 

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 04c45acc426cdeb187fd673756da388f971fe24e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382612"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125174"
 ---
 # <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "88382612"
   
 6.  Selecione o novo índice na caixa de texto **Índice ou Chave Exclusiva/Primária Selecionada** .  
   
-7.  Na grade, selecione **Criar como Clusterizado**e escolha **Não** na lista suspensa, à direita da propriedade.  
+7.  Na grade, selecione **Criar como Clusterizado** e escolha **Não** na lista suspensa, à direita da propriedade.  
   
 8.  Clique em **fechar**  
   

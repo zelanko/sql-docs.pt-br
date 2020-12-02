@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670425"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125965"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
@@ -326,14 +326,14 @@ Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
     > [!NOTE]  
     > Esta página só está disponível na Configuração a partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop). 
+    Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop). 
 
      Use a página **Configuração do Mecanismo de Banco de Dados – Memória** para especificar os valores **memória mínima do servidor** e **memória máxima do servidor** que esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará após a inicialização. Use os valores padrão, os valores recomendados calculados ou especifique manualmente seus próprios valores, depois de escolher a opção **Recomendado**.
      
     > [!NOTE]  
     > Esta página só está disponível na Configuração a partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – Memória](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory). 
+    Para saber mais, veja a [página Configuração do Mecanismo de Banco de Dados – Memória](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory). 
 
      Use a página **Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos** para habilitar o fluxo de arquivos na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais, leia a página [Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
@@ -401,7 +401,7 @@ Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Configure a nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017).  
+[Configure a nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](../../database-engine/configure-windows/database-engine-instances-sql-server.md).  
   
 Para reduzir a área da superfície de um sistema vulnerável a ataques, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos essenciais. Para saber mais, veja o tópico [Configuração de área da superfície](../../relational-databases/security/surface-area-configuration.md).  
   

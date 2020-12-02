@@ -79,18 +79,18 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/26/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: de4026f7fdf2dbde32998657e84a7b9b0c54b1f5
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 2119b3917d6adb13d29627d148a969bf4ccc92c5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418033"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126001"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar o SQL Server do prompt de comando
 
@@ -155,7 +155,7 @@ Use as diretrizes a seguir para desenvolver comandos de instalação com a sinta
 -   /PARAMETER="valor" para todos os parâmetros de valor único. (Exemplo: `/PID="PID" /SQLSVCSTARTUPTYPE="Automatic"`)
     - Para um parâmetro que requer um caminho: `/INSTANCEDIR=c:\Path` ou `/INSTANCEDIR="c:\Path"` é compatível.  
 -   /PARAMETER="value1" "value2" "value3" para todos os parâmetros de vários valores. (Exemplo: `/SQLSYSADMINACCOUNTS="Contoso\John" "Contoso\Mary"`)
-    - **Exceção** : `/FEATURES`, que é um parâmetro de vários valores, mas seu formato é `/FEATURES=AS,RS,IS` sem nenhum espaço e delimitado por vírgulas. 
+    - **Exceção**: `/FEATURES`, que é um parâmetro de vários valores, mas seu formato é `/FEATURES=AS,RS,IS` sem nenhum espaço e delimitado por vírgulas. 
 
   
 > [!IMPORTANT]  
@@ -196,7 +196,7 @@ Os parâmetros listados para um componente do [!INCLUDE[ssDEnoversion](../../inc
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo. Esse parâmetro pode ser omitido ao usar uma conta de serviço gerenciado, uma conta virtual ou uma conta interna.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização para o serviço do mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Opcional**|Especifica um intervalo de portas com pelo menos 6 portas para serviços do PolyBase. Exemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Use essa opção se estiver configurando um grupo computacional de expansão do PolyBase incluindo o nó de cabeçalho. Valores com suporte: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Use essa opção se estiver configurando um grupo computacional de expansão do PolyBase incluindo o nó de cabeçalho. Valores com suporte: **True**, **False**|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/PID<br /><br /> **Opcional**|Especifica a chave do produto (Product Key) da edição do SQL Server. Se esse parâmetro não for especificado, a versão Evaluation será usada.|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/Q ou /QUIET<br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas. O parâmetro /Q substitui a entrada do parâmetro /QS.|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/QS ou /QUIETSIMPLE <br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
@@ -299,7 +299,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo. Esse parâmetro pode ser omitido ao usar uma conta de serviço gerenciado, uma conta virtual ou uma conta interna.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização para o serviço do mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Opcional**|Especifica um intervalo de portas com pelo menos 6 portas para serviços do PolyBase. Exemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True**, **False**|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/Q ou /QUIET <br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas. O parâmetro /Q substitui a entrada do parâmetro /QS.|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/QS ou /QUIETSIMPLE<br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
   
@@ -328,7 +328,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo. Esse parâmetro pode ser omitido ao usar uma conta de serviço gerenciado, uma conta virtual ou uma conta interna.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização para o serviço do mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Opcional**|Especifica um intervalo de portas com pelo menos 6 portas para serviços do PolyBase. Exemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True**, **False**|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/PID<br /><br /> **Opcional**|Especifica a chave do produto (Product Key) da edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esse parâmetro não for especificado, a versão Evaluation será usada.<br /><br /> **Observação:** se você estiver instalando o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] com ferramentas ou o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] com Advanced Services, o PID será predefinido.|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/Q ou /QUIET <br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas. O parâmetro /Q substitui a entrada do parâmetro /QS. |  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/QS ou /QUIETSIMPLE<br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
@@ -426,7 +426,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo. Esse parâmetro pode ser omitido ao usar uma conta de serviço gerenciado, uma conta virtual ou uma conta interna.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização para o serviço do mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Opcional**|Especifica um intervalo de portas com pelo menos 6 portas para serviços do PolyBase. Exemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True**, **False**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/Q ou /QUIET <br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas.|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
   
@@ -513,7 +513,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo. Esse parâmetro pode ser omitido ao usar uma conta de serviço gerenciado, uma conta virtual ou uma conta interna. |  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização para o serviço do mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Opcional**|Especifica um intervalo de portas com pelo menos 6 portas para serviços do PolyBase. Exemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True**, **False**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/*UpdateEnabled*<br /><br /> **Opcional**|Especifique se a instalação do SQL Server deve descobrir e incluir atualizações de produto. Os valores válidos são True e False ou 1 e 0. Por padrão, a instalação do SQL Server incluirá as atualizações localizadas.|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/*UpdateSource*<br /><br /> **Opcional**|Especifique o local em que a instalação do SQL Server obterá as atualizações de produto. Os valores válidos são “MU” para pesquisar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, um caminho de pasta válido, um caminho relativo, por exemplo .\MyUpdates ou um compartilhamento UNC. Por padrão, a instalação do SQL Server pesquisará a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Atualização ou um serviço Windows Update por meio do Windows Server Update Services.|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Opcional**|Especifica o [ConfigurationFile](./install-sql-server-using-a-configuration-file.md) a ser usado.|  
@@ -610,7 +610,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo. Esse parâmetro pode ser omitido ao usar uma conta de serviço gerenciado, uma conta virtual ou uma conta interna.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização para o serviço do mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Opcional**|Especifica um intervalo de portas com pelo menos 6 portas para serviços do PolyBase. Exemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True**, **False**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/PID<br /><br /> **Opcional**|Especifica a chave do produto (Product Key) da edição do SQL Server. Se esse parâmetro não for especificado,<br /><br /> a versão Evaluation será usada.|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/Q ou /QUIET <br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas. O parâmetro /Q substitui a entrada do parâmetro /QS.|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/QS ou /QUIETSIMPLE <br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  
@@ -762,7 +762,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha da conta de serviço de mecanismo. Esse parâmetro pode ser omitido ao usar uma conta de serviço gerenciado, uma conta virtual ou uma conta interna.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de inicialização para o serviço do mecanismo PolyBase: Automático (padrão), Desabilitado e Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Opcional**|Especifica um intervalo de portas com pelo menos 6 portas para serviços do PolyBase. Exemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True** , **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Opcional**|Especifica se a instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] será usada como parte do grupo computacional de expansão do PolyBase. Valores com suporte: **True**, **False**|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/PID<br /><br /> **Opcional**|Especifica a chave do produto (Product Key) da edição do SQL Server. Se esse parâmetro não for especificado, a versão Evaluation será usada.|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/Q ou /QUIET <br /><br /> **Opcional**|Especifica que a Instalação é executada em modo silencioso sem nenhuma interface do usuário. Isso é usado para instalações autônomas. O parâmetro /Q substitui a entrada do parâmetro /QS.|  
 |Controle de Instalação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/QS ou /QUIETSIMPLE <br /><br /> **Opcional**|Especifica que a Instalação é executada e mostra o andamento por meio da interface do usuário, mas não aceita nenhuma entrada nem mostra nenhuma mensagem de erro.|  

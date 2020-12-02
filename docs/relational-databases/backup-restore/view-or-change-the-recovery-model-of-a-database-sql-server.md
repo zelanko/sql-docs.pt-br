@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery models
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4e3aa38d92dbd829ff4259ac384475781534b4a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6f4b1c8c2bcdc3a755a0311d83a08f7b083d4676
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85747607"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125321"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "85747607"
   
 1.  Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
   
-2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
+2.  Expanda **Bancos de Dados** e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
 3.  Clique com o botão direito do mouse no banco de dados e clique em **Propriedades**, o que abrirá a caixa de diálogo **Propriedades do Banco de Dados** .  
   
@@ -68,7 +68,7 @@ ms.locfileid: "85747607"
   
 5.  O modelo de recuperação atual é exibido na caixa de listagem **Modelo de Recuperação** .  
   
-6.  Opcionalmente, para alterar o modelo de recuperação, selecione uma lista de modelos diferente. As escolhas são **Completo**, **Bulk-logged**ou **Simples**.  
+6.  Opcionalmente, para alterar o modelo de recuperação, selecione uma lista de modelos diferente. As escolhas são **Completo**, **Bulk-logged** ou **Simples**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

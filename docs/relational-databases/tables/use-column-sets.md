@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564636"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125089"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -111,7 +111,7 @@ GO
  Nesse exemplo, nenhum valor foi especificado para a coluna `i`, mas o valor `0` foi inserido.  
   
 ## <a name="using-the-sql_variant-data-type"></a>Usando o tipo de dados sql_variant  
- O tipo de dados **sql_variant** pode armazenar vários tipos de dados diferentes, como **int**, **char**e **data**. Os conjuntos de colunas geram informações de tipo de dados como escala, precisão e informações de localidade que são associadas a um valor **sql_variant** como atributo na coluna XML gerada. Se você tentar fornecer esses atributos em uma instrução XML personalizada como uma entrada para uma operação de inserção ou atualização em um conjunto de colunas, alguns desses atributos serão exigidos e a outros será atribuído um valor padrão. A tabela a seguir lista os tipos de dados e os valores padrão que o servidor gera quando o valor não é fornecido.  
+ O tipo de dados **sql_variant** pode armazenar vários tipos de dados diferentes, como **int**, **char** e **data**. Os conjuntos de colunas geram informações de tipo de dados como escala, precisão e informações de localidade que são associadas a um valor **sql_variant** como atributo na coluna XML gerada. Se você tentar fornecer esses atributos em uma instrução XML personalizada como uma entrada para uma operação de inserção ou atualização em um conjunto de colunas, alguns desses atributos serão exigidos e a outros será atribuído um valor padrão. A tabela a seguir lista os tipos de dados e os valores padrão que o servidor gera quando o valor não é fornecido.  
   
 |Tipo de dados|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Tamanho máximo|Precisão|Escala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

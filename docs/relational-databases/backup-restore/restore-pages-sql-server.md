@@ -18,14 +18,14 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 902cb988e52eecedaa8ce95aeb3d922b6daef42c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759127"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125540"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -114,9 +114,9 @@ ms.locfileid: "85759127"
   
 1.  Conecte-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, e clique no nome do servidor para expandir a árvore de servidores.  
   
-2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema**e selecione um banco de dados do sistema.  
+2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, **Restaurar**e clique em **Página**, o que abre a caixa de diálogo **Restaurar Página** .  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, **Restaurar** e clique em **Página**, o que abre a caixa de diálogo **Restaurar Página** .  
   
      **Restaurar**  
      Esta seção executa a mesma função de **Restaurar em** em [Restaurar Banco de Dados (Página Geral)](../../relational-databases/backup-restore/restore-database-general-page.md).  

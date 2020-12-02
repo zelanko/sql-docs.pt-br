@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b562b03068ebee035f9b298c62ca49d5c1c0f396
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6c06cb6fe516625cb517fc315bac8f3bc91e4fd7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671092"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125909"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar o SQL Server com o SysPrep
 
@@ -86,13 +86,13 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 2. O Assistente de Instalação executa a Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para preparar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clique em **Preparação de imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** na página **Avançado**. 
   
-3. O Verificador de Configuração do Sistema executa uma operação de descoberta no computador. Para continuar, clique em **OK**. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+3. O Verificador de Configuração do Sistema executa uma operação de descoberta no computador. Para continuar, clique em **OK**. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 4. Na página Atualizações de Produto, as atualizações mais recentes de produtos disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas. Se você não desejar incluir as atualizações, desmarque a caixa de seleção **Incluir atualizações de produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se nenhuma atualização de produto for descoberta, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não exibirá esta página e avançará automaticamente para a página **Instalar Arquivos de Instalação** . 
   
 5. Na página Instalar Arquivos de Instalação, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de Instalação. Se uma atualização para a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for localizada, e for especificada para ser incluída, essa atualização também será instalada. 
   
-6. O Verificador de Configuração do Sistema verifica o estado do sistema do computador antes da continuação da instalação. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+6. O Verificador de Configuração do Sistema verifica o estado do sistema do computador antes da continuação da instalação. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 7. Na página **Preparar Tipo de Imagem**, selecione **Preparar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . 
   
@@ -110,7 +110,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
      Os pré-requisitos dos recursos selecionados são exibidos no painel à direita. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação instalará os pré-requisitos ainda não instalados na etapa de instalação descrita posteriormente neste procedimento. 
   
-10. Na página **Regras de Preparação de Imagem** , o Verificador de Configuração do Sistema verifica o estado do sistema do computador antes de a Instalação continuar. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+10. Na página **Regras de Preparação de Imagem** , o Verificador de Configuração do Sistema verifica o estado do sistema do computador antes de a Instalação continuar. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 11. Na página Configuração da Instância, especifique a ID da instância. Clique em **Avançar** para continuar. 
   
@@ -124,7 +124,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 12. A página **Requisitos de Espaço em Disco** calcula o espaço em disco necessário para os recursos especificados. Em seguida, ele compara o espaço necessário com o espaço em disco disponível. 
   
-13. O Verificador de Configuração do Sistema executará as regras de preparação de imagem para validar a configuração do computador com os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+13. O Verificador de Configuração do Sistema executará as regras de preparação de imagem para validar a configuração do computador com os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 14. A página **Pronto para Preparar Imagem** mostra uma exibição de árvore das opções de instalação que foram especificadas durante a Instalação. Nesta página, a Instalação indica se o recurso Atualização de Produto está habilitado ou desabilitado e a versão da atualização final. Para continuar, clique em **Preparar**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação instalará primeiro os pré-requisitos exigidos para os recursos selecionados, seguidos da instalação dos recursos. 
   
@@ -142,11 +142,11 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 1. Se você tiver uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluída na imagem de seu computador, verá um atalho no Menu Iniciar. Você também pode iniciar a Central de Instalação e clicar em **Conclusão de imagem de uma instância autônoma preparada** na página **Avançado** . 
   
-2. O Verificador de Configuração do Sistema executa uma operação de descoberta no computador. Para continuar, clique em **OK**. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+2. O Verificador de Configuração do Sistema executa uma operação de descoberta no computador. Para continuar, clique em **OK**. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 3. Na página **Arquivos de Suporte à Instalação** , clique em **Instalar** para instalar os arquivos de suporte à Instalação. 
   
-4. O Verificador de Configuração do Sistema verifica o estado do sistema do computador antes da continuação da instalação. Depois de concluir a verificação, clique em **Avançar** para continuar. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+4. O Verificador de Configuração do Sistema verifica o estado do sistema do computador antes da continuação da instalação. Depois de concluir a verificação, clique em **Avançar** para continuar. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 5. Na página **Chave do Produto (Product Key)** , selecione um botão de opção para indicar se você está instalando uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou uma versão de produção do produto que tem uma chave de PID. Para obter mais informações, consulte [Edições e recursos com suporte do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md). Se você estiver instalando a edição Evaluation, o período de avaliação de 180 dias iniciará quando você concluir esta etapa. 
   
@@ -191,7 +191,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
          Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](./install-sql-server.md). 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](./install-sql-server.md). 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover** e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Configuração do Servidor](./install-sql-server.md). 
   
      Ao concluir a edição da lista, clique em **OK**. Verifique a lista de administradores na caixa de diálogo de configuração. Quando a lista estiver concluída, clique em **Avançar**. 
   
@@ -208,7 +208,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 17. Na página **Relatório de Erros** , especifique as informações que deseja enviar à [!INCLUDE[msCoName](../../includes/msconame-md.md)] que ajudarão a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, as opções de relatório de erros estão habilitadas. 
   
-18. Na página **Regras de Conclusão de Imagem** , o Verificador de Configuração do Sistema executará as regras de conclusão de imagem para validar a configuração do computador com as configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você especificou. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+18. Na página **Regras de Conclusão de Imagem** , o Verificador de Configuração do Sistema executará as regras de conclusão de imagem para validar a configuração do computador com as configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você especificou. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 19. A página **Pronto para Concluir Imagem** mostra uma exibição de árvore das opções de instalação que foram especificadas durante a Instalação. Para continuar, clique em **Instalar**. 
   
@@ -228,7 +228,7 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
 2. O Assistente de Instalação executa a Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para adicionar recursos a uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clique em **Preparação de imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** na página **Avançado**. 
   
-3. O Verificador de Configuração do Sistema executa uma operação de descoberta no computador. Para continuar, clique em **OK**. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+3. O Verificador de Configuração do Sistema executa uma operação de descoberta no computador. Para continuar, clique em **OK**. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 4. Na página Arquivos de Suporte à Instalação, clique em **Instalar** para instalar os arquivos de suporte à Instalação. 
   
@@ -238,11 +238,11 @@ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../..
   
      Os pré-requisitos dos recursos selecionados são exibidos no painel à direita. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação instalará os pré-requisitos ainda não instalados na etapa de instalação descrita posteriormente neste procedimento. 
   
-7. Na página **Regras de Preparação de Imagem** , o Verificador de Configuração do Sistema verifica o estado do sistema do computador antes de a Instalação continuar. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+7. Na página **Regras de Preparação de Imagem** , o Verificador de Configuração do Sistema verifica o estado do sistema do computador antes de a Instalação continuar. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 8. A página Requisitos de Espaço em Disco calcula o espaço em disco necessário para os recursos especificados. Em seguida, ele compara o espaço necessário com o espaço em disco disponível. 
   
-9. Na página **Regras de Preparação de Imagem** , o Verificador de Configuração do Sistema executará as regras de preparação de imagem para validar a configuração do computador com os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você especificou. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
+9. Na página **Regras de Preparação de Imagem** , o Verificador de Configuração do Sistema executará as regras de preparação de imagem para validar a configuração do computador com os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você especificou. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes** ou como um relatório HTML clicando em **Exibir relatório detalhado**. 
   
 10. A página **Pronto para Preparar Imagem** mostra uma exibição de árvore das opções de instalação que foram especificadas durante a Instalação. Para continuar, clique em **Instalar**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação instalará primeiro os pré-requisitos exigidos para os recursos selecionados, seguidos da instalação dos recursos. 
   

@@ -23,11 +23,11 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80745e9ea57da0a2307c304c46aaa2ea831f84ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386702"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125262"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -103,7 +103,7 @@ Mais informações sobre algumas das páginas de assistente abaixo:
   
  Se você alterar o nome do banco de dados, os nomes do arquivo de dados e dos arquivos de log serão alterados para corresponder ao novo valor.  
   
- O nome do banco de dados também é usado como o nome da instância do DAC. O nome da instância é exibido no nó do DAC no nó **Aplicativos da Camada de Dados** no **Pesquisador de Objetos**ou no nó **Aplicativos da Camada de Dados Implantados** no **Gerenciador do Utilitário**.  
+ O nome do banco de dados também é usado como o nome da instância do DAC. O nome da instância é exibido no nó do DAC no nó **Aplicativos da Camada de Dados** no **Pesquisador de Objetos** ou no nó **Aplicativos da Camada de Dados Implantados** no **Gerenciador do Utilitário**.  
   
  As opções a seguir não se aplicam ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]e não são exibidas durante a implantação no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

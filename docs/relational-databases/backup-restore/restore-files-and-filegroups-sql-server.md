@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], restoring files and filegroups
 - restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fade272bf603b0931d19c66b0ca1009b8cfbb3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 40397b72c72142e65716f48a9e948d079d5a7015
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737687"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125519"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Restaurar arquivos e grupos de arquivos (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,9 +71,9 @@ ms.locfileid: "85737687"
   
 1.  Depois de se conectar à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore de servidores.  
   
-2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema**e selecione um banco de dados do sistema.  
+2.  Expanda os **Bancos de dados**. Dependendo do banco de dados, selecione um banco de dados de usuário ou expanda os **Bancos de dados do sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Restaurar**.  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Restaurar**.  
   
 4.  Clique em **Arquivos e Grupos de Arquivos**, que abre a caixa de diálogo **Restaurar Arquivos e Grupos de Arquivos** .  
   
@@ -125,7 +125,7 @@ ms.locfileid: "85737687"
      Esta opção é particularmente útil quando você precisar trocar as fitas de conjuntos de mídia diferentes, tal como quando o servidor tiver um dispositivo de fita.  
   
      **Acesso restrito ao banco de dados restaurado**  
-     Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator**ou **sysadmin**.  
+     Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator** ou **sysadmin**.  
   
      Selecionar esta opção é como usar a opção RESTRICTED_USER na declaração RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
