@@ -14,10 +14,10 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1d62c72e43d9495874881ba3c029640626f129c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471359"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Iniciar ou interromper um conjunto de coleta
@@ -67,7 +67,7 @@ ms.locfileid: "88471359"
   
 #### <a name="to-start-a-collection-set"></a>Para iniciar um conjunto de coleta  
   
-1.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** , expanda **Coleta de Dados**e, em seguida, **Conjuntos de Coleta de Dados do Sistema**.  
+1.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** , expanda **Coleta de Dados** e, em seguida, **Conjuntos de Coleta de Dados do Sistema**.  
   
 2.  Clique com o botão direito do mouse no conjunto de coleta que deseja iniciar e clique em **Iniciar Conjunto de Coleta de Dados**.  
 
@@ -75,7 +75,7 @@ ms.locfileid: "88471359"
   
 #### <a name="to-stop-a-collection-set"></a>Para parar um conjunto de coleta  
   
-1.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** , expanda **Coleta de Dados**e, em seguida, **Conjuntos de Coleta de Dados do Sistema**.  
+1.  No Pesquisador de Objetos, expanda o nó **Gerenciamento** , expanda **Coleta de Dados** e, em seguida, **Conjuntos de Coleta de Dados do Sistema**.  
   
 2.  Clique com o botão direito do mouse no conjunto de coleta a ser interrompido e clique em **Parar Conjunto de Coleta de Dados**.  
   

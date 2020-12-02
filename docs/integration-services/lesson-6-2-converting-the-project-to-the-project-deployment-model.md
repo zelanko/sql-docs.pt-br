@@ -12,10 +12,10 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc0e6111542e73ad64a2e82a7f82b3b8bfbf41c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88487729"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>Lição 6-2: Converter o projeto no Modelo de Implantação de Projeto
@@ -28,7 +28,7 @@ Nesta tarefa, você usa o Assistente de Conversão de Projeto do Integration Ser
   
 1.  No menu **Projeto**, selecione **Converter em Modelo de Implantação de Projeto**.  
   
-2.  Na página **Introdução do ** **Assistente de Conversão de Projeto do Integration Services**, examine as etapas e selecione **Avançar**.  
+2.  Na página **Introdução do** **Assistente de Conversão de Projeto do Integration Services**, examine as etapas e selecione **Avançar**.  
   
 3.  Na página **Selecionar Pacotes**, na lista **Pacotes**, desmarque todas as caixas de seleção, exceto **Lesson 6.dtsx** e selecione **Avançar**.  
   

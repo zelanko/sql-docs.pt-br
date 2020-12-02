@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470169"
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
@@ -39,7 +39,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>Como a validação de dados trabalha  
- O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz a validação dos dados calculando o número de linhas ou uma soma de verificação no Publicador e comparando esses valores com o número de linhas ou a soma de verificação do Assinante. Um valor é calculado para a publicação inteira e um valor é calculado para a tabela de assinatura inteira, mas os dados em **text**, **ntext**ou as colunas de **image** não são incluídas nos cálculos.  
+ O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz a validação dos dados calculando o número de linhas ou uma soma de verificação no Publicador e comparando esses valores com o número de linhas ou a soma de verificação do Assinante. Um valor é calculado para a publicação inteira e um valor é calculado para a tabela de assinatura inteira, mas os dados em **text**, **ntext** ou as colunas de **image** não são incluídas nos cálculos.  
   
  Enquanto os cálculos estão sendo realizados, são colocados temporariamente bloqueios compartilhados em tabelas, nas quais as contagens de linhas ou as somas de verificações estão sendo executadas, mas são completadas rapidamente e os bloqueios compartilhados removidos, normalmente em questão de segundos.  
   
@@ -47,7 +47,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
 
  A validação de dados é um processo de três etapas:  
   
-1.  Uma única assinatura ou todas as assinaturas para uma publicação são *marcadas* para validação. Marque as assinaturas para validação nas caixas de diálogo **Validar Assinatura**, **Validar Assinaturas**e **Validar Todas as Assinaturas** que estão disponíveis na pasta **Publicações Locais** e na pasta **Assinaturas Locais** no [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode marcar assinaturas da guia **Todas as Assinaturas** , a guia **Lista de Observação da Assinatura** e o nó de publicações no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+1.  Uma única assinatura ou todas as assinaturas para uma publicação são *marcadas* para validação. Marque as assinaturas para validação nas caixas de diálogo **Validar Assinatura**, **Validar Assinaturas** e **Validar Todas as Assinaturas** que estão disponíveis na pasta **Publicações Locais** e na pasta **Assinaturas Locais** no [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode marcar assinaturas da guia **Todas as Assinaturas** , a guia **Lista de Observação da Assinatura** e o nó de publicações no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 2.  Uma assinatura é validada da próxima vez em que for sincronizada pelo Distribution Agent (para replicação transacional) ou pelo Merge Agent (replicação de mesclagem). O Distribution Agent normalmente é executado continuamente, nesse caso a validação ocorre imediatamente; o Merge Agent normalmente é executado por solicitação, neste caso a validação ocorrerá após você executar o agente.  
   
@@ -97,8 +97,8 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
 3.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Assinaturas**.    
 4.  Na caixa de diálogo **Validar Assinaturas** , selecione quais assinatura validar:   
     -   Selecione **Validar todas as assinaturas SQL Server**    
-    -   Selecione **Validar estas assinaturas**e então selecione uma ou mais assinaturas.    
-5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções de Validação**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .  
+    -   Selecione **Validar estas assinaturas** e então selecione uma ou mais assinaturas.    
+5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções de Validação** e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .  
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 7.  Exiba os resultados da validação no Replication Monitor ou a caixa de diálogo **Exibir Status da Sincronização** . Para cada assinatura:   
     1.  Expanda a publicação, clique com o botão direito do mouse na assinatura e então clique em **Exibir Status da Sincronização**.    
@@ -158,8 +158,8 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
 3.  Na caixa de diálogo **Validar Assinaturas** , selecione quais assinatura validar:  
   
     -   Selecione **Validar todas as assinaturas SQL Server**    
-    -   Selecione **Validar estas assinaturas**e então selecione uma ou mais assinaturas.    
-4.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções de Validação**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
+    -   Selecione **Validar estas assinaturas** e então selecione uma ou mais assinaturas.    
+4.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções de Validação** e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  Clique na guia **Todas as Assinaturas** .  
 7.  Exiba os resultados da validação. Para cada assinatura push:    
@@ -175,7 +175,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .   
 3.  Expanda a publicação para a qual você quer validar assinaturas, clique com o botão direito do mouse na assinatura e então clique em **Validar Assinatura**.    
 4.  Na caixa de diálogo **Validar Assinatura** , selecione **Validar esta assinatura**.    
-5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
+5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções** e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  Exiba os resultados da validação no Replication Monitor ou a caixa de diálogo **Exibir Status da Sincronização** :  
   
@@ -206,7 +206,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
 2.  Clique na guia **Todas as Assinaturas** .    
 3.  Clique com o botão direito do mouse na assinatura que você quer validar, depois clique em **Validar Assinatura**.    
 4.  Na caixa de diálogo **Validar Assinatura** , selecione **Validar esta assinatura**.    
-5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções**e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
+5.  Para especificar o tipo de validação a ser executado (contagem de linha ou contagem de linha e soma de verificação) clique em **Opções** e então especifique as opções na caixa de diálogo **Opções de Validação de Assinatura** .    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  Clique na guia **Todas as Assinaturas** .    
 8.  Exiba os resultados da validação:    

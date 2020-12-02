@@ -19,10 +19,10 @@ ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b58823a6b9e6b43b3458392d1b9016c0716a2e32
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91116364"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>Funções lógicas – IIF (Transact-SQL)

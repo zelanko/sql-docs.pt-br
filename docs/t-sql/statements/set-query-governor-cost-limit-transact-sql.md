@@ -24,10 +24,10 @@ ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: bb7b16a18832bbdea950843409b0a17153c7a05b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89547438"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)

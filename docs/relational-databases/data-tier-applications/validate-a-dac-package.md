@@ -17,10 +17,10 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 717d81dd0f6f7f55af78ec4264b4f3b9fb329583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471358"
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
@@ -41,7 +41,7 @@ ms.locfileid: "88471358"
   
 1.  Abra o menu **Arquivo**, selecione **Novo** e, em seguida, selecione **Projeto...** .  
   
-2.  Selecione o modelo de projeto **SQL Server** e especifique um **Nome**, um **Local**e um **Nome de solução**.  
+2.  Selecione o modelo de projeto **SQL Server** e especifique um **Nome**, um **Local** e um **Nome de solução**.  
   
 3.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e selecione **Propriedades...** .  
   

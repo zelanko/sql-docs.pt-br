@@ -17,10 +17,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a667c6055a43886239102bd9985d06fa714a24d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470233"
 ---
 # <a name="join-filters"></a>filtros de junção
@@ -39,7 +39,7 @@ ms.locfileid: "88470233"
   
  Essas tabelas podem ser usadas em um aplicativo para fornecer suporte a uma força de vendas móvel, mas precisam ser filtradas para que cada vendedor na tabela **HumanResources.Employee** receba apenas os dados relevantes aos pedidos de seus clientes.  
   
- A primeira etapa é definir um filtro com parâmetros na tabela pai que, neste exemplo, é a tabela **HumanResources.Employee** . Essa tabela inclui a coluna **LoginID**que contém o logon para cada funcionário no formulário *domain\login*. Para filtrar essa tabela de forma que cada funcionário receba apenas os dados relacionados a ele, especifique uma cláusula de filtro com parâmetros de:  
+ A primeira etapa é definir um filtro com parâmetros na tabela pai que, neste exemplo, é a tabela **HumanResources.Employee** . Essa tabela inclui a coluna **LoginID** que contém o logon para cada funcionário no formulário *domain\login*. Para filtrar essa tabela de forma que cada funcionário receba apenas os dados relacionados a ele, especifique uma cláusula de filtro com parâmetros de:  
   
 ```  
 LoginID = SUSER_SNAME()  

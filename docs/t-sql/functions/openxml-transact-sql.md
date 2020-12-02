@@ -21,10 +21,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ee78ea030b50ee6ab90c5df616f2bd49f163ded2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91115892"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)

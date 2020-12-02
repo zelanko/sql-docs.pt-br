@@ -26,10 +26,10 @@ ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: abde67780d0eff93a791a2b48654ba712dea6859
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89539800"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)

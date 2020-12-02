@@ -25,10 +25,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490523"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
@@ -37,7 +37,7 @@ ms.locfileid: "88490523"
   
 ## <a name="create-a--full-text-index"></a>Criar um índice de Texto Completo 
 
-1. No Pesquisador de Objetos, clique com o botão direito do mouse na tabela em que você deseja criar um **Índice de Texto Completo**e clique em **Índice de Texto Completo**. Essa ação inicia o Assistente em uma janela separada.
+1. No Pesquisador de Objetos, clique com o botão direito do mouse na tabela em que você deseja criar um **Índice de Texto Completo** e clique em **Índice de Texto Completo**. Essa ação inicia o Assistente em uma janela separada.
    Clique em Avançar 
   
 2. **Índice Exclusivo.**  Selecione um índice na lista suspensa. O índice deve ser um índice não nulo, exclusivo e de coluna de chave única. Selecione o menor índice de chave exclusiva para a chave exclusiva de texto completo. Para obter um melhor desempenho, é recomendável um índice clusterizado.  

@@ -17,10 +17,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5cde3dc6eb7805f412ed7e820fb4946cf0c20c1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477618"
 ---
 # <a name="ole-db-command-transformation"></a>transformação Comando OLE DB
@@ -38,7 +38,7 @@ ms.locfileid: "88477618"
   
 -   Especifique a página de código padrão.  
   
- Normalmente, a instrução SQL inclui parâmetros. Os valores de parâmetro são armazenados em colunas externas na entrada da transformação e o mapeamento de uma coluna de entrada para uma coluna externa mapeia uma coluna de entrada para um parâmetro. Por exemplo, para localizar linhas na tabela **DimProduct** pelo valor da coluna **ProductKey** e, em seguida, excluí-las, você pode mapear a coluna externa nomeada como **Param_0** para a coluna de entrada nomeada como **ProductKey** e, em seguida, executar a instrução SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. A transformação Comando OLE DB fornece os nomes de parâmetro e você não pode modificá-los. Os nomes de parâmetro são **Param_0**, **Param_1**e assim por diante.  
+ Normalmente, a instrução SQL inclui parâmetros. Os valores de parâmetro são armazenados em colunas externas na entrada da transformação e o mapeamento de uma coluna de entrada para uma coluna externa mapeia uma coluna de entrada para um parâmetro. Por exemplo, para localizar linhas na tabela **DimProduct** pelo valor da coluna **ProductKey** e, em seguida, excluí-las, você pode mapear a coluna externa nomeada como **Param_0** para a coluna de entrada nomeada como **ProductKey** e, em seguida, executar a instrução SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. A transformação Comando OLE DB fornece os nomes de parâmetro e você não pode modificá-los. Os nomes de parâmetro são **Param_0**, **Param_1** e assim por diante.  
   
  Se você configurar a transformação Comando OLE DB usando a caixa de diálogo **Editor Avançado** , os parâmetros na instrução SQL poderão ser mapeados automaticamente para colunas externas na entrada da transformação e as características de cada parâmetro poderão ser definidas, clicando no botão **Atualizar** . Entretanto, se o provedor OLE DB que a transformação Comando OLE DB usa não oferecer suporte para derivação de informações do parâmetro, você deverá configurar as colunas externas manualmente. Isto significa que você deve adicionar uma coluna para cada parâmetro na entrada externa para a transformação, atualizar os nomes de coluna para usar nomes como **Param_0**, especificar o valor da propriedade DBParamInfoFlags e mapear as colunas de entrada que contêm valores de parâmetro para as colunas externas.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "88477618"
   
 10. Clique na guia **Propriedades de Entrada e Saída** .  
   
-11. Expanda **Entrada de Comando OLE DB**e **Colunas Externas**.  
+11. Expanda **Entrada de Comando OLE DB** e **Colunas Externas**.  
   
-12. Verifique se **Colunas Externas** lista uma coluna para cada parâmetro na instrução SQL. Os nomes das colunas são **Param_0**, **Param_1**e assim por diante.  
+12. Verifique se **Colunas Externas** lista uma coluna para cada parâmetro na instrução SQL. Os nomes das colunas são **Param_0**, **Param_1** e assim por diante.  
   
      Você não deve alterar os nomes de coluna. Se você alterar os nomes de coluna, o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] gerará um erro de validação para a transformação Comando OLE DB.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "88477618"
   
     -   Especifique o tipo de dados da coluna e, dependendo do tipo de dados, especifique a página de código, o comprimento, a precisão e a escala da coluna.  
   
-    -   Para excluir um parâmetro não utilizado, selecione o parâmetro em **Colunas Externas**e clique em **Remover Coluna**.  
+    -   Para excluir um parâmetro não utilizado, selecione o parâmetro em **Colunas Externas** e clique em **Remover Coluna**.  
   
     -   Clique em **Mapeamentos de Colunas** e mapeie colunas da lista **Colunas de Entrada Disponíveis** para parâmetros na lista **Colunas de Destino Disponíveis** .  
   

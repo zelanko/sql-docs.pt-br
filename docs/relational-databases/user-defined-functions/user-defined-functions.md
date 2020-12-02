@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472906"
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
@@ -50,7 +50,7 @@ Por que usar UDFs (funções definidas pelo usuário)?
   
 ##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> Tipos de funções  
 **Função escalar**  
- As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, o valor escalar retornado é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função pode conter uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados, exceto **text**, **ntext**, **image**, **cursor**e **timestamp**. 
+ As funções escalares definidas pelo usuário retornam um valor único de dados do tipo definido na cláusula RETURNS. Para uma função escalar embutida, o valor escalar retornado é o resultado de uma única instrução. Para uma função escalar de várias instruções, o corpo da função pode conter uma série de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], que retornam o valor único. O tipo de retorno pode ser qualquer tipo de dados, exceto **text**, **ntext**, **image**, **cursor** e **timestamp**. 
  **[Exemplos.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Funções com valor de tabela**  

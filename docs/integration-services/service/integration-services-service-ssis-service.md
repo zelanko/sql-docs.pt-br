@@ -24,10 +24,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990382"
 ---
 # <a name="integration-services-service-ssis-service"></a>Serviço do Integration Services (Serviço SSIS)
@@ -100,9 +100,9 @@ ms.locfileid: "90990382"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>Para definir propriedades do serviço do Integration Services usando o SQL Server Configuration Manager  
   
-1.  No menu **Iniciar** , aponte para **Todos os Programas**, **Microsoft SQL Server**, **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
+1.  No menu **Iniciar** , aponte para **Todos os Programas**, **Microsoft SQL Server**, **Ferramentas de Configuração** e clique em **SQL Server Configuration Manager**.  
   
-2.  No snap-in **SQL Server Configuration Manager** , localize **SQL Server Integration Services** na lista de serviços, clique com o botão direito do mouse em **SQL Server Integration Services**e clique em **Propriedades**.  
+2.  No snap-in **SQL Server Configuration Manager** , localize **SQL Server Integration Services** na lista de serviços, clique com o botão direito do mouse em **SQL Server Integration Services** e clique em **Propriedades**.  
   
 3.  Na caixa de diálogo **Propriedades do SQL Server Integration Services** , você pode fazer o seguinte:  
   
@@ -119,11 +119,11 @@ ms.locfileid: "90990382"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>Para definir as propriedades do serviço do Integration Services usando Serviços  
   
-1.  No **Painel de Controle**, se você estiver usando o Modo de exibição Clássico, clique em **Ferramentas Administrativas**ou, se estiver usando o Modo exibição de Categoria, clique em **Desempenho e Manutenção** e em **Ferramentas Administrativas**.  
+1.  No **Painel de Controle**, se você estiver usando o Modo de exibição Clássico, clique em **Ferramentas Administrativas** ou, se estiver usando o Modo exibição de Categoria, clique em **Desempenho e Manutenção** e em **Ferramentas Administrativas**.  
   
 2.  Clique em **Serviços**.  
   
-3.  No snap-in **Serviços** , localize **SQL Server Integration Services** na lista de serviços, clique com o botão direito do mouse em **SQL Server Integration Services**e clique em **Propriedades**.  
+3.  No snap-in **Serviços** , localize **SQL Server Integration Services** na lista de serviços, clique com o botão direito do mouse em **SQL Server Integration Services** e clique em **Propriedades**.  
   
 4.  Na caixa de diálogo **Propriedades do SQL Server Integration Services** , você pode fazer o seguinte:  
   
@@ -152,7 +152,7 @@ ms.locfileid: "90990382"
   
 2.  Na caixa de diálogo **Serviços de Componentes**, expanda o nó Serviços de Componentes > Computadores > Meu Computador > Configuração de DCOM.  
   
-3.  Clique com o botão direito do mouse em **Microsoft SQL Server Integration Services 13.0**e clique em **Propriedades**.  
+3.  Clique com o botão direito do mouse em **Microsoft SQL Server Integration Services 13.0** e clique em **Propriedades**.  
   
 4.  Na guia **Segurança** , clique em **Editar** na área **Permissões de Inicialização e Ativação** .  
   
@@ -229,7 +229,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
 ```  
   
 ### <a name="modify-the-configuration-file"></a>Modificar o arquivo de configuração  
- Você pode modificar o arquivo de configuração para permitir que pacotes continuem sendo executados se o serviço for interrompido, para exibir pastas raiz adicionais no Pesquisador de Objetos ou para especificar uma pasta diferente ou pastas adicionais no sistema de arquivos gerenciado pelo serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por exemplo, você pode criar pastas raiz adicionais do tipo **SqlServerFolder**para gerenciar pacotes nos bancos de dados msdb de instâncias adicionais do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Você pode modificar o arquivo de configuração para permitir que pacotes continuem sendo executados se o serviço for interrompido, para exibir pastas raiz adicionais no Pesquisador de Objetos ou para especificar uma pasta diferente ou pastas adicionais no sistema de arquivos gerenciado pelo serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por exemplo, você pode criar pastas raiz adicionais do tipo **SqlServerFolder** para gerenciar pacotes nos bancos de dados msdb de instâncias adicionais do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!NOTE]  
 >  Alguns caracteres não são válidos em nomes de pasta. Caracteres válidos para nomes de pastas são determinados pela classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]**System.IO.Path** e pelo campo **GetInvalidFilenameChars** . O campo **GetInvalidFilenameChars** fornece uma matriz de caracteres específica da plataforma que não pode ser especificada em argumentos de cadeia de caracteres de caminho passados para membros da classe **Path** . O conjunto de caracteres inválidos pode variar por sistema de arquivos. Normalmente, os caracteres inválidos são aspas ("), caractere menos que (<) e caractere pipe (|).  
@@ -290,7 +290,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 2.  Clique em **Pesquisador de Objetos** no menu **Exibir** .  
   
-3.  Na barra de ferramentas do Pesquisador de Objetos, clique em **Conectar**e, depois, em **Integration Services**.  
+3.  Na barra de ferramentas do Pesquisador de Objetos, clique em **Conectar** e, depois, em **Integration Services**.  
   
 4.  Na caixa de diálogo **Conectar ao Servidor** , forneça um nome de servidor. Você pode usar um ponto (.), (local) ou **localhost** para indicar o servidor local.  
   
@@ -334,7 +334,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 2.  Abra o Painel de Controle, clique duas vezes em **Ferramentas Administrativas** e clique duas vezes em **Serviços de Componentes** para iniciar o snap-in do MMC dos Serviços de Componentes.  
   
-3.  Expanda o nó **Serviços de Componentes** no painel esquerdo do console. Expanda o nó **Computadores** , expanda **Meu Computador**e clique no nó **Configuração de DCOM** .  
+3.  Expanda o nó **Serviços de Componentes** no painel esquerdo do console. Expanda o nó **Computadores** , expanda **Meu Computador** e clique no nó **Configuração de DCOM** .  
   
 4.  Selecione o nó **Configuração de DCOM** e selecione SQL Server Integration Services 11.0 na lista de aplicativos que podem ser configurados.  
   
@@ -342,7 +342,7 @@ Ao instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o p
   
 6.  Na caixa de diálogo **Propriedades do SQL Server Integration Services 11.0** , selecione a guia **Segurança** .  
   
-7.  Em **Permissões de Inicialização e Ativação**, selecione **Personalizar**e clique em **Editar** para abrir a caixa de diálogo **Permissão de Inicialização** .  
+7.  Em **Permissões de Inicialização e Ativação**, selecione **Personalizar** e clique em **Editar** para abrir a caixa de diálogo **Permissão de Inicialização** .  
   
 8.  Na caixa de diálogo **Permissão de Inicialização** , adicione ou exclua usuários e atribua as permissões adequadas aos usuários e grupos apropriados. As permissões disponíveis são Inicialização Local, Inicialização Remota, Ativação Local e Ativação Remota. Os direitos de Inicialização concedem ou negam permissão para iniciar e parar o serviço; os direitos de Ativação concedem ou negam permissão para conexão com o serviço.  
   

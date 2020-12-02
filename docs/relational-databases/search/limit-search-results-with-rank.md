@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f68204154f2bbbc3c78d3aeec7e9221a625f355d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470115"
 ---
 # <a name="limit-search-results-with-rank"></a>Limite resultados de pesquisa com RANK
@@ -145,7 +145,7 @@ GO
   
  Estatísticas como **IndexRowCount** podem variar muito. Por exemplo, se um catálogo tem 2 bilhões de linhas no índice mestre, um novo documento será indexado no índice intermediário da memória, e a classificação daquele documento será com base no número de documentos no índice da memória que poderão ser inclinados quando comparados às classificações dos documentos do índice mestre. Por esta razão, recomenda-se que, após qualquer população que resulte em um grande número de linhas, os índices indexados ou reindexados sejam mesclados em um índice mestre usando a função ALTER FULLTEXT CATALOG... Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. O Mecanismo de Texto Completo também mesclará automaticamente os índices com base em parâmetros como o número e o tamanho dos índices intermediários.  
   
- Os valores**MaxOccurrence** são normalizados em 1 de 32 intervalos. Isto significa, por exemplo, que um documento de 50 palavras é tratado da mesma forma que um documento de 100 palavras. Abaixo está a tabela usada para normalização. Como os tamanhos dos documentos estão no intervalo entre os valores 32 e 128 da tabela adjacente, eles são tratados como se tivessem o mesmo tamanho, 128 (32 < **docLength** <= 128).  
+ Os valores **MaxOccurrence** são normalizados em 1 de 32 intervalos. Isto significa, por exemplo, que um documento de 50 palavras é tratado da mesma forma que um documento de 100 palavras. Abaixo está a tabela usada para normalização. Como os tamanhos dos documentos estão no intervalo entre os valores 32 e 128 da tabela adjacente, eles são tratados como se tivessem o mesmo tamanho, 128 (32 < **docLength** <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

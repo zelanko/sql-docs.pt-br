@@ -12,10 +12,10 @@ ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6c0ecefc040d07405e700ee879b2220ff820e0cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484620"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Como criar e editar um Serviço CDC
@@ -57,7 +57,7 @@ ms.locfileid: "88484620"
   
 3.  Digite ou insira as informações necessárias na caixa de diálogo Propriedades do Serviço CDC. Consulte [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) para obter informações sobre como inserir informações na caixa de diálogo Propriedades do Serviço CDC.  
   
-4.  Quando você terminar de inserir as informações necessárias, clique em **OK**e a caixa de diálogo Conecte-se ao SQL Server será aberta.  
+4.  Quando você terminar de inserir as informações necessárias, clique em **OK** e a caixa de diálogo Conecte-se ao SQL Server será aberta.  
   
      Quando um logon sem permissão de gravação para o banco de dados MSXDBDCDC tenta criar uma nova instância Oracle CDC, uma mensagem de erro é exibida. Clique em **OK** nessa caixa de diálogo para exibir a caixa de diálogo Conecte-se ao SQL Server. Nesta caixa de diálogo, você deve inserir as credenciais para um logon que tem permissão de gravação ao banco de dados MSXDBCDC, como a função de banco de dados **db_owner** .  
   

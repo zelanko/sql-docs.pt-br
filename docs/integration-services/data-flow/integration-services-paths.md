@@ -22,10 +22,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495846"
 ---
 # <a name="integration-services-paths"></a>Caminhos do Integration Services
@@ -42,7 +42,7 @@ ms.locfileid: "88495846"
   
  As propriedades de caminho configurável incluem o nome, a descrição e a anotação do caminho. Você também pode configurar caminhos de forma programática. Para obter mais informações, consulte [Conectando componentes do fluxo de dados programaticamente](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
- Uma anotação de caminho exibe o nome da origem do caminho ou o nome do caminho na superfície de design da guia **Fluxo de Dados** no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] . As anotações de caminho são semelhantes às anotações que você pode adicionar a fluxos de dados, fluxos de controle e manipuladores de eventos. A única diferença é que uma anotação de caminho é anexada a um caminho, ao passo que outras anotações aparecem nas guias **Fluxo de Dados**, **Fluxo de Controle**e **Controle de Eventos**do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ Uma anotação de caminho exibe o nome da origem do caminho ou o nome do caminho na superfície de design da guia **Fluxo de Dados** no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] . As anotações de caminho são semelhantes às anotações que você pode adicionar a fluxos de dados, fluxos de controle e manipuladores de eventos. A única diferença é que uma anotação de caminho é anexada a um caminho, ao passo que outras anotações aparecem nas guias **Fluxo de Dados**, **Fluxo de Controle** e **Controle de Eventos** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Os metadados exibem nome, tipo de dados, precisão, escala, comprimento, página de código e componente de origem de cada coluna na saída do componente anterior. O componente de origem é o componente de fluxo de dados que criou a coluna. Isso pode ou não ser o primeiro componente no fluxo de dados. Por exemplo, as transformações Union All e Classificação criam as próprias colunas e são as origens de suas colunas de saída. Em contrapartida, uma transformação Copiar Coluna pode passar por colunas sem as alterá-las ou pode criar colunas novas copiando as colunas de entrada. A transformação Copiar Coluna é o componente de origem somente das novas colunas.  
 
@@ -159,6 +159,6 @@ Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../../in
   
 |Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Inteiro (enumeração)|Um valor que indica se uma anotação deve ser exibida com o caminho na superfície do designer. Os valores possíveis são **AsNeeded**, **SourceName**, **PathName**e **Never**. O valor padrão é **AsNeeded**.|  
+|PathAnnotation|Inteiro (enumeração)|Um valor que indica se uma anotação deve ser exibida com o caminho na superfície do designer. Os valores possíveis são **AsNeeded**, **SourceName**, **PathName** e **Never**. O valor padrão é **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|A entrada associada ao caminho.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|A saída associada ao caminho.|  

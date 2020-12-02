@@ -12,10 +12,10 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bbe7698c4b97a11fd9b2b4dba581fbad5a8be8df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484099"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lição 2-3: Modificar o gerenciador de conexões de Arquivo Simples
@@ -28,9 +28,9 @@ Ao modificar o gerenciador de conexão para usar o valor da variável definida p
   
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>Configurar o gerenciador de conexões do Arquivo Simples para usar uma variável  
   
-1.  No painel **Gerenciadores de Conexões** , clique com o botão direito do mouse em **Dados de Origem de Arquivo Simples de Exemplo**e selecione **Propriedades**.  
+1.  No painel **Gerenciadores de Conexões** , clique com o botão direito do mouse em **Dados de Origem de Arquivo Simples de Exemplo** e selecione **Propriedades**.  
 
-2.  Na janela **Propriedades**, verifique se **PackagePath** começa com **\Package.Connections**. Se não, no painel **Gerenciadores de Conexões**, clique com o botão direito do mouse em **Dados de Origem de Arquivo Simples de Exemplo**e selecione **Converter em Conexão do Pacote**.
+2.  Na janela **Propriedades**, verifique se **PackagePath** começa com **\Package.Connections**. Se não, no painel **Gerenciadores de Conexões**, clique com o botão direito do mouse em **Dados de Origem de Arquivo Simples de Exemplo** e selecione **Converter em Conexão do Pacote**.
   
 3.  Na janela **Propriedades**, para **Expressões**, selecione a célula vazia e selecione o botão de reticências **(…)**.  
   

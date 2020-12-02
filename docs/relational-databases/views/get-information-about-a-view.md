@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1dd037349e2e8126a74fbd895598f3ef05e06583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488585"
 ---
 # <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
@@ -143,7 +143,7 @@ ms.locfileid: "88488585"
      Mostra uma descrição das instruções SQL. Para ver a descrição inteira ou editá-la, clique nela e, em seguida, clique nas reticências **(…)** à direita da propriedade. Os comentários podem incluir informações como quem usa a exibição e quando ela é usada.  
   
      **Especificação de Top**  
-     Expande para mostrar as propriedades **Top**, **Expression**, **Percent**e **With Ties** .  
+     Expande para mostrar as propriedades **Top**, **Expression**, **Percent** e **With Ties** .  
   
      **(Top)**  
      Especifica se a exibição incluirá uma cláusula TOP, que retorna apenas as primeiras linhas n ou primeiro percentual n de linhas no conjunto de resultados. O padrão é que a exibição retorne as primeiras 10 linhas no conjunto de resultados. Use para alterar o número de linhas para retornar ou especificar uma porcentagem diferente.  
