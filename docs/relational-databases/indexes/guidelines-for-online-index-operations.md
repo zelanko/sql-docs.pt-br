@@ -20,10 +20,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867672"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
@@ -32,7 +32,7 @@ ms.locfileid: "91867672"
 
 Quando você executa operações de índice online, as diretrizes seguintes se aplicam:  
 
-- Os índices clusterizados devem ser criados, recriados ou descartados offline quando a tabela subjacente contiver estes tipos de dados LOB (objeto grande): **image**, **ntext**e **text**.  
+- Os índices clusterizados devem ser criados, recriados ou descartados offline quando a tabela subjacente contiver estes tipos de dados LOB (objeto grande): **image**, **ntext** e **text**.  
 - Índices não clusterizados não exclusivos podem ser criados online, quando a tabela contiver tipos de dados LOB, mas nenhuma dessas colunas são usadas na definição de índice seja como colunas-chaves ou colunas não chave.  
 - Os índices em tabelas temporárias locais, não podem ser criados, recriados ou soltos offline. Esta restrição não se aplica a índices em tabelas temporárias globais.
 - Índices podem ser retomados de onde pararam após uma falha inesperada, failover de banco de dados ou um comando **PAUSE**. Consulte [Criar índice](../../t-sql/statements/create-index-transact-sql.md) e [Alterar índice](../../t-sql/statements/alter-index-transact-sql.md).

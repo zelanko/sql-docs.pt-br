@@ -23,10 +23,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498187"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -159,7 +159,7 @@ ms.locfileid: "91498187"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|Status da mensagem. Para mensagens retornadas pelo comando RECEIVE, o status é sempre **0**. Mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0**=Pronto**1**=Mensagem recebida**2**=Ainda não concluído**3**=Mensagem enviada retida|  
+|**status**|**tinyint**|Status da mensagem. Para mensagens retornadas pelo comando RECEIVE, o status é sempre **0**. Mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0**=Pronto **1**=Mensagem recebida **2**=Ainda não concluído **3**=Mensagem enviada retida|  
 |**priority**|**tinyint**|O nível de prioridade de conversa aplicado à mensagem.|  
 |**queuing_order**|**bigint**|Número da ordem da mensagem na fila.|  
 |**conversation_group_id**|**uniqueidentifier**|O identificador do grupo de conversa a que pertence essa mensagem.|  
@@ -171,7 +171,7 @@ ms.locfileid: "91498187"
 |**service_contract_id**|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do contrato que a conversa segue.|  
 |**message_type_name**|**nvarchar(256)**|O nome do tipo de mensagem que descreve o formato da mensagem. Mensagens podem ser do tipo de mensagem de aplicativo ou mensagens de sistema de Agente.|  
 |**message_type_id**|**int**|Identificador de objeto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do tipo de mensagem que descreve a mensagem.|  
-|**validation**|**nchar(2)**|Validação usada para a mensagem.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**validation**|**nchar(2)**|Validação usada para a mensagem.<br /><br /> **E**=Empty **N**=None **X**=XML|  
 |**message_body**|**varbinary(MAX)**|O conteúdo da mensagem.|  
   
 ## <a name="permissions"></a>Permissões  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91810470"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriedades da coluna de tabela (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "91810470"
 >  Se a tabela for publicada para replicação, será necessário fazer alterações no esquema usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER TABLE [do](../../t-sql/statements/alter-table-transact-sql.md) ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
  **Geral**  
- Expande para mostrar **Nome**, **Permitir Nulos**, **Tipo de Dados**, **Valor Padrão ou Associação**, **Comprimento**, **Precisão**e **Escala**.  
+ Expande para mostrar **Nome**, **Permitir Nulos**, **Tipo de Dados**, **Valor Padrão ou Associação**, **Comprimento**, **Precisão** e **Escala**.  
   
  **Nome**  
  Exibe o nome da coluna selecionada.  
@@ -67,7 +67,7 @@ ms.locfileid: "91810470"
 > [!NOTE]  
 >   Para alterar o valor mostrado para a propriedade **Especificação de Coluna Computada** , você deve expandi-la e editar a propriedade filho **Fórmula** .  
   
--   A**Fórmula** exibe a fórmula para a coluna computada. Para editar essa propriedade, digite diretamente uma fórmula nova.  
+-   A **Fórmula** exibe a fórmula para a coluna computada. Para editar essa propriedade, digite diretamente uma fórmula nova.  
   
 -   **Persistente** Indica se os resultados da fórmula foram armazenados. Se essa propriedade for definida como **Não** então, apenas a fórmula será armazenada e os valores serão calculados sempre que a coluna for referenciada. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "91810470"
   
 -   **É texto completo indexado** Indica se essa coluna é texto completo indexado. Essa propriedade só poderá ser definida como **Sim** se o tipo de dados para essa coluna for pesquisável com texto completo e se a tabela à qual essa coluna pertence tiver um índice de texto completo especificado para isso. Para editar a propriedade, clique no valor correspondente, expanda a lista suspensa e escolha um valor.  
   
--   **Coluna de tipo texto completo** Exibe o nome da coluna, na qual a coluna é de texto completo indexado. Essa propriedade deve ser definida, se a propriedade **Tipo de dados** para a coluna for **imagem** ou **varbinary**. A coluna nomeada na propriedade deve ser de tipo **[n]char, [n]varchar** ou **xml**e a lista suspensa para a propriedade só deve conter colunas que tiverem um desses três tipos de dados. Linhas na coluna nomeada pela propriedade indicam o tipo de documento das linhas correspondentes na coluna pesquisável de texto completo. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
+-   **Coluna de tipo texto completo** Exibe o nome da coluna, na qual a coluna é de texto completo indexado. Essa propriedade deve ser definida, se a propriedade **Tipo de dados** para a coluna for **imagem** ou **varbinary**. A coluna nomeada na propriedade deve ser de tipo **[n]char, [n]varchar** ou **xml** e a lista suspensa para a propriedade só deve conter colunas que tiverem um desses três tipos de dados. Linhas na coluna nomeada pela propriedade indicam o tipo de documento das linhas correspondentes na coluna pesquisável de texto completo. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
 -   **Idioma** Indica o idioma do separador de palavras usado para indexar a coluna. O valor armazenado na propriedade é o identificador de localidade para o separador de palavras. Para obter mais informações sobre os separadores de palavras e LCIDs, consulte os Separadores de Palavras e os Lematizadores. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   

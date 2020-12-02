@@ -24,10 +24,10 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2847f43835f70e2c1dd0f78cc58af551d728702f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91725107"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabalhando com variáveis programaticamente

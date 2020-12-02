@@ -19,10 +19,10 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7fe63ad503b49a760823635902b3744a1ae2d85a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719311"
 ---
 # <a name="odbc-connection-manager"></a>gerenciador de conexões ODBC

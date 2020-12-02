@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a17fb30859866155b2e3976e3d1a1bb2890ac4e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92006231"
 ---
 # <a name="polygon"></a>Polygon
@@ -48,7 +48,7 @@ Conforme mostrado na ilustração:
  Instâncias **Polygon** aceitas são instâncias que podem ser armazenadas em uma variável **geometry** ou **geography** sem gerar uma exceção. As seguintes instâncias **Polygon** são aceitas:  
   
 -   Uma instância **Polygon** vazia  
--   Uma instância **Polygon** que tem um anel exterior aceitável (**LineString**) e zero ou mais anéis interiores aceitáveis (**LineString**s)  
+-   Uma instância **Polygon** que tem um anel exterior aceitável (**LineString**) e zero ou mais anéis interiores aceitáveis (**LineString** s)  
   
 Os critérios a seguir são necessários para que um anel (**LineString**) seja aceitável.  
   

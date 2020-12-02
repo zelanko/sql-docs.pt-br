@@ -20,10 +20,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e9968e1537901de729406c5b0ddc21857e74b886
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037484"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>referência de método do tipo de dados hierarchyid
@@ -34,7 +34,7 @@ O tipo de dados **hierarchyid** é um tipo de dados do sistema de tamanho variá
 Um valor do tipo de dados **hierarchyid** representa uma posição em uma hierarquia de árvore. Os valores para **hierarchyid** têm as seguintes propriedades:
   
 -   Extremamente compacto  
-     O número médio de bits necessários para representar um nó em uma árvore com *n* nós depende da média de fanout (o número médio de filhos de um nó). Para fanouts pequenos (0-7), o tamanho é de aproximadamente 6\*logA*n* bits, em que A é o fanout médio. Um nó em uma hierarquia organizacional de 100.000 pessoas com um fanout médio de 6 níveis usa cerca de 38 bits. Isso é arredondado para 40 bits, ou 5 bytes, para armazenamento.  
+     O número médio de bits necessários para representar um nó em uma árvore com *n* nós depende da média de fanout (o número médio de filhos de um nó). Para fanouts pequenos (0-7), o tamanho é de aproximadamente 6\*logA *n* bits, em que A é o fanout médio. Um nó em uma hierarquia organizacional de 100.000 pessoas com um fanout médio de 6 níveis usa cerca de 38 bits. Isso é arredondado para 40 bits, ou 5 bytes, para armazenamento.  
 -   A comparação está na ordem de profundidade  
      Dados dois valores de **hierarchyid****a** r **b**, **a<b** significa que a vem antes de b em uma passagem de profundidade da árvore. Índices em tipos de dados **hierarchyid** estão na ordem de profundidade e os nós próximos uns dos outros em uma passagem de profundidade são armazenados próximos um ao outro. Por exemplo, os filhos de um registro são armazenados adjacentes àquele registro. Para obter mais informações, consulte [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   Suporte a inserções e exclusões arbitrárias  

@@ -14,10 +14,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719766"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformação Pesquisa em Modo de Cache Cheio – gerenciador de conexões do cache
@@ -173,7 +173,7 @@ ms.locfileid: "91719766"
   
 9. No pacote filho, crie um gerenciador de conexões de cache clicando com o botão direito do mouse na área **Gerenciadores de Conexões** , clicando em **Nova Conexão**, selecionando **CACHE** na caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** e, então, clicando em **Adicionar**.  
   
-     A área **Gerenciadores de Conexões** aparece na parte inferior das guias **Fluxo de Controle**, **Fluxo de Dados**e **Manipuladores de Eventos** do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer.  
+     A área **Gerenciadores de Conexões** aparece na parte inferior das guias **Fluxo de Controle**, **Fluxo de Dados** e **Manipuladores de Eventos** do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer.  
   
 10. No **Editor do Gerenciador de Conexões de Cache**, na guia **Geral** , configure o gerenciador de conexões de cache para ler os dados do arquivo de cache selecionado definindo as seguintes opções:  
   
@@ -227,9 +227,9 @@ ms.locfileid: "91719766"
   
 2.  Clique com o botão direito do mouse na área **Gerenciadores de Conexões** e, então, clique em **Nova Conexão**.  
   
-     A área **Gerenciadores de Conexões** aparece na parte inferior das guias **Fluxo de Controle**, **Fluxo de Dados**e **Manipuladores de Eventos** do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer.  
+     A área **Gerenciadores de Conexões** aparece na parte inferior das guias **Fluxo de Controle**, **Fluxo de Dados** e **Manipuladores de Eventos** do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer.  
   
-3.  Use a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** , selecione **CACHE**e, então, clique em **Adicionar** para adicionar um gerenciador de conexões de cache.  
+3.  Use a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** , selecione **CACHE** e, então, clique em **Adicionar** para adicionar um gerenciador de conexões de cache.  
   
 4.  Clique duas vezes no gerenciador de conexões de cache para abrir o **Editor do Gerenciador de Conexões de Cache**.  
   

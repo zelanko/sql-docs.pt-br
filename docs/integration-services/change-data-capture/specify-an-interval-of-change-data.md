@@ -14,10 +14,10 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91724967"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
@@ -86,7 +86,7 @@ ms.locfileid: "91724967"
   
 1.  Na guia **Fluxo de Controle** do Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] , adicione uma tarefa Execute SQL ao pacote.  
   
-2.  Abra o **Editor da tarefa Execute SQL**e na página **Geral** do editor, selecione as seguintes opções:  
+2.  Abra o **Editor da tarefa Execute SQL** e na página **Geral** do editor, selecione as seguintes opções:  
   
     1.  Para **Conjunto de Resultados**, selecione **Linha simples**.  
   

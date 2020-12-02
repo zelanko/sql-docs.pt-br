@@ -14,10 +14,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719646"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformação Pesquisa em modo de cache cheio – Gerenciador de conexões OLE DB
@@ -54,11 +54,11 @@ ms.locfileid: "91719646"
   
 9. Execute uma dessas tarefas:  
   
-    -   Clique em **Usar uma tabela ou uma exibição**e selecione uma tabela ou exibição ou clique em **Nova** para criar uma tabela ou exibição.  
+    -   Clique em **Usar uma tabela ou uma exibição** e selecione uma tabela ou exibição ou clique em **Nova** para criar uma tabela ou exibição.  
   
          - ou -  
   
-    -   Clique em **Use os resultados de uma consulta SQL**e crie uma consulta na janela **Comando SQL** ou clique em **Criar Consulta** para criar uma consulta usando as ferramentas gráficas que o **Construtor de Consultas** fornece.  
+    -   Clique em **Use os resultados de uma consulta SQL** e crie uma consulta na janela **Comando SQL** ou clique em **Criar Consulta** para criar uma consulta usando as ferramentas gráficas que o **Construtor de Consultas** fornece.  
   
          - ou -  
   

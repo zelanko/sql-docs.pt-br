@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868941"
 ---
 # <a name="upgrade-full-text-search"></a>Atualizar pesquisa de texto completo
@@ -137,9 +137,9 @@ Quando um banco de dados é atualizado do [!INCLUDE[ssCurrent](../../includes/ss
   
  Para obter mais informações sobre como fazer o backup e a restauração de catálogos de texto completo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [Fazer backup e restaurar índices e catálogos de texto completo](./back-up-and-restore-full-text-catalogs-and-indexes.md) e [Restauração por etapas e índices de texto completo](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))nos Manuais Online do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- Quando o banco de dados for restaurado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], um novo arquivo de banco de dados será criado para o catálogo de texto completo. O nome padrão desse arquivo é ftrow_*catalog-name*.ndf. Por exemplo, se o *catalog-name* for `cat1`, o nome padrão do arquivo de banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Porém, se o nome padrão já estiver sendo usado no diretório de destino, o novo arquivo de banco de dados será chamado `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, em que *GUID* é o Identificador Global Exclusivo do novo arquivo.  
+ Quando o banco de dados for restaurado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], um novo arquivo de banco de dados será criado para o catálogo de texto completo. O nome padrão desse arquivo é ftrow_ *catalog-name*.ndf. Por exemplo, se o *catalog-name* for `cat1`, o nome padrão do arquivo de banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Porém, se o nome padrão já estiver sendo usado no diretório de destino, o novo arquivo de banco de dados será chamado `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, em que *GUID* é o Identificador Global Exclusivo do novo arquivo.  
   
- Depois que os catálogos foram importados, o **sys.database_files** e **sys.master_file**s são atualizadas para remover as entradas do catálogo e a coluna **path** em **sys.fulltext_catalogs** é definida como NULL.  
+ Depois que os catálogos foram importados, o **sys.database_files** e **sys.master_file** s são atualizadas para remover as entradas do catálogo e a coluna **path** em **sys.fulltext_catalogs** é definida como NULL.  
   
  **Para fazer o backup de um banco de dados**  
   

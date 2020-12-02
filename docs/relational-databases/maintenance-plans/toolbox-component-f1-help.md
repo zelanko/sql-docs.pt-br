@@ -14,17 +14,17 @@ ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 295eaa677578effd375e5443fd20e1f5ca368669
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868639"
 ---
 # <a name="toolbox-component-f1-help"></a>Ajuda de F1 do componente Caixa de Ferramentas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A **Caixa de Ferramentas** exibe uma série de itens a serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  
   
- Os ícones da**Caixa de Ferramentas** podem ser arrastados e soltos ou copiados e colados em editores de códigos ou superfícies de modo exibição de design no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Os ícones da **Caixa de Ferramentas** podem ser arrastados e soltos ou copiados e colados em editores de códigos ou superfícies de modo exibição de design no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="how-the-toolbox-works"></a>Como funciona a caixa de ferramentas  
  A Caixa de Ferramentas é um controle de árvore deslizante com comportamento parecido com o do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, mas sem linhas de grade ou de conexão. Vários segmentos da **Caixa de Ferramentas** (chamados de "guias") podem ser expandidos ao mesmo tempo e toda a árvore rola dentro da janela da **Caixa de Ferramentas** . Para expandir qualquer guia da **Caixa de Ferramentas**, clique no sinal de mais (**+**) próximo ao seu nome. Para recolher uma guia expandida, clique no sinal de menos ( **-** ) próximo a seu nome.  

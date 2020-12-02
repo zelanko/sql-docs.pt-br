@@ -19,16 +19,16 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0256deca482147f98ed93f788b8c77ea26a93b02
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037169"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Mecanismo do Banco de Dados)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Retorna uma **hierarchyid** que representa o *n*º ancestral de *this*.
+Retorna uma **hierarchyid** que representa o *n* º ancestral de *this*.
   
 ## <a name="syntax"></a>Sintaxe  
   
