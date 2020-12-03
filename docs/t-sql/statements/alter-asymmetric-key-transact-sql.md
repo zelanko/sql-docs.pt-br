@@ -21,11 +21,11 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 814df70ce91d6cc65b6c2a86d0617dc42bbb4489
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688692"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128149"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,10 +63,10 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  Altera a proteção da chave privada.  
   
- ENCRYPTION BY PASSWORD **='***strongPassword***'**  
+ ENCRYPTION BY PASSWORD **='** _strongPassword_*_'_*  
  Especifica uma nova senha para proteção da chave privada. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esta opção for omitida, a chave privada será criptografada pela chave mestra do banco de dados.  
   
- DECRYPTION BY PASSWORD **='***oldPassword***'**  
+ DECRYPTION BY PASSWORD **='** _oldPassword_*_'_*  
  Especifica a senha antiga com a qual a chave privada está protegida atualmente. Não será necessária se a chave privada for criptografada com a chave mestra do banco de dados.  
   
 ## <a name="remarks"></a>Comentários  

@@ -14,11 +14,11 @@ ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 23bc66a0c782005a2426ee9fc4e35a237f49cb96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789647"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126154"
 ---
 # <a name="register-mirrored-database"></a>Registrar banco de dados espelho
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85789647"
  Selecione uma instância de servidor na lista, que contém instâncias de servidor às quais o Monitor de Espelhamento de Banco de Dados já tem uma conexão armazenada, ou clique em **Conectar**. Para especificar novas credenciais para uma instância de servidor listada, clique em **Conectar** e se conecte usando as novas credenciais.  
   
 > [!NOTE]  
->  Para registrar bancos de data em várias instâncias de servidor, depois de concluir a verificação dos bancos de dados desejados para uma instância de servidor, clique em **Aplicar**e selecione outra instância de servidor.  
+>  Para registrar bancos de data em várias instâncias de servidor, depois de concluir a verificação dos bancos de dados desejados para uma instância de servidor, clique em **Aplicar** e selecione outra instância de servidor.  
   
  **Connect**  
  Para especificar novas credenciais para a instância de servidor, clique em **Conectar** e conecte-se usando as novas credenciais. Ao se conectar a uma instância de servidor, o Monitor de Espelhamento de Banco de Dados exibe **Aguardando dados**.  
@@ -51,7 +51,7 @@ ms.locfileid: "85789647"
 |**Registrar**|Verifique cada um dos bancos de dados que deseja registrar. Se um banco de dados já estiver monitorado, a sua caixa de seleção será marcada e será desabilitada.<br /><br /> Observação: Para cancelar o registro do banco de dados, desmarque a caixa de diálogo **Banco de Dados Espelho Registrado**, selecione o banco de dados na árvore de navegação e selecione **Cancelar registro** no menu **Ação**.|  
 |**Backup de banco de dados**|O nome de um banco de dados espelho na instância de servidor selecionada.|  
 |**Função Atual**|A função de espelhamento atual do banco de dados, Principal ou Espelho na instância de servidor selecionada.|  
-|**Parceiro (Conectar como)**|O nome do parceiro de failover do banco de dados. **Autenticação do Windows do usuário do console** ou **Autenticação do SQL Server de logon '***\<login name>***'** é exibido entre parênteses. Essas são as informações de autenticação atualmente usadas, se a instância foi adicionada antes, ou que serão usadas, se esta instância não foi acrescentada ao monitor.|  
+|**Parceiro (Conectar como)**|O nome do parceiro de failover do banco de dados. A **Autenticação do Windows do usuário do console** ou a **Autenticação do SQL Server de logon '** _\<login name>_ *_'_* é exibida entre parênteses. Essas são as informações de autenticação atualmente usadas, se a instância foi adicionada antes, ou que serão usadas, se esta instância não foi acrescentada ao monitor.|  
   
  **Mostrar a caixa de diálogo Gerenciar Conexões do Servidor quando clicar em OK.**  
  Por padrão, o Monitor de Espelhamento de Banco de Dados usa as credenciais do Windows Authentication para as instâncias do servidor parceiro para as quais credenciais não foram atribuídas anteriormente. Habilite esta opção para alterar as credenciais de uma ou mais instâncias de servidor quando concluir o registro de bancos de dados.  

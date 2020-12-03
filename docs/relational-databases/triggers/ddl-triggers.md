@@ -13,12 +13,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e70bf690c7e236bbe52eae905730dec8f9ac48a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4e723b2ef95fa3b1916d972a5b911dda5201a3d
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418950"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328056"
 ---
 # <a name="ddl-triggers"></a>Gatilhos DDL
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -124,5 +124,5 @@ GO
  [Gatilhos DML](../../relational-databases/triggers/dml-triggers.md)   
  [Gatilhos de logon](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-  
+ [EVENT DATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

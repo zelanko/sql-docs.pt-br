@@ -25,10 +25,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193207"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
@@ -91,9 +91,9 @@ ms.locfileid: "92193207"
   
  A seguir, veja alguns benefícios adicionais da persistência de cache para um arquivo:  
   
--   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, consulte***  [Implementar uma Transformação de Pesquisa em modo de Cache Cheio usando o Gerenciador de Conexões de Cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Compartilhe o arquivo de cache entre vários pacotes. Para obter mais informações, confira** _ [Implementar uma transformação de pesquisa em modo de cache cheio usando o gerenciador de conexões de cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  _*_ . _*_  
   
--   Implante o arquivo de cache com um pacote. ***Você pode usar os dados em vários computadores.*** Para obter mais informações, consulte [Criar e implantar um cache para a Transformação de Pesquisa](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   Implante o arquivo de cache com um pacote. _*_Você pode usar os dados em vários computadores._*_ Para obter mais informações, consulte [Criar e implantar um cache para a Transformação de Pesquisa](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Use a fonte de arquivos brutos para ler dados do arquivo de cache. Você pode usar outros componentes de fluxo de dados para transformar ou mover os dados. Para obter mais informações, consulte [Raw File Source](../../../integration-services/data-flow/raw-file-source.md).  
   
@@ -146,7 +146,7 @@ ms.locfileid: "92193207"
      Para obter informações sobre como instalar exemplos e bancos de dados de exemplo do produto do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consulte [Exemplos do produto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Editor da Transformação Pesquisa (página Geral)
-  Use a página **Geral** da caixa de diálogo Editor da Transformação Pesquisa para selecionar o modo de cache, selecionar o tipo de conexão e especificar como lidar com as linhas com entradas sem-correspondência.  
+  Use a página _ *Geral** da caixa de diálogo Editor de Transformação Pesquisa para selecionar o modo de cache, escolher o tipo de conexão e especificar como lidar com as linhas com entradas sem correspondência.  
   
 ### <a name="options"></a>Opções  
  **Cache cheio**  
@@ -186,7 +186,7 @@ ms.locfileid: "92193207"
  **Novo**  
  Crie uma nova conexão usando a caixa de diálogo **Editor de Gerenciador de Conexões de Cache** .  
   
- As opções a seguir estarão disponíveis quando você selecionar **Cache cheio**, **Cache parcial**ou **Sem cache**e **Gerenciador de conexões OLE DB**na página Geral da caixa de diálogo **Editor da Transformação Pesquisa** .  
+ As opções a seguir estarão disponíveis quando você selecionar **Cache cheio**, **Cache parcial** ou **Sem cache** e **Gerenciador de conexões OLE DB** na página Geral da caixa de diálogo **Editor da Transformação Pesquisa** .  
   
  **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões OLE DB existente na lista ou crie uma nova conexão clicando em **Nova**.  

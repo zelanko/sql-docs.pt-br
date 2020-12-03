@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2e24711b7b67f19018b325da3c6b78dc954e6a31
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869425"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130292"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
 
@@ -84,7 +84,7 @@ O texto e as capturas de tela de suporte podem não ser exatas quando a interfac
 
 2. No Pesquisador de Objetos, clique em **Gerenciamento** > **Eventos Estendidos** > **Nova Sessão**. A caixa de diálogo **Nova Sessão** é preferível a **Assistente de Nova Sessão**, embora as duas sejam semelhantes.
 
-3. No canto superior esquerdo, clique na página **Geral** . Digite *YourSession*ou qualquer nome que desejar na caixa de texto **Nome da sessão** . *Não* pressione o botão **OK** ainda, que aparece apenas ao final da demonstração.
+3. No canto superior esquerdo, clique na página **Geral** . Digite *YourSession* ou qualquer nome que desejar na caixa de texto **Nome da sessão** . *Não* pressione o botão **OK** ainda, que aparece apenas ao final da demonstração.
 
    ![Nova Sessão > Geral > Nome da sessão](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -103,20 +103,23 @@ O texto e as capturas de tela de suporte podem não ser exatas quando a interfac
 
     ![Nova Sessão > Eventos > Configurar > Filtro (Predicado) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Clique na guia **Filtro (Predicado)** . Em seguida, clique em **Clique aqui para adicionar uma cláusula**para capturar todas as instruções SQL SELECT que têm uma cláusula HAVING.
+7. Clique na guia **Filtro (Predicado)** . Em seguida, clique em **Clique aqui para adicionar uma cláusula** para capturar todas as instruções SQL SELECT que têm uma cláusula HAVING.
 
 8. No lista suspensa **Campo** , escolha **sqlserver.sql_text**.
    - Em **Operador** , escolha um operador LIKE.
    - Em **Valor** , digite **%SELECT%HAVING%** .
 
    > [!NOTE]
-   > Neste nome de duas partes, *sqlserver* é o nome do pacote e *sql_text* é o nome do campo. O evento anterior que escolhemos, *sql_statement_completed* , deve estar no mesmo pacote que o campo escolhido.
+   > Neste nome de duas partes, *sqlserver* é o nome do pacote e *sql_text* é o nome do campo. O evento anterior que escolhemos, *sql_statement_completed*, precisa estar no mesmo pacote que o campo escolhido.
 
 9. No canto superior esquerdo, clique na página **Armazenamento de Dados** .
 
 10. Na área **Destinos**, clique em **Clique aqui para adicionar um destino**.
     - Na lista suspensa **Tipo** , escolha **event_file**.
     - Isso significa que os dados de evento serão armazenados em um arquivo que pode ser exibido.
+    
+    > [!NOTE]
+    > Você não pode usar o Armazenamento de Blobs do Azure como um destino de armazenamento de dados em uma instância local do SQL Server.
 
     ![Nova Sessão > Armazenamento de Dados > Destinos > Tipo > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
@@ -136,7 +139,7 @@ O texto e as capturas de tela de suporte podem não ser exatas quando a interfac
 
 #### <a name="edit-your-event-session"></a>Editar a sessão de evento
 
-No **Pesquisador de Objetos**do SSMS, é possível editar a sessão de evento clicando com o botão direito do mouse em seu nó e clicando em **Propriedades**. A mesma caixa de diálogo com várias páginas é exibida.
+No **Pesquisador de Objetos** do SSMS, é possível editar a sessão de evento clicando com o botão direito do mouse em seu nó e clicando em **Propriedades**. A mesma caixa de diálogo com várias páginas é exibida.
 
 ### <a name="corresponding-t-sql-for-your-event-session"></a>T-SQL correspondente da sessão de evento
 
@@ -209,7 +212,7 @@ Você tem a opção de informar a sessão de evento para ser iniciada automatica
 
 Teste sua sessão de evento com estas etapas simples:
 
-1. No **Pesquisador de Objetos**do SSMS, clique com o botão direito do mouse no nó da sessão de evento e clique em **Iniciar Sessão**.
+1. No **Pesquisador de Objetos** do SSMS, clique com o botão direito do mouse no nó da sessão de evento e clique em **Iniciar Sessão**.
 2. Execute a instrução `SELECT...HAVING` a seguir algumas vezes.
     - O ideal é que você possa alterar o valor `HAVING Count` entre as duas execuções, ativando/desativando entre 2 e 3. Isso permite que você veja as diferenças nos resultados.
 3. Clique com o botão direito do mouse no nó da sessão e clique em **Interromper Sessão**.
@@ -247,7 +250,7 @@ event_session_address  5
 event_session_id       5
 is_trigger_event       4
 trace_event_id         3
-***/
+**_/
 ```
 
 <a name="select-the-full-results-xml-37"/>
@@ -257,7 +260,7 @@ trace_event_id         3
 No SSMS, execute a instrução T-SQL SELECT a seguir para retornar resultados em que cada linha fornece os dados sobre a ocorrência de um evento. CAST AS XML facilita a exibição dos resultados.
 
 > [!NOTE]
-> O sistema de eventos sempre acrescenta um número longo ao nome de arquivo de *.xel* event_file especificado. Antes de executar a instrução SELECT a seguir por meio do arquivo, copie o nome completo fornecido pelo sistema e cole-o em SELECT.
+> O sistema de eventos sempre acrescenta um número longo ao nome de arquivo de _.xel* event_file especificado. Antes de executar a instrução SELECT a seguir por meio do arquivo, copie o nome completo fornecido pelo sistema e cole-o em SELECT.
 
 ```sql
 SELECT
@@ -338,7 +341,7 @@ Os conceitos básicos começam com as opções do menu de contexto rotuladas **E
 
 ### <a name="view-target-data"></a>Exibir Dados de Destino
 
-No **Pesquisador de Objetos**do SSMS, é possível clicar com o botão direito do mouse no nó de destino que está sob o nó da sessão de evento. No menu de contexto, clique em **Exibir Dados de Destino**. O SSMS exibe os dados.
+No **Pesquisador de Objetos** do SSMS, é possível clicar com o botão direito do mouse no nó de destino que está sob o nó da sessão de evento. No menu de contexto, clique em **Exibir Dados de Destino**. O SSMS exibe os dados.
 
 A exibição não é atualizada conforme novos dados são reportados pelo evento. Mas você pode clicar em **Exibir Dados de Destino** novamente.
 
@@ -346,7 +349,7 @@ A exibição não é atualizada conforme novos dados são reportados pelo evento
 
 ### <a name="watch-live-data"></a>Inspecionar Dados Dinâmicos
 
-No **Pesquisador de Objetos**do SSMS, é possível clicar com o botão direito do mouse no nó da sessão de evento. No menu de contexto, clique em **Inspecionar Dados Dinâmicos**. O SSMS exibe dados de entrada conforme sua chegada em tempo real.
+No **Pesquisador de Objetos** do SSMS, é possível clicar com o botão direito do mouse no nó da sessão de evento. No menu de contexto, clique em **Inspecionar Dados Dinâmicos**. O SSMS exibe dados de entrada conforme sua chegada em tempo real.
 
 ![Inspecionar Dados Dinâmicos, no SSMS, Gerenciamento > Eventos Estendidos > Sessões > YourSession > clique com o botão direito do mouse](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
 

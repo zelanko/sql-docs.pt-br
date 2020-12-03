@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91869057"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "91869057"
   
 -   Extremamente compacto  
   
-     O número médio de bits necessários para representar um nó em uma árvore com *n* nós depende da média de fanout (o número médio de filhos de um nó). Para fanouts pequenos, o tamanho (0-7) é de aproximadamente 6\*logA*n* bits, em que A é o fanout médio. Um nó em uma hierarquia organizacional de 100.000 pessoas com um fanout médio de 6 níveis usa cerca de 38 bits. Isso é arredondado para 40 bits, ou 5 bytes, para armazenamento.  
+     O número médio de bits necessários para representar um nó em uma árvore com *n* nós depende da média de fanout (o número médio de filhos de um nó). Para fanouts pequenos, o tamanho (0-7) é de aproximadamente 6\*logA *n* bits, em que A é o fanout médio. Um nó em uma hierarquia organizacional de 100.000 pessoas com um fanout médio de 6 níveis usa cerca de 38 bits. Isso é arredondado para 40 bits, ou 5 bytes, para armazenamento.  
   
 -   A comparação está na ordem de profundidade  
   
@@ -79,7 +79,7 @@ ms.locfileid: "91869057"
   
 -   XML  
   
- A**hierarchyid** é geralmente superior a essas alternativas. Porém, a seguir há situações específicas detalhadas em que as alternativas são provavelmente superiores.  
+ A **hierarchyid** é geralmente superior a essas alternativas. Porém, a seguir há situações específicas detalhadas em que as alternativas são provavelmente superiores.  
   
 ### <a name="parentchild"></a>Pai/filho  
  Ao usar a abordagem Pai/Filho, cada linha contém uma referência ao pai. A tabela a seguir define uma tabela típica usada para conter as linhas pai e filho em uma relação Pai/Filho:  

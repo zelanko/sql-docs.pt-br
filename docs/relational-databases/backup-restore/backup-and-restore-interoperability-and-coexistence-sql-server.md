@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3dcf1473fc92ba69d68f9aae9d871540e2604b52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 106773df7a5e9f88c123b614688ca19722613d7f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737828"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130531"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e restauração: Interoperabilidade e coexistência (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85737828"
   
  Se um problema for encontrado durante a inicialização do banco de dados, a recuperação falhará, e o banco de dados será marcado como SUSPECT. Se o problema puder ser isolado a um arquivo ou arquivos, o administrador do banco de dados poderá colocar os arquivos offline e tentar reinicializar o banco de dados. Para colocar um arquivo offline, você pode usar a seguinte instrução [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) :  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'** , OFFLINE)  
+ ALTER DATABASE *database_name* MODIFY FILE (NAME **='** _filename_*_'_*, OFFLINE)  
   
  Se a inicialização tiver êxito, qualquer grupo de arquivos que contiver um arquivo offline permanecerá offline.  
   

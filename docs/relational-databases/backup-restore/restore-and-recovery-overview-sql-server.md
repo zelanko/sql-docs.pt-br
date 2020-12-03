@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 - accelerated database recovery
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810687"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125557"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Visão geral da restauração e recuperação (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "91810687"
 |cenário de restauração|Modelo de recuperação simples|Modelos de recuperação completa e com log de operações em massa|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |restauração completa do banco de dados|Esta é a estratégia básica de restauração. Uma restauração completa do banco de dados pode envolver simplesmente a restauração e recuperação do backup completo do banco de dados. Alternativamente, uma restauração completa do banco de dados pode envolver a restauração do banco de dados completo seguida pela restauração e recuperação de um backup diferencial.<br /><br /> Para obter mais informações, veja [Restaurações completas de banco de dados &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md).|Esta é a estratégia básica de restauração. Uma restauração completa do banco de dados envolve a restauração de um backup completo do banco e, opcionalmente, de um backup diferencial (se houver), seguida da restauração de todos os backups de logs subsequentes (em sequência). A restauração completa do banco de dados termina com a recuperação do último backup de log e também com sua restauração (RESTORE WITH RECOVERY).<br /><br /> Para obter mais informações, veja [Restaurações completas de banco de dados &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|  
-|File restore **\***|Restaura um ou mais arquivos somente leitura danificados, sem restaurar todo o banco de dados. A restauração de arquivo só estará disponível se o banco de dados tiver pelo menos um grupo de arquivos somente leitura.|Restaura um ou mais arquivos, sem restaurar todo o banco de dados. A restauração de arquivo pode ser executada enquanto o banco de dados estiver offline ou, em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enquanto o banco de dados permanece online. Durante uma restauração de arquivo, os grupos de arquivos que contêm os arquivos que estão sendo restaurados sempre estão offline.|  
+|Restauração de arquivo * *\** _|Restaura um ou mais arquivos somente leitura danificados, sem restaurar todo o banco de dados. A restauração de arquivo só estará disponível se o banco de dados tiver pelo menos um grupo de arquivos somente leitura.|Restaura um ou mais arquivos, sem restaurar todo o banco de dados. A restauração de arquivo pode ser executada enquanto o banco de dados estiver offline ou, em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enquanto o banco de dados permanece online. Durante uma restauração de arquivo, os grupos de arquivos que contêm os arquivos que estão sendo restaurados sempre estão offline.|  
 |Restauração de página|Não aplicável|Restaura uma ou mais páginas danificadas. A restauração de página pode ser executada enquanto o banco de dados estiver offline ou, em algumas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enquanto o banco de dados permanece online. Durante uma restauração de página, as páginas que estão sendo restauradas sempre estão offline.<br /><br /> Uma cadeia ininterrupta de backups de log deve estar disponível, inclusive o arquivo de log atual, e todos eles devem ser aplicados para atualizar a página com o arquivo de log atual.<br /><br /> Para obter mais informações, veja [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).|  
-|Restauração por etapas **\***|Restaura e recupera o banco de dados em fases no nível do grupo de arquivos, iniciando com o grupo de arquivos primário e todos os grupos de arquivos de gravação/leitura secundários.|Restaura e recupera o banco de dados em fases no nível do grupo de arquivos, iniciando com o grupo de arquivos primário.<br /><br /> Saiba mais em [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)|  
+|Restauração por etapas _*\**_|Restaura e recupera o banco de dados em fases no nível do grupo de arquivos, iniciando com o grupo de arquivos primário e todos os grupos de arquivos de gravação/leitura secundários.|Restaura e recupera o banco de dados em fases no nível do grupo de arquivos, iniciando com o grupo de arquivos primário.<br /><br /> Saiba mais em [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)|  
   
- **\*** Há suporte para a restauração online somente na edição Enterprise.  
+ _*\**_ Só há suporte para a restauração online na edição Enterprise.  
 
 ### <a name="steps-to-restore-a-database"></a>Etapas de restauração de um banco de dados
 Para executar uma restauração de arquivo, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] executa duas etapas: 
@@ -87,7 +87,7 @@ Para executar uma restauração do banco de dados, o [!INCLUDE[ssde_md](../../in
 -   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a restauração de arquivos ou páginas pode permitir que outros dados no banco de dados permaneçam online durante a operação de restauração.  
 
 ## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> Log de transações e recuperação
-Para a maioria dos cenários de restauração, é necessário aplicar um backup de log de transações e permitir que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] execute o **processo de recuperação** para que o banco de dados fique online. A recuperação é o processo usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada banco de dados iniciar em um estado transacional consistente ou limpo.
+Para a maioria dos cenários de restauração, é necessário aplicar um backup de log de transações e permitir que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] execute o _ *processo de recuperação** para que o banco de dados fique online. A recuperação é o processo usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada banco de dados iniciar em um estado transacional consistente ou limpo.
 
 Caso ocorra um failover ou outro desligamento não limpo, os bancos de dados poderão ser deixados em um estado em que algumas modificações nunca foram gravadas do cache do buffer para os arquivos de dados, e poderá haver algumas modificações de transações incompletas nos arquivos de dados. Quando uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciada, ela executa uma recuperação de cada banco de dados, que consiste em três fases, com base no último [ponto de verificação do banco de dados](../../relational-databases/logs/database-checkpoints-sql-server.md):
 
@@ -113,13 +113,13 @@ As informações sobre o andamento de cada fase de recuperação do banco de dad
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Recuperação de dados|Recuperação completa (se o log estiver disponível).|Exposição a alguma perda de dados.|Quaisquer dados desde o último backup completo ou diferencial serão perdidos.|  
 |Restauração em um momento determinado|Qualquer período coberto pelos backups de log.|Não permitido se o backup de log contiver quaisquer alterações com log de alteração em massa.|Sem suporte.|  
-|File restore **\***|Suporte completo.|Às vezes. **\*\***|Disponível só para arquivos secundários somente leitura.|  
-|Page restore **\***|Suporte completo.|Às vezes. **\*\***|Nenhum.|  
-|Restauração por etapas (nível de grupo de arquivos) **\***|Suporte completo.|Às vezes. **\*\***|Disponível só para arquivos secundários somente leitura.|  
+|Restauração de arquivo * *\** _|Suporte completo.|Às vezes._ *\*\** *|Disponível só para arquivos secundários somente leitura.|  
+|Restauração de página * *\** _|Suporte completo.|Às vezes._ *\*\** *|Nenhum.|  
+|Restauração por etapas (nível de grupo de arquivos) * *\** _|Suporte completo.|Às vezes._ *\*\** *|Disponível só para arquivos secundários somente leitura.|  
   
- **\*** Disponível somente na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ * *\** _ Disponível somente na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- **\*\*** Para saber as condições exigidas, consulte [Restrições de restauração no modelo de recuperação simples](#RMsimpleScenarios), posteriormente neste tópico.  
+ _ *\*\** * Para saber as condições exigidas, confira [Restrições de restauração no modelo de recuperação simples](#RMsimpleScenarios) posteriormente neste tópico.  
   
 > [!IMPORTANT]  
 > Independentemente do modelo de recuperação de um banco de dados, um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser restaurado por uma versão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que seja mais antiga do que a versão que criou o backup.  

@@ -22,12 +22,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76deea6c09a14a420ac5916248d0a3944ea5609a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f6bfa965b74aada909b7e28e1429941d4a82b65a
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300634"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328026"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -62,7 +62,7 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
 
 Este comando cria uma tabela externa do PolyBase para acessar os dados armazenados em um cluster Hadoop, um Armazenamento de Blobs do Azure ou uma tabela externa do PolyBase que referencia os dados armazenados em um cluster Hadoop ou um Armazenamento de Blobs do Azure.
 
-**APLICA-SE A** : SQL Server 2016 (ou posterior)
+**APLICA-SE A**: SQL Server 2016 (ou posterior)
 
 Use uma tabela externa com uma fonte de dados externa para consultas do PolyBase. Fontes de dados externas são usadas para estabelecer a conectividade e dar suporte a estes casos de uso principal:
 
@@ -102,11 +102,11 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* O nome de uma a três partes da tabela a ser criada. Para uma tabela externa, o SQL armazena apenas os metadados da tabela, junto com estatísticas básicas sobre o arquivo ou a pasta referenciada no Hadoop ou no Armazenamento de Blobs do Azure. Nenhum dado real é movido ou armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE é compatível com a configuração de nome de coluna, tipo de dados, nulidade e ordenação. Não é possível usar a DEFAULT CONSTRAINT em tabelas externas.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE é compatível com a configuração de nome de coluna, tipo de dados, nulidade e ordenação. Não é possível usar a DEFAULT CONSTRAINT em tabelas externas.
 
 As definições de coluna, incluindo os tipos de dados e o número de colunas, devem corresponder aos dados nos arquivos externos. Se houver uma incompatibilidade, as linhas do arquivo serão rejeitadas ao consultar os dados propriamente ditos.
 
-LOCATION = ' *folder_or_filepath* ' Especifica a pasta ou o caminho do arquivo e o nome de arquivo dos dados reais no Hadoop ou no Armazenamento de Blobs do Azure. O local inicia da pasta raiz. A pasta raiz é o local de dados especificado na fonte de dados externa.
+LOCATION = '*folder_or_filepath*' Especifica a pasta ou o caminho do arquivo e o nome de arquivo dos dados reais no Hadoop ou no Armazenamento de Blobs do Azure. O local inicia da pasta raiz. A pasta raiz é o local de dados especificado na fonte de dados externa.
 
 No SQL Server, a instrução CREATE EXTERNAL TABLE cria o caminho e a pasta, caso ela ainda não exista. Em seguida, use INSERT INTO para exportar dados de uma tabela local do SQL Server para uma fonte de dados externa. Para saber mais, confira [Consultas do PolyBase](../../relational-databases/polybase/polybase-queries.md).
 
@@ -128,11 +128,11 @@ Quando você não especifica nem altera os valores de rejeição, o PolyBase usa
 
 REJECT_TYPE = **value** | percentage Esclarece se a opção REJECT_VALUE é especificada como um valor literal ou um percentual.
 
-value REJECT_VALUE é um valor literal, não um percentual. A consulta do PolyBase falhará quando o número de linhas rejeitadas exceder *reject_value* .
+value REJECT_VALUE é um valor literal, não um percentual. A consulta do PolyBase falhará quando o número de linhas rejeitadas exceder *reject_value*.
 
 Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = value, a consulta SELECT do PolyBase falhará depois de cinco linhas serem rejeitadas.
 
-percentage REJECT_VALUE é um percentual, não um valor literal. Uma consulta do PolyBase falhará quando o *percentage* de linhas com falha exceder *reject_value* . O percentual de linhas com falha é calculado em intervalos.
+percentage REJECT_VALUE é um percentual, não um valor literal. Uma consulta do PolyBase falhará quando o *percentage* de linhas com falha exceder *reject_value*. O percentual de linhas com falha é calculado em intervalos.
 
 REJECT_VALUE = *reject_value* Especifica o valor ou o percentual de linhas que pode ser rejeitado antes da falha da consulta.
 
@@ -144,10 +144,10 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* Esse atributo é obrigatório quando
 
 O parâmetro *reject_sample_value* deve ser um inteiro entre 0 e 2.147.483.647.
 
-Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o PolyBase calculará o percentual de linhas com falha depois de tentar importar 1000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value* , o PolyBase tentará recuperar outras 1.000 linhas. Ele continuará recalculando o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.
+Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o PolyBase calculará o percentual de linhas com falha depois de tentar importar 1000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value*, o PolyBase tentará recuperar outras 1.000 linhas. Ele continuará recalculando o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.
 
 > [!NOTE]
-> Como o PolyBase calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value* .
+> Como o PolyBase calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value*.
 
 Exemplo:
 
@@ -163,7 +163,7 @@ SCHEMA_NAME A cláusula SCHEMA_NAME fornece a capacidade de mapear a definição
 
 OBJECT_NAME A cláusula OBJECT_NAME fornece a capacidade de mapear a definição da tabela externa para uma tabela com um nome diferente no banco de dados remoto. Use essa cláusula para remover a ambiguidade entre os nomes de objeto que existem nos bancos de dados locais e remotos.
 
-DISTRIBUIÇÃO Opcional. Esse argumento é necessário para bancos de dados do tipo SHARD_MAP_MANAGER. Esse argumento controla se uma tabela é tratada como uma tabela fragmentada ou uma tabela replicada. Com tabelas **SHARDED** ( *column name* ), os dados de tabelas diferentes não se sobrepõem. **REPLICATED** especifica que as tabelas têm os mesmos dados em cada fragmento. **ROUND_ROBIN** indica que um método específico ao aplicativo é usado para distribuir os dados.
+DISTRIBUIÇÃO Opcional. Esse argumento é necessário para bancos de dados do tipo SHARD_MAP_MANAGER. Esse argumento controla se uma tabela é tratada como uma tabela fragmentada ou uma tabela replicada. Com tabelas **SHARDED** (*column name*), os dados de tabelas diferentes não se sobrepõem. **REPLICATED** especifica que as tabelas têm os mesmos dados em cada fragmento. **ROUND_ROBIN** indica que um método específico ao aplicativo é usado para distribuir os dados.
 
 ## <a name="permissions"></a>Permissões
 
@@ -211,13 +211,26 @@ Constructos e operações não compatíveis:
 - A restrição DEFAULT em colunas de tabela externa
 - Operações DML (linguagem de manipulação de dados) de exclusão, inserção e atualização
 
-Limitações da consulta:
+### <a name="query-limitations"></a>Limitações da consulta
 
 O PolyBase pode consumir um máximo de 33 mil arquivos por pasta durante a execução de 32 consultas simultâneas do PolyBase. O número máximo inclui arquivos e subpastas em cada pasta do HDFS. Se o grau de simultaneidade é menor que 32, um usuário pode executar consultas do PolyBase em pastas do HDFS que contêm mais de 33 mil arquivos. Recomendamos que você mantenha os caminhos de arquivo externo curtos e use, no máximo, 30 mil arquivos por pasta do HDFS. Quando muitos arquivos são referenciados, pode ocorrer uma exceção de memória insuficiente da JVM (Máquina Virtual Java).
 
-Limitações de largura de tabela:
+### <a name="table-width-limitations"></a>Limitações de largura da tabela
 
 o PolyBase no SQL Server 2016 tem um limite de largura de linha de 32 KB, com base no tamanho máximo de uma única linha válida por definição de tabela. Se a soma do esquema de coluna for maior que 32 KB, o PolyBase não poderá consultar os dados.
+
+### <a name="data-type-limitations"></a>Limitações do tipo de dados
+
+Os seguintes tipos de dados não podem ser usados em tabelas externas do PolyBase:
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- Qualquer tipo definido pelo usuário
 
 ## <a name="locking"></a>Bloqueio
 
@@ -231,7 +244,7 @@ Os arquivos de dados para uma tabela externa são armazenados no Hadoop ou no Ar
 
 ### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>a. Criar uma tabela externa com os dados em um formato delimitado por texto
 
-Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tem os dados formatados em arquivos delimitados por texto. Ele define uma fonte de dados externa *mydatasource* e um formato de arquivo externo *myfileformat* . Em seguida, esses objetos no nível do banco de dados são referenciados na instrução CREATE EXTERNAL TABLE. Para saber mais, confira [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tem os dados formatados em arquivos delimitados por texto. Ele define uma fonte de dados externa *mydatasource* e um formato de arquivo externo *myfileformat*. Em seguida, esses objetos no nível do banco de dados são referenciados na instrução CREATE EXTERNAL TABLE. Para saber mais, confira [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource
@@ -261,7 +274,7 @@ WITH (
 
 ### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. Criar uma tabela externa com os dados no formato RCFile
 
-Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tem os dados formatados como RCFiles. Ele define uma fonte de dados externa *mydatasource_rc* e um formato de arquivo externo *myfileformat_rc* . Em seguida, esses objetos no nível do banco de dados são referenciados na instrução CREATE EXTERNAL TABLE. Para saber mais, confira [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
+Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tem os dados formatados como RCFiles. Ele define uma fonte de dados externa *mydatasource_rc* e um formato de arquivo externo *myfileformat_rc*. Em seguida, esses objetos no nível do banco de dados são referenciados na instrução CREATE EXTERNAL TABLE. Para saber mais, confira [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
 ```sql
 CREATE EXTERNAL DATA SOURCE mydatasource_rc
@@ -344,7 +357,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 
 ### <a name="f-import-data-from-hadoop-into-a-sql-table"></a>F. Importar dados do Hadoop para uma tabela SQL
 
-Este exemplo cria uma nova tabela SQL ms_user que armazena permanentemente o resultado de uma junção entre a tabela SQL padrão *user* e a tabela externa *ClickStream* .
+Este exemplo cria uma nova tabela SQL ms_user que armazena permanentemente o resultado de uma junção entre a tabela SQL padrão *user* e a tabela externa *ClickStream*.
 
 ```sql
 SELECT DISTINCT user.FirstName, user.LastName
@@ -629,7 +642,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* O nome de uma a três partes da tabela a ser criada. Para uma tabela externa, o SQL armazena somente os metadados da tabela junto com estatísticas básicas sobre o arquivo ou a pasta referenciada no Banco de Dados SQL do Azure. Nenhum dado real é movido ou armazenado no Banco de Dados SQL do Azure.
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE é compatível com a configuração de nome de coluna, tipo de dados, nulidade e ordenação. Não é possível usar a DEFAULT CONSTRAINT em tabelas externas.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE é compatível com a configuração de nome de coluna, tipo de dados, nulidade e ordenação. Não é possível usar a DEFAULT CONSTRAINT em tabelas externas.
 
 > [!NOTE]
 > `Text`, `nText` e `XML` não são tipos de dados com suporte para colunas em tabelas externas para o Banco de Dados SQL do Azure.
@@ -700,6 +713,19 @@ O uso de Tabelas Externas impede o uso de paralelismo no plano de consulta.
 
 As tabelas externas são implementadas como Consulta Remota e, como tal, o número estimado de linhas retornadas geralmente é 1000; há outras regras com base no tipo de predicado usado para filtrar a tabela externa. Elas são estimativas baseadas em regras em vez de estimativas baseadas nos dados reais na tabela externa. O otimizador não acessa a fonte de dados remota para obter uma estimativa mais precisa.
 
+### <a name="data-type-limitations"></a>Limitações do tipo de dados
+
+Os seguintes tipos de dados não podem ser usados em tabelas externas do PolyBase:
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- Qualquer tipo definido pelo usuário
+
 ## <a name="locking"></a>Bloqueio
 
 Bloqueio compartilhado no objeto SCHEMARESOLUTION.
@@ -755,6 +781,7 @@ Confira também [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-exte
 
 ## <a name="syntax"></a>Sintaxe
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
@@ -777,22 +804,36 @@ column_name <data_type>
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
-  
 }  
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name } 
+    ( <column_definition> [ ,...n ] )   
+    WITH ( 
+        LOCATION = 'folder_or_filepath',   
+        DATA_SOURCE = external_data_source_name,   
+        FILE_FORMAT = external_file_format_name   
+    )   
+[;]   
+<column_definition> ::= 
+column_name <data_type> 
+    [ COLLATE collation_name ] 
+```
+---
 
 ## <a name="arguments"></a>Argumentos
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* O nome de uma a três partes da tabela a ser criada. Para uma tabela externa, apenas os metadados da tabela, junto com estatísticas básicas sobre o arquivo ou a pasta referenciada no Azure Data Lake, no Hadoop ou no Armazenamento de Blobs do Azure. Nenhum dado real é movido ou armazenado quando tabelas externas são criadas.
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE é compatível com a configuração de nome de coluna, tipo de dados, nulidade e ordenação. Não é possível usar a DEFAULT CONSTRAINT em tabelas externas.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE é compatível com a configuração de nome de coluna, tipo de dados, nulidade e ordenação. Não é possível usar a DEFAULT CONSTRAINT em tabelas externas.
 
 > [!NOTE]
 > `Text`, `nText` e `XML` não são tipos de dados com suporte para colunas em tabelas externas para o Azure SQL Warehouse.
 
 As definições de coluna, incluindo os tipos de dados e o número de colunas, devem corresponder aos dados nos arquivos externos. Se houver uma incompatibilidade, as linhas do arquivo serão rejeitadas ao consultar os dados propriamente ditos.
 
-LOCATION = ' *folder_or_filepath* ' Especifica a pasta ou o caminho do arquivo e o nome de arquivo dos dados reais no Azure Data Lake, no Hadoop ou no Armazenamento de Blobs do Azure. O local inicia da pasta raiz. A pasta raiz é o local de dados especificado na fonte de dados externa. A instrução [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) cria o caminho e a pasta, caso ela não exista. `CREATE EXTERNAL TABLE` não cria o caminho e a pasta.
+LOCATION = '*folder_or_filepath*' Especifica a pasta ou o caminho do arquivo e o nome de arquivo dos dados reais no Azure Data Lake, no Hadoop ou no Armazenamento de Blobs do Azure. O local inicia da pasta raiz. A pasta raiz é o local de dados especificado na fonte de dados externa. A instrução [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) cria o caminho e a pasta, caso ela não exista. `CREATE EXTERNAL TABLE` não cria o caminho e a pasta.
 
 Se você especificar LOCATION para que ele seja uma pasta, uma consulta do PolyBase que seleciona por meio da tabela externa recuperará os arquivos da pasta e todas as suas subpastas. Assim como o Hadoop, o PolyBase não retorna pastas ocultas. Ele também não retorna arquivos dos quais o nome do arquivo começa com um sublinhado (_) ou um ponto final (.).
 
@@ -812,11 +853,11 @@ Quando você não especifica nem altera os valores de rejeição, o PolyBase usa
 
 REJECT_TYPE = **value** | percentage Esclarece se a opção REJECT_VALUE é especificada como um valor literal ou um percentual.
 
-value REJECT_VALUE é um valor literal, não um percentual. A consulta do PolyBase falhará quando o número de linhas rejeitadas exceder *reject_value* .
+value REJECT_VALUE é um valor literal, não um percentual. A consulta do PolyBase falhará quando o número de linhas rejeitadas exceder *reject_value*.
 
 Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = value, a consulta SELECT do PolyBase falhará depois de cinco linhas serem rejeitadas.
 
-percentage REJECT_VALUE é um percentual, não um valor literal. Uma consulta do PolyBase falhará quando o *percentage* de linhas com falha exceder *reject_value* . O percentual de linhas com falha é calculado em intervalos.
+percentage REJECT_VALUE é um percentual, não um valor literal. Uma consulta do PolyBase falhará quando o *percentage* de linhas com falha exceder *reject_value*. O percentual de linhas com falha é calculado em intervalos.
 
 REJECT_VALUE = *reject_value* Especifica o valor ou o percentual de linhas que pode ser rejeitado antes da falha da consulta.
 
@@ -828,10 +869,10 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* Esse atributo é obrigatório quando
 
 O parâmetro *reject_sample_value* deve ser um inteiro entre 0 e 2.147.483.647.
 
-Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o PolyBase calculará o percentual de linhas com falha depois de tentar importar 1000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value* , o PolyBase tentará recuperar outras 1.000 linhas. Ele continuará recalculando o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.
+Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o PolyBase calculará o percentual de linhas com falha depois de tentar importar 1000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value*, o PolyBase tentará recuperar outras 1.000 linhas. Ele continuará recalculando o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.
 
 > [!NOTE]
-> Como o PolyBase calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value* .
+> Como o PolyBase calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value*.
 
 Exemplo:
 
@@ -898,13 +939,26 @@ Constructos e operações não compatíveis:
 - A restrição DEFAULT em colunas de tabela externa
 - Operações DML (linguagem de manipulação de dados) de exclusão, inserção e atualização
 
-Limitações da consulta:
+### <a name="query-limitations"></a>Limitações da consulta
 
 recomendamos não exceder 30 mil arquivos por pasta. Quando arquivos em excesso são referenciados, pode ocorrer uma exceção de memória insuficiente da JVM (Máquina Virtual Java) ou uma degradação do desempenho.
 
-Limitações de largura de tabela:
+### <a name="table-width-limitations"></a>Limitações de largura da tabela
 
 o PolyBase no Data Warehouse do Azure tem um limite de largura de linha de 1 MB, com base no tamanho máximo de uma única linha válida por definição de tabela. Se a soma do esquema de coluna for maior que 1 MB, o PolyBase não poderá consultar os dados.
+
+### <a name="data-type-limitations"></a>Limitações do tipo de dados
+
+Os seguintes tipos de dados não podem ser usados em tabelas externas do PolyBase:
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- Qualquer tipo definido pelo usuário
 
 ## <a name="locking"></a>Bloqueio
 
@@ -1025,11 +1079,11 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* O nome de uma a três partes da tabela a ser criada. Para uma tabela externa, o Analytics Platform System armazena somente os metadados da tabela junto com estatísticas básicas sobre o arquivo ou a pasta referenciada no Hadoop ou no Armazenamento de Blobs do Azure. Nenhum dado real é movido ou armazenado no Analytics Platform System.
 
-\<column_definition> [ ,... *n* ] CREATE EXTERNAL TABLE é compatível com a configuração de nome de coluna, tipo de dados, nulidade e ordenação. Não é possível usar a DEFAULT CONSTRAINT em tabelas externas.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE é compatível com a configuração de nome de coluna, tipo de dados, nulidade e ordenação. Não é possível usar a DEFAULT CONSTRAINT em tabelas externas.
 
 As definições de coluna, incluindo os tipos de dados e o número de colunas, devem corresponder aos dados nos arquivos externos. Se houver uma incompatibilidade, as linhas do arquivo serão rejeitadas ao consultar os dados propriamente ditos.
 
-LOCATION = ' *folder_or_filepath* ' Especifica a pasta ou o caminho do arquivo e o nome de arquivo dos dados reais no Hadoop ou no Armazenamento de Blobs do Azure. O local inicia da pasta raiz. A pasta raiz é o local de dados especificado na fonte de dados externa.
+LOCATION = '*folder_or_filepath*' Especifica a pasta ou o caminho do arquivo e o nome de arquivo dos dados reais no Hadoop ou no Armazenamento de Blobs do Azure. O local inicia da pasta raiz. A pasta raiz é o local de dados especificado na fonte de dados externa.
 
 No Analytics Platform System, a instrução [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) cria o caminho e a pasta, caso não existam. `CREATE EXTERNAL TABLE` não cria o caminho e a pasta.
 
@@ -1051,11 +1105,11 @@ Quando você não especifica nem altera os valores de rejeição, o PolyBase usa
 
 REJECT_TYPE = **value** | percentage Esclarece se a opção REJECT_VALUE é especificada como um valor literal ou um percentual.
 
-value REJECT_VALUE é um valor literal, não um percentual. A consulta do PolyBase falhará quando o número de linhas rejeitadas exceder *reject_value* .
+value REJECT_VALUE é um valor literal, não um percentual. A consulta do PolyBase falhará quando o número de linhas rejeitadas exceder *reject_value*.
 
 Por exemplo, se REJECT_VALUE = 5 e REJECT_TYPE = value, a consulta SELECT do PolyBase falhará depois de cinco linhas serem rejeitadas.
 
-percentage REJECT_VALUE é um percentual, não um valor literal. Uma consulta do PolyBase falhará quando o *percentage* de linhas com falha exceder *reject_value* . O percentual de linhas com falha é calculado em intervalos.
+percentage REJECT_VALUE é um percentual, não um valor literal. Uma consulta do PolyBase falhará quando o *percentage* de linhas com falha exceder *reject_value*. O percentual de linhas com falha é calculado em intervalos.
 
 REJECT_VALUE = *reject_value* Especifica o valor ou o percentual de linhas que pode ser rejeitado antes da falha da consulta.
 
@@ -1067,10 +1121,10 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* Esse atributo é obrigatório quando
 
 O parâmetro *reject_sample_value* deve ser um inteiro entre 0 e 2.147.483.647.
 
-Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o PolyBase calculará o percentual de linhas com falha depois de tentar importar 1000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value* , o PolyBase tentará recuperar outras 1.000 linhas. Ele continuará recalculando o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.
+Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o PolyBase calculará o percentual de linhas com falha depois de tentar importar 1000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value*, o PolyBase tentará recuperar outras 1.000 linhas. Ele continuará recalculando o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.
 
 > [!NOTE]
-> Como o PolyBase calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value* .
+> Como o PolyBase calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value*.
 
 Exemplo:
 
@@ -1128,15 +1182,28 @@ Constructos e operações não compatíveis:
 - A restrição DEFAULT em colunas de tabela externa
 - Operações DML (linguagem de manipulação de dados) de exclusão, inserção e atualização
 
-Limitações da consulta:
+### <a name="query-limitations"></a>Limitações da consulta
 
 O PolyBase pode consumir um máximo de 33 mil arquivos por pasta durante a execução de 32 consultas simultâneas do PolyBase. O número máximo inclui arquivos e subpastas em cada pasta do HDFS. Se o grau de simultaneidade é menor que 32, um usuário pode executar consultas do PolyBase em pastas do HDFS que contêm mais de 33 mil arquivos. Recomendamos que você mantenha os caminhos de arquivo externo curtos e use, no máximo, 30 mil arquivos por pasta do HDFS. Quando muitos arquivos são referenciados, pode ocorrer uma exceção de memória insuficiente da JVM (Máquina Virtual Java).
 
-Limitações de largura de tabela:
+### <a name="table-width-limitations"></a>Limitações de largura da tabela
 
 o PolyBase no SQL Server 2016 tem um limite de largura de linha de 32 KB, com base no tamanho máximo de uma única linha válida por definição de tabela. Se a soma do esquema de coluna for maior que 32 KB, o PolyBase não poderá consultar os dados.
 
 No Azure Synapse Analytics, essa limitação foi aumentada para 1 MB.
+
+### <a name="data-type-limitations"></a>Limitações do tipo de dados
+
+Os seguintes tipos de dados não podem ser usados em tabelas externas do PolyBase:
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- Qualquer tipo definido pelo usuário
 
 ## <a name="locking"></a>Bloqueio
 

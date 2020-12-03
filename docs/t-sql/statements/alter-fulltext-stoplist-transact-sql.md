@@ -23,11 +23,11 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a314867515ecbde34702761e7c9ee8904523d0a3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688369"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128088"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,16 +67,16 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Formatar|Descrição|  
 |------------|-----------------|  
-|String|*language_term* corresponde ao valor da coluna **alias** no modo de exibição de compatibilidade [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). A cadeia de caracteres precisa ser colocada entre aspas, como em **'***language_term***'** .|  
+|String|*language_term* corresponde ao valor da coluna **alias** no modo de exibição de compatibilidade [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). A cadeia de caracteres precisa ser colocada entre aspas simples, como em **'** _language_term_*_'_*.|  
 |Integer|*language_term* é o LCID do idioma.|  
 |Hexadecimal|*language_term* é 0x seguido do valor hexadecimal do LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda. Se o valor estiver no formato DBCS (conjunto de caracteres de dois bytes), o SQL Server o converterá em Unicode.|  
   
- ADD **'***stopword***'** LANGUAGE *language_term*  
+ ADD **'** _stopword_*_'_* LANGUAGE *language_term*  
  Adiciona uma palavra irrelevante à lista de palavras irrelevantes do idioma especificado por LANGUAGE *language_term*.  
   
  Se a combinação especificada de palavra-chave e o valor LCID do idioma não forem exclusivos da STOPLIST, um erro será retornado.  Se o valor LCID não corresponder a um idioma registrado, um erro será gerado.  
   
- DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
+ DROP { **'** _stopword_*_'_* LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  Descarta uma palavra irrelevante da lista de palavras irrelevantes.  
   
  **'** *stopword* **'** LANGUAGE *language_term*  

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5510fb2a0a4760b5465dad7f44eed8c85ef36251
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006206"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297953"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarefa de Upload do SQL DW do Azure
 
@@ -31,6 +31,11 @@ A **Tarefa de Upload do Azure SQL DW** habilita um pacote do SSIS a copiar dados
 A tarefa aproveita o PolyBase para melhorar o desempenho, conforme descrito no artigo [Estratégias e padrões de carregamento do Azure Synapse Analytics](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies).
 O formato de arquivo de dados de origem com suporte atualmente é texto delimitado em codificação UTF8.
 Ao copiar do sistema de arquivos, primeiro os dados serão carregados no Armazenamento de Blobs do Azure para o preparo e, depois, para o Azure SQL DW. Portanto, é necessário uma conta de Armazenamento de Blobs do Azure.
+
+> [!NOTE]
+> Não há suporte para o gerenciador de conexões do Armazenamento do Azure com o tipo de serviço do Data Lake Gen2.
+>
+> Para usar o Azure Data Lake Gen2 para preparo ou origem, você pode se conectar por meio do gerenciador de conexões do Armazenamento do Azure com o tipo de serviço do Armazenamento de Blobs.
 
 A **Tarefa de Upload de DW SQL do Azure** é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para o Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -63,7 +68,7 @@ CompressionType|Especifica o formato de compactação a ser usado ao carregar ar
 CompressionLevel|Especifica o nível de compactação a ser usado para o formato de compactação.
 AzureDwConnection|Especifica um Gerenciador de conexões ADO.NET para o SQL DW do Azure.
 TableName|Especifica o nome da tabela de destino. Escolha o nome de uma tabela existente ou crie uma selecionando **\<New Table ...>** .
-TableDistribution|Especifica o método de distribuição para a nova tabela. Aplica-se caso um novo nome de tabela para **TableName**seja especificado.
+TableDistribution|Especifica o método de distribuição para a nova tabela. Aplica-se caso um novo nome de tabela para **TableName** seja especificado.
 HashColumnName|Especifica a coluna usada para a distribuição da tabela de hash. Aplica-se caso **HASH** for especificado para **TableDistribution**.
 
 ### <a name="blobstorage"></a>BlobStorage
@@ -78,7 +83,7 @@ ColumnDelimiter|Especifica um ou mais caracteres que marcam o final de cada colu
 CompressionType|Especifica o formato de compactação usado para dados de origem.
 AzureDwConnection|Especifica um Gerenciador de conexões ADO.NET para o SQL DW do Azure.
 TableName|Especifica o nome da tabela de destino. Escolha o nome de uma tabela existente ou crie uma selecionando **\<New Table ...>** .
-TableDistribution|Especifica o método de distribuição para a nova tabela. Aplica-se caso um novo nome de tabela para **TableName**seja especificado.
+TableDistribution|Especifica o método de distribuição para a nova tabela. Aplica-se caso um novo nome de tabela para **TableName** seja especificado.
 HashColumnName|Especifica a coluna usada para a distribuição da tabela de hash. Aplica-se caso **HASH** for especificado para **TableDistribution**.
 
 Você verá uma página **Mapeamentos** diferente caso esteja copiando para uma tabela nova ou para uma tabela existente.

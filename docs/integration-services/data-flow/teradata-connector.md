@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425758"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Conector da Microsoft para o Teradata
@@ -86,15 +86,15 @@ Para executar o pacote SSIS com *direcionamento para o SQL Server 2017 e anterio
 
 Para projetar o pacote SSIS com o *direcionamento de SSDT para o SQL Server 2017 e anterior*, você precisará ter o **Microsoft Connector para Teradata** e instalar o **Microsoft Connector para Teradata da Attunity** com a versão correspondente.
 
-## <a name="limitationsandknownissues"></a>Limitações e problemas conhecidos
+## <a name="limitations-and-known-issues"></a>Limitações e problemas conhecidos
 
-- No Editor de Origem/Destino do Teradata, a propriedade do **banco de dados padrão** não tem efeito. Como solução alternativa, digite nome do banco de dados na caixa suspensa para filtrar a tabela ou a exibição.
+- No Editor de Origem/Destino do Teradata, a propriedade do **banco de dados padrão** não tem efeito.  Como solução alternativa, digite nome do banco de dados na caixa suspensa para filtrar a tabela ou a exibição.
 
-- No Editor de Origem/Destino do Teradata, a etapa de mapeamento não funcionará quando o tipo for  \<database>.<table/view>. Como solução alternativa, digite  \<database>.<table/view> e clique no botão suspenso.
+- No Editor de Origem/Destino do Teradata, a etapa de mapeamento não funcionará quando o tipo for \<database>.<table/view>. Como solução alternativa, digite \<database>.<table/view> e clique no botão suspenso.
 
 - No Editor de Origem do Teradata, a exibição não poderá ser exibida quando o modo de Acesso a dados for "Nome da Tabela – Exportação de TPT". Como solução alternativa, use o Editor Avançado da Origem do Teradata.
 
-- No Destino de Teradata, o atributo ‘PackMaximum’ não pode ser configurado para ‘True’. Caso contrário, ocorrerá um erro.
+- No Destino de Teradata, o atributo ‘PackMaximum’ não pode ser configurado para ‘True’.  Caso contrário, ocorrerá um erro.
 
 ## <a name="uninstallation"></a>Desinstalação
 

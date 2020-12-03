@@ -2,7 +2,7 @@
 title: Estatísticas
 description: O otimizador de consulta usa estatísticas para criar planos de consulta que melhoram o desempenho das consultas. Saiba mais sobre os conceitos e as diretrizes de uso da otimização de consulta.
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/23/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 1374be401f379dceb73a41f7a4e2f38882a9a98c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810520"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130168"
 ---
 # <a name="statistics"></a>Estatísticas
 
@@ -134,20 +134,23 @@ Você pode usar [sys.dm_db_stats_properties](../../relational-databases/system-d
 
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
- A opção de atualização de estatísticas assíncrona, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se o otimizador de consulta usa atualizações de estatísticas síncronas ou assíncronas. Por padrão, a opção de atualização de estatísticas assíncrona está desativada e o otimizador de consulta atualiza estatísticas de forma síncrona. A opção AUTO_UPDATE_STATISTICS_ASYNC se aplica a objetos de estatísticas criados para índices, colunas únicas em predicados de consulta e estatísticas criadas com a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
+A opção de atualização de estatísticas assíncrona, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se o otimizador de consulta usa atualizações de estatísticas síncronas ou assíncronas. Por padrão, a opção de atualização de estatísticas assíncrona está desativada e o otimizador de consulta atualiza estatísticas de forma síncrona. A opção AUTO_UPDATE_STATISTICS_ASYNC se aplica a objetos de estatísticas criados para índices, colunas únicas em predicados de consulta e estatísticas criadas com a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
  
- > [!NOTE]
- > Para definir a opção de atualização de estatísticas assíncrona no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], na página *Opções* da janela *Propriedades do Banco de Dados*, as opções *Atualizar Estatísticas Automaticamente* e *Atualizar Estatísticas Automaticamente de Forma Assíncrona* devem ser definidas como **Verdadeiro**.
+> [!NOTE]
+> Para definir a opção de atualização de estatísticas assíncrona no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], na página *Opções* da janela *Propriedades do Banco de Dados*, as opções *Atualizar Estatísticas Automaticamente* e *Atualizar Estatísticas Automaticamente de Forma Assíncrona* devem ser definidas como **Verdadeiro**.
   
- As atualizações de estatísticas podem ser síncronas (o padrão) ou assíncronas. Com as atualizações de estatísticas síncronas, as consultas são sempre compiladas e executadas com estatísticas atualizadas. Quando as estatísticas estão desatualizadas, o otimizador de consulta aguarda estatísticas atualizadas antes de compilar e executar a consulta. Com as atualizações de estatísticas assíncronas, as consultas são compiladas com estatísticas existentes, mesmo que elas estejam desatualizas. O otimizador de consulta poderá escolher um plano de consulta com qualidade inferior se as estatísticas estiverem desatualizadas na compilação da consulta. As consultas compiladas após a conclusão das atualizações assíncronas serão beneficiadas por usarem estatísticas atualizadas.  
+As atualizações de estatísticas podem ser síncronas (o padrão) ou assíncronas. Com as atualizações de estatísticas síncronas, as consultas são sempre compiladas e executadas com estatísticas atualizadas. Quando as estatísticas estão desatualizadas, o otimizador de consulta aguarda estatísticas atualizadas antes de compilar e executar a consulta. Com as atualizações de estatísticas assíncronas, as consultas são compiladas com estatísticas existentes, mesmo que elas estejam desatualizas. O otimizador de consulta poderá escolher um plano de consulta com qualidade inferior se as estatísticas estiverem desatualizadas na compilação da consulta. As consultas compiladas após a conclusão das atualizações assíncronas serão beneficiadas por usarem estatísticas atualizadas.  
   
- Considere o uso de estatísticas síncronas ao executar operações que alteram a distribuição de dados, como truncar uma tabela ou executar uma atualização em massa de uma porcentagem grande das linhas. Se você não atualizar as estatísticas depois de concluir a operação, o uso de estatísticas síncronas garantirá que as estatísticas sejam atualizadas antes de executar consultas nos dados alterados.  
+Considere o uso de estatísticas síncronas ao executar operações que alteram a distribuição de dados, como truncar uma tabela ou executar uma atualização em massa de uma porcentagem grande das linhas. Se você não atualizar as estatísticas depois de concluir a operação, o uso de estatísticas síncronas garantirá que as estatísticas sejam atualizadas antes de executar consultas nos dados alterados.  
   
- Considere o uso de estatísticas assíncronas para obter tempos de resposta de consulta mais previsíveis para os seguintes cenários:  
+Considere o uso de estatísticas assíncronas para obter tempos de resposta de consulta mais previsíveis para os seguintes cenários:  
   
 * Seu aplicativo executa frequentemente a mesma consulta, consultas semelhantes ou planos de consulta em cache semelhantes. Os tempos de resposta de consulta podem ser mais previsíveis com atualizações de estatísticas assíncronas do que com atualizações de estatísticas síncronas, pois o otimizador de consulta pode executar consultas de entrada sem aguardar estatísticas atualizadas. Isso evita o atraso de algumas consultas e não de outras.  
   
 * Seu aplicativo excedeu o tempo limite de solicitações do cliente pelo fato de uma ou mais consultas estarem aguardando a atualização de estatísticas. Em alguns casos, a espera por estatísticas síncronas pode gerar falhas em aplicativos com tempo limite restrito.  
+
+> [!NOTE]
+> As estatísticas em tabelas temporárias locais são sempre atualizadas de maneira síncrona, independentemente da opção AUTO_UPDATE_STATISTICS_ASYNC. As estatísticas em tabelas temporárias globais são atualizadas de maneira síncrona ou assíncrona, de acordo com a opção AUTO_UPDATE_STATISTICS_ASYNC definida para o banco de dados do usuário.
 
 A atualização de estatísticas assíncronas é executada por uma solicitação em segundo plano. Quando a solicitação estiver pronta para gravar estatísticas atualizadas no banco de dados, ela tentará adquirir um bloqueio de modificação de esquema no objeto de metadados de estatísticas. Caso uma sessão diferente já esteja mantendo um bloqueio no mesmo objeto, a atualização de estatísticas assíncronas será bloqueada até que o bloqueio de modificação do esquema possa ser adquirido. Da mesma forma, as sessões que precisam adquirir um bloqueio de estabilidade do esquema no objeto de metadados de estatísticas para compilar uma consulta poderão ser bloqueadas pela sessão em segundo plano da atualização de estatísticas assíncronas, pois ela já está aguardando para adquirir o bloqueio de modificação do esquema. Portanto, para cargas de trabalho com compilações de consulta muito frequentes e atualizações de estatísticas frequentes, usar estatísticas assíncronas poderá aumentar a probabilidade de ocorrer problemas de simultaneidade devido ao bloqueio.
 

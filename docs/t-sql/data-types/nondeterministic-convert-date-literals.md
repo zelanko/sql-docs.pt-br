@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445864"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversão não determinística de cadeias de caracteres literais de data em valores de DATA
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-***/
+**_/
 ```
 
 
@@ -69,7 +69,7 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-O formato **dma** anterior diz que uma cadeia de caracteres de data de exemplo de '01-03-2018' deve ser interpretada como _o primeiro dia de março do ano de 2018_.
+O formato _ *dma** anterior informa que uma cadeia de caracteres de data de exemplo de '01-03-2018' deve ser interpretada como _o primeiro dia de março do ano de 2018_.
 
 Em vez disso, **mda** fosse especificado, a mesma cadeia de caracteres '01-03-2018' significaria _o terceiro dia de janeiro de 2018_.
 
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-***/
+**_/
 ```
 
-No exemplo de código anterior, o exemplo final tem uma incompatibilidade entre o formato **amd** versus a cadeia de caracteres de entrada. O terceiro nó da cadeia de caracteres de entrada representa um valor numérico muito grande para ser um dia. A Microsoft não garante o valor de saída dessas incompatibilidades.
+No exemplo de código anterior, o exemplo final tem uma incompatibilidade entre o formato _ *amd** versus a cadeia de caracteres de entrada. O terceiro nó da cadeia de caracteres de entrada representa um valor numérico muito grande para ser um dia. A Microsoft não garante o valor de saída dessas incompatibilidades.
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT oferece códigos explícitos para controle _determinístico_ dos formatos de data
 

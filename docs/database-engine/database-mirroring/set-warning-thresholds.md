@@ -14,11 +14,11 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789641"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126141"
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85789641"
   
 ## <a name="options"></a>Opções  
  *A instância de servidor e seu status de conexão*  
- Nome de uma instância de servidor de parceiro no formato *SYSTEM***\\***INSTANCE_NAME*. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
+ Nome de uma instância de servidor de parceiro no formato *SYSTEM* **\\** _INSTANCE_NAME_. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
   
  Esse campo indica também se o monitor está conectado atualmente à instância de servidor. Os status de conexão possíveis são:  
   

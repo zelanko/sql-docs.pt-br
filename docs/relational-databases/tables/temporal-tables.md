@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d45c26459b43fecaedf401bf98d0a5346da34dbb
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 76eb3c73bf93b3cc8f037f96737f491c5d473173
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243555"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130865"
 ---
 # <a name="temporal-tables"></a>Tabelas temporais
 
@@ -81,7 +81,7 @@ A tabela atual contém o valor atual para cada linha. A tabela de histórico con
 
 ![Diagrama que mostra como funciona a Tabela temporal.](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
 
-O exemplo simples a seguir ilustra um cenário com informações de Funcionário em um banco de dados de RH hipotético:
+O seguinte exemplo simples ilustra um cenário com as Informações do funcionário em um banco de dados de RH hipotético:
 
 ```sql
 CREATE TABLE dbo.Employee
@@ -99,10 +99,10 @@ CREATE TABLE dbo.Employee
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 ```
 
-- **INSERTS:** Em uma **INSERT** , o sistema define o valor para a coluna **SysStartTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema e atribui o valor para a coluna **SysEndTime** para o valor máximo de 9999-12-31. Isso marca a linha como aberta.
-- **UPDATES:** Em uma **UPDATE** , o sistema armazena o valor anterior do registro na tabela de histórico e define o valor para a coluna **SysEndTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema. Isso marca a linha como fechada, com um período registrado para o qual a linha era válida. Na tabela atual, o registro é atualizado com o novo valor e o sistema define o valor para a coluna **SysStartTime** para a hora de início da transação (no fuso horário UTC) com base no relógio do sistema. O valor de registro atualizado na tabela atual para a coluna **SysEndTime** permanece o valor máximo de 9999-12-31.
-- **DELETES:** Em uma **DELETE** , o sistema armazena o valor anterior do registro na tabela de histórico e define o valor para a coluna **SysEndTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema. Isso marca a linha como fechada, com um período registrado para o qual a linha anterior era válida. Na tabela atual, a linha é removida. As consultas da tabela atual não retornarão essa linha. Somente as consultas que lidam com dados de histórico retornarão dados cujo linha está fechada.
-- **MERGE:** Em uma **MERGE** , a operação se comporta exatamente como se até três instruções (uma **INSERT** , uma **UPDATE** e/ou uma **DELETE** ) fossem executadas, dependendo do que é especificado como ações na instrução **MERGE**.
+- **INSERTS:** em uma **INSERT**, o sistema define o valor para a coluna **SysStartTime** (no exemplo, é chamada de **ValidFrom**) como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema e atribui o valor para a coluna **SysEndTime** (no exemplo, é chamada de **ValidTo**) como o valor máximo de 9999-12-31. Isso marca a linha como aberta.
+- **UPDATES:** Em uma **UPDATE**, o sistema armazena o valor anterior do registro na tabela de histórico e define o valor para a coluna **SysEndTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema. Isso marca a linha como fechada, com um período registrado para o qual a linha era válida. Na tabela atual, o registro é atualizado com o novo valor e o sistema define o valor para a coluna **SysStartTime** para a hora de início da transação (no fuso horário UTC) com base no relógio do sistema. O valor de registro atualizado na tabela atual para a coluna **SysEndTime** permanece o valor máximo de 9999-12-31.
+- **DELETES:** Em uma **DELETE**, o sistema armazena o valor anterior do registro na tabela de histórico e define o valor para a coluna **SysEndTime** como a hora de início da transação atual (no fuso horário UTC) com base no relógio do sistema. Isso marca a linha como fechada, com um período registrado para o qual a linha anterior era válida. Na tabela atual, a linha é removida. As consultas da tabela atual não retornarão essa linha. Somente as consultas que lidam com dados de histórico retornarão dados cujo linha está fechada.
+- **MERGE:** Em uma **MERGE**, a operação se comporta exatamente como se até três instruções (uma **INSERT**, uma **UPDATE** e/ou uma **DELETE**) fossem executadas, dependendo do que é especificado como ações na instrução **MERGE**.
 
 > [!IMPORTANT]
 > As horas registradas nas colunas datetime2 do sistema baseiam-se na hora de início da própria transação. Por exemplo, todas as linhas inseridas em uma única transação terão o mesmo horário UTC registrado na coluna correspondente ao início do período **SYSTEM_TIME** .
@@ -123,7 +123,7 @@ SELECT * FROM Employee
 ```
 
 > [!NOTE]
-> **FOR SYSTEM_TIME** filtra as linhas que têm um período de validade com duração zero ( **SysStartTime** = **SysEndTime** ).
+> **FOR SYSTEM_TIME** filtra as linhas que têm um período de validade com duração zero (**SysStartTime** = **SysEndTime**).
 > Essas linhas serão geradas se você realizar várias atualizações na mesma chave primária na mesma transação.
 > Nesse caso, a consulta temporal exibe somente versões de linha anteriores às transações e que se tornaram reais após as transações.
 > Se você precisa incluir as linhas na análise, veja diretamente a tabela de histórico.
@@ -132,9 +132,9 @@ Na tabela a seguir, SysStartTime na coluna Qualifying Rows representa o valor na
 
 |Expression|Linhas de qualificação|Descrição|
 |----------------|---------------------|-----------------|
-|**AS OF** <date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Retorna uma tabela com uma linha que contém os valores que foram reais (atuais) no momento especificado no passado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *<date_time>* . O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *<date_time>* .|
-|**FROM** <start_date_time> **TO** <end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Retorna uma tabela com os valores para todas as versões de linha que estavam ativas no intervalo de tempo especificado, não importando se eles começaram a ser ativos antes do valor de parâmetro *<start_date_time>* para o argumento FROM ou deixaram de ser ativos após o valor de parâmetro *<end_date_time>* para o argumento TO. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores para todas as versões de linha que estavam ativas a qualquer momento durante o intervalo de tempo especificado. As linhas que deixaram de ser ativas exatamente no limite inferior definido pelo ponto de extremidade FROM não são incluídas e os registros que se tornaram ativos exatamente no limite superior definido pelo ponto de extremidade TO também não são incluídos.|
-|**BETWEEN** <start_date_time> **AND** <end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|A mesma descrição acima para **FOR SYSTEM_TIME FROM** <start_date_time> **TO** <end_date_time> é válida, exceto que a tabela de linhas retornada inclui linhas que se tornaram ativas no limite superior definido pelo ponto de extremidade <end_date_time>.|
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Retorna uma tabela com uma linha que contém os valores que foram reais (atuais) no momento especificado no passado. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores na linha que era válida no ponto no tempo especificado pelo parâmetro *<date_time>* . O valor de uma linha é considerado válido se o valor de *system_start_time_column_name* é menor ou igual ao valor do parâmetro *<date_time>* e o valor de *system_end_time_column_name* é maior que o valor do parâmetro *<date_time>* .|
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Retorna uma tabela com os valores para todas as versões de linha que estavam ativas no intervalo de tempo especificado, não importando se eles começaram a ser ativos antes do valor de parâmetro *<start_date_time>* para o argumento FROM ou deixaram de ser ativos após o valor de parâmetro *<end_date_time>* para o argumento TO. Internamente, uma união é executada entre a tabela temporal e sua tabela de histórico e os resultados são filtrados para retornar os valores para todas as versões de linha que estavam ativas a qualquer momento durante o intervalo de tempo especificado. As linhas que deixaram de ser ativas exatamente no limite inferior definido pelo ponto de extremidade FROM não são incluídas e os registros que se tornaram ativos exatamente no limite superior definido pelo ponto de extremidade TO também não são incluídos.|
+|**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|A mesma descrição acima para **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time> é válida, exceto que a tabela de linhas retornada inclui linhas que se tornaram ativas no limite superior definido pelo ponto de extremidade <end_date_time>.|
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|Retorna uma tabela com os valores para todas as versões de linha que foram abertas e fechadas dentro do intervalo de tempo especificado definido por dois valores de data e hora para o argumento CONTAINED IN. As linhas que se tornaram ativas exatamente no limite inferior ou que deixaram de ser ativas exatamente no limite superior são incluídas.|
 |**ALL**|Todas as linhas|Retorna a união de linhas que pertencem às tabelas atual e de histórico.|
 

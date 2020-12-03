@@ -2,19 +2,19 @@
 title: Ingressar o SQL Server em Linux no Active Directory
 titleSuffix: SQL Server
 description: Este artigo fornece orientações sobre como ingressar um computador host Linux do SQL Server em um domínio do AD. Você pode usar um pacote SSSD interno ou provedores do AD de terceiros.
-author: Dylan-MSFT
-ms.author: dygray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 184744aeea40dd8d21c023806cc63d644311ffde
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896971"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419837"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Ingressar o SQL Server em um host Linux em um domínio do Active Directory
 
@@ -29,19 +29,27 @@ Antes de configurar a autenticação do Active Directory, é necessário configu
 > [!IMPORTANT]
 > As etapas de exemplo descritas neste artigo são apenas para orientação e referem-se aos sistemas operacionais Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x e SUSE Enterprise Linux (SLES) 12. As etapas reais podem ser ligeiramente diferentes em seu ambiente, dependendo de como o ambiente geral está configurado e da versão do sistema operacional. Por exemplo, o Ubuntu 18.04 usa o netplan enquanto o Red Hat Enterprise Linux (RHEL) 8.x usa o nmcli entre outras ferramentas para gerenciar e configurar a rede. É recomendável envolver os administradores do sistema e do domínio do seu ambiente para ferramentas específicas, configuração, personalização e qualquer solução de problemas necessária.
 
+### <a name="reverse-dns-rdns"></a>RDNS (DNS Reverso)
+
+Quando você configura um computador que executa o Windows Server como um controlador de domínio, talvez você não tenha uma zona RDNS por padrão. Verifique se uma zona RDNS aplicável existe para o controlador de domínio e o endereço IP do computador Linux que executará o SQL Server.
+
+Verifique também se existe um registro PTR que aponta para seu controlador de domínio.
+
 ## <a name="check-the-connection-to-a-domain-controller"></a>Verificar a conexão com um controlador de domínio
 
-Verifique se você pode contatar o controlador de domínio com os nomes curto e totalmente qualificado do domínio:
+Verifique se você pode entrar em contato com o controlador de domínio usando os nomes curto e totalmente qualificado do domínio e usando o nome do host do controlador de domínio. O IP do controlador de domínio também deve ser resolvido para o FQDN do controlador de domínio:
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
 > Este tutorial usa **contoso.com** e **CONTOSO.COM** como nomes de domínio e realm de exemplo, respectivamente. Ele também usa **DC1.CONTOSO.COM** como o nome de domínio totalmente qualificado de exemplo do controlador de domínio. É necessário substituir esses nomes por seus próprios valores.
 
-Se uma dessas verificações de nome falhar, atualize sua lista de pesquisa de domínio. As seções a seguir fornecem instruções para Ubuntu, RHEL (Red Hat Enterprise Linux) e SLES (SUSE Linux Enterprise Server), respectivamente.
+Se qualquer uma dessas verificações de nome falhar, atualize sua lista de pesquisa de domínio. As seções a seguir fornecem instruções para Ubuntu, RHEL (Red Hat Enterprise Linux) e SLES (SUSE Linux Enterprise Server), respectivamente.
 
 ### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
@@ -62,6 +70,39 @@ Se uma dessas verificações de nome falhar, atualize sua lista de pesquisa de d
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
+   ```
+
+1. Em seguida, verifique se o arquivo **/etc/resolv.conf** contém uma linha semelhante ao do exemplo a seguir:
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+1. Edite o arquivo [sudo vi /etc/netplan/******.yaml] para que seu domínio do Active Directory esteja na lista de pesquisa de domínio:
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > O adaptador de rede, `eth0`, pode ser diferente para diferentes computadores. Para descobrir qual você está usando, execute **ifconfig**. Em seguida, copie a interface que tem um endereço IP e os bytes transmitidos e recebidos.
+
+1. Após editar esse arquivo, reinicie o serviço de rede:
+
+   ```bash
+   sudo netplan apply
    ```
 
 1. Em seguida, verifique se o arquivo **/etc/resolv.conf** contém uma linha semelhante ao do exemplo a seguir:
@@ -145,22 +186,41 @@ Use as etapas a seguir para ingressar um host SQL Server em um domínio do Activ
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE:**
+   
+   **SLES 12:**
+   
+   Observe que essas etapas são específicas para o SLES 12, que é a única versão com suporte oficial do SUSE para Linux.
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu:**
+   **Ubuntu 16.04:**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04:**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. Se a instalação do pacote de cliente Kerberos solicitar um nome de realm, insira seu nome de domínio em letras maiúsculas.
 
 1. Após confirmar se seu DNS está configurado adequadamente, ingresse o domínio executando o comando a seguir. É necessário autenticar-se usando uma conta do AD com privilégios suficientes no AD para ingressar um novo computador no domínio. Este comando cria uma conta do computador no AD, cria o arquivo keytab do host **/etc/krb5.keytab**, configura o domínio no **/etc/sssd/sssd.conf** e atualiza o **/etc/krb5.conf**.
+
+   Devido a um problema com **realmd**, primeiro defina o nome do host do computador para o FQDN em vez de para o computador. Caso contrário, **realmd** pode não criar todos os SPNs necessários para o computador e as entradas DNS não serão atualizadas automaticamente, mesmo que o controlador de domínio dê suporte a atualizações de DNS dinâmicas.
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   Depois de executar o comando acima, o arquivo /etc/hostname deve conter <old hostname>.contoso.com.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v

@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: d1dfea07a02effb5362b0f01ad496b536c646139
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300833"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328081"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,16 +39,14 @@ ms.locfileid: "92300833"
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe
-  
+
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>Sintaxe para [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] e [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
-  
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>Sintaxe para [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_WARNINGS ON
 ```
 
@@ -59,10 +57,10 @@ SET ANSI_WARNINGS ON
   
 -   Quando definida como ON, se forem exibidos valores nulos em funções de agregação, como SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP ou COUNT, será gerada uma mensagem de aviso. Quando definido como OFF, nenhum aviso é emitido.  
   
--   Quando definida como ON, os erros de estouro aritmético e de divisão por zero fazem a instrução ser retornada e uma mensagem de erro é gerada. Quando definida como OFF, os erros de estouro aritmético e de divisão por zero fazem com que valores nulos sejam retornados. O comportamento em que um erro de estouro aritmético e ou divisão por zero faz valores nulos serem retornados ocorrerá se houver uma tentativa de INSERT ou UPDATE em uma coluna **character** , Unicode ou **binary** na qual a extensão do novo valor exceda o tamanho máximo da coluna. Se SET ANSI_WARNINGS está ON, INSERT ou UPDATE é cancelada, como especificado pelo padrão ISO. Espaços em branco à direita são ignorados em colunas de caracteres e valores nulos à direita são ignorados em colunas binárias. Quando OFF, os dados são truncados para o tamanho da coluna e a instrução obtém êxito.  
+-   Quando definida como ON, os erros de estouro aritmético e de divisão por zero fazem a instrução ser retornada e uma mensagem de erro é gerada. Quando definida como OFF, os erros de estouro aritmético e de divisão por zero fazem com que valores nulos sejam retornados. O comportamento em que um erro de estouro aritmético e ou divisão por zero faz valores nulos serem retornados ocorrerá se houver uma tentativa de INSERT ou UPDATE em uma coluna **character**, Unicode ou **binary** na qual a extensão do novo valor exceda o tamanho máximo da coluna. Se SET ANSI_WARNINGS está ON, INSERT ou UPDATE é cancelada, como especificado pelo padrão ISO. Espaços em branco à direita são ignorados em colunas de caracteres e valores nulos à direita são ignorados em colunas binárias. Quando OFF, os dados são truncados para o tamanho da coluna e a instrução obtém êxito.  
   
 > [!NOTE]  
-> Quando o truncamento ocorre em qualquer conversão de ou para dados **binary** ou **varbinary** , nenhum aviso ou erro é emitido, independentemente das opções SET.  
+> Quando o truncamento ocorre em qualquer conversão de ou para dados **binary** ou **varbinary**, nenhum aviso ou erro é emitido, independentemente das opções SET.  
   
 > [!NOTE]  
 > O ANSI_WARNINGS não é cumprido quando os parâmetros passam no procedimento armazenado, em uma função definida pelo usuário ou quando declaram ou definem variáveis em uma instrução de lote. Por exemplo, se a variável for definida como **char(3)** e, em seguida, configurada com um valor maior que três caracteres, os dados serão truncados até o tamanho definido e a instrução INSERT ou UPDATE terá êxito.  

@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457224"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126619"
 ---
 # <a name="execution-plans"></a>Planos de execução
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ Um plano de execução de consulta é uma definição do seguinte:
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem três opções para exibir os planos de execução:        
-> -  O ***[Plano de Execução Estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** é o plano compilado, como produzido pelo Otimizador de Consulta com base em estimativas. Esse é o plano de consulta armazenado no cache de planos.        
-> -  O ***[Plano de Execução Real](../../relational-databases/performance/display-an-actual-execution-plan.md)*** é o plano compilado mais o [contexto de execução](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Ele fica disponível **após a execução da consulta ter sido concluída**. Inclui informações de runtime como avisos de execução ou, em versões mais recentes do [!INCLUDE[ssde_md](../../includes/ssde_md.md)], o tempo decorrido e o tempo de CPU usados durante a execução.         
-> -  As ***[Estatísticas de Consulta Dinâmica](../../relational-databases/performance/live-query-statistics.md)*** são o plano compilado mais o contexto de execução. Estão disponíveis para **execuções de consulta em andamento** e são atualizadas a cada segundo. Isso inclui informações de runtime, como o número real de linhas fluindo pelos [operadores](../../relational-databases/showplan-logical-and-physical-operators-reference.md), tempo decorrido e progresso estimado da consulta.
+> -  O **_[Plano de Execução Estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _ é o plano compilado, como produzido pelo Otimizador de Consulta com base em estimativas. Esse é o plano de consulta armazenado no cache de planos.        
+> -  O _*_ [Plano de Execução Real](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ é o plano compilado mais o [contexto de execução](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Ele ficará disponível _*depois que a execução da consulta tiver sido concluída**. Inclui informações de runtime como avisos de execução ou, em versões mais recentes do [!INCLUDE[ssde_md](../../includes/ssde_md.md)], o tempo decorrido e o tempo de CPU usados durante a execução.         
+> -  As **_[Estatísticas de Consulta Dinâmica](../../relational-databases/performance/live-query-statistics.md)_ *_ são o plano compilado mais o contexto de execução. Estão disponíveis para _* execuções de consulta em andamento** e são atualizadas a cada segundo. Isso inclui informações de runtime, como o número real de linhas fluindo pelos [operadores](../../relational-databases/showplan-logical-and-physical-operators-reference.md), tempo decorrido e progresso estimado da consulta.
 
 > [!TIP]
 > Para obter mais informações sobre o processamento de consultas e planos de execução de consulta, confira as seções [Otimizar as instruções SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) e [Cache e Reutilização do Plano de Execução](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) do Guia de Arquitetura de Processamento de Consultas.
