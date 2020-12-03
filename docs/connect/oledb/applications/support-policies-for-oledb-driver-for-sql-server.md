@@ -1,7 +1,7 @@
 ---
 title: Políticas de suporte do OLE DB Driver for SQL Server
 description: Saiba mais sobre as políticas de suporte para o Driver do OLE DB para SQL Server e quais sistemas operacionais e versões do banco de dados SQL são compatíveis com cada versão de driver.
-ms.date: 08/06/2020
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: aa01dec4758bb91a4b05d65af372ee66c1c53672
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860638"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506414"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Políticas de suporte do OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +30,7 @@ O Driver do OLE DB para SQL Server é compatível e testado com conexões com as
 
 | Versão do banco de dados&nbsp;&#8594;<br />&#8595; Versão do driver | Banco de Dados SQL do Azure | Azure Synapse Analytics | Instância Gerenciada do Azure SQL | SQL Server 2019 | Microsoft SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|---|---|---|---|---|---|---|---|
+|18.5|Sim|Sim|Sim|Sim|Sim|Sim|Sim|Sim|
 |18.4|Sim|Sim|Sim|Sim|Sim|Sim|Sim|Sim|
 |18.3|Sim|Sim|Sim|Sim|Sim|Sim|Sim|Sim|
 |18.2|Sim|Sim|Sim|Sim|Sim|Sim|Sim|Sim|
@@ -43,6 +44,7 @@ A tabela a seguir lista os sistemas operacionais compatíveis com o Driver do OL
 
 | Sistema operacional&nbsp;&#8594;<br />&#8595; Versão do driver | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|---|---|---|---|---|---|
+|18.5|Sim|Sim|Sim|Sim|Sim|Sim|
 |18.4|Sim|Sim|Sim|Sim|Sim|Sim|
 |18.3|Sim|Sim|Sim|Sim|Sim|Sim|
 |18.2|Sim|Sim|Sim|Sim|Sim|Sim|

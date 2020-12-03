@@ -2,19 +2,19 @@
 title: Matriz de suporte de recursos de driver
 description: Saiba quais recursos populares têm suporte nos drivers para SQL Server e onde encontrar informações sobre eles.
 ms.custom: ''
-ms.date: 08/05/2020
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081425"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419668"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matriz de suporte de recursos de driver para Microsoft SQL Server
 
@@ -43,7 +43,7 @@ Queremos que todos os drivers deem suporte a todos os recursos e façam esforço
 | [Autenticação de Senha do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Sim | Sim | | Sim |
 | [Autenticação integrada do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Sim | Sim | | Sim |
 | [Autenticação Interativa (MFA) do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Sim | Sim | | Sim |
-| [Autenticação de Identidade Gerenciada do Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | | | | |
+| [Autenticação de Identidade Gerenciada do Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | Sim | Sim | | |
 | [Autenticação da Entidade de Serviço do Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | Sim | Sim | | |
 | [Autenticação Integrada do Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Sim](ado-net/sql/authentication-sql-server.md) | [Sim](ado-net/sql/authentication-sql-server.md) | [Sim](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Sim](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Cópia em Massa](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Sim](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sim](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sim](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Sim](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
