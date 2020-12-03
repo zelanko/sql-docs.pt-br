@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059614"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535290"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,7 +76,7 @@ ID do arquivo. *file_id* é int, sem padrão. São entradas válidas o número d
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|nome do banco de dados.</br></br>Para o Azure Synapse Analytics, esse é o nome do banco de dados armazenado no nó que é identificado por pdw_node_id. Cada nó tem um banco de dados tempdb que tem 13 arquivos. Cada nó também tem um banco de dados por distribuição e cada banco de dados de distribuição tem 5 arquivos. Por exemplo, se cada nó contiver 4 distribuições, os resultados mostrarão 20 arquivos de banco de dados de distribuição por pdw_node_id. 
+|**database_name**|**sysname**|**Não se aplica a:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> nome do banco de dados.</br></br>Para o Azure Synapse Analytics, esse é o nome do banco de dados armazenado no nó que é identificado por pdw_node_id. Cada nó tem um banco de dados tempdb que tem 13 arquivos. Cada nó também tem um banco de dados por distribuição e cada banco de dados de distribuição tem 5 arquivos. Por exemplo, se cada nó contiver 4 distribuições, os resultados mostrarão 20 arquivos de banco de dados de distribuição por pdw_node_id. 
 |**database_id**|**smallint**|ID do banco de dados.|  
 |**file_id**|**smallint**|ID de arquivo.|  
 |**sample_ms**|**bigint**|Número de milissegundos desde que o computador foi iniciado. Essa coluna pode ser usada para comparar saídas diferentes dessa função.</br></br>O tipo de dados é **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
