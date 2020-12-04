@@ -31,7 +31,7 @@ ms.locfileid: "88456390"
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SRV_NOMEMORY|  
-|Texto da mensagem|Ocorreu uma falha de alocação de memória ao estabelecer conexão. Reduce nonessential memory load, or increase system memory. A conexão foi fechada.%.*ls|  
+|Texto da mensagem|Ocorreu uma falha de alocação de memória ao estabelecer conexão. Reduza a carga de memória não essencial ou aumente a memória do sistema. A conexão foi fechada.%.*ls|  
   
 ## <a name="explanation"></a>Explicação  
 O servidor está sendo executado sem memória.  
