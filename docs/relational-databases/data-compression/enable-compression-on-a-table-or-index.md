@@ -21,15 +21,15 @@ helpviewer_keywords:
 - data compression wizard
 - compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d168265fbd400f94939103411a6f56afe901f07
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 27fd0226590b0466a00299c20688cfbb136f0c09
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457497"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506482"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
 
@@ -82,14 +82,14 @@ ms.locfileid: "86457497"
   
      As seguintes opções estão disponíveis na página **Selecionar Tipo de Compactação** :  
   
-     Caixa de seleção**Usar o mesmo tipo de compactação para todas as partições**  
-     Selecione para configurar a mesma configuração de compactação para todas as partições. Isso habilita a caixa de seleção e desabilita a coluna **Tipo de Compactação** na grade. Quando selecionadas, as opções na lista adjacente são **Nenhum**, **Linha**e **Página**.  
+     Caixa de seleção **Usar o mesmo tipo de compactação para todas as partições**  
+     Selecione para configurar a mesma configuração de compactação para todas as partições. Isso habilita a caixa de seleção e desabilita a coluna **Tipo de Compactação** na grade. Quando selecionadas, as opções na lista adjacente são **Nenhum**, **Linha** e **Página**.  
   
      **Número da partição**  
      Lista cada partição na tabela ou índice. Essa coluna é somente leitura.  
   
      **Tipo de Compactação**  
-     Selecione a opção de compactação para cada partição. Ela não estará disponível quando a opção **Usar o mesmo tipo de compactação para todas as partições** estiver selecionada. As opções da lista são **Nenhum**, **Linha**e **Página**.  
+     Selecione a opção de compactação para cada partição. Ela não estará disponível quando a opção **Usar o mesmo tipo de compactação para todas as partições** estiver selecionada. As opções da lista são **Nenhum**, **Linha** e **Página**.  
   
      **Limite**  
      Exibe o limite da partição. Essa coluna é somente leitura.  
@@ -186,7 +186,7 @@ ms.locfileid: "86457497"
      Fornece qualquer mensagem de aviso ou erro retornada pelo processo.  
   
      **Report**  
-     Cria um relatório contendo os resultados do Assistente para Criar Partição. As opções são **Exibir Relatório**, **Salvar Relatório no Arquivo**, **Copiar Relatório na Área de Transferência**e **Enviar Relatório como Email**.  
+     Cria um relatório contendo os resultados do Assistente para Criar Partição. As opções são **Exibir Relatório**, **Salvar Relatório no Arquivo**, **Copiar Relatório na Área de Transferência** e **Enviar Relatório como Email**.  
   
      **Exibir Relatório**  
      Abre a caixa de diálogo **Exibir Relatório** , que contém um relatório de texto do progresso do Assistente para Criar Partições.  

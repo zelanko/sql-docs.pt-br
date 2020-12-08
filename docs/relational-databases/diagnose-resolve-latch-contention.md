@@ -3,18 +3,18 @@ title: 'White paper: Diagnosticar e resolver contenções de trava'
 description: Este artigo fornece uma visão detalhada sobre como diagnosticar e resolver contenções de trava no SQL Server. Este artigo foi publicado originalmente pela equipe do SQLCAT da Microsoft.
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b438bd466023844f7396a5ef71e9c8e0f916005
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 3a1ce0e4a54810730935b4a93aef72edfa404d88
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384305"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506447"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnosticar e resolver contenções de trava no SQL Server
 
@@ -65,7 +65,7 @@ Há cinco modos diferentes de aquisição de travas, que estão relacionados ao 
 
 Os modos de trava têm níveis diferentes de compatibilidade, por exemplo, uma trava compartilhada (SH) é compatível com uma trava de atualização (UP) ou de manutenção (KP), mas é incompatível com uma trava de destruição (DT). Várias travas podem ser adquiridas simultaneamente na mesma estrutura, desde que sejam compatíveis. Quando um thread tenta adquirir uma trava em um modo que não é compatível, ela é colocada em uma fila para aguardar um sinal indicando que o recurso está disponível. Um spinlock do tipo SOS_Task é usado para proteger a fila de espera impondo o acesso serializado à fila. Esse spinlock deve ser adquirido para adicionar itens à fila. O spinlock SOS_Task também sinaliza aos threads na fila quando travas incompatíveis são liberadas, permitindo que os threads em espera adquiram uma trava compatível e continuem funcionando. A fila de espera é processada de maneira PEPS (primeiro a entrar, primeiro a sair) conforme as solicitações de trava são liberadas. As travas seguem esse sistema PEPS para garantir a imparcialidade e para evitar a privação dos threads.
 
-A compatibilidade dos modos de trava é listada na seguinte tabela ( **S** indica compatibilidade e **N** , incompatibilidade):
+A compatibilidade dos modos de trava é listada na seguinte tabela (**S** indica compatibilidade e **N**, incompatibilidade):
 
 |Modo de trava |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
@@ -87,13 +87,13 @@ Use o objeto **SQL Server:Latches** e os contadores associados no Monitor de Des
 
 ## <a name="latch-wait-types"></a>Tipos de tempo de espera de trava
 
-Informações de espera cumulativa são monitoradas pelo SQL Server e podem ser acessadas usando a DMV (exibição de gerenciamento dinâmico) *sys.dm_os_wait_stats*. O SQL Server emprega três tipos de tempo de espera de trava, conforme definido pelo elemento "wait_type" correspondente na DMV *sys.dm_os_wait_stats* :
+Informações de espera cumulativa são monitoradas pelo SQL Server e podem ser acessadas usando a DMV (exibição de gerenciamento dinâmico) *sys.dm_os_wait_stats*. O SQL Server emprega três tipos de tempo de espera de trava, conforme definido pelo elemento "wait_type" correspondente na DMV *sys.dm_os_wait_stats*:
 
-* **Trava de buffer (BUF):** usada para garantir a consistência das páginas de dados e índice para objetos de usuário. Também são usadas para proteger o acesso a páginas de dados que o SQL Server usa para objetos do sistema. Por exemplo, páginas que gerenciam alocações são protegidas por travas de buffer. Elas incluem as páginas PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) e IAM (Index Allocation Map). As travas de buffer são relatadas em *sys.dm_os_wait_stats* com um *wait_type* igual a * *PAGELATCH\_\** _.
+* **Trava de buffer (BUF):** usada para garantir a consistência das páginas de dados e índice para objetos de usuário. Também são usadas para proteger o acesso a páginas de dados que o SQL Server usa para objetos do sistema. Por exemplo, páginas que gerenciam alocações são protegidas por travas de buffer. Elas incluem as páginas PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) e IAM (Index Allocation Map). As travas de buffer são relatadas em *sys.dm_os_wait_stats* com um *wait_type* igual a **PAGELATCH\_\** _.
 
-_ **Trava de não buffer (não BUF):** usada para garantir a consistência de qualquer estrutura na memória, exceto pelas páginas de pool de buffers. Todas as esperas por travas de não buffer serão relatadas como um *wait_type* de * *LATCH\_\** _.
+_ **Trava de não buffer (não BUF):** usada para garantir a consistência de qualquer estrutura na memória, exceto pelas páginas de pool de buffers. Todas as esperas por travas de não buffer serão relatadas como um *wait_type* de **LATCH\_\** _.
 
-_ **Trava de E/S:** um subconjunto de travas de buffer que garantem a consistência das mesmas estruturas protegidas por travas de buffer quando essas estruturas exigem o carregamento para o pool de buffers com uma operação de E/S. As travas de E/S impedem que outro thread carregue a mesma página no pool de buffers com uma trava incompatível. Associada a um *wait_type* igual a * *PAGEIOLATCH\_\** _.
+_ **Trava de E/S:** um subconjunto de travas de buffer que garantem a consistência das mesmas estruturas protegidas por travas de buffer quando essas estruturas exigem o carregamento para o pool de buffers com uma operação de E/S. As travas de E/S impedem que outro thread carregue a mesma página no pool de buffers com uma trava incompatível. Associada a um *wait_type* igual a **PAGEIOLATCH\_\** _.
 
    > [!NOTE]
    > Quando você vê esperas de PAGEIOLATCH significativas, isso significa que o SQL Server está aguardando o subsistema de E/S. Embora seja esperado um número de esperas de PAGEIOLATCH e seja um comportamento normal, se o tempo médio de espera de PAGEIOLATCH estiver consistentemente acima de 10 milissegundos (MS), investigue por que o subsistema de E/S está sob pressão.
@@ -112,7 +112,7 @@ No diagrama a seguir, a linha azul representa a taxa de transferência no SQL Se
 
 ### <a name="performance-when-latch-contention-is-resolved"></a>Desempenho quando a contenção de trava é resolvida
 
-Como ilustra o diagrama a seguir, o SQL Server deixa de sofrer gargalos com os tempos de espera de trava de página e a taxa de transferência aumenta em 300%, conforme medido pelas transações por segundo. Isso foi feito usando a técnica **Usar o particionamento de hash com uma coluna computada** , descrita posteriormente neste artigo. Esse aprimoramento de desempenho é voltado para sistemas com um alto número de núcleos e um alto nível de simultaneidade.
+Como ilustra o diagrama a seguir, o SQL Server deixa de sofrer gargalos com os tempos de espera de trava de página e a taxa de transferência aumenta em 300%, conforme medido pelas transações por segundo. Isso foi feito usando a técnica **Usar o particionamento de hash com uma coluna computada**, descrita posteriormente neste artigo. Esse aprimoramento de desempenho é voltado para sistemas com um alto número de núcleos e um alto nível de simultaneidade.
 
 ![Aprimoramentos de produtividade conquistados com o particionamento de hash](./media/diagnose-resolve-latch-contention/image6.png)
 
@@ -163,54 +163,54 @@ Conforme mencionado anteriormente, a contenção de trava é problemática apena
 
 3. Determine a proporção daqueles que estão relacionados a travas.
 
-Informações sobre esperas cumulativas estão disponíveis na DEMV *sys.dm_os_wait_stats*. O tipo mais comum de contenção de trava é a contenção de trava de buffer, observada como um aumento nos tempos de espera para travas com um *wait_type* igual a * *PAGELATCH\_\** _. Travas de não buffer são agrupadas sob o tipo de espera _*LATCH\**_. Como ilustra o diagrama a seguir, você deve, primeiramente, fazer uma análise cumulativa das esperas do sistema usando a DMV _sys.dm_os_wait_stats* para determinar o percentual do tempo de espera geral causado por travas de buffer e de não buffer. Se você encontrar travas de não buffer, a DMV *sys.dm_os_latch_stats* também deverá ser examinada.
+Informações sobre esperas cumulativas estão disponíveis na DEMV *sys.dm_os_wait_stats*. O tipo mais comum de contenção de trava é a contenção de trava de buffer, observada como um aumento nos tempos de espera para travas com um *wait_type* igual a **PAGELATCH\_\** _. Travas de não buffer são agrupadas sob o tipo de espera _*LATCH\**_. Como ilustra o diagrama a seguir, você deve, primeiramente, fazer uma análise cumulativa das esperas do sistema usando a DMV _sys.dm_os_wait_stats* para determinar o percentual do tempo de espera geral causado por travas de buffer e de não buffer. Se você encontrar travas de não buffer, a DMV *sys.dm_os_latch_stats* também deverá ser examinada.
 
 O diagrama a seguir descreve a relação entre as informações retornadas pelas DMVs *sys.dm_os_wait_stats* e *sys.dm_os_latch_stats*.
 
 ![Temos de espera de trava](./media/diagnose-resolve-latch-contention/image7.png)
 
-Para obter mais informações sobre a DMV *sys.dm_os_wait_stats* , confira [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) na ajuda do SQL Server.
+Para obter mais informações sobre a DMV *sys.dm_os_wait_stats*, confira [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) na ajuda do SQL Server.
 
-Para obter mais informações sobre a DMV *sys.dm_os_latch_stats* , confira [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) na ajuda do SQL Server.
+Para obter mais informações sobre a DMV *sys.dm_os_latch_stats*, confira [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) na ajuda do SQL Server.
 
 As seguintes medidas de tempo de espera de trava são indicadores de que o excesso de contenção de trava está afetando o desempenho do aplicativo:
 
-* **O tempo médio de espera de trava da página aumenta consistentemente com a taxa de transferência** : se os tempos médios de espera de trava da página aumentarem consistentemente com a taxa de transferência e os tempos médios de espera de trava de buffer também aumentarem para além dos tempos de resposta de disco esperados, examine as tarefas de espera atuais usando a DMV *sys.dm_os_waiting_tasks*. As médias podem ser enganosas quando analisadas isoladamente, portanto, é importante observar o sistema em atividade quando possível para entender as características da carga de trabalho. Em particular, verifique se os tempos de espera são altos em solicitações de PAGELATCH_EX e/ou PAGELATCH_SH em qualquer página. Siga estas etapas para diagnosticar um aumento nos tempos médios de espera de trava com a taxa de transferência:
+* **O tempo médio de espera de trava da página aumenta consistentemente com a taxa de transferência**: se os tempos médios de espera de trava da página aumentarem consistentemente com a taxa de transferência e os tempos médios de espera de trava de buffer também aumentarem para além dos tempos de resposta de disco esperados, examine as tarefas de espera atuais usando a DMV *sys.dm_os_waiting_tasks*. As médias podem ser enganosas quando analisadas isoladamente, portanto, é importante observar o sistema em atividade quando possível para entender as características da carga de trabalho. Em particular, verifique se os tempos de espera são altos em solicitações de PAGELATCH_EX e/ou PAGELATCH_SH em qualquer página. Siga estas etapas para diagnosticar um aumento nos tempos médios de espera de trava com a taxa de transferência:
 
    * Use os scripts de exemplo [Consultar sys.dm_os_waiting_tasks ordenadas pela ID da Sessão](#waiting-tasks-script1) ou [Calcular esperas ao longo de um período](#calculate-waits-over-a-time-period) para examinar as tarefas atuais com espera e medir o tempo de espera médio de trava. 
    * Use o script de exemplo [Consultar descritores de buffer para determinar objetos que causam contenção de trava](#query-buffer-descriptors) para determinar o índice e a tabela subjacente em que a contenção está ocorrendo. 
    * Meça o tempo médio de espera de trava da página usando o contador do Monitor de Desempenho **MSSQL%InstanceName%\\Estatísticas de Espera\\Tempos de Espera de Página\\Tempo Médio de Espera** ou executando a DMV *sys.dm_os_wait_stats*.
 
    > [!NOTE]
-   > Para calcular o tempo de espera médio de um tipo de espera específico (retornado por *sys.dm_os_wait_stats* as *wt_:type* ), divida o tempo de espera total (retornado como *wait_time_ms* ) pelo número de tarefas em espera (retornado como *waiting_tasks_count* ).
+   > Para calcular o tempo de espera médio de um tipo de espera específico (retornado por *sys.dm_os_wait_stats* as *wt_:type*), divida o tempo de espera total (retornado como *wait_time_ms*) pelo número de tarefas em espera (retornado como *waiting_tasks_count*).
 
-* **Percentual do tempo de espera total gasto com tipos de espera de trava durante o pico de carga** : Se o tempo médio de espera de trava como um percentual do tempo de espera geral aumentar em paralelo com a carga do aplicativo, a contenção de trava poderá estar afetando o desempenho e deverá ser investigada.
+* **Percentual do tempo de espera total gasto com tipos de espera de trava durante o pico de carga**: Se o tempo médio de espera de trava como um percentual do tempo de espera geral aumentar em paralelo com a carga do aplicativo, a contenção de trava poderá estar afetando o desempenho e deverá ser investigada.
 
    Meça os tempos de espera de trava de página e os tempos de espera de trava que não são de página com os contadores de desempenho [Objeto SQLServer:Wait Statistics](./performance-monitor/sql-server-wait-statistics-object.md). Em seguida, compare os valores desses contadores de desempenho com os contadores de desempenho associados à CPU, à E/S, à memória e à taxa de transferência de rede. Por exemplo, transações/s e solicitações em lote/s são duas boas medidas de utilização de recursos.
 
    > [!NOTE]
-   > O tempo de espera relativo para cada tipo de espera não está incluído na DMV *sys.dm_os_wait_stats* , porque essa DMV mede os tempos de espera desde a última vez que a instância do SQL Server foi iniciada ou que as estatísticas de espera cumulativas foram redefinidas usando DBCC SQLPERF. Para calcular o tempo de espera relativo para cada tipo de espera, faça um instantâneo de *sys.dm_os_wait_stats* antes e depois da carga de pico e calcule a diferença. O script de exemplo [Calcular esperas ao longo de um período](#calculate-waits-over-a-time-period) pode ser usado para essa finalidade.
+   > O tempo de espera relativo para cada tipo de espera não está incluído na DMV *sys.dm_os_wait_stats*, porque essa DMV mede os tempos de espera desde a última vez que a instância do SQL Server foi iniciada ou que as estatísticas de espera cumulativas foram redefinidas usando DBCC SQLPERF. Para calcular o tempo de espera relativo para cada tipo de espera, faça um instantâneo de *sys.dm_os_wait_stats* antes e depois da carga de pico e calcule a diferença. O script de exemplo [Calcular esperas ao longo de um período](#calculate-waits-over-a-time-period) pode ser usado para essa finalidade.
 
    Para um **ambiente que não é de produção** apenas, limpe a DMV *sys.dm_os_wait_stats* com o seguinte comando:
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_wait_stats', 'CLEAR')
    ```
-   Um comando semelhante pode ser executado para limpar a DMV *sys.dm_os_latch_stats* :
+   Um comando semelhante pode ser executado para limpar a DMV *sys.dm_os_latch_stats*:
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_latch_stats', 'CLEAR')
    ```
 
-* **A taxa de transferência não aumenta e, em alguns casos, diminui conforme a carga do aplicativo aumenta e o número de CPUs disponíveis para o SQL Server aumenta** : Isso foi ilustrado no [Exemplo de contenção de trava](#example-of-latch-contention).
+* **A taxa de transferência não aumenta e, em alguns casos, diminui conforme a carga do aplicativo aumenta e o número de CPUs disponíveis para o SQL Server aumenta**: Isso foi ilustrado no [Exemplo de contenção de trava](#example-of-latch-contention).
 
-* **A utilização da CPU não aumenta conforme a carga de trabalho do aplicativo aumenta** : Se a utilização da CPU no sistema não aumentar conforme a simultaneidade gerada pela taxa de transferência do aplicativo aumentar, esse será um indicador de que o SQL Server está aguardando algo e um sintoma de contenção de trava.
+* **A utilização da CPU não aumenta conforme a carga de trabalho do aplicativo aumenta**: Se a utilização da CPU no sistema não aumentar conforme a simultaneidade gerada pela taxa de transferência do aplicativo aumentar, esse será um indicador de que o SQL Server está aguardando algo e um sintoma de contenção de trava.
 
 Analise a causa raiz. Mesmo que cada uma das condições anteriores seja verdadeira, ainda é possível que a causa raiz dos problemas de desempenho esteja em outro lugar. Na verdade, na maioria dos casos, a utilização de CPU abaixo do ideal é causada por outros tipos de espera, como bloqueios de travas, esperas relacionadas à E/S ou problemas relacionados à rede. Como regra prática, é sempre melhor resolver a espera do recurso que representa a maior proporção do tempo de espera geral antes de prosseguir com uma análise mais detalhada.
 
 ## <a name="analyzing-current-wait-buffer-latches"></a>Analisando travas de buffer de espera atuais
 
-A contenção de trava do buffer é manifestada como um aumento nos tempos de espera para travas com um *wait_type* igual a * *PAGELATCH\_\** _ ou _*PAGEIOLATCH\_\**_ , conforme exibido na DMV _sys.dm_os_wait_stats*. Para examinar o sistema em tempo real, execute a consulta a seguir em um sistema para ingressar nas DMVs *sys.dm_os_wait_stats* , *sys.dm_exec_sessions* e *sys.dm_exec_requests*. Os resultados podem ser usados para determinar o tipo de espera atual para as sessões em execução no servidor.
+A contenção de trava do buffer é manifestada como um aumento nos tempos de espera para travas com um *wait_type* igual a **PAGELATCH\_\** _ ou _*PAGEIOLATCH\_\**_, conforme exibido na DMV _sys.dm_os_wait_stats*. Para examinar o sistema em tempo real, execute a consulta a seguir em um sistema para ingressar nas DMVs *sys.dm_os_wait_stats*, *sys.dm_exec_sessions* e *sys.dm_exec_requests*. Os resultados podem ser usados para determinar o tipo de espera atual para as sessões em execução no servidor.
 
 ```sql
 SELECT wt.session_id, wt.wait_type
@@ -257,7 +257,7 @@ As estatísticas expostas por essa consulta serão descritas da seguinte maneira
 | **Max_wait_time_ms** | Tempo máximo em milissegundos que qualquer solicitação gastou aguardando esse tipo de trava. |
 
 > [!NOTE]
-> Os valores retornados por essa DMV são cumulativos desde a última vez que o servidor foi reiniciado ou que a DMV foi redefinida. Em um sistema que está sendo executado há muito tempo, isso significa que algumas estatísticas, como *Max_wait_time_ms* , raramente são úteis. O seguinte comando pode ser usado para redefinir as estatísticas de espera para essa DMV:
+> Os valores retornados por essa DMV são cumulativos desde a última vez que o servidor foi reiniciado ou que a DMV foi redefinida. Em um sistema que está sendo executado há muito tempo, isso significa que algumas estatísticas, como *Max_wait_time_ms*, raramente são úteis. O seguinte comando pode ser usado para redefinir as estatísticas de espera para essa DMV:
 >
 > ```sql
 > DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR)
@@ -482,7 +482,7 @@ O particionamento de tabela dentro do SQL Server pode ser usado para atenuar o e
    > [!NOTE]
    > Um alinhamento de um para um entre o número de partições e o número de núcleos de CPU nem sempre é necessário. Em muitos casos, esse pode ser um valor menor que o número de núcleos de CPU. Ter mais partições pode causar mais sobrecarga para consultas que precisam pesquisar todas as partições e, nesses casos, ter menos partições ajudará. Nos testes do SQLCAT com sistemas com 64 e 128 CPUs lógicas com cargas de trabalho de clientes reais, 32 partições foram suficientes para resolver a contenção de trava excessivas e atingir as metas de escala. Em última instância, o número ideal de partições deve ser determinado por meio de testes. 
 
-4. Use o comando **CREATE PARTITION SCHEME** :
+4. Use o comando **CREATE PARTITION SCHEME**:
 
    * Associe a partição aos grupos de arquivos. 
    * Adicione uma coluna de hash do tipo tinyint ou smallint à tabela. 

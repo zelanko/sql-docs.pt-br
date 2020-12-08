@@ -12,15 +12,15 @@ helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbe2358e2be461666378cc18c5a735a71574f17a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 829229371dfecd55a56fdbb9a6530635a6170904
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456018"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506345"
 ---
 # <a name="row-compression-implementation"></a>Implementação da compactação de linha
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "86456018"
   
 -   Reduz a sobrecarga de metadados associados ao registro. Esses metadados são informações sobre colunas, seus comprimentos e deslocamentos. Em alguns casos, a sobrecarga de metadados pode ser maior do que o formato de armazenamento antigo.  
   
--   Usa o formato de armazenamento de comprimento variável para tipos numéricos (por exemplo, **integer**, **decimal**e **float**) e os tipos baseados em números (por exemplo, **datetime** e **money**).  
+-   Usa o formato de armazenamento de comprimento variável para tipos numéricos (por exemplo, **integer**, **decimal** e **float**) e os tipos baseados em números (por exemplo, **datetime** e **money**).  
   
 -   Armazena cadeias de caracteres fixas usando o formato de comprimento variável ao não armazenar caracteres em branco.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "86456018"
 |**bit**|Sim|A sobrecarga dos metadados atinge 4 bits.|  
 |**smallmoney**|Sim|Usa a representação de dados de número inteiro usando um número inteiro de 4 bytes. Os valores monetários são multiplicados por 10000 e o valor inteiro resultante é armazenado removendo os dígitos após a casa decimal. Esse tipo tem uma otimização de armazenamento semelhante à empregada para tipos de número inteiro.|  
 |**money**|Sim|Usa a representação de dados de número inteiro usando um número inteiro de 8 bytes. Os valores monetários são multiplicados por 10000 e o valor inteiro resultante é armazenado removendo os dígitos após a casa decimal. Esse tipo tem um intervalo maior que **smallmoney**. Esse tipo tem uma otimização de armazenamento semelhante à empregada para tipos de número inteiro.|  
-|**float**|Sim|Bytes menos significantes com zeros não são armazenados. A compactação**float** é aplicável principalmente a valores não fracionários em mantissa.|  
-|**real**|Sim|Bytes menos significantes com zeros não são armazenados. A compactação**real** é aplicável principalmente a valores não fracionários em mantissa.|  
+|**float**|Sim|Bytes menos significantes com zeros não são armazenados. A compactação **float** é aplicável principalmente a valores não fracionários em mantissa.|  
+|**real**|Sim|Bytes menos significantes com zeros não são armazenados. A compactação **real** é aplicável principalmente a valores não fracionários em mantissa.|  
 |**smalldatetime**|Não|Usa a representação de dados de número inteiro usando números inteiros de 2 bytes. A data ocupa 2 bytes. É o número de dias desde 1/1/1901. São necessários 2 bytes a partir de 1902. Portanto, não há aumento a partir desse ponto.<br /><br /> A hora é o número de minutos a partir da meia-noite. Os valores de hora logo após 4h começam a usar o segundo byte.<br /><br /> Se um **smalldatetime** for usado apenas para representar uma data (o caso comum), a hora será 0.0. A compactação salva 2 bytes armazenando a hora em um formato de byte mais significativo para compactação de linha.|  
 |**datetime**|Sim|Usa a representação de dados de número inteiro usando números inteiros de 4 bytes. O valor de inteiro representa o número de dias com data base de 1/1/1900. Os primeiros 2 bytes podem representar até o ano 2079. A compactação sempre pode salvar 2 bytes aqui até esse ponto. Cada valor de inteiro representa 3,33 milissegundos. A compactação esvazia os primeiros 2 bytes nos primeiros cinco minutos e precisa do quarto byte após às 16h. Portanto, a compactação pode salvar apenas 1 byte depois das 16h. Quando **datetime** é compactado como qualquer outro inteiro, a compactação salva 2 bytes na data.|  
 |**date**|Não|Usa a representação de dados inteiros usando 3 bytes. Representa a data a partir de 1/1/0001. Para datas contemporâneas, a compactação de linha usa todos os 3 bytes. Não gera nenhum aumento.|  

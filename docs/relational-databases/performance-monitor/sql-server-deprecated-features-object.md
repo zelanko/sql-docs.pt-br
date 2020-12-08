@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a833e7029697693a6620ce5196a10b6ef95acc8f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4e6e6ae53bfc9cf3c6c702e9caf8a1a9bdaf29a1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890916"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505710"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |CREATE TRIGGER WITH APPEND|A instrução CREATE TRIGGER com a cláusula WITH APPEND foi encontrada. Recrie o gatilho inteiro. Ocorre uma vez por uso em uma instrução DDL.|  
 |CREATE_DROP_DEFAULT|As sintaxes CREATE DEFAULT ou DROP DEFAULT foram encontradas. Reescreva o comando usando a opção DEFAULT de CREATE TABLE ou ALTER TABLE. Ocorre uma vez por compilação.|  
 |CREATE_DROP_RULE|A sintaxe CREATE RULE foi encontrada. Reescreva o comando usando restrições. Ocorre uma vez por compilação.|  
-|Tipos de dados: texto ntext ou imagem|Um tipos de dados **text**, **ntext**ou **image** foi encontrado. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
+|Tipos de dados: texto ntext ou imagem|Um tipos de dados **text**, **ntext** ou **image** foi encontrado. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext** e **image** . Ocorre uma vez por consulta.|  
 ||O número total de vezes que um banco de dados foi alterado para o nível de compatibilidade 80. Planeje atualizar o banco de dados e o aplicativo antes da próxima versão. Também ocorre quando se inicia um banco de dados em nível de compatibilidade 80.|  
 |Nível de compatibilidade do banco de dados 100, 110. 120|O número total de vezes que o nível de compatibilidade de um banco de dados foi alterado. Planeje atualizar o banco de dados e o aplicativo para uma versão futura. Também ocorre quando um banco de dados em um nível de compatibilidade preterido é iniciado.|  
 |DATABASE_MIRRORING|Referencia a recurso de espelhamento de banco de dados foi encontrado. Planeje atualizar para os Grupos de Disponibilidade AlwaysOn ou, se estiver executando uma edição do SQL Server que não dê suporte aos Grupos de Disponibilidade AlwaysOn, planeje migrar o para envio de logs.|  
@@ -266,10 +266,10 @@ Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do 
 |sysusers|Referências a sysusers foram encontradas. Use sys.database_principals em vez disso. Ocorre uma vez por compilação.|  
 |Dica de tabela sem WITH|Uma instrução que usou dicas de tabela sem usar a palavra-chave WITH foi encontrada. Modifique as instruções para incluir a palavra WITH. Ocorre uma vez por compilação.|  
 |Opção de tabela 'text in row'|Referências à opção de tabela 'text in row' foram encontradas. Use 'large value types out of row' de sp_tableoption em seu lugar. Ocorre uma vez por consulta.|  
-|TEXTPTR|Referências à função TEXTPTR foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
-|TEXTVALID|Referências à função TEXTVALID foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
+|TEXTPTR|Referências à função TEXTPTR foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext** e **image** . Ocorre uma vez por consulta.|  
+|TEXTVALID|Referências à função TEXTVALID foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext** e **image** . Ocorre uma vez por consulta.|  
 |timestamp|Número total de vezes que o tipo preterido de dados **timestamp** foi encontrado em uma instrução DDL. Em seu lugar, use o tipo de dados **rowversion** .|  
-|UPDATETEXT ou WRITETEXT|As instruções UPDATETEXT ou WRITETEXT foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext**e **image** . Ocorre uma vez por consulta.|  
+|UPDATETEXT ou WRITETEXT|As instruções UPDATETEXT ou WRITETEXT foram encontradas. Reescreva os aplicativos para que eles usem o tipo de dados **varchar(max)** e removam a sintaxe dos tipos de dados **text**, **ntext** e **image** . Ocorre uma vez por consulta.|  
 |USER_ID|Referências à função USER_ID foram encontradas. Use a função DATABASE_PRINCIPAL_ID em seu lugar. Ocorre uma vez por compilação.|  
 |Usando OLEDB para servidores vinculados||  
 |Formato de armazenamento vardecimal|O uso do formato de armazenamento **vardecimal** foi encontrado. Em vez disso, use a compactação de dados.|  

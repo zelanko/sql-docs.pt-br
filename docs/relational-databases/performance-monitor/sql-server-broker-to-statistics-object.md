@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Broker Transmission Object object
 - 'SQL Server: Broker Transmission Object'
 ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a3d71f2d4f3f523295c04b099e43415df5b0834b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: eabaa3854012b747e028babca44c749d1d51206e
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458658"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505823"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, objeto Broker TO Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

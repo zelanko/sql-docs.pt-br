@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 94e726a108c78ffec8715e80c4b14f2274656be0
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458111"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505660"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, objeto Locks
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

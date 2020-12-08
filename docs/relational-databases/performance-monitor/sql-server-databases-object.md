@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d775ca3158b642c6184f9d6c909b349d49d779ef
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 0c98d04b9b82feabe1c6ad96cc28faf828223e68
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457978"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505735"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

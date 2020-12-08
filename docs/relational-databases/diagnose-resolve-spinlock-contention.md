@@ -3,18 +3,18 @@ title: 'White paper: diagnosticar e resolver uma contenção de spinlock'
 description: Este artigo fornece uma visão detalhada sobre como diagnosticar e resolver uma contenção de spinlock no SQL Server. Este artigo foi publicado originalmente pela equipe do SQLCAT da Microsoft.
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf22570ae96e0ee2a839088e6848443d0c9dddd9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 6ecce46a04943d36dc6d821d6a3457b056f00356
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811699"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506310"
 ---
 # <a name="diagnose-and-resolve-spinlock-contention-on-sql-server"></a>Diagnosticar e resolver uma contenção de spinlock no SQL Server
 

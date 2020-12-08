@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0a7d51ee275f234de0be33a5bfa618684ee2e07e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2f86c13a6f4cc6672b457653f6d923b63245fbc7
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458740"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505540"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objeto Transactions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

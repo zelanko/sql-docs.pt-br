@@ -13,15 +13,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78cef40fd3674f0f7ad4a128e0724013b959ae2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 704cded3f187d963851dd3054a577cd2592fcc53
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499229"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595168"
 ---
 # <a name="include-null-values-in-json---include_null_values-option"></a>Incluir valores nulos na opção JSON – INCLUDE_NULL_VALUES
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
   Para incluir valores nulos na saída JSON da cláusula **FOR JSON** , especifique a opção **INCLUDE_NULL_VALUES** .  
   
