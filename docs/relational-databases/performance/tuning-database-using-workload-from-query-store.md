@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d7e279c7fe8cb6dd1ea2a716cd2a7a15d73c68e2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 64c730f4559173f1ac8dcf1817c688dcb11e3ce4
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457567"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504940"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ajustando o banco de dados usando a carga de trabalho do repositório de consulta
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

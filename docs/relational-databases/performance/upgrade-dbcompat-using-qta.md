@@ -4,7 +4,7 @@ description: Saiba como o Assistente de Ajuste de Consulta orienta você ao long
 ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +21,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: aafbba1fe5c4d7fe8c20b1d50d97bbd8a4277bae
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 31cdd59e519437f679cd738ef1dc959919b86667
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890966"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504930"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Atualizando bancos de dados usando o Assistente de Ajuste de Consulta
 

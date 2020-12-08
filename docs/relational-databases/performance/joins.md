@@ -15,15 +15,15 @@ helpviewer_keywords:
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7dd500eb443af493403b64b652e047608d2a0dd1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725994"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505173"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

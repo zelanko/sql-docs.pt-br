@@ -14,14 +14,14 @@ helpviewer_keywords:
 - logs [SQL Server], SQL Server error logs
 - logs [SQL Server], viewing
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 54aa4b48837f171406edbbe4cbadcacf5b910a99
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4727287f27190ad865cf0ebe6142d674730dbc46
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458048"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504867"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>Exibir o log de erros do SQL Server no SSMS (SQL Server Management Studio)
 

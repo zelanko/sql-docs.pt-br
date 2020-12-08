@@ -2,19 +2,19 @@
 title: DMVs – estatísticas de uso e desempenho de exibições
 description: Saiba como usar as DMVs (exibições de gerenciamento dinâmico) sys.dm_exec_query_optimizer_info, sys.views e sys.dmv_exec_cached_plans para obter estatísticas do Desempenho de Consultas SQL.
 ms.custom: seo-dt-2019
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: ea5ae310606097b9f25a31337222b941ac963fd0
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: d900786f27280eb66ded8801843e9c657f2ceb5f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899548"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504900"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
 Este artigo aborda a metodologia e os scripts usados para obter informações sobre o **desempenho de consultas que usam exibições**. A finalidade desses scripts é fornecer indicadores de uso e desempenho das diferentes exibições encontradas em um banco de dados. 

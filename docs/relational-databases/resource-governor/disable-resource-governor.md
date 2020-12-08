@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: bc4aea056c466aaf7cbacc8a6871fac488d31ef7
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5c3d7c13a76f0b6cb36aab11d7beb4c1b162044a
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457854"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504801"
 ---
 # <a name="disable-resource-governor"></a>Desabilitar Administrador de Recursos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "86457854"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o **Administrador de Recursos**.  
   
-2.  Clique com o botão direito do mouse em **Administrador de Recursos**e, então, clique em **Desabilitar**.  
+2.  Clique com o botão direito do mouse em **Administrador de Recursos** e, então, clique em **Desabilitar**.  
 
 ##  <a name="disable-resource-governor-using-resource-governor-properties"></a><a name="RGOffProp"></a> Desabilitar o Administrador de Recursos usando as Propriedades do Administrador de Recursos  
  **Para desabilitar o Administrador de Recursos usando a página de propriedades do Administrador de Recursos**  

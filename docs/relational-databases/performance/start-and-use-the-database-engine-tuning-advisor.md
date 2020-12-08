@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890749"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504953"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "91890749"
   
 1.  Inicie o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usando um dos seguintes métodos:  
   
-    -   No menu **Iniciar** , aponte para **Todos os Programas**, **Microsoft SQL Server**, **Ferramentas de Desempenho**e clique em **SQL Server Profiler**.  
+    -   No menu **Iniciar** , aponte para **Todos os Programas**, **Microsoft SQL Server**, **Ferramentas de Desempenho** e clique em **SQL Server Profiler**.  
   
     -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], clique no menu **Ferramentas** e em **SQL Server Profiler**.  
   
@@ -398,7 +398,7 @@ database_name.owner_name.table_name
  **Selecionar bancos de dados e tabelas a otimizar**  
  Especifique os bancos de dados e tabelas a serem otimizados. Para especificar todos os bancos de dados, marque a caixa de seleção no cabeçalho da coluna **Nome** . Para especificar alguns bancos de dados, marque a caixa de seleção ao lado do nome do banco de dados. Por padrão, todas as tabelas dos bancos de dados selecionados são automaticamente incluídas na sessão de ajuste. Para excluir tabelas, clique na seta na coluna **Tabelas Selecionadas** e desmarque as caixas de seleção ao lado das tabelas que não desejar ajustar.  
   
- Seta para baixo das**Tabelas Selecionadas**  
+ Seta para baixo das **Tabelas Selecionadas**  
  Expanda a lista de tabelas para permitir a seleção de tabelas individuais para ajuste.  
   
  **Salvar log de ajuste**  

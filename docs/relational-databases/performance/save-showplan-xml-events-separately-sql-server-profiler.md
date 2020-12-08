@@ -13,14 +13,14 @@ helpviewer_keywords:
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: c7cac6673d190ab8860792a2de1c995804275570
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34c79b9f3dad13a8927296d424d827eb693ad1dd
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458713"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504996"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Salvar eventos do Plano de Execução XML separadamente (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "86458713"
   
 10. Selecione **Todos os lotes de Plano de Execução XML em um único arquivo** para salvar todos os eventos de **Plano de Execução XML** em um único arquivo XML. Ou selecione **Cada lote de Plano de Execução XML em um arquivo distinto** para criar um novo arquivo XML para cada evento de **Plano de Execução XML**.  
   
-11. Para exibir o arquivo do evento de **Plano de Execução XML** no SQL Server Management Studio, no menu **Arquivo**, aponte para **Abrir** e selecione **Arquivo**. Navegue até o diretório em que você salvou o arquivo (ou arquivos) de evento de **Plano de Execução XML** para selecionar um e abri-lo. Os arquivos de evento**Showplan XML** têm a extensão .SQLPlan.  
+11. Para exibir o arquivo do evento de **Plano de Execução XML** no SQL Server Management Studio, no menu **Arquivo**, aponte para **Abrir** e selecione **Arquivo**. Navegue até o diretório em que você salvou o arquivo (ou arquivos) de evento de **Plano de Execução XML** para selecionar um e abri-lo. Os arquivos de evento **Showplan XML** têm a extensão .SQLPlan.  
 
 ## <a name="see-also"></a>Confira também  
  [Analisar consultas com resultados do Plano de Execução no SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

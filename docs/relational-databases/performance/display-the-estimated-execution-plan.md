@@ -18,15 +18,15 @@ helpviewer_keywords:
 - modifying execution plan display
 - custom zoom [SQL Server]
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90b7074b12a3c3a49588a9c791cde1386212192b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 53e8d703c7bfab5440e0558f45e996904b14a86b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457278"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505232"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Exibir o plano de execução estimado
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "86457278"
 
     ![Clicar com o botão direito do mouse em Propriedades no operador de plano](../../relational-databases/performance/media/planproperties.png "Clicar com o botão direito do mouse em Propriedades no operador de plano")    
   
-4.  Para alterar a exibição do plano de execução, clique com o botão direito do mouse no plano de execução e selecione **Ampliar**, **Reduzir**, **Zoom Personalizado**ou **Ajustar Nível de Zoom**. **Ampliar** e **Reduzir** permitem ampliar ou reduzir o plano de execução com valores fixos. **Zoom personalizado** permite que você defina sua própria ampliação da exibição, como ampliar em 80 por cento. **Ajustar Nível de Zoom** aumenta o plano de execução para se ajustar ao painel de resultados. Como alternativa, use a tecla CTRL e o botão de rolagem do mouse para ativar o **zoom dinâmico**.  
+4.  Para alterar a exibição do plano de execução, clique com o botão direito do mouse no plano de execução e selecione **Ampliar**, **Reduzir**, **Zoom Personalizado** ou **Ajustar Nível de Zoom**. **Ampliar** e **Reduzir** permitem ampliar ou reduzir o plano de execução com valores fixos. **Zoom personalizado** permite que você defina sua própria ampliação da exibição, como ampliar em 80 por cento. **Ajustar Nível de Zoom** aumenta o plano de execução para se ajustar ao painel de resultados. Como alternativa, use a tecla CTRL e o botão de rolagem do mouse para ativar o **zoom dinâmico**.  
 
 5.  Para navegar na exibição do plano de execução, use as barras de rolagem vertical e horizontal ou **clique e segure em qualquer área em branco** do plano de execução e **arraste o mouse**. Como alternativa, clique e segure o sinal de adição (+) no canto inferior direito da janela de plano de execução para exibir um mapa em miniatura de todo o plano de execução.
  

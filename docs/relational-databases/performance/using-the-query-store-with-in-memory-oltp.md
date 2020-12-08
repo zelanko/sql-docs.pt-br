@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b18741804460a5a95f74345f2158cb647ab3689c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8c0da148cb3d1d733e506aee2ce06b5494e44c90
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456895"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504905"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Como usar o Repositório de Consultas com OLTP in-memory
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ No entanto, há alguns aspectos específicos dos quais os usuários devem estar 
     
 -   Ao executar o Repositório de Consultas em um banco de dados com uma carga de trabalho mista, é possível usar o campo **is_natively_compiled** do [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) para localizar rapidamente os planos de consulta gerados pela compilação de código nativo.  
   
--   O modo de captura do Repositório de Consultas (o parâmetro*QUERY_CAPTURE_MODE* na instrução **ALTER TABLE** ) não afeta as consultas de módulos compilados de modo nativo, pois elas são sempre capturadas, independentemente do valor configurado. Isso inclui a configuração de `QUERY_CAPTURE_MODE = NONE`.  
+-   O modo de captura do Repositório de Consultas (o parâmetro *QUERY_CAPTURE_MODE* na instrução **ALTER TABLE** ) não afeta as consultas de módulos compilados de modo nativo, pois elas são sempre capturadas, independentemente do valor configurado. Isso inclui a configuração de `QUERY_CAPTURE_MODE = NONE`.  
   
 -   A duração da compilação de consulta capturada pelo Repositório de Consultas inclui apenas o tempo gasto na otimização da consulta, antes da geração do código nativo. Mais precisamente, não inclui o tempo de compilação do código C e a geração de estruturas internas necessárias para geração de código C.  
   

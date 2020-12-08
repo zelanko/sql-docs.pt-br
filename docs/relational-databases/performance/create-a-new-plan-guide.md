@@ -13,14 +13,14 @@ helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 46a3cc2e95093a9d4d3a69f1b5ca0e1eddb38d21
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b8f96167fff7c5d36209d43eedbbd53bc1daffee
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457331"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505320"
 ---
 # <a name="create-a-new-plan-guide"></a>Criar um novo guia de plano
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ Um Guia de Plano aplica-se a um plano de consulta fixa, e/ou dicas de consulta, 
   
 4.  Na caixa **Instrução** , insira a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] à qual o guia de plano deve ser aplicado.  
   
-5.  Na lista **Tipo de escopo** , selecione o tipo de entidade na qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] aparece. Isso especifica o contexto para se fazer a correspondência da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ao guia de plano. Os valores possíveis são **OBJECT**, **SQL**e **TEMPLATE**.  
+5.  Na lista **Tipo de escopo** , selecione o tipo de entidade na qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] aparece. Isso especifica o contexto para se fazer a correspondência da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ao guia de plano. Os valores possíveis são **OBJECT**, **SQL** e **TEMPLATE**.  
   
 6.  Na caixa **Lote de escopo** , digite o texto de lote no qual a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] aparece. O texto de lote não pode incluir uma instrução `USE`*database*. A caixa **Lote de escopo** está disponível apenas quando **SQL** é selecionado como um tipo de escopo. Se nada for inserido na caixa de lote de escopo quando o SQL for o tipo de escopo, o valor do texto de lote será definido com o mesmo valor que a caixa **Instrução** .  
   
