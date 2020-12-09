@@ -1,6 +1,6 @@
 ---
-description: sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
-title: sys. dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
+description: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
+title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5957fc72b3addc15aac6763534ac3e623b23686
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 106c471efa0f7b42f707e418c04120b50ab86f54
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551269"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934003"
 ---
-# <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
+# <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Fornece informações atuais em nível de rowgroup sobre todos os índices columnstore no banco de dados atual.  
 
-Isso estende a exibição de catálogo [Sys. column_store_row_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md).  
+Isso estende a exibição de catálogo [sys.column_store_row_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md).  
 
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -50,13 +50,13 @@ Isso estende a exibição de catálogo [Sys. column_store_row_groups &#40;&#41;T
 |**deleted_rows**|**bigint**|Número de linhas fisicamente armazenadas em um grupo de linhas compactado que são marcadas para exclusão.<br /><br /> 0 para grupos de linhas que estão no repositório Delta.|  
 |**size_in_bytes**|**bigint**|Tamanho combinado, em bytes, de todas as páginas deste grupo de linhas. Esse tamanho não inclui o tamanho necessário para armazenar metadados ou dicionários compartilhados.|  
 |**trim_reason**|**tinyint**|Motivo que disparou o grupo de linhas COMPACTado para ter menos do que o número máximo de linhas.<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-CARREGAMENTO EM MASSA<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-EXCEDENTE<br /><br /> 9-AUTO_MERGE|  
-|**trim_reason_desc**|**nvarchar(60)**|Descrição de *trim_reason*.<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION: ocorreu ao atualizar da versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> 1-NO_TRIM: o grupo de linhas não foi cortado. O grupo de linhas foi compactado com o máximo de 1.048.476 linhas.  O número de linhas pode ser menor se um subconjunto de linhas tiver sido excluído depois que o rowgroup Delta tiver sido fechado<br /><br /> 2-carregamento em massa: o tamanho do lote de carregamento em massa limitou o número de linhas.<br /><br /> 3-REORG: compactação forçada como parte do comando REORG.<br /><br /> 4-DICTIONARY_SIZE: o tamanho do dicionário cresceu muito grande para compactar todas as linhas juntas.<br /><br /> 5-MEMORY_LIMITATION: não há memória suficiente disponível para compactar todas as linhas juntas.<br /><br /> 6-RESIDUAL_ROW_GROUP: fechada como parte do último grupo de linhas com linhas < 1 milhão durante a operação de compilação do índice<br /><br /> 7-STATS_MISMATCH: somente para columnstore na tabela na memória. Se as estatísticas indicaram incorretamente >= 1 milhão linhas qualificadas na parte final, mas encontramos menos, o rowgroup compactado terá < 1 milhão linhas<br /><br /> 8-excedente: somente para o columnstore na tabela na memória. Se a parte final tiver > 1 milhão linhas qualificadas, as linhas do último lote restante serão compactadas se a contagem estiver entre 100 mil e 1 milhão<br /><br /> 9-AUTO_MERGE: uma operação de mesclagem de movimentação de tupla em execução em segundo plano consolidou um ou mais grupos de rowgroup nesse rowgroup.|  
+|**trim_reason_desc**|**nvarchar(60)**|Descrição de *trim_reason*.<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION: ocorreu ao atualizar da versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> 1-NO_TRIM: o grupo de linhas não foi cortado. O grupo de linhas foi compactado com o máximo de 1.048.576 linhas.  O número de linhas pode ser menor se um subconjunto de linhas tiver sido excluído depois que o rowgroup Delta tiver sido fechado<br /><br /> 2-carregamento em massa: o tamanho do lote de carregamento em massa limitou o número de linhas.<br /><br /> 3-REORG: compactação forçada como parte do comando REORG.<br /><br /> 4-DICTIONARY_SIZE: o tamanho do dicionário cresceu muito grande para compactar todas as linhas juntas.<br /><br /> 5-MEMORY_LIMITATION: não há memória suficiente disponível para compactar todas as linhas juntas.<br /><br /> 6-RESIDUAL_ROW_GROUP: fechada como parte do último grupo de linhas com linhas < 1 milhão durante a operação de compilação do índice<br /><br /> 7-STATS_MISMATCH: somente para columnstore na tabela na memória. Se as estatísticas indicaram incorretamente >= 1 milhão linhas qualificadas na parte final, mas encontramos menos, o rowgroup compactado terá < 1 milhão linhas<br /><br /> 8-excedente: somente para o columnstore na tabela na memória. Se a parte final tiver > 1 milhão linhas qualificadas, as linhas do último lote restante serão compactadas se a contagem estiver entre 100 mil e 1 milhão<br /><br /> 9-AUTO_MERGE: uma operação de mesclagem de movimentação de tupla em execução em segundo plano consolidou um ou mais grupos de rowgroup nesse rowgroup.|  
 |**transition_to_compressed_state**|TINYINT|Mostra como esse rowgroup foi movido do deltastore para um estado compactado no columnstore.<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2-INDEX_BUILD<br /><br /> 3-TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6-CARREGAMENTO EM MASSA<br /><br /> 7-MESCLAR|  
 |**transition_to_compressed_state_desc**|nvarchar(60)| 1-NOT_APPLICABLE-a operação não se aplica ao deltastore. Ou, o rowgroup foi compactado antes da atualização para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o caso em que o histórico não é preservado.<br /><br /> 2-INDEX_BUILD-uma criação de índice ou uma recompilação de índice comprimiu o rowgroup.<br /><br /> 3-TUPLE_MOVER-o movimentador de tupla em execução em segundo plano compactou o rowgroup. O motor da tupla ocorre depois que o estado de alterações do rowgroup é aberto para fechado.<br /><br /> 4-REORG_NORMAL-a operação de reorganização, ALTER INDEX... REORG, moveu o rowgroup fechado do deltastore para o columnstore. Isso ocorreu antes que o motor de tupla tivesse tempo para mover o rowgroup.<br /><br /> 5-REORG_FORCED-esse rowgroup estava aberto no deltastore e foi forçado para o columnstore antes de ter um número completo de linhas.<br /><br /> 6-carregamento em massa-uma operação de carregamento em massa compactou o rowgroup diretamente sem usar o deltastore.<br /><br /> 7-MERGE-uma operação de mesclagem consolidou um ou mais grupos de rowgroup nesse rowgroup e, em seguida, executou a compactação columnstore.|  
 |**has_vertipaq_optimization**|bit|A otimização de VertiPaq melhora a compactação de columnstore reorganizando a ordem das linhas no rowgroup para obter maior compactação. Essa otimização ocorre automaticamente na maioria dos casos. Há dois casos em que a otimização VertiPaq não é usada:<br/>  a. Quando um rowgroup Delta se move para o columnstore e há um ou mais índices não clusterizados no índice columnstore – nesse caso, a otimização de VertiPaq é ignorada para minimizar as alterações no índice de mapeamento;<br/> b. para índices columnstore em tabelas com otimização de memória. <br /><br /> 0 = Não<br /><br /> 1 = Sim|  
 |**geração**|BIGINT|Geração de grupo de linhas associada a este grupo de linhas.|  
-|**created_time**|datetime2|Hora do relógio para quando esse rowgroup foi criado.<br /><br /> NULL-para um índice columnstore em uma tabela na memória.|  
-|**closed_time**|datetime2|Hora do relógio para quando este rowgroup foi fechado.<br /><br /> NULL-para um índice columnstore em uma tabela na memória.|  
+|**created_time**|datetime2|Hora do relógio para quando esse rowgroup foi criado.<br /><br /> NULL-para um índice columnstore em uma tabela na memória.|  
+|**closed_time**|datetime2|Hora do relógio para quando este rowgroup foi fechado.<br /><br /> NULL-para um índice columnstore em uma tabela na memória.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="results"></a>Resultados  
@@ -70,7 +70,7 @@ Requer `CONTROL` a permissão na tabela e a `VIEW DATABASE STATE` permissão no 
 ### <a name="a-calculate-fragmentation-to-decide-when-to-reorganize-or-rebuild-a-columnstore-index"></a>a. Calcule a fragmentação para decidir quando reorganizar ou recriar um índice columnstore.  
  Para índices columnstore, a porcentagem de linhas excluídas é uma boa medida para a fragmentação em um rowgroup. Quando a fragmentação for de 20% ou mais, remova as linhas excluídas. Para obter mais exemplos, consulte [reorganizar e recompilar índices](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- Este exemplo une **Sys. dm_db_column_store_row_group_physical_stats** a outras tabelas do sistema e, em seguida, calcula a `Fragmentation` coluna como uma estimativa da eficiência de cada grupo de linhas no banco de dados atual. Para localizar informações em uma única tabela, remova os hifens de comentário na frente da cláusula **Where** e forneça um nome de tabela.  
+ Este exemplo une **Sys.dm_db_column_store_row_group_physical_stats** com outras tabelas do sistema e, em seguida, calcula a `Fragmentation` coluna como uma estimativa da eficiência de cada grupo de linhas no banco de dados atual. Para localizar informações em uma única tabela, remova os hifens de comentário na frente da cláusula **Where** e forneça um nome de tabela.  
   
 ```sql  
 SELECT i.object_id,   
@@ -93,8 +93,8 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
  [Arquitetura de índices columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
  [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
- [sys. column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.all_columns ](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.computed_columns ](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sys.column_store_dictionaries ](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
