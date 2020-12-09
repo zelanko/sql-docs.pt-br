@@ -2,7 +2,7 @@
 title: Configuração do UDL (Universal Data Link) | Microsoft Docs
 description: Saiba como usar a guia Conexão para especificar como se conectar aos seus dados usando o Driver do OLE DB para SQL Server.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8d9444864dfe144918374c6d10e1a9f403faff3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727264"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504707"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configuração do UDL (Universal Data Link)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ A guia Conexão é específica do provedor e exibe apenas as propriedades de con
 |Opção|DESCRIÇÃO|
 |---   |---        |
 |Selecione ou digite um nome de servidor|selecione um nome de servidor na lista suspensa ou digite o local do servidor em que o banco de dados que você deseja acessar está localizado. Selecionar o banco de dados no servidor é uma ação separada. Atualize a lista clicando em "Atualizar".
-|Digite as informações para entrar no servidor|Você pode selecionar as seguintes opções de autenticação nesta lista suspensa: <ul><li>Autenticação do `Windows Authentication:` para SQL Server usando as credenciais da conta do Windows do usuário conectado no momento.</li><li>Autenticação do `SQL Server Authentication:` usando a ID de logon e a senha.</li><li>Autenticação integrada do `Active Directory - Integrated:` com uma identidade do Azure Active Directory. Esse modo também pode ser usado para a autenticação do Windows para SQL Server.</li><li>Autenticação de ID de usuário e senha do `Active Directory - Password:` com uma identidade do Azure Active Directory.</li><li>Autenticação interativa do `Active Directory - Universal with MFA support:` com uma identidade do Azure Active Directory. Este modo é compatível com a Autenticação Multifator (MFA) do Azure.</li></ul>|
+|Digite as informações para entrar no servidor|Você pode selecionar as seguintes opções de autenticação nesta lista suspensa: <ul><li>Autenticação do `Windows Authentication:` para SQL Server usando as credenciais da conta do Windows do usuário conectado no momento.</li><li>Autenticação do `SQL Server Authentication:` usando a ID de logon e a senha.</li><li>Autenticação integrada do `Active Directory - Integrated:` com uma identidade do Azure Active Directory. Esse modo também pode ser usado para a autenticação do Windows para SQL Server.</li><li>Autenticação de ID de usuário e senha do `Active Directory - Password:` com uma identidade do Azure Active Directory.</li><li>Autenticação interativa do `Active Directory - Universal with MFA support:` com uma identidade do Azure Active Directory. Este modo é compatível com a Autenticação Multifator (MFA) do Azure.</li><li>`Active Directory - Service Principal:` Autenticação com uma entidade de serviço do Azure Active Directory. **Nome de usuário** deve ser definido como a ID do aplicativo (cliente). **Senha** deve ser definida como o segredo do aplicativo (cliente).</li></ul>|
 |SPN do servidor|Se você usar uma conexão confiável, poderá especificar um SPN (nome de entidade de serviço) para o servidor.|
 |Nome de usuário|Digite a ID de usuário a ser usada para autenticação quando você entrar na fonte de dados.|
 |Senha|Digite a senha a ser usada para autenticação quando você entrar na fonte de dados.|

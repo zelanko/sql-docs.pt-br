@@ -2,7 +2,7 @@
 title: Propriedades e comportamentos do conjunto de linhas (Driver do OLE DB)
 description: Estas são as propriedades de conjunto de linhas do Driver do OLE DB para SQL Server, incluindo o nome e a descrição da propriedade.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ff19eb334fceba0b49a88fd1f812ad5b320c762f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859998"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504706"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriedades e comportamentos do conjunto de linhas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Estas são as propriedades de conjunto de linhas do Driver do OLE DB para SQL Server.  
+  Confira as seguintes propriedades de conjunto de linhas do Driver do OLE DB para SQL Server:
   
 |ID da propriedade|Descrição|  
 |-----------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "88859998"
 |DBPROP_BOOKMARKTYPE|L/G: Somente leitura<br /><br /> Padrão: DBPROPVAL_BMK_NUMERIC<br /><br /> Descrição: o Driver do OLE DB para SQL Server implementa somente indicadores numéricos. Um indicador do Driver do OLE DB para SQL Server é um inteiro sem sinal de 32 bits, do tipo DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Esta propriedade de conjunto de linhas não é implementada pelo Driver do OLE DB para SQL Server. A tentativa de ler ou gravar o valor da propriedade gera um erro.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|L/G: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: o Driver do OLE DB para SQL Server dá suporte à busca e rolagem regressiva em conjuntos de linhas não sequenciais. O OLE DB Driver for SQL Server cria um conjunto de linhas com suporte de cursor quando DBPROP_CANFETCHBACKWARDS ou DBPROP_CANSCROLLBACKWARDS é VARIANT_TRUE. Para obter mais informações, confira [Conjuntos de linha e cursores do SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|L/G: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: por padrão, o Driver do OLE DB para SQL Server retorna DB_E_ROWSNOTRELEASED se o consumidor tenta obter mais linhas para um conjunto de linhas enquanto existem alterações pendentes nessas linhas atualmente no conjunto. Este comportamento pode ser modificado.<br /><br /> A definição de DBPROP_CANHOLDROWS e DBPROP_IRowsetChange como VARIANT_TRUE implica um conjunto de linhas com indicadores. Se as duas propriedades forem VARIANT_TRUE, a interface **IRowsetLocate** estará disponível no conjunto de linhas e DBPROP_BOOKMARKS e DBPROP_LITERALBOOKMARKS serão VARIANT_TRUE.<br /><br /> Os conjuntos de linhas do Driver do OLE DB para SQL Server que contêm indicadores são compatíveis com os cursores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|DBPROP_CANHOLDROWS|L/G: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: por padrão, o Driver do OLE DB para SQL Server retornará DB_E_ROWSNOTRELEASED se o consumidor tentar obter mais linhas para um conjunto de linhas enquanto existem alterações pendentes nas linhas atualmente no conjunto. Este comportamento pode ser modificado.<br /><br /> A definição de DBPROP_CANHOLDROWS e DBPROP_IRowsetChange como VARIANT_TRUE implica um conjunto de linhas com indicadores. Se as duas propriedades forem VARIANT_TRUE, a interface **IRowsetLocate** estará disponível no conjunto de linhas e DBPROP_BOOKMARKS e DBPROP_LITERALBOOKMARKS serão VARIANT_TRUE.<br /><br /> Os conjuntos de linhas do Driver do OLE DB para SQL Server que contêm indicadores são compatíveis com os cursores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |DBPROP_CHANGEINSERTEDROWS|L/G: Leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: esta propriedade só poderá ser definida como VARIANT_TRUE se o conjunto de linhas estiver usando um cursor controlado por conjunto de chaves.|  
 |DBPROP_COLUMNRESTRICT|L/G: Somente leitura<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: o Driver do OLE DB para SQL Server define a propriedade como VARIANT_TRUE quando uma coluna em um conjunto de linhas não pode ser alterada pelo consumidor. Outras colunas no conjunto de linhas podem ser atualizáveis e as linhas em si podem ser excluídas.<br /><br /> Quando a propriedade é VARIANT_TRUE, o consumidor examina o membro *dwFlags* da estrutura DBCOLUMNINFO para determinar se o valor de uma coluna individual pode ser gravado ou não. Para colunas modificáveis, *dwFlags* exibe DBCOLUMNFLAGS_WRITE.|  
 |DBPROP_COMMANDTIMEOUT|L/G: Leitura/gravação<br /><br /> Padrão: 0<br /><br /> Descrição: por padrão, o Driver do OLE DB para SQL Server não atinge o tempo limite no método **ICommand::Execute** method.|  
@@ -97,6 +97,7 @@ ms.locfileid: "88859998"
 |SSPROP_DEFERPREPARE|Coluna: Não<br /><br /> L/G: Leitura/gravação<br /><br /> Tipo: VT_BOOL<br /><br /> Padrão: VARIANT_TRUE<br /><br /> Descrição: VARIANT_TRUE: na execução preparada, a preparação de comando é adiada até que **ICommand::Execute** é chamada ou uma operação de metapropriedade é executada. Se a propriedade for definida como<br /><br /> VARIANT_FALSE: a instrução é preparada quando **ICommandPrepare::Prepare** é executada.|  
 |SSPROP_IRowsetFastLoad|Coluna: Não<br /><br /> L/G: Leitura/gravação<br /><br /> Tipo: VT_BOOL<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: defina essa propriedade como VARIANT_TRUE para abrir um conjunto de linhas de carga rápida por meio de **IOpenRowset::OpenRowset**. Não é possível definir essa propriedade em **ICommandProperties::SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Coluna: Não.<br /><br /> L/G: Leitura/gravação<br /><br /> Tipo: VT_BOOL<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: defina essa propriedade como VARIANT_TRUE para habilitar operações assíncronas que usam a interface [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md).|  
+|SSPROP_ISSDataClassification|L/G: Leitura/gravação<br /><br />  Tipo: VT_BOOL<br /><br /> Padrão: VARIANT_TRUE<br /><br /> Descrição: O Driver OLE DB para SQL Server dá suporte à recuperação de informações de classificação de confidencialidade usando a interface [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md).|  
 |SSPROP_MAXBLOBLENGTH|Coluna: Não<br /><br /> L/G: Leitura/gravação<br /><br /> Tipo: VT_I4<br /><br /> Padrão: o provedor não restringe o tamanho do texto retornado pelo servidor e o valor da propriedade é definido como seu máximo. Por exemplo, 2147483647.<br /><br /> Descrição: o Driver do OLE DB para SQL Server executa uma instrução SET TEXTSIZE para restringir o tamanho dos dados BLOB (objeto binário grande) retornados em uma instrução SELECT.|  
 |SSPROP_NOCOUNT_STATUS|Coluna: NoCount<br /><br /> L/G: Somente leitura<br /><br /> Tipo: VT_BOOL<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: um valor booliano que representa o status de SET NOCOUNT ON/OFF no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: quando SET NOCOUNT ON<br /><br /> VARIANT_FALSE: quando SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Coluna: Não<br /><br /> L/G: Leitura/gravação<br /><br /> Tipo: VT_BSTR (1 a 2.000 caracteres permitidos)<br /><br /> Padrão: cadeia de caracteres vazia<br /><br /> Descrição: o texto de mensagem da notificação de consulta. Esta propriedade é definida pelo usuário e não tem nenhum formato definido.|  

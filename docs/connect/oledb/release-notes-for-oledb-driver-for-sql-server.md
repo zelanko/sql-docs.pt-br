@@ -1,19 +1,19 @@
 ---
 title: Notas sobre a versão do Driver do OLE DB
 description: Este artigo de notas sobre a versão descreve as alterações em cada versão do Driver do Microsoft OLE DB para SQL Server.
-ms.date: 05/25/2020
+ms.date: 12/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: e66856d7eac47bca5fe7093cbec02d9414c585ef
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726903"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523063"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de versão do Driver do Microsoft OLE DB para SQL Server
 
@@ -27,6 +27,34 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1850"></a>18.5.0
+![download](../../ssms/media/download-icon.png) [Baixar o instalador x64](https://go.microsoft.com/fwlink/?linkid=2135577)  
+![download](../../ssms/media/download-icon.png) [Baixar o instalador x86](https://go.microsoft.com/fwlink/?linkid=2135722)  
+
+Lançado: 1º de dezembro de 2020
+
+Se precisar baixar o instalador em um idioma diferente daquele detectado para você, será possível usar esses links diretos.  
+    Para o driver x64: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40a)  
+    Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40a)  
+
+### <a name="features-added"></a>Recursos adicionados
+
+| Recurso adicionado | Detalhes |
+| :------------ | :------ |
+| Suporte para [Descoberta e classificação de dados SQL](../../relational-databases/security/sql-data-discovery-and-classification.md) | [Uso da classificação de dados](features/using-data-classification.md) |
+| Suporte à autenticação da entidade de serviço do Azure Active Directory (`ActiveDirectoryServicePrincipal`) | [Como usar o Azure Active Directory](features/using-azure-active-directory.md) |
+
+### <a name="bugs-fixed"></a>Bugs corrigidos
+
+| Correções de bugs | Detalhes |
+| :-------- | :------ |
+| Correção de um problema com os caracteres NUL inseridos. | Correção de um bug que fazia com que o driver retornasse um comprimento incorreto de cadeias de caracteres NUL incorporados. |
+| Correção de uma perda de memória na interface [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md). | Correção de uma perda de memória na interface [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) envolvendo operações de cópia em massa do tipo de dados `sql_variant`. |
+| Correção de bugs que resultavam no retorno de valores incorretos para as propriedades `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` e `SSPROP_MUTUALLYAUTHENTICATED`. | As versões anteriores do driver retornavam valores truncados da propriedade `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD`. Além disso, no caso de autenticação `ActiveDirectoryIntegrated`, o valor retornado da propriedade `SSPROP_MUTUALLYAUTHENTICATED` era `VARIANT_FALSE` mesmo quando ambos os lados eram mutuamente autenticados.|
+| Correção de um bug de inserção de tabela remota do servidor vinculado. | Correção de um bug que causava falha na inserção de uma tabela remota do servidor vinculado se a [opção de configuração do servidor NOCOUNT](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) fosse habilitada. |
+
+## <a name="previous-releases"></a>Versões anteriores
 
 ## <a name="1840"></a>18.4.0
 ![download](../../ssms/media/download-icon.png) [Baixar o instalador x64](https://go.microsoft.com/fwlink/?linkid=2129954)  
@@ -52,12 +80,10 @@ Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?lin
 | Corrigidos vários bugs na interface [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) | Alguns bugs que afetam páginas de código multibyte faziam com que a interface relatasse prematuramente o fim do fluxo durante a operação de leitura.|
 | Corrigida uma perda de memória na interface [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) | Foi corrigida uma perda de memória na interface [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) quando a propriedade `SSPROP_IRowsetFastLoad` estava habilitada. |
 | Corrigido um bug em cenários envolvendo um tipo de dados `sql_variant` e cadeias de caracteres não ASCII. | A execução de determinados cenários envolvendo um tipo de dados `sql_variant` e cadeias de caracteres não ASCII pode resultar em dados corrompidos. Para obter detalhes, confira: [Problemas conhecidos](ole-db-data-types/ssvariant-structure.md#known-issues). |
-| Corrigidos problemas com o botão *Testar Conexão* na [caixa de diálogo de configuração do UDL](help-topics/data-link-pages.md) | O botão *Testar Conexão* na [caixa de diálogo de configuração do UDL](help-topics/data-link-pages.md) agora honra as propriedades de inicialização definidas na guia *Todos*. |
-| Corrigida a manipulação do valor padrão da propriedade `SSPROP_INIT_PACKETSIZE` | Corrigido um erro inesperado quando a propriedade `SSPROP_INIT_PACKETSIZE` era definida com o valor padrão de `0`. Para conhecer os detalhes dessa propriedade, confira [Propriedades de inicialização e autorização](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
-| Corrigidos problemas de estouro de buffer em [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Corrigidos problemas de estouro de buffer ao usar arquivos de dados malformados. |
-| Corrigidos problemas de acessibilidade | Corrigidos problemas de acessibilidade na interface do usuário do instalador e na [caixa de diálogo de Logon do SQL Server](help-topics/sql-server-login-dialog.md) (leitura de conteúdo, tabulações). |
-
-## <a name="previous-releases"></a>Versões anteriores
+| Correção de problemas com o botão *Testar Conexão* na [caixa de diálogo de configuração do UDL](help-topics/data-link-pages.md). | O botão *Testar Conexão* na [caixa de diálogo de configuração do UDL](help-topics/data-link-pages.md) agora honra as propriedades de inicialização definidas na guia *Todos*. |
+| Correção da manipulação do valor padrão da propriedade `SSPROP_INIT_PACKETSIZE`. | Corrigido um erro inesperado quando a propriedade `SSPROP_INIT_PACKETSIZE` era definida com o valor padrão de `0`. Para conhecer os detalhes dessa propriedade, confira [Propriedades de inicialização e autorização](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Correção de problemas de estouro de buffer em [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md). | Corrigidos problemas de estouro de buffer ao usar arquivos de dados malformados. |
+| Correção de problemas de acessibilidade. | Corrigidos problemas de acessibilidade na interface do usuário do instalador e na [caixa de diálogo de Logon do SQL Server](help-topics/sql-server-login-dialog.md) (leitura de conteúdo, tabulações). |
 
 ## <a name="1830"></a>18.3.0
 
@@ -74,7 +100,7 @@ Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?lin
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| Suporte para autenticação do Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Como usar o Azure Active Directory](features/using-azure-active-directory.md). |
+| Suporte para autenticação do Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`) | [Como usar o Azure Active Directory](features/using-azure-active-directory.md) |
 | Incluir a Biblioteca de Autenticação do Azure Active Directory (adal.dll) no instalador | Agora incluída na instalação do driver base, o instalador do OLE DB atualizará as instalações existentes da Biblioteca de Autenticação do Microsoft Active Directory para SQL Server, removendo-as da lista de aplicativos instalados no Windows. |
 | &nbsp; | &nbsp; |
 
@@ -102,7 +128,7 @@ Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?lin
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| Suporte para atualizações de driver da mídia removível do SQL Server. | Esse aprimoramento permite atualizações de driver diretamente da mídia removível do SQL Server. |
+| Suporte para atualizações de driver da mídia removível do SQL Server | Esse aprimoramento permite atualizações de driver diretamente da mídia removível do SQL Server. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -138,8 +164,8 @@ Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?lin
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| Suporte para codificação do servidor UTF-8. | [Suporte a UTF-8 no Driver do OLE DB para SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md). |
-| Suporte para autenticação do Azure Active Directory. | [Como usar o Azure Active Directory](features/using-azure-active-directory.md). |
+| Suporte para codificação do servidor UTF-8 | [Suporte ao UTF-8 no OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+| Suporte para autenticação do Azure Active Directory | [Como usar o Azure Active Directory](features/using-azure-active-directory.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="1810"></a>18.1.0
@@ -157,7 +183,7 @@ Para o driver x86: [Chinês (Simplificado)](https://go.microsoft.com/fwlink/?lin
 
 | Recurso adicionado | Detalhes |
 | :------------ | :------ |
-| Suporte para a palavra-chave da cadeia de conexão `UseFMTONLY` e para a propriedade de inicialização `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controla como os metadados são recuperados ao se conectar ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e mais recente.<br/><br/>Para obter mais informações, consulte: [Como usar palavras-chave de cadeia de conexão com o Driver do OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Suporte para a palavra-chave de cadeia de conexão `UseFMTONLY` e para a propriedade de inicialização `SSPROP_INIT_USEFMTONLY` | `UseFMTONLY` controla como os metadados são recuperados ao se conectar ao [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e mais recente.<br/><br/>Para obter mais informações, consulte: [Como usar palavras-chave de cadeia de conexão com o Driver do OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed-in-1810"></a>Bugs corrigidos na 18.1.0

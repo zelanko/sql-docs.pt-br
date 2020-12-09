@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943014"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442594"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Como usar a API de cópia em massa para a operação de inserção em lote
 
@@ -71,7 +71,7 @@ Se a consulta falhar devido a erros não relacionados ao "SQL Server”, o drive
 
 ## <a name="example"></a>Exemplo
 
-Confira abaixo um código de exemplo que demonstra o caso de uso de uma operação de inserção em lote no Azure Synapse Analytics (SQL DW) de mil linhas nos dois cenários (normal x API de Cópia em Massa).
+Confira abaixo um código de exemplo que demonstra o caso de uso de uma operação de inserção em lote no Azure Synapse Analytics de mil linhas nos dois cenários (normal x API de Cópia em Massa).
 
 ```java
     public static void main(String[] args) throws Exception

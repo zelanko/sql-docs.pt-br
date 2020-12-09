@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cbe61aafd8dcd1681230c355187a65a231535e00
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126323"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419727"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperar e modificar dados no ADO.NET
 
@@ -35,5 +35,5 @@ A função principal de qualquer aplicativo de banco de dados é conectar-se a u
 
 ## <a name="see-also"></a>Confira também
 
-- [Mapeamentos de tipos de dados no ADO.NET](data-type-mappings-ado-net.md)
+- [Mapeamentos de tipo de dados no ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server e ADO.NET](./sql/index.md)

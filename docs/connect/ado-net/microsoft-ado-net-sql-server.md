@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b3f1e0c518bf1b77c096999423c5e6d37e6051a
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f78760819e91a3f83e1a91208bdd96e7d1ec15ac
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123922"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442729"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -32,10 +32,10 @@ O ADO.NET é a principal tecnologia de acesso de dados para linguagens .NET. Use
 
 ## <a name="documentation"></a>Documentação
 * [Visão geral do ADO.NET](/dotnet/framework/data/adonet/)
-* [Introdução ao driver do SqlClient](get-started-sqlclient-driver.md)  
-* [Visão geral do driver do SqlClient](overview-sqlclient-driver.md)  
-* [Mapeamentos de tipos de dados no ADO.NET](data-type-mappings-ado-net.md)
-* [Recuperando e modificando dados no ADO.NET](retrieving-modifying-data.md)
+* [Introdução ao driver do SqlClient](get-started-sqlclient-driver.md)
+* [Visão geral do driver do SqlClient](overview-sqlclient-driver.md)
+* [Mapeamentos de tipo de dados no ADO.NET](data-type-mappings-ado-net.md)
+* [Recuperar e modificar dados no ADO.NET](retrieving-modifying-data.md)
 * [SQL Server e ADO.NET](./sql/index.md)
 
 ## <a name="community"></a>Comunidade

@@ -2,7 +2,7 @@
 title: Caixa de diálogo Logon do SQL Server (OLE DB) | Microsoft Docs
 description: Quando você tenta se conectar sem especificar informações o suficiente, o Driver do OLE DB para SQL Server exibe a caixa de diálogo de Logon do SQL Server.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 97b52f8c1e4560c5fe1654d8e81d2ac00cdb6257
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727247"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506376"
 ---
 # <a name="sql-server-login-dialog-box"></a>Caixa de diálogo de logon do SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +35,10 @@ Quando você tenta se conectar sem especificar informações o suficiente, o dri
 |Opção|Descrição|
 |---   |---        |
 |Servidor|O nome de uma instância do SQL Server na sua rede. Selecione um nome de servidor\instância na lista ou digite o nome do servidor\instância na caixa **Servidor**. Se desejar, crie um alias de servidor no computador cliente usando o **SQL Server Configuration Manager** e digite esse nome na caixa **Servidor**. <br/><br/>Digite "(local)" quando estiver usando o mesmo computador como SQL Server. Assim, você pode se conectar a uma instância local do SQL Server, até mesmo ao executar uma versão não em rede do SQL Server.<br/><br/>Para obter mais informações sobre nomes de servidor para diferentes tipos de rede, confira [Instalação do SQL Server](../../../database-engine/install-windows/install-sql-server.md).|
-|Modo de autenticação|Você pode selecionar as seguintes opções de autenticação na lista suspensa:<br/><ul><li>Autenticação do `Windows Authentication:` para SQL Server usando as credenciais da conta do Windows do usuário conectado no momento.</li><li>Autenticação do `SQL Server Authentication:` usando a ID de logon e a senha.</li><li>Autenticação integrada do `Active Directory - Integrated:` com uma identidade do Azure Active Directory. Esse modo também pode ser usado para a autenticação do Windows para SQL Server.</li><li>Autenticação de ID de usuário e senha do `Active Directory - Password:` com uma identidade do Azure Active Directory.</li><li>Autenticação interativa do `Active Directory - Universal with MFA support:` com uma identidade do Azure Active Directory. Este modo é compatível com a Autenticação Multifator (MFA) do Azure.</li></ul>|
+|Modo de autenticação|Você pode selecionar as seguintes opções de autenticação na lista suspensa:<br/><ul><li>Autenticação do `Windows Authentication:` para SQL Server usando as credenciais da conta do Windows do usuário conectado no momento.</li><li>Autenticação do `SQL Server Authentication:` usando a ID de logon e a senha.</li><li>Autenticação integrada do `Active Directory - Integrated:` com uma identidade do Azure Active Directory. Esse modo também pode ser usado para a autenticação do Windows para SQL Server.</li><li>Autenticação de ID de usuário e senha do `Active Directory - Password:` com uma identidade do Azure Active Directory.</li><li>Autenticação interativa do `Active Directory - Universal with MFA support:` com uma identidade do Azure Active Directory. Este modo é compatível com a Autenticação Multifator (MFA) do Azure.</li><li>`Active Directory - Service Principal:` autenticação com uma entidade de serviço do Azure Active Directory. **ID de logon** deve ser definida como a ID do aplicativo (cliente). **Senha** deve ser definida como o segredo do aplicativo (cliente).</li></ul>|
 |SPN do servidor|Se você usar uma conexão confiável, poderá especificar um SPN (nome de entidade de serviço) para o servidor.|
-|ID de Logon|Especifica a ID de logon a ser usada na conexão. A caixa de texto ID de logon só será habilitada se `Authentication Mode` for definido como `SQL Server Authentication`, `Active Directory - Password` ou `Active Directory - Universal with MFA support`.|
-|Senha|Especifica a senha usada para a conexão. A caixa de texto de senha só será integrada se `Authentication Mode` for definido como `SQL Server Authentication` ou `Active Directory - Password`.|
+|ID de Logon|Especifica a ID de logon a ser usada na conexão. A caixa de texto ID de logon só será habilitada se `Authentication Mode` for definido como `SQL Server Authentication`, `Active Directory - Password`, `Active Directory - Universal with MFA support` ou `Active Directory - Service Principal`.|
+|Senha|Especifica a senha usada para a conexão. A caixa de texto de senha só será habilitada se `Authentication Mode` for definido como `SQL Server Authentication`, `Active Directory - Password` ou `Active Directory - Service Principal`.|
 |Opções|Exibe ou oculta o grupo **Opções**. O botão **Opções** será habilitado se **Servidor** tiver um valor.|
 |Alterar Senha|Quando selecionado, habilita as caixas de texto **Nova senha** e **Confirmar nova senha**.|
 |Nova senha|Especifica a nova senha.|

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: ed1e16aac4de3277906d00c2b1a0f4458418cc95
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 31510c4fbe4291168753809c227650951592e1e6
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081765"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328036"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Usando a autenticação NTLM para se conectar ao SQL Server
 

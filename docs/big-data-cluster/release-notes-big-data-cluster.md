@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: b3265c99e185f4a8fcbe68e400ab1277b1e72671
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631682"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442884"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas sobre a versão de Clusters de Big Data do SQL Server 2019
 
@@ -113,8 +113,10 @@ Essa versão inclui correções e melhorias secundárias. Os seguintes artigos i
 - [Gerenciar o acesso ao cluster de Big Data no modo do Active Directory](manage-user-access.md)
 - [Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo do Active Directory](active-directory-deploy.md)
 - [Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no AKS no modo do Active Directory](active-directory-deployment-aks.md)
-- [Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] com alta disponibilidade](deployment-high-availability.md)
-- [Configurar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
+- [Implantar clusters de Big Data com o cluster privado do AKS (Serviço de Kubernetes do Azure)](private-deploy.md)
+- [Restringir o tráfego de saída de clusters BDC (Clusters de Big Data) no cluster privado do AKS (Serviço de Kubernetes do Azure)](private-restrict-egress-traffic.md)
+- [Implantar o cluster de Big Data do SQL Server com alta disponibilidade](deployment-high-availability.md)
+- [Configurar um cluster de Big Data do SQL Server](configure-cluster.md)
 - [Configurar Apache Spark e Apache Hadoop em Clusters de Big Data](configure-spark-hdfs.md)
 - [Propriedades de configuração da instância mestra do SQL Server](reference-config-master-instance.md)
 - [Propriedades de configuração do Apache Spark e Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 40fc82cdc264951d1e776875a48b5a516b4b26a8
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126339"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442819"
 ---
 # <a name="connection-string-syntax"></a>Sintaxe de cadeia de conexão
 
@@ -69,7 +69,7 @@ A Autenticação do Windows é preferencial para se conectar ao SQL Server. No e
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Quando você se conectar ao Banco de Dados SQL do Azure ou ao SQL Data Warehouse do Azure e fornecer um logon no formato `user@servername`, verifique se o valor `servername` no logon corresponde ao valor fornecido para `Server=`.
+Quando você se conectar ao Banco de Dados SQL do Azure ou ao Azure Synapse Analytics e fornecer um logon no formato `user@servername`, verifique se o valor `servername` no logon corresponde ao valor fornecido para `Server=`.
 
 > [!NOTE]
 > A autenticação do Windows tem precedência sobre logons do SQL Server. Se você especificar Integrated Security=true assim como um nome de usuário e uma senha, o nome de usuário e a senha serão ignorados e a autenticação do Windows será usada.
@@ -128,4 +128,4 @@ Para obter mais informações, confira [Usando criptografia sem validação](/sq
 ## <a name="see-also"></a>Confira também
 
 - [Cadeias de conexão](connection-strings.md)
-- [Conectando a uma Fonte de Dados](connecting-to-data-source.md)
+- [Conectar-se a fontes de dados](connecting-to-data-source.md)

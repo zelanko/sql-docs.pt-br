@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 7894ea12ef77a7fb07a61ff454f27150812c7dfb
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384495"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443065"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -245,7 +245,7 @@ Uma operação de publicação SqlPackage.exe atualiza o esquema de um banco de 
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica se diferenças na quantidade de tempo que o SQL Server retém a rota na tabela de roteamento deverão ser ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica se diferenças nos pontos e vírgulas entre instruções T-SQL serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica se diferenças nas opções de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica se diferenças nas opções de partição de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.  Essa opção se aplica somente a bancos de dados (data warehouse) do pool de SQL do Azure Synapse Analytics.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica se diferenças nas opções de partição de tabela serão ignoradas ou atualizadas quando você publicar em um banco de dados.  Essa opção se aplica somente aos bancos de dados de pool de SQL dedicados do Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica se diferenças nos objetos de configurações do usuário serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica se diferenças de espaço em branco serão ignoradas ou atualizadas quando você publicar em um banco de dados.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica se diferenças no valor da cláusula WITH NOCHECK para restrições de verificação serão ignoradas ou atualizadas quando você publicar.|

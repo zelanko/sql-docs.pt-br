@@ -2,7 +2,7 @@
 title: SPNs (Nomes da Entidade de Serviço) em conexões de cliente (OLE DB) | Microsoft Docs
 description: Saiba mais sobre as propriedades e funções de membro do Driver do OLE DB para SQL Server que dão suporte a nomes de entidade de serviço em aplicativos cliente.
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5a97e889a8e36e0c9fc918f3f4724d283b8cfa5d
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 43e0972f3dde7be226ccac2bd4039dd7403ade03
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862232"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504715"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db-in-sql-server-native-client"></a>SPNs (nomes da entidade de serviço) em conexões de cliente (OLE DB) no 'SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88862232"
 |Nome|Type|Uso|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, somente leitura|Retorna o método de autenticação usado para a conexão. O valor retornado ao aplicativo é o valor que o Windows retorna ao Driver do OLE DB para SQL Server. O valores possíveis são os seguintes: <br />"NTLM", que é retornado quando uma conexão é aberta usando a autenticação NTLM.<br />"Kerberos", que é retornado quando uma conexão é aberta usando a autenticação Kerberos.<br /><br /> Se uma conexão foi aberta e não for possível determinar o método de autenticação, VT_EMPTY será retornado.<br /><br /> Essa propriedade só pode ser lida quando uma fonte de dados tiver sido inicializada. Se você tentar ler a propriedade antes da inicialização da fonte de dados, IDBProperties::GetProperies retornará DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, conforme apropriado, e DBPROPSTATUS_NOTSUPPORTED será definido em DBPROPSET_PROPERTIESINERROR para essa propriedade. Esse comportamento está de acordo com a especificação principal do OLE DB.|  
-|SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, somente leitura|Retorna VARIANT_TRUE se os servidores da conexão forem autenticados mutuamente. Caso contrário, retorna VARIANT_FALSE.<br /><br /> Essa propriedade só pode ser lida quando uma fonte de dados tiver sido inicializada. Se houver uma tentativa de ler a propriedade antes da inicialização da fonte de dados, IDBProperties::GetProperies retornará DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, conforme apropriado, e DBPROPSTATUS_NOTSUPPORTED será definido em DBPROPSET_PROPERTIESINERROR para essa propriedade. Esse comportamento está de acordo com a especificação principal do OLE DB<br /><br /> Se esse atributo for consultado para uma conexão que não usou a Autenticação do Windows, será retornado VARIANT_FALSE.|  
+|SSPROP_MUTUALLYAUTHENTICATED|VT_BOOL, somente leitura|Retorna VARIANT_TRUE se os servidores da conexão forem autenticados mutuamente. Caso contrário, retorna VARIANT_FALSE.<br /><br /> Essa propriedade só pode ser lida quando uma fonte de dados tiver sido inicializada. Se houver uma tentativa de ler a propriedade antes da inicialização da fonte de dados, IDBProperties::GetProperies retornará DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, conforme apropriado, e DBPROPSTATUS_NOTSUPPORTED será definido em DBPROPSET_PROPERTIESINERROR para essa propriedade. Esse comportamento está de acordo com a especificação principal do OLE DB<br /><br /> Se esse atributo for consultado para uma conexão que não usou a Autenticação do Windows, será retornado VARIANT_FALSE.|  
   
 ## <a name="ole-db-api-support-for-spns"></a>Suporte de API do OLE DB para SPNs  
  A tabela a seguir descreve o as funções do membro OLE DB que dá suporte a SPNs em conexões do cliente:  

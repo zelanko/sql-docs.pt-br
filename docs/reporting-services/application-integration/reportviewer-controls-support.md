@@ -9,13 +9,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.date: 06/03/2020
-ms.openlocfilehash: 087be959ea39ba9b223b7bd5ae0e3e343d90a594
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.date: 12/01/2020
+ms.openlocfilehash: f6c713d579042425dc863b7d4f942229a091d0c4
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891476"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96502690"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Suporte para versões do branch atual do Visualizador de Relatórios
 
@@ -26,6 +26,20 @@ O **controle do Microsoft Report Viewer** é compatível com o SQL Server Report
 Para um histórico de versão do controle do Visualizador de Relatórios, confira os links a seguir:
 
 - [Windows Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/)
-- [Web Forms do ASP.NET](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- [ASP.NET Web Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
 
-Para obter mais informações sobre a versão atual do controle do Visualizador de Relatórios, você pode examinar o seguinte [blog](/archive/blogs/sqlrsteamblog/report-viewer-2016-control-update-now-available).
+## <a name="application-server-and-report-server-combinations"></a>Combinações de servidores de relatório e de aplicativo
+
+Alguns recursos do controle do Visualizador de Relatórios dependem dos comportamentos padrão do sistema operacional. Portanto, eles podem exigir a execução da mesma versão tanto para o cliente (o servidor de aplicativo que executa o controle do Visualizador de Relatórios) quanto para o servidor (que executa o Reporting Services). Há suporte para as seguintes combinações de servidor de aplicativo e de relatório:
+
+| Servidor de aplicativos | Servidor de relatórios |
+| :----------------- | :------ |
+| Windows Server 2012 | Windows Server 2012 |
+| Windows Server 2012 | Windows Server 2012 R2 |
+| Windows Server 2012 R2 | Windows Server 2012 R2 |
+| Windows Server 2012 R2 | Windows Server 2012 |
+| Windows Server 2016 e posterior | Windows Server 2016 e posterior |
+
+## <a name="next-steps"></a>Próximas etapas
+
+Para saber mais sobre o controle do Visualizador de Relatórios, confira [Introdução à integração do Reporting Services usando os controles do Visualizador de Relatórios](integrating-reporting-services-using-reportviewer-controls-get-started.md).
