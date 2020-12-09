@@ -21,12 +21,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44fcac654dcbfe3cc8257c665600f2948cbe491e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7908cf5767dfdc36d69a9df0279041c6e965a1c9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537433"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900974"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "89537433"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual este índice pertence.|  
 |**name**|**sysname**|Nome do índice. o **nome** é exclusivo somente dentro do objeto.<br /><br /> NULL = Heap|  
-|**index_id**|**int**|ID do índice. **index_id** é exclusivo somente dentro do objeto.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> >1 = Índice não clusterizado|  
+|**index_id**|**int**|ID do índice. **index_id** é exclusivo somente dentro do objeto.<br /><br /> 0 = Heap<br /><br /> 1 ou 5 = índice clusterizado (árvore B, columnstore)<br /><br /> > 1 e <> 5 = índice não clusterizado|  
 |**tipo**|**tinyint**|Tipo de índice:<br /><br /> 0 = Heap<br /><br /> 1 = Clusterizado<br /><br /> 2 = Não clusterizado<br /><br /> 3 = XML<br /><br /> 4 = Espacial<br /><br /> 5 = índice columnstore clusterizado. **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> 6 = índice columnstore não clusterizado. **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> 7 = índice de hash não clusterizado. **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.|  
-|**type_desc**|**nvarchar(60)**|Descrição de tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> COLUMNSTORE CLUSTERIZAdo – **aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> COLUMNSTORE não CLUSTERIZAdo – **aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> HASH não CLUSTERIZAdo: há suporte para índices de HASH não CLUSTERIZAdos somente em tabelas com otimização de memória. A exibição sys.hash_indexes mostra os índices de hash atuais e as propriedades de hash. Para obter mais informações, consulte [Sys. hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.|  
+|**type_desc**|**nvarchar(60)**|Descrição de tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> COLUMNSTORE CLUSTERIZAdo – **aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> COLUMNSTORE não CLUSTERIZAdo – **aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> HASH não CLUSTERIZAdo: há suporte para índices de HASH não CLUSTERIZAdos somente em tabelas com otimização de memória. A exibição sys.hash_indexes mostra os índices de hash atuais e as propriedades de hash. Para obter mais informações, consulte [sys.hash_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.|  
 |**is_unique**|**bit**|1 = O índice é exclusivo.<br /><br /> 0 = O índice não é exclusivo.<br /><br /> Sempre 0 para índices columnstore clusterizados.|  
 |**data_space_id**|**int**|A ID do espaço de dados deste índice. O espaço de dados é um grupo de arquivos ou um esquema de partição.<br /><br /> 0 = **object_id** é uma função com valor de tabela ou índice na memória.|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY está ON.<br /><br /> 0 = IGNORE_DUP_KEY está OFF.|  
@@ -94,7 +94,7 @@ GO
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.key_constraints ](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

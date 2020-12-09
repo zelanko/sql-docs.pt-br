@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 910ee3433bfa4298412a10a58405fb27dad0b157
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753809"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900964"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -74,7 +74,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**1**|Uma vez|  
 |**4**|Diariamente|  
 |**8**|Semanalmente|  
-|**16**|Mensalmente|  
+|**16**|Mensal|  
 |**32**|Mensalmente, em relação a *frequency_interval.*|  
 |**64**|Executar ao iniciar o serviço do Agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Executar quando o computador estiver ocioso.|  
@@ -96,6 +96,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |Valor|Descrição (unidade)|  
 |-----------|--------------------------|  
 |**0x1**|Na hora especificada|  
+|**0x2**|Segundos|  
 |**0x4**|minutos|  
 |**0x8**|Horas|  
   
@@ -113,9 +114,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**8**|Quarto|  
 |**16**|Último|  
   
- *frequency_relative_interval* indica a ocorrência do intervalo. Por exemplo, se *frequency_relative_interval* for definido como **2**, *frequency_type* será definido como **32**e *frequency_interval* será definido como **3**, o trabalho agendado ocorrerá na segunda terça-feira de cada mês.  
+ *frequency_relative_interval* indica a ocorrência do intervalo. Por exemplo, se *frequency_relative_interval* for definido como **2**, *frequency_type* será definido como **32** e *frequency_interval* será definido como **3**, o trabalho agendado ocorrerá na segunda terça-feira de cada mês.  
   
-`[ @freq_recurrence_factor = ] frequency_recurrence_factor` Número de semanas ou meses entre a execução agendada do trabalho. *frequency_recurrence_factor* será usado somente se *frequency_type* estiver definido como **8**, **16**ou **32**. *frequency_recurrence_factor* é **int**, com um padrão de 0.  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor` Número de semanas ou meses entre a execução agendada do trabalho. *frequency_recurrence_factor* será usado somente se *frequency_type* estiver definido como **8**, **16** ou **32**. *frequency_recurrence_factor* é **int**, com um padrão de 0.  
   
 `[ @active_start_date = ] active_start_date` Data em que a execução do trabalho pode começar. *active_start_date* é **int**, sem padrão. A data é formatada como DDMMAAAA. Se *active_start_date* for definido, a data deverá ser maior ou igual a 19900101.  
   
