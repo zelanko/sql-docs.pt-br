@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419735"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563073"
 ---
 # <a name="establishing-connection"></a>Estabelecer conexão
 
@@ -29,12 +29,12 @@ Para se conectar ao Microsoft SQL Server, use o objeto <xref:Microsoft.Data.SqlC
 
 ## <a name="closing-connections"></a>Fechando conexões
 
-É recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão possa ser retornada ao pool. O bloco `Using` no Visual Basic ou C# automaticamente descarta a conexão quando o código sai do bloco, mesmo no caso de uma exceção sem tratamento. Confira [Instrução using](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) e [Instrução Using](/dotnet/docs/visual-basic/language-reference/statements/using-statement.md) para obter mais informações.
+É recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão possa ser retornada ao pool. O bloco `Using` no Visual Basic ou C# automaticamente descarta a conexão quando o código sai do bloco, mesmo no caso de uma exceção sem tratamento. Confira [Instrução using](/dotnet/csharp/language-reference/keywords/using-statement) e [Instrução Using](/dotnet/visual-basic/language-reference/statements/using-statement) para obter mais informações.
 
 Você também pode usar os métodos `Close` ou `Dispose` do objeto de conexão. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Por exemplo, uma conexão que sai de escopo, mas que não foi fechada explicitamente será retornada somente para o pool de conexões se o tamanho do máximo tiver sido atingido e a conexão ainda estiver válida.
 
 > [!NOTE]
-> Não chame `Close` ou `Dispose` em um objeto **Connection**, um **DataReader** nem em nenhum outro objeto gerenciado no método `Finalize` de sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, confira [Coleta de lixo](/dotnet/docs/standard/garbage-collection/index.md).
+> Não chame `Close` ou `Dispose` em um objeto **Connection**, um **DataReader** nem em nenhum outro objeto gerenciado no método `Finalize` de sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, confira [Coleta de lixo](/dotnet/standard/garbage-collection/index).
 
 > [!NOTE]
 > Eventos de logon e logout não serão gerados no servidor quando uma conexão for procurada de ou retornada para o pool de conexões, porque a conexão não é fechada realmente quando é retornada para o pool de conexões. Para obter mais informações, consulte [Pool de Conexões do SQL Server (ADO.NET)](sql-server-connection-pooling.md).

@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 5d9138a5d02008cc173bc7f0b64d354d67112d3b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 9f6449c11c4033324b8f294449942b67425a737c
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364083"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900889"
 ---
 # <a name="create-a-jupyter-book-extension"></a>Criar uma extensão do Jupyter Book
 
@@ -57,7 +57,7 @@ O Azure Data Studio se baseia na mesma estrutura que o Visual Studio Code, porta
 Para simplificar o processo de criação de extensões, criamos um [gerador de extensão](https://www.npmjs.com/package/generator-azuredatastudio) usando o Yeoman. Para instalá-lo, execute o seguinte comando no prompt de comando:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-extension"></a>Criar sua extensão
@@ -80,13 +80,13 @@ Opte por fornecer um Jupyter Book existente, usar um livro de exemplo fornecido 
 
 Caso deseje enviar um livro já criado, forneça o caminho absoluto do arquivo para a pasta em que reside o conteúdo do livro. Depois, você estará pronto para continuar aprendendo sobre a extensão e como enviá-la.
 
-:::image type="content" source="media/jupyter-book-extension/jupyter-book-existing-book.png" alt-text="Captura de tela que mostra o gerador de extensão.":::
+:::image type="content" source="media/jupyter-book-extension/jupyter-book-existing-book.png" alt-text="Captura de tela que mostra um livro existente.":::
 
 ### <a name="use-the-sample-book"></a>Usar o livro de exemplo
 
 Caso você não tenha livros ou notebooks existentes, use o exemplo fornecido no gerador.
 
-:::image type="content" source="media/jupyter-book-extension/jupyter-book-sample-path.png" alt-text="Captura de tela que mostra o gerador de extensão.":::
+:::image type="content" source="media/jupyter-book-extension/jupyter-book-sample-path.png" alt-text="Captura de tela que mostra um Jupyter Book de exemplo.":::
 
 O livro de exemplo demonstra a aparência de um Jupyter Book simples. Caso deseje saber mais sobre como personalizar um Jupyter Book, confira a seção a seguir sobre como criar um livro com notebooks existentes.
 
@@ -94,7 +94,7 @@ O livro de exemplo demonstra a aparência de um Jupyter Book simples. Caso desej
 
 Caso você tenha notebooks que deseja empacotar em um Jupyter Book, faça isso. O gerador pergunta se você deseja ter capítulos no livro e, em caso afirmativo, quantos capítulos e quais são os respectivos títulos. Veja qual é a aparência do processo de seleção aqui. Use a barra de espaço para selecionar os notebooks que deseja inserir em cada capítulo.
 
-:::image type="content" source="media/jupyter-book-extension/jupyter-book-create-book.png" alt-text="Captura de tela que mostra o gerador de extensão.":::
+:::image type="content" source="media/jupyter-book-extension/jupyter-book-create-book.png" alt-text="Captura de tela que mostra a criação de um Jupyter Book.":::
 
 A conclusão das etapas anteriores cria uma pasta com o novo Jupyter Book. Abra a pasta no Visual Studio Code e você estará pronto para enviar sua extensão do Jupyter Book.
 
@@ -102,7 +102,7 @@ A conclusão das etapas anteriores cria uma pasta com o novo Jupyter Book. Abra 
 
 É esta a aparência que o projeto deverá ter:
 
-   :::image type="content" source="media/jupyter-book-extension/jupyter-book-file-structure-generator.png" alt-text="Captura de tela que mostra o gerador de extensão.":::
+   :::image type="content" source="media/jupyter-book-extension/jupyter-book-file-structure-generator.png" alt-text="Captura de tela que mostra uma estrutura de arquivo de extensão.":::
 
 O arquivo `vsc-extension-quickstart.md` fornece uma referência dos arquivos importantes. `README.md` é o arquivo em que você pode fornecer a documentação da nova extensão. Observe os arquivos `package.json`, `jupyter-book.ts`, `content` e `toc.yml`. A pasta `content` contém todos os arquivos de notebook ou markdown. O `toc.yml` estrutura o Jupyter Book e é gerado automaticamente caso você tenha optado por criar um Jupyter Book personalizado por meio do gerador de extensão.
 
@@ -151,7 +151,7 @@ O evento de ativação, `onCommand`, dispara a função que registramos quando i
 Para compartilhar a extensão com outras pessoas, você precisará empacotá-la em um só arquivo. Sua extensão pode ser publicada no marketplace de extensões do Azure Data Studio ou compartilhada entre a sua equipe ou sua comunidade. Para realizar essa etapa, você precisa instalar outro pacote npm da linha de comando.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Edite o arquivo `README.md` de sua preferência. Navegue até o diretório base da extensão e execute `vsce package`. Opcionalmente, você pode vincular um repositório com a extensão ou continuar sem um. Para adicionar um, adicione uma linha semelhante ao arquivo `package.json`.
@@ -169,11 +169,11 @@ Depois que essas linhas forem adicionadas, um arquivo `my test-book-0.0.1.vsix` 
 
 Para executar e testar a extensão, abra o Azure Data Studio e a paleta de comandos selecionando **Ctrl+Shift+P**. Localize o comando **Extensões: fazer a instalação com base no arquivo VSIX** e procure a pasta que contém a nova extensão. Agora ela será exibida no painel de extensões do Azure Data Studio.
 
-   :::image type="content" source="media/jupyter-book-extension/install-vsix.png" alt-text="Captura de tela que mostra o gerador de extensão.":::
+   :::image type="content" source="media/jupyter-book-extension/install-vsix.png" alt-text="Captura de tela que mostra a instalação do VSIX.":::
 
 Abra a paleta de comandos novamente e localize o comando que registramos, **Abrir Livro:** Testar Notebook. Após a execução, ele deve abrir o Jupyter Book que empacotamos com nossa extensão.
 
-   :::image type="content" source="media/jupyter-book-extension/jupyter-book-launch-ads.png" alt-text="Captura de tela que mostra o gerador de extensão.":::
+   :::image type="content" source="media/jupyter-book-extension/jupyter-book-launch-ads.png" alt-text="Captura de tela que mostra o notebook-command.":::
 
 Parabéns! Você criou sua primeira extensão do Jupyter Book e agora poderá enviá-la. Para obter mais informações sobre os Jupyter Books, confira [Livros com o Jupyter](https://jupyterbook.org/intro.html).
 

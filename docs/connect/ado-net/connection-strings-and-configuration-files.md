@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126336"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563112"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadeias de conexão e arquivos de configuração
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126336"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulnerabilidades de segurança e problemas de manutenção. As cadeias de conexão não criptografadas compiladas no código-fonte de um aplicativo podem ser exibidas com a ferramenta [Ildasm.exe (IL Disassembler)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md). Além disso, se a cadeia de conexão for alterada, seu aplicativo deverá ser recompilado. Por esses motivos, recomendamos armazenar cadeias de conexão em um arquivo de configuração do aplicativo.
+Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulnerabilidades de segurança e problemas de manutenção. As cadeias de conexão não criptografadas compiladas no código-fonte de um aplicativo podem ser exibidas com a ferramenta [Ildasm.exe (IL Disassembler)](/dotnet/framework/tools/ildasm-exe-il-disassembler). Além disso, se a cadeia de conexão for alterada, seu aplicativo deverá ser recompilado. Por esses motivos, recomendamos armazenar cadeias de conexão em um arquivo de configuração do aplicativo.
 
 ## <a name="working-with-application-configuration-files"></a>Trabalhando com arquivos de configuração de aplicativo
 
@@ -194,5 +194,5 @@ Para saber mais sobre como proteger aplicativos ASP.NET, confira [Proteger sites
 - [Construtores de cadeia de conexão](connection-string-builders.md)
 - [Protegendo informações de conexão](protecting-connection-information.md)
 - [Usando as classes de configuração](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configuração de aplicativos](/dotnet/docs/framework/configure-apps/index.md)
+- [Configuração de aplicativos](/dotnet/framework/configure-apps/index)
 - [Administração de site ASP.NET](/previous-versions/aspnet/6hy1xzbw(v=vs.100))

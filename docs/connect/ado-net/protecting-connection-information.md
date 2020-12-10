@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 87d8e2013693d2e8123adb97273309d6f22de03e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 146063d665b89a8541c34d9cc3b0b6da3939d801
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126322"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563092"
 ---
 # <a name="protecting-connection-information"></a>Proteger informações de conexão
 
@@ -23,7 +23,7 @@ ms.locfileid: "96126322"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-A proteção do acesso à fonte de dados é essencial para a segurança do aplicativo. Uma cadeia de conexão apresenta uma vulnerabilidade potencial se não estiver protegida. Armazenar as informações de conexão em texto sem formatação ou persistir-la na memória pode comprometer seu sistema inteiro. As cadeias de conexão inseridas em seu código-fonte podem ser lidas usando o [Ildasm.exe (desmontador de IL)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) para exibir a MSIL (Microsoft Intermediate Language) em um assembly compilado.
+A proteção do acesso à fonte de dados é essencial para a segurança do aplicativo. Uma cadeia de conexão apresenta uma vulnerabilidade potencial se não estiver protegida. Armazenar as informações de conexão em texto sem formatação ou persistir-la na memória pode comprometer seu sistema inteiro. As cadeias de conexão inseridas em seu código-fonte podem ser lidas usando o [Ildasm.exe (desmontador de IL)](/dotnet/framework/tools/ildasm-exe-il-disassembler) para exibir a MSIL (Microsoft Intermediate Language) em um assembly compilado.
 
 As vulnerabilidades de segurança envolvendo cadeias de conexão podem surgir com base no tipo de autenticação usado, em como as cadeias de conexão são persistidas na memória e no disco e nas técnicas usadas para construí-los em tempo de execução.
 

@@ -2,19 +2,19 @@
 title: Matriz de suporte de recursos de driver
 description: Saiba quais recursos populares têm suporte nos drivers para SQL Server e onde encontrar informações sobre eles.
 ms.custom: ''
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 4fff9c04098bd0796f714d160864e4edb93613ac
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419668"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595227"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matriz de suporte de recursos de driver para Microsoft SQL Server
 
@@ -40,14 +40,14 @@ Queremos que todos os drivers deem suporte a todos os recursos e façam esforço
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Sim](ado-net/sql/sqlclient-support-always-encrypted.md) | [Sim](ado-net/sql/sqlclient-support-always-encrypted.md) | | [Sim](ado-net/sql/sqlclient-support-always-encrypted.md) |
 | [Always Encrypted com enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Sim](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | [Sim](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | | [Sim](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) |
 | [Autenticação do Token de Acesso do Azure Active Directory](/azure/active-directory/develop/access-tokens) | [Sim](/dotnet/api/system.data.sqlclient.sqlconnection.accesstoken) | [Sim](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Sim](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Sim](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) |
-| [Autenticação de Senha do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Sim | Sim | | Sim |
-| [Autenticação integrada do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Sim | Sim | | Sim |
-| [Autenticação Interativa (MFA) do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Sim | Sim | | Sim |
-| [Autenticação de Identidade Gerenciada do Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | Sim | Sim | | |
-| [Autenticação da Entidade de Serviço do Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | Sim | Sim | | |
+| [Autenticação de Senha do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | | Sim |
+| [Autenticação integrada do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | | Sim |
+| [Autenticação Interativa (MFA) do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | | Sim |
+| [Autenticação de Identidade Gerenciada do Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | | |
+| [Autenticação da Entidade de Serviço do Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | [Sim](ado-net/sql/azure-active-directory-authentication.md) | | |
 | [Autenticação Integrada do Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Sim](ado-net/sql/authentication-sql-server.md) | [Sim](ado-net/sql/authentication-sql-server.md) | [Sim](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Sim](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Cópia em Massa](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Sim](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sim](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sim](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Sim](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [Confidencialidade de dados e metadados de classificação](../relational-databases/security/sql-data-discovery-and-classification.md) | Sim | Sim | Sim | Sim |
+| [Confidencialidade de dados e metadados de classificação](../relational-databases/security/sql-data-discovery-and-classification.md) | [Sim](ado-net/sql/data-classification.md) | [Sim](ado-net/sql/data-classification.md) | Sim | Sim |
 | [MARS (conjunto de resultados ativos múltiplos)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Sim](ado-net/sql/multiple-active-result-sets-mars.md) | [Sim](ado-net/sql/multiple-active-result-sets-mars.md) | [Sim](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [Sim](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [Tipos de dados espaciais](../relational-databases/spatial/spatial-data-sql-server.md) | | Sim | | Sim |
 | [TVP (Parâmetros com Valor de Tabela)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Sim](ado-net/sql/table-valued-parameters.md) | [Sim](ado-net/sql/table-valued-parameters.md) | [Sim](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Sim](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
@@ -64,7 +64,7 @@ Queremos que todos os drivers deem suporte a todos os recursos e façam esforço
 | [Autenticação integrada do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](odbc/using-azure-active-directory.md) | [Sim](odbc/using-azure-active-directory.md) | [Sim](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sim](oledb/features/using-azure-active-directory.md) |
 | [Autenticação Interativa (MFA) do Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sim](odbc/using-azure-active-directory.md) | | | [Sim](oledb/features/using-azure-active-directory.md) |
 | [Autenticação de Identidade Gerenciada do Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Sim](odbc/using-azure-active-directory.md) | [Sim](odbc/using-azure-active-directory.md) | [Sim](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sim](oledb/features/using-azure-active-directory.md) |
-| [Autenticação da Entidade de Serviço do Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
+| [Autenticação da Entidade de Serviço do Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [Sim](oledb/features/using-azure-active-directory.md) |
 | [Autenticação Integrada do Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | Sim | [Sim](odbc/linux-mac/using-integrated-authentication.md) | [Sim](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Sim |
 | [Cópia em Massa](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Sim](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Sim](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Sim](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Sim](oledb/features/performing-bulk-copy-operations.md) |
 | [Descoberta de dados e metadados de classificação](../relational-databases/security/sql-data-discovery-and-classification.md) | [Sim](odbc/data-classification.md) | [Sim](odbc/data-classification.md) | [Sim](jdbc/data-discovery-classification-sample.md) | |

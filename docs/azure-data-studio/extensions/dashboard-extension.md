@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364093"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900869"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Criar uma extensão de painel do Azure Data Studio
 
@@ -44,7 +44,7 @@ O Azure Data Studio se baseia na mesma estrutura que o Visual Studio Code, porta
 Para simplificar o processo de criação de extensões, criamos um [gerador de extensão](https://code.visualstudio.com/docs/extensions/yocode) usando o Yeoman. Para instalá-lo, execute o seguinte comando no prompt de comando:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-dashboard-extension"></a>Criar a extensão de painel
@@ -63,7 +63,7 @@ Há três pontos de contribuição principais para que as extensões adicionem u
 2. **Ações da Home Page**: botões de ação na parte superior da barra de ferramentas de conexão.
 3. **Widgets**: grafos que são executados no SQL Server.
 
-   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Captura de tela que mostra a introdução dos painéis.":::
+   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Captura de tela que mostra pontos de contribuição.":::
 
 ### <a name="run-the-extension-generator"></a>Executar o gerador de extensão
 
@@ -77,11 +77,11 @@ Para criar uma extensão:
 
 1. Preencha os prompts, conforme mostrado, para criar uma extensão que contribui com uma guia para o painel de servidor.
 
-   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Captura de tela que mostra a introdução dos painéis.":::
+   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Captura de tela que mostra o gerador de extensão.":::
 
    Como há muitos prompts, veja um pouco mais de informações sobre o que cada pergunta significa:
 
-   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Captura de tela que mostra a introdução dos painéis.":::
+   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Captura de tela que mostra um fluxograma de painel.":::
 
 Seguir as etapas anteriores cria uma nova pasta. Abra a pasta no Visual Studio Code e você estará pronto para criar sua extensão de painel.
 
@@ -108,7 +108,7 @@ Estas são algumas alterações para você experimentar:
 Para compartilhar a extensão com outras pessoas, você precisará empacotá-la em um só arquivo. Sua extensão pode ser publicada no marketplace de extensões do Azure Data Studio ou compartilhada entre a sua equipe ou sua comunidade. Para realizar essa etapa, você precisa instalar outro pacote npm da linha de comando.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Edite o arquivo `README.md` de sua preferência. Navegue até o diretório base da extensão e execute `vsce package`. Opcionalmente, você pode vincular um repositório com a extensão ou continuar sem um. Para adicionar um, adicione uma linha semelhante ao arquivo `package.json`.
@@ -122,7 +122,7 @@ Edite o arquivo `README.md` de sua preferência. Navegue até o diretório base 
 
 Depois que essas linhas forem adicionadas, um arquivo `my-test-extension-0.0.1.vsix` será criado e estará pronto para ser instalado no Azure Data Studio.
 
-:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Captura de tela que mostra a introdução dos painéis.":::
+:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Captura de tela que mostra a instalação do VSIX.":::
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Publicar sua extensão no marketplace
 

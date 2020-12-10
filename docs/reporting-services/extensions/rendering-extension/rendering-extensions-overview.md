@@ -1,7 +1,7 @@
 ---
 title: Visão geral das extensões de renderização | Microsoft Docs
 description: Veja quais extensões de renderização de dados estão incluídas com o Reporting Services. Saiba como adicionar extensões de renderização personalizadas para gerar relatórios em outros formatos.
-ms.date: 03/14/2017
+ms.date: 12/7/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: c14237adcb3cd45e62db0915004f51ed547c9f30
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529422"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788289"
 ---
 # <a name="rendering-extensions-overview"></a>Visão geral das extensões de renderização
   Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui sete extensões de renderização: HTML, Excel, Word, CSV ou Texto, XML, Imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  
@@ -54,8 +54,6 @@ ms.locfileid: "84529422"
 -   Adicione formatação personalizada e recursos de apresentação combinando XSLT (Transformações XSL) com a saída do formato de renderização XML.  
   
  Escrever uma extensão de renderização personalizada é difícil. Normalmente, uma extensão de renderização deve dar suporte a todas as combinações possíveis de elementos de relatório e exige que você implemente centenas de classes, de interfaces, de métodos e de propriedades. Se precisar renderizar um relatório em um formato não incluído no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e decidir escrever sua própria implementação de código gerenciado de uma extensão de renderização, o código da extensão de renderização deverá implementar a interface **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**, que é exigida pelo servidor de relatório.  
-  
- Para obter a documentação e whitepapers suplementares sobre o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consulte os últimos recursos técnicos no [site do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Implementando uma extensão de renderização](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

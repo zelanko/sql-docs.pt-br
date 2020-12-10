@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419717"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563072"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool de conexões do SQL Server (ADO.NET)
 
@@ -68,10 +68,10 @@ Quando um objeto <xref:Microsoft.Data.SqlClient.SqlConnection> é solicitado, el
 O pool de conexões atende às solicitações de conexões realocando-as à medida que são retornadas ao pool. Se o tamanho máximo de pool for atingido e nenhuma conexão útil estiver disponível, a solicitação será colocada na fila. Então, o pooler tenta recuperar todas as conexões até que o tempo limite seja atingido (**o padrão é 15 segundos**). Se o pooler não puder atender à solicitação antes que se esgote o tempo limite de conexão, uma exceção será gerada.
 
 > [!CAUTION]
-> É altamente recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão seja retornada ao pool. Você pode fazer isso usando os métodos `Close` ou `Dispose` do objeto `Connection` ou abrindo todas as conexões em uma instrução `using` no C# ou uma instrução `Using` no Visual Basic. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Para obter mais informações, confira [Instrução using](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) ou [Como descartar um recurso de sistema](/dotnet/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) para Visual Basic.
+> É altamente recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão seja retornada ao pool. Você pode fazer isso usando os métodos `Close` ou `Dispose` do objeto `Connection` ou abrindo todas as conexões em uma instrução `using` no C# ou uma instrução `Using` no Visual Basic. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Para obter mais informações, confira [Instrução using](/dotnet/csharp/language-reference/keywords/using-statement) ou [Como descartar um recurso de sistema](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource) para Visual Basic.
 
 > [!NOTE]
-> Não chame `Close` nem `Dispose` em um objeto `Connection`, em um `DataReader` nem em nenhum outro objeto gerenciado no método `Finalize` de sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, confira [Coleta de lixo](/dotnet/docs/standard/garbage-collection/index.md).
+> Não chame `Close` nem `Dispose` em um objeto `Connection`, em um `DataReader` nem em nenhum outro objeto gerenciado no método `Finalize` de sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, confira [Coleta de lixo](/dotnet/standard/garbage-collection/index).
 
 Para obter mais informações sobre os eventos associados à abertura e ao fechamento de conexões, confira [Classe de Evento Audit Login](/sql/relational-databases/event-classes/audit-login-event-class) e [Classe de Evento Audit Logout](/sql/relational-databases/event-classes/audit-logout-event-class) na documentação do SQL Server.
 

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 127b163ff7f75b4c7ebeff37781f8a5670a47cf9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364073"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900819"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Criar uma extensão de mapa de teclas do Azure Data Studio
 
@@ -44,7 +44,7 @@ O Azure Data Studio se baseia na mesma estrutura que o Visual Studio Code, porta
 Para simplificar o processo de criação de extensões, criamos um [gerador de extensão](https://code.visualstudio.com/docs/extensions/yocode) usando o Yeoman. Para instalá-lo, execute o código no prompt de comando abaixo:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-keymap-extension"></a>Criar a extensão de mapa de teclas
@@ -79,9 +79,40 @@ Os itens de que mais senti falta foram:
 
 É fácil localizar e substituir essas associações de teclas. Execute *Abrir Atalhos de Teclado* para mostrar a guia **Atalhos de Teclado** no Azure Data Studio, pesquise por *consultar* e escolha **Alterar Associação de teclas**. Quando terminar de alterar a associação de teclas, você poderá ver o mapeamento atualizado no arquivo keybindings.json (execute *Abrir Atalhos de Teclado* para vê-lo).
 
-:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="Gerador de extensão":::
+:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="Atalhos do teclado":::
 
-:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Gerador de extensão"
+:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Extensão keybindings.json":::
+
+**Etapa 2: Adicionar atalhos à extensão**
+
+Para adicionar atalhos à extensão, abra o arquivo *package.json* (na extensão) e substitua a seção `contributes` pelo código abaixo:
+
+```json
+"contributes": {
+  "keybindings": [
+    {
+      "key": "shift+cmd+e",
+      "command": "runQueryKeyboardAction"
+    },
+    {
+      "key": "ctrl+cmd+e",
+      "command": "workbench.view.explorer"
+    },
+    {
+      "key": "alt+f1",
+      "command": "workbench.action.query.shortcut1"
+    },
+    {
+      "key": "shift+alt+enter",
+      "command": "workbench.action.toggleFullScreen"
+    },
+    {
+      "key": "f8",
+      "command": "workbench.view.connections"
+    },
+    {
+      "key": "ctrl+m",
+      "command": "runCurrentQueryWithActualPlanKeyboardAction"
     }
   ]
 }
@@ -95,9 +126,9 @@ Certifique-se de que a extensão de Depuração do Azure Data Studio esteja inst
 
 Selecione **F5** para iniciar o Azure Data Studio no modo de depuração com a extensão em execução:
 
-:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Gerador de extensão":::
+:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Instalar a extensão":::
 
-:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="Gerador de extensão":::
+:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="testar extensão":::
 
 Mapas de teclas são uma das extensões mais rápidas de serem criadas, portanto, sua nova extensão deve estar funcionando com êxito e pronta para ser compartilhada.
 
@@ -106,7 +137,7 @@ Mapas de teclas são uma das extensões mais rápidas de serem criadas, portanto
 Para compartilhar a extensão com outras pessoas, você precisará empacotá-la em um só arquivo. Isso pode ser publicado no Marketplace de extensões do Azure Data Studio ou compartilhado entre a sua equipe ou sua comunidade. Para fazer isso, você precisa instalar outro pacote npm na linha de comando:
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Navegue até o diretório base da extensão e execute `vsce package`. Eu precisei adicionar duas linhas extras para impedir que a ferramenta *vsce* criasse problemas:
@@ -123,7 +154,7 @@ Navegue até o diretório base da extensão e execute `vsce package`. Eu precise
 
 Depois disso, meu arquivo ssmskeymap-0.1.0.vsix foi criado e está pronto para ser instalado e compartilhado com o mundo!
 
-:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Gerador de extensão":::
+:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Instalar":::
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Publicar sua extensão no Marketplace
 
