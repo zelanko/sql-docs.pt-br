@@ -4,7 +4,7 @@ description: Saiba como o Mecanismo de Banco de Dados do SQL Server acessa infor
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 125a95f14f7082a3ed806d6dfa7fcb05b6d11c81
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890773"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505060"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ A *infraestrutura do perfil de estatísticas de execução de consulta* ou a cri
 
 Os métodos de coleta de informações de plano de execução a seguir para **todas as sessão** aproveitam a infraestrutura de criação de perfil padrão:
 
--  O evento ***query_post_execution_showplan***. Para habilitar eventos estendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
-- O evento de rastreamento **Showplan XML** no [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md) e [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Para obter mais informações sobre o evento de rastreamento, confira [Classe de evento Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md).
+-  O evento estendido **_query_post_execution_showplan_* _. Para habilitar eventos estendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+- O evento de rastreamento _ *Showplan XML*** no [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md) e [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Para obter mais informações sobre o evento de rastreamento, confira [Classe de evento Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md).
 
 Ao executar uma sessão de eventos estendidos que usa o evento *query_post_execution_showplan*, o DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) também é populado, o que permite estatísticas de consulta dinâmica para todas as sessões, usando o [Monitor de Atividade](../../relational-databases/performance-monitor/activity-monitor.md) ou consultando diretamente o DMV. Para obter mais informações, consulte [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
@@ -64,7 +64,7 @@ Começando com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLU
   
 Começando com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a sobrecarga de desempenho para coletar informações sobre planos de execução foi reduzida com a introdução da criação de perfil leve. Ao contrário da criação de perfil padrão, a criação de perfil leve não coleta informações de runtime de CPU. No entanto, a criação de perfil leve ainda coleta informações de uso de E/S e de contagem de linhas.
 
-Um novo evento ***query_thread_profile*** estendido que utiliza a criação de perfil leve também foi introduzido. Esse evento estendido expõe estatísticas de execução por operador, permitindo mais informações sobre o desempenho de cada nó e thread. Uma sessão de exemplo usando este evento estendido pode ser configurada como no exemplo abaixo:
+Um novo evento **_query_thread_profile_* _ estendido que utiliza a criação de perfil leve também foi introduzido. Esse evento estendido expõe estatísticas de execução por operador, permitindo mais informações sobre o desempenho de cada nó e thread. Uma sessão de exemplo usando este evento estendido pode ser configurada como no exemplo abaixo:
 
 ```sql
 CREATE EVENT SESSION [NodePerfStats] ON SERVER
@@ -86,7 +86,7 @@ WITH (MAX_MEMORY=4096 KB,
 > [!NOTE]
 > Para obter mais informações sobre a sobrecarga de desempenho da criação de perfil de consulta, confira a postagem no blog [Developers Choice: Query progress – anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (Escolha dos desenvolvedores: consultar o andamento – a qualquer momento, em qualquer lugar). 
 
-Ao executar uma sessão de eventos estendidos que usa o evento *query_thread_profile*, o DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) também é populado usando a criação de perfil leve, o que permite estatísticas de consulta dinâmica para todas as sessões, usando o [Monitor de Atividade](../../relational-databases/performance-monitor/activity-monitor.md) ou consultando diretamente o DMV.
+Ao executar uma sessão de eventos estendidos que uso o evento _query_thread_profile*, o DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) também é preenchido usando a criação de perfil leve, o que permite estatísticas de consulta dinâmica para todas as sessões usando o [Monitor de Atividade](../../relational-databases/performance-monitor/activity-monitor.md) ou consultando diretamente o DMV.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infraestrutura de criação de perfil de estatísticas de execução de consulta leve v2
 
@@ -94,7 +94,7 @@ Ao executar uma sessão de eventos estendidos que usa o evento *query_thread_pro
 
 O [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 inclui uma versão revisada da criação de perfil leve com sobrecarga mínima. A criação de perfil leve também pode ser habilitada globalmente usando o [sinalizador de rastreamento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para as versões mencionadas acima em *Aplica-se a*. Um novo DMF [DM exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) é introduzido para retornar o plano de execução de consulta para as solicitações em trânsito.
 
-Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, se a criação de perfil leve não estiver habilitada globalmente, o novo argumento de [dica de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)**QUERY_PLAN_PROFILE** poderá ser usado para habilitar a criação de perfil leve no nível da consulta, para qualquer sessão. Quando uma consulta que contém essas nova dica termina, um novo evento estendido ***query_plan_profile*** também é a saída que fornece um plano de execução real XML semelhante ao evento estendido *query_post_execution_showplan*. 
+Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, se a criação de perfil leve não estiver habilitada globalmente, o novo argumento de [dica de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)**QUERY_PLAN_PROFILE** poderá ser usado para habilitar a criação de perfil leve no nível da consulta, para qualquer sessão. Quando uma consulta que contém essas nova dica termina, um novo evento estendido **_query_plan_profile_* _ também é a saída que fornece um XML de plano de execução real semelhante ao evento estendido query_post_execution_showplan. 
 
 > [!NOTE]
 > O evento estendido *query_plan_profile* também se beneficia da criação de perfil leve, mesmo se a dica de consulta não é usada. 

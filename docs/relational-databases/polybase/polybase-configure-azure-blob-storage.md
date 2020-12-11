@@ -1,7 +1,7 @@
 ---
 title: 'Acessar dados externos: Armazenamento de Blobs do Azure – PolyBase'
 description: O artigo usa o PolyBase em uma instância do SQL Server com o Armazenamento de Blobs do Azure. O PolyBase é adequado para consultas ad hoc de tabelas externas e importação/exportação de dados.
-ms.date: 12/13/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6621d01c9cb52d528f2d3578a128f0abada22db0
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215846"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563102"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar o PolyBase para acessar dados externos no Armazenamento de Blobs do Azure
 
@@ -44,7 +44,7 @@ Primeiro, configure o PolyBase do SQL Server para usar o Armazenamento de Blobs 
    GO
    ```  
 
-2. É necessário reiniciar o SQL Server usando **services.msc**. A reinicialização do o SQL Server reiniciará estes serviços:  
+2. Reinicie o SQL Server usando **services.msc**. A reinicialização do o SQL Server reiniciará estes serviços:  
 
    - Serviço de movimentação de dados de PolyBase do SQL Server  
    - Mecanismo PolyBase do SQL Server  
@@ -55,7 +55,7 @@ Primeiro, configure o PolyBase do SQL Server para usar o Armazenamento de Blobs 
 
 Para consultar os dados em sua fonte de dados do Hadoop, você precisa definir uma tabela externa para usar em consultas Transact-SQL. As etapas a seguir descrevem como configurar a tabela externa.
 
-1. Crie uma chave mestra no banco de dados. Isso é necessário para criptografar o segredo da credencial.
+1. Crie uma chave mestra no banco de dados. A chave mestra é necessária para criptografar o segredo da credencial.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -119,15 +119,15 @@ Para consultar os dados em sua fonte de dados do Hadoop, você precisa definir u
 
 O PolyBase é adequado para três funções:  
   
-- consultas ad hoc em tabelas externas.  
+- Consultas ad hoc em tabelas externas.  
 - importar dados.  
 - exportar dados.  
 
 As consultas a seguir fornecem exemplo com os dados de sensor de carro fictícios.
 
-### <a name="ad-hoc-queries"></a>Consultas ad hoc  
+### <a name="ad-hoc-queries"></a>Consulta ad hoc  
 
-A seguinte consulta ad hoc une dados relacionais com os dados do Hadoop. Ela seleciona clientes que dirigem mais rápido do que 35 km/h, unindo dados estruturados do cliente armazenados no SQL Server com os dados de sensor de carro armazenados no Hadoop.  
+A consulta ad hoc a seguir associa dados relacionais aos dados do Hadoop. Ela seleciona clientes que dirigem mais rápido do que 55 km/h e reúne dados estruturados do cliente armazenados no SQL Server com os dados de sensor de carro armazenados no Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -158,7 +158,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### <a name="exporting-data"></a>Exportando dados  
 
-A consulta a seguir exporta dados do SQL Server para Armazenamento de Blobs do Azure. Para fazer isso, primeiro você precisa habilitar a exportação do PolyBase. Em seguida, crie uma tabela externa para o destino antes de exportar dados para ele.
+A consulta a seguir exporta dados do SQL Server para Armazenamento de Blobs do Azure. Primeiro, habilite a exportação do PolyBase. Em seguida, crie uma tabela externa para o destino antes de exportar dados para ele.
 
 ```sql
 -- Enable INSERT into external table  
@@ -186,6 +186,8 @@ SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2
 ON (T1.CustomerKey = T2.CustomerKey)  
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
+
+A exportação do PolyBase com esse método pode criar vários arquivos.
 
 ## <a name="view-polybase-objects-in-ssms"></a>Exibir objetos do PolyBase no SSMS  
 

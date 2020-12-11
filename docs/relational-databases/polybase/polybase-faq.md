@@ -1,19 +1,19 @@
 ---
 title: Perguntas frequentes no PolyBase | Microsoft Docs
-description: Compare o PolyBase com os servidores vinculados e compare o PolyBase em Clusters de Big Data com o PolyBase em instâncias autônomas. Descubra as novidades no PolyBase 2019.
-ms.date: 04/23/2019
+description: Faça a comparação do PolyBase com servidores vinculados e do PolyBase em Clusters de Big Data e em instâncias autônomas. Descubra as novidades no PolyBase 2019.
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96127857"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563132"
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 
@@ -49,19 +49,19 @@ O PolyBase no [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] agora pode ler
 > [!NOTE]
 > O PolyBase pode permitir a conexão a fontes de dados externas usando drivers ODBC de terceiros. Esses drivers não são fornecidos com o PolyBase e podem não funcionar conforme o esperado. Para obter mais informações, veja nosso [guia](../../relational-databases/polybase/polybase-configure-odbc-generic.md) para configuração genérica do PolyBase ODBC.  
 
-## <a name="polybase-in-big-data-clusters-vs-polybase-in-stand-alone-instances"></a>O PolyBase em clusters de Big Data VS. PolyBase em Instâncias autônomas
+## <a name="polybase-in-big-data-clusters-vs-polybase-in-stand-alone-instances"></a>PolyBase em Clusters de Big Data vs. PolyBase em Instâncias autônomas
 
 A tabela a seguir destaca os recursos do PolyBase disponíveis na instalação autônoma do [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] e no cluster de Big Data do [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]:
 
 |Recurso |Cluster de Big Data|Instância autônoma|
 |--------------------------|--------------------------|---------|   
-|Criar fonte de dados externa para SQL Server, Oracle, Teradata e Mongo DB |X|X |
+|Criar fonte de dados externa para SQL Server, Oracle, Teradata e Mongo DB |X|X|
 |Criar fonte de dados externa usando um Driver ODBC de terceiros compatível | | X|
 |Criar fonte de dados externa para a fonte de dados do HADOOP | X| X|
 |Criar fonte de dados externa para o Armazenamento de Blobs do Azure | X| X|
 |Criar tabela externa em um pool de dados do SQL Server | X| |
 |Criar tabela externa em um pool de armazenamento do SQL Server | X| |
-|Expandir execução de consulta | X| X|
+|Expandir execução de consulta | X| X (somente Windows) |
 
 > [!NOTE]
 >A tabela não descreve a funcionalidade disponível na última CTP do [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]. Para conhecer os recursos disponíveis, confira as notas sobre a versão. Para obter mais informações sobre conexões usando o conector genérico ODBC, acesse nosso [Guia de instruções para configurar os tipos genéricos de ODBC](polybase-configure-odbc-generic.md).

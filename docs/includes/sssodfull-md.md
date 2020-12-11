@@ -1,1 +1,1 @@
-Pool de SQL sem servidor (versão prévia) no Azure Synapse Analytics
+Pool de SQL sem servidor no Azure Synapse Analytics

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73f9f3a39f5a30fe611c5ec839d8d2c7172206d8
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778435"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761504"
 ---
 # <a name="azure-data-studio-extensibility"></a>Extensibilidade do Azure Data Studio
 
@@ -32,6 +32,9 @@ Alguns dos principais pontos de extensibilidade são:
 ## <a name="visual-studio-code-extensibility-apis"></a>APIs de extensibilidade do Visual Studio Code
 
 Como a plataforma principal do Azure Data Studio se baseia no Visual Studio Code, detalhes sobre as APIs de extensibilidade do Visual Studio Code são encontrados na documentação de [Criação de Extensão](https://code.visualstudio.com/docs/extensions/overview) e [API de Extensão](https://code.visualstudio.com/docs/extensionAPI/overview) no site do Visual Studio Code.
+
+> [!NOTE]
+>  As versões do Azure Data Studio estão alinhadas com uma versão recente do VS Code. No entanto, o mecanismo do VS Code incluído pode não corresponder à versão do VS Code atual. Por exemplo, em novembro de 2020, o mecanismo do VS Code no Azure Data Studio é 1.48, e a versão do VS Code atual é 1.51.  A mensagem de erro "Não foi possível instalar a extensão '<name>' porque ela não é compatível com VS Code<version>" ao instalar uma extensão é causada por uma extensão que contém uma versão mais recente do mecanismo do VS Code definida no manifesto do pacote (`package.json`). Você pode verificar a versão do mecanismo do VS Code no Azure Data Studio por meio do menu **Ajuda** em **Sobre**.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>Gerenciar contribuições do painel da guia Painéis
 

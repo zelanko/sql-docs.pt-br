@@ -18,18 +18,18 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: 0f0ed0ee3619abae19df06879fbfd1d60b22a0b0
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 1202cb470530941b23c3e0a742ea9a1715170784
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688426"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523061"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Adiciona uma assinatura digital a um procedimento armazenado, função, assembly ou gatilho. Além disso, adiciona uma referenda a um procedimento armazenado, uma função, um assembly ou um gatilho.
+Adiciona uma assinatura digital a um procedimento armazenado, uma função, um assembly ou um gatilho DML. Além disso, adiciona uma referenda a um procedimento armazenado, uma função, um assembly ou um gatilho DML.
 
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -83,7 +83,7 @@ O módulo que é assinado ou referendado e o certificado ou chave assimétrica u
 > [!CAUTION]
 > A assinatura de módulo só deve ser usada para conceder permissões, e nunca para negar ou revogar permissões.  
   
- Funções embutidas com valor de tabela não podem ser assinadas.  
+ Os gatilhos DDL (linguagem de definição de dados) e as funções com valor de tabela embutidas não podem ser assinados.  
   
  As informações sobre assinaturas são visíveis na exibição do catálogo sys.crypt_properties.  
   

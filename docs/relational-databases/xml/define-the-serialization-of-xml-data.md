@@ -2,7 +2,7 @@
 title: Definir a serialização de dados XML| Microsoft Docs
 description: Saiba mais sobre as regras usadas ao serializar dados XML no SQL Server.
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/07/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 67201804cc1f93a9595ff46c02a57da7ea6e6109
+ms.sourcegitcommit: 68063a1857f40487e6a2028de25990728419e3a7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738442"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96749698"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir a serialização de dados XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "85738442"
   
  Por exemplo:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
  Este é o resultado:  
   
-```  
+```console
 0xFFFE3C0094032F003E00  
 ```  
   
@@ -49,13 +49,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Por exemplo:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  Este é o resultado:  
   
-```  
+```console
 <Δ/>  
 ```  
   
@@ -63,7 +63,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Por exemplo:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
@@ -77,21 +77,21 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Definição da entidade de caracteres XML durante a serialização  
  Cada estrutura XML serializada deve poder ser reanalisada. Portanto alguns caracteres precisam ser serializados de uma maneira de definição de entidade para preservar a capacidade de viagem de ida e volta dos caracteres durante a fase de normalização do analisador XML. No entanto a entidade de alguns caracteres precisa ser definida para que o documento seja bem formado e portanto possa ser analisado. As regras de definição de entidade aplicáveis durante a serialização são as seguintes:  
   
--   Os caracteres &, \<, and > são sempre definidos como &amp;, &lt; e &gt; respectivamente, se ocorrem dentro de um valor de atributo ou conteúdo de elemento.  
+-   Os caracteres &, \<, and > são sempre definidos como `&amp;`, `&lt;` e `&gt;` respectivamente, se ocorrem dentro de um valor de atributo ou conteúdo de elemento.  
   
--   Como o SQL Server usa aspas (U+0022) para incluir valores de atributos, a entidade de aspas em valores de atributos é definida como &quot;.  
+-   Como o SQL Server usa aspas (U+0022) para incluir valores de atributos, a entidade de aspas em valores de atributos é definida como `&quot;`.  
   
--   A entidade de um par substituto é definida como uma referência de caractere numérico único na conversão no servidor apenas. Por exemplo, a entidade do par substituto U+D800 U+DF00 é definida como a referência de caractere numérico &\#x00010300;.  
+-   A entidade de um par substituto é definida como uma referência de caractere numérico único na conversão no servidor apenas. Por exemplo, a entidade do par alternativo U+D800 U+DF00 é definida como a referência de caractere numérico `&#x00010300;`.  
   
--   Para proteger uma TABULAÇÃO (U+0009) e um avanço de linha (LF, U+000A) contra normalização durante a análise, suas entidades são definidas como suas referências de caractere numérico &\#x9; e &\#xA; respectivamente, dentro de valores de atributos.  
+-   Para proteger uma TABULAÇÃO (U+0009) e um avanço de linha (LF, U+000A) contra normalização durante a análise, suas entidades são definidas como suas referências de caractere numérico `&#x9;` e `&#xA;`, respectivamente, dentro de valores de atributos.  
   
--   Para evitar que um retorno de carro (CR, U+000D) seja normalizado durante a análise, a entidade é definida como sua referência de caractere numérico, &\#xD; dentro dos valores de atributos e do conteúdo de elemento.  
+-   Para evitar que um retorno de carro (CR, U+000D) seja normalizado durante a análise, a entidade é definida como sua referência de caractere numérico, `&#xD;`; dentro dos valores de atributos e do conteúdo de elemento.  
   
 -   Para proteger nós de texto que contêm apenas espaço em branco, a entidade de um dos caracteres de espaço em branco, geralmente o último, é definida como sua referência de caractere numérico. Dessa maneira, a reanálise preserva o nó de texto do caractere em branco, independentemente da configuração do tratamento do espaço em branco durante a análise.  
   
  Por exemplo:  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
@@ -100,7 +100,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  Este é o resultado:  
   
-```  
+```console
 <a a="  
     𐌀>">     
 </a>  
@@ -108,13 +108,13 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  Se não desejar aplicar a regra de proteção do último caractere em branco, você poderá usar a opção explícita 1 de CONVERT ao converter de **xml** em uma cadeia de caracteres ou em um tipo binário. Por exemplo, para evitar a definição de entidade, você pode fazer o seguinte:  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  Observe que, o [Método query() (tipo de dados xml)](../../t-sql/xml/query-method-xml-data-type.md) resulta em uma instância de tipo de dados xml. Portanto qualquer resultado do método **query()** que seja convertido em um tipo de cadeia de caracteres ou binário tem a entidade definida de acordo com as regras descritas anteriormente. Para obter os valores da cadeia de caracteres que não têm a entidade definida, use o [Método value() (tipo de dados xml)](../../t-sql/xml/value-method-xml-data-type.md) . O seguinte é um exemplo de uso do método **query()** :  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
@@ -122,19 +122,19 @@ select @x.query('/a/text()')
   
  Este é o resultado:  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
  O seguinte é um exemplo de uso do método **value()** :  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
  Este é o resultado:  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
@@ -143,7 +143,7 @@ This example contains an entitized char: <.
   
  Por exemplo, o valor de xs:double 1.34e1 é serializado como 13.4 conforme mostrado no exemplo a seguir:  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
@@ -153,6 +153,5 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
 ## <a name="see-also"></a>Consulte Também  
  [Regras de conversão de tipo em XQuery](../../xquery/type-casting-rules-in-xquery.md)   
- [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+ 

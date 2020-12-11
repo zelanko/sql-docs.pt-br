@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 728650497849454ab7c30dae04317a750665a26c
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867964"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442968"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
 
@@ -110,11 +110,11 @@ A RLS permite dois tipos de predicado de segurança.
   
  Além disso, as seguintes permissões são necessárias para cada predicado que é adicionado:  
   
-- Permissões**SELECT** e **REFERENCES** na função que está sendo usada como um predicado.  
+- Permissões **SELECT** e **REFERENCES** na função que está sendo usada como um predicado.  
   
-- Permissão**REFERENCES** na tabela de destino que está sendo associada à política.  
+- Permissão **REFERENCES** na tabela de destino que está sendo associada à política.  
   
-- permissão**REFERENCES** em todas as colunas da tabela de destino usadas como argumentos.  
+- permissão **REFERENCES** em todas as colunas da tabela de destino usadas como argumentos.  
   
  Diretivas de segurança se aplicam a todos os usuários, incluindo usuários de dbo do banco de dados. Os usuários do dbo podem alterar ou descartar as políticas de segurança, mas suas alterações às políticas de segurança podem ser auditadas. Se os usuários com altos privilégios, como sysadmin ou db_owner precisarem ver todas as linhas para solucionar problemas ou validar dados, a política de segurança deverá ser escrita para permitir isso.  
   
@@ -208,12 +208,12 @@ CREATE TABLE Sales
  Preencha a tabela com seis linhas de dados, mostrando três pedidos para cada representante de vendas.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -302,8 +302,8 @@ Esse pequeno exemplo cria três usuários e uma tabela externa com seis linhas. 
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-1. É necessário ter um pool de SQL. Confira [Criar um pool de SQL do Synapse](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. O servidor que hospeda o pool de SQL precisa ser registrado no AAD, e você precisa ter uma conta de armazenamento do Azure com permissões de Colaborador do Blog de Armazenamento. Siga as etapas descritas [aqui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. Você deve ter um pool de SQL dedicado. Confira [Criar um pool de SQL dedicado](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. O servidor que hospeda o pool de SQL dedicado precisa ser registrado no AAD, e você precisa ter uma conta de armazenamento do Azure com permissões de Colaborador do Blog de Armazenamento. Siga as etapas descritas [aqui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Crie um sistema de arquivos para a sua conta do Armazenamento do Azure. Use o Gerenciador de Armazenamento para ver sua conta de armazenamento. Clique com o botão direito do mouse em contêineres e selecione *Criar sistema de arquivos*.  
 
 Depois de preparar os pré-requisitos, crie três contas de usuário que demonstrarão diferentes funcionalidades de acesso.
@@ -317,10 +317,10 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
-CREATE USER Manager FOR LOGIN Manager;  
-CREATE USER Sales1  FOR LOGIN Sales1;  
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+--run in master and your dedicated SQL pool database
+CREATE USER Manager FOR LOGIN Manager;  
+CREATE USER Sales1  FOR LOGIN Sales1;  
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 Crie uma tabela para armazenar dados.  

@@ -21,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d282a1dca21d2b76925c12dddf3002d159aaec64
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f7911d4f096c8b90b2ee01341405acd561c46ec9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116521"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443127"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,7 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` requer 
 |IsXTPSupported|Indica se o banco de dados dá suporte a OLTP in-memory, ou seja, criação e uso de tabelas com otimização de memória e módulos compilados nativamente.<br /><br /> Específico ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported não depende da existência de um grupo de arquivos MEMORY_OPTIMIZED_DATA, que é necessário para a criação de objetos OLTP in-memory.|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada inválida, um erro ou não aplicável<br /><br /> Tipo de dados base: **int**|  
 |LastGoodCheckDbTime|A data e hora do último DBCC CHECKDB bem-sucedido executado no banco de dados especificado.<sup>1</sup> Se DBCC CHECKDB não tiver sido executado em um banco de dados, 1900-01-01 00:00:00.000 será retornado.|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do SP2 em diante.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] a partir da CU9.</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] ou posterior.</br>Banco de Dados SQL do Azure.<br/><br/>Um valor datetime<br /><br /> NULL: Entrada inválida<br /><br /> Tipo de dados base: **datetime**| 
 |LCID|O LCID (identificador de localidade) do Windows da ordenação.|Valor LCID (em formato decimal).<br /><br /> Tipo de dados base: **int**|  
-|MaxSizeInBytes|Tamanho máximo do banco de dados, em bytes.|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[Banco de Dados SQL do Azure e SQL DW(Azure Synapse Analytics)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) – o valor é baseado no SLO, a menos que o armazenamento adicional tenha sido comprado.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) – o valor está em incrementos de 1 GB até o tamanho máximo.<br /><br />NULL: O banco de dados não foi iniciado<br /><br /> Tipo de dados base: **bigint**|  
+|MaxSizeInBytes|Tamanho máximo do banco de dados, em bytes.|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[Banco de Dados SQL do Azure e Azure Synapse Analytics](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) – o valor é baseado no SLO, a menos que armazenamento adicional tenha sido comprado.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) – o valor está em incrementos de 1 GB até o tamanho máximo.<br /><br />NULL: O banco de dados não foi iniciado<br /><br /> Tipo de dados base: **bigint**|  
 |Recuperação|Modelo de recuperação de banco de dados|FULL: Modelo de recuperação completa<br /><br /> BULK_LOGGED: Modelo registrado em log em massa<br /><br /> SIMPLE: Modelo de recuperação simples<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |ServiceObjective|Descreve o nível de desempenho do banco de dados no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ou [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Um dos seguintes:<br /><br /> Nulo: banco de dados não iniciado<br /><br /> Compartilhado (para edições Web/Business)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Sistema (para o banco de dados mestre)<br /><br /> Tipo de dados base: **nvarchar(32)**|  
 |ServiceObjectiveId|O id do objetivo de serviço em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier** que identifica o objetivo de serviço.|  

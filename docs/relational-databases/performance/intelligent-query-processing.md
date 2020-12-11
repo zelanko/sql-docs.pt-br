@@ -5,23 +5,23 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+ms.openlocfilehash: d1171d4f3570c6bcfcf222043c5036de15c98241
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134864"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595137"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 A família de recursos de IQP (processamento de consulta inteligente) inclui recursos de amplo impacto que melhoram o desempenho de cargas de trabalho existentes com esforço mínimo de implementação na adoção. 
 
@@ -40,8 +40,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 A tabela a seguir detalha todos os recursos de processamento de consulta inteligente, juntamente com todos os requisitos para o nível de compatibilidade do banco de dados.
 
-| **Recurso IQP** | **Com suporte no Banco de Dados SQL do Azure** | **Com suporte no SQL Server** |**Descrição** |
-| --- | --- | --- |--- |
+| **Recurso IQP** | **Com suporte no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e na [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]** | **Com suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Descrição** |
+| ---------------- | ------- | ------- | ---------------- |
 | [Junções adaptáveis (Modo de Lote)](#batch-mode-adaptive-joins) | Sim, no nível de compatibilidade 140| Sim, começando no [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] no nível de compatibilidade 140|As junções adaptáveis selecionam automaticamente um tipo de junção durante o runtime com base nas linhas de entrada reais.|
 | [Distinção de contagem aproximada](#approximate-query-processing) | Sim| Sim, no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante|Forneça o COUNT DISTINCT aproximado para cenários de big data com o benefício de alto desempenho e baixo volume de memória. |
 | [Modo de Lote no Rowstore](#batch-mode-on-rowstore) | Sim, no nível de compatibilidade 150| Sim, no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante no nível de compatibilidade 150|Forneça o modo de lote para cargas de trabalho de DW relacionais vinculados à CPU sem exigir índices columnstore.  | 
@@ -136,7 +136,7 @@ Para habilitar os comentários de concessão de memória em modo de linha no [!I
 
 A atividade de comentários de concessão de memória de modo de linha ficará visível por meio do XEvent **memory_grant_updated_by_feedback**. 
 
-Começando com comentários de concessão de memória no modo de linha, serão exibidos dois novos atributos de plano de consulta para planos de pós-execução reais: ***IsMemoryGrantFeedbackAdjusted*** e ***LastRequestedMemory***, que foram adicionados ao elemento XML *MemoryGrantInfo* do plano de consulta. 
+Começando com os comentários de concessão de memória em modo de linha, dois novos atributos de plano de consulta serão mostrados para planos pós-execução reais: **_IsMemoryGrantFeedbackAdjusted_* _ e _*_LastRequestedMemory_*_, que são adicionados ao elemento XML de plano de consulta _MemoryGrantInfo*. 
 
 *LastRequestedMemory* mostra a memória concedida em quilobytes (KB) na execução de consulta anterior. O atributo *IsMemoryGrantFeedbackAdjusted* permite que você verifique o estado dos comentários de concessão de memória para a instrução dentro de um plano de execução de consulta real. Os valores apresentados nesse atributo são os seguintes:
 
@@ -319,14 +319,14 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT  O_OrderKey,
+SELECT O_OrderKey,
     O_CustKey,
     O_OrderStatus,
     L_QUANTITY
 FROM    
     ORDERS,
     @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
+WHERE    O_ORDERKEY    =    L_ORDERKEY
     AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
@@ -391,7 +391,6 @@ Defina o banco de dados para o nível de compatibilidade 150. Nenhuma outra alte
 Mesmo que uma consulta não acesse nenhuma tabela com índices columnstore, o processador de consultas, usando heurística, decidirá se deve considerar o modo de lote. A heurística consiste destas verificações:
 1. Uma verificação inicial dos tamanhos de tabela, operadores usados e cardinalidades estimadas na consulta de entrada.
 2. Pontos de verificação adicionais à medida que o otimizador descobre planos novos e mais baratos para a consulta. Se esses planos alternativos não usarem o modo de lote de forma significativa, o otimizador parará de explorar as alternativas de modo de lote.
-
 
 Se o modo de lote em rowstore for usado, você verá o modo de execução real como o **modo de lote** no plano de consulta. O operador de verificação usa o modo de lote em heaps em discos e índices de árvore B. Essa verificação do modo de lote pode avaliar os filtros de bitmap do modo de lote. Você também poderá ver outros operadores de modo de lote no plano. Os exemplos são junções hash, agregações baseadas em hash, classificações, agregações de janela, filtros, concatenações e operadores escalares de computação.
 

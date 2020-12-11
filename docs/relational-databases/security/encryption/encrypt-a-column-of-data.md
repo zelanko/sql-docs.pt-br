@@ -18,18 +18,18 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 4d1fefc10f19a4b8fda411337cd4b35a6f8f2939
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439330"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442978"
 ---
 # <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  Este artigo descreve como criptografar uma coluna de dados usando uma criptografia simétrica no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Às vezes, isso é conhecido como criptografia no nível de coluna, ou criptografia no nível da célula. Este recurso está na versão prévia do SQL DW (Azure Synapse Analytics)
+  Este artigo descreve como criptografar uma coluna de dados usando uma criptografia simétrica no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Às vezes, isso é conhecido como criptografia no nível de coluna, ou criptografia no nível da célula. Este recurso está na versão prévia do Azure Synapse Analytics
 
 ## <a name="security"></a>Segurança  
   
@@ -57,11 +57,11 @@ Sempre faça backup da sua chave mestra de banco de dados. Para obter mais infor
 
 ### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Para criptografar uma coluna de dados usando a criptografia simétrica que inclui um autenticador  
   
-1. No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. Na barra Padrão, clique em **Nova Consulta** .  
+2. Na barra Padrão, clique em **Nova Consulta**.  
   
-3. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar** .  
+3. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
 
     ```sql
     USE AdventureWorks2012;  
@@ -115,11 +115,11 @@ Sempre faça backup da sua chave mestra de banco de dados. Para obter mais infor
   
 ### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para criptografar uma coluna de dados usando uma criptografia simétrica simples  
   
-1. No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. Na barra Padrão, clique em **Nova Consulta** .  
+2. Na barra Padrão, clique em **Nova Consulta**.  
   
-3. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar** .  
+3. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```sql
     USE AdventureWorks2012;  

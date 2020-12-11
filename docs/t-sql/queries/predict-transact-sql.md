@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116281"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523045"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -120,9 +120,9 @@ O parâmetro DATA é usado para especificar os dados usados para previsão ou po
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> O argumento `RUNTIME = ONNX` está disponível somente na [Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) e no [SQL do Azure no Edge](/azure/sql-database-edge/onnx-overview).
+> O argumento `RUNTIME = ONNX` só está disponível na [Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview), [SQL do Azure no Edge](/azure/sql-database-edge/onnx-overview) e [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is).
 
-Indica o mecanismo de machine learning usado para a execução do modelo. O valor do parâmetro `RUNTIME` sempre será `ONNX`. O parâmetro é necessário para o SQL do Azure no Edge. Na Instância Gerenciada de SQL do Azure, o parâmetro é opcional e usado somente com modelos ONNX.
+Indica o mecanismo de machine learning usado para a execução do modelo. O valor do parâmetro `RUNTIME` sempre será `ONNX`. O parâmetro é obrigatório para o SQL do Azure no Edge e o Azure Synapse Analytics. Na Instância Gerenciada de SQL do Azure, o parâmetro é opcional e usado somente com modelos ONNX.
 
 **WITH ( <result_set_definition> )**
 
@@ -186,7 +186,7 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,6 +216,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 Um caso de uso comum para a previsão é gerar uma pontuação para dados de entrada e inserir os valores previstos em uma tabela. O seguinte exemplo presume que o aplicativo de chamada usa um procedimento armazenado para inserir uma linha que contém o valor previsto em uma tabela:
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -223,6 +225,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - Os resultados de `PREDICT` são armazenados em uma tabela chamada PredictionResults. 
 - O modelo é armazenado como uma coluna `varbinary(max)` na tabela chamada **Modelos**. Informações adicionais, como ID e descrição, poderão ser salvas na tabela para identificar o modelo.

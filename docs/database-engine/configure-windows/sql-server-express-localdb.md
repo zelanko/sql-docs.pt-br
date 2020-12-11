@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f290da98335aaf46c3c0d12c94d265f14dc1e2bd
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669487"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535280"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -64,6 +64,10 @@ O utilitário `SqlLocalDb` pode criar novas instâncias do LocalDB, iniciar e in
 A ordenação de instâncias do LocalDB foi definida como `SQL_Latin1_General_CP1_CI_AS` e não pode ser alterada. Normalmente há suporte para ordenações nos níveis de banco de dados, de coluna e de expressão. Os bancos de dados independentes seguem os metadados e as regras de ordenações `tempdb` definidas por [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md).
 
 ### <a name="restrictions"></a>Restrições
+
+- O LocalDB não pode ser corrigido além dos Service Packs. CUs e atualizações de segurança não podem ser aplicadas manualmente e não serão aplicadas por meio do Windows Update, Windows Update para Empresas ou outros métodos.
+
+- O LocalDB não pode ser gerenciado remotamente por meio do SQL Management Studio.
 
 - O LocalDB não pode ser um assinante de replicação de mesclagem.
 

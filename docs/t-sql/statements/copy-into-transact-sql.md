@@ -1,5 +1,5 @@
 ---
-title: COPY INTO (Transact-SQL) (versão prévia)
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use a instrução COPY no Azure Synapse Analytics para carregar dados de contas de armazenamento externas.
 ms.date: 09/25/2020
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300285"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96787947"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -45,7 +45,7 @@ Visite a seguinte documentação para obter exemplos abrangentes e guias de iní
 
 - [Início Rápido: dados de carregamento em massa usando a instrução COPY](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [Início Rápido: exemplos usando a instrução COPY e métodos de autenticação compatíveis](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Início Rápido: como criar a instrução COPY usando uma interface do usuário avançada do Synapse Studio (versão prévia do workspace)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Início Rápido: criar a instrução COPY usando uma interface do usuário avançada do Synapse Studio](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>Sintaxe  
 
@@ -141,9 +141,9 @@ Vários locais de arquivo só podem ser especificados na mesma conta de armazena
 |  **Armazenamento de Blobs do Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: O ponto de extremidade .blob ( **.blob** .core.windows.net) no seu caminho de localização externa é necessário nesse método de autenticação.
+1: O ponto de extremidade .blob ( **.blob**.core.windows.net) no seu caminho de localização externa é necessário nesse método de autenticação.
 
-2: O ponto de extremidade .dfs ( **.dfs** .core.windows.net) no seu caminho de localização externa é necessário nesse método de autenticação.
+2: O ponto de extremidade .dfs ( **.dfs**.core.windows.net) no seu caminho de localização externa é necessário nesse método de autenticação.
 
 
 > [!NOTE]  
@@ -179,7 +179,7 @@ Vários locais de arquivo só podem ser especificados na mesma conta de armazena
   - Funções de RBAC mínimas necessárias: colaborador de dados do blob de armazenamento ou proprietário de dados do blob de armazenamento para o usuário do AAD
 
 *ERRORFILE = local do diretório*</br>
-*ERRORFILE* aplica-se somente ao CSV. Especifica o diretório na instrução COPY em que as linhas rejeitadas e o arquivo de erro correspondente devem ser gravados. O caminho completo da conta de armazenamento ou o caminho relativo do contêiner pode ser especificado. Se o caminho especificado não existir, um será criado em seu nome. Um diretório filho é criado com o nome " _rejectedrows". O caractere "_ " garante que o diretório tenha escape para outro processamento de dados, a menos que explicitamente nomeado no parâmetro de localização. 
+*ERRORFILE* aplica-se somente ao CSV. Especifica o diretório na instrução COPY em que as linhas rejeitadas e o arquivo de erro correspondente devem ser gravados. O caminho completo da conta de armazenamento ou o caminho relativo do contêiner pode ser especificado. Se o caminho especificado não existir, um será criado em seu nome. Um diretório filho é criado com o nome "_rejectedrows". O caractere "_ " garante que o diretório tenha escape para outro processamento de dados, a menos que explicitamente nomeado no parâmetro de localização. 
 
 Dentro desse diretório, há uma pasta criada com base na hora do envio do carregamento no formato YearMonthDay – HourMinuteSecond (por exemplo, 20180330-173205). Nessa pasta, dois tipos de arquivos são gravados, o arquivo de motivo (erro) e o arquivo de dados (linha), cada um anexado previamente com o queryID, o distributionID e um GUID do arquivo. Já que os dados e o motivo estão em arquivos separados, arquivos correspondentes têm um prefixo correspondente.
 
@@ -262,7 +262,7 @@ DATEFORMAT aplica-se somente ao CSV e especifica o formato de data do mapeamento
 *ENCODING* aplica-se somente ao CSV. O padrão é UTF8. Especifica o padrão da codificação de dados para os arquivos carregados pelo comando COPY. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT especifica se os valores de identidade no arquivo de dados importado devem ser usados para a coluna de identidade. Se o valor de IDENTITY_INSERT for OFF (padrão), os valores de identidade para essa coluna serão verificados, mas não importados. O SQL DW atribuirá automaticamente valores exclusivos com base nos valores de semente e incremento especificados durante a criação da tabela. Observe o seguinte comportamento com o comando COPY:
+IDENTITY_INSERT especifica se os valores de identidade no arquivo de dados importado devem ser usados para a coluna de identidade. Se o valor de IDENTITY_INSERT for OFF (padrão), os valores de identidade para essa coluna serão verificados, mas não importados. O Azure Synapse Analytics atribuirá automaticamente valores exclusivos com base nos valores de semente e incremento especificados durante a criação da tabela. Observe o seguinte comportamento com o comando COPY:
 
 - Se o valor de IDENTITY_INSERT for OFF e a tabela tiver uma coluna de identidade
   - Deverá ser especificada uma lista de colunas que não mapeia um campo de entrada para a coluna de identidade.
@@ -433,17 +433,6 @@ Não há necessidade de dividir arquivos Parquet e ORC, porque o comando COPY di
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Há alguma limitação quanto ao número ou ao tamanho dos arquivos?
 Não há limitações quanto ao número ou tamanho dos arquivos; no entanto, para obter o melhor desempenho, recomendamos que os arquivos tenham pelo menos 4 MB.
 
-### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Há alguma limitação quanto ao uso de COPY em workspaces do Synapse (versão prévia)?
-
-A autenticação com MSI (Identidade de Serviço Gerenciada) não é compatível com a instrução COPY nem com PolyBase (inclusive quando usada em pipelines). Você pode receber uma mensagem de erro semelhante a:
-
-*com.microsoft.sqlserver.jdbc.SQLServerException: Identidade de Serviço Gerenciada não habilitada neste servidor. Habilite a Identidade de Serviço Gerenciada e tente novamente.*
-
-A autenticação com MSI é necessária quando a conta de armazenamento está associada a uma VNet. Você deverá usar a inserção BCP/Cópia em massa para carregar dados em vez de COPY ou PolyBase se a conta de armazenamento estiver conectada a uma VNet.
-
-Essa limitação é aplicável apenas a pools de SQL pertencentes a um workspace do Synapse (versão prévia). Habilitaremos o suporte a MSI em workspaces do Synapse em uma versão futura. 
-
-Envie comentários ou problemas para a seguinte lista de distribuição: sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>Confira também  
 

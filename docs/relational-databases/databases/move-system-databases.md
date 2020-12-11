@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194993"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523055"
 ---
 # <a name="move-system-databases"></a>Mover bancos de dados do sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92194993"
 >  Se você mover um banco de dados do sistema e, posteriormente, recriar o banco de dados mestre, será necessário mover o banco de dados do sistema novamente porque a operação de recriação instala todos os bancos de dados do sistema em seus locais padrão.  
 
 > [!IMPORTANT]  
->  Após a movimentação dos arquivos, a conta de serviço do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] deve ter permissão para acessar os arquivos no novo local de pasta do arquivo.
+>  Após a movimentação dos arquivos, a conta de serviço do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] deve ter permissão para acessar os arquivos no novo local de pasta de arquivo. Para obter mais informações, veja [Configurar permissões do sistema de arquivos para acesso ao Mecanismo de Banco de Dados](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Realocação planejada e procedimento de manutenção de disco agendado  
@@ -145,7 +145,7 @@ ms.locfileid: "92194993"
 ##  <a name="moving-the-master-database"></a><a name="master"></a> Movendo o banco de dados mestre  
  Para mover o banco de dados mestre, siga estas etapas.  
   
-1.  Pelo menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**, aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
+1.  Pelo menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**, aponte para **Ferramentas de Configuração** e clique em **SQL Server Configuration Manager**.  
   
 2.  No nó **Serviços do SQL Server** , clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, **SQL Server [MSSQLSERVER]** ) e escolha **Propriedades**.  
   

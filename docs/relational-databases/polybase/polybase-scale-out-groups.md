@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523831"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535270"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escala horizontal do PolyBase
 
@@ -35,11 +35,11 @@ Veja [Introdução ao PolyBase](./polybase-guide.md) e [Guia do PolyBase](../../
   
 ## <a name="head-node"></a>Nó de cabeçalho  
 
-O nó de cabeçalho contém a instância do SQL Server para a qual as consultas do PolyBase são enviadas. Cada grupo do PolyBase pode ter apenas um nó de cabeçalho. Um nó de cabeçalho é um grupo lógico do Mecanismo de Banco de Dados do SQL, do Mecanismo de PolyBase e do Serviço de Movimentação de Dados de PolyBase na instância do SQL Server.
+O nó de cabeçalho contém a instância do SQL Server para a qual as consultas do PolyBase são enviadas. Cada grupo do PolyBase pode ter apenas um nó de cabeçalho. Um nó de cabeçalho é um grupo lógico do Mecanismo de Banco de Dados do SQL Server, do Mecanismo de PolyBase e do Serviço de Movimentação de Dados PolyBase na instância do SQL Server. Com o SQL Server 2017 e 2016, o nó principal deve ser da Edição Enterprise. A partir do SQL Server 2019, o nó principal do PolyBase pode ser de uma edição Enterprise ou Standard.
   
-## <a name="compute-node"></a>Nó de computação  
+## <a name="compute-node"></a>Nó de computação
 
-Um nó de computação contém a instância do SQL Server que auxilia no processamento de consulta de escala horizontal de dados externos. Um nó de cabeçalho é um grupo lógico do SQL Server e do serviço de movimentação de dados de PolyBase na instância do SQL Server. Um grupo do PolyBase pode ter vários nós de computação. O nó principal e os nós de computação devem executar a mesma versão do SQL Server.
+Um nó de computação contém a instância do SQL Server que auxilia no processamento de consulta de escala horizontal de dados externos. Um nó de cabeçalho é um grupo lógico do SQL Server e do serviço de movimentação de dados de PolyBase na instância do SQL Server. Um grupo do PolyBase pode ter vários nós de computação. O nó principal e os nós de computação devem executar a mesma versão do SQL Server. A versão inicial do SQL Server 2016 permitia que os nós de computação fossem de uma edição Enterprise ou Standard. A partir do SQL Server 2016 SP1, todas as edições do SQL Server podem ser um nó de computação.
 
 ## <a name="scale-out-reads"></a>Leituras de expansão
 
