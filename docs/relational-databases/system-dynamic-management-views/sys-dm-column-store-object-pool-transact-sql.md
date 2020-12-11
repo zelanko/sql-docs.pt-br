@@ -14,12 +14,12 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ead8a41e3ac6aea721603df7bcf288dbcef80d0
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: e258c1b095c4b43ebf23957a721d40c5254d6edc
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329946"
 ---
 # <a name="sysdm_column_store_object_pool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 
@@ -32,19 +32,19 @@ ms.locfileid: "93036077"
 |**database_id**|INT|ID do banco de dados. Isso é exclusivo em uma instância de um banco de dados SQL Server ou um servidor de banco de dados SQL do Azure. |  
 |**object_id**|INT|A ID do objeto. O objeto é um dos object_types. | 
 |**index_id**|INT|ID do índice columnstore.|  
-|**partition_number**|bigint|Número de partição com base 1 no índice ou heap. Cada tabela ou exibição tem pelo menos uma partição.| 
+|**partition_number**|BIGINT|Número de partição com base 1 no índice ou heap. Cada tabela ou exibição tem pelo menos uma partição.| 
 |**column_id**|INT|ID da coluna columnstore. Isso é nulo para DELETE_BITMAP.| 
 |**row_group_id**|INT|ID do rowgroup.|
-|**object_type**|smallint|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
+|**object_type**|SMALLINT|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
 |**object_type_desc**|nvarchar(60)|COLUMN_SEGMENT-um segmento de coluna. `object_id` é a ID do segmento. Um segmento armazena todos os valores de uma coluna dentro de um rowgroup. Por exemplo, se uma tabela tiver 10 colunas, haverá 10 segmentos de coluna por rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY-um dicionário global que contém informações de pesquisa para todos os segmentos de coluna na tabela.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-um dicionário local associado a uma coluna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY-outra representação do dicionário global. Isso fornece uma pesquisa inversa de valor para dictionary_id. Usado para criar segmentos compactados como parte do movimento de tupla ou carregamento em massa.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP-um bitmap que controla as exclusões de segmento. Há um bitmap de exclusão por partição.|  
 |**access_count**|INT|Número de acessos de leitura ou gravação a este objeto.|  
-|**memory_used_in_bytes**|bigint|Memória usada por esse objeto no pool de objetos.|  
+|**memory_used_in_bytes**|BIGINT|Memória usada por esse objeto no pool de objetos.|  
 |**object_load_time**|DATETIME|Tempo de relógio para quando object_id foi trazido para o pool de objetos.|  
   
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
  
 ## <a name="see-also"></a>Consulte Também  
   

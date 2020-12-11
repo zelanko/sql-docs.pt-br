@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_optimizer_info (Transact-SQL)
-title: sys. dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9678d237863801b4ecad49167d1930a694859bae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 656655d56e7188cc92b92f22d0f0155f9a0166f1
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328664"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "89546590"
   Retorna estatísticas detalhadas sobre a operação do otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar esta exibição ao ajustar uma carga de trabalho para identificar problemas ou melhorias na otimização de consulta. Por exemplo, você pode usar o número total de otimizações, o valor de tempo decorrido e o valor de custo final para comparar as otimizações de consulta da carga de trabalho atual e quaisquer mudanças observadas durante o processo de ajuste. Alguns contadores fornecem dados que são relevantes apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uso de diagnóstico interno. Esses contadores são marcados como "Somente interno”.  
   
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_exec_query_optimizer_info**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
 |Name|Tipo de dados|Descrição|  
 |----------|---------------|-----------------|  
-|**neutraliza**|**nvarchar(4000)**|Nome do evento de estatísticas do otimizador.|  
+|**contador**|**nvarchar(4000)**|Nome do evento de estatísticas do otimizador.|  
 |**occurrence**|**bigint**|Número de ocorrências do evento de otimização para este contador.|  
 |**value**|**float**|Valor de propriedade médio por ocorrência de evento.|  
 |**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
@@ -46,10 +46,10 @@ ms.locfileid: "89546590"
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
     
 ## <a name="remarks"></a>Comentários  
- **Sys. dm_exec_query_optimizer_info** contém as seguintes propriedades (contadores). Todos os valores de ocorrência são cumulativos, e são definidos em 0 na reinicialização de sistema. Todos os valores dos campos de valores são definidos em NULL, na reinicialização de sistema. Todos os valores da coluna de valor especificam um uso médio do valor de ocorrência da mesma linha como o denominador no cálculo da média. Todas as otimizações de consulta são medidas quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o determina alterações no **dm_exec_query_optimizer_info**, incluindo consultas geradas pelo usuário e pelo sistema. A execução de um plano já armazenado em cache não altera valores em **dm_exec_query_optimizer_info**, somente otimizações são significativas.  
+ **Sys.dm_exec_query_optimizer_info** contém as seguintes propriedades (contadores). Todos os valores de ocorrência são cumulativos, e são definidos em 0 na reinicialização de sistema. Todos os valores dos campos de valores são definidos em NULL, na reinicialização de sistema. Todos os valores da coluna de valor especificam um uso médio do valor de ocorrência da mesma linha como o denominador no cálculo da média. Todas as otimizações de consulta são medidas quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o determina alterações no **dm_exec_query_optimizer_info**, incluindo consultas geradas pelo usuário e pelo sistema. A execução de um plano já armazenado em cache não altera valores em **dm_exec_query_optimizer_info**, somente otimizações são significativas.  
   
 |Contador|Ocorrência|Valor|  
 |-------------|----------------|-----------|  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_stats (Transact-SQL)
-title: sys. dm_exec_query_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2bca0c700f483aced7a4387885649cb0ac2e764
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3097ba3a920a049dd69b54a8a9f7b84638ff3fb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328023"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "89546574"
 Retorna estatísticas de desempenho de agregação de planos de consulta em cache no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A exibição contém uma linha por instrução de consulta dentro do plano em cache e o tempo de vida das linhas é ligado ao próprio plano. Quando um plano é removido do cache, as linhas correspondentes são eliminadas desta exibição.  
   
 > [!NOTE]
-> - Os resultados de **Sys. dm_exec_query_stats**  podem variar com cada execução, já que os dados refletem apenas as consultas concluídas e não os que ainda estão em andamento.
-> - Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_exec_query_stats**.    
+> - Os resultados de **Sys.dm_exec_query_stats**  podem variar com cada execução, já que os dados refletem apenas as consultas concluídas e não os que ainda estão em andamento.
+> - Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_exec_query_stats**.    
 
   
 |Nome da coluna|Tipo de dados|Descrição|  
@@ -104,18 +104,18 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 |**last_used_threads**|**bigint**|O número de threads paralelos usados quando este plano foi executado pela última vez. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
 |**min_used_threads**|**bigint**|O número mínimo de threads paralelos usados que esse plano já usou durante uma execução. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
 |**max_used_threads**|**bigint**|O número máximo de threads paralelos usados que esse plano já usou durante uma execução. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
-|**total_columnstore_segment_reads**|**bigint**|A soma total de segmentos columnstore lidos pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**last_columnstore_segment_reads**|**bigint**|O número de segmentos columnstore lidos pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**min_columnstore_segment_reads**|**bigint**|O número mínimo de segmentos columnstore já lidos pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**max_columnstore_segment_reads**|**bigint**|O número máximo de segmentos columnstore já lidos pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**total_columnstore_segment_skips**|**bigint**|A soma total de segmentos columnstore ignorada pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**last_columnstore_segment_skips**|**bigint**|O número de segmentos columnstore ignorados pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**min_columnstore_segment_skips**|**bigint**|O número mínimo de segmentos columnstore já ignorados pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
-|**max_columnstore_segment_skips**|**bigint**|O número máximo de segmentos columnstore já ignorados pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|
-|**total_spills**|**bigint**|O número total de páginas despejadas pela execução desta consulta desde sua compilação.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**last_spills**|**bigint**|O número de páginas despejadas na última vez em que a consulta foi executada.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**min_spills**|**bigint**|O número mínimo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
-|**max_spills**|**bigint**|O número máximo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
+|**total_columnstore_segment_reads**|**bigint**|A soma total de segmentos columnstore lidos pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
+|**last_columnstore_segment_reads**|**bigint**|O número de segmentos columnstore lidos pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
+|**min_columnstore_segment_reads**|**bigint**|O número mínimo de segmentos columnstore já lidos pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
+|**max_columnstore_segment_reads**|**bigint**|O número máximo de segmentos columnstore já lidos pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
+|**total_columnstore_segment_skips**|**bigint**|A soma total de segmentos columnstore ignorada pela consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
+|**last_columnstore_segment_skips**|**bigint**|O número de segmentos columnstore ignorados pela última execução da consulta. Não pode ser nulo.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
+|**min_columnstore_segment_skips**|**bigint**|O número mínimo de segmentos columnstore já ignorados pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|    
+|**max_columnstore_segment_skips**|**bigint**|O número máximo de segmentos columnstore já ignorados pela consulta durante uma execução. Não pode ser nulo.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|
+|**total_spills**|**bigint**|O número total de páginas despejadas pela execução desta consulta desde sua compilação.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
+|**last_spills**|**bigint**|O número de páginas despejadas na última vez em que a consulta foi executada.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
+|**min_spills**|**bigint**|O número mínimo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
+|**max_spills**|**bigint**|O número máximo de páginas que essa consulta já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a** partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
 |**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|Número total de leituras de servidor de página remota executadas por execuções deste plano desde sua compilação.<br /><br /> **Aplica-se a:** Hiperescala do banco de dados SQL do Azure |  
 |**last_page_server_reads**|**bigint**|Número de leituras de servidor de página remota executadas na última vez em que o plano foi executado.<br /><br /> **Aplica-se a:** Hiperescala do banco de dados SQL do Azure |  
@@ -127,7 +127,7 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
    
 ## <a name="remarks"></a>Comentários  
  As estatísticas na exibição são atualizadas quando uma consulta é concluída.  
@@ -174,12 +174,12 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Veja também  
 [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
-[sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
-[sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
-[sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[&#41;&#40;Transact-SQL de sys.dm_exec_sql_text ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[&#41;&#40;Transact-SQL de sys.dm_exec_query_plan ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[&#41;&#40;Transact-SQL de sys.dm_exec_procedure_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[&#41;&#40;Transact-SQL de sys.dm_exec_trigger_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 

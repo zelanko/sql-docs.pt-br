@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_current_snapshot (Transact-SQL)
-title: sys. dm_tran_current_snapshot (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_current_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 7509d595-c0e1-4237-a5ac-b41ad934544c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9785cf52937f2e8a6ec17489d4bedd0d4726149
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c1d6681ec21993481e7ff1c395b0ed2c61eb5190
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334412"
 ---
 # <a name="sysdm_tran_current_snapshot-transact-sql"></a>sys.dm_tran_current_snapshot (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Retorna uma tabela virtual que exibe todas as transações ativas no momento em que a transação de instantâneo atual tem início. Se a transação atual não for uma transação de instantâneo, essa função não retornará nenhuma linha. **Sys. dm_tran_current_snapshot** é semelhante a **Sys. dm_tran_transactions_snapshot**, exceto que **Sys. dm_tran_current_snapshot** retorna apenas as transações ativas para a transação de instantâneo atual.  
+  Retorna uma tabela virtual que exibe todas as transações ativas no momento em que a transação de instantâneo atual tem início. Se a transação atual não for uma transação de instantâneo, essa função não retornará nenhuma linha. **Sys.dm_tran_current_snapshot** é semelhante a **Sys.dm_tran_transactions_snapshot**, exceto que **Sys.dm_tran_current_snapshot** retorna apenas as transações ativas para a transação de instantâneo atual.  
   
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_tran_current_snapshot**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_tran_current_snapshot**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ sys.dm_tran_current_snapshot
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa um cenário de teste no qual quatro transações simultâneas, cada uma identificada por um XSN (número de sequência de transação), estão sendo executadas em um banco de dados no qual as opções ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT estão definidas como ON. As seguintes transações estão sendo executadas:  

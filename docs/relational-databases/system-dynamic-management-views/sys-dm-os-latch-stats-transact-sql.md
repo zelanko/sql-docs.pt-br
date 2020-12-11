@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_latch_stats (Transact-SQL)
-title: sys. dm_os_latch_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e4e29a7e416a5c3aebb109c871af00bbd31871a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: abb813e008fdf00e7094ce59000f07be8da6bf25
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321882"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548506"
 Retorna as informações sobre todas as esperas de trava organizadas por classe. 
   
 > [!NOTE]  
-> Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_os_latch_stats**.  
+> Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_os_latch_stats**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +44,7 @@ Retorna as informações sobre todas as esperas de trava organizadas por classe.
   
 ## <a name="permissions"></a>Permissões  
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
   
 ## <a name="remarks"></a>Comentários  
  sys.dm_os_latch_stats pode ser usado para identificar a origem de uma contenção de travamento, examinando os números e os tempos de espera relativos para as diferentes classes de trava. Em algumas situações, talvez seja possível resolver ou reduzir contenção de trava. Entretanto, pode haver situações em que seja necessário contatar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Serviço de Atendimento ao Cliente.  
@@ -101,7 +101,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Usada para sincronizar operações de backup diferencial com DBCC.|  
 |BACKUP_OPERATION|Usada para a sincronização da estrutura de dados interna dentro de uma operação de backup, tal como banco de dados, log ou backup de arquivo.|  
 |BACKUP_FILE_HANDLE|Usada para sincronizar operações de abertura de arquivos durante uma operação de restauração.|  
-|BUFFER|Usada para sincronizar o acesso a curto prazo a páginas de banco de dados. Uma trava de buffer é necessária antes de ler ou modificar qualquer página de banco de dados. A contenção da trava de buffer pode indicar vários problemas, inclusive hotpages e E/S lentas.<br /><br /> Essa classe de trava abrange todos os possíveis usos de travas de página. sys. dm_os_wait_stats faz uma diferença entre as esperas de trava de página que são causadas por operações de e/s e operações de leitura e gravação na página.|  
+|BUFFER|Usada para sincronizar o acesso a curto prazo a páginas de banco de dados. Uma trava de buffer é necessária antes de ler ou modificar qualquer página de banco de dados. A contenção da trava de buffer pode indicar vários problemas, inclusive hotpages e E/S lentas.<br /><br /> Essa classe de trava abrange todos os possíveis usos de travas de página. sys.dm_os_wait_stats faz uma diferença entre as esperas de trava de página que são causadas por operações de e/s e operações de leitura e gravação na página.|  
 |BUFFER_POOL_GROW|Usada para a sincronização do gerenciador de buffer interno durante as operações de geração de pools de buffers.|  
 |DATABASE_CHECKPOINT|Usada para serializar pontos de verificação dentro de um banco de dados.|  
 |CLR_PROCEDURE_HASHTABLE|Somente para uso interno.|  

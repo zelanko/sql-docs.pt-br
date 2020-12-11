@@ -23,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5419919b14c15615cb84d124387c98e9ba2e90a5
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 1f905eed2d4dfdbbd7167171282922739978d386
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332956"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "91834435"
 |**softnuma_configuration_desc**|**nvarchar(60)**|**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posteriores.<br /><br /> OFF = o recurso soft-NUMA está desativado<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina automaticamente os tamanhos de nó numa para Soft-numa<br /><br /> MANUAL = soft-NUMA configurado manualmente|
 |**process_physical_affinity**|**nvarchar (3072)** |**Aplica-se a:** A partir do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] .<br /><br />Informações que ainda são fornecidas. |
 |**sql_memory_model**|**int**|**Aplica-se a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e posterior.<br /><br />Especifica o modelo de memória usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alocar memória. Não permite valor nulo.<br /><br />1 = modelo de memória convencional<br />2 = bloquear páginas na memória<br /> 3 = páginas grandes na memória|
-|**sql_memory_model_desc**|**nvarchar(120)**|**Aplica-se a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e posterior.<br /><br />Especifica o modelo de memória usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alocar memória. Não permite valor nulo.<br /><br />**CONVENTIONAL**  =  Convencional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o está usando o modelo de memória convencional para alocar memória. Esse é o modelo de memória SQL padrão quando a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço não tem páginas de bloqueio em privilégios de memória durante a inicialização.<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o está usando páginas de bloqueio na memória para alocar memória. Esse é o Gerenciador de memória do SQL padrão quando SQL Server conta de serviço possui o privilégio bloquear páginas na memória durante a inicialização SQL Server.<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o está usando páginas grandes na memória para alocar memória. SQL Server usa o alocador de páginas grandes para alocar memória somente com o Enterprise Edition quando SQL Server conta de serviço possui páginas de bloqueio no privilégio de memória durante a inicialização do servidor e quando o sinalizador de rastreamento 834 está ativado.|
+|**sql_memory_model_desc**|**nvarchar(120)**|**Aplica-se a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e posterior.<br /><br />Especifica o modelo de memória usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alocar memória. Não permite valor nulo.<br /><br />  =  Convencional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o está usando o modelo de memória convencional para alocar memória. Esse é o modelo de memória SQL padrão quando a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço não tem páginas de bloqueio em privilégios de memória durante a inicialização.<br />  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o está usando páginas de bloqueio na memória para alocar memória. Esse é o Gerenciador de memória do SQL padrão quando SQL Server conta de serviço possui o privilégio bloquear páginas na memória durante a inicialização SQL Server.<br />   =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o está usando páginas grandes na memória para alocar memória. SQL Server usa o alocador de páginas grandes para alocar memória somente com o Enterprise Edition quando SQL Server conta de serviço possui páginas de bloqueio no privilégio de memória durante a inicialização do servidor e quando o sinalizador de rastreamento 834 está ativado.|
 |**pdw_node_id**|**int**|**Aplica-se a:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
 |**socket_count** |**int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e posterior.<br /><br />Especifica o número de soquetes de processador disponíveis no sistema. |  
 |**cores_per_socket** |**int** | **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e posterior.<br /><br />Especifica o número de processadores por soquete disponível no sistema. |  
@@ -84,7 +84,7 @@ ms.locfileid: "91834435"
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
 
 ## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

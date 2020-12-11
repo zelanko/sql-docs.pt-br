@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_process_memory (Transact-SQL)
-title: sys. dm_os_process_memory (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_process_memory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4234894d907a383902a00a659e954ccfea2ff74c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a60651016355dcf6b78a514a4b4ee3b523c9136
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325389"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   A maioria das alocações de memória atribuídas ao espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é controlada por meio de interfaces que permitem o rastreamento e a contabilidade dessas alocações. Porém, poderiam ser executadas alocações de memória no espaço de endereçamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ignora rotinas de administração de memória internas. Os valores são obtidos por chamadas ao sistema operacional de base. Eles não são manipulados por métodos internos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto quando eles se ajustam a alocações de página grandes ou bloqueadas.  
   
- Todos os valores retornados que indicam tamanhos de memória são exibidos em kilobytes (KB). A coluna **total_virtual_address_space_reserved_kb** é uma duplicata de **virtual_memory_in_bytes** de **Sys. dm_os_sys_info**.  
+ Todos os valores retornados que indicam tamanhos de memória são exibidos em kilobytes (KB). A coluna **total_virtual_address_space_reserved_kb** é uma duplicata de **virtual_memory_in_bytes** de **Sys.dm_os_sys_info**.  
   
  A tabela a seguir fornece um quadro completo do espaço de endereçamento de processos.  
   
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_os_process_memory**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_os_process_memory**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539293"
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessária a permissão VIEW SERVER STATE no servidor.  
   
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

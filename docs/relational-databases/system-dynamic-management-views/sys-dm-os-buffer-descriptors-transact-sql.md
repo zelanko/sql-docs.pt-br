@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_buffer_descriptors (Transact-SQL)
-title: sys. dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe2641c33169e094b5e3cf5ae49a36508f5d4d00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c778e2e2ccc1d54a6a61110457ce6a2b0756920e
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539390"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321920"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89539390"
   
  Quando uma página de dados é lida a partir do disco, a página é copiada para o pool de buffer do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e armazenada em cache para reutilização. Cada página de dados tem um descritor de buffer. Descritores de buffer que identificam exclusivamente cada página de dados armazenada em cache no momento em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors retorna páginas armazenadas em cache para todos os usuários e bancos de dados do sistema. Isso inclui páginas que estão associadas ao banco de dados de Recursos.  
   
-> **Observação:** Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_os_buffer_descriptors**.  
+> **Observação:** Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -49,23 +49,23 @@ ms.locfileid: "89539390"
 |free_space_in_bytes|**int**|Quantidade de espaço livre disponível, em bytes, na página. Permite valor nulo.|  
 |is_modified|**bit**|1 = A página foi modificada depois de lida no disco. Permite valor nulo.|  
 |numa_node|**int**|Nó de acesso à memória não uniforme do buffer. Permite valor nulo.|  
-|read_microsec|**bigint**|A hora real (em microssegundos) necessária para ler a página no buffer. Este número é redefinido quando o buffer é reutilizado. Permite valor nulo.|  
-|is_in_bpool_extension|**bit**|1 = a página está na extensão do pool de buffers. Permite valor nulo.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|read_microsec|**bigint**|A hora real (em microssegundos) necessária para ler a página no buffer. Este número é redefinido quando o buffer é reutilizado. Permite valor nulo.|  
+|is_in_bpool_extension|**bit**|1 = a página está na extensão do pool de buffers. Permite valor nulo.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
    
 ## <a name="remarks"></a>Comentários  
- sys. dm_os_buffer_descriptors retorna páginas que estão sendo usadas pelo banco de dados de recursos. sys. dm_os_buffer_descriptors não retorna informações sobre páginas gratuitas ou roubadas, ou sobre páginas que tinham erros quando foram lidas.  
+ sys.dm_os_buffer_descriptors retorna páginas que estão sendo usadas pelo banco de dados de recursos. sys.dm_os_buffer_descriptors não retorna informações sobre páginas gratuitas ou roubadas, ou sobre páginas que tinham erros quando foram lidas.  
   
 |De|Para|Ativado|Relação|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|muitos para um|  
-|sys.dm_os_buffer_descriptors|\<userdb>. sys. allocation_units|allocation_unit_id|muitos para um|  
-|sys.dm_os_buffer_descriptors|\<userdb>. sys. database_files|file_id|muitos para um|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|muitos para um|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|muitos para um|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|muitos para um|  
   
 ## <a name="examples"></a>Exemplos  

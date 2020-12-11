@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_memory_clerks (Transact-SQL)
-title: sys. dm_os_memory_clerks (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_memory_clerks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f5841aab34fbea23d3933f918c2ab9298594c81
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 91900dc582246c7af67ca13ff49b465b48599b5d
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326734"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89550238"
   Retorna o conjunto de todos os administradores de memória que estão ativos no momento na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_os_memory_clerks**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_os_memory_clerks**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -51,14 +51,14 @@ ms.locfileid: "89550238"
 |**shared_memory_reserved_kb**|**bigint**|Especifica a quantidade de memória compartilhada reservada por um administrador de memória. A quantidade de memória reservada para uso por mapeamento de arquivo e memória compartilhada. Não permite valor nulo.|  
 |**shared_memory_committed_kb**|**bigint**|Especifica a quantidade de memória compartilhada confirmada pelo administrador de memória. Não permite valor nulo.|  
 |**page_size_in_bytes**|**bigint**|Especifica a granularidade da alocação de páginas para este administrador de memória. Não permite valor nulo.|  
-|**page_allocator_address**|**varbinary (8)**|Especifica o endereço do alocador de páginas. Esse endereço é exclusivo para um administrador de memória e pode ser usado em **Sys. dm_os_memory_objects** para localizar objetos de memória associados a esse assistente. Não permite valor nulo.|  
-|**host_address**|**varbinary (8)**|Especifica o endereço de memória do host desse administrador de memória. Para obter mais informações, consulte [Sys. dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Os componentes do, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client, acessam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os recursos de memória por meio da interface do host.<br /><br /> 0x00000000 = O administrador de memória pertence ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Não permite valor nulo.|  
+|**page_allocator_address**|**varbinary (8)**|Especifica o endereço do alocador de páginas. Esse endereço é exclusivo para um administrador de memória e pode ser usado em **Sys.dm_os_memory_objects** para localizar objetos de memória associados a esse assistente. Não permite valor nulo.|  
+|**host_address**|**varbinary (8)**|Especifica o endereço de memória do host desse administrador de memória. Para obter mais informações, consulte [sys.dm_os_hosts &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Os componentes do, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client, acessam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os recursos de memória por meio da interface do host.<br /><br /> 0x00000000 = O administrador de memória pertence ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Não permite valor nulo.|  
 |**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões 
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
   
 ## <a name="remarks"></a>Comentários  
  O gerenciador de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste em uma hierarquia de três camadas. Na parte inferior da hierarquia estão os nós de memória. O próximo nível médio consiste em administradores de memória, caches de memória e pools de memória. A camada superior consiste em objetos de memória. Esses objetos geralmente são usados para alocar memória em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -69,10 +69,10 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
 
  [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.dm_exec_query_memory_grants ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sys.dm_exec_query_plan ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.dm_exec_sql_text ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   
 

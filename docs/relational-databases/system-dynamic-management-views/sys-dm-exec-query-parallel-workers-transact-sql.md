@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_parallel_workers (Transact-SQL)
-title: sys. dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -22,19 +22,19 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fc9e42e6803dcda6d9f2ccb54401c2d926dd48d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b6ddc3437013be59bf2eef2ae235843b5843fd7
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331108"
 ---
 # <a name="sysdm_exec_query_parallel_workers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Retorna informações de disponibilidade de trabalhador por nó.  
   
-|Nome|Tipo de dados|Descrição|  
+|Name|Tipo de dados|Descrição|  
 |----------|---------------|-----------------|  
 |**node_id**|**int**|ID do nó NUMA.|  
 |**scheduler_count**|**int**|Número de agendadores neste nó.|  
@@ -46,7 +46,7 @@ ms.locfileid: "88447599"
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
  
 ## <a name="examples"></a>Exemplos  
   
@@ -59,4 +59,4 @@ SELECT * FROM sys.dm_exec_query_parallel_workers;
 ## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)
+ [&#41;&#40;Transact-SQL de sys.dm_os_workers ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)

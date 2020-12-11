@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
-title: sys. dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f9d0d8b71bf4c4a1dac1ecdefd5422137a3a755
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 537cc5a047536c682d8eb6f61d8d4811ccba1a73
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550199"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330674"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "89550199"
  Esta exibição de gerenciamento dinâmico não inclui transações de sistema.  
   
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,10 +75,10 @@ sys.dm_tran_active_snapshot_database_transactions
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
 
 ## <a name="remarks"></a>Comentários  
- **Sys. dm_tran_active_snapshot_database_transactions** relata as transações que recebem um XSN (número de sequência de transação). O XSN é atribuído quando a transação acessa o armazenamento de versões pela primeira vez. Em um banco de dados habilitado para isolamento de instantâneo ou isolamento confirmado por leitura utilizando controle de versão de linhas, os exemplos mostram quando um XSN é atribuído a uma transação:  
+ **Sys.dm_tran_active_snapshot_database_transactions** relata as transações que recebem um XSN (número de sequência de transação). O XSN é atribuído quando a transação acessa o armazenamento de versões pela primeira vez. Em um banco de dados habilitado para isolamento de instantâneo ou isolamento confirmado por leitura utilizando controle de versão de linhas, os exemplos mostram quando um XSN é atribuído a uma transação:  
   
 -   Se uma transação estiver executando em nível de isolamento de serializável, um XSN será atribuído quando a transação executar, pela primeira vez, uma instrução, como uma operação UPDATE, que cause a criação de uma versão de linha.  
   
@@ -144,7 +144,7 @@ elapsed_time_seconds
 333  
 ```  
   
- As informações a seguir avaliam os resultados de **Sys. dm_tran_active_snapshot_database_transactions**:  
+ As informações a seguir avaliam os resultados de **Sys.dm_tran_active_snapshot_database_transactions**:  
   
 -   XSN-57: como essa transação não está sendo executada sob isolamento de instantâneo, o `is_snapshot` valor e `first_snapshot_sequence_num` é `0` . O `transaction_sequence_num` mostra que um número de sequência de transação foi atribuído a esta transação, pois uma ou ambas as opções de banco de dados ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT são ON.  
   

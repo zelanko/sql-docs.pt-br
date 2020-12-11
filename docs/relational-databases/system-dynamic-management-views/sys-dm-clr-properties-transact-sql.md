@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_properties (Transact-SQL)
-title: sys. dm_clr_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f966cbb5570eb1efb2068d7796ccecb4463750
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e313b3e873fbd59a53306475d0641ddbe5566703
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551277"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330029"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
-  Retorna uma linha para cada propriedade relacionada à integração common language runtime (CLR) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo a versão e o estado de CLR hospedado. O CLR hospedado é inicializado executando as instruções [Create assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)ou [drop assembly](../../t-sql/statements/drop-assembly-transact-sql.md) , ou executando qualquer rotina, tipo ou gatilho CLR. A exibição **Sys. dm_clr_properties** não especifica se a execução do código CLR do usuário foi habilitada no servidor. A execução do código CLR do usuário é habilitada usando o procedimento armazenado [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) com a opção [CLR Enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) definida como 1.  
+  Retorna uma linha para cada propriedade relacionada à integração common language runtime (CLR) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo a versão e o estado de CLR hospedado. O CLR hospedado é inicializado executando as instruções [Create assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)ou [drop assembly](../../t-sql/statements/drop-assembly-transact-sql.md) , ou executando qualquer rotina, tipo ou gatilho CLR. A exibição **Sys.dm_clr_properties** não especifica se a execução do código CLR do usuário foi habilitada no servidor. A execução do código CLR do usuário é habilitada usando o procedimento armazenado [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) com a opção [CLR Enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) definida como 1.  
   
- A exibição **Sys. dm_clr_properties** contém as colunas **nome** e **valor** . Cada linha nesta exibição fornece detalhes sobre uma propriedade do CLR hospedado. Use esta exibição para coletar informações sobre o CLR hospedado, como o diretório de instalação do CLR, a versão do CLR e o estado atual do CLR hospedado. Esta exibição poderá ajudá-lo a determinar se o código de integração CLR não está funcionando devido a problemas com a instalação de CLR no computador do servidor.  
+ A exibição **Sys.dm_clr_properties** contém as colunas **nome** e **valor** . Cada linha nesta exibição fornece detalhes sobre uma propriedade do CLR hospedado. Use esta exibição para coletar informações sobre o CLR hospedado, como o diretório de instalação do CLR, a versão do CLR e o estado atual do CLR hospedado. Esta exibição poderá ajudá-lo a determinar se o código de integração CLR não está funcionando devido a problemas com a instalação de CLR no computador do servidor.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "89551277"
   
  A propriedade **version** indica a versão do .NET Framework e o CLR hospedado no servidor.  
   
- A exibição gerenciada dinâmica **Sys. dm_clr_properties** pode retornar seis valores diferentes para a propriedade **State** , que reflete o estado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hospedado. Elas são:  
+ A exibição gerenciada dinâmica **Sys.dm_clr_properties** pode retornar seis valores diferentes para a propriedade de **estado** , que reflete o estado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hospedado. Elas são:  
   
 -   Mscoree não está carregado.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "89551277"
 ## <a name="permissions"></a>Permissões  
   
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir recupera informações sobre o CLR hospedado:  

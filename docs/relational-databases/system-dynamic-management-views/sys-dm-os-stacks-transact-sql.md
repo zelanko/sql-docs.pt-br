@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_stacks (Transact-SQL)
-title: sys. dm_os_stacks (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_stacks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83b694a70145637dce66e33ea417d1afc660af8e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 04f9fe453b2f3e74a96ebd20565d92038bff4bae
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325134"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "89542103"
 |**frame_address**|**varbinary (8)**|Endereço da chamada de função. Não permite valor nulo.|  
   
 ## <a name="remarks"></a>Comentários  
- **Sys. dm_os_stacks** requer que os símbolos do servidor e outros componentes estejam presentes no servidor para exibir as informações corretamente.  
+ **Sys.dm_os_stacks** requer que os símbolos do servidor e outros componentes estejam presentes no servidor para exibir as informações corretamente.  
   
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
 
 
 ## <a name="see-also"></a>Consulte Também  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_file_space_usage (Transact-SQL)
-title: sys. dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a56c3a17ec09bd45ef9d9efd632d58b190268943
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d5147740cbddd623be12ba821634cd9142b24c59
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322609"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,18 +34,18 @@ ms.locfileid: "89534763"
   Retorna informações de uso de espaço para cada arquivo de dados no banco de dado.  
   
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_db_file_space_usage**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_db_file_space_usage**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|ID do banco de dados.|  
-|file_id|**smallint**|ID do arquivo.<br /><br /> file_id mapeia para file_id em [Sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) e para FileID em [ arquivossys.sys](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md).|  
+|file_id|**smallint**|ID do arquivo.<br /><br /> file_id mapeia para file_id em [Sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) e para FileID em [ arquivossys.sys](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md).|  
 |filegroup_id|**smallint**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> ID do grupo de arquivos.|  
 |total_page_count|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Número total de páginas no arquivo de dados.|  
 |allocated_extent_page_count|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Número total de páginas nas extensões alocadas no arquivo de dados.|  
 |unallocated_extent_page_count|**bigint**|Número total de páginas nas extensões não alocadas no arquivo de dados.<br /><br /> Páginas não utilizadas em extensões alocadas não são incluídas.|  
 |version_store_reserved_page_count|**bigint**|Número total de páginas nas extensões uniformes alocadas para o repositório de versão. As páginas do repositório de versão nunca são alocadas de eventos mistos.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Para obter mais informações, veja [sys.dm_tran_version_store &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
-|user_object_reserved_page_count|**bigint**|Número total de páginas alocadas de extensões uniformes para objetos de usuário no banco de dados. Páginas não usadas de uma extensão alocada são incluídas na contagem.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Você pode usar a coluna total_pages na exibição de catálogo [Sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) para retornar a contagem de páginas reservadas de cada unidade de alocação no objeto de usuário. No entanto, observe que a coluna total_pages inclui páginas IAM.|  
+|user_object_reserved_page_count|**bigint**|Número total de páginas alocadas de extensões uniformes para objetos de usuário no banco de dados. Páginas não usadas de uma extensão alocada são incluídas na contagem.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Você pode usar a coluna total_pages na exibição de catálogo [Sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) para retornar a contagem de páginas reservadas de cada unidade de alocação no objeto de usuário. No entanto, observe que a coluna total_pages inclui páginas IAM.|  
 |internal_object_reserved_page_count|**bigint**|Número total de páginas nas extensões uniformes alocadas para objetos internos no arquivo. Páginas não usadas de uma extensão alocada são incluídas na contagem.<br /><br /> Páginas IAM não são incluídas, pois são sempre são alocadas de extensões mistas. As páginas PFS serão incluídas se forem alocadas de uma extensão uniforme.<br /><br /> Não há exibição do catálogo ou objeto de gerenciamento dinâmico que retorne a contagem de páginas de cada objeto interno.|  
 |mixed_extent_page_count|**bigint**|Número total de páginas alocadas e não alocadas nas extensões mistas alocadas no arquivo. As extensões mistas contêm páginas alocadas a objetos diferentes. Essa contagem inclui todas as páginas IAM no arquivo.|
 |modified_extent_page_count|**bigint**|**Aplica-se ao**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e posterior.<br /><br />Número total de páginas modificadas em extensões alocadas do arquivo desde o último backup completo do banco de dados. A contagem de páginas modificadas pode ser usada para rastrear a quantidade de alterações diferenciais no banco de dados desde o último backup completo, para decidir se o backup diferencial é necessário.|
@@ -55,9 +55,9 @@ ms.locfileid: "89534763"
 ## <a name="remarks"></a>Comentários  
  As contagens de página estão sempre no nível de extensão. Portanto, os valores de contagem de página serão sempre um múltiplo de oito. As extensões que contêm páginas de alocação GAM (Global Alocação Map) e SGAM (Shared Global Allocation Map) são extensões uniformes alocadas. Elas não são incluídas nas contagens de página previamente descritas. Para obter mais informações sobre páginas e extensões, consulte [Guia de arquitetura de páginas e extensões](../../relational-databases/pages-and-extents-architecture-guide.md). 
   
- O conteúdo do repositório de versão atual está em [Sys. dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). As páginas de repositório de versão são controladas no nível de arquivo, em vez de no nível de sessão e tarefa, porque são recursos globais. Uma sessão pode gerar versões, mas as versões não podem ser removidas quando a sessão terminar. A limpeza total do repositório de versão deve considerar a transação mais longa em execução que exige acesso à versão particular. A transação de execução mais longa relacionada à limpeza do repositório de versão pode ser descoberta exibindo a coluna elapsed_time_seconds em [Sys. dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
+ O conteúdo do repositório de versão atual está em [Sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). As páginas de repositório de versão são controladas no nível de arquivo, em vez de no nível de sessão e tarefa, porque são recursos globais. Uma sessão pode gerar versões, mas as versões não podem ser removidas quando a sessão terminar. A limpeza total do repositório de versão deve considerar a transação mais longa em execução que exige acesso à versão particular. A transação de execução mais longa relacionada à limpeza do repositório de versão pode ser descoberta exibindo a coluna elapsed_time_seconds em [Sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
   
- Mudanças frequentes na coluna mixed_extent_page_count podem indicar uso pesado de páginas SGAM. Quando isso ocorrer, você poderá ver muitas esperas de PAGELATCH_UP nas quais o recurso de espera é uma página SGAM. Para obter mais informações, consulte [Sys. dm_os_waiting_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), [sys. dm_os_wait_stats &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)e [Sys. dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md).  
+ Mudanças frequentes na coluna mixed_extent_page_count podem indicar uso pesado de páginas SGAM. Quando isso ocorrer, você poderá ver muitas esperas de PAGELATCH_UP nas quais o recurso de espera é uma página SGAM. Para obter mais informações, consulte [sys.dm_os_waiting_tasks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), sys.dm_os_wait_stats &#40;&#41;de [Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)e [Sys.dm_os_latch_stats &#40;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)&#41;.  
   
 ## <a name="user-objects"></a>Objetos do usuário  
  Os objetos a seguir são incluídos nos contadores de páginas de objeto do usuário:  
@@ -92,7 +92,7 @@ ms.locfileid: "89534763"
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
   
@@ -121,5 +121,5 @@ FROM sys.dm_db_file_space_usage;
 ## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.dm_db_task_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

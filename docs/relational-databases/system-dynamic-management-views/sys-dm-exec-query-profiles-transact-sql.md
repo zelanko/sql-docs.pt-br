@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_profiles (Transact-SQL)
-title: sys. dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b761064191f26a05d565e673428221afb4805b1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 332b554797282510463ae3ec837fb00256db31b3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330889"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -91,7 +91,7 @@ A partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do SP1, a *infraestru
 
 ## <a name="permissions"></a>Permissões  
 No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e SQL instância gerenciada do Azure, requer `VIEW DATABASE STATE` permissão e associação da `db_owner` função de banco de dados.   
-Nas [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nas [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Sobre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] os objetivos de serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
    
 ## <a name="examples"></a>Exemplos  
  Etapa 1: faça logon em uma sessão na qual você planeja executar a consulta com a qual irá analisar `sys.dm_exec_query_profiles` . Para configurar a consulta para uso de criação de perfil `SET STATISTICS PROFILE ON` . Execute a consulta nessa mesma sessão.  

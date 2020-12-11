@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_schedulers (Transact-SQL)
-title: sys. dm_os_schedulers (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffb03f426977b982c79df26ede26a777a9a98aeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b6055413a3ff32882e86c65dd69353e44b2353bb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332996"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "89543885"
   Retorna uma linha por agendador no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], onde cada agendador é mapeado para um processador individual. Use esta exibição para monitorar a condição de um agendador ou para identificar tarefas sem controle. Para obter mais informações sobre agendadores, consulte o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).  
   
 > [!NOTE]  
->  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_os_schedulers**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys.dm_pdw_nodes_os_schedulers**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |scheduler_address|**varbinary (8)**|Endereço de memória do agendador. Não permite valor nulo.|  
 |parent_node_id|**int**|ID do nó ao qual o agendador pertence, também conhecido como nó pai. Isso representa um nó NUMA (acesso não uniforme à memória). Não permite valor nulo.|  
 |scheduler_id|**int**|ID do agendador. Todos os agendadores que são usados para executar consultas normais têm números de ID menores que 1048576. Os agendadores que tiverem IDs maiores ou iguais a 1048576 serão usados internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o agendador da conexão de administrador dedicada. Não permite valor nulo.|  
-|cpu_id|**smallint**|A ID da CPU atribuída ao agendador.<br /><br /> Não permite valor nulo.<br /><br /> **Observação:** 255 não indica nenhuma afinidade como fazia em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Consulte [Sys. dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) para obter informações adicionais de afinidade.|  
+|cpu_id|**smallint**|A ID da CPU atribuída ao agendador.<br /><br /> Não permite valor nulo.<br /><br /> **Observação:** 255 não indica nenhuma afinidade como fazia em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Consulte [sys.dm_os_threads &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) para obter informações adicionais de afinidade.|  
 |status|**nvarchar(60)**|Indica o status do agendador. Pode ser um dos seguintes valores:<br /><br /> -OCULTO ONLINE<br />-OCULTO OFFLINE<br />-VISÍVEL ONLINE<br />-VISÍVEL OFFLINE<br />-ONLINE VISÍVEL (DAC)<br />-HOT_ADDED<br /><br /> Não permite valor nulo.<br /><br /> Os agendadores HIDDEN são usados para processar solicitações internas do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os agendadores VISIBLE são usados para processar solicitações de usuários.<br /><br /> Os agendadores OFFLINE são mapeados para processadores que estão offline na máscara de afinidade e, portanto, não estão sendo usados para processar solicitações. Os agendadores ONLINE são mapeados para processadores que estão online na máscara de afinidade e estão disponíveis para processar threads.<br /><br /> DAC indica que o agendador está sendo executado em uma conexão de administrador dedicada.<br /><br /> HOT ADDED indica que os agendadores foram adicionados em resposta a um evento de CPU de adição a quente.|  
 |is_online|**bit**|Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para usar somente alguns dos processadores disponíveis no servidor, essa configuração pode indicar que alguns agendadores estão mapeados para processadores que não estão na máscara de afinidade. Se esse for o caso, essa coluna retornará 0. Esse valor indica que o agendador não está sendo usado para processar consultas ou lotes.<br /><br /> Não permite valor nulo.|  
 |is_idle|**bit**|1 = O agendador está ocioso. Nenhum operador está em execução no momento. Não permite valor nulo.|  
@@ -58,9 +58,9 @@ ms.locfileid: "89543885"
 |yield_count|**int**|Valor interno que é usado para indicar o progresso neste agendador. Esse valor é usado pelo Scheduler Monitor para determinar se um trabalhador no agendador não está cedendo a outros trabalhadores no momento. O valor não indica que houve transição do operador ou tarefa para um novo operador. Não permite valor nulo.|  
 |last_timer_activity|**bigint**|Em tiques de CPU, a última vez que a fila do temporizador do agendador foi verificada pelo agendador. Não permite valor nulo.|  
 |failed_to_create_worker|**bit**|Definido como 1 se não foi possível criar um novo operador neste agendador. Isso geralmente ocorre devido a restrições de memória. Permite valor nulo.|  
-|active_worker_address|**varbinary (8)**|Endereço de memória do operador que está ativo no momento. Permite valor nulo. Para obter mais informações, consulte [Sys. dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|active_worker_address|**varbinary (8)**|Endereço de memória do operador que está ativo no momento. Permite valor nulo. Para obter mais informações, consulte [sys.dm_os_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |memory_object_address|**varbinary (8)**|Endereço de memória do objeto de memória do agendador. Não é NULLABLE.|  
-|task_memory_object_address|**varbinary (8)**|Endereço de memória do objeto de memória da tarefa. Não permite valor nulo. Para obter mais informações, consulte [Sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|task_memory_object_address|**varbinary (8)**|Endereço de memória do objeto de memória da tarefa. Não permite valor nulo. Para obter mais informações, consulte [sys.dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expõe o quantum do agendador usado por SQLOS.|  
 | total_cpu_usage_ms |**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior <br><br> Total de CPU consumida por este Agendador conforme relatado por trabalhadores não preemptivos. Não permite valor nulo.|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Indica a limitação com base no [objetivo de nível de serviço](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), sempre será 0 para versões não Azure do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Permite valor nulo.|
@@ -70,7 +70,7 @@ ms.locfileid: "89543885"
   
 ## <a name="permissions"></a>Permissões
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
   
@@ -146,7 +146,7 @@ active_workers_count work_queue_count
  A consulta a seguir mostra o estado de agendadores não ocultos intensamente carregados, onde há mais solicitações do que os trabalhadores disponíveis podem manipular. Neste exemplo, 256 trabalhadores recebem tarefas. Algumas tarefas estão aguardando a atribuição a um trabalhador. A contagem de executáveis mais baixa indica que várias tarefas aguardam um recurso.  
   
 > [!NOTE]  
->  Você pode descobrir o estado de trabalhadores consultando sys.dm_os_workers. Para obter mais informações, consulte [Sys. dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
+>  Você pode descobrir o estado de trabalhadores consultando sys.dm_os_workers. Para obter mais informações, consulte [sys.dm_os_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
   
  Esta é a consulta:  
   

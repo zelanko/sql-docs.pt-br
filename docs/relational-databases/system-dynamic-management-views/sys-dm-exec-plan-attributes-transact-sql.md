@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_plan_attributes (Transact-SQL)
-title: sys. dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c80e576bd6f2872a2486da5fd09292609f86ba60
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331988"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +41,14 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Argumentos  
  *plan_handle*  
- Identifica exclusivamente um plano de consulta de um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* é **varbinary (64)**. O identificador de plano pode ser obtido na exibição de gerenciamento dinâmico [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) .  
+ Identifica exclusivamente um plano de consulta de um lote que foi executado e cujo plano reside no cache de plano. *plan_handle* é **varbinary (64)**. O identificador de plano pode ser obtido na exibição de gerenciamento dinâmico [Sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) .  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |Atributo|**varchar(128)**|O nome do atributo associado com este plano. A tabela imediatamente abaixo dessa lista os possíveis atributos, seus tipos de dados e suas descrições.|  
-|value|**sql_variant**|Valor do atributo que é associado ao plano.|  
+|valor|**sql_variant**|Valor do atributo que é associado ao plano.|  
 |is_cache_key|**bit**|Indica se o atributo é usado como parte da chave de consulta de cache para o plano.|  
 
 Na tabela acima, o **atributo** pode ter os seguintes valores:
@@ -82,7 +82,7 @@ Na tabela acima, o **atributo** pode ter os seguintes valores:
 ## <a name="permissions"></a>Permissões  
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
 
 ## <a name="remarks"></a>Comentários  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_version_store (Transact-SQL)
-title: sys. dm_tran_version_store (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd71e1c70ef06d5e669158aea06b7f3dde720951
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d56dc48e37d7f0b03f59a1fecb024a74d3ed75cb
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333056"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Retorna uma tabela virtual que exibe todos os registros de versão no repositório de versão. **Sys. dm_tran_version_store** não é eficiente para ser executado porque consulta todo o repositório de versão, e o repositório de versão pode ser muito grande.  
+  Retorna uma tabela virtual que exibe todos os registros de versão no repositório de versão. o **Sys.dm_tran_version_store** não é eficiente para ser executado porque consulta todo o repositório de versão, e o repositório de versão pode ser muito grande.  
   
  Cada registro com controle de versão é armazenado como dados binários juntamente com algumas informações de rastreamento ou de status. Semelhante a registros em tabelas de banco de dados, os registros de armazenamento de versão são armazenados em páginas de 8.192 bytes. Se um registro exceder 8.192 bytes, ele será dividido em dois registros diferentes.  
   
- Porque o registro com controle de versão é armazenado como binário, não há nenhum problema com ordenações diferentes de bancos de dados diferentes. Use **Sys. dm_tran_version_store** para localizar as versões anteriores das linhas na representação binária, pois elas existem no repositório de versão.  
+ Porque o registro com controle de versão é armazenado como binário, não há nenhum problema com ordenações diferentes de bancos de dados diferentes. Use **Sys.dm_tran_version_store** para localizar as versões anteriores das linhas na representação binária, pois elas existem no repositório de versão.  
   
   
 ## <a name="syntax"></a>Sintaxe  
@@ -62,7 +62,7 @@ sys.dm_tran_version_store
 ## <a name="permissions"></a>Permissões
 
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
-Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o  **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Nos objetivos do serviço básico, S0 e S1 do banco de dados SQL, e para bancos de dados em pools elásticos, o `Server admin` ou uma `Azure Active Directory admin` conta é necessária. Em todos os outros objetivos de serviço do banco de dados SQL, a `VIEW DATABASE STATE` permissão é necessária no banco de dados.   
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa um cenário de teste no qual quatro transações simultâneas, cada uma identificada por um XSN (número de sequência de transação), estão sendo executadas em um banco de dados no qual as opções ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT estão definidas como ON. As seguintes transações estão sendo executadas:  
