@@ -21,13 +21,13 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06299f367f987cfc716154f4d26ffb8e5e07a868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c8643c40f7b62c0a0fdc3d85d32111d05ee955f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760413"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405102"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Especificando um esquema de mapeamento anotado em um diagrama de atualização (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "85760413"
 >  Esta documentação parte do pressuposto de que você esteja familiarizado com suporte a modelos e ao esquema de mapeamento no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [introdução aos esquemas XSD anotados &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para aplicativos herdados que usam XDR, consulte [esquemas XDR anotados &#40;preteridos no SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Lidando com tipos de dados  
- Se o esquema especificar o tipo de dados **Image**, **Binary**ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (usando **SQL: DataType**) e não especificar um tipo de dados XML, o updategram assumirá que o tipo de dados XML é **binary base 64**. Se os dados forem do tipo **bin. base** , você deverá especificar explicitamente o tipo (**dt: Type = bin. base** ou **Type = "xsd: hexBinary"**).  
+ Se o esquema especificar o tipo de dados **Image**, **Binary** ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (usando **SQL: DataType**) e não especificar um tipo de dados XML, o updategram assumirá que o tipo de dados XML é **binary base 64**. Se os dados forem do tipo **bin. base** , você deverá especificar explicitamente o tipo (**dt: Type = bin. base** ou **Type = "xsd: hexBinary"**).  
   
- Se o esquema especificar o tipo de dados **DateTime**, **Date**ou **time** XSD, você também deverá especificar o tipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados correspondente usando **SQL: datatype = "DateTime"**.  
+ Se o esquema especificar o tipo de dados **DateTime**, **Date** ou **time** XSD, você também deverá especificar o tipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados correspondente usando **SQL: datatype = "DateTime"**.  
   
  Ao manipular parâmetros do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo **Money** , você deve especificar explicitamente **SQL: datatype = "Money"** no nó apropriado no esquema de mapeamento.  
   

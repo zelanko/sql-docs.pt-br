@@ -1,6 +1,6 @@
 ---
 description: sys.master_files (Transact-SQL)
-title: sys. master_files (Transact-SQL) | Microsoft Docs
+title: sys.master_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecf00931301e468f3fcaa92b95e15f778bd1607c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3bd6320435c372b99d9b88f9e0ecc7e41c41cf90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548696"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405330"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89548696"
 |physical_name|**nvarchar(260)**|Nome de arquivo do sistema operacional.|  
 |state|**tinyint**|Estado do arquivo:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|Descrição do estado do arquivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para obter mais informações, consulte [Estados de arquivo](../../relational-databases/databases/file-states.md).|  
-|tamanho|**int**|Tamanho de arquivo atual, em páginas de 8 KB. Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Observação: esse campo é preenchido como zero para contêineres FILESTREAM. Consulte a exibição do catálogo *Sys. database_files* para obter o tamanho real dos contêineres FileStream.|  
+|tamanho|**int**|Tamanho de arquivo atual, em páginas de 8 KB. Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Observação: esse campo é preenchido como zero para contêineres FILESTREAM. Consulte a exibição de catálogo *Sys.database_files* para obter o tamanho real dos contêineres FileStream.|  
 |max_size|**int**|Tamanho de arquivo máximo, em páginas de 8 KB:<br /><br /> 0 = Crescimento não é permitido.<br /><br /> -1 = Arquivo crescerá até que o disco esteja completo.<br /><br /> 268435456 = Arquivo de log crescerá a um tamanho máximo de 2 TB.<br /><br /> Observação: os bancos de dados que são atualizados com um tamanho de arquivo de log ilimitado relatarão-1 para o tamanho máximo do arquivo de log.|  
 |growth|**int**|0 = Arquivo tem tamanho fixo e não crescerá.<br /><br /> >0 = o arquivo aumentará automaticamente.<br /><br /> Se is_percent_growth = 0, incremento de crescimento está em unidades de páginas de 8 KB, arredondado ao mais próximo de 64 KB.<br /><br /> Se is_percent_growth = 1, o incremento de crescimento será expresso em porcentagem de número inteiro.|  
 |is_media_read_onlyF|**bit**|1 = O arquivo está em mídia somente leitura.<br /><br /> 0 = Arquivo está em mídia leitura/gravação.|  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f734caf4a42e8565c95badf4e4ff98ee1e8b50c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: be40ef900c72d4bfd991ae371235648222fd68b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541516"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97403877"
 ---
 # <a name="sp_special_columns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  [ @table_owner =] '*TABLE_OWNER*'  
  É o proprietário da tabela usado para retornar as informações do catálogo. *Owner* é **sysname**, com um padrão de NULL. Não há suporte para a correspondência de padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de tabela padrão do DBMS subjacente se aplicarão.  
   
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir uma tabela do *nome*especificado, esse procedimento procurará uma tabela do *nome* especificado de Propriedade do proprietário do banco de dados. Se a tabela existir, suas colunas serão retornadas.  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir uma tabela do *nome* especificado, esse procedimento procurará uma tabela do *nome* especificado de Propriedade do proprietário do banco de dados. Se a tabela existir, suas colunas serão retornadas.  
   
  [ @qualifier =] '*qualificador*'  
  É o nome do qualificador da tabela. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*Qualifier.Owner.Name*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
@@ -78,11 +78,11 @@ sp_special_columns [ @table_name = ] 'table_name'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Escopo real da ID da linha. Pode ser 0, 1 ou 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna 0. Esse campo sempre retorna um valor.<br /><br /> 0 = SQL_SCOPE_CURROW. A ID da linha tem a garantia de ser válida somente quando posicionada nessa linha. Uma nova seleção posterior que utilize a ID da linha talvez não retorne uma linha se a linha foi atualizada ou excluída por outra transação.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. A ID da linha tem a garantia de ser válida durante a transação atual.<br /><br /> 2 = SQL_SCOPE_SESSION. A ID da linha tem a garantia de ser válida durante a sessão (dentro dos limites da transação).|  
-|COLUMN_NAME|**sysname**|Nome da coluna para cada coluna da *tabela*retornada. Esse campo sempre retorna um valor.|  
+|COLUMN_NAME|**sysname**|Nome da coluna para cada coluna da *tabela* retornada. Esse campo sempre retorna um valor.|  
 |DATA_TYPE|**smallint**|Tipo de dados SQL ODBC.|  
-|TYPE_NAME|**sysname**|Nome do tipo de dados dependente de fonte de dados; por exemplo, **Char**, **varchar**, **Money**ou **Text**.|  
+|TYPE_NAME|**sysname**|Nome do tipo de dados dependente de fonte de dados; por exemplo, **Char**, **varchar**, **Money** ou **Text**.|  
 |PRECISION|**Int**|Precisão da coluna na fonte de dados. Esse campo sempre retorna um valor.|  
-|LENGTH|**Int**|Comprimento, em bytes, necessário para o tipo de dados em seu formato binário na fonte de dados, por exemplo, 10 para **Char (** 10 **)**, 4 para **Integer**e 2 para **smallint**.|  
+|LENGTH|**Int**|Comprimento, em bytes, necessário para o tipo de dados em seu formato binário na fonte de dados, por exemplo, 10 para **Char (** 10 **)**, 4 para **Integer** e 2 para **smallint**.|  
 |SCALE|**smallint**|Escala da coluna na fonte de dados. NULL é retornado para os tipos de dados para os quais a escala não é aplicável.|  
 |PSEUDO_COLUMN|**smallint**|Indica se a coluna é um pseudocoluna. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

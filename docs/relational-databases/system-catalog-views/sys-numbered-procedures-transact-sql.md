@@ -1,6 +1,6 @@
 ---
 description: sys.numbered_procedures (Transact-SQL)
-title: sys. numbered_procedures (Transact-SQL) | Microsoft Docs
+title: sys.numbered_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b849c5f2d02af85f3cab09dfc0cef05a5df8cac1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 410c7b9a04463aeed0a777bb8c3bfcb75dfc9e32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539599"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405103"
 ---
 # <a name="sysnumbered_procedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]

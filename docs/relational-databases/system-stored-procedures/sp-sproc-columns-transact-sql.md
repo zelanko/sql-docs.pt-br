@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 756b50b22b470ec8dcf3f54467af78e71558ea1c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 180d57f7daacb1f7aeb6b638dba03f893340c1d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006486"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404136"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,9 +49,9 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ## <a name="arguments"></a>Argumentos  
 `[ @procedure_name = ] 'name'` É o nome do procedimento usado para retornar informações do catálogo. *Name* é **nvarchar (** 390 **)**, com um padrão de%, que significa todas as tabelas no banco de dados atual. Há suporte para a correspondência do padrão curinga.  
   
-`[ @procedure_owner = ] 'owner'` É o nome do proprietário do procedimento. *Owner*é **nvarchar (** 384 **)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de procedimento padrão do DBMS subjacente se aplicarão.  
+`[ @procedure_owner = ] 'owner'` É o nome do proprietário do procedimento. *Owner* é **nvarchar (** 384 **)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de procedimento padrão do DBMS subjacente se aplicarão.  
   
- Se o usuário atual possuir um procedimento com o nome especificado, serão retornadas informações sobre esse procedimento. Se o *proprietário*não for especificado e o usuário atual não possuir um procedimento com o nome especificado, **sp_sproc_columns** procurará um procedimento com o nome especificado que pertence ao proprietário do banco de dados. Se o procedimento existir, serão retornadas informações sobre suas colunas.  
+ Se o usuário atual possuir um procedimento com o nome especificado, serão retornadas informações sobre esse procedimento. Se o *proprietário* não for especificado e o usuário atual não possuir um procedimento com o nome especificado, **sp_sproc_columns** procurará um procedimento com o nome especificado que pertence ao proprietário do banco de dados. Se o procedimento existir, serão retornadas informações sobre suas colunas.  
   
 `[ @procedure_qualifier = ] 'qualifier'` É o nome do qualificador de procedimento. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*Qualifier.Owner.Name*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse parâmetro representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
@@ -83,14 +83,14 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**COMENTÁRIOS**|**varchar (** 254 **)**|Descrição da coluna de procedimento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valor padrão da coluna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados SQL como ele aparece no campo **tipo** do descritor. Esta coluna é igual à coluna **DATA_TYPE**, com exceção dos tipos de dados **datetime** e **interval** ISO. Esta coluna sempre retorna um valor.|  
-|**SQL_DATETIME_SUB**|**smallint**|O subcódigo de **interval** ISO de **datetime**, se o valor de **SQL_DATA_TYPE** for **SQL_DATETIME** ou **SQL_INTERVAL**. Para tipos de dados diferentes de **DateTime** e o **intervalo**ISO, esse campo é nulo.|  
+|**SQL_DATETIME_SUB**|**smallint**|O subcódigo de **interval** ISO de **datetime**, se o valor de **SQL_DATA_TYPE** for **SQL_DATETIME** ou **SQL_INTERVAL**. Para tipos de dados diferentes de **DateTime** e o **intervalo** ISO, esse campo é nulo.|  
 |**CHAR_OCTET_LENGTH**|**int**|Comprimento máximo em bytes de uma coluna de tipo de dados **Binary** ou de **caractere** . Para todos os outros tipos de dados, essa coluna retorna um valor nulo.|  
 |**ORDINAL_POSITION**|**int**|Posição ordinal da coluna na tabela. A primeira coluna na tabela é 1. Esta coluna sempre retorna um valor.|  
 |**IS_NULLABLE**|**varchar (254)**|Possibilidade de nulidade da coluna na tabela. As regras ISO são seguidas para determinar a possibilidade de nulidade. Um DBMS com conformidade de ISO não pode retornar uma cadeia de caracteres vazia.<br /><br /> Exibe YES, se a coluna puder incluir NULLS, e NO, se a coluna não puder incluir NULLS.<br /><br /> Esta coluna retorna uma cadeia de caracteres de comprimento zero se a possibilidade de nulidade for desconhecida.<br /><br /> O valor retornado para esta coluna é diferente do valor retornado para a coluna NULLABLE.|  
 |**SS_DATA_TYPE**|**tinyint**|Tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados por procedimentos armazenados estendidos. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
 ## <a name="remarks"></a>Comentários  
- **sp_sproc_columns** é equivalente a **SQLProcedureColumns** no ODBC. Os resultados retornados são ordenados por **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name**e a ordem em que os parâmetros aparecem na definição do procedimento.  
+ **sp_sproc_columns** é equivalente a **SQLProcedureColumns** no ODBC. Os resultados retornados são ordenados por **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name** e a ordem em que os parâmetros aparecem na definição do procedimento.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  

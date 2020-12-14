@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c804e5fbeb61a62ae7a615d09085e0dea8ee61d0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6d65e13bdcf03aab38786b519dfaeb6e58004a27
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534994"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404152"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,12 +44,12 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'` O nome do trabalho para o qual os registros de histórico são excluídos. *job_name*é **sysname**, com um padrão de NULL. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
+`[ @job_name = ] 'job_name'` O nome do trabalho para o qual os registros de histórico são excluídos. *job_name* é **sysname**, com um padrão de NULL. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
 > [!NOTE]  
 >  Os membros da função de servidor fixa **sysadmin** ou os membros da função de banco de dados fixa **SQLAgentOperatorRole** podem executar **sp_purge_jobhistory** sem especificar um *job_name* ou *job_id*. Quando os usuários do **sysadmin** não especificam esses argumentos, o histórico de trabalhos de todos os trabalhos locais e multisservidor é excluído dentro do tempo especificado pelo *oldest_date*. Quando os usuários do **SQLAgentOperatorRole** não especificam esses argumentos, o histórico de trabalhos de todos os trabalhos locais é excluído dentro do tempo especificado pelo *oldest_date*.  
   
-`[ @job_id = ] job_id` O número de identificação do trabalho para os registros a serem excluídos. *job_id* é **uniqueidentifier**, com um padrão de NULL. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. Consulte a observação na descrição de ** \@ job_name** para obter informações sobre como os usuários **sysadmin** ou **SQLAgentOperatorRole** podem usar esse argumento.  
+`[ @job_id = ] job_id` O número de identificação do trabalho para os registros a serem excluídos. *job_id* é **uniqueidentifier**, com um padrão de NULL. *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados. Consulte a observação na descrição de **\@ job_name** para obter informações sobre como os usuários **sysadmin** ou **SQLAgentOperatorRole** podem usar esse argumento.  
   
 `[ @oldest_date = ] oldest_date` O registro mais antigo a ser mantido no histórico. *oldest_date* é **DateTime**, com um padrão de NULL. Quando *oldest_date* é especificado, **sp_purge_jobhistory** remove apenas os registros que são mais antigos que o valor especificado.  
   
@@ -67,7 +67,7 @@ sp_purge_jobhistory
   
  Outros usuários, incluindo membros de **SQLAgentUserRole** e membros de **SQLAgentReaderRole**, devem receber explicitamente a permissão EXECUTE em **sp_purge_jobhistory**. Depois de receber a permissão EXECUTE nesse procedimento armazenado, esses usuários poderão limpar somente o histórico dos trabalhos que eles possuam.  
   
- As funções de banco de dados fixas **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** estão no banco de dados **msdb** . Para obter detalhes sobre suas permissões, consulte [SQL Server Agent funções de banco de dados fixas](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ As funções de banco de dados fixas **SQLAgentUserRole**, **SQLAgentReaderRole** e **SQLAgentOperatorRole** estão no banco de dados **msdb** . Para obter detalhes sobre suas permissões, consulte [SQL Server Agent funções de banco de dados fixas](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemplos  
   
