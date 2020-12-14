@@ -114,6 +114,28 @@
               href: ../connect/ado-net/handle-dataadapter-events.md
             - name: Operações em lote usando DataAdapters
               href: ../connect/ado-net/batch-operations-using-dataadapters.md
+        - name: Transações e simultaneidade
+          href: ../connect/ado-net/transactions-and-concurrency.md
+          items:
+            - name: Transações locais
+              href: ../connect/ado-net/local-transactions.md
+            - name: Transações distribuídas
+              href: ../connect/ado-net/distributed-transactions.md
+            - name: Integração de System.Transactions com SQL Server
+              href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
+            - name: Simultaneidade otimista
+              href: ../connect/ado-net/optimistic-concurrency.md
+        - name: Recuperar informações de esquema de banco de dados
+          href: ../connect/ado-net/retrieving-database-schema-information.md
+          items:
+            - name: As coleções de esquemas e GetSchema
+              href: ../connect/ado-net/getschema-and-schema-collections.md
+            - name: Restrições de esquemas
+              href: ../connect/ado-net/schema-restrictions.md
+            - name: Coleções de esquemas comuns
+              href: ../connect/ado-net/common-schema-collections.md
+            - name: Coleções de esquema do SQL Server
+              href: ../connect/ado-net/sql-server-schema-collections.md
     - name: SQL Server e ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
