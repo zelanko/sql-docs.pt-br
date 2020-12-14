@@ -1,5 +1,5 @@
 ---
-description: Replicação geográfica ativa-sp_wait_for_database_copy_sync
+description: Geo-Replication ativo-sp_wait_for_database_copy_sync
 title: sp_wait_for_database_copy_sync
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 72d18f2857b561015348a7738128cd8f1e51cf00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8d453d6d3fa43226921aa6f5f0322b8f574a5e31
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542060"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410761"
 ---
-# <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Replicação geográfica ativa-sp_wait_for_database_copy_sync
+# <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Geo-Replication ativo-sp_wait_for_database_copy_sync
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Este procedimento tem como escopo uma relação do [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] entre um banco de dados primário e um banco de dados secundário. Chamar o **sp_wait_for_database_copy_sync** faz com que o aplicativo aguarde até que todas as transações confirmadas sejam replicadas e confirmadas pelo banco de dados secundário ativo. Execute **sp_wait_for_database_copy_sync** somente no banco de dados primário.  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. dm_continuous_copy_status &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [sys.dm_continuous_copy_status &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [DMVs (exibições de gerenciamento dinâmico) de replicação geográfica e funções &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
   
