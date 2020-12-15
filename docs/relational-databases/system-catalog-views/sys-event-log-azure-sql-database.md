@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: d60c081eecf88868db4541bc79960bf1bbd8723c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892396"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412877"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Banco de Dados SQL do Azure)
 
@@ -83,7 +83,7 @@ ms.locfileid: "91892396"
 |**conectividade**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A sessão foi terminada devido a uso excessivo de TEMPDB. Tente modificar a consulta para reduzir o uso de espaço de tabela temporária. Para obter mais informações, consulte [limites de recursos](/previous-versions/azure/dn338081(v=azure.100)).|  
 |**conectividade**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A sessão foi terminada devido a uso excessivo de espaço de log de transação. Tente modificar menos linhas em uma única transação. Para obter mais informações, consulte [limites de recursos](/previous-versions/azure/dn338081(v=azure.100)).|  
 |**conectividade**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A sessão foi terminada devido a uso excessivo de memória. Tente modificar a consulta para processar menos linhas. Para obter mais informações, consulte [limites de recursos](/previous-versions/azure/dn338081(v=azure.100)).|  
-|**motores**|**deadlock**|0|**deadlock**|2|Ocorreu um deadlock.|  
+|**motores**|**bloqueado**|0|**bloqueado**|2|Ocorreu um deadlock.|  
   
 ## <a name="permissions"></a>Permissões
 
@@ -105,7 +105,7 @@ ms.locfileid: "91892396"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-start_time-and-end_time"></a>start_time e end_time do intervalo  
- Um evento é incluído em um intervalo de agregação quando o evento ocorre *em* ou _depois_de**start_time** e _antes_de**end_time** para esse intervalo. Por exemplo, um evento que ocorre exatamente em `2012-10-30 19:25:00.0000000` seria incluído somente no segundo intervalo mostrado abaixo:  
+ Um evento é incluído em um intervalo de agregação quando o evento ocorre *em* ou _depois_ de **start_time** e _antes_ de **end_time** para esse intervalo. Por exemplo, um evento que ocorre exatamente em `2012-10-30 19:25:00.0000000` seria incluído somente no segundo intervalo mostrado abaixo:  
   
 ```
 start_time                    end_time  
@@ -231,4 +231,4 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>Consulte Também
 
- [Eventos estendidos no banco de dados SQL do Azure](/azure/azure-sql/database/xevent-db-diff-from-svr)  
+ [Eventos estendidos no Banco de Dados SQL do Azure](/azure/azure-sql/database/xevent-db-diff-from-svr)  

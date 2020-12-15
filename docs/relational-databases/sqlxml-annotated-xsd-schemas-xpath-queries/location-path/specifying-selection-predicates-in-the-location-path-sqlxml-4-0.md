@@ -18,13 +18,13 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17f6ca29f9a91315eef11c39a884bf773cad6daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c02a33e76fd478e77e2b5a743b5cc6e1d32f1ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649773"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414397"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificando predicados de seleção no caminho do local (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85649773"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer`é o teste de nó (verdadeiro se `Customer` for um **\<element node>** , porque **\<element>** é o tipo de nó principal para o `child` eixo). `attribute::CustomerID="ALFKI"` é o predicado. No predicado, `attribute` é o eixo e `CustomerID` é o teste de nó (true se **CustomerID** é um atributo do nó de contexto, porque **\<attribute>** é o tipo de nó principal do eixo de **atributo** ).  
+ Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer` é o teste de nó (verdadeiro se `Customer` for um **\<element node>** , porque **\<element>** é o tipo de nó principal para o `child` eixo). `attribute::CustomerID="ALFKI"` é o predicado. No predicado, `attribute` é o eixo e `CustomerID` é o teste de nó (true se **CustomerID** é um atributo do nó de contexto, porque **\<attribute>** é o tipo de nó principal do eixo de **atributo** ).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -74,7 +74,7 @@ child::Customer[child::ContactName]
   
  Este exemplo pressupõe que o **\<ContactName>** é um elemento filho do **\<Customer>** elemento no documento XML, que é conhecido como *mapeamento centrado em elemento* em um esquema XSD anotado.  
   
- Nesta expressão XPath, `child` é o nome do eixo. `Customer`é o teste de nó (TRUE se `Customer` for um **\<element>** nó, porque **\<element>** é o tipo de nó principal para `child` Axis). `child::ContactName` é o predicado. No predicado, `child` é o eixo e `ContactName` é o teste de nó (verdadeiro se `ContactName` for um **\<element>** nó).  
+ Nesta expressão XPath, `child` é o nome do eixo. `Customer` é o teste de nó (TRUE se `Customer` for um **\<element>** nó, porque **\<element>** é o tipo de nó principal para `child` Axis). `child::ContactName` é o predicado. No predicado, `child` é o eixo e `ContactName` é o teste de nó (verdadeiro se `ContactName` for um **\<element>** nó).  
   
  Essa expressão retorna somente os **\<Customer>** filhos do elemento do nó de contexto que têm **\<ContactName>** elementos filhos.  
   
@@ -93,7 +93,7 @@ child::Customer[not(child::ContactName)]
   
  Este exemplo pressupõe que **\<ContactName>** é um elemento filho do **\<Customer>** elemento no documento XML, e o campo ContactName não é necessário no banco de dados.  
   
- Neste exemplo, `child` é o eixo. `Customer`é o teste de nó (verdadeiro se `Customer` for um \<element> nó). `not(child::ContactName)` é o predicado. No predicado, `child` é o eixo e `ContactName` é o teste de nó (verdadeiro se `ContactName` for um \<element> nó).  
+ Neste exemplo, `child` é o eixo. `Customer` é o teste de nó (verdadeiro se `Customer` for um \<element> nó). `not(child::ContactName)` é o predicado. No predicado, `child` é o eixo e `ContactName` é o teste de nó (verdadeiro se `ContactName` for um \<element> nó).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   

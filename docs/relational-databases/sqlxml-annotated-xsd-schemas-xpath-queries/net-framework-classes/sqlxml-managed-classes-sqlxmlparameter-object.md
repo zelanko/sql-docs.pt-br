@@ -17,19 +17,19 @@ ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db4c8621b64b340b3bebf605cb4ae9e3bb400382
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 198cdadcfcd338dd44afdfffe995a315b7670d0f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787269"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97413890"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>Classes gerenciadas SQLXML – Objeto SqlXmlParameter
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   O objeto SqlXmlParameter dá suporte a essas propriedades:  
   
- Name  
+ Nome  
  O nome do parâmetro. Os comandos podem ser parâmetros passados. Chamar o método CreateParameter do objeto SqlXmlCommand cria o objeto Parameter.  
   
  Valor  
