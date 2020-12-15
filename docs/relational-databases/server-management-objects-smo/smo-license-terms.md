@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8939bfbec2f309c899a527288de35a3d3ea10d09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 91301000df95b19338313d4541d7a7de4956095d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420190"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439809"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termos de licença do SMO (Objetos de Gerenciamento Compartilhado) do SQL Server
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 
 **2.    REQUISITOS DE LICENCIAMENTO E/OU DIREITOS DE USO ADICIONAIS.**
 
-&nbsp;&nbsp;**um código. distribuível.**
+&nbsp;&nbsp;**um.    Código distribuível.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i. Right para usar e distribuir. Se você estiver em conformidade com os termos abaixo:**
 *   Você poderá copiar e distribuir a forma de código-objeto do software (“Código Distribuível”) nos programas que desenvolve e
@@ -86,9 +86,9 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 
 **10.   LEI APLICÁVEL.**
 
-&nbsp;&nbsp;**a. Estados Unidos.** Se você tiver adquirido o software nos Estados Unidos, o presente contrato será regido e interpretado de acordo com as leis do Estado de Washington, que serão aplicadas aos requerimentos judiciais ou extrajudiciais de violação de contrato, independentemente dos conflitos de princípios de leis. As leis do estado no qual você reside regerão todos os requerimentos judiciais ou extrajudiciais, incluindo leis de defesa do consumidor, concorrência desleal e atos ilícitos extracontratuais.
+&nbsp;&nbsp;**um.    Estados Unidos.** Se você tiver adquirido o software nos Estados Unidos, o presente contrato será regido e interpretado de acordo com as leis do Estado de Washington, que serão aplicadas aos requerimentos judiciais ou extrajudiciais de violação de contrato, independentemente dos conflitos de princípios de leis. As leis do estado no qual você reside regerão todos os requerimentos judiciais ou extrajudiciais, incluindo leis de defesa do consumidor, concorrência desleal e atos ilícitos extracontratuais.
 
-&nbsp;&nbsp;**b. fora do Estados Unidos.** Se você tiver adquirido o software em qualquer outro país, serão aplicadas as leis desse país.
+&nbsp;&nbsp;**b.    Fora do Estados Unidos.** Se você tiver adquirido o software em qualquer outro país, serão aplicadas as leis desse país.
 
 **11.   EFEITO LEGAL.** Este contrato descreve determinados direitos legais. Você pode ter outros direitos de acordo com as leis do seu país. Você também pode ter direitos em relação à parte de quem o software foi adquirido. Este contrato não altera seus direitos previstos nas leis do seu país, caso essas leis não o permitam.
 

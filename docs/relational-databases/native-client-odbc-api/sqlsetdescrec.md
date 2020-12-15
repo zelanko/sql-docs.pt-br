@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55de82affa5ea60acb5bd284f4876501d96b5404
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ce62781859e07eda250a6ea5d0c84016a0216163
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868489"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438679"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "91868489"
 |Parâmetro|Atributo relacionado para tipos de parâmetro não com valor de tabela, incluindo colunas de parâmetro com valor de tabela|Atributo relacionado para parâmetros com valor de tabela|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Tipo*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*SubType*|Ignored|Para registros de tipo SQL_DATETIME ou SQL_INTERVAL, defina como SQL_DESC_DATETIME_INTERVAL_CODE.|  
+|*Subtipo*|Ignored|Para registros de tipo SQL_DATETIME ou SQL_INTERVAL, defina como SQL_DESC_DATETIME_INTERVAL_CODE.|  
 |*Comprimento*|SQL_DESC_OCTET_LENGTH|O comprimento do nome do tipo de parâmetro com valor de tabela. Isso poderá ser SQL_NTS se o nome do tipo terminar com caractere nulo ou zero se o nome do tipo de parâmetro com valor de tabela não for necessário.|  
 |*Precisão*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
-|*Escala*|SQL_DESC_SCALE|Não utilizado. O parâmetro deve ser zero.|  
+|*Dimensionar*|SQL_DESC_SCALE|Não utilizado. O parâmetro deve ser zero.|  
 |*DataPtr*|SQL_DESC_DATA_PTR em APD|SQL_CA_SS_TYPE_NAME<br /><br /> O parâmetro é opcional para chamadas de procedimento armazenado e NULL poderá ser especificado se ele não for necessário. Esse parâmetro deve ser especificado para instruções SQL que não sejam chamadas de procedimento.<br /><br /> *DataPtr* também serve como um valor exclusivo que o aplicativo pode usar para identificar esse parâmetro com valor de tabela quando a associação de linha variável é usada.|  
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> Para um parâmetro com valor de tabela, trata-se do número de linhas de transferência ou SQL_DATA_AT_EXEC. Esse é um ponteiro para um valor que contém o número de linhas a serem transferidas com SQLExecDirect.|  
 |*IndicatorPtr*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
@@ -47,7 +47,7 @@ ms.locfileid: "91868489"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>Suporte de SQLSetDescRec a recursos aprimorados de data e hora  
  Os valores permitidos para tipos de data/hora são os seguintes:  
   
-| Atributo | *Tipo* | *SubType* | *Comprimento* | *Precisão* | *Escala* |
+| Atributo | *Tipo* | *Subtipo* | *Comprimento* | *Precisão* | *Escala* |
 | --------- | ------ | --------- | -------- | ----------- | ------- |
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  

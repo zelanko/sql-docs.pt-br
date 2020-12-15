@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1eb4580f3654b12f09b39e2fadf2167a9f9e561
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a2fbc7fe209653a142ea887999fc95310f29e30b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869337"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438349"
 ---
 # <a name="prepared-execution"></a>Execução preparada
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91869337"
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] também oferece suporte nativo para execução preparada. Um plano de execução é criado em **SQLPrepare** e executado posteriormente quando **SQLExecute** é chamado. Como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o não é necessário para criar procedimentos armazenados temporários em **SQLPrepare**, não há nenhuma sobrecarga extra nas tabelas do sistema em **tempdb**.  
   
- Por motivos de desempenho, a preparação da instrução é adiada até que **SQLExecute** seja chamado ou uma operação de metapropriedade (como [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) no ODBC) seja executada. Esse é o comportamento padrão. Não são conhecidos erros na instrução que está sendo preparada até que ela seja executada ou uma operação de metapropriedade seja executada. Definir o atributo da instrução específica do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client SQL_SOPT_SS_DEFER_PREPARE como SQL_DP_OFF pode desativar esse comportamento padrão.  
+ Por motivos de desempenho, a preparação da instrução é adiada até que **SQLExecute** seja chamado ou uma operação de metapropriedade (como [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) no ODBC) seja executada. Este é o comportamento padrão. Não são conhecidos erros na instrução que está sendo preparada até que ela seja executada ou uma operação de metapropriedade seja executada. Definir o atributo da instrução específica do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client SQL_SOPT_SS_DEFER_PREPARE como SQL_DP_OFF pode desativar esse comportamento padrão.  
   
  No caso da preparação adiada, chamar **SQLDescribeCol** ou **SQLDescribeParam** antes de chamar **SQLExecute** gera um ida e volta extra para o servidor. No **SQLDescribeCol**, o driver remove a cláusula WHERE da consulta e a envia ao servidor com SET FMTONLY on para obter a descrição das colunas no primeiro conjunto de resultados retornado pela consulta. No **SQLDescribeParam**, o driver chama o servidor para obter uma descrição das expressões ou colunas referenciadas por quaisquer marcadores de parâmetro na consulta. Esse método também tem algumas restrições, como não poder resolver parâmetros em subconsultas.  
   

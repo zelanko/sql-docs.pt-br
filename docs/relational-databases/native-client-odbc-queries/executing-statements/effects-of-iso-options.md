@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7903ef171ecda557c723edc2d73381a2db8fa41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 53012e9698cdd7132b6ea35a8296d84287a2767f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486806"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438369"
 ---
 # <a name="effects-of-iso-options"></a>Efeitos das opções ISO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88486806"
   
  O próprio driver emite estas instruções; o aplicativo ODBC não faz nada para solicitá-las. A configuração dessas opções permite que os aplicativos ODBC que usam o driver sejam mais portáteis, pois o comportamento do servidor corresponde então ao padrão ISO.  
   
- Em geral, os aplicativos baseados na DB-Library não ativam essas opções. Os sites que observam comportamento diferente entre os clientes ODBC ou de biblioteca de banco de BD ao executar a mesma instrução SQL não devem assumir que isso aponta para um problema com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client. Eles devem primeiro executar novamente a instrução no ambiente de biblioteca de banco de usuários com as mesmas opções SET que seriam usadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client.  
+ Em geral, os aplicativos baseados na DB-Library não ativam essas opções. Os sites que observam comportamento diferente entre os clientes ODBC ou DB-Library ao executar a mesma instrução SQL não devem pressupor que isso aponta para um problema com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client. Eles devem primeiro executar novamente a instrução no ambiente de DB-Library com as mesmas opções SET que seriam usadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client.  
   
  Como as opções SET podem ser ativadas e desativadas a qualquer momento por usuários e aplicativos, os desenvolvedores de procedimentos armazenados e de gatilhos também devem tomar o cuidado de testar seus procedimentos e gatilhos com as opções SET listadas acima ativadas e desativadas. Isso garante que os procedimentos e gatilhos funcionem corretamente, independentemente das opções que uma conexão específica possa ter ativado ao invocar o procedimento ou o gatilho. Os gatilhos ou os procedimentos armazenados que necessitam de uma determinada configuração para uma dessas opções deve emitir uma instrução SET no início do gatilho ou do procedimento armazenado. Essa instrução SET permanece em vigor apenas para a execução do gatilho ou do procedimento armazenado; quando o procedimento ou o gatilho é concluído, a configuração original é restaurada.  
   

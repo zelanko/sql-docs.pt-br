@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca60a4bbe9652d20cb4db0f9f4522d2fa1ff1afc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c648e39186dada7527678f6a1c8efcd764d86355
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438449"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Processando instruções que geram mensagens
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

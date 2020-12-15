@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82b797bdf365b5b1226f63bae31047f4c6aa29c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: afb9cbc371fa962d9c7b63dea6e2a9fe82cbfae8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498536"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439737"
 ---
 # <a name="configuring-sql-server-in-smo"></a>Configurando o SQL Server no SMO
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88498536"
   
  As propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.UserOptions> contêm informações sobre o comportamento das conexões atuais em relação a aritmética, padrões ANSI e transações.  
   
- Também há um conjunto de opções de configuração que é representado pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Configuration>. Ele contém um conjunto de propriedades que representam as opções que podem ser modificadas pelo procedimento armazenado **sp_configure** . Opções como **aumento de prioridade**, **intervalo de recuperação** e tamanho do pacote de **rede**controlam o desempenho da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Muitas dessas opções podem ser alteradas de forma dinâmica, mas, em alguns casos, o valor é primeiro configurado e depois alterado quando a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é reiniciada.  
+ Também há um conjunto de opções de configuração que é representado pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Configuration>. Ele contém um conjunto de propriedades que representam as opções que podem ser modificadas pelo procedimento armazenado **sp_configure** . Opções como **aumento de prioridade**, **intervalo de recuperação** e tamanho do pacote de **rede** controlam o desempenho da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Muitas dessas opções podem ser alteradas de forma dinâmica, mas, em alguns casos, o valor é primeiro configurado e depois alterado quando a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é reiniciada.  
   
  Há uma propriedade de objeto <xref:Microsoft.SqlServer.Management.Smo.Configuration> para cada opção de configuração. Usando o objeto <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>, você pode modificar o parâmetro de configuração global. Muitas propriedades têm valores máximo e mínimo que também são armazenados como propriedades <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>. Essas propriedades exigem o <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> método para confirmar a alteração na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

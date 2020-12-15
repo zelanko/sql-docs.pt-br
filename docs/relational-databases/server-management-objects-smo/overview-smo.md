@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b3a9c15979d162ca345a0d440f7093c4bd15ad9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868265"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439828"
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "91868265"
   
  A execução direta é o método habitual de execução. As instruções são enviadas diretamente a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conforme são incorridas. A execução de captura é a alternativa a isto.  
   
- A execução de captura permite capturar os lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)] que seriam executados normalmente. Dessa forma, o programador de SMO pode adiar o script, armazená-lo para execução posterior ou fornecer uma visualização para o usuário final. Por exemplo, uma instrução **create database**, um **create table**e **create index** podem ser enviadas em um lote e ser executadas como três etapas sequenciais. Essa funcionalidade é controlada pelo usuário com o objeto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
+ A execução de captura permite capturar os lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)] que seriam executados normalmente. Dessa forma, o programador de SMO pode adiar o script, armazená-lo para execução posterior ou fornecer uma visualização para o usuário final. Por exemplo, uma instrução **create database**, um **create table** e **create index** podem ser enviadas em um lote e ser executadas como três etapas sequenciais. Essa funcionalidade é controlada pelo usuário com o objeto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
  **Provedor WMI**  
   

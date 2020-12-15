@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 2ab1c51c53282b5f245cf7da0d33cf4f797bf53a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810242"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439457"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -76,7 +76,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>Comentários  
  `sp_execute_remote` os parâmetros devem ser inseridos na ordem específica, conforme descrito na seção sintaxe acima. Se os parâmetros forem inseridos na ordem incorreta, uma mensagem de erro será exibida.  
   
- `sp_execute_remote` tem o mesmo comportamento que [executar &#40;&#41;Transact-SQL ](../../t-sql/language-elements/execute-transact-sql.md) com relação a lotes e o escopo de nomes. A instrução Transact-SQL ou o lote no parâmetro sp_execute_remote * \@ stmt* não é compilado até que a instrução sp_execute_remote seja executada.  
+ `sp_execute_remote` tem o mesmo comportamento que [executar &#40;&#41;Transact-SQL ](../../t-sql/language-elements/execute-transact-sql.md) com relação a lotes e o escopo de nomes. A instrução Transact-SQL ou o lote no parâmetro sp_execute_remote *\@ stmt* não é compilado até que a instrução sp_execute_remote seja executada.  
   
  `sp_execute_remote` Adiciona uma coluna adicional ao conjunto de resultados denominado ' $ShardName ' que contém o nome do banco de dados remoto que produziu a linha.  
   

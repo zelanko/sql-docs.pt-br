@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7a46f76385a724f1aa8622ac85301cdc7e12b6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7257b24d2908ea17977c0b08f0517d65d2481979
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006511"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439481"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ sp_columns [ @table_name = ] object
   
 `[ \@table_owner = ] owner` É o proprietário do objeto do objeto usado para retornar as informações do catálogo. *Owner* é **nvarchar (384)**, com um padrão de NULL. Há suporte para a correspondência do padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de objeto padrão do DBMS subjacente se aplicarão.  
   
- Se o usuário atual possuir um objeto com o nome especificado, as colunas desse objeto serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir um objeto com o *objeto*especificado, **sp_columns** procurará um objeto com o *objeto* especificado de Propriedade do proprietário do banco de dados. Se existir, as colunas desse objeto serão retornadas.  
+ Se o usuário atual possuir um objeto com o nome especificado, as colunas desse objeto serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir um objeto com o *objeto* especificado, **sp_columns** procurará um objeto com o *objeto* especificado de Propriedade do proprietário do banco de dados. Se existir, as colunas desse objeto serão retornadas.  
   
 `[ \@table_qualifier = ] qualifier` É o nome do qualificador de objeto. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para objetos (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ela representa o nome do servidor do ambiente de banco de dados do objeto.  
   
@@ -62,7 +62,7 @@ sp_columns [ @table_name = ] object
  Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- O procedimento armazenado do catálogo **sp_columns** é equivalente a **SQLColumns** no ODBC. Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**e **table_name**.  
+ O procedimento armazenado do catálogo **sp_columns** é equivalente a **SQLColumns** no ODBC. Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER** e **table_name**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  

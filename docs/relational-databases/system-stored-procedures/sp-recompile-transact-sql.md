@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e0f32166351f80b87b28a169ea0204af97f832f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bf933bec30b2434583970992f79dfc4e898cd479
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547577"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439428"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

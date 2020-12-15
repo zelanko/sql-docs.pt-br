@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1117c89aec3a615b439686a065c29457e267bffe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 94ce485bc773b66010708034c6c6cd2b87f85d3e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541756"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439401"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_fulltext_table
 |**Suspensa**|Descarta os metadados no índice de texto completo para *qualified_table_name*. Se o índice de texto completo for ativo, será desativado automaticamente antes de ser descartado. Não é necessário remover colunas antes de descartar o índice de texto completo.|  
 |**Ativar**|Ativa a capacidade de coleta de dados de índice de texto completo para *qualified_table_name*, após sua desativação. Deve haver pelo menos uma coluna participando do índice de texto completo para que ele seja ativado.<br /><br /> Um índice de texto completo torna-se ativo automaticamente (para população) assim que a primeira coluna é adicionada para indexação. Se a última coluna for descartada do índice, o índice se tornará inativo. Se o controle de alterações estiver ativo, a ativação de um índice inativo inicia um novo população.<br /><br /> Observe que isso não preenche realmente o índice de texto completo, mas simplesmente registra a tabela no catálogo de texto completo no sistema de arquivos para que as linhas de *qualified_table_name* possam ser recuperadas durante a próxima população de índice de texto completo.|  
 |**Ativar**|Desativa o índice de texto completo para *qualified_table_name* para que os dados do índice de texto completo não possam mais ser coletados para o *qualified_table_name*. Os metadados de índice de texto completo permanecem e a tabela pode ser reativada.<br /><br /> Se o controle de alterações estiver ativo, a desativação de um índice ativo congelará o estado do índice: qualquer população em andamento será interrompido e mais nenhuma alteração será propagada para o índice.|  
-|**start_change_tracking**|Inicia uma população incremental do índice de texto completo. Se a tabela não tiver um carimbo de data/hora, inicia uma população completa do índice de texto completo. Inicia o controle de alterações na tabela.<br /><br /> O controle de alterações de texto completo não rastreia nenhuma operação WRITETEXT ou UPDATETEXT executada em colunas indexadas de texto completo que são do tipo **Image**, **Text**ou **ntext**.|  
+|**start_change_tracking**|Inicia uma população incremental do índice de texto completo. Se a tabela não tiver um carimbo de data/hora, inicia uma população completa do índice de texto completo. Inicia o controle de alterações na tabela.<br /><br /> O controle de alterações de texto completo não rastreia nenhuma operação WRITETEXT ou UPDATETEXT executada em colunas indexadas de texto completo que são do tipo **Image**, **Text** ou **ntext**.|  
 |**stop_change_tracking**|Interrompe o controle de alterações na tabela.|  
 |**update_index**|Propaga o conjunto atual de alterações controladas no índice de texto completo.|  
 |**start_background_updateindex**|Inicia a propagação de alterações controladas no índice de texto completo conforme elas ocorrem.|  
@@ -84,7 +84,7 @@ sp_fulltext_table
   
  Se a tabela é reativada e o índice não é populado novamente, o antigo índice permanece disponível para consultas em qualquer coluna restante habilitada para texto completo que não seja nova. É feita a correspondência de dados de colunas excluídas nas consultas que especificam uma pesquisa de todas as colunas de texto completo.  
   
- Depois que uma tabela foi definida para indexação de texto completo, alternando a coluna de chave exclusiva de texto completo de um tipo de dados para outro, alterando o tipo de dados dessa coluna ou alterando a chave exclusiva de texto completo de uma coluna para outra, sem uma repopulação completa pode causar uma falha durante uma consulta subsequente e retornando a mensagem de erro: "falha na conversão para *o*tipo data_type *para* o valor da chave de pesquisa de texto completo key_value Para evitar isso, descarte a definição de texto completo desta tabela usando a ação de **soltar** de **sp_fulltext_table** e redefina-a usando **sp_fulltext_table** e **sp_fulltext_column**.  
+ Depois que uma tabela foi definida para indexação de texto completo, alternando a coluna de chave exclusiva de texto completo de um tipo de dados para outro, alterando o tipo de dados dessa coluna ou alterando a chave exclusiva de texto completo de uma coluna para outra, sem uma repopulação completa pode causar uma falha durante uma consulta subsequente e retornando a mensagem de erro: "falha na conversão para *o* tipo data_type *para* o valor da chave de pesquisa de texto completo key_value Para evitar isso, descarte a definição de texto completo desta tabela usando a ação de **soltar** de **sp_fulltext_table** e redefina-a usando **sp_fulltext_table** e **sp_fulltext_column**.  
   
  A coluna de chave de texto completo deve ser definida para ter 900 bytes ou menos. É recomendável que o tamanho da coluna de chave seja o menor possível por motivos de desempenho.  
   
