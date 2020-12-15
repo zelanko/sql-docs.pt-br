@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 837947acfb36857414b53edc9f89054a4dd4bbd8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dea493c6c46536367d3251579d60c731bde1bb84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899979"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424523"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW o uso de recursos e funcionalidades do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ Todas as tabelas de fatos maiores são particionadas por ano. A única exceção
 
 A função de partição usada para todas as tabelas particionadas é `PF_Date` , e o esquema de partição que está sendo usado é `PS_Date` .
 
-## <a name="in-memory-oltp"></a>OLTP in-memory
+## <a name="in-memory-oltp"></a>OLTP na memória
 
 (Versão completa do exemplo)
 
