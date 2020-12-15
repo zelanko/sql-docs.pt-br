@@ -10,13 +10,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: e246d516d3c05b9a2c6725f7fd3e3f787066b8aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112436"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461397"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de banco de dados WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ Os diferentes tipos de tabelas são organizados em três esquemas.
 |Esquema|Descrição|
 |-----------------------------|---------------------|
 |Dimensão|Tabelas de dimensões.|
-|Fato|Tabelas de fatos.|  
+|Fato| Tabela de fatos.|  
 |Integração|Tabelas de preparo e outros objetos necessários para ETL.|  
 
 ## <a name="tables"></a>Tabelas
@@ -49,21 +49,21 @@ WideWorldImportersDW tem as tabelas de dimensão a seguir. A descrição inclui 
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Cliente|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Data|Nova tabela com informações sobre datas, incluindo ano financeiro (com base em 1º de novembro de início para o ano financeiro).|
-|Employee|`Application.People`.|
+|Funcionário|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fornecedor|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
 |PaymentMethod|`Application.PaymentMethods`.|
 |TransactionType|`Application.TransactionTypes`.|
 
-### <a name="fact-tables"></a>Tabelas de fatos
+### <a name="fact-tables"></a>Tabela de fatos
 
 WideWorldImportersDW tem as seguintes tabelas de fatos. A descrição inclui a relação com as tabelas de origem no banco de dados WideWorldImporters, bem como as classes de consultas de análise/relatórios em que cada tabela de fatos é normalmente usada com o.
 
 |Tabela|Tabelas de origem|Análise de exemplo|
 |-----------------------------|---------------------|---------------------|
-|Order|`Sales.Orders` e `Sales.OrderLines`|Vendedores, o seletor/produtividade do empacotador e no tempo para selecionar pedidos. Além disso, situações de ações baixas levando a pedidos pendentes.|
+|Ordem|`Sales.Orders` e `Sales.OrderLines`|Vendedores, o seletor/produtividade do empacotador e no tempo para selecionar pedidos. Além disso, situações de ações baixas levando a pedidos pendentes.|
 |Venda|`Sales.Invoices` e `Sales.InvoiceLines`|Datas de vendas, datas de entrega, rentabilidade ao longo do tempo, rentabilidade por vendedor.|
-|Adquirir|`Purchasing.PurchaseOrderLines`|Tempos de Lead reais esperados versus|
+|Purchase|`Purchasing.PurchaseOrderLines`|Tempos de Lead reais esperados versus|
 |Transação|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Medindo datas de problemas vs. datas de finalização e valores.|
 |Movimentação|`Warehouse.StockTransactions`|Movimentações ao longo do tempo.|
 |Retenção de estoque|`Warehouse.StockItemHoldings`|Valores e níveis de estoque disponíveis.|
@@ -72,7 +72,7 @@ WideWorldImportersDW tem as seguintes tabelas de fatos. A descrição inclui a r
 
 Os procedimentos armazenados são usados principalmente para o processo de ETL e para fins de configuração.
 
-Todas as extensões do exemplo são incentivadas a usar `Reports` o esquema para Reporting Services relatórios e o `PowerBI` esquema para acesso do Power bi.
+Todas as extensões do exemplo são incentivadas a usar o `Reports` esquema para Reporting Services relatórios e o `PowerBI` esquema para acesso do Power bi.
 
 ### <a name="application-schema"></a>Esquema do aplicativo
 
@@ -92,7 +92,7 @@ Esses procedimentos são usados para configurar o exemplo. Eles são usados para
 Os procedimentos usados no processo ETL se enquadram nessas categorias:
 - Procedimentos auxiliares para o pacote ETL – todos os procedimentos Get *.
 - Procedimentos usados pelo pacote ETL para migrar dados de preparo para as tabelas DW – todos os procedimentos Migrate *.
-- `PopulateDateDimensionForYear`– Leva um ano e garante que todas as datas desse ano sejam preenchidas na `Dimension.Date` tabela.
+- `PopulateDateDimensionForYear` – Leva um ano e garante que todas as datas desse ano sejam preenchidas na `Dimension.Date` tabela.
 
 ### <a name="sequences-schema"></a>Esquema de sequências
 

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1099243569f74cc5c50c90de1ec7bf35a5c53d51
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2cef670429ad9a086916e49049b7e28d03ad424f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005813"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462797"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys.query_store_query (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -52,17 +52,17 @@ ms.locfileid: "92005813"
 |**last_compile_batch_offset_start**|**bigint**|Informações que podem ser fornecidas para sys.dm_exec_sql_text junto com last_compile_batch_sql_handle.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
 |**last_compile_batch_offset_end**|**bigint**|Informações que podem ser fornecidas para sys.dm_exec_sql_text junto com last_compile_batch_sql_handle.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
 |**count_compiles**|**bigint**|Estatísticas de compilação.<br/>**Observação:** A análise de Synapse do Azure sempre retornará um (1).|  
-|**avg_compile_duration**|**flutuante**|Estatísticas de compilação em microssegundos.|  
+|**avg_compile_duration**|**float**|Estatísticas de compilação em microssegundos.|  
 |**last_compile_duration**|**bigint**|Estatísticas de compilação em microssegundos.|  
-|**avg_bind_duration**|**flutuante**|Estatísticas de associação em microssegundos.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
+|**avg_bind_duration**|**float**|Estatísticas de associação em microssegundos.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
 |**last_bind_duration**|**bigint**|Estatísticas de associação.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
-|**avg_bind_cpu_time**|**flutuante**|Estatísticas de associação.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
+|**avg_bind_cpu_time**|**float**|Estatísticas de associação.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
 |**last_bind_cpu_time**|**bigint**|Estatísticas de associação.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
-|**avg_optimize_duration**|**flutuante**|Estatísticas de otimização em microssegundos.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
+|**avg_optimize_duration**|**float**|Estatísticas de otimização em microssegundos.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
 |**last_optimize_duration**|**bigint**|Estatísticas de otimização.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
-|**avg_optimize_cpu_time**|**flutuante**|Estatísticas de otimização em microssegundos.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
+|**avg_optimize_cpu_time**|**float**|Estatísticas de otimização em microssegundos.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
 |**last_optimize_cpu_time**|**bigint**|Estatísticas de otimização.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
-|**avg_compile_memory_kb**|**flutuante**|Compilar estatísticas de memória.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
+|**avg_compile_memory_kb**|**float**|Compilar estatísticas de memória.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
 |**last_compile_memory_kb**|**bigint**|Compilar estatísticas de memória.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
 |**max_compile_memory_kb**|**bigint**|Compilar estatísticas de memória.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|
 |**is_clouddb_internal_query**|**bit**|Sempre 0 no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local.<br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|

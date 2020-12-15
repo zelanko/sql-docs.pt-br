@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bf4383d8b0f6be0d3242d91c935559f8c98ff00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 54419481ea32fb3b1a5cfc896f16bf4db974c0fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498842"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462047"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Suporte a colunas esparsas no SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88498842"
 |Determinar se uma coluna está esparsa.|Consulte a coluna SS_IS_SPARSE do conjunto de resultados SQLColumns (ODBC).<br /><br /> Consulte a coluna SS_IS_SPARSE do conjunto de linhas de esquema de DBSCHEMA_COLUMNS (OLE DB).<br /><br /> Esse cenário não é possível com um aplicativo que usa o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client de uma versão anterior ao [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Entretanto, esse aplicativo poderia consultar exibições de sistema.|  
 |Determinar se uma coluna é um **column_set**.|Consulte a coluna SS_IS_COLUMN_SET do conjunto de resultados SQLColumns. Ou então, consulte o atributo de coluna específico do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SQL_CA_SS_IS_COLUMN_SET (ODBC).<br /><br /> Consulte a coluna SS_IS_COLUMN_SET do conjunto de linhas de esquema de DBSCHEMA_COLUMNS. Ou então, confira *dwFlags* retornado por IColumnsinfo::GetColumnInfo ou DBCOLUMNFLAGS no conjunto de linhas retornado por IColumnsRowset::GetColumnsRowset. Para **column_set** colunas, DBCOLUMNFLAGS_SS_ISCOLUMNSET será definido (OLE DB).<br /><br /> Esse cenário não é possível com um aplicativo que usa o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client de uma versão anterior ao [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Entretanto, esse aplicativo poderia consultar exibições de sistema.|  
 |Importar e exportar colunas esparsas por BCP para uma tabela sem **column_set**.|Nenhuma alteração em comportamento de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
-|Importar e exportar colunas esparsas por BCP para uma tabela com um **column_set**.|Se **column_set** estiver associado como um tipo binário, ele será importado e exportado da mesma maneira que o XML; ou seja, como **varbinary(max)**. Se estiver associado como um tipo **char** ou **wchar**, será importado como **nvarchar (max)**.<br /><br /> As colunas que são membros do **column_set** esparso não são exportadas como colunas distintas; elas só são exportadas no valor do **column_set**.|  
+|Importar e exportar colunas esparsas por BCP para uma tabela com um **column_set**.|Se **column_set** estiver associado como um tipo binário, ele será importado e exportado da mesma maneira que o XML; ou seja, como **varbinary(max)** . Se estiver associado como um tipo **char** ou **wchar**, será importado como **nvarchar (max)** .<br /><br /> As colunas que são membros do **column_set** esparso não são exportadas como colunas distintas; elas só são exportadas no valor do **column_set**.|  
 |Comportamento de **queryout** para BCP.|Nenhuma alteração na manipulação de colunas nomeadas explicitamente de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.<br /><br /> Cenários que envolvem importação e exportação entre tabelas com esquemas diferentes podem exigir manipulação especial.<br /><br /> Para obter mais informações sobre BCP, consulte Suporte de BCP (cópia em massa) a colunas esparsas, mais adiante neste tópico.|  
   
 ## <a name="down-level-client-behavior"></a>Comportamento do cliente de versão anterior  
@@ -56,7 +56,7 @@ ms.locfileid: "88498842"
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Suporte de BCP (cópia em massa) a colunas esparsas  
  Não há nenhuma alteração na API BCP no ODBC ou OLE DB para as colunas esparsas ou **column_set** recursos.  
   
- Se uma tabela tiver um **column_set**, as colunas esparsas não serão tratadas como colunas distintas. Os valores de todas as colunas esparsas serão incluídos no valor do **column_set**, que é exportado da mesma maneira que uma coluna XML, ou seja, como **varbinary(max)**, se estiver associado como tipo binário ou como **nvarchar(max)** se estiver associado como tipo **char** or **wchar**). Na importação, o valor de **column_set** precisa estar em conformidade com o esquema do **column_set**.  
+ Se uma tabela tiver um **column_set**, as colunas esparsas não serão tratadas como colunas distintas. Os valores de todas as colunas esparsas serão incluídos no valor do **column_set**, que é exportado da mesma maneira que uma coluna XML, ou seja, como **varbinary(max)** , se estiver associado como tipo binário ou como **nvarchar(max)** se estiver associado como tipo **char** or **wchar**). Na importação, o valor de **column_set** precisa estar em conformidade com o esquema do **column_set**.  
   
  Para operações **queryout**, não há alterações na maneira como são tratadas as colunas referenciadas explicitamente. As colunas de **column_set** têm o mesmo comportamento das colunas XML e a dispersão não tem nenhum efeito sobre o tratamento de colunas esparsas nomeadas.  
   

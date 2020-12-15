@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e4d175fe42497d2a75c23d3ae49d60821952ccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833867"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458474"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ sys.dm_db_index_physical_stats (
  *database_id* \| \|Padrão nulo 0 \|  
  É a ID do banco de dados. *database_id* é **smallint**. As entradas válidas são o número da ID de um banco de dados, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.  
   
- Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id*, também deverá especificar null para *object_id*, *index_id*e *partition_number*.  
+ Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id*, também deverá especificar null para *object_id*, *index_id* e *partition_number*.  
   
  A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificada. Quando você usar DB_ID sem especificar um nome de banco de dados, o nível de compatibilidade do banco de dados atual deverá ser 90 ou mais.  
   
@@ -125,7 +125,7 @@ sys.dm_db_index_physical_stats (
  A função de gerenciamento dinâmico sys.dm_db_index_physical_stats substitui a instrução DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modos de exame  
- O modo em que a função é executada determina o nível do exame executado para obter os dados estatísticos usados pela função. o *modo* é especificado como limitado, amostrado ou detalhado. A função atravessa as cadeias de páginas para as unidades de alocação que compõem as partições especificadas da tabela ou índice. sys.dm_db_index_physical_stats requer apenas um bloqueio de tabela (IS) de intenção compartilhado, independentemente do modo em que ele é executado.  
+ O modo em que a função é executada determina o nível do exame executado para obter os dados estatísticos usados pela função. o *modo* é especificado como limitado, amostrado ou detalhado. A função atravessa as cadeias de páginas para as unidades de alocação que compõem as partições especificadas da tabela ou índice. sys.dm_db_index_physical_stats requer apenas um bloqueio de tabela de Intent-Shared (IS), independentemente do modo em que ele é executado.  
   
  O modo LIMITED é o mais rápido e examina o menor número de páginas. Para um índice, apenas as páginas de nível pai da árvore b (ou seja, aquelas acima do nível folha) são examinadas. Para um heap, as páginas PFS e IAM associadas são examinadas, e as páginas de dados de um heap são examinadas no modo LIMITED.  
   
@@ -184,7 +184,7 @@ GO
   
  **Fragmentação lógica**  
   
- É a porcentagem de páginas com problema nas páginas de folha de um índice. Uma página fora de ordem é aquela cuja próxima página física alocada ao índice não é a página apontada pelo ponteiro de próxima págin*a* na página de folha atual.  
+ É a porcentagem de páginas com problema nas páginas de folha de um índice. Uma página fora de ordem é aquela cuja próxima página física alocada ao índice não é a página apontada pelo ponteiro de próxima págin *a* na página de folha atual.  
   
  **Fragmentação da extensão**  
   

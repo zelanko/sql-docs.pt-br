@@ -15,13 +15,13 @@ ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e247ae58867054a1051f58f8a17d0d1ef701b2e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3cbf84c0f5bf4f80bc3bf12d6dad91479888d595
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790675"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462897"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Tipos de dados e o comportamento do Carregamento em Massa de XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85790675"
   
  Em XDR:  
   
--   Se o **dt: Type** for **DateTime**, **time**, **DateTime.TZ**ou **time.TZ**, você deverá especificar os tipos de dados **dt: Type** e **SQL: DataType** porque o carregamento em massa de XML executa a conversão de dados antes de enviar os dados para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Se o **dt: Type** for **DateTime**, **time**, **DateTime.TZ** ou **time.TZ**, você deverá especificar os tipos de dados **dt: Type** e **SQL: DataType** porque o carregamento em massa de XML executa a conversão de dados antes de enviar os dados para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Se os dados XML forem do tipo **UUID**, **SQL: DataType** deverá ser especificado; **dt: Type = "UUID"** também é necessário, a menos que os dados sejam dados de cadeia de caracteres. Se você não especificar **dt: UUID**, o carregamento em massa XML aceitará cadeias de caracteres com chaves (e as removerá se necessário).  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a2a97a7ac060e22ee352324a454f321e1c7d1f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2b8a80a3d63339afd700b324bee7588c69a77e58
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498804"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463307"
 ---
 # <a name="stored-procedures---calling-in-sql-server-native-client"></a>Procedimentos armazenados-chamando em SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "88498804"
 ### <a name="transact-sql-execute-statement"></a>Instrução Transact-SQL EXECUTE  
  A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo usa o mecanismo RPC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para otimizar o processamento de comandos. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
   
- Este é um exemplo da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE**do**:  
+ Este é um exemplo da instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE **do**:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

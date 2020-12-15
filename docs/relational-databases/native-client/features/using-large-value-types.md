@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dce3adf92772a69875a644a2dc23344b6b139f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243892"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461987"
 ---
 # <a name="using-large-value-types-in-sql-server-native-client"></a>Usando tipos de valor grande no SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabalhar com tipos de dados de valor grande exigia procedimentos especiais. Os tipos de dados de valores grandes são os que excedem o tamanho de linha máximo de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introduziu um especificador **Max** para tipos de dados **varchar**, **nvarchar** e **varbinary** para permitir o armazenamento de valores tão grandes quanto 2 ^ 31-1 bytes. As colunas e [!INCLUDE[tsql](../../../includes/tsql-md.md)] variáveis de tabela podem especificar os tipos de dados **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** .  
+  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabalhar com tipos de dados de valor grande exigia procedimentos especiais. Os tipos de dados de valores grandes são os que excedem o tamanho de linha máximo de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um especificador **Max** para tipos de dados **varchar**, **nvarchar** e **varbinary** para permitir o armazenamento de valores tão grandes quanto 2 ^ 31-1 bytes. As colunas e [!INCLUDE[tsql](../../../includes/tsql-md.md)] variáveis de tabela podem especificar os tipos de dados **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** .  
   
 > [!NOTE]  
 >  Os tipos de dados de valor grande podem ter entre 1 e 8 KB ou podem ser especificados como ilimitado.  
@@ -701,7 +701,7 @@ _ExitProcessResultSet:
   
 -   O valor "ilimitado" que, no caso de uma coluna **varchar (max)** é igual a 0.  
   
- As regras de conversão padrão se aplicam a uma coluna **varchar (max)** , o que significa que qualquer conversão válida para uma coluna **varchar (** 2000 **)** também será válida para uma coluna **varchar (max)** . O mesmo vale para as colunas **nvarchar(max)** e **varbinary(max)**.  
+ As regras de conversão padrão se aplicam a uma coluna **varchar (max)** , o que significa que qualquer conversão válida para uma coluna **varchar (** 2000 **)** também será válida para uma coluna **varchar (max)** . O mesmo vale para as colunas **nvarchar(max)** e **varbinary(max)** .  
   
  A seguir, encontra-se uma lista das funções API ODBC que foram aprimoradas para aceitar tipos de dados de valor grande:  
   

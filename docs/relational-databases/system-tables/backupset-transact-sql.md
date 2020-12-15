@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3271963cf5a07e88b6209bd2b7316ab40f43bc05
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328593"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461527"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "93328593"
 |**is_copy_only**|**bit**|1 = Um backup somente cópia. Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|ID da bifurcação de recuperação inicial. Isso corresponde a **FirstRecoveryForkID** de HEADERONLY de restauração.<br /><br /> Para backups de dados, **first_recovery_fork_guid** é igual a **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|ID da bifurcação de recuperação final. Isso corresponde a **RecoveryForkID** de HEADERONLY de restauração.<br /><br /> Para backups de dados, **first_recovery_fork_guid** é igual a **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Se **first_recovery_fork_guid** não for igual a **last_recovery_fork_guid** , esse será o número de sequência de log do ponto de bifurcação. Caso contrário, o valor será NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Se **first_recovery_fork_guid** não for igual a **last_recovery_fork_guid**, esse será o número de sequência de log do ponto de bifurcação. Caso contrário, o valor será NULL.|  
 |**database_guid**|**uniqueidentifier**|ID exclusiva para o banco de dados. Isso corresponde a **BindingId** de RESTORE HEADERONLY. Quando o banco de dados é restaurado, um valor novo é atribuído.|  
 |**family_guid**|**uniqueidentifier**|ID exclusiva do banco de dados original na criação. Este valor permanece o mesmo quando o banco de dados é restaurado, mesmo para um nome diferente.|  
 |**differential_base_lsn**|**numeric(25,0)**|LSN base para backups diferenciais. Para um backup diferencial com base em um único; as alterações com LSNs maior ou igual a **differential_base_lsn** são incluídas no backup diferencial.<br /><br /> Para um diferencial multibase, o valor é NULL e o LSN base deve ser determinado no nível do arquivo (consulte [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Para tipos de backup não diferencial, o valor é sempre NULL.|  

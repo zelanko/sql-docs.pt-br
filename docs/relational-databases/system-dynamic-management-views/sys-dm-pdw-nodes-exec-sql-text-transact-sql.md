@@ -12,18 +12,18 @@ dev_langs:
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2bf5b58a1e9dca5f282691ae29dd534a06ca5002
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9bb87af8d580830072dd3a8199958497b8e38a25
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059464"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440793"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Retorna o texto do lote SQL que é identificado pelo *sql_handle*especificado. Esta função com valor de tabela substitui a função do sistema **fn_get_sql**.  
+Retorna o texto do lote SQL que é identificado pelo *sql_handle* especificado. Esta função com valor de tabela substitui a função do sistema **fn_get_sql**.  
    
 ## <a name="table-returned"></a>Tabela retornada  
 |Nome da coluna|Tipo de dados|Descrição|  
@@ -41,7 +41,7 @@ Os mesmos comentários em [Sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact
 ## <a name="permissions"></a>Permissões  
  Exigir a função de servidor **sysadmin** ou `VIEW SERVER STATE` a permissão no servidor.  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Consulte também  
  [Exibições de gerenciamento dinâmico do Azure Synapse Analytics e Parallel data warehouse &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## <a name="next-steps"></a>Próximas etapas

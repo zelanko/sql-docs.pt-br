@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e22fcf286b0f1d336eebdbc5726af7b2c9f15ff0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 09cccfb889bb2eae2b80c2c466eaed1a96520be8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246703"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461997"
 ---
 # <a name="using-encryption-without-validation-in-sql-server-native-client"></a>Usando a criptografia sem validação no SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre criptograf
 
 Os certificados autoassinados não garantem a segurança. O handshake criptografado é baseado no NTLM (NT LAN Manager). É altamente recomendável que você provisione um certificado verificável no SQL Server a fim de ter uma conectividade segura. O protocolo TLS pode se tornar seguro somente com a validação de certificado.
 
-Os aplicativos também podem solicitar a criptografia de todo o tráfego de rede usando palavras-chave de cadeia de conexão ou propriedades de conexão. As palavras-chave são "Encrypt" para ODBC e OLE DB ao usar uma cadeia de caracteres de provedor com **IDBInitialize:: Initialize**ou "usar criptografia para dados" para ADO e OLE DB ao usar uma cadeia de inicialização com **IDataInitialize**. Isso também pode ser configurado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager usando a opção **Forçar Protocolo de Criptografia** e configurando o cliente para solicitar conexões criptografadas. Por padrão, a criptografia de todo o tráfego de rede para uma conexão requer que um certificado seja aprovisionado no servidor. Ao configurar o cliente para confiar no certificado no servidor, você pode se tornar vulnerável a ataques man-in-the-middle. Se você implantar um certificado verificável no servidor, será necessário alterar as configurações do cliente sobre confiar no certificado para FALSE.
+Os aplicativos também podem solicitar a criptografia de todo o tráfego de rede usando palavras-chave de cadeia de conexão ou propriedades de conexão. As palavras-chave são "Encrypt" para ODBC e OLE DB ao usar uma cadeia de caracteres de provedor com **IDBInitialize:: Initialize** ou "usar criptografia para dados" para ADO e OLE DB ao usar uma cadeia de inicialização com **IDataInitialize**. Isso também pode ser configurado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager usando a opção **Forçar Protocolo de Criptografia** e configurando o cliente para solicitar conexões criptografadas. Por padrão, a criptografia de todo o tráfego de rede para uma conexão requer que um certificado seja aprovisionado no servidor. Ao configurar o cliente para confiar no certificado no servidor, você pode se tornar vulnerável a ataques man-in-the-middle. Se você implantar um certificado verificável no servidor, será necessário alterar as configurações do cliente sobre confiar no certificado para FALSE.
 
 Para obter informações sobre palavras-chave da cadeia de conexão, consulte [usando palavras-chave da cadeia de conexão com SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   

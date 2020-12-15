@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f25dad90002ea50ba797a7960f22cfee5055c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aadc6c5b5548b2fccb3c37fdc9eb06a9baf69dcc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543364"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440527"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -62,12 +62,12 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |**add**|Adiciona *column_name* de *qualified_table_name* ao índice de texto completo inativo da tabela. Esta ação habilita a coluna para indexação de texto completo.|  
 |**suspensa**|Remove *column_name* de *qualified_table_name* do índice de texto completo inativo da tabela.|  
   
-`[ @language = ] 'language_term'` É o idioma dos dados armazenados na coluna. Para obter uma lista de idiomas incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [sys. Fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'` É o idioma dos dados armazenados na coluna. Para obter uma lista de idiomas incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [sys.fulltext_languages &#40;&#41;TRANSACT-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Use 'Neutro' quando uma coluna tiver dados em vários idiomas ou em um idioma sem-suporte. O padrão é especificado pela opção de configuração 'default full-text language.'  
   
-`[ @type_colname = ] 'type_column_name'` É o nome de uma coluna em *qualified_table_name* que contém o tipo de documento de *column_name*. Essa coluna deve ser **Char**, **nchar**, **varchar**ou **nvarchar**. Ele só é usado quando o tipo de dados de *column_name* é do tipo **varbinary (max)** ou **Image**. *type_column_name* é **sysname**, sem padrão.  
+`[ @type_colname = ] 'type_column_name'` É o nome de uma coluna em *qualified_table_name* que contém o tipo de documento de *column_name*. Essa coluna deve ser **Char**, **nchar**, **varchar** ou **nvarchar**. Ele só é usado quando o tipo de dados de *column_name* é do tipo **varbinary (max)** ou **Image**. *type_column_name* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

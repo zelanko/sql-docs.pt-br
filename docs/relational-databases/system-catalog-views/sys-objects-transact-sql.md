@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5afb76b32d58a18725ad32170bdcaf7de45355ca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fc2a9d5ef268d806a9e7a0f6b78df58539d69a4b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542550"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461677"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "89542550"
 ## <a name="remarks"></a>Comentários  
  Você pode aplicar as funções internas [object_id](../../t-sql/functions/object-id-transact-sql.md), [object_name](../../t-sql/functions/object-name-transact-sql.md)e [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)() aos objetos mostrados em sys. Objects.  
   
- Há uma versão desse modo de exibição com o mesmo esquema, chamada [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), que mostra os objetos do sistema. Há outra exibição chamada [Sys. all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) que mostra os objetos do sistema e do usuário. Todas as três exibições do catálogo têm a mesma estrutura.  
+ Há uma versão desse modo de exibição com o mesmo esquema, chamada [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), que mostra os objetos do sistema. Há outra exibição chamada [Sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) que mostra os objetos do sistema e do usuário. Todas as três exibições do catálogo têm a mesma estrutura.  
   
  Nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um índice estendido, como um índice XML ou índice espacial, é considerado uma tabela interna em sys.objects (type = IT and type_desc = INTERNAL_TABLE). Para um índice estendido:  
   
@@ -163,11 +163,11 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. all_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.all_objects ](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys. internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sys.internal_tables ](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   

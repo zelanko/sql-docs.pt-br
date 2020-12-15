@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_stats_properties (Transact-SQL)
-title: sys. dm_db_stats_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1039850e4322003ddfedd5407d18ab6170077c42
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f412097e74c8230ee7fe9941e48f39b034c2ebca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537014"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462737"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Retorna propriedades de estatísticas para o objeto de banco de dados especificado (tabela ou exibição indexada) no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. Para tabelas particionadas, consulte o [Sys. dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)semelhante. 
+  Retorna propriedades de estatísticas para o objeto de banco de dados especificado (tabela ou exibição indexada) no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. Para tabelas particionadas, consulte o [Sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)semelhante. 
  
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
  É a ID do objeto no banco de dados atual para o qual as propriedades de uma de suas estatísticas é solicitada. *object_id* é **int**.  
   
  *stats_id*  
- É a ID de estatísticas do *object_id*especificado. A ID de estatísticas pode ser obtida na exibição de gerenciamento dinâmico [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* é **int**.  
+ É a ID de estatísticas do *object_id* especificado. A ID de estatísticas pode ser obtida na exibição de gerenciamento dinâmico [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* é **int**.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -61,14 +61,14 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |persisted_sample_percent|**float**|Percentual de amostra persistente usado para as atualizações de estatísticas que não especifica explicitamente um percentual de amostragem. Se o valor for zero, nenhum percentual de amostra persistente será definido para essa estatística.<br /><br /> **Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> Comentários  
- **Sys. dm_db_stats_properties** retorna um conjunto de linhas vazio em qualquer uma das seguintes condições:  
+ **Sys.dm_db_stats_properties** retorna um conjunto de linhas vazio em qualquer uma das seguintes condições:  
   
 -   **object_id** ou **stats_id** é nulo.    
 -   O objeto especificado não foi encontrado ou não corresponde a uma tabela ou exibição indexada.    
 -   A ID de estatísticas especificada não corresponde às estatísticas existentes para a ID de objeto especificada.    
 -   O usuário atual não tem permissões para exibir o objeto de estatísticas.  
   
- Esse comportamento permite o uso seguro de **Sys. dm_db_stats_properties** quando o cruzamento é aplicado a linhas em modos de exibição como **Sys. Objects** e **Sys. stats**.  
+ Esse comportamento permite o uso seguro de **Sys.dm_db_stats_properties** quando o cruzamento é aplicado a linhas em modos de exibição como **Sys. Objects** e **Sys. stats**.  
  
 A data de atualização de estatísticas é armazenada no [objeto de blob de estatísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics), junto com o [histograma](../../relational-databases/statistics/statistics.md#histogram) e o [vetor de densidade](../../relational-databases/statistics/statistics.md#density), não nos metadados. Quando nenhum dado é lido para gerar dados de estatísticas, o blob de estatísticas não é criado, a data não está disponível e a coluna *Last_updated* é nula. Esse é o caso para estatísticas filtradas para as quais o predicado não retorna nenhuma linha ou para novas tabelas vazias.
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f64525abc9b8e42717cb9b1194001e6723f044ba
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 21afc06f62a9501e73d038a472319081421cca0f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081645"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463517"
 ---
 # <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession:: BCPControl (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +70,7 @@ HRESULT BCPControl(
  Defina como uma das opções listadas na seção de comentários, acima.  
   
  *iValue*[in]  
- O valor para o *eOption*especificado. O argumento *iValue* é um valor inteiro convertido para um ponteiro void para permitir a expansão futura para valores de 64 bits.  
+ O valor para o *eOption* especificado. O argumento *iValue* é um valor inteiro convertido para um ponteiro void para permitir a expansão futura para valores de 64 bits.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  

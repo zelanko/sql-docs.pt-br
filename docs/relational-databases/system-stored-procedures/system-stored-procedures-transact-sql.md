@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810292"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462667"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimentos armazenados do sistema (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "91810292"
   
 |Categoria|Descrição|  
 |--------------|-----------------|  
-|[Procedimentos armazenados de replicação geográfica ativa]()|Usado para gerenciar o gerenciamento de configurações de replicação geográfica ativa no banco de dados SQL do Azure|  
+|[Procedimentos armazenados do Active Geo-Replication]()|Usado para gerenciar o para gerenciar configurações do Active Geo-Replication no banco de dados SQL do Azure|  
 |[Procedimentos armazenados do catálogo](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Usados para implementar funções do dicionário de dados ODBC e isolar aplicativos ODBC de alterações feitas nas tabelas subjacentes do sistema.|  
 |[Procedimentos armazenados de captura de alteração de dados](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Usados para habilitar, desabilitar ou gerar relatórios de objetos de captura de dados de alterações.|  
 |[Procedimentos armazenados de cursor](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Usados para implementar a funcionalidade variável do cursor.|  

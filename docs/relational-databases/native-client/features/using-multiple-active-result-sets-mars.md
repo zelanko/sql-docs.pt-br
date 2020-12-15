@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1b31e142760e6799b743ab8771cc52c068d1b3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 468de09dbbf49b14f1794de5956df7e6125407fa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243865"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461977"
 ---
 # <a name="using-multiple-active-result-sets-mars-in-sql-server-native-client"></a>Usando MARS (vários conjuntos de resultados ativos) no SQL Server Native Client
 
@@ -78,7 +78,7 @@ ms.locfileid: "87243865"
   
  Para obter um exemplo de como usar MARS do ADO, consulte [usando o ADO com SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
   
-## <a name="in-memory-oltp"></a>OLTP in-memory  
+## <a name="in-memory-oltp"></a>OLTP na memória  
  O OLTP in-memory dá suporte a MARS usando consultas e procedimentos armazenados compilados nativamente. O MARS permite solicitar dados de várias consultas sem a necessidade de recuperar completamente cada conjunto de resultados antes de enviar uma solicitação para buscar linhas de um novo conjunto de resultados. Para ler com êxito de vários conjuntos de resultados abertos, você deve usar uma conexão de MARS habilitado.  
   
  O MARS é desabilitado por padrão, portanto, você precisa habilitá-lo explicitamente adicionando `MultipleActiveResultSets=True` a uma cadeia de conexão. O seguinte exemplo demonstra como se conectar a uma instância do SQL Server e como especificar que o MARS está habilitado:  
