@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4461c311c32c1f500a4481b36f4a17d0be0134bf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e6d2fbb2311392ee046b4aad84705b8ccd91a48c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547972"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468367"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 |**Text**|**nvarchar(255)**|Definição do objeto|  
   
 ## <a name="remarks"></a>Comentários  
- sp_helptext exibe a definição que é usada para criar um objeto em linhas múltiplas. Cada linha contém 255 caracteres da definição [!INCLUDE[tsql](../../includes/tsql-md.md)]. A definição reside na coluna **definição** na exibição do catálogo [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .  
+ sp_helptext exibe a definição que é usada para criar um objeto em linhas múltiplas. Cada linha contém 255 caracteres da definição [!INCLUDE[tsql](../../includes/tsql-md.md)]. A definição reside na coluna **definição** na exibição de catálogo [Sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** . Definições de objeto de sistema são publicamente visíveis. A definição de objetos de usuário é visível ao proprietário do objeto e às entidades autorizadas que têm uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION.  

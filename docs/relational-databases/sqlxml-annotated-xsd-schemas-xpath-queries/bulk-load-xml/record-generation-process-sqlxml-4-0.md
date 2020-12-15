@@ -22,13 +22,13 @@ ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 380698d9d164012f8e0be53f19be6cef8b7c56e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3b6a29abf5c1c0fd02a6af3c48845553bb88756f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773055"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467167"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Registrar processo de geração (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

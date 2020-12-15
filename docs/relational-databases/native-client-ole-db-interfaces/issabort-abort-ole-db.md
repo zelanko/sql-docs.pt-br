@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16e72e33c4ddd618ab9753cb13e1073d9defe365
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 276378972110515ef1ab397a9a494c50d5532970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081575"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469407"
 ---
 # <a name="issabortabort-native-client-ole-db-provider"></a>ISSAbort:: Abort (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "92081575"
   
 A interface **ISSAbort** , que é exposta no provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, fornece o método **ISSAbort::Abort** que é usado para cancelar o conjunto de linhas atual, além de todos os comandos executados em lotes com o comando que gerou inicialmente o conjunto de linhas e cuja execução ainda não foi concluída.  
   
- O**ISSAbout** é uma interface específica do provedou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client disponível pou meio da utilização de **QueryInterface** no objeto **IMultipleResults** retounado pou **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
+ O **ISSAbout** é uma interface específica do provedou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client disponível pou meio da utilização de **QueryInterface** no objeto **IMultipleResults** retounado pou **ICommand::Execute** ou **IOpenRowset::OpenRowset**.  
   
 ## <a name="syntax"></a>Sintaxe  
   

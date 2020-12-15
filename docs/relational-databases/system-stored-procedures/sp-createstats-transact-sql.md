@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c49367f78a257b1ba4e19d9916b590a67991d1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536679"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466867"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89536679"
   
  sp_createstats é útil para aplicativos como o benckmark, quando os tempos de execução de consulta são críticos e não podem aguardar a geração de estatísticas de coluna única pelo otimizador de consulta. Na maioria dos casos, não é necessário usar sp_createstats; o otimizador de consulta gera estatísticas de coluna única conforme necessário para melhorar os planos de consulta quando a opção de **AUTO_CREATE_STATISTICS** está ativada.  
   
- Para obter mais informações sobre estatísticas, consulte [Estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte a opção **AUTO_CREATE_STATISTICS** em [Opções ALTER DATABASE SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para obter mais informações sobre estatísticas, consulte [Estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte a opção **AUTO_CREATE_STATISTICS** em [Opções ALTER DATABASE SET &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5a337408ef4cf1a2e4b72cbb20f9c64681efd0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 95b1ac8bbbcc07eb671a32f72e944b80fdb7e0d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650318"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467127"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Executando consultas XPath (provedor SQLXMLOLEDB)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85650318"
   
 -   **Esquema de mapeamento**  
   
- Neste aplicativo de exemplo do ADO, uma consulta XPath (raiz) é especificada em um esquema de mapeamento XSD (MySchema.xml). O esquema tem um **\<Contacts>** elemento com os atributos **ContactID**, **FirstName**e **LastName** . No esquema, ocorre o mapeamento padrão: um nome de elemento é mapeado para a tabela com o mesmo nome, e os atributos do tipo simples, para as colunas com os mesmos nomes.  
+ Neste aplicativo de exemplo do ADO, uma consulta XPath (raiz) é especificada em um esquema de mapeamento XSD (MySchema.xml). O esquema tem um **\<Contacts>** elemento com os atributos **ContactID**, **FirstName** e **LastName** . No esquema, ocorre o mapeamento padrão: um nome de elemento é mapeado para a tabela com o mesmo nome, e os atributos do tipo simples, para as colunas com os mesmos nomes.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

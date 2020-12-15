@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 42e11b7c4a973312cb71756d0e67cc964664410e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867996"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469457"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>Enumerar SQL Server Native Client OLE DB fontes de dados (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91867996"
   
 5.  Busque as linhas chamando **IRowset::GetNextRows**.  
   
-6.  Recupere os dados da cópia da linha do conjunto de linhas chamando **IRowset::GetData**e processe-os.  
+6.  Recupere os dados da cópia da linha do conjunto de linhas chamando **IRowset::GetData** e processe-os.  
   
 ## <a name="example"></a>Exemplo  
  Compile com ole32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L "(local)" para L"(local)\\\name", em que name representa a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  

@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab373afbe0805b95ddc1eb1601172e467c269459
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7924ee21c5bbf6184654303328952afb93fc97cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91865100"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469317"
 ---
 # <a name="isscommandwithparameters-native-client-ole-db-provider"></a>ISSCommandWithParameters (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **ISSCommandWithParameters** dá suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML e UDTs (tipos definidos pelo usuário). Esta é uma interface opcional que herda da interface OLE DB principal **ICommandWithParameters**. Além dos três métodos herdados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **SetParameterInfo**; **ISSCommandWithParameters** fornece dois novos métodos usados para identificar os tipos de dados específicas de servidor.  
+  **ISSCommandWithParameters** dá suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML e UDTs (tipos definidos pelo usuário). Esta é uma interface opcional que herda da interface OLE DB principal **ICommandWithParameters**. Além dos três métodos herdados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames** e **SetParameterInfo**; **ISSCommandWithParameters** fornece dois novos métodos usados para identificar os tipos de dados específicas de servidor.  
   
 > [!NOTE]  
 >   A interface **ISSCommandWithParameters** pode ser usada quando são usados Componentes de Serviço, mas os próprios Componentes de Serviço não usarão esta interface.  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d87bd3ec1361cbe3c038ff57bdde31c5593a4dbb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1ed3eb33c3e7c1f54787d71c3d70bbb8ea10b810
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543996"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466987"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "89543996"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |\<inherited columns>||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|lob_data_space_id|**int**|O valor diferente de zero é a ID do espaço de dados (esquema de partição ou grupo de arquivos) que armazena os dados de objeto binário grande (LOB) dessa tabela. Exemplos de tipos de dados LOB incluem **varbinary (max)**, **varchar (max)**, **geography**ou **XML**.<br /><br /> 0 = A tabela não contém dados LOB.|  
-|filestream_data_space_id|**int**|É a ID do espaço de dados de um grupo de arquivos FILESTREAM ou de um esquema de partição que consiste em grupos de arquivos FILESTREAM.<br /><br /> Para relatar o nome de um grupo de arquivos FILESTREAM, execute a consulta `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables pode ser unido às seguintes exibições em filestream_data_space_id = data_space_id.<br /><br /> -sys. FileGroups<br /><br /> -sys. partition_schemes<br /><br /> -sys. Indexes<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (junção em filegroup_id)|  
+|lob_data_space_id|**int**|O valor diferente de zero é a ID do espaço de dados (esquema de partição ou grupo de arquivos) que armazena os dados de objeto binário grande (LOB) dessa tabela. Exemplos de tipos de dados LOB incluem **varbinary (max)**, **varchar (max)**, **geography** ou **XML**.<br /><br /> 0 = A tabela não contém dados LOB.|  
+|filestream_data_space_id|**int**|É a ID do espaço de dados de um grupo de arquivos FILESTREAM ou de um esquema de partição que consiste em grupos de arquivos FILESTREAM.<br /><br /> Para relatar o nome de um grupo de arquivos FILESTREAM, execute a consulta `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables pode ser unido às seguintes exibições em filestream_data_space_id = data_space_id.<br /><br /> -sys. FileGroups<br /><br /> -sys.partition_schemes<br /><br /> -sys. Indexes<br /><br /> -sys.allocation_units<br /><br /> -sys.fulltext_catalogs<br /><br /> -sys.data_spaces<br /><br /> -sys.destination_data_spaces<br /><br /> -sys.master_files<br /><br /> -sys.database_files<br /><br /> -backupfilegroup (junção em filegroup_id)|  
 |max_column_id_used|**int**|ID máxima de coluna já usada por esta tabela.|  
 |lock_on_bulk_load|**bit**|A tabela é bloqueada em carregamento em massa. Para obter mais informações, veja [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |uses_ansi_nulls|**bit**|A tabela foi criada com a opção de banco de dados SET ANSI_NULLS definida como ON.|  
@@ -48,7 +48,7 @@ ms.locfileid: "89543996"
 |has_unchecked_assembly_data|**bit**|1 = A tabela contém dados persistentes que dependem de um assembly cuja definição foi alterada durante o último ALTER ASSEMBLY. Será redefinida como 0 depois do próximo DBCC CHECKDB ou DBCC CHECKTABLE bem-sucedido.|  
 |text_in_row_limit|**int**|O máximo de bytes permitidos para texto em linha.<br /><br /> 0 = Texto em opção de linha não é definido. Para obter mais informações, veja [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |large_value_types_out_of_row|**bit**|1 = Tipos de valor grande são armazenados fora de linha. Para obter mais informações, veja [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
-|is_tracked_by_cdc|**bit**|1 = A tabela está habilitada para Change Data Capture. Para obter mais informações, consulte [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
+|is_tracked_by_cdc|**bit**|1 = A tabela está habilitada para Change Data Capture. Para obter mais informações, consulte [sys.sp_cdc_enable_table &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
 |lock_escalation|**tinyint**|O valor da opção LOCK_ESCALATION da tabela:<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
 |lock_escalation_desc|**nvarchar(60)**|Uma descrição de texto da opção lock_escalation da tabela. Os valores possíveis são: TABLE, AUTO e DISABLE.|  
 |is_filetable|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = A tabela é uma FileTable.<br /><br /> Para obter mais informações sobre FileTables, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).|  

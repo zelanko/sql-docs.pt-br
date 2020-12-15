@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7bd8db285c1c8d9801adb7d37d4f03a9103b444
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4dec7256e445ff41f5e8549e4dff4e6c5c341fe1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490805"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469377"
 ---
 # <a name="issasynchstatusgetstatus-native-client-ole-db-provider"></a>ISSAsynchStatus:: GetStatus (provedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

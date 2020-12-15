@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f2cc89e6e7582497f2419fe19d650f0463ab0bd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e676580ced0122e01286a0c6142cf63edcdf6e0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810429"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469517"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  O**SQLBindParameter** pode eliminar o peso da conversão de dados quando usado para fornecer dados para o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, o que resulta em ganhos de desempenho significativos para os componentes de cliente e servidor dos aplicativos. Entre os outros benefícios está a menor perda de precisão ao inserir ou atualizar tipos de dados numéricos aproximados.  
+  O **SQLBindParameter** pode eliminar o peso da conversão de dados quando usado para fornecer dados para o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, o que resulta em ganhos de desempenho significativos para os componentes de cliente e servidor dos aplicativos. Entre os outros benefícios está a menor perda de precisão ao inserir ou atualizar tipos de dados numéricos aproximados.  
   
 > [!NOTE]  
 >  Ao inserir dados de tipos **char** e **wchar** em uma coluna de imagem, é usado o tamanho dos dados sendo passados, e não o tamanho dos dados após a conversão em formato binário.  
@@ -46,7 +46,7 @@ ms.locfileid: "91810429"
   
  Depois que um parâmetro com valor de tabela é associado, suas colunas também são associadas. Para associar as colunas, chame [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para definir SQL_SOPT_SS_PARAM_FOCUS como o ordinal do parâmetro com valor de tabela. Em seguida, chame SQLBindParameter para cada coluna no parâmetro com valor de tabela. Para voltar às associações de parâmetro de nível superior, defina SQL_SOPT_SS_PARAM_FOCUS como 0.  
   
- Para obter informações sobre como mapear parâmetros para campos de descritor para parâmetros com valor de tabela, consulte [Binding and transferência de dados of table-valued Parameters and Column Values](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Para obter informações sobre como mapear parâmetros para campos de descritor para parâmetros com valor de tabela, consulte [Binding and transferência de dados of Table-Valued Parameters and Column Values](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
  Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "91810429"
  Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>Suporte de SQLBindParameter a UDTs CLR grandes  
- O**SQLBindParameter** suporta UDTs (tipos de dados definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O **SQLBindParameter** suporta UDTs (tipos de dados definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos de User-Defined CLR grandes &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Detalhes de implementação da API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   

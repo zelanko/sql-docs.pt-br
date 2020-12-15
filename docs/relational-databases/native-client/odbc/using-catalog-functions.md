@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bdc781aaef55a074083e111777b99c0b6ebd6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5047e64eed31c1b6853cbe23fc2008d61015fbca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428088"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467607"
 ---
 # <a name="using-catalog-functions"></a>Usando funções de catálogo
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88428088"
   
 -   **SQLTables**  
   
- A _linked_server_name_de duas partes **.** o _Catálogo_ também tem suporte para *FKCatalogName* e *PKCatalogName* em [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ A _linked_server_name_ de duas partes **.** o _Catálogo_ também tem suporte para *FKCatalogName* e *PKCatalogName* em [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  O uso de SQLLinkedServers e SQLLinkedCatalogs exige os seguintes arquivos:  
   

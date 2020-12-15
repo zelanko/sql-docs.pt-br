@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c316d1f87b76387ebf382754970a6b9dc1ab609f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2996d419ae22b58c065eb2b6dbcdae6786703420
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89517587"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466847"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Esta exibição do sistema com escopo no banco de dados é criada para fornecer um sistema de alerta rápido para determinar os objetos que serão afetados por uma atualização de versão principal no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Você pode usar a exibição antes ou depois da atualização para obter uma descrição completa dos objetos afetados. Você precisará consultar essa exibição em cada banco de dados para obter uma contabilidade completa no servidor inteiro.  
   
-|Nome da coluna|Tipo de Dados|Descrição|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |classe|**int** NÃO NULO|A classe do objeto que será afetado:<br /><br /> **1** = restrição<br /><br /> **7** = Índices e heaps|  
 |class_desc|**nvarchar (60)** NÃO NULO|Descrição da classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
@@ -66,9 +66,9 @@ class  class_desc        major_id    minor_id    dependency
 ### <a name="how-to-update-impacted-objects"></a>Como atualizar objetos afetados  
  As etapas ordenadas a seguir descrevem a ação corretiva a ser realizada depois da atualização da próxima versão do serviço de junho.  
   
-|Order|Objeto afetado|Ação corretiva|  
+|Ordem|Objeto afetado|Ação corretiva|  
 |-----------|---------------------|-----------------------|  
-|1|**Índices**|Reconstrua qualquer índice identificado por **Sys. dm_db_objects_impacted_on_version_change** por exemplo:  `ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
+|1|**Índices**|Reconstrua qualquer índice identificado por **Sys.dm_db_objects_impacted_on_version_change** por exemplo:  `ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Objeto**|Todas as restrições definidas por **sys.dm_db_objects_impacted_on_version_change** devem ser revalidadas depois que os dados Geometry e Geography forem recomputados na tabela subjacente. Para restrições, revalide usando ALTER TABLE. <br />Por exemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

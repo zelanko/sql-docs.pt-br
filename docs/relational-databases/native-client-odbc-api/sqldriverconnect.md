@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76942f8367bb6c38da195c61fa8d428b877d0042
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 53804692b3bb27fa4be5c3ca46e516e178288846
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810066"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465267"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "91810066"
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>Suporte de SQLDriverConnect a SPNs (nomes de entidade de serviço)  
  O SQLDDriverConnect usará a caixa de diálogo logon do ODBC boxwhen solicitação está habilitada. Isto permite que os SPNs sejam inseridos no servidor principal e no seu parceiro de failover.  
   
- O SQLDriverConnect aceitará as novas palavras-chave de cadeia de conexão **ServerSPN** e **FailoverPartnerSPN**e reconhecerá os novos atributos de conexão SQL_COPT_SS_SERVER_SPN e SQL_COPT_SS_FAILOVER_PARTNER_SPN.  
+ O SQLDriverConnect aceitará as novas palavras-chave de cadeia de conexão **ServerSPN** e **FailoverPartnerSPN** e reconhecerá os novos atributos de conexão SQL_COPT_SS_SERVER_SPN e SQL_COPT_SS_FAILOVER_PARTNER_SPN.  
   
  Quando um valor de atributo de conexão é especificado mais de uma vez, um valor definido programaticamente tem precedência sobre o valor em um DSN e um valor em uma cadeia de caracteres de conexão. Um valor em um DSN tem precedência sobre um valor em uma cadeia de caracteres de conexão.  
   

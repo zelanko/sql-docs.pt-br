@@ -15,13 +15,13 @@ ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a513ca320f072dc74b525ae4511973fa438a7624
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8487fcbd6d24f28eb753ff47ad2625bcacc47e33
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328032"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467647"
 ---
 # <a name="sql-server-native-client-conversions-ole-db"></a>Conversões de SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88328032"
 > [!NOTE]  
 >  As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. Consequentemente, algumas conversões executadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versões posteriores diferem da especificação OLE DB.  
   
- As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "formatos de dados: cadeias de caracteres e literais" em [suporte de tipo de dados para OLE DB melhorias de data e hora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, confira a seção "Formatos de dados: cadeias de caracteres e literais" em [Suporte a tipo de dados para aprimoramentos de data e hora do OLE DB](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Seguem as regras de conversão gerais:  
   

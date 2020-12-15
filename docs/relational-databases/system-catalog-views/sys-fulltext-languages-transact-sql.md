@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_languages (Transact-SQL)
-title: sys. fulltext_languages (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_languages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab4f793c243671edeaf2684d40b87c40cddaf8cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9e8c29c32323c2c75e573e8e76851e4026a6e815
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420160"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464687"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88420160"
 ## <a name="values-returned-for-default-languages"></a>Valores retornados para idiomas padrão  
  A tabela a seguir mostra valores para idiomas cujos separadores de palavras são registrados por padrão.  
   
-|Language|LCID|  
+|Idioma|LCID|  
 |--------------|----------|  
 |Árabe|1025|  
 |Bengali (India)|1093|  
@@ -106,10 +106,10 @@ ms.locfileid: "88420160"
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_fulltext_load_thesaurus_file ](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_fulltext_service ](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
- [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Configurar e gerenciar arquivos de dicionário de sinônimos para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurar e gerenciar palavras irrelevantes e palavras irrelevantes para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Configurar e gerenciar arquivos de dicionário de sinônimos para Full-Text pesquisa](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [Configurar e gerenciar palavras irrelevantes (stop words) e listas de palavras irrelevantes (stoplists) para a pesquisa de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Atualizar pesquisa de texto completo](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

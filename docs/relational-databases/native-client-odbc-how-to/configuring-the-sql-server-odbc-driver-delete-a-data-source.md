@@ -13,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf2767bdf043543f84f50a2c72fbfc8a5f10890
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 56b013873ef8060101e28d9b2c4609fa41c0c798
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009520"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467807"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurar o Driver ODBC do SQL Server – Excluir uma fonte de dados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,13 +30,13 @@ ms.locfileid: "86009520"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para excluir uma fonte de dados usando o Administrador de ODBC  
   
-1.  No **painel de controle**, **abra Ferramentas administrativas**e clique duas vezes em **fontes de dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits)**. Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
+1.  No **painel de controle**, **abra Ferramentas administrativas** e clique duas vezes em **fontes de dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits)**. Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
   
-2.  Clique na guia **DSN do usuário**, DSN do **sistema**ou DSN de **arquivo** .  
+2.  Clique na guia **DSN do usuário**, DSN do **sistema** ou DSN de **arquivo** .  
   
 3.  Selecione a fonte de dados a ser excluída.  
   
-4.  Clique em **remover**e confirme a exclusão.  
+4.  Clique em **remover** e confirme a exclusão.  
 
 ## <a name="example"></a>Exemplo  
  Para excluir programaticamente uma fonte de dados, chame [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) usando ODBC_REMOVE_DSN ou ODBC_REMOVE_SYS_DSN como o segundo parâmetro.  
@@ -60,6 +61,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Adicionar uma fonte de dados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+ [Adicionar uma fonte de dados &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

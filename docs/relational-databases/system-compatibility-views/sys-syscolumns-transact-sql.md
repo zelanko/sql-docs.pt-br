@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f16d1975d4e8ac872c8c8d625b935b738fbfdb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ae2c5a8353b896e418f15744e7b4e527183a9e79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423360"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466957"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]

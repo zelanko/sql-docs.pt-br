@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03dd345e2b7fc3be27b9bd1c61f3d252d7afb229
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3b3c006da487774a8de01ccf9a9b8cd12d9ca15f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867812"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465117"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -287,7 +287,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptsstranslate"></a>
 ## <a name="sql_copt_ss_translate"></a>SQL_COPT_SS_TRANSLATE  
- SQL_COPT_SS_TRANSLATE faz o driver traduzir caracteres entre as páginas de código de cliente e de servidor à medida que os dados de MBCS são trocados. O atributo afeta apenas os dados armazenados nas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **colunas char**, **varchar**e **Text** .  
+ SQL_COPT_SS_TRANSLATE faz o driver traduzir caracteres entre as páginas de código de cliente e de servidor à medida que os dados de MBCS são trocados. O atributo afeta apenas os dados armazenados nas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **colunas char**, **varchar** e **Text** .  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

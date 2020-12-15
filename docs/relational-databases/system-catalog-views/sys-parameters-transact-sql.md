@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 863f360d5d5aaba7eae957d7406f5e3ec465d64f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4f9b575ae381e01233c801b963d4205b554d7f3b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548704"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467007"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89548704"
 |**scale**|**tinyint**|Escala do parâmetro, se numérico; do contrário, 0.|  
 |**is_output**|**bit**|1 = Parâmetro é OUTPUT ou RETURN; caso contrário, 0.|  
 |**is_cursor_ref**|**bit**|1 = o parâmetro é um parâmetro de referência de cursor.|  
-|**has_default_value**|**bit**|1 = Parâmetro tem valor padrão.<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém valores padrão apenas para objetos CLR nesta exibição do catálogo; portanto, essa coluna tem um valor de 0 para objetos [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para exibir o valor padrão de um parâmetro em um [!INCLUDE[tsql](../../includes/tsql-md.md)] objeto, consulte a coluna **definição** da exibição de catálogo [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) ou use a função de sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
+|**has_default_value**|**bit**|1 = Parâmetro tem valor padrão.<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém valores padrão apenas para objetos CLR nesta exibição do catálogo; portanto, essa coluna tem um valor de 0 para objetos [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para exibir o valor padrão de um parâmetro em um [!INCLUDE[tsql](../../includes/tsql-md.md)] objeto, consulte a coluna **definição** da exibição de catálogo [Sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) ou use a função de sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
 |**is_xml_document**|**bit**|1 = O conteúdo é um documento XML completo.<br /><br /> 0 = o conteúdo é um fragmento de documento ou o tipo de dados da coluna não é **XML**.|  
 |**default_value**|**sql_variant**|Se **has_default_value** for 1, o valor dessa coluna será o valor do padrão para o parâmetro; caso contrário, NULL.|  
 |**xml_collection_id**|**int**|Diferente de zero se o tipo de dados do parâmetro for **XML** e o XML for digitado. O valor é a ID da coleção que contém o namespace do esquema XML de validação do parâmetro.<br /><br /> 0 = Nenhuma coleção de esquemas XML.|  
@@ -60,7 +60,7 @@ ms.locfileid: "89548704"
  [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys. all_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-parameters-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.all_parameters ](../../relational-databases/system-catalog-views/sys-all-parameters-transact-sql.md)   
  [sys.system_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
   
   

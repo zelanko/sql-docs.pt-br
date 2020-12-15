@@ -1,6 +1,6 @@
 ---
-description: sys. query_store_wait_stats (Transact-SQL)
-title: sys. query_store_wait_stats (Transact-SQL) | Microsoft Docs
+description: sys.query_store_wait_stats (Transact-SQL)
+title: sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc28729ef4f3743e945f782fed0409057e90224a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2ab48b6155e26873c22a3b951ef65705d3addd79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537298"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466917"
 ---
-# <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
+# <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
@@ -36,8 +36,8 @@ ms.locfileid: "89537298"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Identificador da linha que representa as estatísticas de espera para o plan_id, runtime_stats_interval_id, execution_type e wait_category. Ele só é exclusivo para os intervalos de estatísticas de tempo de execução anteriores. Para o intervalo ativo no momento, pode haver várias linhas representando estatísticas de espera para o plano referenciado por plan_id, com o tipo de execução representado por execution_type e a categoria de espera representada por wait_category. Normalmente, uma linha representa as estatísticas de espera liberadas para o disco, enquanto outras (s) representam o estado na memória. Portanto, para obter o estado real de cada intervalo, você precisa agregar métricas, agrupamento por plan_id, runtime_stats_interval_id, execution_type e wait_category. |  
-|**plan_id**|**bigint**|Chave estrangeira. Junções em [Sys. query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Chave estrangeira. Junções em [Sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|Chave estrangeira. Junções para [sys.query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Chave estrangeira. Junções para [sys.query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Os tipos de espera são categorizados usando a tabela abaixo e, em seguida, o tempo de espera é agregado entre essas categorias de espera. Diferentes categorias de espera exigem uma análise de acompanhamento diferente para resolver o problema, mas os tipos de espera da mesma categoria levam a experiências de solução de problemas semelhantes, e fornecer a consulta afetada além das esperas é a peça que falta para concluir a maioria dessas investigações com êxito.|
 |**wait_category_desc**|**nvarchar(128)**|Para descrição textual do campo de categoria de espera, examine a tabela a seguir.|
 |**execution_type**|**tinyint**|Determina o tipo de execução da consulta:<br /><br /> 0-execução regular (concluída com êxito)<br /><br /> 3-execução abortada do cliente iniciada<br /><br /> 4-execução anulada de exceção|  
@@ -58,15 +58,15 @@ ms.locfileid: "89537298"
 |**0**|**Desconhecido**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Thread de trabalho**|THREADPOOL|
-|**3**|**Bloqueio**|LCK_M_%|
+|**3**|**Bloquear**|LCK_M_%|
 |**4**|**Trava**|LATCH_%|
 |**5**|**Trava do buffer**|PAGELATCH_%|
 |**6**|**E/s do buffer**|PAGEIOLATCH_%|
-|**7**|**Ocorrida***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL CLR**|% DE CLR, SQLCLR%|
+|**7**|**Compilação** _|RESOURCE_SEMAPHORE_QUERY_COMPILE|
+|_ *8**|**SQL CLR**|% DE CLR, SQLCLR%|
 |**9**|**Espelhamento**|DBMIRROR%|
 |**10**|**Transação**|TRANSAÇÃO%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
+|**11**|**Ocioso**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**Preemptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(mas não BROKER_RECEIVE_WAITFOR)**|
 |**14**|**E/s de log Tran**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|

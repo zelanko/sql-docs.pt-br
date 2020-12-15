@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feb83b82a131d731129285fb4c9b5fea7b201b9f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: aada1686982e39c405c0c022fa46d5117d690f86
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493738"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466927"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88493738"
 |name|**sysname**|Nome do objeto|  
 |id|**int**|Número de identificação do objeto|  
 |xtype|**char(2)**|Tipo de objeto. Pode ser um dos seguintes tipos de objeto:<br /><br /> AF = Função de agregação (CLR)<br /><br /> C = Restrição CHECK<br /><br /> D = Padrão ou restrição DEFAULT<br /><br /> F = Restrição FOREIGN KEY<br /><br /> L = Log<br /><br /> FN = Função escalar<br /><br /> FS = Função escalar de assembly (CLR)<br /><br /> FT = Função avaliada por tabela de assembly (CLR)<br /><br /> IF = Função de tabela em linha<br /><br /> TI = tabela interna<br /><br /> P = Procedimento armazenado<br /><br /> PC = assembly (CLR) armazenado-procedimento<br /><br /> PK = Restrição PRIMARY KEY (o tipo é K)<br /><br /> RF = Procedimento armazenado de filtro de replicação<br /><br /> S = Tabela do sistema<br /><br /> SN = Sinônimo<br /><br /> SQ = Fila de serviço<br /><br /> TA = Gatilho DML de assembly (CLR)<br /><br /> TF = Função de tabela<br /><br /> TR = gatilho DML do SQL<br /><br /> TT = Tipo de tabela<br /><br /> U = Tabela de usuário<br /><br /> UQ = Restrição UNIQUE (o tipo é K)<br /><br /> V = Exibição<br /><br /> X = Procedimento armazenado estendido|  
-|uid|**smallint**|ID de esquema do proprietário do objeto. Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário. Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.<br /><br /> Importante se você usar qualquer uma das instruções DDL a seguir, deverá usar a exibição de catálogo ** \* Sys. Objects em vez de sys.sysobjetos. \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)<br /><br /> CRIAR &#124; ALTER &#124; DROP USER<br /><br /> CRIAR &#124; ALTERAR &#124; REMOVER FUNÇÃO<br /><br /> CRIAR &#124; ALTERAR &#124; REMOVER FUNÇÃO DE APLICATIVO<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|ID de esquema do proprietário do objeto. Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário. Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.<br /><br /> Importante se você usar qualquer uma das instruções DDL a seguir, deverá usar a exibição de catálogo **\* Sys. Objects em vez de sys.sysobjetos. \* \* \*** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)<br /><br /> CRIAR &#124; ALTER &#124; DROP USER<br /><br /> CRIAR &#124; ALTERAR &#124; REMOVER FUNÇÃO<br /><br /> CRIAR &#124; ALTERAR &#124; REMOVER FUNÇÃO DE APLICATIVO<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |informações|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -52,7 +52,7 @@ ms.locfileid: "88493738"
 |ftcatid|**smallint**|Identificador do catálogo de texto completo de todas as tabelas de usuário registradas por indexação de texto completo e 0 para todas as tabelas de usuário não registradas.|  
 |schema_ver|**int**|Número de versão incrementado toda vez que o esquema de uma tabela muda. Sempre retorna 0.|  
 |stats_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|type|**char(2)**|Tipo de objeto. Pode ser um dos seguintes valores:<br /><br /> AF = Função de agregação (CLR)<br /><br /> C = Restrição CHECK<br /><br /> D = Padrão ou restrição DEFAULT<br /><br /> F = Restrição FOREIGN KEY<br /><br /> FN = Função escalar<br /><br /> FS = Função escalar de assembly (CLR)<br /><br /> FT = Função com valor de tabela de assembly (CLR)IF =Função de tabela embutida<br /><br /> IT = Tabela interna<br /><br /> K = Restrição PRIMARY KEY ou UNIQUE<br /><br /> L = Log<br /><br /> P = Procedimento armazenado<br /><br /> PC = assembly (CLR) armazenado-procedimento<br /><br /> R = Regra<br /><br /> RF = Procedimento armazenado de filtro de replicação<br /><br /> S = Tabela do sistema<br /><br /> SN = Sinônimo<br /><br /> SQ = Fila de serviço<br /><br /> TA = Gatilho DML de assembly (CLR)<br /><br /> TF = Função de tabela<br /><br /> TR = gatilho DML do SQL<br /><br /> TT = Tipo de tabela<br /><br /> U = Tabela de usuário<br /><br /> V = Exibição<br /><br /> X = Procedimento armazenado estendido|  
+|tipo|**char(2)**|Tipo de objeto. Pode ser um dos seguintes valores:<br /><br /> AF = Função de agregação (CLR)<br /><br /> C = Restrição CHECK<br /><br /> D = Padrão ou restrição DEFAULT<br /><br /> F = Restrição FOREIGN KEY<br /><br /> FN = Função escalar<br /><br /> FS = Função escalar de assembly (CLR)<br /><br /> FT = Função com valor de tabela de assembly (CLR)IF =Função de tabela embutida<br /><br /> IT = Tabela interna<br /><br /> K = Restrição PRIMARY KEY ou UNIQUE<br /><br /> L = Log<br /><br /> P = Procedimento armazenado<br /><br /> PC = assembly (CLR) armazenado-procedimento<br /><br /> R = Regra<br /><br /> RF = Procedimento armazenado de filtro de replicação<br /><br /> S = Tabela do sistema<br /><br /> SN = Sinônimo<br /><br /> SQ = Fila de serviço<br /><br /> TA = Gatilho DML de assembly (CLR)<br /><br /> TF = Função de tabela<br /><br /> TR = gatilho DML do SQL<br /><br /> TT = Tipo de tabela<br /><br /> U = Tabela de usuário<br /><br /> V = Exibição<br /><br /> X = Procedimento armazenado estendido|  
 |userstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |sysstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |indexdel|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

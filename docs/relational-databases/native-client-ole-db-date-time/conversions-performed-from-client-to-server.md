@@ -13,13 +13,13 @@ ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bd997af611ec04a67d937752bde8318eb70ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2f618eebe85de63dbcff5c7fdfad4dc1331a614a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467657"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>SQL Server Native Client conversões executadas do cliente para o servidor
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88328012"
 |6|A hora é definida como zero.|  
 |7|A data é definida com a data atual.|  
 |8|A hora é convertida a UTC. Se ocorrer um erro durante essa conversão, DBSTATUS_E_CANTCONVERTVALUE será definido.|  
-|9|A cadeia de caracteres é analisada como um literal ISO e convertida para o tipo de destino. Se houver falha, a cadeia de caracteres será analisada como um literal de data OLE (que também tem componentes de hora) e convertida de uma data OLE (DBTYPE_DATE) para o tipo de destino.<br /><br /> Se o tipo de destino for DBTIMESTAMP, **smalldatetime**, **datetime**ou **datetime2**, a cadeia de caracteres deverá estar de acordo com a sintaxe de data, hora ou literais **datetime2** , ou com a sintaxe reconhecida pelo OLE. Se a cadeia de caracteres for um literal de data, todos os componentes de hora serão definidos como zero. Se a cadeia de caracteres for um literal de hora, a data será definida com a data atual.<br /><br /> Para todos os outros tipos de destino, a cadeia de caracteres deve estar de acordo com a sintaxe de literais do tipo de destino.|  
+|9|A cadeia de caracteres é analisada como um literal ISO e convertida para o tipo de destino. Se houver falha, a cadeia de caracteres será analisada como um literal de data OLE (que também tem componentes de hora) e convertida de uma data OLE (DBTYPE_DATE) para o tipo de destino.<br /><br /> Se o tipo de destino for DBTIMESTAMP, **smalldatetime**, **datetime** ou **datetime2**, a cadeia de caracteres deverá estar de acordo com a sintaxe de data, hora ou literais **datetime2** , ou com a sintaxe reconhecida pelo OLE. Se a cadeia de caracteres for um literal de data, todos os componentes de hora serão definidos como zero. Se a cadeia de caracteres for um literal de hora, a data será definida com a data atual.<br /><br /> Para todos os outros tipos de destino, a cadeia de caracteres deve estar de acordo com a sintaxe de literais do tipo de destino.|  
 |10|Se ocorrer o truncamento de frações de segundo com perda de dados, DBSTATUS_E_DATAOVERFLOW será definido. Para conversões de cadeia de caracteres, a verificação de estouro é possível somente quando a cadeia de caracteres estiver de acordo com a sintaxe ISO. Se a cadeia de caracteres for um literal de data OLE, as frações de segundo serão arredondadas.<br /><br /> Para conversão de DBTIMESTAMP (datetime) em smalldatetime, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client truncará silenciosamente o valor de segundos, em vez de gerar o erro DBSTATUS_E_DATAOVERFLOW.|  
 |11|O número de dígitos de segundo fracionário (a escala) é determinado pelo tamanho da coluna de destino, de acordo com a tabela abaixo. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo OLE DB.<br /><br /> Porém, se o tipo de origem for DBTIMESTAMP e as frações de segundo forem zero, não serão gerados dígitos de fração de segundo ou vírgulas decimais. Este comportamento assegura a compatibilidade com versões anteriores de aplicativos desenvolvidos usando provedores OLE DB mais antigos.<br /><br /> Um tamanho de coluna de ~ 0 implica em tamanho ilimitado no OLE DB (9 dígitos, a menos que a regra de 3 dígitos para DBTIMESTAMP se aplique).|  
 |12|A semântica de conversão anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para DBTYPE_DATE é mantida. As frações de segundo são truncadas para zero.|  

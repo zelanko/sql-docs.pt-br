@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b75eeeb466c8b611437cc0984b1c50fbc3130953
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f85320fff9c44a1904ea3500b32b0d9305237b99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465318"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Para instruções executadas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client não precisa consultar o servidor para descrever as colunas em um conjunto de resultados. Nesse caso, o **SQLDescribeCol** não causa uma viagem de ida e volta do servidor. Como [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)e[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), chamar **SQLDescribeCol** em instruções preparadas, mas não executadas, gera um ida e volta do servidor.  
+  Para instruções executadas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client não precisa consultar o servidor para descrever as colunas em um conjunto de resultados. Nesse caso, o **SQLDescribeCol** não causa uma viagem de ida e volta do servidor. Como [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)e [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), chamar **SQLDescribeCol** em instruções preparadas, mas não executadas, gera um ida e volta do servidor.  
   
  Quando uma instrução ou um lote de instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)] retorna vários conjuntos de linha de resultado, é possível para uma coluna referenciada por ordinal ser originada em uma tabela separada ou consultar uma coluna inteiramente diferente no conjunto de resultados. **SQLDescribeCol** deve ser chamado para cada conjunto. Quando o conjunto de resultados for alterado, o aplicativo deverá associar novamente os valores de dados antes de buscar os resultados da linha. Para obter mais informações sobre como manipular vários retornos de conjunto de resultados, consulte [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "91810012"
  Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>Suporte de SQLDescribeCol para CLR UDTs grandes  
- O **SQLDescribeCol** dá suporte a UDTs (tipos definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O **SQLDescribeCol** dá suporte a UDTs (tipos definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos de User-Defined CLR grandes &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Função SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md)   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-title: sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 310fb757ca9956ac3206ac3d9bff0cc99c857a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542251"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468477"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "89542251"
 Os comprimentos de cadeia longos podem afetar significativamente o desempenho de todas as operações DML em linhas individuais, incluindo SELECT e INSERT. Os comprimentos de cadeias curtas com um número alto de buckets vazios estão na indicação de um bucket_count que seja muito alto. Isso diminui o desempenho de verificações de índice.  
   
 > [!WARNING]
-> **Sys. dm_db_xtp_hash_index_stats** examina a tabela inteira. Portanto, se houver grandes tabelas em seu banco de dados, **Sys. dm_db_xtp_hash_index_stats** poderá levar muito tempo.  
+> **Sys.dm_db_xtp_hash_index_stats** examina a tabela inteira. Portanto, se houver grandes tabelas em seu banco de dados, **Sys.dm_db_xtp_hash_index_stats** poderá levar muito tempo.  
   
-Para obter mais informações, consulte [índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Para obter mais informações, consulte [índices de hash para tabelas Memory-Optimized](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
 |Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
@@ -88,7 +88,7 @@ A consulta a seguir pode ser usada para solucionar o número de buckets de índi
   ORDER BY [table], [index];  
 ``` 
 
-Para obter detalhes sobre como interpretar os resultados dessa consulta, consulte [Solucionando problemas de índices de hash para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Para obter detalhes sobre como interpretar os resultados dessa consulta, consulte [Solucionando problemas de índices de hash para tabelas Memory-Optimized](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Estatísticas de índice de hash para tabelas internas
 

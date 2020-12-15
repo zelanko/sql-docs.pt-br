@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f62b0fa0d27ed5db06f85b2c77e1ab381534d731
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b65b009d5dc88dc9d5a0cd5cc6f5592c8160c8bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891106"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467497"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,6 +60,6 @@ O ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Clien
 
 -   [Alteração de comportamento do driver ODBC ao lidar com conversões de caracteres](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Consulte também  
 [Instalar SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [Recursos do SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)

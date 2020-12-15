@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f2e03e32842a9187761c0f4471d871277682005
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b887b79a2e768f3c73a683ae6f60b06fb8d16a2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067508"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466827"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,11 +52,11 @@ Para [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../.
    
  É o nome qualificado ou não qualificado da tabela, da exibição indexada ou da fila para a qual as informações de uso do espaço são solicitadas. As aspas são obrigatórias apenas se um nome de objeto qualificado for especificado. Se um nome de objeto totalmente qualificado (incluindo um nome de banco de dados) for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual.  
 Se *objname* não for especificado, os resultados serão retornados para todo o banco de dados.  
-*objname* é **nvarchar (776)** , com um padrão de NULL.  
+*objname* é **nvarchar (776)**, com um padrão de NULL.  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] oferecem suporte apenas a objetos de banco de dados e de tabela.
   
-`[ @updateusage = ] 'updateusage'` Indica que o DBCC UPDATEUSAGE deve ser executado para atualizar as informações de uso do espaço. Quando *objname* não for especificado, a instrução será executada no banco de dados inteiro; caso contrário, a instrução será executada em *objname* . Os valores podem ser **true** ou **false** . o *UPDATEUSAGE* é **varchar (5)** , com um padrão de **false** .  
+`[ @updateusage = ] 'updateusage'` Indica que o DBCC UPDATEUSAGE deve ser executado para atualizar as informações de uso do espaço. Quando *objname* não for especificado, a instrução será executada no banco de dados inteiro; caso contrário, a instrução será executada em *objname*. Os valores podem ser **true** ou **false**. o *UPDATEUSAGE* é **varchar (5)**, com um padrão de **false**.  
   
 `[ @mode = ] 'mode'` Indica o escopo dos resultados. Para uma tabela ou banco de dados ampliado, o parâmetro *Mode* permite que você inclua ou exclua a parte remota do objeto. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
@@ -68,7 +68,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
 |LOCAL_ONLY|Retorna as estatísticas de armazenamento apenas da parte local do objeto ou do banco de dados. Se o objeto ou banco de dados não estiver habilitado para Stretch, o retornará as mesmas estatísticas de quando @mode = All.|  
 |REMOTE_ONLY|Retorna as estatísticas de armazenamento apenas da parte remota do objeto ou banco de dados. Essa opção gera um erro quando uma das seguintes condições é verdadeira:<br /><br /> A tabela não está habilitada para ampliação.<br /><br /> A tabela está habilitada para ampliação, mas você nunca habilitou a migração de dados. Nesse caso, a tabela remota ainda não tem um esquema.<br /><br /> O usuário removeu manualmente a tabela remota.<br /><br /> O provisionamento do arquivo de dados remotos retornou um status de êxito, mas, na verdade, falhou.|  
   
- o *modo* é **varchar (11)** , com um padrão de **n' all' '** .  
+ o *modo* é **varchar (11)**, com um padrão de **n' all' '**.  
   
 `[ @oneresultset = ] oneresultset` Indica se um único conjunto de resultados deve ser retornado. O argumento *oneresultset* pode ter os seguintes valores:  
   
@@ -77,7 +77,7 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
 |0|Quando *\@ objname* é nulo ou não é especificado, dois conjuntos de resultados são retornados. Dois conjuntos de resultados são o comportamento padrão.|  
 |1|Quando *\@ objname* = NULL ou não for especificado, um único conjunto de resultados será retornado.|  
   
- *oneresultset* é **bit** , com um padrão de **0** .  
+ *oneresultset* é **bit**, com um padrão de **0**.  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **Aplica-se a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] , [!INCLUDE[sssds-md](../../includes/sssds-md.md)] .  
@@ -121,9 +121,9 @@ Se *objname* não for especificado, os resultados serão retornados para todo o 
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Nome do objeto para o qual foram solicitadas informações de uso do espaço.<br /><br /> O nome de esquema do objeto não é retornado. Se o nome do esquema for necessário, use as exibições de gerenciamento dinâmico [Sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) ou [Sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) para obter informações de tamanho equivalentes.|  
 |**rows**|**Char (20)**|Número de linhas existentes na tabela. Se o objeto especificado for uma fila [!INCLUDE[ssSB](../../includes/sssb-md.md)], essa coluna indicará o número de mensagens na fila.|  
-|**reservado**|**varchar (18)**|Quantidade total de espaço reservado para *objname* .|  
-|**data**|**varchar (18)**|Quantidade total de espaço usada pelos dados em *objname* .|  
-|**index_size**|**varchar (18)**|Quantidade total de espaço usada pelos índices em *objname* .|  
+|**reservado**|**varchar (18)**|Quantidade total de espaço reservado para *objname*.|  
+|**data**|**varchar (18)**|Quantidade total de espaço usada pelos dados em *objname*.|  
+|**index_size**|**varchar (18)**|Quantidade total de espaço usada pelos índices em *objname*.|  
 |**Não utilizado**|**varchar (18)**|Quantidade total de espaço reservado para *objname* , mas que ainda não foi usado.|  
  
 Esse é o modo padrão, quando nenhum parâmetro é especificado. Os seguintes conjuntos de resultados são retornados detalhando as informações de tamanho do banco de dados em disco. 
@@ -162,8 +162,8 @@ Se *objname* for omitido, o valor de oneresultset será 1 e *include_total_xtp_s
 |**data**|**varchar (18)**|Total de espaço usado por dados.|  
 |**index_size**|**varchar (18)**|Total de espaço usado por índices.|  
 |**Não utilizado**|**varchar (18)**|Total de espaço reservado para objetos no banco de dados, mas ainda não usado.|
-|**xtp_precreated**|**varchar (18)**|Tamanho total dos arquivos de ponto de verificação com o estado precriado, em KB. Isso conta em direção ao espaço não alocado no banco de dados como um todo. Retornará NULL se o banco de dados não tiver um grupo de arquivos memory_optimized_data com pelo menos um contêiner. *Esta coluna só será incluída se @include_total_xtp_storage = 1* .| 
-|**xtp_used**|**varchar (18)**|Tamanho total dos arquivos de ponto de verificação com Estados em construção, ativo e destino de MESCLAgem, em KB. Esse é o espaço em disco usado ativamente para dados em tabelas com otimização de memória. Retornará NULL se o banco de dados não tiver um grupo de arquivos memory_optimized_data com pelo menos um contêiner. *Esta coluna só será incluída se @include_total_xtp_storage = 1* .| 
+|**xtp_precreated**|**varchar (18)**|Tamanho total dos arquivos de ponto de verificação com o estado precriado, em KB. Isso conta em direção ao espaço não alocado no banco de dados como um todo. Retornará NULL se o banco de dados não tiver um grupo de arquivos memory_optimized_data com pelo menos um contêiner. *Esta coluna só será incluída se @include_total_xtp_storage = 1*.| 
+|**xtp_used**|**varchar (18)**|Tamanho total dos arquivos de ponto de verificação com Estados em construção, ativo e destino de MESCLAgem, em KB. Esse é o espaço em disco usado ativamente para dados em tabelas com otimização de memória. Retornará NULL se o banco de dados não tiver um grupo de arquivos memory_optimized_data com pelo menos um contêiner. *Esta coluna só será incluída se @include_total_xtp_storage = 1*.| 
 |**xtp_pending_truncation**|**varchar (18)**|Tamanho total dos arquivos de ponto de verificação com estado WAITING_FOR_LOG_TRUNCATION, em KB. Esse é o espaço em disco usado para arquivos de ponto de verificação que estão aguardando limpeza, quando ocorre um truncamento de log. Retornará NULL se o banco de dados não tiver um grupo de arquivos memory_optimized_data com pelo menos um contêiner. Esta coluna só será incluída se `@include_total_xtp_storage=1` .|
 
 ## <a name="remarks"></a>Comentários  
@@ -171,7 +171,7 @@ Se *objname* for omitido, o valor de oneresultset será 1 e *include_total_xtp_s
   
  As páginas usadas por índices XML e índices de texto completo são incluídas em **index_size** para ambos os conjuntos de resultados. Quando *objname* é especificado, as páginas dos índices XML e dos índices de texto completo do objeto também são contadas nos resultados totais **reservados** e **index_size** .  
   
- Se o uso de espaço for calculado para um banco de dados ou um objeto que tenha um índice espacial, as colunas de tamanho de espaço, como **database_size** , **reservadas** e **index_size** , incluem o tamanho do índice espacial.  
+ Se o uso de espaço for calculado para um banco de dados ou um objeto que tenha um índice espacial, as colunas de tamanho de espaço, como **database_size**, **reservadas** e **index_size**, incluem o tamanho do índice espacial.  
   
  Quando o *UPDATEUSAGE* é especificado, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] examina as páginas de dados no banco de dado e faz as correções necessárias nas exibições do catálogo **Sys.allocation_units** e **Sys. partitions** sobre o espaço de armazenamento usado por cada tabela. Há algumas situações, por exemplo, depois de um índice ser descartado, em que as informações de espaço da tabela talvez não sejam atuais. o *UPDATEUSAGE* pode levar algum tempo para ser executado em grandes tabelas ou bancos de dados. Use o *UPDATEUSAGE* somente quando você suspeitar de que valores incorretos estão sendo retornados e quando o processo não terá um efeito adverso em outros usuários ou processos no banco de dados. Se preferir, DBCC UPDATEUSAGE pode ser executado separadamente.  
   
@@ -179,7 +179,7 @@ Se *objname* for omitido, o valor de oneresultset será 1 e *include_total_xtp_s
 >  Quando você descarta ou reconstrói índices grandes, ou descarta ou trunca tabelas grandes, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adia as desalocações de página atuais e seus bloqueios associados, até depois que a transação confirme. Operações de cancelamento adiadas não libertam espaço alocado imediatamente. Portanto, os valores retornados por **sp_spaceused** imediatamente após descartar ou truncar um objeto grande podem não refletir o espaço em disco real disponível.  
   
 ## <a name="permissions"></a>Permissões  
- A permissão para executar **sp_spaceused** é concedida à função **public** . Somente os membros da função de banco de dados fixa **db_owner** podem especificar o parâmetro **\@updateusage** .  
+ A permissão para executar **sp_spaceused** é concedida à função **public** . Somente os membros da função de banco de dados fixa **db_owner** podem especificar o parâmetro **\@updateusage**.  
   
 ## <a name="examples"></a>Exemplos  
   

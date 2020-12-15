@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ed1df2288067d30f9443736b914b7560c0c6a784
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 795aeb9a03f839cae400e92060ac21056f314d2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810465"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468277"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Banco de Dados SQL do Azure)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]

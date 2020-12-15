@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e73d8f6345be199c44278cb15aa43c6ada7f91c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480933"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466787"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Verifica nomes de identificadores válidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todos os dados não binários e não nulos, incluindo dados Unicode que podem ser armazenados usando os tipos de dados **nchar**, **nvarchar**ou **ntext** , são aceitos como caracteres válidos para nomes de identificadores.  
+  Verifica nomes de identificadores válidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todos os dados não binários e não nulos, incluindo dados Unicode que podem ser armazenados usando os tipos de dados **nchar**, **nvarchar** ou **ntext** , são aceitos como caracteres válidos para nomes de identificadores.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

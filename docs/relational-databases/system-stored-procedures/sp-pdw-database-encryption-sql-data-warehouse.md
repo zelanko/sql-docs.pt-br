@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f8d77853846a18bd310d8afa58101cf66a24475b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 73d1eb9fe27fa060a8bfcd13341a3908545aeed3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258087"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468337"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a>sp_pdw_database_encryption (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -35,7 +35,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 #### <a name="parameters"></a>Parâmetros  
-`[ @enabled = ] enabled` Determina se a criptografia de dados transparente está habilitada. *habilitado* é **int**e pode ser um dos seguintes valores:  
+`[ @enabled = ] enabled` Determina se a criptografia de dados transparente está habilitada. *habilitado* é **int** e pode ser um dos seguintes valores:  
   
 -   0 = Desabilitado  
   
@@ -59,7 +59,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
  [sp_pdw_database_encryption_regenerate_system_keys &#40;o Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking &#40;o Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   
