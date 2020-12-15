@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d69890ba5c76c3d37ecd6accd9ba13caa7b089
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1f177d09dd741eadc967a2b32a87a905e04dfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036090"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475067"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,29 +55,29 @@ sys.dm_db_index_operational_stats (
 
 *database_id* | NULL | 0 | OS
 
-  ID do banco de dados. *database_id* é **smallint** . As entradas válidas são o número da ID de um banco de dados, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
+  ID do banco de dados. *database_id* é **smallint**. As entradas válidas são o número da ID de um banco de dados, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
- Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id* , também deverá especificar null para *object_id* , *index_id* e *partition_number* .    
+ Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id*, também deverá especificar null para *object_id*, *index_id* e *partition_number*.    
     
  A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificada.    
 
 *object_id* | NULL | 0 | OS
 
- ID do objeto da tabela ou exibição em que o índice está ativado. *object_id* é **int** .    
+ ID do objeto da tabela ou exibição em que o índice está ativado. *object_id* é **int**.    
     
  As entradas válidas são o número da ID de uma tabela e de uma exibição, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
- Especifique NULL para retornar informações em cache de todas as tabelas e exibições no banco de dados especificado. Se você especificar NULL para *object_id* , também deverá especificar null para *index_id* e *partition_number* .    
+ Especifique NULL para retornar informações em cache de todas as tabelas e exibições no banco de dados especificado. Se você especificar NULL para *object_id*, também deverá especificar null para *index_id* e *partition_number*.    
 
 *index_id* | 0 | NULL | -1 | OS
 
- ID do índice. *index_id* é **int** . As entradas válidas são o número de identificação de um índice, 0 se *object_id* for um heap, nulo,-1 ou padrão. O padrão é -1, NULL, -1 e DEFAULT são valores equivalentes neste contexto.    
+ ID do índice. *index_id* é **int**. As entradas válidas são o número de identificação de um índice, 0 se *object_id* for um heap, nulo,-1 ou padrão. O padrão é -1, NULL, -1 e DEFAULT são valores equivalentes neste contexto.    
     
- Especifique NULL para retornar informações em cache de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id* , também deverá especificar null para *partition_number* .    
+ Especifique NULL para retornar informações em cache de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id*, também deverá especificar null para *partition_number*.    
 
 *partition_number* | NULL | 0 | OS
 
- O número da partição no objeto. *partition_number* é **int** . As entradas válidas são a *partion_number* de um índice ou heap, NULL, 0 ou default. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
+ O número da partição no objeto. *partition_number* é **int**. As entradas válidas são a *partion_number* de um índice ou heap, NULL, 0 ou default. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.    
     
  Especifique NULL para retornar informações em cache de todas as partições do índice ou heap.    
     
@@ -91,7 +91,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|ID da tabela ou exibição.|    
 |**index_id**|**int**|ID do índice ou heap.<br /><br /> 0 = Heap| 
 |**partition_number**|**int**|Número de partição com base 1 no índice ou heap.| 
-|**hobt_id**|**bigint**|**Aplica-se a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> ID do conjunto de linhas de heap ou árvore B de dados que controla dados internos para um índice columnstore.<br /><br /> NULL-este não é um conjunto de linhas columnstore interno.<br /><br /> Para obter mais detalhes, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> ID do conjunto de linhas de heap ou árvore B de dados que controla dados internos para um índice columnstore.<br /><br /> NULL-este não é um conjunto de linhas columnstore interno.<br /><br /> Para obter mais detalhes, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Contagem cumulativa de inserções de nível folha.|    
 |**leaf_delete_count**|**bigint**|Contagem cumulativa de exclusões de nível folha. leaf_delete_count é incrementado apenas para registros excluídos que não são marcados como fantasma primeiro. Para registros excluídos que são fantasmas primeiro, **leaf_ghost_count** é incrementado em vez disso.|    
 |**leaf_update_count**|**bigint**|Contagem cumulativa de atualizações de nível folha.|    
@@ -106,11 +106,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Contagem cumulativa de exames de intervalo e de tabela iniciados no índice ou heap.|    
 |**singleton_lookup_count**|**bigint**|Contagem cumulativa de recuperações de linha única do índice ou heap.|    
 |**forwarded_fetch_count**|**bigint**|Contagem de linhas buscadas por meio de um registro de encaminhamento.<br /><br /> 0 = Índices|    
-|**lob_fetch_in_pages**|**bigint**|Contagem cumulativa de páginas de LOB (objeto grande) recuperadas da unidade de alocação LOB_DATA. Essas páginas contêm dados que são armazenados em colunas do tipo **Text** , **ntext** , **Image** , **varchar (max)** , **nvarchar (max)** , **varbinary (max)** e **XML** . Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Contagem cumulativa de páginas de LOB (objeto grande) recuperadas da unidade de alocação LOB_DATA. Essas páginas contêm dados que são armazenados em colunas do tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** e **XML**. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Contagem cumulativa de bytes de dados LOB recuperados.|    
 |**lob_orphan_create_count**|**bigint**|Contagem cumulativa de valores LOB órfãos criados para operações em massa.<br /><br /> 0 = Índice não clusterizado|    
 |**lob_orphan_insert_count**|**bigint**|Contagem cumulativa de valores LOB órfãos inseridos durante operações em massa.<br /><br /> 0 = Índice não clusterizado|    
-|**row_overflow_fetch_in_pages**|**bigint**|Contagem cumulativa de páginas de dados de estouro de linha recuperada da unidade de alocação ROW_OVERFLOW_DATA.<br /><br /> Essas páginas contêm dados armazenados em colunas do tipo **varchar (n)** , **nvarchar (n)** , **varbinary (n)** e **sql_variant** que foram empurrados para fora da linha.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Contagem cumulativa de páginas de dados de estouro de linha recuperada da unidade de alocação ROW_OVERFLOW_DATA.<br /><br /> Essas páginas contêm dados armazenados em colunas do tipo **varchar (n)**, **nvarchar (n)**, **varbinary (n)** e **sql_variant** que foram empurrados para fora da linha.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Contagem cumulativa de bytes de dados de estouro de linha recuperados.|    
 |**column_value_push_off_row_count**|**bigint**|Contagem cumulativa de valores de coluna para dados LOB e dados de estouro de linha empurrados para fora da linha para que uma linha atualizada ou inserida coubesse na página.|    
 |**column_value_pull_in_row_count**|**bigint**|Contagem cumulativa de valores de coluna para dados de LOB e dados de estouro de linha puxados para dentro da linha. Isso ocorre quando uma operação de atualização libera espaço em um registro e fornece uma oportunidade de empurrar um ou mais valores para fora da linha das unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA.|    
@@ -140,7 +140,7 @@ sys.dm_db_index_operational_stats (
     
  Use as seguintes colunas para identificar áreas de contenção.    
     
- **Para analisar um padrão de acesso comum à tabela ou partição de índice** , use estas colunas:    
+ **Para analisar um padrão de acesso comum à tabela ou partição de índice**, use estas colunas:    
     
 -   **leaf_insert_count**    
     
@@ -192,9 +192,9 @@ sys.dm_db_index_operational_stats (
     
 -   `CONTROL` permissão no objeto especificado no banco de dados    
     
--   `VIEW DATABASE STATE` permissão para retornar informações sobre todos os objetos dentro do banco de dados especificado, usando o curinga do objeto @ *object_id* = NULL    
+-   `VIEW DATABASE STATE` permissão para retornar informações sobre todos os objetos dentro do banco de dados especificado, usando o curinga do objeto @*object_id* = NULL    
     
--   `VIEW SERVER STATE` permissão para retornar informações sobre todos os bancos de dados, usando o caractere curinga @ *database_id* = NULL    
+-   `VIEW SERVER STATE` permissão para retornar informações sobre todos os bancos de dados, usando o caractere curinga @*database_id* = NULL    
     
  A concessão `VIEW DATABASE STATE` permite que todos os objetos no banco de dados sejam retornados, independentemente de qualquer permissão de controle negada em objetos específicos.    
     

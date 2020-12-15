@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_index_fragments (Transact-SQL)
-title: sys. fulltext_index_fragments (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_index_fragments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 953bf5145712d81acf0ed193719d290cc2397e43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5e0f1882c6840048e3308120e6b8768897b43d6b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401362"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475177"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88401362"
 |table_id|**int**|ID de objeto da tabela que contém o fragmento do índice de texto completo.|  
 |fragment_object_id|**int**|ID de objeto da tabela interna associado com o fragmento.|  
 |fragment_id|**int**|ID lógico do fragmento de índice de texto completo. Ele é exclusivo em todos os fragmentos para esta tabela.|  
-|timestamp|**timestamp**|Timestamp associado com a criação do fragmento. O timestamps dos fragmentos mais recentes são maiores do que o timestamps de fragmentos mais antigos.|  
+| timestamp|**timestamp**|Timestamp associado com a criação do fragmento. O timestamps dos fragmentos mais recentes são maiores do que o timestamps de fragmentos mais antigos.|  
 |data_size|**int**|Tamanho lógico do fragmento em bytes.|  
 |row_count|**int**|Número de linhas individuais no fragmento.|  
 |status|**int**|Status do fragmento, um de:<br /><br /> 0 = Criado recentemente e não utilizado ainda<br /><br /> 1 = Sendo usado para inserção durante população ou mesclagem de índice de texto completo<br /><br /> 4 = Fechado. Pronto para consulta<br /><br /> 6 = Sendo usado para entrada de mesclagem e pronto para consulta<br /><br /> 8 = Marcado para exclusão. Não será usado para consulta e mesclagem de origem.<br /><br /> Um status de 4 ou 6 significa que o fragmento faz parte do índice de texto completo lógico e pode ser consultado; ou seja, é um fragmento *passível* de consulta.|  

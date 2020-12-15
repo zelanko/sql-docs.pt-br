@@ -1,5 +1,5 @@
 ---
-title: sys. database_automatic_tuning_options (Transact-SQL) | Microsoft Docs
+title: sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs
 description: Saiba como exibir opções de ajuste automático em um banco de dados SQL. Consulte as permissões necessárias e exiba recursos adicionais disponíveis.
 ms.custom: ''
 ms.date: 07/20/2017
@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4de2851505d7c5c240d792ecacdaa6bf3d1c6c3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4da712a23dde26d12164957718c3bdfbf89eb487
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242946"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475217"
 ---
 # <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>tuning_options automático sys. Database \_ \_ (TRANSACT-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "87242946"
 ## <a name="see-also"></a>Consulte Também  
  [Ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys. dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.database_query_store_options ](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.dm_db_tuning_recommendations ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  

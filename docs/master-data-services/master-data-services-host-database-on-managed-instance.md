@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521081"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469967"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hospedar um banco de dados MDS em uma instância gerenciada
 
@@ -47,7 +47,7 @@ Para preparar, você precisa criar e configurar um Instância Gerenciada de SQL 
      - Ferramentas de gerenciamento da Web
      - Console de Gerenciamento IIS
      - Serviços da World Wide Web
-     - Desenvolvimento do aplicativo
+     - Desenvolvimento de aplicativo
      - Extensibilidade 3.5 do .NET
      - Extensibilidade 4.5 do .NET
      - ASP.NET 3.5
@@ -135,11 +135,11 @@ Esta ação instala:
 
 1. Depois que o banco de dados for criado e configurado, selecione **concluir**.
 
-   Para obter mais informações sobre as configurações no **Assistente para criar banco de dados** , consulte [Assistente para criar banco de dados &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
+   Para obter mais informações sobre as configurações no **Assistente para criar banco de dados**, consulte [Assistente para criar banco de dados &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
 1. Na página **configuração do banco de dados** no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , **escolha Selecionar Banco de dados**.
 
-1. Selecione **conectar** , escolha o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] banco de dados e, em seguida, selecione **OK**.
+1. Selecione **conectar**, escolha o [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] banco de dados e, em seguida, selecione **OK**.
 
    ![Captura de tela da caixa de diálogo conectar ao banco de dados.](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
@@ -150,7 +150,7 @@ Esta ação instala:
    ![Captura de tela da caixa de diálogo Gerenciador de Configuração do Master Data Services.](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
 
    > [!NOTE]
-   > Se você selecionar **site padrão** , precisará criar separadamente um aplicativo Web. Se você escolher **criar novo site** na caixa de listagem, o aplicativo será criado automaticamente.
+   > Se você selecionar **site padrão**, precisará criar separadamente um aplicativo Web. Se você escolher **criar novo site** na caixa de listagem, o aplicativo será criado automaticamente.
 
 1. Na seção **pool de aplicativos** , insira um nome de usuário diferente, insira a senha e, em seguida, selecione **OK**.
 
@@ -169,7 +169,7 @@ Esta ação instala:
 
    ![Captura de tela da seção de configuração da Web.](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
 
-1. Escolha **Aplicar**. Você verá a mensagem **configuração concluída** . Selecione **OK** na caixa de mensagem para iniciar o aplicativo Web. O endereço do site é `http://server name/web application/` .
+1. Selecione **Aplicar**. Você verá a mensagem **configuração concluída** . Selecione **OK** na caixa de mensagem para iniciar o aplicativo Web. O endereço do site é `http://server name/web application/` .
 
 ## <a name="configure-authentication"></a>Configurar autenticação
 
@@ -228,7 +228,7 @@ Para corrigir esse problema, você precisa atualizar a versão do banco de dados
 
 1. Selecione **concluir** depois que todas as tarefas forem concluídas.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Banco de dados do Master Data Services](../master-data-services/master-data-services-database.md)
 - [Aplicativo Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)

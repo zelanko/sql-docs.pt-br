@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69dfbde65d00f3d6995d1bce784a46a64515f8fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834269"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472887"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -57,9 +57,9 @@ Se você estiver usando o banco de dados SQL V12, deverá usar [Sys.dm_geo_repli
   
  Se a relação de cópia contínua for encerrada em um banco de dados, a linha desse banco de dados na exibição de **Sys.dm_continuous_copy_status** desaparece.  
   
- Como a exibição de **Sys.dm_database_copies** , **Sys.dm_continuous_copy_status** reflete o estado da relação de cópia contínua na qual o banco de dados é um banco de dados primário ou secundário ativo. Ao contrário de **Sys.dm_database_copies**, **Sys.dm_continuous_copy_status** contém várias colunas que fornecem detalhes sobre operações e desempenho. Essas colunas incluem **last_replication**e **replication_lag_sec**..  
+ Como a exibição de **Sys.dm_database_copies** , **Sys.dm_continuous_copy_status** reflete o estado da relação de cópia contínua na qual o banco de dados é um banco de dados primário ou secundário ativo. Ao contrário de **Sys.dm_database_copies**, **Sys.dm_continuous_copy_status** contém várias colunas que fornecem detalhes sobre operações e desempenho. Essas colunas incluem **last_replication** e **replication_lag_sec**..  
   
 ## <a name="see-also"></a>Consulte Também  
  [sys.dm_database_copies &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Procedimentos armazenados de replicação geográfica ativa &#40;Transact-SQL&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Procedimentos armazenados do Active Geo-Replication &#40;&#41;do Transact-SQL ](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f142f5de6f5580e7b0e21658e4b3c276984cd88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f1c547cee24397cc9cc1c0b139bd728aef92c2b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474674"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472777"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,10 +66,10 @@ CHANGETABLE (
   
  *last_sync_version* deve ser validado para garantir que ele não seja muito antigo, pois algumas ou todas as informações de alteração podem ter sido limpas de acordo com o período de retenção configurado para o banco de dados. Para obter mais informações, consulte as opções [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [ALTER DATABASE SET &#40;&#41;do Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- *Tabela*de versões, {<primary_key_values>}  
+ *Tabela* de versões, {<primary_key_values>}  
  Retorna as informações de controle de alterações mais recentes de uma linha especificada. Os valores de chave primária devem identificar a linha. <primary_key_values> identifica as colunas de chave primária e especifica os valores. Os nomes de coluna de chave primária podem ser especificados em qualquer ordem.  
   
- *Table*  
+ *Tabela*  
  É a tabela definida pelo usuário na qual devem ser obtidas as informações de controle de alterações. O controle de alterações deve ser ativado na tabela. Um nome de tabela de uma, duas, três ou quatro partes pode ser usado. O nome da tabela pode ser um sinônimo para a tabela.  
   
  *column_name*  
@@ -214,7 +214,7 @@ WHERE
  [Funções do controle de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [&#41;&#40;Transact-SQL de CHANGE_TRACKING_IS_COLUMN_IN_MASK ](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [&#41;&#40;Transact-SQL de CHANGE_TRACKING_CURRENT_VERSION ](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

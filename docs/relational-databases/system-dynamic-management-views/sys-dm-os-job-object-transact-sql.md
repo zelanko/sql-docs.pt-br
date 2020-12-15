@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c8ee9c4054a9bb39f7eebcd30aa0fa9c85d7bde7
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 456197c4519ca4135cf4a5edbf38d58c6d9246a8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834069"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472847"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Banco de Dados SQL do Microsoft Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -34,7 +34,7 @@ Retorna uma única linha que descreve a configuração do objeto de trabalho que
 
 Um objeto de trabalho é uma construção do Windows que implementa a CPU, a memória e a governança de recursos de e/s no nível do sistema operacional. Para obter mais informações sobre objetos de trabalho, consulte [objetos de trabalho](/windows/desktop/ProcThread/job-objects).
   
-|Colunas|Tipo de Dados|Descrição|  
+|Colunas|Tipo de dados|Descrição|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|Especifica a parte dos ciclos do processador que SQL Server threads podem usar durante cada intervalo de agendamento. O valor é relatado como uma porcentagem de ciclos disponíveis dentro de um intervalo de agendamento de 10000, multiplicado pelo número de CPUs lógicas. Por exemplo, o valor 800 em uma instância de SQL Server com 8 CPUs lógicas significa que os threads podem usar CPUs com capacidade total.|
 |cpu_affinity_mask|**bigint**|Uma máscara de bits que descreve quais processadores lógicos o processo de SQL Server pode usar dentro do grupo de processadores. Por exemplo, cpu_affinity_mask 255 (1111 1111 em binário) significa que os oito primeiros processadores lógicos podem ser usados. <br /><br />Esta coluna é fornecida para compatibilidade com versões anteriores. Ele não relata o grupo de processador e o valor relatado pode estar incorreto quando um grupo de processador contém mais de 64 processadores lógicos. Use a `process_physical_affinity` coluna para determinar a afinidade do processador.|

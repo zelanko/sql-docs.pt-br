@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58f27f22e0a0d69ab35f21b9dcecdc80fd12e63
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dbbf927943b34c81ad1f0a49b831314803969d7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005561"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472647"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 `[ @table_qualifier = ] 'qualifier'` É o nome do qualificador de tabela. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` É uma lista de valores, separados por vírgulas, que fornece informações sobre todas as tabelas dos tipos de tabela especificados. Eles incluem **tabela**, **sistematable**e **exibição**. o *tipo* é **varchar (100)**, com um padrão de NULL.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` É uma lista de valores, separados por vírgulas, que fornece informações sobre todas as tabelas dos tipos de tabela especificados. Eles incluem **tabela**, **sistematable** e **exibição**. o *tipo* é **varchar (100)**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Aspas simples devem incluir cada tipo de tabela e aspas duplas devem incluir o parâmetro inteiro. Os tipos de tabela devem ser em maiúsculas. Se SET QUOTED_IDENTIFIER for ON, cada aspa simples deverá ser duplicada e o parâmetro inteiro deverá ser incluído entre aspas duplas.  
@@ -82,7 +82,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  As informações de privilégio sobre o acesso de leitura ou gravação do usuário atual a uma tabela específica nem sempre são verificadas. Portanto, o acesso não está garantido. Esse conjunto de resultados inclui não apenas tabelas e exibições, mas também sinônimos e aliases de gateways para produtos DBMS que oferecem suporte a esses tipos. Se o atributo de servidor **ACCESSIBLE_TABLES** for Y no conjunto de resultados para **sp_server_info**, somente as tabelas que podem ser acessadas pelo usuário atual serão retornadas.  
   
- **sp_tables** é equivalente a **SQLTables** no ODBC. Os resultados retornados são ordenados por **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**e **table_name**.  
+ **sp_tables** é equivalente a **SQLTables** no ODBC. Os resultados retornados são ordenados por **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER** e **table_name**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  

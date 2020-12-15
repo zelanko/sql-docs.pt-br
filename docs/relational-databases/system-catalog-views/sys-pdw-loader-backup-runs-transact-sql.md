@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: e74c866747b7e8f9c784f43e60ab7fb6ce4cc673
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036969"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472907"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92036969"
 |end_time|**datetime**|Hora em que a operação foi concluída, falhou ou foi cancelada.||  
 |total_elapsed_time|**int**|Tempo total decorrido entre start_time e a hora atual, ou entre start_time e end_time para execuções concluídas, canceladas ou com falha.|Se total_elapsed_time exceder o valor máximo de um inteiro (24,8 dias em milissegundos), isso causará falha de materialização devido ao estouro.<br /><br /> O valor máximo em milissegundos é equivalente a 24,8 dias.|  
 |operation_type|**nvarchar (16)**|O tipo de carga.|' BACKUP ', ' LOAD ', ' RESTORE '|  
-|mode|**nvarchar (16)**|O modo dentro do tipo de execução.|Para operation_type = **backup**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Para operation_type = **Load**<br />**ANEXAR**<br />**RECARREGAR**<br />**UPSERT**<br /><br /> Para operation_type = **restaurar**<br />**BANCO**<br />**HEADER_ONLY**|  
+|mode|**nvarchar (16)**|O modo dentro do tipo de execução.|Para operation_type = **backup**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Para operation_type = **Load**<br />**ANEXAR**<br />**RECARREGAR**<br />**UPSERT**<br /><br /> Para operation_type = **restaurar**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|Nome do banco de dados que é o contexto desta operação||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|ID do usuário que está solicitando a operação.||  

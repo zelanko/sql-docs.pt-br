@@ -1,6 +1,6 @@
 ---
 description: sys.bandwidth_usage (Banco de Dados SQL do Azure)
-title: sys. bandwidth_usage (banco de dados SQL do Azure) | Microsoft Docs
+title: sys.bandwidth_usage (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: c71fdc21c634e8f473d628373ae5adfa9c1c072f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402522"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473027"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Banco de Dados SQL do Azure)
 
@@ -34,11 +34,11 @@ ms.locfileid: "88402522"
 > [!NOTE]
 > Isso se aplica somente a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11. * *  
   
- Retorna informações sobre a largura de banda de rede usada por cada banco de dados em um ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor de banco de dados v11**,. Cada linha retornada para um banco de dados determinado resume uma única direção e a classe de uso durante um período de uma hora.  
+ Retorna informações sobre a largura de banda de rede usada por cada banco de dados em um **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor de banco de dados v11**,. Cada linha retornada para um banco de dados determinado resume uma única direção e a classe de uso durante um período de uma hora.  
   
  **Isso foi preterido em um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
- A exibição **Sys. bandwidth_usage** contém as colunas a seguir.  
+ A exibição **Sys.bandwidth_usage** contém as colunas a seguir.  
   
 |Nome da coluna|Descrição|  
 |-----------------|-----------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "88402522"
   
 ### <a name="external-and-internal-classes"></a>Classes External e Internal
 
- Para cada banco de dados usado em um determinado momento, a exibição **Sys. bandwidth_usage** retorna linhas que mostram a classe e a direção do uso da largura de banda. O exemplo a seguir ilustra os dados que podem ser expostos para um banco de dados específico. Neste exemplo, a hora é 2012-04-21 17:00:00, que ocorre durante o horário de pico. O nome do banco de dados é Db1. Neste exemplo, **Sys. bandwidth_usage** retornou uma linha para todas as quatro combinações de direções de entrada e saída e classes externas e internas, da seguinte maneira:  
+ Para cada banco de dados usado em um determinado momento, a exibição **Sys.bandwidth_usage** retorna linhas que mostram a classe e a direção do uso da largura de banda. O exemplo a seguir ilustra os dados que podem ser expostos para um banco de dados específico. Neste exemplo, a hora é 2012-04-21 17:00:00, que ocorre durante o horário de pico. O nome do banco de dados é Db1. Neste exemplo, **Sys.bandwidth_usage** retornou uma linha para todas as quatro combinações de direções de entrada e saída e classes externas e internas, da seguinte maneira:  
   
 |time|database_name|direction|classe|time_period|quantidade|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  

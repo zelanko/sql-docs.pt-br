@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 169f0069565c3d1f6561d6edc8e8b459fc77ac9a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475257"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "88486503"
 |**is_active_for_begin_dialog**|**bit**|Se for 1, este certificado é usado para iniciar caixas de diálogo de serviço criptografadas.|  
 |**issuer_name**|**nvarchar (442)**|Nome do emissor do certificado.|  
 |**cert_serial_number**|**nvarchar (64)**|Número de série do certificado.|  
-|**sid**|**varbinary (85)**|SID de logon para este certificado.|  
+|**SIDs**|**varbinary(85)**|SID de logon para este certificado.|  
 |**string_sid**|**nvarchar(128)**|Representação da cadeia de caracteres do SID de logon para este certificado|  
 |**subject**|**nvarchar(4000)**|Assunto deste certificado.|  
 |**expiry_date**|**datetime**|Quando o certificado expira.|  
 |**start_date**|**datetime**|Quando o certificado é validado.|  
-|**digitais**|**varbinary(32)**|Hash SHA-1 do certificado. O hash SHA-1 é globalmente exclusivo.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 do certificado. O hash SHA-1 é globalmente exclusivo.|  
 |**attested_by**|**nvarchar(260)**|Somente para uso do sistema.|  
 |**pvt_key_last_backup_date**|**datetime**|A data e a hora em que a chave privada do certificado foi exportada pela última vez.|  
   

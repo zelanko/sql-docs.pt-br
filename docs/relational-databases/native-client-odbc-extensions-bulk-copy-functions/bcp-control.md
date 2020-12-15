@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f84f1afbc1ede59e170e3fa4d17c9b921d2d1674
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 24aac8fe3f903ebb0cadec8f662a1cc870340d1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499211"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473807"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -128,7 +128,7 @@ RETCODE bcp_control (
  Quando TRUE, especifica que o arquivo de entrada é um arquivo Unicode.  
   
  *iValue*  
- É o valor para o *eOption*especificado. *iValue* é uma conversão de valor inteiro (LONGLONG) em um ponteiro void para permitir a expansão futura para valores de 64 bits.  
+ É o valor para o *eOption* especificado. *iValue* é uma conversão de valor inteiro (LONGLONG) em um ponteiro void para permitir a expansão futura para valores de 64 bits.  
   
 ## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL.  
