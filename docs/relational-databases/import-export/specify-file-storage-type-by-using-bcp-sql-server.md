@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 874326a9eb3673a0b091e06fe5e9ba3f04e1c3b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86c5e6c9edb33147979c7df34386dc474529b18f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003151"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407552"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Especificar o tipo de armazenamento de arquivos usando o bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   O *tipo de armazenamento de arquivo* descreve como são armazenados os dados no arquivo de dados. Dados podem ser exportados para um arquivo de dados como seu tipo de tabela de banco de dados (formato nativo), em sua representação de caractere (formato de caractere) ou como qualquer tipo de dados em que há suporte para conversão implícita; por exemplo, copiando um **smallint** como um **int**. Os tipos de dados definidos pelo usuário como tipos básicos são exportados.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Solicitação de bcp para o tipo de armazenamento de arquivo  
- Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos ( **-f**) ou uma opção do formato de dados ( **-n**, **-c**, **-w**ou **-N**), o comando solicitará o tipo de armazenamento de arquivos de cada campo de dados, da seguinte maneira:  
+ Se um comando **bcp** interativo contiver a opção **in** ou **out** sem a opção do arquivo de formatos ( **-f**) ou uma opção do formato de dados ( **-n**, **-c**, **-w** ou **-N**), o comando solicitará o tipo de armazenamento de arquivos de cada campo de dados, da seguinte maneira:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -73,12 +73,12 @@ ms.locfileid: "86003151"
     |**uniqueidentifier**|**u**|  
     |**sql_variant**|**V[ariant]**|  
     |**timestamp**|**x**|  
-    |um tipo de dados definido pelo usuário**um tipo de dados definido pelo usuário**|**U**|  
+    |um tipo de dados definido pelo usuário **um tipo de dados definido pelo usuário**|**U**|  
     |**XML**|**X**|  
   
      \*A interação do tamanho do campo, do tamanho do prefixo e dos terminadores determina a quantidade de espaço de armazenamento alocado em um arquivo de dados para dados que não são de caractere que é exportada como o tipo de armazenamento de arquivos **char** .  
   
-     \*\* Os tipos de dados **ntext**, **text**e **image** serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Em vez disso, use **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
+     \*\* Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Em vez disso, use **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
   
 ## <a name="native-file-storage-types"></a>Tipos de armazenamento de arquivos nativos  
  Cada tipo de armazenamento de arquivo nativo é registrado no arquivo de formato como um tipo de dados do arquivo host correspondente.  
@@ -123,7 +123,7 @@ ms.locfileid: "86003151"
   
 -   Se você inserir um tipo de armazenamento de arquivo que represente uma conversão implícita inválida, **bcp** falhará; por exemplo, embora você possa especificar **int** para dados **smallint** , se você especificar **smallint** para dados **int** , isso resultará em erros de estouro.  
   
--   Quando tipos de dados que não são de caractere, como **float**, **money**, **datetime**ou **int** , são armazenados como seus tipos de bancos de dados, os dados são gravados para o arquivo de dados no formato nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Quando tipos de dados que não são de caractere, como **float**, **money**, **datetime** ou **int** , são armazenados como seus tipos de bancos de dados, os dados são gravados para o arquivo de dados no formato nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
     >  Depois que você especificar interativamente todos os campos em um comando **bcp**, o comando solicitará que salve suas respostas para cada campo em um arquivo de formato não XML. Para obter mais informações sobre arquivos de formato não XML, veja [Arquivos de formato não XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  

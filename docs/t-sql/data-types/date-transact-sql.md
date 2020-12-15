@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d6246c3b8318ae2596dfd1f4240692be7941e49
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 68268a384ab4d89944a3c26322555326948629f2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175951"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407996"
 ---
 # <a name="date-transact-sql"></a>data (Transact-SQL)
 
@@ -126,7 +126,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-Quando a conversão é feita em uma **smalldatetime**, o valor de **date**está no intervalo de uma [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), o componente de data é copiado e o componente de hora é definido como 00:00:00.000. Quando o valor **date** está fora do intervalo de um valor **smalldatetime**, a mensagem de erro 242 é gerada: "A conversão de um tipo de dados de data para tipos de dados smalldatetime resulta em um valor fora do intervalo"; e o valor **smalldatetime** é definido como NULL. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `smalldatetime`.
+Quando a conversão é feita em uma **smalldatetime**, o valor de **date** está no intervalo de uma [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), o componente de data é copiado e o componente de hora é definido como 00:00:00.000. Quando o valor **date** está fora do intervalo de um valor **smalldatetime**, a mensagem de erro 242 é gerada: "A conversão de um tipo de dados de data para tipos de dados smalldatetime resulta em um valor fora do intervalo"; e o valor **smalldatetime** é definido como NULL. O código a seguir mostra os resultados da conversão de um valor `date` em um valor `smalldatetime`.
   
 ```sql
 DECLARE @date date= '1912-10-25';  
