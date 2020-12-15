@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d51d0f1f2e15bcf6db3be6d7afee6010e9454a4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810092"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427221"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -44,19 +44,19 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 #### <a name="parameters"></a>Parâmetros  
  *table_id*  
- É a ID do objeto da tabela indexada de texto completo. Se você especificar um *table_id*inválido, um erro será retornado. Para obter informações sobre como obter a ID de objeto de uma tabela, consulte [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).  
+ É a ID do objeto da tabela indexada de texto completo. Se você especificar um *table_id* inválido, um erro será retornado. Para obter informações sobre como obter a ID de objeto de uma tabela, consulte [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).  
   
  *identificação*  
  É o identificador de um documento interno (DocId) que corresponde ao valor da chave. Um valor *docid* inválido não retorna nenhum resultado.  
   
  *chave*  
- É o valor da chave de texto completo da tabela especificada. Um valor *key* inválido não retorna nenhum resultado. Para obter informações sobre valores de chave de texto completo, consulte [gerenciar índices de texto completo](../search/create-and-manage-full-text-indexes.md).  
+ É o valor da chave de texto completo da tabela especificada. Um valor *key* inválido não retorna nenhum resultado. Para obter informações sobre valores de chave de texto completo, consulte [gerenciar índices de Full-Text](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  Para obter informações sobre como usar um, dois ou três parâmetros, consulte "Comentários", posteriormente neste tópico.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum.  
+ nenhuma.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -81,7 +81,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
  Um erro é retornado em qualquer uma das condições a seguir:  
   
--   Você especifica um *table_id*inválido.  
+-   Você especifica um *table_id* inválido.  
   
 -   A tabela não está indexada por texto completo.  
   

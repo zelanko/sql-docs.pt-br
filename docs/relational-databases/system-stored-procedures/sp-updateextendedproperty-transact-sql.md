@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52c91c09c440402df383253996e660d7abdb317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13d9b45efd0fc75e1e17ea0ec5b21537fae71971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551145"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427195"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ sp_updateextendedproperty
   
 ## <a name="arguments"></a>Argumentos  
  [ @name =] {'*property_name*'}  
- É o nome da propriedade a ser atualizada. *property_name* é **sysname**e não pode ser nulo.  
+ É o nome da propriedade a ser atualizada. *property_name* é **sysname** e não pode ser nulo.  
   
  [ @value =] {'*valor*'}  
  É o valor associado à propriedade. o *valor* é **sql_variant**, com um padrão de NULL. O tamanho do *valor* não pode ser maior que 7.500 bytes.  
@@ -86,7 +86,7 @@ sp_updateextendedproperty
 ## <a name="remarks"></a>Comentários  
  Com o propósito de especificar as propriedades estendidas, os objetos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são classificados em três níveis (0, 1 e 2). O nível 0 é o mais alto e é definido como objetos que estão contidos no escopo do banco de dados. Os objetos de nível 1 estão contidos em um esquema ou escopo de usuário e os objetos de nível 2 estão contidos pelos objetos de nível 1. As propriedades estendidas podem ser definidas para os objetos em qualquer um desses níveis. As referências a um objeto de um nível precisam ser qualificadas com os nomes dos objetos de nível superior que as possua ou contenha.  
   
- Dado uma *property_name* e um *valor*válidos, se todos os tipos e nomes de objetos forem nulos, a propriedade atualizada pertencerá ao banco de dados atual.  
+ Dado uma *property_name* e um *valor* válidos, se todos os tipos e nomes de objetos forem nulos, a propriedade atualizada pertencerá ao banco de dados atual.  
   
 ## <a name="permissions"></a>Permissões  
  Os membros das funções de banco de dados fixas db_owner e db_ddladmin podem atualizar as propriedades estendidas de qualquer objeto, com a seguinte exceção: db_ddladmin não pode adicionar propriedades ao banco de dados em si ou a usuários ou funções.  
@@ -138,7 +138,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.fn_listextendedproperty ](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_addextendedproperty ](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropextendedproperty ](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
