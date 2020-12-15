@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 931c36619f5eaed0159ee04db3a08eb745634698
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: f899ad41e609874cbcc22c2a3ac959c41574e0eb
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428179"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761524"
 ---
 # <a name="commands-and-parameters"></a>Comandos e parâmetros
 
@@ -29,17 +29,22 @@ Você também pode configurar esses objetos como propriedades do comando. Pode t
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Executar um comando](execute-command.md) Descreve o objeto `Command` do ADO.NET e como usá-lo para executar consultas e comandos em uma fonte de dados.
+[Executando um comando](execute-command.md)  
+Descreve o objeto `Command` ADO.NET e como usá-lo para executar consultas e comandos em uma fonte de dados.
 
-[Configurar parâmetros](configure-parameters.md) Descreve como trabalhar com parâmetros `Command`, incluindo a direção, os tipos de dados e a sintaxe do parâmetro.
+[Configurando parâmetros](configure-parameters.md)  
+Descreve como trabalhar com os parâmetros de `Command`, incluindo a direção, os tipos de dados e a sintaxe de parâmetro.
 
 [Gerar comandos com CommandBuilders](generate-commands-with-commandbuilders.md)  
 Descreve como usar construtores de comando para gerar automaticamente comandos INSERT, UPDATE, e DELETE para um `DataAdapter` que possui um comando SELECT de uma única tabela.
 
-[Obter um único valor de um banco de dados](obtain-single-value-from-database.md) Descreve como usar o método `ExecuteScalar` de um objeto `Command` para retornar um único valor de uma consulta de banco de dados.
+[Obtendo apenas um valor de um banco de dados](obtain-single-value-from-database.md)  
+Descreve como usar o método `ExecuteScalar` de um objeto `Command` para retornar um único valor de uma consulta de banco de dados.
 
-[Usar comandos para modificar dados](use-commands-to-modify-data.md) Descreve como usar o Provedor de Dados do Microsoft SqlClient para SQL Server a fim de executar procedimentos armazenados ou instruções DDL (linguagem de definição de dados).
+[Usar comandos para modificar dados](use-commands-to-modify-data.md)  
+Descreve como usar o Provedor de Dados do Microsoft SqlClient para SQL Server a fim de executar procedimentos armazenados ou instruções DDL (linguagem de definição de dados).
 
 ## <a name="see-also"></a>Confira também
 
 - [Conectar-se a fontes de dados](connecting-to-data-source.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

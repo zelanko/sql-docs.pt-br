@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127674"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999232"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127674"
   
 -   A Administração Remota deve estar habilitada.  
   
--   Para a porta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager para verificar a configuração de rede do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o protocolo TCP/IP da instância que você deseja desbloquear. Você deve habilitar a porta TCP para IPALL, se desejar se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando TCP após a instalação. Por padrão, o SQL Browser escuta na porta UDP 1434.  
+- Para Instâncias do SQL Server que usam uma porta não padrão, use a configuração de rede do SQL Server Configuration Manager para determinar a porta usada pela Instância do SQL Server que você deseja desbloquear. Habilite a porta TCP para o IPALL no firewall se quiser se conectar à Instância do SQL Server usando o [Serviço SQL Server Browser](../../../tools/configuration-manager/sql-server-browser-service.md), que emprega um endereço IP diferente da instância clusterizada e a porta UDP 1434. 
   
 -   As operações de configuração do cluster de failover incluem uma regra que verifica a ordem de associação da rede. Embora as ordens de associação possam parecer corretas, é possível que você tenha desabilitado ou "tornado fantasma" as configurações de NIC no sistema. Configurações de NIC "fantasma" podem afetar a ordem de associação e fazer com que a regra de ordem de associação emita um aviso. Para evitar essa situação, use as seguintes etapas para identificar e remover adaptadores de rede desabilitados:  
   

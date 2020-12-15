@@ -2,7 +2,7 @@
 description: Noções básicas sobre o bloqueio de linha
 title: Noções básicas sobre o bloqueio de linha | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b04db86ce8784f5f346a4ac0d19b2bedd0e456
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5305f3feaa80d0a83dd1e7bfd97088492608ae5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487995"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901053"
 ---
 # <a name="understanding-row-locking"></a>Noções básicas sobre o bloqueio de linha
 
@@ -30,7 +30,7 @@ O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa bloqueios de
 O bloqueio é usado para garantir a integridade transacional e a consistência do banco de dados. O bloqueio impede que os usuários leiam dados que estão sendo alterados por outros usuários e impedem que vários usuários alterem os mesmos dados ao mesmo tempo. Se o bloqueio não for usado, os dados dentro do banco de dados poderão se tornar logicamente incorretos e as consultas executadas naqueles dados podem gerar resultados inesperados.
 
 > [!NOTE]  
-> Para obter mais informações sobre bloqueio de linha no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja "Bloqueando no [!INCLUDE[ssDE](../../includes/ssde_md.md)]" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Para obter mais informações sobre o bloqueio de linha em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira ["Bloqueando em [!INCLUDE[ssDE](../../includes/ssde_md.md)]"](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## <a name="see-also"></a>Confira também
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419727"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761484"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperar e modificar dados no ADO.NET
 
@@ -27,13 +27,23 @@ A função principal de qualquer aplicativo de banco de dados é conectar-se a u
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Conectar-se a uma fonte de dados](connecting-to-data-source.md) Descreve como estabelecer uma conexão com uma fonte de dados e trabalhar com eventos de conexão.
+[Conectar-se a fontes de dados](connecting-to-data-source.md)  
+Descreve como estabelecer uma conexão com uma fonte de dados e como trabalhar com eventos de conexão.
 
-[Cadeias de conexão](connection-strings.md) Contém tópicos que descrevem vários aspectos do uso de cadeias de conexão, incluindo palavras-chave da cadeia de conexão, informações de segurança e armazenamento e recuperação.
+[Cadeias de conexão](connection-strings.md)  
+Contém os tópicos que descrevem os vários aspectos do uso de cadeias de conexão, incluindo palavras-chave de cadeias de conexão, informações de segurança e seu respectivo armazenamento e recuperação.
 
-[Pool de conexões](connection-pooling.md) Descreve o pool de conexões para o Provedor de Dados Microsoft SqlClient para SQL Server.
+[Pool de conexões](connection-pooling.md)  
+Descreve o pool de conexões para o Provedor de Dados Microsoft SqlClient para SQL Server.
+
+[Comandos e parâmetros](commands-parameters.md)  
+Contém os tópicos que descrevem como criar comandos e construtores de comandos, configurar parâmetros e executar comandos para recuperar e modificar dados.
+
+[DataAdapters e DataReaders](dataadapters-datareaders.md)  
+Contém os tópicos que descrevem DataReaders, DataAdapters, parâmetros, manipulação de eventos DataAdapter e execução de operações em lote.
 
 ## <a name="see-also"></a>Confira também
 
 - [Mapeamentos de tipo de dados no ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server e ADO.NET](./sql/index.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

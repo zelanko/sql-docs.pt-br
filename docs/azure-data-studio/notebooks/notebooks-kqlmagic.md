@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 436c176e469e7ce0f34e26a883fae4cdd6bb59a1
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: cdb110059043741627300e1f6d080582363d834b
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067238"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900829"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic no Azure Data Studio
 
@@ -112,7 +112,7 @@ Esta seção explica como executar a análise de dados usando Kqlmagic com um cl
     > Se estiver usando seu próprio cluster ADX, você deverá incluir a região nas cadeias de conexão da seguinte maneira:   
     ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
-   Use o Logon do Dispositivo para se autenticar. Copie o código da saída e selecione **autenticar** , que abre um navegador no qual você precisa colar o código. Após autenticar-se com êxito, você pode voltar para o Azure Data Studio para continuar com o restante do script.
+   Use o Logon do Dispositivo para se autenticar. Copie o código da saída e selecione **autenticar**, que abre um navegador no qual você precisa colar o código. Após autenticar-se com êxito, você pode voltar para o Azure Data Studio para continuar com o restante do script.
 
    ![Autenticação do Azure Data Explorer](media/notebooks-kqlmagic/ade-auth.png)
 

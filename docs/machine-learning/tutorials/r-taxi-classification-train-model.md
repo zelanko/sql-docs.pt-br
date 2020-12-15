@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412544"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934011"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>Tutorial do R: Treinar e salvar o modelo
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -79,7 +79,7 @@ Ao chamar o R do T-SQL, você usa o procedimento armazenado do sistema, [sp_exec
   
    + O script R chama a função **glm** do R para criar o modelo de regressão logística.
   
-     A variável binária _tipped_ é usada como a coluna *label* ou de resultado, e o modelo é ajustado com o uso destas colunas de recursos:  _passenger_count_ , _trip_distance_ , _trip_time_in_secs_ e _direct_distance_.
+     A variável binária _tipped_ é usada como a coluna *label* ou de resultado, e o modelo é ajustado com o uso destas colunas de recursos:  _passenger_count_, _trip_distance_, _trip_time_in_secs_ e _direct_distance_.
   
    + O modelo treinado, salvo no `logitObj` da variável do R, é serializado e retornado como um parâmetro de saída.
 
@@ -101,7 +101,7 @@ Como o procedimento armazenado já inclui uma definição dos dados de entrada, 
 
 3. Quando a instrução tiver sido concluída, abra a tabela *nyc_taxi_models*. O processamento dos dados e o ajuste do modelo poderão levar algum tempo.
 
-   Você pode ver que foi adicionada uma nova linha contendo o modelo serializado na coluna _model_ e o nome do modelo **TrainLog_model** na coluna _name_.
+   Você pode ver que foi adicionada uma nova linha que contém o modelo serializado na coluna _modelo_ e o nome do modelo **RTrainLogit_model** na coluna _nome_.
 
    ```text
    model                        name
