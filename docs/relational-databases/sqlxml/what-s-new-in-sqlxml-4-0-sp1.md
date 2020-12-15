@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cdb176233f3490daa428e7cf6bb8f7c9b0b58255
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2665584ac6ac791ca489ea452779a93b71b35c68
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665604"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479207"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>O que&#39;s New no SQLXML 4,0 SP1
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "85665604"
  Você também precisará redistribuir o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se estiver usando-o como o provedor de dados com seu aplicativo. Para obter mais informações, consulte [Instalando o SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="support-for-sql-server-native-client"></a>Suporte para SQL Server Native Client  
- O SQLXML 4,0 dá suporte aos provedores de cliente SQLOLEDB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo. É recomendável que você use a mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de cliente nativo e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client é desenvolvido para dar suporte a quaisquer novos tipos de dados que são fornecidos no servidor, como os tipos de dados **Date, time**, **datetime2**e **DateTimeOffset** no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e com suporte do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cliente nativo.  
+ O SQLXML 4,0 dá suporte aos provedores de cliente SQLOLEDB e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo. É recomendável que você use a mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de cliente nativo e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client é desenvolvido para dar suporte a quaisquer novos tipos de dados que são fornecidos no servidor, como os tipos de dados **Date, time**, **datetime2** e **DateTimeOffset** no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e com suporte do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cliente nativo.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é uma tecnologia de acesso a dados introduzida no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Ela reúne o provedor SQLOLEDB e o driver SQLODBC em uma única DLL (dynamic link library) nativa fornecendo, ao mesmo tempo, uma nova funcionalidade separada e diferente do MDAC (Microsoft Data Access Components).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "85665604"
 >  O SQLXML 4.0 não é totalmente compatível com o SQLXML 3.0. Pelo fato de haver algumas correções de bug e outras alterações funcionais, particularmente a remoção do suporte a SQLXML ISAPI, você não pode usar diretórios virtuais IIS com o SQLXML 4.0. Embora a maioria dos aplicativos será executada com pequenas modificações, você deve testá-los antes de os colocar em produção com o SQLXML 4.0.  
   
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>Suporte para tipos de dados introduzidos no SQL Server 2005 e no SQL Server 2008  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu o tipo de dados **XML** e o SQLXML 4,0 dá suporte ao tipo de dados **XML** . Para obter mais informações, consulte [suporte de tipo de dados XML no SQLXML 4,0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu o tipo de dados **XML** e o SQLXML 4,0 dá suporte ao tipo de dados **XML** . Para obter mais informações, consulte [suporte de tipo de dados XML no SQLXML 4,0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md).  
   
  Para obter exemplos de como usar o tipo de dados **XML** no SQLXML ao mapear exibições XML, o carregamento em massa de XML ou a execução de Updategrams XML, consulte os exemplos fornecidos nos tópicos a seguir.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "85665604"
   
 -   [Exemplos de carregamento em massa de documentos XML](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]introduziu os tipos de dados **Date, time**, **datetime2**e **DateTimeOffset** . O SQLXML 4.0 SP1 habilitará esses quatro novos tipos de dados como tipos escalares internos quando usados com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI11) que é fornecido com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduziu os tipos de dados **Date, time**, **datetime2** e **DateTimeOffset** . O SQLXML 4.0 SP1 habilitará esses quatro novos tipos de dados como tipos escalares internos quando usados com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI11) que é fornecido com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="xml-bulk-load-changes-for-sqlxml-40-sp1"></a>Alterações no XML Bulk Load para o SQLXML 4.0 SP1  
   

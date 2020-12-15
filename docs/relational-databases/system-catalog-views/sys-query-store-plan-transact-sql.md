@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bb73d0374426e3210da14bdb38c5e34cbbcf357
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2fa0f779726303ac30cfd235394bf7c8f5d09c44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005637"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479037"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "92005637"
 |**initial_compile_start_time**|**datetimeoffset**|Planejar estatísticas de compilação.|  
 |**last_compile_start_time**|**datetimeoffset**|Planejar estatísticas de compilação.|  
 |**last_execution_time**|**datetimeoffset**|A hora da última execução refere-se à última hora de término da consulta/plano.|  
-|**avg_compile_duration**|**flutuante**|Planejar estatísticas de compilação. <br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
+|**avg_compile_duration**|**float**|Planejar estatísticas de compilação. <br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
 |**last_compile_duration**|**bigint**|Planejar estatísticas de compilação. <br/>**Observação:** A análise de Synapse do Azure sempre retornará zero (0).|  
 |**plan_forcing_type**|**int**|Tipo de imposição de plano.<br /><br />0: NENHUM<br /><br />1: MANUAL<br /><br />2: AUTOMÁTICO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Descrição de texto de plan_forcing_type.<br /><br />NENHUM: nenhum plano impondo<br /><br />MANUAL: plano forçado pelo usuário<br /><br />AUTOMÁTICO: plano forçado pelo ajuste automático|  

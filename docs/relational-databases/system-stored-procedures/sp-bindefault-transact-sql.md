@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21f743aa4c28095a3167ebb16cf873f46afece38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9cad51a7a83f694ac89b41584929a46e1fbc725c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541947"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482415"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,9 +48,9 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="arguments"></a>Argumentos  
 `[ @defname = ] 'default'` É o nome do padrão que é criado por criar padrão. o *padrão* é **nvarchar (776)**, sem padrão.  
   
-`[ @objname = ] 'object_name'` É o nome da tabela e da coluna ou do tipo de dados do alias ao qual o padrão deve ser associado. *object_name* é **nvarchar (776)** sem padrão. Não é possível definir *object_name* com os tipos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**ou CLR definidos pelo usuário.  
+`[ @objname = ] 'object_name'` É o nome da tabela e da coluna ou do tipo de dados do alias ao qual o padrão deve ser associado. *object_name* é **nvarchar (776)** sem padrão. Não é possível definir *object_name* com os tipos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** ou CLR definidos pelo usuário.  
   
- Se *object_name* for um nome de uma parte, ele será resolvido como um tipo de dados de alias. Se for um nome de duas ou três partes, ele será resolvido primeiro como uma tabela e uma coluna; e se essa resolução falhar, ela será resolvida como um tipo de dados de alias. Por padrão, as colunas existentes do tipo de dados alias herdam *Default*, a menos que um padrão tenha sido associado diretamente à coluna. Um padrão não pode ser associado a uma coluna de tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **timestamp**ou CLR definida pelo usuário, uma coluna com a propriedade Identity, uma coluna computada ou uma coluna que já tenha uma restrição default.  
+ Se *object_name* for um nome de uma parte, ele será resolvido como um tipo de dados de alias. Se for um nome de duas ou três partes, ele será resolvido primeiro como uma tabela e uma coluna; e se essa resolução falhar, ela será resolvida como um tipo de dados de alias. Por padrão, as colunas existentes do tipo de dados alias herdam *Default*, a menos que um padrão tenha sido associado diretamente à coluna. Um padrão não pode ser associado a uma coluna de tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **timestamp** ou CLR definida pelo usuário, uma coluna com a propriedade Identity, uma coluna computada ou uma coluna que já tenha uma restrição default.  
   
 > [!NOTE]  
 >  *object_name* pode conter colchetes **[]** como identificadores delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -82,7 +82,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Associando um padrão a um tipo de dados de alias.  
- Já existem um padrão denominado `def_ssn` e um tipo de dados de alias denominado `ssn`. O exemplo a seguir associa o padrão `def_ssn` a `ssn`. Quando uma tabela for criada, o padrão será herdado por todas as colunas que tenham o tipo de dados de alias `ssn` designado. As colunas existentes do tipo **ssn** também herdam o **def_ssn**padrão, a menos que **futureonly** seja especificado para *futureonly_flag* valor, ou a menos que a coluna tenha um padrão associado diretamente a ela. Os padrões associados a colunas sempre têm precedência aos associados a tipos de dados.  
+ Já existem um padrão denominado `def_ssn` e um tipo de dados de alias denominado `ssn`. O exemplo a seguir associa o padrão `def_ssn` a `ssn`. Quando uma tabela for criada, o padrão será herdado por todas as colunas que tenham o tipo de dados de alias `ssn` designado. As colunas existentes do tipo **ssn** também herdam o **def_ssn** padrão, a menos que **futureonly** seja especificado para *futureonly_flag* valor, ou a menos que a coluna tenha um padrão associado diretamente a ela. Os padrões associados a colunas sempre têm precedência aos associados a tipos de dados.  
   
 ```  
 USE master;  

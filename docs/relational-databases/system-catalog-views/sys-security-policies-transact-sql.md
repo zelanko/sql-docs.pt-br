@@ -1,6 +1,6 @@
 ---
-description: sys. security_policies (Transact-SQL)
-title: sys. security_policies (Transact-SQL) | Microsoft Docs
+description: sys.security_policies (Transact-SQL)
+title: sys.security_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae97e6f310561339c24e712dd3d0f07552232bf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e2d1cd685055d4dd91bdb9cda445c7847bf5bbd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490138"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479027"
 ---
-# <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-SQL)
+# <a name="syssecurity_policies-transact-sql"></a>sys.security_policies (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Retorna uma linha para cada política de segurança no banco de dados.  
@@ -41,7 +41,7 @@ ms.locfileid: "88490138"
 |principal_id|**int**|ID do proprietário da política de segurança, conforme registrado no banco de dados. NULL se o proprietário for determinado por meio do esquema.|  
 |schema_id|**int**|ID do esquema onde o objeto reside.|  
 |parent_object_id|**int**|ID do objeto ao qual esta política pertence. Deve ser 0.|  
-|type|**vachar (2)**|Deve ser **SP**.|  
+|tipo|**vachar (2)**|Deve ser **SP**.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|A data UTC em que a política de segurança foi criada.|  
 |modify_date|**datetime**|A data UTC em que a política de segurança foi modificada.|  
@@ -56,7 +56,7 @@ ms.locfileid: "88490138"
   
 ## <a name="see-also"></a>Consulte Também  
  [Segurança em nível de linha](../../relational-databases/security/row-level-security.md)   
- [sys. security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.security_predicates ](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5008d433757351e6d4be65d6db9c3ba8e0deb10f
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a46c5b4d9fa9f5bdf5db52e9ee2c0610ef7ba2a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646496"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482464"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 
@@ -57,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 -   3-forçado  
   
 ## <a name="columns-returned"></a>Colunas retornadas  
- A tabela a seguir lista as colunas que sys. fn_stmt_sql_handle_from_sql_stmt retorna.  
+ A tabela a seguir lista as colunas que sys.fn_stmt_sql_handle_from_sql_stmt retorna.  
   
 |Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  

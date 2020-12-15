@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5ebf9dad37ba44163aa3f658fab86be8d95bd8d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 13a306310fdb8a28e2613304a8fb7bba529f5f00
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546705"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479047"
 ---
 # <a name="syssystem_columns-transact-sql"></a>sys.system_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,8 +56,8 @@ ms.locfileid: "89546705"
 |**is_dts_replicated**|**bit**|1 = A coluna é replicada usando o [!INCLUDE[ssIS](../../includes/ssis-md.md)].|  
 |**is_xml_document**|**bit**|1 = O conteúdo é um documento XML completo.<br /><br /> 0 = o conteúdo é um fragmento de documento ou o tipo de dados da coluna não é **XML**.|  
 |**xml_collection_id**|**int**|Diferente de zero se o tipo de dados da coluna for **XML** e o XML for digitado. O valor será a ID da coleção que contém o namespace do esquema XML de validação da coluna.<br /><br /> 0 = Nenhuma coleção de esquemas XML.|  
-|**default_object_id**|**int**|ID do objeto padrão, independentemente de ser um [Sys autônomo. sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)ou uma restrição padrão em nível de coluna, ou embutida. A coluna **parent_object_id** de um objeto padrão em nível de coluna embutida é uma referência de volta para a tabela em si. Ou 0, se não houver padrão.|  
-|**rule_object_id**|**int**|ID da regra autônoma associada à coluna usando **Sys. sp_bindrule**.<br /><br /> 0 = Nenhuma regra autônoma.<br /><br /> Para restrições de verificação em nível de coluna, consulte [Sys. check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
+|**default_object_id**|**int**|ID do objeto padrão, independentemente de ser um [Sys.sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)autônomo ou uma restrição padrão em nível de coluna em linha. A coluna **parent_object_id** de um objeto padrão em nível de coluna embutida é uma referência de volta para a tabela em si. Ou 0, se não houver padrão.|  
+|**rule_object_id**|**int**|ID da regra autônoma associada à coluna usando **Sys.sp_bindrule**.<br /><br /> 0 = Nenhuma regra autônoma.<br /><br /> Para restrições de verificação em nível de coluna, confira [sys.check_constraints &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|**bit**|1 = A coluna é esparsa. Para obter mais informações, veja [Usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = A coluna é um conjunto de colunas. Para obter mais informações, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).|  
 |generated_always_type|**tinyint**|O valor numérico que representa o tipo de coluna:<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
@@ -71,7 +71,7 @@ ms.locfileid: "89546705"
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sys.all_columns ](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.computed_columns ](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   

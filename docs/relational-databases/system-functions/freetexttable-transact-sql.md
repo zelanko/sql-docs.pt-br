@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f44a757695d067f518de22f9d3bc59af455a67c
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83aa956f8a9a9421cdbc411856be78af272f1fa6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753764"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482507"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  É uma função usada na [cláusula from](../../t-sql/queries/from-transact-sql.md) de uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SELECT para executar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisa de texto completo em colunas indexadas de texto completo que contêm tipos de dados baseados em caracteres. Essa função retorna uma tabela de zero, uma ou mais linhas para as colunas que contêm valores que correspondem ao significado e não apenas às palavras exatas do texto no *freetext_string*especificado. FREETEXTTABLE é referenciada como se fosse um nome de tabela comum.  
+  É uma função usada na [cláusula from](../../t-sql/queries/from-transact-sql.md) de uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SELECT para executar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisa de texto completo em colunas indexadas de texto completo que contêm tipos de dados baseados em caracteres. Essa função retorna uma tabela de zero, uma ou mais linhas para as colunas que contêm valores que correspondem ao significado e não apenas às palavras exatas do texto no *freetext_string* especificado. FREETEXTTABLE é referenciada como se fosse um nome de tabela comum.  
   
  FREETEXTtable é útil para os mesmos tipos de correspondências que o [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md),  
   
@@ -58,7 +58,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>Argumentos  
  *table*  
- É o nome da tabela que foi marcada para consulta de texto completo. a *tabela* ou *exibição*pode ser um nome de objeto de banco de dados de um, dois ou três partes. Durante a consulta a uma exibição, apenas uma tabela base indexada por texto completo pode ser envolvida.  
+ É o nome da tabela que foi marcada para consulta de texto completo. a *tabela* ou *exibição* pode ser um nome de objeto de banco de dados de um, dois ou três partes. Durante a consulta a uma exibição, apenas uma tabela base indexada por texto completo pode ser envolvida.  
   
  a *tabela* não pode especificar um nome de servidor e não pode ser usada em consultas em servidores vinculados.  
   
@@ -90,7 +90,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Se o idioma especificado não for válido ou se não houver nenhum recurso instalado que corresponda ao idioma, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. Para usar os recursos de idioma neutro, especifique 0x0 como *language_term*.  
   
  *top_n_by_rank*  
- Especifica que somente as *n*maiores correspondências classificadas, em ordem decrescente, são retornadas. Aplica-se somente quando um valor inteiro, *n*, é especificado. Se *top_n_by_rank* for combinado com outros parâmetros, a consulta retornará menos linhas do que o número de linhas que corresponde de fato a todos os predicados. *top_n_by_rank* permite aumentar o desempenho da consulta, rechamando apenas as ocorrências mais relevantes.  
+ Especifica que somente as *n* maiores correspondências classificadas, em ordem decrescente, são retornadas. Aplica-se somente quando um valor inteiro, *n*, é especificado. Se *top_n_by_rank* for combinado com outros parâmetros, a consulta retornará menos linhas do que o número de linhas que corresponde de fato a todos os predicados. *top_n_by_rank* permite aumentar o desempenho da consulta, rechamando apenas as ocorrências mais relevantes.  
   
 ## <a name="remarks"></a>Comentários  
  As funções e os predicados de texto completo trabalham em uma única tabela, que está implícita no predicado FROM. Para pesquisar em várias tabelas, use uma tabela unida na cláusula FROM para pesquisar em um conjunto de resultados que é o produto de duas ou mais tabelas.  

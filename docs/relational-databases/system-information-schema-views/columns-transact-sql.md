@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4f49fe215279782a5f2e8df8fe501e0619f4bd2
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5dd88dffcf5171250936c75ff56ee5948148adad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753603"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478967"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "91753603"
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Se a coluna for do tipo de dados definido pelo usuário, essa coluna será o nome do tipo de dados definido pelo usuário. Caso contrário, será retornado NULL.|  
   
 ## <a name="remarks"></a>Comentários  
- A coluna **ORDINAL_POSITION** da **INFORMATION_SCHEMA. ** A exibição de colunas não é compatível com o padrão de bit das colunas retornadas pela função COLUMNS_UPDATED. Para obter um padrão de bit compatível com COLUMNS_UPDATED, você deve fazer referência à propriedade **columnid** da função de sistema COLUMNPROPERTY ao consultar o **INFORMATION_SCHEMA. ** Exibição de colunas. Por exemplo:  
+ A coluna **ORDINAL_POSITION** da **INFORMATION_SCHEMA.** A exibição de colunas não é compatível com o padrão de bit das colunas retornadas pela função COLUMNS_UPDATED. Para obter um padrão de bit compatível com COLUMNS_UPDATED, você deve fazer referência à propriedade **columnid** da função de sistema COLUMNPROPERTY ao consultar o **INFORMATION_SCHEMA.** Exibição de colunas. Por exemplo:  
   
 ```  
 USE AdventureWorks2012;  

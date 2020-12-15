@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_indexes (Transact-SQL)
-title: sys. fulltext_indexes (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b57b7f507e5721647ca44b7f75388fc5ce8de57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7c9b04a81d537c0b82a7a1bccb76b429d896ba13
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401652"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482897"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "88401652"
 |**unique_index_id**|**int**|ID do índice de texto não completo exclusivo correspondente, usado para relacionar o índice de texto completo às linhas.|  
 |**fulltext_catalog_id**|**int**|ID do catálogo de texto completo no qual o índice de texto completo reside.|  
 |**is_enabled**|**bit**|1 = O índice de texto completo está atualmente habilitado.|  
-|**change_tracking_state**|**Char (1)**|Estado de rastreamento de alteração.<br /><br /> M = Manual<br /><br /> A = Automático<br /><br /> O = Desligado|  
+|**change_tracking_state**|**char(1)**|Estado de rastreamento de alteração.<br /><br /> M = Manual<br /><br /> A = Automático<br /><br /> O = Desligado|  
 |**change_tracking_state_desc**|**nvarchar(60)**|Descrição do estado de rastreamento de alteração.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|Último rastreamento (população) que o índice de texto completo concluiu.|  
-|**crawl_type**|**Char (1)**|Tipo do rastreamento atual ou do último.<br /><br /> F = Rastreamento completo<br /><br /> I = Rastreamento incremental, com base em carimbo de data/hora<br /><br /> U = Rastreio de atualização, com base em notificações<br /><br /> P = O rastreamento completo está em pausa.|  
+|**crawl_type**|**char(1)**|Tipo do rastreamento atual ou do último.<br /><br /> F = Rastreamento completo<br /><br /> I = Rastreamento incremental, com base em carimbo de data/hora<br /><br /> U = Rastreio de atualização, com base em notificações<br /><br /> P = O rastreamento completo está em pausa.|  
 |**crawl_type_desc**|**nvarchar(60)**|Descrição do tipo de rastreamento atual ou do último.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|Início do rastreamento atual ou do último.<br /><br /> NULL = Nenhum.|  
 |**crawl_end_date**|**datetime**|Fim do rastreamento atual ou do último.<br /><br /> NULL = Nenhum.|  
 |**incremental_timestamp**|**binário (8)**|Valor do carimbo de data/hora a ser usado para o próximo rastreamento incremental.<br /><br /> NULL = Nenhum.|  
 |**stoplist_id**|**int**|ID da [restoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) associada a este índice de texto completo.|  
 |**data_space_id**|**int**|Grupo de arquivos no qual este índice de texto completo reside.|  
-|**property_list_id**|**int**|ID da lista de propriedades de pesquisa associada a este índice de texto completo. NULL indic que nenhuma lista de propriedades de pesquisa associada ao índice de texto completo. Para obter mais informações sobre essa lista de propriedades de pesquisa, use a exibição de catálogo de [&#41;registered_search_property_lists de &#40;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) .|  
+|**property_list_id**|**int**|ID da lista de propriedades de pesquisa associada a este índice de texto completo. NULL indic que nenhuma lista de propriedades de pesquisa associada ao índice de texto completo. Para obter mais informações sobre essa lista de propriedades de pesquisa, use a exibição de catálogo de [&#41;sys.registered_search_property_lists de &#40;Transact-SQL ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) .|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
@@ -70,9 +70,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
- [sys. fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
- [sys. fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.fulltext_index_fragments ](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
+ [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.fulltext_index_catalog_usages ](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
  [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

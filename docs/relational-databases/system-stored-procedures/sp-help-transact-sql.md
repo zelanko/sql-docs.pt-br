@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fe0b4f610b0656a0b82ad80adebde1480f14c6f3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543325"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478907"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nome**|**nvarchar (** 128 **)**|Nome do objeto|  
     |**Proprietário**|**nvarchar (** 128 **)**|Proprietário do objeto (esta é a entidade de segurança do banco de dados que é a proprietária deste objeto. O padrão é o proprietário do esquema que contém o objeto.)|  
-    |**Object_type**|**nvarchar (** 31 **)**|Tipo de objeto|  
+    |**Object_type**|**nvarchar (** 31 **)**|Tipo de Objeto|  
   
 2.  Se *Name* for um tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados ou um tipo de dados definido pelo usuário, **sp_help** retornará esse conjunto de resultados.  
   
@@ -67,7 +67,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**nvarchar (** 128 **)**|Nome do tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Comprimento**|**smallint**|O comprimento físico do tipo de dados (em bytes).|  
     |**Prec**|**int**|Precisão (número total de dígitos).|  
-    |**Escala**|**int**|Número de dígitos à direita da casa decimal.|  
+    |**Dimensionar**|**int**|Número de dígitos à direita da casa decimal.|  
     |**Permite valor nulo**|**varchar (** 35 **)**|Indica se valores NULL são permitidos: Sim ou Não.|  
     |**Default_name**|**nvarchar (** 128 **)**|Nome de uma associação padrão para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Nome de uma associação de regra para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
@@ -95,7 +95,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Computada**|**varchar (** 35 **)**|Indica se os valores na coluna são computados: Sim ou Não.|  
         |**Comprimento**|**int**|Comprimento da coluna em bytes.<br /><br /> Observação: se o tipo de dados da coluna for um tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** ou **XML**), o valor será exibido como-1.|  
         |**Prec**|**Char (** 5 **)**|Precisão da coluna.|  
-        |**Escala**|**Char (** 5 **)**|Escala de coluna.|  
+        |**Dimensionar**|**Char (** 5 **)**|Escala de coluna.|  
         |**Permite valor nulo**|**varchar (** 35 **)**|Indica se valores NULL são permitidos na coluna: Sim ou Não.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Exclui os espaços em branco à direita. Retorna Sim ou Não.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Somente para compatibilidade com versões anteriores.|  
@@ -106,7 +106,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome da coluna|Tipo de dados|Descrição|  
         |-----------------|---------------|-----------------|  
         |**Identidade**|**nvarchar (** 128 **)**|Nome da coluna cujo tipo de dados é declarado como identidade.|  
-        |**Seed**|**numeric**|O valor inicial para a coluna de identidade.|  
+        |**Semente**|**numeric**|O valor inicial para a coluna de identidade.|  
         |**Incremento**|**numeric**|Incremento a ser usado para obter valores nesta coluna.|  
         |**Não para replicação**|**int**|A propriedade IDENTITY não é imposta quando um logon de replicação, como **sqlrepl**, insere dados na tabela:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -156,7 +156,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Tipo**|**nvarchar (** 128 **)**|Tipo de dados do parâmetro de procedimento armazenado.|  
         |**Comprimento**|**smallint**|Comprimento máximo de armazenamento físico, em bytes.|  
         |**Prec**|**int**|Precisão ou número total de dígitos.|  
-        |**Escala**|**int**|Número de dígitos à direita da vírgula decimal.|  
+        |**Dimensionar**|**int**|Número de dígitos à direita da vírgula decimal.|  
         |**Param_order**|**smallint**|Ordem do parâmetro.|  
   
 ## <a name="remarks"></a>Comentários  

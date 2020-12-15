@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dee5ef30ca260855c9df6a7823e7dce605c3ff72
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f976f9be51d688833a09e5faaae42b8864ecc274
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534772"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482382"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
 `[ @resample = ] 'resample'` Especifica que **sp_updatestats** usará a opção reamostrar da instrução [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Se **' reamostrar '** não for especificado, o **sp_updatestats** atualizará as estatísticas usando a amostragem padrão. a **reamostragem** é **varchar (8)** com um valor padrão de no.  
   
 ## <a name="remarks"></a>Comentários  
@@ -52,7 +52,7 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 **sp_updatestats** atualiza estatísticas em índices não clusterizados desabilitados e não atualiza estatísticas em índices clusterizados desabilitados.  
   
-Para tabelas baseadas em disco, o **sp_updatestats** atualiza as estatísticas com base nas informações de **modification_counter** na exibição de catálogo **Sys. dm_db_stats_properties** , atualizando as estatísticas em que pelo menos uma linha foi modificada. As estatísticas em tabelas com otimização de memória sempre são atualizadas durante a execução de **sp_updatestats**. Portanto, não execute **sp_updatestats** mais do que o necessário.  
+Para tabelas baseadas em disco, **sp_updatestats** atualiza estatísticas com base nas informações de **modification_counter** na exibição de catálogo **Sys.dm_db_stats_properties** , atualizando as estatísticas em que pelo menos uma linha foi modificada. As estatísticas em tabelas com otimização de memória sempre são atualizadas durante a execução de **sp_updatestats**. Portanto, não execute **sp_updatestats** mais do que o necessário.  
   
 **sp_updatestats** pode disparar uma recompilação de procedimentos armazenados ou outro código compilado. No entanto, **sp_updatestats** pode não causar uma recompilação, se apenas um plano de consulta for possível para as tabelas referenciadas e os índices nelas. Uma recompilação será desnecessária nesses casos mesmo que as estatísticas sejam atualizadas.  
   

@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d155f836abb975b39ef7b2396057a43e59686f9b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 1e5fc3af931460de84dde4467b803226dcd6d431
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035330"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482562"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "92035330"
 |is_transactional|**bit**|Captura se uma sessão está atualmente dentro de uma transação ou não.|0 para confirmação automática, 1 para transacional.|  
 |client_id|**nvarchar(255)**|Captura informações do cliente para a sessão.|Qualquer cadeia de caracteres válida.|  
 |app_name|**nvarchar(255)**|Captura as informações de nome do aplicativo como opção definidas como parte do processo de conexão.|Qualquer cadeia de caracteres válida.|  
-|sql_spid|**int**|O número de identificação do SPID. Use `session_id` esta sessão. Use a `sql_spid` coluna para ingressar no **Sys.dm_pdw_nodes_exec_sessions**.<br /><br /> Aviso esta coluna contém SPIDs fechados. ** \* \* \* \* **||  
+|sql_spid|**int**|O número de identificação do SPID. Use `session_id` esta sessão. Use a `sql_spid` coluna para ingressar no **Sys.dm_pdw_nodes_exec_sessions**.<br /><br /> Aviso esta coluna contém SPIDs fechados. **\* \* \* \***||  
   
  Para obter informações sobre o máximo de linhas retidas por essa exibição, consulte a seção de metadados no tópico [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

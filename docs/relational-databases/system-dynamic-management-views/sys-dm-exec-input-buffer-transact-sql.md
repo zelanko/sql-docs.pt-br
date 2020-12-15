@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_input_buffer (Transact-SQL)
-title: sys. dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_input_buffer (Transact-SQL)
+title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fecdc698dc7015ab47e5a8c97b3990c7e5bf1f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 68673cb11ce5a003b2c9317939942b1d602095be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477257"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
@@ -48,7 +48,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
 
-*request_id* O request_id de [Sys. dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* é **int**.
+*request_id* O request_id de [Sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* é **int**.
 
 ## <a name="table-returned"></a>Tabela retornada
 
@@ -72,7 +72,7 @@ Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , se o usuário for o propriet�
 
 ## <a name="remarks"></a>Comentários
 
-Essa função de gerenciamento dinâmico pode ser usada em conjunto com sys. dm_exec_sessions ou sys. dm_exec_requests fazendo a **aplicação cruzada**.
+Essa função de gerenciamento dinâmico pode ser usada em conjunto com sys.dm_exec_sessions ou sys.dm_exec_requests fazendo a **aplicação cruzada**.
 
 ## <a name="examples"></a>Exemplos
 

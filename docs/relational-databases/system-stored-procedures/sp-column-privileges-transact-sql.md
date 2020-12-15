@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44097fb7340dd61f467b4bb08e0b4a718d6ab323
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 279789c40dbc79dd3d7b2d421d757a936b0e6126
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528373"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482402"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  [ @table_owner =] '*TABLE_OWNER*'  
  É o proprietário da tabela usada para retornar informações do catálogo. *TABLE_OWNER* é **sysname**, com um padrão de NULL. Não há suporte para a correspondência de padrão curinga. Se *TABLE_OWNER* não for especificado, as regras de visibilidade de tabela padrão do DBMS (sistema de gerenciamento de banco de dados) subjacentes se aplicarão.  
   
- Se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *TABLE_OWNER* não for especificado e o usuário atual não possuir uma tabela com a *table_name*especificada, os privilégios de sp_column procurarão uma tabela com a *table_name* especificada de Propriedade do proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
+ Se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *TABLE_OWNER* não for especificado e o usuário atual não possuir uma tabela com a *table_name* especificada, os privilégios de sp_column procurarão uma tabela com a *table_name* especificada de Propriedade do proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
   
  [ @table_qualifier =] '*TABLE_QUALIFIER*'  
  É o nome do qualificador da tabela. *TABLE_QUALIFIER* é *sysname*, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  

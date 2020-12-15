@@ -18,13 +18,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
+ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475829"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480177"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ FOR PATH deve ser usado com qualquer nome de tabela de nó ou borda na cláusula
 Esse padrão inclui os nós e as bordas que devem ser percorridas repetidamente até que o nó desejado seja atingido ou até que o número máximo de iterações, conforme especificado no padrão, seja atendido. Cada vez que a consulta é executada, o resultado da execução desse padrão será uma coleção ordenada de nós e bordas atravessados ao longo do caminho do nó inicial até o nó final. Este é um padrão de sintaxe de estilo de expressão regular e os dois quantificadores de padrão a seguir têm suporte:
 
 * **' + '**: Repetir o padrão 1 ou mais vezes. É encerrado assim que encontra um caminho mais curto.
-* **{1, n}**: repita o padrão 1 para ' n' vezes. Terminar assim que um mais curto for encontrado.
+* **{1,n}** : repete o padrão 1 por “n” horas. Terminar assim que um mais curto for encontrado.
 
 ## <a name="last_node"></a>LAST_NODE
 A função LAST_NODE () permite encadear dois padrões de passagem de comprimento arbitrário. Ele pode ser usado em cenários em que:    
@@ -103,10 +103,10 @@ Essa função retorna o número de valores não nulos do atributo de nó/borda d
 ### <a name="avg"></a>AVG
 Retorna a média de valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
-### <a name="min"></a>MIN
+### <a name="min"></a>MÍN.
 Retorna o valor mínimo dos valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
-### <a name="max"></a>MAX
+### <a name="max"></a>MÁX.
 Retorna o valor máximo dos valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
 ## <a name="remarks"></a>Comentários  
@@ -213,6 +213,6 @@ WHERE Q.levels = 2
 ## <a name="see-also"></a>Consulte Também  
  [MATCH (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [Insert (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Processamento de grafo com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)     
  

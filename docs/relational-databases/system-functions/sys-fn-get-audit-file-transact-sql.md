@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: 1ab5c24dadbe3e8d0ad333cd67452c752cb2937b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753724"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478987"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -52,11 +52,11 @@ fn_get_audit_file ( file_pattern,
     
     Esse argumento deve incluir um caminho (letra de unidade ou compartilhamento de rede) e um nome de arquivo, podendo conter um caractere curinga. Um único asterisco (*) pode ser usado para coletar vários arquivos de um conjunto de arquivos de auditoria. Por exemplo:  
   
-    -   **\<path>\\\*** -Coletar todos os arquivos de auditoria no local especificado.  
+    -   **\<path>\\\** _-Coletar todos os arquivos de auditoria no local especificado.  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID}***-coletar todos os arquivos de auditoria que têm o nome e o par GUID especificados.  
+    -   _* \<path> \LoginsAudit_{GUID} * * _-coletar todos os arquivos de auditoria que têm o nome e o par GUID especificados.  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** -coleta um arquivo de auditoria específico.  
+    -   _* \<path> \LoginsAudit_{GUID} _00_29384. sqlaudit * *-coletar um arquivo de auditoria específico.  
   
  - **Banco de dados SQL do Azure**:
  
@@ -64,7 +64,7 @@ fn_get_audit_file ( file_pattern,
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** -coleta todos os arquivos de auditoria (BLOBs) para o banco de dados específico.    
       
-      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . xel** -coleta um arquivo de auditoria específico (BLOB).
+      - **\<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . xel** -coleta um arquivo de auditoria específico (BLOB).
   
 > [!NOTE]  
 >  Indicar um caminho sem um padrão de nome de arquivo irá gerar um erro.  
@@ -159,7 +159,7 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```  
 
-  Este exemplo lê o mesmo arquivo acima, mas com cláusulas T-SQL adicionais (**Top**, **order by**e cláusula **Where** para filtrar os registros de auditoria retornados pela função):
+  Este exemplo lê o mesmo arquivo acima, mas com cláusulas T-SQL adicionais (**Top**, **order by** e cláusula **Where** para filtrar os registros de auditoria retornados pela função):
   
   ```  
   SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)

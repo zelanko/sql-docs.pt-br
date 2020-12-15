@@ -1,6 +1,6 @@
 ---
 description: sys.all_parameters (Transact-SQL)
-title: sys. all_parameters (Transact-SQL) | Microsoft Docs
+title: sys.all_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2a6f5d373c4bf3ea2a5b22b0376ee57dbb0e4c0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 452d131c0bf1a267d42c83c17b7c6f3c9ec69bfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539747"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479107"
 ---
 # <a name="sysall_parameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89539747"
 |**scale**|**tinyint**|Escala do parâmetro, se numérico; caso contrário, 0.|  
 |**is_output**|**bit**|1 = Parâmetro é saída (ou retorno); do contrário, 0.|  
 |**is_cursor_ref**|**bit**|1 = Parâmetro é um parâmetro de referência do cursor.|  
-|**has_default_value**|**bit**|1 = O parâmetro tem valor padrão de 1.<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém valores padrão apenas para objetos CLR nesta exibição do catálogo; portanto, esta coluna terá sempre um valor de 0 para objetos [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para exibir o valor padrão de um parâmetro em um [!INCLUDE[tsql](../../includes/tsql-md.md)] objeto, consulte a coluna **definição** da exibição de catálogo [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) ou use a função de sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
+|**has_default_value**|**bit**|1 = O parâmetro tem valor padrão de 1.<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém valores padrão apenas para objetos CLR nesta exibição do catálogo; portanto, esta coluna terá sempre um valor de 0 para objetos [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para exibir o valor padrão de um parâmetro em um [!INCLUDE[tsql](../../includes/tsql-md.md)] objeto, consulte a coluna **definição** da exibição de catálogo [Sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) ou use a função de sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
 |**is_xml_document**|**bit**|1 = O conteúdo é um documento XML completo.<br /><br /> 0 = o conteúdo é um fragmento de documento ou o tipo de dados da coluna não é **XML**.|  
 |**default_value**|**sql_variant**|Se **has_default_value** for 1, o valor dessa coluna será o valor do padrão para o parâmetro; caso contrário, NULL.|  
 |**xml_collection_id**|**int**|É a ID da coleção de esquema XML utilizada para validar o parâmetro.<br /><br /> Diferente de zero se o tipo de dados do parâmetro for **XML** e o XML for digitado.<br /><br /> 0 = Não há nenhuma coleção de esquemas XML ou o parâmetro não é XML.|  
