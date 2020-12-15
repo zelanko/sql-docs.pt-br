@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e18319e45c3d397e4283013ec31bb3c98424c892
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f07f4d02c005ee89b24a323111c05789dbbd9fac
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131098"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901032"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,9 +54,8 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  Remove uma chave EKM (Gerenciamento Extensível de Chaves) de um dispositivo EKM. Para obter mais informações sobre o gerenciamento extensível de chaves, consulte [EKM &#40;Gerenciamento extensível de chaves&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>Comentários  
- Se a chave estiver aberta na sessão atual, a instrução falhará.  
   
- Se a chave assimétrica for mapeada para uma chave EKM (Gerenciamento Extensível de Chaves) no dispositivo EKM e a opção **REMOVE PROVIDER KEY** não for especificada, a chave será removida do banco de dados mas não do dispositivo, e um aviso será emitido.  
+Se a chave assimétrica for mapeada para uma chave EKM (Gerenciamento Extensível de Chaves) no dispositivo EKM e a opção **REMOVE PROVIDER KEY** não for especificada, a chave será removida do banco de dados mas não do dispositivo, e um aviso será emitido.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL na chave simétrica.  

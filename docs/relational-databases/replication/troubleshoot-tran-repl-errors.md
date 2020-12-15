@@ -11,13 +11,13 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 62e047a11d62e8c634f0188746a0f901ab26efdc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882280"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406352"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solução de problemas: localizar erros com replicação transacional do SQL Server 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

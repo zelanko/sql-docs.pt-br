@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43ef52303110cb26b145348edc6aa9ec09bf38de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 780ee667e84b0def82e27afff1b27886150c8bb0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408132"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407098"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -279,7 +279,7 @@ As páginas de nível intermediário são preenchidas até próximo de sua capac
  No nível superior, se um objeto abranger mais células que o especificado por *n*, a indexação usará o número de células necessário para fornecer um mosaico de nível superior completo. Nesses casos, um objeto poderia receber mais que o número de células especificado. Nesse caso, o número máximo de células geradas pela grade de nível superior, que depende da densidade **Nível 1** .  
   
 ### <a name="grids"></a>Grades  
- Este painel mostra a densidade da grade a cada nível do esquema de mosaico. A densidade é especificada como **Baixa**, **Média**ou **Alta**. O padrão **Média**. **Baixa** representa uma grade de 4x4 (16 células), **Média** representa uma grade de 8x8 (64 células) e **Alta** representa uma grade de 16x16 (256 células). Essas opções não estão disponíveis quando as opções de mosaico **Grade Automática de Geometria** ou **Grade Automática de Geografia** são escolhidas.  
+ Este painel mostra a densidade da grade a cada nível do esquema de mosaico. A densidade é especificada como **Baixa**, **Média** ou **Alta**. O padrão **Média**. **Baixa** representa uma grade de 4x4 (16 células), **Média** representa uma grade de 8x8 (64 células) e **Alta** representa uma grade de 16x16 (256 células). Essas opções não estão disponíveis quando as opções de mosaico **Grade Automática de Geometria** ou **Grade Automática de Geografia** são escolhidas.  
   
  **Nível 1**  
  A densidade da grade de primeiro nível (superior).  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de602d5a975cb04c6c2f1496f0fcf01eae5a85a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39a4d0a6136990cdb583a432757503099f61cfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485359"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97403374"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obter informações sobre gatilhos DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88485359"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Requer associação à função **pública** . A definição de objetos de usuário é visível ao proprietário do objeto e às entidades autorizadas que têm uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ Requer associação à função **pública** . A definição de objetos de usuário é visível ao proprietário do objeto e às entidades autorizadas que têm uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin** e **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Requer permissão VIEW DEFINITION no banco de dados e permissão SELECT em **sys.sql_expression_dependencies** para o banco de dados. Por padrão, a permissão SELECT é concedida somente a membros da função de banco de dados fixa **db_owner** . Quando são concedidas permissões SELECT e VIEW DEFINITION a outro usuário, o usuário autorizado pode exibir todas as dependências no banco de dados.  
@@ -61,7 +61,7 @@ ms.locfileid: "88485359"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda o banco de dados desejado, expanda **Tabelas**e expanda a tabela que contém o gatilho para o qual você quer exibir a definição.  
+2.  Expanda o banco de dados desejado, expanda **Tabelas** e expanda a tabela que contém o gatilho para o qual você quer exibir a definição.  
   
 3.  Expanda **Gatilhos**, clique com o botão direito do mouse no gatilho desejado e clique em **Modificar**. A definição do gatilho DML aparece na janela de consulta.  
 
@@ -69,7 +69,7 @@ ms.locfileid: "88485359"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda o banco de dados desejado, expanda **Tabelas**e expanda a tabela que contém o gatilho e suas dependências que você quer exibir.  
+2.  Expanda o banco de dados desejado, expanda **Tabelas** e expanda a tabela que contém o gatilho e suas dependências que você quer exibir.  
   
 3.  Expanda **Gatilhos**, clique com o botão direito do mouse no gatilho desejado e clique em **Exibir Dependências**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88485359"
   
      Para ver os objetos dos quais o DML depende, selecione **Objetos dos quais \<DML trigger name> depende**. Os objetos aparecem na área **Dependências** . Expanda cada nó para ver todos os objetos.  
   
-5.  Para obter informações sobre um objeto que aparece na área **Dependências** , clique no objeto. No campo **Objeto selecionado** , as informações são fornecidas nas caixas **Nome**, **Tipo**e **Tipo de dependência** .  
+5.  Para obter informações sobre um objeto que aparece na área **Dependências** , clique no objeto. No campo **Objeto selecionado** , as informações são fornecidas nas caixas **Nome**, **Tipo** e **Tipo de dependência** .  
   
 6.  Para fechar a janela **Dependências do Objeto** , clique em **OK**.  
   

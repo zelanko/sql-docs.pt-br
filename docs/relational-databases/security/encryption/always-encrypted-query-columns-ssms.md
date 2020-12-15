@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37ac7271be5090f17db16f67968df6eca138856d
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1406b28cae6d73228d54059cf7463b8eaa578385
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679036"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405925"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Consultar colunas usando o Always Encrypted com o SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -87,25 +87,25 @@ Habilitar o Always Encrypted para uma conexão de banco de dados instrui o .NET 
 
 Se você não habilitar o Always Encrypted para uma conexão, o provedor de dados .NET Framework para SQL Server usado pelo SSMS não tentará criptografar os parâmetros de consulta nem descriptografar os resultados.
 
-Habilite ou desabilite o Always Encrypted ao criar uma conexão ou alterar uma conexão existente usando a caixa de diálogo **Conectar ao Servidor** . 
+Habilite ou desabilite o Always Encrypted ao criar uma conexão ou alterar uma conexão existente usando a caixa de diálogo **Conectar ao Servidor**. 
 
 Para habilitar (desabilitar) o Always Encrypted:
 1. Abra a caixa de diálogo **Conectar ao Servidor** (confira [Conectar-se a uma Instância do SQL Server](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance) para obter detalhes).
 1. Clique em **Opções >>** .
 1. Se você estiver usando o SSMS 18 ou mais recente:
-    1. Selecione a guia **Always Encrypted** .
+    1. Selecione a guia **Always Encrypted**.
     1. Para habilitar o Always Encrypted, selecione **Habilitar o Always Encrypted (criptografia de coluna)** . Para desabilitar o Always Encrypted, verifique se a opção **Habilitar o Always Encrypted (criptografia de coluna)** não está selecionada.
     1. Se você estiver usando o [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e a Instância do SQL Server estiver configurada com um enclave seguro, especifique uma URL de atestado de enclave. Se a Instância do SQL Server não usar um enclave seguro, deixe a caixa de texto **URL de Atestado de Enclave** em branco. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md).
 1. Se você estiver usando o SSMS 17 ou mais antigo:
-    1. Selecione a guia **Propriedades Adicionais** .
-    1. Para habilitar o Always Encrypted, digite `Column Encryption Setting = Enabled`. Para desabilitar o Always Encrypted, especifique `Column Encryption Setting = Disabled` ou remova a **Configuração de Criptografia de Coluna** na guia **Propriedades Adicionais** (o valor padrão é **Desabilitado** ).   
- 1. Clique em **Conectar** .
+    1. Selecione a guia **Propriedades Adicionais**.
+    1. Para habilitar o Always Encrypted, digite `Column Encryption Setting = Enabled`. Para desabilitar o Always Encrypted, especifique `Column Encryption Setting = Disabled` ou remova a **Configuração de Criptografia de Coluna** na guia **Propriedades Adicionais** (o valor padrão é **Desabilitado**).   
+ 1. Clique em **Conectar**.
 
 > [!TIP]
 > Para habilitar ou desabilitar Always Encrypted em uma janela do Editor de Consultas existente:   
 > 1.    Clique com o botão direito do mouse em qualquer lugar na janela do Editor de Consultas.
 > 2.    Selecione **Conexão** > **Alterar Conexão...** . Isso abrirá a caixa de diálogo **Conectar ao Servidor** para a conexão atual na janela do Editor de Consultas. 
-> 2.    Habilite ou desabilite o Always Encrypted seguindo as etapas acima e clique em **Conectar** .  
+> 2.    Habilite ou desabilite o Always Encrypted seguindo as etapas acima e clique em **Conectar**.  
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Parametrização de Always Encrypted   
  
@@ -127,17 +127,17 @@ Para habilitar/desabilitar a Parametrização de Always Encrypted na janela atua
 
 1. Selecione **Consulta** no menu principal.
 2. Selecione **Opções de Consulta...** .
-3. Navegue para **Execução** > **Avançado** .
-4. Selecione ou desmarque **Habilitar Parametrização de Always Encrypted** .
-5. Clique em **OK** .
+3. Navegue para **Execução** > **Avançado**.
+4. Selecione ou desmarque **Habilitar Parametrização de Always Encrypted**.
+5. Clique em **OK**.
 
 Para habilitar/desabilitar a Parametrização de Always Encrypted nas janelas futuras do Editor de Consultas:
 
 1. Selecione **Ferramentas** no menu principal.
 2. Selecione **Opções...** .
-3. Navegue para **Execução da Consulta** > **SQL Server** > **Avançado** .
-4. Selecione ou desmarque **Habilitar Parametrização de Always Encrypted** .
-5. Clique em **OK** .
+3. Navegue para **Execução da Consulta** > **SQL Server** > **Avançado**.
+4. Selecione ou desmarque **Habilitar Parametrização de Always Encrypted**.
+5. Clique em **OK**.
 
 Se você executar uma consulta em uma janela do Editor de Consultas que usa uma conexão de banco de dados com o Always Encrypted habilitado, mas a parametrização não estiver habilitada para a janela do Editor de Consultas, você receberá uma solicitação para habilitá-la.
 
@@ -183,9 +183,9 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 O SQL Server Management Studio usa o Intellisense para informar quais variáveis podem ser parametrizadas com êxito e quais tentativas de parametrização falham (e por quê).   
 
-Uma declaração de uma variável que pode ser parametrizada com êxito é marcada com um sublinhado de aviso no Editor de Consultas. Caso passe o mouse sobre uma instrução de declaração que foi marcada com um sublinhado de aviso, você verá os resultados do processo de parametrização, incluindo os valores das propriedades de chave do objeto [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) resultante (a variável é mapeada para): [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [Size](/dotnet/api/system.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). Você também pode ver a lista completa de todas as variáveis que foram parametrizadas com êxito na guia **Aviso** do modo de exibição **Lista de Erros** . Para abrir o modo de exibição **Lista de Erros** , selecione **Exibição** no menu principal e escolha **Lista de Erros** .    
+Uma declaração de uma variável que pode ser parametrizada com êxito é marcada com um sublinhado de aviso no Editor de Consultas. Caso passe o mouse sobre uma instrução de declaração que foi marcada com um sublinhado de aviso, você verá os resultados do processo de parametrização, incluindo os valores das propriedades de chave do objeto [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) resultante (a variável é mapeada para): [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [Size](/dotnet/api/system.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). Você também pode ver a lista completa de todas as variáveis que foram parametrizadas com êxito na guia **Aviso** do modo de exibição **Lista de Erros** . Para abrir o modo de exibição **Lista de Erros** , selecione **Exibição** no menu principal e escolha **Lista de Erros**.    
 
-Se o SQL Server Management Studio tentou parametrizar uma variável, mas a parametrização falhou, a declaração da variável será marcada com um sublinhado de erro. Caso passe o mouse sobre a instrução de declaração que foi marcada com um sublinhado de erro, você obterá resultados sobre o erro. Você também pode ver a lista completa de erros de parametrização de todas as variáveis na guia **Erro** do modo de exibição **Lista de Erros** . Para abrir o modo de exibição **Lista de Erros** , selecione **Exibição** no menu principal e escolha **Lista de Erros** .   
+Se o SQL Server Management Studio tentou parametrizar uma variável, mas a parametrização falhou, a declaração da variável será marcada com um sublinhado de erro. Caso passe o mouse sobre a instrução de declaração que foi marcada com um sublinhado de erro, você obterá resultados sobre o erro. Você também pode ver a lista completa de erros de parametrização de todas as variáveis na guia **Erro** do modo de exibição **Lista de Erros** . Para abrir o modo de exibição **Lista de Erros** , selecione **Exibição** no menu principal e escolha **Lista de Erros**.   
 
 A captura de tela abaixo mostra um exemplo de seis declarações de variável. O SQL Server Management Studio parametrizou com êxito as primeiras três variáveis. As últimas três variáveis não atenderam às condições de pré-requisito de parametrização e, portanto, o SQL Server Management Studio não tentou parametrizá-las (suas declarações não são marcadas de forma alguma).
 

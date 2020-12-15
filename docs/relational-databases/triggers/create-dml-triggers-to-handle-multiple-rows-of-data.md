@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4089c9cb747837e6d0e41c7af1c8d9fc0829e494
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5738b2194142b83130a22c851c23e53495306257
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446336"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97403217"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Crie gatilhos DML para tratar várias linhas de dados
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88446336"
 ## <a name="examples"></a>Exemplos  
  Os gatilhos DML nos exemplos a seguir são projetados para armazenar o total de execução de uma coluna em outra tabela do banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>a. Armazenando um total de execução de uma inserção de única linha  
+### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>A. Armazenando um total de execução de uma inserção de única linha  
  A primeira versão do gatilho DML trabalha bem para uma inserção de única linha quando uma linha de dados é carregada na tabela `PurchaseOrderDetail` . Uma instrução INSERT aciona um gatilho DML e uma nova linha é carregada na tabela **inserida** durante o período de duração da execução do gatilho. A instrução `UPDATE` lê o valor da coluna `LineTotal` para a linha e adiciona esse valor ao valor existente na coluna `SubTotal` na tabela `PurchaseOrderHeader` . A cláusula `WHERE` certifica que a linha atualizada na tabela `PurchaseOrderDetail` corresponde à `PurchaseOrderID` da linha na tabela **inserida** .  
   
 ```  

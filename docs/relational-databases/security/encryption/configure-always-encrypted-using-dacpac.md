@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130908"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405478"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configurar a criptografia de coluna usando o Always Encrypted com um pacote de DAC 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ A implantação de um pacote de DAC também pode resultar na criação ou na rem
 ## <a name="performance-considerations"></a>Considerações sobre desempenho
 Para executar operações de criptografia, uma ferramenta usada para implantar um DACPAC precisa mover os dados para fora do banco de dados. A ferramenta cria tabelas com a configuração de criptografia desejada no banco de dados, carrega todos os dados das tabelas originais, executa as operações de criptografia solicitadas, carrega os dados nas novas tabelas e, em seguida, troca as tabelas originais pelas novas tabelas. A execução de operações criptográficas pode levar muito tempo. Durante esse tempo, o banco de dados não estará disponível para gravar transações. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Se estiver usando [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e sua instância do SQL Server estiver configurada com um enclave seguro, você poderá executar operações criptográficas in-loco, sem mover os dados para fora do banco de dados. Confira [Configurar a criptografia de coluna in-loco usando o Always Encrypted com enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Observe que a criptografia in-loco não está disponível para implantações de DACPAC.

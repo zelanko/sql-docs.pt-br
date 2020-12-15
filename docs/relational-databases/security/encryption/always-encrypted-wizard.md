@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 27af6771eeccf660b1eac623f80e663d93e411b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866686"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405816"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configurar a criptografia de coluna usando o Assistente do Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ O assistente funciona movendo dados para fora do banco de dados e executando ope
 > [!NOTE]
 > A execução de operações criptográficas pode levar muito tempo. Durante esse tempo, o banco de dados não estará disponível para gravar transações. O PowerShell é uma ferramenta recomendada para operações criptográficas em tabelas maiores. Confira [Configurar a criptografia de coluna usando o Always Encrypted com o PowerShell](configure-column-encryption-using-powershell.md).
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Se estiver usando [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e sua instância do SQL Server estiver configurada com um enclave seguro, você poderá executar operações criptográficas in-loco, sem mover os dados para fora do banco de dados. Confira [Configurar a criptografia de coluna in-loco usando o Always Encrypted com enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Note que o assistente não dá suporte à criptografia in-loco.

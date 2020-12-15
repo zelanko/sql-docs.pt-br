@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765142"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405466"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Provisionar chaves Always Encrypted usando o SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ A caixa de diálogo **Nova Chave Mestra da Coluna** permite que você gere uma c
 
 Depois que você concluir a caixa de diálogo, o SQL Server Management Studio criará metadados para a chave mestra de coluna no banco de dados. A caixa de diálogo consegue isso gerando e emitindo uma instrução [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) .
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 Se você está configurando uma chave mestra de coluna habilitada para enclave, o SSMS também assina os metadados usando a chave mestra de coluna. 
 
