@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referenced_entities (Transact-SQL)
-title: sys. dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de7e748e1e993d0e60bde500af1443707ee9020c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cd6c12416a4e1626b7439ace6921b5d1981f0051
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550198"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484598"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -89,7 +89,7 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|ID da entidade referenciada. Quando referenced_minor_id não é 0, referenced_id é a entidade na qual a coluna é definida.<br /><br /> Sempre NULL para referências entre servidores.<br /><br /> NULL para referências entre bancos de dados quando a ID não pode ser determinada, porque o banco de dados está offline ou a entidade não pode ser associada.<br /><br /> NULL para referências dentro do banco de dados se a ID não puder ser determinada. Para referências não associadas a esquema, a ID não pode ser resolvida quando a entidade referenciada não existe no banco de dados ou quando a resolução de nome é dependente de chamador.  No último caso, is_caller_dependent é definido como 1.<br /><br /> Jamais NULL para referências associadas a esquema.|  
 |referenced_minor_id|**int**|ID da coluna quando a entidade referenciada é uma coluna; caso contrário, 0. Por exemplo, referenced_minor_is é 0 na linha que lista a própria entidade referenciada.<br /><br /> Para referências não associadas a esquema, as dependências de coluna são informadas somente quando todas as entidades referenciadas podem ser associadas. Se não for possível associar alguma entidade referenciada, nenhuma dependência no nível de coluna será informada e referenced_minor_id será 0. Consulte o exemplo D.|  
 |referenced_class|**tinyint**|Classe da entidade referenciada.<br /><br /> 1 = Objeto ou coluna<br /><br /> 6 = Tipo<br /><br /> 10 = Coleção de esquema XML<br /><br /> 21 = Função de partição|  
-|referenced_class_desc|**nvarchar(60)**|Descrição de classe da entidade referenciada.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|Descrição de classe da entidade referenciada.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TIPO<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indica que a associação de esquema para a entidade referenciada ocorre em tempo de execução; portanto, a resolução da ID da entidade depende do esquema do chamador. Isso ocorre quando a entidade referenciada é um procedimento armazenado, um procedimento armazenado estendido ou uma função definida pelo usuário chamada em uma instrução EXECUTE.<br /><br /> 1 = A entidade referenciada depende do chamador e é resolvida em tempo de execução. Nesse caso, referenced_id é NULL.<br /><br /> 0 = A ID da entidade referenciada não é dependente do chamador. Sempre 0 para referências associadas a esquema e referências entre bancos de dados e entre servidores que especificam explicitamente um nome de esquema. Por exemplo, uma referência para uma entidade no formato `EXEC MyDatabase.MySchema.MyProc` não é dependente do chamador. Porém, uma referência no formato `EXEC MyDatabase..MyProc` é dependente do chamador.|  
 |is_ambiguous|**bit**|Indica que a referência é ambígua e pode ser resolvida em tempo de execução para uma função definida pelo usuário, um UDT (tipo definido pelo usuário) ou uma referência XQuery para uma coluna do tipo **XML**. Por exemplo, suponha que a instrução `SELECT Sales.GetOrder() FROM Sales.MySales` esteja definida em um procedimento armazenado. Até que o procedimento armazenado seja executado, não se sabe se `Sales.GetOrder()` é uma função definida pelo usuário no esquema `Sales` ou é uma coluna denominada `Sales` do tipo UDT com um método denominado `GetOrder()`.<br /><br /> 1 = A referência a uma função definida pelo usuário ou a um método UDT (Tipo Definido pelo Usuário) de coluna é ambígua.<br /><br /> 0 = A referência não é ambígua ou a entidade pode ser associada com êxito quando a função é chamada.<br /><br /> Sempre 0 para referências associadas a esquema.|  
 |is_selected|**bit**|1 = O objeto ou coluna é selecionada.|  

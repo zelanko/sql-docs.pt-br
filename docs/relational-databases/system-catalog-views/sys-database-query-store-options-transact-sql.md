@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1c77693808a1571069e9b921e7efe017d55a514
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c6b346496eb08e9121abac463b3e87f6e27362e2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175919"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484778"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

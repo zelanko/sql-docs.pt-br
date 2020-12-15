@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referencing_entities (Transact-SQL)
-title: sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9855ef4c747c411476df5700f4a61f43f31de299
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 517e6f8faaccf40091535b8a78d47d0fa8a43032
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550182"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484568"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -127,7 +127,7 @@ sys.dm_sql_referencing_entities (
   
 -   Requer a permissão CONTROL no objeto referenciado. Quando a entidade referenciada é uma função de partição, a permissão CONTROL é exigida no banco de dados.  
   
--   Requer a permissão SELECT em sys. dm_sql_referencing_entities. Por padrão, a permissão SELECT é concedida a público.  
+-   Requer a permissão SELECT em sys.dm_sql_referencing_entities. Por padrão, a permissão SELECT é concedida a público.  
   
 ### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

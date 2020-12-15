@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4738fca47b35cae4e6b895ac59aa26213f17a7d8
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 117c4c2e6bc3e08ea32869cd198850eb3bb29ab2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753978"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484558"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -221,7 +221,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br /> **Aplica-se a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|DELETE|DATABASE|  
+|DL|Delete (excluir)|DATABASE|  
 |DL|Delete (excluir)|OBJECT|  
 |DL|Delete (excluir)|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
@@ -281,7 +281,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](../../sql-server/what-s-new-in-sql-server-2016.md)).|SERVER ROLE|  
 |TO|TAKE OWNERSHIP|SERVICE|  
 |TO|TAKE OWNERSHIP|SYMMETRIC KEY|  
-|TO|TAKE OWNERSHIP|TYPE|  
+|TO|TAKE OWNERSHIP|TIPO|  
 |TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
 |UMSK|UNMASK<br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](../../sql-server/what-s-new-in-sql-server-2016.md)).|DATABASE|  
 |UP|UPDATE|DATABASE|  

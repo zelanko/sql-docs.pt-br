@@ -1,6 +1,6 @@
 ---
-description: sys. security_predicates (Transact-SQL)
-title: sys. security_predicates (Transact-SQL) | Microsoft Docs
+description: sys.security_predicates (Transact-SQL)
+title: sys.security_predicates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2ba8b6c9c4a2fc2f6b3beb562edfac0728678fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 629d2eb6cc4bd9451800be12f9739209548c1df2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490124"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484718"
 ---
-# <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates (Transact-SQL)
+# <a name="syssecurity_predicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Retorna uma linha para cada predicado de segurança no banco de dados.  
@@ -39,7 +39,7 @@ ms.locfileid: "88490124"
 |object_id|**int**|ID da política de segurança que contém esse predicado.|  
 |security_predicate_id|**int**|ID do predicado nesta política de segurança.|  
 |target_object_id|**int**|ID do objeto no qual o predicado de segurança está associado.|  
-|predicate_definition|**nvarchar(max)**|Nome totalmente qualificado da função que será usada como um predicado de segurança, incluindo os argumentos. Observe que o nome `schema.function` pode ser normalizado (ou seja, escrito com caracteres de escape), bem como qualquer outro elemento em texto para manter a consistência. Por exemplo: <br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_definition|**nvarchar(max)**|Nome totalmente qualificado da função que será usada como um predicado de segurança, incluindo os argumentos. Observe que o nome `schema.function` pode ser normalizado (ou seja, escrito com caracteres de escape), bem como qualquer outro elemento em texto para manter a consistência. Por exemplo:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|O tipo de predicado usado pela política de segurança:<br /><br /> 0 = PREDICADO DE FILTRO<br /><br /> 1 = PREDICADO DE BLOQUEIO|  
 |predicate_type_desc|**nvarchar(60)**|O tipo de predicado usado pela política de segurança:<br /><br /> FILTER<br /><br /> BLOQUEAR|  
 |operation|**int**|O tipo de operação especificado para o predicado:<br /><br /> NULL = todas as operações aplicáveis<br /><br /> 1 = APÓS INSERIR<br /><br /> 2 = APÓS A ATUALIZAÇÃO<br /><br /> 3 = ANTES DA ATUALIZAÇÃO<br /><br /> 4 = ANTES DA EXCLUSÃO|  

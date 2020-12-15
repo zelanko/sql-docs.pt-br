@@ -1,6 +1,6 @@
 ---
 description: sys.dm_fts_index_keywords_by_document (Transact-SQL)
-title: sys. dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d9526c20757ca8f63c468f88c56e26de7ad2b1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 353fcb321549546ff1b44956d5ebc20826e6c0e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484698"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -131,8 +131,8 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico de pesquisa de texto completo e de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
- [sys. dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [sys. dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sys.dm_fts_index_keywords ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_fulltext_keymappings ](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [Melhorar o desempenho de índices de texto completo](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
   

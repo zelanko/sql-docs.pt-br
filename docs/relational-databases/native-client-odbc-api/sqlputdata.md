@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42323e6fbf35ddb6093ac4e764e81e7f0274cbb2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81b090ce7c0e7231fac2296149546b64f481b38f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867480"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483428"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91867480"
   
 -   O parâmetro referenciado pode ser uma *expressão* na cláusula SET de uma instrução UPDATE.  
   
- Cancelar uma sequência de chamadas SQLPutData que fornecem dados em blocos para um servidor em execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] causa uma atualização parcial do valor da coluna ao usar a versão 6,5 ou anterior. A coluna **Text**, **ntext**ou **Image** que foi referenciada quando SQLCancel foi chamado é definida como um valor de espaço reservado intermediário.  
+ Cancelar uma sequência de chamadas SQLPutData que fornecem dados em blocos para um servidor em execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] causa uma atualização parcial do valor da coluna ao usar a versão 6,5 ou anterior. A coluna **Text**, **ntext** ou **Image** que foi referenciada quando SQLCancel foi chamado é definida como um valor de espaço reservado intermediário.  
   
 > [!NOTE]  
 >  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client não dá suporte à conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 6.5 e anteriores.  
@@ -39,7 +39,7 @@ ms.locfileid: "91867480"
 ## <a name="diagnostics"></a>Diagnósticos  
  Há um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE específico de cliente nativo para SQLPutData:  
   
-|SQLSTATE|Erro do|Descrição|  
+|SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |22026|Incompatibilidade de comprimento de dados String|Se o comprimento dos dados em bytes a ser enviado tiver sido especificado por um aplicativo, por exemplo, com SQL_LEN_DATA_AT_EXEC (*n*) em que *n* é maior que 0, o número total de bytes fornecidos pelo aplicativo via SQLPutData deve corresponder ao comprimento especificado.|  
   

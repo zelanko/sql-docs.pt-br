@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c32343c060eab0d70ba3bbc4419d30809ae745c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7e325b7e88b2958b8870151516f991f27ba79e44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448554"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483337"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,12 +47,12 @@ Nomes Unicode e ANSI:
 - bcp_initA (ANSI)
 - bcp_initW (Unicode)
 
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  *hdbc*  
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *szTable*  
- É o nome da tabela do banco de dados a ser copiada de ou para. Este nome também pode incluir o nome do banco de dados ou o nome do proprietário. Por exemplo, **pubs. Gracie. titles**, **pubs.. títulos**, **Gracie. titles**e **títulos** são todos nomes de tabelas legais.  
+ É o nome da tabela do banco de dados a ser copiada de ou para. Este nome também pode incluir o nome do banco de dados ou o nome do proprietário. Por exemplo, **pubs. Gracie. titles**, **pubs.. títulos**, **Gracie. titles** e **títulos** são todos nomes de tabelas legais.  
   
  Se *eDirection* for DB_OUT, *szTable* também poderá ser o nome de uma exibição de banco de dados.  
   

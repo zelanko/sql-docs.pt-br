@@ -1,5 +1,5 @@
 ---
-description: Criação de conjunto de linhas de parâmetro com valor de tabela no SQL Server Native Client
+description: Table-Valued a criação de conjunto de linhas de parâmetro em SQL Server Native Client
 title: Criação de conjunto de linhas de parâmetro com valor de tabela (provedor de OLE DB de cliente nativo)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bf030073ce8b8a22fe605ef54ea521253aa3337
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65215eebf7a0e8dd91529f5a231f8597cadfda2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483137"
 ---
-# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Criação de conjunto de linhas de parâmetro com valor de tabela no SQL Server Native Client
+# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Table-Valued a criação de conjunto de linhas de parâmetro em SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Embora os consumidores possam fornecer qualquer objeto do conjunto de linhas a parâmetros com valor de tabela, objetos do conjunto de linhas típicos são implementados com relação a armazenamentos de dados de back-end e, portanto, fornecem desempenho limitado. Por isso, o provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite que os consumidores criem um objeto de conjunto de linhas especializado sobre os dados da memória. Esse objeto de conjunto de linhas em memória especial é um novo objeto COM chamado conjunto de linhas de parâmetro COM valor de tabela. Ele fornece funcionalidade semelhante para conjuntos de parâmetro.  
