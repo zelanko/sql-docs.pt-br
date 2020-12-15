@@ -1,5 +1,5 @@
 ---
-title: Carregador de linha de comando dwloader
+title: Carregador de Command-Line dwloader
 description: dwloader é uma ferramenta de linha de comando de data warehouse paralelo (PDW) que carrega linhas de tabela em massa em uma tabela existente.
 author: mzaman1
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3635aff3c3dad371c969acd3d72b2fb738748ecc
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767045"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489686"
 ---
-# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando dwloader para data warehouse paralelos
-**dwloader** é uma ferramenta de linha de comando de data warehouse paralelo (PDW) que carrega linhas de tabela em massa em uma tabela existente. Ao carregar linhas, você pode adicionar todas as linhas ao final da tabela (modo de*acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo Upsert*) ou excluir todas as linhas existentes antes do carregamento e, em seguida, inserir todas as linhas em uma tabela vazia (*modo de recarregamento*).  
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de Command-Line dwloader para data warehouse paralelos
+**dwloader** é uma ferramenta de linha de comando de data warehouse paralelo (PDW) que carrega linhas de tabela em massa em uma tabela existente. Ao carregar linhas, você pode adicionar todas as linhas ao final da tabela (modo de *acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo Upsert*) ou excluir todas as linhas existentes antes do carregamento e, em seguida, inserir todas as linhas em uma tabela vazia (*modo de recarregamento*).  
   
 **Processo para carregar dados**  
   
@@ -124,7 +124,7 @@ Exibe informações de ajuda simples sobre o uso do carregador. A ajuda só ser�
 Um logon de autenticação SQL Server válido com as permissões apropriadas para executar a carga.  
   
 **-P** *password*  
-A senha para um *login_name*de autenticação SQL Server.  
+A senha para um *login_name* de autenticação SQL Server.  
   
 **-W**  
 Use a Autenticação do Windows. (Nenhum *login_name* ou *senha* é necessário.) 
@@ -466,7 +466,7 @@ Com **-m**, SQL Server PDW executa e confirma as cargas em paralelo. Isso é exe
   
 Sem **-m**, SQL Server PDW executa e confirma as cargas em série em todas as distribuições dentro de cada nó de computação e simultaneamente nos nós de computação. Esse método é mais lento do que o modo de várias transações, mas é seguro para transações.  
   
-**-m** é opcional para *anexar*, *recarregar*e *Upsert*.  
+**-m** é opcional para *anexar*, *recarregar* e *Upsert*.  
   
 **-m** é necessário para fastappend.  
   
@@ -528,7 +528,7 @@ Os dados carregados podem exigir mais ou menos espaço no dispositivo do que no 
 Embora **dwloader** seja um processo de transação e seja revertido normalmente em caso de falha, ele não poderá ser revertido depois que o carregamento em massa for concluído com êxito. Para cancelar um processo **dwloader** ativo, digite CTRL + C.  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
-O tamanho total de todas as cargas que ocorrem simultaneamente deve ser menor que LOG_SIZE para o banco de dados e é recomendável que o tamanho total de todas as cargas simultâneas seja menor que 50% do LOG_SIZE. Para obter essa limitação de tamanho, você pode dividir grandes cargas em vários lotes. Para obter mais informações sobre LOG_SIZE, consulte [criar banco de dados](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)  
+O tamanho total de todas as cargas que ocorrem simultaneamente deve ser menor que LOG_SIZE para o banco de dados e é recomendável que o tamanho total de todas as cargas simultâneas seja menor que 50% do LOG_SIZE. Para obter essa limitação de tamanho, você pode dividir grandes cargas em vários lotes. Para obter mais informações sobre LOG_SIZE, consulte [criar banco de dados](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 Ao carregar vários arquivos com um comando de carregamento, todas as linhas rejeitadas são gravadas no mesmo arquivo de rejeição. O arquivo de rejeição não mostra qual arquivo de entrada contém cada linha rejeitada.  
   
@@ -552,15 +552,15 @@ O acréscimo pode ser executado no modo de várias transacionais (usando o argum
   
 O modo de acréscimo carrega dados em duas fases. A fase 1 carrega os dados do arquivo de origem em uma tabela de preparo simultaneamente (a fragmentação pode ocorrer). A fase dois carrega dados da tabela de preparo para a tabela final. A segunda fase executa uma **inserção em... Selecione WITH (TABLOCK)** operação. A tabela a seguir mostra o comportamento de bloqueio na tabela final e o comportamento de log ao usar o modo de acréscimo:  
   
-|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registrando em log|  
+|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registro em log|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Pilha|Sim|Sim|Sim|Minimal|  
-|Pilha|Sim|Não|Sim|Minimal|  
-|Pilha|Não|Sim|Não|Minimal|  
-|Pilha|Não|Não|Não|Minimal|  
-|L|Sim|Sim|Não|Minimal|  
+|Pilha|Sim|Sim|Sim|Mínimo|  
+|Pilha|Sim|Não|Sim|Mínimo|  
+|Pilha|Não|Sim|Não|Mínimo|  
+|Pilha|Não|Não|Não|Mínimo|  
+|L|Sim|Sim|Não|Mínimo|  
 |L|Sim|Não|Sim|Completo|  
-|L|Não|Sim|Não|Minimal|  
+|L|Não|Sim|Não|Mínimo|  
 |L|Não|Não|Sim|Completo|  
   
 A tabela acima mostra **dwloader** usando o modo de acréscimo carregando em um heap ou uma tabela de índice clusterizado (CI), com ou sem o sinalizador de várias transacionais e o carregamento em uma tabela vazia ou em uma tabela não vazia. O comportamento de bloqueio e de log de cada combinação de carga é exibido na tabela. Por exemplo, a fase de carregamento (2ª) com o modo Append em um índice clusterizado sem o modo multifuncional e em uma tabela vazia terá o PDW para criar um bloqueio exclusivo na tabela e o registro em log é mínimo. Isso significa que um cliente não será capaz de carregar (2ª) a fase e a consulta simultaneamente em uma tabela vazia. No entanto, ao carregar com a mesma configuração em uma tabela não vazia, o PDW não emitirá um bloqueio exclusivo na tabela e a simultaneidade será possível. Infelizmente, o log completo ocorre, reduzindo o processo.  
@@ -695,7 +695,7 @@ Descrição dos parâmetros de linha de comando:
   
 -   *-r \r\n* especifica que cada linha em DimAccount.txt termina com um retorno de carro e um caractere de alimentação de linha.  
   
--   *-U <login_name>-P <password> * Especifica o logon e a senha para o logon que tem permissões para executar a carga.  
+-   *-U <login_name>-P <password>* Especifica o logon e a senha para o logon que tem permissões para executar a carga.  
   
 
 <!-- MISSING LINK

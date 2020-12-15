@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6e0bbfd3acbc7616fca0f180d6de3238a724231
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767155"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489716"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquirir e configurar um servidor de backup para data warehouse paralelos
 Este artigo descreve como configurar um sistema Windows que não seja de dispositivo como um servidor de backup para uso com os recursos de backup e restauração no sistema de plataforma de análise (PAS) e data warehouse em paralelo (PDW).  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 Para obter mais informações, consulte: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)   
   
--   [RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
+-   [RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Avisos de segurança  
 O servidor de backup não está ingressado no domínio privado do dispositivo. Ele está em sua própria rede e não há nenhuma relação de confiança entre seu próprio domínio e domínio de dispositivo privado.  
@@ -140,7 +140,7 @@ Para armazenar o nome de usuário e a senha no PDW, use o procedimento armazenad
   
 Para remover as credenciais de rede do PDW, use o procedimento armazenado [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) .  
   
-Para listar todas as credenciais de rede armazenadas no SQL Server PDW, use a exibição de gerenciamento dinâmico [Sys. dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
+Para listar todas as credenciais de rede armazenadas no SQL Server PDW, use a exibição de gerenciamento dinâmico [Sys.dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
   
 ### <a name="secure-communications"></a>Comunicações seguras  
   
@@ -150,4 +150,4 @@ As operações no servidor de carregamento podem usar um caminho UNC para efetua
 - No servidor de carregamento, defina a seguinte opção de política de grupo em segurança \ Opções de instalação: cliente de rede da Microsoft: assinar digitalmente as comunicações (sempre): habilitada.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Backup e Restauração](backup-and-restore-overview.md)  
+[Backup e restauração](backup-and-restore-overview.md)  

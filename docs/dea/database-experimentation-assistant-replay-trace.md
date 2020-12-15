@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636166"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489540"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproduzir um rastreamento no Assistente para Experimentos de Banco de Dados
 
@@ -139,7 +139,7 @@ Você pode obter mais detalhes nos logs em% temp% \\ DEA. Se o problema persisti
 
 - Verifique se o serviço do controlador de Distributed Replay está em execução no computador do controlador. Para verificar, use as ferramentas de gerenciamento de Distributed Replay (execute o comando `dreplay.exe status -f 1` ).
 - Se a reprodução for iniciada remotamente:
-  - Confirme se o computador que está executando o DEA pode executar ping no controlador com êxito. Confirme se as configurações de firewall permitem conexões de acordo com as instruções na página **Configurar ambiente de reprodução** . Para obter mais informações, consulte o artigo [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
+  - Confirme se o computador que está executando o DEA pode executar ping no controlador com êxito. Confirme se as configurações de firewall permitem conexões de acordo com as instruções na página **Configurar ambiente de reprodução** . Para obter mais informações, consulte o artigo [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
   - Verifique se o início remoto DCOM e a ativação remota são permitidos para o usuário do controlador de Distributed Replay.
   - Verifique se os direitos de usuário de acesso remoto DCOM são permitidos para o usuário do controlador de Distributed Replay.
 
@@ -163,6 +163,6 @@ Esse problema é conhecido na versão RTM do SQL Server 2017. Para obter mais in
   
 O problema foi resolvido na atualização cumulativa 1 mais recente para o SQL Server 2017. Baixe a versão mais recente da [atualização cumulativa 1 para SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - Para criar um relatório de análise que ajuda você a obter informações sobre as alterações propostas, consulte [criar relatórios](database-experimentation-assistant-create-report.md).

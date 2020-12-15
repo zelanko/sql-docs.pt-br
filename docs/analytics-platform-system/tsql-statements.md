@@ -9,24 +9,24 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 078c0364e64ddca8974544734e8e5a45950e14e0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: df390f724f6903a1cd87deee1f9d48b363ce4f57
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778395"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489624"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Instruções T-SQL para data warehouse paralelas
 Instruções Transact-SQL (T-SQL) para o sistema de plataforma analítica (APS) SQL Server Parallel data warehouse (PDW).
 
 ## <a name="data-definition-language-ddl-statements"></a>Instruções de DDL (Linguagem de Definição de Dados)
-* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)
+* [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
 * [CRIAR UMA CREDENCIAL NO ESCOPO DO BANCO DE DADOS](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -47,7 +47,7 @@ Instruções Transact-SQL (T-SQL) para o sistema de plataforma analítica (APS) 
 * [DROP STATISTICS](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
 * [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
-* [REMOVER EXIBIÇÃO](../t-sql/statements/drop-view-transact-sql.md)
+* [DROP VIEW](../t-sql/statements/drop-view-transact-sql.md)
 * [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
 * [UPDATE STATISTICS](../t-sql/statements/update-statistics-transact-sql.md)
@@ -91,16 +91,16 @@ Instruções Transact-SQL (T-SQL) para o sistema de plataforma analítica (APS) 
 * [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
 * [ALTER MASTER KEY](../t-sql/statements/alter-master-key-transact-sql.md)
-* [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)
+* [ALTER_ROLE](../t-sql/statements/alter-role-transact-sql.md)
 * [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)
 * [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)
 * [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
-* [CRIAR CHAVE MESTRA](../t-sql/statements/create-master-key-transact-sql.md)
+* [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)
-* [CREATE USER](../t-sql/statements/create-user-transact-sql.md)
+* [CRIAR USUÁRIO](../t-sql/statements/create-user-transact-sql.md)
 * [DROP CERTIFICATE](../t-sql/statements/drop-certificate-transact-sql.md)
 * [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)

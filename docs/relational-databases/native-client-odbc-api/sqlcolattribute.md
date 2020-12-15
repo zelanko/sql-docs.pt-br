@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2d1ef030815e701f0b1b7cdeac02c4827641ff2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99a4ffe7fc4b5ac47abdf8891ab694ef20abc845
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809882"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485088"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "91809882"
  Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Suporte do SQLColAttribute a UDTs CLR grandes  
- O**SQLColAttribute** suporta UDTs CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O **SQLColAttribute** suporta UDTs CLR grandes. Para obter mais informações, consulte [tipos de User-Defined CLR grandes &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Suporte do SQLColAttribute a colunas esparsas  
  SQLColAttribute consulta o novo campo IRD (descritor de linha de implementação), SQL_CA_SS_IS_COLUMN_SET, para determinar se uma coluna é uma coluna de **column_set** .  

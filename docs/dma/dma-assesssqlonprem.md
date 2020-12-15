@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5c0ddd9aa7c89f7f77212155a0b85089c34087d9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c88a289e21e7cd70980763474e82b7dd6cbd49c2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726296"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489513"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar uma avaliação de migração do SQL Server com o Assistente de Migração de Dados
 
@@ -125,23 +125,23 @@ A duração da avaliação depende do número de bancos de dados adicionados e d
 
 2. Examine os problemas de compatibilidade em todos os níveis de compatibilidade com suporte na versão de SQL Server de destino que você selecionou na página **Opções** .
 
-Você pode examinar os problemas de compatibilidade analisando o objeto afetado, seus detalhes e potencialmente uma correção para cada problema identificado em **alterações significativas**, **alterações de comportamento**e **recursos preteridos**.
+Você pode examinar os problemas de compatibilidade analisando o objeto afetado, seus detalhes e potencialmente uma correção para cada problema identificado em **alterações significativas**, **alterações de comportamento** e **recursos preteridos**.
 
 ![Exibir resultados da avaliação](../dma/media/dma-assesssqlonprem/review-results.png)
 
-Da mesma forma, você pode examinar a recomendação de recursos entre áreas de **desempenho**, **armazenamento**e **segurança** .
+Da mesma forma, você pode examinar a recomendação de recursos entre áreas de **desempenho**, **armazenamento** e **segurança** .
 
-As recomendações de recursos abrangem diferentes tipos de recursos, como OLTP na memória, Columnstore, Stretch Database, Always Encrypted, Máscara de Dados Dinâmicos e Transparent Data Encryption.
+As recomendações de recursos abrangem diferentes tipos de recursos, como In-Memory OLTP, Columnstore, Stretch Database, Always Encrypted, Máscara de Dados Dinâmicos e Transparent Data Encryption.
 
 ![Exibir recomendações de recursos](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Para o banco de dados SQL do Azure, as avaliações fornecem problemas de bloqueio de migração e problemas de paridade de recursos.Examine os resultados de ambas as categorias selecionando as opções específicas.
+Para o banco de dados SQL do Azure, as avaliações fornecem problemas de bloqueio de migração e problemas de paridade de recursos. Examine os resultados de ambas as categorias selecionando as opções específicas.
 
 - A categoria de **paridade de recursos SQL Server** fornece um conjunto abrangente de recomendações, abordagens alternativas disponíveis no Azure e etapas de mitigação. Ele ajuda a planejar esse esforço em seus projetos de migração.
 
   ![Exibir informações para SQL Server paridade de recurso](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- A categoria de **problemas de compatibilidade** fornece recursos com suporte parcial ou sem suporte que bloqueiam a migração de bancos de dados de SQL Server locais para bancos de dados SQL do Azure.Em seguida, ele fornece recomendações para ajudá-lo a resolver esses problemas.
+- A categoria de **problemas de compatibilidade** fornece recursos com suporte parcial ou sem suporte que bloqueiam a migração de bancos de dados de SQL Server locais para bancos de dados SQL do Azure. Em seguida, ele fornece recomendações para ajudá-lo a resolver esses problemas.
 
   ![Exibir problemas de compatibilidade](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
@@ -151,7 +151,7 @@ Se você quiser estender ainda mais essas avaliações para todo o espaço de da
 
 Isso permite que você exiba os resultados consolidados no projeto do hub de migrações para Azure.
 
-As diretrizes detalhadas passo a passo para avaliações de prontidão de destino estão disponíveis [aqui](./dma-assess-sql-data-estate-to-sqldb.md?view=sql-server-2017).
+As diretrizes detalhadas passo a passo para avaliações de prontidão de destino estão disponíveis [aqui](./dma-assess-sql-data-estate-to-sqldb.md).
 
    ![Carregar resultados para migrações para Azure](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 

@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04647ba7d356b49b9967b5a84ebf15fb33072e0f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c9bea9cc9285d99c5632dc443a135008ff5f3799
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810965"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485058"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client relata o tipo de coluna adicional no conjunto de resultados de **SQLGetTypeInfo**. USERTYPE informa a definição do tipo de dados da biblioteca do banco de dados, sendo útil para desenvolvedores que estejam portando aplicativos existentes da biblioteca para ODBC.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata identidade como um atributo, ao passo que o ODBC a trata como um tipo de dados. Para resolver essa incompatibilidade, **SQLGetTypeInfo** retorna os tipos de dados: **intidentity**, **smallintidentity**, **tinyintidentity**, **decimalidentity**e **NumericIdentity**. A coluna conjunto de resultados **SQLGetTypeInfo** AUTO_UNIQUE_VALUE relata o valor true para esses tipos de dados.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata identidade como um atributo, ao passo que o ODBC a trata como um tipo de dados. Para resolver essa incompatibilidade, **SQLGetTypeInfo** retorna os tipos de dados: **intidentity**, **smallintidentity**, **tinyintidentity**, **decimalidentity** e **NumericIdentity**. A coluna conjunto de resultados **SQLGetTypeInfo** AUTO_UNIQUE_VALUE relata o valor true para esses tipos de dados.  
   
  Para **varchar**, **nvarchar** e **varbinary**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client continua a relatar 8000, 4000 e 8000, respectivamente, para o valor COLUMN_SIZE, mesmo que seja realmente ilimitado. Isso é para assegurar a compatibilidade com versões anteriores.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "91810965"
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo e parâmetros com valor de tabela  
  O tipo de tabela para parâmetros com valor de tabela é efetivamente um meta-tipo, ou seja, um tipo usado para definir outros tipos. Portanto, ele não precisa ser exposto por meio do SQLGetTypeInfo. Os aplicativos devem usar SQLTables, em vez de SQLGetTypeInfo, para recuperar metadados para tipos de tabela usados com parâmetros com valor de tabela.  
   
- Para obter mais informações, sobre como recuperar metdata para parâmetros com valor de tabela, consulte [atributos de instrução que afetam os parâmetros com valor de tabela](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md).  
+ Para obter mais informações, sobre como recuperar metdata para parâmetros com valor de tabela, consulte [atributos de instrução que afetam parâmetros de Table-Valued](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md).  
   
  Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "91810965"
  Para obter mais informações gerais, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>Suporte de SQLGetTypeInfo a grandes UDTs do CLR  
- O **SQLGetTypeInfo** dá suporte a UDTs (tipos definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O **SQLGetTypeInfo** dá suporte a UDTs (tipos definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos de User-Defined CLR grandes &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Função SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)   

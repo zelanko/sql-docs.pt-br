@@ -9,12 +9,12 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e7f106e462d3d1bb7848b15523ef3d3f7feed2a1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd52db9d34519f2b09cbaba880806c17509c84c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767205"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489706"
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 
@@ -24,7 +24,7 @@ Descreve como o backup e a restauração de dados funcionam para o PDW (data war
 
 Um *backup de banco de dados* PDW é uma cópia de um banco de dados de dispositivo, armazenado em um formato para que possa ser usado para restaurar o banco de dados original para um dispositivo.  
   
-Um backup de banco de dados do PDW é criado com a instrução t-SQL do [banco de dados de backup](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) e formatado para uso com a instrução [Restore Database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) ; Ele não pode ser usado para nenhuma outra finalidade. O backup só pode ser restaurado para um dispositivo com o mesmo número ou um número maior de nós de computação.  
+Um backup de banco de dados do PDW é criado com a instrução t-SQL do [banco de dados de backup](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true) e formatado para uso com a instrução [Restore Database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) ; Ele não pode ser usado para nenhuma outra finalidade. O backup só pode ser restaurado para um dispositivo com o mesmo número ou um número maior de nós de computação.  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -104,7 +104,7 @@ Ao restaurar dados, o dispositivo detecta o número de nós de computação no d
   
 1.  O backup do banco de dados a ser restaurado está disponível em um compartilhamento de arquivos do Windows em um servidor de backup que não seja de dispositivo. Para obter o melhor desempenho, esse servidor está conectado à rede InfiniBand do dispositivo.  
   
-2.  O usuário envia uma instrução TSQL do [banco de dados de restauração](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) para o nó de controle.  
+2.  O usuário envia uma instrução TSQL do [banco de dados de restauração](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) para o nó de controle.  
   
     -   A restauração é uma restauração completa ou uma restauração de cabeçalho. A restauração completa restaura um backup completo e, opcionalmente, restaura um backup diferencial.  
   
@@ -133,8 +133,8 @@ Após a redistribuição, cada nó de computação conterá menos dados reais e 
 |Tarefa de backup e restauração|Descrição|  
 |---------------------------|---------------|  
 |Prepare um servidor como um servidor de backup.|[Adquirir e configurar um servidor de backup](acquire-and-configure-backup-server.md)|  
-|Fazer backup de um banco de dados.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
-|Restaurar um banco de dados.|[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
+|Fazer backup de um banco de dados.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|  
+|Restaurar um banco de dados.|[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|    
 
 <!-- MISSING LINKS
 

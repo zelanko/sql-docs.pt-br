@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947926"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489492"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar o SKU do banco de dados SQL/Instância Gerenciada do Azure correto para seu banco de dados local
 
@@ -44,7 +44,7 @@ Veja a seguir as instruções para ajudá-lo a determinar as recomendações de 
 - Verifique se o computador tem o [PowerShell versão 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou posterior, que é necessário para executar todos os scripts. Para obter informações sobre como descobrir qual versão do PowerShell está instalada em seu computador, consulte o artigo [baixar e instalar o Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
   > [!NOTE]
   > Para coletar informações do computador, o script de coleta de dados usa o cmdlet Get-WmiObject, que foi preterido no PowerShell 6. Para executar esse script no PowerShell 6 ou 7, você deve substituir os cmdlets do WMI pelos cmdlets do CIM mais recentes.
-- Verifique se o seu computador tem o módulo do Azure PowerShell instalado. Para obter mais informações, consulte o artigo [instalar o Azure PowerShell Module](/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Verifique se o seu computador tem o módulo do Azure PowerShell instalado. Para obter mais informações, consulte o artigo [instalar o Azure PowerShell Module](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
 - Verifique se o arquivo do PowerShell **SkuRecommendationDataCollectionScript.ps1**, que é necessário para coletar os contadores de desempenho, está instalado na pasta DMA.
 - Verifique se o computador no qual você executará esse processo tem permissões de administrador para o computador que está hospedando seus bancos de dados.
 
@@ -239,4 +239,4 @@ Para inserir informações de provisionamento e fazer alterações nas recomenda
 
 ## <a name="next-step"></a>Próxima etapa
 
-- Para obter uma lista completa de comandos para executar o DMA da CLI, consulte o artigo [executar assistente de migração de dados na linha de comando](./dma-commandline.md?view=sql-server-2017).
+- Para obter uma lista completa de comandos para executar o DMA da CLI, consulte o artigo [executar assistente de migração de dados na linha de comando](./dma-commandline.md).

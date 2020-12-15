@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bfd345ff4f55311de41140d5675809838eb06297
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3e794d8311aa79cb12a5be7326b93117518d716f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766715"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489646"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Restaurar um banco de dados protegido pelo TDE em paralelo data warehouse
 Use as etapas a seguir para restaurar um banco de dados que é criptografado usando Transparent Data Encryption.  
@@ -59,9 +59,9 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)  
+[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
 [criar chave mestra](../t-sql/statements/create-master-key-transact-sql.md)  
  [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)  
-[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)
+[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
