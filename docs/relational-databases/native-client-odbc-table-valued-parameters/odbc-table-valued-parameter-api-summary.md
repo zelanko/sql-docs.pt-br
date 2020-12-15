@@ -1,6 +1,6 @@
 ---
 description: Resumo de APIs de parâmetros com valor de tabela ODBC
-title: Resumo da API de parâmetro com valor de tabela ODBC | Microsoft Docs
+title: Resumo de API de parâmetro de Table-Valued ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1201bef5cc9681ef0b0622c71efb98dfee22bf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3fbe7c3193c9b03008b33772a2bd66b50b0e803c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499064"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97435437"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Resumo de APIs de parâmetros com valor de tabela ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

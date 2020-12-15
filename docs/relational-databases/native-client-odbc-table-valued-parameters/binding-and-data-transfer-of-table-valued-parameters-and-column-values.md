@@ -1,6 +1,6 @@
 ---
-title: Transferência de Dados de parâmetros com valor de tabela
-description: Descrever Transferência de Dados de parâmetros com valor de tabela
+title: Transferência de Dados de parâmetros Table-Valued
+description: Descrever Transferência de Dados de parâmetros de Table-Valued
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: native-client
@@ -11,12 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 19a7f22cd26ea4988364d51ff70300cdbf42d365
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004618"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97436046"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Associação e transferência de dados de parâmetros com valor de tabela e valores de coluna
 
@@ -78,7 +79,7 @@ Para associação de linha fixa, um aplicativo aloca buffers (ou matrizes de buf
 
 Para associação de linha variável, as linhas são transferidas em lotes em tempo de execução e o aplicativo passa linhas para o driver sob demanda. Isso é semelhante a dados em execução para valores de parâmetros individuais. Para associação de linha variável, o aplicativo faz o seguinte:  
 
-1. Associa parâmetros e colunas de parâmetro com valor de tabela, conforme descrito nas etapas 1 a 3 da seção anterior, "Associação de linha de parâmetro com valor de tabela fixa".  
+1. Associa parâmetros e colunas de parâmetro com valor de tabela, conforme descrito nas etapas 1 a 3 da seção anterior, "fixed Table-Valued Associação de linha de parâmetro".  
 
 2. Define *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR para que os parâmetros com valor de tabela sejam passados no momento da execução para SQL_DATA_AT_EXEC. Se nenhum for definido, o parâmetro será processado conforme descrito na seção anterior.  
 
