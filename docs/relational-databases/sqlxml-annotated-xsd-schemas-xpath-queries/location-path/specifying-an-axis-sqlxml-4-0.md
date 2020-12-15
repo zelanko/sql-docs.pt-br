@@ -21,18 +21,18 @@ ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df40d531bcb9c1fddcad5d78cd76ca98831834ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03c0fff271ef3774116eb9c97025b1f602f7852c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649725"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431154"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificando um eixo (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
     
--   O eixo especifica a relação de árvore entre os nós selecionados pela etapa de local e o nó de contexto. Há suporte para os seguintes eixos: **filho**  
+-   O eixo especifica a relação de árvore entre os nós selecionados pela etapa de local e o nó de contexto. Há suporte para os seguintes eixos:  **filho**  
   
      Contém o filho do nó de contexto.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "85649725"
   
      Na consulta XPath a seguir, `child` é o eixo. `Customer` é o teste de nó.  
   
--   **primária**  
+-   **parent**  
   
      Contém o pai do nó de contexto.  
   

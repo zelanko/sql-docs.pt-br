@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68f260aa547550d08c853b69cc6fb6e3e46d9a72
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8259a8a2f80bc96c52f0059cedef3036ce29cde9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833558"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97428089"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "91833558"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|ID numérica exclusiva associada ao erro.|Exclusivo em todos os erros de consulta no sistema|  
 |source|`nvarchar(255)`|Descrição do thread ou processo de origem||  
-|type|`nvarchar(255)`|Tipo de erro.||  
+|tipo|`nvarchar(255)`|Tipo de erro.||  
 |create_time|`datetime`|A hora da ocorrência de erro||  
 |compute_node_id|`int`|Identificador do nó de computação específico|Consulte compute_node_id de [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificador da consulta do polybase, se houver.||  

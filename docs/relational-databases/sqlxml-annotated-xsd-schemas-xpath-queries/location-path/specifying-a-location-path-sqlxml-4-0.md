@@ -17,13 +17,13 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f5793bef7a6b025198972b1be40fc9f482fd53c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9dedf4df4aa43f79ca4146da6f1183b0ee06286b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649741"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431174"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificando um caminho para o local (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "85649741"
   
 -   **Axis**  
   
-     O eixo especifica a relação de árvore entre os nós selecionados pela etapa de local e o nó de contexto. Há suporte para os eixos **pai**, **filho**, **atributo**e **Self** . Se um eixo **filho** for especificado no caminho do local, todos os nós selecionados pela consulta serão os filhos do nó de contexto. Se um eixo **pai** for especificado, o nó selecionado será o nó pai do nó de contexto. Se um eixo de **atributo** for especificado, os nós selecionados serão os atributos do nó de contexto.  
+     O eixo especifica a relação de árvore entre os nós selecionados pela etapa de local e o nó de contexto. Há suporte para os eixos **pai**, **filho**, **atributo** e **Self** . Se um eixo **filho** for especificado no caminho do local, todos os nós selecionados pela consulta serão os filhos do nó de contexto. Se um eixo **pai** for especificado, o nó selecionado será o nó pai do nó de contexto. Se um eixo de **atributo** for especificado, os nós selecionados serão os atributos do nó de contexto.  
   
 -   **Teste de nó**  
   
-     Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Cada eixo (**filho**, **pai**, **atributo**e **Self**) tem um tipo de nó principal. Para o eixo de **atributo** , o tipo de nó principal é **\<attribute>** . Para os eixos **pai**, **filho**e **Self** , o tipo de nó principal é **\<element>** .  
+     Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Cada eixo (**filho**, **pai**, **atributo** e **Self**) tem um tipo de nó principal. Para o eixo de **atributo** , o tipo de nó principal é **\<attribute>** . Para os eixos **pai**, **filho** e **Self** , o tipo de nó principal é **\<element>** .  
   
      Por exemplo, se o caminho do local especificar **Child:: Customer**, os **\<Customer>** filhos do elemento do nó de contexto serão selecionados. Como o eixo **filho** tem **\<element>** como o tipo de nó principal, o teste de nó, Customer, será verdadeiro se o cliente for um **\<element>** nó.  
   

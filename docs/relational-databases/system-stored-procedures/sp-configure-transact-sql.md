@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955857"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427337"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -102,7 +102,7 @@ RECONFIGURE
   
  A instrução RECONFIGURE atualiza algumas opções dinamicamente, outras opções requerem a parada do servidor e reinicialização. Por exemplo, as opções **mín** . memória do servidor e memória máxima do servidor **memória** do servidor são atualizadas dinamicamente no [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; portanto, você pode alterá-las sem reiniciar o servidor. Por outro lado, a reconfiguração do valor de execução da opção de **fator de preenchimento** requer a reinicialização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Depois de executar RECONFIGURE em uma opção de configuração, você pode ver se a opção foi atualizada dinamicamente executando **sp_configure '***option_name***'**. Os valores nas colunas **run_value** e **config_value** devem corresponder a uma opção atualizada dinamicamente. Você também pode verificar para ver quais opções são dinâmicas examinando a coluna **is_dynamic** da exibição de catálogo **sys.configurations** .  
+ Depois de executar RECONFIGURE em uma opção de configuração, você pode ver se a opção foi atualizada dinamicamente executando **sp_configure '**_option_name_*_'_*. Os valores nas colunas **run_value** e **config_value** devem corresponder a uma opção atualizada dinamicamente. Você também pode verificar para ver quais opções são dinâmicas examinando a coluna **is_dynamic** da exibição de catálogo **sys.configurations** .  
  
  A alteração também é gravada no log de erros do SQL Server.
   

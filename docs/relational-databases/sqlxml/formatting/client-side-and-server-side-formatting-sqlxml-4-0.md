@@ -16,13 +16,13 @@ ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7daefff6e4b43496acf218c1af3399b56b0b957
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d9cb0ece6c89de0ae8ca4271b78b98e3a5d424c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751766"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97430654"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Formatação do lado do cliente e do lado do servidor (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

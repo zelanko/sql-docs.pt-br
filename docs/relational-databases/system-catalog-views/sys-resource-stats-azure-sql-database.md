@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: eea603b089c93b86b92ac39a22d0c6e9c64b49d9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 835fcabe9a247efb7cf280eb89a0baefd4076640
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429097"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Banco de Dados SQL do Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91807012"
   
  A tabela a seguir descreve as colunas disponíveis em um servidor v12:  
   
-|Colunas|Tipo de Dados|Descrição|  
+|Colunas|Tipo de dados|Descrição|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|Hora UTC indicando o início do intervalo de relatórios de cinco minutos.|  
 |end_time|**datetime**|Hora UTC indicando o final do intervalo de relatórios de cinco minutos.|  
@@ -49,7 +49,7 @@ ms.locfileid: "91807012"
 |max_worker_percent|**decimal (5, 2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> No momento, o máximo é calculado para o intervalo de cinco minutos com base nas amostras de 15 segundos de contagens de trabalho simultâneas.|  
 |max_session_percent|**decimal (5, 2)**|Máximo de sessões simultâneas em porcentagem com base no limite da camada de serviço do banco de dados.<br /><br /> No momento, o máximo é calculado para o intervalo de cinco minutos com base nas amostras de 15 segundos de contagens de sessão simultâneas.|  
 |dtu_limit|**int**|Configuração de DTU máxima do banco de dados atual para este banco de dados durante esse intervalo. |
-|xtp_storage_percent|**decimal (5, 2)**|Utilização de armazenamento para OLTP na memória em porcentagem do limite da camada de serviço (no final do intervalo de relatórios). Isso inclui a memória usada para o armazenamento dos seguintes objetos OLTP na memória: tabelas com otimização de memória, índices e variáveis de tabela. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retornará 0 se o OLTP na memória não for usado no banco de dados.|
+|xtp_storage_percent|**decimal (5, 2)**|Utilização de armazenamento para In-Memory OLTP em porcentagem do limite da camada de serviço (no final do intervalo de relatório). Isso inclui a memória usada para o armazenamento dos seguintes In-Memory objetos OLTP: tabelas com otimização de memória, índices e variáveis de tabela. Ele também inclui a memória usada para processar operações ALTER TABLE.<br /><br /> Retornará 0 se In-Memory OLTP não for usado no banco de dados.|
 |avg_login_rate_percent|**decimal (5, 2)**|Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|Uso médio de CPU do banco de dados como uma porcentagem do processo do banco de dados SQL.|
 |avg_instance_memory_percent|**decimal (5, 2)**|Uso médio de memória do banco de dados como uma porcentagem do processo do banco de dados SQL.|

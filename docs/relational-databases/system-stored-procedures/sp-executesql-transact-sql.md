@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005757"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427814"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ sp_executesql [ @stmt = ] statement
  É um valor para o primeiro parâmetro definido na cadeia de caracteres de parâmetro. O valor pode ser uma constante Unicode ou uma variável Unicode. Deve haver um valor de parâmetro fornecido para cada parâmetro incluído em \@ stmt. Os valores não são necessários quando a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote em \@ stmt não tem parâmetros.  
   
  [ OUT | OUTPUT ]  
- Indica que o parâmetro é um parâmetro de saída. os parâmetros **Text**, **ntext**e **Image** podem ser usados como parâmetros de saída, a menos que o procedimento seja um procedimento Common Language Runtime (CLR). Um parâmetro de saída que usa a palavra-chave OUTPUT pode ser um espaço reservado de cursor, a menos que o procedimento seja CLR.  
+ Indica que o parâmetro é um parâmetro de saída. os parâmetros **Text**, **ntext** e **Image** podem ser usados como parâmetros de saída, a menos que o procedimento seja um procedimento Common Language Runtime (CLR). Um parâmetro de saída que usa a palavra-chave OUTPUT pode ser um espaço reservado de cursor, a menos que o procedimento seja CLR.  
   
  *n*  
  É um espaço reservado aos valores de parâmetros adicionais. Os valores só podem ser constantes ou variáveis. Os valores não podem ser expressões mais complexas, como funções ou expressões construídas usando os operadores.  
