@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e1196ec8ea240f2e8a9210657a60f967e4b7c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d29cae171cad8f0da3c53a708112167a0a17f749
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490448"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463057"
 ---
 # <a name="sequence-numbers"></a>Números de sequência
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -86,7 +86,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="examples"></a>Exemplos  
  Há outros exemplos nos tópicos [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md) e [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md).  
   
-### <a name="a-using-a-sequence-number-in-a-single-table"></a>a. Usando um número de sequência em uma única tabela  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. Usando um número de sequência em uma única tabela  
  O exemplo a seguir cria um esquema denominado Test, uma tabela denominada Orders e uma sequência denominada CountBy1 e insere linhas na tabela usando a função NEXT VALUE FOR.  
   
 ```  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 6169741cf4e744aa89c17c960a83a6af18d54851
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670179"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460689"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Atualizar Power Pivot para SharePoint
 
@@ -103,11 +103,11 @@ ms.locfileid: "91670179"
   
          Ou  
   
-         No menu **Iniciar** , aponte para **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], em **Ferramentas de Configuração**e em **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013**. Observe que essa ferramenta será listada apenas quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estiver instalado no servidor local.  
+         No menu **Iniciar** , aponte para **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], em **Ferramentas de Configuração** e em **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013**. Observe que essa ferramenta será listada apenas quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estiver instalado no servidor local.  
   
     2.  Na inicialização, a ferramenta de configuração verifica o status de atualização da solução de farm do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e das soluções de aplicativo Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se forem detectadas versões anteriores dessas soluções, você verá a mensagem “**Foram detectadas versões mais recentes dos arquivos da solução [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Selecione a opção de atualização para atualizar o farm**.” Clique em **OK** para fechar a mensagem de validação do sistema.  
   
-    3.  Clique em **Atualizar Recursos, Serviços, Aplicativos e Soluções**e clique em **OK**.  
+    3.  Clique em **Atualizar Recursos, Serviços, Aplicativos e Soluções** e clique em **OK**.  
   
     4.  Reveja as ações na lista de tarefas do painel esquerdo e exclua as que você não deseja que a ferramenta execute. Por padrão, todas as ações são incluídas. Para remover uma ação, selecione-a na lista de tarefas à esquerda e, na página **Parameters** , desmarque a caixa de seleção **Inclua esta ação na lista de tarefas** na página Parâmetros.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "91670179"
   
     2.  Na inicialização, a ferramenta de configuração verifica o status de atualização da solução de farm do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e das soluções de aplicativo Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se forem detectadas versões anteriores dessas soluções, você verá a mensagem “Foram detectadas versões mais recentes dos arquivos da solução [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Selecione a opção de atualização para atualizar o farm.” Clique em **OK** para fechar a caixa de mensagens.  
   
-    3.  Clique em **Atualizar Recursos, Serviços, Aplicativos e Soluções**e clique em **OK** para continuar.  
+    3.  Clique em **Atualizar Recursos, Serviços, Aplicativos e Soluções** e clique em **OK** para continuar.  
   
     4.  O seguinte aviso é exibido: "As pastas de trabalho no Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] estão prestes a ser atualizadas para a última versão. Quaisquer atualizações feitas nas pastas de trabalho existentes serão perdidas. Deseja continuar?"  
   
@@ -331,7 +331,7 @@ Get-PowerPivotSystemService
   
 2.  Inicie a ferramenta Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-3.  Clique em **Atualizar Recursos, Serviços, Aplicativos e Soluções**e clique em **OK**.  
+3.  Clique em **Atualizar Recursos, Serviços, Aplicativos e Soluções** e clique em **OK**.  
   
 4.  Revise as ações que estão incluídas na tarefa de atualização e clique em **Validar**.  
   

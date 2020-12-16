@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d213b41fe392bbc82f663360879b7d67b07675be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09be06fc9f84b46a93363c8386b492f987872583
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767544"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463097"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Girar chaves do Always Encrypted usando o SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,7 @@ Girar uma chave de criptografia da coluna envolve descriptografar os dados em to
 > Girar uma chave de criptografia de coluna pode demorar muito tempo se as tabelas que contêm as colunas criptografadas com a chave que está sendo girada forem grandes. Enquanto os dados estão sendo criptografados novamente, os aplicativos não podem realizar gravações nas tabelas afetadas. Portanto, sua organização precisa planejar uma rotação de chave de criptografia de coluna com muito cuidado.
 Para girar uma chave de criptografia de coluna, use o Assistente do Always Encrypted.
 
-1.  Abra o assistente para o banco de dados: clique com o botão direito do mouse, aponte para **Tarefas**e clique em **Criptografar Colunas**.
+1.  Abra o assistente para o banco de dados: clique com o botão direito do mouse, aponte para **Tarefas** e clique em **Criptografar Colunas**.
 2.  Examine a página **Introdução** e, em seguida, clique em **Avançar**.
 3.  Na página **Seleção de Coluna** , expanda as tabelas e localize todas as colunas que deseja substituir que atualmente estão criptografadas com a chave de criptografia de coluna.
 4.  Para cada coluna criptografada com a chave de criptografia de coluna antiga, defina a **Chave de Criptografia** para uma nova chave gerada automaticamente. **Observação:** Como alternativa, você pode criar uma chave de criptografia de coluna antes de executar o assistente. Confira [Provisionar chaves de criptografia de coluna com a caixa de diálogo Nova Chave de Criptografia de Coluna](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).

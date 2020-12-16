@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c5f5ba531875009b64c3dc65d8cf67b6160417da
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d4bbdf301caf364be30694d8e6ecdd8dc75d6427
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125782"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463547"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2016"></a>Atualizações de versão e edição com suporte (SQL Server 2016)
 

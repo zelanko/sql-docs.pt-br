@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006220"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462957"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
 
@@ -151,7 +151,7 @@ LS Length    CS Length
 5.65685...   6.28318...
 ```
 
-As instâncias **CircularString** usam menos pontos para armazenar limites de curva com maior precisão que as instâncias **LineString**. As instâncias**CircularString** são úteis para armazenar limites circulares como um raio de pesquisa de 20 milhas de um ponto específico. Instâncias**LineString** são boas para armazenar limites que são lineares como um quarteirão de cidade.  
+As instâncias **CircularString** usam menos pontos para armazenar limites de curva com maior precisão que as instâncias **LineString**. As instâncias **CircularString** são úteis para armazenar limites circulares como um raio de pesquisa de 20 milhas de um ponto específico. Instâncias **LineString** são boas para armazenar limites que são lineares como um quarteirão de cidade.  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Comparação de LineString e CompoundCurve
 
@@ -187,7 +187,7 @@ Para armazenar a fatia de pizza usando uma instância **CircularString**, é nec
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
-As instâncias**CompoundCurve** permitem componentes **LineString** e **CircularString** , de forma que somente dois pontos para os segmentos de linha da fatia de pizza precisam ser conhecidos.  Este exemplo de código mostra como usar uma **CompoundCurve** para armazenar a mesma figura:
+As instâncias **CompoundCurve** permitem componentes **LineString** e **CircularString** , de forma que somente dois pontos para os segmentos de linha da fatia de pizza precisam ser conhecidos.  Este exemplo de código mostra como usar uma **CompoundCurve** para armazenar a mesma figura:
 
 ```sql
 DECLARE @g geometry;
@@ -197,7 +197,7 @@ SELECT @g.ToString(), @g.STLength();
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Comparação de Polygon e CurvePolygon
 
-Instâncias**CurvePolygon** podem usar instâncias **CircularString** e **CompoundCurve** instances when defining their exterior e interior rings. Instâncias de **Polygon** não podem.
+Instâncias **CurvePolygon** podem usar instâncias **CircularString** e **CompoundCurve** instances when defining their exterior e interior rings. Instâncias de **Polygon** não podem.
 
 ## <a name="see-also"></a>Confira também
 

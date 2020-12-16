@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 59637197b72232df9f5054b88ea9a111f34b58a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384770"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464087"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -128,7 +128,7 @@ DELETE
  O alias especificado na cláusula FROM *table_source* que representa a tabela ou exibição na qual as linhas devem ser excluídas.  
   
  *server_name*  
- **Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
  O nome do servidor (que usa um nome de servidor vinculado ou a função [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) como nome do servidor) no qual a tabela ou exibição está localizada. Se *server_name* for especificado, *database_name* e *schema_name* serão necessários.  
   
@@ -146,11 +146,11 @@ DELETE
  A exibição referenciada por *table_or_view_name* deve ser atualizável e referenciar exatamente uma tabela base na cláusula FROM da definição de exibição. Para obter mais informações sobre exibições atualizáveis, consulte [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
  A função [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), sujeita às funcionalidades do provedor.  
   
- WITH **(** \<table_hint_limited> [... *n* ] **)**  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
  Especifica uma ou mais dicas de tabela permitidas para uma tabela de destino. A palavra-chave WITH e parênteses são necessários. NOLOCK e READUNCOMMITTED não são permitidos. Para obter mais informações sobre dicas de tabela, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
@@ -187,7 +187,7 @@ DELETE
  *cursor_variable_name*  
  O nome de uma variável de cursor. A variável de cursor deve fazer referência a um cursor que permite atualizações.  
   
- OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Palavras-chave que indicam as dicas de otimização que são usadas para personalizar a forma como o [!INCLUDE[ssDE](../../includes/ssde-md.md)] processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Práticas Recomendadas  
@@ -338,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Usando TOP para limitar o número de linhas excluídas  
- Quando uma cláusula TOP ( *n* ) é usada com DELETE, a operação de exclusão é executada em uma seleção aleatória de um número *n* de linhas. O exemplo a seguir exclui `20` linhas aleatórias da tabela `PurchaseOrderDetail` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que têm datas de vencimento anteriores a 1º de julho de 2006.  
+ Quando uma cláusula TOP (*n*) é usada com DELETE, a operação de exclusão é executada em uma seleção aleatória de um número *n* de linhas. O exemplo a seguir exclui `20` linhas aleatórias da tabela `PurchaseOrderDetail` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que têm datas de vencimento anteriores a 1º de julho de 2006.  
   
 ```sql
 DELETE TOP (20)   
@@ -361,7 +361,7 @@ GO
 ###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Excluindo linhas de uma tabela remota  
  Os exemplos nesta seção demonstram como excluir linhas de uma tabela de remota usando um [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou uma [função de conjunto de linhas](../functions/opendatasource-transact-sql.md) para referenciar a tabela remota. Uma tabela remota existe em um servidor diferente ou em uma instância do SQL Server.  
   
-**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Excluindo dados de uma tabela remota por meio de um servidor vinculado  
  O exemplo a seguir exclui uma linhas de uma tabela remota. O exemplo começa criando um link com a fonte de dados remota usando [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). O nome do servidor vinculado, `MyLinkServer`, é especificado, em seguida, como parte do nome de objeto de quatro partes no formulário *server.catalog.schema.object*.  

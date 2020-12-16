@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98faafb23e6f5c3f981fdf04eca99a7ab3eb7a7b
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3f408175a59484aa162c0db654ebf4b1d5656901
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384798"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460579"
 ---
 # <a name="set-or-change-the-column-collation"></a>Definir ou alterar a ordenação de coluna
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  É possível substituir a ordenação de banco de dados para dados **char** , **varchar** , **text** , **nchar** , **nvarchar** e **ntext** especificando uma ordenação diferente para uma coluna específica de uma tabela e usando uma das seguintes opções:  
+  É possível substituir a ordenação de banco de dados para dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext** especificando uma ordenação diferente para uma coluna específica de uma tabela e usando uma das seguintes opções:  
   
 -   A cláusula COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md), como visto nos exemplos abaixo. 
 
@@ -88,13 +88,13 @@ ms.locfileid: "94384798"
 -   Uma restrição CHECK  
 -   Uma restrição FOREIGN KEY  
   
- Ao trabalhar com **tempdb** , a cláusula [COLLATE](~/t-sql/statements/collations.md) inclui uma opção *database_default* para especificar que a coluna em uma tabela temporária usa a ordenação padrão do banco de dados de usuário atual para a conexão em vez da ordenação de **tempdb**.  
+ Ao trabalhar com **tempdb**, a cláusula [COLLATE](~/t-sql/statements/collations.md) inclui uma opção *database_default* para especificar que a coluna em uma tabela temporária usa a ordenação padrão do banco de dados de usuário atual para a conexão em vez da ordenação de **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Ordenações e colunas de texto  
  Você pode inserir ou atualizar valores em uma coluna **texto** cuja ordenação seja diferente da página de código da ordenação padrão do banco de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte implicitamente os valores para a ordenação da coluna.  
   
 ## <a name="collations-and-tempdb"></a>Ordenações e tempdb  
- O banco de dados **tempdb** é criado toda vez que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado e tem a mesma ordenação padrão que o banco de dados **model**. Normalmente isso é igual à ordenação padrão da instância. Se você criar um banco de dados de usuário e especificar uma ordenação padrão diferente do **modelo** , o banco de dados de usuário terá uma ordenação padrão diferente do **tempdb**. Todos os procedimentos armazenados temporários ou tabelas temporárias são criados e armazenados em **tempdb**. Isso significa que todas as colunas implícitas em tabelas temporárias e todas as constantes, variáveis e parâmetros coercíveis padrão em procedimentos armazenados temporários têm ordenações diferentes dos objetos comparáveis criados em tabelas e procedimentos armazenados permanentes.  
+ O banco de dados **tempdb** é criado toda vez que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado e tem a mesma ordenação padrão que o banco de dados **model**. Normalmente isso é igual à ordenação padrão da instância. Se você criar um banco de dados de usuário e especificar uma ordenação padrão diferente do **modelo**, o banco de dados de usuário terá uma ordenação padrão diferente do **tempdb**. Todos os procedimentos armazenados temporários ou tabelas temporárias são criados e armazenados em **tempdb**. Isso significa que todas as colunas implícitas em tabelas temporárias e todas as constantes, variáveis e parâmetros coercíveis padrão em procedimentos armazenados temporários têm ordenações diferentes dos objetos comparáveis criados em tabelas e procedimentos armazenados permanentes.  
   
  Isso pode levar a problemas com uma desigualdade em ordenações entre bancos de dados definidos pelo usuário e objetos de banco de dados do sistema. Por exemplo, uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a ordenação Latin1_General_CS_AS e você executa as seguintes instruções:  
   

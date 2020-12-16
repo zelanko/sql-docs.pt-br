@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e56eb0ffcc4996ddd6903f2e79c14947b9a450
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a5225cdec356cbefc3df6abae58ae4cd512445b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461507"
 ---
 # <a name="manage-trigger-security"></a>Gerenciar a segurança dos gatilhos
 
@@ -50,7 +50,7 @@ O que esse gatilho significa é que assim que um usuário tiver a permissão par
 ## <a name="trigger-security-best-practices"></a>Práticas recomendadas para a segurança dos gatilhos  
  Você pode tomar as medidas a seguir para impedir que o código do gatilho execute sob privilégios escalados:  
   
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 -   Lembre-se dos gatilhos DML e DDL que existem no banco de dados e na instância do servidor consultando as exibições de catálogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . A consulta a seguir retorna todos os gatilhos DML e DDL no nível de banco de dados no banco de dados atual e todos os gatilhos DDL no nível de servidor na instância do servidor:  
   
@@ -65,7 +65,7 @@ O que esse gatilho significa é que assim que um usuário tiver a permissão par
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 -   Lembre-se dos gatilhos DML e DDL que existem no banco de dados ao consultar a exibição de catálogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). A consulta a seguir retorna todos os gatilhos DML e DDL no nível do banco de dados para o banco de dados atual:  
   
