@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfa866c6c03234a28fbccb14a2c45cea2571090
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 81929c8da672e9294d276b5b562e55886a1c3515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918458"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468997"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "86918458"
         |**hierarchyid**|Permitir alteração|Bloquear alteração|Bloquear alteração|  
         |**geography** e **geometry**|Permitir alteração|Permitir alteração*|Bloquear alteração|  
         |**fluxo de arquivos**|Permitir alteração|Bloquear alteração|Bloquear alteração|  
-        |**date**, **time**, **datetime2**e **datetimeoffset**|Permitir alteração|Permitir alteração*|Bloquear alteração|  
+        |**date**, **time**, **datetime2** e **datetimeoffset**|Permitir alteração|Permitir alteração*|Bloquear alteração|  
   
          *Os Assinantes do SQL Server Compact convertem estes tipos de dados no Assinante.  
   

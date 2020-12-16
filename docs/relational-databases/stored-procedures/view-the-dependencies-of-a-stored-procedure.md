@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b59fe000bb72cdfb7286c5efba0de009439c555
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2d0a64ac9fd8ed3f9ac09f269a4026ed797b5af2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332195"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466977"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Exibir as dependências de um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "87332195"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda **Bancos de Dados**e o banco de dados ao qual o procedimento pertence.  
+2.  Expanda **Bancos de Dados** e o banco de dados ao qual o procedimento pertence.  
   
 3.  Clique em **Nova Consulta** no menu **Arquivo** .  
   
@@ -121,7 +121,7 @@ ms.locfileid: "87332195"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda **Bancos de Dados**e o banco de dados ao qual o procedimento pertence.  
+2.  Expanda **Bancos de Dados** e o banco de dados ao qual o procedimento pertence.  
   
 3.  Clique em **Nova Consulta** no menu **Arquivo** .  
   
@@ -167,7 +167,7 @@ ms.locfileid: "87332195"
  Exibindo os objetos que dependem de um procedimento.  
  1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda **Bancos de Dados**e o banco de dados ao qual o procedimento pertence.  
+2.  Expanda **Bancos de Dados** e o banco de dados ao qual o procedimento pertence.  
   
 3.  Clique em **Nova Consulta** no menu **Arquivo** .  
   
@@ -218,7 +218,7 @@ ms.locfileid: "87332195"
  Exibindo os objetos dois quais um procedimento depende.  
  1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda **Bancos de Dados**e o banco de dados ao qual o procedimento pertence.  
+2.  Expanda **Bancos de Dados** e o banco de dados ao qual o procedimento pertence.  
   
 3.  Clique em **Nova Consulta** no menu **Arquivo** .  
   

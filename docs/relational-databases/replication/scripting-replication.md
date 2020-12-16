@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 88f805876602f30cfd53defa93257a4102eaf52c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 160066798b04b16e82ed1903555b6981323a4dcc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765192"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468787"
 ---
 # <a name="scripting-replication"></a>Replicação de script
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "85765192"
   
 6.  Insira um nome de arquivo na caixa de diálogo **Local do Arquivo de Script** e então clique em **Salvar**. Será exibida uma mensagem de status.  
   
-7.  Clique em **OK**e então clique em **Fechar**.  
+7.  Clique em **OK** e então clique em **Fechar**.  
   
 #### <a name="to-script-multiple-objects-from-management-studio"></a>Para executar script de vários objetos do Management Studio  
   

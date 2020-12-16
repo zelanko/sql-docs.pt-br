@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3aa0d62d275f3c92a6a21aba4c60b083e004e10b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891116"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467437"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -108,7 +108,7 @@ O parâmetro **-PollingInterval** especifica com que frequência o log de transa
 O parâmetro **–MaxCmdsInTran** especifica o número máximo de instruções agrupadas em uma transação à medida que o Log Reader grava comandos no banco de dados de distribuição. O uso desse parâmetro permite que o Log Reader Agent e o Distribution Agent dividam transações volumosas (consistindo em muitos comandos) no Publicador em várias transações menores, ao aplicar os comandos no Assinante. A especificação desse parâmetro pode reduzir a contenção no Distribuidor e pode reduzir a latência entre o Publicador e o Assinante. Como a transação original é aplicada em unidades menores, o Assinante pode acessar linhas de uma transação lógica de Publicador antes do fim da transação original, O padrão é **0**, que preserva os limites de transação do Publicador. Esse parâmetro não se aplica aos Editores Oracle.  
   
    > [!WARNING]  
-   >  O**MaxCmdsInTran** não foi criado para estar sempre ativado. Ele existe para solucionar casos em que alguém acidentalmente realizou um número grande de operações DML em uma única transação (causando atraso na distribuição de comandos até que a transação inteira esteja no banco de dados de distribuição, os bloqueios sejam mantidos etc.). Se você rotineiramente enfrentar essa situação, examine seus aplicativos e descubra maneiras de reduzir o tamanho da transação.  
+   >  O **MaxCmdsInTran** não foi criado para estar sempre ativado. Ele existe para solucionar casos em que alguém acidentalmente realizou um número grande de operações DML em uma única transação (causando atraso na distribuição de comandos até que a transação inteira esteja no banco de dados de distribuição, os bloqueios sejam mantidos etc.). Se você rotineiramente enfrentar essa situação, examine seus aplicativos e descubra maneiras de reduzir o tamanho da transação.  
   
 ### <a name="distribution-agent"></a>Agente de Distribuição
 

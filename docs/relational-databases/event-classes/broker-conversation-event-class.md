@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f77b2cff9793f7e6be200423dd6bc23377814635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88410222"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468017"
 ---
 # <a name="brokerconversation-event-class"></a>Classe de evento Broker:Conversation
 
@@ -32,7 +32,7 @@ ms.locfileid: "88410222"
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
-|**DatabaseID**|**int**|A ID do banco de dados que é especificada pela instrução de *banco de dados* USE. A ID do banco de dados padrão, se nenhuma instrução de *banco de dados*USE tiver sido emitida. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor de um banco de dados usando a função **DB_ID** .|3|Sim|  
+|**DatabaseID**|**int**|A ID do banco de dados que é especificada pela instrução de *banco de dados* USE. A ID do banco de dados padrão, se nenhuma instrução de *banco de dados* USE tiver sido emitida. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor de um banco de dados usando a função **DB_ID** .|3|Sim|  
 |**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **124** para **Broker:Conversa**.|27|Não|  
 |**EventSequence**|**int**|Número de sequência para esse evento.|51|Não|  
 |**EventSubClass**|**nvarchar**|O tipo de subclasse de evento. Esse tipo fornece mais informações sobre cada classe de evento.|21|Sim|  

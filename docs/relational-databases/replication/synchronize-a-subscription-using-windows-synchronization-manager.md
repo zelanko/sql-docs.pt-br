@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3b29f98ad39d34935d65530841f8e81063233791
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719515"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468717"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "85719515"
   
 1.  Inicie o Gerenciador de Sincronização usando um dos seguintes métodos:  
   
-    -   No Internet Explorer, clique em **Ferramentas**e, então, clique em **Sincronizar**.  
+    -   No Internet Explorer, clique em **Ferramentas** e, então, clique em **Sincronizar**.  
   
-    -   Clique em **Iniciar**, aponte para **Programas** ou **Todos os Programas**, aponte para **Acessórios**e, então, clique em **Sincronizar**.  
+    -   Clique em **Iniciar**, aponte para **Programas** ou **Todos os Programas**, aponte para **Acessórios** e, então, clique em **Sincronizar**.  
   
-    -   Clique em **Iniciar**e, então, clique em **Executar** . Na caixa de diálogo **Executar** , digite **mobsync.exe** in the **Abrir** e, então, clique em **OK**.  
+    -   Clique em **Iniciar** e, então, clique em **Executar** . Na caixa de diálogo **Executar** , digite **mobsync.exe** in the **Abrir** e, então, clique em **OK**.  
   
 2.  Na caixa de diálogo **Itens a Serem Sincronizados** , selecione as assinaturas a serem sincronizadas. As assinaturas são listadas sob as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "85719515"
   
     -   **Identificação**  
   
-    -   **Logon do Assinante**, **Logon do Distribuidor**e **Logon do Publicador** (apenas para replicação de mesclagem)  
+    -   **Logon do Assinante**, **Logon do Distribuidor** e **Logon do Publicador** (apenas para replicação de mesclagem)  
   
     -   **Informações do Servidor Web** (para assinatura de mesclagem em Assinantes que usam SQL Server 2005 ou posterior)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "85719515"
      Em seguida, a linha selecionada é aplicada ao Publicador e/ou Assinante. Ela é propagada para outros nós na topologia durante sincronizações subsequentes.  
   
 > [!NOTE]  
->  As edições serão aplicadas apenas se fizerem parte da linha escolhida para resolução. Por exemplo, se você fizer edições no **Publicador**e, em seguida, clicar em **Aceitar Assinante**, as edições serão descartadas.  
+>  As edições serão aplicadas apenas se fizerem parte da linha escolhida para resolução. Por exemplo, se você fizer edições no **Publicador** e, em seguida, clicar em **Aceitar Assinante**, as edições serão descartadas.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  

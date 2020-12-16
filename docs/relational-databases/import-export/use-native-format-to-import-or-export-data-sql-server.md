@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 54374ae5337abcd49cc2d2eefedc25d36ceee697
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 4a1802cc2bcd64141c35dcc1e15f4609848e7c79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442779"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465547"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar um formato nativo para importar ou exportar dados (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -180,7 +180,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### <a name="using-bulk-insert-and-native-format-without-a-format-file"></a>Usar BULK INSERT e formato nativo sem um arquivo de formato
-Argumento**DATAFILETYPE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argumento **DATAFILETYPE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
@@ -195,7 +195,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### <a name="using-bulk-insert-and-native-format-with-a-non-xml-format-file"></a>Usar BULK INSERT e formato nativo com um arquivo de formato não XML
-Argumento**FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argumento **FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
@@ -210,7 +210,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### <a name="using-openrowset-and-native-format-with-a-non-xml-format-file"></a>Usar OPENROWSET e formato nativo com um arquivo de formato não XML
-Argumento**FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argumento **FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative;  -- for testing

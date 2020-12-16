@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a029fc7b6622410e741940d7bce5c0ec6510e060
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9e3306824c3af49418ba6528381051b805c2efd7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428428"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467857"
 ---
 # <a name="plan-guide-successful-event-class"></a>classe de evento Plan Guide Successful
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

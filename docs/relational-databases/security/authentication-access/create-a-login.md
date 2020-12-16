@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b94fa9994a42dd11b6fa5a54fffd222e87feb2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867444"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468587"
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "91867444"
   
     1.  Na caixa **Senha** , digite uma senha para o novo usuário. Insira novamente essa senha na caixa **Confirmar Senha** .  
   
-    2.  Ao alterar uma senha existente, selecione **Especificar senha antiga**e digite a senha antiga na caixa **Senha antiga** .  
+    2.  Ao alterar uma senha existente, selecione **Especificar senha antiga** e digite a senha antiga na caixa **Senha antiga** .  
   
     3.  Para impor opções de política de senha para complexidade e execução, selecione **Impor política de senha**. Para obter mais informações, consulte [Password Policy](../../../relational-databases/security/password-policy.md). Esta será uma opção padrão quando **Autenticação do SQL Server** estiver selecionada.  
   
@@ -104,31 +104,31 @@ ms.locfileid: "91867444"
 ### <a name="server-roles"></a>Funções de Servidor  
  A página **Funções de Servidor** lista todas as funções possíveis que podem ser atribuídas ao novo logon. As seguintes opções estão disponíveis:  
   
- Caixa de seleção**bulkadmin**  
+ Caixa de seleção **bulkadmin**  
  Os membros da função de servidor fixa **bulkadmin** podem executar a instrução BULK INSERT.  
   
- Caixa de seleção**dbcreator**  
+ Caixa de seleção **dbcreator**  
  Os membros da função de servidor fixa **dbcreator** podem criar, alterar, remover e restaurar qualquer banco de dados.  
   
- Caixa de seleção**diskadmin**  
+ Caixa de seleção **diskadmin**  
  Os membros da função de servidor fixa **diskadmin** podem gerenciar arquivos em disco.  
   
- Caixa de seleção**processadmin**  
+ Caixa de seleção **processadmin**  
  Os membros da função de servidor fixa **processadmin** podem encerrar processos em execução em uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Caixa de seleção**public**  
+ Caixa de seleção **public**  
  Todos os usuários, grupos e funções do SQL Server pertencem à função de servidor fixa **public** .  
   
- Caixa de seleção**securityadmin**  
+ Caixa de seleção **securityadmin**  
  Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem CONCEDER, NEGAR e REVOGAR permissões de nível de servidor. Eles também podem CONCEDER, NEGAR e REVOGAR permissões de nível de banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Caixa de seleção**serveradmin**  
+ Caixa de seleção **serveradmin**  
  Os membros da função de servidor fixa **serveradmin** podem alterar as opções de configuração de todo o servidor e fechar o servidor.  
   
- Caixa de seleção**setupadmin**  
+ Caixa de seleção **setupadmin**  
  Os membros da função de servidor fixa **setupadmin** podem adicionar e remover servidores vinculados e podem executar alguns procedimentos armazenados no sistema.  
   
- Caixa de seleção**sysadmin**  
+ Caixa de seleção **sysadmin**  
  Os membros da função de servidor fixa **sysadmin** podem executar qualquer atividade no [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 ### <a name="user-mapping"></a>Mapeamento de Usuário  

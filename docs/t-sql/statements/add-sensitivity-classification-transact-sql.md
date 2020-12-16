@@ -22,13 +22,13 @@ helpviewer_keywords:
 - rank
 ms.custom: ''
 ms.date: 06/10/2020
-monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current"
+ms.openlocfilehash: a9654a26ff748afa039ac5b0d2088135eea6a796
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784785"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466027"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADICIONAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "91784785"
 
 Adiciona metadados sobre a classificação de confidencialidade a uma ou mais colunas do banco de dados. A classificação pode incluir um rótulo de confidencialidade e um tipo de informação.
 
-No SQL Server, isso foi introduzido no SQL Server 2012.
+Para o SQL Server, isso foi introduzido no SQL Server 2019.
 
 A classificação de dados confidenciais em seu ambiente de banco de dados ajuda a obter visibilidade estendida e melhor proteção. Informações adicionais podem ser encontradas em [Introdução à Proteção de Informações do SQL](https://aka.ms/sqlip)
 

@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: e978c269a17f42bc75729303a860c61d4868f3fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868589"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468607"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 
-  A*auditoria* de uma instância do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou de um banco de dados individual envolve o controle e o registro em log dos eventos que ocorrem no [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite criar auditorias de servidor, que podem conter especificações de auditoria de servidor para eventos no nível de servidor, além de especificações de auditoria de banco de dados para eventos no nível de banco de dados. Os eventos auditados podem ser gravados nos logs de eventos ou nos arquivos de auditoria.  
+  A *auditoria* de uma instância do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou de um banco de dados individual envolve o controle e o registro em log dos eventos que ocorrem no [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. A auditoria do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite criar auditorias de servidor, que podem conter especificações de auditoria de servidor para eventos no nível de servidor, além de especificações de auditoria de banco de dados para eventos no nível de banco de dados. Os eventos auditados podem ser gravados nos logs de eventos ou nos arquivos de auditoria.  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
@@ -109,7 +109,7 @@ ms.locfileid: "91868589"
   
 3.  Habilite a auditoria.  
   
-4.  Leia os eventos de auditoria usando o recurso **Visualizador de Eventos**do Windows, o **Visualizador do Arquivo de Log**ou a função fn_get_audit_file.  
+4.  Leia os eventos de auditoria usando o recurso **Visualizador de Eventos** do Windows, o **Visualizador do Arquivo de Log** ou a função fn_get_audit_file.  
 
  Para obter mais informações, consulte [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) e [Criar uma especificação de auditoria de banco de dados e de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   

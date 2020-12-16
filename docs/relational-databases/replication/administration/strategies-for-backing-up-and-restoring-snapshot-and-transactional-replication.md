@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5da2a080ef20bd98b27873796a64b433268ae06f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 1d395bebae8b009f4e91d8df074401f8659e1748
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108426"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467397"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -186,7 +186,7 @@ ms.locfileid: "87108426"
          Para obter mais informações sobre como especificar que o Assinante já tem os dados, consulte [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
 #### <a name="publication-database-peer-to-peer-transactional-replication"></a>Banco de Dados de Publicação: Peer-to-Peer Transactional Replication  
- Nas etapas seguintes, os bancos de dados de publicação **A**, **B**e **C** estão em uma topologia de replicação transacional ponto a ponto. Os bancos de dados **A** e **C** estão online e funcionando corretamente; o banco de dados **B** é o banco de dados a ser restaurado. O processo aqui descrito, especialmente as etapas 7,10 e 11, são muito similares ao processo requerido para adicionar um nó a uma topologia ponto a ponto. O modo mais direto para executar essas etapas é por meio do Assistente para Configurar Topologia Ponto a Ponto, mas você também pode usar procedimentos armazenados.  
+ Nas etapas seguintes, os bancos de dados de publicação **A**, **B** e **C** estão em uma topologia de replicação transacional ponto a ponto. Os bancos de dados **A** e **C** estão online e funcionando corretamente; o banco de dados **B** é o banco de dados a ser restaurado. O processo aqui descrito, especialmente as etapas 7,10 e 11, são muito similares ao processo requerido para adicionar um nó a uma topologia ponto a ponto. O modo mais direto para executar essas etapas é por meio do Assistente para Configurar Topologia Ponto a Ponto, mas você também pode usar procedimentos armazenados.  
   
 1.  Execute os Agentes de Distribuição para sincronizar as assinaturas nos bancos de dados **A** e **C**. Vá para a etapa 2.  
   

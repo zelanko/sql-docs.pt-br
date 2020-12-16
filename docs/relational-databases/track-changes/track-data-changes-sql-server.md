@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38293d4b60168028a5669a9f5dd2e01ccbde012
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810713"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466747"
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "91810713"
  Para obter acesso aos dados de alteração associados a uma instância de captura, o usuário deve ter acesso de seleção a todas as colunas capturadas da tabela de origem associada. Além disso, se uma função de acesso for especificada quando a instância de captura for criada, o chamador também deverá ser um membro da função de acesso especificada. Outras funções gerais de captura de dados de alteração para o acesso aos metadados estarão acessíveis a todos os usuários de banco de dados por meio da função pública, embora o acesso aos metadados retornados será sempre concedido pelo uso do acesso de seleção às tabelas de origem subjacentes e pela associação em qualquer função gating definida.  
   
  **Operações de DDL para tabelas de origem habilitadas para captura de dados de alterações**  
- Quando uma tabela é habilitada para a captura de dados de alteração, as operações de DDL podem ser aplicadas à tabela somente por um membro de função fixa de servidor **sysadmin**, um membro de **database role db_owner**ou um membro de **database role db_ddladmin**. Os usuários que têm acesso explícito para executar as operações de DDL na tabela receberão o erro 22914 se tentarem essas operações.  
+ Quando uma tabela é habilitada para a captura de dados de alteração, as operações de DDL podem ser aplicadas à tabela somente por um membro de função fixa de servidor **sysadmin**, um membro de **database role db_owner** ou um membro de **database role db_ddladmin**. Os usuários que têm acesso explícito para executar as operações de DDL na tabela receberão o erro 22914 se tentarem essas operações.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>Considerações sobre tipos de dados para captura de dados de alteração  
  Todos os tipos de coluna base são suportados pela captura de dados de alteração. A tabela a seguir lista o comportamento e as limitações de vários tipos de coluna.  

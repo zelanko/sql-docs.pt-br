@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 09334d8eedab294de3015cdcaf0ac5b1c61c9239
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f5e716be586d7fb152a3c229cc016e349d57c99b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395002"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467347"
 ---
 # <a name="replication-log-reader-agent"></a>Replication Agente de Leitor de Log
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

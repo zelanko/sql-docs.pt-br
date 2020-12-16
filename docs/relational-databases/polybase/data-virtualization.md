@@ -8,14 +8,14 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 6c27959422023c0407d7abe3a1219c6a242bae7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524013"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469067"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Usar o Assistente de Tabela Externa com fontes de dados ODBC
 
@@ -45,7 +45,7 @@ Selecione **Avançar** para continuar.
 
 ## <a name="create-a-database-master-key"></a>Criar uma chave mestra de banco de dados
 
-Nesta etapa, você criará uma chave mestra de banco de dados. É necessário criar uma chave mestra. Uma chave mestra protege as credenciais usadas por uma fonte de dados externa. Escolha uma senha forte para a chave mestra. Além disso, faça o backup da chave mestra usando **BACKUP MASTER KEY** . Armazene o backup em uma localização externa segura.
+Nesta etapa, você criará uma chave mestra de banco de dados. É necessário criar uma chave mestra. Uma chave mestra protege as credenciais usadas por uma fonte de dados externa. Escolha uma senha forte para a chave mestra. Além disso, faça o backup da chave mestra usando **BACKUP MASTER KEY**. Armazene o backup em uma localização externa segura.
 
 ![Criar uma chave mestra de banco de dados](media/data-virtualization/virtualize-data-master-key.png)
 
@@ -78,11 +78,11 @@ Essa etapa exibe um resumo das suas seleções. Ela fornece o nome da credencial
 
 ![Tela de resumo](media/data-virtualization/virtualize-data-summary.png)
 
-Caso clique em **Criar** , você verá o objeto da fonte de dados externa criado no banco de dados de destino.
+Caso clique em **Criar**, você verá o objeto da fonte de dados externa criado no banco de dados de destino.
 
 ![Fontes de dados externas](media/data-virtualization/external-data-sources.png)
 
-Caso clique em **Gerar Script** , verá a consulta T-SQL que está sendo gerada para criar o objeto da fonte de dados externa.
+Caso clique em **Gerar Script**, verá a consulta T-SQL que está sendo gerada para criar o objeto da fonte de dados externa.
 
 ![Gerar script](media/data-virtualization/generated-script.png)
 

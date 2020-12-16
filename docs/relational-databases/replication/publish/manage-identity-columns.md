@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7d0a169e6b160bc865c5ba3c115803fb690cbe68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6c7f660c4550a3bd792b2132ad0699d944b90a2e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423480"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468987"
 ---
 # <a name="manage-identity-columns"></a>Gerenciar colunas de identidade
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88423480"
   
 2.  Na página **Artigos** , selecione uma tabela com uma coluna de identidade.  
   
-3.  Clique em **Propriedades do Artigo**e clique em **Definir Propriedades do Artigo Realçado da Tabela**.  
+3.  Clique em **Propriedades do Artigo** e clique em **Definir Propriedades do Artigo Realçado da Tabela**.  
   
 4.  Na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Article>** , na seção **Gerenciamento de Intervalos de Identidade**, defina a propriedade **Gerenciar automaticamente os intervalos de identidades** como **Automático** ou **Manual** (para Publicadores que executam o [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior) ou **Verdadeiro** ou **Falso** (para Publicadores que executam uma versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88423480"
   
 1.  Na página **Artigos** da caixa de diálogo **Propriedades da Publicação – \<Publication>** , selecione uma tabela com uma coluna de identidade.  
   
-2.  Clique em **Propriedades do Artigo**e clique em **Definir Propriedades do Artigo Realçado da Tabela**.  
+2.  Clique em **Propriedades do Artigo** e clique em **Definir Propriedades do Artigo Realçado da Tabela**.  
   
 3.  Na guia **Propriedades** da caixa de diálogo **Propriedades do Artigo – \<Article>** , na seção **Gerenciamento de Intervalos de Identidade**, insira valores para uma ou mais das seguintes propriedades: **Tamanho do intervalo do Publicador**, **Tamanho do intervalo do Assinante** e **Percentual do limite de intervalo**.  
   

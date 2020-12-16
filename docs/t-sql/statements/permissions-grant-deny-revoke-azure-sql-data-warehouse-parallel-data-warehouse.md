@@ -14,18 +14,18 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e384304e5e3e67b0768c0cd145a0427877c4ce89
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 14eb63bde72a10be3c58af17510030ad6610e33b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300345"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465867"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>Permissões: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Use as instruções [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** e **DENY** para conceder ou negar uma permissão (como **UPDATE** ) em um protegível (como um banco de dados, uma tabela, uma exibição etc.) de uma entidade de segurança (um logon, um usuário de banco de dados ou uma função de banco de dados). Use **REVOKE** para remover a concessão ou negar uma permissão.  
+  Use as instruções [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** e **DENY** para conceder ou negar uma permissão (como **UPDATE**) em um protegível (como um banco de dados, uma tabela, uma exibição etc.) de uma entidade de segurança (um logon, um usuário de banco de dados ou uma função de banco de dados). Use **REVOKE** para remover a concessão ou negar uma permissão.  
   
  As permissões no nível do servidor são aplicadas aos logons. As permissões no nível do banco de dados são aplicadas aos usuários de banco de dados e às funções de banco de dados.  
   
@@ -79,33 +79,33 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<permission>[ **,** ... *n* ]  
+ \<permission>[ **,** ...*n* ]  
  Uma ou mais permissões a serem concedidas, negadas ou revogadas.  
   
  ON [ \<class_type> :: ] *securable* A cláusula **ON** descreve o parâmetro protegível no qual as permissões grant, deny ou revoke serão concedidas.  
   
- \<class_type> O tipo de classe do protegível. Pode ser **LOGIN** , **DATABASE** , **OBJECT** , **SCHEMA** , **ROLE** ou **USER** . As permissões também podem ser concedidas para o **SERVER**_class\_type_ , mas **SERVER** não é especificado para essas permissões. **DATABASE** não é especificado quando a permissão inclui a palavra **DATABASE** (por exemplo **ALTER ANY DATABASE** ). Quando nenhum *class_type* é especificado e o tipo de permissão não é restrito para o servidor ou a classe de banco de dados, a classe é considerada **OBJECT** .  
+ \<class_type> O tipo de classe do protegível. Pode ser **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** ou **USER**. As permissões também podem ser concedidas para o **SERVER**_class\_type_, mas **SERVER** não é especificado para essas permissões. **DATABASE** não é especificado quando a permissão inclui a palavra **DATABASE** (por exemplo **ALTER ANY DATABASE**). Quando nenhum *class_type* é especificado e o tipo de permissão não é restrito para o servidor ou a classe de banco de dados, a classe é considerada **OBJECT**.  
   
  *securable*  
  O nome do logon, do banco de dados, da tabela, da exibição, do esquema, do procedimento, da função ou do usuário em que as permissões serão concedidas, negadas ou revogadas. O nome do objeto pode ser especificado com as regras de nomenclatura de três partes descritas em [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- TO *principal* [ **,** ... *n* ]  
+ TO *principal* [ **,** ...*n* ]  
  Uma ou mais entidades de segurança às quais as permissões estão sendo concedidas, negadas ou revogadas. Entidade de segurança é o nome de um logon, um usuário de banco de dados ou uma função de banco de dados.  
   
- FROM *principal* [ **,** ... *n* ]  
- Uma ou mais entidades de segurança das quais as permissões serão revogadas.  Entidade de segurança é o nome de um logon, um usuário de banco de dados ou uma função de banco de dados. **FROM** só pode ser usado com uma instrução **REVOKE** . **TO** pode ser usado com **GRANT** , **DENY** ou **REVOKE** .  
+ FROM *principal* [ **,** ...*n* ]  
+ Uma ou mais entidades de segurança das quais as permissões serão revogadas.  Entidade de segurança é o nome de um logon, um usuário de banco de dados ou uma função de banco de dados. **FROM** só pode ser usado com uma instrução **REVOKE**. **TO** pode ser usado com **GRANT**, **DENY** ou **REVOKE**.  
   
  WITH GRANT OPTION  
  Indica que o usuário autorizado também poderá conceder a permissão especificada a outras entidades.  
   
  CASCADE  
- Indica que a permissão foi negada ou revogada para a entidade de segurança especificada e para todas as outras entidades de segurança às quais a entidade de segurança concedeu a permissão. Necessário quando a entidade de segurança tem a permissão com **GRANT OPTION** .  
+ Indica que a permissão foi negada ou revogada para a entidade de segurança especificada e para todas as outras entidades de segurança às quais a entidade de segurança concedeu a permissão. Necessário quando a entidade de segurança tem a permissão com **GRANT OPTION**.  
   
  GRANT OPTION FOR  
- Indica que a habilidade de conceder a permissão especificada será revogada. Será necessário quando você estiver usando o argumento **CASCADE** .  
+ Indica que a habilidade de conceder a permissão especificada será revogada. Será necessário quando você estiver usando o argumento **CASCADE**.  
   
 > [!IMPORTANT]  
->  Se a entidade de segurança tiver a permissão especificada sem a opção **GRANT** , a própria permissão será revogada.  
+>  Se a entidade de segurança tiver a permissão especificada sem a opção **GRANT**, a própria permissão será revogada.  
   
 ## <a name="permissions"></a>Permissões  
  Para conceder uma permissão, o concessor precisa ter a própria permissão com a **WITH GRANT OPTION** ou ter uma permissão superior que implique a concessão da permissão.  Os proprietários de objetos podem conceder permissões nos objetos de sua propriedade. As entidades de segurança com a permissão **CONTROL** em um protegível podem conceder a permissão nesse protegível.  Os membros das funções de banco de dado fixas **db_owner** e **db_securityadmin** podem conceder qualquer permissão no banco de dados.  
@@ -114,21 +114,21 @@ REVOKE
  Negar ou revogar permissões a uma entidade de segurança não afetará as solicitações com autorização aprovada que estiverem em execução no momento. Para restringir o acesso imediatamente, você precisa cancelar as solicitações ativas ou encerrar as sessões atuais.  
   
 > [!NOTE]  
->  A maioria das funções de servidor fixas não estão disponíveis nesta versão. Use as funções de banco de dados definidas pelo usuário. Não é possível adicionar logons à função de servidor fixa **sysadmin** . Conceder a permissão **CONTROL SERVER** aproxima-se da associação à função de servidor fixa **sysadmin** .  
+>  A maioria das funções de servidor fixas não estão disponíveis nesta versão. Use as funções de banco de dados definidas pelo usuário. Não é possível adicionar logons à função de servidor fixa **sysadmin**. Conceder a permissão **CONTROL SERVER** aproxima-se da associação à função de servidor fixa **sysadmin**.  
   
  Algumas instruções exigem várias permissões. Por exemplo, para criar uma tabela, são necessárias as permissões **CREATE TABLE** no banco de dados e a permissão **ALTER SCHEMA** para a tabela que conterá a tabela.  
   
  Às vezes, o PDW (Parallel Data Warehouse) executa procedimentos armazenados para distribuir as ações do usuário para os nós de computação. Portanto, a permissão execute para um banco de dados inteiro não pode ser negada. (Por exemplo, `DENY EXECUTE ON DATABASE::<name> TO <user>;` falhará.) Como uma solução alternativa, negue a permissão execute para esquemas de usuário ou objetos específicos (procedimentos).  
   
 ### <a name="implicit-and-explicit-permissions"></a>Permissões implícitas e explícitas  
- Uma *permissão explícita* é uma permissão **GRANT** ou **DENY** concedida a uma entidade de segurança por uma instrução **GRANT** ou **DENY** .  
+ Uma *permissão explícita* é uma permissão **GRANT** ou **DENY** concedida a uma entidade de segurança por uma instrução **GRANT** ou **DENY**.  
   
  Uma *permissão implícita* é uma permissão **GRANT** ou **DENY** que uma entidade de segurança (logon, usuário ou função de banco de dados) herda de outra função de banco de dados.  
   
  Uma permissão implícita também pode ser herdada de uma permissão de cobertura ou pai. Por exemplo, a permissão **UPDATE** em uma tabela pode ser herdada pela presença da permissão **UPDATE** no esquema que contém a tabela ou da permissão **CONTROL** na tabela.  
   
 ### <a name="ownership-chaining"></a>Encadeamento de propriedade  
- Quando vários objetos de banco de dados acessam uns aos outros sequencialmente, essa sequência é conhecida como *cadeia* . Embora essas cadeias não existam independentemente, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se desvia de links em uma cadeia, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avalia as permissões nos objetos do cliente de forma diferente do que faria se estivesse acessando os objetos separadamente. O encadeamento de propriedade tem implicações importantes para o gerenciamento de segurança. Para obter mais informações sobre cadeias de propriedade, veja [Cadeias de Propriedades](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) e [Tutorial: Cadeias de Propriedade e Comutação de Contexto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
+ Quando vários objetos de banco de dados acessam uns aos outros sequencialmente, essa sequência é conhecida como *cadeia*. Embora essas cadeias não existam independentemente, quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se desvia de links em uma cadeia, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avalia as permissões nos objetos do cliente de forma diferente do que faria se estivesse acessando os objetos separadamente. O encadeamento de propriedade tem implicações importantes para o gerenciamento de segurança. Para obter mais informações sobre cadeias de propriedade, veja [Cadeias de Propriedades](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) e [Tutorial: Cadeias de Propriedade e Comutação de Contexto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## <a name="permission-list"></a>Lista de permissões  
   
@@ -241,26 +241,26 @@ REVOKE
  Para obter uma definição de cada tipo de permissão, confira [Permissões (Mecanismo de Banco de Dados)](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="chart-of-permissions"></a>Gráfico de permissões  
- Todas as permissões são representadas graficamente neste cartaz. Essa é a maneira mais fácil de ver a hierarquia aninhada de permissões. Por exemplo a permissão **ALTER ON LOGIN** pode ser concedida sozinha, mas também estará incluída se um logon receber a permissão a **CONTROL** nesse logon ou se um logon receber a permissão **ALTER ANY LOGIN** .  
+ Todas as permissões são representadas graficamente neste cartaz. Essa é a maneira mais fácil de ver a hierarquia aninhada de permissões. Por exemplo a permissão **ALTER ON LOGIN** pode ser concedida sozinha, mas também estará incluída se um logon receber a permissão a **CONTROL** nesse logon ou se um logon receber a permissão **ALTER ANY LOGIN**.  
   
  ![Cartaz de permissões de segurança do APS](../../t-sql/statements/media/aps-security-perms-poster.png "Cartaz de permissões de segurança do APS")  
   
- Para baixar uma versão completa desse cartaz, confira [Permissões do SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) na seção de arquivos do site do Yammer do APS (ou solicite-a enviando um email para **apsdoc\@microsoft.com** ).  
+ Para baixar uma versão completa desse cartaz, confira [Permissões do SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) na seção de arquivos do site do Yammer do APS (ou solicite-a enviando um email para **apsdoc\@microsoft.com**).  
   
 ## <a name="default-permissions"></a>Permissões padrão  
  A lista a seguir descreve as permissões padrão:  
   
--   Quando um logon é criado usando a instrução **CREATE LOGIN** , o novo logon recebe a permissão **CONNECT SQL** .  
+-   Quando um logon é criado usando a instrução **CREATE LOGIN**, o novo logon recebe a permissão **CONNECT SQL**.  
   
--   Todos os logons são membros da função de servidor **pública** e não podem ser removidos dessa função **pública** .  
+-   Todos os logons são membros da função de servidor **pública** e não podem ser removidos dessa função **pública**.  
   
--   Quando um usuário de banco de dados é criado usando a permissão **CREATE USER** , o usuário de banco de dados recebe a permissão **CONNECT** no banco de dados.  
+-   Quando um usuário de banco de dados é criado usando a permissão **CREATE USER**, o usuário de banco de dados recebe a permissão **CONNECT** no banco de dados.  
   
--   As entidades de segurança, incluindo a função **pública** , não têm nenhuma permissão explícita ou implícita por padrão.  
+-   As entidades de segurança, incluindo a função **pública**, não têm nenhuma permissão explícita ou implícita por padrão.  
   
--   Quando um logon ou um usuário se torna o proprietário de um banco de dados ou de um objeto, o logon ou o usuário passa a ter todas as permissões no banco de dados ou no objeto. As permissões de propriedade não podem ser alteradas e não são visíveis como as permissões explícitas. As instruções **GRANT** , **DENY** e **REVOKE** não têm efeito sobre os proprietários.  
+-   Quando um logon ou um usuário se torna o proprietário de um banco de dados ou de um objeto, o logon ou o usuário passa a ter todas as permissões no banco de dados ou no objeto. As permissões de propriedade não podem ser alteradas e não são visíveis como as permissões explícitas. As instruções **GRANT**, **DENY** e **REVOKE** não têm efeito sobre os proprietários.  
   
--   O logon **sa** tem todas as permissões no dispositivo. Semelhante às permissões de propriedade, as permissões de **sa** não podem ser alteradas e não são visíveis como as permissões explícitas. As instruções **GRANT** , **DENY** e **REVOKE** não têm efeito sobre o logon **sa** . O logon **sa** não pode ser renomeado.  
+-   O logon **sa** tem todas as permissões no dispositivo. Semelhante às permissões de propriedade, as permissões de **sa** não podem ser alteradas e não são visíveis como as permissões explícitas. As instruções **GRANT**, **DENY** e **REVOKE** não têm efeito sobre o logon **sa**. O logon **sa** não pode ser renomeado.  
   
 -   A instrução **USE** não requer permissões. Todas as entidades de segurança podem executar a instrução **USE** em qualquer banco de dados.  
   
@@ -304,7 +304,7 @@ GRANT SELECT ON SCHEMA::dbo TO [Yuen];
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- A seguinte instrução **REVOKE** remove a permissão **DENY** . Agora, as permissões explícitas do Yuen são neutras. Yuen poderá selecionar dados de qualquer tabela por meio de outras permissões implícitas, como uma associação de função.  
+ A seguinte instrução **REVOKE** remove a permissão **DENY**. Agora, as permissões explícitas do Yuen são neutras. Yuen poderá selecionar dados de qualquer tabela por meio de outras permissões implícitas, como uma associação de função.  
   
 ```sql  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  

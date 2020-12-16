@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5198b93db0372a1bd16fa99a7c0b65feeac70aa4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 96a8558b4a1c233ef94fdd47cae70309f1ce53ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427998"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467277"
 ---
 # <a name="articles"></a>Artigos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88427998"
 -   Clique com o botão direito do mouse em um objeto no painel para consultar um menu de comandos para aquele objeto.  
   
  **Propriedades do Artigo**  
- Clique em **Propriedades do Artigo**e depois clique em uma das opções seguintes:  
+ Clique em **Propriedades do Artigo** e depois clique em uma das opções seguintes:  
   
 -   Clique em **Definir as Propriedades do Artigo \<ObjectType> Realçado** para iniciar a caixa de diálogo **Propriedades do Artigo – \<ObjectName>** . As alterações de propriedade feitas nessa caixa de diálogo são aplicadas somente ao objeto que está realçado no painel de objetos na página **Artigos**.  
   

@@ -32,13 +32,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b574c9efb9f6c5d5cda38731546403e1219c8a36
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99ef20a9db20238f24361327b79068ed39d430f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193496"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465667"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e Unicode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -600,7 +600,7 @@ A seguinte tabela lista os bytes de armazenamento de codificação para cada int
 <sup>2</sup> O intervalo do ponto de código para [caracteres suplementares](#Supplementary_Characters).
 
 > [!TIP]   
-> É comum pensar, em [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) ou em [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), que *n*define o número de caracteres. Isso ocorre porque, no exemplo de uma coluna CHAR(10), 10 caracteres ASCII no intervalo 0–127 podem ser armazenados usando uma ordenação como **Latin1_General_100_CI_AI**, porque cada caractere desse intervalo usa apenas 1 byte.
+> É comum pensar, em [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) ou em [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), que *n* define o número de caracteres. Isso ocorre porque, no exemplo de uma coluna CHAR(10), 10 caracteres ASCII no intervalo 0–127 podem ser armazenados usando uma ordenação como **Latin1_General_100_CI_AI**, porque cada caractere desse intervalo usa apenas 1 byte.
 >    
 > No entanto, em [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), *n* define o tamanho da cadeia de caracteres em *bytes* (0–8.000), e em [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* define o tamanho da cadeia de caracteres em *pares de bytes* (0–4.000). *n* nunca define números de caracteres que podem ser armazenados.
 
