@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddd1c896aa3a1425b6d31d33a6d113c77c9c11bf
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8684764c0386513c0890b10dee8bfa3582c1cf59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867488"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485168"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Studio para OLTP na memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91867488"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e expanda-a.  
   
-2.  Clique com o botão direito do mouse em **Bancos de Dados**e clique em **Novo Banco de Dados**.  
+2.  Clique com o botão direito do mouse em **Bancos de Dados** e clique em **Novo Banco de Dados**.  
   
 3.  Para adicionar um novo grupo de arquivos de dados com otimização de memória, clique na página **Grupos de Arquivos** . Em **MEMORY OPTIMIZED DATA**, clique em **Adicionar grupo de arquivos** e insira o nome do grupo de arquivos de dados com otimização de memória.  A coluna rotulada **Arquivos FILESTREAM** representa o número de contêineres no grupo de arquivos. Os contêineres são adicionados na página **Geral** .  
   
@@ -41,7 +41,7 @@ ms.locfileid: "91867488"
   
 ### <a name="to-create-a-memory-optimized-table"></a>Para criar uma tabela com otimização de memória  
   
-1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse no nó **Tabelas** do banco de dados, clique em **Novo**e clique em **Tabela com Otimização de Memória**.  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse no nó **Tabelas** do banco de dados, clique em **Novo** e clique em **Tabela com Otimização de Memória**.  
   
      É exibido um modelo para criar tabelas com otimização de memória.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "91867488"
   
 ### <a name="to-create-a-natively-compiled-stored-procedure"></a>Para criar um procedimento armazenado compilado nativamente  
   
-1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse no nó **Procedimentos Armazenados** do banco de dados, clique em **Novo**e clique em **Procedimento Armazenado Compilado de Modo Nativo**.  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse no nó **Procedimentos Armazenados** do banco de dados, clique em **Novo** e clique em **Procedimento Armazenado Compilado de Modo Nativo**.  
   
      É exibido um modelo para criar procedimentos armazenados compilados nativamente.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "91867488"
   
 ### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>Para criar um tipo de tabela com otimização de memória definido pelo usuário  
   
-1.  Em **Pesquisador de Objetos**, expanda o nó **Tipos** do seu banco de dados, clique com o botão direito do mouse no nó **Tipos de Tabela Definidos pelo Usuário** , clique em **Novo**e em **Tipo de Tabela com Otimização de Memória Definido pelo Usuário**.  
+1.  Em **Pesquisador de Objetos**, expanda o nó **Tipos** do seu banco de dados, clique com o botão direito do mouse no nó **Tipos de Tabela Definidos pelo Usuário** , clique em **Novo** e em **Tipo de Tabela com Otimização de Memória Definido pelo Usuário**.  
   
      É exibido um modelo para a criação do tipo de tabela com otimização de memória definido pelo usuário.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91867488"
   
 #### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>Exibir uso da memória por relatório de objetos com otimização de memória  
   
--   No **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados, clique em **Relatórios**, clique em **Relatórios Padrão**e clique em **Uso de Memória por Objetos com Otimização de Memória**.  
+-   No **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados, clique em **Relatórios**, clique em **Relatórios Padrão** e clique em **Uso de Memória por Objetos com Otimização de Memória**.  
   
      Esse relatório fornece dados detalhados sobre a utilização do espaço da memória pelos objetos com otimização de memória no banco de dados.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "91867488"
   
 1.  Para obter informações sobre o uso na memória:  
   
-    -   No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela com otimização de memória, clique em **Propriedades**e na página **Armazenamento** . O valor da propriedade **Espaço de Dados** indica a memória usada pelos dados na tabela. O valor da propriedade **Espaço do Índice** indica a memória usada pelos índices na tabela.  
+    -   No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela com otimização de memória, clique em **Propriedades** e na página **Armazenamento** . O valor da propriedade **Espaço de Dados** indica a memória usada pelos dados na tabela. O valor da propriedade **Espaço do Índice** indica a memória usada pelos índices na tabela.  
   
-    -   No **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados, clique em **Propriedades**e clique na página **Geral** . O valor da propriedade **Memória Alocada a Objetos com Otimização de Memória** indica a memória alocada a objetos com otimização de memória no banco de dados. O valor da propriedade **Memória Usada por Objetos com Otimização de Memória** indica a memória usada por objetos com otimização de memória no banco de dados.  
+    -   No **Pesquisador de Objetos**, clique com o botão direito do mouse no banco de dados, clique em **Propriedades** e clique na página **Geral** . O valor da propriedade **Memória Alocada a Objetos com Otimização de Memória** indica a memória alocada a objetos com otimização de memória no banco de dados. O valor da propriedade **Memória Usada por Objetos com Otimização de Memória** indica a memória usada por objetos com otimização de memória no banco de dados.  
   
 ## <a name="supported-features-in-ssmanstudiofull"></a>Recursos com suporte no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dá suporte a recursos e operações que têm suporte no mecanismo de banco de dados em bancos de dados com grupo de arquivos de dados com otimização de memória, tabelas com otimização de memória, índices e procedimentos armazenados compilados de modo nativo.  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28472efd6747239910630388133bdfe3ca95a6a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4ff1708cf4c3986a90aff1b4c8048879bf0658e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547778"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489448"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -157,7 +157,7 @@ DEFAULT
  É um valor literal, um NULL ou uma função de sistema usado como valor de coluna padrão. Se for usado em conjunto com uma coluna definida para ser de um tipo definido pelo usuário do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], a implementação do tipo deverá dar suporte a uma conversão implícita da *constant_expression* no tipo definido pelo usuário.  
   
 WITH VALUES   
- Ao adicionar uma coluna E uma restrição DEFAULT, se a coluna permitir valores NULLS o uso de WITH VALUES definirá, para as linhas existentes, o valor da nova coluna como o valor fornecido em *constant_expression* DEFAULT. Se a coluna que está sendo adicionada não permitir valores NULLS, o valor da coluna sempre será definido, para as linhas existentes, como o valor fornecido na *expressão constante* DEFAULT. A partir do SQL Server 2012, essa pode ser uma operação de metadados [adicionando colunas não nulas como uma operação online](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ Ao adicionar uma coluna E uma restrição DEFAULT, se a coluna permitir valores NULLS o uso de WITH VALUES definirá, para as linhas existentes, o valor da nova coluna como o valor fornecido em *constant_expression* DEFAULT. Se a coluna que está sendo adicionada não permitir valores NULLS, o valor da coluna sempre será definido, para as linhas existentes, como o valor fornecido na *expressão constante* DEFAULT. A partir do SQL Server 2012, essa pode ser uma operação de metadados [adicionando colunas não nulas como uma operação online](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 Se isso for usado quando a coluna relacionada também não estiver sendo adicionada, não terá qualquer efeito.
  
  Especifica que o valor fornecido em DEFAULT *constant_expression* seja armazenado em uma nova coluna adicionada às linhas existentes. Se a coluna adicionada permitir valores nulos e WITH VALUES for especificado, o valor padrão será armazenado na nova coluna adicionada a linhas existentes. Se WITH VALUES não estiver especificado para colunas que permitem nulos, o valor NULL será armazenado na nova coluna nas linhas existentes. Se a nova coluna não permitir nulos, o valor padrão será armazenado em linhas novas, independentemente de WITH VALUES ser especificado.  

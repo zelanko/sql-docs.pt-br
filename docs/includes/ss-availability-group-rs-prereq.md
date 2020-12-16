@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 A porta TCP no firewall deve estar aberta para a porta do ouvinte.
 
-Para obter mais informações, consulte [O ponto de extremidade de espelhamento de banco de dados (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md?view=sql-server-2017).
+Para obter mais informações, consulte [O ponto de extremidade de espelhamento de banco de dados (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).

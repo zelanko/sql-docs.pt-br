@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: a4221c4200d8b56a1ce1b848e024ef8f135d9129
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92195358"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489776"
 ---
 # <a name="oracle-destination"></a>Destino Oracle
 
@@ -200,7 +200,7 @@ Use a página de Saída de Erro da caixa de diálogo Editor de Destino do Oracle
 **Comportamento do erro**
 
 Selecione como a origem do Oracle deve tratar os erros em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.
-**Seção relacionada**: [Tratamento de erro em dados](./error-handling-in-data.md?view=sql-server-2017)
+**Seção relacionada**: [Tratamento de erro em dados](./error-handling-in-data.md)
 
 **Truncation**
 

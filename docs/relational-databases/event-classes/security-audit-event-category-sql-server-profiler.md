@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 910671ecefc7a52f86a7e025492c3e5ec1371e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330432"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485358"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Categoria de evento de auditoria de segurança (SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88330432"
 |[Classe de evento Audit DBCC](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Indica que um comando DBCC foi emitido.|  
 |[Classe de evento Audit Fulltext](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indica que ocorreu um evento de texto completo.|  
 |[Classe de evento Audit Login Change Password](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indica que um usuário alterou sua senha de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Classe de evento Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica que **sp_defaultdb**, **sp_defaultlanguage**ou ALTER LOGIN foi usado para modificar uma propriedade de um logon.|  
+|[Classe de evento Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica que **sp_defaultdb**, **sp_defaultlanguage** ou ALTER LOGIN foi usado para modificar uma propriedade de um logon.|  
 |[Classe de evento Audit Login](../../relational-databases/event-classes/audit-login-event-class.md)|Indica que um usuário efetuou logon com êxito no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Classe de evento Audit Login Failed](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Indica que um usuário tentou efetuar logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e falhou.|  
 |[Classe de evento Audit Login GDR](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Indica que um direito de logon no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows foi adicionado ou removido.|  

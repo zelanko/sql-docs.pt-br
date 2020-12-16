@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e484cfef4f805f1456101ad966ddf64912daca5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867184"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485308"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91867184"
  O relatório de Análise de Desempenho da Transação e os consultores de migração são instalados como parte do SSMS (SQL Server Management Studio) quando você seleciona **Ferramentas de Gerenciamento – Básico** ou **Ferramentas de Gerenciamento – Avançado** ao instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou quando você [baixa o SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Relatórios de Análise de desempenho da transação  
- Você pode gerar relatórios de análise de desempenho da transação no **Pesquisador de Objetos** clicando com o botão direito no banco de dados, selecionando **Relatórios**, **Relatórios Padrão**e **Visão Geral da Análise de Desempenho da Transação**. O banco de dados deve ter uma carga de trabalho ativa, ou uma execução recente de uma carga de trabalho, para gerar um relatório de análise significativo.  
+ Você pode gerar relatórios de análise de desempenho da transação no **Pesquisador de Objetos** clicando com o botão direito no banco de dados, selecionando **Relatórios**, **Relatórios Padrão** e **Visão Geral da Análise de Desempenho da Transação**. O banco de dados deve ter uma carga de trabalho ativa, ou uma execução recente de uma carga de trabalho, para gerar um relatório de análise significativo.  
   
 ### <a name="tables"></a>Tabelas
   
@@ -108,7 +108,7 @@ As estatísticas de verificação e contenção no relatório de detalhes da tab
   
 **Para gerar uma lista de verificação de migração usando o comando de interface de usuário**  
   
-1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em um banco de dados diferente do banco de dados do sistema, clique em **Tarefas**e clique em **Gerar Listas de Verificação de Migração de OLTP in-memory**.  
+1.  No **Pesquisador de Objetos**, clique com o botão direito do mouse em um banco de dados diferente do banco de dados do sistema, clique em **Tarefas** e clique em **Gerar Listas de Verificação de Migração de OLTP in-memory**.  
   
 2.  Na caixa de diálogo Gerar Lista de Verificação de Migração do OLTP in-memory, clique em Avançar para navegar até a página **Configurar Opções de Geração de Lista de Verificação** . Nessa página, faça o seguinte.  
   
@@ -122,7 +122,7 @@ As estatísticas de verificação e contenção no relatório de detalhes da tab
   
 3.  Clique em **Avançar** e confirme se a lista de tarefas corresponde às configurações na página **Configurar Opções de Geração de Lista de Verificação** .  
   
-4.  Clique em **Concluir**e confirme a geração da lista de verificação de migração somente para os objetos selecionados.  
+4.  Clique em **Concluir** e confirme a geração da lista de verificação de migração somente para os objetos selecionados.  
 
  Você pode verificar a precisão dos relatórios comparando-os com os relatórios gerados pela ferramenta Orientador de otimização da memória e pela ferramenta Native Compilation Advisor. Para obter mais informações, consulte [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) e [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   

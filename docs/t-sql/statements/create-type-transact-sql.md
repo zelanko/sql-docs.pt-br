@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e04a826b3ea7769ceb9ec54cc5175c24f6b98a2
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 32173f13255c080c2df991b59452377fe38b49fa
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300577"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490056"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -176,7 +176,7 @@ column_name <data_type>
  É o nome do tipo de dados de alias ou tipo definido pelo usuário. Os nomes de tipos devem obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *base_type*  
- É o tipo de dados fornecido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual o tipo de dados de alias se baseia. *base_type* é **sysname** , sem padrão, e pode ter um dos seguintes valores:  
+ É o tipo de dados fornecido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual o tipo de dados de alias se baseia. *base_type* é **sysname**, sem padrão, e pode ter um dos seguintes valores:  
   
 |||||  
 |-|-|-|-|  
@@ -191,16 +191,16 @@ column_name <data_type>
  *base_type* também pode ser qualquer sinônimo de tipo de dados mapeado para um desses tipos de dados de sistema.  
   
  *precisão*  
- Para **decimal** ou **numeric** , é um inteiro não negativo que indica o número total máximo de dígitos decimais que podem ser armazenados à esquerda e à direita do ponto decimal. Para obter mais informações, consulte [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ Para **decimal** ou **numeric**, é um inteiro não negativo que indica o número total máximo de dígitos decimais que podem ser armazenados à esquerda e à direita do ponto decimal. Para obter mais informações, consulte [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  *scale*  
- Para **decimal** ou **numeric** , é um inteiro não negativo que indica o número máximo de dígitos decimais que podem ser armazenados à direita do ponto decimal e ele deve ser menor ou igual à precisão. Para obter mais informações, consulte [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ Para **decimal** ou **numeric**, é um inteiro não negativo que indica o número máximo de dígitos decimais que podem ser armazenados à direita do ponto decimal e ele deve ser menor ou igual à precisão. Para obter mais informações, consulte [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  **NULL** | NOT NULL  
  Especifica se o tipo pode ter um valor nulo. Se não for especificado, NULL é o padrão.  
   
  *assembly_name*  
- **Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
  Especifica o assembly [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que referencia a implementação do tipo definido pelo usuário no Common Language Runtime. *assembly_name* deve corresponder a um assembly existente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no banco de dados atual.  
   
@@ -208,9 +208,9 @@ column_name <data_type>
 >  EXTERNAL_NAME não está disponível em um banco de dados independente.  
   
  **[.** *class_name*  **]**  
- **Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+ **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
- Especifica a classe dentro do assembly que implementa o tipo definido pelo usuário. *class_name* deve ser um identificador válido e deve existir como uma classe no assembly com visibilidade do assembly. *class_name* diferencia maiúsculas de minúsculas, independentemente da ordenação de banco de dados, e deve corresponder exatamente ao nome de classe no assembly correspondente. O nome de classe poderá ser um nome qualificado de namespace entre colchetes ( **[ ]** ) se a linguagem de programação usada para gravar a classe usar o conceito de namespaces, como C#. Se *class_name* não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumirá que ele é o mesmo que *type_name* .  
+ Especifica a classe dentro do assembly que implementa o tipo definido pelo usuário. *class_name* deve ser um identificador válido e deve existir como uma classe no assembly com visibilidade do assembly. *class_name* diferencia maiúsculas de minúsculas, independentemente da ordenação de banco de dados, e deve corresponder exatamente ao nome de classe no assembly correspondente. O nome de classe poderá ser um nome qualificado de namespace entre colchetes ( **[ ]** ) se a linguagem de programação usada para gravar a classe usar o conceito de namespaces, como C#. Se *class_name* não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumirá que ele é o mesmo que *type_name*.  
   
  \<column_definition>  
  Define as colunas para um tipo de tabela definido pelo usuário.  
@@ -232,7 +232,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-**Aplica-se a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica a criação de um índice na tabela. Isso pode ser um índice clusterizado ou um índice não clusterizado. O índice conterá as colunas listadas e classificará os dados em ordem crescente ou decrescente.
   
@@ -240,22 +240,22 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
  Você deve especificar os índices de tabela e coluna como parte da instrução CREATE TABLE. CREATE INDEX e DROP INDEX não têm suporte para tabelas com otimização de memória.  
   
  MEMORY_OPTIMIZED  
- **Aplica-se a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indica se o tipo de tabela tem otimização de memória. Essa opção é desabilitada por padrão; a tabela (tipo) não é uma tabela (tipo) com otimização de memória. Os tipos de tabela com otimização de memória são tabelas de usuário com otimização de memória, o esquema que é mantido no disco, semelhante a outras tabelas de usuário.  
   
  BUCKET_COUNT  
- **Aplica-se a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indica o número de buckets que devem ser criados no índice de hash. O valor máximo para BUCKET_COUNT em índices de hash é 1.073.741.824. Para obter mais informações sobre o número de buckets, veja [Índices para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* é um argumento obrigatório.  
   
  HASH  
- **Aplica-se a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indica que um índice de HASH foi criado. Há suporte para índices de hash apenas em tabelas com otimização de memória.  
   
 ## <a name="remarks"></a>Comentários  
- A classe do assembly que é referenciado em *assembly_name* , incluindo seus métodos, deve atender a todos os requisitos de implementação de um tipo definido pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre esses requisitos, consulte [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+ A classe do assembly que é referenciado em *assembly_name*, incluindo seus métodos, deve atender a todos os requisitos de implementação de um tipo definido pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre esses requisitos, consulte [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
  Considerações adicionais incluem o seguinte:  
   
@@ -265,11 +265,11 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
   
  Dentro de um banco de dados, pode haver apenas um único tipo definido pelo usuário registrado em qualquer tipo especificado que seja carregado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do CLR. Se um tipo definido pelo usuário for criado em um tipo CLR para o qual um tipo definido pelo usuário já exista no banco de dados, CREATE TYPE falhará com um erro. Essa restrição é necessária para evitar ambiguidade durante a resolução de Tipo SQL se um tipo CLR puder ser mapeado para mais de um tipo definido pelo usuário.  
   
- Se um método modificador no tipo não retornar *void* , a instrução CREATE TYPE não será executada.  
+ Se um método modificador no tipo não retornar *void*, a instrução CREATE TYPE não será executada.  
   
  Para modificar um tipo definido pelo usuário, você deve descartar o tipo usando uma instrução DROP TYPE e, em seguida, recriá-lo.  
   
- Ao contrário dos tipos definidos pelo usuário que são criados com **sp_addtype** , a função de banco de dados **public** , não recebe automaticamente a permissão REFERENCES em tipos que são criados com CREATE TYPE. Essa permissão deve ser concedida separadamente.  
+ Ao contrário dos tipos definidos pelo usuário que são criados com **sp_addtype**, a função de banco de dados **public**, não recebe automaticamente a permissão REFERENCES em tipos que são criados com CREATE TYPE. Essa permissão deve ser concedida separadamente.  
   
  Em tipos de tabela definidos pelo usuário, os tipos estruturados definidos pelo usuário que são usados em *column_name* \<data type> fazem parte do escopo de esquema do banco de dados no qual o tipo de tabela é definido. Para acessar os tipos estruturados definidos pelo usuário em um escopo diferente dentro do banco de dados, use nomes de duas partes.  
   
@@ -279,13 +279,13 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
  Desde o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o processamento de dados em um tipo de tabela pode ser feito na memória principal, e não no disco. Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Para obter exemplos de código que mostram como criar tipos de tabela com otimização de memória, consulte [Criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ## <a name="permissions"></a>Permissões  
- Exige a permissão CREATE TYPE no banco de dados atual e a permissão ALTER no *schema_name* . Se *schema_name* não for especificado, serão aplicadas as regras de resolução de nome padrão para determinar o esquema do usuário atual. Se *assembly_name* for especificado, um usuário deverá ter o assembly ou ter a permissão REFERENCES nele.  
+ Exige a permissão CREATE TYPE no banco de dados atual e a permissão ALTER no *schema_name*. Se *schema_name* não for especificado, serão aplicadas as regras de resolução de nome padrão para determinar o esquema do usuário atual. Se *assembly_name* for especificado, um usuário deverá ter o assembly ou ter a permissão REFERENCES nele.  
 
  Se qualquer coluna na instrução CREATE TABLE for definida como sendo de um tipo definido pelo usuário, a permissão REFERENCES no tipo definido pelo usuário será necessária.
  
    >[!NOTE]
   > Um usuário que cria uma tabela com uma coluna que usa um tipo definido pelo usuário precisa da permissão REFERENCES no tipo definido pelo usuário.
-  > Se essa tabela tiver que ser criada no TempDB, a permissão REFERENCES precisa ser concedida explicitamente toda vez **antes** de a tabela ser criada, ou este tipo de dados e as permissões REFERENCES precisam ser adicionados ao modelo de banco de dados. Se isso for feito, esse tipo de dados e permissões estarão disponíveis em TempDB permanentemente. Caso contrário, o tipo de dados e as permissões definidos pelo usuário desaparecerão quando o SQL Server for reiniciado. Para saber mais, veja [CREATE TABLE](./create-table-transact-sql.md?view=sql-server-2017#permissions-1)
+  > Se essa tabela tiver que ser criada no TempDB, a permissão REFERENCES precisa ser concedida explicitamente toda vez **antes** de a tabela ser criada, ou este tipo de dados e as permissões REFERENCES precisam ser adicionados ao modelo de banco de dados. Se isso for feito, esse tipo de dados e permissões estarão disponíveis em TempDB permanentemente. Caso contrário, o tipo de dados e as permissões definidos pelo usuário desaparecerão quando o SQL Server for reiniciado. Para saber mais, veja [CREATE TABLE](./create-table-transact-sql.md#permissions-1)
   
 ## <a name="examples"></a>Exemplos  
   
@@ -300,7 +300,7 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>B. Criando um tipo definido pelo usuário  
  O exemplo a seguir cria um tipo `Utf8String` que referencia a classe `utf8string` no assembly `utf8string`. Antes de criar o tipo, o assembly `utf8string` é registrado no banco de dados local. Substitua a parte binária da instrução CREATE ASSEMBLY por uma descrição válida.  
   
-**Aplica-se a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
 ```sql  
 CREATE ASSEMBLY utf8string  

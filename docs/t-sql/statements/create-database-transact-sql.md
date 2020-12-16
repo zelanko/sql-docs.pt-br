@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintaxe de criação de banco de dados para SQL Server, Banco de Dados SQL do Azure, Azure Synapse Analytics e Analytics Platform System
 ms.custom: references_regions
-ms.date: 10/30/2020
+ms.date: 12/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -36,13 +36,13 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
+ms.openlocfilehash: 0e0cf7b17061340f347af536cad762f63cc38ef3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235393"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489062"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -54,7 +54,7 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -70,7 +70,7 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -182,7 +182,7 @@ Se o nome do arquivo de dados não for especificado, [!INCLUDE[ssNoVersion](../.
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
 
 Especifica o status de contenção do banco de dados. NONE = banco de dados dependente. PARTIAL = banco de dados parcialmente independente.
 
@@ -208,7 +208,7 @@ Para saber mais sobre nomes de ordenações Windows e SQL, confira [COLLATE](~/t
 WITH \<option>
  **\<filestream_option>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.
 
 Especifica o nível de acesso não transacional de FILESTREAM ao banco de dados.
 
@@ -219,7 +219,7 @@ Especifica o nível de acesso não transacional de FILESTREAM ao banco de dados.
 |FULL|O acesso não transacional completo a FileTables FILESTREAM está habilitado.|
 
 DIRECTORY_NAME = \<directory_name>
-**Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
+**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
 
 Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de Database_Directory na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção deve ser definida antes da criação de um FileTable neste banco de dados.
 
@@ -227,25 +227,25 @@ As opções a seguir são permitidas apenas quando CONTAINMENT estiver definido 
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
+  **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
 
   Confira [Configurar a opção de Configuração de Servidor de linguagem de texto completo padrão](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) para obter uma descrição completa dessa opção.
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
+  **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
 
   Confira [Configurar a opção de Configuração de Servidor de idioma padrão](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) para obter uma descrição completa dessa opção.
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
+  **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
 
   Confira [Configurar a opção de Configuração de Servidor de gatilhos aninhados](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) para obter uma descrição completa dessa opção.
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **Aplica-se a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
+  **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior
 
   Confira [Opção de Configuração de Servidor transformar palavras de ruído](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) para obter uma descrição completa dessa opção.
 
@@ -276,7 +276,7 @@ As opções a seguir são permitidas apenas quando CONTAINMENT estiver definido 
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  Quando essa opção é especificada, o buffer de log de transações é criado em um volume que está localizado em um dispositivo de disco apoiado pela Memória de Classe de Armazenamento (armazenamento não volátil NVDIMM-N), também conhecido como buffer de log persistente. Para saber mais, confira [Aceleração de latência de Transação Confirmada usando Memória de Classe de Armazenamento](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/). **Aplica-se a** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e posterior.
+  Quando essa opção é especificada, o buffer de log de transações é criado em um volume que está localizado em um dispositivo de disco apoiado pela Memória de Classe de Armazenamento (armazenamento não volátil NVDIMM-N), também conhecido como buffer de log persistente. Para saber mais, confira [Aceleração de latência de Transação Confirmada usando Memória de Classe de Armazenamento](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/). **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e posterior.
 
 FOR ATTACH [ WITH \< attach_database_option > ] Especifica que o banco de dados é criado pela [anexação](../../relational-databases/databases/database-detach-and-attach-sql-server.md) de um conjunto existente de arquivos do sistema operacional. Deve haver uma entrada \<filespec> que especifica o arquivo primário. As únicas outras entradas \<filespec> necessárias são as de arquivos que têm um caminho diferente daquele de quando o banco de dados foi criado pela primeira vez ou anexado pela última vez. Uma entrada \<filespec> deve ser especificada para estes arquivos.
 
@@ -292,7 +292,7 @@ Se um banco de dados de leitura/gravação tiver um único arquivo de log que n�
 
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], todos os arquivos de texto completo que fazem parte do banco de dados que está sendo anexado serão anexados com o banco de dados. Para especificar um novo caminho do catálogo de texto completo, especifique o novo local sem o nome do arquivo do sistema operacional de texto completo. Para obter mais informações, consulte a seção Exemplos.
 
-A anexação de um banco de dados que contém uma opção de FILESTREAM "Nome de diretório", em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solicitará que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifique se o nome de Database_Directory é exclusivo. Se não for, a operação de anexação falhará com o erro "O nome do Database_Directory do FILESTREAM \<name> não é exclusivo nesta instância do SQL Server". Para evitar esse erro, o parâmetro opcional,  *directory_name* deve ser passado para essa operação.
+A anexação de um banco de dados que contém uma opção de FILESTREAM "Nome de diretório", em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solicitará que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifique se o nome de Database_Directory é exclusivo. Se não for, a operação de anexação falhará com o erro "O nome do Database_Directory do FILESTREAM \<name> não é exclusivo nesta instância do SQL Server". Para evitar esse erro, o parâmetro opcional, *directory_name* deve ser passado para essa operação.
 
 FOR ATTACH não pode ser especificado em um instantâneo do banco de dados.
 
@@ -315,7 +315,7 @@ Ao anexar um banco de dados replicado que tenha sido copiado, em vez de desanexa
 - Se você anexar o banco de dados a uma instância de servidor diferente, independentemente da versão, deverá executar [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para remover a replicação depois que a operação de anexação tiver sido concluída.
 
 > [!NOTE]
-> A anexação funciona com o formato de armazenamento **vardecimal** , mas o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deve ser atualizado pelo menos para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. Não é possível anexar um banco de dados que usa formato de armazenamento vardecimal a uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o formato de armazenamento **vardecimal** , veja [Compactação de dados](../../relational-databases/data-compression/data-compression.md).
+> A anexação funciona com o formato de armazenamento **vardecimal**, mas o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deve ser atualizado pelo menos para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. Não é possível anexar um banco de dados que usa formato de armazenamento vardecimal a uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o formato de armazenamento **vardecimal**, veja [Compactação de dados](../../relational-databases/data-compression/data-compression.md).
 
 Quando um banco de dados é anexado ou restaurado pela primeira vez a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra de banco de dados (criptografada pela chave mestra de serviço) ainda não está armazenada no servidor. É necessário usar a instrução **OPEN MASTER KEY** para descriptografar a DMK (chave mestra do banco de dados). Após a descriptografia da DMK, você tem a opção de habilitar a descriptografia automática no futuro usando a instrução **ALTER MASTER KEY REGENERATE** para provisionar o servidor com uma cópia da DMK criptografada com a SMK (chave mestra de serviço). Quando um banco de dados for atualizado de uma versão anterior, a DMK deverá ser regenerada para usar o algoritmo AES mais recente. Para obter mais informações sobre como regenerar a DMK, consulte [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). O tempo necessário para regenerar a chave DMK para atualizar o AES depende do número de objetos protegidos pela DMK. É necessário regenerar a chave DMK para atualizar o AES somente uma vez, isso não tem impacto sobre regenerações futuras como parte de uma estratégia de rotação de chave. Para obter informações sobre como atualizar um banco de dados usando anexar, veja [Atualizar um banco de dados utilizando desanexar e anexar](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).
 
@@ -411,7 +411,7 @@ CONTAINS FILESTREAM Especifica que o grupo de arquivos armazena BLOBs (objetos b
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**Aplica-se a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior
+**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior
 
 Especifica que o grupo de arquivos armazena dados memory_optimized no sistema de arquivos. Para obter mais informações, veja [OLTP In-Memory – Otimização In-Memory](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Apenas um grupo de arquivos MEMORY_OPTIMIZED_DATA é permitido por banco de dados. Para obter exemplos de códigos que criam um grupo de arquivos para armazenar dados com otimização de memória, veja [Criando uma tabela com otimização de memória e um procedimento armazenado compilado nativamente](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
@@ -859,11 +859,11 @@ GO
 - [Objeto binário grande – dados de blob](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Banco de Dados SQL \*_**
@@ -875,7 +875,7 @@ GO
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1288,11 +1288,11 @@ CREATE DATABASE test_zone_redundancy
 - [ALTER DATABASE – Banco de Dados SQL do Azure](alter-database-transact-sql.md?view=azuresqldb-currentls)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1304,7 +1304,7 @@ CREATE DATABASE test_zone_redundancy
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1324,7 +1324,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```
 
 > [!IMPORTANT]
-> Para adicionar arquivos ou definir a contenção de um banco de dados em uma instância gerenciada, use a instrução [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi).
+> Para adicionar arquivos ou definir a contenção de um banco de dados em uma instância gerenciada, use a instrução [ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi).
 
 ## <a name="arguments"></a>Argumentos
 
@@ -1372,11 +1372,11 @@ CREATE DATABASE TestDB1;
 Confira [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1388,7 +1388,7 @@ Confira [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-curre
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1402,7 +1402,7 @@ No Azure Synapse, essa instrução pode ser usada com um servidor do Banco de Da
 
 ## <a name="syntax"></a>Sintaxe
 
-### <a name="sql-pool"></a>[Pool de SQL](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[Pool de SQL dedicado](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1423,7 +1423,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
-### <a name="sql-on-demand-preview"></a>[SQL sob demanda (versão prévia)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[Pool de SQL sem servidor](#tab/sqlod)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;] 
@@ -1504,11 +1504,11 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 - [DROP DATABASE – Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Banco de Dados SQL](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1548,13 +1548,13 @@ WITH (
 
 *database_name* O nome do novo banco de dados. Para obter mais informações sobre nomes de banco de dados permitidos, consulte "Regras de nomenclatura de objeto" e "Nomes de banco de dados reservados" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-AUTOGROW = ON | **OFF** Especifica se os parâmetros *replicated_size* , *distributed_size* e *log_size* para esse banco de dados aumentarão automaticamente, conforme necessário, além de seus tamanhos especificados. O valor padrão é **OFF**.
+AUTOGROW = ON | **OFF** Especifica se os parâmetros *replicated_size*, *distributed_size* e *log_size* para esse banco de dados aumentarão automaticamente, conforme necessário, além de seus tamanhos especificados. O valor padrão é **OFF**.
 
-Se AUTOGROW for ON, *replicated_size* , *distributed_size* e *log_size* aumentará conforme necessário (não em blocos do tamanho inicial especificado) com cada inserção de dados, atualização ou outra ação que exige mais armazenamento do que já foi alocado.
+Se AUTOGROW for ON, *replicated_size*, *distributed_size* e *log_size* aumentará conforme necessário (não em blocos do tamanho inicial especificado) com cada inserção de dados, atualização ou outra ação que exige mais armazenamento do que já foi alocado.
 
-Se AUTOGROW for OFF, os tamanhos não aumentarão automaticamente. O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retornará um erro durante a tentativa de uma ação que exige que *replicated_size* , *distributed_size* ou *log_size* aumente além do valor especificado.
+Se AUTOGROW for OFF, os tamanhos não aumentarão automaticamente. O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retornará um erro durante a tentativa de uma ação que exige que *replicated_size*, *distributed_size* ou *log_size* aumente além do valor especificado.
 
-AUTOGROW é ON ou OFF para todos os tamanhos. Por exemplo, não é possível definir AUTOGROW ON para *log_size* , mas não defini-lo para *replicated_size*.
+AUTOGROW é ON ou OFF para todos os tamanhos. Por exemplo, não é possível definir AUTOGROW ON para *log_size*, mas não defini-lo para *replicated_size*.
 
 *replicated_size* [GB] Um número positivo. Define o tamanho (em gigabytes de inteiro ou decimal) para o espaço total alocado a tabelas replicadas e os dados correspondentes *em cada nó de Computação*. Para os requisitos de *replicated_size* mínimo e máximo, consulte "Valores mínimos e máximos" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
@@ -1602,8 +1602,8 @@ Para obter informações sobre restrições mínimas e máximas em bancos de dad
 No momento em um banco de dados é criado, deve haver espaço livre suficiente disponível *em cada nó de Computação* para alocar o total combinado dos seguintes tamanhos:
 
 - Banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com tabelas com o tamanho de *replicated_table_size*.
-- Banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com tabelas com o tamanho do ( *distributed_table_size* /número de nós de Computação).
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra em log o tamanho de ( *log_size* /número de nós de Computação).
+- Banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com tabelas com o tamanho do (*distributed_table_size*/número de nós de Computação).
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra em log o tamanho de (*log_size*/número de nós de Computação).
 
 ## <a name="locking"></a>Bloqueio
 

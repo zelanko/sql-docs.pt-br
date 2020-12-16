@@ -17,19 +17,19 @@ helpviewer_keywords:
 - DROP WORKLOAD GROUP statement
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b18502d8ac5a39f7e429bc7eac90a0abe39313
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: 064af222a8203ac629756204423040d754f13d1a
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496855"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488646"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -50,11 +50,11 @@ ms.locfileid: "92496855"
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
   
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Instância Gerenciada de SQL \*_** &nbsp;
@@ -71,11 +71,11 @@ ms.locfileid: "92496855"
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Instância Gerenciada de SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)

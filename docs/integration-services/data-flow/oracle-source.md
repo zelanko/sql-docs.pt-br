@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5919aa313147b54e52289aa0c1d530a5f0064aab
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: fe89a97c1fb13d9446b0fe07f04c7399b42a439e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195348"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489766"
 ---
 # <a name="oracle-source"></a>Oracle Source
 
@@ -162,7 +162,7 @@ Use a página **Saída de Erro** da caixa de diálogo **Editor do Oracle Source*
 **Comportamento do erro**
 
 Selecione como a origem do Oracle deve tratar os erros em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.
-**Seção relacionada**: [Tratamento de erro em dados](./error-handling-in-data.md?view=sql-server-2017)
+**Seção relacionada**: [Tratamento de erro em dados](./error-handling-in-data.md)
 
 **Truncation**
 

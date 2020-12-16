@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2e568e5fc2bc170101b47a436b8af24a22b0137
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
+ms.openlocfilehash: d1146d2b937c542a46ad0bf8cc473854e40800b2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496886"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489746"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 
@@ -58,7 +58,7 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -326,17 +326,17 @@ A reversão é controlada pela instrução RESTORE nas opções [ RECOVERY | NOR
 
 - RECOVERY (o padrão) indica que a reversão deve ser executada após a conclusão do roll forward no backup atual.
 
-  A recuperação do banco de dados exige que todo o conjunto de dados que está sendo restaurado (o *conjunto de roll forward* ) seja consistente com o banco de dados. Se o conjunto de roll forward não tiver ido longe o suficiente para ficar consistente com o banco de dados e RECOVERY estiver especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emitirá um erro. Saiba mais sobre a recuperação de banco de dados em [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
+  A recuperação do banco de dados exige que todo o conjunto de dados que está sendo restaurado (o *conjunto de roll forward*) seja consistente com o banco de dados. Se o conjunto de roll forward não tiver ido longe o suficiente para ficar consistente com o banco de dados e RECOVERY estiver especificado, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] emitirá um erro. Saiba mais sobre a recuperação de banco de dados em [Visão geral da restauração e recuperação (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ## <a name="compatibility-support"></a>Suporte de compatibilidade
-Backups do **master** , **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Backups do **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
 > Nenhum backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser restaurado para uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] além da versão na qual o backup foi criado.
 
 Cada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um caminho padrão diferente das versões anteriores. Assim, para restaurar um banco de dados que foi criado no local padrão dos backups de versões anteriores, você deve usar a opção MOVE. Para obter informações sobre o novo caminho padrão, consulte [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
-Depois de você restaurar um banco de dados da versão anterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor **upgrade_option** . Se a opção de atualização for definida como importar ( **upgrade_option** = 2) ou recriar ( **upgrade_option** = 0), os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida para importar, os índices de texto completo associados serão recriados se um catálogo de texto completo não estiver disponível. Para alterar a configuração da propriedade de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).
+Depois de você restaurar um banco de dados da versão anterior para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados será atualizado automaticamente. Normalmente, o banco de dados se torna disponível imediatamente. No entanto, se um banco de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices, dependendo da configuração da propriedade de servidor **upgrade_option**. Se a opção de atualização for definida como importar (**upgrade_option** = 2) ou recriar (**upgrade_option** = 0), os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida para importar, os índices de texto completo associados serão recriados se um catálogo de texto completo não estiver disponível. Para alterar a configuração da propriedade de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).
 
 Quando um banco de dados é anexado ou restaurado pela primeira vez a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra de banco de dados (criptografada pela chave mestra de serviço) ainda não está armazenada no servidor. É necessário usar a instrução **OPEN MASTER KEY** para descriptografar a DMK (chave mestra do banco de dados). Após a descriptografia da DMK, você tem a opção de habilitar a descriptografia automática no futuro usando a instrução **ALTER MASTER KEY REGENERATE** para provisionar o servidor com uma cópia da DMK criptografada com a SMK (chave mestra de serviço). Quando um banco de dados for atualizado de uma versão anterior, a DMK deverá ser regenerada para usar o algoritmo AES mais recente. Para obter mais informações sobre como regenerar a DMK, consulte [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). O tempo necessário para regenerar a chave DMK para atualizar o AES depende do número de objetos protegidos pela DMK. É necessário regenerar a chave DMK para atualizar o AES somente uma vez, isso não tem impacto sobre regenerações futuras como parte de uma estratégia de rotação de chave.
 
@@ -369,7 +369,7 @@ Para restaurar um banco de dados criptografado, é necessário ter acesso ao cer
 
 ### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>Restaurando um bancos de dados habilitado para armazenamento vardecimal
 
-O backup e a restauração funcionam corretamente com o formato de armazenamento **vardecimal** . Para obter mais informações sobre o formato de armazenamento **vardecimal** , consulte [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).
+O backup e a restauração funcionam corretamente com o formato de armazenamento **vardecimal**. Para obter mais informações sobre o formato de armazenamento **vardecimal**, consulte [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).
 
 ### <a name="restore-full-text-data"></a>Restaurar dados de texto completo
 
@@ -733,7 +733,7 @@ RESTORE DATABASE Sales
 [Informações de histórico e cabeçalho de backup](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
@@ -880,11 +880,11 @@ WHERE r.command = 'RESTORE DATABASE'
 > Esta exibição provavelmente mostra duas solicitações de restore. Uma é a instrução RESTORE original enviada pelo cliente e a outra é a instrução RESTORE em segundo plano que está sendo executada, mesmo se houver falha na conexão do cliente.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Instância Gerenciada de SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
@@ -901,7 +901,7 @@ WHERE r.command = 'RESTORE DATABASE'
 Restaura um banco de dados de usuário do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] por meio de um backup de banco de dados em um dispositivo do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. O banco de dados é restaurado por meio de um backup que foi criado anteriormente pelo comando [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md). Use as operações de backup e restauração para criar um plano de recuperação de desastre ou mover bancos de dados de um dispositivo para outro.
 
 > [!NOTE]
-> A restauração do mestre inclui a restauração das informações de logon do dispositivo. Para restaurar um mestre, use a página [Restaurar o banco de dados mestre](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) da ferramenta **Configuration Manager** . Um administrador com acesso ao nó de Controle pode executar essa operação. Para obter mais informações sobre backups de banco de dados do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], confira "Backup e restauração" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+> A restauração do mestre inclui a restauração das informações de logon do dispositivo. Para restaurar um mestre, use a página [Restaurar o banco de dados mestre](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) da ferramenta **Configuration Manager**. Um administrador com acesso ao nó de Controle pode executar essa operação. Para obter mais informações sobre backups de banco de dados do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], confira "Backup e restauração" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -929,11 +929,11 @@ RESTORE HEADERONLY
 
 ## <a name="arguments"></a>Argumentos
 
-RESTORE DATABASE *database_name* Especifica a restauração de um banco de dados de usuário para um banco de dados chamado *database_name* . O banco de dados restaurado pode ter um nome diferente do banco de dados de origem que foi copiado em backup. *database_name* ainda não pode existir como um banco de dados no dispositivo de destino. Para obter mais detalhes sobre nomes de banco de dados permitidos, consulte "Regras de nomenclatura de objeto" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+RESTORE DATABASE *database_name* Especifica a restauração de um banco de dados de usuário para um banco de dados chamado *database_name*. O banco de dados restaurado pode ter um nome diferente do banco de dados de origem que foi copiado em backup. *database_name* ainda não pode existir como um banco de dados no dispositivo de destino. Para obter mais detalhes sobre nomes de banco de dados permitidos, consulte "Regras de nomenclatura de objeto" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 A restauração de um banco de dados de usuário restaura um backup de banco de dados completo e, opcionalmente, em seguida, restaura um backup diferencial no dispositivo. Uma restauração de um banco de dados de usuário inclui a restauração de usuários e funções de banco de dados.
 
-FROM DISK = '\\\\*UNC_path*\\*backup_directory* ' O caminho de rede e o diretório do qual o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaurará os arquivos de backup. Por exemplo, FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
+FROM DISK = '\\\\*UNC_path*\\*backup_directory*' O caminho de rede e o diretório do qual o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaurará os arquivos de backup. Por exemplo, FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
 
 *backup_directory* Especifica o nome de um diretório que contém o backup completo ou diferencial. Por exemplo, você pode executar uma operação RESTORE HEADERONLY em um backup completo ou diferencial.
 

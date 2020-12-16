@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea3a7bec04dcd7e584d541cf4fa4ccee3cf48915
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdd110fd51d42ae13054a5d189c1180a9af623ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645837"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484508"
 ---
 # <a name="create-foreign-key-relationships"></a>Criar relações de chaves estrangeiras
 
@@ -68,7 +68,7 @@ Criar uma chave estrangeira em uma tabela existente requer a permissão [ALTER](
 6. Na caixa de diálogo **Tabelas e Colunas** , na lista suspensa **Chave Primária** , escolha a tabela que estará ao lado da chave primária da relação.
 7. Na grade inferior, escolha as colunas que contribuem para chave primária da tabela. Na célula da grade adjacente à direita de cada coluna, escolha a coluna da chave estrangeira correspondente da tabela da chave estrangeira.
 
-   O**Designer de Tabela** sugere um nome para a relação. Para mudar esse nome, edite o conteúdo da caixa de texto **Nome da Relação** .
+   O **Designer de Tabela** sugere um nome para a relação. Para mudar esse nome, edite o conteúdo da caixa de texto **Nome da Relação** .
 8. Escolha **OK** para criar a relação.
 9. Feche a janela do designer de tabela e **salve** as suas alterações para que a alteração da relação de chave estrangeira entre em vigor.
 

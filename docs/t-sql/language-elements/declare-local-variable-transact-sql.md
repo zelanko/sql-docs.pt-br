@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58213e5098a1565dc25d702aef5f68589a55475
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dea62262cf7a9d5f8965dd4eeff6f412776fbc32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679176"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484088"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ DECLARE
  É o nome de uma variável. Os nomes de variável devem começar com uma arroba (@). Os nomes de variável local devem obedecer às regras de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
 *data_type*  
- É qualquer tipo de tabela CLR (Common Language Runtime) definido pelo usuário e fornecido pelo sistema ou tipo de dados alias. Uma variável não pode ser de um tipo de dados **text** , **ntext** ou **image** .  
+ É qualquer tipo de tabela CLR (Common Language Runtime) definido pelo usuário e fornecido pelo sistema ou tipo de dados alias. Uma variável não pode ser de um tipo de dados **text**, **ntext** ou **image**.  
   
  Para obter mais informações sobre tipos de dados do sistema, consulte [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). Para obter mais informações sobre tipos de dados CLR definidos pelo usuário ou tipos de dados alias, consulte [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
@@ -103,15 +103,15 @@ CURSOR
  Especifica que a variável é uma variável de cursor local.  
   
 @*table_variable_name*  
- É o nome de uma variável do tipo **table** . Os nomes de variável devem começar com uma arroba (@) e devem ser compatíveis com as regras para identificadores.  
+ É o nome de uma variável do tipo **table**. Os nomes de variável devem começar com uma arroba (@) e devem ser compatíveis com as regras para identificadores.  
   
 <table_type_definition>  
-Define o tipo de dados **table** . A declaração de tabela inclui definições de coluna, nomes, tipos de dados e restrições. Os únicos tipos de restrição permitidos são PRIMARY KEY, UNIQUE, NULL e CHECK. Um tipo de dados alias não pode ser usado como um tipo de dados escalar de coluna se uma regra ou definição padrão for associada ao tipo.
+Define o tipo de dados **table**. A declaração de tabela inclui definições de coluna, nomes, tipos de dados e restrições. Os únicos tipos de restrição permitidos são PRIMARY KEY, UNIQUE, NULL e CHECK. Um tipo de dados alias não pode ser usado como um tipo de dados escalar de coluna se uma regra ou definição padrão for associada ao tipo.
   
 \<table_type_definiton> É um subconjunto de informações usado para definir uma tabela em CREATE TABLE. Elementos e definições essenciais são incluídos aqui. Para obter mais informações, consulte [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
- É um espaço reservado que indica que várias variáveis podem ser especificadas e valores podem ser atribuídos. Ao declarar variáveis **table** , a variável **table** deve ser a única declarada na instrução DECLARE.  
+ É um espaço reservado que indica que várias variáveis podem ser especificadas e valores podem ser atribuídos. Ao declarar variáveis **table**, a variável **table** deve ser a única declarada na instrução DECLARE.  
   
  *column_name*  
  É o nome da coluna na tabela.  
@@ -120,10 +120,10 @@ Define o tipo de dados **table** . A declaração de tabela inclui definições 
  Especifica que a coluna é um tipo de dados escalar.  
   
  *computed_column_expression*  
- É uma expressão que define o valor de uma coluna computada. Essa coluna é computada a partir de uma expressão que usa outras colunas na mesma tabela. Por exemplo, uma coluna computada pode ter a definição **cost** AS **price \* qty** . A expressão pode ser o nome de uma coluna não computada, uma constante, uma função interna, uma variável ou qualquer combinação dessas conectada por um ou mais operadores. A expressão não pode ser uma subconsulta ou uma função definida pelo usuário. A expressão não pode fazer referência a um tipo de dados CLR definido pelo usuário.  
+ É uma expressão que define o valor de uma coluna computada. Essa coluna é computada a partir de uma expressão que usa outras colunas na mesma tabela. Por exemplo, uma coluna computada pode ter a definição **cost** AS **price \* qty**. A expressão pode ser o nome de uma coluna não computada, uma constante, uma função interna, uma variável ou qualquer combinação dessas conectada por um ou mais operadores. A expressão não pode ser uma subconsulta ou uma função definida pelo usuário. A expressão não pode fazer referência a um tipo de dados CLR definido pelo usuário.  
   
- [ COLLATE *collation_name* ]  
- Especifica a ordenação da coluna. *collation_name* pode ser um nome de ordenação do Windows ou um nome de ordenação SQL e é aplicável somente a colunas dos tipos de dados **char** , **varchar** , **text** , **nchar** , **nvarchar** e **ntext** . Se não for especificado, à coluna será atribuída a ordenação do tipo de dados definido pelo usuário (se a coluna for de um tipo de dados definido pelo usuário) ou a ordenação do banco de dados atual.  
+ [ COLLATE *collation_name*]  
+ Especifica a ordenação da coluna. *collation_name* pode ser um nome de ordenação do Windows ou um nome de ordenação SQL e é aplicável somente a colunas dos tipos de dados **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**. Se não for especificado, à coluna será atribuída a ordenação do tipo de dados definido pelo usuário (se a coluna for de um tipo de dados definido pelo usuário) ou a ordenação do banco de dados atual.  
   
  Para obter mais informações sobre os nomes de ordenação do Windows e do SQL, veja [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
@@ -134,7 +134,7 @@ Define o tipo de dados **table** . A declaração de tabela inclui definições 
  É uma constante, um NULL ou uma função de sistema usada como valor de coluna padrão.  
   
  IDENTITY  
- Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um valor incremental exclusivo para a coluna. As colunas de identidade, em geral, são usadas juntamente com restrições PRIMARY KEY para servir de identificador exclusivo de linha para a tabela. A propriedade IDENTITY pode ser atribuída às colunas **tinyint** , **smallint** , **int** , **decimal(p,0)** ou **numeric(p,0)** . Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Você deve especificar a semente e o incremento, ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
+ Indica que a nova coluna é uma coluna de identidade. Quando uma nova linha é adicionada à tabela, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um valor incremental exclusivo para a coluna. As colunas de identidade, em geral, são usadas juntamente com restrições PRIMARY KEY para servir de identificador exclusivo de linha para a tabela. A propriedade IDENTITY pode ser atribuída às colunas **tinyint**, **smallint**, **int**, **decimal(p,0)** ou **numeric(p,0)** . Apenas uma coluna de identidade pode ser criada por tabela. Padrões associados e restrições DEFAULT não podem ser usados com uma coluna de identidade. Você deve especificar a semente e o incremento, ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
   
  *seed*  
  É o valor usado para a primeira linha carregada na tabela.  
@@ -143,7 +143,7 @@ Define o tipo de dados **table** . A declaração de tabela inclui definições 
  É o valor incremental adicionado ao valor de identidade da linha anterior que foi carregada.  
   
  ROWGUIDCOL  
- Indica que a nova coluna é uma coluna de identificador exclusivo global de linha. Somente uma coluna **uniqueidentifier** por tabela pode ser designada como a coluna ROWGUIDCOL. A propriedade ROWGUIDCOL pode ser atribuída somente a uma coluna **uniqueidentifier** .  
+ Indica que a nova coluna é uma coluna de identificador exclusivo global de linha. Somente uma coluna **uniqueidentifier** por tabela pode ser designada como a coluna ROWGUIDCOL. A propriedade ROWGUIDCOL pode ser atribuída somente a uma coluna **uniqueidentifier**.  
   
  NULL | NOT NULL  
  Indica se será permitido um valor nulo na variável. O padrão é NULO.  

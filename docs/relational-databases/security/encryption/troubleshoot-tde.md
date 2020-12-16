@@ -13,13 +13,13 @@ ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 2328cb73bbd101af12074620d0f755209e6dd185
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679253"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489836"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erros comuns de Transparent Data Encryption com chaves gerenciadas pelo cliente no Azure Key Vault
 
@@ -34,7 +34,7 @@ Durante as primeiras 8 horas, se o problema subjacente de acesso à chave do Azu
 
 Se um banco de dados inacessível não for mais necessário, ele poderá ser excluído imediatamente para interromper os custos. Todas as outras ações no banco de dados não são permitidas até que o acesso à chave do Azure Key Vault tenha sido restaurado e o banco de dados fique novamente online. A alteração da opção de TDE de chaves gerenciadas pelo cliente para chaves gerenciadas pelo servidor também não é possível enquanto um banco de dados criptografado com chaves gerenciadas pelo cliente está inacessível. Isso é necessário para proteger os dados contra o acesso não autorizado, enquanto as permissões para o protetor de TDE foram revogadas. 
 
-Depois que um banco de dados ficar inacessível por mais de 8 horas, ele não será mais reparado automaticamente. Se o acesso necessário à chave do cofre de chaves do Azure for restaurado após esse período, você deverá revalidar o acesso à chave manualmente para colocar novamente o banco de dados online. Nesse caso, colocar novamente o banco de dados online pode demorar, dependendo do tamanho do banco de dados. Depois que o banco de dados estiver novamente online, as configurações definidas anteriormente, como o [grupo de failover](/azure/sql-database/sql-database-auto-failover-group), histórico de PITR e todas as marcas **serão perdidas** . Portanto, é recomendável implementar um sistema de notificação usando [Grupos de Ações](/azure/azure-monitor/platform/action-groups) que permitem estar ciente e tratar os problemas subjacentes do cofre de chaves assim que possível. 
+Depois que um banco de dados ficar inacessível por mais de 8 horas, ele não será mais reparado automaticamente. Se o acesso necessário à chave do cofre de chaves do Azure for restaurado após esse período, você deverá revalidar o acesso à chave manualmente para colocar novamente o banco de dados online. Nesse caso, colocar novamente o banco de dados online pode demorar, dependendo do tamanho do banco de dados. Depois que o banco de dados estiver novamente online, as configurações definidas anteriormente, como o [grupo de failover](/azure/sql-database/sql-database-auto-failover-group), histórico de PITR e todas as marcas **serão perdidas**. Portanto, é recomendável implementar um sistema de notificação usando [Grupos de Ações](/azure/azure-monitor/platform/action-groups) que permitem estar ciente e tratar os problemas subjacentes do cofre de chaves assim que possível. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erros comuns que fazem com que os bancos de dados se tornem inacessíveis
 
@@ -70,7 +70,7 @@ Use o comando ou cmdlet a seguir para garantir que uma identidade seja atribuíd
 
 - Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- CLI do Azure: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- CLI do Azure: [az-sql-server-show](/cli/azure/sql/server#az-sql-server-show)
 
 **Mitigação**
 
@@ -78,9 +78,9 @@ Use o cmdlet ou o comando a seguir para configurar uma AppId (identidade do Azur
 
 - Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) com a opção `-AssignIdentity`.
 
-- CLI do Azure: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) com a opção `--assign_identity`.
+- CLI do Azure: [az sql server update](/cli/azure/sql/server#az-sql-server-update) com a opção `--assign_identity`.
 
-No portal do Azure, vá até o cofre de chaves e depois às **Políticas de acesso** . Conclua estas etapas: 
+No portal do Azure, vá até o cofre de chaves e depois às **Políticas de acesso**. Conclua estas etapas: 
 
  1. Use o botão **Adicionar Novo** para adicionar a AppId ao servidor criado na etapa anterior. 
  1. Atribua as seguintes permissões de chave: Obter, Encapsular e Desencapsular 
@@ -105,7 +105,7 @@ Para identificar o URI da chave e o cofre de chaves:
 
     - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - CLI do Azure: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - CLI do Azure: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-show) 
 
 1. Use o URI da chave para identificar o cofre de chaves:
 
@@ -159,9 +159,9 @@ Como identificar o URI da chave e o cofre de chaves:
 
 Confirme se a instância lógica do SQL Server tem permissões para o cofre de chaves e se as permissões estão corretas para acessar a chave:
 
-- No portal do Azure, vá até o cofre de chaves > **Políticas de acesso** . Localize a AppId da instância lógica do SQL Server.  
+- No portal do Azure, vá até o cofre de chaves > **Políticas de acesso**. Localize a AppId da instância lógica do SQL Server.  
 - Se a AppId estiver presente, verifique se ela tem as seguintes permissões de chave: Obter, Encapsular e Desencapsular.
-- Se a AppId não estiver presente, adicione-a usando o botão **Adicionar Novo** . 
+- Se a AppId não estiver presente, adicione-a usando o botão **Adicionar Novo**. 
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Obter o status de TDE do Log de atividades
 

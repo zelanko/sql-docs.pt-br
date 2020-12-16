@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64a8f8d2ed20144b5f3de5b1d24fee3adf428a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7ac6f7773736f09368825e89a5b0b6707ad0d176
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424228"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485408"
 ---
 # <a name="lockcancel-event-class"></a>Classe de evento Lock:Cancel
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
