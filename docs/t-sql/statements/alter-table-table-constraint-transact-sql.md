@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8e5da6272ce3bb60852e10f3bac9cd3fa9a1435f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9597b6c0811ff2fe917a2282b43e677b74eebd4f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426858"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490066"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "88426858"
  Especifica a coluna associada a uma definição de DEFAULT em nível de tabela.  
   
  WITH VALUES  
- Ao adicionar uma coluna E uma restrição DEFAULT, se a coluna permitir valores NULLS o uso de WITH VALUES definirá, para as linhas existentes, o valor da nova coluna como o valor fornecido em *constant_expression* DEFAULT. Se a coluna que está sendo adicionada não permitir valores NULLS, o valor da coluna sempre será definido, para as linhas existentes, como o valor fornecido na *expressão constante* DEFAULT. A partir do SQL Server 2012, essa pode ser uma operação de metadados [adicionando colunas não nulas como uma operação online](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ Ao adicionar uma coluna E uma restrição DEFAULT, se a coluna permitir valores NULLS o uso de WITH VALUES definirá, para as linhas existentes, o valor da nova coluna como o valor fornecido em *constant_expression* DEFAULT. Se a coluna que está sendo adicionada não permitir valores NULLS, o valor da coluna sempre será definido, para as linhas existentes, como o valor fornecido na *expressão constante* DEFAULT. A partir do SQL Server 2012, essa pode ser uma operação de metadados [adicionando colunas não nulas como uma operação online](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 Se isso for usado quando a coluna relacionada também não estiver sendo adicionada, não terá qualquer efeito. 
   
  CHECK  

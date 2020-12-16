@@ -16,13 +16,13 @@ helpviewer_keywords:
 - SQL Graph
 author: shkale-msft
 ms.author: shkale
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 6f1075c6128ae040b3f2b0cb80c167d77aca89e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: c74b5d0f91e1a6bdcf54df1bf00e60d4ff7a72cd
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419020"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490096"
 ---
 # <a name="edge-constraints"></a>Restrições do Microsoft Edge
 
@@ -343,5 +343,4 @@ WHERE EC.parent_object_id = object_id('bought');
 [CREATE TABLE (Grafo do SQL)](../../t-sql/statements/create-table-sql-graph.md)  
 [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
 
-Para saber mais sobre a tecnologia de grafo no SQL Server, confira [Processamento de grafo com o SQL Server e Banco de Dados SQL do Azure](../graphs/sql-graph-overview.md?view=sql-server-2017).
-
+Para saber mais sobre a tecnologia de grafo no SQL Server, confira [Processamento de grafo com o SQL Server e Banco de Dados SQL do Azure](../graphs/sql-graph-overview.md).

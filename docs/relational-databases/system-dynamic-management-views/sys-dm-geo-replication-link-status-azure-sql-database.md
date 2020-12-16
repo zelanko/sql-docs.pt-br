@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cb9936ce01a68055b7f050ddc7dbdb21a9802438
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d6177d289eb46f839d8b1e742d2daf2cff73f5e3
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474847"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515355"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Banco de Dados SQL do Azure)
 
@@ -39,12 +39,12 @@ ms.locfileid: "97474847"
 |partner_database|**sysname**|Nome do banco de dados vinculado no servidor do Banco de Dados SQL.|  
 |last_replication|**datetimeoffset**|O carimbo de data/hora da última confirmação da transação pelo secundário com base no relógio do banco de dados primário. Esse valor está disponível somente no banco de dados primário.|  
 |replication_lag_sec|**int**|Diferença de tempo em segundos entre o valor de last_replication e o carimbo de data/hora da confirmação da transação no primário com base no relógio do banco de dados primário.  Esse valor está disponível somente no banco de dados primário.|  
-|replication_state|**tinyint**|O estado de replicação geográfica para este banco de dados, um dos:.<br /><br /> 1 = propagação. O destino de replicação geográfica está sendo propagado, mas os dois bancos de dados ainda não estão sincronizados. Até que a propagação seja concluída, você não poderá se conectar ao banco de dados secundário. Remover o banco de dados secundário do primário cancelará a operação de propagação.<br /><br /> 2 = atualização. O banco de dados secundário está em um estado transacionalmente consistente e está sendo constantemente sincronizado com o banco de dados primário.<br /><br /> 4 = suspenso. Essa não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
+|replication_state|**tinyint**|O estado de replicação geográfica para este banco de dados, um dos:<br /><br /> 1 = propagação. O destino de replicação geográfica está sendo propagado, mas os dois bancos de dados ainda não estão sincronizados. Até que a propagação seja concluída, você não poderá se conectar ao banco de dados secundário. Remover o banco de dados secundário do primário cancelará a operação de propagação.<br /><br /> 2 = atualização. O banco de dados secundário está em um estado transacionalmente consistente e está sendo constantemente sincronizado com o banco de dados primário.<br /><br /> 4 = suspenso. Essa não é uma relação de cópia contínua ativa. Esse estado geralmente indica que a largura de banda disponível para o interlink é insuficiente para o nível de atividade da transação no banco de dados primário. No entanto, a relação de cópia contínua ainda permanece intacta.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |função|**tinyint**|Função de replicação geográfica, uma das:<br /><br /> 0 = primário. O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.<br /><br /> 1 = secundário.  O database_id refere-se ao banco de dados primário na parceria de replicação geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|O tipo secundário, um de:<br /><br /> 0 = nenhuma conexão direta é permitida para o banco de dados secundário e o banco de dados não está disponível para acesso de leitura.<br /><br /> 2 = todas as conexões são permitidas para o banco de dados no repl secundário; vo para acesso somente leitura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Não<br /><br /> Todos|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Tudo|  
 |last_commit|**datetimeoffset**|A hora da última transação confirmada no banco de dados. Se for recuperado no banco de dados primário, ele indica a hora da última confirmação no banco de dados primário. Se for recuperado no banco de dados secundário, ele indica a hora da última confirmação no banco de dados secundário. Se for recuperado no banco de dados secundário quando o primário do link de replicação estiver inativo, ele indicará até que ponto o secundário foi pego.|
   
 > [!NOTE]  
