@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1caf51460496fa734bed5e2a88cce3abf9b138e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bd89afe79f1e6cf7a5745b04378c1b403142c56e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427388"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426395"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88427388"
 > [!NOTE]  
 >  Se as ações de gatilhos dependem do número de linhas que uma modificação de dados afeta, use os testes (como um exame de @@ROWCOUNT) para modificações de dados em várias linhas (uma instrução INSERT, DELETE ou UPDATE com base em uma instrução SELECT) e execute as ações apropriadas. Para obter mais informações, veja [Criar gatilhos DML para tratar várias linhas de dados](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não permite referências de coluna **text** , **ntext** ou **image** nas tabelas inseridas e excluídas para gatilhos AFTER. Entretanto, esses tipos de dados são incluídos somente para fins de compatibilidade com versões anteriores. O armazenamento preferencial para dados grandes é usar os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . Os gatilhos AFTER e INSTEAD OF dão suporte a dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** nas tabelas inseridas e excluídas. Para obter mais informações, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não permite referências de coluna **text**, **ntext** ou **image** nas tabelas inseridas e excluídas para gatilhos AFTER. Entretanto, esses tipos de dados são incluídos somente para fins de compatibilidade com versões anteriores. O armazenamento preferencial para dados grandes é usar os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . Os gatilhos AFTER e INSTEAD OF dão suporte a dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** nas tabelas inseridas e excluídas. Para obter mais informações, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Um exemplo do uso de tabela inserida em um gatilho para impor regras de negócio**  
   
