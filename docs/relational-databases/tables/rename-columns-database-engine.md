@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18ed629f6a9d02c0068a20fc1da3e8d5c4375dc2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 70df620a283ac7f49c8ec854884a25843adc3e1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464507"
 ---
 # <a name="rename-columns-database-engine"></a>Renomear colunas (Mecanismo de Banco de Dados)
 

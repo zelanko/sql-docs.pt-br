@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ea0d7aca2659d16bc761cfd4dc2146a96f977622
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6627a09a602f9d75cd742f967ba9e8cb6f05ca7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423610"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464817"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>Ações comuns que requerem um backup atualizado
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  Se você executar backups de log regulares, qualquer alteração relacionada à replicação deverá ser capturada nos backups de log. Se não executar backups de log, faça um backup dos bancos de dados de publicação, distribuição, assinatura, **msdb**e **mestre** após fazer alterações ao seu esquema ou topologia de replicação.  
+  Se você executar backups de log regulares, qualquer alteração relacionada à replicação deverá ser capturada nos backups de log. Se não executar backups de log, faça um backup dos bancos de dados de publicação, distribuição, assinatura, **msdb** e **mestre** após fazer alterações ao seu esquema ou topologia de replicação.  
   
 ## <a name="publication-database"></a>Banco de dados de publicação  
  Faça o backup do banco de dados de publicação após:  

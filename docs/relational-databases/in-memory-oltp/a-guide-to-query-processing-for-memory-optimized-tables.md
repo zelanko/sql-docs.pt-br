@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bd48189958a95a54efa128a7b0a9887b4e04b4c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eed83fcd8a8b861f102c90fbc73d28d51bd5fa56
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867416"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465477"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

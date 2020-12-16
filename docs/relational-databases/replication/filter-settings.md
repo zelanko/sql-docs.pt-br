@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 74ddf2a67970c290d427e777184eba74af28a3d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f6b00d51fab28b9d4b4c66e8deff0194e01e8d41
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486659"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464747"
 ---
 # <a name="filter-settings"></a>Configurações de Filtro
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

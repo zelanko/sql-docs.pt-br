@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998993"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465517"
 ---
 # <a name="xml-format-files-sql-server"></a>Arquivos de formato XML (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -272,10 +272,10 @@ ms.locfileid: "85998993"
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
 |Correção|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**, e **SQLUNIQUEID**|Nenhum.|NULLABLE|  
 |Número variável|**SQLDECIMAL** e **SQLNUMERIC**|Nenhum.|NULLABLE, PRECISION, SCALE|  
-|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|Nenhum.|NULLABLE|  
+|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT** e **SQLUDT**|Nenhum.|NULLABLE|  
 |LOB caractere|**SQLNTEXT**|Nenhum.|NULLABLE|  
 |Cadeia de caracteres binária|**SQLBINARY** e **SQLVARYBIN**|Nenhum.|NULLABLE, LENGTH|  
-|Cadeia de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|Nenhum.|NULLABLE, LENGTH|  
+|Cadeia de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR** e **SQLNVARCHAR**|Nenhum.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  Para exportar ou importar dados SQLXML em massa, use um dos tipos de dados a seguir em seu arquivo de formato: SQLCHAR ou SQLVARYCHAR (os dados são enviados na página de código do cliente ou na página de código implícita pela ordenação), SQLNCHAR ou SQLNVARCHAR (os dados são enviados como Unicode), ou SQLBINARY ou SQLVARYBIN (os dados são enviados sem nenhuma conversão).  

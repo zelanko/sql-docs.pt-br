@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7641e8f5468a6e915772edf10e97cd735c934f0d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 49e3681e448e0fb262e3ea1c52650106f15687e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010119"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465487"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Usar o formato nativo Unicode para importar ou exportar dados (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ O formato nativo Unicode tem suporte nas seguintes opções de comando:
   
 |Comando|Opção|Descrição|  
 |-------------|------------|-----------------|  
-|bcp|**-N**|Faz com que o utilitário **bcp** use o formato nativo Unicode que usa tipos de dados nativos (banco de dados) para todos os dados do tipo não caractere e formato de dados de caractere Unicode para obter todos os dados de caracteres (**char**, **nchar**, **varchar**, **nvarchar**, **text**e **ntext**).|  
+|bcp|**-N**|Faz com que o utilitário **bcp** use o formato nativo Unicode que usa tipos de dados nativos (banco de dados) para todos os dados do tipo não caractere e formato de dados de caractere Unicode para obter todos os dados de caracteres (**char**, **nchar**, **varchar**, **nvarchar**, **text** e **ntext**).|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|Usa o formato nativo Unicode na importação de dados em massa.|  
 |OPENROWSET|N/D|Deve usar um arquivo de formato|
     
@@ -133,7 +133,7 @@ REM Review results is SSMS
 ```
 
 ### <a name="using-bulk-insert-and-unicode-native-format-without-a-format-file"></a>**Usando BULK INSERT e formato nativo Unicode sem um arquivo de formato**<a name="bulk_widenative"></a>
-Argumento**DATAFILETYPE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argumento **DATAFILETYPE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
 BULK INSERT TestDatabase.dbo.myWidenative
@@ -147,7 +147,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
 ### <a name="using-bulk-insert-and-unicode-native-format-with-a-non-xml-format-file"></a>**Usando BULK INSERT e formato nativo Unicode com um arquivo de formato não XML**<a name="bulk_widenative_fmt"></a>
-Argumento**FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argumento **FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
 BULK INSERT TestDatabase.dbo.myWidenative
@@ -161,7 +161,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
 ### <a name="using-openrowset-and-unicode-native-format-with-a-non-xml-format-file"></a>**Usando OPENROWSET e formato nativo Unicode com um arquivo de formato não XML**<a name="openrowset_widenative_fmt"></a>
-Argumento**FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argumento **FORMATFILE** .  Execute o seguinte comando Transact-SQL no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidenative

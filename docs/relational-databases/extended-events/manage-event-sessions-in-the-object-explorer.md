@@ -10,13 +10,13 @@ ms.topic: tutorial
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 802ef2c4b7c73847e1c3de3cdc67516a9d35f2e3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3b7295d803770d37940480606ce038129e62a01d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868545"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465507"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gerenciar sessões de evento no Pesquisador de Objetos
 
@@ -66,16 +66,16 @@ STATE = STOP
 ```  
   
 ### <a name="start-or-stop-an-extended-events-session-in-object-explorer"></a>Iniciar ou interromper uma sessão de Eventos Estendidos no Pesquisador de Objetos  
- Para iniciar ou interromper uma sessão de Eventos Estendidos no **Pesquisador de Objetos**, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** , clique com o botão direito do mouse em uma sessão e clique em **Iniciar Sessão** ou **Interromper Sessão**.  
+ Para iniciar ou interromper uma sessão de Eventos Estendidos no **Pesquisador de Objetos**, expanda os nós **Gerenciamento**, **Eventos Estendidos** e **Sessões** , clique com o botão direito do mouse em uma sessão e clique em **Iniciar Sessão** ou **Interromper Sessão**.  
   
 ## <a name="export-an-extended-events-session-template"></a>Exportar um modelo da sessão de Eventos Estendidos  
- Você pode exportar uma sessão de Eventos Estendidos usando o **Pesquisador de Objetos**e salvá-la como um arquivo de modelo .xml. Por exemplo, talvez você queira exportar uma sessão e aplicar o modelo a uma nova sessão de eventos usando o **Assistente para Nova Sessão** ou o assistente **Nova Sessão** .  
+ Você pode exportar uma sessão de Eventos Estendidos usando o **Pesquisador de Objetos** e salvá-la como um arquivo de modelo .xml. Por exemplo, talvez você queira exportar uma sessão e aplicar o modelo a uma nova sessão de eventos usando o **Assistente para Nova Sessão** ou o assistente **Nova Sessão** .  
   
  Quando você exportar uma sessão, não se esqueça de salvar o arquivo de modelo em um local que use o sistema de arquivos NTFS e de restringir o acesso aos usuários que tenham autorização para exibir as informações.  
   
  Para exportar uma sessão de Eventos Estendidos usando o **Pesquisador de Objetos**:  
   
-1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões**  
+1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos** e **Sessões**  
   
 2.  Clique com o botão direito do mouse na sessão a ser exportada e selecione **Export Session (Exportar Sessão)** .  
   
@@ -92,7 +92,7 @@ STATE = STOP
   
  Para importar uma sessão de Eventos Estendidos:  
   
-1.  No **Pesquisador de Objetos**, expanda os nós **Gerenciamento**e **Eventos Estendidos** .  
+1.  No **Pesquisador de Objetos**, expanda os nós **Gerenciamento** e **Eventos Estendidos** .  
   
 2.  Clique com o botão direito do mouse em **Sessões** e selecione **Nova Sessão**.  
   
@@ -109,7 +109,7 @@ STATE = STOP
   
  Para editar uma sessão de Eventos Estendidos:  
   
-1.  No **Pesquisador de Objetos**, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
+1.  No **Pesquisador de Objetos**, expanda os nós **Gerenciamento**, **Eventos Estendidos** e **Sessões** .  
   
 2.  Clique com o botão direito do mouse em uma sessão e selecione **Propriedades**.  
   
@@ -120,7 +120,7 @@ STATE = STOP
 ## <a name="script-an-event-session-definition-using-tsql"></a>Criar o script de uma definição de sessão de eventos usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  O Assistente para Nova Sessão e a caixa de diálogo Nova Sessão têm uma opção Script que gera o [!INCLUDE[tsql](../../includes/tsql-md.md)] que define a sessão de Eventos Estendidos.  
   
- Você pode acessar o [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma sessão de Eventos Estendidos existente clicando o botão direito do mouse no nome da sessão, selecionando **Sessão de Script como**e selecionando **Create para**.  
+ Você pode acessar o [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma sessão de Eventos Estendidos existente clicando o botão direito do mouse no nome da sessão, selecionando **Sessão de Script como** e selecionando **Create para**.  
   
 ## <a name="delete-an-extended-events-session"></a>Excluir uma sessão de Eventos Estendidos  
  Você pode excluir uma sessão de Eventos Estendidos:  
@@ -138,7 +138,7 @@ STATE = STOP
   
  Para excluir uma sessão de Eventos Estendidos no **Pesquisador de Objetos**:  
   
-1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
+1.  Expanda os nós **Gerenciamento**, **Eventos Estendidos** e **Sessões** .  
   
 2.  Clique com o botão direito do mouse em uma sessão e selecione **Excluir**.  
   
