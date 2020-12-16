@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006279"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473137"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92006279"
 ##  <a name="about-spatial-indexes"></a><a name="about"></a> Sobre índices espaciais  
   
 ###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Decompondo espaço indexado em uma hierarquia de grade  
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], índices espaciais são criados usando árvores B, o que significa que os índices devem representar os dados espaciais bidimensionais na ordem linear de árvores B. Portanto, antes de ler dados em um índice espacial, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa uma decomposição uniforme hierárquica do espaço. O processo de criação de índice *decompõe* o espaço em uma *hierarquia de grade*de quatro níveis. Esses níveis são chamados de *nível 1* (o nível superior), *nível 2*, *nível 3*e *nível 4*.  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], índices espaciais são criados usando árvores B, o que significa que os índices devem representar os dados espaciais bidimensionais na ordem linear de árvores B. Portanto, antes de ler dados em um índice espacial, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa uma decomposição uniforme hierárquica do espaço. O processo de criação de índice *decompõe* o espaço em uma *hierarquia de grade* de quatro níveis. Esses níveis são chamados de *nível 1* (o nível superior), *nível 2*, *nível 3* e *nível 4*.  
   
  Cada nível sucessivo decompõe ainda mais o nível acima dele, de forma que cada célula de nível superior contém uma grade completa no próximo nível. Em um determinado nível, todas as grades têm o mesmo número de células ao longo dos dois eixos (por exemplo, 4x4 ou 8x8) e as células são todas de um único tamanho.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "92006279"
 ###  <a name="tessellation-schemes"></a><a name="schemes"></a> Esquemas de mosaico  
  O comportamento de um índice espacial depende parcialmente de seu *esquema de mosaico*. O esquema de mosaico é específico ao tipo de dados. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], índices espaciais oferecem suporte a dois esquemas de mosaico:  
   
--   O*mosaico de grade geométrica*, que é o esquema do tipo de dados **geometry** .  
+-   O *mosaico de grade geométrica*, que é o esquema do tipo de dados **geometry** .  
   
--   *Mosaico de grade geográfica*que se aplica a colunas do tipo de dados de **geografia** .  
+-   *Mosaico de grade geográfica* que se aplica a colunas do tipo de dados de **geografia** .  
   
 > [!NOTE]  
 >  A configuração **tessellation_scheme** de um índice espacial é visível na exibição de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -130,7 +130,7 @@ ms.locfileid: "92006279"
 >  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##### <a name="the-bounding-box"></a>A caixa delimitadora  
- Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
+ Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora* retangular. A caixa delimitadora é definida por quatro coordenadas, **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
   
 -   *x-min* é a coordenada X do canto inferior esquerdo da caixa delimitadora.  
   

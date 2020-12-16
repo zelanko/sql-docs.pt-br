@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 66a40af981670fd30f8ff6d20c34364ba084e3dd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 737004c651ff7cb335557cbbfe61e9df516e2f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115521"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471617"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Definir configurações do SQL Server com variáveis de ambiente em Linux
 
@@ -27,7 +27,7 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL Server 2019 em Linux. Essas variáveis são usadas em dois cenários:
 
@@ -66,7 +66,7 @@ Você pode usar diversas variáveis de ambiente diferentes para configurar o SQL
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 | Variável de ambiente | DESCRIÇÃO |
 |-----|-----|
@@ -132,7 +132,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Se você estiver executando o Docker em Linux/macOS, use a seguinte sintaxe com aspas simples:
 

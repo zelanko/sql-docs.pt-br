@@ -7,13 +7,13 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
+ms.openlocfilehash: b5fcfbf30028c904be96ca17be1ebb7feeb6f91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115859"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471417"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados SQL Server em um contêiner do Docker em Linux
 
@@ -26,7 +26,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Server para uma imagem de contêiner do SQL Server 2019 em Linux em execução no Docker.
 
@@ -108,7 +108,7 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Abra um terminal Bash no Linux/Mac ou em uma sessão do PowerShell com privilégios elevados no Windows.
 
@@ -465,7 +465,7 @@ Além de usar os backups de banco de dados para proteger seus dados, você tamb�
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Interrompa o contêiner **sql1**.
 
@@ -529,7 +529,7 @@ Neste tutorial, você aprendeu a fazer backup de um banco de dados em Windows e 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Neste tutorial, você aprendeu a fazer backup de um banco de dados em Windows e movê-lo para um servidor Linux que executa o SQL Server 2019. Você aprendeu a:
 

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d7dc4905411b6673d0e4a2127e3885918d509bbb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007191"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473907"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Usar um arquivo de formato para ignorar uma coluna de tabela (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -94,7 +94,7 @@ Para ignorar uma coluna de tabela, edite o arquivo de formato não XML padrão e
 O método preferencial para ignorar uma coluna envolve as três etapas a seguir:
 
 1.   Primeiro, exclua qualquer linha do arquivo de formato que descreva um campo ausente do arquivo de dados de origem.
-2.   Então, reduza o valor da "Ordem do campo de arquivo host" de cada linha do arquivo de formato que segue uma linha excluída. A meta são valores sequenciais "Ordem do campo de arquivo host", de 1 a *n*que reflitam a posição atual de cada campo de dados no arquivo de dados.
+2.   Então, reduza o valor da "Ordem do campo de arquivo host" de cada linha do arquivo de formato que segue uma linha excluída. A meta são valores sequenciais "Ordem do campo de arquivo host", de 1 a *n* que reflitam a posição atual de cada campo de dados no arquivo de dados.
 3.   Finalmente, reduza o valor no campo "Número de colunas" para refletir o número real de campos no arquivo de dados.  
   
 O exemplo a seguir é baseado no arquivo de formato padrão da tabela `myTestSkipCol`. Este arquivo de formato modificado mapeia o primeiro campo de dados para a `Col1`, ignora a `Col2`e mapeia o segundo campo de dados para a `Col3`. A linha da `Col2` foi excluída. O delimitador após o primeiro campo também foi alterado de `\t` para `,`.

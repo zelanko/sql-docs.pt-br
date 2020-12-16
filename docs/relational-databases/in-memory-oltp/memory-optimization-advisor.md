@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0626ff511e504a4718a426ae9b1ca85c674ab5f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868576"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473867"
 ---
 # <a name="memory-optimization-advisor"></a>Orientador de otimização da memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "91868576"
   
  Se não existir uma chave primária e a tabela estiver sendo migrada para uma tabela não durável, esta tela não aparecerá.  
   
- Para as colunas textuais (colunas com tipos **char**, **nchar**, **varchar**e **nvarchar**), é necessário selecionar uma ordenação adequada. O OLTP na memória somente dá suporte a ordenações BIN2 para colunas em uma tabela com otimização de memória e não dá suporte a ordenações com caracteres suplementares. Consulte [Páginas de código de ordenações](./introduction-to-memory-optimized-tables.md) para obter informações sobre as ordenações com suporte e o impacto potencial de uma alteração na ordenação.  
+ Para as colunas textuais (colunas com tipos **char**, **nchar**, **varchar** e **nvarchar**), é necessário selecionar uma ordenação adequada. O OLTP na memória somente dá suporte a ordenações BIN2 para colunas em uma tabela com otimização de memória e não dá suporte a ordenações com caracteres suplementares. Consulte [Páginas de código de ordenações](./introduction-to-memory-optimized-tables.md) para obter informações sobre as ordenações com suporte e o impacto potencial de uma alteração na ordenação.  
   
  Você pode configurar os seguintes parâmetros para a chave primária:  
   

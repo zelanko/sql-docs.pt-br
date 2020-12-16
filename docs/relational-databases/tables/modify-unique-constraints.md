@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9617509a4e9e0a08dbcd1a0d6225e748c9f59a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0546bd8ed476891a177f5246c0ff65859835a0fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646649"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472617"
 ---
 # <a name="modify-unique-constraints"></a>Modificar restrições exclusivas
 
@@ -57,7 +57,7 @@ ms.locfileid: "88646649"
   
 2.  No menu **Designer de Tabela**, clique em **Índices/Chaves...** .  
   
-3.  Na caixa de diálogo **Índices/Chaves** , selecione **Índice ou Chave Exclusiva/Primária Selecionada**e selecione a restrição que deseja editar.  
+3.  Na caixa de diálogo **Índices/Chaves** , selecione **Índice ou Chave Exclusiva/Primária Selecionada** e selecione a restrição que deseja editar.  
   
 4.  Complete uma ação da seguinte tabela:  
   
