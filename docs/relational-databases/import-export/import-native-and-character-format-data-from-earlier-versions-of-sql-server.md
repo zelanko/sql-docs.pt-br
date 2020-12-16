@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a433735d5989a9708c9ca59ba92051634e1c2eed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e89b0fb2445901ec981a5bdfa238cbd31704a039
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868747"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473947"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importar dados de formato nativo e de caractere de versões anteriores do SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91868747"
 ## <a name="interpretation-of-data-types"></a>Interpretação de tipos de dados  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores oferecem suporte para alguns novos tipos. Para importar um novo tipo de dados para uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o tipo de dados deve ser armazenado em um formato legível pelos clientes **bcp** antigos. A tabela a seguir resume como os novos tipos de dados são convertidos para compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Novos tipos de dados no SQL Server 2005|Tipos de dados compatíveis na versão 6*x*|Tipos de dados compatíveis na versão 70|Tipos de dados compatíveis na versão 80|  
+|Novos tipos de dados no SQL Server 2005|Tipos de dados compatíveis na versão 6 *x*|Tipos de dados compatíveis na versão 70|Tipos de dados compatíveis na versão 80|  
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
 |**bigint**|**decimal**|**decimal**|*|  
 |**sql_variant**|**text**|**nvarchar(4000)**|*|  
@@ -58,7 +58,7 @@ ms.locfileid: "91868747"
  Quando você exporta dados em massa usando a opção **-V80**, dados **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , XML e UDT no modo nativo são armazenados com um prefixo de 4 bytes, como dados de **texto**, **imagem** e **ntext**, em vez de com um prefixo de 8 bytes, que é o padrão para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
   
 ## <a name="copying-date-values"></a>Copiando valores de dados  
- O**bcp** usa a API de cópia em massa do ODBC. Portanto, para importar valores de data para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o **bcp** usa o formato de data do ODBC (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]).  
+ O **bcp** usa a API de cópia em massa do ODBC. Portanto, para importar valores de data para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o **bcp** usa o formato de data do ODBC (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]).  
   
  O comando **bcp** exporta arquivos de dados de formato de caractere usando o formato padrão ODBC para os valores **datetime** e **smalldatetime** . Por exemplo, uma coluna **datetime** que contém a data `12 Aug 1998` é copiada em massa em um arquivo de dados como a cadeia de caracteres `1998-08-12 00:00:00.000`.  
   

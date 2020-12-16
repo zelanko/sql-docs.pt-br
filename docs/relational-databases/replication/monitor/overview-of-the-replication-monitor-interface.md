@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 281f95c0e80b11e6295e94ef1e19b93969910790
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 92101ce00eb74e7a48a7e72b320eb536e4d60022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465208"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477817"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Visão geral da interface do Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88465208"
 ## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Exibindo informações e executando tarefas relacionadas à distribuidores  
  O Replication Monitor exibe informações sobre Distribuidores em três guias:  
   
--   Guia**Publicações**  
+-   Guia **Publicações**  
   
      Essa guia fornece informações resumidas de todas as publicações de um Distribuidor.  
   
--   Guia**Lista de Observação da Assinatura**  
+-   Guia **Lista de Observação da Assinatura**  
   
      Essa guia fornece informações sobre assinaturas do Distribuidor selecionado. Você pode filtrar a lista de assinaturas para ver erros, avisos e qualquer assinatura de desempenho insatisfatório. A guia também permite executar as seguintes tarefas: acessar propriedades da assinatura, acessar informações detalhadas sobre o agente ou agentes associados à assinatura; reiniciar assinaturas e validar assinaturas.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88465208"
   
      Essa guia não está disponível para Distribuidores que estão executando versões do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou anteriores.  
   
--   Guia**Agentes**  
+-   Guia **Agentes**  
   
      Essa guia exibe informações detalhadas sobre os agentes e trabalhos usados por todos os tipos de replicação. A guia também permite iniciar e interromper cada agente e trabalho.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "88465208"
 ## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Exibindo informações e executando tarefas relacionadas a Publicadores  
  O Replication Monitor exibe informações sobre Publicadores em três guias:  
   
--   Guia**Publicações**  
+-   Guia **Publicações**  
   
      Essa guia fornece informações resumidas de todas as publicações em um Publicador.  
   
--   Guia**Lista de Observação da Assinatura**  
+-   Guia **Lista de Observação da Assinatura**  
   
      O objetivo dessa guia é exibir informações sobre assinaturas de todas as publicações disponíveis no Publicador selecionado. Você pode filtrar a lista de assinaturas para ver erros, avisos e qualquer assinatura de desempenho insatisfatório. A guia também permite: acessar as propriedades da assinatura; acessar informações detalhadas sobre o agente ou agentes associados com uma assinatura; reiniciar assinaturas e validar assinaturas.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88465208"
   
      Essa guia não é exibida para Distribuidores que executam versões anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   Guia**Agentes**  
+-   Guia **Agentes**  
   
      Essa guia exibe informações detalhadas sobre os agentes e trabalhos usados por todos os tipos de replicação. A guia também permite que você inicie e interrompa cada agente e trabalho.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "88465208"
 ## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Exibindo informações e executando tarefas relacionadas a publicações  
  O Replication Monitor exibe informações sobre publicações em três guias e várias janelas de detalhes:  
   
--   Guia**Todas as Assinaturas**  
+-   Guia **Todas as Assinaturas**  
   
      Essa guia exibe informações sobre todas as assinaturas para a publicação selecionada. Por padrão, essa guia é classificada por ordem de prioridade: erros, avisos e, em seguida, em ordem crescente de desempenho, com qualquer assinatura de baixo desempenho na parte superior.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "88465208"
   
          A grade nessa guia exibe ícones de erro e advertência de qualquer assinatura que exija sua atenção.  
   
--   Guia**Agentes**  
+-   Guia **Agentes**  
   
      Essa guia exibe informações sobre os agentes que são usados pela replicação. Essa guia exibe informações sobre os seguintes agentes:  
   
@@ -148,11 +148,11 @@ ms.locfileid: "88465208"
   
      A guia também permite que você execute as seguintes tarefas: acessar informações detalhadas sobre cada agente e iniciar e interromper cada agente. Para obter mais informações sobre os agentes associados a assinaturas (Agente de Distribuição e Agente de Mesclagem), consulte a seção “Exibindo informações e tarefas de desempenho relacionadas a assinaturas”, neste tópico.  
   
--   Guia**Avisos**  
+-   Guia **Avisos**  
   
      Esta guia permite especificar avisos e alertas para agentes. Para obter mais informações, consulte [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
--   Guia**Tokens de Rastreamento** (somente para replicação transacional)  
+-   Guia **Tokens de Rastreamento** (somente para replicação transacional)  
   
      Essa guia permite medir a latência, o período decorrido entre a confirmação de uma transação no Publicador e a confirmação da transação correspondente no Assinante.  
   
@@ -199,19 +199,19 @@ ms.locfileid: "88465208"
   
      Essas guias foram descritas anteriormente neste tópico.  
   
--   Guia**Histórico do Publicador para o Distribuidor** (somente replicação transacional)  
+-   Guia **Histórico do Publicador para o Distribuidor** (somente replicação transacional)  
   
      Essa guia exibe informações sobre o Agente de Leitor de Log para uma publicação (a guia é idêntica à janela de detalhes do Agente de Leitor de Log).  
   
--   Guia**Histórico do Distribuidor para o Assinante** (replicação de instantâneo e replicação transacional)  
+-   Guia **Histórico do Distribuidor para o Assinante** (replicação de instantâneo e replicação transacional)  
   
      Essa guia exibe informações sobre o Agente de Distribuição de uma assinatura.  
   
--   Guia**Comandos Não Distribuídos** (somente replicação transacional)  
+-   Guia **Comandos Não Distribuídos** (somente replicação transacional)  
   
      Essa guia exibe informações sobre o número de comandos no banco de dados de distribuição que não foram entregues ao Assinante selecionado e o tempo estimado para entrega desses comandos. A guia ajuda a responder a pergunta "Quanto minha assinatura está atrasada?" Essa guia não é exibida para Distribuidores que executam versões anteriores ao SQL Server 2005.  
   
--   Guia**Histórico de Sincronização** (somente replicação de mesclagem)  
+-   Guia **Histórico de Sincronização** (somente replicação de mesclagem)  
   
      Essa guia exibe informações sobre o Agente de Mesclagem para uma assinatura. Essa guia ajuda a responder a seguinte pergunta:  
   

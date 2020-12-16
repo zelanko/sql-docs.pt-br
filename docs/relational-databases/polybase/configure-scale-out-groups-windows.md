@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf0fe7b4f3f14963291d8ae930d7d680c374cb2
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 1592632bdeca9f8c3cdceeb61b06c1bd92550f53
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892136"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477917"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurar grupos de escala horizontal do PolyBase no Windows
 
@@ -52,7 +52,7 @@ Veja o passo a passo de como configurar um Grupo do PolyBase usando:
   
    - PQTH4A-CMP02  
   
-2. Conta de domínio: *PQTH4A\PolyBaseUse*r  
+2. Conta de domínio: *PQTH4A\PolyBaseUse* r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Instalar o SQL Server com PolyBase em todos os computadores
 

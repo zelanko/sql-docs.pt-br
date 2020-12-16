@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec282485aec37e07684de2430c2379bf584b4b05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1c3e022c0c284fa1c2b4ef6824c94cec609e8222
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485399"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477197"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Excluir ou desabilitar gatilhos DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88485399"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda o banco de dados que você quer, expanda **Tabelas**e expanda a tabela que contém o gatilho que você quer excluir.  
+2.  Expanda o banco de dados que você quer, expanda **Tabelas** e expanda a tabela que contém o gatilho que você quer excluir.  
   
 3.  Expanda **Gatilhos**, clique com o botão direito do mouse no gatilho para excluí-lo e clique em **Excluir**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88485399"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda o banco de dados que você quer, expanda **Tabelas**e expanda a tabela que contém o gatilho que você quer desabilitar.  
+2.  Expanda o banco de dados que você quer, expanda **Tabelas** e expanda a tabela que contém o gatilho que você quer desabilitar.  
   
 3.  Expanda **Gatilhos**, clique com o botão direito do mouse no gatilho para desabilitá-lo e clique em **Desabilitar**.  
   

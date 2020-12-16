@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47073d130f6a3881c7765d74f40fa06658b02f78
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 5d969da45ab53a82d71cea4d852a69f4bbc10999
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067374"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476617"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,7 +106,7 @@ RETURNS TABLE
  *parameter_data_type*  
  É o tipo de dados de parâmetro. Para funções [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os tipos de dados escalares compatíveis com o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] são permitidos. O tipo de dados de carimbo de data/hora (rowversion) não é um tipo compatível.  
   
- [ = *default* ]  
+ [ =*default* ]  
  É um valor padrão para o parâmetro. Se um valor *default* for definido, a função poderá ser executada sem a necessidade de especificar um valor para esse parâmetro.  
   
  Quando um parâmetro da função tiver um valor padrão, a palavra-chave DEFAULT deverá ser especificada quando a função for chamada para recuperar o valor padrão. Esse comportamento é diferente do uso de parâmetros com valores padrão em procedimentos armazenados nos quais a omissão do parâmetro também indica o valor padrão.  
@@ -122,11 +122,11 @@ RETURNS TABLE
  *scalar_expression*  
  Especifica o valor escalar que a função escalar retorna.  
 
- *select_stmt* **APLICA-SE A** : Azure Synapse Analytics  
+ *select_stmt* **APLICA-SE A**: Azure Synapse Analytics  
  É a única instrução SELECT que define o valor retornado de uma função com valor de tabela embutida (versão prévia).
 
- TABLE **APLICA-SE A** : Azure Synapse Analytics  
- Especifica que o valor retornado da TVF (função com valor de tabela) é uma tabela. Somente constantes e @ *local_variables* podem ser passadas para TVFs.
+ TABLE **APLICA-SE A**: Azure Synapse Analytics  
+ Especifica que o valor retornado da TVF (função com valor de tabela) é uma tabela. Somente constantes e @*local_variables* podem ser passadas para TVFs.
 
  Em TVFs embutidas (versão prévia), o valor retornado TABLE é definido por meio de uma única instrução SELECT. As funções embutidas não têm variáveis de retorno associadas.
   
@@ -244,7 +244,7 @@ RETURN
 );
 GO
 ```
-A função pode então ser chamada para retornar todos os objetos de exibição ( **V** ) com:
+A função pode então ser chamada para retornar todos os objetos de exibição (**V**) com:
 ```sql
 select * from dbo.ModulesByType('V');
 ```

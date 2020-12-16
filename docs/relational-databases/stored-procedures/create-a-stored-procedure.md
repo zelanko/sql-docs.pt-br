@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c1ab9e2681f229fba5294f061d8d83e98aabac64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364754"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475317"
 ---
 # <a name="create-a-stored-procedure"></a>Criar um procedimento armazenado
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,9 +45,9 @@ Este tópico descreve como criar um procedimento armazenado [!INCLUDE[tsql](../.
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para criar um procedimento no Pesquisador de Objetos**  
   
-1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
   
-2.  Expanda **Bancos de Dados** , expanda o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e, em seguida, expanda **Programação**.  
+2.  Expanda **Bancos de Dados**, expanda o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e, em seguida, expanda **Programação**.  
   
 3.  Clique com o botão direito do mouse em **Procedimentos Armazenados** e clique em **Novo Procedimento Armazenado**.  
   
@@ -62,15 +62,15 @@ Este tópico descreve como criar um procedimento armazenado [!INCLUDE[tsql](../.
     |Descrição|Retorna dados de funcionário.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar** (50)|  
+    |@Datatype_For_Param1|**nvarchar**(50)|  
     |Default_Value_For_Param1|NULO|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar** (50)|  
+    |@Datatype_For_Param2|**nvarchar**(50)|  
     |Default_Value_For_Param2|NULO|  
   
 6.  Clique em **OK**.  
   
-7.  No **Editor de Consultas** , substitua a instrução SELECT pela seguinte instrução:  
+7.  No **Editor de Consultas**, substitua a instrução SELECT pela seguinte instrução:  
   
     ```sql  
     SELECT FirstName, LastName, Department  
@@ -87,7 +87,7 @@ Este tópico descreve como criar um procedimento armazenado [!INCLUDE[tsql](../.
   
 11. Para executar o procedimento, no Pesquisador de Objetos, clique com o botão direito do mouse no nome do procedimento armazenado **HumanResources.uspGetEmployeesTest** e selecione **Executar Procedimento Armazenado**.  
   
-12. Na janela **Executar Procedimento** , insira Margheim como o valor para o parâmetro @LastName e insira o valor Diane como o valor para o parâmetro @FirstName.  
+12. Na janela **Executar Procedimento**, insira Margheim como o valor para o parâmetro @LastName e insira o valor Diane como o valor para o parâmetro @FirstName.  
   
 > [!WARNING]  
 >  Valide todas as entradas de usuário. Não concatene a entrada de usuário antes de validá-la. Nunca execute um comando construído por uma entrada de usuário inválida.  
@@ -95,7 +95,7 @@ Este tópico descreve como criar um procedimento armazenado [!INCLUDE[tsql](../.
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para criar um procedimento no Editor de Consultas**  
   
-1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  No menu **Arquivo** , clique em **Nova Consulta**.  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e2bc61b8c69f3e52fc5149a1c3313ee4f0dc8d1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 85c93be3f041e470a7c4d1838467a997ff7dd56f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363146"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476497"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "87363146"
   
 #### <a name="to-create-a-user-defined-data-type"></a>Para criar um tipo de dados definido pelo usuário  
   
-1.  No Pesquisador de Objetos, expanda **Bancos de dados**, expanda um banco de dados, expanda **Programação**, expanda **Tipos**, clique com o botão direito do mouse em **Tipos de Dados Definidos pelo Usuário**e clique em **Novo Tipo de Dados Definido pelo Usuário**.  
+1.  No Pesquisador de Objetos, expanda **Bancos de dados**, expanda um banco de dados, expanda **Programação**, expanda **Tipos**, clique com o botão direito do mouse em **Tipos de Dados Definidos pelo Usuário** e clique em **Novo Tipo de Dados Definido pelo Usuário**.  
   
      **Permitir Nulos**  
      Especifique se o tipo de dados definido pelo usuário pode aceitar valores NULL. A nulidade de um tipo de dados definido pelo usuário existente não é editável.  
@@ -105,7 +105,7 @@ ms.locfileid: "87363146"
   
 4.  Na caixa **Tipo de dados** , selecione o tipo de dados que servirá de base para o novo alias de tipo de dados.  
   
-5.  Complete as caixas **Tamanho**, **Precisão**e **Escala** caso seja adequado para aquele tipo de dados.  
+5.  Complete as caixas **Tamanho**, **Precisão** e **Escala** caso seja adequado para aquele tipo de dados.  
   
 6.  Marque **Permitir NULLs** , se o novo alias de tipo de dados puder permitir valores NULL.  
   

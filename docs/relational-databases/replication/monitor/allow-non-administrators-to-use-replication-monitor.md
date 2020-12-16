@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3c7c3858c4d9b9426e8f77ef4a7c319bed5871de
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0ee0023f3329de255ec199eed4ce6600ed3f9c3d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906936"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477877"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Permitir que não administradores usem o Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,9 +58,9 @@ ms.locfileid: "86906936"
   
 1.  No [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], conecte-se ao Distribuidor e, em seguida, expanda o nó do servidor.  
   
-2.  Expanda **Bancos de Dados**, expanda **Bancos de Dados do Sistema**e, em seguida, expanda o banco de dados de distribuição (nomeado **distribuição** por padrão).  
+2.  Expanda **Bancos de Dados**, expanda **Bancos de Dados do Sistema** e, em seguida, expanda o banco de dados de distribuição (nomeado **distribuição** por padrão).  
   
-3.  Expanda **Segurança**, clique com o botão direito do mouse em **Usuários**e, em seguida, clique em **Novo Usuário**.  
+3.  Expanda **Segurança**, clique com o botão direito do mouse em **Usuários** e, em seguida, clique em **Novo Usuário**.  
   
 4.  Digite um nome de usuário e logon para o usuário.  
   

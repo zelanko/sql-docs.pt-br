@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810453"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474567"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
 
@@ -49,7 +49,7 @@ Os fatos a seguir sobre as tabelas temporais com controle da versão do sistema 
 - Você pode impor uma liberação de dados invocando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
 - Quando **SYSTEM_VERSIONING = OFF** ou quando o esquema da tabela com controle da versão do sistema for modificado pela adição, remoção ou alteração de colunas, todo o conteúdo do buffer de preparo interno é movido para a tabela de histórico com base em disco.
 - A consulta de dados históricos está efetivamente sob o nível de isolamento de INSTANTÂNEO e sempre retorna uma união entre o buffer de preparo na memória e a tabela com base em disco sem duplicatas.
-- As operações**ALTER TABLE** que alteram o esquema da tabela internamente devem executar uma limpeza de dados, o que pode prolongar a duração da operação.
+- As operações **ALTER TABLE** que alteram o esquema da tabela internamente devem executar uma limpeza de dados, o que pode prolongar a duração da operação.
 
 ## <a name="the-internal-memory-optimized-staging-table"></a>A tabela de preparo com otimização de memória interna
 

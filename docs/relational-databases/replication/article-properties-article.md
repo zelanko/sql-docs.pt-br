@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6a0703042862d995d8890c01fee519915b513e3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 03b08fa667f8b0753c315a7cf66123618cb493f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482415"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475857"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "88482415"
  **Nível de rastreamento**  
  Determina se as alterações para a mesma linha ou para a mesma coluna devem ser tratadas como um conflito.  
   
- **Verificar permissão de INSERT**, **Verificar permissão de UPDATE**e **Verificar permissão de DELETE**  
+ **Verificar permissão de INSERT**, **Verificar permissão de UPDATE** e **Verificar permissão de DELETE**  
  Determina se verificar ou não durante a sincronização se o logon do Assinante tem as permissões INSERT, UPDATE ou DELETE nas tabelas publicadas, no banco de dados de publicação. O padrão é **False** porque replicação de mesclagem não requer que essas permissões sejam concedidas; o acesso às tabelas publicadas é controlado pela PAL (Lista de Acesso à Publicação). Para obter mais informações sobre a PAL, consulte [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md) (Proteger o publicador).  
   
  Você pode requerer que as permissões sejam verificadas se quiser permitir que um ou mais Assinantes carreguem algumas alterações de dados publicados, mas não outras. Por exemplo, você pode adicionar um Assinante a PAL, mas não conceder ao Assinante nenhuma permissão nas tabelas do banco de dados de publicação. Depois você pode definir Verificar permissões DELETE como **True**: o Assinante poderá carregar inserções e atualizações, mas não exclusões.  

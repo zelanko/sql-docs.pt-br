@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2bf769680bfc19180b03cf30235e6abbc8dd77b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e3bd7a6481f677de9355a892eb78b3b5aeaaa15
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867953"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477577"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Usando o Always Encrypted com o Provedor de Dados .NET Framework para SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -387,7 +387,7 @@ Esta seção descreve as otimizações de desempenho internas do Provedor do .NE
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controlando as viagens de ida e volta para recuperar metadados dos parâmetros de consulta
 
-Se o Always Encrypted estiver habilitado para uma conexão, por padrão, o Provedor de Dados .NET Framework para SQL Server chamará [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum valor de parâmetro) para o SQL Server. O**sys.sp_describe_parameter_encryption** analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados, e se for o caso, para cada um, retorna as informações relacionadas à criptografia que permitirão ao Provedor de Dados .NET Framework para SQL Server criptografar os valores de parâmetro. O comportamento acima garante um alto nível de transparência para o aplicativo cliente. O aplicativo (e o desenvolvedor do aplicativo) não precisa estar ciente de quais consultas acessam colunas criptografadas, desde que os valores que se destinam às colunas criptografadas sejam passados para o Provedor de Dados do .NET Framework para SQL Server em objetos SqlParameter.
+Se o Always Encrypted estiver habilitado para uma conexão, por padrão, o Provedor de Dados .NET Framework para SQL Server chamará [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum valor de parâmetro) para o SQL Server. O **sys.sp_describe_parameter_encryption** analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados, e se for o caso, para cada um, retorna as informações relacionadas à criptografia que permitirão ao Provedor de Dados .NET Framework para SQL Server criptografar os valores de parâmetro. O comportamento acima garante um alto nível de transparência para o aplicativo cliente. O aplicativo (e o desenvolvedor do aplicativo) não precisa estar ciente de quais consultas acessam colunas criptografadas, desde que os valores que se destinam às colunas criptografadas sejam passados para o Provedor de Dados do .NET Framework para SQL Server em objetos SqlParameter.
 
 
 ### <a name="query-metadata-caching"></a>Cache de metadados de consulta

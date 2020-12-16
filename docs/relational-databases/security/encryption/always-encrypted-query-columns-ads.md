@@ -9,13 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7ac5e42497a0167a0e935c116a1efd9cc466300c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679038"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477607"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Consultar colunas usando o Always Encrypted com o Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,7 @@ Para executar as consultas em colunas criptografadas, incluindo consultas que re
 Além das permissões acima, para descriptografar qualquer resultado de consulta ou criptografar os parâmetros de consulta (produzidos por parametrização de variáveis Transact-SQL), você também precisa acessar a chave mestra de coluna protegendo as colunas de destino:
 
 - **Repositório de certificados – Computador local:** você precisa ter acesso de **Leitura** ao certificado que é usado como uma chave mestra de coluna ou ser o administrador do computador.   
-- **Azure Key Vault:** você precisará das permissões **get** , **unwrapKey** e **verify** sobre o cofre de chaves que contém a chave mestra de coluna.
+- **Azure Key Vault:** você precisará das permissões **get**, **unwrapKey** e **verify** sobre o cofre de chaves que contém a chave mestra de coluna.
 
 Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted).
 
@@ -98,15 +98,15 @@ Você pode habilitar ou desabilitar o Always Encrypted ao se conectar a um banco
 - [Início Rápido: use o Azure Data Studio para se conectar e consultar e o Banco de Dados SQL do Azure](../../../azure-data-studio/quickstart-sql-database.md)
 
 Para habilitar (desabilitar) o Always Encrypted:
-1. Na caixa de diálogo **Conexão** , clique em **Avançado...** .
-2. Para habilitar o Always Encrypted para a conexão, defina o campo **Always Encrypted** como **Habilitado** . Para desabilitar o Always Encrypted, deixe o valor do campo **Always Encrypted** em branco ou defina-o como **Desabilitado** .
+1. Na caixa de diálogo **Conexão**, clique em **Avançado...** .
+2. Para habilitar o Always Encrypted para a conexão, defina o campo **Always Encrypted** como **Habilitado**. Para desabilitar o Always Encrypted, deixe o valor do campo **Always Encrypted** em branco ou defina-o como **Desabilitado**.
 3. Se você estiver usando o [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e a Instância do SQL Server estiver configurada com um enclave seguro, você poderá especificar um protocolo de enclave e uma URL de atestado de enclave. Se a Instância do SQL Server não usar um enclave seguro, verifique se você deixou os campos **Protocolo de Atestado** e **URL de Atestado de Enclave** em branco. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md).
-4. Clique em **OK** para fechar as **Propriedades avançadas** .
+4. Clique em **OK** para fechar as **Propriedades avançadas**.
 
 ![Vídeo rápido que mostra as etapas necessárias para habilitar o Always Encrypted para a conexão.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
-> Para alternar entre a habilitação e a desabilitação do Always Encrypted para uma janela de consultas existente, clique em **Desconectar** e em **Conectar** e conclua as etapas acima para se reconectar ao banco de dados com os valores desejados do campo **Always Encrypted** . 
+> Para alternar entre a habilitação e a desabilitação do Always Encrypted para uma janela de consultas existente, clique em **Desconectar** e em **Conectar** e conclua as etapas acima para se reconectar ao banco de dados com os valores desejados do campo **Always Encrypted**. 
 
 > [!NOTE] 
 > O botão **Alterar conexão** em uma janela de consultas atualmente não é compatível com a alternância entre habilitar e desabilitar o Always Encrypted.
@@ -129,10 +129,10 @@ A Parametrização de Always Encrypted é desabilitada por padrão.
 
 Para habilitar/desabilitar a Parametrização do Always Encrypted:
 
-1. Selecione **Arquivo** > **Preferências** > **Configurações** ( **Código** > **Preferências** > **Configurações** no Mac).
-2. Navegue até **Dados** > **Microsoft SQL Server** .
-3. Selecione ou desmarque **Habilitar Parametrização de Always Encrypted** .
-4. Feche a janela **Configurações** .
+1. Selecione **Arquivo** > **Preferências** > **Configurações** (**Código** > **Preferências** > **Configurações** no Mac).
+2. Navegue até **Dados** > **Microsoft SQL Server**.
+3. Selecione ou desmarque **Habilitar Parametrização de Always Encrypted**.
+4. Feche a janela **Configurações**.
 
 ![Vídeo rápido que mostra como habilitar/desabilitar a Parametrização no Always Encrypted.](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
@@ -180,11 +180,11 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 O Azure Data Studio usa o IntelliSense para informar quais variáveis podem ser parametrizadas com sucesso e quais tentativas de parametrização falham (e por quê).   
 
-Uma declaração de uma variável que pode ser parametrizada com sucesso é marcada com um sublinhado na mensagem de informações na janela de consultas. Caso passe o mouse sobre uma instrução de declaração que foi marcada com um sublinhado na mensagem de informações, você verá a mensagem contendo os resultados do processo de parametrização, incluindo os valores das propriedades de chave do objeto [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) resultante (a variável é mapeada para: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Você também pode ver a lista completa de todas as variáveis que foram parametrizadas com sucesso na exibição de **Problemas** . Para abrir a exibição de **Problemas** , selecione **Exibir** > **Problemas** .    
+Uma declaração de uma variável que pode ser parametrizada com sucesso é marcada com um sublinhado na mensagem de informações na janela de consultas. Caso passe o mouse sobre uma instrução de declaração que foi marcada com um sublinhado na mensagem de informações, você verá a mensagem contendo os resultados do processo de parametrização, incluindo os valores das propriedades de chave do objeto [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) resultante (a variável é mapeada para: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Você também pode ver a lista completa de todas as variáveis que foram parametrizadas com sucesso na exibição de **Problemas**. Para abrir a exibição de **Problemas**, selecione **Exibir** > **Problemas**.    
 
 
 
-Se o Azure Data Studio tentou parametrizar uma variável, mas a parametrização falhou, a declaração da variável será marcada com um sublinhado de erro. Caso passe o mouse sobre a instrução de declaração que foi marcada com um sublinhado de erro, você obterá resultados sobre o erro. Você também poderá ver a lista completa de erros de parametrização para todas as variáveis na exibição de **Problemas** .
+Se o Azure Data Studio tentou parametrizar uma variável, mas a parametrização falhou, a declaração da variável será marcada com um sublinhado de erro. Caso passe o mouse sobre a instrução de declaração que foi marcada com um sublinhado de erro, você obterá resultados sobre o erro. Você também poderá ver a lista completa de erros de parametrização para todas as variáveis na exibição de **Problemas**.
 
  
 > [!NOTE]

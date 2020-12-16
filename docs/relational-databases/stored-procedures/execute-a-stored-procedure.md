@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332605"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475297"
 ---
 # <a name="execute-a-stored-procedure"></a>Executar um procedimento armazenado
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -114,7 +114,7 @@ Este tópico descreve como executar um procedimento armazenado no [!INCLUDE[ssCu
   
 -   Configurando, limpando e controlando a execução automática  
   
-     Somente o administrador de sistema (**sa**) pode marcar um procedimento para ser executado automaticamente. Além disso, o procedimento armazenado deve estar no banco de dados **mestre** , pertencer ao **sa**e não deverá conter parâmetros de entrada ou de saída.  
+     Somente o administrador de sistema (**sa**) pode marcar um procedimento para ser executado automaticamente. Além disso, o procedimento armazenado deve estar no banco de dados **mestre** , pertencer ao **sa** e não deverá conter parâmetros de entrada ou de saída.  
   
      Use [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) para:  
   
@@ -134,7 +134,7 @@ Este tópico descreve como executar um procedimento armazenado no [!INCLUDE[ssCu
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda essa instância e expanda **Bancos de Dados**.  
   
-2.  Expanda o banco de dados desejado, expanda **Programabilidade**e expanda **Procedimentos Armazenados**.  
+2.  Expanda o banco de dados desejado, expanda **Programabilidade** e expanda **Procedimentos Armazenados**.  
   
 3.  Clique com o botão direito do mouse no procedimento armazenado definido pelo usuário desejado e clique em **Executar Procedimento Armazenado**.  
   

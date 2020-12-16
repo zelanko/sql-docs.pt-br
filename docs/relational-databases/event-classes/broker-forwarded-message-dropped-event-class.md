@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fe9b893b04f48a582e0ff0125c1fc33b77a16f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ccb035e127b6476ca18b5745dbaf58b66c8c929e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476247"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>classe de evento Broker:Forwarded Message Dropped
 
@@ -33,7 +33,7 @@ ms.locfileid: "88409862"
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|**bigint**|Número de sequência da mensagem.|52|Não|  
 |ClientProcessID|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
-|DatabaseID|**int**|A ID do banco de dados especificada pela instrução de *banco de dados* USE ou a ID do banco de dados padrão se nenhuma instrução de *banco de dados*USE tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados Server Name for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
+|DatabaseID|**int**|A ID do banco de dados especificada pela instrução de *banco de dados* USE ou a ID do banco de dados padrão se nenhuma instrução de *banco de dados* USE tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados Server Name for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|O nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |DBUserName|**nvarchar**|O identificador da instância do agente de onde se origina a mensagem.|40|Não|  
 |Erro|**int**|O número da ID de mensagem em sys.messages para o texto no evento.|31|Não|  
@@ -56,11 +56,11 @@ ms.locfileid: "88409862"
 |SPID|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |StartTime|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
 |Estado|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
-|Sucesso|**int**|O tempo em que a mensagem esteve ativa. Quando este valor é maior ou igual à vida útil, a mensagem é removida.|23|Não|  
+|Êxito|**int**|O tempo em que a mensagem esteve ativa. Quando este valor é maior ou igual à vida útil, a mensagem é removida.|23|Não|  
 |TargetLoginName|**nvarchar**|O endereço de rede para o qual a mensagem deveria ser encaminhada.|42|Não|  
 |TargetUserName|**nvarchar**|O nome do serviço que iniciou a mensagem.|39|Não|  
 |TextData|**ntext**|Descrição do motivo pelo qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] removeu a mensagem.|1|Sim|  
-|ID da transação|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
+|ID da Transação|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   
  A coluna TextData desse evento contém uma descrição do motivo que levou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a remover a mensagem.  
   

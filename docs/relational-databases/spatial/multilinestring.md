@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6caab752b3edc7c56d127fb3a378a9a5a69a18b7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 14b742786f8b031e1c9c80f9c058f57d96cf240a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006300"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475377"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "92006300"
   
 -   A Figura 4 é uma instância **MultiLineString** não simples, não fechada.  
   
--   A Figura 5 é uma instância **MultiLineString**simples, não fechada. Ela não é fechada porque seus elementos **LineStrings** não estão fechados. Ela é simples porque nenhum dos interiores de qualquer uma das instâncias **LineStrings** se cruzam.  
+-   A Figura 5 é uma instância **MultiLineString** simples, não fechada. Ela não é fechada porque seus elementos **LineStrings** não estão fechados. Ela é simples porque nenhum dos interiores de qualquer uma das instâncias **LineStrings** se cruzam.  
   
 -   A Figura 6 é uma instância **MultiLineString** simples e fechada. Ela é fechada porque todos os seus elementos não estão fechados. Ela é simples porque nenhum de seus elementos se cruzam nos interiores.  
   

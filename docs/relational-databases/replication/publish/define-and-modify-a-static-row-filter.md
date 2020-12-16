@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f88007fbb409004bc01d7b909dfa520cb7b8a051
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 626665bff61cd6f0c1799ef52134c50688d962b6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490601"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477727"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definir e modificar um filtro de linha estático
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "88490601"
   
     -   Para um instantâneo ou publicação transacional, clique em **Adicionar**.  
   
-    -   Para uma publicação de mesclagem, clique em **Adicionar**e então clique em **Adicionar filtro**.  
+    -   Para uma publicação de mesclagem, clique em **Adicionar** e então clique em **Adicionar filtro**.  
   
 2.  Na caixa de diálogo **Adicionar Filtro** , selecione uma tabela para filtrar na caixa de listagem suspensa.  
   
