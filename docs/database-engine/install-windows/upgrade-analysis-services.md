@@ -2,7 +2,7 @@
 description: Atualizar o Analysis Services
 title: Fazer upgrade do Analysis Services | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 12/09/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 1bf7bb7c42a9172148ccdf551eed0b62b3cf5938
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 73258d31f23c52915319aa765dd8d9bcbb7f2e35
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670979"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480347"
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
 
@@ -80,6 +80,7 @@ ms.locfileid: "91670979"
   
 |Modelo de banco de dados|Nível de Compatibilidade|Versões compatíveis|  
 |-|-|-|  
+|Tabular|1500|SQL Server 2019|
 |Tabular|1.400|Microsoft SQL Server 2017|
 |Tabular|1200|SQL Server 2016|  
 |Tabular|1103|SQL Server 2014|  

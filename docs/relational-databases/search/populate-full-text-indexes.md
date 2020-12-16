@@ -24,13 +24,13 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6331623da6672b0b39ec7ca432201cd9a482b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac09b96cf93144ebf2b615bbd73db36c673eb5ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404132"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479457"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -176,11 +176,11 @@ Em alguns casos, a solicitação de uma população incremental resulta em uma p
   
 1.  No Management Studio, no Pesquisador de Objetos, expanda o servidor.  
   
-2.  Expanda **Bancos de Dados**e expanda o banco de dados que contém o índice de texto completo.  
+2.  Expanda **Bancos de Dados** e expanda o banco de dados que contém o índice de texto completo.  
   
 3.  Expanda **Tabelas**.  
   
-    Clique com o botão direito do mouse na tabela em que o índice de texto completo está definido, selecione **Índice de Texto Completo**e, no menu de contexto **Índice de Texto Completo** , clique em **Propriedades**. Este procedimento abre a caixa de diálogo **Propriedades do Índice de Texto Completo** .  
+    Clique com o botão direito do mouse na tabela em que o índice de texto completo está definido, selecione **Índice de Texto Completo** e, no menu de contexto **Índice de Texto Completo** , clique em **Propriedades**. Este procedimento abre a caixa de diálogo **Propriedades do Índice de Texto Completo** .  
 
     > [!IMPORTANT]  
     >  Se a tabela base ou a exibição não contiverem uma coluna com o tipo de dados **carimbo de data/hora**, a população incremental não será possível.

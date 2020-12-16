@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c9a0dfad97e37325c0990bb8c1786a63a5bf897a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867825"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479357"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Criar e armazenar chaves mestras de coluna para Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +30,7 @@ Este artigo fornece detalhes para selecionar um repositório de chaves e criar c
 
 O Always Encrypted dá suporte a vários repositórios de chaves para armazenar chaves mestras de coluna do Always Encrypted. Os repositórios de chaves com suporte variam de acordo com o driver e a versão utilizada.
 
-Há duas categorias de alto nível de repositórios de chaves a serem consideradas – *Repositórios de Chaves Locais*e *Repositórios de Chaves Centralizados*.
+Há duas categorias de alto nível de repositórios de chaves a serem consideradas – *Repositórios de Chaves Locais* e *Repositórios de Chaves Centralizados*.
 
 ###  <a name="local-or-centralized-key-store"></a>Repositório de Chaves Local ou Centralizado?
 
@@ -95,8 +95,8 @@ Para conceder a um usuário a permissão *Leitura* para um certificado armazenad
 1.  Abra um prompt de comando e digite **mmc**.
 2.  No console do MMC, no menu **Arquivo** , clique em **Adicionar/Remover Snap-in**.
 3.  Na caixa de diálogo **Adicionar/Remover Snap-in** , clique em **Adicionar**.
-4.  Na caixa de diálogo **Adicionar Snap-in Autônomo** , clique em **Certificados**e em **Adicionar**.
-5.  Na caixa de diálogo Snap-in de **certificados** , clique em **Conta de computador**e em **Concluir**.
+4.  Na caixa de diálogo **Adicionar Snap-in Autônomo** , clique em **Certificados** e em **Adicionar**.
+5.  Na caixa de diálogo Snap-in de **certificados** , clique em **Conta de computador** e em **Concluir**.
 6.  Na caixa de diálogo **Adicionar Snap-in Autônomo** , clique em **Fechar**.
 7.  Na caixa de diálogo **Adicionar/Remover Snap-in** , clique em **OK**.
 8.  No snap-in de **Certificados**, localize o certificado na pasta **Certificados > Pessoal**, clique com o botão direito do mouse no Certificado, aponte para **Todas as Tarefas** e clique em **Gerenciar Chaves Privadas**.
@@ -134,7 +134,7 @@ Para obter um tutorial passo a passo que usa o SSMS e armazena as chaves do Alwa
 
 Ao usar uma chave do Azure Key Vault como uma chave mestra de coluna, seu aplicativo precisa se autenticar no Azure e a identidade do aplicativo precisa ter as seguintes permissões no cofre de chaves: *get*, *unwrapKey* e *verify*. 
 
-Para provisionar as chaves de criptografia de coluna protegidas com uma chave mestra de coluna armazenada no Cofre de Chaves do Azure, é necessário ter as permissões *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* . Além disso, para criar uma nova chave em um Cofre de Chaves do Azure, é necessário ter a permissão *create* ; para listar o conteúdo da chave de cofres, você precisa da permissão *list* .
+Para provisionar as chaves de criptografia de coluna protegidas com uma chave mestra de coluna armazenada no Cofre de Chaves do Azure, é necessário ter as permissões *get*, *unwrapKey*, *wrapKey*, *sign* e *verify* . Além disso, para criar uma nova chave em um Cofre de Chaves do Azure, é necessário ter a permissão *create* ; para listar o conteúdo da chave de cofres, você precisa da permissão *list* .
 
 #### <a name="using-powershell"></a>Usando o PowerShell
 

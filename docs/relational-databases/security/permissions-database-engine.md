@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: AndreasWolter
 ms.author: anwolter
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b7839615ed830f91ced84f1c565d9c2d32bf3a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243606"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479417"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -364,7 +364,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Resumo do algoritmo de verificação de permissão  
- A verificação de permissões pode ser uma tarefa complexa. O algoritmo de verificação de permissão inclui a sobreposição de associações de grupo e o encadeamento de propriedades, as permissões explícita e implícita, e pode ser afetado pelas permissões em classes de protegíveis que contêm a entidade protegível. O processo geral do algoritmo é coletar todas as permissões pertinentes. Se nenhum bloqueio DENY for localizado, o algoritmo irá procurar uma permissão GRANT que fornece acesso suficiente. O algoritmo contém três elementos essenciais, o **contexto de segurança** , o **espaço de permissão** e a **permissão necessária**.  
+ A verificação de permissões pode ser uma tarefa complexa. O algoritmo de verificação de permissão inclui a sobreposição de associações de grupo e o encadeamento de propriedades, as permissões explícita e implícita, e pode ser afetado pelas permissões em classes de protegíveis que contêm a entidade protegível. O processo geral do algoritmo é coletar todas as permissões pertinentes. Se nenhum bloqueio DENY for localizado, o algoritmo irá procurar uma permissão GRANT que fornece acesso suficiente. O algoritmo contém três elementos essenciais, o **contexto de segurança**, o **espaço de permissão** e a **permissão necessária**.  
   
 > [!NOTE]  
 >  Não é possível conceder, negar ou revogar permissões para sa, dbo, o proprietário da entidade, information_schema, sys ou para você mesmo.  
@@ -406,7 +406,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
   
 3.  Agrega as identidades em nível de servidor e de banco de dados e as identidades do módulo assinado associadas ao chamador para criar o **contexto de segurança**.  
   
-4.  Para esse **contexto de segurança** , reúna todas as permissões concedidas ou negadas ao **espaço de permissão**. A permissão pode ser declarada explicitamente como GRANT, GRANT WITH GRANT ou DENY; ou as permissões podem ser implícitas ou de cobertura GRANT ou DENY. Por exemplo, a permissão CONTROL em um esquema implica CONTROL em uma tabela. E CONTROL em uma tabela implica SELECT. Portanto, se CONTROL foi concedida no esquema, SELECT será concedida na tabela. Se CONTROL foi negada na tabela, SELECT será negada na tabela.  
+4.  Para esse **contexto de segurança**, reúna todas as permissões concedidas ou negadas ao **espaço de permissão**. A permissão pode ser declarada explicitamente como GRANT, GRANT WITH GRANT ou DENY; ou as permissões podem ser implícitas ou de cobertura GRANT ou DENY. Por exemplo, a permissão CONTROL em um esquema implica CONTROL em uma tabela. E CONTROL em uma tabela implica SELECT. Portanto, se CONTROL foi concedida no esquema, SELECT será concedida na tabela. Se CONTROL foi negada na tabela, SELECT será negada na tabela.  
   
     > [!NOTE]  
     >  Uma permissão GRANT no nível de coluna substitui DENY no nível de objeto.  

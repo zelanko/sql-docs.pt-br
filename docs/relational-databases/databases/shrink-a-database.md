@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60c06966368720b4d996c32be221cf37d805a381
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807509"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478347"
 ---
 # <a name="shrink-a-database"></a>Reduzir um banco de dados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "87807509"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda-a.  
   
-2.  Expanda **Bancos de Dados**e clique com o botão direito do mouse no banco de dados que deseja reduzir.  
+2.  Expanda **Bancos de Dados** e clique com o botão direito do mouse no banco de dados que deseja reduzir.  
   
-3.  Aponte para **Tarefas**, depois **Reduzir**e clique em **Banco de dados**.  
+3.  Aponte para **Tarefas**, depois **Reduzir** e clique em **Banco de dados**.  
   
      **Backup de banco de dados**  
      Exibe o nome do banco de dados selecionado.  

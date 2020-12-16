@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8d321f41871469284b3ce8dd3402cc16eee385d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: fb42b1c8f14880c0831d153d4507adc4da80065d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493870"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479857"
 ---
 # <a name="publisher-information-publications"></a>Informações do Publicador, Publicações
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88493870"
  **Status**  
  O estado de cada publicação que é determinado pelo status de prioridade mais alta de suas assinaturas. Por padrão, a grade que contém informações de publicação é classificada pela coluna **Status** . A lista a seguir mostra os valores de status possíveis e a ordem de classificação dos valores (por exemplo, erros são sempre mostrados na parte superior da grade):  
   
--   Erro  
+-   Erro do  
   
 -   Desempenho crítico  
   

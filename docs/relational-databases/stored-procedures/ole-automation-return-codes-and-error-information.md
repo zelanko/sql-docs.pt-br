@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a810d032a2668e217d6776bb3fbab7fe40b79e91
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ef7b62123195fbc514350e2e600c3e5c1e5f88b1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332562"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479137"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Informações sobre erros e códigos de retorno de automação OLE
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Os procedimentos armazenados do sistema de Automação OLE retornam um código de retorno **int** que é o HRESULT retornado pela operação de Automação OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800*nnnnn*, mas ao ser retornado com o valor **int** em um código de retorno de procedimento armazenado, o HRESULT assume o formato 214*nnnnnnn*.  
+  Os procedimentos armazenados do sistema de Automação OLE retornam um código de retorno **int** que é o HRESULT retornado pela operação de Automação OLE adjacente. O HRESULT de 0 indica sucesso. HRESULT diferente de zero é um código de erro OLE de formato hexadecimal 0x800 *nnnnn*, mas ao ser retornado com o valor **int** em um código de retorno de procedimento armazenado, o HRESULT assume o formato 214 *nnnnnnn*.  
   
  Por exemplo, passar um nome de objeto inválido (SQLDMO.Xyzzy) para sp_OACreate faz o procedimento retornar um HRESULT **int** de 2147221005, que é 0x800401f3 em número hexadecimal.  
   

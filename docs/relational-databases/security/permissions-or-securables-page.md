@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8109779b1afe4badd7c44bd30b264a07503c5fa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0bc202f99dfc1bcc067b3baf7f7606506f318d3d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000554"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479397"
 ---
 # <a name="permissions-or-securables-page"></a>Página Permissões ou Protegíveis
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86000554"
  Descreve o tipo de cada item.  
   
 ## <a name="explicit-tab"></a>Guia Explícita  
- A guia **Explícita** lista as permissões possíveis para o protegível que está selecionado na grade superior. Para configurar permissões, marque ou desmarque as caixas de seleção **Conceder** (ou **Permitir**), **Com Concessão**e **Negar** . Nem todas as opções estão disponíveis para todas as permissões explícitas.  
+ A guia **Explícita** lista as permissões possíveis para o protegível que está selecionado na grade superior. Para configurar permissões, marque ou desmarque as caixas de seleção **Conceder** (ou **Permitir**), **Com Concessão** e **Negar** . Nem todas as opções estão disponíveis para todas as permissões explícitas.  
   
  **Permissões**  
  O nome da permissão.  
@@ -62,7 +62,7 @@ ms.locfileid: "86000554"
  Selecione para negar essa permissão ao logon. Desmarque para revogar essa permissão.  
   
  **Permissões de Coluna**  
- Para objetos que contêm colunas (como tabelas, exibições ou funções com valor de tabela), o botão **Permissões de Coluna** abre a caixa de diálogo **Permissões de Coluna** . Nessa caixa de diálogo, você pode definir **Conceder**, **Permitir**ou **Negar** permissões em colunas individuais de uma tabela ou exibição. Essa opção não está disponível para todos os tipos de objeto ou permissões.  
+ Para objetos que contêm colunas (como tabelas, exibições ou funções com valor de tabela), o botão **Permissões de Coluna** abre a caixa de diálogo **Permissões de Coluna** . Nessa caixa de diálogo, você pode definir **Conceder**, **Permitir** ou **Negar** permissões em colunas individuais de uma tabela ou exibição. Essa opção não está disponível para todos os tipos de objeto ou permissões.  
   
 ## <a name="effective-tab"></a>Guia Efetiva  
  As permissões que uma entidade tem associadas a um protegível podem vir das permissões que são definidas para diversas entidades diferentes. Por exemplo, um logon pode receber permissões individualmente e também como um membro de um grupo. A guia **Efetiva** mostra o resultado da combinação de permissões explícitas e das permissões que são recebidas pela associação a um grupo ou função. As permissões concedidas são agregadas. Uma negação de permissão substitui todas as concessões de permissões.  

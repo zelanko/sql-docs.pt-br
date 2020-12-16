@@ -17,20 +17,20 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 98ce649f2b0c2f1d9788deddecfa5294c0325230
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 3cbf3bfa6ad5cb6971d1cd7ab7d9d4d2ac490c2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91378411"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478477"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Exclui uma biblioteca de pacote existente. As bibliotecas de pacotes são usadas por runtimes externos com suporte, tais como do R, Python ou Java.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 > [!NOTE]
 > No SQL Server 2017, há compatibilidade apenas com a linguagem R e a plataforma Windows. Há suporte para R, Python e Java nas plataformas Windows e Linux no SQL Server 2019 e posteriores.
 ::: moniker-end
@@ -79,7 +79,7 @@ Vários pacotes, chamados de *pacotes do sistema*, são pré-instalados em uma i
 
 ## <a name="examples"></a>Exemplos
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 Adicione o pacote do R personalizado, chamado `customPackage`, a um banco de dados:
 
 ```sql

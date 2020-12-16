@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2b3e66bbfa13af7c6f06e39346c68273c9f7a58a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: f4c10ff531c0a687bebb270c118c451ce489786a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783125"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480967"
 ---
 # <a name="snapshot-replication"></a>Replicação de instantâneo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 773162660a1d64f37ee225a14b7a260640104594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988809"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479597"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Caixa de diálogo Propriedades de Assinatura de Replicação do SQL Server 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Opções do editor para todas as assinaturas  
  **Segurança**  
- Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades ( **...** ) para alterar a conta na qual o Distribution Agent ou Merge Agent são executados no Distribuidor. Para alterar a conta na qual o Distribution Agent ou Merge Agent fazem conexões com o Assinante, clique em **Conexão do Assinante**e, depois, clique no botão de propriedades ( **...** ).  
+ Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades ( **...** ) para alterar a conta na qual o Distribution Agent ou Merge Agent são executados no Distribuidor. Para alterar a conta na qual o Distribution Agent ou Merge Agent fazem conexões com o Assinante, clique em **Conexão do Assinante** e, depois, clique no botão de propriedades ( **...** ).  
   
  Para obter mais informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -100,11 +100,11 @@ A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e
  **Segurança**  
  Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades ( **...** ) para alterar a conta na qual o Agente de Distribuição ou Agente de Mesclagem são executados no Assinante. As opções de segurança relacionadas a conexões dependem do tipo de assinatura:  
   
--   Para assinaturas de uma publicação transacional: para alterar a conta na qual o Distribution Agent faz conexões com o Distribuidor, clique em **Conexão do Distribuidor**e, depois, clique no botão de propriedades ( **...** ).  
+-   Para assinaturas de uma publicação transacional: para alterar a conta na qual o Distribution Agent faz conexões com o Distribuidor, clique em **Conexão do Distribuidor** e, depois, clique no botão de propriedades ( **...** ).  
   
--   Para assinaturas de atualização imediata de uma publicação transactional, além da conexão do Distribuidor descrita anteriormente, você pode alterar o método usado para propagar alterações do Assinante para o Publicador: clique em **Conexão do Publicador**e, depois, clique no botão de propriedades ( **...** ).  
+-   Para assinaturas de atualização imediata de uma publicação transactional, além da conexão do Distribuidor descrita anteriormente, você pode alterar o método usado para propagar alterações do Assinante para o Publicador: clique em **Conexão do Publicador** e, depois, clique no botão de propriedades ( **...** ).  
   
--   Para assinaturas de publicações de mesclagem, clique em **Conexão do Publicador**e, depois, clique no botão de propriedades ( **...** ).  
+-   Para assinaturas de publicações de mesclagem, clique em **Conexão do Publicador** e, depois, clique no botão de propriedades ( **...** ).  
   
  Para obter mais informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   

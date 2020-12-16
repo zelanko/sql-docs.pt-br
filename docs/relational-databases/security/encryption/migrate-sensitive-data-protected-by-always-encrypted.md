@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1225f99547dd143b4284f6415df761bdca5c0c38
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679265"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480847"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Carregar em massa dados criptografados em colunas usando o Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ O cenário a seguir demonstra como importar dados incorretamente pode corromper 
 
 1.  A opção está definida como ON para um usuário.  
  
-2.  O usuário executa o aplicativo que se conecta ao banco de dados. O aplicativo usa APIs em massa para inserir valores de texto sem formatação às colunas criptografadas. O aplicativo espera um driver de cliente habilitado para o Always Encrypted a fim de criptografar os dados na inserção. No entanto, o aplicativo foi configurado incorretamente, de modo que ele acaba usando um driver que não é compatível com o Always Encrypted ou a cadeia de conexão não contém **column encryption setting=enabled** .  
+2.  O usuário executa o aplicativo que se conecta ao banco de dados. O aplicativo usa APIs em massa para inserir valores de texto sem formatação às colunas criptografadas. O aplicativo espera um driver de cliente habilitado para o Always Encrypted a fim de criptografar os dados na inserção. No entanto, o aplicativo foi configurado incorretamente, de modo que ele acaba usando um driver que não é compatível com o Always Encrypted ou a cadeia de conexão não contém **column encryption setting=enabled**.  
 
 3.  O aplicativo envia os valores de texto sem formatação ao servidor. Como as verificações de metadados criptográficos estão desabilitadas para o usuário no servidor, o servidor permite que os dados incorretos (texto sem formatação em vez de texto cifrado criptografado corretamente) sejam inseridos em uma coluna criptografada.  
  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408262"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480047"
 ---
 # <a name="create-indexes-with-included-columns"></a>Criar índices com colunas incluídas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,11 +54,11 @@ ms.locfileid: "88408262"
   
 -   As colunas não chave só podem ser definidas em índices não clusterizados.  
   
--   Todos os tipos de dados, exceto **text**, **ntext**e **image** , podem ser usados como colunas não chave.  
+-   Todos os tipos de dados, exceto **text**, **ntext** e **image** , podem ser usados como colunas não chave.  
   
 -   As colunas computadas que são determinísticas e precisas ou imprecisas podem ser colunas não chave. Para obter mais informações, consulte [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   As colunas computadas derivadas dos tipos de dados **image**, **ntext**e **text** podem ser colunas não chave, desde que o tipo de dados da coluna computada seja permitido como uma coluna de índice não chave.  
+-   As colunas computadas derivadas dos tipos de dados **image**, **ntext** e **text** podem ser colunas não chave, desde que o tipo de dados da coluna computada seja permitido como uma coluna de índice não chave.  
   
 -   As colunas que não são de chave não podem ser removidas de uma tabela, a menos que o índice dessa tabela seja removido primeiro.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88408262"
   
     -   Alterar a nulidade da coluna da coluna NOT NULL até NULL.  
   
-    -   Aumente o tamanho das colunas **varchar**, **nvarchar**ou **varbinary** .  
+    -   Aumente o tamanho das colunas **varchar**, **nvarchar** ou **varbinary** .  
   
 ###  <a name="security"></a><a name="Security"></a> Segurança  
   

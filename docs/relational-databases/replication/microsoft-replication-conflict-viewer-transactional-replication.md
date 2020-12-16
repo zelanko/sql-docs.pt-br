@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 17b2fd7cd58cdd63884850ccd3b4da1b5e1ee380
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: f18d7b665d9e546054fccf681e2e78f4f9fbf963
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110547"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481027"
 ---
 # <a name="replication-conflict-viewer-transactional-replication"></a>Visualizador de Conflitos de Replicação (replicação transacional)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "87110547"
  Selecione para exibir as primeiras cinco colunas e qualquer coluna com conflitos. Isso é útil quando a tabela tem um grande número de colunas, mas você quer ver apenas as mais relevantes para resolver o conflito. As primeiras cinco colunas sempre são incluídas nessa exibição, como campos que identificam uma linha, como chave primária ou campo de nomes, estão sempre entre as primeiras colunas da tabela.  
   
  **Exibir Informações da Coluna** ( **.** )  
- Clique para exibir informações da coluna: **Nome da Tabela**, **Nome da Coluna**, **Tipo de Dados**e **Valor da Coluna**.  
+ Clique para exibir informações da coluna: **Nome da Tabela**, **Nome da Coluna**, **Tipo de Dados** e **Valor da Coluna**.  
   
  **Registrar em log os detalhes do conflito**  
  Marque essa caixa para registrar em log os detalhes do conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e clique em **Opções**. Insira um valor ou clique em ( **...** ) e navegue até o arquivo apropriado. Clique em **OK** para sair da caixa de diálogo **Opções** .  

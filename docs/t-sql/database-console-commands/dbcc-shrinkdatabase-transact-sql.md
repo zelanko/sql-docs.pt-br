@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
-monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest
+ms.openlocfilehash: 38deaa198679545b3b67a9d93e9a01b12851abd0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115587"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480497"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -55,7 +55,7 @@ DBCC SHRINKDATABASE
 ```  
 
 ```syntaxsql
--- Azure Synapse Analytics (formerly SQL DW)
+-- Azure Synapse Analytics
 
 DBCC SHRINKDATABASE   
 ( database_name   
@@ -132,7 +132,7 @@ Suponha que você tem alguns arquivos de log, um arquivo de dados e um banco de 
 
 Por exemplo, se você especificar um _target\_percent_ igual a 25 para a redução de **mydb**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] calculará o tamanho de destino para o arquivo de dados como 8 MB (6 MB de dados mais 2 MB de espaço livre). Portanto, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] moverá todos os dados dos últimos 2 MB do arquivo de dados para qualquer espaço livre nos primeiros 8 MB do arquivo de dados e, em seguida, reduzirá o arquivo.
   
-Considere que o arquivo de dados de **mydb** contém 7 MB de dados. Especificar um _target\_percent_ igual a 30 permite que esse arquivo de dados seja reduzido para um percentual livre igual a 30. No entanto, especificar um_target\_percent_ igual a 40 não reduz o arquivo de dados porque o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não reduzirá um arquivo para um tamanho menor do que aquele que os dados ocuparem no momento. 
+Considere que o arquivo de dados de **mydb** contém 7 MB de dados. Especificar um _target\_percent_ igual a 30 permite que esse arquivo de dados seja reduzido para um percentual livre igual a 30. No entanto, especificar um _target\_percent_ igual a 40 não reduz o arquivo de dados porque o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não reduzirá um arquivo para um tamanho menor do que aquele que os dados ocuparem no momento. 
 
 Você também pode pensar neste assunto outro modo: um arquivo de dados com 40 por cento de espaço livre desejado + 70 por cento de espaço cheio de dados (7 MB de 10 MB) dá mais que 100 por cento. Qualquer _target\_size_ maior que 30 não reduzirá o arquivo de dados. Ele não será reduzido porque o percentual de espaço que você deseja mais o percentual atual ocupado pelo arquivo de dados soma mais de 100%.
   

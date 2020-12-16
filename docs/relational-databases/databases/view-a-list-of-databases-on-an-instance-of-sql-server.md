@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5c22331de5c4848c28125d8c46d8eced7acc8cab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 450f8ce406970fd948e6d5c7683e8bba789ba799
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758996"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478317"
 ---
 # <a name="view-list-of-databases-on-sql-server"></a>Exibir a lista de bancos de dados no SQL Server     
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
