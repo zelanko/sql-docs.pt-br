@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a799e90f659e02fcd02e72270684b968a58cc6b6
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: fd783c5ff6578f320e4d9d093f33ea5a10762eaf
+ms.sourcegitcommit: f87f2f0f1edc91fe400040d8e3a5810347aa8d70
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679197"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96857643"
 ---
 # <a name="database-engine-errors"></a>Erros do mecanismo de banco de dados
 
@@ -138,7 +138,7 @@ ORDER BY message_id
 |    197    |    15    |    Não    |    EXECUTE não pode ser usada como origem ao inserir em uma variável de tabela.    |
 |    198    |    15    |    Não    |    O modo de procura é inválido para instruções que contêm um operador UNION, INTERSECT ou EXCEPT.    |
 |    199    |    15    |    Não    |    Uma instrução INSERT não pode conter uma instrução SELECT que atribua valores a uma variável.    |
-|    201    |    16    |    Não    |    O procedimento ou a função '%. *ls' espera o parâmetro '%.* ls' que não foi fornecido.    |
+|    201    |    16    |    Não    |    O procedimento ou a função '%.*ls' espera o parâmetro '%.* ls' que não foi fornecido.    |
 |    202    |    16    |    Não    |    Tipo inválido '%s' para WAITFOR. Os tipos de dados com suporte são CHAR/VARCHAR, NCHAR/NVARCHAR e DATETIME. WAITFOR DELAY dá suporte aos tipos de dados INT e SMALLINT.    |
 |    203    |    16    |    Não    |    O nome '%.*ls' não é um identificador válido.    |
 |    204    |    20    |    Sim    |    Erro de normalização no nó %ls.    |
@@ -165,19 +165,19 @@ ORDER BY message_id
 |    225    |    16    |    Não    |    Os parâmetros fornecidos para o %ls "%.*ls" não são válidos.    |
 |    226    |    16    |    Não    |    Instrução %ls não permitida em transação com várias instruções.    |
 |    227    |    15    |    Não    |    %.*ls não é uma função, propriedade ou campo válido.    |
-|    228    |    15    |    Não    |    O método '%. *ls' do tipo '%.* ls' no assembly '%.*ls' não retorna nenhum valor.    |
-|    229    |    14    |    Não    |    A permissão %ls foi negada no objeto '%. *ls', banco de dados '%.* ls', esquema '%.*ls'.    |
-|    230    |    14    |    Não    |    A permissão %ls foi negada na coluna '%. *ls' do objeto '%.* ls", banco de dados '%. *ls', esquema '%.* ls'.    |
+|    228    |    15    |    Não    |    O método '%.*ls' do tipo '%.* ls' no assembly '%.*ls' não retorna nenhum valor.    |
+|    229    |    14    |    Não    |    A permissão %ls foi negada no objeto '%.*ls', banco de dados '%.* ls', esquema '%.*ls'.    |
+|    230    |    14    |    Não    |    A permissão %ls foi negada na coluna '%.*ls' do objeto '%.* ls", banco de dados '%.*ls', esquema '%.* ls'.    |
 |    231    |    11    |    Não    |    Não existe tal padrão. ID = %ld, ID de banco de dados = %d.    |
 |    232    |    16    |    Não    |    Erro de estouro aritmético para tipo %ls, valor = %f.    |
-|    233    |    16    |    Não    |    A coluna '%. *ls' da tabela '%.* ls' não pode ser nula.    |
+|    233    |    16    |    Não    |    A coluna '%.*ls' da tabela '%.* ls' não pode ser nula.    |
 |    [233](mssqlserver-233-database-engine-error.md)    |        |        |    Uma conexão com o servidor foi estabelecida com êxito, mas ocorreu um erro durante o processo de logon. (provedor: Provedor de Memória Compartilhada, erro: 0 – Nenhum processo está na outra extremidade do pipe.) (Microsoft SQL Server, Erro: 233)    |
 |    234    |    16    |    Não    |    Espaço de resultado insuficiente para converter o valor money em %ls.    |
 |    235    |    16    |    Não    |    Não é possível converter um valor char em money. A sintaxe do valor char está incorreta.    |
 |    236    |    16    |    Não    |    A conversão do tipo de dados char em money resultou em um erro de estouro de money.    |
 |    237    |    16    |    Não    |    Espaço de resultado insuficiente para converter o valor money em %ls.    |
 |    239    |    16    |    Não    |    Nome de expressão de tabela comum duplicado '%.*ls' especificado.    |
-|    240    |    16    |    Não    |    Os tipos não correspondem entre a âncora e a parte recursiva da coluna "%. *ls" da consulta recursiva "%.* ls".    |
+|    240    |    16    |    Não    |    Os tipos não correspondem entre a âncora e a parte recursiva da coluna "%.*ls" da consulta recursiva "%.* ls".    |
 |    241    |    16    |    Não    |    Falha na conversão ao converter data e/ou hora da cadeia de caracteres.    |
 |    242    |    16    |    Não    |    A conversão de um tipo de dados %ls em um tipo de dados %ls resultou em um valor fora do intervalo.    |
 |    243    |    16    |    Não    |    O tipo %.*ls não é um tipo de sistema definido.    |
@@ -196,11 +196,11 @@ ORDER BY message_id
 |    257    |    16    |    Não    |    A conversão implícita de tipo de dados %ls em %ls não é permitida. Use a função CONVERT para executar esta consulta.    |
 |    258    |    15    |    Não    |    Não é possível chamar métodos em %ls.    |
 |    259    |    16    |    Não    |    As atualizações ad hoc em catálogos do sistema não são permitidas.    |
-|    260    |    16    |    Não    |    Conversão implícita não permitida no tipo de dados %ls para o tipo de dados %ls, tabela '%. *ls', coluna '%.* ls'. Use a função CONVERT para executar esta consulta.    |
+|    260    |    16    |    Não    |    Conversão implícita não permitida no tipo de dados %ls para o tipo de dados %ls, tabela '%.*ls', coluna '%.* ls'. Use a função CONVERT para executar esta consulta.    |
 |    261    |    16    |    Não    |    '%.*ls' não é uma função reconhecida.    |
 |    262    |    16    |    Não    |    Permissão %ls negada no banco de dados '%.*ls'.    |
 |    263    |    16    |    Não    |    É necessário especificar a tabela da qual deve ser feita a seleção.    |
-|    264    |    16    |    Não    |    O nome da coluna '%. *ls' foi especificado mais de uma vez na cláusula SET. Não é possível atribuir mais de um valor a uma coluna na mesma cláusula SET. Modifique a cláusula SET para certificar-se de que a coluna seja atualizada apenas uma vez. Se a cláusula SET atualizar as colunas de uma exibição, o nome da coluna '%.* ls' poderá aparecer duas vezes na definição da exibição.    |
+|    264    |    16    |    Não    |    O nome da coluna '%.*ls' foi especificado mais de uma vez na cláusula SET. Não é possível atribuir mais de um valor a uma coluna na mesma cláusula SET. Modifique a cláusula SET para certificar-se de que a coluna seja atualizada apenas uma vez. Se a cláusula SET atualizar as colunas de uma exibição, o nome da coluna '%.* ls' poderá aparecer duas vezes na definição da exibição.    |
 |    265    |    16    |    Não    |    O nome da coluna "%.*ls" especificado no operador %ls conflita com o nome de coluna existente do argumento %ls.    |
 |    266    |    16    |    Não    |    O número de transações após EXECUTE indica um número incompatível de instruções BEGIN e COMMIT. Contagem anterior = %ld, contagem atual = %ld.    |
 |    267    |    16    |    Não    |    O objeto '%.*ls' não pode ser encontrado.    |
@@ -230,7 +230,7 @@ ORDER BY message_id
 |    294    |    16    |    Não    |    A conversão do tipo de dados char no tipo de dados smallmoney resultou em um erro de estouro do smallmoney.    |
 |    295    |    16    |    Não    |    Erro de conversão ao converter a cadeia de caracteres no tipo de dados smalldatetime.    |
 |    297    |    16    |    Não    |    O usuário não tem permissão para executar esta ação.    |
-|    300    |    14    |    Não    |    A permissão %ls foi negada no objeto '%. *ls', banco de dados '%.* ls'.    |
+|    300    |    14    |    Não    |    A permissão %ls foi negada no objeto '%.*ls', banco de dados '%.* ls'.    |
 |    301    |    16    |    Não    |    A consulta contém uma solicitação de junção externa não permitida.    |
 |    302    |    16    |    Não    |    A nova função newsequentialid() embutida somente pode ser usada em uma expressão DEFAULT de uma coluna do tipo 'uniqueidentifier' de uma instrução CREATE TABLE ou ALTER TABLE. Ela não pode ser combinada com outros operadores para formar uma expressão escalar complexa.    |
 |    303    |    16    |    Não    |    A tabela '%.*ls' é um membro interno de uma cláusula de junção externa. Isso não é permitido se a tabela também participar de uma cláusula de junção regular.    |
@@ -238,14 +238,14 @@ ORDER BY message_id
 |    305    |    16    |    Não    |    O tipo de dados XML não pode ser comparado ou classificado, exceto quando é usado o operador IS NULL.    |
 |    306    |    16    |    Não    |    Os tipos de dados text, ntext e image não podem ser comparados ou classificados, exceto ao usar o operador IS NULL ou LIKE.    |
 |    307    |    16    |    Não    |    A ID do índice %d na tabela '%.*ls' (especificada na cláusula FROM) não existe.    |
-|    308    |    16    |    Não    |    O índice '%. *ls' na tabela '%.* ls' (especificado na cláusula FROM) não existe.    |
-|    309    |    16    |    Não    |    Não é possível usar o índice "%. *ls" na tabela "%.* ls" em uma dica. Índices XML não são permitidos em dicas.    |
+|    308    |    16    |    Não    |    O índice '%.*ls' na tabela '%.* ls' (especificado na cláusula FROM) não existe.    |
+|    309    |    16    |    Não    |    Não é possível usar o índice "%.*ls" na tabela "%.* ls" em uma dica. Índices XML não são permitidos em dicas.    |
 |    310    |    15    |    Não    |    O valor %d especificado para a opção MAXRECURSION excede o máximo permitido de %d.    |
 |    311    |    16    |    Não    |    Não é possível usar colunas de text, ntext ou image nas tabelas 'inserted' e 'deleted'.    |
 |    312    |    16    |    Não    |    Não é possível fazer referência a colunas de text, ntext ou image em um procedimento armazenado de filtro.    |
 |    313    |    16    |    Não    |    Um número insuficiente de argumentos foi fornecido para o procedimento ou função %.*ls.    |
 |    314    |    16    |    Não    |    Não é possível usar GROUP BY ALL com as tabelas especiais INSERTED ou DELETED.    |
-|    315    |    16    |    Não    |    O índice "%. *ls" na tabela "%.* ls" (especificado na cláusula FROM) está desabilitado ou reside em um grupo de arquivos que não está online.    |
+|    315    |    16    |    Não    |    O índice "%.*ls" na tabela "%.* ls" (especificado na cláusula FROM) está desabilitado ou reside em um grupo de arquivos que não está online.    |
 |    316    |    16    |    Não    |    A ID do índice %d na tabela "%.*ls" (especificada na cláusula FROM) está desabilitada ou reside em um grupo de arquivos que não está online.    |
 |    317    |    16    |    Não    |    A função com valor de tabela '%.*ls' não pode ter um alias de coluna.    |
 |    318    |    16    |    Não    |    A tabela (e suas colunas) retornada por um método com valor de tabela precisa receber um alias.    |
@@ -256,7 +256,7 @@ ORDER BY message_id
 |    323    |    16    |    Não    |    A cláusula 'COMPUTE' não é permitida em uma instrução que contém o operador INTERSECT ou EXCEPT.    |
 |    324    |    15    |    Não    |    A versão 'ALL' do operador %.*ls não é suportada.    |
 |    325    |    15    |    Não    |    Sintaxe incorreta próxima a '%.*ls'. Talvez seja necessário definir o nível de compatibilidade do banco de dados atual em um valor mais alto para habilitar este recurso. Consulte a ajuda da opção SET COMPATIBILITY_LEVEL de ALTER DATABASE.    |
-|    326    |    16    |    Não    |    O identificador de várias partes '%. *ls' é ambíguo. Ambas as colunas '%.* ls' e '%.*ls' existem.    |
+|    326    |    16    |    Não    |    O identificador de várias partes '%.*ls' é ambíguo. Ambas as colunas '%.* ls' e '%.*ls' existem.    |
 |    327    |    16    |    Não    |    A chamada de função '%.*ls' é ambígua: uma função definida pelo usuário e uma chamada de método com este nome já existem.    |
 |    328    |    16    |    Não    |    Não foi possível gerar um plano de cursor para a instrução porque a função textptr() foi usada em uma coluna LOB de uma das tabelas base.    |
 |    329    |    16    |    Não    |    Cada expressão GROUP BY deve conter pelo menos uma referência de coluna.    |
@@ -270,18 +270,18 @@ ORDER BY message_id
 |    337    |    10    |    Não    |    Aviso: o valor de ponto flutuante '%.*ls' é muito pequeno. Será interpretado como 0.    |
 |    338    |    16    |    Não    |    As instruções READEXT, WRITETEXT e UPDATETEXT não podem ser usadas com exibições, tabelas remotas e tabelas inseridas ou excluídas em gatilhos.    |
 |    339    |    16    |    Não    |    DEFAULT ou NULL não são permitidos como valores de identidade explícitos.    |
-|    340    |    16    |    Não    |    Não é possível criar o gatilho "%. *ls" na exibição "%.* ls". Gatilhos AFTER não podem ser criados em exibições.    |
+|    340    |    16    |    Não    |    Não é possível criar o gatilho "%.*ls" na exibição "%.* ls". Gatilhos AFTER não podem ser criados em exibições.    |
 |    341    |    16    |    Não    |    Procedimentos de filtro de replicação não podem conter colunas de tipo de objeto grande, valor grande, XML ou CLR.    |
-|    342    |    16    |    Não    |    A coluna "%. *ls" não é permitida neste contexto e não foi possível encontrar a função definida pelo usuário ou a agregação "%.* ls".    |
+|    342    |    16    |    Não    |    A coluna "%.*ls" não é permitida neste contexto e não foi possível encontrar a função definida pelo usuário ou a agregação "%.* ls".    |
 |    343    |    15    |    Não    |    Tipo de objeto desconhecido '%.*ls' usado em uma instrução CREATE, DROP ou ALTER.    |
-|    344    |    16    |    Não    |    A referência à função remota '%. *ls' não é permitida e não foi possível encontrar o nome da coluna '%.* ls' ou ele é ambíguo.    |
+|    344    |    16    |    Não    |    A referência à função remota '%.*ls' não é permitida e não foi possível encontrar o nome da coluna '%.* ls' ou ele é ambíguo.    |
 |    345    |    16    |    Não    |    A função '%.*ls' não é permitida na cláusula OUTPUT, pois ela executa, ou supõe-se que executa, acesso a dados de usuário ou de sistema. Por padrão, se uma função não estabelece associação com o esquema, supõe-se que ela execute acesso a dados.    |
 |    346    |    15    |    Não    |    Não é possível declarar o parâmetro "%.*ls" como READONLY, uma vez que ele não é um parâmetro com valor de tabela.    |
 |    347    |    16    |    Não    |    "Não é possível declarar o parâmetro com valor de tabela "%.*ls" como um parâmetro OUTPUT.    |
 |    348    |    16    |    Não    |    Não é possível passar a variável de tabela "%.*ls" para um procedimento armazenado com a opção OUTPUT.    |
-|    349    |    16    |    Não    |    O procedimento "%. *ls" não tem nenhum parâmetro denominado "%.* ls".    |
+|    349    |    16    |    Não    |    O procedimento "%.*ls" não tem nenhum parâmetro denominado "%.* ls".    |
 |    350    |    16    |    Não    |    A coluna "%.*ls" não tem um tipo de dados válido. Uma coluna não pode ser de um tipo de tabela definido pelo usuário.    |
-|    351    |    16    |    Não    |    Coluna, parâmetro ou variável %. *ls. : Não é possível localizar o tipo de dados %.* ls.    |
+|    351    |    16    |    Não    |    Coluna, parâmetro ou variável %.*ls. : Não é possível localizar o tipo de dados %.* ls.    |
 |    352    |    15    |    Não    |    O parâmetro com valor de tabela "%.*ls" deve ser declarado com a opção READONLY.    |
 |    353    |    16    |    Não    |    A função '%.*ls' não é permitida na cláusula %S_MSG quando a cláusula FROM contém uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada. Isso ocorre porque a função executa, ou pressupõe-se que execute, o acesso a dados de usuário ou de sistema. Por padrão, pressupõe-se que uma função execute o acesso a dados, caso não esteja associada a um esquema.    |
 |    354    |    15    |    Não    |    O destino '%.*ls' da instrução INSERT não pode ser uma exibição ou uma expressão de tabela comum quando a cláusula FROM contém uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada.    |
@@ -311,14 +311,14 @@ ORDER BY message_id
 |    421    |    16    |    Não    |    O tipo de dados %ls não pode ser selecionado como DISTINCT porque não é comparável.    |
 |    422    |    16    |    Não    |    Expressão de tabela comum definida mas não usada.    |
 |    423    |    16    |    Não    |    Não há suporte para métodos de tipos de dados Xml em restrições de verificação. Crie uma função escalar definida pelo usuário para encapsular a invocação do método. O erro ocorreu na tabela "%.*ls".    |
-|    424    |    16    |    Não    |    Os métodos do tipo de dados xml não são suportados em definições de colunas computadas de variáveis de tabelas e retornam tabelas de funções com valor de tabela. O erro ocorreu na coluna "%. *ls", tabela "%.* ls", na instrução %ls.    |
+|    424    |    16    |    Não    |    Os métodos do tipo de dados xml não são suportados em definições de colunas computadas de variáveis de tabelas e retornam tabelas de funções com valor de tabela. O erro ocorreu na coluna "%.*ls", tabela "%.* ls", na instrução %ls.    |
 |    425    |    16    |    Não    |    O tipo de dados %ls da variável de recebimento não é igual ao tipo de dados %ls da coluna '%.*ls'.    |
 |    426    |    16    |    Não    |    O comprimento %d da variável de recebimento é menor que o comprimento %d da coluna '%.*ls'.    |
 |    427    |    20    |    Sim    |    Não foi possível carregar a definição da ID de restrição %d na ID de banco de dados %d. Execute DBCC CHECKCATALOG para verificar a integridade do banco de dados.    |
 |    428    |    16    |    Não    |    A inserção em massa não pode ser usada em um lote de várias instruções.    |
 |    432    |    16    |    Não    |    Não há mais suporte para métodos de tipos de dados Xml em restrições de verificação. Descarte a restrição ou crie uma função escalar definida pelo usuário para encapsular a invocação do método. O erro ocorreu na tabela "%.*ls".    |
 |    434    |    16    |    Não    |    A função '%ls' não é permitida na cláusula OUTPUT.    |
-|    435    |    16    |    Não    |    Os métodos do tipo de dados xml não são suportados em definições de colunas computadas. Crie uma função escalar definida pelo usuário para encapsular a invocação do método. O erro ocorreu na coluna "%. *ls", tabela "%.* ls", na instrução %ls.    |
+|    435    |    16    |    Não    |    Os métodos do tipo de dados xml não são suportados em definições de colunas computadas. Crie uma função escalar definida pelo usuário para encapsular a invocação do método. O erro ocorreu na coluna "%.*ls", tabela "%.* ls", na instrução %ls.    |
 |    438    |    16    |    Não    |    Não são permitidos métodos de tipos de dados Xml em regras. O erro ocorreu na tabela "%.*ls".    |
 |    440    |    16    |    Não    |    Erro interno de compilação de consulta. Não foi possível manipular o estouro da pilha.    |
 |    441    |    16    |    Não    |    Não é possível usar a função '%ls' em uma fonte de dados remotos.    |
@@ -329,7 +329,7 @@ ORDER BY message_id
 |    446    |    16    |    Não    |    Não é possível resolver o conflito de ordenação da operação %ls.    |
 |    447    |    16    |    Não    |    Tipo de expressão %ls inválido para a cláusula COLLATE.    |
 |    448    |    16    |    Não    |    Ordenação '%.*ls' inválida.    |
-|    449    |    16    |    Não    |    Conflito de ordenação causado pelas cláusulas agrupadas '%. *ls' e '%.* ls'. com diferentes ordenações.    |
+|    449    |    16    |    Não    |    Conflito de ordenação causado pelas cláusulas agrupadas '%.*ls' e '%.* ls'. com diferentes ordenações.    |
 |    450    |    16    |    Não    |    As conversões de páginas de código não têm suporte para o tipo de dados text. De: %d para: %d.    |
 |    451    |    16    |    Não    |    Não foi possível resolver o conflito de ordenação da coluna %d na instrução %ls.    |
 |    452    |    16    |    Não    |    A cláusula COLLATE não pode ser usada em tipos de dados definidos pelo usuário.    |
@@ -338,7 +338,7 @@ ORDER BY message_id
 |    455    |    16    |    Não    |    A última instrução incluída em uma função deve ser uma instrução de retorno.    |
 |    456    |    16    |    Não    |    A conversão implícita do valor %ls em %ls não pode ser executada porque a ordenação resultante não está resolvida devido a um conflito de ordenação.    |
 |    457    |    16    |    Não    |    A conversão implícita do valor %ls em %ls não pode ser executada porque a ordenação do valor não foi resolvida devido a um conflito de ordenação.    |
-|    458    |    16    |    Não    |    Não foi possível criar a tabela de destino SELECT INTO "%. *ls" porque a coluna xml "%.* ls" foi tipada com uma coleção de esquemas "%. *ls" do banco de dados "%.* ls". Colunas xml não podem fazer referência a esquemas entre bancos de dados.    |
+|    458    |    16    |    Não    |    Não foi possível criar a tabela de destino SELECT INTO "%.*ls" porque a coluna xml "%.* ls" foi tipada com uma coleção de esquemas "%.*ls" do banco de dados "%.* ls". Colunas xml não podem fazer referência a esquemas entre bancos de dados.    |
 |    459    |    16    |    Não    |    A ordenação '%.*ls' tem suporte somente nos tipos de dados Unicode e não pode ser aplicada aos tipos de dados char, varchar ou text.    |
 |    460    |    16    |    Não    |    O operador DISTINCT não é permitido na parte recursiva de uma expressão de tabela comum recursiva '%.*ls'.    |
 |    461    |    16    |    Não    |    O operador TOP não é permitido na parte recursiva de uma expressão de tabela comum recursiva '%.*ls'.    |
@@ -348,9 +348,9 @@ ORDER BY message_id
 |    465    |    16    |    Não    |    Referências recursivas não são permitidas em subconsultas.    |
 |    466    |    16    |    Não    |    O operador UNION não é permitido na parte recursiva de uma expressão de tabela comum recursiva '%.*ls'.    |
 |    467    |    16    |    Não    |    GROUP BY, HAVING ou funções de agregação não são permitidas na parte recursiva de uma expressão de tabela comum recursiva '%.*ls'.    |
-|    468    |    16    |    Não    |    Não é possível resolver o conflito de ordenação entre "%. *ls" e "%.* ls" na operação %ls.    |
+|    468    |    16    |    Não    |    Não é possível resolver o conflito de ordenação entre "%.*ls" e "%.* ls" na operação %ls.    |
 |    469    |    16    |    Não    |    É necessário especificar uma lista de colunas explícita para a tabela de destino '%.*ls' quando é usada a dica de tabela KEEPIDENTITY e a tabela contém uma coluna de identidade.    |
-|    470    |    16    |    Não    |    O sinônimo "%. *ls" fez referência ao sinônimo "%.* ls". Não é permitido o encadeamento de sinônimos.    |
+|    470    |    16    |    Não    |    O sinônimo "%.*ls" fez referência ao sinônimo "%.* ls". Não é permitido o encadeamento de sinônimos.    |
 |    471    |    16    |    Não    |    Apenas uma das três opções, SINGLE_BLOB, SINGLE_CLOB ou SINGLE_NCLOB, pode ser especificada.    |
 |    472    |    16    |    Não    |    É necessário especificar um arquivo de formato ou uma das opções SINGLE_BLOB, SINGLE_CLOB, ou SINGLE_NCLOB.    |
 |    473    |    16    |    Não    |    Valor incorreto "%.*ls" fornecido no operador PIVOT.    |
@@ -365,7 +365,7 @@ ORDER BY message_id
 |    482    |    16    |    Não    |    Há um expressão não constante ou inválida na cláusula TABLESAMPLE ou REPEATABLE.    |
 |    483    |    16    |    Não    |    A cláusula OUTPUT não pode ser usada em uma instrução INSERT...EXEC.    |
 |    484    |    16    |    Não    |    Não é possível declarar mais de %d variáveis locais.    |
-|    485    |    16    |    Não    |    As exibições e as funções embutidas não podem retornar colunas xml digitadas com uma coleção de esquemas registrados em um banco de dados diferente do atual. A coluna "%. *ls" é tipada com a coleção de esquema "%.* ls" que está registrado no banco de dados "%.*ls".    |
+|    485    |    16    |    Não    |    As exibições e as funções embutidas não podem retornar colunas xml digitadas com uma coleção de esquemas registrados em um banco de dados diferente do atual. A coluna "%.*ls" é tipada com a coleção de esquema "%.* ls" que está registrado no banco de dados "%.*ls".    |
 |    486    |    16    |    Não    |    %.*ls não permite especificar um nome de esquema como prefixo do nome do assembly.    |
 |    487    |    16    |    Não    |    Opção inválida especificada para a instrução "%.*ls".    |
 |    488    |    16    |    Não    |    As colunas %s devem ser comparáveis. O tipo de coluna "%.*ls" é "%s", o que não é comparável.    |
@@ -388,8 +388,8 @@ ORDER BY message_id
 |    510    |    16    |    Não    |    Não é possível criar uma linha da tabela de trabalho maior que o máximo permitido. Envie novamente a consulta com a dica ROBUST PLAN.    |
 |    [511](mssqlserver-511-database-engine-error.md)    |    16    |    Não    |    Não é possível criar uma linha com o tamanho %d que seja maior que o tamanho de linha máximo permitido de %d.    |
 |    512    |    16    |    Não    |    A subconsulta retornou mais de um valor. Isso não é permitido quando a subconsulta segue =, !=, <, <= , >, >= ou quando ela é usada como uma expressão.    |
-|    513    |    16    |    Não    |    Uma inserção ou atualização de coluna está em conflito com uma regra imposta por uma instrução CREATE RULE anterior. Instrução finalizada. O conflito ocorreu no banco de dados '%. *ls', tabela '%.* ls', coluna '%.*ls'.    |
-|    515    |    16    |    Não    |    Não é possível inserir o valor NULL na coluna '%. *ls', tabela '%.* ls'; a coluna não permite nulos. Falha em %ls.    |
+|    513    |    16    |    Não    |    Uma inserção ou atualização de coluna está em conflito com uma regra imposta por uma instrução CREATE RULE anterior. Instrução finalizada. O conflito ocorreu no banco de dados '%.*ls', tabela '%.* ls', coluna '%.*ls'.    |
+|    515    |    16    |    Não    |    Não é possível inserir o valor NULL na coluna '%.*ls', tabela '%.* ls'; a coluna não permite nulos. Falha em %ls.    |
 |    517    |    16    |    Não    |    A adição de um valor a uma coluna '%ls' causou um estouro.    |
 |    518    |    16    |    Não    |    Não é possível converter o de tipo de dados %ls em %ls.    |
 |    522    |    16    |    Não    |    O thread WAITFOR foi removido.    |
@@ -403,7 +403,7 @@ ORDER BY message_id
 |    531    |    10    |    Não    |    Não é possível definir NOCOUNT como OFF na execução do gatilho porque a opção de servidor "disallow_results_from_triggers" é true ou estamos dentro da execução do gatilho LOGON.    |
 |    532    |    16    |    Não    |    O carimbo de data/hora (alterado para %S_TS) mostra que a linha foi atualizada por outro usuário.    |
 |    533    |    10    |    Não    |    Só é possível definir XACT ABORT como OFF dentro da execução do gatilho se a compatibilidade do banco de dados for 90.    |
-|    534    |    16    |    Não    |    '%. *ls' falhou porque não é suportado na edição desta instância '%.* ls'. do SQL Server. Consulte os manuais online para saber mais sobre os recursos compatíveis em diferentes edições do SQL Server.    |
+|    534    |    16    |    Não    |    '%.*ls' falhou porque não é suportado na edição desta instância '%.* ls'. do SQL Server. Consulte os manuais online para saber mais sobre os recursos compatíveis em diferentes edições do SQL Server.    |
 |    535    |    16    |    Não    |    A função datediff resultou em um estouro. O número de dateparts separando duas instâncias de data/hora é muito grande. Tente usar datediff com uma datepart menos precisa.    |
 |    536    |    16    |    Não    |    Parâmetro de comprimento inválido passado para a função %ls.    |
 |    537    |    16    |    Não    |    Parâmetro de comprimento inválido passado para a função LEFT ou SUBSTRING.    |
@@ -414,9 +414,9 @@ ORDER BY message_id
 |    543    |    16    |    Não    |    Falha ao criar uma tabela de retorno para a função com valor de tabela '%.*ls'.    |
 |    544    |    16    |    Não    |    Não é possível inserir um valor explícito para a coluna de identidade na tabela '%.*ls' quando IDENTITY_INSERT está definido como OFF.    |
 |    545    |    16    |    Não    |    Deve ser especificado um valor explícito para a coluna de identidade na tabela '%.*ls' quando IDENTITY_INSERT está definido como ON ou quando um usuário de replicação está inserindo em uma coluna de identidade NOT FOR REPLICATION.    |
-|    547    |    16    |    Não    |    A instrução %ls entrou em conflito com a restrição %ls "%. *ls". O conflito ocorreu no banco de dados "%.* ls", tabela "%. *ls"%ls%.* ls%ls.    |
-|    548    |    16    |    Não    |    Falha na inserção. Ela entrou em conflito com uma restrição de verificação de intervalo de identidade no banco de dados '%. *ls', na tabela replicada '%.* ls'%ls%.*ls%ls. Se a coluna de identidade for gerenciada automaticamente por replicação, atualize o intervalo desta forma: para o Publicador, execute sp_adjustpublisheridentityrange; para o Assinante, execute o Distribution Agent ou o Merge Agent.    |
-|    549    |    16    |    Não    |    A ordenação '%. *ls' da variável de recebimento não é igual à ordenação '%.* ls' da coluna '%.*ls'.    |
+|    547    |    16    |    Não    |    A instrução %ls entrou em conflito com a restrição %ls "%.*ls". O conflito ocorreu no banco de dados "%.* ls", tabela "%.*ls"%ls%.* ls%ls.    |
+|    548    |    16    |    Não    |    Falha na inserção. Ela entrou em conflito com uma restrição de verificação de intervalo de identidade no banco de dados '%.*ls', na tabela replicada '%.* ls'%ls%.*ls%ls. Se a coluna de identidade for gerenciada automaticamente por replicação, atualize o intervalo desta forma: para o Publicador, execute sp_adjustpublisheridentityrange; para o Assinante, execute o Distribution Agent ou o Merge Agent.    |
+|    549    |    16    |    Não    |    A ordenação '%.*ls' da variável de recebimento não é igual à ordenação '%.* ls' da coluna '%.*ls'.    |
 |    550    |    16    |    Não    |    Falha ao tentar inserir ou atualizar porque a exibição de destino especifica WITH CHECK OPTION ou ultrapassa uma exibição que especifica WITH CHECK OPTION e uma ou mais linhas resultantes da operação não se qualifica na restrição CHECK OPTION.    |
 |    552    |    16    |    Não    |    Falha na função CryptoAPI '%ls'. Erro 0x%x: %ls    |
 |    555    |    16    |    Não    |    As funções definidas pelo usuário ainda não estão habilitadas.    |
@@ -476,19 +476,19 @@ ORDER BY message_id
 |    628    |    16    |    Não    |    Não é possível emitir SAVE TRANSACTION quando não há uma transação ativa.    |
 |    650    |    16    |    Não    |    Você só pode especificar o bloqueio READPAST nos níveis de isolamento READ COMMITTED ou REPEATABLE READ.    |
 |    651    |    16    |    Não    |    Não é possível usar a dica de granularidade %ls na tabela "%.*ls" porque o bloqueio na granularidade especificada está inibido.    |
-|    652    |    16    |    Não    |    O índice "%. *ls" da tabela "%.* ls" (RowsetId %I64d) reside em um grupo de arquivos somente leitura ("%.*ls") que não pode ser modificado.    |
+|    652    |    16    |    Não    |    O índice "%.*ls" da tabela "%.* ls" (RowsetId %I64d) reside em um grupo de arquivos somente leitura ("%.*ls") que não pode ser modificado.    |
 |    666    |    16    |    Não    |    O valor exclusivo máximo gerado pelo sistema para um grupo duplicado foi excedido para o índice com ID de partição %I64d. Talvez o problema possa ser resolvido descartando e recriando o índice. Caso contrário, use outra chave de cluster.    |
-|    667    |    16    |    Não    |    O índice "%. *ls" da tabela "%.* ls" (RowsetId %I64d) reside em um grupo de arquivos ("%.*ls") que não pode ser acessado porque está offline, está sendo restaurado ou está desativado.    |
+|    667    |    16    |    Não    |    O índice "%.*ls" da tabela "%.* ls" (RowsetId %I64d) reside em um grupo de arquivos ("%.*ls") que não pode ser acessado porque está offline, está sendo restaurado ou está desativado.    |
 |    669    |    22    |    Não    |    O objeto row está inconsistente. Execute novamente a consulta.    |
-|    670    |    16    |    Não    |    Os dados de objeto grande (LOB) para a tabela "%. *ls" residem em um grupo de arquivos offline ("%.* ls") que não pode ser acessado.    |
-|    671    |    16    |    Não    |    Os dados de objeto grande (LOB) para a tabela "%. *ls" residem em um grupo de arquivos somente leitura ("%.* ls") que não pode ser modificado.    |
+|    670    |    16    |    Não    |    Os dados de objeto grande (LOB) para a tabela "%.*ls" residem em um grupo de arquivos offline ("%.* ls") que não pode ser acessado.    |
+|    671    |    16    |    Não    |    Os dados de objeto grande (LOB) para a tabela "%.*ls" residem em um grupo de arquivos somente leitura ("%.* ls") que não pode ser modificado.    |
 |    672    |    10    |    Não    |    Falha ao enfileirar pacotes de limpeza para conjuntos de linhas órfãos no banco de dados "%.*ls". Poderá ser perdido espaço em disco. Uma nova tentativa de limpeza será feita na reinicialização do banco de dados.    |
 |    674    |    10    |    Sim    |    Exceção no destruidor de RowsetNewSS 0x%p. Esse erro pode indicar um problema relacionado à liberação de blocos de disco pré-alocados usados durante operações de inserção em massa. Reinicie o servidor para resolver o problema.    |
 |    675    |    10    |    Sim    |    Tabela de trabalho com ID de partição %I64d descartada com êxito após repetidas tentativas.    |
 |    676    |    10    |    Sim    |    Erro ao tentar descartar a tabela de trabalho com ID de partição %I64d.    |
 |    677    |    10    |    Sim    |    Não foi possível descartar a tabela de trabalho com ID de partição %I64d após repetidas tentativas. A tabela de trabalho está marcada para descarte adiado. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    678    |    10    |    Sim    |    Conjunto de linhas ativo da ID de partição %I64d encontrado no final do lote. Esse erro pode indicar um tratamento de exceção incorreto. Use a janela de atividade atual no SQL Server Management Studio ou a instrução Transact-SQL KILL para encerrar o SPID (identificador de processo de servidor) responsável por gerar o erro.    |
-|    679    |    16    |    Não    |    Uma das partições do índice '%. *ls' da tabela '%.* ls'(ID de partição %I64d) reside em um grupo de arquivos ("%.*ls") que não pode ser acessado porque está offline, em restauração ou inativo. Isso pode limitar o resultado da consulta.    |
+|    679    |    16    |    Não    |    Uma das partições do índice '%.*ls' da tabela '%.* ls'(ID de partição %I64d) reside em um grupo de arquivos ("%.*ls") que não pode ser acessado porque está offline, em restauração ou inativo. Isso pode limitar o resultado da consulta.    |
 |    680    |    10    |    Sim    |    Erro [%d, %d, %d] ao tentar descartar ID de unidade de alocação %I64d pertencente à tabela de trabalho com ID de partição %I64d.    |
 |    681    |    16    |    Não    |    Tentativa de definir um valor de coluna não passível de NULL como NULL.    |
 |    682    |    16    |    Não    |    Erro interno. O buffer fornecido para ler o valor da coluna é muito pequeno. Execute DBCC CHECKDB para verificar se há danos.    |
@@ -528,17 +528,17 @@ ORDER BY message_id
 |    [856](mssqlserver-856-database-engine-error.md)    |    10    |    Sim    |    O SQL Server detectou uma corrupção de memória de hardware no banco de dados '%ls', ID do arquivo: %u, ID da página: %u, endereço de memória: 0x%I64x e recuperou a página com êxito.    |
 |    902    |    16    |    Não    |    Para alterar o %ls, o banco de dados deve estar no estado em que um ponto de verificação possa ser executado.    |
 |    904    |    16    |    Não    |    O banco de dados %ld não pode ser iniciado automaticamente durante o encerramento ou a inicialização do servidor.    |
-|    [905](mssqlserver-905-database-engine-error.md)    |    21    |    Sim    |    O banco de dados '%. *ls' não pode ser iniciado nesta edição do SQL Server porque contém uma função de partição '%.* ls'. Somente a edição Enterprise do SQL Server oferece suporte ao particionamento.    |
+|    [905](mssqlserver-905-database-engine-error.md)    |    21    |    Sim    |    O banco de dados '%.*ls' não pode ser iniciado nesta edição do SQL Server porque contém uma função de partição '%.* ls'. Somente a edição Enterprise do SQL Server oferece suporte ao particionamento.    |
 |    907    |    16    |    Não    |    O banco de dados "%ls" tem metadados de banco de dados ou de arquivo inconsistentes.    |
 |    908    |    10    |    Sim    |    O grupo de arquivos %ls no banco de dados %ls está indisponível porque é %ls. Restaure ou altere o grupo de arquivos para que fique disponível.    |
-|    909    |    21    |    Sim    |    Não é possível iniciar o banco de dados '%. *ls' nesta edição do SQL Server porque todo o objeto '%.* ls' ou parte dele está habilitada com compactação de dados ou formato de armazenamento vardecimal. A compactação de dados e o formato de armazenamento vardecimal só têm suporte no SQL Server Enterprise Edition.    |
-|    910    |    10    |    Não    |    O banco de dados '%. *ls' está atualizando o script '%.* ls' do nível %d para o nível %d.    |
+|    909    |    21    |    Sim    |    Não é possível iniciar o banco de dados '%.*ls' nesta edição do SQL Server porque todo o objeto '%.* ls' ou parte dele está habilitada com compactação de dados ou formato de armazenamento vardecimal. A compactação de dados e o formato de armazenamento vardecimal só têm suporte no SQL Server Enterprise Edition.    |
+|    910    |    10    |    Não    |    O banco de dados '%.*ls' está atualizando o script '%.* ls' do nível %d para o nível %d.    |
 |    911    |    16    |    Não    |    O banco de dados '%.*ls' não existe. Verifique se o nome foi digitado corretamente.    |
-|    912    |    16    |    Não    |    A atualização de nível de script para o banco de dados '%. *ls' falhou porque a etapa de atualização '%.* ls' encontrou o erro %d, estado %d, gravidade %d. Esta é uma condição de erro grave que pode interferir na operação normal e o banco de dados será colocado offline. Se o erro ocorreu durante a atualização do banco de dados 'mestre', ele impedirá que toda a instância do SQL Server seja iniciada. Examine as entradas anteriores do log de erros, execute as ações corretivas apropriadas e reinicie o banco de dados, para que as etapas de atualização do script sejam concluídas.    |
+|    912    |    16    |    Não    |    A atualização de nível de script para o banco de dados '%.*ls' falhou porque a etapa de atualização '%.* ls' encontrou o erro %d, estado %d, gravidade %d. Esta é uma condição de erro grave que pode interferir na operação normal e o banco de dados será colocado offline. Se o erro ocorreu durante a atualização do banco de dados 'mestre', ele impedirá que toda a instância do SQL Server seja iniciada. Examine as entradas anteriores do log de erros, execute as ações corretivas apropriadas e reinicie o banco de dados, para que as etapas de atualização do script sejam concluídas.    |
 |    913    |    22    |    Sim    |    Não foi possível localizar a ID de banco de dados %d. O banco de dados talvez ainda não esteja ativado ou esteja em transição. Emita a consulta novamente depois que o banco de dados estiver disponível. Se você acreditar que o erro não foi causado por um banco de dados em transição de estado e se o erro persistir, contate o provedor de suporte. Tenha em mãos o log de erros do Microsoft SQL Server e todas as informações adicionais pertinentes às circunstâncias da ocorrência do erro.    |
-|    914    |    21    |    Não    |    A atualização de nível de script para o banco de dados '%. *ls' falhou porque a etapa de atualização '%.* ls' foi anulada antes da conclusão. Se a anulação ocorreu durante a atualização do banco de dados 'mestre', isso impedirá que toda a instância do SQL Server seja iniciada. Examine as entradas anteriores do log de erros, execute as ações corretivas apropriadas e reinicie o banco de dados, para que as etapas de atualização do script sejam concluídas.    |
+|    914    |    21    |    Não    |    A atualização de nível de script para o banco de dados '%.*ls' falhou porque a etapa de atualização '%.* ls' foi anulada antes da conclusão. Se a anulação ocorreu durante a atualização do banco de dados 'mestre', isso impedirá que toda a instância do SQL Server seja iniciada. Examine as entradas anteriores do log de erros, execute as ações corretivas apropriadas e reinicie o banco de dados, para que as etapas de atualização do script sejam concluídas.    |
 |    915    |    21    |    Não    |    Não foi possível obter o nível de script atual para o banco de dados '%.*ls'. Se o erro ocorreu durante a inicialização do banco de dados 'mestre', ele impedirá que toda a instância do SQL Server seja iniciada. Examine as entradas do log de erros anterior, execute as ações corretivas adequadas e reinicie o banco de dados, para que a atualização do script seja executada até a conclusão.    |
-|    [916](mssqlserver-916-database-engine-error.md)    |    14    |    Não    |    A entidade de segurança do servidor "%. *ls" não é capaz de acessar o banco de dados "%.* ls" no contexto de segurança atual.    |
+|    [916](mssqlserver-916-database-engine-error.md)    |    14    |    Não    |    A entidade de segurança do servidor "%.*ls" não é capaz de acessar o banco de dados "%.* ls" no contexto de segurança atual.    |
 |    917    |    21    |    Não    |    Falha na execução de um lote de scripts de atualização do banco de dados '%.*ls' devido a erro de compilação. Procure na mensagem de erro anterior a linha que causou a falha de compilação.    |
 |    918    |    21    |    Não    |    Falha ao carregar metadados do script do mecanismo da DLL do script '%.*ls'. O código de erro informado pelo Windows foi %d. Essa é uma condição de erro grave, que normalmente indica uma instalação corrompida ou incompleta. O reparo da instância do SQL Server poderá ajudar a resolver o erro.    |
 |    919    |    10    |    Não    |    O usuário '%.*ls' está alterando a entrada do nível de script do banco de dados %d para um valor %d.    |
@@ -557,7 +557,7 @@ ORDER BY message_id
 |    932    |    21    |    Sim    |    O SQL Server não pode carregar o banco de dados '%.*ls' porque o controle de alterações está habilitado. A edição do SQL Server instalada não dá suporte para o controle de alterações. Desabilite esse controle no banco de dados usando uma edição do SQL Server com suporte ou atualize a instância para uma que dê suporte para o controle de alterações.    |
 |    933    |    21    |    Sim    |    O banco de dados '%.*ls' não pode ser iniciado porque alguma funcionalidade do banco de dados não está disponível na edição atual do SQL Server.    |
 |    934    |    21    |    Sim    |    O SQL Server não pode carregar o banco de dados '%.*ls' porque o Change Data Capture está habilitado. A edição do SQL Server instalada não dá suporte ao Change Data Capture. Desabilite-o no banco de dados usando uma edição do SQL Server com suporte, ou atualize a instância para uma que dê suporte ao Change Data Capture.    |
-|    935    |    21    |    Sim    |    O nível de script para '%. *ls' no banco de dados '%.* ls' não pode ser desatualizado de %d para %d, o que é compatível com este servidor. Isso normalmente indica que um futuro banco de dados foi anexado e o caminho da desatualização não é suportado pela instalação atual. Instale uma versão mais recente do SQL Server e tente abrir o banco de dados novamente.    |
+|    935    |    21    |    Sim    |    O nível de script para '%.*ls' no banco de dados '%.* ls' não pode ser desatualizado de %d para %d, o que é compatível com este servidor. Isso normalmente indica que um futuro banco de dados foi anexado e o caminho da desatualização não é suportado pela instalação atual. Instale uma versão mais recente do SQL Server e tente abrir o banco de dados novamente.    |
 |    942    |    14    |    Não    |    O banco de dados '%.*ls' não pode ser aberto porque está offline.    |
 |    943    |    14    |    Não    |    O banco de dados '%.*ls' não pode ser aberto porque sua versão (%d) é mais recente do que a versão atual do servidor (%d).    |
 |    944    |    10    |    Não    |    Convertendo o banco de dados '%.*ls' da versão %d na versão atual %d.    |
@@ -575,24 +575,24 @@ ORDER BY message_id
 |    957    |    17    |    Não    |    O banco de dados '%.*ls' está habilitado para Espelhamento de Banco de Dados. O nome do banco de dados não pode ser alterado.    |
 |    958    |    10    |    Sim    |    A versão do banco de dados de recursos é %.*ls. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    959    |    20    |    Sim    |    A versão do banco de dados de recursos é %d e este servidor suporta a versão %d. Restaure a versão correta ou reinstale o SQL Server.    |
-|    960    |    10    |    Não    |    Aviso: o usuário "sys" (principal_id = %d) no banco de dados "%. *ls" foi renomeado como "%.* ls". "sys" é um nome de esquema ou de usuário reservado nesta versão do SQL Server.    |
-|    961    |    10    |    Não    |    Aviso: o índice "%. *ls" (index_id = %d) na ID de objeto %d no banco de dados "%.* ls" foi renomeado como "%.*ls", pois seu nome é uma duplicata de outro índice no mesmo objeto.    |
-|    962    |    10    |    Não    |    Aviso: a chave primária ou a restrição exclusiva "%. *ls" (object_id = %d) no banco de dados "%.* ls" foi renomeada como "%.*ls" porque seu índice foi renomeado.    |
+|    960    |    10    |    Não    |    Aviso: o usuário "sys" (principal_id = %d) no banco de dados "%.*ls" foi renomeado como "%.* ls". "sys" é um nome de esquema ou de usuário reservado nesta versão do SQL Server.    |
+|    961    |    10    |    Não    |    Aviso: o índice "%.*ls" (index_id = %d) na ID de objeto %d no banco de dados "%.* ls" foi renomeado como "%.*ls", pois seu nome é uma duplicata de outro índice no mesmo objeto.    |
+|    962    |    10    |    Não    |    Aviso: a chave primária ou a restrição exclusiva "%.*ls" (object_id = %d) no banco de dados "%.* ls" foi renomeada como "%.*ls" porque seu índice foi renomeado.    |
 |    963    |    10    |    Não    |    Aviso: o banco de dados "%.*ls" foi marcado como suspeito devido a ações executadas durante a atualização. Consulte o log de erros para obter mais informações. Use ALTER DATABASE para colocar o banco de dados online. O banco de dados ficará online no estado restricted_user.    |
-|    964    |    10    |    Não    |    Aviso: o usuário do sistema '%. *ls' não foi encontrado no banco de dados '%.* ls' e foi restaurado. Esse usuário é necessário para a operação do SQL Server.    |
-|    965    |    10    |    Não    |    Aviso: foi detectada uma inconsistência de nulidade de coluna nos metadados do índice "%. *ls" (index_id = %d) na ID de objeto %d do banco de dados "%.* ls". O índice pode estar danificado. Execute DBCC CHECKTABLE para verificar a consistência.    |
-|    966    |    10    |    Não    |    Aviso: o assembly "%. *ls", no banco de dados "%.* ls", foi renomeado para "%.*ls" porque o nome do assembly entra em conflito com um assembly do sistema nesta versão do SQL Server.    |
-|    967    |    10    |    Não    |    Aviso: o índice "%. *ls" em "%.* ls"."%.*ls" está desabilitado porque os dados XML associados a ele podem conter valores negativos para xs:date e xs:dateTime, que não são mais aceitos.    |
-|    968    |    10    |    Não    |    Aviso: a faceta XML no tipo "%. *ls" da coleção de esquemas "%.* ls" é atualizada de "%. *ls" para "%.* ls", pois o SQL Server não oferece suporte a anos negativos em valores do tipo xs:date ou xs:dateTime.    |
-|    969    |    10    |    Não    |    Aviso: o valor padrão ou fixo no atributo ou elemento XML "%. *ls" da coleção de esquemas "%.* ls" é atualizado de "%. *ls" para "%.* ls", pois o SQL Server não oferece suporte a anos negativos em valores do tipo xs:date ou xs:dateTime.    |
-|    970    |    10    |    Não    |    Aviso: as instâncias XML na coluna XML "%. *ls.%.* ls.%.*ls" podem conter valores negativos de tipo simples xs:date ou xs:dateTime. Não será possível executar XQuery ou criar um índice XML primário nessas instâncias XML.    |
-|    971    |    10    |    Não    |    O banco de dados de recursos foi detectado em dois locais diferentes. Anexando o banco de dados de recursos no mesmo diretório que sqlservr.exe em '%. *ls', ao invés do banco de dados de recursos anexado no momento em '%.* ls'.    |
+|    964    |    10    |    Não    |    Aviso: o usuário do sistema '%.*ls' não foi encontrado no banco de dados '%.* ls' e foi restaurado. Esse usuário é necessário para a operação do SQL Server.    |
+|    965    |    10    |    Não    |    Aviso: foi detectada uma inconsistência de nulidade de coluna nos metadados do índice "%.*ls" (index_id = %d) na ID de objeto %d do banco de dados "%.* ls". O índice pode estar danificado. Execute DBCC CHECKTABLE para verificar a consistência.    |
+|    966    |    10    |    Não    |    Aviso: o assembly "%.*ls", no banco de dados "%.* ls", foi renomeado para "%.*ls" porque o nome do assembly entra em conflito com um assembly do sistema nesta versão do SQL Server.    |
+|    967    |    10    |    Não    |    Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" está desabilitado porque os dados XML associados a ele podem conter valores negativos para xs:date e xs:dateTime, que não são mais aceitos.    |
+|    968    |    10    |    Não    |    Aviso: a faceta XML no tipo "%.*ls" da coleção de esquemas "%.* ls" é atualizada de "%.*ls" para "%.* ls", pois o SQL Server não oferece suporte a anos negativos em valores do tipo xs:date ou xs:dateTime.    |
+|    969    |    10    |    Não    |    Aviso: o valor padrão ou fixo no atributo ou elemento XML "%.*ls" da coleção de esquemas "%.* ls" é atualizado de "%.*ls" para "%.* ls", pois o SQL Server não oferece suporte a anos negativos em valores do tipo xs:date ou xs:dateTime.    |
+|    970    |    10    |    Não    |    Aviso: as instâncias XML na coluna XML "%.*ls.%.* ls.%.*ls" podem conter valores negativos de tipo simples xs:date ou xs:dateTime. Não será possível executar XQuery ou criar um índice XML primário nessas instâncias XML.    |
+|    971    |    10    |    Não    |    O banco de dados de recursos foi detectado em dois locais diferentes. Anexando o banco de dados de recursos no mesmo diretório que sqlservr.exe em '%.*ls', ao invés do banco de dados de recursos anexado no momento em '%.* ls'.    |
 |    972    |    17    |    Não    |    Não foi possível usar o banco de dados '%d' durante a execução do procedimento.    |
 |    973    |    10    |    Sim    |    O banco de dados %ls foi iniciado. No entanto, FILESTREAM não é compatível com as opções READ_COMMITTED_SNAPSHOT e ALLOW_SNAPSHOT_ISOLATION. Remova os arquivos FILESTREAM e os grupos de arquivos FILESTREAM ou defina READ_COMMITTED_SNAPSHOT e ALLOW_SNAPSHOT_ISOLATION como OFF.    |
 |974 | 10  | Não  |  Falha ao anexar o banco de dados do recurso no mesmo diretório que sqlservr.exe em '%.*ls', pois os arquivos do banco de dados não existem.|
 |975 | 10  | Sim |  Não foi possível atualizar objetos de sistema no banco de dados '%.*ls', pois ele é somente leitura. |
 |976 | 14  | Não  |  O banco de dados de destino, '%.*ls', está participando de um grupo de disponibilidade e atualmente não está acessível para consultas. Qualquer movimento de dados é suspenso ou a réplica de disponibilidade não é habilitada para acesso de leitura. Para permitir o acesso somente leitura a este e a outros |
-|977 | 10 |  Não  |  Aviso: não foi possível localizar o índice associado para a restrição '%. *ls' em object_id '%d' do banco de dados '%.* ls'.|
+|977 | 10 |  Não  |  Aviso: não foi possível localizar o índice associado para a restrição '%.*ls' em object_id '%d' do banco de dados '%.* ls'.|
 |978 | 14 |  Não  |  O banco de dados de destino ('%.*ls') está em um grupo de disponibilidade e está acessível no momento para conexões quando a intenção do aplicativo é definida como somente leitura. Para obter mais informações sobre a intenção do aplicativo, confira os Manuais Online do SQL Server. |
 |979  | 14 | Não  |  O banco de dados de destino ('%.*ls') está em um grupo de disponibilidade e atualmente não permite conexões somente leitura. Para obter mais informações sobre a intenção do aplicativo, confira os Manuais Online do SQL Server.|
 |980 |  21 |  Sim |  O SQL Server não pode carregar o banco de dados '%.*ls' porque ele contém um índice columnstore. A edição atualmente instalada do SQL Server |não é compatível com índices columnstore. Desabilite o índice columnstore no banco de dados usando uma edição compatível do SQL Se|
@@ -609,9 +609,9 @@ ORDER BY message_id
 |991 |  16  |    Não  | Falha ao colocar o banco de dados host '%.*ls' offline quando um ou mais de seus bancos de dados de partição estão marcados como suspeitos.|
 |992 |  16  |    Não  | Falha ao obter o bloqueio compartilhado no banco de dados '%.*ls'.|
 |993 |  10  |    Não  | Refaça para a etapa de atualização da versão aplicada de '%.*ls' do banco de dados de %d para %d.|
-|994 |  10  |    Não  | Aviso: o índice "%. *ls" em "%.* ls"."%.*ls" está desabilitado porque contém uma coluna computada.|
-|995 |  10  |    Não  | Aviso: o índice "%. *ls" em "%.* ls"."%.*ls" está desabilitado. Ele não pode ser atualizado porque reside em um grupo de arquivos somente leitura.|
-|996 |  10  |    Não  | Aviso: o índice "%. *ls" em "%.* ls"."%.*ls" está desabilitado. Este índice columnstore não pode ser atualizado, provavelmente porque excede o limite de tamanho de linha de "%d" bytes.|
+|994 |  10  |    Não  | Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" está desabilitado porque contém uma coluna computada.|
+|995 |  10  |    Não  | Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" está desabilitado. Ele não pode ser atualizado porque reside em um grupo de arquivos somente leitura.|
+|996 |  10  |    Não  | Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" está desabilitado. Este índice columnstore não pode ser atualizado, provavelmente porque excede o limite de tamanho de linha de "%d" bytes.|
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 
@@ -630,8 +630,8 @@ ORDER BY message_id
 |    1009    |    16    |    Não    |    A palavra-chave DEFAULT não é permitida em comandos DBCC.    |
 |    1010    |    15    |    Não    |    Caractere de escape '%.*ls' inválido.    |
 |    1011    |    15    |    Não    |    O nome de correlação '%.*ls' está especificado várias vezes em uma cláusula FROM.    |
-|    1012    |    15    |    Não    |    O nome de correlação '%. *ls' tem o mesmo nome exposto que a tabela '%.* ls'.    |
-|    1013    |    15    |    Não    |    Os objetos "%. *ls" e "%.* ls" da cláusula FROM têm os mesmos nomes expostos. Use nomes de correlação para diferenciá-los.    |
+|    1012    |    15    |    Não    |    O nome de correlação '%.*ls' tem o mesmo nome exposto que a tabela '%.* ls'.    |
+|    1013    |    15    |    Não    |    Os objetos "%.*ls" e "%.* ls" da cláusula FROM têm os mesmos nomes expostos. Use nomes de correlação para diferenciá-los.    |
 |    1014    |    15    |    Não    |    A cláusula TOP contém um valor inválido.    |
 |    1015    |    15    |    Não    |    Uma agregação não pode aparecer em uma cláusula ON a menos que ela esteja em uma subconsulta contida em uma cláusula HAVING ou em uma lista de seleção, e a coluna que está sendo agregada seja uma referência externa.    |
 |    1016    |    15    |    Não    |    Não é possível especificar operadores de junção externa em uma consulta que contenha tabelas unidas.    |
@@ -648,10 +648,10 @@ ORDER BY message_id
 |    1029    |    15    |    Não    |    Modo de procura inválido para subconsultas e tabelas derivadas.    |
 |    1030    |    16    |    Não    |    Somente constantes são permitidas aqui. A literal de tempo não é permitida porque faz referência à data atual.    |
 |    1031    |    15    |    Não    |    Os valores percentuais devem estar entre 0 e 100.    |
-|    1032    |    16    |    Não    |    Não é possível usar o prefixo de coluna '%. *ls'. Este deve corresponder ao objeto na cláusula UPDATE '%.* ls'.    |
+|    1032    |    16    |    Não    |    Não é possível usar o prefixo de coluna '%.*ls'. Este deve corresponder ao objeto na cláusula UPDATE '%.* ls'.    |
 |    1046    |    16    |    Não    |    A cláusula ORDER BY é inválida em exibições, funções embutidas, tabelas derivadas, subconsultas e expressões de tabela comuns, a menos que TOP ou FOR XMXL também estejam especificados.    |
 |    1034    |    15    |    Não    |    Erro de sintaxe: Especificação duplicada da ação "%.*s" na declaração do gatilho.    |
-|    1035    |    15    |    Não    |    Sintaxe incorreta próxima a '%. *ls', esperada '%.* ls'.    |
+|    1035    |    15    |    Não    |    Sintaxe incorreta próxima a '%.*ls', esperada '%.* ls'.    |
 |    1036    |    15    |    Não    |    A opção de arquivo %hs é necessária nesta instrução CREATE/ALTER DATABASE.    |
 |    1037    |    15    |    Não    |    As opções CASCADE, WITH GRANT ou AS não podem ser especificadas com permissões de instrução.    |
 |    1038    |    15    |    Não    |    Um nome de objeto ou coluna está ausente ou está vazio. Nas instruções SELECT INTO, verifique se cada coluna tem um nome. Em outras instruções, procure nomes de alias vazios. Não são permitidos aliases definidos como "" ou []. Altere o alias para um nome válido.    |
@@ -688,12 +688,12 @@ ORDER BY message_id
 |    1070    |    15    |    Não    |    Não há mais suporte para a opção CREATE INDEX '%.*ls'.    |
 |    1071    |    16    |    Não    |    Não é possível especificar um algoritmo JOIN com um JOIN remoto.    |
 |    1072    |    16    |    Não    |    Uma dica REMOTE só pode ser especificada com uma cláusula INNER JOIN.    |
-|    1073    |    15    |    Não    |    '%. *ls' não é uma opção de cursor %.* ls reconhecida.    |
+|    1073    |    15    |    Não    |    '%.*ls' não é uma opção de cursor %.* ls reconhecida.    |
 |    1074    |    15    |    Não    |    Não é permitida a criação de funções temporárias.    |
 |    1075    |    15    |    Não    |    As instruções RETURN em funções com valor escalar devem incluir um argumento.    |
 |    1076    |    15    |    Não    |    A função '%s' exige pelo menos o(s) argumento(s) %d.    |
 |    1077    |    15    |    Não    |    INSERT em uma coluna de identidade não é permitido para variáveis de tabela.    |
-|    1078    |    15    |    Não    |    '%. *ls %.* ls' não é uma opção reconhecida.    |
+|    1078    |    15    |    Não    |    '%.*ls %.* ls' não é uma opção reconhecida.    |
 |    1079    |    15    |    Não    |    Uma variável não pode ser usada para especificar um critério de pesquisa em um predicado fulltext ao ser acessada através de um cursor.    |
 |    1080    |    15    |    Não    |    O valor do inteiro %.*ls está fora do intervalo.    |
 |    1081    |    16    |    Não    |    %s não permite a especificação do nome do banco de dados como um prefixo para o nome do assembly.    |
@@ -715,8 +715,8 @@ ORDER BY message_id
 |    1097    |    15    |    Não    |    Não é possível usar If UPDATE na instrução CREATE TRIGGER.    |
 |    1098    |    15    |    Não    |    Os tipos de eventos especificados não são válidos no objeto de destino especificado.    |
 |    1099    |    15    |    Não    |    A cláusula ON não é válida nesta instrução.    |
-|    [1101](mssqlserver-1101-database-engine-error.md)    |    17    |    Sim    |    Não foi possível alocar uma nova página ao banco de dados '%. *ls' devido ao espaço em disco insuficiente no grupo de arquivos '%.* ls'. Crie o espaço necessário descartando objetos no grupo de arquivos, adicionando arquivos ao grupo de arquivos ou definindo o aumento automático para arquivos existentes no grupo de arquivos.    |
-|    [1105](mssqlserver-1105-database-engine-error.md)    |    17    |    Sim    |    Não foi possível alocar espaço ao objeto '%. *ls'%.* ls no banco de dados '%. *ls' porque o grupo de arquivos '%.* ls' está cheio. Crie espaço em disco excluindo arquivos desnecessários, descartando objetos no grupo de arquivos, adicionando arquivos ao grupo de arquivos ou definindo o aumento automático para arquivos existentes no grupo de arquivos.    |
+|    [1101](mssqlserver-1101-database-engine-error.md)    |    17    |    Sim    |    Não foi possível alocar uma nova página ao banco de dados '%.*ls' devido ao espaço em disco insuficiente no grupo de arquivos '%.* ls'. Crie o espaço necessário descartando objetos no grupo de arquivos, adicionando arquivos ao grupo de arquivos ou definindo o aumento automático para arquivos existentes no grupo de arquivos.    |
+|    [1105](mssqlserver-1105-database-engine-error.md)    |    17    |    Sim    |    Não foi possível alocar espaço ao objeto '%.*ls'%.* ls no banco de dados '%.*ls' porque o grupo de arquivos '%.* ls' está cheio. Crie espaço em disco excluindo arquivos desnecessários, descartando objetos no grupo de arquivos, adicionando arquivos ao grupo de arquivos ou definindo o aumento automático para arquivos existentes no grupo de arquivos.    |
 |    1119    |    16    |    Não    |    Falha ao remover a página IAM %S_PGID porque outra pessoa está usando o objeto ao qual essa página IAM pertence.    |
 |    1121    |    17    |    Não    |    O alocador de espaço não pôde alocar a página no banco de dados %d.    |
 |    1122    |    14    |    Não    |    Erro de tabela: Página %S_PGID. Falha do teste (%hs). O endereço 0x%x não está alinhado.    |
@@ -744,7 +744,7 @@ ORDER BY message_id
 |    1220    |    17    |    Não    |    Não há mais classes de bloqueio disponíveis na transação.    |
 |    1221    |    20    |    Sim    |    O Mecanismo de Banco de Dados está tentando liberar um grupo de bloqueios que não estão mantidos atualmente pela transação. Tente a transação novamente. Se o problema persistir, contate o provedor de suporte.    |
 |    [1222](mssqlserver-1222-database-engine-error.md)    |    16    |    Não    |    Tempo limite da solicitação de bloqueio excedido.    |
-|    1223    |    16    |    Não    |    Não é possível liberar a trava do aplicativo (Entidade de segurança do banco de dados: '%. *ls', recurso: '%.* ls') porque ele não está mantido atualmente.    |
+|    1223    |    16    |    Não    |    Não é possível liberar a trava do aplicativo (Entidade de segurança do banco de dados: '%.*ls', recurso: '%.* ls') porque ele não está mantido atualmente.    |
 |    1224    |    16    |    Não    |    Recurso de bloqueio de aplicativo inválido passado para %ls.    |
 |    1225    |    16    |    Não    |    Modo de bloqueio de aplicativo inválido passado para %ls.    |
 |    1226    |    16    |    Não    |    Proprietário de bloqueio de aplicativo inválido passado para %ls.    |
@@ -753,7 +753,7 @@ ORDER BY message_id
 |    1230    |    16    |    Não    |    Um banco de dados principal inválido passado para %ls.    |
 |    [1401](mssqlserver-1401-database-engine-error.md)    |    21    |    Sim    |    Falha na inicialização da rotina de thread mestre do espelhamento de banco de dados pelo seguinte motivo: %ls. Corrija a causa do erro e reinicialize o serviço SQL Server.    |
 |    1402    |    20    |    Sim    |    A testemunha não localizou uma entrada para o GUID de espelhamento de banco de dados {% .8x -% .4x -% .4x -% .2x% .2x -% .2x% .2x% .2x% .2x% .2x% .2x}. Existe uma incompatibilidade na configuração. Tente o comando novamente ou redefina as testemunhas de um dos parceiros de espelhamento de banco de dados.    |
-|    1403    |    16    |    Sim    |    A testemunha da sessão de espelhamento recebeu a resposta de erro %d (estado %d) da instância do servidor %. *ls para o banco de dados %.* ls. Para obter mais informações sobre o erro, consulte o log de erros dessa instância de servidor e da instância do servidor parceiro.    |
+|    1403    |    16    |    Sim    |    A testemunha da sessão de espelhamento recebeu a resposta de erro %d (estado %d) da instância do servidor %.*ls para o banco de dados %.* ls. Para obter mais informações sobre o erro, consulte o log de erros dessa instância de servidor e da instância do servidor parceiro.    |
 |    1404    |    16    |    Não    |    Falha no comando porque o espelho de banco de dados está ocupado. Emita o comando novamente mais tarde.    |
 |    1405    |    16    |    Não    |    O banco de dados "%.*ls" já está habilitado para espelhamento de banco de dados.    |
 |    [1406](mssqlserver-1406-database-engine-error.md)    |    16    |    Não    |    Não foi possível forçar o serviço com segurança. Remova o espelhamento de banco de dados e recupere o banco de dados "%.*ls" para obter acesso.    |
@@ -803,8 +803,8 @@ ORDER BY message_id
 |    1450    |    16    |    Não    |    O comando ALTER DATABASE falhou porque não foi possível criar o thread de trabalho.    |
 |    1451    |    16    |    Não    |    As informações de espelhamento de banco de dados não foram encontradas na tabela do sistema.    |
 |    1452    |    16    |    Não    |    O nome da instância do servidor parceiro deve ser diferente do das instâncias do servidor que gerenciam o banco de dados. Falha no comando ALTER DATABASE SET PARTNER.    |
-|    1453    |    17    |    Sim    |    '%. *ls', o parceiro de espelhamento remoto do banco de dados '%.* ls', encontrou o erro %d, status %d, gravidade %d. O espelhamento de banco de dados foi suspenso. Resolva o erro no servidor remoto e continue o espelhamento, ou remova o espelhamento e restabeleça a instância do servidor espelho.    |
-|    1454    |    17    |    Sim    |    O espelhamento de banco de dados será suspenso. Ao agir como parceiro de espelhamento de banco de dados '%. *ls', a instância do servidor '%.* ls' encontrou o erro %d, estado %d, gravidade %d. Os parceiros de espelhamento de banco de dados podem tentar se recuperar automaticamente do erro e continuar a sessão de espelhamento. Para obter mais informações, verifique se existem mensagens de erro adicionais no log de erros.    |
+|    1453    |    17    |    Sim    |    '%.*ls', o parceiro de espelhamento remoto do banco de dados '%.* ls', encontrou o erro %d, status %d, gravidade %d. O espelhamento de banco de dados foi suspenso. Resolva o erro no servidor remoto e continue o espelhamento, ou remova o espelhamento e restabeleça a instância do servidor espelho.    |
+|    1454    |    17    |    Sim    |    O espelhamento de banco de dados será suspenso. Ao agir como parceiro de espelhamento de banco de dados '%.*ls', a instância do servidor '%.* ls' encontrou o erro %d, estado %d, gravidade %d. Os parceiros de espelhamento de banco de dados podem tentar se recuperar automaticamente do erro e continuar a sessão de espelhamento. Para obter mais informações, verifique se existem mensagens de erro adicionais no log de erros.    |
 |    1455    |    16    |    Não    |    Não é possível forçar o serviço de espelhamento do banco de dados "%.*ls" porque este não está no estado correto para tornar-se o banco de dados principal.    |
 |    1456    |    16    |    Sim    |    Não foi possível enviar o comando ALTER DATABASE à instância do servidor remoto '%.*ls'. A configuração do espelhamento de banco de dados não foi alterada. Verifique se o servidor está conectado e tente novamente.    |
 |    [1457](mssqlserver-1457-database-engine-error.md)    |    23    |    Sim    |    A sincronização do banco de dados espelho, '%.* ls', foi interrompida, deixando o banco de dados em um estado inconsistente. Falha no comando ALTER DATABASE. Verifique se o banco de dados principal, se disponível, está funcionando novamente e online e reconecte a instância do servidor espelho para permitir que o banco de dados espelho conclua a sincronização.    |
@@ -824,12 +824,12 @@ ORDER BY message_id
 |    1471    |    16    |    Não    |    Conexão de espelhamento de banco de dados terminada. Sem memória para enviar mensagens ao banco de dados "%.*ls".    |
 |    1.472    |    16    |    Não    |    Conexão de espelhamento de banco de dados terminada. Erro de comunicação ao enviar mensagem ao banco de dados "%.*ls".    |
 |    1473    |    16    |    Não    |    Esta edição do SQL Server não permite alterar o nível de segurança. Falha no comando ALTER DATABASE.    |
-|    1474    |    16    |    Não    |    Erro de conexão do espelhamento de banco de dados %d '%. *ls' para '%.* ls'.    |
+|    1474    |    16    |    Não    |    Erro de conexão do espelhamento de banco de dados %d '%.*ls' para '%.* ls'.    |
 |    1475    |    16    |    Não    |    Não é possível habilitar o espelhamento de banco de dados porque o banco de dados "%.*ls" pode ter muitas alterações em log que não foram armazenadas em backup. O último backup de log no principal deve ser restaurado no espelho.    |
 |    1476    |    16    |    Não    |    O valor de tempo limite do espelhamento de banco de dados %d excede o valor máximo 32767.    |
 |    1477    |    16    |    Não    |    O nível de segurança do espelhamento de banco de dados deve ser FULL para execução manual de failover do banco de dados "%.*ls". Ajuste o nível de segurança para FULL e tente novamente.    |
 |    1478    |    16    |    Não    |    O banco de dados espelho "%.*ls" não dispõe de dados de log de transações suficientes para preservar a cadeia de backup de log do banco de dados principal. Isso poderá ocorrer se um backup de log do banco de dados principal ainda não tiver sido obtido ou restaurado no banco de dados espelho.    |
-|    1479    |    16    |    Não    |    A conexão de espelhamento a "%. *ls" expirou para o banco de dados "%.* ls" após %d segundos sem obter resposta. Verifique as conexões de serviço e de rede.    |
+|    1479    |    16    |    Não    |    A conexão de espelhamento a "%.*ls" expirou para o banco de dados "%.* ls" após %d segundos sem obter resposta. Verifique as conexões de serviço e de rede.    |
 |    1480    |    10    |    Não    |    O banco de dados espelho "%.*ls" está alterando funções de "%ls" para "%ls" devido a %S_MSG.    |
 |    1481    |    10    |    Não    |    O espelhamento de banco de dados não pôde reparar a página física %S_PGID no banco de dados "%.*ls". O parceiro de espelhamento não pôde ser contatado ou não forneceu uma cópia da página. Entre os motivos possíveis estão a falta de conectividade de rede ou um dano à cópia da página mantida pelo parceiro. Para saber se os parceiros estão conectados, exiba a coluna mirroring_state_desc da exibição de catálogo sys.database_mirroring. Se estiverem conectados, para saber por que o parceiro não pôde fornecer uma cópia da página, examine as entradas do log de erros próximas à hora em que esta mensagem foi relatada. Tente resolver o erro e continuar o espelhamento.    |
 |    1485    |    10    |    Não    |    O espelhamento de banco de dados foi habilitado nesta instância do SQL Server.    |
@@ -839,7 +839,7 @@ ORDER BY message_id
 |    1489    |    10    |    Não    |    O Espelhamento de Banco de Dados está desabilitado neste servidor devido ao erro %d. Para obter mais informações, verifique o log de erros e a configuração.    |
 |    1499    |    16    |    Sim    |    Erro de espelhamento de banco de dados: status %u, severidade %u, estado %u, cadeia de caracteres %.*ls.    |
 |    1501    |    20    |    Sim    |    Falha na classificação. Contate o suporte técnico.    |
-|    [1505](mssqlserver-1505-database-engine-error.md)    |    16    |    Não    |    A instrução CREATE UNIQUE INDEX foi encerrada porque foi encontrada uma chave duplicada para o nome de objeto '%. *ls' e o nome de índice '%.* ls'. O valor da chave duplicada é %ls.    |
+|    [1505](mssqlserver-1505-database-engine-error.md)    |    16    |    Não    |    A instrução CREATE UNIQUE INDEX foi encerrada porque foi encontrada uma chave duplicada para o nome de objeto '%.*ls' e o nome de índice '%.* ls'. O valor da chave duplicada é %ls.    |
 |    1509    |    20    |    Sim    |    Falha na comparação de linhas durante a classificação devido a um tipo de dados desconhecido em uma coluna-chave. Os metadados podem estar danificados. Contate o suporte técnico.    |
 |    1510    |    17    |    Não    |    Falha ao classificar. Espaço insuficiente ou bloqueios no banco de dados '%.*ls'.    |
 |    1511    |    20    |    Sim    |    A classificação não pode ser reconciliada com o log de transações.    |
@@ -856,20 +856,20 @@ ORDER BY message_id
 |    1542    |    10    |    Sim    |    BobMgr::GetBuf: gravação de Classificar Buffer de Saída Grande não concluída após %d segundos.    |
 |    1543    |    10    |    Sim    |    Erro do sistema operacional '%ls' resultante da tentativa de ler o seguinte: página de execução de classificação % S_PGID, no arquivo '%ls' do banco de dados com ID %d. A classificação está tentando a leitura novamente.    |
 |    1701    |    16    |    Não    |    Falha na criação ou alteração da tabela '%.*ls' porque o tamanho mínimo da linha seria %d, incluindo %d bytes de sobrecarga interna. Isso excede o tamanho máximo de linha permitido na tabela, que é de %d bytes.    |
-|    1702    |    16    |    Não    |    Falha em CREATE TABLE porque a coluna '%. *ls' na tabela '%.* ls' excede o máximo de %d colunas.    |
+|    1702    |    16    |    Não    |    Falha em CREATE TABLE porque a coluna '%.*ls' na tabela '%.* ls' excede o máximo de %d colunas.    |
 |    1706    |    16    |    Não    |    A tabela do sistema '%.*ls' só pode ser criada ou alterada durante uma atualização.    |
 |    1707    |    16    |    Não    |    Não é possível especificar o grupo de arquivos TEXTIMAGE_ON de uma tabela particionada.    |
 |    1708    |    10    |    Não    |    Aviso: a tabela "%.*ls" foi criada, mas seu tamanho máximo de linhas excede o máximo permitido de %d bytes. INSERT ou UPDATE nesta tabela falhará se a linha resultante exceder o limite de tamanho.    |
 |    1.709    |    16    |    Não    |    Não é possível usar TEXTIMAGE_ON quando uma tabela não tem as colunas text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml ou colunas de tipo CLR.    |
 |    1710    |    10    |    Não    |    Não é possível usar o tipo de alias com regra ou padrão associado a ele como um tipo de coluna na variável de tabela ou retornar definição de tabela na função com valor de tabela. O tipo '%.*ls' tem um %S_MSG associado a ele.    |
-|    1711    |    16    |    Não    |    Não é possível definir a restrição PRIMARY KEY na coluna '%. *ls' da tabela '%.* ls'. A coluna computada deve persistir e não ser anulável.    |
+|    1711    |    16    |    Não    |    Não é possível definir a restrição PRIMARY KEY na coluna '%.*ls' da tabela '%.* ls'. A coluna computada deve persistir e não ser anulável.    |
 |    1712    |    16    |    Não    |    Só podem ser executadas operações de índice online na edição Enterprise do SQL Server.    |
 |    1713    |    16    |    Não    |    Não é possível executar %ls na/com a tabela '%.*ls' porque a tabela é o destino ou faz parte das ações em cascata de um gatilho em execução.    |
 |    1714    |    16    |    Não    |    Falha na alteração de tabela porque não há mais IDs exclusivas de coluna para a tabela '%.*ls'.    |
-|    1715    |    16    |    Não    |    Falha na criação da chave estrangeira '%. *ls'. Apenas a ação de atualização referencial NO ACTION é permitida na referência de coluna computada '%.* ls'.    |
+|    1715    |    16    |    Não    |    Falha na criação da chave estrangeira '%.*ls'. Apenas a ação de atualização referencial NO ACTION é permitida na referência de coluna computada '%.* ls'.    |
 |    1716    |    16    |    Não    |    Não é possível usar FILESTREAM_ON quando uma tabela não tem colunas FILESTREAM. Remova a cláusula FILESTREAM_ON da instrução ou adicione uma coluna FILESTREAM à tabela.    |
 |    1717    |    16    |    Não    |    Não é possível especificar FILESTREAM_ON junto com um esquema de partição na cláusula ON.    |
-|    1718    |    16    |    Não    |    O controle de alterações deve estar habilitado no banco de dados '%. *ls' para que ele possa ser habilitado na tabela '%.* ls'.    |
+|    1718    |    16    |    Não    |    O controle de alterações deve estar habilitado no banco de dados '%.*ls' para que ele possa ser habilitado na tabela '%.* ls'.    |
 |    1719    |    16    |    Não    |    Os dados FILESTREAM não podem ser colocados em um grupo de arquivos vazio.    |
 |    1720    |    16    |    Não    |    Não é possível descartar o grupo de arquivos ou esquema de partição FILESTREAM, pois a tabela '%.*ls' tem colunas FILESTREAM.    |
 |    1721    |    16    |    Não    |    Falha ao alterar a tabela '%.*ls', pois o tamanho de linha que usa o formato de armazenamento vardecimal excede o tamanho máximo de linha de tabela permitido de %d bytes.    |
@@ -878,58 +878,58 @@ ORDER BY message_id
 |    1724    |    16    |    Não    |    '%.*ls' não é um grupo de arquivos FILESTREAM ou um esquema de partição de grupos de arquivos FILESTREAM.    |
 |    1.725    |    16    |    Não    |    Não é possível adicionar a coluna FILESTREAM a %S_MSG '%.*ls' porque existe um gatilho INSTEAD OF em %S_MSG.    |
 |    1726    |    16    |    Não    |    Não é possível adicionar o grupo de arquivos ou o esquema de partição de FILESTREAM, pois a tabela '%.*ls' já tem um grupo de arquivos ou esquema de partição de FILESTREAM.    |
-|    1727    |    16    |    Não    |    Não é possível criar o índice não clusterizado '%. *ls' na tabela '%.* ls' com a cláusula FILESTREAM_ON.    |
-|    1728    |    16    |    Não    |    Não é possível criar o índice '%. *ls' na tabela '%.* ls' porque a coluna computada '%.*ls' usa uma coluna FILESTREAM.    |
-|    1729    |    16    |    Não    |    Não é possível criar a tabela '%. *ls' porque a coluna de particionamento '%.* ls' usa uma coluna FILESTREAM.    |
+|    1727    |    16    |    Não    |    Não é possível criar o índice não clusterizado '%.*ls' na tabela '%.* ls' com a cláusula FILESTREAM_ON.    |
+|    1728    |    16    |    Não    |    Não é possível criar o índice '%.*ls' na tabela '%.* ls' porque a coluna computada '%.*ls' usa uma coluna FILESTREAM.    |
+|    1729    |    16    |    Não    |    Não é possível criar a tabela '%.*ls' porque a coluna de particionamento '%.* ls' usa uma coluna FILESTREAM.    |
 |    1730    |    16    |    Não    |    Falha na criação ou alteração da tabela compactada '%.*ls' porque o tamanho da linha não compactada seria %d, incluindo %d bytes de sobrecarga interna. Isso excede o tamanho máximo de linha permitido na tabela, que é de %d bytes.    |
-|    1731    |    16    |    Não    |    Não é possível criar a coluna esparsa '%. *ls' na tabela '%.* ls' porque uma opção ou um tipo de dados especificado não é válido. Uma coluna esparsa deve permitir valores nulos e não pode ter as propriedades ROWGUIDCOL, IDENTITY ou FILESTREAM. Uma coluna esparsa não pode ser dos seguintes tipos de dados: text, ntext, image, geometry, geography ou um tipo definido pelo usuário.    |
-|    1732    |    16    |    Não    |    Não é possível criar o conjunto de colunas esparsas '%. *ls' na tabela '%.* ls', pois uma tabela não pode ter mais de um conjunto de colunas esparsas. Modifique a instrução de forma que somente uma coluna seja especificada como COLUMN_SET FOR ALL_SPARSE_COLUMNS.    |
-|    1.733    |    16    |    Não    |    Não é possível criar o conjunto de colunas esparsas '%. *ls' na tabela '%.* ls', pois um conjunto de colunas esparsas deve ser uma coluna xml que permita valores nulos. Modifique a definição de coluna para permitir valores nulos.    |
-|    1734    |    16    |    Não    |    Não é possível criar o conjunto de colunas esparsas '%. *ls' na tabela '%.* ls', pois ela já contém uma ou mais colunas esparsas. Um conjunto de colunas esparsas não poderá ser adicionado a uma tabela se ela contiver uma coluna esparsa.    |
-|    1736    |    16    |    Não    |    A coluna '%. *ls' na tabela '%.* ls' não pode ser referenciada em uma restrição CHECK ou definição de coluna computada, pois a coluna é um conjunto de colunas esparsas. Não é possível referenciar um conjunto de colunas esparsas em uma restrição CHECK ou definição de coluna computada.    |
+|    1731    |    16    |    Não    |    Não é possível criar a coluna esparsa '%.*ls' na tabela '%.* ls' porque uma opção ou um tipo de dados especificado não é válido. Uma coluna esparsa deve permitir valores nulos e não pode ter as propriedades ROWGUIDCOL, IDENTITY ou FILESTREAM. Uma coluna esparsa não pode ser dos seguintes tipos de dados: text, ntext, image, geometry, geography ou um tipo definido pelo usuário.    |
+|    1732    |    16    |    Não    |    Não é possível criar o conjunto de colunas esparsas '%.*ls' na tabela '%.* ls', pois uma tabela não pode ter mais de um conjunto de colunas esparsas. Modifique a instrução de forma que somente uma coluna seja especificada como COLUMN_SET FOR ALL_SPARSE_COLUMNS.    |
+|    1.733    |    16    |    Não    |    Não é possível criar o conjunto de colunas esparsas '%.*ls' na tabela '%.* ls', pois um conjunto de colunas esparsas deve ser uma coluna xml que permita valores nulos. Modifique a definição de coluna para permitir valores nulos.    |
+|    1734    |    16    |    Não    |    Não é possível criar o conjunto de colunas esparsas '%.*ls' na tabela '%.* ls', pois ela já contém uma ou mais colunas esparsas. Um conjunto de colunas esparsas não poderá ser adicionado a uma tabela se ela contiver uma coluna esparsa.    |
+|    1736    |    16    |    Não    |    A coluna '%.*ls' na tabela '%.* ls' não pode ser referenciada em uma restrição CHECK ou definição de coluna computada, pois a coluna é um conjunto de colunas esparsas. Não é possível referenciar um conjunto de colunas esparsas em uma restrição CHECK ou definição de coluna computada.    |
 |    1738    |    10    |    Não    |    Não é possível criar a tabela '%.*ls' com apenas uma coluna de conjunto de colunas e sem colunas não computadas na tabela.    |
 |    1750    |    10    |    Não    |    Não foi possível criar a restrição. Consulte os erros anteriores.    |
-|    1752    |    16    |    Não    |    A coluna '%. *ls' da tabela '%.* ls' é inválida para criar uma restrição padrão.    |
-|    1753    |    16    |    Não    |    A coluna '%. *ls.%.* ls' não tem o mesmo comprimento ou a mesma escala da coluna de referência '%. *ls.%.* ls' na chave estrangeira '%.*ls'. As colunas que participam de uma relação de chave estrangeira devem ser definidas com o mesmo comprimento e a mesma escala.    |
-|    1754    |    16    |    Não    |    Não podem ser criados padrões em colunas com um atributo IDENTITY. Tabela '%. *ls', coluna '%.* ls'.    |
-|    1755    |    16    |    Não    |    Não podem ser criados padrões em colunas de carimbo de hora do tipo de dados. Tabela '%. *ls', coluna '%.* ls'.    |
+|    1752    |    16    |    Não    |    A coluna '%.*ls' da tabela '%.* ls' é inválida para criar uma restrição padrão.    |
+|    1753    |    16    |    Não    |    A coluna '%.*ls.%.* ls' não tem o mesmo comprimento ou a mesma escala da coluna de referência '%.*ls.%.* ls' na chave estrangeira '%.*ls'. As colunas que participam de uma relação de chave estrangeira devem ser definidas com o mesmo comprimento e a mesma escala.    |
+|    1754    |    16    |    Não    |    Não podem ser criados padrões em colunas com um atributo IDENTITY. Tabela '%.*ls', coluna '%.* ls'.    |
+|    1755    |    16    |    Não    |    Não podem ser criados padrões em colunas de carimbo de hora do tipo de dados. Tabela '%.*ls', coluna '%.* ls'.    |
 |    1756    |    10    |    Não    |    Ignorando a definição '%.*ls' da restrição FOREIGN KEY para a tabela temporária. Restrições FOREIGN KEY não são impostas a tabelas temporárias locais ou globais.    |
-|    1757    |    16    |    Não    |    A coluna '%. *ls.%.* ls' não tem a mesma ordenação que a coluna de referência '%. *ls.%.* ls' na chave estrangeira '%.*ls'.    |
+|    1757    |    16    |    Não    |    A coluna '%.*ls.%.* ls' não tem a mesma ordenação que a coluna de referência '%.*ls.%.* ls' na chave estrangeira '%.*ls'.    |
 |    1758    |    16    |    Não    |    Apenas uma única restrição pode ser adicionada ou descartada online sem outras operações na mesma instrução.    |
-|    1759    |    16    |    Não    |    A coluna computada '%. *ls' da tabela '%.* ls' não pode ser usada em outra definição de coluna computada.    |
+|    1759    |    16    |    Não    |    A coluna computada '%.*ls' da tabela '%.* ls' não pode ser usada em outra definição de coluna computada.    |
 |    1760    |    16    |    Não    |    Não podem ser criadas restrições do tipo %ls em colunas do tipo %ls.    |
 |    1761    |    16    |    Não    |    Não é possível criar a chave estrangeira "%.*ls" com a ação referencial SET NULL, pois uma ou mais colunas de referência não permitem valores nulos.    |
 |    1762    |    16    |    Não    |    Não é possível criar a chave estrangeira "%.*ls" com a ação referencial SET DEFAULT porque uma ou mais colunas de referência não anuláveis não possuem uma restrição padrão.    |
 |    1763    |    16    |    Não    |    Não há suporte para referências de chave estrangeira em todos os bancos de dados. Chave estrangeira '%.*ls'.    |
-|    1764    |    16    |    Não    |    A coluna computada '%. *ls' da tabela '%.* ls' é inválida para uso em '%ls' porque não é persistente.    |
-|    1765    |    16    |    Não    |    Falha na criação da chave estrangeira '%. *ls'. Apenas as ações de exclusão referencial NO ACTION e CASCADE são permitidas na referência de coluna computada '%.* ls'.    |
+|    1764    |    16    |    Não    |    A coluna computada '%.*ls' da tabela '%.* ls' é inválida para uso em '%ls' porque não é persistente.    |
+|    1765    |    16    |    Não    |    Falha na criação da chave estrangeira '%.*ls'. Apenas as ações de exclusão referencial NO ACTION e CASCADE são permitidas na referência de coluna computada '%.* ls'.    |
 |    1766    |    16    |    Não    |    Não há suporte para referências de chave estrangeira a tabelas temporárias. Chave estrangeira '%.*ls'.    |
-|    1767    |    16    |    Não    |    A chave estrangeira '%. *ls' faz referência à tabela inválida '%.* ls'.    |
-|    1768    |    16    |    Não    |    A chave estrangeira '%. *ls' faz referência ao objeto '%.* ls’, que não é uma tabela do usuário.    |
-|    1769    |    16    |    Não    |    A chave estrangeira '%. *ls' faz referência à coluna inválida '%.* ls' na tabela de referência '%.*ls'.    |
-|    1770    |    16    |    Não    |    A chave estrangeira '%. *ls' faz referência à coluna inválida '%.* ls' na tabela referenciada '%.*ls'.    |
-|    1771    |    16    |    Não    |    Não é possível criar uma chave estrangeira '%. *ls' porque ela faz referência ao objeto '%.* ls' cujo índice clusterizado '%.*ls' está desabilitado.    |
+|    1767    |    16    |    Não    |    A chave estrangeira '%.*ls' faz referência à tabela inválida '%.* ls'.    |
+|    1768    |    16    |    Não    |    A chave estrangeira '%.*ls' faz referência ao objeto '%.* ls’, que não é uma tabela do usuário.    |
+|    1769    |    16    |    Não    |    A chave estrangeira '%.*ls' faz referência à coluna inválida '%.* ls' na tabela de referência '%.*ls'.    |
+|    1770    |    16    |    Não    |    A chave estrangeira '%.*ls' faz referência à coluna inválida '%.* ls' na tabela referenciada '%.*ls'.    |
+|    1771    |    16    |    Não    |    Não é possível criar uma chave estrangeira '%.*ls' porque ela faz referência ao objeto '%.* ls' cujo índice clusterizado '%.*ls' está desabilitado.    |
 |    1772    |    16    |    Não    |    A chave estrangeira '%.*ls' não é válida. Não é possível usar uma tabela do sistema em uma definição de chave estrangeira.    |
-|    1773    |    16    |    Não    |    A chave estrangeira '%. *ls' possui referência implícita ao objeto '%.* ls' que não tem uma chave primária definida.    |
-|    1774    |    16    |    Não    |    O número de colunas na lista de colunas de referência da chave estrangeira '%. *ls' não corresponde às da chave primária na tabela de referência '%.* ls'.    |
-|    1775    |    16    |    Não    |    Não é possível criar a chave estrangeira '%. *ls' porque ela faz referência a um objeto '%.* ls' cujo índice PRIMARY KEY '%.*ls' está desabilitado.    |
-|    1776    |    16    |    Não    |    Não existem chaves primárias ou candidatas na tabela de referência '%. *ls' que correspondam à lista de colunas de referência na chave estrangeira '%.* ls'.    |
-|    1778    |    16    |    Não    |    A coluna '%. *ls.%.* ls' não tem o mesmo tipo de dados da coluna de referência '%. *ls.%.* ls' na chave estrangeira '%.*ls'.    |
+|    1773    |    16    |    Não    |    A chave estrangeira '%.*ls' possui referência implícita ao objeto '%.* ls' que não tem uma chave primária definida.    |
+|    1774    |    16    |    Não    |    O número de colunas na lista de colunas de referência da chave estrangeira '%.*ls' não corresponde às da chave primária na tabela de referência '%.* ls'.    |
+|    1775    |    16    |    Não    |    Não é possível criar a chave estrangeira '%.*ls' porque ela faz referência a um objeto '%.* ls' cujo índice PRIMARY KEY '%.*ls' está desabilitado.    |
+|    1776    |    16    |    Não    |    Não existem chaves primárias ou candidatas na tabela de referência '%.*ls' que correspondam à lista de colunas de referência na chave estrangeira '%.* ls'.    |
+|    1778    |    16    |    Não    |    A coluna '%.*ls.%.* ls' não tem o mesmo tipo de dados da coluna de referência '%.*ls.%.* ls' na chave estrangeira '%.*ls'.    |
 |    1779    |    16    |    Não    |    A tabela '%.*ls' já tem uma chave primária definida.    |
 |    1781    |    16    |    Não    |    A coluna já tem um DEFAULT associado.    |
-|    1784    |    16    |    Não    |    Não é possível criar a chave estrangeira '%. *ls' porque a coluna de referência '%.* ls.%.*ls' é uma coluna computada não persistente.    |
-|    1785    |    16    |    Não    |    A introdução da restrição FOREIGN KEY '%. *ls' na tabela '%.* ls' pode causar ciclos ou vários caminhos em cascata. Especifique ON DELETE NO ACTION ou ON UPDATE NO ACTION, ou modifique outras restrições FOREIGN KEY.    |
-|    1786    |    16    |    Não    |    A coluna '%. *ls.%.* ls' ou a coluna de referência '%. *ls.%.* ls' na chave estrangeira '%.*ls' é uma coluna de carimbo de data/hora. Esse tipo de dados não pode ser usado com restrições de integridade referencial em cascata.    |
-|    1787    |    16    |    Não    |    Não é possível definir a restrição de chave estrangeira '%. *ls' com DELETE ou UPDATE em cascata na tabela '%.* ls' porque a tabela tem um INSTEAD OF DELETE ou UPDATE TRIGGER definido.    |
-|    1788    |    16    |    Não    |    A chave estrangeira em cascata '%. *ls' não pode ser criada quando a coluna de referência '%.* ls.%.*ls' for uma coluna de identidade.    |
+|    1784    |    16    |    Não    |    Não é possível criar a chave estrangeira '%.*ls' porque a coluna de referência '%.* ls.%.*ls' é uma coluna computada não persistente.    |
+|    1785    |    16    |    Não    |    A introdução da restrição FOREIGN KEY '%.*ls' na tabela '%.* ls' pode causar ciclos ou vários caminhos em cascata. Especifique ON DELETE NO ACTION ou ON UPDATE NO ACTION, ou modifique outras restrições FOREIGN KEY.    |
+|    1786    |    16    |    Não    |    A coluna '%.*ls.%.* ls' ou a coluna de referência '%.*ls.%.* ls' na chave estrangeira '%.*ls' é uma coluna de carimbo de data/hora. Esse tipo de dados não pode ser usado com restrições de integridade referencial em cascata.    |
+|    1787    |    16    |    Não    |    Não é possível definir a restrição de chave estrangeira '%.*ls' com DELETE ou UPDATE em cascata na tabela '%.* ls' porque a tabela tem um INSTEAD OF DELETE ou UPDATE TRIGGER definido.    |
+|    1788    |    16    |    Não    |    A chave estrangeira em cascata '%.*ls' não pode ser criada quando a coluna de referência '%.* ls.%.*ls' for uma coluna de identidade.    |
 |    1789    |    16    |    Não    |    Não é possível usar CHECKSUM(*) em uma definição de coluna computada.    |
 |    1790    |    16    |    Não    |    O nome de um tipo de tabela definido pelo usuário não pode iniciar com um sinal de número (#).    |
-|    1791    |    16    |    Não    |    Não é possível criar uma restrição DEFAULT na coluna '%. *ls' da tabela '%.* ls', pois esta é uma coluna esparsa ou um conjunto de colunas esparsas. Colunas esparsas ou conjuntos de colunas esparsas não podem ter uma restrição DEFAULT.    |
+|    1791    |    16    |    Não    |    Não é possível criar uma restrição DEFAULT na coluna '%.*ls' da tabela '%.* ls', pois esta é uma coluna esparsa ou um conjunto de colunas esparsas. Colunas esparsas ou conjuntos de colunas esparsas não podem ter uma restrição DEFAULT.    |
 | [1793](mssqlserver-1793-database-engine-error.md) | 16   | Não  | Não é possível remover o índice '%.*ls', pois um esquema de partição não está especificado para os dados de FILESTREAM.
 |    1801    |    16    |    Não    |    O banco de dados '%.*ls' já existe. Escolha um nome de banco de dados diferente.    |
 |    1802    |    16    |    Não    |    Falha em CREATE DATABASE. Alguns nomes de arquivos listados não puderam ser criados. Verifique os erros correlatos.    |
 |    [1803](mssqlserver-1803-database-engine-error.md)    |    17    |    Não    |    Falha na instrução CREATE DATABASE. O arquivo primário deve ter pelo menos %d MB para acomodar uma cópia do banco de dados modelo.    |
-|    1806    |    16    |    Não    |    Falha em CREATE DATABASE. A ordenação padrão do banco de dados '%. *ls' não pode ser definida como '%.* ls'.    |
+|    1806    |    16    |    Não    |    Falha em CREATE DATABASE. A ordenação padrão do banco de dados '%.*ls' não pode ser definida como '%.* ls'.    |
 |    [1807](mssqlserver-1807-database-engine-error.md)    |    17    |    Não    |    Não foi possível obter bloqueio exclusivo no banco de dados '%.*ls'. Tente novamente a operação mais tarde.    |
 |    1810    |    16    |    Não    |    O banco de dados modelo deve ser atualizável antes da criação de um novo banco de dados.    |
 |    1812    |    16    |    Não    |    Falha em CREATE DATABASE. A cláusula COLLATE não pode ser usada com a opção FOR ATTACH.    |
@@ -949,9 +949,9 @@ ORDER BY message_id
 |    1827    |    16    |    Não    |    Falha em CREATE DATABASE ou ALTER DATABASE porque o tamanho acumulado resultante do banco de dados excederia o limite licenciado de %I64d MB por %S_MSG.    |
 |    1828    |    16    |    Não    |    O nome de arquivo lógico "%.*ls" já está em uso. Escolha um nome diferente.    |
 |    1829    |    16    |    Não    |    A opção FOR ATTACH requer que pelo menos o arquivo primário seja especificado.    |
-|    1830    |    16    |    Não    |    Os arquivos '%. *ls' e '%.* ls' são ambos arquivos primários. Um banco de dados pode conter apenas um arquivo primário.    |
+|    1830    |    16    |    Não    |    Os arquivos '%.*ls' e '%.* ls' são ambos arquivos primários. Um banco de dados pode conter apenas um arquivo primário.    |
 |    1831    |    16    |    Não    |    Sintaxe de arquivo ONLINE/OFFLINE não pode ser usada com CREATE DATABASE.    |
-|    1832    |    20    |    Não    |    Não é possível anexar o arquivo '%. *ls' como banco de dados '%.* ls'.%.*ls    |
+|    1832    |    20    |    Não    |    Não é possível anexar o arquivo '%.*ls' como banco de dados '%.* ls'.%.*ls    |
 |    1833    |    16    |    Não    |    O arquivo '%ls' não pode ser usado novamente até a próxima operação BACKUP LOG.    |
 |    1834    |    16    |    Não    |    O arquivo '%ls' não pode ser substituído. Ele está sendo usado pelo banco de dados '%.*ls'.    |
 |    1835    |    16    |    Não    |    Não é possível criar/anexar um novo banco de dados porque o número de bancos de dados existentes atingiu o número máximo permitido: %d.    |
@@ -967,33 +967,33 @@ ORDER BY message_id
 |    1847    |    16    |    Não    |    A versão atual do sistema operacional não dá suporte a instantâneos do Serviço de Cópias de Sombra de Volume (VSS) recuperados automaticamente.    |
 |    1848    |    16    |    Não    |    Falha no Serviço de Cópias de Sombra de Volume (VSS) ao criar um instantâneo recuperado automaticamente do banco de dados '%ls' para verificação DBCC online.    |
 |    1849    |    16    |    Não    |    Falha de CREATE DATABASE porque grupos de arquivos de FILESTREAM foram declarados e ALLOW_SNAPSHOT_ISOLATION ou READ_COMMITTED_SNAPSHOT está definido como ON no banco de dados modelo. Defina ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT como OFF no banco de dados modelo ou crie o banco de dados sem declarar grupos de arquivos FILESTREAM, defina ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT como OFF no novo banco de dados e use ALTER DATABSE para adicionar grupos de arquivos e arquivos FILESTREAM.    |
-|    1901    |    16    |    Não    |    Não é possível criar índices ou estatísticas '%. *ls' na exibição '%.* ls' porque a coluna de chave '%.*ls' é imprecisa, computada e não persistente. Considere remover a referência à coluna no índice da exibição ou na chave de estatísticas ou alterar a coluna para ficar precisa. Se a coluna for computada em tabela base, considere torná-la PERSISTED naquela tabela.    |
-|    1902    |    16    |    Não    |    Não é possível criar mais de um índice clusterizado em %S_MSG '%. *ls'. Descarte o índice clusterizado '%.* ls' existente antes de criar outro.    |
-|    [1904](mssqlserver-1904-database-engine-error.md)    |    16    |    Não    |    A %S_MSG '%. *ls' na tabela '%.* ls' tem %d nomes de coluna na lista de chaves %S_MSG. O limite máximo para lista de colunas de chaves de índice ou de estatísticas é de %d.    |
+|    1901    |    16    |    Não    |    Não é possível criar índices ou estatísticas '%.*ls' na exibição '%.* ls' porque a coluna de chave '%.*ls' é imprecisa, computada e não persistente. Considere remover a referência à coluna no índice da exibição ou na chave de estatísticas ou alterar a coluna para ficar precisa. Se a coluna for computada em tabela base, considere torná-la PERSISTED naquela tabela.    |
+|    1902    |    16    |    Não    |    Não é possível criar mais de um índice clusterizado em %S_MSG '%.*ls'. Descarte o índice clusterizado '%.* ls' existente antes de criar outro.    |
+|    [1904](mssqlserver-1904-database-engine-error.md)    |    16    |    Não    |    A %S_MSG '%.*ls' na tabela '%.* ls' tem %d nomes de coluna na lista de chaves %S_MSG. O limite máximo para lista de colunas de chaves de índice ou de estatísticas é de %d.    |
 |    1907    |    16    |    Não    |    Não é possível recriar novamente o índice '%.*ls'. A nova definição de índice não corresponde à restrição que está sendo imposta pelo índice existente.    |
-|    1908    |    16    |    Não    |    A coluna '%. *ls' está particionando a coluna do índice '%.* ls'. As colunas de partição para um índice exclusivo devem ser um subconjunto da chave de índices.    |
+|    1908    |    16    |    Não    |    A coluna '%.*ls' está particionando a coluna do índice '%.* ls'. As colunas de partição para um índice exclusivo devem ser um subconjunto da chave de índices.    |
 |    1909    |    16    |    Não    |    Não é possível usar nomes de colunas duplicados em %S_MSG. O nome da coluna '%.*ls' foi listado mais de uma vez.    |
 |    1910    |    16    |    Não    |    Não foi possível criar %S_MSG '%.*ls' porque excede o máximo de %d permitidos por tabela ou exibição.    |
 |    1911    |    16    |    Não    |    O nome de coluna '%.*ls' não existe na tabela ou exibição de destino.    |
 |    1912    |    16    |    Não    |    Não foi possível continuar com a operação DDL do índice em %S_MSG '%.*ls' porque ela entra em conflito com outra operação já em andamento no objeto. A operação simultânea pode ser uma operação de índice online no mesmo objeto ou outra operação simultânea que mova páginas de índice como DBCC SHRINKFILE.    |
-|    1913    |    16    |    Não    |    Falha na operação porque já existe um índice ou estatística com o nome '%. *ls' em %S_MSG '%.* ls'.    |
+|    1913    |    16    |    Não    |    Falha na operação porque já existe um índice ou estatística com o nome '%.*ls' em %S_MSG '%.* ls'.    |
 |    1914    |    16    |    Não    |    Não é possível criar um índice no objeto '%.*ls' porque o objeto não é uma tabela ou exibição do usuário.    |
 |    1915    |    16    |    Não    |    Não é possível alterar um índice não exclusivo com a opção de índice ignore_dup_key. O índice '%.*ls' é não exclusivo.    |
 |    1916    |    16    |    Não    |    As opções CREATE INDEX %ls e %ls são mutuamente exclusivas.    |
 |    1917    |    16    |    Não    |    Não é possível, recriar ou descartar um índice em uma tabela temporária local online. Execute a operação de índice offline.    |
-|    1919    |    16    |    Não    |    A coluna '%. *ls' da tabela '%.* ls' é de um tipo inválido para uso como coluna de chaves em um índice.    |
+|    1919    |    16    |    Não    |    A coluna '%.*ls' da tabela '%.* ls' é de um tipo inválido para uso como coluna de chaves em um índice.    |
 |    1921    |    16    |    Não    |    %S_MSG '%.*ls' inválido especificado.    |
 |    1922    |    16    |    Não    |    O grupo de arquivos '%.*ls' não tem arquivos atribuídos. Não é possível criar tabelas, índices e grandes colunas de objetos nesse grupo de arquivos. Use ALTER DATABASE para adicionar um ou mais arquivos ao grupo de arquivos.    |
 |    1924    |    16    |    Não    |    O grupo de arquivos '%.*ls' é somente leitura.    |
 |    1925    |    16    |    Não    |    Não é possível converter um índice clusterizado em índice não clusterizado usando a opção DROP_EXISTING. Para alterar o tipo de índice de clusterizado para não clusterizado, exclua o índice clusterizado e crie um índice não clusterizado usando duas instruções separadas.    |
-|    1927    |    16    |    Não    |    Já existem estatísticas na tabela '%. *ls' com o nome '%.* ls'.    |
+|    1927    |    16    |    Não    |    Já existem estatísticas na tabela '%.*ls' com o nome '%.* ls'.    |
 |    1929    |    16    |    Não    |    Não é possível criar estatísticas no objeto '%.*ls' porque o objeto não é uma tabela ou exibição do usuário.    |
 |    1930    |    16    |    Não    |    Não é possível converter um índice não clusterizado em índice clusterizado porque uma restrição de chave estrangeira faz referência ao índice. Remova a restrição de chave estrangeira e tente novamente a operação.    |
 |    1931    |    16    |    Não    |    A instrução SQL não pode ser executada porque o grupo de arquivos '%.*ls' está offline. Use a exibição do catálogo sys.database_files ou sys.master_files para determinar o estado dos arquivos deste grupo de arquivos e, em seguida, restaure os arquivos offline a partir do backup.    |
 |    1934    |    16    |    Não    |    Falha em %ls porque as seguintes opções SET têm configurações incorretas: '%.*ls'. Verifique se as opções SET estão corretas para uso com %S_MSG.    |
-|    1935    |    16    |    Não    |    Não é possível criar o índice. O objeto '%. *ls' foi criado com as seguintes opções SET desativadas: '%.* ls'.    |
-|    1937    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%. *ls' porque ela faz referência a uma outra exibição '%.* ls'. Considere expandir a definição da exibição de referência manualmente na definição da exibição indexada.    |
-|    1938    |    16    |    Não    |    O índice não pode ser criado na exibição '%. *ls' porque o objeto base '%.* ls' tem um proprietário diferente.    |
+|    1935    |    16    |    Não    |    Não é possível criar o índice. O objeto '%.*ls' foi criado com as seguintes opções SET desativadas: '%.* ls'.    |
+|    1937    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls' porque ela faz referência a uma outra exibição '%.* ls'. Considere expandir a definição da exibição de referência manualmente na definição da exibição indexada.    |
+|    1938    |    16    |    Não    |    O índice não pode ser criado na exibição '%.*ls' porque o objeto base '%.* ls' tem um proprietário diferente.    |
 |    1939    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls' porque a exibição não está associada ao esquema.    |
 |    1940    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls'. Ela não tem um índice clusterizado exclusivo.    |
 |    1941    |    16    |    Não    |    Não é possível criar um índice clusterizado não exclusivo na exibição '%.*ls' porque apenas índices clusterizados exclusivos são permitidos. Considere criar um índice clusterizado exclusivo.    |
@@ -1001,13 +1001,13 @@ ORDER BY message_id
 |    1944    |    16    |    Não    |    O índice '%.*ls' não foi criado. Esse índice possui um comprimento de chave de pelo menos %d bytes. O comprimento máximo de chave permitido é de %d bytes.    |
 |    1945    |    10    |    Não    |    Aviso! O comprimento máximo de chave é de %d bytes. O índice '%.*ls' tem um comprimento máximo de %d bytes. Para algumas combinações de valores grandes, haverá falha na operação insert/update.    |
 |    1946    |    16    |    Não    |    Falha na operação. A entrada do índice com comprimento de %d bytes do índice '%.*ls' excede o comprimento máximo de %d bytes.    |
-|    1947    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls". A exibição contém uma autojunção em "%.* ls".    |
+|    1947    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls". A exibição contém uma autojunção em "%.* ls".    |
 |    1949    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls'. A função '%s' retorna resultados não determinísticos. Use uma função de sistema determinística ou modifique a função definida pelo usuário para retornar resultados determinísticos.    |
-|    1956    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%. *ls' porque ela usa uma função não determinística definida pelo usuário '%.* ls'. Remova a referência à função ou torne-a determinística.    |
-|    1957    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%. *ls' porque ela usa uma função imprecisa definida pelo usuário '%.* ls'. Considere remover a referência à função ou altere-a, tornando-a precisa.    |
+|    1956    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls' porque ela usa uma função não determinística definida pelo usuário '%.* ls'. Remova a referência à função ou torne-a determinística.    |
+|    1957    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls' porque ela usa uma função imprecisa definida pelo usuário '%.* ls'. Considere remover a referência à função ou altere-a, tornando-a precisa.    |
 |    1959    |    16    |    Não    |    Não é possível criar um índice em uma exibição ou coluna computada porque o nível de compatibilidade desse banco de dados é inferior a 80. Use sp_dbcmptlevel para elevar o nível de compatibilidade do banco de dados.    |
-|    1.961    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%. *ls'. A expressão de conversão de ordenação com nome de ordenação '%.* ls' é não determinística porque depende do sistema operacional.    |
-|    1962    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%. *ls' porque a coluna '%.* ls' que é referenciada pela exibição na cláusula WHERE ou GROUP BY é imprecisa. Considere a possibilidade de eliminar a coluna da exibição ou alterá-la para ser precisa.    |
+|    1.961    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls'. A expressão de conversão de ordenação com nome de ordenação '%.* ls' é não determinística porque depende do sistema operacional.    |
+|    1962    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls' porque a coluna '%.* ls' que é referenciada pela exibição na cláusula WHERE ou GROUP BY é imprecisa. Considere a possibilidade de eliminar a coluna da exibição ou alterá-la para ser precisa.    |
 |    1963    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls". A exibição contém uma conversão imprecisa ou não determinística.    |
 |    1964    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls". A exibição contém uma constante imprecisa.    |
 |    1965    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls". A exibição contém um operador aritmético impreciso.    |
@@ -1016,35 +1016,35 @@ ORDER BY message_id
 |    1968    |    16    |    Não    |    Não é possível converter um índice não clusterizado em índice clusterizado online usando a opção DROP_EXISTING.    |
 |    1969    |    16    |    Não    |    O grupo de arquivos padrão FILESTREAM não está disponível no banco de dados '%.*ls'.    |
 |    1970    |    10    |    Não    |    Aviso: a operação de índice online na tabela '%.*ls' continuará, mas o acesso simultâneo à tabela poderá ficar limitado devido a bloqueio residual resultante de uma operação anterior na mesma transação.    |
-|    1971    |    16    |    Não    |    Não é possível desabilitar o índice '%. *ls' da tabela '%.* ls'. Permissão negada para desabilitar a chave estrangeira '%. *ls' na tabela '%.* ls' que usa este índice.    |
-|    1972    |    16    |    Não    |    Não é possível desabilitar o índice clusterizado '%. *ls' da tabela '%.* ls'. Permissão negada para alterar a exibição de referência '%.*ls' enquanto estiver desabilitando seu índice clusterizado.    |
-|    1973    |    16    |    Não    |    Não é possível executar a operação especificada no índice desabilitado '%. *ls' em %S_MSG '%.* ls'.    |
-|    1974    |    16    |    Não    |    Não é possível executar a operação especificada em %S_MSG '%. *ls' porque seu índice clusterizado '%.* ls' está desabilitado.    |
+|    1971    |    16    |    Não    |    Não é possível desabilitar o índice '%.*ls' da tabela '%.* ls'. Permissão negada para desabilitar a chave estrangeira '%.*ls' na tabela '%.* ls' que usa este índice.    |
+|    1972    |    16    |    Não    |    Não é possível desabilitar o índice clusterizado '%.*ls' da tabela '%.* ls'. Permissão negada para alterar a exibição de referência '%.*ls' enquanto estiver desabilitando seu índice clusterizado.    |
+|    1973    |    16    |    Não    |    Não é possível executar a operação especificada no índice desabilitado '%.*ls' em %S_MSG '%.* ls'.    |
+|    1974    |    16    |    Não    |    Não é possível executar a operação especificada em %S_MSG '%.*ls' porque seu índice clusterizado '%.* ls' está desabilitado.    |
 |    1975    |    16    |    Não    |    O comprimento da linha '%.*ls' do índice excede o comprimento máximo permitido de '%d' bytes.    |
-|    1976    |    16    |    Não    |    Não é possível criar índice ou estatísticas '%. *ls' na exibição '%.* ls' porque não é possível verificar se a coluna de chaves '%.*ls' é precisa e determinística. Considere remover a coluna da chave de índice ou estatística, marcando a coluna persistente na tabela base se esta estiver computada, ou usando a coluna não derivada de CLR na chave.    |
-|    1977    |    16    |    Não    |    Não foi possível criar %S_MSG '%. *ls' na tabela '%.* ls'. Somente XML Index pode ser criado na coluna XML '%.*ls'.    |
-|    1978    |    16    |    Não    |    A coluna '%. *ls' da tabela '%.* ls' é do tipo inválido para uso como coluna de chaves em um índice ou estatística.    |
+|    1976    |    16    |    Não    |    Não é possível criar índice ou estatísticas '%.*ls' na exibição '%.* ls' porque não é possível verificar se a coluna de chaves '%.*ls' é precisa e determinística. Considere remover a coluna da chave de índice ou estatística, marcando a coluna persistente na tabela base se esta estiver computada, ou usando a coluna não derivada de CLR na chave.    |
+|    1977    |    16    |    Não    |    Não foi possível criar %S_MSG '%.*ls' na tabela '%.* ls'. Somente XML Index pode ser criado na coluna XML '%.*ls'.    |
+|    1978    |    16    |    Não    |    A coluna '%.*ls' da tabela '%.* ls' é do tipo inválido para uso como coluna de chaves em um índice ou estatística.    |
 |    1979    |    16    |    Não    |    Não é possível usar a opção de índice ignore_dup_key para alterar o índice '%.*ls' porque este aplica uma restrição primária ou única.    |
-|    1980    |    16    |    Não    |    O índice não pode ser criado na coluna computada '%. *ls' da tabela '%.* ls' porque o objeto base '%.*ls' tem um proprietário diferente.    |
+|    1980    |    16    |    Não    |    O índice não pode ser criado na coluna computada '%.*ls' da tabela '%.* ls' porque o objeto base '%.*ls' tem um proprietário diferente.    |
 |    1981    |    10    |    Não    |    Aviso: o comprimento máximo da linha excede o limite permitido de %d bytes. Para algumas combinações de valores grandes, haverá falha na operação insert/update.    |
-|    1982    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%. *ls' porque esta faz referência à função de membro não determinística ou imprecisa '%.* ls' no tipo CLR '%.*ls'. Considere a possibilidade de remover a referência à função ou alterar a função para que se comporte de maneira determinística. Não declare que uma função CLR que se comporta de forma não determinística tenha IsDeterministic=true, pois isso pode corromper o índice. Consulte os Manuais Online para obter detalhes.    |
+|    1982    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls' porque esta faz referência à função de membro não determinística ou imprecisa '%.* ls' no tipo CLR '%.*ls'. Considere a possibilidade de remover a referência à função ou alterar a função para que se comporte de maneira determinística. Não declare que uma função CLR que se comporta de forma não determinística tenha IsDeterministic=true, pois isso pode corromper o índice. Consulte os Manuais Online para obter detalhes.    |
 |    1983    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls'. A função '%s' produz resultados imprecisos. Use uma função de sistema precisa ou modifique a função definida pelo usuário para retornar resultados precisos.    |
 |    1984    |    16    |    Não    |    O índice '%.*ls' não pode ser criado ou recriado. O tamanho de linha especificado para esse índice, com o formato de armazenamento vardecimal, excede o comprimento máximo permitido de '%d' bytes.    |
 |    1985    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls'. Ela contém um ou mais métodos de tipo de dados XML.    |
 |    1986    |    10    |    Não    |    Não é possível substituir o índice não hipotético '%.*ls' por um índice hipotético usando a opção DROP_EXISTING.    |
-|    1987    |    16    |    Não    |    Não é possível %S_MSG %S_MSG '%. *ls' em %S_MSG '%.* ls' porque seu %S_MSG está desabilitado.    |
+|    1987    |    16    |    Não    |    Não é possível %S_MSG %S_MSG '%.*ls' em %S_MSG '%.* ls' porque seu %S_MSG está desabilitado.    |
 |    1988    |    16    |    Não    |    Não é possível recriar o índice clusterizado '%.*ls' online porque ele está desabilitado.    |
-|    1989    |    16    |    Não    |    Não é possível habilitar a restrição de chave estrangeira '%. *ls' porque o índice '%.* ls' da chave referenciada está desabilitado.    |
+|    1989    |    16    |    Não    |    Não é possível habilitar a restrição de chave estrangeira '%.*ls' porque o índice '%.* ls' da chave referenciada está desabilitado.    |
 |    1990    |    16    |    Não    |    Não é possível definir um índice em uma exibição com a opção de índice ignore_dup_key. Remova a opção ignore_dup_key e verifique se a definição da exibição não permite duplicatas, ou não indexa a exibição.    |
-|    1991    |    16    |    Não    |    Não é possível desabilitar o índice clusterizado '%. *ls' da tabela '%.* ls'. Permissão negada para desabilitar a chave estrangeira '%. *ls' na tabela '%.* ls' que faz referência a esta tabela.    |
-|    1992    |    10    |    Não    |    Aviso: a chave estrangeira '%. *ls' na tabela '%.* ls' que faz referência à tabela '%. *ls' foi desabilitada como resultado da desabilitação do índice '%.* ls'.    |
+|    1991    |    16    |    Não    |    Não é possível desabilitar o índice clusterizado '%.*ls' da tabela '%.* ls'. Permissão negada para desabilitar a chave estrangeira '%.*ls' na tabela '%.* ls' que faz referência a esta tabela.    |
+|    1992    |    10    |    Não    |    Aviso: a chave estrangeira '%.*ls' na tabela '%.* ls' que faz referência à tabela '%.*ls' foi desabilitada como resultado da desabilitação do índice '%.* ls'.    |
 |    1993    |    16    |    Não    |    Não é possível particionar um índice em uma variável de tabela ou em uma definição de tabela de retorno na função de valor de tabela.    |
 |    1994    |    16    |    Não    |    Não é possível criar ou atualizar estatísticas na exibição "%.*ls" porque as opções FULLSCAN e NORECOMPUTE são obrigatórias.    |
 |    1995    |    16    |    Não    |    Não é possível recriar o índice hipotético '%.*ls' online.    |
 |    1996    |    16    |    Não    |    Não foi possível criar índice aplicando restrição de chave primária '%.*ls' usando a opção DROP_EXISTING porque a tabela tem um índice XML ou espacial. Descarte esse índice, crie a restrição de chave primária ou espacial e recrie o índice XML ou espacial.    |
 |    1997    |    16    |    Não    |    Não foi possível converter o índice XML ou espacial '%.*ls' em um índice relacional usando a opção DROP_EXISTING. Descarte o índice XML ou espacial e crie um índice relacional com o mesmo nome.    |
-|    1998    |    10    |    Não    |    Aviso: o índice clusterizado '%. *ls' na exibição '%.* ls' que faz referência à tabela '%. *ls' foi desabilitado como resultado da desabilitação do índice '%.* ls'.    |
-|    1999    |    16    |    Não    |    A coluna '%. *ls' da tabela '%.* ls' é do tipo inválido para uso como coluna incluída em um índice.    |
+|    1998    |    10    |    Não    |    Aviso: o índice clusterizado '%.*ls' na exibição '%.* ls' que faz referência à tabela '%.*ls' foi desabilitado como resultado da desabilitação do índice '%.* ls'.    |
+|    1999    |    16    |    Não    |    A coluna '%.*ls' da tabela '%.* ls' é do tipo inválido para uso como coluna incluída em um índice.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 ## <a name="errors-2000-to-2999"></a>Erros de 2000 a 2999
@@ -1052,9 +1052,9 @@ ORDER BY message_id
 | Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
 |    2002    |    16    |    Não    |    Não é possível criar um procedimento para replicação com um número de grupo maior que um.    |
-|    2003    |    16    |    Não    |    Os procedimentos com um número de grupo não podem ter parâmetros de tipos XML ou CLR. O parâmetro '%. *ls' do procedimento '%.* ls' tem o tipo '%ls'.    |
+|    2003    |    16    |    Não    |    Os procedimentos com um número de grupo não podem ter parâmetros de tipos XML ou CLR. O parâmetro '%.*ls' do procedimento '%.* ls' tem o tipo '%ls'.    |
 |    2004    |    16    |    Não    |    O procedimento '%.*ls' já foi criado com o número de grupo %d. Crie um procedimento com um número de grupo não usado.    |
-|    2007    |    10    |    Não    |    O módulo '%. *ls' depende do objeto ausente '%.* ls'. O módulo ainda será criado; entretanto, não poderá ser executado com êxito até o objeto existir.    |
+|    2007    |    10    |    Não    |    O módulo '%.*ls' depende do objeto ausente '%.* ls'. O módulo ainda será criado; entretanto, não poderá ser executado com êxito até o objeto existir.    |
 |    2008    |    16    |    Não    |    O objeto '%.*ls' não é um procedimento, logo não é possível criar outro procedimento sob esse nome de grupo.    |
 |    2010    |    16    |    Não    |    Não é possível efetuar uma alteração em '%.*ls' porque este é um tipo de objeto incompatível.    |
 |    2011    |    16    |    Não    |    Não podem ser especificadas dicas do índice em um objeto associado a esquema.    |
@@ -1062,18 +1062,18 @@ ORDER BY message_id
 |    2014    |    16    |    Não    |    O acesso remoto não é permitido a partir de um objeto associado a esquema.    |
 |    [2020](mssqlserver-2020-database-engine-error.md)    |    16    |    Não    |    As dependências reportadas para a entidade "%.*ls" não incluem referências às colunas. Isso ocorre porque a entidade faz referência a um objeto que não existe ou devido a um erro em uma ou mais instruções na entidade. Antes de executar novamente a consulta, verifique se não há erros na entidade e se todos os objetos referenciados por ela existem.    |
 |    2101    |    14    |    Não    |    Não é possível %S_MSG um nível de servidor %S_MSG para o usuário '%.*ls' pois não há nenhum logon correspondente ao usuário.    |
-|    2102    |    16    |    Não    |    Não é possível %S_MSG %S_MSG '%. *ls' porque não há nenhum usuário para logon '%.* ls' no banco de dados '%.*ls'.    |
+|    2102    |    16    |    Não    |    Não é possível %S_MSG %S_MSG '%.*ls' porque não há nenhum usuário para logon '%.* ls' no banco de dados '%.*ls'.    |
 |    2103    |    15    |    Não    |    Não é possível %S_MSG o gatilho '%.*s' porque seu esquema é diferente do esquema da tabela ou da exibição de destino.    |
 |    2104    |    14    |    Não    |    Não é possível %S_MSG o %S_MSG '%.*ls', porque você não tem permissão.    |
 |    2108    |    15    |    Não    |    Não é possível %S_MSG %S_MSG em '%.*ls' pois o destino não está no banco de dados atual.    |
-|    2110    |    15    |    Não    |    Não é possível alterar o gatilho '%. *ls' em '%.* ls' porque o gatilho não pertence a esse objeto. Especifique o nome do gatilho ou o nome do objeto de destino correto.    |
-|    2111    |    16    |    Não    |    Não é possível %S_MSG o gatilho '%. *ls' em %S_MSG '%.* ls' porque já existe um gatilho INSTEAD OF %s nesse objeto.    |
-|    2112    |    16    |    Não    |    Não é possível criar o gatilho '%. *ls' na exibição '%.* ls' porque a exibição está definida com CHECK OPTION.    |
-|    2113    |    16    |    Não    |    Não é possível %S_MSG INSTEAD OF DELETE ou INSTEAD OF UPDATE TRIGGER '%. *ls' na tabela '%.* ls'. Isso ocorre porque a tabela possui FOREIGN KEY com DELETE ou UPDATE em cascata.    |
+|    2110    |    15    |    Não    |    Não é possível alterar o gatilho '%.*ls' em '%.* ls' porque o gatilho não pertence a esse objeto. Especifique o nome do gatilho ou o nome do objeto de destino correto.    |
+|    2111    |    16    |    Não    |    Não é possível %S_MSG o gatilho '%.*ls' em %S_MSG '%.* ls' porque já existe um gatilho INSTEAD OF %s nesse objeto.    |
+|    2112    |    16    |    Não    |    Não é possível criar o gatilho '%.*ls' na exibição '%.* ls' porque a exibição está definida com CHECK OPTION.    |
+|    2113    |    16    |    Não    |    Não é possível %S_MSG INSTEAD OF DELETE ou INSTEAD OF UPDATE TRIGGER '%.*ls' na tabela '%.* ls'. Isso ocorre porque a tabela possui FOREIGN KEY com DELETE ou UPDATE em cascata.    |
 |    2114    |    16    |    Não    |    A coluna '%.*ls' não pode ser usada em uma cláusula IF UPDATE porque ela é uma coluna computada.    |
 |    2115    |    16    |    Não    |    As notificações de eventos no nível do servidor estão desabilitadas porque o banco de dados msdb não existe.    |
 |    2116    |    16    |    Não    |    Não é possível CREATE EVENT NOTIFICATION para o banco de dados '%.*ls' porque ele não é um banco de dados de agente válido.    |
-|    2117    |    16    |    Não    |    Não é possível %S_MSG INSTEAD OF o gatilho '%. *ls' em %S_MSG '%.* ls' porque %S_MSG tem uma coluna de FILESTREAM.    |
+|    2117    |    16    |    Não    |    Não é possível %S_MSG INSTEAD OF o gatilho '%.*ls' em %S_MSG '%.* ls' porque %S_MSG tem uma coluna de FILESTREAM.    |
 |    2201    |    16    |    Não    |    %sA derivação de "anySimpleType" por restrição não é permitida, e a derivação por restrição de um tipo derivado de "anySimpleType" por extensão será permitida apenas se nenhuma faceta de restrição for especificada.    |
 |    2202    |    16    |    Não    |    %sOcorreu um erro durante a compilação da consulta. Para obter informações mais detalhadas sobre o erro, a consulta deve ser executada por um usuário com permissões EXECUTE na coleção de esquemas xml usadas na consulta.    |
 |    2203    |    16    |    Não    |    %sSomente 'http://www.w3.org/2001/XMLSchema#decimal? ', 'http://www.w3.org/2001/XMLSchema#boolean? ' ou 'node()*' permitidas como predicados, encontrado: '%ls'    |
@@ -1247,9 +1247,9 @@ ORDER BY message_id
 |    2503    |    10    |    Não    |    O arquivo físico '%ls' foi excluído com êxito.    |
 |    2504    |    16    |    Não    |    Não foi possível excluir o arquivo físico '%ls'. A função de sistema DeleteFile retornou o erro %ls.    |
 |    2505    |    16    |    Não    |    O dispositivo '%.*ls' não existe. Use sys.backup_devices para mostrar os dispositivos disponíveis.    |
-|    2506    |    16    |    Não    |    Não foi possível encontrar um nome de tabela ou de objeto '%. *ls' no banco de dados '%.* ls'.    |
+|    2506    |    16    |    Não    |    Não foi possível encontrar um nome de tabela ou de objeto '%.*ls' no banco de dados '%.* ls'.    |
 |    2507    |    16    |    Não    |    A opção CONCAT_NULL_YIELDS_NULL deve ser definida como ON para executar DBCC CHECKCONSTRAINTS.    |
-|    [2508](mssqlserver-2508-database-engine-error.md)    |    16    |    Não    |    A contagem %. *ls de objetos "%.* ls", ID de índice %d, ID de partição %I64d e ID de unidade de alocação %I64d (tipo %.*ls) está incorreta. Execute DBCC UPDATEUSAGE.    |
+|    [2508](mssqlserver-2508-database-engine-error.md)    |    16    |    Não    |    A contagem %.*ls de objetos "%.* ls", ID de índice %d, ID de partição %I64d e ID de unidade de alocação %I64d (tipo %.*ls) está incorreta. Execute DBCC UPDATEUSAGE.    |
 |    2509    |    16    |    Não    |    Falha em DBCC CHECKCONSTRAINTS devido a um erro de consulta interna.    |
 |    2510    |    16    |    Não    |    Erro de DBCC '%ls': %ls.    |
 |    [2511](mssqlserver-2511-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls). As chaves estão fora da ordem na página %S_PGID, slots %d e %d.    |
@@ -1262,15 +1262,15 @@ ORDER BY message_id
 |    [2519](mssqlserver-2519-database-engine-error.md)    |    10    |    Não    |    Colunas computadas e tipos CLR não podem ser verificados para a ID de objeto %ld (objeto "%.*ls") porque o avaliador interno de expressões não pôde ser inicializado.    |
 |    2520    |    16    |    Não    |    Não foi possível localizar o banco de dados '%.*ls'. Ele não existe ou foi descartado antes que uma instrução tentasse utilizá-lo. Verifique se o banco de dados existe consultando a exibição do catálogo sys.databases.    |
 |    2521    |    16    |    Não    |    Não foi possível localizar a ID de banco de dados %d. Ela não existe ou o banco de dados foi descartado antes que uma instrução tentasse utilizá-la. Verifique se a ID de banco de dados existe consultando a exibição do catálogo sys.databases.    |
-|    [2522](mssqlserver-2522-database-engine-error.md)    |    16    |    Não    |    Não é possível processar o índice %. *ls de tabela %.* ls porque o grupo de arquivos %.*ls é inválido.    |
+|    [2522](mssqlserver-2522-database-engine-error.md)    |    16    |    Não    |    Não é possível processar o índice %.*ls de tabela %.* ls porque o grupo de arquivos %.*ls é inválido.    |
 |    2523    |    16    |    Não    |    Grupo de arquivos %.*ls é inválido.    |
 |    2524    |    16    |    Não    |    Não é possível processar a ID de objeto %ld (objeto "%.*ls") por ser uma fila do Service Broker. Tente a operação novamente com a ID de objeto da tabela interna correspondente para a fila, encontrada em sys.internal_tables.    |
 |    2525    |    16    |    Não    |    O arquivo de banco de dados %.*s está offline.    |
 |    2526    |    16    |    Não    |    Instrução DBCC incorreta. Verifique a documentação para obter a sintaxe correta e as opções de DBCC.    |
-|    [2527](mssqlserver-2527-database-engine-error.md)    |    16    |    Não    |    Não é possível processar o índice %. *ls da tabela %.* ls porque o grupo de arquivos %.*ls está offline.    |
+|    [2527](mssqlserver-2527-database-engine-error.md)    |    16    |    Não    |    Não é possível processar o índice %.*ls da tabela %.* ls porque o grupo de arquivos %.*ls está offline.    |
 |    2528    |    10    |    Não    |    A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, contate o administrador do sistema.    |
 |    2529    |    16    |    Não    |    O grupo de arquivos %.*ls está offline    |
-|    [2530](mssqlserver-2530-database-engine-error.md)    |    16    |    Não    |    O índice "%. *ls" na tabela "%.* ls" está desabilitado.    |
+|    [2530](mssqlserver-2530-database-engine-error.md)    |    16    |    Não    |    O índice "%.*ls" na tabela "%.* ls" está desabilitado.    |
 |    2531    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID da unidade de alocação %I64d (tipo %.*ls) incompatibilidade entre níveis de árvore B, página %S_PGID. Nível %d não corresponde a nível %d do %S_PGID anterior.    |
 |    2532    |    16    |    Não    |    Uma ou mais opções WITH especificadas não são válidas para este comando.    |
 |    [2533](mssqlserver-2533-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: a página %S_PGID alocada à ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls) não foi vista. A página pode ser inválida ou ter uma ID de unidade de alocação incorreta em seu cabeçalho.    |
@@ -1280,23 +1280,23 @@ ORDER BY message_id
 |    [2538](mssqlserver-2538-database-engine-error.md)    |    10    |    Não    |    Arquivo %d. Número de extensões = %I64d, páginas usadas = %I64d e páginas reservadas = %I64d.    |
 |    [2539](mssqlserver-2539-database-engine-error.md)    |    10    |    Não    |    O número total de extensões = %I64d, páginas usadas = %I64d, páginas reservadas = %I64d neste banco de dados.    |
 |    [2540](mssqlserver-2540-database-engine-error.md)    |    10    |    Não    |    O sistema não pode reparar este erro por conta própria.    |
-|    2541    |    10    |    Não    |    DBCC UPDATEUSAGE: contagens de uso atualizadas para a tabela '%. *ls' (índice '%.* ls', partição %ld):    |
+|    2541    |    10    |    Não    |    DBCC UPDATEUSAGE: contagens de uso atualizadas para a tabela '%.*ls' (índice '%.* ls', partição %ld):    |
 |    2542    |    10    |    Não    |    Páginas DATA %.*ls: alteradas de páginas (%I64d) para (%I64d).    |
 |    2543    |    10    |    Não    |    Páginas USED %.*ls: alterado de (%I64d) para (%I64d) páginas.    |
 |    2544    |    10    |    Não    |    Páginas RSVD %.*ls: alterado de (%I64d) para (%I64d) páginas.    |
 |    2545    |    10    |    Não    |    Contagem de ROWS: alterado de (%I64d) para (%I64d) linhas.    |
-|    [2546](mssqlserver-2546-database-engine-error.md)    |    10    |    Não    |    O índice '%. *ls' na tabela '%.* ls' está marcado como desabilitado. Reconstrua o índice para colocá-lo online.    |
+|    [2546](mssqlserver-2546-database-engine-error.md)    |    10    |    Não    |    O índice '%.*ls' na tabela '%.* ls' está marcado como desabilitado. Reconstrua o índice para colocá-lo online.    |
 |    2547    |    16    |    Não    |    Não foi possível processar a ID de objeto %ld (objeto "%.*ls") por ser um sinônimo. Se o objeto referido pelo sinônimo for uma tabela ou exibição, tente a operação novamente usando o objeto base ao qual o sinônimo faz referência.    |
 |    2548    |    10    |    Não    |    DBCC: a fase de compactação do índice '%.*ls' está %d%% concluída.    |
 |    2549    |    10    |    Não    |    DBCC: a fase de desfragmentação do índice '%.*ls' está %d%% concluída.    |
-|    2550    |    16    |    Não    |    O índice "%. *ls" (partição %ld) da tabela "%.* ls" não pode ser reorganizado porque está sendo reorganizado por outro processo.    |
+|    2550    |    16    |    Não    |    O índice "%.*ls" (partição %ld) da tabela "%.* ls" não pode ser reorganizado porque está sendo reorganizado por outro processo.    |
 |    2551    |    16    |    Não    |    Os índices da tabela "%.*ls" não podem ser reorganizados porque já existe uma compilação ou recompilação de índice online em andamento na tabela.    |
-|    2552    |    16    |    Não    |    O índice "%. *ls" (partição %ld) da tabela "%.* ls" não pode ser reorganizado porque o bloqueio de nível de página está desabilitado.    |
-|    2553    |    10    |    Sim    |    A tabela '%. *ls' não estará disponível durante a reorganização do índice '%.* ls'. Isso ocorre porque a operação de reorganização do índice é executada dentro de uma transação do usuário e a tabela inteira é bloqueada exclusivamente.    |
-|    2554    |    16    |    Não    |    O índice "%. *ls" (partição %ld) da tabela "%.* ls" não pode ser reorganizado porque o grupo de arquivos é somente leitura.    |
+|    2552    |    16    |    Não    |    O índice "%.*ls" (partição %ld) da tabela "%.* ls" não pode ser reorganizado porque o bloqueio de nível de página está desabilitado.    |
+|    2553    |    10    |    Sim    |    A tabela '%.*ls' não estará disponível durante a reorganização do índice '%.* ls'. Isso ocorre porque a operação de reorganização do índice é executada dentro de uma transação do usuário e a tabela inteira é bloqueada exclusivamente.    |
+|    2554    |    16    |    Não    |    O índice "%.*ls" (partição %ld) da tabela "%.* ls" não pode ser reorganizado porque o grupo de arquivos é somente leitura.    |
 |    2555    |    16    |    Não    |    Não é possível mover todo o conteúdo do arquivo "%.*ls" para outros locais para concluir a operação emptyfile.    |
 |    2556    |    16    |    Não    |    Não há espaço suficiente no grupo de arquivos para concluir a operação emptyfile.    |
-|    2557    |    14    |    Não    |    O usuário '%. *ls' não tem permissão para executar o DBCC %ls para o objeto '%.* ls'.    |
+|    2557    |    14    |    Não    |    O usuário '%.*ls' não tem permissão para executar o DBCC %ls para o objeto '%.* ls'.    |
 |    2558    |    16    |    Não    |    %I64d contagens incorretas foram detectadas no banco de dados '%.*ls'.    |
 |    2559    |    16    |    Não    |    As opções '%ls' e '%ls' não são permitidas na mesma instrução.    |
 |    2560    |    16    |    Não    |    O parâmetro %d está incorreto para esta instrução DBCC.    |
@@ -1305,8 +1305,8 @@ ORDER BY message_id
 |    2566    |    14    |    Não    |    DBCC DBREINDEX não pode ser usado em tabelas do sistema.    |
 |    2567    |    14    |    Não    |    DBCC INDEXDEFRAG não pode ser usado em índices de tabela do sistema    |
 |    2568    |    16    |    Não    |    A página %S_PGID está fora do intervalo desse banco de dados ou está em um arquivo de log.    |
-|    [2570](mssqlserver-2570-database-engine-error.md)    |    16    |    Não    |    Página %S_PGID, slot %d na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo "%. *ls"). O valor da coluna "%.* ls" está fora do intervalo de tipo de dados "%.*ls". Atualize a coluna para um valor válido.    |
-|    2571    |    14    |    Não    |    O usuário '%. *ls' não tem permissão para executar o DBCC %.* ls.    |
+|    [2570](mssqlserver-2570-database-engine-error.md)    |    16    |    Não    |    Página %S_PGID, slot %d na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo "%.*ls"). O valor da coluna "%.* ls" está fora do intervalo de tipo de dados "%.*ls". Atualize a coluna para um valor válido.    |
+|    2571    |    14    |    Não    |    O usuário '%.*ls' não tem permissão para executar o DBCC %.* ls.    |
 |    2572    |    16    |    Não    |    O DBCC não pode liberar a DLL '%.*ls'. A DLL está em uso.    |
 |    2573    |    16    |    Não    |    Não foi possível encontrar a ID de tabela ou objeto %.*ls. Verifique o catálogo do sistema.    |
 |    [2574](mssqlserver-2574-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: a página %S_PGID está vazia na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls). Isso não é permitido no nível %d da árvore B.    |
@@ -1318,51 +1318,51 @@ ORDER BY message_id
 |    2581    |    10    |    Não    |    DBCC não pode liberar a DLL "%.*ls". A DLL não está carregada.    |
 |    2583    |    16    |    Não    |    Número incorreto de parâmetros fornecido para a instrução DBCC.    |
 |    2585    |    16    |    Não    |    Não é possível localizar o número de partição %ld para a tabela "%.*ls".    |
-|    2586    |    16    |    Não    |    Não é possível localizar o número de partição %ld para o índice "%. *ls", tabela "%.* ls".    |
+|    2586    |    16    |    Não    |    Não é possível localizar o número de partição %ld para o índice "%.*ls", tabela "%.* ls".    |
 |    2587    |    16    |    Não    |    Foi especificado o número de partição inválido %ld.    |
 |    2588    |    16    |    Não    |    Não é possível localizar o número de partição %ld para a ID de índice %d, ID de objeto %d.    |
 |    2589    |    16    |    Não    |    O reparo não pôde corrigir todos os erros na primeira tentativa.    |
-|    2590    |    10    |    Sim    |    O usuário "%. *ls" está modificando bytes %d para %d da página %S_PGID no banco de dados "%.* ls".    |
+|    2590    |    10    |    Sim    |    O usuário "%.*ls" está modificando bytes %d para %d da página %S_PGID no banco de dados "%.* ls".    |
 |    2591    |    16    |    Não    |    Não é possível localizar uma linha do catálogo do sistema com a ID de índice %d para a tabela "%.*ls".    |
-|    [2592](mssqlserver-2592-database-engine-error.md)    |    10    |    Não    |    Reparar: o índice %ls foi recompilado com êxito para o objeto "%. *ls" no banco de dados "%.* ls".    |
+|    [2592](mssqlserver-2592-database-engine-error.md)    |    10    |    Não    |    Reparar: o índice %ls foi recompilado com êxito para o objeto "%.*ls" no banco de dados "%.* ls".    |
 |    [2593](mssqlserver-2593-database-engine-error.md)    |    10    |    Não    |    Há %I64d linhas em %I64d páginas para o objeto "%.*ls".    |
-|    2594    |    10    |    Não    |    Não é possível processar a ID do conjunto de linhas %I64d do objeto "%. *ls" (ID %d), índice "%.* ls" (ID %d), pois ela reside no grupo de arquivos "%.*ls" (ID %d), que não foi verificado.    |
+|    2594    |    10    |    Não    |    Não é possível processar a ID do conjunto de linhas %I64d do objeto "%.*ls" (ID %d), índice "%.* ls" (ID %d), pois ela reside no grupo de arquivos "%.*ls" (ID %d), que não foi verificado.    |
 |    [2596](mssqlserver-2596-database-engine-error.md)    |    16    |    Não    |    A instrução de correção não foi processada. O banco de dados não pode ficar no modo somente leitura.    |
 |    2597    |    10    |    Não    |    Ignorando o sinalizador de rastreamento %d. Trata-se de um sinalizador de rastreamento inválido ou que somente pode ser especificado durante a inicialização do servidor.    |
 |    2599    |    16    |    Não    |    Não é possível alternar para o texto da linha na tabela "%.*ls".    |
-|    2601    |    14    |    Não    |    Não é possível inserir uma linha de chave duplicada no objeto '%. *ls' com o índice exclusivo '%.* ls'.    |
-|    2628    |    16    |    Não    |    Os dados da cadeia de caracteres seriam truncados na tabela '%. *ls', coluna '%.* ls'. Valor truncado: '%.*ls'.|
-|    2627    |    14    |    Não    |    Violação da restrição %ls '%. *ls'. Não é possível inserir uma chave duplicada no objeto '%.* ls'.    |
+|    2601    |    14    |    Não    |    Não é possível inserir uma linha de chave duplicada no objeto '%.*ls' com o índice exclusivo '%.* ls'.    |
+|    2628    |    16    |    Não    |    Os dados da cadeia de caracteres seriam truncados na tabela '%.*ls', coluna '%.* ls'. Valor truncado: '%.*ls'.|
+|    2627    |    14    |    Não    |    Violação da restrição %ls '%.*ls'. Não é possível inserir uma chave duplicada no objeto '%.* ls'.    |
 |    2701    |    10    |    Não    |    Nome do banco de dados '%.*ls' ignorado, fazendo referência a objeto em tempdb.    |
 |    2702    |    16    |    Não    |    O banco de dados '%.*ls' não existe.    |
 |    2703    |    16    |    Não    |    Não é possível usar nomes de colunas duplicados na lista de colunas de partição. O nome da coluna '%.*ls' aparece mais de uma vez.    |
 |    2704    |    16    |    Não    |    Esquema de partição inválido '%.*ls' especificado.    |
-|    2705    |    16    |    Não    |    Os nomes de colunas em cada tabela devem ser exclusivos. O nome da coluna '%. *ls' na tabela '%.* ls' foi especificado mais de uma vez.    |
+|    2705    |    16    |    Não    |    Os nomes de colunas em cada tabela devem ser exclusivos. O nome da coluna '%.*ls' na tabela '%.* ls' foi especificado mais de uma vez.    |
 |    2706    |    11    |    Não    |    A tabela '%.*ls' não existe.    |
-|    2707    |    16    |    Não    |    A coluna '%. *ls' em %S_MSG '%.* ls' não pode ser usada em um índice ou estatística ou como uma chave de partição porque depende de um objeto não associado a esquema.    |
-|    2709    |    16    |    Não    |    A coluna '%. *ls' em %S_MSG '%.* ls' não pode ser usada em um índice ou estatística ou como uma chave de partição porque oferece acesso a dados do usuário ou do sistema.    |
+|    2707    |    16    |    Não    |    A coluna '%.*ls' em %S_MSG '%.* ls' não pode ser usada em um índice ou estatística ou como uma chave de partição porque depende de um objeto não associado a esquema.    |
+|    2709    |    16    |    Não    |    A coluna '%.*ls' em %S_MSG '%.* ls' não pode ser usada em um índice ou estatística ou como uma chave de partição porque oferece acesso a dados do usuário ou do sistema.    |
 |    2710    |    16    |    Não    |    Você não é o proprietário especificado do objeto '%.*ls' nesta instrução (CREATE, ALTER, TRUNCATE, UPDATE STATISTICS ou BULK INSERT).    |
-|    2711    |    16    |    Não    |    A definição do objeto "%. *ls" no banco de dados de recursos contém o caractere não ASCII "%.* ls".    |
+|    2711    |    16    |    Não    |    A definição do objeto "%.*ls" no banco de dados de recursos contém o caractere não ASCII "%.* ls".    |
 |    2712    |    16    |    Não    |    '%.*ls' não pode ser configurado como um banco de dados de distribuição porque seu controle de alterações está habilitado.    |
 |    2714    |    16    |    Não    |    Já existe um objeto denominado '%.*ls' no banco de dados.    |
 |    2715    |    16    |    Não    |    Coluna, parâmetro ou variável #%d: Não é possível localizar o tipo de dados %.*ls.    |
 |    2716    |    16    |    Não    |    Coluna, parâmetro ou variável #%d: Não é possível especificar o comprimento de uma coluna no tipo de dados %.*ls.    |
 |    2717    |    15    |    Não    |    O tamanho (%d) especificado para a %S_MSG'%.*ls' excede o máximo permitido (%d).    |
 |    2719    |    16    |    Não    |    Falha na atualização do banco de dados "%.*ls" porque ele contém um usuário chamado "sys" que é um usuário reservado ou nome de esquema nesta versão do SQL Server.    |
-|    2720    |    16    |    Não    |    Não é possível associar o esquema %S_MSG '%. *ls' porque ele faz referência ao objeto do sistema '%.* ls'.    |
+|    2720    |    16    |    Não    |    Não é possível associar o esquema %S_MSG '%.*ls' porque ele faz referência ao objeto do sistema '%.* ls'.    |
 |    2722    |    16    |    Não    |    Os métodos de tipos de dados Xml não são permitidos em expressões neste contexto.    |
 |    2724    |    10    |    Não    |    O parâmetro ou a variável '%.*ls' tem um tipo de dados inválido.    |
-|    2725    |    16    |    Não    |    Não é possível executar uma operação online para %S_MSG '%. *ls' porque o índice contém a coluna '%.* ls' de tipo de dados text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml ou tipo CLR grande. Para um índice não clusterizado, a coluna pode ser de inclusão do índice. Para um índice clusterizado, a coluna pode ser qualquer coluna da tabela. Se for usado DROP_EXISTING, a coluna poderá ser parte de um índice novo ou antigo. A operação deve ser executada offline.    |
+|    2725    |    16    |    Não    |    Não é possível executar uma operação online para %S_MSG '%.*ls' porque o índice contém a coluna '%.* ls' de tipo de dados text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml ou tipo CLR grande. Para um índice não clusterizado, a coluna pode ser de inclusão do índice. Para um índice clusterizado, a coluna pode ser qualquer coluna da tabela. Se for usado DROP_EXISTING, a coluna poderá ser parte de um índice novo ou antigo. A operação deve ser executada offline.    |
 |    2726    |    16    |    Não    |    A função de partição '%.*ls' usa colunas %d que não correspondem ao número de colunas de partição usadas para particionar a tabela ou índice.    |
 |    2727    |    11    |    Não    |    Não é possível localizar o índice '%.*ls'.    |
 |    2728    |    16    |    Não    |    Não é possível particionar mais de %d colunas.    |
-|    2729    |    16    |    Não    |    A coluna '%. *ls' em %S_MSG '%.* ls' não pode ser usada em um índice ou estatística ou como uma chave de partição porque é não determinística.    |
-|    2730    |    11    |    Não    |    Não é possível criar o procedimento '%. *ls' com um número de grupo %d porque um procedimento com o mesmo nome e um número de grupo 1 não existe no momento no banco de dados. É necessário executar CREATE PROCEDURE '%.* ls';1 primeiro.    |
+|    2729    |    16    |    Não    |    A coluna '%.*ls' em %S_MSG '%.* ls' não pode ser usada em um índice ou estatística ou como uma chave de partição porque é não determinística.    |
+|    2730    |    11    |    Não    |    Não é possível criar o procedimento '%.*ls' com um número de grupo %d porque um procedimento com o mesmo nome e um número de grupo 1 não existe no momento no banco de dados. É necessário executar CREATE PROCEDURE '%.* ls';1 primeiro.    |
 |    2731    |    16    |    Não    |    A coluna '%.*ls' tem largura inválida: %d.    |
 |    2732    |    16    |    Não    |    O número de erro %ld é inválido. O número deve estar entre %ld e %ld e não pode ser 50000.    |
 |    2733    |    16    |    Não    |    O tipo de dados %ls é inválido para valores de retorno.    |
-|    2735    |    16    |    Não    |    Não é possível criar o índice xml ou espacial primário '%. *ls' em '%.* ls' porque a restrição PRIMARY KEY contém colunas do tipo carimbo de data/hora.    |
-|    2738    |    16    |    Não    |    Uma tabela só pode ter uma coluna de carimbo de data/hora. Como a tabela '%. *ls' já tem uma, a coluna '%.* ls' não pode se adicionada.    |
+|    2735    |    16    |    Não    |    Não é possível criar o índice xml ou espacial primário '%.*ls' em '%.* ls' porque a restrição PRIMARY KEY contém colunas do tipo carimbo de data/hora.    |
+|    2738    |    16    |    Não    |    Uma tabela só pode ter uma coluna de carimbo de data/hora. Como a tabela '%.*ls' já tem uma, a coluna '%.* ls' não pode se adicionada.    |
 |    2739    |    16    |    Não    |    Os tipos de dados text, ntext e image são inválidos para variáveis locais.    |
 |    2740    |    16    |    Não    |    Falha em SET LANGUAGE porque '%.*ls' não é um nome de idioma oficial ou um alias de idioma neste SQL Server.    |
 |    2741    |    16    |    Não    |    A ordem de data '%.*ls' de SET DATEFORMAT é inválida.    |
@@ -1405,19 +1405,19 @@ ORDER BY message_id
 |    2792    |    16    |    Não    |    Não é possível especificar um tipo CLR sql em um objeto associado a esquema ou uma expressão de restrição.    |
 |    2793    |    16    |    Não    |    O nome do proprietário especificado '%.*ls' não existe ou você não tem permissão para agir em seu nome.    |
 |    2794    |    16    |    Não    |    O texto da mensagem espera mais que o número máximo de argumentos (%d).    |
-|    2795    |    16    |    Não    |    Não foi possível %S_MSG %S_MSG porque o novo %S_MSG '%. *ls' não corresponde ao FILESTREAM %S_MSG '%.* ls' da tabela.    |
+|    2795    |    16    |    Não    |    Não foi possível %S_MSG %S_MSG porque o novo %S_MSG '%.*ls' não corresponde ao FILESTREAM %S_MSG '%.* ls' da tabela.    |
 |    2796    |    16    |    Não    |    Não é possível especificar o nome do banco de dados com $partition em um objeto associado a esquema, coluna computada ou expressão de restrição.    |
 |    2797    |    16    |    Não    |    O esquema padrão não existe.    |
-|    2798    |    16    |    Não    |    Não é possível criar índice ou estatísticas '%. *ls' na tabela '%.* ls' porque o SQL Server não pode verificar se a coluna de chaves '%.*ls' é precisa e determinística. Considere a possibilidade de remover a coluna da chave do índice ou de estatística, marcando a coluna computada persistente ou usando a coluna não derivada de CLR na chave.    |
-|    2799    |    16    |    Não    |    Não é possível criar índice ou estatísticas '%. *ls' na tabela '%.* ls' porque a coluna computada '%.*ls' é imprecisa e não persistente. Considere a possibilidade de remover a coluna da chave de índice ou estatísticas ou marcar a coluna computada persistente.    |
+|    2798    |    16    |    Não    |    Não é possível criar índice ou estatísticas '%.*ls' na tabela '%.* ls' porque o SQL Server não pode verificar se a coluna de chaves '%.*ls' é precisa e determinística. Considere a possibilidade de remover a coluna da chave do índice ou de estatística, marcando a coluna computada persistente ou usando a coluna não derivada de CLR na chave.    |
+|    2799    |    16    |    Não    |    Não é possível criar índice ou estatísticas '%.*ls' na tabela '%.* ls' porque a coluna computada '%.*ls' é imprecisa e não persistente. Considere a possibilidade de remover a coluna da chave de índice ou estatísticas ou marcar a coluna computada persistente.    |
 |    2801    |    16    |    Não    |    A definição do objeto '%.*ls' foi alterada desde a sua compilação.    |
 |    2802    |    10    |    Não    |    O SQL Server encontrou %d ocorrências de liberação de armazenamento no cache '%.s' (parte do cache de planos) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'.    |
 |    2803    |    10    |    Não    |    O SQL Server encontrou %d ocorrências de liberação de armazenamento no cache '%s' (parte do cache de planos) devido à manutenção do banco de dados ou operações de reconfiguração.    |
-|    2809    |    18    |    Não    |    Houve falha na solicitação de %S_MSG '%. *ls' porque '%.* ls' é um objeto %S_MSG.    |
+|    2809    |    18    |    Não    |    Houve falha na solicitação de %S_MSG '%.*ls' porque '%.* ls' é um objeto %S_MSG.    |
 |    2812    |    16    |    Não    |    Não foi possível localizar o procedimento armazenado '%.*ls'.    |
 |    2813    |    16    |    Não    |    %.*ls não é suportado nesta edição do SQL Server.    |
 |    [2814](mssqlserver-2814-database-engine-error.md)    |    10    |    Não    |    Uma possível recompilação infinita foi detectada para SQLHANDLE %hs, PlanHandle %hs, deslocamento inicial %d, deslocamento final %d. O último motivo da recompilação foi %d.    |
-|    2628    |    16    |    Não    |    Os dados da cadeia de caracteres seriam truncados na tabela '%. *ls', coluna '%.* ls'. Valor truncado: '%.*ls'.    |
+|    2628    |    16    |    Não    |    Os dados da cadeia de caracteres seriam truncados na tabela '%.*ls', coluna '%.* ls'. Valor truncado: '%.*ls'.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 ## <a name="errors-3000---3999"></a>Erros 3000 a 3999
@@ -1447,7 +1447,7 @@ ORDER BY message_id
 |    [3023](mssqlserver-3023-database-engine-error.md)    |    16    |    Não    |    O backup e as operações de manipulação de arquivos (como ALTER DATABASE ADD FILE) e alterações de criptografia em um banco de dados devem ser serializadas. Emita novamente a instrução após a conclusão da operação atual de backup ou de manipulação de arquivo.    |
 |    3024    |    16    |    Não    |    Só é possível executar um backup completo do banco de dados mestre. Use BACKUP DATABASE para fazer backup de todo o banco de dados mestre.    |
 |    3025    |    16    |    Não    |    Nome do banco de dados ausente. Emita novamente a instrução especificando um nome de banco de dados válido.    |
-|    3027    |    16    |    Não    |    O grupo de arquivos "%. *ls" não faz parte do banco de dados "%.* ls".    |
+|    3027    |    16    |    Não    |    O grupo de arquivos "%.*ls" não faz parte do banco de dados "%.* ls".    |
 |    3028    |    10    |    Não    |    O arquivo de reinício do ponto de verificação '%ls' estava corrompido e será ignorado. O comando RESTORE continuará desde o início como se RESTART não tivesse sido especificado.    |
 |    3031    |    16    |    Não    |    A opção '%ls' está em conflito com as opções '%ls'. Remova a opção conflitante e emita novamente a instrução.    |
 |    3032    |    16    |    Não    |    Uma ou mais das opções (%ls) não têm suporte para essa instrução. Reveja a documentação para obter as opções com suporte.    |
@@ -1657,7 +1657,7 @@ ORDER BY message_id
 |    3420    |    21    |    Sim    |    O instantâneo do banco de dados '%ls' falhou em uma operação de E/S e foi marcado como suspeito. Ele deve ser descartado e recriado.    |
 |    3421    |    10    |    Sim    |    Recuperação concluída para o banco de dados %ls (ID do banco de dados %d) em %I64d segundo(s) (análise %I64d ms, refazer %I64d ms, desfazer %I64d ms). Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    3422    |    10    |    Sim    |    O banco de dados %1s foi desativado devido ao erro %d na rotina '%hs'. Haverá tentativa de reiniciar bancos de dados que não sejam de instantâneo após a anulação de todas as conexões com o banco de dados.    |
-|    3429    |    10    |    Sim    |    A recuperação não pôde determinar o resultado de uma transação envolvendo todos os bancos de dados %S_XID, denominada '%. *ls', no banco de dados '%.* ls' (ID do banco de dados %d). O banco de dados coordenador (ID do banco de dados %d) não estava disponível. A transação foi considerada confirmada. Se ela não tiver sido confirmada, você poderá repetir a recuperação quando o banco de dados coordenador estiver disponível.    |
+|    3429    |    10    |    Sim    |    A recuperação não pôde determinar o resultado de uma transação envolvendo todos os bancos de dados %S_XID, denominada '%.*ls', no banco de dados '%.* ls' (ID do banco de dados %d). O banco de dados coordenador (ID do banco de dados %d) não estava disponível. A transação foi considerada confirmada. Se ela não tiver sido confirmada, você poderá repetir a recuperação quando o banco de dados coordenador estiver disponível.    |
 |    [3431](mssqlserver-3431-database-engine-error.md)    |    21    |    Sim    |    Não foi possível recuperar o banco de dados '%.*ls' (ID do banco de dados %d) devido a resultados de transação não resolvidos. As transações do MS DTC (Coordenador de Transações Distribuídas da Microsoft) foram preparadas, mas o MS DTC não pôde determinar a resolução. Para resolver, corrija o MS DTC, repare o banco de dados ou restaure-o usando um backup completo.    |
 |    3434    |    20    |    Sim    |    Não é possível alterar a ordem de classificação ou a localidade. Ocorreu uma falha inesperada durante tentativa de reindexar o servidor em uma nova ordenação. O SQL Server está sendo desligado. Reinicie-o para manter a ordem de classificação inalterada. Diagnostique e corrija erros anteriores e tente a operação novamente.    |
 |    [3437](mssqlserver-3437-database-engine-error.md)    |    21    |    Sim    |    Ocorreu um erro ao recuperar o banco de dados '%.*ls.' Não é possível se conectar ao MS DTC (Coordenador de Transações Distribuídas da Microsoft) para verificar o status de conclusão da transação %S_XID. Corrija o MS DTC e execute a recuperação novamente.    |
@@ -1670,7 +1670,7 @@ ORDER BY message_id
 |    3448    |    21    |    Sim    |    A reversão encontrou uma página com um número de sequência de log (LSN) inferior ao LSN do registro do log original. Não foi possível desfazer o registro de log %S_LSN, para ID de transação %S_XID, na página %S_PGID, banco de dados '%.*ls' (ID de banco de dados %d). Informações da página: LSN = %S_LSN, type = %ld. Informações do log: OpCode = %ld, context %ld. Restaure ou repare o banco de dados.    |
 |    3449    |    21    |    Sim    |    O SQL Server deve ser desligado para a recuperar um banco de dados (ID do banco de dados %d). Este é um banco de dados de usuário que não pôde ser fechado ou um banco de dados do sistema. Reinicie o SQL Server. Se ocorrer falha na recuperação do banco de dados após outra inicialização, repare ou restaure o banco de dados.    |
 |    3450    |    10    |    Sim    |    A recuperação do banco de dados '%.*ls' (%d) está %d%% concluída (ainda restam cerca de %d segundos). Fase %d de 3. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
-|    [3452](mssqlserver-3452-database-engine-error.md)    |    10    |    Sim    |    A recuperação do banco de dados '%. *ls' (%d) detectou uma possível inconsistência do valor da identidade na ID da tabela %d. Execute DBCC CHECKIDENT ('%.* ls').    |
+|    [3452](mssqlserver-3452-database-engine-error.md)    |    10    |    Sim    |    A recuperação do banco de dados '%.*ls' (%d) detectou uma possível inconsistência do valor da identidade na ID da tabela %d. Execute DBCC CHECKIDENT ('%.* ls').    |
 |    3453    |    16    |    Não    |    Esta versão não pode refazer nenhuma criação de índice ou operação não registrada em log executada pelo SQL Server 7.0. Não é possível efetuar roll forward adicional.    |
 |    3454    |    10    |    Sim    |    A recuperação está gravando um ponto de verificação no banco de dados '%.*ls' (%d). Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    [3456](mssqlserver-3456-database-engine-error.md)    |    21    |    Sim    |    Não foi possível refazer o registro de log %S_LSN, para ID de transação %S_XID, na página %S_PGID, banco de dados '%.*ls' (ID de banco de dados %d). Página: LSN = %S_LSN, type = %ld. Log: OpCode = %ld, contexto %ld, PrevPageLSN: %S_LSN. Restaure de um backup do banco de dados ou repare o banco de dados.    |
@@ -1704,7 +1704,7 @@ ORDER BY message_id
 |    3701    |    11    |    Não    |    Não é possível %S_MSG o %S_MSG '%.*ls', pois ele não existe ou você não tem permissão.    |
 |    3702    |    16    |    Não    |    Não é possível descartar o banco de dados "%.*ls" porque ele está em uso.    |
 |    3703    |    16    |    Não    |    Não é possível desanexar %S_MSG '%.*ls' porque ele está em uso.    |
-|    3705    |    16    |    Não    |    Não é possível usar DROP %ls com '%. *ls' porque '%.* ls' é %S_MSG. Use %ls.    |
+|    3705    |    16    |    Não    |    Não é possível usar DROP %ls com '%.*ls' porque '%.* ls' é %S_MSG. Use %ls.    |
 |    3706    |    16    |    Não    |    Não é possível %S_MSG um instantâneo do banco de dados.    |
 |    3707    |    16    |    Não    |    Não é possível desanexar um banco de dados suspeito ou com recuperação pendente. Ele deve ser reparado ou descartado.    |
 |    3708    |    16    |    Não    |    Não é possível %S_MSG o %S_MSG '%.*ls' porque ele é um %S_MSG do sistema.    |
@@ -1712,19 +1712,19 @@ ORDER BY message_id
 |    3710    |    16    |    Não    |    Não é possível desanexar um banco de dados aberto quando o servidor está no modo de configuração mínima.    |
 |    3716    |    16    |    Não    |    O %S_MSG '%.*ls' não pode ser descartado porque está associado a um ou mais %S_MSG.    |
 |    3717    |    16    |    Não    |    Não é possível descartar uma restrição padrão com a instrução DROP DEFAULT. Use ALTER TABLE para descartar uma restrição padrão.    |
-|    3721    |    16    |    Não    |    O tipo '%. *ls' não pode ser renomeado porque o objeto '%.* ls'. se refere a ele.    |
+|    3721    |    16    |    Não    |    O tipo '%.*ls' não pode ser renomeado porque o objeto '%.* ls'. se refere a ele.    |
 |    3723    |    16    |    Não    |    Um DROP INDEX explícito não é permitido no índice '%.*ls'. Ele está sendo usado para a aplicação da restrição %ls.    |
 |    3724    |    16    |    Não    |    Não é possível %S_MSG o %S_MSG '%.*ls' porque está sendo usado para replicação.    |
-|    3725    |    16    |    Não    |    Existe uma referência à restrição '%. *ls' na tabela '%.* ls', restrição da chave estrangeira '%.*ls'.    |
+|    3725    |    16    |    Não    |    Existe uma referência à restrição '%.*ls' na tabela '%.* ls', restrição da chave estrangeira '%.*ls'.    |
 |    3726    |    16    |    Não    |    Não foi possível descartar o objeto '%.*ls' porque há referência a ele em uma restrição FOREIGN KEY.    |
 |    3727    |    10    |    Não    |    Não foi possível descartar a restrição. Consulte os erros anteriores.    |
 |    3728    |    16    |    Não    |    '%.*ls' não é uma restrição.    |
-|    3729    |    16    |    Não    |    Não é possível %ls '%. *ls' porque o objeto '%.* ls'. faz referência a ele.    |
+|    3729    |    16    |    Não    |    Não é possível %ls '%.*ls' porque o objeto '%.* ls'. faz referência a ele.    |
 |    3730    |    16    |    Não    |    Não é possível descartar a restrição padrão '%.*ls' enquanto ela está sendo usada por uma chave estrangeira como ação referencial de SET DEFAULT.    |
-|    3732    |    16    |    Não    |    Não é possível descartar o tipo '%. *ls' porque o objeto '%.* ls' faz referência a ele. Talvez haja outros objetos que referenciem esse tipo.    |
-|    3733    |    16    |    Não    |    A restrição '%. *ls' não pertence à tabela '%.* ls'.    |
+|    3732    |    16    |    Não    |    Não é possível descartar o tipo '%.*ls' porque o objeto '%.* ls' faz referência a ele. Talvez haja outros objetos que referenciem esse tipo.    |
+|    3733    |    16    |    Não    |    A restrição '%.*ls' não pertence à tabela '%.* ls'.    |
 |    3734    |    16    |    Não    |    Não foi possível descartar a restrição de chave primária '%.*ls' porque a tabela tem um índice XML ou espacial.    |
-|    3735    |    16    |    Não    |    A restrição de chave primária '%. *ls' na tabela '%.* ls' não pode ser descartada porque o controle de alterações está habilitado na tabela. Esse controle requer uma restrição de chave primária na tabela. Desabilite o controle de alterações antes de descartar a restrição.    |
+|    3735    |    16    |    Não    |    A restrição de chave primária '%.*ls' na tabela '%.* ls' não pode ser descartada porque o controle de alterações está habilitado na tabela. Esse controle requer uma restrição de chave primária na tabela. Desabilite o controle de alterações antes de descartar a restrição.    |
 |    3737    |    16    |    Não    |    Não foi possível excluir o arquivo '%ls'. Consulte o log de erros do SQL Server para saber mais.    |
 |    3738    |    10    |    Não    |    Excluindo arquivo de banco de dados '%ls'.    |
 |    3739    |    11    |    Não    |    Não é possível %ls o índice '%.*ls' porque ele não é uma coleção de estatísticas.    |
@@ -1734,34 +1734,34 @@ ORDER BY message_id
 |    3744    |    16    |    Não    |    Apenas uma cláusula única é permitida em uma instrução em que um índice é descartado online.    |
 |    3745    |    16    |    Não    |    Somente um índice clusterizado pode ser descartado online.    |
 |    3746    |    16    |    Não    |    Não é possível descartar o índice clusterizado da exibição '%.*ls' porque ela está sendo usada para replicação.    |
-|    3747    |    16    |    Não    |    Não é possível descartar um índice clusterizado criado em uma exibição usando a cláusula drop clustered index. O índice clusterizado '%. *ls' foi criado na exibição '%.* ls'.    |
+|    3747    |    16    |    Não    |    Não é possível descartar um índice clusterizado criado em uma exibição usando a cláusula drop clustered index. O índice clusterizado '%.*ls' foi criado na exibição '%.* ls'.    |
 |    3748    |    16    |    Não    |    Não é possível remover o índice não clusterizado '%.*ls' usando a cláusula drop clustered index.    |
 |    3749    |    16    |    Não    |    Não é possível descartar o índice XML '%.*ls' usando a sintaxe antiga 'Table.Index'. Use a sintaxe 'Index ON Table'.    |
-|    3750    |    10    |    Não    |    Aviso: o índice '%. *ls' em %S_MSG '%.* ls' foi desabilitado como resultado da desabilitação do índice clusterizado em %S_MSG.    |
-|    3751    |    16    |    Não    |    Não é possível usar SP_DROPEXTENDEDPROC ou DBCC DROPEXTENDEDPROC com '%. *ls' porque '%.* ls' é %S_MSG. Use %ls.    |
-|    3801    |    10    |    Não    |    Aviso: o índice "%. *ls" em "%.* ls"."%.*ls" pode ser afetado pela atualização da ordenação. Execute DBCC CHECKTABLE.    |
-|    3802    |    10    |    Não    |    Aviso: a restrição "%. *ls" em "%.* ls"."%.*ls" pode ser afetada pela atualização da ordenação. Desabilite e habilite WITH CHECK.    |
-|    3803    |    10    |    Não    |    Aviso: o índice "%. *ls" em "%.* ls"."%.*ls" está desabilitado porque a implementação da função de soma de verificação foi alterada.    |
-|    3804    |    10    |    Não    |    Aviso: a restrição de verificação "%. *ls" na tabela "%.* ls"."%.*ls" está desabilitada porque a implementação da função de soma de verificação foi alterada.    |
-|    3805    |    10    |    Não    |    Aviso: o índice "%. *ls" na tabela "%.* ls"."%. *ls" pode estar corrompido porque faz referência à coluna computada "%.* ls" que contém uma conversão não determinística de cadeia de caracteres em data. Execute DBCC CHECKTABLE para verificar o índice. Considere a possibilidade de usar CONVERT explícito com estilo de data determinística, como 121. Os índices de coluna computada que fazem referência a expressões não determinísticas não podem ser criados no modo de compatibilidade 90. Para obter mais informações, consulte o tópico "Criando índices em colunas computadas" nos Manuais Online.    |
-|    3806    |    10    |    Não    |    Aviso: a exibição indexada "%. *ls"."%.* ls" pode estar corrompida porque contém uma conversão não determinística de cadeia de caracteres em data. Execute DBCC CHECKTABLE para verificar a exibição. Considere a possibilidade de usar CONVERT explícito com estilo de data determinística, como 121. Exibições indexadas que referenciam expressões não determinísticas não podem ser criadas no modo de compatibilidade 90. Consulte o tópico "Criando exibições indexadas" dos Manuais Online para obter mais informações.    |
+|    3750    |    10    |    Não    |    Aviso: o índice '%.*ls' em %S_MSG '%.* ls' foi desabilitado como resultado da desabilitação do índice clusterizado em %S_MSG.    |
+|    3751    |    16    |    Não    |    Não é possível usar SP_DROPEXTENDEDPROC ou DBCC DROPEXTENDEDPROC com '%.*ls' porque '%.* ls' é %S_MSG. Use %ls.    |
+|    3801    |    10    |    Não    |    Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" pode ser afetado pela atualização da ordenação. Execute DBCC CHECKTABLE.    |
+|    3802    |    10    |    Não    |    Aviso: a restrição "%.*ls" em "%.* ls"."%.*ls" pode ser afetada pela atualização da ordenação. Desabilite e habilite WITH CHECK.    |
+|    3803    |    10    |    Não    |    Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" está desabilitado porque a implementação da função de soma de verificação foi alterada.    |
+|    3804    |    10    |    Não    |    Aviso: a restrição de verificação "%.*ls" na tabela "%.* ls"."%.*ls" está desabilitada porque a implementação da função de soma de verificação foi alterada.    |
+|    3805    |    10    |    Não    |    Aviso: o índice "%.*ls" na tabela "%.* ls"."%.*ls" pode estar corrompido porque faz referência à coluna computada "%.* ls" que contém uma conversão não determinística de cadeia de caracteres em data. Execute DBCC CHECKTABLE para verificar o índice. Considere a possibilidade de usar CONVERT explícito com estilo de data determinística, como 121. Os índices de coluna computada que fazem referência a expressões não determinísticas não podem ser criados no modo de compatibilidade 90. Para obter mais informações, consulte o tópico "Criando índices em colunas computadas" nos Manuais Online.    |
+|    3806    |    10    |    Não    |    Aviso: a exibição indexada "%.*ls"."%.* ls" pode estar corrompida porque contém uma conversão não determinística de cadeia de caracteres em data. Execute DBCC CHECKTABLE para verificar a exibição. Considere a possibilidade de usar CONVERT explícito com estilo de data determinística, como 121. Exibições indexadas que referenciam expressões não determinísticas não podem ser criadas no modo de compatibilidade 90. Consulte o tópico "Criando exibições indexadas" dos Manuais Online para obter mais informações.    |
 |    3807    |    17    |    Não    |    Falha na criação porque todos os identificadores disponíveis foram esgotados.    |
-|    3808    |    10    |    Não    |    Aviso: o índice "%. *ls" em "%.* ls"."%.*ls" está desabilitado por estar definido em uma exibição com a opção de índice ignore_dup_key. Descarte o índice e, se possível, recrie-o sem a opção ignore_dup_key. Talvez seja necessário alterar a estrutura lógica da exibição para garantir que todas as linhas sejam exclusivas.    |
-|    3809    |    16    |    Não    |    Falha na atualização do banco de dados "%. *ls" porque o índice "%.* ls" na ID do objeto %d tem o mesmo nome de outro índice na mesma tabela.    |
+|    3808    |    10    |    Não    |    Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" está desabilitado por estar definido em uma exibição com a opção de índice ignore_dup_key. Descarte o índice e, se possível, recrie-o sem a opção ignore_dup_key. Talvez seja necessário alterar a estrutura lógica da exibição para garantir que todas as linhas sejam exclusivas.    |
+|    3809    |    16    |    Não    |    Falha na atualização do banco de dados "%.*ls" porque o índice "%.* ls" na ID do objeto %d tem o mesmo nome de outro índice na mesma tabela.    |
 |    3810    |    10    |    Não    |    Notificação de eventos "%.*ls" no assembly descartada.    |
 |    3811    |    10    |    Não    |    Notificação de eventos "%.*ls" na fila de serviço descartada porque a instância do agente não foi especificada.    |
 |    3812    |    10    |    Não    |    Notificação de eventos "%.*ls" no objeto descartada.    |
 |    3813    |    16    |    Não    |    Falha na atualização do logon '%.*ls' porque seu nome ou sid é uma duplicata de outra função de logon ou servidor.    |
-|    3814    |    16    |    Não    |    O logon local mapeado para o logon remoto '%. *ls' no servidor '%.* ls' é inválido. Descarte e recrie o logon remoto antes da atualização.    |
-|    3815    |    16    |    Não    |    O logon local mapeado para o logon vinculado '%. *ls' no servidor '%.* ls' é inválido. Descarte e recrie o logon vinculado antes da atualização.    |
+|    3814    |    16    |    Não    |    O logon local mapeado para o logon remoto '%.*ls' no servidor '%.* ls' é inválido. Descarte e recrie o logon remoto antes da atualização.    |
+|    3815    |    16    |    Não    |    O logon local mapeado para o logon vinculado '%.*ls' no servidor '%.* ls' é inválido. Descarte e recrie o logon vinculado antes da atualização.    |
 |    3816    |    16    |    Não    |    Falha na atualização do logon '%.*ls' porque o hash de senha é inválido. Atualize a senha do logon antes de fazer a atualização.    |
-|    3817    |    10    |    Não    |    Aviso: o índice "%. *ls" em "%.* ls"."%.*ls" foi desabilitado porque a implementação dos métodos de geometria e geografia foi alterada.    |
-|    3818    |    16    |    Não    |    Não é possível adicionar a coluna CUID de 6 bytes ao índice "%. *ls" no objeto %.* ls, pois o comprimento da linha excederia o comprimento máximo permitido de %d bytes.    |
-|    3819    |    10    |    Não    |    Aviso: a restrição de verificação "%. *ls" em "%.* ls"."%.*ls" foi desabilitada e definida como não confiável porque a implementação dos métodos de geometria e geografia foi alterada.    |
-|    3820    |    10    |    Não    |    Aviso: a coluna CUID de 6 bytes foi adicionada ao índice "%. *ls" no objeto %.* ls, mas seu tamanho máximo de linha excede o máximo permitido de %d bytes. INSERT ou UPDATE nesse índice falhará devido a alguma combinação de valores grandes.    |
-|    3821    |    10    |    Não    |    Aviso: a restrição da chave estrangeira "%. *ls" em "%.* ls"."%.*ls" foi desabilitada porque a implementação dos métodos de geometria e geografia foi alterada.    |
-|    3822    |    10    |    Não    |    Aviso: o heap "%. *ls"."%.* ls" manteve colunas computadas que dependem de métodos de geometria ou geografia e podem conter informações desatualizadas. Por causa disso, o DBCC talvez reporte inconsistências nesta tabela. As colunas calculadas persistentes dependentes de métodos de geometria ou geografia devem ser tornadas não persistentes e persistentes de novo para atualizar os dados.    |
-|    3823    |    10    |    Não    |    Aviso: não foi possível vincular o objeto "%. *ls"."%.* ls" e ele foi ignorado durante a atualização. Considere examinar e corrigir sua definição.    |
+|    3817    |    10    |    Não    |    Aviso: o índice "%.*ls" em "%.* ls"."%.*ls" foi desabilitado porque a implementação dos métodos de geometria e geografia foi alterada.    |
+|    3818    |    16    |    Não    |    Não é possível adicionar a coluna CUID de 6 bytes ao índice "%.*ls" no objeto %.* ls, pois o comprimento da linha excederia o comprimento máximo permitido de %d bytes.    |
+|    3819    |    10    |    Não    |    Aviso: a restrição de verificação "%.*ls" em "%.* ls"."%.*ls" foi desabilitada e definida como não confiável porque a implementação dos métodos de geometria e geografia foi alterada.    |
+|    3820    |    10    |    Não    |    Aviso: a coluna CUID de 6 bytes foi adicionada ao índice "%.*ls" no objeto %.* ls, mas seu tamanho máximo de linha excede o máximo permitido de %d bytes. INSERT ou UPDATE nesse índice falhará devido a alguma combinação de valores grandes.    |
+|    3821    |    10    |    Não    |    Aviso: a restrição da chave estrangeira "%.*ls" em "%.* ls"."%.*ls" foi desabilitada porque a implementação dos métodos de geometria e geografia foi alterada.    |
+|    3822    |    10    |    Não    |    Aviso: o heap "%.*ls"."%.* ls" manteve colunas computadas que dependem de métodos de geometria ou geografia e podem conter informações desatualizadas. Por causa disso, o DBCC talvez reporte inconsistências nesta tabela. As colunas calculadas persistentes dependentes de métodos de geometria ou geografia devem ser tornadas não persistentes e persistentes de novo para atualizar os dados.    |
+|    3823    |    10    |    Não    |    Aviso: não foi possível vincular o objeto "%.*ls"."%.* ls" e ele foi ignorado durante a atualização. Considere examinar e corrigir sua definição.    |
 |    3851    |    10    |    Não    |    Uma linha inválida (%ls) foi encontrada na tabela do sistema sys.%ls%ls.    |
 |    3852    |    10    |    Não    |    Linha (%ls) em sys.%ls%ls sem linha correspondente (%ls) em sys.%ls%ls.    |
 |    3853    |    10    |    Não    |    Atributo (%ls) da linha (%ls) em sys.%ls%ls sem linha correspondente (%ls) em sys.%ls%ls.    |
@@ -1772,12 +1772,12 @@ ORDER BY message_id
 |    3858    |    10    |    Não    |    O atributo (%ls) da linha (%ls) em sys.%ls%ls tem um valor inválido.    |
 |    [3859](mssqlserver-3859-database-engine-error.md)    |    10    |    Não    |    Aviso: catálogo do sistema atualizado diretamente na ID de banco de dados %d, mais recentemente em %S_DATE.    |
 |    3860    |    10    |    Não    |    Não é possível atualizar a ID de banco de dados 32767. Este valor de ID é reservado para uso interno do SQL Server.    |
-|    3862    |    10    |    Não    |    O tipo CLR '%. *ls'.'%.* ls' está desabilitado porque o formato do disco para este tipo CLR foi alterado. Use DROP TYPE para remover esse tipo desabilitado.    |
+|    3862    |    10    |    Não    |    O tipo CLR '%.*ls'.'%.* ls' está desabilitado porque o formato do disco para este tipo CLR foi alterado. Use DROP TYPE para remover esse tipo desabilitado.    |
 |    3864    |    23    |    Sim    |    Não foi possível localizar uma entrada para o índice com ID %d, no objeto com ID %d, no banco de dados com ID %d. Possível dano no esquema. Execute DBCC CHECKDB.    |
 |    3901    |    16    |    Não    |    O nome da transação deve ser especificado quando for usado com a opção de interrogação.    |
 |    3902    |    16    |    Não    |    A solicitação COMMIT TRANSACTION não tem um BEGIN TRANSACTION correspondente.    |
 |    3903    |    16    |    Não    |    A solicitação ROLLBACK TRANSACTION não tem um BEGIN TRANSACTION correspondente.    |
-|    3904    |    21    |    Não    |    Não é possível reverter a divisão da página lógica %S_PGID no objeto '%. *ls', no banco de dados '%.* ls'. Os dados das duas páginas juntas não cabem em apenas uma página.    |
+|    3904    |    21    |    Não    |    Não é possível reverter a divisão da página lógica %S_PGID no objeto '%.*ls', no banco de dados '%.* ls'. Os dados das duas páginas juntas não cabem em apenas uma página.    |
 |    3906    |    16    |    Não    |    Falha ao atualizar o banco de dados "%.*ls" porque ele é somente leitura.    |
 |    3908    |    16    |    Não    |    Não foi possível executar BEGIN TRANSACTION no banco de dados '%.*ls' porque o banco de dados está definido para não usar o modo de recuperação.    |
 |    3909    |    16    |    Não    |    O token de associação de sessão é inválido.    |
@@ -1818,9 +1818,9 @@ ORDER BY message_id
 |    3955    |    16    |    Não    |    Falha na transação de isolamento de instantâneo no banco de dados '%.*ls' porque a recuperação foi ignorada para este banco de dados. É preciso recuperar o banco de dados antes de executar uma transação sob o isolamento do instantâneo.    |
 |    3956    |    16    |    Não    |    A transação de isolamento de instantâneo não pôde ser iniciada no banco de dados '%.*ls' porque o comando ALTER DATABASE que habilita o isolamento de instantâneo desse banco de dados ainda não foi concluído. O banco de dados está em transição para o estado pendente ON. É necessário aguardar até que o comando ALTER DATABASE seja concluído com êxito.    |
 |    3957    |    16    |    Não    |    Falha na transação de isolamento de instantâneo ao iniciar o banco de dados '%.*ls' porque o banco de dados não permitiu o isolamento de instantâneo quando a transação começou. Isso pode ajudar a repetir a transação.    |
-|    3958    |    16    |    Não    |    Transação anulada ao acessar a linha com controle de versão na tabela '%. *ls' do banco de dados '%.* ls'. A linha com controle de versão solicitada não foi encontrada. Provavelmente tempdb não tem espaço suficiente. Consulte os Manuais Online para obter informações sobre como configurar o tempdb para controle de versão.    |
+|    3958    |    16    |    Não    |    Transação anulada ao acessar a linha com controle de versão na tabela '%.*ls' do banco de dados '%.* ls'. A linha com controle de versão solicitada não foi encontrada. Provavelmente tempdb não tem espaço suficiente. Consulte os Manuais Online para obter informações sobre como configurar o tempdb para controle de versão.    |
 |    3959    |    10    |    Sim    |    Repositório de versão cheio. Não foi possível adicionar novas versões. Uma transação que precise acessar o repositório de versão pode ser revertida. Consulte os Manuais Online para obter informações sobre como configurar o tempdb para controle de versão.    |
-|    3960    |    16    |    Não    |    Transação de isolamento de instantâneo anulada devido a conflito de atualização. Não é possível usar o isolamento de instantâneo para acessar a tabela '%. *ls' direta ou indiretamente no banco de dados '%.* ls' para atualizar, excluir ou inserir a linha que foi modificada ou excluída por outra transação. Tente a transação novamente ou altere o nível de isolamento para a instrução update/delete.    |
+|    3960    |    16    |    Não    |    Transação de isolamento de instantâneo anulada devido a conflito de atualização. Não é possível usar o isolamento de instantâneo para acessar a tabela '%.*ls' direta ou indiretamente no banco de dados '%.* ls' para atualizar, excluir ou inserir a linha que foi modificada ou excluída por outra transação. Tente a transação novamente ou altere o nível de isolamento para a instrução update/delete.    |
 |    [3961](mssqlserver-3961-database-engine-error.md)    |    16    |    Não    |    Falha na transação de isolamento de instantâneo no banco de dados '%.*ls' porque o objeto acessado pela instrução foi modificado por uma instrução DDL em outra transação simultânea desde o início dessa transação. Ela não é permitida porque os metadados não têm controle de versão. Uma atualização simultânea dos metadados poderá gerar inconsistências se for combinada ao isolamento de instantâneo.    |
 |    3962    |    16    |    Não    |    Não há suporte para associação a outra transação ao executar consulta interna do SQL Server. Verifique sua definição de gatilho de logon e remova qualquer uso de sp_bindsession, se houver. Se esse erro não estiver ocorrendo durante a execução do gatilho de logon, contate a equipe de suporte à produção.    |
 |    3963    |    16    |    Não    |    Falha na transação no banco de dados '%.*ls' porque as transações distribuídas não têm suporte no isolamento de instantâneo.    |
@@ -1879,12 +1879,12 @@ ORDER BY message_id
 |    4012    |    16    |    Não    |    Foi encontrado uma ordenação inválida do protocolo TDS.    |
 |    4013    |    16    |    Não    |    O fluxo do protocolo TDS de entrada está incorreto. O cabeçalho do TDS para MARS (vários conjuntos de resultados ativos) continha erros.    |
 |    4014    |    20    |    Não    |    Erro fatal ao ler o fluxo de entrada da rede. A sessão será encerrada (erro de entrada: %d, erro de saída: %d).    |
-|    4015    |    16    |    Não    |    O idioma solicitado no logon '%. *ls' não é um nome oficial neste SQL Server. Será usado o padrão para todos os servidores %.* ls.    |
-|    4016    |    16    |    Não    |    O idioma solicitado no logon '%. *ls' não é um nome oficial neste SQL Server. Será usado o padrão de usuário %.* ls.    |
-|    4017    |    16    |    Não    |    Nem o idioma solicitado no logon '%. *ls', nem o idioma padrão do usuário %.* ls é um nome de idioma oficial neste SQL Server. Usando o padrão para todos os servidores %.*ls.    |
-|    4018    |    16    |    Não    |    O idioma padrão do usuário %. *ls não é um nome de idioma oficial neste SQL Server. Será usado o padrão para todos os servidores %.* ls.    |
+|    4015    |    16    |    Não    |    O idioma solicitado no logon '%.*ls' não é um nome oficial neste SQL Server. Será usado o padrão para todos os servidores %.* ls.    |
+|    4016    |    16    |    Não    |    O idioma solicitado no logon '%.*ls' não é um nome oficial neste SQL Server. Será usado o padrão de usuário %.* ls.    |
+|    4017    |    16    |    Não    |    Nem o idioma solicitado no logon '%.*ls', nem o idioma padrão do usuário %.* ls é um nome de idioma oficial neste SQL Server. Usando o padrão para todos os servidores %.*ls.    |
+|    4018    |    16    |    Não    |    O idioma padrão do usuário %.*ls não é um nome de idioma oficial neste SQL Server. Será usado o padrão para todos os servidores %.* ls.    |
 |    4019    |    16    |    Não    |    O idioma solicitado no logon '%.*ls' não é um nome de idioma oficial neste SQL Server. Falha de logon.    |
-|    4020    |    16    |    Não    |    A ordem de data padrão '%. *ls' para o idioma %.* ls é inválida. Usando mda.    |
+|    4020    |    16    |    Não    |    A ordem de data padrão '%.*ls' para o idioma %.* ls é inválida. Usando mda.    |
 |    4021    |    16    |    Não    |    A redefinição da conexão resultará em um estado diferente do logon inicial. Falha no logon.    |
 |    4022    |    16    |    Não    |    O carregamento de dados em massa era esperado, mas não foi enviado. O lote será encerrado.    |
 |    4027    |    16    |    Não    |    Monte a fita para %hs do banco de dados '%ls' na unidade de fita '%ls'.    |
@@ -1896,7 +1896,7 @@ ORDER BY message_id
 |    4060    |    11    |    Não    |    Não é possível abrir o banco de dados "%.ls" solicitado pelo logon. Falha no logon.    |
 |    4061    |    11    |    Não    |    Nem o banco de dados "%.ls" solicitado pelo logon nem o banco de dados padrão do usuário puderam ser abertos. Será usado o banco de dados mestre.    |
 |    4062    |    11    |    Não    |    Não é possível abrir o banco de dados padrão do usuário. Usando o banco de dados mestre.    |
-|    4063    |    11    |    Não    |    Não é possível abrir o banco de dados "%. *ls" solicitado pelo logon. Será usado o banco de dados padrão do usuário "%.* ls".    |
+|    4063    |    11    |    Não    |    Não é possível abrir o banco de dados "%.*ls" solicitado pelo logon. Será usado o banco de dados padrão do usuário "%.* ls".    |
 |    [4064](mssqlserver-4064-database-engine-error.md)    |    11    |    Não    |    Não é possível abrir o banco de dados padrão do usuário. Falha no logon.    |
 |    4065    |    16    |    Sim    |    O usuário está tentando usar '%.*ls' através do ODS, o que não é mais suportado.    |
 |    4066    |    16    |    Não    |    IDs de tipo maiores do que 65535 não podem ser enviadas a clientes fornecidos no SQL Server 2000 ou anterior.    |
@@ -1904,14 +1904,14 @@ ORDER BY message_id
 |    4068    |    20    |    Não    |    sp_resetconnection foi enviado como parte de um lote de RPC (chamada de procedimento remoto) que não era o último RPC do lote. Esta conexão será encerrada.    |
 |    4069    |    16    |    Não    |    O valor final do parâmetro de saída era nulo e não foi possível enviá-lo a um cliente 6.5 que espera um parâmetro não anulável.    |
 |    4070    |    16    |    Não    |    Foram especificadas mais de 255 colunas na cláusula COMPUTE, e esses metadados não podem ser enviados a um cliente do SQL Server versão 6.5.    |
-|    4071    |    10    |    Não    |    Falha na função de retorno de chamada do XP '%. *ls' no procedimento estendido '%.* ls' porque foi executada dentro de uma instrução INSERT-EXEC, que não permite que o procedimento estendido envie informações além do conjunto de resultados.    |
-|    4072    |    10    |    Não    |    Falha na função de retorno de chamada do XP '%. *ls' no procedimento estendido '%.* ls' porque este é chamado dentro de um UDF que não permite enviar dados.    |
+|    4071    |    10    |    Não    |    Falha na função de retorno de chamada do XP '%.*ls' no procedimento estendido '%.* ls' porque foi executada dentro de uma instrução INSERT-EXEC, que não permite que o procedimento estendido envie informações além do conjunto de resultados.    |
+|    4072    |    10    |    Não    |    Falha na função de retorno de chamada do XP '%.*ls' no procedimento estendido '%.* ls' porque este é chamado dentro de um UDF que não permite enviar dados.    |
 |    4073    |    16    |    Não    |    Um valor de retorno do tipo de dados varchar(max), nvarchar(max), varbinary(max), XML ou outro tipo de objeto grande não pode ser retornado para versões de driver cliente anteriores à SQL Server 2005. Envie novamente a consulta usando um driver cliente mais atual.    |
 |    4074    |    16    |    Não    |    Drivers cliente não aceitam conjuntos de resultados que tenham mais de 65.535 colunas.    |
 |    4075    |    16    |    Não    |    Falha na instrução de banco de dados USE porque a ordenação de banco de dados %.*ls não é reconhecido por drivers cliente mais antigos. Tente atualizar o sistema operacional do cliente ou aplicar uma atualização de serviço no software cliente do banco de dados ou usar uma ordenação diferente. Consulte os Manuais Online do SQL Server para obter mais informações sobre como alterar ordenações.    |
 |    4076    |    16    |    Não    |    Falha na instrução de banco de dados ALTER DATABASE porque a ordenação de banco de dados %.*ls não é reconhecida por drivers cliente mais antigos. Tente atualizar o sistema operacional do cliente ou aplicar uma atualização de serviço no software cliente do banco de dados ou usar uma ordenação diferente. Consulte os Manuais Online do SQL Server para obter mais informações sobre como alterar ordenações.    |
 |    4077    |    20    |    Não    |    Falha na instrução porque o valor sql_variant usa a ordenação %.*ls que não é reconhecido por drivers cliente mais antigos. Tente atualizar o sistema operacional do cliente ou aplicar uma atualização de serviço no software cliente do banco de dados ou usar uma ordenação diferente. Consulte os Manuais Online do SQL Server para obter mais informações sobre como alterar ordenações.    |
-|    4078    |    16    |    Não    |    Falha na instrução porque a coluna '%. *ls' (ID=%d) usa a ordenação %.* ls, que não é reconhecido por drivers cliente mais antigos. Tente atualizar o sistema operacional do cliente ou aplicar uma atualização de serviço no software cliente do banco de dados ou usar uma ordenação diferente. Consulte os Manuais Online do SQL Server para obter mais informações sobre como alterar ordenações.    |
+|    4078    |    16    |    Não    |    Falha na instrução porque a coluna '%.*ls' (ID=%d) usa a ordenação %.* ls, que não é reconhecido por drivers cliente mais antigos. Tente atualizar o sistema operacional do cliente ou aplicar uma atualização de serviço no software cliente do banco de dados ou usar uma ordenação diferente. Consulte os Manuais Online do SQL Server para obter mais informações sobre como alterar ordenações.    |
 |    4079    |    16    |    Não    |    Falha na instrução devido ao estouro aritmético durante o envio do fluxo de dados.    |
 |    4101    |    16    |    Não    |    As agregações à direita de um APPLY não podem fazer referência a colunas à esquerda.    |
 |    4102    |    15    |    Não    |    A dica de bloqueio READPAST só é permitida em tabelas de destino de UPDATE e DELETE e em tabelas especificadas em uma cláusula FROM explícita.    |
@@ -1929,11 +1929,11 @@ ORDER BY message_id
 |    4114    |    16    |    Não    |    A função '%.*ls' utiliza %d argumentos.    |
 |    4115    |    16    |    Não    |    A referência à coluna "%.*ls" não é permitida no argumento da cláusula TOP. Somente são permitidas referências a colunas em um escopo externo ou subconsultas e expressões autônomas.    |
 |    4116    |    16    |    Não    |    A função 'ntile' usa apenas uma expressão int ou bigint positiva como entrada.    |
-|    4117    |    16    |    Não    |    Não é possível recuperar dados da tabela para a operação de consulta porque o esquema "%. *ls" da tabela está sendo alterado com muita frequência. Como a tabela "%.* ls" contém uma coluna computada, as alterações no esquema da tabela exigem uma atualização de todos os seus dados. Tente novamente a operação de consulta e, se o problema persistir, use o SQL Server Profiler para identificar quais operações de alteração de esquema estão ocorrendo.    |
+|    4117    |    16    |    Não    |    Não é possível recuperar dados da tabela para a operação de consulta porque o esquema "%.*ls" da tabela está sendo alterado com muita frequência. Como a tabela "%.* ls" contém uma coluna computada, as alterações no esquema da tabela exigem uma atualização de todos os seus dados. Tente novamente a operação de consulta e, se o problema persistir, use o SQL Server Profiler para identificar quais operações de alteração de esquema estão ocorrendo.    |
 |    4118    |    16    |    Não    |    Foi especificada uma expressão inválida na cláusula FOR UPDATE.    |
 |    4119    |    16    |    Não    |    Não é possível atribuir valores padrão a setters de propriedades de colunas com um tipo CLR.    |
 |    4120    |    16    |    Não    |    O nome de uma função definida pelo usuário não pode ser iniciado com um nome de banco de dados neste contexto.    |
-|    4121    |    16    |    Não    |    Não é possível localizar a coluna "%. *ls" ou a função definida pelo usuário ou a agregação "%.* ls", ou o nome é ambíguo.    |
+|    4121    |    16    |    Não    |    Não é possível localizar a coluna "%.*ls" ou a função definida pelo usuário ou a agregação "%.* ls", ou o nome é ambíguo.    |
 |    4122    |    16    |    Não    |    Não são permitidas chamadas de funções com valor de tabela remota.    |
 |    4124    |    16    |    Não    |    Os parâmetros fornecidos para o lote não são válidos.    |
 |    4126    |    16    |    Não    |    Não foi encontrada nenhuma coluna indexada de texto completo.    |
@@ -1944,12 +1944,12 @@ ORDER BY message_id
 |    4131    |    16    |    Não    |    Um valor de literal de tempo de compilação foi especificado mais de uma vez para a variável "%.*ls" em uma ou mais cláusulas OPTIMIZE FOR.    |
 |    4132    |    16    |    Não    |    O valor especificado para a variável "%.*ls" na cláusula OPTIMIZE FOR não pôde ser convertido implicitamente nesse tipo de variável.    |
 |    4133    |    16    |    Não    |    Somente uma expressão escalar pode ser especificada como o argumento da instrução RETURN.    |
-|    4134    |    16    |    Sim    |    Os metadados armazenados em disco para a coluna computada '%. *ls' na tabela '%.* ls' não corresponderam à definição de coluna. Para evitar possíveis danos ao índice, descarte e recrie a coluna computada.    |
-|    4135    |    16    |    Não    |    O sinônimo '%. *ls' está definido na fila '%.* ls'. Não são permitidos sinônimos em filas.    |
-|    4136    |    16    |    Não    |    A dica '%. *ls' não pode ser usada com a dica '%.* ls'.    |
+|    4134    |    16    |    Sim    |    Os metadados armazenados em disco para a coluna computada '%.*ls' na tabela '%.* ls' não corresponderam à definição de coluna. Para evitar possíveis danos ao índice, descarte e recrie a coluna computada.    |
+|    4135    |    16    |    Não    |    O sinônimo '%.*ls' está definido na fila '%.* ls'. Não são permitidos sinônimos em filas.    |
+|    4136    |    16    |    Não    |    A dica '%.*ls' não pode ser usada com a dica '%.* ls'.    |
 |    4137    |    16    |    Não    |    Um arquivo de formato não pode ser especificado com a opção SINGLE_BLOB, SINGLE_CLOB ou SINGLE_NCLOB.    |
 |    4138    |    16    |    Não    |    Dicas de bloqueio em conflito foram especificadas para a tabela "%.*ls". Isso pode ser provocado por uma dica em conflito especificada para uma de exibição.    |
-|    4139    |    16    |    Não    |    Não é possível processar a consulta porque ela faz referência à função com valor de tabela de CLR (Common Language Runtime) "%. *ls" com uma dica na exibição "%.* ls".    |
+|    4139    |    16    |    Não    |    Não é possível processar a consulta porque ela faz referência à função com valor de tabela de CLR (Common Language Runtime) "%.*ls" com uma dica na exibição "%.* ls".    |
 |    4140    |    15    |    Não    |    A dica de bloqueio READCOMMITTEDLOCK não é permitida na tabela de destino de uma instrução INSERT.    |
 |    4141    |    16    |    Não    |    Não são permitidas atualizações aninhadas de tipo CLR.    |
 |    4142    |    16    |    Não    |    Não são permitidas agregações na lista RECEIVE.    |
@@ -1987,7 +1987,7 @@ ORDER BY message_id
 |    4175    |    16    |    Não    |    Atualizações aninhadas não podem ser executadas em tipos CLR que não sejam Format.Structured.    |
 |    4176    |    16    |    Não    |    Número excessivo de parâmetros especificado para FULLTEXTTABLE do tipo "Simple". O número máximo de parâmetros é %d.    |
 |    4177    |    16    |    Não    |    A cláusula FROM de uma consulta PROB_MATCH deve consistir em uma tabela derivada única.    |
-|    4184    |    16    |    Não    |    Não é possível recuperar dados da tabela para a operação de consulta porque o esquema "%. *ls" da tabela está sendo alterado com muita frequência. Como a tabela "%.* ls" contém um índice filtrado ou estatísticas filtradas, as alterações ao esquema requerem uma atualização de todos os dados da tabela. Tente novamente a operação de consulta e, se o problema persistir, use o SQL Server Profiler para identificar quais operações de alteração de esquema estão ocorrendo.    |
+|    4184    |    16    |    Não    |    Não é possível recuperar dados da tabela para a operação de consulta porque o esquema "%.*ls" da tabela está sendo alterado com muita frequência. Como a tabela "%.* ls" contém um índice filtrado ou estatísticas filtradas, as alterações ao esquema requerem uma atualização de todos os dados da tabela. Tente novamente a operação de consulta e, se o problema persistir, use o SQL Server Profiler para identificar quais operações de alteração de esquema estão ocorrendo.    |
 |    4185    |    16    |    Não    |    Não é possível executar esta ação em um tipo de sistema.    |
 |    [4186](mssqlserver-4186-database-engine-error.md)    |    16    |    Não    |    A coluna '%ls.%.*ls' não pode ser referenciada na cláusula OUTPUT porque a definição da coluna contém uma subconsulta ou faz referência a uma função que executa acesso a dados de sistema ou de usuário. Por padrão, se uma função não estabelece associação com o esquema, supõe-se que ela execute acesso a dados. Considere remover a subconsulta ou a função da definição de coluna ou remover a coluna da cláusula OUTPUT.    |
 |    4202    |    16    |    Não    |    BACKUP LOG não é possível porque existem alterações registradas em massa no log no banco de dados e um ou mais grupos de arquivos não estão disponíveis.    |
@@ -1998,8 +1998,8 @@ ORDER BY message_id
 |    4217    |    10    |    Não    |    BACKUP LOG não pode modificar o banco de dados porque ele é somente leitura. O backup continuará, embora os backups subsequentes dupliquem o trabalho deste backup.    |
 |    4218    |    16    |    Não    |    Existem operações bulk-logged no banco de dados. Execute um BACKUP LOG.    |
 |    4302    |    16    |    Não    |    A opção "%ls" está em conflito com a restauração online. Remova a opção em conflito e execute novamente o comando.    |
-|    4303    |    16    |    Não    |    O ponto inicial de roll forward está agora no número de sequência de log (LSN) %. *s. É necessário efetuar roll forward além do LSN %.* s para concluir a sequência de restauração.    |
-|    4305    |    16    |    Não    |    O log deste conjunto de backup começa no LSN %. *ls, que é recente demais para ser aplicado ao banco de dados. É possível restaurar um backup de log anterior que inclua o LSN %.* ls.    |
+|    4303    |    16    |    Não    |    O ponto inicial de roll forward está agora no número de sequência de log (LSN) %.*s. É necessário efetuar roll forward além do LSN %.* s para concluir a sequência de restauração.    |
+|    4305    |    16    |    Não    |    O log deste conjunto de backup começa no LSN %.*ls, que é recente demais para ser aplicado ao banco de dados. É possível restaurar um backup de log anterior que inclua o LSN %.* ls.    |
 |    4307    |    16    |    Não    |    Falha na restauração online do banco de dados '%ls'. Ele pode ser apropriado para executar uma restauração offline. Para forçar uma restauração offline, primeiro coloque o banco de dados offline usando a instrução ALTER DATABASE.    |
 |    4308    |    10    |    Não    |    Restauração online concluída, mas WITH NORECOVERY foi especificado. Use RESTORE WITH RECOVERY para colocar os dados afetados online.    |
 |    4309    |    16    |    Não    |    O estado do arquivo "%ls" impede a restauração de páginas individuais. No momento, só é possível uma restauração de arquivo.    |
@@ -2007,14 +2007,14 @@ ORDER BY message_id
 |    4311    |    16    |    Não    |    RESTORE PAGE não é permitido a partir de backups feitos com versões anteriores do SQL Server.    |
 |    4312    |    16    |    Não    |    Este log não pode ser restaurado porque foi criado um intervalo na cadeia de logs. Use os backups de dados mais recentes para acabar com o intervalo.    |
 |    4315    |    10    |    Não    |    Alguns arquivos exigirão mais etapas de restauração para que a sequência de restauração online possa ser concluída.    |
-|    4318    |    16    |    Não    |    Foi efetuado roll forward do arquivo '%ls' para o LSN %. *ls. Esse log termina no LSN %.* ls, que é muito recente para aplicar a opção WITH RECOVERY. Execute novamente a instrução RESTORE LOG WITH NORECOVERY.    |
+|    4318    |    16    |    Não    |    Foi efetuado roll forward do arquivo '%ls' para o LSN %.*ls. Esse log termina no LSN %.* ls, que é muito recente para aplicar a opção WITH RECOVERY. Execute novamente a instrução RESTORE LOG WITH NORECOVERY.    |
 |    4319    |    16    |    Não    |    Uma operação de restauração anterior foi interrompida e não concluiu o processamento no arquivo '%ls'. Restaure o conjunto de backup que foi interrompido ou reinicie a sequência de restauração.    |
 |    4320    |    16    |    Não    |    O arquivo "%ls" não foi restaurado completamente pela restauração de banco de dados ou de arquivo. O arquivo todo deve ser restaurado corretamente antes da aplicação deste conjunto de backup.    |
 |    4322    |    10    |    Não    |    Este conjunto de backup contém registros feitos no log antes do momento designado. O banco de dados está sendo deixado no estado Restaurando para que seja possível efetuar roll forward adicional.    |
 |    4323    |    16    |    Não    |    Uma operação RESTORE WITH CONTINUE_AFTER_ERROR deixou o banco de dados em um estado potencialmente danificado. Para continuar essa sequência RESTORE, todas as demais etapas devem incluir a opção CONTINUE_AFTER_ERROR.    |
-|    4326    |    16    |    Não    |    O log deste conjunto de backup termina no LSN %. *ls, que é muito recente para ser aplicado ao banco de dados. É possível restaurar um backup de log mais recente que inclua o LSN %.* ls.    |
+|    4326    |    16    |    Não    |    O log deste conjunto de backup termina no LSN %.*ls, que é muito recente para ser aplicado ao banco de dados. É possível restaurar um backup de log mais recente que inclua o LSN %.* ls.    |
 |    4327    |    16    |    Não    |    O log deste conjunto de backup contém alterações bulk-logged. A recuperação pontual esperada foi inibida. Foi efetuado roll forward do banco de dados até o fim do log.    |
-|    4328    |    16    |    Não    |    O arquivo "%ls" está ausente. O roll forward pára no número de sequência de log %. *ls. O arquivo foi criado no LSN (número de sequência de log) %.* ls e descartado no LSN %.*ls. Restaure o log de transações além do momento determinado quando o arquivo foi descartado, ou restaure os dados para que fiquem consistentes com o restante do banco de dados.    |
+|    4328    |    16    |    Não    |    O arquivo "%ls" está ausente. O roll forward pára no número de sequência de log %.*ls. O arquivo foi criado no LSN (número de sequência de log) %.* ls e descartado no LSN %.*ls. Restaure o log de transações além do momento determinado quando o arquivo foi descartado, ou restaure os dados para que fiquem consistentes com o restante do banco de dados.    |
 |    4329    |    10    |    Não    |    Este arquivo de log contém registros feitos no log antes do marcador designado. O banco de dados está sendo deixado no estado Restaurando para que seja possível aplicar outro arquivo de log.    |
 |    4330    |    16    |    Não    |    Este conjunto de backup não pode ser aplicado porque está em um caminho de recuperação inconsistente com o banco de dados. O caminho de recuperação é a sequência de backups de dados e logs que levou o banco de dados até um determinado ponto de recuperação. Localize um backup compatível para a restauração ou restaure o restante do banco de dados para que corresponda a um ponto de recuperação neste conjunto de backup, o que significa restaurar o banco de dados até outro momento determinado. Para obter mais informações sobre caminhos de recuperação, consulte os Manuais Online do SQL Server.    |
 |    4331    |    16    |    Não    |    O banco de dados não pode ser recuperado porque os arquivos foram restaurados em momentos inconsistentes.    |
@@ -2035,7 +2035,7 @@ ORDER BY message_id
 |    4346    |    16    |    Não    |    RESTORE PAGE não é permitido com bancos de dados que usam o modelo de recuperação simples.    |
 |    4347    |    16    |    Não    |    A sequência de restauração atual foi interrompida anteriormente durante a transição para o estado online. RESTORE DATABASE WITH RECOVERY pode ser usado para concluir a transição para online.    |
 |    4348    |    16    |    Não    |    Falha na restauração online do banco de dados '%ls'. Ele pode ser apropriado para executar uma restauração offline. Uma restauração offline é iniciada com BACKUP LOG WITH NORECOVERY.    |
-|    4349    |    16    |    Não    |    O log deste conjunto de backup começa no LSN %. *ls, que é recente demais para ser aplicado ao banco de dados. Esta sequência de restauração precisa iniciar o log para que comece no LSN %.* ls. Emita novamente a instrução RESTORE LOG usando um backup de log anterior.    |
+|    4349    |    16    |    Não    |    O log deste conjunto de backup começa no LSN %.*ls, que é recente demais para ser aplicado ao banco de dados. Esta sequência de restauração precisa iniciar o log para que comece no LSN %.* ls. Emita novamente a instrução RESTORE LOG usando um backup de log anterior.    |
 |    4350    |    16    |    Não    |    A formatação da lista de páginas fornecida com a instrução RESTORE PAGE está incorreta. Antes do problema, %d páginas foram identificadas corretamente. O problema ocorreu no deslocamento do caractere %d. Verifique se todas as páginas estão identificadas por pares numéricos <file>:<page> com vírgulas entre cada par. Por exemplo:  PAGE='1:57,2:31'.    |
 |    4351    |    16    |    Não    |    Backups feitos em versões anteriores do SQL Server não são suportados por fn_dump_dblog.    |
 |    4352    |    16    |    Não    |    Não há suporte para RESTORE LOG nesse backup de dados porque o arquivo '%ls' é muito antigo. Use um backup de log regular para continuar a sequência de restauração.    |
@@ -2044,7 +2044,7 @@ ORDER BY message_id
 |    4355    |    16    |    Não    |    O comando de reversão foi especificado incorretamente. A instrução RESTORE deve estar no formato: RESTORE DATABASE <x> FROM DATABASE_SNAPSHOT = <y>.    |
 |    4356    |    10    |    Não    |    A restauração foi concluída no banco de dados '%ls'. O banco de dados está agora disponível.    |
 |    4357    |    16    |    Não    |    A restauração não pode colocar '%ls' offline porque existem alterações que requerem um backup de log. Faça um backup de log e repita a instrução RESTORE.    |
-|    4358    |    16    |    Não    |    O banco de dados não pode ser colocado online porque o arquivo '%ls' está restaurado para o LSN %. *ls, mas deve ser restaurado para o LSN %.* ls.    |
+|    4358    |    16    |    Não    |    O banco de dados não pode ser colocado online porque o arquivo '%ls' está restaurado para o LSN %.*ls, mas deve ser restaurado para o LSN %.* ls.    |
 |    4359    |    16    |    Não    |    A opção STOPAT não pode ser usada com esta sequência de restauração parcial porque um ou mais grupos de arquivos FILESTREAM não estão incluídos. A opção CONTINUE_AFTER_ERROR pode ser usada para forçar a recuperação, mas esse recurso só deverá ser usado se você não pretender restaurar posteriormente os grupos de arquivos FILESTREAM.    |
 |    4360    |    16    |    Não    |    RESTORE LOG WITH CONTINUE_AFTER_ERROR não foi bem-sucedido. A execução do comando RESTORE foi anulada.    |
 |    4403    |    16    |    Não    |    Não é possível atualizar a exibição ou a função '%.*ls' porque ela contém agregações ou uma cláusula DISTINCT ou GROUP BY ou o operador PIVOT ou UNPIVOT.    |
@@ -2067,47 +2067,47 @@ ORDER BY message_id
 |    4427    |    16    |    Não    |    Não é possível atualizar a exibição "%.*ls" porque essa exibição ou uma outra à qual ela faz referência foi criada com WITH CHECK OPTION e sua definição contém a cláusula TOP.    |
 |    4429    |    16    |    Não    |    A exibição ou a função '%.*ls' contém uma autorreferência. Exibições ou funções não podem fazer referência a si mesmas direta ou indiretamente.    |
 |    4430    |    10    |    Não    |    Aviso: as dicas de índice fornecidas para a exibição '%.*ls' serão ignoradas.    |
-|    4431    |    16    |    Não    |    A exibição particionada '%. *ls' não pode ser atualizada porque a tabela '%.* ls' possui uma coluna de carimbo de data/hora.    |
-|    4432    |    16    |    Não    |    A exibição particionada '%. *ls' não pode ser atualizada porque a tabela '%.* ls' possui uma restrição DEFAULT.    |
-|    4433    |    16    |    Não    |    Não é possível usar INSERT na exibição particionada '%. *ls' porque a tabela '%.* ls' possui uma restrição IDENTITY.    |
-|    4434    |    16    |    Não    |    A exibição particionada '%. *ls' não pode ser atualizada porque a tabela '%.* ls' possui um gatilho INSTEAD OF.    |
-|    4435    |    16    |    Não    |    A exibição particionada '%. *ls' não pode ser atualizada porque não foi especificado um valor para a coluna de particionamento '%.* ls'.    |
+|    4431    |    16    |    Não    |    A exibição particionada '%.*ls' não pode ser atualizada porque a tabela '%.* ls' possui uma coluna de carimbo de data/hora.    |
+|    4432    |    16    |    Não    |    A exibição particionada '%.*ls' não pode ser atualizada porque a tabela '%.* ls' possui uma restrição DEFAULT.    |
+|    4433    |    16    |    Não    |    Não é possível usar INSERT na exibição particionada '%.*ls' porque a tabela '%.* ls' possui uma restrição IDENTITY.    |
+|    4434    |    16    |    Não    |    A exibição particionada '%.*ls' não pode ser atualizada porque a tabela '%.* ls' possui um gatilho INSTEAD OF.    |
+|    4435    |    16    |    Não    |    A exibição particionada '%.*ls' não pode ser atualizada porque não foi especificado um valor para a coluna de particionamento '%.* ls'.    |
 |    4436    |    16    |    Não    |    A exibição UNION ALL '%.*ls' não é atualizável porque não foi encontrada uma coluna de particionamento.    |
 |    4437    |    16    |    Não    |    A exibição particionada '%.*ls' não é atualizável como o destino de uma operação em massa.    |
 |    4438    |    16    |    Não    |    A exibição particionada '%.*ls' não é atualizável porque não fornece todas as colunas de suas tabelas membro.    |
-|    4439    |    16    |    Não    |    A exibição particionada '%. *ls' não pode ser atualizada porque a consulta de origem contém referências à tabela de partição '%.* ls'.    |
-|    4440    |    16    |    Não    |    A exibição UNION ALL '%. *ls' não pode ser atualizada porque não foi encontrada uma chave primária na tabela '%.* ls'.    |
-|    4441    |    16    |    Não    |    A exibição particionada '%. *ls' não pode ser atualizada porque a tabela '%.* ls' possui um índice em uma coluna computada.    |
-|    4442    |    16    |    Não    |    A exibição UNION ALL '%. *ls' não pode ser atualizada porque a tabela base '%.* ls' é usada várias vezes.    |
-|    4443    |    16    |    Não    |    A exibição UNION ALL '%. *ls' não pode ser atualizada porque a coluna '%.* ls' da tabela base '%.*ls' é usada várias vezes.    |
-|    4444    |    16    |    Não    |    A exibição UNION ALL '%. *ls' não pode ser atualizada porque a chave primária da tabela '%.* ls' não está incluída no resultado da união.    |
-|    4445    |    16    |    Não    |    A exibição UNION ALL '%. *ls' não pode ser atualizada porque a chave primária da tabela '%.* ls' não está unida às chaves primárias das tabelas anteriores.    |
-|    4446    |    16    |    Não    |    Não é possível atualizar a exibição UNION ALL "%. *ls" porque a definição da coluna "%.* ls" da exibição "%.*ls" é usada por outra coluna de exibição.    |
+|    4439    |    16    |    Não    |    A exibição particionada '%.*ls' não pode ser atualizada porque a consulta de origem contém referências à tabela de partição '%.* ls'.    |
+|    4440    |    16    |    Não    |    A exibição UNION ALL '%.*ls' não pode ser atualizada porque não foi encontrada uma chave primária na tabela '%.* ls'.    |
+|    4441    |    16    |    Não    |    A exibição particionada '%.*ls' não pode ser atualizada porque a tabela '%.* ls' possui um índice em uma coluna computada.    |
+|    4442    |    16    |    Não    |    A exibição UNION ALL '%.*ls' não pode ser atualizada porque a tabela base '%.* ls' é usada várias vezes.    |
+|    4443    |    16    |    Não    |    A exibição UNION ALL '%.*ls' não pode ser atualizada porque a coluna '%.* ls' da tabela base '%.*ls' é usada várias vezes.    |
+|    4444    |    16    |    Não    |    A exibição UNION ALL '%.*ls' não pode ser atualizada porque a chave primária da tabela '%.* ls' não está incluída no resultado da união.    |
+|    4445    |    16    |    Não    |    A exibição UNION ALL '%.*ls' não pode ser atualizada porque a chave primária da tabela '%.* ls' não está unida às chaves primárias das tabelas anteriores.    |
+|    4446    |    16    |    Não    |    Não é possível atualizar a exibição UNION ALL "%.*ls" porque a definição da coluna "%.* ls" da exibição "%.*ls" é usada por outra coluna de exibição.    |
 |    4447    |    16    |    Não    |    A exibição '%.*ls' não é atualizável porque a definição contém um operador de conjunto.    |
 |    4448    |    16    |    Não    |    Não é possível usar INSERT na exibição particionada '%.*ls' porque não foram fornecidos valores para todas as colunas.    |
 |    4449    |    16    |    Não    |    O uso de padrões não é permitido em exibições que contêm um operador de conjunto.    |
-|    4450    |    16    |    Não    |    Não é possível atualizar a exibição particionada '%. *ls' porque a definição de coluna de exibição '%.* ls' na tabela '%.*ls' possui uma restrição IDENTITY.    |
+|    4450    |    16    |    Não    |    Não é possível atualizar a exibição particionada '%.*ls' porque a definição de coluna de exibição '%.* ls' na tabela '%.*ls' possui uma restrição IDENTITY.    |
 |    4451    |    16    |    Não    |    As exibições que fazem referência a tabelas em vários servidores não são atualizáveis na edição desta instância '%.*ls' do SQL Server. Consulte os manuais online para saber mais sobre os recursos compatíveis em diferentes edições do SQL Server.    |
-|    4452    |    16    |    Não    |    Não é possível usar UPDATE na coluna de particionamento '%. *ls' da exibição '%.* ls' porque a tabela '%.*ls' possui uma restrição CASCADE DELETE ou CASCADE UPDATE.    |
-|    4453    |    16    |    Não    |    Não é possível usar UPDATE na coluna de particionamento '%. *ls' da exibição '%.* ls' porque a tabela '%.*ls' possui um gatilho INSERT, UPDATE ou DELETE.    |
+|    4452    |    16    |    Não    |    Não é possível usar UPDATE na coluna de particionamento '%.*ls' da exibição '%.* ls' porque a tabela '%.*ls' possui uma restrição CASCADE DELETE ou CASCADE UPDATE.    |
+|    4453    |    16    |    Não    |    Não é possível usar UPDATE na coluna de particionamento '%.*ls' da exibição '%.* ls' porque a tabela '%.*ls' possui um gatilho INSERT, UPDATE ou DELETE.    |
 |    4454    |    16    |    Não    |    Não é possível atualizar a exibição particionada "%.*ls" porque as colunas de particionamento de suas tabelas membro têm tipos incompatíveis.    |
 |    4456    |    16    |    Não    |    A exibição particionada "%.ls" não é atualizável porque uma ou mais colunas de não particionamento de suas tabelas membro têm tipos incompatíveis.    |
 |    4457    |    16    |    Não    |    Falha na tentativa de inserir ou atualizar a exibição particionada porque o valor da coluna de particionamento não pertence a nenhuma partição.    |
 |    4502    |    16    |    Não    |    A exibição ou função '%.*ls' possui mais nomes de colunas especificados do que colunas definidas.    |
 |    4503    |    16    |    Não    |    Não foi possível estabelecer associação de %S_MSG '%.*ls' com o esquema porque ele faz referência a um objeto de outro banco de dados.    |
-|    4504    |    16    |    Não    |    Não foi possível criar %S_MSG '%. *ls' porque o tipo CLR '%.* ls' não existe no banco de dados de destino '%.*ls'.    |
-|    4505    |    16    |    Não    |    Falha de CREATE VIEW porque a coluna '%. *ls' da exibição '%.* ls' excede o número máximo de %d colunas.    |
-|    4506    |    16    |    Não    |    Os nomes de colunas em cada exibição ou função devem ser exclusivos. O nome de coluna '%. *ls' na exibição ou função '%.* ls' foi especificado mais de uma vez.    |
+|    4504    |    16    |    Não    |    Não foi possível criar %S_MSG '%.*ls' porque o tipo CLR '%.* ls' não existe no banco de dados de destino '%.*ls'.    |
+|    4505    |    16    |    Não    |    Falha de CREATE VIEW porque a coluna '%.*ls' da exibição '%.* ls' excede o número máximo de %d colunas.    |
+|    4506    |    16    |    Não    |    Os nomes de colunas em cada exibição ou função devem ser exclusivos. O nome de coluna '%.*ls' na exibição ou função '%.* ls' foi especificado mais de uma vez.    |
 |    4508    |    16    |    Não    |    Não são permitidas exibições ou funções em tabelas temporárias. Os nomes de tabelas que começam com '#' indicam tabelas temporárias.    |
 |    4510    |    16    |    Não    |    Não foi possível executar CREATE VIEW porque WITH %ls foi especificado e a exibição não é atualizável.    |
 |    4511    |    16    |    Não    |    Falha ao criar Exibição ou Função porque não foi especificado um nome para a coluna %d.    |
-|    4512    |    16    |    Não    |    Não é possível associar %S_MSG '%. *ls' ao esquema porque o nome '%.* ls' é inválido para a associação de esquema. Os nomes devem ter um formato de duas partes e nenhum objeto pode fazer referência a si mesmo.    |
-|    4513    |    16    |    Não    |    Não é possível associar %S_MSG '%. *ls'. '%.* ls' ao esquema, pois este não é válido para estabelecer associação com esquema.    |
+|    4512    |    16    |    Não    |    Não é possível associar %S_MSG '%.*ls' ao esquema porque o nome '%.* ls' é inválido para a associação de esquema. Os nomes devem ter um formato de duas partes e nenhum objeto pode fazer referência a si mesmo.    |
+|    4513    |    16    |    Não    |    Não é possível associar %S_MSG '%.*ls'. '%.* ls' ao esquema, pois este não é válido para estabelecer associação com esquema.    |
 |    4514    |    16    |    Não    |    Falha em CREATE FUNCTION porque não foi especificado um nome para a coluna %d.    |
-|    4515    |    16    |    Não    |    Falha em CREATE FUNCTION porque a coluna '%. *ls' na função '%.* ls' excede o número máximo de %d colunas.    |
+|    4515    |    16    |    Não    |    Falha em CREATE FUNCTION porque a coluna '%.*ls' na função '%.* ls' excede o número máximo de %d colunas.    |
 |    4516    |    16    |    Não    |    Não é possível associar a função '%.*ls' a esquema porque ela contém uma instrução EXECUTE.    |
 |    4517    |    16    |    Não    |    O objeto de fila de serviço não pode ser usado em expressões de associação a esquema. '%.*ls' é uma fila de serviço.    |
-|    4519    |    16    |    Não    |    Não é possível %S_MSG %S_MSG '%. *ls' na exibição '%.* ls' por se tratar de uma exibição gerada pelo sistema e criada para fins de otimização.    |
+|    4519    |    16    |    Não    |    Não é possível %S_MSG %S_MSG '%.*ls' na exibição '%.* ls' por se tratar de uma exibição gerada pelo sistema e criada para fins de otimização.    |
 |    4520    |    16    |    Não    |    Não é possível desabilitar o índice na exibição %d' por se tratar de uma exibição gerada pelo sistema e criada para fins de otimização.    |
 |    4521    |    16    |    Não    |    Não é possível usar o objeto '%.*ls' com o atributo de objeto autodrop em expressões de associação a esquema por se tratar de uma exibição gerada pelo sistema e criada para fins de otimização.    |
 |    4522    |    16    |    Não    |    Não é possível alterar a exibição '%.*ls' porque ela é gerada pelo sistema e criada para fins de otimização.    |
@@ -2133,10 +2133,10 @@ ORDER BY message_id
 |    4628    |    16    |    Não    |    A permissão ALL não está mais em uso e só é mantida para fins de compatibilidade. Isso NÃO significa que as permissões ALL estejam definidas na entidade.    |
 |    4629    |    16    |    Não    |    As permissões em exibições do catálogo no escopo do servidor, procedimentos armazenados do sistema ou procedimentos armazenados estendidos só podem ser concedidas quando o banco de dados atual é o mestre.    |
 |    4701    |    16    |    Não    |    Não foi possível localizar o objeto "%.*ls" porque ele não existe ou você não tem permissão.    |
-|    4707    |    16    |    Não    |    Não é possível truncar o objeto '%. *ls' porque ele ou um de seus índices reside em um grupo de arquivos READONLY '%.* ls'.    |
+|    4707    |    16    |    Não    |    Não é possível truncar o objeto '%.*ls' porque ele ou um de seus índices reside em um grupo de arquivos READONLY '%.* ls'.    |
 |    4708    |    16    |    Não    |    Não foi possível truncar o objeto '%.*ls' porque ele não é uma tabela.    |
 |    4709    |    16    |    Não    |    Não é permitido truncar a tabela do sistema '%.*ls'.    |
-|    4710    |    16    |    Não    |    Não é possível truncar o objeto '%. *ls' porque ele ou um de seus índices reside em um grupo de arquivos offline '%.* ls'.    |
+|    4710    |    16    |    Não    |    Não é possível truncar o objeto '%.*ls' porque ele ou um de seus índices reside em um grupo de arquivos offline '%.* ls'.    |
 |    4711    |    16    |    Não    |    Não é possível truncar a tabela '%.*ls' porque ela está publicada para replicação ou habilitada para o Change Data Capture.    |
 |    4712    |    16    |    Não    |    Não é possível truncar a tabela '%.*ls' porque uma restrição FOREIGN KEY faz referência a ela.    |
 |    4801    |    16    |    Não    |    O recurso de inserção em massa não tem suporte neste protocolo de acesso.    |
@@ -2230,96 +2230,96 @@ ORDER BY message_id
 |    4896    |    16    |    Não    |    Valor de coluna inválido do cliente bcp para colid %d.    |
 |    4897    |    16    |    Não    |    Comprimento inválido recebido para dados LOB em bloco para colid %d.    |
 |    4900    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH para a tabela '%.*ls'. Não é possível alternar a partição de uma tabela na qual o controle de alterações está habilitado. Desabilite esse controle antes de usar ALTER TABLE SWITCH.    |
-|    4901    |    16    |    Não    |    ALTER TABLE só permite a inclusão de colunas que contêm nulos ou uma definição DEFAULT especificada, ou a coluna que está sendo adicionada é uma coluna de identidade ou de carimbo de data/hora, ou, opcionalmente, se nenhuma das condições anteriores for atendida, a tabela deverá estar vazia para permitir adição dessa coluna. A coluna '%. *ls' não pode ser adicionada a uma tabela '%.* ls' que não esteja vazia, porque não atende a essas condições.    |
+|    4901    |    16    |    Não    |    ALTER TABLE só permite a inclusão de colunas que contêm nulos ou uma definição DEFAULT especificada, ou a coluna que está sendo adicionada é uma coluna de identidade ou de carimbo de data/hora, ou, opcionalmente, se nenhuma das condições anteriores for atendida, a tabela deverá estar vazia para permitir adição dessa coluna. A coluna '%.*ls' não pode ser adicionada a uma tabela '%.* ls' que não esteja vazia, porque não atende a essas condições.    |
 |    4902    |    16    |    Não    |    Não foi possível localizar o objeto "%.*ls" porque ele não existe ou você não tem permissão.    |
 |    4903    |    10    |    Não    |    Aviso: a partição especificada %d para a tabela '%.*ls' foi ignorada na instrução ALTER TABLE SWITCH porque a tabela não está particionada.    |
 |    4904    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A partição especificada %d da tabela de destino '%.*ls' deve estar vazia.    |
 |    4905    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' deve estar vazia.    |
-|    4906    |    16    |    Não    |    Falha na instrução '%ls'. A %S_MSG '%. *ls' é uma %S_MSG particionada, enquanto o índice '%.* ls' é uma %S_MSG particionada.    |
-|    4907    |    16    |    Não    |    Falha na instrução '%ls'. A %S_MSG '%. *ls' tem %d partições, enquanto o índice '%.* ls' tem %d partições.    |
-|    4908    |    16    |    Não    |    Falha na instrução '%ls'. Os valores de limite do intervalo usados para particionar %S_MSG '%. *ls' são diferentes dos valores de limite do intervalo usados para o índice '%.* ls'.    |
+|    4906    |    16    |    Não    |    Falha na instrução '%ls'. A %S_MSG '%.*ls' é uma %S_MSG particionada, enquanto o índice '%.* ls' é uma %S_MSG particionada.    |
+|    4907    |    16    |    Não    |    Falha na instrução '%ls'. A %S_MSG '%.*ls' tem %d partições, enquanto o índice '%.* ls' tem %d partições.    |
+|    4908    |    16    |    Não    |    Falha na instrução '%ls'. Os valores de limite do intervalo usados para particionar %S_MSG '%.*ls' são diferentes dos valores de limite do intervalo usados para o índice '%.* ls'.    |
 |    4909    |    16    |    Não    |    Não é possível alterar '%.*ls' por não se tratar de uma tabela.    |
 |    4911    |    16    |    Não    |    Não é possível especificar uma tabela particionada sem número de partição na instrução ALTER TABLE SWITCH. A tabela '%.*ls' está particionada.    |
-|    4912    |    16    |    Não    |    Falha na instrução '%ls'. O conjunto de colunas usado para particionar %S_MSG '%. *ls' é diferente do conjunto de colunas usado para particionar índices '%.* ls'.    |
-|    4913    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%. *ls' tem índice clusterizado '%.* ls', enquanto a tabela '%.*ls' não tem.    |
+|    4912    |    16    |    Não    |    Falha na instrução '%ls'. O conjunto de colunas usado para particionar %S_MSG '%.*ls' é diferente do conjunto de colunas usado para particionar índices '%.* ls'.    |
+|    4913    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%.*ls' tem índice clusterizado '%.* ls', enquanto a tabela '%.*ls' não tem.    |
 |    4914    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela "%.*ls" tem um índice clusterizado desabilitado.    |
-|    4915    |    16    |    Não    |    Falha na instrução '%ls'. O tipo de parâmetro da função de partição usada para particionar %S_MSG '%. *ls' é diferente do tipo de parâmetro da função usada para particionar o índice '%.* ls'.    |
+|    4915    |    16    |    Não    |    Falha na instrução '%ls'. O tipo de parâmetro da função de partição usada para particionar %S_MSG '%.*ls' é diferente do tipo de parâmetro da função usada para particionar o índice '%.* ls'.    |
 |    4916    |    16    |    Não    |    Não foi possível habilitar ou desabilitar a restrição. Consulte os erros anteriores.    |
 |    4917    |    16    |    Não    |    A restrição '%.*ls' não existe.    |
 |    4918    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a tabela '%.*ls' contém um índice de texto completo.    |
 |    4919    |    16    |    Não    |    O atributo PERSISTED não pode ser alterado na coluna '%.*ls' porque essa coluna não é computada.    |
-|    4920    |    16    |    Não    |    Falha em ALTER TABLE porque o gatilho '%. *ls' na tabela '%.* ls' não existe.    |
-|    4921    |    16    |    Não    |    Falha em ALTER TABLE porque o gatilho '%. *ls' não pertence à tabela '%.* ls'.    |
+|    4920    |    16    |    Não    |    Falha em ALTER TABLE porque o gatilho '%.*ls' na tabela '%.* ls' não existe.    |
+|    4921    |    16    |    Não    |    Falha em ALTER TABLE porque o gatilho '%.*ls' não pertence à tabela '%.* ls'.    |
 |    4922    |    16    |    Não    |    Falha em %ls %.*ls porque um ou mais objetos acessam esta coluna.    |
-|    4923    |    16    |    Não    |    Falha em ALTER TABLE DROP COLUMN porque '%. *ls' é a única coluna de dados na tabela '%.* ls'. Uma tabela deve ter pelo menos uma coluna de dados.    |
-|    4924    |    16    |    Não    |    Falha em %ls porque a coluna '%. *ls' não existe na tabela '%.* ls'.    |
+|    4923    |    16    |    Não    |    Falha em ALTER TABLE DROP COLUMN porque '%.*ls' é a única coluna de dados na tabela '%.* ls'. Uma tabela deve ter pelo menos uma coluna de dados.    |
+|    4924    |    16    |    Não    |    Falha em %ls porque a coluna '%.*ls' não existe na tabela '%.* ls'.    |
 |    4925    |    16    |    Não    |    Falha em ALTER TABLE ALTER COLUMN ADD ROWGUIDCOL porque já existe uma coluna na tabela '%.*ls' com a propriedade ROWGUIDCOL.    |
 |    4926    |    16    |    Não    |    Falha em ALTER TABLE ALTER COLUMN DROP ROWGUIDCOL porque não existe uma coluna na tabela '%.*ls' com a propriedade ROWGUIDCOL.    |
-|    4927    |    16    |    Não    |    Não é possível alterar a coluna '%. *ls' para que seja do tipo de dados %.* ls.    |
+|    4927    |    16    |    Não    |    Não é possível alterar a coluna '%.*ls' para que seja do tipo de dados %.* ls.    |
 |    4928    |    16    |    Não    |    Não é possível alterar a coluna '%.*ls' porque ela é '%ls'.    |
 |    4929    |    16    |    Não    |    Não é possível alterar %S_MSG '%.*ls' porque ele está sendo publicado para replicação.    |
-|    4933    |    16    |    Não    |    A coluna computada '%. *ls' da tabela '%.* ls' não pode persistir porque depende de um objeto sem associação a esquema.    |
-|    4934    |    16    |    Não    |    A coluna computada '%. *ls' da tabela '%.* ls' não pode persistir porque acessa dados do sistema ou do usuário.    |
+|    4933    |    16    |    Não    |    A coluna computada '%.*ls' da tabela '%.* ls' não pode persistir porque depende de um objeto sem associação a esquema.    |
+|    4934    |    16    |    Não    |    A coluna computada '%.*ls' da tabela '%.* ls' não pode persistir porque acessa dados do sistema ou do usuário.    |
 |    4935    |    16    |    Não    |    ALTER TABLE ADD COLUMN não pode especificar um grupo de arquivos FILESTREAM diferente do existente.    |
-|    4936    |    16    |    Não    |    A coluna computada '%. *ls' da tabela '%.* ls' não pode persistir porque é não determinística.    |
-|    4938    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A partição %d de %S_MSG '%. *ls' está no grupo de arquivos '%.* ls', e a partição %d de %S_MSG '%. *ls' está no grupo de arquivos '%.* ls'.    |
-|    4939    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. %S_MSG '%. *ls' está no grupo de arquivos '%.* ls' e a partição %d de %S_MSG '%. *ls' está no grupo de arquivos '%.* ls'.    |
-|    4940    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. %S_MSG '%. *ls' está no grupo de arquivos '%.* ls' e %S_MSG '%. *ls' está no grupo de arquivos '%.* ls'.    |
+|    4936    |    16    |    Não    |    A coluna computada '%.*ls' da tabela '%.* ls' não pode persistir porque é não determinística.    |
+|    4938    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A partição %d de %S_MSG '%.*ls' está no grupo de arquivos '%.* ls', e a partição %d de %S_MSG '%.*ls' está no grupo de arquivos '%.* ls'.    |
+|    4939    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. %S_MSG '%.*ls' está no grupo de arquivos '%.* ls' e a partição %d de %S_MSG '%.*ls' está no grupo de arquivos '%.* ls'.    |
+|    4940    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. %S_MSG '%.*ls' está no grupo de arquivos '%.* ls' e %S_MSG '%.*ls' está no grupo de arquivos '%.* ls'.    |
 |    4941    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a tabela '%.*ls' está marcada para replicação de mesclagem.    |
-|    4942    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' no ordinal %d da tabela '%.* ls' tem um nome diferente da coluna '%. *ls' no mesmo ordinal da tabela '%.* ls'.    |
-|    4943    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a tabela '%. *ls' tem %d colunas e a tabela '%.* ls' tem %d colunas.    |
-|    4944    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' tem o tipo de dados %s na tabela de origem '%.* ls', que é diferente de seu tipo %s na tabela de destino '%.*ls'.    |
-|    4945    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' não tem a mesma ordenação nas tabelas '%.* ls' e '%.*ls'.    |
-|    4946    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' não tem o mesmo atributo persistente nas tabelas '%.* ls' e '%.*ls'.    |
-|    4947    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. Não existe um índice idêntico na tabela de origem '%. *ls' para o índice '%.* ls' na tabela de destino '%.*ls'.    |
-|    4948    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de origem '%. *ls' está no banco de dados '%.* ls', ao passo que a tabela de destino '%. *ls' está no banco de dados '%.* ls'.    |
+|    4942    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' no ordinal %d da tabela '%.* ls' tem um nome diferente da coluna '%.*ls' no mesmo ordinal da tabela '%.* ls'.    |
+|    4943    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a tabela '%.*ls' tem %d colunas e a tabela '%.* ls' tem %d colunas.    |
+|    4944    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' tem o tipo de dados %s na tabela de origem '%.* ls', que é diferente de seu tipo %s na tabela de destino '%.*ls'.    |
+|    4945    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' não tem a mesma ordenação nas tabelas '%.* ls' e '%.*ls'.    |
+|    4946    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' não tem o mesmo atributo persistente nas tabelas '%.* ls' e '%.*ls'.    |
+|    4947    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. Não existe um índice idêntico na tabela de origem '%.*ls' para o índice '%.* ls' na tabela de destino '%.*ls'.    |
+|    4948    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de origem '%.*ls' está no banco de dados '%.* ls', ao passo que a tabela de destino '%.*ls' está no banco de dados '%.* ls'.    |
 |    4949    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque o objeto '%.*ls' não é uma tabela definida pelo usuário.    |
 |    4950    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque o número de partição %d não existe na tabela '%.*ls'.    |
-|    4951    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' não tem o mesmo atributo de armazenamento FILESTREAM nas tabelas '%.* ls' e '%.*ls'.    |
-|    4952    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' não tem a mesma semântica de corte ANSI nas tabelas '%.* ls' e '%.*ls'.    |
-|    4953    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O conjunto de colunas usado para particionar a tabela '%. *ls' é diferente do conjunto de colunas usado para particionar a tabela '%.* ls'.    |
-|    4954    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%. *ls' tem um limite embutido de %d para o texto nos dados da linha que difere do valor %d usado pela tabela '%.* ls'.    |
-|    4955    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de origem '%. *ls' e a tabela de destino '%.* ls' são iguais.    |
+|    4951    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' não tem o mesmo atributo de armazenamento FILESTREAM nas tabelas '%.* ls' e '%.*ls'.    |
+|    4952    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' não tem a mesma semântica de corte ANSI nas tabelas '%.* ls' e '%.*ls'.    |
+|    4953    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O conjunto de colunas usado para particionar a tabela '%.*ls' é diferente do conjunto de colunas usado para particionar a tabela '%.* ls'.    |
+|    4954    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%.*ls' tem um limite embutido de %d para o texto nos dados da linha que difere do valor %d usado pela tabela '%.* ls'.    |
+|    4955    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de origem '%.*ls' e a tabela de destino '%.* ls' são iguais.    |
 |    4956    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a tabela '%.*ls' não foi particionada com RANGE.    |
 |    4957    |    16    |    Não    |    Falha na instrução '%ls' porque a expressão que identifica o número da partição de %S_MSG '%.*ls' não é do tipo inteiro.    |
-|    4958    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' não tem a mesma propriedade ROWGUIDCOL nas tabelas '%.* ls' e '%.*ls'.    |
-|    4959    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A partição %d de %S_MSG '%. *ls' tem o grupo de arquivos TEXT '%.* ls' e a partição %d de %S_MSG '%. *ls' tem o grupo de arquivos TEXT '%.* ls'.    |
-|    4960    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A restrição de verificação '%. *ls' na tabela de origem '%.* ls' é uma restrição NOCHECK, mas a restrição de verificação '%. *ls' correspondente na tabela de destino '%.* ls' é CHECK.    |
-|    4961    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A coluna '%. *ls' da tabela '%.* ls' é passível de nulidade, mas não em '%.*ls'.    |
+|    4958    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' não tem a mesma propriedade ROWGUIDCOL nas tabelas '%.* ls' e '%.*ls'.    |
+|    4959    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A partição %d de %S_MSG '%.*ls' tem o grupo de arquivos TEXT '%.* ls' e a partição %d de %S_MSG '%.*ls' tem o grupo de arquivos TEXT '%.* ls'.    |
+|    4960    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A restrição de verificação '%.*ls' na tabela de origem '%.* ls' é uma restrição NOCHECK, mas a restrição de verificação '%.*ls' correspondente na tabela de destino '%.* ls' é CHECK.    |
+|    4961    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A coluna '%.*ls' da tabela '%.* ls' é passível de nulidade, mas não em '%.*ls'.    |
 |    4962    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A partição %d na tabela '%.*ls' não é uma partição de intervalo.    |
 |    4963    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A partição %d não é válida para a tabela '%.*ls'.    |
-|    4964    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%. *ls' tem uma restrição RULE '%.* ls'. SWITCH não é permitido em tabelas com restrições RULE.    |
-|    4965    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A coluna '%. *ls' da tabela '%.* ls' é uma coluna computada, mas a mesma coluna em '%.*ls' não é.    |
-|    4966    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A coluna computada '%. *ls' definida como '%.* ls' na tabela '%. *ls' é diferente da mesma coluna na tabela '%.* ls' definida como '%.*ls'.    |
-|    4967    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. SWITCH não é permitido porque a tabela de origem '%. *ls' contém a chave primária para a restrição '%.* ls'.    |
-|    4968    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%. *ls' tem uma chave estrangeira para a restrição '%.* ls', mas a tabela de origem '%.*ls' não tem uma chave correspondente.    |
-|    4969    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A restrição de chave estrangeira '%. *ls' está desabilitada na tabela de origem '%.* ls' e a restrição correspondente '%. *ls' está habilitada na tabela de destino '%.* ls'. A restrição da tabela de origem deve estar habilitada.    |
-|    4970    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%. *ls' tem uma restrição de verificação em nível de tabela '%.* ls', mas a tabela de origem '%.*ls' não tem uma restrição correspondente.    |
-|    4971    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%. *ls' tem uma restrição de verificação em nível de coluna '%.* ls', mas a tabela de origem '%.*ls' não tem uma restrição correspondente.    |
-|    4972    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. As restrições de verificação ou a função de partição na tabela de origem '%. *ls' aceitam valores que não são permitidos por restrições de verificação ou função de partição na tabela de destino '%.* ls'.    |
-|    4973    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O intervalo definido pela partição %d na tabela '%. *ls' não é um subconjunto do intervalo definido pela partição %d na tabela '%.* ls'.    |
-|    4974    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A restrição de chave estrangeira '%. *ls' é NOCHECK na tabela de origem '%.* ls' e a restrição correspondente '%. *ls' é CHECK na tabela de destino '%.* ls'. A restrição da tabela de origem deve ser CHECK.    |
-|    4975    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A restrição de verificação '%. *ls' na tabela de origem '%.* ls' e a restrição de verificação '%. *ls' na tabela de destino '%.* ls' têm configurações diferentes para o atributo 'Not For Replication'.    |
-|    4976    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%. *ls' tem uma restrição de verificação '%.* ls' em uma coluna XML, mas a tabela de origem '%.*ls' não tem uma verificação de restrição idêntica.    |
-|    4977    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%. *ls' tem uma restrição de verificação '%.* ls' em uma coluna de tipo CLR, mas a tabela de origem '%.*ls' não tem uma restrição de verificação idêntica.    |
-|    4978    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A partição %d na tabela '%. *ls' reside em um grupo de arquivos somente leitura '%.* ls'.    |
-|    4979    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%. *ls' reside em um grupo de arquivos somente leitura '%.* ls'.    |
-|    4980    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O lobdata da partição %d na tabela '%. *ls' reside em um grupo de arquivos somente leitura '%.* ls'.    |
-|    4981    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O lobdata da tabela '%. *ls' reside em um grupo de arquivos somente leitura '%.* ls'.    |
-|    4982    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. As restrições de verificação da tabela de origem '%. *ls' aceitam valores que não são permitidos pelo intervalo definido pela partição %d na tabela de destino '%.* ls'.    |
-|    4983    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%. *ls' tem um índice XML ou espacial '%.* ls'. Somente a tabela de origem pode ter índices XML ou espaciais na instrução ALTER TABLE SWITCH.    |
-|    4984    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%. *ls' e a tabela de origem '%.* ls' têm valores diferentes de formato de armazenamento vardecimal. Use o procedimento armazenado sp_tableoption para alterar a opção 'formato de armazenamento vardecimal' das tabelas para os mesmos valores.    |
-|    4985    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' não tem o mesmo atributo de nulidade nas tabelas '%.* ls' e '%.*ls'.    |
-|    4986    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' não tem o mesmo tipo CLR nas tabelas '%.* ls' e '%.*ls'.    |
-|    4987    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' não tem a mesma Coleção de Esquemas XML nas tabelas '%.* ls' e '%.*ls'.    |
-|    4988    |    16    |    Não    |    Não é possível persistir a coluna computada '%. *ls'. O objeto subjacente '%.* ls' tem um proprietário diferente da tabela '%.*ls'.    |
-|    4989    |    16    |    Não    |    Não é possível descartar a propriedade ROWGUIDCOL para a coluna '%. *ls' na tabela '%.* ls' porque a coluna não é o ROWGUIDCOL designado para a tabela.    |
-|    4990    |    16    |    Não    |    Não é possível alterar a coluna '%. *ls' da tabela '%.* ls' para adicionar ou remover o atributo de coluna FILESTREAM.    |
-|    4991    |    16    |    Não    |    Não é possível alterar o atributo NOT FOR REPLICATION na coluna '%. *ls' da tabela '%.* ls' porque essa não é uma coluna de identidade.    |
+|    4964    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%.*ls' tem uma restrição RULE '%.* ls'. SWITCH não é permitido em tabelas com restrições RULE.    |
+|    4965    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A coluna '%.*ls' da tabela '%.* ls' é uma coluna computada, mas a mesma coluna em '%.*ls' não é.    |
+|    4966    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A coluna computada '%.*ls' definida como '%.* ls' na tabela '%.*ls' é diferente da mesma coluna na tabela '%.* ls' definida como '%.*ls'.    |
+|    4967    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. SWITCH não é permitido porque a tabela de origem '%.*ls' contém a chave primária para a restrição '%.* ls'.    |
+|    4968    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' tem uma chave estrangeira para a restrição '%.* ls', mas a tabela de origem '%.*ls' não tem uma chave correspondente.    |
+|    4969    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A restrição de chave estrangeira '%.*ls' está desabilitada na tabela de origem '%.* ls' e a restrição correspondente '%.*ls' está habilitada na tabela de destino '%.* ls'. A restrição da tabela de origem deve estar habilitada.    |
+|    4970    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' tem uma restrição de verificação em nível de tabela '%.* ls', mas a tabela de origem '%.*ls' não tem uma restrição correspondente.    |
+|    4971    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' tem uma restrição de verificação em nível de coluna '%.* ls', mas a tabela de origem '%.*ls' não tem uma restrição correspondente.    |
+|    4972    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. As restrições de verificação ou a função de partição na tabela de origem '%.*ls' aceitam valores que não são permitidos por restrições de verificação ou função de partição na tabela de destino '%.* ls'.    |
+|    4973    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O intervalo definido pela partição %d na tabela '%.*ls' não é um subconjunto do intervalo definido pela partição %d na tabela '%.* ls'.    |
+|    4974    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A restrição de chave estrangeira '%.*ls' é NOCHECK na tabela de origem '%.* ls' e a restrição correspondente '%.*ls' é CHECK na tabela de destino '%.* ls'. A restrição da tabela de origem deve ser CHECK.    |
+|    4975    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A restrição de verificação '%.*ls' na tabela de origem '%.* ls' e a restrição de verificação '%.*ls' na tabela de destino '%.* ls' têm configurações diferentes para o atributo 'Not For Replication'.    |
+|    4976    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' tem uma restrição de verificação '%.* ls' em uma coluna XML, mas a tabela de origem '%.*ls' não tem uma verificação de restrição idêntica.    |
+|    4977    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' tem uma restrição de verificação '%.* ls' em uma coluna de tipo CLR, mas a tabela de origem '%.*ls' não tem uma restrição de verificação idêntica.    |
+|    4978    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A partição %d na tabela '%.*ls' reside em um grupo de arquivos somente leitura '%.* ls'.    |
+|    4979    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%.*ls' reside em um grupo de arquivos somente leitura '%.* ls'.    |
+|    4980    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O lobdata da partição %d na tabela '%.*ls' reside em um grupo de arquivos somente leitura '%.* ls'.    |
+|    4981    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O lobdata da tabela '%.*ls' reside em um grupo de arquivos somente leitura '%.* ls'.    |
+|    4982    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. As restrições de verificação da tabela de origem '%.*ls' aceitam valores que não são permitidos pelo intervalo definido pela partição %d na tabela de destino '%.* ls'.    |
+|    4983    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' tem um índice XML ou espacial '%.* ls'. Somente a tabela de origem pode ter índices XML ou espaciais na instrução ALTER TABLE SWITCH.    |
+|    4984    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' e a tabela de origem '%.* ls' têm valores diferentes de formato de armazenamento vardecimal. Use o procedimento armazenado sp_tableoption para alterar a opção 'formato de armazenamento vardecimal' das tabelas para os mesmos valores.    |
+|    4985    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' não tem o mesmo atributo de nulidade nas tabelas '%.* ls' e '%.*ls'.    |
+|    4986    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' não tem o mesmo tipo CLR nas tabelas '%.* ls' e '%.*ls'.    |
+|    4987    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' não tem a mesma Coleção de Esquemas XML nas tabelas '%.* ls' e '%.*ls'.    |
+|    4988    |    16    |    Não    |    Não é possível persistir a coluna computada '%.*ls'. O objeto subjacente '%.* ls' tem um proprietário diferente da tabela '%.*ls'.    |
+|    4989    |    16    |    Não    |    Não é possível descartar a propriedade ROWGUIDCOL para a coluna '%.*ls' na tabela '%.* ls' porque a coluna não é o ROWGUIDCOL designado para a tabela.    |
+|    4990    |    16    |    Não    |    Não é possível alterar a coluna '%.*ls' da tabela '%.* ls' para adicionar ou remover o atributo de coluna FILESTREAM.    |
+|    4991    |    16    |    Não    |    Não é possível alterar o atributo NOT FOR REPLICATION na coluna '%.*ls' da tabela '%.* ls' porque essa não é uma coluna de identidade.    |
 |    4992    |    16    |    Não    |    Não é possível usar a opção de tabela LARGE VALUE TYPES OUT OF ROW em uma tabela de usuário que não tenha colunas varchar(max), nvarchar(max), varbinary(max), xml ou CLR grande com tipos de valores grandes. Essa opção pode ser aplicada a tabelas que tenham colunas computadas com valores grandes que sejam persistentes.    |
-|    4993    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%. *ls' tem uma configuração para a opção Tipos de Valores Grandes Fora de Linha diferente da tabela '%.* ls'.    |
-|    4994    |    16    |    Não    |    A coluna computada '%. *ls' na tabela '%.* ls' não pode ser persistente porque o tipo de coluna, '%.*ls', é um CLR não ordenado por byte.    |
-|    4995    |    16    |    Não    |    O formato de armazenamento vardecimal não pode ser habilitado na tabela '%. *ls' porque '%.* ls' é um banco de dados do sistema. O formato de armazenamento vardecimal não está disponível em bancos de dados do sistema.    |
+|    4993    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%.*ls' tem uma configuração para a opção Tipos de Valores Grandes Fora de Linha diferente da tabela '%.* ls'.    |
+|    4994    |    16    |    Não    |    A coluna computada '%.*ls' na tabela '%.* ls' não pode ser persistente porque o tipo de coluna, '%.*ls', é um CLR não ordenado por byte.    |
+|    4995    |    16    |    Não    |    O formato de armazenamento vardecimal não pode ser habilitado na tabela '%.*ls' porque '%.* ls' é um banco de dados do sistema. O formato de armazenamento vardecimal não está disponível em bancos de dados do sistema.    |
 |    4996    |    16    |    Não    |    O controle de alterações já está habilitado para a tabela '%.*ls'.    |
 |    4997    |    16    |    Não    |    Não é possível habilitar o controle de alterações na tabela '%.*ls'. Esse controle requer uma chave primária na tabela. Crie essa chave antes de habilitar o controle de alterações.    |
 |    4998    |    16    |    Não    |    O controle de alterações não está habilitado na tabela '%.*ls'.    |
@@ -2341,7 +2341,7 @@ ORDER BY message_id
 |    5011    |    14    |    Não    |    O usuário não tem permissão para alterar o banco de dados '%.*ls', o banco de dados não existe ou o banco de dados não está em um estado que permita verificações de acesso.    |
 |    5012    |    16    |    Não    |    O nome do grupo de arquivos primário não pode ser alterado.    |
 |    5013    |    16    |    Não    |    Não é possível adicionar arquivos aos bancos de dados mestre e modelo. ALTER DATABASE anulado.    |
-|    5014    |    16    |    Não    |    O %S_MSG '%. *ls' não existe no banco de dados '%.* ls'.    |
+|    5014    |    16    |    Não    |    O %S_MSG '%.*ls' não existe no banco de dados '%.* ls'.    |
 |    5015    |    16    |    Não    |    Falha em ALTER DATABASE. O tamanho total especificado deve ser de 1 MB ou mais.    |
 |    5016    |    16    |    Não    |    Não é possível alterar o nome do banco de dados do sistema %.*ls.    |
 |    5018    |    10    |    Não    |    O arquivo "%.*ls" foi modificado no catálogo do sistema. O novo caminho será usado na próxima vez que o banco de dados for iniciado.    |
@@ -2380,7 +2380,7 @@ ORDER BY message_id
 |    5055    |    16    |    Não    |    Não é possível adicionar, remover ou modificar o arquivo '%.*ls'. Ele é somente leitura.    |
 |    5056    |    16    |    Não    |    Não é possível adicionar, remover ou modificar um arquivo do grupo de arquivos '%.*ls' porque o grupo de arquivos não está online.    |
 |    5057    |    16    |    Não    |    Não é possível adicionar, remover ou modificar o arquivo '%.*ls' porque ele está offline.    |
-|    5058    |    16    |    Não    |    A opção '%. *ls' não pode ser definida no banco de dados '%.* ls'.    |
+|    5058    |    16    |    Não    |    A opção '%.*ls' não pode ser definida no banco de dados '%.* ls'.    |
 |    5059    |    16    |    Não    |    O banco de dados '%.*ls' está em transição. Tente a instrução ALTER DATABASE mais tarde.    |
 |    5060    |    10    |    Não    |    Transações não qualificadas sendo revertidas. Tempo estimado para conclusão da reversão: %d%%.    |
 |    5061    |    16    |    Não    |    Falha em ALTER DATABASE porque não foi possível colocar um bloqueio no banco de dados '%.*ls'. Tente novamente depois.    |
@@ -2394,9 +2394,9 @@ ORDER BY message_id
 |    5069    |    16    |    Não    |    Falha na instrução ALTER DATABASE.    |
 |    5070    |    16    |    Não    |    Não é possível alterar o estado do banco de dados enquanto outros usuários estão usando o banco de dados '%.*ls'    |
 |    5071    |    16    |    Não    |    A recriação de logs só pode especificar um arquivo.    |
-|    5072    |    16    |    Não    |    Falha em ALTER DATABASE. A ordenação padrão do banco de dados '%. *ls' não pode ser definida como '%.* ls'.    |
+|    5072    |    16    |    Não    |    Falha em ALTER DATABASE. A ordenação padrão do banco de dados '%.*ls' não pode ser definida como '%.* ls'.    |
 |    5073    |    16    |    Não    |    Não é possível alterar a ordenação do banco de dados '%ls' porque ela é READONLY, OFFLINE ou está marcada como SUSPECT.    |
-|    5074    |    16    |    Não    |    O %S_MSG '%. *ls' depende de %S_MSG '%.* ls'.    |
+|    5074    |    16    |    Não    |    O %S_MSG '%.*ls' depende de %S_MSG '%.* ls'.    |
 |    5075    |    16    |    Não    |    O %S_MSG '%.*ls' depende de %S_MSG. A ordenação do banco de dados não pode ser alterada quando um objeto associado a um esquema depende dele. Remova as dependências na ordenação do banco de dados e repita a operação.    |
 |    5076    |    10    |    Não    |    Aviso: alterando a ordenação padrão do banco de dados '%.*ls', que é usado em replicação. Todos os bancos de dados de replicação devem ter a mesma ordenação padrão.    |
 |    5077    |    16    |    Não    |    Não é possível alterar o estado de arquivos que não são de dados ou que estão no grupo de arquivos principal.    |
@@ -2449,11 +2449,11 @@ ORDER BY message_id
 |    5134    |    16    |    Não    |    Não é possível usar o caminho especificado por '%.*ls' para arquivos FILESTREAM pois ele não está em um sistema de arquivos com suporte.    |
 |    5135    |    16    |    Não    |    O caminho '%.*ls' não pode ser usado para arquivos FILESTREAM. Para obter informações sobre caminhos com suporte, consulte os Manuais Online do SQL Server.    |
 |    5136    |    16    |    Não    |    O caminho especificado por '%.*ls' não pode ser usado para um contêiner de FILESTREAM, pois está contido em outro contêiner de FILESTREAM.    |
-|    5144    |    10    |    Sim    |    Crescimento automático do arquivo '%. *ls' no banco de dados '%.* ls' cancelado pelo usuário ou excedeu o tempo limite após %d milissegundos. Use ALTER DATABASE para definir um valor de FILEGROWTH menor para o arquivo ou para definir um novo tamanho de arquivo explicitamente.    |
-|    5145    |    10    |    Sim    |    O crescimento automático do arquivo '%. *ls' no banco de dados '%.* ls' levou %d milissegundos. Considere usar ALTER DATABASE para definir um FILEGROWTH menor para esse arquivo.    |
+|    5144    |    10    |    Sim    |    Crescimento automático do arquivo '%.*ls' no banco de dados '%.* ls' cancelado pelo usuário ou excedeu o tempo limite após %d milissegundos. Use ALTER DATABASE para definir um valor de FILEGROWTH menor para o arquivo ou para definir um novo tamanho de arquivo explicitamente.    |
+|    5145    |    10    |    Sim    |    O crescimento automático do arquivo '%.*ls' no banco de dados '%.* ls' levou %d milissegundos. Considere usar ALTER DATABASE para definir um FILEGROWTH menor para esse arquivo.    |
 |    5149    |    16    |    Não    |    MODIFY FILE encontrou erro do sistema operacional %ls ao tentar expandir o arquivo físico '%ls'.    |
 |    5150    |    16    |    Não    |    O tamanho de um arquivo de log único não pode ser maior que 2 TB.    |
-|    5159    |    24    |    Não    |    Erro do sistema operacional %. *ls no arquivo "%.* ls" durante %ls.    |
+|    5159    |    24    |    Não    |    Erro do sistema operacional %.*ls no arquivo "%.* ls" durante %ls.    |
 |    5161    |    16    |    Sim    |    Encontrada uma ID de arquivo inesperada. A ID de arquivo %d era esperada, mas %d foi lida em "%.*ls". Verifique se os arquivos estão mapeados corretamente em sys.master_files. ALTER DATABASE pode ser usado para corrigir os mapeamentos.    |
 |    5169    |    16    |    Não    |    FILEGROWTH não pode ser maior que MAXSIZE para o arquivo '%.*ls'.    |
 |    5170    |    16    |    Sim    |    Não é possível criar o arquivo '%ls' porque ele já existe. Altere o caminho ou o nome do arquivo e tente executar a operação novamente.    |
@@ -2544,7 +2544,7 @@ ORDER BY message_id
 |    5260    |    16    |    Não    |    ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls): Pelo menos um registro na página % S_PGID contém informações de controle de versão, mas o bit VERSION_INFO no cabeçalho da página não está definido.    |
 |    5261    |    10    |    Não    |    %.*ls: não foi possível mover a página %d:%d porque ela não foi formatada.    |
 |    5262    |    16    |    Não    |    ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls), página %S_PGID, linha %d: A linha contém um carimbo de data/hora de controle de versão NULL, mas seu ponteiro de cadeia de versão não é NULL. A cadeia de versão aponta para a página %S_PGID, slot %d.    |
-|    5263    |    10    |    Não    |    Contagens incorretas encontradas para a tabela '%. *ls', índice '%.* ls', partição %ld:    |
+|    5263    |    10    |    Não    |    Contagens incorretas encontradas para a tabela '%.*ls', índice '%.* ls', partição %ld:    |
 |    5264    |    10    |    Não    |    Páginas DATA %.*ls: da tabela do sistema – %I64d páginas; Real – %I64d páginas.    |
 |    5265    |    10    |    Não    |    Páginas USED %.*ls: da tabela do sistema – %I64d páginas; Real – %I64d páginas.    |
 |    5266    |    10    |    Não    |    Páginas RSVD %.*ls: da tabela do sistema – %I64d páginas; Real – %I64d páginas.    |
@@ -2560,8 +2560,8 @@ ORDER BY message_id
 |    5276    |    10    |    Não    |    A pesquisa detalhada de '%.*ls' (ID de banco de dados %d) para detectar inconsistências falhou devido à exceção %d, estado %d. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    5277    |    10    |    Não    |    Instantâneo de banco de dados %ls interno tem ponto de divisão LSN = %08x:%08x:%04x e primeiro LSN = %08x:%08x:%04x. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    5301    |    16    |    Não    |    Falha no carregamento em massa. O usuário não tem a permissão ALTER TABLE na tabela '%.*ls'. A permissão ALTER TABLE será necessária na tabela de destino de um carregamento em massa se a tabela de destino contiver gatilhos ou restrições de verificação, mas as dicas em massa 'FIRE_TRIGGERS' ou 'CHECK_CONSTRAINTS' não estiverem especificadas. A permissão ALTER TABLE também será necessária se a dica em massa 'KEEPIDENTITY' estiver especificada.    |
-|    5302    |    16    |    Não    |    O modificador '%. *ls' em '%.* ls' não pode ser chamado com um valor nulo.    |
-|    5303    |    16    |    Não    |    O resultado da aplicação do modificador '%. *ls' no tipo CLR '%.* ls' não pode ser um valor nulo.    |
+|    5302    |    16    |    Não    |    O modificador '%.*ls' em '%.* ls' não pode ser chamado com um valor nulo.    |
+|    5303    |    16    |    Não    |    O resultado da aplicação do modificador '%.*ls' no tipo CLR '%.* ls' não pode ser um valor nulo.    |
 |    5304    |    16    |    Não    |    Falha na cópia em massa. O usuário não tem a permissão ALTER TABLE na tabela '%.*ls'. Essa permissão será necessária na tabela de destino de uma operação de cópia em massa se a tabela tiver gatilhos ou restrições de verificação, mas se as dicas em massa 'FIRE_TRIGGERS' ou 'CHECK_CONSTRAINTS' não estiverem especificadas como opções do comando de cópia em massa.    |
 |    5305    |    16    |    Não    |    As colunas rowdump e lockres são válidas apenas em tabelas e exibições indexadas em que a dica NOEXPAND esteja especificada.    |
 |    5306    |    16    |    Não    |    Parâmetros de cursor não são permitidos para funções. A variável '%.*ls' é do tipo cursor.    |
@@ -2583,8 +2583,8 @@ ORDER BY message_id
 |    5324    |    15    |    Não    |    Em uma instrução MERGE, uma cláusula '%S_MSG' com um critério de pesquisa não pode aparecer após uma cláusula '%S_MSG' sem critério de pesquisa.    |
 |    5325    |    15    |    Não    |    A ordem dos dados no arquivo de dados não está de acordo com a dica ORDER especificada para o conjunto de linhas BULK '%.*ls'. A ordem dos dados deve corresponder à ordem especificada na dica ORDER de um conjunto de linhas BULK. Atualize a dica ORDER para refletir a ordem em que os dados de entrada estão dispostos ou atualize o arquivo de dados de entrada para corresponder à ordem especificada pela dica ORDER.    |
 |    5326    |    15    |    Não    |    Os dados no arquivo de dados não estão de acordo com a dica UNIQUE especificada para o conjunto de linhas BULK '%.*ls'. Os dados no arquivo de dados deverão ser exclusivos se a dica UNIQUE estiver especificada para um conjunto de linhas BULK. Remova a dica UNIQUE ou atualize o arquivo de dados de entrada para garantir que os dados sejam exclusivos.    |
-|    5327    |    15    |    Não    |    A coluna '%. *ls' não tem um tipo de dados válido para a dica ORDER especificada para a fonte de dados '%.* ls'. Os tipos de dados text, ntext, image, xml, varchar(max), nvarchar(max) e varbinary(max) não podem ser usados na dica ORDER para um conjunto de linhas BULK ou CLR TVF.    |
-|    5328    |    15    |    Não    |    Não é possível inserir um valor explícito para a coluna de identidade '%. *ls' na tabela de destino '%.* ls' da instrução INSERT quando a cláusula FROM contém uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada.    |
+|    5327    |    15    |    Não    |    A coluna '%.*ls' não tem um tipo de dados válido para a dica ORDER especificada para a fonte de dados '%.* ls'. Os tipos de dados text, ntext, image, xml, varchar(max), nvarchar(max) e varbinary(max) não podem ser usados na dica ORDER para um conjunto de linhas BULK ou CLR TVF.    |
+|    5328    |    15    |    Não    |    Não é possível inserir um valor explícito para a coluna de identidade '%.*ls' na tabela de destino '%.* ls' da instrução INSERT quando a cláusula FROM contém uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada.    |
 |    5329    |    15    |    Não    |    Funções em janelas não são permitidas na cláusula %S_MSG quando a cláusula FROM contém uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada.    |
 |    5330    |    16    |    Não    |    Predicados de texto completo não podem aparecer na cláusula OUTPUT.    |
 |    5331    |    16    |    Não    |    Predicados de texto completo não podem aparecer na cláusula %S_MSG quando a cláusula FROM contém uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada.    |
@@ -2601,7 +2601,7 @@ ORDER BY message_id
 |    5508    |    15    |    Não    |    FILESTREAM só pode ser declarado para colunas VARBINARY.    |
 |    5509    |    15    |    Não    |    As propriedades SIZE, MAXSIZE ou FILEGROWTH não podem ser especificadas para o arquivo de dados FILESTREAM '%.*ls'.    |
 |    5510    |    15    |    Não    |    LOG ON não pode ser usado para grupos de arquivos não FILESTREAM '%.*ls'.    |
-|    5511    |    23    |    Não    |    O registro de log do sistema de arquivos '%. *ls' de FILESTREAM na pasta de log '%.* ls' está corrompido.    |
+|    5511    |    23    |    Não    |    O registro de log do sistema de arquivos '%.*ls' de FILESTREAM na pasta de log '%.* ls' está corrompido.    |
 |    [5512](mssqlserver-5512-database-engine-error.md)    |    16    |    Sim    |    Erro 0x%x (%ls) encontrado enquanto diretório '%.*ls' estava sendo truncado.    |
 |    5513    |    16    |    Não    |    O nome especificado para o grupo de arquivos de log associado para o grupo de arquivos FILESTREAM '%.*ls' não é válido.    |
 |    5514    |    16    |    Não    |    A replicação transacional/Change Data Capture não pode continuar porque o Gerenciador de Recursos do Sistema de Arquivos Transacional em '%.*ls' não foi iniciado.    |
@@ -2611,7 +2611,7 @@ ORDER BY message_id
 |    5518    |    16    |    Não    |    O caminho de '%.*ls' de FILESTREAM é longo demais.    |
 |    5519    |    16    |    Não    |    Um banco de dados deve ter um grupo de arquivos de log FILESTREAM e um arquivo de log principais para conter outros grupos de arquivos FILESTREAM.    |
 |    5520    |    16    |    Não    |    O arquivo '%.*ls' de FILESTREAM não pode ser adicionado porque seu grupo de arquivos de destino não pode ter mais de um arquivo.    |
-|    5521    |    16    |    Não    |    Ocorreu o erro 0x%x (código de status NT) quando o SQL Server tentou recuperar '%. *ls' do Gerenciador de Recursos do Sistema de Arquivos Transacional localizado em '%.* ls'.    |
+|    5521    |    16    |    Não    |    Ocorreu o erro 0x%x (código de status NT) quando o SQL Server tentou recuperar '%.*ls' do Gerenciador de Recursos do Sistema de Arquivos Transacional localizado em '%.* ls'.    |
 |    5522    |    16    |    Não    |    O arquivo de dados de FILESTREAM não pode ser removido porque não foi feito backup de seu arquivo de log.    |
 |    5523    |    16    |    Não    |    O grupo de arquivos de dados de FILESTREAM não pode ser adicionado para fazer referência a um grupo de arquivos de log FILESTREAM vazio.    |
 |    5524    |    16    |    Não    |    O grupo de arquivos de dados padrão FILESTREAM não pode ser removido, a menos que seja o último grupo de arquivos de dados FILESTREAM.    |
@@ -2619,7 +2619,7 @@ ORDER BY message_id
 |    5526    |    16    |    Não    |    O arquivo de log FILESTREAM '%.*ls' não pode ser removido porque está sendo referenciado por um grupo de arquivos de dados FILESTREAM.    |
 |    5527    |    16    |    Não    |    O arquivo de log FILESTREAM principal não pode ser descartado porque existem outros grupos de arquivos FILESTREAM.    |
 |    5528    |    16    |    Não    |    Um banco de dados pode ter no máximo um arquivo de log e um grupo de arquivos de log FILESTREAM principal.    |
-|    5531    |    16    |    Não    |    Ocorreu o erro 0x%x (código de status NT) quando o SQL Server tentou alterar o modo de registro em log do Gerenciador de Recursos do Sistema de Arquivos de Transacional localizado em '%. *ls', de '%.* ls' para '%.*ls'.    |
+|    5531    |    16    |    Não    |    Ocorreu o erro 0x%x (código de status NT) quando o SQL Server tentou alterar o modo de registro em log do Gerenciador de Recursos do Sistema de Arquivos de Transacional localizado em '%.*ls', de '%.* ls' para '%.*ls'.    |
 |    5532    |    16    |    Não    |    O SQL Server não pode obter o contexto de transação do Kernel Transaction Manager para executar operações no sistema de arquivos.    |
 |    5533    |    23    |    Não    |    O registro de log do sistema de arquivos FILESTREAM que tem um LSN '%d:%d:%d' está ausente. A pasta de log '%.*ls' está corrompida. Restaure o banco de dados de um backup.    |
 |    5534    |    23    |    Não    |    O registro de log SQL em LSN '%d:%d:%d' do banco de dados '%.*ls' está corrompido. O banco de dados não pode ser recuperado.    |
@@ -2709,7 +2709,7 @@ ORDER BY message_id
 |    6001    |    10    |    Não    |    SHUTDOWN está aguardando que %d processos sejam concluídos.    |
 |    6004    |    10    |    Não    |    O usuário não tem permissão para executar esta ação.    |
 |    6005    |    10    |    Não    |    SHUTDOWN em andamento.    |
-|    6006    |    10    |    Sim    |    Servidor desligado por %. *ls do logon %.* ls.    |
+|    6006    |    10    |    Sim    |    Servidor desligado por %.*ls do logon %.* ls.    |
 |    6007    |    10    |    Não    |    Não é possível executar a instrução SHUTDOWN em uma transação ou por um procedimento armazenado.    |
 |    6101    |    16    |    Não    |    A ID de processo %d não é válida. Escolha um número entre 1 e %d.    |
 |    6102    |    14    |    Não    |    O usuário não tem permissão para usar a instrução KILL.    |
@@ -2740,46 +2740,46 @@ ORDER BY message_id
 |    6208    |    16    |    Não    |    Falha em %s porque o parâmetro count do método FillRow deve ser um a mais em relação à declaração SQL para a função CLR com valor de tabela.    |
 |    6209    |    16    |    Não    |    Ordenação inválida no tipo CLR "%.*ls": retornando NULL em entradas não NULL.    |
 |    6210    |    16    |    Não    |    O tipo CLR '%.*ls' não é totalmente comparável.    |
-|    6211    |    16    |    Não    |    Falha em %s ASSEMBLY porque o tipo '%. *ls' em %.* ls no assembly '%. *ls' tem um campo estático '%.* ls'. Os atributos de campos estáticos em assemblies %.*ls devem ser marcados como readonly no Visual C#, como ReadOnly no Visual Basic ou como initonly no Visual C++ e linguagem intermediária.    |
-|    6212    |    16    |    Não    |    Falha em %s ASSEMBLY porque o método '%. *ls' no tipo '%.* ls' em %. *ls no assembly '%.* ls' armazena um campo estático. O armazenamento de campo estático não é permitido em assemblies %.*ls.    |
-|    6213    |    16    |    Não    |    Falha em %s ASSEMBLY porque o método '%. *ls' no tipo '%.* ls' em %. *ls no assembly '%.* ls' tem um atributo sincronizado. A sincronização explícita não é permitida em assemblies %.*ls.    |
+|    6211    |    16    |    Não    |    Falha em %s ASSEMBLY porque o tipo '%.*ls' em %.* ls no assembly '%.*ls' tem um campo estático '%.* ls'. Os atributos de campos estáticos em assemblies %.*ls devem ser marcados como readonly no Visual C#, como ReadOnly no Visual Basic ou como initonly no Visual C++ e linguagem intermediária.    |
+|    6212    |    16    |    Não    |    Falha em %s ASSEMBLY porque o método '%.*ls' no tipo '%.* ls' em %.*ls no assembly '%.* ls' armazena um campo estático. O armazenamento de campo estático não é permitido em assemblies %.*ls.    |
+|    6213    |    16    |    Não    |    Falha em %s ASSEMBLY porque o método '%.*ls' no tipo '%.* ls' em %.*ls no assembly '%.* ls' tem um atributo sincronizado. A sincronização explícita não é permitida em assemblies %.*ls.    |
 |    6214    |    16    |    Não    |    Falha em %s ASSEMBLY porque o assembly "%.*ls" tem um ponto de entrada não gerenciado.    |
-|    6215    |    16    |    Não    |    Falha em %s ASSEMBLY porque o método '%. *ls' no tipo '%.* ls' em %. *ls no assembly '%.* ls' tem o atributo inválido 0x%x.    |
-|    6216    |    16    |    Não    |    Falha em %s ASSEMBLY porque o tipo "%. *ls" em %.* ls no assembly "%. *ls" tem um finalizador. Finalizadores não são permitidos em assemblies %.* ls.    |
+|    6215    |    16    |    Não    |    Falha em %s ASSEMBLY porque o método '%.*ls' no tipo '%.* ls' em %.*ls no assembly '%.* ls' tem o atributo inválido 0x%x.    |
+|    6216    |    16    |    Não    |    Falha em %s ASSEMBLY porque o tipo "%.*ls" em %.* ls no assembly "%.*ls" tem um finalizador. Finalizadores não são permitidos em assemblies %.* ls.    |
 |    6217    |    16    |    Não    |    Falha em ALTER ASSEMBLY ADD FILE porque o arquivo, "%.*ls", sendo adicionado está vazio.    |
-|    6218    |    16    |    Não    |    Falha em %s ASSEMBLY do assembly '%. *ls' porque o assembly '%.* ls' falhou na verificação. Verifique se os assemblies referenciados estão atualizados e são confiáveis (para external_access ou unsafe) para execução no banco de dados. "Caso haja mensagens de erro do verificador do CLR, elas serão exibidas após esta mensagem%.*ls    |
+|    6218    |    16    |    Não    |    Falha em %s ASSEMBLY do assembly '%.*ls' porque o assembly '%.* ls' falhou na verificação. Verifique se os assemblies referenciados estão atualizados e são confiáveis (para external_access ou unsafe) para execução no banco de dados. "Caso haja mensagens de erro do verificador do CLR, elas serão exibidas após esta mensagem%.*ls    |
 |    6219    |    16    |    Não    |    Falha em %s ASSEMBLY porque o parâmetro de origem do assembly %d tem um ponto de entrada não gerenciado.    |
 |    6220    |    16    |    Não    |    Falha em SELECT INTO porque o tipo CLR "%.*ls" não existe no banco de dados de destino.    |
 |    6221    |    16    |    Não    |    A operação do cursor gerou mais de uma linha de metadados de coluna diferentes.    |
-|    6222    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa, mas o campo "%. *ls" do tipo "%.* ls.%.*ls" não é válido para serialização nativa.    |
-|    6223    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa, mas o campo "%. *ls" do tipo "%.* ls.%. *ls" é do tipo "%.* ls.%.*ls", que não está marcado com "LayoutKind.Sequential". A serialização nativa requer que o tipo seja marcado com "LayoutKind.Sequential".    |
-|    6224    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa, mas o campo "%. *ls" do tipo "%.* ls.%.*ls" está marcado com "System.NonSerializedAttribute". Os tipos de serialização nativa não podem ter campos marcados com "System.NonSerializedAttribute".    |
-|    6225    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa, mas o campo "%. *ls" do tipo "%.* ls.%. *ls" é do tipo "%.* ls.%.*ls", que é um tipo sem-valor. Os tipos de serialização nativa só podem ter campos do tipo blittable. Se desejar ter um campo de qualquer outro tipo, considere a possibilidade de usar um tipo diferente de formato de serialização, como a serialização definida por usuário.    |
-|    6226    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização definida pelo usuário, mas não implementa a interface de "%. *ls.%.* ls".    |
-|    6227    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa, mas o campo "%. *ls" do tipo "%.* ls.%. *ls" é do tipo "%.* ls.%. *ls", que não é blittable ou o tipo "%.* ls.%.*ls" tem uma definição recursiva.    |
-|    6228    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa, mas contém campos que não são blittable.    |
-|    6229    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa. Ele não está marcado com "LayoutKind.Sequential". A serialização nativa requer que o tipo seja marcado com "LayoutKind.Sequential".    |
-|    6230    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa, mas o campo "%. *ls" do tipo "%.* ls.%.*ls" tem marshallers de campo. Os tipos de serialização nativa não podem ter empacotadores de campo.    |
-|    6231    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa, mas um de seus tipos base, "%. *ls.%.* ls", não é válido para serialização nativa.    |
-|    6232    |    16    |    Não    |    O tipo "%. *ls.%.* ls" está marcado para serialização nativa, mas o tipo base, "%. *ls.%.* ls", não está marcado com "LayoutKind.Sequential". A serialização nativa requer que o tipo seja marcado com "LayoutKind.Sequential".    |
+|    6222    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa, mas o campo "%.*ls" do tipo "%.* ls.%.*ls" não é válido para serialização nativa.    |
+|    6223    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa, mas o campo "%.*ls" do tipo "%.* ls.%.*ls" é do tipo "%.* ls.%.*ls", que não está marcado com "LayoutKind.Sequential". A serialização nativa requer que o tipo seja marcado com "LayoutKind.Sequential".    |
+|    6224    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa, mas o campo "%.*ls" do tipo "%.* ls.%.*ls" está marcado com "System.NonSerializedAttribute". Os tipos de serialização nativa não podem ter campos marcados com "System.NonSerializedAttribute".    |
+|    6225    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa, mas o campo "%.*ls" do tipo "%.* ls.%.*ls" é do tipo "%.* ls.%.*ls", que é um tipo sem-valor. Os tipos de serialização nativa só podem ter campos do tipo blittable. Se desejar ter um campo de qualquer outro tipo, considere a possibilidade de usar um tipo diferente de formato de serialização, como a serialização definida por usuário.    |
+|    6226    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização definida pelo usuário, mas não implementa a interface de "%.*ls.%.* ls".    |
+|    6227    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa, mas o campo "%.*ls" do tipo "%.* ls.%.*ls" é do tipo "%.* ls.%.*ls", que não é blittable ou o tipo "%.* ls.%.*ls" tem uma definição recursiva.    |
+|    6228    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa, mas contém campos que não são blittable.    |
+|    6229    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa. Ele não está marcado com "LayoutKind.Sequential". A serialização nativa requer que o tipo seja marcado com "LayoutKind.Sequential".    |
+|    6230    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa, mas o campo "%.*ls" do tipo "%.* ls.%.*ls" tem marshallers de campo. Os tipos de serialização nativa não podem ter empacotadores de campo.    |
+|    6231    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa, mas um de seus tipos base, "%.*ls.%.* ls", não é válido para serialização nativa.    |
+|    6232    |    16    |    Não    |    O tipo "%.*ls.%.* ls" está marcado para serialização nativa, mas o tipo base, "%.*ls.%.* ls", não está marcado com "LayoutKind.Sequential". A serialização nativa requer que o tipo seja marcado com "LayoutKind.Sequential".    |
 |    6233    |    16    |    Não    |    O acesso a dados em processamento não é permitido em um estado representado.    |
 |    6234    |    16    |    Não    |    Erro de truncamento de dados. O comprimento (%d) excede o máximo (%d) para o tipo '%.*ls'.    |
 |    6235    |    16    |    Não    |    Erro de serialização de dados. O comprimento (%d) é inferior ao comprimento fixo (%d) para o tipo '%.*ls'.    |
 |    6236    |    16    |    Não    |    Falha em %s ASSEMBLY porque o nome de arquivo '%.*ls' é muito longo.    |
-|    6237    |    16    |    Não    |    Falha em %s ASSEMBLY porque o método "%. *ls" no tipo "%.* ls" do assembly "%. *ls" tem um atributo personalizado "%.* ls" inválido.    |
-|    6238    |    16    |    Não    |    Falha em %s ASSEMBLY porque o campo "%. *ls" no tipo "%.* ls" do assembly "%. *ls" tem um atributo personalizado "%.* ls" inválido.    |
-|    6239    |    16    |    Não    |    Falha em %s ASSEMBLY porque o tipo "%. *ls" no assembly "%.* ls" tem um atributo personalizado "%.*ls" inválido.    |
+|    6237    |    16    |    Não    |    Falha em %s ASSEMBLY porque o método "%.*ls" no tipo "%.* ls" do assembly "%.*ls" tem um atributo personalizado "%.* ls" inválido.    |
+|    6238    |    16    |    Não    |    Falha em %s ASSEMBLY porque o campo "%.*ls" no tipo "%.* ls" do assembly "%.*ls" tem um atributo personalizado "%.* ls" inválido.    |
+|    6239    |    16    |    Não    |    Falha em %s ASSEMBLY porque o tipo "%.*ls" no assembly "%.* ls" tem um atributo personalizado "%.*ls" inválido.    |
 |    6240    |    16    |    Não    |    Falha em ALTER ASSEMBLY porque a função '%s' do tipo '%s' não atende mais aos requisitos de indexação e é usada para a exibição indexada '%s'.    |
 |    6241    |    16    |    Não    |    Tentando enviar um registro com tipo ou nome de coluna %d diferente do tipo ou nome de coluna correspondente do conjunto de resultados.    |
 |    6242    |    16    |    Não    |    Falha em CREATE ASSEMBLY porque o usuário "%.*ls" especificado na cláusula de autorização não existe.    |
-|    6243    |    16    |    Não    |    '%. *ls.%.* ls' está marcado para serialização nativa e tem a propriedade MaxByteSize especificada no atributo '%.*ls'. Os objetos de serialização nativa não podem especificar a propriedade MaxByteSize, pois ela é calculada pelo SQL Server.    |
-|    6244    |    16    |    Não    |    O tamanho (%d) de "%. *ls.%.* ls" não está no intervalo válido. O tamanho deve ser -1 ou um número entre 1 e 8.000.    |
-|    6245    |    16    |    Não    |    Formato de serialização (%d) inválido para o tipo "%. *ls.%.* ls".    |
-|    6246    |    16    |    Não    |    O assembly "%. *ls" já existe no banco de dados "%.* ls".    |
-|    6247    |    16    |    Não    |    Não é possível criar o tipo porque '%. *ls.%.* ls' não pode ter comprimento fixo se tiver MaxByteSize definido como -1.    |
+|    6243    |    16    |    Não    |    '%.*ls.%.* ls' está marcado para serialização nativa e tem a propriedade MaxByteSize especificada no atributo '%.*ls'. Os objetos de serialização nativa não podem especificar a propriedade MaxByteSize, pois ela é calculada pelo SQL Server.    |
+|    6244    |    16    |    Não    |    O tamanho (%d) de "%.*ls.%.* ls" não está no intervalo válido. O tamanho deve ser -1 ou um número entre 1 e 8.000.    |
+|    6245    |    16    |    Não    |    Formato de serialização (%d) inválido para o tipo "%.*ls.%.* ls".    |
+|    6246    |    16    |    Não    |    O assembly "%.*ls" já existe no banco de dados "%.* ls".    |
+|    6247    |    16    |    Não    |    Não é possível criar o tipo porque '%.*ls.%.* ls' não pode ter comprimento fixo se tiver MaxByteSize definido como -1.    |
 |    6248    |    16    |    Não    |    Falha em %s porque o tipo '%s' contém um método '%s' especificado por SqlUserDefinedType.ValidateMethodName não se adequa à especificação necessária porque tem uma assinatura inválida.    |
-|    6249    |    16    |    Não    |    O arquivo "%. *ls" associado já existe para o assembly "%.* ls".    |
-|    6250    |    11    |    Não    |    O assembly "%. *ls" não tem um arquivo associado "%.* ls".    |
+|    6249    |    16    |    Não    |    O arquivo "%.*ls" associado já existe para o assembly "%.* ls".    |
+|    6250    |    11    |    Não    |    O assembly "%.*ls" não tem um arquivo associado "%.* ls".    |
 |    6251    |    16    |    Não    |    Falha em ALTER ASSEMBLY porque o parâmetro de arquivo de assembly %d não é uma expressão válida.    |
 |    6252    |    16    |    Não    |    Falha em ALTER ASSEMBLY porque não foi especificado um nome de arquivo para o parâmetro de arquivo de assembly embutido %d.    |
 |    6253    |    10    |    Sim    |    Funcionalidade Common Language Runtime (CLR) inicializada usando a versão do CLR %ls de %ls.    |
@@ -2787,12 +2787,12 @@ ORDER BY message_id
 |    6255    |    16    |    Não    |    Falha em %s porque o tipo "%d" não se adequa à especificação %s: atributo personalizado "%.*ls".    |
 |    6258    |    16    |    Não    |    A assinatura de função do método "FillRow" (conforme designação de SqlFunctionAttribute.FillRowMethodName) não corresponde à declaração SQL para a função CLR com valor de tabela '%.*ls' devido à coluna %d.    |
 |    6260    |    16    |    Não    |    Ocorreu um erro ao obter uma nova linha a partir de função com valor de tabela definida pelo usuário: %.*ls.    |
-|    6261    |    16    |    Não    |    O tipo CLR referenciado pela coluna "%. *ls" da variável de tabela "%.* ls" foi descartado durante a execução do lote. Execute o lote novamente.    |
+|    6261    |    16    |    Não    |    O tipo CLR referenciado pela coluna "%.*ls" da variável de tabela "%.* ls" foi descartado durante a execução do lote. Execute o lote novamente.    |
 |    6262    |    16    |    Não    |    O assembly não foi encontrado no banco de dados atual ou a versão não corresponde.    |
 |    6263    |    16    |    Não    |    A execução do código do usuário no .NET Framework está desabilitada. Habilite a opção de configuração "clr enabled".    |
 |    6264    |    16    |    Não    |    Falha no acesso aos dados porque a rotina do .NET Framework não está marcada com "DataAccessKind.Read" ou "SystemDataAccessKind.Read".    |
-|    6265    |    16    |    Não    |    Falha em %s ASSEMBLY porque o tipo "%. *ls" em %.* ls no assembly "%. *ls" tem um método pinvokeimpl. P/Invoke não é permitido em assemblies %.* ls.    |
-|    6266    |    10    |    Não    |    Aviso: o assembly "%. *ls" foi criado com a versão %.* ls do .NET Framework. Atualmente, o SQL Server usa a versão %s.    |
+|    6265    |    16    |    Não    |    Falha em %s ASSEMBLY porque o tipo "%.*ls" em %.* ls no assembly "%.*ls" tem um método pinvokeimpl. P/Invoke não é permitido em assemblies %.* ls.    |
+|    6266    |    10    |    Não    |    Aviso: o assembly "%.*ls" foi criado com a versão %.* ls do .NET Framework. Atualmente, o SQL Server usa a versão %s.    |
 |    6267    |    16    |    Não    |    O assembly "%.*ls" não existe ou o usuário não tem permissão para fazer referência a ele.    |
 |    6269    |    16    |    Não    |    Falha em ALTER ASSEMBLY porque a agregação definida pelo usuário "%s" não existe ou não está definida corretamente no assembly atualizado.    |
 |    6270    |    16    |    Não    |    Falha em ALTER ASSEMBLY porque o método necessário "%s" no tipo "%s" não foi encontrado com a mesma assinatura no assembly atualizado.    |
@@ -2818,12 +2818,12 @@ ORDER BY message_id
 |    6290    |    10    |    Sim    |    AppDomain %i (%.*ls) descarregado.    |
 |    6291    |    16    |    Sim    |    AppDomain %i (%.*1s) não pôde ser descarregado com o código de erro 0x%x.    |
 |    6292    |    16    |    Não    |    A transação associada a esta operação foi confirmada ou revertida. Tente novamente com outra transação.    |
-|    6293    |    16    |    Não    |    %. *ls.%.* ls.%.*ls: SqlFacetAttribute é inválido em um membro que não é público.    |
-|    6294    |    16    |    Não    |    %. *ls.%.* ls.%. *ls: a propriedade %.* ls de SqlFacetAttribute não pode ser usada neste contexto.    |
-|    6295    |    16    |    Não    |    %. *ls.%.* ls.%. *ls: a propriedade %.* lsls de SqlFacetAttribute tem um valor inválido.    |
-|    6296    |    16    |    Não    |    %. *ls.%.* ls.%.*ls : SqlFacetAttribute não pode ser aplicado a uma propriedade getter ou setter. Ele deve ser aplicado à própria propriedade.    |
-|    6297    |    16    |    Não    |    %. *ls.%.* ls.%.*ls: a propriedade IsFixedLength de SqlFacetAttribute não pode ser definida como true quando MaxSize está definido como -1.    |
-|    6298    |    16    |    Não    |    %. *ls.%.* ls.%.*ls: as propriedades Precision e Scale de SqlFacetAttribute têm que ser usadas em conjunto.    |
+|    6293    |    16    |    Não    |    %.*ls.%.* ls.%.*ls: SqlFacetAttribute é inválido em um membro que não é público.    |
+|    6294    |    16    |    Não    |    %.*ls.%.* ls.%.*ls: a propriedade %.* ls de SqlFacetAttribute não pode ser usada neste contexto.    |
+|    6295    |    16    |    Não    |    %.*ls.%.* ls.%.*ls: a propriedade %.* lsls de SqlFacetAttribute tem um valor inválido.    |
+|    6296    |    16    |    Não    |    %.*ls.%.* ls.%.*ls : SqlFacetAttribute não pode ser aplicado a uma propriedade getter ou setter. Ele deve ser aplicado à própria propriedade.    |
+|    6297    |    16    |    Não    |    %.*ls.%.* ls.%.*ls: a propriedade IsFixedLength de SqlFacetAttribute não pode ser definida como true quando MaxSize está definido como -1.    |
+|    6298    |    16    |    Não    |    %.*ls.%.* ls.%.*ls: as propriedades Precision e Scale de SqlFacetAttribute têm que ser usadas em conjunto.    |
 |    6299    |    10    |    Não    |    AppDomain %i (%.*ls) criado.    |
 |    6302    |    16    |    Não    |    O argumento da instrução CREATE ou ALTER XML SCHEMA COLLECTION deve ser uma expressão em cadeia de caracteres.    |
 |    6303    |    16    |    Não    |    Análise de XML: a análise de documentos exigiu muita memória    |
@@ -2833,13 +2833,13 @@ ORDER BY message_id
 |    6307    |    16    |    Não    |    Verificação de boa formação de XML: O atributo não pode aparecer fora da declaração do elemento. Refaça a sua XQuery para que ela retorne XML bem formado.    |
 |    6308    |    16    |    Não    |    Verificação de boa formação de XML: Atributo duplicado '%.*ls'. Refaça a sua XQuery para que ela retorne XML bem formado.    |
 |    6309    |    16    |    Não    |    Verificação de boa formação de XML: os dados do nó '%.*ls' contêm um caractere (0x%04X) que não é permitido em XML.    |
-|    6310    |    16    |    Não    |    Não é permitida a alteração de componentes de esquema existentes. Houve uma tentativa de modificar um componente existente do esquema XML, namespace do componente: '%. *ls' nome do componente: '%.* ls' tipo de componente: %.*ls    |
+|    6310    |    16    |    Não    |    Não é permitida a alteração de componentes de esquema existentes. Houve uma tentativa de modificar um componente existente do esquema XML, namespace do componente: '%.*ls' nome do componente: '%.* ls' tipo de componente: %.*ls    |
 |    6311    |    16    |    Não    |    Ocorreu um erro interno do processador de esquema XMLDB. Contate o Suporte Técnico para obter ajuda.    |
-|    6312    |    16    |    Não    |    Não foi possível encontrar componentes de esquema com o namespace de destino '%. *ls' na coleção '%.* ls'.    |
+|    6312    |    16    |    Não    |    Não foi possível encontrar componentes de esquema com o namespace de destino '%.*ls' na coleção '%.* ls'.    |
 |    6314    |    16    |    Não    |    A coleção especificada não existe em metadados: '%.*ls'    |
-|    6315    |    16    |    Não    |    XQuery: não é possível atualizar com o valor '%. *ls', pois a forma canônica do tipo '{%.* ls}%.*ls' viola o padrão necessário. É recomendável usar aspectos padrão em tipos que não são cadeias de caracteres.    |
+|    6315    |    16    |    Não    |    XQuery: não é possível atualizar com o valor '%.*ls', pois a forma canônica do tipo '{%.* ls}%.*ls' viola o padrão necessário. É recomendável usar aspectos padrão em tipos que não são cadeias de caracteres.    |
 |    6316    |    16    |    Não    |    O componente especificado '%s' não pode ser descartado porque ele é usado pelo componente:'%s'    |
-|    6317    |    16    |    Não    |    XQuery: não é possível atualizar com o valor '%. *ls' porque houve falha na validação com o tipo '{%.* ls}%.*ls'    |
+|    6317    |    16    |    Não    |    XQuery: não é possível atualizar com o valor '%.*ls' porque houve falha na validação com o tipo '{%.* ls}%.*ls'    |
 |    6318    |    16    |    Não    |    XQuery: falha na conversão da cadeia de caracteres durante a validação de UPDATE    |
 |    6320    |    16    |    Não    |    XQuery: somente nós de texto ou elementos anuláveis podem ser atualizados com uma sequência vazia    |
 |    6321    |    16    |    Não    |    O atributo xml:space deve ter um valor de 'preserve' ou 'default'. '%.*ls' não é válido.    |
@@ -2851,22 +2851,22 @@ ORDER BY message_id
 |    6327    |    16    |    Não    |    A ID da coleção de esquemas xml especificada não é válida: %d    |
 |    6328    |    16    |    Não    |    A coleção '%.*ls' especificada não pode ser descartada porque ela é usada por %S_MSG '%ls'.    |
 |    6329    |    16    |    Não    |    Uso sem-suporte de um valor digitado para QName no nó '%.*ls'    |
-|    6330    |    16    |    Não    |    A coluna '%. *ls' da tabela '%.* ls' não é do tipo XML, que é necessário para criar um índice XML nela.    |
-|    6331    |    16    |    Não    |    O índice XML primário '%. *ls' já existe na coluna '%.* ls' da tabela '%.*ls'. Além disso, não é permitido o uso de vários índices XML primários por coluna.    |
+|    6330    |    16    |    Não    |    A coluna '%.*ls' da tabela '%.* ls' não é do tipo XML, que é necessário para criar um índice XML nela.    |
+|    6331    |    16    |    Não    |    O índice XML primário '%.*ls' já existe na coluna '%.* ls' da tabela '%.*ls'. Além disso, não é permitido o uso de vários índices XML primários por coluna.    |
 |    6332    |    16    |    Não    |    A tabela '%.*ls' precisa de uma chave primária clusterizada com menos de %d colunas para permitir a criação de um índice XML primário.    |
-|    6333    |    16    |    Não    |    Não foi possível encontrar o índice XML %ls denominado '%. *ls' na tabela '%.* ls'    |
+|    6333    |    16    |    Não    |    Não foi possível encontrar o índice XML %ls denominado '%.*ls' na tabela '%.* ls'    |
 |    6334    |    16    |    Não    |    Não foi possível criar o índice XML ou espacial no objeto '%.*ls' porque esse objeto não é uma tabela. Crie o índice na coluna da tabela base.    |
 |    6335    |    16    |    Não    |    A instância de tipo de dados XML tem excesso de níveis de nós aninhados. O máximo permitido são %d níveis.    |
 |    6336    |    16    |    Não    |    O tamanho máximo do índice primário da tabela '%.*ls' é de %d bytes. CREATE XML INDEX requer que esse tamanho se limite a %d bytes    |
 |    6337    |    16    |    Não    |    '%.*ls' não é um nome de índice XML válido porque começa com o caractere '%c'. O nome do índice XML não deve começar com '#' ou '\@'    |
 |    6338    |    10    |    Não    |    XML DTD foi eliminado de um ou mais fragmentos XML. Os subconjuntos externos, se existentes, foram ignorados.    |
 |    6339    |    16    |    Não    |    A coleção especificada '%.*ls' não pode ser modificada porque ela é uma coleção de esquemas XML interna do SQL Server.    |
-|    6340    |    16    |    Não    |    A coleção de esquemas Xml '%. *ls' referenciada pela variável de tabela '%.* ls' foi descartada ou alterada durante a execução do lote. Reexecute o lote.    |
-|    6341    |    16    |    Não    |    A coleção de esquemas Xml referenciada pela coluna '%. *ls' da variável de tabela '%.* ls' foi descartada ou alterada durante a execução do lote. Reexecute o lote.    |
-|    6342    |    16    |    Não    |    Não é possível criar índices xml ou espaciais primários '%. *ls' na tabela '%.* ls', coluna '%.*ls', porque a coluna é computada.    |
+|    6340    |    16    |    Não    |    A coleção de esquemas Xml '%.*ls' referenciada pela variável de tabela '%.* ls' foi descartada ou alterada durante a execução do lote. Reexecute o lote.    |
+|    6341    |    16    |    Não    |    A coleção de esquemas Xml referenciada pela coluna '%.*ls' da variável de tabela '%.* ls' foi descartada ou alterada durante a execução do lote. Reexecute o lote.    |
+|    6342    |    16    |    Não    |    Não é possível criar índices xml ou espaciais primários '%.*ls' na tabela '%.* ls', coluna '%.*ls', porque a coluna é computada.    |
 |    6343    |    16    |    Não    |    Não é possível criar índices xml secundários '%.*ls' sem uma cláusula USING XML INDEX.    |
-|    6344    |    16    |    Não    |    O índice xml primário '%. *ls' não existe na tabela '%.* ls', coluna '%.*ls'.    |
-|    6345    |    16    |    Não    |    O conjunto de colunas esparsas '%. *ls' na tabela '%.* ls' não pode ser indexado por um índice XML.    |
+|    6344    |    16    |    Não    |    O índice xml primário '%.*ls' não existe na tabela '%.* ls', coluna '%.*ls'.    |
+|    6345    |    16    |    Não    |    O conjunto de colunas esparsas '%.*ls' na tabela '%.* ls' não pode ser indexado por um índice XML.    |
 |    6346    |    16    |    Não    |    Não é possível converter um índice XML primário em um índice XML secundário usando a opção DROP_EXISTING. '%.*ls' é um índice XML primário.    |
 |    6347    |    16    |    Não    |    A coleção '%.*ls' especificada não pode ser alterada porque não existe ou você não tem permissão.    |
 |    6348    |    16    |    Não    |    A coleção '%.*ls' especificada não pode ser criada porque já existe ou você não tem permissão.    |
@@ -2884,14 +2884,14 @@ ORDER BY message_id
 |    6361    |    16    |    Não    |    Foi especificado um parâmetro nulo inválido. As coleções de esquema XML só podem ser criadas a partir de um valor não nulo.    |
 |    6362    |    16    |    Não    |    Não é possível executar a alteração da coleção de esquema porque o esquema atual tem um curinga incerto ou um elemento do tipo xs:anyType.    |
 |    6363    |    16    |    Não    |    Falha em ALTER SCHEMA COLLECTION. Não é possível executá-la em uma coleção de esquema que permita conteúdo incertamente validado e que esteja associado ao esquema. Remova a associação a esquema antes de tentar alterar a coleção.    |
-|    6364    |    16    |    Não    |    Falha em ALTER SCHEMA COLLECTION. A revalidação das colunas XML da tabela '%. *ls' não teve êxito devido ao seguinte motivo: '%.* ls'. Nem o esquema nem os dados especificados devem ser alterados para que a validação não encontre incompatibilidades.    |
+|    6364    |    16    |    Não    |    Falha em ALTER SCHEMA COLLECTION. A revalidação das colunas XML da tabela '%.*ls' não teve êxito devido ao seguinte motivo: '%.* ls'. Nem o esquema nem os dados especificados devem ser alterados para que a validação não encontre incompatibilidades.    |
 |    6365    |    16    |    Não    |    Uma operação XML resultou em um tipo de dados XML excedendo 2 GB no tamanho. Operação anulada.    |
 |    6401    |    16    |    Não    |    Não é possível reverter %.*ls. Não foi encontrado ponto de salvamento ou transação com este nome.    |
 |    6500    |    16    |    Não    |    Falha em %1s porque o método '%ls' da classe '%ls' no assembly '%ls' retorna %ls, mas os gatilhos de CLR devem retornar void.    |
 |    6501    |    16    |    Não    |    Falha em %s ASSEMBLY porque não foi possível abrir o arquivo físico "%.*ls": %ls.    |
 |    6502    |    16    |    Não    |    Falha em %s ASSEMBLY porque não foi possível ler no arquivo físico '%.*ls': %ls.    |
 |    6503    |    16    |    Não    |    O assembly '%.*ls' não foi encontrado no catálogo SQL.    |
-|    6504    |    16    |    Não    |    O valor retornado de %. *ls.%.* ls não pode ser NULL.    |
+|    6504    |    16    |    Não    |    O valor retornado de %.*ls.%.* ls não pode ser NULL.    |
 |    6505    |    16    |    Não    |    Não foi possível encontrar o tipo '%s' no assembly '%s'.    |
 |    6506    |    16    |    Não    |    Não foi possível encontrar o método '%s' para o tipo '%s' no assembly '%s'    |
 |    6507    |    16    |    Não    |    Falha ao abrir o assembly malformado '%ls' com HRESULT 0x%x.    |
@@ -2903,8 +2903,8 @@ ORDER BY message_id
 |    6513    |    16    |    Sim    |    Falha ao inicializar CLR (Common Language Runtime) %ls devido à pressão da memória. Isso se deve provavelmente à pressão da memória na sua região MemToLeave. Para obter mais informações, consulte a documentação de integração de CLR nos manuais online do SQL Server.    |
 |    6514    |    16    |    Não    |    Não é possível usar a coluna '%s' na tabela de resultados de uma função de fluxo definida pelo usuário (coluna '%.*ls').    |
 |    6515    |    16    |    Não    |    O banco de dados da coleção de esquemas '%.*ls' não existe ou você não tem permissão.    |
-|    6516    |    16    |    Não    |    Não existe a coleção '%. *ls' nos metadados '%.* ls'.    |
-|    6517    |    16    |    Sim    |    Falha ao criar AppDomain "%. *ls". %.* ls    |
+|    6516    |    16    |    Não    |    Não existe a coleção '%.*ls' nos metadados '%.* ls'.    |
+|    6517    |    16    |    Sim    |    Falha ao criar AppDomain "%.*ls". %.* ls    |
 |    6518    |    16    |    Não    |    Não foi possível abrir o assembly de sistema ''%.*ls'': %ls.    |
 |    6519    |    16    |    Não    |    O tipo '%.*ls' ainda não tem suporte em operações de CLR.    |
 |    6520    |    16    |    Não    |    Ocorreu um erro do .NET Framework durante execução de instrução.    |
@@ -2915,23 +2915,23 @@ ORDER BY message_id
 |    6525    |    16    |    Não    |    Não é possível usar a restrição '%s' na tabela de resultados de uma função de fluxo definida pelo usuário.    |
 |    6526    |    16    |    Não    |    Não é possível usar a restrição '%s' na tabela de resultados de uma função de fluxo definida pelo usuário (coluna '%.*ls').    |
 |    6527    |    10    |    Sim    |    runtime do .NET Framework interrompido.    |
-|    6528    |    16    |    Não    |    O assembly '%. *ls' não foi encontrado no catálogo SQL do banco de dados '%.* ls'.    |
+|    6528    |    16    |    Não    |    O assembly '%.*ls' não foi encontrado no catálogo SQL do banco de dados '%.* ls'.    |
 |    6529    |    16    |    Não    |    Falha em ALTER ASSEMBLY porque a identidade do assembly referenciado '%.*ls' foi alterada. Verifique se a versão, o nome e a chave pública foram alterados.    |
 |    6530    |    16    |    Não    |    Não é possível efetuar uma alteração em '%.*ls' porque este é um tipo de objeto incompatível.    |
 |    6531    |    16    |    Não    |    Falha em %ls porque a função '%ls' da classe '%ls' do assembly '%*ls' usa um ou mais parâmetros, mas os gatilhos de CLR não aceitam parâmetros.    |
 |    6532    |    16    |    Sim    |    A execução do .NET Framework foi interrompida pela política de encaminhamento por falta de memória. %.*ls    |
-|    6533    |    16    |    Sim    |    %. *ls do AppDomain foi descarregado pela política de escalação para garantir a consistência do aplicativo. Memória insuficiente ao acessar um recurso crítico. %.* ls    |
-|    6534    |    16    |    Sim    |    %. *ls do AppDomain foi descarregado pela política de escalação para garantir a consistência do aplicativo. Falha do aplicativo ao liberar um bloqueio gerenciado. %.* ls    |
-|    6535    |    16    |    Não    |    A execução do .NET Framework foi cancelada. Outra consulta fez com que o %. *ls do AppDomain fosse descarregado. %.* ls    |
+|    6533    |    16    |    Sim    |    %.*ls do AppDomain foi descarregado pela política de escalação para garantir a consistência do aplicativo. Memória insuficiente ao acessar um recurso crítico. %.* ls    |
+|    6534    |    16    |    Sim    |    %.*ls do AppDomain foi descarregado pela política de escalação para garantir a consistência do aplicativo. Falha do aplicativo ao liberar um bloqueio gerenciado. %.* ls    |
+|    6535    |    16    |    Não    |    A execução do .NET Framework foi cancelada. Outra consulta fez com que o %.*ls do AppDomain fosse descarregado. %.* ls    |
 |    6536    |    16    |    Sim    |    Erro fatal no Common Language Runtime do .NET Framework. O SQL Server está sendo desligado. Se o erro voltar a ocorrer após a reinicialização do servidor, contate os Serviços de Atendimento ao Cliente.    |
 |    6537    |    16    |    Sim    |    O Common Language Runtime do .NET Framework foi desligado pelo código do usuário, como em uma função ou um tipo CLR. O SQL Server está sendo desligado. Environment.Exit não deve ser usado para sair do processo. Se a intenção for retornar um inteiro para indicar falha, use uma função escalar ou um parâmetro de saída.    |
 |    6538    |    16    |    Sim    |    A execução do .NET Framework foi interrompida devido a um estouro de pilha. %.*ls    |
-|    6539    |    16    |    Não    |    Formato de serialização inválido (Format.Unknown) para o tipo '%. *ls.%.* ls'.    |
+|    6539    |    16    |    Não    |    Formato de serialização inválido (Format.Unknown) para o tipo '%.*ls.%.* ls'.    |
 |    6540    |    16    |    Não    |    O assembly '%.*ls' que está sendo registrado tem um nome ilegal que é igual ao nome de um assembly do sistema.    |
 |    6541    |    16    |    Não    |    Falha em ALTER ASSEMBLY porque o assembly '%.*ls' tem mais de um arquivo associado. Use ALTER ASSEMBLY DROP FILE para remover arquivos extras.    |
 |    6542    |    16    |    Não    |    Não é possível criar objeto porque %ls é um tipo genérico.    |
 |    6543    |    16    |    Não    |    A execução do .NET Framework foi cancelada. O tipo UDP/UDF/CLR não encerrou a afinidade de threads.    |
-|    6544    |    16    |    Não    |    Falha em %s ASSEMBLY para o assembly '%. *ls' porque o assembly '%.* ls' é malformado ou não é um assembly puro do .NET. %.*ls    |
+|    6544    |    16    |    Não    |    Falha em %s ASSEMBLY para o assembly '%.*ls' porque o assembly '%.* ls' é malformado ou não é um assembly puro do .NET. %.*ls    |
 |    6545    |    16    |    Não    |    Não é permitida a habilitação de opções SET para estatísticas de execução a partir de uma função ou um procedimento CLR.    |
 |    6546    |    16    |    Não    |    Não foi possível representar o contexto de execução durante a execução de '%.*ls'.    |
 |    6547    |    16    |    Não    |    Erro ao obter informações sobre método, propriedade ou campo para "%ls" da classe "%ls" no assembly "%.*ls".    |
@@ -2939,10 +2939,10 @@ ORDER BY message_id
 |    6549    |    16    |    Não    |    Ocorreu um erro do .NET Framework durante a execução da agregação ou da rotina definida pelo usuário '%.*ls': %ls. A transação do usuário, se houver alguma, será revertida.    |
 |    6550    |    16    |    Não    |    Falha em %s porque não há correspondência para o número de parâmetros.    |
 |    6551    |    16    |    Não    |    Falha de %s para "%.*ls" porque o valor de retorno dos tipos T-SQL e CLR não correspondem.    |
-|    6552    |    16    |    Não    |    Falha de %s para "%. *ls" porque o os tipos T-SQL e CLR do parâmetro "%.* ls" não correspondem.    |
+|    6552    |    16    |    Não    |    Falha de %s para "%.*ls" porque o os tipos T-SQL e CLR do parâmetro "%.* ls" não correspondem.    |
 |    6553    |    16    |    Não    |    Falha em %s devido a uma convenção de chamada inválida do .NET Framework. Use a convenção de chamada padrão do .NET Framework.    |
-|    6554    |    16    |    Não    |    Não existe correspondência entre o nome do assembly SQL '%. *ls' e o nome do assembly .NET Framework '%.* ls'. É preciso haver correspondência entre os nomes de assembly.    |
-|    6555    |    16    |    Não    |    O assembly '%. *ls' já existe para o proprietário '%.* ls' no banco de dados '%.*ls'.    |
+|    6554    |    16    |    Não    |    Não existe correspondência entre o nome do assembly SQL '%.*ls' e o nome do assembly .NET Framework '%.* ls'. É preciso haver correspondência entre os nomes de assembly.    |
+|    6555    |    16    |    Não    |    O assembly '%.*ls' já existe para o proprietário '%.* ls' no banco de dados '%.*ls'.    |
 |    6556    |    16    |    Não    |    Falha em %s porque não pôde encontrar o tipo '%s' no assembly '%s'.    |
 |    6557    |    16    |    Não    |    Falha em %s porque o tipo '%s' não se adequa à especificação de %s por causa do campo '%s'.    |
 |    6558    |    16    |    Não    |    Falha em %s porque o tipo '%s' não se adequa à especificação de %s por causa do método '%s'.    |
@@ -2955,7 +2955,7 @@ ORDER BY message_id
 |    6565    |    16    |    Não    |    Falha em %s ASSEMBLY porque o parâmetro de origem do assembly %d não é um assembly válido.    |
 |    6566    |    16    |    Não    |    Falha em %s ASSEMBLY porque o parâmetro de origem do assembly %d não é uma expressão válida.    |
 |    6567    |    16    |    Não    |    %s falhou porque um Procedimento CLR só pode ser definido em métodos CLR que retornam SqlInt32, System.Int32, System.Nullable<System.Int32> ou void.    |
-|    6568    |    16    |    Não    |    Erro do .NET Framework ao obter informações da classe "%. *ls" no assembly "%.* ls": %ls.    |
+|    6568    |    16    |    Não    |    Erro do .NET Framework ao obter informações da classe "%.*ls" no assembly "%.* ls": %ls.    |
 |    6569    |    16    |    Não    |    Falha em '%.*ls' porque o parâmetro %d não pode ser nulo.    |
 |    6570    |    16    |    Não    |    O método '%ls' da classe '%ls' no assembly '%.*ls' é genérico. Não há suporte para métodos genéricos.    |
 |    6571    |    16    |    Não    |    A classe '%ls' no assembly '%.*ls' é genérica. Não há suporte para tipos genéricos.    |
@@ -2968,7 +2968,7 @@ ORDER BY message_id
 |    6578    |    16    |    Não    |    Tentativa inválida de continuar operação após erro grave.    |
 |    6579    |    16    |    Não    |    A alteração do assembly de '%ls' para '%ls' não é uma atualização compatível.    |
 |    6580    |    16    |    Não    |    As declarações não correspondem ao parâmetro %d. As declarações da referência do .NET Framework e do parâmetro T-SQL OUTPUT devem corresponder.    |
-|    6581    |    16    |    Não    |    Não foi possível encontrar o assembly '%. *ls' no diretório '%.* ls'.    |
+|    6581    |    16    |    Não    |    Não foi possível encontrar o assembly '%.*ls' no diretório '%.* ls'.    |
 |    6582    |    16    |    Não    |    O assembly '%.*s' não está visível para a criação de objetos SQL. Use ALTER ASSEMBLY para alterar a visibilidade do assembly.    |
 |    6583    |    16    |    Não    |    O assembly '%.*s' não pode ser usado para criar objetos SQL porque é um assembly de sistema.    |
 |    6584    |    16    |    Não    |    A propriedade ou o campo '%ls' para o tipo '%ls' no assembly '%ls' não é estático    |
@@ -2978,7 +2978,7 @@ ORDER BY message_id
 |    6588    |    16    |    Não    |    As operações de arquivo de assembly não são permitidas para usuários do Windows NT ativados por SETUSER.    |
 |    6589    |    16    |    Não    |    Falha em DROP ASSEMBLY porque os assemblies especificados são referenciados pelo assembly '%ls'.    |
 |    6590    |    16    |    Não    |    Falha em DROP ASSEMBLY porque o objeto '%ls' faz referência a '%ls'.    |
-|    6591    |    16    |    Não    |    Falha em %s de "%. *ls" porque o primeiro parâmetro do método "%.* ls" deve ser do tipo System.Object.    |
+|    6591    |    16    |    Não    |    Falha em %s de "%.*ls" porque o primeiro parâmetro do método "%.* ls" deve ser do tipo System.Object.    |
 |    6592    |    16    |    Não    |    Não foi possível encontrar a propriedade ou o campo '%ls' para o tipo '%ls' no assembly '%ls'.    |
 |    6593    |    16    |    Não    |    A propriedade ou o campo '%ls' para o tipo '%ls' no assembly '%ls' é estático.    |
 |    6594    |    16    |    Não    |    Não foi possível ler na propriedade '%ls' do tipo '%ls' no assembly '%ls' porque ela não tem um acessador get.    |
@@ -3033,7 +3033,7 @@ ORDER BY message_id
 |    6809    |    16    |    Não    |    Tabelas sem-nome não podem ser usadas como identificadores XML nem como nomes de atributo. Nomeie as colunas e tabelas sem-nome usando AS na instrução SELECT.    |
 |    6810    |    16    |    Não    |    Nome de coluna '%.*ls' repetido. Não é possível gerar o mesmo atributo mais de uma vez na mesma marca XML.    |
 |    6811    |    16    |    Não    |    FOR XML é incompatível com expressões COMPUTE. Remova a expressão COMPUTE.    |
-|    6812    |    16    |    Não    |    A ID de marca XML %d que foi declarada originalmente como '%. *ls' está sendo declarada novamente como '%.* ls'.    |
+|    6812    |    16    |    Não    |    A ID de marca XML %d que foi declarada originalmente como '%.*ls' está sendo declarada novamente como '%.* ls'.    |
 |    6813    |    16    |    Não    |    FOR XML EXPLICIT não pode combinar várias ocorrências de ID, IDREF, IDREFS, NMTOKEN e/ou NMTOKENS no nome de coluna '%.*ls'.    |
 |    6814    |    16    |    Não    |    Na cláusula FOR XML EXPLICIT, os atributos ID, IDREF, IDREFS, NMTOKEN e NMTOKENS exigem nomes em '%.*ls'.    |
 |    6815    |    16    |    Não    |    Na cláusula FOR XML EXPLICIT, os atributos ID, IDREF, IDREFS, NMTOKEN e NMTOKENS não podem estar ocultos em '%.*ls'.    |
@@ -3063,11 +3063,11 @@ ORDER BY message_id
 |    6843    |    16    |    Não    |    FOR XML EXPLICIT: os tipos de dados XML e os tipos CLR não podem ser processados como CDATA no nome de coluna '%.*ls'. Considere converter XML em um tipo de cadeia de caracteres. Considere converter tipos CLR em XML e, em seguida, em um tipo de cadeia de caracteres.    |
 |    6844    |    16    |    Não    |    Dois (ou mais) elementos denominados '%.*ls' são de tipos diferentes e não são irmãos diretos no mesmo nível.    |
 |    6845    |    16    |    Não    |    Dois (ou mais) elementos denominados '%.*ls' são opcionais no mesmo nível. Considere torná-los irmãos diretos ou mapear NULL como xsi:nil    |
-|    6846    |    16    |    Não    |    A declaração '%. *ls' do prefixo do namespace XML está ausente em FOR XML %.* ls, nome '%.*ls'.    |
+|    6846    |    16    |    Não    |    A declaração '%.*ls' do prefixo do namespace XML está ausente em FOR XML %.* ls, nome '%.*ls'.    |
 |    6847    |    16    |    Não    |    A coluna '%.*ls' é do tipo sql_variant, que não tem suporte de FOR XML centrado em atributo, com o esquema XML.    |
 |    6848    |    16    |    Não    |    XMLDATA não dá suporte ao mapeamento do tipo de coluna '%.*ls' para um tipo XDR. Use XMLSCHEMA em vez do modo AUTO e RAW.    |
 |    6849    |    16    |    Não    |    Erro de FOR XML PATH na coluna '%.*ls' - '//', e não são permitidos '/' à esquerda e à direita em expressões simples de caminho.    |
-|    6850    |    16    |    Não    |    %. *ls nome '%.* ls' contém um identificador XML inválido para FOR XML; '%c'(0x%04X) é o primeiro caractere com defeito.    |
+|    6850    |    16    |    Não    |    %.*ls nome '%.* ls' contém um identificador XML inválido para FOR XML; '%c'(0x%04X) é o primeiro caractere com defeito.    |
 |    6851    |    16    |    Não    |    A coluna '%.*ls' tem um tipo de dados inválido para a serialização de XML centrada em atributo em FOR XML PATH.    |
 |    6852    |    16    |    Não    |    A coluna centrada em atributo '%.*ls' não deve vir após um irmão não centrado em atributo na hierarquia XML de FOR XML PATH.    |
 |    6853    |    16    |    Não    |    Coluna '%.*ls': a última etapa do caminho não pode ser aplicada ao tipo de dados XML ou ao tipo CLR em FOR XML PATH.    |
@@ -3126,8 +3126,8 @@ ORDER BY message_id
 |    6927    |    16    |    Não    |    Validação de XML: Valor de tipo simples inválido: '%ls''.    |
 |    6928    |    16    |    Não    |    Validação de XML: instâncias XML do modelo de conteúdo do grupo de modelos ou tipos '%ls' podem ser validadas de diversas maneiras e não há suporte para elas.    |
 |    6929    |    16    |    Não    |    Validação de XML: QName inválido para atributo xsi:type '%.*ls'.    |
-|    6930    |    16    |    Não    |    Validação de XML: Falha na verificação de restrição de ID. Encontrado atributo denominado '%. *ls' com o valor de ID '%.* ls' duplicado. Local: %s    |
-|    6931    |    16    |    Não    |    Validação de XML: Falha na verificação de restrição de IDREF. Encontrado atributo denominado '%. *ls' com referência ao valor de ID '%.* ls', que não existe    |
+|    6930    |    16    |    Não    |    Validação de XML: Falha na verificação de restrição de ID. Encontrado atributo denominado '%.*ls' com o valor de ID '%.* ls' duplicado. Local: %s    |
+|    6931    |    16    |    Não    |    Validação de XML: Falha na verificação de restrição de IDREF. Encontrado atributo denominado '%.*ls' com referência ao valor de ID '%.* ls', que não existe    |
 |    6932    |    16    |    Não    |    Definição inválida para elemento ou atributo '%s'. Não são permitidas restrições de valor em componentes do tipo ID.    |
 |    6933    |    16    |    Não    |    Validação de XML: operação de tipo simples inválida. A inserção em um tipo simples não é permitida. Local: %s    |
 |    6934    |    16    |    Não    |    Validação de XML: o elemento '%s' requer substituição porque foi definido como abstrato. Local: %s    |
@@ -3240,11 +3240,11 @@ ORDER BY message_id
 |    7151    |    16    |    Não    |    Espaço do buffer insuficiente para realizar operação de gravação.    |
 |    7201    |    17    |    Não    |    Não foi possível executar o procedimento no servidor remoto '%.*ls' porque o SQL Server não está configurado para acesso remoto. Solicite que o administrador do sistema reconfigure o SQL Server para permitir o acesso remoto.    |
 |    7202    |    11    |    Não    |    Não foi possível encontrar o servidor '%.*ls' em sys.servers. Verifique se o nome do servidor correto foi especificado. Se necessário, execute o procedimento armazenado sp_addlinkedserver para adicionar o servidor a sys.servers.    |
-|    7212    |    16    |    Não    |    Não foi possível executar o procedimento '%. *ls' no servidor remoto '%.* ls'.    |
+|    7212    |    16    |    Não    |    Não foi possível executar o procedimento '%.*ls' no servidor remoto '%.* ls'.    |
 |    7213    |    20    |    Sim    |    Falha na tentativa do provedor de passar parâmetros de procedimento armazenado remoto para o servidor remoto '%.*ls'. Verifique se o número de parâmetros, a ordem e os valores passados estão corretos.    |
 |    7214    |    16    |    Sim    |    O tempo limite do procedimento remoto de %d segundos foi excedido. Procedimento remoto '%.*ls' cancelado.    |
 |    7215    |    16    |    Não    |    Não foi possível executar a instrução no servidor remoto '%.*ls'.    |
-|    7221    |    16    |    Não    |    Não foi possível retransmitir os resultados do procedimento '%. *ls' do servidor remoto '%.* ls'.    |
+|    7221    |    16    |    Não    |    Não foi possível retransmitir os resultados do procedimento '%.*ls' do servidor remoto '%.* ls'.    |
 |    7301    |    16    |    Não    |    Não é possível obter a interface necessária ("%ls") do provedor OLE DB "%ls" para o servidor vinculado "%ls".    |
 |    7302    |    16    |    Não    |    Não é possível criar uma instância do provedor OLE DB "%ls" para o servidor vinculado "%ls".    |
 |    7303    |    16    |    Não    |    Não é possível inicializar um objeto de fonte de dados do provedor OLE DB "%ls" para o servidor vinculado "%ls".    |
@@ -3357,7 +3357,7 @@ ORDER BY message_id
 |    7608    |    16    |    Não    |    Falha desconhecida de texto completo (0x%x) durante ""%hs".    |
 |    7609    |    17    |    Não    |    A pesquisa de texto completo não está instalada ou não é possível carregar um componente de texto completo.    |
 |    7610    |    16    |    Não    |    Acesso a "%.*ls" negado ou caminho inválido.    |
-|    7613    |    16    |    Não    |    Não é possível descartar o índice '%. *ls' porque ele aplica a chave de texto completo à tabela ou exibição indexada '%.* ls'.    |
+|    7613    |    16    |    Não    |    Não é possível descartar o índice '%.*ls' porque ele aplica a chave de texto completo à tabela ou exibição indexada '%.* ls'.    |
 |    7614    |    16    |    Não    |    Não é possível alterar ou descartar a coluna '%.*ls' porque ela está habilitada para pesquisa de texto completo.    |
 |    7615    |    16    |    Não    |    Um predicado CONTAINS ou FREETEXT só pode operar em uma tabela ou exibição indexada. Qualifique o uso de * com um nome de tabela ou de exibição indexada.    |
 |    7616    |    16    |    Não    |    A pesquisa de texto completo não está habilitada para o banco de dados atual. Use sp_fulltext_database para habilitar a pesquisa de texto completo para o banco de dados. Não há mais a funcionalidade de desabilitar e habilitar a pesquisa de texto completo para um banco de dados. Altere seu aplicativo.    |
@@ -3371,7 +3371,7 @@ ORDER BY message_id
 |    7626    |    15    |    Não    |    O argumento top_n_by_rank ('%d') deve ser maior ou igual a zero.    |
 |    7627    |    16    |    Não    |    Não é possível criar o catálogo de texto completo no diretório "%.*ls" para o servidor clusterizado. Somente os diretórios em um disco do grupo de clusters do servidor podem ser usados.    |
 |    7629    |    17    |    Não    |    Não é possível abrir ou consultar a chave de Registro do caminho padrão de texto completo. O caminho do catálogo padrão de texto completo é inválido.    |
-|    7630    |    15    |    Não    |    Erro de sintaxe próximo a '%. *ls' no critério de pesquisa de texto completo '%.* ls'.    |
+|    7630    |    15    |    Não    |    Erro de sintaxe próximo a '%.*ls' no critério de pesquisa de texto completo '%.* ls'.    |
 |    7632    |    15    |    Não    |    O valor do argumento Weight deve estar entre 0.0 e 1.0.    |
 |    7636    |    10    |    Não    |    Aviso: a solicitação para iniciar uma população do índice de texto completo na tabela ou exibição indexada '%.*ls' foi ignorada porque há uma população ativa atualmente nesta tabela ou nesta exibição indexada.    |
 |    7638    |    10    |    Não    |    Aviso: a solicitação para parar o controle de alterações excluiu todas as alterações controladas na tabela ou exibição indexada '%ls'.    |
@@ -3380,7 +3380,7 @@ ORDER BY message_id
 |    7642    |    16    |    Não    |    Um catálogo de texto completo denominado '%ls' já existe neste banco de dados. Use outro nome.    |
 |    7644    |    16    |    Não    |    O gerenciador de rastreamento de texto completo não foi inicializado. Será preciso reiniciar qualquer rastreamento iniciado antes do gerenciador de rastreamento ser totalmente inicializado. Reinicie o SQL Server e tente o comando novamente. Você também deve verificar o log de erros para corrigir erros que possam ter causado a falha do gerenciador de rastreamento.    |
 |    7645    |    16    |    Não    |    Predicado de texto completo nulo ou vazio.    |
-|    7646    |    16    |    Não    |    Colunas de referências de predicado de texto completo de duas tabelas ou exibições indexadas '%. *ls' e '%.* ls' distintas, o que não é permitido.    |
+|    7646    |    16    |    Não    |    Colunas de referências de predicado de texto completo de duas tabelas ou exibições indexadas '%.*ls' e '%.* ls' distintas, o que não é permitido.    |
 |    7647    |    10    |    Não    |    Aviso: não foi possível salvar a configuração do catálogo de texto completo em '%ls' ao desanexar o banco de dados.    |
 |    7648    |    10    |    Não    |    Aviso: falha ao anexar catálogo de texto completo '%ls'.    |
 |    7649    |    10    |    Não    |    Aviso: falha ao desmontar catálogo de texto completo em '%ls'.    |
@@ -3425,7 +3425,7 @@ ORDER BY message_id
 |    7693    |    16    |    Não    |    Falha na inicialização de texto completo para criar um administrador de memória.    |
 |    7694    |    16    |    Não    |    Falha ao pausar catálogo para backup. O backup foi anulado.    |
 |    7696    |    16    |    Não    |    ID de localidade inválida especificada. Verifique se a ID da localidade está correta e se o recurso de idioma correspondente foi instalado.    |
-|    7697    |    10    |    Não    |    Aviso: o índice de texto completo na tabela ou exibição indexada '%. *ls' do banco de dados '%.* ls' foi alterado após o backup de arquivos de catálogo de texto completo. Uma população completa é necessária para colocar o índice em um estado consistente.    |
+|    7697    |    10    |    Não    |    Aviso: o índice de texto completo na tabela ou exibição indexada '%.*ls' do banco de dados '%.* ls' foi alterado após o backup de arquivos de catálogo de texto completo. Uma população completa é necessária para colocar o índice em um estado consistente.    |
 |    7698    |    16    |    Não    |    GROUP BY ALL não pode ser usado em consultas de pesquisa de texto completo.    |
 |    7699    |    16    |    Não    |    A opção TYPE COLUMN não é permitida em tipos de coluna que não sejam image ou varbinary(max).    |
 |    7702    |    16    |    Não    |    A lista de parâmetros de tipo da função Empty Partition não é permitida durante a definição de uma função de partição.    |
@@ -3435,10 +3435,10 @@ ORDER BY message_id
 |    7706    |    16    |    Não    |    A função de partição '%ls' está sendo usada por um ou mais esquemas de partição.    |
 |    7707    |    16    |    Não    |    A função de partição associada '%ls' gera mais partições do que o número de grupos de arquivos mencionados no esquema '%ls'.    |
 |    7708    |    16    |    Não    |    Não são permitidos valores de limite de intervalo duplicados na lista de valores de limite de função de partição. Os valores de limite de partição no ordinal %d e %d são iguais.    |
-|    7709    |    10    |    Não    |    Aviso: a lista de valores de intervalo para a função de partição '%. *ls' não está classificada por valor. O mapeamento de partições para grupos de arquivos durante CREATE PARTITION SCHEME usará os valores limite classificados se a função '%.* ls' for referenciada em CREATE PARTITION SCHEME.    |
+|    7709    |    10    |    Não    |    Aviso: a lista de valores de intervalo para a função de partição '%.*ls' não está classificada por valor. O mapeamento de partições para grupos de arquivos durante CREATE PARTITION SCHEME usará os valores limite classificados se a função '%.* ls' for referenciada em CREATE PARTITION SCHEME.    |
 |    7710    |    10    |    Não    |    Aviso: o esquema de partição '%.*ls' não tem um próximo grupo de arquivos a ser usado. O esquema de partição não foi alterado.    |
 |    [7711](mssqlserver-7711-database-engine-error.md)    |    16    |    Não    |    A opção DATA_COMPRESSION foi especificada mais de uma vez para a tabela, ou para pelo menos uma de suas partições se a tabela estiver particionada.    |
-|    7712    |    10    |    Não    |    Esquema de partição '%. *ls' criado com êxito. '%.* ls' está marcado como o próximo grupo de arquivos a ser usado no esquema de partição '%.*ls'.    |
+|    7712    |    10    |    Não    |    Esquema de partição '%.*ls' criado com êxito. '%.* ls' está marcado como o próximo grupo de arquivos a ser usado no esquema de partição '%.*ls'.    |
 |    7713    |    10    |    Não    |    Os grupos de arquivos %d, especificados após o próximo grupo de arquivos usado, foram ignorados.    |
 |    7714    |    16    |    Não    |    Valor de intervalo de partição ausente.    |
 |    7715    |    16    |    Não    |    O valor de intervalo de partição especificado não foi encontrado.    |
@@ -3450,25 +3450,25 @@ ORDER BY message_id
 |    7721    |    16    |    Não    |    Não são permitidos valores de limite de intervalo duplicados na lista de valores de limite de função de partição. O valor de limite que está sendo adicionado já existe no ordinal %d da lista de valores de limite.    |
 |    7722    |    16    |    Não    |    Número de partição inválido %d especificado para %S_MSG '%.*ls'. O número de partição pode ir de 1 a %d.    |
 |    7723    |    16    |    Não    |    Somente um grupo de arquivos pode ser especificado durante a criação do esquema de partição usando a opção ALL para especificar todos os grupos de arquivos.    |
-|    7724    |    16    |    Não    |    A coluna computada não pode ser usada como uma chave de partição se ela não for persistente. A coluna de chave de partição '%. *ls' na tabela '%.* ls' não é persistente.    |
-|    7725    |    16    |    Não    |    Falha na instrução para alterar a função de partição. Não é possível reparticionar a tabela '%. *ls' alterando a função de partição '%.* ls' porque seu índice clusterizado '%.*ls' está desabilitado.    |
-|    7726    |    16    |    Não    |    A coluna de partição '%. *ls' tem o tipo de dados %s, que é diferente do tipo de dados de parâmetro %s da função de partição '%.* ls'.    |
-|    7727    |    16    |    Não    |    A ordenação da coluna de partição '%. *ls' não corresponde à ordenação do parâmetro correspondente na função de partição '%.* ls'.    |
+|    7724    |    16    |    Não    |    A coluna computada não pode ser usada como uma chave de partição se ela não for persistente. A coluna de chave de partição '%.*ls' na tabela '%.* ls' não é persistente.    |
+|    7725    |    16    |    Não    |    Falha na instrução para alterar a função de partição. Não é possível reparticionar a tabela '%.*ls' alterando a função de partição '%.* ls' porque seu índice clusterizado '%.*ls' está desabilitado.    |
+|    7726    |    16    |    Não    |    A coluna de partição '%.*ls' tem o tipo de dados %s, que é diferente do tipo de dados de parâmetro %s da função de partição '%.* ls'.    |
+|    7727    |    16    |    Não    |    A ordenação da coluna de partição '%.*ls' não corresponde à ordenação do parâmetro correspondente na função de partição '%.* ls'.    |
 |    7728    |    16    |    Não    |    Intervalo de partições inválido: %d TO %d. O limite inferior deve ser maior do que o limite superior.    |
 |    7729    |    16    |    Não    |    Não é possível especificar o número de partição na instrução %S_MSG %S_MSG pois o %S_MSG '%.*ls' não está particionado.    |
 |    7730    |    16    |    Não    |    Falha na instrução %S_MSG porque o número de partição %d não existe em %S_MSG '%.*ls'.    |
 |    7731    |    16    |    Não    |    Não é possível especificar o número de partição na instrução %S_MSG para recriar ou reorganizar uma partição de %S_MSG '%.*ls'.    |
 |    7732    |    16    |    Não    |    Não é possível especificar o número de partição na instrução Alter index com a palavra-chave ALL para recriar partições da tabela '%.*ls' quando a tabela não tem índices regulares.    |
-|    7733    |    16    |    Não    |    Falha na instrução '%ls'. O %S_MSG '%. *ls' está particionado e %S_MSG '%.* ls' não está.    |
-|    7734    |    10    |    Não    |    O %S_MSG '%. *ls' especificado para o índice clusterizado '%.* ls' foi usado para a tabela '%. *ls', embora %S_MSG '%.* ls' esteja especificado para ele.    |
+|    7733    |    16    |    Não    |    Falha na instrução '%ls'. O %S_MSG '%.*ls' está particionado e %S_MSG '%.* ls' não está.    |
+|    7734    |    10    |    Não    |    O %S_MSG '%.*ls' especificado para o índice clusterizado '%.* ls' foi usado para a tabela '%.*ls', embora %S_MSG '%.* ls' esteja especificado para ele.    |
 |    7735    |    16    |    Não    |    Não é possível especificar o número de partição na instrução Alter %S_MSG para reconstruir ou reorganizar uma partição de %S_MSG '%.*ls', já que %S_MSG não está particionado.    |
 |    7736    |    16    |    Não    |    A função de partição só pode ser criada na edição Enterprise do SQL Server. Somente a edição Enterprise do SQL Server oferece suporte ao particionamento.    |
-|    7737    |    16    |    Não    |    O grupo de arquivos %. *ls é de um tipo diferente do primeiro grupo de arquivos no esquema de partição %.* ls    |
+|    7737    |    16    |    Não    |    O grupo de arquivos %.*ls é de um tipo diferente do primeiro grupo de arquivos no esquema de partição %.* ls    |
 |    7738    |    16    |    Não    |    Não é possível habilitar a compactação para o objeto '%.*ls'. Somente o SQL Server Enterprise Edition dá suporte à compactação.    |
 |    7801    |    15    |    Não    |    O parâmetro necessário %.*ls não foi especificado.    |
 |    7802    |    16    |    Não    |    Não há suporte para as funções que têm um tipo de retorno de "%.*ls" na invocação de SOAP.    |
-|    7803    |    15    |    Não    |    A cláusula %. *ls não pode ser usada na instrução %.* ls.    |
-|    7804    |    15    |    Não    |    %. *ls e %.* ls não podem compartilhar o mesmo valor.    |
+|    7803    |    15    |    Não    |    A cláusula %.*ls não pode ser usada na instrução %.* ls.    |
+|    7804    |    15    |    Não    |    %.*ls e %.* ls não podem compartilhar o mesmo valor.    |
 |    7805    |    16    |    Não    |    O parâmetro SITE não pode ser prefixado por um esquema como 'https://'. O valores válidos para SITE incluem {'*' | '+' | 'site_name'}.    |
 |    7806    |    16    |    Não    |    A URL especificada pelo ponto de extremidade de '%.*ls' já está registrada para receber solicitações ou está reservada para uso de outro serviço.    |
 |    7807    |    16    |    Não    |    Erro ('0x%x') durante tentativa de registrar o ponto de extremidade '%.*ls'.    |
@@ -3486,11 +3486,11 @@ ORDER BY message_id
 |    7819    |    15    |    Não    |    O objeto '%.*ls' do método SOAP deve ser especificado com um nome de três partes totalmente qualificado.    |
 |    7820    |    16    |    Não    |    Os espaços para nome de SOAP que começam com '%.*ls' não são permitidos porque estão reservados para uso do sistema.    |
 |    7821    |    10    |    Não    |    O banco de dados '%.*ls' não foi encontrado porque não existe ou você não tem permissão.    |
-|    7822    |    16    |    Não    |    Foi encontrado um nó inesperado de XML "%. *ls" (no namespace "%.* ls") no elemento "%. *ls" (no namespace "%.* ls") da solicitação SOAP.    |
-|    7823    |    16    |    Não    |    O elemento XML "%. *ls" (no namespace "%.* ls") era esperado no elemento "%. *ls" (no namespace "%.* ls") da solicitação SOAP.    |
-|    7824    |    16    |    Não    |    O elemento XML "%. *ls" (no namespace "%.* ls") era esperado como nó superior da solicitação SOAP.    |
-|    7825    |    16    |    Não    |    Um elemento do método SOAP era esperado no elemento "%. *ls" (no namespace "%.* ls") da solicitação SOAP.    |
-|    7826    |    16    |    Não    |    Dados de caractere inesperados encontrados no elemento "%. *ls" (no namespace "%.* ls") da solicitação SOAP.    |
+|    7822    |    16    |    Não    |    Foi encontrado um nó inesperado de XML "%.*ls" (no namespace "%.* ls") no elemento "%.*ls" (no namespace "%.* ls") da solicitação SOAP.    |
+|    7823    |    16    |    Não    |    O elemento XML "%.*ls" (no namespace "%.* ls") era esperado no elemento "%.*ls" (no namespace "%.* ls") da solicitação SOAP.    |
+|    7824    |    16    |    Não    |    O elemento XML "%.*ls" (no namespace "%.* ls") era esperado como nó superior da solicitação SOAP.    |
+|    7825    |    16    |    Não    |    Um elemento do método SOAP era esperado no elemento "%.*ls" (no namespace "%.* ls") da solicitação SOAP.    |
+|    7826    |    16    |    Não    |    Dados de caractere inesperados encontrados no elemento "%.*ls" (no namespace "%.* ls") da solicitação SOAP.    |
 |    7827    |    14    |    Não    |    O usuário não tem permissão para reservar ou cancelar a reserva de espaços para nome HTTP.    |
 |    7828    |    11    |    Não    |    Não há suporte para a instrução nesta versão do sistema operacional. Não foi possível encontrar Httpapi.dll no caminho.    |
 |    7829    |    11    |    Não    |    Não há suporte para a instrução nesta versão do sistema operacional. Não foi possível encontrar o ponto de entrada da função '%.*ls' em Httpapi.dll.    |
@@ -3505,17 +3505,17 @@ ORDER BY message_id
 |    7848    |    15    |    Não    |    Foi especificada uma localeId inválida ou sem-suporte para o parâmetro "%.*ls".    |
 |    7849    |    15    |    Não    |    Foi especificado um sqlCompareOptions inválido para o parâmetro "%.*ls".    |
 |    7850    |    16    |    Não    |    A conta do Serviço SQL Server não tem permissão para registrar a URL fornecida no ponto de extremidade '%.*ls'. Use sp_reserve_http_namespace para reservar explicitamente o namespace da URL antes da tentativa de registrar a URL novamente.    |
-|    7851    |    15    |    Não    |    O atributo %. *ls deve ser especificado no elemento %.* ls do parâmetro “%. *ls” porque é do tipo %.* ls.    |
-|    7852    |    15    |    Não    |    Parâmetro "%. *ls": se o atributo %.* ls aparecer no nó de valor de um parâmetro que seja do tipo "%. *ls" (no namespace "%.* ls"), ele deverá se referir a um tipo CLR.    |
-|    7853    |    16    |    Não    |    A URL especificada como o caminho ("%. *ls") não está em um formato absoluto e deve começar com "%.* ls".    |
+|    7851    |    15    |    Não    |    O atributo %.*ls deve ser especificado no elemento %.* ls do parâmetro “%.*ls” porque é do tipo %.* ls.    |
+|    7852    |    15    |    Não    |    Parâmetro "%.*ls": se o atributo %.* ls aparecer no nó de valor de um parâmetro que seja do tipo "%.*ls" (no namespace "%.* ls"), ele deverá se referir a um tipo CLR.    |
+|    7853    |    16    |    Não    |    A URL especificada como o caminho ("%.*ls") não está em um formato absoluto e deve começar com "%.* ls".    |
 |    7854    |    16    |    Não    |    O valor de URL especificado para o parâmetro "%.*ls" é longo demais.    |
 |    7855    |    15    |    Não    |    Falha na leitura do fluxo de entrada de HTTP.    |
 |    7856    |    16    |    Não    |    Os parâmetros XML não dão suporte a valores de atributos ou elementos não unicode.    |
 |    7857    |    16    |    Não    |    Parâmetro "%.*ls": os parâmetros de função ou procedimento com nomes preterido ou formatados incorretamente não têm suporte no acesso nativo de SOAP. Consulte a documentação para informar-se sobre as regras referentes à nomeação correta de parâmetros.    |
-|    7858    |    16    |    Não    |    O elemento XML "%. *ls" (no namespace "%.* ls") no elemento "%. *ls" (no namespace "%.* ls") da solicitação SOAP continha um tipo binário inválido.    |
-|    7859    |    15    |    Não    |    Parâmetro "%. *ls": a ordenação de parâmetros não pode ser especificada no nó "%.* ls" (no namespace "%.*ls").    |
+|    7858    |    16    |    Não    |    O elemento XML "%.*ls" (no namespace "%.* ls") no elemento "%.*ls" (no namespace "%.* ls") da solicitação SOAP continha um tipo binário inválido.    |
+|    7859    |    15    |    Não    |    Parâmetro "%.*ls": a ordenação de parâmetros não pode ser especificada no nó "%.* ls" (no namespace "%.*ls").    |
 |    7860    |    15    |    Não    |    O conteúdo ou o transporte de um ponto de extremidade não pode ser alterado com a instrução ALTER ENDPOINT. Use DROP ENDPOINT e execute a instrução CREATE ENDPOINT para efetuar essas alterações.    |
-|    7861    |    15    |    Não    |    Os pontos de extremidade %. *ls só podem ser do tipo "FOR %.* ls".    |
+|    7861    |    15    |    Não    |    Os pontos de extremidade %.*ls só podem ser do tipo "FOR %.* ls".    |
 |    7862    |    16    |    Não    |    Já existe um ponto de extremidade do tipo solicitado. Só há suporte para um ponto de extremidade deste tipo. Use ALTER ENDPOINT ou DROP no ponto de extremidade existente e execute a instrução CREATE ENDPOINT.    |
 |    7863    |    16    |    Não    |    O ponto de extremidade não foi alterado. A instrução ALTER ENDPOINT não continha valores a serem modificados ou atualizados.    |
 |    7864    |    16    |    Não    |    CREATE/ALTER ENDPOINT não pode ser usado para atualizar o ponto de extremidade com essas informações. O ponto de extremidade da Conexão de Administrador Dedicada é reservado e não pode ser atualizado.    |
@@ -3523,13 +3523,13 @@ ORDER BY message_id
 |    7866    |    16    |    Não    |    Valores de elemento ou de atributo XML com mais de 4000 caracteres só são permitidos no nó do corpo de SOAP.    |
 |    7867    |    15    |    Não    |    Foi especificado um sqlCollationVersion inválido para o parâmetro "%.*ls".    |
 |    7868    |    15    |    Não    |    Foi especificado um sqlSortId inválido para o parâmetro "%.*ls".    |
-|    7869    |    16    |    Não    |    O nome de ponto de extremidade '%. *ls' está reservado para uso do SQL. Os nomes de pontos de extremidade não podem começar com '%.* ls'.    |
+|    7869    |    16    |    Não    |    O nome de ponto de extremidade '%.*ls' está reservado para uso do SQL. Os nomes de pontos de extremidade não podem começar com '%.* ls'.    |
 |    7870    |    16    |    Não    |    A cláusula AFFINITY não tem suporte para pontos de extremidade deste tipo.    |
 |    7871    |    16    |    Não    |    A cláusula "%.*ls" não é válida para este tipo de ponto de extremidade.    |
-|    7872    |    16    |    Não    |    %. *ls não é um parâmetro para o procedimento "%.* ls" ou foi especificado fora de ordem.    |
+|    7872    |    16    |    Não    |    %.*ls não é um parâmetro para o procedimento "%.* ls" ou foi especificado fora de ordem.    |
 |    7873    |    16    |    Não    |    O ponto de extremidade de "%.*ls" é interno e não pode ser descartado. Use os utilitários de configuração de protocolo para aplicar ADD ou DROP aos pontos de extremidade de Transact-SQL.    |
 |    7874    |    16    |    Não    |    Já existe um ponto de extremidade com as associações especificadas. Só há suporte para um ponto de extremidade para uma associação específica. Use ALTER ENDPOINT ou DROP no ponto de extremidade existente e execute a instrução CREATE ENDPOINT.    |
-|    7875    |    16    |    Não    |    Uma construção XML inesperada foi encontrada nos dados de caractere do elemento "%. *ls" (no namespace "%.* ls") da solicitação SOAP.    |
+|    7875    |    16    |    Não    |    Uma construção XML inesperada foi encontrada nos dados de caractere do elemento "%.*ls" (no namespace "%.* ls") da solicitação SOAP.    |
 |    7878    |    16    |    Não    |    Não há suporte para esta instrução "%.*ls ENDPOINT" nesta edição do SQL Server.    |
 |    7879    |    10    |    Não    |    O SQL Server está aguardando o fechamento das %d sessões e conexões restantes. Se essas sessões não forem fechadas dentro de um tempo aceitável, o desligamento "cortês" será anulado. Esta mensagem poderá aparecer várias vezes antes do desligamento do SQL Server.    |
 |    7880    |    10    |    Não    |    O SQL Server terminou de fechar as sessões e conexões.    |
@@ -3543,9 +3543,9 @@ ORDER BY message_id
 |    7888    |    20    |    Sim    |    Não há suporte para o endereço IPv6 especificado. O servidor pode não estar configurado para permitir a conectividade IPv6, ou o endereço talvez não esteja em um formato IPv6 reconhecido.    |
 |    7889    |    16    |    Não    |    Os cabeçalhos de SOAP na solicitação excederam os limites de tamanho estabelecidos para este ponto de extremidade. O proprietário do ponto de extremidade pode aumentar esses limites usando ALTER ENDPOINT.    |
 |    7890    |    16    |    Não    |    Erro durante tentativa de registrar o ponto de extremidade '%.*ls'. Uma ou mais portas especificadas na instrução CREATE ENDPOINT podem estar associadas a outro processo. Tente a instrução novamente com outra porta ou use netstat para localizar o aplicativo que está usando a porta e solucionar o conflito.    |
-|    7891    |    10    |    Não    |    A criação de um ponto de extremidade TSQL resultará na revogação de quaisquer permissões de conexão 'Public' no ponto de extremidade '%. *ls'. Se o acesso 'Public' for desejado nesse ponto de extremidade, reaplique a permissão usando 'GRANT CONNECT ON ENDPOINT::[%.* ls] como [public]'.    |
+|    7891    |    10    |    Não    |    A criação de um ponto de extremidade TSQL resultará na revogação de quaisquer permissões de conexão 'Public' no ponto de extremidade '%.*ls'. Se o acesso 'Public' for desejado nesse ponto de extremidade, reaplique a permissão usando 'GRANT CONNECT ON ENDPOINT::[%.* ls] como [public]'.    |
 |    7892    |    16    |    Não    |    Não são permitidos subconjuntos DTDs internos dentro de solicitações SOAP.    |
-|    7893    |    15    |    Não    |    Parâmetro '%. *ls': há atributos XML incompatíveis. Os atributos '%.* ls' e '%. *ls' não podem estar presentes ao mesmo tempo no nó de valor de um parâmetro do tipo '%.* ls' (no namespace '%.*ls').    |
+|    7893    |    15    |    Não    |    Parâmetro '%.*ls': há atributos XML incompatíveis. Os atributos '%.* ls' e '%.*ls' não podem estar presentes ao mesmo tempo no nó de valor de um parâmetro do tipo '%.* ls' (no namespace '%.*ls').    |
 |    7894    |    16    |    Sim    |    Não foi iniciada a escuta no ponto de extremidade '%.*ls' encontrado nos metadados. As operações no ponto de extremidade foram desabilitadas nesta edição do SQL Server.    |
 |    7895    |    14    |    Não    |    Somente um administrador do sistema pode especificar um procedimento armazenado WSDL personalizado no ponto de extremidade.    |
 |    7896    |    16    |    Não    |    A coluna ou parâmetro '%.*ls' usa um tipo de dados não suportado pelo SOAP, que suporta apenas tipos de dados aceitos no SQL Server ou anterior.    |
@@ -3553,12 +3553,12 @@ ORDER BY message_id
 |    7898    |    10    |    Sim    |    O suporte SOAP nativo do SQL Server foi substituído e será removido em uma versão futura do SQL Server. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam.    |
 |    7899    |    16    |    Não    |    O valor de retorno usa um tipo de dados não suportado pelo SOAP, que suporta apenas tipos de dados aceitos no SQL Server ou anterior.    |
 |    [7901](mssqlserver-7901-database-engine-error.md)    |    16    |    Não    |    A instrução de correção não foi processada. Esse nível de correção não tem suporte quando o banco de dados está no modo de emergência.    |
-|    [7903](mssqlserver-7903-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: arquivo órfão "%. *ls" encontrado na ID de diretório %.* ls do FILESTREAM para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de coluna %d.    |
-|    [7904](mssqlserver-7904-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: não é possível localizar o arquivo "%. *ls" do FILESTREAM da ID de coluna %d (ID de diretório de coluna %.* ls) na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de página %S_PGID, ID de slot %d.    |
+|    [7903](mssqlserver-7903-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: arquivo órfão "%.*ls" encontrado na ID de diretório %.* ls do FILESTREAM para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de coluna %d.    |
+|    [7904](mssqlserver-7904-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: não é possível localizar o arquivo "%.*ls" do FILESTREAM da ID de coluna %d (ID de diretório de coluna %.* ls) na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de página %S_PGID, ID de slot %d.    |
 |    [7905](mssqlserver-7905-database-engine-error.md)    |    16    |    Não    |    Erro de banco de dados: o diretório "%.*ls" não é um diretório FILESTREAM válido.    |
 |    [7906](mssqlserver-7906-database-engine-error.md)    |    16    |    Não    |    Erro de banco de dados: O arquivo "%.*ls" não é um arquivo FILESTREAM válido.    |
-|    [7907](mssqlserver-7907-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: o diretório "%. *ls" na ID de diretório de conjunto de linhas %.* ls não é um diretório FILESTREAM válido.    |
-|    [7908](mssqlserver-7908-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: o arquivo "%. *ls" na ID de diretório de conjunto de linhas %.* ls não é um arquivo FILESTREAM válido.    |
+|    [7907](mssqlserver-7907-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: o diretório "%.*ls" na ID de diretório de conjunto de linhas %.* ls não é um diretório FILESTREAM válido.    |
+|    [7908](mssqlserver-7908-database-engine-error.md)    |    16    |    Não    |    Erro de tabela: o arquivo "%.*ls" na ID de diretório de conjunto de linhas %.* ls não é um arquivo FILESTREAM válido.    |
 |    7909    |    20    |    Não    |    Falha no reparo do modo de emergência. É preciso fazer a restauração com um backup.    |
 |    [7910](mssqlserver-7910-database-engine-error.md)    |    10    |    Não    |    Reparar: a página %S_PGID foi alocada para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo %.*ls).    |
 |    [7911](mssqlserver-7911-database-engine-error.md)    |    10    |    Não    |    Reparar: a página %S_PGID foi desalocada da ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo %.*ls).    |
@@ -3609,10 +3609,10 @@ ORDER BY message_id
 |    7957    |    10    |    Não    |    Não é possível exibir o buffer do SPID especificado; em transição.    |
 |    7958    |    16    |    Não    |    O SPID especificado não processa fluxos de dados de entrada/saída.    |
 |    7960    |    16    |    Não    |    Foi especificado um identificador de processo de servidor (SPID) %d ou ID de lote %d inválido.    |
-|    7961    |    16    |    Não    |    ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo %. *ls), ID de página %S_PGID, ID de linha %d. A coluna '%.* ls' é uma coluna var com um valor NULL e comprimento de dados diferente de zero    |
+|    7961    |    16    |    Não    |    ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo %.*ls), ID de página %S_PGID, ID de linha %d. A coluna '%.* ls' é uma coluna var com um valor NULL e comprimento de dados diferente de zero    |
 |    7962    |    16    |    Não    |    BATCHID inválido %d especificado.    |
 |    7963    |    16    |    Não    |    Erro de banco de dados: O arquivo "%.*ls" não é um arquivo FILESTREAM LOG válido.    |
-|    7964    |    10    |    Não    |    Reparar: excluído o arquivo "%. *ls" do FILESTREAM da ID de coluna %d, ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo %.* ls) na página %S_PGID, slot %d.    |
+|    7964    |    10    |    Não    |    Reparar: excluído o arquivo "%.*ls" do FILESTREAM da ID de coluna %d, ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo %.* ls) na página %S_PGID, slot %d.    |
 |    7965    |    16    |    Não    |    Erro de tabela: não foi possível verificar a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls) devido a página(s) de alocação inválidas (IAM).    |
 |    7966    |    10    |    Não    |    Aviso: a opção NO_INDEX de %ls está sendo usada. As verificações nos índices que não sejam do sistema serão ignoradas.    |
 |    7968    |    10    |    Não    |    Informações da transação relativas ao banco de dados '%.*ls'.    |
@@ -3627,7 +3627,7 @@ ORDER BY message_id
 |    7979    |    10    |    Não    |    %hsInformações da Transação Replicada:    |
 |    7980    |    10    |    Não    |    LSN mais antigo distribuído: (%d:%d:%d)    |
 |    7982    |    10    |    Não    |    LSN mais antigo não distribuído : (%d:%d:%d)    |
-|    7983    |    14    |    Não    |    O usuário '%. *ls' não tem permissão para executar o DBCC %ls para o banco de dados '%.* ls'.    |
+|    7983    |    14    |    Não    |    O usuário '%.*ls' não tem permissão para executar o DBCC %ls para o banco de dados '%.* ls'.    |
 |    [7984](mssqlserver-7984-database-engine-error.md)    |    16    |    Não    |    Verificações prévias de tabela do sistema: ID do objeto %d. A página %S_PGID tem um tipo %d de página inesperado. Instrução de verificação encerrada devido a erro irreparável.    |
 |    7985    |    16    |    Não    |    Verificações prévias de tabela do sistema: ID do objeto %d. Não foi possível ler e travar a página %S_PGID com o tipo de trava %ls. Instrução de verificação encerrada devido a erro irreparável.    |
 |    [7986](mssqlserver-7986-database-engine-error.md)    |    16    |    Não    |    Verificações prévias de tabela do sistema: A ID do objeto %d tem vínculos de cadeia entre objetos. A página %S_PGID aponta para %S_PGID na ID de unidade de alocação %I64d (deve ser %I64d). Instrução de verificação encerrada devido a erro irreparável.    |
@@ -3638,8 +3638,8 @@ ORDER BY message_id
 |    [7995](mssqlserver-7995-database-engine-error.md)    |    16    |    Não    |    Banco de dados '%.*ls': erros de consistência em catálogos do sistema impedem processamento adicional de DBCC %ls.    |
 |    7996    |    16    |    Não    |    Os procedimentos armazenados estendidos só podem ser criados no banco de dados mestre.    |
 |    7997    |    16    |    Não    |    '%.*ls' não contém uma coluna de identidade.    |
-|    7998    |    16    |    Não    |    Verificando informações de identidade: valor de identidade atual '%. *hs', valor de coluna atual '%.* hs'.    |
-|    7999    |    16    |    Não    |    Não foi possível encontrar um índice chamado '%. *ls' para a tabela '%.* ls'.    |
+|    7998    |    16    |    Não    |    Verificando informações de identidade: valor de identidade atual '%.*hs', valor de coluna atual '%.* hs'.    |
+|    7999    |    16    |    Não    |    Não foi possível encontrar um índice chamado '%.*ls' para a tabela '%.* ls'.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 ## <a name="errors-8000-to-8999"></a>Erros de 8000 a 8999
@@ -3667,13 +3667,13 @@ ORDER BY message_id
 |    8019    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o tipo de dados "0x%02X" (tipo CLR) tem um tipo de usuário inválido especificado.    |
 |    8020    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o tipo de dados "0x%02X" (tipo CLR) tem um comprimento inválido para metadados de serialização.    |
 |    8021    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o tipo de dados "0x%02X" (tipo CLR) tem um banco de dados inválido especificado.    |
-|    8022    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%. *ls"): o valor fornecido é NULL e o tipo de dados %.* ls não pode ser NULL. Verifique se há valores inválidos nos dados de origem.    |
-|    8023    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%. *ls"): o valor fornecido não é uma instância válida do tipo de dados %.* ls. Verifique se há valores inválidos nos dados de origem. Um exemplo de um valor inválido são dados de tipo numérico com escala superior à precisão.    |
+|    8022    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o valor fornecido é NULL e o tipo de dados %.* ls não pode ser NULL. Verifique se há valores inválidos nos dados de origem.    |
+|    8023    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o valor fornecido não é uma instância válida do tipo de dados %.* ls. Verifique se há valores inválidos nos dados de origem. Um exemplo de um valor inválido são dados de tipo numérico com escala superior à precisão.    |
 |    8024    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o tipo de dados 0x%02X (sql_variant) tem uma ordenação inválida para os metadados específicos do tipo.    |
 |    8025    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o RPC está marcado com o sinalizador inalterado de metadados, mas o tipo de dados 0x%02X tem um comprimento máximo diferente do último que foi enviado.    |
 |    8026    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o RPC está marcado com o sinalizador inalterado de metadados, mas o tipo de dados 0x%02X tem um comprimento real diferente do último que foi enviado.    |
 |    8027    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o tipo de dados "0x%02X" (tipo CLR) tem um tipo de esquema inválido especificado.    |
-|    8028    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%. *ls"): o comprimento fornecido não é válido para o tipo de dados %.* ls. Verifique se há comprimentos inválidos nos dados de origem. Um exemplo de comprimento inválido são dados do tipo nchar com um comprimento incorreto em bytes.    |
+|    8028    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o comprimento fornecido não é válido para o tipo de dados %.* ls. Verifique se há comprimentos inválidos nos dados de origem. Um exemplo de comprimento inválido são dados do tipo nchar com um comprimento incorreto em bytes.    |
 |    8029    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: O token inesperado do tipo de dados 0x%02X (tipo de tabela definido pelo usuário) encontrado ao processar um parâmetro com valor de tabela.    |
 |    8030    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: o tipo de dados 0x%02X (XML) tem um esquema ou banco de dados inválido especificado.    |
 |    8031    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: o formato das partes está incorreto para um parâmetro de objeto grande do tipo de dados 0x%02X.    |
@@ -3687,11 +3687,11 @@ ORDER BY message_id
 |    8039    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: o tipo de dados 0x%02X (tipo CLR) tem um tipo de usuário inválido especificado.    |
 |    8040    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: o tipo de dados 0x%02X (tipo CLR) tem um comprimento inválido para metadados de serialização.    |
 |    8041    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: o tipo de dados 0x%02X (tipo CLR) tem um banco de dados inválido especificado.    |
-|    8042    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("% *ls"), linha %I64d, coluna %d: o valor fornecido é NULL e o tipo de dados %.* ls não pode ser NULL. Verifique se há valores inválidos nos dados de origem.    |
-|    8043    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("% *ls"), linha %I64d, coluna %d: o valor fornecido não é uma instância válida do tipo de dados %.* ls. Verifique se há valores inválidos nos dados de origem. Um exemplo de um valor inválido são dados de tipo numérico com escala superior à precisão.    |
+|    8042    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%*ls"), linha %I64d, coluna %d: o valor fornecido é NULL e o tipo de dados %.* ls não pode ser NULL. Verifique se há valores inválidos nos dados de origem.    |
+|    8043    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%*ls"), linha %I64d, coluna %d: o valor fornecido não é uma instância válida do tipo de dados %.* ls. Verifique se há valores inválidos nos dados de origem. Um exemplo de um valor inválido são dados de tipo numérico com escala superior à precisão.    |
 |    8044    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: o tipo de dados 0x%02X (sql_variant) tem uma ordenação inválida para os metadados específicos do tipo.    |
 |    8045    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: o tipo de dados 0x%02X (tipo CLR) tem um tipo de esquema inválido especificado.    |
-|    8046    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("% *ls"), linha %I64d, coluna %d: o comprimento fornecido não é válido para o tipo de dados %.* ls. Verifique se há comprimentos inválidos nos dados de origem. Um exemplo de comprimento inválido são dados do tipo nchar com um comprimento incorreto em bytes.    |
+|    8046    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%*ls"), linha %I64d, coluna %d: o comprimento fornecido não é válido para o tipo de dados %.* ls. Verifique se há comprimentos inválidos nos dados de origem. Um exemplo de comprimento inválido são dados do tipo nchar com um comprimento incorreto em bytes.    |
 |    8047    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: O tipo de dados 0x%02X (tipo de tabela definido pelo usuário) tem um nome de banco de dados de comprimento diferente de zero especificado. O nome do banco de dados não é permitido com um parâmetro com valor de tabela, somente o nome do esquema e o nome do tipo são válidos.    |
 |    8048    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: O tipo de dados 0x%02X (tipo de tabela definido pelo usuário) tem um esquema inválido especificado.    |
 |    8049    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: O tipo de dados 0x%02X (tipo de tabela definido pelo usuário) tem um nome de tipo inválido especificado.    |
@@ -3708,14 +3708,14 @@ ORDER BY message_id
 |    8060    |    16    |    Não    |    O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro com valor de tabela %d ("%.*ls"), linha %I64d, coluna %d: O tipo de dados 0x%02X (tipo de tabela definido pelo usuário) é nulo e não está definido como padrão. Um parâmetro com valor de tabela nulo é necessário para ser enviado como um parâmetro padrão.    |
 |    8061    |    16    |    Não    |    Os dados do parâmetro com valor de tabela "%.*ls" não estão de acordo com o tipo de tabela do parâmetro.    |
 |    8062    |    16    |    Não    |    Os dados do parâmetro com valor de tabela %d não estão de acordo com o tipo de tabela do parâmetro.    |
-|    8063    |    16    |    Não    |    O fluxo de chamada de procedimento remoto do fluxo de dados tabular (TDS) de entrada está enviando um tipo CLR de comprimento ilimitado. O parâmetro %d ("%. *ls") está definido como tipo %.* ls. Esse tipo não tem suporte de clientes de nível inferior. Envie os dados serializados do tipo CLR grande como varbinary(max) ou atualize o driver de cliente para um que dê suporte a tipos CLR ilimitados.    |
-|    8064    |    16    |    Não    |    Parâmetro %d ([%. *ls].[%.* ls].[%.*ls]): o tipo de dados CLR não existe ou você não tem permissões para acessá-lo.    |
+|    8063    |    16    |    Não    |    O fluxo de chamada de procedimento remoto do fluxo de dados tabular (TDS) de entrada está enviando um tipo CLR de comprimento ilimitado. O parâmetro %d ("%.*ls") está definido como tipo %.* ls. Esse tipo não tem suporte de clientes de nível inferior. Envie os dados serializados do tipo CLR grande como varbinary(max) ou atualize o driver de cliente para um que dê suporte a tipos CLR ilimitados.    |
+|    8064    |    16    |    Não    |    Parâmetro %d ([%.*ls].[%.* ls].[%.*ls]): o tipo de dados CLR não existe ou você não tem permissões para acessá-lo.    |
 |    8101    |    16    |    Não    |    Um valor explícito para a coluna de identidade na tabela '%.*ls' só pode ser especificado quando uma lista de colunas é usada e o valor de IDENTITY_INSERT é ON.    |
 |    8102    |    16    |    Não    |    Não é possível atualizar a coluna de identidade '%.*ls'.    |
 |    8105    |    16    |    Não    |    '%.*ls' não é uma tabela de usuário. Não é possível executar a operação SET.    |
 |    8106    |    16    |    Não    |    A tabela '%.*ls' não tem a propriedade de identidade. Não é possível executar a operação SET.    |
-|    8107    |    16    |    Não    |    IDENTITY_INSERT já está como ON para a tabela '%. *ls.%.* ls.%. *ls'. Não é possível executar a operação SET para a tabela '%.* ls'.    |
-|    8108    |    16    |    Não    |    Não é possível adicionar a coluna de identidade usando a instrução SELECT INTO à tabela '%. *ls', que já possui a coluna '%.* ls' que herda a propriedade de identidade.    |
+|    8107    |    16    |    Não    |    IDENTITY_INSERT já está como ON para a tabela '%.*ls.%.* ls.%.*ls'. Não é possível executar a operação SET para a tabela '%.* ls'.    |
+|    8108    |    16    |    Não    |    Não é possível adicionar a coluna de identidade usando a instrução SELECT INTO à tabela '%.*ls', que já possui a coluna '%.* ls' que herda a propriedade de identidade.    |
 |    8109    |    16    |    Não    |    Tentativa de adicionar várias colunas de identidade à tabela '%.*ls' usando a instrução SELECT INTO.    |
 |    8110    |    16    |    Não    |    Não é possível adicionar várias restrições PRIMARY KEY à tabela '%.*ls'.    |
 |    8111    |    16    |    Não    |    Não é possível definir a restrição PRIMARY KEY em coluna anulável na tabela '%.*ls'.    |
@@ -3725,15 +3725,15 @@ ORDER BY message_id
 |    8115    |    16    |    Não    |    Erro de estouro aritmético ao converter %ls no tipo de dados %ls.    |
 |    8116    |    16    |    Não    |    O tipo de dados de argumento %ls é inválido para argumento %d de função %ls.    |
 |    8117    |    16    |    Não    |    O tipo de dados de operando %ls é inválido para o operador %ls.    |
-|    8118    |    16    |    Não    |    A coluna '%. *ls.%.* ls' é inválida na lista de seleção porque não está contida em uma função de agregação e não existe uma cláusula GROUP BY.    |
-|    8119    |    16    |    Não    |    A coluna '%. *ls.%.* ls' é inválida na cláusula HAVING porque não está contida em uma função de agregação e não existe uma cláusula GROUP BY.    |
-|    8120    |    16    |    Não    |    A coluna '%. *ls.%.* ls' é inválida na lista de seleção porque não está contida em uma função de agregação nem na cláusula GROUP BY.    |
-|    8121    |    16    |    Não    |    A coluna '%. *ls.%.* ls' é inválida na cláusula HAVING porque não está contida em uma função de agregação nem na cláusula GROUP BY.    |
+|    8118    |    16    |    Não    |    A coluna '%.*ls.%.* ls' é inválida na lista de seleção porque não está contida em uma função de agregação e não existe uma cláusula GROUP BY.    |
+|    8119    |    16    |    Não    |    A coluna '%.*ls.%.* ls' é inválida na cláusula HAVING porque não está contida em uma função de agregação e não existe uma cláusula GROUP BY.    |
+|    8120    |    16    |    Não    |    A coluna '%.*ls.%.* ls' é inválida na lista de seleção porque não está contida em uma função de agregação nem na cláusula GROUP BY.    |
+|    8121    |    16    |    Não    |    A coluna '%.*ls.%.* ls' é inválida na cláusula HAVING porque não está contida em uma função de agregação nem na cláusula GROUP BY.    |
 |    8123    |    16    |    Não    |    Uma expressão correlacionada é inválida porque não está em uma cláusula GROUP BY.    |
 |    8124    |    16    |    Não    |    Várias colunas estão especificadas em uma expressão agregada que contém uma referência externa. Se uma expressão que está sendo agregada contiver uma referência externa, a referência externa deverá ser a única coluna de referência na expressão.    |
 |    8125    |    16    |    Não    |    Uma expressão agregada que contém uma referência externa deve estar contida na lista de seleção ou em uma subconsulta da cláusula HAVING na consulta cuja cláusula FROM contém a tabela com a coluna que está sendo agregada.    |
-|    8126    |    16    |    Não    |    A coluna "%. *ls.%.* ls" é inválida na cláusula ORDER BY porque não está contida em uma função de agregação e não existe uma cláusula GROUP BY.    |
-|    8127    |    16    |    Não    |    A coluna "%. *ls.%.* ls" é inválida na cláusula ORDER BY porque não está contida em uma função de agregação nem na cláusula GROUP BY.    |
+|    8126    |    16    |    Não    |    A coluna "%.*ls.%.* ls" é inválida na cláusula ORDER BY porque não está contida em uma função de agregação e não existe uma cláusula GROUP BY.    |
+|    8127    |    16    |    Não    |    A coluna "%.*ls.%.* ls" é inválida na cláusula ORDER BY porque não está contida em uma função de agregação nem na cláusula GROUP BY.    |
 |    8128    |    10    |    Sim    |    Usando '%s' versão '%s' para executar procedimento armazenado estendido '%s'. Esta mensagem é apenas informativa. Nenhuma ação do usuário é necessária.    |
 |    8129    |    16    |    Não    |    O novo tamanho de disco deve ser maior que %d. Considere a possibilidade de usar DBCC SHRINKDB.    |
 |    8131    |    10    |    Sim    |    A DLL '%s' do procedimento armazenado estendido não exporta __GetXpVersion(). Consulte o tópico "Detalhes de compatibilidade com versões anteriores (nível 1) – Open Data Services" na documentação para obter mais informações.    |
@@ -3746,21 +3746,21 @@ ORDER BY message_id
 |    8138    |    16    |    Não    |    Mais de 16 colunas especificadas na lista de colunas da chave estrangeira, tabela '%.*ls'.    |
 |    8139    |    16    |    Não    |    O número de colunas de referência na chave estrangeira é diferente do número de colunas referenciadas, tabela '%.*ls'.    |
 |    8140    |    16    |    Não    |    Mais de uma chave especificada na restrição %ls do nível de coluna, tabela '%.*ls'.    |
-|    8141    |    16    |    Não    |    A restrição de coluna %ls para a coluna '%. *ls' faz referência a outra coluna, tabela '%.* ls'.    |
+|    8141    |    16    |    Não    |    A restrição de coluna %ls para a coluna '%.*ls' faz referência a outra coluna, tabela '%.* ls'.    |
 |    8143    |    16    |    Não    |    O parâmetro '%.*ls' foi fornecido várias vezes.    |
 |    8144    |    16    |    Não    |    O procedimento ou função %.*ls tem muitos argumentos especificados.    |
-|    8145    |    16    |    Não    |    %. *ls não é um parâmetro para o procedimento %.* ls.    |
+|    8145    |    16    |    Não    |    %.*ls não é um parâmetro para o procedimento %.* ls.    |
 |    8146    |    16    |    Não    |    O procedimento %.*ls não tem parâmetros e foram fornecidos argumentos.    |
-|    8147    |    16    |    Não    |    Não foi possível criar o atributo IDENTITY na coluna passível de nulidade '%. *ls', tabela '%.* ls'.    |
-|    8148    |    16    |    Não    |    Mais de uma restrição de coluna %ls especificada para a coluna '%. *ls', tabela '%.* ls'.    |
+|    8147    |    16    |    Não    |    Não foi possível criar o atributo IDENTITY na coluna passível de nulidade '%.*ls', tabela '%.* ls'.    |
+|    8148    |    16    |    Não    |    Mais de uma restrição de coluna %ls especificada para a coluna '%.*ls', tabela '%.* ls'.    |
 |    8149    |    16    |    Não    |    Não há suporte para objetos de automação OLE no modo fibra.    |
-|    8150    |    16    |    Não    |    Várias restrições NULL foram especificadas para a coluna '%. *ls', tabela '%.* ls'.    |
-|    8151    |    16    |    Não    |    Ambas as restrições PRIMARY KEY e UNIQUE foram definidas para a coluna '%. *ls', tabela '%.* ls'. Somente uma é permitida.    |
+|    8150    |    16    |    Não    |    Várias restrições NULL foram especificadas para a coluna '%.*ls', tabela '%.* ls'.    |
+|    8151    |    16    |    Não    |    Ambas as restrições PRIMARY KEY e UNIQUE foram definidas para a coluna '%.*ls', tabela '%.* ls'. Somente uma é permitida.    |
 |    8152    |    16    |    Não    |    Dados string ou binary seriam truncados.    |
 |    8153    |    10    |    Não    |    Aviso: o valor nulo é eliminado por uma agregação ou outra operação SET.    |
 |    8154    |    15    |    Não    |    A tabela '%.*ls' é ambígua.    |
 |    8155    |    15    |    Não    |    Nenhum nome de coluna foi especificado para a coluna %d de '%.*ls'.    |
-|    8156    |    15    |    Não    |    A coluna '%. *ls' foi especificada várias vezes para '%.* ls'.    |
+|    8156    |    15    |    Não    |    A coluna '%.*ls' foi especificada várias vezes para '%.* ls'.    |
 |    8158    |    15    |    Não    |    '%.*ls' tem mais colunas do que o especificado na lista de colunas.    |
 |    8159    |    15    |    Não    |    '%.*ls' tem menos colunas do que o especificado na lista de colunas.    |
 |    8160    |    15    |    Não    |    Uma função GROUPING ou GROUPING_ID só pode ser especificada quando há uma cláusula GROUP BY.    |
@@ -3780,7 +3780,7 @@ ORDER BY message_id
 |    8175    |    10    |    Não    |    Não foi possível localizar tabela %.*ls. A resolução do nome desta tabela será tentada mais tarde.    |
 |    8176    |    16    |    Não    |    O procedimento resync espera o valor de chave '%.*ls' que não foi fornecido.    |
 |    8177    |    16    |    Não    |    Não é possível usar uma coluna na cláusula %hs a não ser que ela esteja contida em uma função de agregação ou na cláusula GROUP BY.    |
-|    8178    |    16    |    Não    |    A consulta com parâmetros '%. *ls' espera o parâmetro '%.* ls' que não foi fornecido.    |
+|    8178    |    16    |    Não    |    A consulta com parâmetros '%.*ls' espera o parâmetro '%.* ls' que não foi fornecido.    |
 |    8179    |    16    |    Não    |    Não foi possível localizar a instrução preparada com o identificador %d.    |
 |    8180    |    16    |    Não    |    Não foi possível preparar instruções.    |
 |    8181    |    16    |    Não    |    O texto para '%.*ls' está ausente no catálogo do sistema. O objeto deve ser descartado e recriado para que possa ser usado.    |
@@ -3789,13 +3789,13 @@ ORDER BY message_id
 |    8185    |    16    |    Não    |    Erro ao expandir "*": uma coluna incomparável foi encontrada em uma exibição ou tabela subjacente.    |
 |    8186    |    16    |    Não    |    A função '%.*ls' só pode ser usada em tabelas do usuário e do sistema.    |
 |    8187    |    16    |    Sim    |    O identificador preparado %d está sendo usado atualmente por outro comando (estado do erro: %d).    |
-|    8188    |    16    |    Não    |    Já existe um tipo SQL para o tipo de assembly "%. *ls" no assembly "%.* ls". Somente um tipo SQL pode ser mapeado para determinado tipo de assembly. Falha em CREATE TYPE.    |
+|    8188    |    16    |    Não    |    Já existe um tipo SQL para o tipo de assembly "%.*ls" no assembly "%.* ls". Somente um tipo SQL pode ser mapeado para determinado tipo de assembly. Falha em CREATE TYPE.    |
 |    8189    |    16    |    Não    |    Você não tem permissão para executar '%ls'.    |
 |    8190    |    16    |    Não    |    Não é possível compilar o procedimento de filtro de replicação sem definir a tabela que está sendo filtrada.    |
 |    8191    |    16    |    Não    |    Os procedimentos de filtro de replicação só podem conter instruções SELECT, GOTO, IF, WHILE, RETURN e DECLARE.    |
 |    8192    |    16    |    Não    |    Os procedimentos de filtro de replicação não podem ter parâmetros.    |
 |    8193    |    16    |    Não    |    Não é possível executar um procedimento marcado como FOR REPLICATION.    |
-|    8195    |    16    |    Não    |    Não é possível criar "%. *ls" em "%.* ls". Os gatilhos de Inserção, de Atualização e de Exclusão só podem ser criados em exibições e tabelas do usuário.    |
+|    8195    |    16    |    Não    |    Não é possível criar "%.*ls" em "%.* ls". Os gatilhos de Inserção, de Atualização e de Exclusão só podem ser criados em exibições e tabelas do usuário.    |
 |    8196    |    16    |    Não    |    Coluna duplicada especificada como ROWGUIDCOL.    |
 |    8197    |    16    |    Não    |    O objeto '%.*ls' não existe ou é inválido para esta operação.    |
 |    8199    |    16    |    Não    |    Em EXECUTE <procname>, procname só pode ser literal ou variável do tipo char, varchar, nchar ou nvarchar.    |
@@ -3855,8 +3855,8 @@ ORDER BY message_id
 |    8405    |    16    |    Não    |    Ocorreu um erro no manipulador de reversão de fila do service broker ao tentar desabilitar uma fila. ID de banco de dados: %d, ID de Fila: %d, Erro: %i, Estado: %i.    |
 |    8406    |    16    |    Não    |    O tempo de vida da caixa de diálogo não pode ser NULL. Especifique um valor válido de tempo de vida para a caixa de diálogo de %d a %d.    |
 |    8407    |    16    |    Não    |    Foi recebida uma mensagem que contém campos de cabeçalho inválidos. Isso pode indicar um problema de rede ou que outro aplicativo está conectado ao ponto de extremidade do Service Broker.    |
-|    8408    |    16    |    Não    |    O serviço de destino '%. *ls' não oferece suporte ao contrato '%.* ls'.    |
-|    8409    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o serviço de destino não dá suporte ao contrato de serviço. Serviço de destino: '%. *ls', contrato de serviço: '%.* ls'.    |
+|    8408    |    16    |    Não    |    O serviço de destino '%.*ls' não oferece suporte ao contrato '%.* ls'.    |
+|    8409    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o serviço de destino não dá suporte ao contrato de serviço. Serviço de destino: '%.*ls', contrato de serviço: '%.* ls'.    |
 |    8410    |    16    |    Não    |    O timer de conversa não pode ser definido além do tempo de vida da conversa.    |
 |    8411    |    16    |    Não    |    O valor do tempo de vida da caixa de diálogo de %d está fora do intervalo permitido de %d a %d. Especifique um valor válido de tempo de vida para a caixa de diálogo.    |
 |    8412    |    16    |    Não    |    A sintaxe do nome de serviço '%.*ls' é inválida.    |
@@ -3887,7 +3887,7 @@ ORDER BY message_id
 |    8439    |    16    |    Não    |    O grupo de conversa de destino '%.*ls' é inválido.    |
 |    8440    |    23    |    Sim    |    O grupo de conversa existe, mas nenhuma fila existe. Possível dano no banco de dados. Execute DBCC CHECKDB.    |
 |    8442    |    16    |    Não    |    Não há nenhum Service Broker ativo no banco de dados. Altere para um contexto de banco de dados que contenha um Service Broker.    |
-|    [8443](mssqlserver-8443-database-engine-error.md)    |    23    |    Sim    |    A conversa com a ID '%. *ls' e o iniciador: %d faz referência a um grupo de conversa '%.* ls' ausente. Execute DBCC CHECKDB para analisar e reparar o banco de dados.    |
+|    [8443](mssqlserver-8443-database-engine-error.md)    |    23    |    Sim    |    A conversa com a ID '%.*ls' e o iniciador: %d faz referência a um grupo de conversa '%.* ls' ausente. Execute DBCC CHECKDB para analisar e reparar o banco de dados.    |
 |    8444    |    23    |    Sim    |    A estrutura da fila de serviço está inconsistente. Possível dano no banco de dados. Execute DBCC CHECKDB.    |
 |    8445    |    16    |    Não    |    O identificador de conversa '%ls' está fazendo referência a uma ID de conversa inválida '%ls', iniciador: %d.    |
 |    8447    |    16    |    Não    |    Uma instrução RECEIVE que atribui um valor a uma variável não deve ser combinada com operações de recuperação de dados.    |
@@ -3915,7 +3915,7 @@ ORDER BY message_id
 |    8494    |    16    |    Não    |    Você não tem permissão para acessar o serviço '%.*ls'.    |
 |    8495    |    16    |    Não    |    A conversa já foi confirmada por outra instância deste serviço.    |
 |    8498    |    16    |    Não    |    O serviço remoto enviou uma mensagem do tipo '%.*ls' que não faz parte do contrato local.    |
-|    8499    |    16    |    Não    |    O serviço remoto enviou um corpo de mensagem do tipo '%. *ls' que não corresponde ao formato de codificação de corpo de mensagem. Isso ocorreu na mensagem com ID de conversa '%.* ls', Iniciador: %d e Número de sequência de mensagem: %I64d.    |
+|    8499    |    16    |    Não    |    O serviço remoto enviou um corpo de mensagem do tipo '%.*ls' que não corresponde ao formato de codificação de corpo de mensagem. Isso ocorreu na mensagem com ID de conversa '%.* ls', Iniciador: %d e Número de sequência de mensagem: %I64d.    |
 |    8501    |    16    |    Não    |    MSDTC não está disponível no servidor '%.*ls'.    |
 |    8502    |    20    |    Sim    |    Token '0x%x' desconhecido recebido do MS DTC (Coordenador de Transações Distribuídas da Microsoft) .    |
 |    8504    |    20    |    Sim    |    O buffer de importação desta transação não é válido.    |
@@ -3978,7 +3978,7 @@ ORDER BY message_id
 |    [8601](mssqlserver-8601-database-engine-error.md)    |    17    |    Não    |    Erro do Processador de Consulta Interna: O processador de consultas não conseguiu obter acesso a uma interface necessária.    |
 |    8602    |    16    |    Não    |    Os índices usados em dicas devem ser incluídos explicitamente pelo assistente de ajuste do índice.    |
 |    8603    |    16    |    Não    |    Sintaxe inválida para instrução DBCC REPAIR interna.    |
-|    8604    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%. *ls' tem uma restrição de verificação em nível de coluna '%.* ls' na coluna '%.*ls' que não pode ser carregada para validação semântica.    |
+|    8604    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%.*ls' tem uma restrição de verificação em nível de coluna '%.* ls' na coluna '%.*ls' que não pode ser carregada para validação semântica.    |
 |    8605    |    10    |    Não    |    A operação de criação de índice usará %ld KB da memória especificada na opção sp_configure avançada "mínimo de memória por consulta (KB)" em vez de %lu KB especificados na opção "memória de criação de índice (KB)" porque o valor da primeira deve ser menor que o da última.    |
 |    8606    |    17    |    Não    |    Esta operação de índice requer %I64d KB de memória por DOP. O requisito total de %I64d KB para DOP de %lu é superior ao valor de %lu KB de sp_configure definido para a opção de configuração de servidor avançada "memória de criação de índice (KB)". Aumente o valor dessa configuração ou reduza o DOP e execute a consulta novamente.    |
 |    8607    |    16    |    Não    |    A tabela '%.*ls' não pode ser modificada porque um ou mais índices não clusterizados residem em um grupo de arquivos que não está online.    |
@@ -3994,7 +3994,7 @@ ORDER BY message_id
 |    8628    |    17    |    Sim    |    Tempo limite excedido ao aguardar para otimizar a consulta. Execute a consulta novamente.    |
 |    [8630](mssqlserver-8630-database-engine-error.md)    |    17    |    Não    |    Erro do Processador de Consulta Interna: O processador de consultas encontrou um erro inesperado durante a execução.    |
 |    8631    |    17    |    Não    |    Erro interno: O limite de pilha do servidor foi atingido. Procure aninhamentos que tenham vários níveis na consulta e tente simplificá-la.    |
-|    8632    |    17    |    Não    |    Erro interno: um limite dos serviços de expressão foi atingido. Procure expressões complexas na consulta e tente simplificá-las.    |
+|    [8632](mssqlserver-8632-database-engine-error.md)    |    17    |    Não    |    Erro interno: um limite dos serviços de expressão foi atingido. Procure expressões complexas na consulta e tente simplificá-las.    |
 |    8633    |    16    |    Não    |    O processador de consultas não pôde produzir um plano de consulta porque a consulta distribuída não dá suporte à materialização de resultados intermediários com padrão em consultas DML sobre origens remotas. Tente usar os valores padrão reais em vez de padrão ou divida a atualização em várias instruções, uma contendo apenas a atribuição DEFAULT, a outra com o restante.    |
 |    8634    |    17    |    Não    |    O processador de consultas recebeu um erro de uma camada de comunicação de cluster.    |
 |    8635    |    16    |    Não    |    O processador de consultas não pôde produzir um plano de consulta para uma consulta com uma dica de índice espacial. Razão: %S_MSG. Tente remover as dicas de índice ou remover SET FORCEPLAN.    |
@@ -4008,18 +4008,18 @@ ORDER BY message_id
 |    [8649](mssqlserver-8649-database-engine-error.md)    |    17    |    Não    |    A consulta foi cancelada porque seu custo estimado (%d) excede o limite configurado de %d. Contate o administrador do sistema.    |
 |    [8651](mssqlserver-8651-database-engine-error.md)    |    17    |    Não    |    Não foi possível executar a operação porque a concessão de memória solicitada não estava disponível no pool de recursos '%ls' (%ld). Execute a consulta novamente, reduza a carga da consulta ou verifique a configuração do gerenciador de recursos.    |
 |    8653    |    16    |    Não    |    O processador de consultas não pode produzir um plano para a tabela ou exibição '%.*ls' porque a tabela reside em um grupo de arquivos que não está online.    |
-|    8655    |    16    |    Não    |    O processador de consultas não consegue produzir um plano porque o índice '%. *ls' na tabela ou exibição '%.* ls' está desabilitado.    |
+|    8655    |    16    |    Não    |    O processador de consultas não consegue produzir um plano porque o índice '%.*ls' na tabela ou exibição '%.* ls' está desabilitado.    |
 |    8656    |    16    |    Não    |    O processador de consultas não pôde produzir um plano de consulta. Reenvie a consulta após desabilitar o sinalizador de rastreamento %d.    |
 |    8657    |    17    |    Não    |    Não foi possível obter a concessão de memória de %I64d KB porque ela excede o limite máximo de configuração no grupo de cargas de trabalho '%ls' (%ld) e no pool de recursos '%ls' (%ld). Contate o administrador do servidor para aumentar o limite de uso de memória.    |
-|    8660    |    16    |    Não    |    Não é possível criar o índice clusterizado "%. *ls" na exibição "%.* ls" porque a lista de seleção da definição da exibição não inclui todas as colunas na cláusula GROUP BY. Considere a possibilidade de incluir essas colunas na lista de seleção.    |
-|    8661    |    16    |    Não    |    Não é possível criar o índice clusterizado "%. *ls" na exibição "%.* ls" porque a chave de índice inclui colunas que não estão na cláusula GROUP BY. Considere a possibilidade de eliminar as colunas que não estão na cláusula GROUP BY da chave de índice.    |
-|    8662    |    16    |    Não    |    Não é possível criar o índice clusterizado "%. *ls" na exibição "%.* ls" porque a exibição faz referência a um valor desconhecido (agregação de SUM da expressão anulável). Considere a possibilidade de fazer referência somente a valores não anuláveis em SUM. ISNULL() pode ser útil para esse fim.    |
-|    8663    |    16    |    Não    |    Não é possível criar o índice clusterizado "%. *ls" na exibição "%.* ls" porque sua lista de seleção não inclui COUNT_BIG( *). Considere adicionar COUNT_BIG(* ) à lista de seleção.    |
-|    8665    |    16    |    Não    |    Não é possível criar o índice clusterizado "%. *ls" na exibição "%.* ls" porque nenhuma linha atende à definição da exibição. Considere a possibilidade de eliminar contradições da definição da exibição.    |
-|    8668    |    16    |    Não    |    Não é possível criar o índice clusterizado '%. *ls' na exibição '%.* ls' porque a lista de seleção da exibição contém uma expressão no resultado da função de agregação ou coluna de agrupamento. Considere a possibilidade de remover a expressão no resultado da função de agregação ou na coluna de agrupamento da lista de seleção.    |
+|    8660    |    16    |    Não    |    Não é possível criar o índice clusterizado "%.*ls" na exibição "%.* ls" porque a lista de seleção da definição da exibição não inclui todas as colunas na cláusula GROUP BY. Considere a possibilidade de incluir essas colunas na lista de seleção.    |
+|    8661    |    16    |    Não    |    Não é possível criar o índice clusterizado "%.*ls" na exibição "%.* ls" porque a chave de índice inclui colunas que não estão na cláusula GROUP BY. Considere a possibilidade de eliminar as colunas que não estão na cláusula GROUP BY da chave de índice.    |
+|    8662    |    16    |    Não    |    Não é possível criar o índice clusterizado "%.*ls" na exibição "%.* ls" porque a exibição faz referência a um valor desconhecido (agregação de SUM da expressão anulável). Considere a possibilidade de fazer referência somente a valores não anuláveis em SUM. ISNULL() pode ser útil para esse fim.    |
+|    8663    |    16    |    Não    |    Não é possível criar o índice clusterizado "%.*ls" na exibição "%.* ls" porque sua lista de seleção não inclui COUNT_BIG( *). Considere adicionar COUNT_BIG(* ) à lista de seleção.    |
+|    8665    |    16    |    Não    |    Não é possível criar o índice clusterizado "%.*ls" na exibição "%.* ls" porque nenhuma linha atende à definição da exibição. Considere a possibilidade de eliminar contradições da definição da exibição.    |
+|    8668    |    16    |    Não    |    Não é possível criar o índice clusterizado '%.*ls' na exibição '%.* ls' porque a lista de seleção da exibição contém uma expressão no resultado da função de agregação ou coluna de agrupamento. Considere a possibilidade de remover a expressão no resultado da função de agregação ou na coluna de agrupamento da lista de seleção.    |
 |    8669    |    16    |    Não    |    Falha na tentativa de manter a exibição indexada "%.*ls" porque ela contém uma expressão em resultados de agregação, ou porque contém uma função de janela de agregação ou classificação. Considere a possibilidade de descartar o índice clusterizado na exibição ou alterar a definição da exibição.    |
 |    8670    |    16    |    Não    |    O otimizador de consultas atingiu o limite interno do número máximo de exibições que podem ser usadas durante a otimização.    |
-|    8671    |    16    |    Não    |    Falha ao tentar manter a exibição indexada "%. *ls" por causa da opção ignore_dup_key no índice "%.* ls". Descarte o índice ou recrie-o sem a opção de índice ignore_dup_key.    |
+|    8671    |    16    |    Não    |    Falha ao tentar manter a exibição indexada "%.*ls" por causa da opção ignore_dup_key no índice "%.* ls". Descarte o índice ou recrie-o sem a opção de índice ignore_dup_key.    |
 |    8672    |    16    |    Não    |    A instrução MERGE tentou um UPDATE ou DELETE na mesma linha mais de uma vez. Isso ocorre quando uma linha de destino corresponde a mais de uma linha de origem. Uma instrução MERGE não pode executar UPDATE/DELETE na mesma linha da tabela de destino várias vezes. Refine a cláusula ON para garantir que uma linha de destino corresponda, no máximo, a uma linha de origem ou use a cláusula GROUP BY para agrupar as linhas de origem.    |
 |    8673    |    16    |    Não    |    Uma instrução MERGE não será válida se ela disparar as ações 'ON DELETE SET NULL' e 'ON UPDATE CASCADE' para uma restrição de integridade referencial. Modifique as ações realizadas pela instrução MERGE para garantir que ela não dispare essas duas ações para uma restrição de integridade referencial.    |
 |    [8680](mssqlserver-8680-database-engine-error.md)    |    17    |    Não    |    Erro do Processador de Consulta Interna: o processador de consulta encontrou um erro inesperado durante o processamento de uma fase de consulta remota.    |
@@ -4045,7 +4045,7 @@ ORDER BY message_id
 |    [8712](mssqlserver-8712-database-engine-error.md)    |    16    |    Não    |    O índice '%.*ls', especificado na dica USE PLAN, não existe. Especifique um índice existente ou crie um índice com o nome especificado.    |
 |    8720    |    15    |    Não    |    Não é possível executar a consulta. Há mais de uma cláusula TABLE HINT especificada para o objeto '%.*ls'. Use no máximo uma dessas clausulas TABLE HINT por referência de tabela.    |
 |    8721    |    15    |    Não    |    Não é possível executar a consulta. TABLE HINT na cláusula OPTION leva a uma referência ambígua para o objeto '%.*ls'. Em vez disso, considere a dica de consulta USE PLAN.    |
-|    8722    |    15    |    Não    |    Não é possível executar a consulta. A semântica que afeta a dica '%. *ls' é exibida na cláusula '%.* ls' do objeto '%. *ls', mas não na cláusula '%.* ls' correspondente. Altere a cláusula OPTION (TABLE HINTS...) para que a semântica que afeta as dicas corresponda à cláusula WITH.    |
+|    8722    |    15    |    Não    |    Não é possível executar a consulta. A semântica que afeta a dica '%.*ls' é exibida na cláusula '%.* ls' do objeto '%.*ls', mas não na cláusula '%.* ls' correspondente. Altere a cláusula OPTION (TABLE HINTS...) para que a semântica que afeta as dicas corresponda à cláusula WITH.    |
 |    8723    |    15    |    Não    |    Não é possível executar a consulta. O objeto '%.*ls' está especificado na cláusula TABLE HINT, mas não é usado na consulta ou não corresponde ao alias especificado na consulta. As referências de tabela na cláusula TABLE HINT devem corresponder à cláusula WITH.    |
 |    8724    |    15    |    Não    |    Não é possível executar a consulta. A função com valor de tabela ou OPENROWSET '%.*ls' não pode ser especificada na cláusula TABLE HINT.    |
 |    8901    |    16    |    Não    |    Erro de tabela: a ID de objeto %d tem metadados inconsistentes. Este erro não pode ser reparado e impede processamento adicional deste objeto.    |
@@ -4057,7 +4057,7 @@ ORDER BY message_id
 |    8907    |    16    |    Não    |    O índice espacial, índice XML ou a exibição indexada '%.*ls' (ID de objeto %d) contém linhas que não foram produzidas pela definição de exibição. Isso não representa necessariamente um problema de integridade com os dados desse banco de dados. Para obter mais informações sobre como solucionar problemas de erros DBCC em exibições indexadas, consulte os Manuais Online do SQL Server.    |
 |    8908    |    16    |    Não    |    O índice espacial, índice XML ou a exibição indexada '%.*ls' (ID de objeto %d) não contém todas as linhas produzidas pela definição de exibição. Isso não representa necessariamente um problema de integridade com os dados desse banco de dados. Para obter mais informações sobre como solucionar problemas de erros DBCC em índices espaciais, índices XML e exibições indexadas, consulte os Manuais Online do SQL Server.    |
 |    8909    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls), ID de página %S_PGID contém uma ID de página incorreta em seu cabeçalho de página. PageId no cabeçalho de página = %S_PGID.    |
-|    8910    |    16    |    Não    |    A página %S_PGID, na ID de banco de dados %d, está alocada para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %. *ls) e para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.* ls).    |
+|    8910    |    16    |    Não    |    A página %S_PGID, na ID de banco de dados %d, está alocada para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls) e para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.* ls).    |
 |    8911    |    10    |    Não    |    O erro foi corrigido.    |
 |    8912    |    10    |    Não    |    %.*ls corrigiu %d erros de alocação e %d erros de consistência no banco de dados '%ls'.    |
 |    8913    |    16    |    Não    |    A extensão %S_PGID está alocada para '%ls' e pelo menos um outro objeto.    |
@@ -4072,11 +4072,11 @@ ORDER BY message_id
 |    8922    |    10    |    Não    |    Não foi possível reparar este erro.    |
 |    8923    |    10    |    Não    |    O nível de correção na instrução DBCC fez com que esta correção fosse ignorada.    |
 |    8924    |    10    |    Não    |    A correção deste erro requer a correção prévia de outros erros.    |
-|    8925    |    16    |    Não    |    Erro de tabela: Vinculação entre objetos: página %S_PGID, slot %d, na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %. *ls), refere-se à página %S_PGID, slot %d, na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.* ls).    |
-|    8926    |    16    |    Não    |    Erro de tabela: Vinculação entre objetos: página pai %S_PGID, slot %d no objeto %d, índice %d, partição %I64d, AU %I64d (%. *ls) e página %S_PGID->next no objeto %d, índice %d, partição %I64d, AU %I64d (%.* ls), referem-se à página %S_PGID, mas não estão no mesmo objeto.    |
+|    8925    |    16    |    Não    |    Erro de tabela: Vinculação entre objetos: página %S_PGID, slot %d, na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls), refere-se à página %S_PGID, slot %d, na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.* ls).    |
+|    8926    |    16    |    Não    |    Erro de tabela: Vinculação entre objetos: página pai %S_PGID, slot %d no objeto %d, índice %d, partição %I64d, AU %I64d (%.*ls) e página %S_PGID->next no objeto %d, índice %d, partição %I64d, AU %I64d (%.* ls), referem-se à página %S_PGID, mas não estão no mesmo objeto.    |
 |    8927    |    16    |    Não    |    ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls): A contagem de registros fantasmas no cabeçalho (%d) não coincide com o número de registros fantasmas (%d) encontrados na página %S_PGID.    |
 |    8928    |    16    |    Não    |    ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls): Não foi possível processar a página %S_PGID. Consulte os outros erros para obter detalhes.    |
-|    8929    |    16    |    Não    |    ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %. *ls): Erros encontrados em dados fora da linha com ID % I64d de propriedade do registro %ls identificado por %.* ls    |
+|    8929    |    16    |    Não    |    ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls): Erros encontrados em dados fora da linha com ID % I64d de propriedade do registro %ls identificado por %.* ls    |
 |    8930    |    16    |    Não    |    Erro de banco de dados: O banco de dados %d tem metadados inconsistentes. Esse erro não pode ser reparado e impede processamento adicional de DBCC. Restaure com um backup.    |
 |    8931    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID da unidade de alocação %I64d (tipo %.*ls) incompatibilidade entre níveis de árvore B, página %S_PGID. O nível %d não corresponde ao nível %d do %S_PGID pai.    |
 |    8932    |    16    |    Não    |    Não foi possível localizar a ID de grupo de arquivos %d em sys.filegroups para o banco de dados '%ls'.    |
@@ -4106,7 +4106,7 @@ ORDER BY message_id
 |    8956    |    16    |    Não    |    Linha de índice (%d:%d:%d) com valores (%ls) que apontam para a linha de dados identificada por (%ls).    |
 |    8957    |    10    |    Sim    |    %lsDBCC %ls (%ls%ls%ls)%ls executado por %ls encontrou %d erros e corrigiu %d erros. Tempo decorrido: %d horas %d minutos %d segundos. %.*ls    |
 |    8958    |    10    |    Não    |    %ls é o nível de correção mínimo dos erros encontrados por DBCC %ls (%ls%ls%ls).    |
-|    8959    |    16    |    Não    |    Erro de tabela: a página IAM %S_PGID para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %. *ls) está vinculada à cadeia IAM para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.* ls) pela página %S_PGID.    |
+|    8959    |    16    |    Não    |    Erro de tabela: a página IAM %S_PGID para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls) está vinculada à cadeia IAM para a ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.* ls) pela página %S_PGID.    |
 |    8960    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls). Página %S_PGID, slot %d, coluna %d não é uma coluna complexa válida.    |
 |    8961    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls). O nó de dados fora da linha na página %S_PGID, slot %d, ID de texto %I64d não corresponde à sua referência da página %S_PGID, slot %d.    |
 |    8962    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls). O nó de dados fora da linha na página %S_PGID, slot %d, ID de texto %I64d tem tipo de nó incorreto %d.    |
@@ -4117,7 +4117,7 @@ ORDER BY message_id
 |    8967    |    16    |    Não    |    Ocorreu um erro interno em DBCC que impediu a continuação do processamento. Contate os Serviços de Atendimento ao Cliente.    |
 |    8968    |    16    |    Não    |    Erro de tabela: %ls página %S_PGID (ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls)) fora do intervalo deste banco de dados.    |
 |    8969    |    16    |    Não    |    Erro de tabela: Erro na vinculação de cadeia IAM: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls). A página seguinte à página IAM %S_PGID é %S_PGID, mas o vínculo anterior para página %S_PGID é %S_PGID.    |
-|    8970    |    16    |    Não    |    Erro de linha: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo %. *ls), ID de página %S_PGID, ID de linha %d. A coluna '%.* ls' foi criada NOT NULL, mas é NULL na linha.    |
+|    8970    |    16    |    Não    |    Erro de linha: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de aloc. %I64d (tipo %.*ls), ID de página %S_PGID, ID de linha %d. A coluna '%.* ls' foi criada NOT NULL, mas é NULL na linha.    |
 |    8971    |    16    |    Não    |    Incompatibilidade de linha encaminhada: ID de objeto %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls) página %S_PGID, slot %d aponta para a página de linha encaminhada %S_PGID, slot %d; a linha encaminhada aponta de volta para a página %S_PGID, slot %d    |
 |    8972    |    16    |    Não    |    Linha encaminhada referenciada por mais de uma linha. ID de objeto %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls), página %S_PGID, slot %d aponta incorretamente para a página de linha encaminhada %S_PGID, slot %d, que se refere de volta corretamente à página %S_PGID, slot %d.    |
 |    8973    |    16    |    Não    |    O processamento da ID de objeto de CHECKTABLE %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls) encontrou a página %S_PGID, slot %d duas vezes.    |
@@ -4129,10 +4129,10 @@ ORDER BY message_id
 |    8979    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls). A página %S_PGID não tem referências nos nós pai (desconhecido) e anterior (página %S_PGID). Possível entrada de raiz incorreta no catálogo do sistema.    |
 |    8980    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls). A página do nó do índice %S_PGID, slot %d refere-se à página filho %S_PGID e ao filho anterior %S_PGID, mas não foram encontradas.    |
 |    8981    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de unidade de alocação %I64d (tipo %.*ls). O próximo ponteiro de %S_PGID se refere à página %S_PGID. Nem %S_PGID nem seu pai foram encontrados. Possível vínculo em cadeia incorreto.    |
-|    8982    |    16    |    Não    |    Erro de tabela: Vinculação entre objetos. A página %S_PGID->next na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de AU %I64d (tipo %. *ls) refere-se à página %S_PGID na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de AU %I64d (tipo %.* ls), mas não está no mesmo índice.    |
+|    8982    |    16    |    Não    |    Erro de tabela: Vinculação entre objetos. A página %S_PGID->next na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de AU %I64d (tipo %.*ls) refere-se à página %S_PGID na ID de objeto %d, ID de índice %d, ID de partição %I64d, ID de AU %I64d (tipo %.* ls), mas não está no mesmo índice.    |
 |    8983    |    10    |    Não    |    Arquivo %d. Extensões %I64d, páginas usadas %I64d, páginas reservadas %I64d, extensões mistas %I64d, páginas mistas %I64d.    |
 |    8984    |    16    |    Não    |    Erro de tabela: ID de objeto %d, ID de índice %d, ID de partição %I64d. Uma linha deveria estar na partição número %d, mas foi encontrada na partição número %d. Possíveis chaves extras ou inválidas para:    |
-|    8985    |    16    |    Não    |    Não foi possível localizar o arquivo '%. *ls' para o banco de dados '%.* ls' em sys.database_files. O arquivo não existe ou foi descartado.    |
+|    8985    |    16    |    Não    |    Não foi possível localizar o arquivo '%.*ls' para o banco de dados '%.* ls' em sys.database_files. O arquivo não existe ou foi descartado.    |
 |    8986    |    16    |    Não    |    Número excessivo de erros encontrado (%d) para a ID do objeto %d. Para ver todas as mensagens de erro, execute a instrução novamente usando "WITH ALL_ERRORMSGS".    |
 |    8987    |    16    |    Não    |    Nenhuma ajuda disponível para a instrução DBCC '%.*ls'.    |
 |    8988    |    16    |    Não    |    Linha (%d:%d:%d) identificada por (%ls).    |
@@ -4174,17 +4174,17 @@ ORDER BY message_id
 |    9104    |    16    |    Não    |    estatística automática interna    |
 |    9105    |    16    |    Não    |    Fluxo da estatística fornecido corrompido.    |
 |    9106    |    16    |    Não    |    Suporte a histograma não permitido para tipo de dados de entrada 0x%08x.    |
-|    9201    |    10    |    Sim    |    %d assinatura(s) de notificação de consulta ativa(s) no banco de dados '%. *ls' de propriedade do número de identificação de segurança '%.* ls' foram descartadas.    |
+|    9201    |    10    |    Sim    |    %d assinatura(s) de notificação de consulta ativa(s) no banco de dados '%.*ls' de propriedade do número de identificação de segurança '%.* ls' foram descartadas.    |
 |    9202    |    16    |    Não    |    Mensagem de assinatura na notificação de consulta inválida.    |
 |    9204    |    16    |    Não    |    Tempo limite da assinatura na notificação de consulta inválido. O intervalo permitido é de 1 a 2147483647.    |
-|    9205    |    16    |    Não    |    O usuário "%. *ls" não tem permissão para solicitar assinaturas de notificação de consulta no banco de dados "%.* ls".    |
+|    9205    |    16    |    Não    |    O usuário "%.*ls" não tem permissão para solicitar assinaturas de notificação de consulta no banco de dados "%.* ls".    |
 |    9206    |    16    |    Não    |    A assinatura na notificação de consulta "%ld" não pode ser excluída porque não existe ou já foi acionada.    |
-|    9207    |    10    |    Não    |    A caixa de diálogo de notificação de consulta no identificador de conversa '%. *ls' foi fechada devido ao seguinte erro: '%.* ls'.    |
-|    9208    |    16    |    Não    |    A assinatura de notificação de consulta não pôde obter ponto de extremidade da caixa de diálogo. Não foi possível abrir a caixa de diálogo do agente de serviços para o nome de serviço '%. *ls' da instância do agente '%.* ls'.    |
-|    9209    |    16    |    Não    |    A assinatura de notificação de consulta não pôde iniciar a caixa de diálogo com o nome de serviço '%. *ls' da instância de agente '%.* ls'.    |
-|    9210    |    10    |    Não    |    A entrega da notificação de consulta não pôde enviar a mensagem sobre a caixa de diálogo '%. *ls'. Falha na entrega da notificação '%.* ls' devido ao seguinte erro no agente de serviços '%.*ls'.    |
+|    9207    |    10    |    Não    |    A caixa de diálogo de notificação de consulta no identificador de conversa '%.*ls' foi fechada devido ao seguinte erro: '%.* ls'.    |
+|    9208    |    16    |    Não    |    A assinatura de notificação de consulta não pôde obter ponto de extremidade da caixa de diálogo. Não foi possível abrir a caixa de diálogo do agente de serviços para o nome de serviço '%.*ls' da instância do agente '%.* ls'.    |
+|    9209    |    16    |    Não    |    A assinatura de notificação de consulta não pôde iniciar a caixa de diálogo com o nome de serviço '%.*ls' da instância de agente '%.* ls'.    |
+|    9210    |    10    |    Não    |    A entrega da notificação de consulta não pôde enviar a mensagem sobre a caixa de diálogo '%.*ls'. Falha na entrega da notificação '%.* ls' devido ao seguinte erro no agente de serviços '%.*ls'.    |
 |    9211    |    10    |    Não    |    Falha ao verificar se há notificações de consultas pendentes no banco de dados "%d" devido ao seguinte erro ao abrir o banco de dados: '%.*ls'.    |
-|    9213    |    10    |    Não    |    A assinatura de notificação de consulta não pôde acessar o banco de dados com ID %d. Não foi possível abrir a caixa de diálogo do agente para o nome de serviço '%. *ls' da instância do agente '%.* ls'.    |
+|    9213    |    10    |    Não    |    A assinatura de notificação de consulta não pôde acessar o banco de dados com ID %d. Não foi possível abrir a caixa de diálogo do agente para o nome de serviço '%.*ls' da instância do agente '%.* ls'.    |
 |    9214    |    16    |    Não    |    A entrega da notificação de consulta não pôde decodificar a mensagem de erro do Service Broker.    |
 |    9215    |    16    |    Não    |    A entrega da notificação de consulta não pôde codificar a mensagem. Falha na entrega da notificação '%.*ls'.    |
 |    9216    |    10    |    Não    |    Falha ao excluir assinatura de notificação de consulta expirada "%d".    |
@@ -4192,7 +4192,7 @@ ORDER BY message_id
 |    9218    |    16    |    Não    |    Notificações de consulta atingiram o limite interno do número máximo de objetos.    |
 |    9219    |    16    |    Não    |    Falha na operação de limpeza das assinaturas de notificação de consulta. Consulte erros anteriores para obter detalhes.    |
 |    9220    |    10    |    Não    |    Caixa de diálogo de notificação de consulta no identificador de conversa '%.*ls' fechada devido a um erro desconhecido do agente de serviços.    |
-|    9221    |    10    |    Não    |    A entrega de notificação de consulta não pôde obter o ponto de extremidade da caixa de diálogo '%. *ls'. Falha na entrega da notificação '%.* ls' devido ao seguinte erro no agente de serviços '%.*ls'.    |
+|    9221    |    10    |    Não    |    A entrega de notificação de consulta não pôde obter o ponto de extremidade da caixa de diálogo '%.*ls'. Falha na entrega da notificação '%.* ls' devido ao seguinte erro no agente de serviços '%.*ls'.    |
 |    9222    |    16    |    Não    |    A tabela de notificação de consulta interna contém um esquema desatualizado e foi descartada. A limpeza de notificação de consulta não foi executada para essa tabela.    |
 |    9223    |    10    |    Sim    |    %d assinaturas de notificação de consulta ativas do número de identificação de segurança '%.*ls' foram descartadas.    |
 |    9224    |    10    |    Não    |    A entrega de notificação de consulta não pôde acessar o banco de dados com a ID %d. Falha na entrega da notificação '%.*ls'.    |
@@ -4211,10 +4211,10 @@ ORDER BY message_id
 |    9237    |    16    |    Não    |    %.*ls não é um banco de dados de agente válido.    |
 |    9238    |    16    |    Não    |    Não são permitidas assinaturas de notificação de consulta em um contexto de função de aplicativo ativa. Considere a possibilidade de emitir novamente a solicitação sem ativar a função de aplicativo.    |
 |    9239    |    16    |    Não    |    Erro de notificações de consulta interna: O coletor de lixo corrigiu uma inconsistência.    |
-|    9240    |    10    |    Não    |    A caixa de diálogo do agente de serviços '%. *ls' não pôde ser fechada por causa de um erro do agente no banco de dados com ID '%.d' devido ao seguinte erro no agente de serviços: '%.* ls'.    |
+|    9240    |    10    |    Não    |    A caixa de diálogo do agente de serviços '%.*ls' não pôde ser fechada por causa de um erro do agente no banco de dados com ID '%.d' devido ao seguinte erro no agente de serviços: '%.* ls'.    |
 |    9241    |    16    |    Não    |    Não foi possível fechar a caixa de diálogo do agente de serviços '%.*ls' porque o banco de dados com ID '%d' não está disponível. Considere a possibilidade de fechar as caixas de diálogo manualmente depois que o banco de dados voltar a ficar disponível.    |
-|    9242    |    10    |    Não    |    A entrega de notificação de consulta não pôde obter o ponto de extremidade da caixa de diálogo '%. *ls'. Falha na entrega da notificação de consulta devido ao seguinte erro no agente de serviços: '%.* ls'. Consulte o log de erros para obter informações adicionais.    |
-|    9243    |    10    |    Não    |    A entrega da notificação de consulta não pôde enviar a mensagem sobre a caixa de diálogo '%. *ls'. Falha na entrega da notificação de consulta devido ao seguinte erro no agente de serviços: '%.* ls'. Consulte o log de erros para obter informações adicionais.    |
+|    9242    |    10    |    Não    |    A entrega de notificação de consulta não pôde obter o ponto de extremidade da caixa de diálogo '%.*ls'. Falha na entrega da notificação de consulta devido ao seguinte erro no agente de serviços: '%.* ls'. Consulte o log de erros para obter informações adicionais.    |
+|    9243    |    10    |    Não    |    A entrega da notificação de consulta não pôde enviar a mensagem sobre a caixa de diálogo '%.*ls'. Falha na entrega da notificação de consulta devido ao seguinte erro no agente de serviços: '%.* ls'. Consulte o log de erros para obter informações adicionais.    |
 |    9244    |    16    |    Não    |    A limpeza de notificações de consulta não pôde acessar os metadados do banco de dados "%d". Verifique se o banco de dados foi restaurado com êxito e está online.    |
 |    9300    |    16    |    Não    |    %sNesta versão do servidor, a função 'fn:id()' só aceita um argumento do tipo 'IDREF *'.    |
 |    9301    |    16    |    Não    |    %sNesta versão do servidor, 'cast as <type>%s' não está disponível. Use a sintaxe 'cast as <type> ?' .    |
@@ -4326,14 +4326,14 @@ ORDER BY message_id
 |    9501    |    16    |    Não    |    XQuery: não é possível resolver sql:variable('%.*ls'). A variável deve ser declarada como TSQL escalar.    |
 |    9502    |    16    |    Não    |    A literal de cadeia de caracteres para o argumento %d do método '%.*ls' não deve exceder %d bytes.    |
 |    9503    |    16    |    Não    |    Ocorreram erros e/ou avisos durante o processamento da instrução XQuery para o método do tipo de dados XML '%.*ls'. Consulte as mensagens de erro anteriores para obter mais detalhes.    |
-|    9504    |    16    |    Não    |    Ocorreram erros e/ou avisos durante o processamento da instrução XQuery para o método do tipo de dados XML '%. *ls', chamado na coluna '%.* ls', tabela '%.*ls'. Consulte as mensagens de erro anteriores para obter mais detalhes.    |
+|    9504    |    16    |    Não    |    Ocorreram erros e/ou avisos durante o processamento da instrução XQuery para o método do tipo de dados XML '%.*ls', chamado na coluna '%.* ls', tabela '%.*ls'. Consulte as mensagens de erro anteriores para obter mais detalhes.    |
 |    9506    |    16    |    Não    |    O método XMLDT '%.*ls' só pode ser chamado nas colunas do tipo xml.    |
 |    9507    |    16    |    Não    |    O método do tipo de dados XML em uma coluna remota usada nesta consulta não pode ser executado local ou remotamente. Reescreva a consulta.    |
 |    9508    |    16    |    Não    |    O parâmetro de referência fornecido ao método XMLDT '%.*ls' foi gerado a partir de uma instância XML diferente da qual está sendo aplicada.    |
 |    9509    |    16    |    Não    |    O método XMLUNNEST requer coluna xml com tipo com elemento global único    |
 |    9510    |    16    |    Não    |    Funcionalidade ainda não implementada: XMLNODEREFS não pode usar referências expostas por exibições.    |
 |    9512    |    16    |    Não    |    Tipo de dados xml não recebe suporte como parâmetro para chamadas remotas.    |
-|    9513    |    16    |    Não    |    Erro ao processar o método de tipo de dados XML '%. *ls'. As seguintes opções SET exigidas por métodos de tipo de dados XML não estão definidas: '%.* ls'.    |
+|    9513    |    16    |    Não    |    Erro ao processar o método de tipo de dados XML '%.*ls'. As seguintes opções SET exigidas por métodos de tipo de dados XML não estão definidas: '%.* ls'.    |
 |    9514    |    16    |    Não    |    Tipo de dados xml não recebe suporte em consultas distribuídas. Objeto remoto '%.*ls' tem colunas xml.    |
 |    9515    |    16    |    Não    |    Um esquema XML foi alterado ou descartado e o plano de consulta não é mais válido. Execute o lote de consultas novamente.    |
 |    9516    |    16    |    Não    |    XQuery: o nome ou uma das várias partes de um nome fornecidas a %S_MSG('%.*ls') está vazio. Nomes vazios não podem ser usados para identificar objetos, colunas ou variáveis no SQL.    |
@@ -4343,33 +4343,33 @@ ORDER BY message_id
 |    9520    |    16    |    Não    |    XQuery: '%.*ls' mencionado por sql:variable() não é um nome de função de sistema válido.    |
 |    9521    |    16    |    Não    |    Erro ao processar tipo de dados XML. A instância de tipo de dados XML contém um valor xs:date ou xs:dateTime negativo.    |
 |    9522    |    16    |    Não    |    O método de modificação XQuery não é permitido em conjuntos de colunas esparsas.    |
-|    9523    |    16    |    Não    |    Não é possível atualizar o conjunto de colunas esparsas '%. *ls' porque o conteúdo XML fornecido faz referência à coluna não esparsa '%.* ls' que não pertence a esse conjunto de colunas. Os dados XML usados para atualizar um conjunto de colunas esparsas não pode referenciar colunas que não pertençam ao conjunto de colunas.    |
+|    9523    |    16    |    Não    |    Não é possível atualizar o conjunto de colunas esparsas '%.*ls' porque o conteúdo XML fornecido faz referência à coluna não esparsa '%.* ls' que não pertence a esse conjunto de colunas. Os dados XML usados para atualizar um conjunto de colunas esparsas não pode referenciar colunas que não pertençam ao conjunto de colunas.    |
 |    [9524](mssqlserver-9524-database-engine-error.md)    |    16    |    Não    |    O conteúdo XML fornecido não se adapta ao formato XML exigido para conjuntos de colunas esparsos.    |
-|    9525    |    16    |    Não    |    O conteúdo XML fornecido para o conjunto de colunas esparsas '%. *ls' contém referências duplicadas à coluna '%.* ls'. Uma coluna só pode ser referenciada uma vez no conteúdo XML fornecido para um conjunto de colunas esparsas.    |
-|    9526    |    16    |    Não    |    No conteúdo XML fornecido para o conjunto de colunas esparsas '%. *ls', o valor do atributo '%.* ls' no elemento '%.*ls' está fora do intervalo. O intervalo válido é de 1 a %d.    |
-|    9527    |    16    |    Não    |    No conteúdo XML fornecido para o conjunto de colunas '%. *ls', o valor do atributo sqltypes:scale no elemento '%.* ls' está fora do intervalo. O intervalo válido para a escala é de 0 até a precisão especificada.    |
-|    9528    |    16    |    Não    |    No conteúdo XML fornecido para o conjunto de colunas '%. *ls', o atributo '%.* ls' no elemento '%.*ls' não é válido. O atributo é válido somente para colunas esparsas de tipo de dados sql_variant.    |
-|    9529    |    16    |    Não    |    No conteúdo XML fornecido para a coluna '%. *ls' do conjunto de colunas, o atributo sqlDBType:base64Encoded no elemento '%.* ls' não é válido. O atributo base64Encoded pode ser usado apenas quando a coluna esparsa correspondente é de tipo de dados de caracteres (char, varchar, nchar, nvarchar), ou se a coluna esparsa for de tipo de dados sql_variant e o valor do atributo xsi:type for "Char", "VarChar", "NChar" ou "NVarChar".    |
-|    9530    |    16    |    Não    |    No conteúdo XML fornecido para a coluna '%. *ls' do conjunto de colunas, o atributo '%.* ls' no elemento '%.*ls' não é válido. Remova o atributo.    |
-|    9531    |    16    |    Não    |    No conteúdo XML fornecido para a coluna '%. *ls' do conjunto de colunas, o valor do atributo '%.* ls' no elemento '%.*ls' não é válido.    |
-|    [9532](mssqlserver-9532-database-engine-error.md)    |    16    |    Não    |    Na operação de consulta/DML envolvendo o conjunto de colunas '%. *ls', houve falha ao converter do tipo de dados '%ls' para o tipo de dados '%ls' da coluna '%.* ls'.    |
-|    9533    |    16    |    Não    |    No XML fornecido para o conjunto de colunas '%. *ls', o elemento '%.* ls' deve residir no namespace global. Remova a declaração de namespace padrão ou o prefixo do elemento.    |
-|    9534    |    16    |    Não    |    Na operação de consulta/DML envolvendo o conjunto de colunas '%. *ls', houve falha ao converter do tipo de dados '%ls' para o tipo de dados '%ls' da coluna '%.* ls'. Consulte os Manuais Online para obter mais detalhes sobre o fornecimento de métodos de conversão XML em tipos CLR.    |
+|    9525    |    16    |    Não    |    O conteúdo XML fornecido para o conjunto de colunas esparsas '%.*ls' contém referências duplicadas à coluna '%.* ls'. Uma coluna só pode ser referenciada uma vez no conteúdo XML fornecido para um conjunto de colunas esparsas.    |
+|    9526    |    16    |    Não    |    No conteúdo XML fornecido para o conjunto de colunas esparsas '%.*ls', o valor do atributo '%.* ls' no elemento '%.*ls' está fora do intervalo. O intervalo válido é de 1 a %d.    |
+|    9527    |    16    |    Não    |    No conteúdo XML fornecido para o conjunto de colunas '%.*ls', o valor do atributo sqltypes:scale no elemento '%.* ls' está fora do intervalo. O intervalo válido para a escala é de 0 até a precisão especificada.    |
+|    9528    |    16    |    Não    |    No conteúdo XML fornecido para o conjunto de colunas '%.*ls', o atributo '%.* ls' no elemento '%.*ls' não é válido. O atributo é válido somente para colunas esparsas de tipo de dados sql_variant.    |
+|    9529    |    16    |    Não    |    No conteúdo XML fornecido para a coluna '%.*ls' do conjunto de colunas, o atributo sqlDBType:base64Encoded no elemento '%.* ls' não é válido. O atributo base64Encoded pode ser usado apenas quando a coluna esparsa correspondente é de tipo de dados de caracteres (char, varchar, nchar, nvarchar), ou se a coluna esparsa for de tipo de dados sql_variant e o valor do atributo xsi:type for "Char", "VarChar", "NChar" ou "NVarChar".    |
+|    9530    |    16    |    Não    |    No conteúdo XML fornecido para a coluna '%.*ls' do conjunto de colunas, o atributo '%.* ls' no elemento '%.*ls' não é válido. Remova o atributo.    |
+|    9531    |    16    |    Não    |    No conteúdo XML fornecido para a coluna '%.*ls' do conjunto de colunas, o valor do atributo '%.* ls' no elemento '%.*ls' não é válido.    |
+|    [9532](mssqlserver-9532-database-engine-error.md)    |    16    |    Não    |    Na operação de consulta/DML envolvendo o conjunto de colunas '%.*ls', houve falha ao converter do tipo de dados '%ls' para o tipo de dados '%ls' da coluna '%.* ls'.    |
+|    9533    |    16    |    Não    |    No XML fornecido para o conjunto de colunas '%.*ls', o elemento '%.* ls' deve residir no namespace global. Remova a declaração de namespace padrão ou o prefixo do elemento.    |
+|    9534    |    16    |    Não    |    Na operação de consulta/DML envolvendo o conjunto de colunas '%.*ls', houve falha ao converter do tipo de dados '%ls' para o tipo de dados '%ls' da coluna '%.* ls'. Consulte os Manuais Online para obter mais detalhes sobre o fornecimento de métodos de conversão XML em tipos CLR.    |
 |    9601    |    16    |    Não    |    Não é possível relacionar a %S_MSG%.*ls porque é %S_MSG.    |
 |    9605    |    10    |    Não    |    Prioridades de Conversa analisadas: %d.    |
 |    9606    |    16    |    Não    |    A prioridade de conversa com ID %d foi descartada.    |
 |    9607    |    16    |    Não    |    A prioridade de conversa com ID %d está fazendo referência ao serviço ausente com ID %d.    |
 |    9608    |    16    |    Não    |    A prioridade de conversa com ID %d está fazendo referência ao contrato de serviço ausente com ID %d.    |
 |    9609    |    16    |    Não    |    O nome %S_MSG da '%.*ls' contém mais do que o número máximo de prefixos. O máximo é %d.    |
-|    9610    |    16    |    Não    |    O serviço '%. *ls' na cláusula FROM SERVICE deve corresponder ao serviço '%.* ls' referido por %s = '%.*ls'.    |
+|    9610    |    16    |    Não    |    O serviço '%.*ls' na cláusula FROM SERVICE deve corresponder ao serviço '%.* ls' referido por %s = '%.*ls'.    |
 |    9611    |    16    |    Não    |    Não é possível localizar o usuário '%.*ls' especificado.    |
 |    9613    |    16    |    Não    |    A fila '%.*ls' não pode ser ativada porque o usuário da ativação não foi especificado.    |
 |    9614    |    16    |    Não    |    A fila '%.*ls' não pode ser ativada porque o procedimento armazenado da ativação não foi especificado ou é inválido.    |
-|    9615    |    16    |    Não    |    Falha na validação XML de uma mensagem do tipo '%. *ls' no serviço de destino. %.* ls Isso ocorreu na mensagem com ID de conversa '%.*ls', iniciador: %d e número de sequência da mensagem: %I64d.    |
-|    9616    |    16    |    Não    |    Falha na validação XML recebida de uma mensagem do tipo '%. *ls'. %.* ls Isso ocorreu na mensagem com ID de conversa '%.*ls', iniciador: %d e número de sequência da mensagem: %I64d.    |
+|    9615    |    16    |    Não    |    Falha na validação XML de uma mensagem do tipo '%.*ls' no serviço de destino. %.* ls Isso ocorreu na mensagem com ID de conversa '%.*ls', iniciador: %d e número de sequência da mensagem: %I64d.    |
+|    9616    |    16    |    Não    |    Falha na validação XML recebida de uma mensagem do tipo '%.*ls'. %.* ls Isso ocorreu na mensagem com ID de conversa '%.*ls', iniciador: %d e número de sequência da mensagem: %I64d.    |
 |    9617    |    16    |    Não    |    A fila de serviço "%.*ls" está desabilitada no momento.    |
 |    9618    |    16    |    Não    |    A mensagem não pode ser enviada porque a fila de serviço '%.*ls' associada ao diálogo está desabilitada no momento e a retenção está ligada.    |
-|    9619    |    16    |    Não    |    Falha ao criar associação de serviço remoto '%. *ls'. Já existe uma associação de serviço remoto para '%.* ls'.    |
+|    9619    |    16    |    Não    |    Falha ao criar associação de serviço remoto '%.*ls'. Já existe uma associação de serviço remoto para '%.* ls'.    |
 |    9620    |    16    |    Não    |    O procedimento armazenado da ativação '%.*ls' é inválido. Funções não são permitidas.    |
 |    9621    |    16    |    Não    |    Erro durante o processamento de uma mensagem no transporte do Service Broker e do Espelhamento de Banco de Dados: erro: %i, estado: %i.    |
 |    9622    |    16    |    Não    |    O contexto de provedor de criptografia não foi inicializado.    |
@@ -4492,7 +4492,7 @@ ORDER BY message_id
 |    9749    |    10    |    Não    |    Fila de destino ocupada; mensagens enfileiradas para entrega.    |
 |    9750    |    10    |    Não    |    Nenhuma rota corresponde ao nome de serviço de destino relativo a esta conversa. Crie uma rota para o nome de serviço de destino para que as mensagens desta conversa sejam entregues.    |
 |    9751    |    10    |    Não    |    Falha de autenticação com erro: '%.*ls'.    |
-|    9752    |    10    |    Não    |    A conexão %S_MSG foi recusada. A conta de usuário do servidor remoto não tem permissão para fazer logon neste SQL Server: Conta de usuário: '%. *ls', Endereço IP: '%.* hs'.    |
+|    9752    |    10    |    Não    |    A conexão %S_MSG foi recusada. A conta de usuário do servidor remoto não tem permissão para fazer logon neste SQL Server: Conta de usuário: '%.*ls', Endereço IP: '%.* hs'.    |
 |    9753    |    10    |    Não    |    Service broker de destino inacessível.    |
 |    9754    |    10    |    Não    |    Falha na tentativa de conexão com erro: '%.*ls'.    |
 |    9755    |    10    |    Não    |    Erro ao receber dados: '%.*ls'.    |
@@ -4543,11 +4543,11 @@ ORDER BY message_id
 |    9803    |    16    |    Não    |    Dados inválidos para tipo "%ls".    |
 |    9804    |    16    |    Não    |    Coluna ou parâmetro #%d: Precisão de segundos fracionária inválida %d especificada para o tipo de dados %ls. A precisão máxima de fração de segundo é %d.    |
 |    9805    |    10    |    Não    |    Aviso: a conversão de %ls em %ls causou uma perda de informações.    |
-|    9806    |    16    |    Não    |    A função de data %. *ls não oferece suporte à datepart %.* ls.    |
+|    9806    |    16    |    Não    |    A função de data %.*ls não oferece suporte à datepart %.* ls.    |
 |    9807    |    16    |    Não    |    A cadeia de caracteres de entrada não segue o estilo %d. Altere essa cadeia de caracteres ou use um estilo diferente.    |
 |    9808    |    16    |    Não    |    Não há suporte para o formato de data YDM desta sessão ao converter esse formato de cadeia de caracteres em date, time, datetime2 ou datetimeoffset. Altere o formato de data da sessão ou forneça um estilo para a conversão explícita.    |
 |    9809    |    16    |    Não    |    O estilo %d não é suportado para conversões de %s em %s.    |
-|    9810    |    16    |    Não    |    A função de data %. *ls não oferece suporte à datepart %.* ls para o tipo de dados %s.    |
+|    9810    |    16    |    Não    |    A função de data %.*ls não oferece suporte à datepart %.* ls para o tipo de dados %s.    |
 |    9811    |    16    |    Não    |    Não foi possível recuperar as informações de fuso horário do sistema.    |
 |    9812    |    16    |    Não    |    O fuso horário fornecido para a função interna %.*ls é inválido.    |
 |    9813    |    16    |    Não    |    O fuso horário fornecido para a função interna %.*ls faria com que datetimeoffset estourasse o intervalo de datas válido na hora UTC ou local.    |
@@ -4634,7 +4634,7 @@ ORDER BY message_id
 |    9983    |    16    |    Não    |    O valor '%ls' para o componente de texto completo '%ls' ultrapassa o máximo permitido (%d caracteres). Reduza o tamanho do valor.    |
 |    9984    |    10    |    Não    |    Informativo: população de %ls de texto completo em pausa para a tabela ou exibição indexada '%ls' (ID da tabela ou exibição indexada '%d', ID do banco de dados '%d').    |
 |    9998    |    16    |    Não    |    Não é possível adicionar a coluna '%.*ls' a um índice de texto completo. Esses índices são limitados a 1024 colunas. Quando você criar um índice de texto completo, adicione menos colunas.    |
-|    9999    |    16    |    Não    |    A coluna '%. *ls' da tabela '%.* ls' não pode ser usada para pesquisa de texto completo porque é um conjunto de colunas esparsas.    |
+|    9999    |    16    |    Não    |    A coluna '%.*ls' da tabela '%.* ls' não pode ser usada para pesquisa de texto completo porque é um conjunto de colunas esparsas.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 ## <a name="errors-10000-to-10999"></a>Erros de 10.000 a 10.999
@@ -4689,16 +4689,16 @@ ORDER BY message_id
 |    10087    |    16    |    Não    |    A tabela foi criada sobre um fluxo de dados ativo e a posição não pode ser reiniciada.    |
 |    10088    |    16    |    Não    |    O provedor não liberou algumas das linhas existentes.    |
 |    10100    |    16    |    Não    |    A ordem das colunas não foi especificada no objeto que criou o conjunto de linhas. O provedor precisou executar o comando novamente para reposicionar a próxima posição de busca na sua posição inicial e a ordem das colunas foi alterada.    |
-|    10101    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls" porque contém a palavra-chave DISTINCT. Considere remover DISTINCT ou não indexar a exibição. Como alternativa, considere substituir DISTINCT por GROUP BY ou COUNT_BIG(* ) para simular DISTINCT no agrupamento de colunas.    |
+|    10101    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque contém a palavra-chave DISTINCT. Considere remover DISTINCT ou não indexar a exibição. Como alternativa, considere substituir DISTINCT por GROUP BY ou COUNT_BIG(* ) para simular DISTINCT no agrupamento de colunas.    |
 |    10102    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela contém a palavra-chave TOP. Considere remover TOP ou não indexar a exibição.    |
 |    10103    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela contém a cláusula TABLESAMPLE. Considere remover TABLESAMPLE ou não indexar a exibição.    |
 |    10104    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" pois ela usa OPENROWSET, OPENQUERY ou OPENDATASOURCE. Considere não indexar a exibição ou eliminar OPENQUERY, OPENROWSET e OPENDATASOURCE.    |
 |    10105    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" pois ela faz referência a uma tabela que usa a função de texto completo CONTAINSTABLE ou FREETEXTTABLE. Considere remover o uso dessas funções ou não indexar a exibição.    |
 |    10106    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" pois ela contém o provedor de conjunto de linhas OPENXML. Considere remover OPENXML ou não indexar a exibição.    |
 |    10107    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" pois ela faz referência a um provedor de conjunto de linhas do sistema interno. Considere não indexar essa exibição.    |
-|    10108    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls" porque usa uma variável de tabela "%.* ls". Considere não indexar essa exibição ou remover a referência à variável de tabela.    |
+|    10108    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque usa uma variável de tabela "%.* ls". Considere não indexar essa exibição ou remover a referência à variável de tabela.    |
 |    10109    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" pois ela faz referência a uma tabela interna do SQL Server.    |
-|    10110    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls" pois faz referência à tabela derivada "%.* ls" (definida pela instrução SELECT na cláusula FROM). Considere remover a referência à tabela derivada ou não indexar a exibição.    |
+|    10110    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" pois faz referência à tabela derivada "%.* ls" (definida pela instrução SELECT na cláusula FROM). Considere remover a referência à tabela derivada ou não indexar a exibição.    |
 |    10111    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela contém OUTER APPLY. Considere não indexar a exibição ou remover OUTER APPLY.    |
 |    10112    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" pois ela contém uma junção que usa uma sintaxe de saída ODBC padrão. Considere usar uma sintaxe de junção ANSI.    |
 |    10113    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois ela contém uma junção INNER que especifica uma dica de junção. Considere remover a dica de junção.    |
@@ -4706,38 +4706,38 @@ ORDER BY message_id
 |    10115    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela usa o operador PIVOT. Considere não indexar essa exibição.    |
 |    10116    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela usa o operador UNPIVOT. Considere não indexar essa exibição.    |
 |    10117    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls', pois ela contém um ou mais operadores UNION, INTERSECT ou EXCEPT. Considere criar uma exibição indexada separada para cada consulta que for uma entrada dos operadores UNION, INTERSECT ou EXCEPT da exibição original.    |
-|    10118    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls", pois a exibição usa o operador "* " para selecionar colunas. Considere fazer referência às colunas por nome.    |
+|    10118    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois a exibição usa o operador "* " para selecionar colunas. Considere fazer referência às colunas por nome.    |
 |    10119    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela contém GROUP BY ALL. Considere usar GROUP BY.    |
 |    10121    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois ela contém um operador CUBE, ROLLUP ou GROUPING SETS. Considere não indexar essa exibição.    |
 |    10122    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela contém a cláusula HAVING. Considere remover a cláusula HAVING.    |
 |    10123    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela contém a cláusula COMPUTE. Considere não indexar essa exibição ou usar GROUP BY ou exibição de agregação para substituir o cálculo COMPUTE dos resultados da agregação.    |
 |    10124    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" pois contém uma junção que usa sintaxe de junção Transact-SQL preterida ( *= e =* ). Considere usar um operador = (junção não externa).    |
 |    10125    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" pois ela faz referência a uma coluna interna do SQL Server.    |
-|    10126    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls" porque usa agregação "%.* ls". Considere eliminar a agregação, não indexar a exibição ou usar agregações alternativas. Por exemplo, para AVG substitua SUM e COUNT_BIG ou, para COUNT, substitua COUNT_BIG.    |
-|    10127    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls" porque usa agregação "%.* ls" com a palavra-chave DISTINCT. Considere não indexar essa exibição ou eliminar DISTINCT. Considere usar uma exibição GROUP BY ou COUNT_BIG(*) para simular DISTINCT no agrupamento de colunas.    |
+|    10126    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque usa agregação "%.* ls". Considere eliminar a agregação, não indexar a exibição ou usar agregações alternativas. Por exemplo, para AVG substitua SUM e COUNT_BIG ou, para COUNT, substitua COUNT_BIG.    |
+|    10127    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque usa agregação "%.* ls" com a palavra-chave DISTINCT. Considere não indexar essa exibição ou eliminar DISTINCT. Considere usar uma exibição GROUP BY ou COUNT_BIG(*) para simular DISTINCT no agrupamento de colunas.    |
 |    10128    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois ela contém uma ou mais subconsultas. Considere alterar a exibição para usar somente junções em vez de subconsultas. Opcionalmente, considere não indexar essa exibição.    |
 |    10129    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois ela usa um predicado CONTAINS ou FREETEXT de texto completo. Considere eliminar CONTAINS ou FREETEXT ou não indexar a exibição.    |
-|    10130    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls", pois faz referência à função com valor de tabela em linha ou de várias instruções "%.* ls". Considere expandir a definição da função manualmente na definição da exibição ou não indexar a exibição.    |
-|    10131    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls", pois usa a função com valor de tabela CLR (Common Language Runtime) não determinística "%.* ls". Considere não indexar a exibição ou alterá-la para não usar essa função.    |
-|    10132    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls", pois faz referência à função com valor de tabela CLR (Common Language Runtime) imprecisa "%.* ls". Considere não indexar a exibição.    |
-|    10133    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls", pois faz referência à função com valor de tabela CLR (Common Language Runtime) "%.* ls". Considere remover a referência à função ou não indexar a exibição.    |
-|    10134    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls", pois a função "%.* ls" mencionada pela exibição executa acesso a dados do usuário ou do sistema.    |
+|    10130    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois faz referência à função com valor de tabela em linha ou de várias instruções "%.* ls". Considere expandir a definição da função manualmente na definição da exibição ou não indexar a exibição.    |
+|    10131    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois usa a função com valor de tabela CLR (Common Language Runtime) não determinística "%.* ls". Considere não indexar a exibição ou alterá-la para não usar essa função.    |
+|    10132    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois faz referência à função com valor de tabela CLR (Common Language Runtime) imprecisa "%.* ls". Considere não indexar a exibição.    |
+|    10133    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois faz referência à função com valor de tabela CLR (Common Language Runtime) "%.* ls". Considere remover a referência à função ou não indexar a exibição.    |
+|    10134    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois a função "%.* ls" mencionada pela exibição executa acesso a dados do usuário ou do sistema.    |
 |    10136    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois ela contém mais de um APPLY. Considere não indexar a exibição ou usar somente um APPLY.    |
 |    10137    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela usa agregação COUNT. Use COUNT_BIG em seu lugar.    |
-|    10138    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%. *ls", pois faz referência à expressão de tabela comum "%.* ls". Exibições que fazem referência a expressões de tabela comum não podem ser indexadas. Considere não indexar a exibição ou remover a expressão de tabela comum da definição da exibição.    |
-|    10139    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%. *ls', pois sua lista de seleção não inclui um uso adequado de COUNT_BIG. Considere adicionar COUNT_BIG(* ) à lista de seleção.    |
+|    10138    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls", pois faz referência à expressão de tabela comum "%.* ls". Exibições que fazem referência a expressões de tabela comum não podem ser indexadas. Considere não indexar a exibição ou remover a expressão de tabela comum da definição da exibição.    |
+|    10139    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls', pois sua lista de seleção não inclui um uso adequado de COUNT_BIG. Considere adicionar COUNT_BIG(* ) à lista de seleção.    |
 |    10140    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls', pois ela usa uma conversão implícita de cadeia de caracteres para datetime ou smalldatetime. Use um CONVERT explícito com um valor de estilo determinístico.    |
 |    10141    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls', pois ela contém uma dica de tabela. Considere remover a dica.    |
-|    10142    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%. *ls', pois faz referência à rotina CLR (função ou método) '%.* ls' fora das colunas não chave da lista SELECT. Recrie ou altere a exibição para que não faça referência às rotinas CLR, exceto em colunas não chave da lista SELECT, e crie o índice.    |
+|    10142    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls', pois faz referência à rotina CLR (função ou método) '%.* ls' fora das colunas não chave da lista SELECT. Recrie ou altere a exibição para que não faça referência às rotinas CLR, exceto em colunas não chave da lista SELECT, e crie o índice.    |
 |    10143    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela contém APPLY. Considere a possibilidade de não indexar a exibição ou de remover APPLY.    |
 |    10144    |    16    |    Não    |    Não é possível criar %S_MSG na exibição "%.*ls" porque ela contém uma função de janela de agregação ou de classificação. Remova a função da definição da exibição ou, como alternativa, não indexe a exibição.    |
 |    10145    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls' porque ele usa a função CHANGETABLE.    |
 |    10211    |    16    |    Não    |    Não é possível criar %S_MSG na exibição '%.*ls', pois ela faz referência a um conjunto de colunas esparsas. As exibições que contêm um conjunto de colunas esparsas não podem ser indexadas. Considere a possibilidade de remover o conjunto de colunas esparsas da exibição ou não indexá-la.    |
 |    10227    |    16    |    Não    |    Não é possível chamar modificador em um valor nulo de tipo CLR.    |
-|    10240    |    16    |    Não    |    O campo "%. *ls" do tipo "%.* ls.%. *ls" não pode ser atualizado pois o campo é "%.* ls".    |
+|    10240    |    16    |    Não    |    O campo "%.*ls" do tipo "%.* ls.%.*ls" não pode ser atualizado pois o campo é "%.* ls".    |
 |    10300    |    16    |    Não    |    Não foi possível encontrar UdtExtensions.dll. Verifique a instalação.    |
-|    10301    |    16    |    Não    |    O assembly '%. *ls' faz referência ao assembly '%.* ls', que não está presente no banco de dados atual. O SQL Server tentou localizar e carregar automaticamente o assembly mencionado do mesmo local de onde veio o assembly que fez referência, mas essa operação falhou (razão: %S_MSG). Carregue o assembly mencionado para o banco de dados atual e tente a solicitação novamente.    |
-|    10302    |    16    |    Não    |    O assembly '%. *ls' faz referência ao assembly '%.* ls', que não está presente no banco de dados atual. O SQL Server tentou localizar e carregar automaticamente o assembly mencionado do mesmo local de onde veio o assembly que fez referência, mas essa operação falhou (razão: %s). Carregue o assembly mencionado para o banco de dados atual e tente a solicitação novamente.    |
+|    10301    |    16    |    Não    |    O assembly '%.*ls' faz referência ao assembly '%.* ls', que não está presente no banco de dados atual. O SQL Server tentou localizar e carregar automaticamente o assembly mencionado do mesmo local de onde veio o assembly que fez referência, mas essa operação falhou (razão: %S_MSG). Carregue o assembly mencionado para o banco de dados atual e tente a solicitação novamente.    |
+|    10302    |    16    |    Não    |    O assembly '%.*ls' faz referência ao assembly '%.* ls', que não está presente no banco de dados atual. O SQL Server tentou localizar e carregar automaticamente o assembly mencionado do mesmo local de onde veio o assembly que fez referência, mas essa operação falhou (razão: %s). Carregue o assembly mencionado para o banco de dados atual e tente a solicitação novamente.    |
 |    10303    |    16    |    Sim    |    Não foi possível obter o caminho para o SQL Server: '%ls'.    |
 |    10304    |    16    |    Não    |    Não foi possível criar o gerenciador AppDomain: '%.*ls'.    |
 |    10305    |    16    |    Não    |    Falha ao entrar no CLR (Common Language Runtime) com HRESULT 0x%x. Isso pode ser devido a condições de recursos insuficientes.    |
@@ -4753,33 +4753,33 @@ ORDER BY message_id
 |    10316    |    16    |    Não    |    Ocorreu um erro no Microsoft .NET Framework ao tentar carregar a id de assembly %d. Talvez o servidor esteja ficando sem recursos ou o assembly não seja confiável com PERMISSION_SET = EXTERNAL_ACCESS ou UNSAFE. Execute a consulta novamente ou verifique a documentação para saber como solucionar questões de confiança de assemblies. Para obter mais informações sobre esse erro: %.*ls    |
 |    10317    |    16    |    Não    |    O domínio de aplicativo com a ID de versão especificada (%d) foi descarregado devido à pressão de memória e não foi encontrado.    |
 |    10318    |    16    |    Não    |    Erro ao tentar obter informações de versão para o arquivo '%s'.    |
-|    10319    |    16    |    Não    |    Falha em '%. *ls' porque o parâmetro %d do método '%.* ls' do tipo '%.*ls' está anotado com atributo System.ParamArrayAttribute sem-suporte.    |
-|    10320    |    16    |    Não    |    Falha na chamada do método UserDefinedType porque o parâmetro %d do método '%. *ls' do tipo '%.* ls' está anotado com atributo System.ParamArrayAttribute incompatível.    |
-|    10321    |    16    |    Não    |    Nome do método '%. *ls' é inválido para '%.* ls'.    |
+|    10319    |    16    |    Não    |    Falha em '%.*ls' porque o parâmetro %d do método '%.* ls' do tipo '%.*ls' está anotado com atributo System.ParamArrayAttribute sem-suporte.    |
+|    10320    |    16    |    Não    |    Falha na chamada do método UserDefinedType porque o parâmetro %d do método '%.*ls' do tipo '%.* ls' está anotado com atributo System.ParamArrayAttribute incompatível.    |
+|    10321    |    16    |    Não    |    Nome do método '%.*ls' é inválido para '%.* ls'.    |
 |    10322    |    16    |    Não    |    Nome do método '%.*ls' é inválido para chamada de método UserDefinedType.    |
-|    10323    |    16    |    Sim    |    Tipo %. *ls não encontrado no banco de dados %.* ls    |
+|    10323    |    16    |    Sim    |    Tipo %.*ls não encontrado no banco de dados %.* ls    |
 |    10324    |    16    |    Não    |    Código inválido de usuário foi identificado pelo Managed Debug Assistant do .Net Framework %.*ls    |
 |    10325    |    16    |    Sim    |    A opção WITH ENCRYPTION de CREATE TRIGGER só é aplicável a gatilhos T-SQL e não a gatilhos CLR.    |
 |    10326    |    16    |    Sim    |    O servidor está sendo desligado devido a um estouro de pilha em código de usuário não gerenciado.    |
-|    10327    |    14    |    Não    |    Duas versões de assembly '%. *ls' não podem coexistir no banco de dados '%.* ls'. Mantenha uma versão e descarte a outra.    |
-|    10328    |    16    |    Não    |    Falha em %ls ASSEMBLY do assembly '%. *ls' porque o assembly '%.* ls' não está autorizado para PERMISSION_SET = %ls. O assembly é autorizado quando uma das seguintes condições é verdadeira: o proprietário do banco de dados (DBO) possui permissão %ls e a propriedade TRUSTWORTHY está ativada no banco de dados; o assembly é assinado com um certificado ou uma chave assimétrica que tem um logon correspondente com a permissão %ls.    |
+|    10327    |    14    |    Não    |    Duas versões de assembly '%.*ls' não podem coexistir no banco de dados '%.* ls'. Mantenha uma versão e descarte a outra.    |
+|    10328    |    16    |    Não    |    Falha em %ls ASSEMBLY do assembly '%.*ls' porque o assembly '%.* ls' não está autorizado para PERMISSION_SET = %ls. O assembly é autorizado quando uma das seguintes condições é verdadeira: o proprietário do banco de dados (DBO) possui permissão %ls e a propriedade TRUSTWORTHY está ativada no banco de dados; o assembly é assinado com um certificado ou uma chave assimétrica que tem um logon correspondente com a permissão %ls.    |
 |    10329    |    16    |    Não    |    Não há pilha suficiente para criar appdomain '%.*ls'.    |
 |    10330    |    16    |    Não    |    A execução do .NET Framework foi cancelada. %.*ls    |
 |    10331    |    16    |    Não    |    Falha em ALTER ASSEMBLY porque o layout de serialização do tipo '%s' seria alterado como resultado de uma alteração no tipo '%s' no assembly atualizado. Os tipos persistentes não podem alterar o layout de serialização.    |
 |    10501    |    16    |    Não    |    O tipo '%ls' no assembly '%ls' deriva de um tipo genérico que não tem suporte para um tipo CLR.    |
-|    [10502](mssqlserver-10502-database-engine-error.md)    |    16    |    Não    |    Não é possível criar o guia de plano '%. *ls' porque o tipo '%.* ls' fornecido não é permitido.    |
-|    10503    |    16    |    Não    |    Não é possível criar o guia de plano '%. *ls' porque a instrução especificada por \@stmt e \@module_or_batch, ou por \@plan_handle e \@statement_start_offset, corresponde ao guia de plano existente '%.* ls' no banco de dados. Descarte o guia de plano existente antes de criar o novo.    |
+|    [10502](mssqlserver-10502-database-engine-error.md)    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o tipo '%.* ls' fornecido não é permitido.    |
+|    10503    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por \@stmt e \@module_or_batch, ou por \@plan_handle e \@statement_start_offset, corresponde ao guia de plano existente '%.* ls' no banco de dados. Descarte o guia de plano existente antes de criar o novo.    |
 |    10504    |    16    |    Não    |    A operação '%.*ls' não é permitida.    |
 |    10505    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o parâmetro \@hints está incorreto. Use N'OPTION ( <query_hint> [ ,...n ] )'.    |
-|    10506    |    16    |    Não    |    Não é possível criar o guia de plano '%. *ls' porque o valor '%.* ls' fornecido para \@module_or_batch não é um nome legal com duas partes. Use 'schema_name.object_name'.    |
+|    10506    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o valor '%.* ls' fornecido para \@module_or_batch não é um nome legal com duas partes. Use 'schema_name.object_name'.    |
 |    [10507](mssqlserver-10507-database-engine-error.md)    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o parâmetro \@stmt tem mais de uma instrução.    |
 |    10508    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por \@stmt e \@module_or_batch, ou por \@plan_handle e \@statement_start_offset, não corresponde a nenhuma instrução no módulo ou lote especificado. Modifique os valores para que correspondam a uma instrução no módulo ou lote.    |
 |    [10509](mssqlserver-10509-database-engine-error.md)    |    16    |    Não    |    Não é possível '%ls' no guia de plano '%.*ls' porque ele não existe ou não tem permissão. Verifique o nome do guia de plano e o banco de dados da sessão atual e se você tem a permissão necessária.    |
 |    10510    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por \@stmt ou \@statement_start_offset contém um erro de sintaxe ou é ilegível para uso em um guia de plano. Forneça uma única instrução Transact-SQL válida ou uma posição inicial válida da instrução no lote. Para obter uma posição inicial válida, consulte a coluna 'statement_start_offset' na função de gerenciamento dinâmico sys.dm_exec_query_stats.    |
 |    10512    |    16    |    Não    |    Não é possível criar um guia de plano '%.*ls' porque já existe outro com esse nome no banco de dados. Use um nome exclusivo.    |
 |    10513    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o objeto '\@module_or_batch' está criptografado. Considere ajustar a consulta usando outras técnicas, como índices e estatísticas.    |
-|    10515    |    16    |    Não    |    Não é possível %S_MSG %S_MSG '%. *ls' porque ele é mencionado pelo guia de plano '%.* ls'. Use sp_control_plan_guide para descartar primeiro o guia de plano. Grave a definição do guia de plano para uso futuro, se necessário.    |
-|    10516    |    16    |    Não    |    Não é possível criar o guia de plano '%. *ls' porque o módulo '%.* ls' não existe ou você não tem a permissão necessária.    |
+|    10515    |    16    |    Não    |    Não é possível %S_MSG %S_MSG '%.*ls' porque ele é mencionado pelo guia de plano '%.* ls'. Use sp_control_plan_guide para descartar primeiro o guia de plano. Grave a definição do guia de plano para uso futuro, se necessário.    |
+|    10516    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o módulo '%.* ls' não existe ou você não tem a permissão necessária.    |
 |    10517    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque \@module_or_batch não pode ser compilado.    |
 |    10518    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque você não tem a permissão necessária. Altere a permissão necessária do banco de dados.    |
 |    [10519](mssqlserver-10519-database-engine-error.md)    |    16    |    Não    |    Não é possível executar sp_control_plan_guide por causa das permissões insuficientes para controlar o guia de plano '%.*ls'. Altere a permissão no objeto mencionado pelo guia de plano ou altere a permissão necessária do banco de dados.    |
@@ -4790,10 +4790,10 @@ ORDER BY message_id
 |    10524    |    16    |    Não    |    Não é possível gerar o modelo de consulta porque \@querytext não contém uma consulta única válida.    |
 |    10525    |    10    |    Não    |    Não é possível parametrizar \@querytext.    |
 |    10526    |    16    |    Não    |    O guia de plano '%.*ls' correspondeu à instrução após ser parametrizado automaticamente por parametrização FORCED ou SIMPLE, mas a dica RECOMPILE que ele contém foi ignorada. RECOMPILE não é suportado em instruções parametrizadas automaticamente. Considere descartar este guia de plano ou remover RECOMPILE dele.    |
-|    10527    |    16    |    Não    |    Não é possível descartar %S_MSG '%. *ls' porque seu gatilho '%.* ls' é referenciado pelo guia de plano '%.*ls'. Use sp_control_plan_guide para descartar primeiro o guia de plano. Grave a definição do guia de plano para uso futuro, se necessário.    |
-|    10528    |    16    |    Não    |    Não é possível criar o guia de plano '%. *ls' porque o objeto '%.* ls' é temporário.    |
+|    10527    |    16    |    Não    |    Não é possível descartar %S_MSG '%.*ls' porque seu gatilho '%.* ls' é referenciado pelo guia de plano '%.*ls'. Use sp_control_plan_guide para descartar primeiro o guia de plano. Grave a definição do guia de plano para uso futuro, se necessário.    |
+|    10528    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o objeto '%.* ls' é temporário.    |
 |    10529    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque seu nome é inválido. O nome do guia de plano não pode começar com um caractere '#'.    |
-|    10530    |    16    |    Não    |    Não é possível criar o guia de plano '%. *ls' porque já existe um guia de plano '%.* ls' de \@type 'template' em \@stmt.    |
+|    10530    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque já existe um guia de plano '%.* ls' de \@type 'template' em \@stmt.    |
 |    [10531](mssqlserver-10531-database-engine-error.md)    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por \@statement_start_offset não corresponde a nenhuma instrução do módulo ou lote especificado. Considere a possibilidade de modificar \@statement_start_offset para que corresponda a uma instrução do módulo ou lote.    |
 |    [10532](mssqlserver-10532-database-engine-error.md)    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' do cache porque o usuário não tem as permissões adequadas. Conceda a permissão VIEW SERVER STATE para o usuário que está criando o guia de plano.    |
 |    [10533](mssqlserver-10533-database-engine-error.md)    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o lote ou módulo especificado por \@plan_handle não contém uma instrução que seja qualificada para um guia de plano. Especifique um valor diferente para \@plan_handle.    |
@@ -4801,28 +4801,28 @@ ORDER BY message_id
 |    [10535](mssqlserver-10535-database-engine-error.md)    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o valor especificado para \@params é inválido. Especifique o valor no formato <parameter_name> <parameter_type> ou especifique NULL.    |
 |    [10536](mssqlserver-10536-database-engine-error.md)    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque não foi encontrado no cache de planos um plano que corresponda ao identificador de plano especificado. Especifique um identificador de plano em cache. Para obter uma lista de identificadores de plano em cache, consulte a exibição de gerenciamento dinâmico sys.dm_exec_query_stats.    |
 |    [10537](mssqlserver-10537-database-engine-error.md)    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' porque o lote ou módulo correspondente ao \@plan_handle especificado contém mais de 1000 instruções qualificadas. Crie um guia de plano para cada instrução do lote ou módulo especificando um valor de statement_start_offset para cada instrução.    |
-|    [10538](mssqlserver-10538-database-engine-error.md)    |    16    |    Não    |    Não é possível habilitar o guia de plano '%. *ls' porque o guia de plano habilitado '%.* ls' contém o mesmo escopo e valor de deslocamento inicial da instrução. Desabilite o guia de plano existente antes de habilitar o guia de plano especificado.    |
+|    [10538](mssqlserver-10538-database-engine-error.md)    |    16    |    Não    |    Não é possível habilitar o guia de plano '%.*ls' porque o guia de plano habilitado '%.* ls' contém o mesmo escopo e valor de deslocamento inicial da instrução. Desabilite o guia de plano existente antes de habilitar o guia de plano especificado.    |
 |    [10539](mssqlserver-10539-database-engine-error.md)    |    16    |    Não    |    Não foi possível encontrar o guia de plano porque a ID do guia de plano especificada é NULL ou inválida ou você não tem permissão no objeto referenciado pelo guia de plano. Verifique se a ID do guia de plano é válida, se a sessão atual está definida com o contexto de banco de dados correto e se você tem a permissão ALTER DATABASE ou ALTER no objeto referenciado pelo guia de plano.    |
 |    10601    |    16    |    Não    |    Não é possível criar o guia de plano '%.*ls' a partir do cache porque um plano de consulta não está disponível para a instrução com deslocamento inicial %d. Esse problema poderá ocorrer se a instrução depender de objetos do banco de dados que ainda não foram criados. Verifique se todos os objetos de banco de dados necessários existem e execute a instrução antes de criar o guia de plano.    |
 |    10602    |    16    |    Não    |    Não é possível especificar colunas incluídas para um índice clusterizado.    |
 |    10603    |    16    |    Não    |    Não é permitida a combinação de sintaxe antiga e nova na instrução CREATE/ALTER/DROP INDEX.    |
-|    10604    |    16    |    Não    |    Não é possível recriar os índices clusterizados '%. *ls' na exibição '%.* ls' porque a exibição depende da tabela base '%. *ls' cujo índice clusterizado '%.* ls' está desabilitado.    |
+|    10604    |    16    |    Não    |    Não é possível recriar os índices clusterizados '%.*ls' na exibição '%.* ls' porque a exibição depende da tabela base '%.*ls' cujo índice clusterizado '%.* ls' está desabilitado.    |
 |    10605    |    16    |    Não    |    Não é possível converter uma estatística em um índice usando a opção de índice DROP_EXISTING se a opção de índice ONLINE também for especificada.    |
-|    10606    |    16    |    Não    |    Não é possível desabilitar o índice de chave primária "%. *ls" da tabela "%.* ls" porque a tabela foi publicada para replicação.    |
-|    10607    |    16    |    Não    |    Não é possível desabilitar o índice clusterizado "%. *ls" da exibição "%.* ls" porque a exibição indexada foi publicada para replicação.    |
-|    10608    |    16    |    Não    |    O índice clusterizado '%. *ls' na tabela '%.* ls' não pode ser desabilitado porque o controle de alterações está habilitado na tabela. Desabilite esse controle na tabela antes de desabilitar o índice clusterizado.    |
-|    10609    |    16    |    Não    |    Não é possível desabilitar o índice '%. *ls' da tabela '%.* ls' porque o controle de alterações está habilitado na tabela. Esse controle requer uma restrição de chave primária na tabela, e a desabilitação do índice descartará a restrição. Desabilite o controle de alterações da tabela antes de desabilitar o índice.    |
-|    10610    |    16    |    Não    |    Não é possível criar %S_MSG '%. *ls' com filtro na tabela '%.* ls' porque a coluna '%.*ls' na expressão de filtro é uma coluna computada. Reescreva a expressão do filtro de forma que ela não inclua essa coluna.    |
-|    10611    |    16    |    Não    |    Não é possível criar o índice filtrado '%. *ls' no objeto '%.* ls' porque ele não é uma tabela de usuário. Somente tabelas de usuário oferecem suporte para índices filtrados. Se estiver tentando criar um índice filtrado em uma exibição, considere a possibilidade de criar uma exibição indexada com a expressão de filtro incorporada na definição de exibição.    |
-|    10612    |    16    |    Não    |    Não é possível criar %S_MSG '%. *ls' com filtro na tabela '%.* ls' porque a coluna '%. *ls' na expressão de filtro é comparada a uma constante de precedência de tipo de dados mais alta ou de uma ordenação diferente. Não há compatibilidade com a conversão de uma coluna no tipo de dados de uma constante para %S_MSG filtrado. Para resolver esse erro, converta explicitamente a constante para o tipo de dados e a ordenação iguais aos da coluna '%.* ls'.    |
-|    10617    |    16    |    Não    |    Não é possível criar %S_MSG '%. *ls' com filtro na tabela '%.* ls' porque a coluna '%.*ls' na expressão de filtro é comparada a uma constante que não pode ser convertida no tipo de dados da coluna. Reescreva a expressão de filtro de forma que essa comparação seja incluída.    |
+|    10606    |    16    |    Não    |    Não é possível desabilitar o índice de chave primária "%.*ls" da tabela "%.* ls" porque a tabela foi publicada para replicação.    |
+|    10607    |    16    |    Não    |    Não é possível desabilitar o índice clusterizado "%.*ls" da exibição "%.* ls" porque a exibição indexada foi publicada para replicação.    |
+|    10608    |    16    |    Não    |    O índice clusterizado '%.*ls' na tabela '%.* ls' não pode ser desabilitado porque o controle de alterações está habilitado na tabela. Desabilite esse controle na tabela antes de desabilitar o índice clusterizado.    |
+|    10609    |    16    |    Não    |    Não é possível desabilitar o índice '%.*ls' da tabela '%.* ls' porque o controle de alterações está habilitado na tabela. Esse controle requer uma restrição de chave primária na tabela, e a desabilitação do índice descartará a restrição. Desabilite o controle de alterações da tabela antes de desabilitar o índice.    |
+|    10610    |    16    |    Não    |    Não é possível criar %S_MSG '%.*ls' com filtro na tabela '%.* ls' porque a coluna '%.*ls' na expressão de filtro é uma coluna computada. Reescreva a expressão do filtro de forma que ela não inclua essa coluna.    |
+|    10611    |    16    |    Não    |    Não é possível criar o índice filtrado '%.*ls' no objeto '%.* ls' porque ele não é uma tabela de usuário. Somente tabelas de usuário oferecem suporte para índices filtrados. Se estiver tentando criar um índice filtrado em uma exibição, considere a possibilidade de criar uma exibição indexada com a expressão de filtro incorporada na definição de exibição.    |
+|    10612    |    16    |    Não    |    Não é possível criar %S_MSG '%.*ls' com filtro na tabela '%.* ls' porque a coluna '%.*ls' na expressão de filtro é comparada a uma constante de precedência de tipo de dados mais alta ou de uma ordenação diferente. Não há compatibilidade com a conversão de uma coluna no tipo de dados de uma constante para %S_MSG filtrado. Para resolver esse erro, converta explicitamente a constante para o tipo de dados e a ordenação iguais aos da coluna '%.* ls'.    |
+|    10617    |    16    |    Não    |    Não é possível criar %S_MSG '%.*ls' com filtro na tabela '%.* ls' porque a coluna '%.*ls' na expressão de filtro é comparada a uma constante que não pode ser convertida no tipo de dados da coluna. Reescreva a expressão de filtro de forma que essa comparação seja incluída.    |
 |    10618    |    16    |    Não    |    O índice '%.*ls' não pôde ser criado ou recriado. O tamanho da chave desse índice (%d bytes) excede o tamanho máximo permitido de '%d' bytes no uso do formato de armazenamento vardecimal.    |
-|    10619    |    16    |    Não    |    Não é possível criar o índice filtrado %S_MSG '%. *ls' na tabela '%.* ls' porque a instrução define a opção IGNORE_DUP_KEY como ON. Reescreva a instrução de forma que a opção IGNORE_DUP_KEY não seja usada.    |
-|    10620    |    16    |    Não    |    Não é possível criar %S_MSG '%. *ls' com filtro na tabela '%.* ls' porque a coluna '%.*ls' na expressão de filtro é de um tipo de dados CLR. Reescreva a expressão do filtro de forma que ela não inclua essa coluna.    |
-|    10621    |    16    |    Não    |    Não é possível criar %S_MSG '%. *ls' com filtro na tabela '%.* ls' porque a expressão de filtro contém uma comparação com um valor NULL literal. Reescreva a comparação para usar o operador de comparação IS [NOT] NULL para testar valores NULL.    |
-|    10622    |    16    |    Não    |    Não foi possível criar o índice '%. *ls' na tabela '%.* ls' porque a coluna '%.*ls' na expressão de filtro do índice é um conjunto de colunas.    |
+|    10619    |    16    |    Não    |    Não é possível criar o índice filtrado %S_MSG '%.*ls' na tabela '%.* ls' porque a instrução define a opção IGNORE_DUP_KEY como ON. Reescreva a instrução de forma que a opção IGNORE_DUP_KEY não seja usada.    |
+|    10620    |    16    |    Não    |    Não é possível criar %S_MSG '%.*ls' com filtro na tabela '%.* ls' porque a coluna '%.*ls' na expressão de filtro é de um tipo de dados CLR. Reescreva a expressão do filtro de forma que ela não inclua essa coluna.    |
+|    10621    |    16    |    Não    |    Não é possível criar %S_MSG '%.*ls' com filtro na tabela '%.* ls' porque a expressão de filtro contém uma comparação com um valor NULL literal. Reescreva a comparação para usar o operador de comparação IS [NOT] NULL para testar valores NULL.    |
+|    10622    |    16    |    Não    |    Não foi possível criar o índice '%.*ls' na tabela '%.* ls' porque a coluna '%.*ls' na expressão de filtro do índice é um conjunto de colunas.    |
 |    10623    |    16    |    Não    |    O índice '%.*ls' não pôde ser criado ou recriado. Não há suporte para índice compactado na tabela que contém colunas esparsas ou uma coluna de conjunto de colunas.    |
-|    10700    |    16    |    Não    |    Estatísticas filtradas '%. *ls' não podem ser criadas no objeto '%.* ls' porque ele não é uma tabela de usuário. Estatísticas filtradas são suportadas apenas em tabelas de usuário.    |
+|    10700    |    16    |    Não    |    Estatísticas filtradas '%.*ls' não podem ser criadas no objeto '%.* ls' porque ele não é uma tabela de usuário. Estatísticas filtradas são suportadas apenas em tabelas de usuário.    |
 |    10701    |    15    |    Não    |    O parâmetro com valor de tabela "%.*ls" é READONLY e não pode ser modificado.    |
 |    10702    |    15    |    Não    |    A opção READONLY não pode ser usada em uma instrução EXECUTE ou CREATE AGGREGATE.    |
 |    10703    |    15    |    Não    |    As opções WITH CUBE e WITH ROLLUP não são permitidas com uma especificação ROLLUP, CUBE ou GROUPING SETS.    |
@@ -4856,16 +4856,16 @@ ORDER BY message_id
 |    10733    |    15    |    Não    |    Uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada não é permitida em nenhum dos lados de um operador UNION, INTERSECT ou EXCEPT.    |
 |    10734    |    16    |    Não    |    Uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada não é permitida na cláusula USING de uma instrução MERGE.    |
 |    10735    |    15    |    Não    |    A atribuição variável não é permitida em uma instrução que contenha um operador UNION, INTERSECT ou EXCEPT de nível superior.    |
-|    10736    |    15    |    Não    |    Cláusula WHERE incorreta para %S_MSG '%. *ls' com filtro na tabela '%.* ls'.    |
+|    10736    |    15    |    Não    |    Cláusula WHERE incorreta para %S_MSG '%.*ls' com filtro na tabela '%.* ls'.    |
 |    [10737](mssqlserver-10737-database-engine-error.md)    |    15    |    Não    |    Uma instrução de lista de palavras irrelevantes (stoplist) de texto completo deve terminar com um ponto-e-vírgula (;).    |
 |    10738    |    15    |    Não    |    Em uma instrução ALTER TABLE REBUILD ou ALTER INDEX REBUILD, quando uma partição é especificada em uma cláusula DATA_COMPRESSION, especifique PARTITION=ALL. A cláusula PARTITION=ALL é usada para reforçar que todas as partições da tabela ou do índice serão reconstruídas, mesmo que apenas um subconjunto seja especificado na cláusula DATA_COMPRESSION.    |
 |    [10770](mssqlserver-10770-database-engine-error.md)    |    15    |    Não    |    O número de expressões de valor de linha na instrução INSERT excede o número máximo permitido de %d valores de linha.    |
-|    [10771](mssqlserver-10771-database-engine-error.md)    |        |        |    O ' *feature* ' *construct* ainda não foi implementado com tabelas com otimização de memória.    |
-|    [10772](mssqlserver-10772-database-engine-error.md)    |        |        |    Não há suporte para o ' *feature* ' *construct* com procedimentos armazenados compilados nativamente.    |
-|    [10773](mssqlserver-10773-database-engine-error.md)    |        |        |    O ' *feature* ' *construct* ainda não foi implementado com procedimentos armazenados compilados nativamente.    |
-|    [10785](mssqlserver-10785-database-engine-error.md)    |        |        |    Não há suporte para o ' *feature* ' *construct* com uma transação ativa que acessa tabelas com otimização de memória ou procedimentos armazenados compilados nativamente.    |
-|    [10787](mssqlserver-10787-database-engine-error.md)    |        |        |    Não há suporte para o ' *feature* ' *construct* com um índice de hash.    |
-|    [10794](mssqlserver-10794-database-engine-error.md)    |        |        |    Não há suporte para o ' *feature* ' *construct* com *construct* .    |
+|    [10771](mssqlserver-10771-database-engine-error.md)    |        |        |    O '*feature*' *construct* ainda não foi implementado com tabelas com otimização de memória.    |
+|    [10772](mssqlserver-10772-database-engine-error.md)    |        |        |    Não há suporte para o '*feature*' *construct* com procedimentos armazenados compilados nativamente.    |
+|    [10773](mssqlserver-10773-database-engine-error.md)    |        |        |    O '*feature*' *construct* ainda não foi implementado com procedimentos armazenados compilados nativamente.    |
+|    [10785](mssqlserver-10785-database-engine-error.md)    |        |        |    Não há suporte para o '*feature*' *construct* com uma transação ativa que acessa tabelas com otimização de memória ou procedimentos armazenados compilados nativamente.    |
+|    [10787](mssqlserver-10787-database-engine-error.md)    |        |        |    Não há suporte para o '*feature*' *construct* com um índice de hash.    |
+|    [10794](mssqlserver-10794-database-engine-error.md)    |        |        |    Não há suporte para o '*feature*' *construct* com *construct*.    |
 |    10900    |    16    |    Não    |    A lista de colunas inserida usada na instrução MERGE não pode conter identificadores de várias partes. Use identificadores de parte única.    |
 |    10901    |    16    |    Não    |    Falha ao configurar o administrador de recursos durante a inicialização. Verifique se existem mensagens de erro específicas no log de erros do SQL Server ou verifique a consistência do banco de dados mestre executando DBCC CHECKCATALOG('master').    |
 |    10902    |    16    |    Não    |    O usuário não tem permissão para alterar a configuração do administrador de recursos.    |
@@ -4873,22 +4873,22 @@ ORDER BY message_id
 |    10904    |    16    |    Não    |    O nome de esquema especificado '%.*ls' para a função de classificação definida pelo usuário não existe ou o usuário não tem permissão para acessá-lo.    |
 |    10905    |    16    |    Não    |    Falha na configuração do administrador de recursos. Existem sessões ativas em grupos de cargas de trabalho que estão sendo descartados ou movidos para pools de recursos diferentes. Desconecte todas as sessões ativas nos grupos de cargas de trabalho afetados e tente novamente.    |
 |    10906    |    16    |    Não    |    Não foi possível concluir a configuração do administrador de recursos devido à memória insuficiente. Reduza a carga do servidor ou tente a operação em uma conexão de administrador dedicada.    |
-|    10907    |    16    |    Não    |    O objeto '%. *ls'.'%.* ls' não é uma função de classificação do administrador de recursos definida pelo usuário. Uma função de classificação definida pelo usuário válida deve ser associada a esquema, retornar sysname e não ter parâmetros.    |
-|    10908    |    16    |    Não    |    O atributo '%. *ls' com o valor %u é maior que o atributo '%.* ls' com o valor %u.    |
-|    10909    |    16    |    Não    |    O atributo '%. *ls' com o valor %u é menor que o atributo '%.* ls' com o valor %u.    |
+|    10907    |    16    |    Não    |    O objeto '%.*ls'.'%.* ls' não é uma função de classificação do administrador de recursos definida pelo usuário. Uma função de classificação definida pelo usuário válida deve ser associada a esquema, retornar sysname e não ter parâmetros.    |
+|    10908    |    16    |    Não    |    O atributo '%.*ls' com o valor %u é maior que o atributo '%.* ls' com o valor %u.    |
+|    10909    |    16    |    Não    |    O atributo '%.*ls' com o valor %u é menor que o atributo '%.* ls' com o valor %u.    |
 |    10910    |    16    |    Não    |    O pool de recursos não pode ser criado. O número máximo de pools de recursos não pode exceder o limite atual de %u, incluindo os pools de recursos predefinidos.    |
 |    10911    |    16    |    Não    |    Não foi possível concluir a operação. O valor de '%.*ls' especificado, %u, faz com que a soma dos mínimos em todos os pools de recursos exceda 100 por cento. Reduza o valor ou modifique outros pools de recursos para que a soma seja inferior a 100.    |
 |    10912    |    16    |    Não    |    A operação solicitada não pode ser executada porque o pool de recursos '%.*ls' não existe.    |
 |    10913    |    16    |    Não    |    Não foi possível concluir a operação. Não é permitido descartar %S_MSG predefinido.    |
-|    10914    |    16    |    Não    |    Os usuários não podem %S_MSG o grupo de cargas de trabalho '%. *ls' no pool de recursos '%.* ls'.    |
+|    10914    |    16    |    Não    |    Os usuários não podem %S_MSG o grupo de cargas de trabalho '%.*ls' no pool de recursos '%.* ls'.    |
 |    10915    |    16    |    Não    |    O nome do %S_MSG '%.*ls' não pode começar com # de ##.    |
 |    10916    |    16    |    Não    |    Não foi possível concluir a operação. Não é permitido alterar '%.*ls' %S_MSG.    |
-|    10917    |    16    |    Não    |    Não é possível descartar o pool de recursos '%. *ls' porque ele contém o grupo de cargas de trabalho '%.* ls'. Descarte ou remova todos os grupos de cargas de trabalho que estejam usando esse pool de recursos antes de descartá-lo.    |
+|    10917    |    16    |    Não    |    Não é possível descartar o pool de recursos '%.*ls' porque ele contém o grupo de cargas de trabalho '%.* ls'. Descarte ou remova todos os grupos de cargas de trabalho que estejam usando esse pool de recursos antes de descartá-lo.    |
 |    10918    |    16    |    Não    |    Falha de ALTER WORKLOAD GROUP. Uma cláusula 'WITH' ou 'USING' deve ser especificada.    |
 |    10919    |    16    |    Não    |    Não é possível criar %S_MSG '%.*ls' porque ele já existe.    |
 |    10920    |    16    |    Não    |    Erro ao ler a configuração do administrador de recursos no banco de dados mestre. Verifique a integridade do banco de dados mestre ou contate o administrador do sistema.    |
 |    10921    |    16    |    Não    |    Não é possível %S_MSG a função definida pelo usuário '%.*ls'. Ela está sendo usada como um classificador do administrador de recursos.    |
-|    10922    |    16    |    Não    |    Não é possível mover '%. *ls'% S_MSG não de '%.* ls'% S_MSG.    |
+|    10922    |    16    |    Não    |    Não é possível mover '%.*ls'% S_MSG não de '%.* ls'% S_MSG.    |
 |    10923    |    16    |    Não    |    Falha em %ls. Execute novamente a instrução.    |
 |    10981    |    10    |    Não    |    Falha em %ls. O administrador de recursos não está disponível nesta edição do SQL Server. Você pode manipular metadados do administrador de recursos, mas não poderá aplicar a configuração do administrador de recursos. Somente a edição Enterprise do SQL Server dá suporte ao administrador de recursos.    |
 |    10982    |    16    |    Sim    |    Reconfiguração do administrador de recursos bem-sucedida.    |
@@ -4965,13 +4965,13 @@ ORDER BY message_id
 |    11219    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque a fila de destino foi desabilitada. ID de fila: %d.    |
 |    11220    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque a instância de agente TO está ausente.    |
 |    11221    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque há uma inconsistência no cabeçalho da mensagem.    |
-|    11222    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o nome do serviço TO na mensagem não corresponde ao nome no ponto de extremidade de conversa. Nome do Serviço TO da Mensagem: '%. *ls'. Nome do Serviço TO do Ponto de Extremidade de Conversa: '%.* ls'.    |
-|    11223    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o nome do contrato de serviço na mensagem não corresponde ao nome no ponto de extremidade de conversa. Nome do contrato do serviço na mensagem: '%. *ls'. Nome do contrato do serviço no ponto de extremidade de conversa: '%.* ls'.    |
+|    11222    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o nome do serviço TO na mensagem não corresponde ao nome no ponto de extremidade de conversa. Nome do Serviço TO da Mensagem: '%.*ls'. Nome do Serviço TO do Ponto de Extremidade de Conversa: '%.* ls'.    |
+|    11223    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o nome do contrato de serviço na mensagem não corresponde ao nome no ponto de extremidade de conversa. Nome do contrato do serviço na mensagem: '%.*ls'. Nome do contrato do serviço no ponto de extremidade de conversa: '%.* ls'.    |
 |    11224    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque outra instância deste programa de serviço já começou a conversar com o ponto de extremidade.    |
 |    11225    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o nome do tipo de mensagem não foi encontrado. Nome do tipo de mensagem: '%.*ls'.    |
-|    11226    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o tipo de mensagem não faz parte do contrato do serviço. Nome do tipo de mensagem: '%. *ls'. Nome do contrato do serviço: '%.* ls'.    |
-|    11227    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o serviço iniciador enviou uma mensagem com um tipo que só pode ser enviado pelo destino. Nome do tipo de mensagem: '%. *ls'. Nome do contrato do serviço: '%.* ls'.    |
-|    11228    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o serviço de destino enviou uma mensagem com um tipo que só pode ser enviado pelo iniciador. Nome do tipo de mensagem: '%. *ls'. Nome do contrato do serviço: '%.* ls'.    |
+|    11226    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o tipo de mensagem não faz parte do contrato do serviço. Nome do tipo de mensagem: '%.*ls'. Nome do contrato do serviço: '%.* ls'.    |
+|    11227    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o serviço iniciador enviou uma mensagem com um tipo que só pode ser enviado pelo destino. Nome do tipo de mensagem: '%.*ls'. Nome do contrato do serviço: '%.* ls'.    |
+|    11228    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o serviço de destino enviou uma mensagem com um tipo que só pode ser enviado pelo iniciador. Nome do tipo de mensagem: '%.*ls'. Nome do contrato do serviço: '%.* ls'.    |
 |    11229    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o contexto de segurança não foi recuperado.    |
 |    11230    |    16    |    Não    |    Esta mensagem não pôde ser entregue por não ter sido possível descriptografá-la e validá-la.    |
 |    11231    |    16    |    Não    |    Esta mensagem não pôde ser entregue porque o ponto de extremidade de conversa não está protegido, mas a mensagem está.    |
@@ -5045,35 +5045,35 @@ ORDER BY message_id
 |    11302    |    10    |    Sim    |    Erro durante a reversão. Desligando banco de dados (localização: %d).    |
 |    11303    |    10    |    Sim    |    Erro ao liberar espaço para log reservado: %d espaço %I64d, código %d, estado %d.    |
 |    11304    |    10    |    Sim    |    Falha ao registrar resultado de uma transação de protocolo 2PC. Colocando banco de dados offline.    |
-|    11400    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O índice '%. *ls' na exibição indexada '%.* ls' usa a função de partição '%. *ls', mas a tabela '%.* ls' usa a função de partição não equivalente '%. *ls'. O índice na exibição indexada '%.* ls' e tabela '%.*ls' deve usar uma função de partição equivalente.    |
-|    11401    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%. *ls' é %S_MSG, mas o índice '%.* ls' na exibição indexada '%.*ls' é %S_MSG.    |
-|    11402    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%. *ls' é referenciada por %d exibição(ões) indexada(s), mas a tabela de origem '%.* ls' só é referenciada por %d exibição(ões) indexada(s). Cada exibição indexada na tabela de destino deve ter pelo menos uma exibição indexada correspondente na tabela de origem.    |
-|    11403    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A exibição indexada '%. *ls' não está alinhada com a tabela '%.* ls'. A coluna de particionamento '%. *ls' da exibição indexada calcula seu valor a partir de uma ou mais colunas ou uma expressão, e não selecionando diretamente na coluna de particionamento '%.* ls' da tabela. Altere a definição de exibição indexada de forma que a coluna de particionamento seja selecionada diretamente da coluna de particionamento '%.*ls' da tabela.    |
-|    11404    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%. *ls' é referenciada por %d exibição(ões) indexada(s), mas a tabela de origem '%.* ls' só é referenciada por %d exibição(ões) indexada(s) correspondente(s). Cada exibição indexada na tabela de destino deve ter pelo menos uma exibição indexada correspondente na tabela de origem.    |
-|    11405    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%. *ls' não está alinhada com o índice '%.* ls' na exibição indexada '%. *ls'. A tabela é particionada na coluna '%.* ls', mas o índice na exibição indexada é particionado na coluna '%. *ls', que é selecionada a partir de uma coluna '%.* ls' diferente na tabela '%.*ls'. Altere a definição de exibição indexada para que a coluna de particionamento seja igual à coluna de particionamento da tabela.    |
+|    11400    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. O índice '%.*ls' na exibição indexada '%.* ls' usa a função de partição '%.*ls', mas a tabela '%.* ls' usa a função de partição não equivalente '%.*ls'. O índice na exibição indexada '%.* ls' e tabela '%.*ls' deve usar uma função de partição equivalente.    |
+|    11401    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%.*ls' é %S_MSG, mas o índice '%.* ls' na exibição indexada '%.*ls' é %S_MSG.    |
+|    11402    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' é referenciada por %d exibição(ões) indexada(s), mas a tabela de origem '%.* ls' só é referenciada por %d exibição(ões) indexada(s). Cada exibição indexada na tabela de destino deve ter pelo menos uma exibição indexada correspondente na tabela de origem.    |
+|    11403    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A exibição indexada '%.*ls' não está alinhada com a tabela '%.* ls'. A coluna de particionamento '%.*ls' da exibição indexada calcula seu valor a partir de uma ou mais colunas ou uma expressão, e não selecionando diretamente na coluna de particionamento '%.* ls' da tabela. Altere a definição de exibição indexada de forma que a coluna de particionamento seja selecionada diretamente da coluna de particionamento '%.*ls' da tabela.    |
+|    11404    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela de destino '%.*ls' é referenciada por %d exibição(ões) indexada(s), mas a tabela de origem '%.* ls' só é referenciada por %d exibição(ões) indexada(s) correspondente(s). Cada exibição indexada na tabela de destino deve ter pelo menos uma exibição indexada correspondente na tabela de origem.    |
+|    11405    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. A tabela '%.*ls' não está alinhada com o índice '%.* ls' na exibição indexada '%.*ls'. A tabela é particionada na coluna '%.* ls', mas o índice na exibição indexada é particionado na coluna '%.*ls', que é selecionada a partir de uma coluna '%.* ls' diferente na tabela '%.*ls'. Altere a definição de exibição indexada para que a coluna de particionamento seja igual à coluna de particionamento da tabela.    |
 |    11406    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH. As partições de origem e destino possuem valores diferentes para a opção DATA_COMPRESSION.    |
 |    11407    |    16    |    Não    |    O formato de armazenamento vardecimal não pode ser habilitado para '%.*ls'. Somente a Enterprise Edition do SQL Server dá suporte a vardecimal.    |
-|    11408    |    16    |    Não    |    Não é possível modificar a coluna '%. *ls' da tabela '%.* ls' para adicionar ou remover o atributo COLUMN_SET. Para alterar um atributo COLUMN_SET de uma coluna, modifique a tabela para remover a coluna e, em seguida, adicione a coluna novamente, ou descarte e recrie a tabela.    |
-|    [11409](mssqlserver-11409-database-engine-error.md)    |    16    |    Não    |    Não é possível remover o conjunto de colunas '%. *ls' da tabela '%.* ls' porque ela contém mais de 1025 colunas. Reduza o número de colunas para menos de 1025.    |
-|    11410    |    16    |    Não    |    Não é possível modificar a coluna '%. *ls' da tabela '%.* ls' para uma coluna esparsa, pois a coluna tem um padrão ou uma regra associada. Desassocie a regra ou o padrão antes de designar a coluna como esparsa.    |
-|    11411    |    16    |    Não    |    Não é possível adicionar a coluna esparsa '%. *ls' à tabela '%.* ls', pois o tipo de dados da coluna tem um padrão ou uma regra associada. Desassocie a regra ou o padrão do tipo de dados antes de adicionar a coluna esparsa à tabela.    |
-|    11412    |    16    |    Não    |    A instrução ALTER TABLE SWITCH falhou porque a coluna '%. *ls' não tem o mesmo atributo de armazenamento esparso nas tabelas '%.* ls' e '%.*ls'.    |
-|    11413    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%. *ls' não tem a mesma propriedade de conjunto de colunas nas tabelas '%.* ls' e '%.*ls'.    |
+|    11408    |    16    |    Não    |    Não é possível modificar a coluna '%.*ls' da tabela '%.* ls' para adicionar ou remover o atributo COLUMN_SET. Para alterar um atributo COLUMN_SET de uma coluna, modifique a tabela para remover a coluna e, em seguida, adicione a coluna novamente, ou descarte e recrie a tabela.    |
+|    [11409](mssqlserver-11409-database-engine-error.md)    |    16    |    Não    |    Não é possível remover o conjunto de colunas '%.*ls' da tabela '%.* ls' porque ela contém mais de 1025 colunas. Reduza o número de colunas para menos de 1025.    |
+|    11410    |    16    |    Não    |    Não é possível modificar a coluna '%.*ls' da tabela '%.* ls' para uma coluna esparsa, pois a coluna tem um padrão ou uma regra associada. Desassocie a regra ou o padrão antes de designar a coluna como esparsa.    |
+|    11411    |    16    |    Não    |    Não é possível adicionar a coluna esparsa '%.*ls' à tabela '%.* ls', pois o tipo de dados da coluna tem um padrão ou uma regra associada. Desassocie a regra ou o padrão do tipo de dados antes de adicionar a coluna esparsa à tabela.    |
+|    11412    |    16    |    Não    |    A instrução ALTER TABLE SWITCH falhou porque a coluna '%.*ls' não tem o mesmo atributo de armazenamento esparso nas tabelas '%.* ls' e '%.*ls'.    |
+|    11413    |    16    |    Não    |    Falha na instrução ALTER TABLE SWITCH porque a coluna '%.*ls' não tem a mesma propriedade de conjunto de colunas nas tabelas '%.* ls' e '%.*ls'.    |
 |    11414    |    10    |    Não    |    Aviso: a opção %ls não é aplicável à tabela %.*ls porque não ela não tem um índice clusterizado. Essa opção será aplicada somente aos índices não clusterizados da tabela, se ela tiver algum.    |
 |    11415    |    16    |    Não    |    O objeto '%.*ls' não pode ser desabilitado ou habilitado. Essa ação aplica-se apenas a restrições de verificação e chave estrangeira.    |
 |    11418    |    16    |    Não    |    Não é possível %S_MSG a tabela '%.*ls' porque ela contém colunas esparsas ou uma coluna de conjunto de colunas, que são incompatíveis com a compactação.    |
-|    12002    |    16    |    Não    |    O índice %S_MSG solicitado na coluna '%. *ls' da tabela '%.* ls' não pôde ser criado porque o tipo de coluna não é %S_MSG. Especifique um nome de coluna que referencie uma coluna com um tipo de dados %S_MSG.    |
+|    12002    |    16    |    Não    |    O índice %S_MSG solicitado na coluna '%.*ls' da tabela '%.* ls' não pôde ser criado porque o tipo de coluna não é %S_MSG. Especifique um nome de coluna que referencie uma coluna com um tipo de dados %S_MSG.    |
 |    12003    |    16    |    Não    |    Não foi possível localizar o esquema de mosaico '%.*ls'. Especifique um nome de esquema de mosaico válido na cláusula USING.    |
-|    12004    |    16    |    Não    |    Não foi possível localizar o esquema de mosaico espacial padrão da coluna '%. *ls' na tabela '%.* ls'. Verifique se a referência de coluna está correta ou especifique o esquema de extensão em uma cláusula USING.    |
+|    12004    |    16    |    Não    |    Não foi possível localizar o esquema de mosaico espacial padrão da coluna '%.*ls' na tabela '%.* ls'. Verifique se a referência de coluna está correta ou especifique o esquema de extensão em uma cláusula USING.    |
 |    12005    |    16    |    Não    |    Parâmetros incorretos foram passados para a instrução CREATE %S_MSG próxima a '%.*ls'. Valide a instrução em relação à sintaxe de criação do índice.    |
 |    12006    |    16    |    Não    |    Parâmetros duplicados foram passados para a instrução create index. Valide a instrução em relação à sintaxe de criação do índice.    |
 |    12007    |    16    |    Não    |    O parâmetro necessário '%.*ls' está ausente na instrução CREATE %S_MSG. Valide a instrução em relação à sintaxe de criação do índice.    |
 |    12008    |    16    |    Não    |    A tabela '%.*ls' não tem uma chave primária clusterizada requerida pelo índice %S_MSG. Verifique se a coluna de chave primária existe na tabela antes de criar um índice %S_MSG.    |
-|    12009    |    16    |    Não    |    Não foi possível localizar o índice %S_MSG '%. *ls' de %d na tabela '%.* ls'. Ou não existe nenhum índice %S_MSG com esse nome, ou um índice não %S_MSG pode estar usando o mesmo nome. Corrija o nome do índice para evitar duplicatas. Se um índice relacional tiver o mesmo nome, descarte o índice relacional normal.    |
+|    12009    |    16    |    Não    |    Não foi possível localizar o índice %S_MSG '%.*ls' de %d na tabela '%.* ls'. Ou não existe nenhum índice %S_MSG com esse nome, ou um índice não %S_MSG pode estar usando o mesmo nome. Corrija o nome do índice para evitar duplicatas. Se um índice relacional tiver o mesmo nome, descarte o índice relacional normal.    |
 |    12010    |    16    |    Não    |    Somente uma dica de índice espacial pode aparecer por tabela, seja como primeiro ou último índice com dica.    |
 |    12011    |    16    |    Não    |    O valor do parâmetro '%.*ls' de CREATE %S_MSG deve ser menor que %d.    |
 |    12012    |    16    |    Não    |    O valor do parâmetro '%.*ls' de CREATE %S_MSG deve ser maior que o valor do parâmetro %d.    |
-|    12013    |    16    |    Não    |    O valor do parâmetro '%. *ls' de CREATE %S_MSG deve ser maior que o valor do parâmetro '%.* ls'.    |
+|    12013    |    16    |    Não    |    O valor do parâmetro '%.*ls' de CREATE %S_MSG deve ser maior que o valor do parâmetro '%.* ls'.    |
 |    12014    |    16    |    Não    |    O parâmetro '%.*ls' de CREATE %S_MSG está definido de forma incompleta. Se o parâmetro tiver mais de uma parte, todas as partes deverão ser definidas.    |
 |    12015    |    16    |    Não    |    A opção de índice %.*ls na instrução CREATE %S_MSG precisa aparecer antes das opções de índice gerais.    |
 |    12016    |    16    |    Não    |    A criação de um índice %S_MSG requer que a chave primária na tabela base satisfaça as restrições a seguir. O número máximo de colunas de chave primária é %d. O tamanho máximo combinado por linha das colunas de chave primária é %d bytes. A chave primária na tabela base '%.*ls' tem %d colunas e contém %d bytes. Altere a tabela base para satisfazer as restrições de chave primária impostas pelo índice %S_MSG.    |
@@ -5088,16 +5088,16 @@ ORDER BY message_id
 |    12025    |    10    |    Não    |    Não foi possível localizar o método espacial binário requerido em uma condição.    |
 |    12026    |    10    |    Não    |    Não foi possível localizar o predicado de comparação requerido.    |
 |    12100    |    16    |    Não    |    Falha em ALTER DATABASE porque não é possível adicionar grupos de arquivos FILESTREAM a um banco de dados que tem a opção READ_COMMITTED_SNAPSHOT ou ALLOW_SNAPSHOT_ISOLATION definida como ON. Para adicionar grupos de arquivos FILESTREAM, defina READ_COMMITTED_SNAPSHOT e ALLOW_SNAPSHOT_ISOLATION como OFF.    |
-|    [12300](mssqlserver-12300-database-engine-error.md)    |        |        |    Não há suporte para colunas computadas com ' *construct* '.    |
-|    [12301](mssqlserver-12301-database-engine-error.md)    |        |        |    Não há suporte para colunas que permitem valor nulo na chave de índice com ' *construct* '.    |
-|    [12302](mssqlserver-12302-database-engine-error.md)    |        |        |    Não há suporte para a atualização das colunas que fazem parte da restrição de PRIMARY KEY com ' *construct* '.    |
-|    [12303](mssqlserver-12303-database-engine-error.md)    |        |        |    Não há suporte para a cláusula 'number' com ' *construct* '.    |
+|    [12300](mssqlserver-12300-database-engine-error.md)    |        |        |    Não há suporte para colunas computadas com '*construct*'.    |
+|    [12301](mssqlserver-12301-database-engine-error.md)    |        |        |    Não há suporte para colunas que permitem valor nulo na chave de índice com '*construct*'.    |
+|    [12302](mssqlserver-12302-database-engine-error.md)    |        |        |    Não há suporte para a atualização das colunas que fazem parte da restrição de PRIMARY KEY com '*construct*'.    |
+|    [12303](mssqlserver-12303-database-engine-error.md)    |        |        |    Não há suporte para a cláusula 'number' com '*construct*'.    |
 |    [12304](mssqlserver-12304-database-engine-error.md)    |        |        |    Usar um tipo de tabela com otimização de memória que usa a propriedade IDENTITY com qualquer uma de suas colunas não tem suporte ao usar o tipo fora do contexto de um procedimento armazenado compilado nativamente.    |
-|    [12305](mssqlserver-12305-database-engine-error.md)    |        |        |    Não há suporte para variáveis de tabela embutidas com ' *construct* '.    |
-|    [12306](mssqlserver-12306-database-engine-error.md)    |        |        |    Não há suporte para cursores com ' *construct* '.    |
-|    [12307](mssqlserver-12307-database-engine-error.md)    |        |        |    Os valores padrão para parâmetros em ' *construct* ' devem ser constantes.    |
-|    [12308](mssqlserver-12308-database-engine-error.md)    |        |        |    Não há suporte para funções com valor de tabela com ' *construct* '.    |
-|    [12329](mssqlserver-12329-database-engine-error.md)    |        |        |    Não há suporte para os tipos de dados char(n) e varchar(n) que usam uma ordenação com uma página de código diferente de 1252 com *construct* .    |
+|    [12305](mssqlserver-12305-database-engine-error.md)    |        |        |    Não há suporte para variáveis de tabela embutidas com '*construct*'.    |
+|    [12306](mssqlserver-12306-database-engine-error.md)    |        |        |    Não há suporte para cursores com '*construct*'.    |
+|    [12307](mssqlserver-12307-database-engine-error.md)    |        |        |    Os valores padrão para parâmetros em '*construct*' devem ser constantes.    |
+|    [12308](mssqlserver-12308-database-engine-error.md)    |        |        |    Não há suporte para funções com valor de tabela com '*construct*'.    |
+|    [12329](mssqlserver-12329-database-engine-error.md)    |        |        |    Não há suporte para os tipos de dados char(n) e varchar(n) que usam uma ordenação com uma página de código diferente de 1252 com *construct*.    |
 |    12980    |    16    |    Não    |    Forneça %s ou %s para identificar as entradas de log.    |
 |    12981    |    16    |    Não    |    Você deve especificar %s ao criar um subplano.    |
 |    12982    |    16    |    Não    |    Forneça %s ou %s para identificar o plano ou subplano a ser executado.    |
@@ -5657,7 +5657,7 @@ ORDER BY message_id
 |    14301    |    16    |    Não    |    Os logons diferentes do usuário atual só podem ser vistos por membros da função sysadmin.    |
 |    14303    |    16    |    Não    |    Falha no procedimento armazenado '%s' ao acessar a chave do Registro.    |
 |    14304    |    16    |    Não    |    O procedimento armazenado '%s' só pode ser executado em servidores Windows 2000.    |
-|    14305    |    16    |    Não    |    A coluna '%. *ls' não existe na tabela '%.* ls'.    |
+|    14305    |    16    |    Não    |    A coluna '%.*ls' não existe na tabela '%.* ls'.    |
 |    14306    |    16    |    Não    |    A versão do servidor de destino (TSX) não é compatível com a versão do servidor mestre (MSX) (%ld.%ld.%ld).    |
 |    14307    |    16    |    Não    |    O acesso ao pacote do Integration Services '%s' foi negado.    |
 |    14350    |    16    |    Não    |    Não é possível inicializar a biblioteca COM devido a falha em CoInitialize.    |
@@ -6115,7 +6115,7 @@ ORDER BY message_id
 |    15214    |    16    |    Não    |    Aviso: o certificado criado está vencido.    |
 |    15215    |    16    |    Não    |    Aviso: o certificado criado ainda não é válido; a data de início está no futuro.    |
 |    15216    |    16    |    Não    |    '%s' não é uma opção válida para o parâmetro \@delfile.    |
-|    15217    |    16    |    Não    |    A propriedade não pode ser atualizada ou excluída. A propriedade '%. *ls' não existe para '%.* ls'.    |
+|    15217    |    16    |    Não    |    A propriedade não pode ser atualizada ou excluída. A propriedade '%.*ls' não existe para '%.* ls'.    |
 |    15218    |    16    |    Não    |    O objeto '%s' não é uma tabela.    |
 |    15219    |    16    |    Não    |    Não é possível alterar o proprietário de uma exibição indexada.    |
 |    15222    |    16    |    Não    |    A opção de logon remoto '%s' não é exclusiva.    |
@@ -6127,7 +6127,7 @@ ORDER BY message_id
 |    15229    |    16    |    Não    |    O argumento especificado para o parâmetro "%.*ls" do procedimento armazenado sp_db_vardecimal_storage_format não é válido. Os argumentos válidos são 'ON' ou 'OFF'.    |
 |    15230    |    16    |    Não    |    Erro ao iniciar instância de usuário. Código do erro: %d.    |
 |    15232    |    16    |    Não    |    Já existe um certificado com o nome '%s' ou esse certificado já foi adicionado ao banco de dados.    |
-|    15233    |    16    |    Não    |    Não é possível adicionar a propriedade. A propriedade '%. *ls' já existe para '%.* ls'.    |
+|    15233    |    16    |    Não    |    Não é possível adicionar a propriedade. A propriedade '%.*ls' já existe para '%.* ls'.    |
 |    15234    |    16    |    Não    |    Objetos desse tipo não têm espaço alocado.    |
 |    15236    |    16    |    Não    |    A coluna '%s' não possui padrão.    |
 |    15237    |    16    |    Não    |    O tipo de dados do usuário '%s' não possui padrão.    |
@@ -6171,7 +6171,7 @@ ORDER BY message_id
 |    15278    |    16    |    Não    |    O logon '%s' já está mapeado para o usuário '%s' no banco de dados '%s'.    |
 |    15279    |    16    |    Não    |    É necessário adicionar a versão us_english dessa mensagem para adicionar a versão '%s'.    |
 |    15280    |    16    |    Não    |    Todas as versões traduzidas dessa mensagem devem ser canceladas para que a versão us_english seja descartada.    |
-|    15281    |    10    |    Não    |    O SQL Server bloqueou o acesso a %S_MSG '%.*ls' do componente '%. *ls' porque esse componente está desativado como parte da configuração de segurança deste servidor. Um administrador de sistema pode habilitar o uso de '%.* ls' usando sp_configure. Para obter mais informações sobre como habilitar '%.*ls', consulte "Configuração da área da superfície" nos Manuais Online do SQL Server.    |
+|    15281    |    10    |    Não    |    O SQL Server bloqueou o acesso a %S_MSG '%.*ls' do componente '%.*ls' porque esse componente está desativado como parte da configuração de segurança deste servidor. Um administrador de sistema pode habilitar o uso de '%.* ls' usando sp_configure. Para obter mais informações sobre como habilitar '%.*ls', consulte "Configuração da área da superfície" nos Manuais Online do SQL Server.    |
 |    15282    |    10    |    Não    |    A chave de nome '%.*ls' ou o identificador exclusivo definido pelo usuário já existe ou você não tem permissões para criá-lo(a).    |
 |    15283    |    16    |    Não    |    O nome '%s' contém um número excessivo de caracteres.    |
 |    15284    |    16    |    Não    |    O principal de banco de dados concedeu ou negou permissões a objetos no banco de dados e não pode ser descartado.    |
@@ -6242,7 +6242,7 @@ ORDER BY message_id
 |    15356    |    16    |    Não    |    A função de aplicativo atual foi descartada. O contexto de segurança atual não contém nenhum contexto de usuário do banco de dados válido.    |
 |    15357    |    16    |    Não    |    O contexto de segurança atual foi definido por "% ls". Não é possível reverter pela instrução "% ls".    |
 |    15358    |    10    |    Não    |    Os grupos de arquivos definidos pelo usuário devem ser definidos como somente leitura.    |
-|    15359    |    16    |    Não    |    Não é possível adicionar a unidade funcional '%. *ls' ao componente '%.* ls'. Essa unidade já foi registrada com o componente.    |
+|    15359    |    16    |    Não    |    Não é possível adicionar a unidade funcional '%.*ls' ao componente '%.* ls'. Essa unidade já foi registrada com o componente.    |
 |    15360    |    16    |    Não    |    Erro ao tentar carregar a dll xpstar para ler a conta proxy do agente a partir do LSA.    |
 |    15361    |    16    |    Não    |    Erro ao tentar ler as credenciais da conta proxy SQLAgent a partir da LSA.    |
 |    15362    |    16    |    Não    |    Erro ao tentar criar a credencial '%.*ls'.    |
@@ -6405,12 +6405,12 @@ ORDER BY message_id
 |    15578    |    16    |    Não    |    Já existe uma chave mestra no banco de dados. Descarte-a antes de executar essa instrução.    |
 |    15579    |    16    |    Não    |    Falha ao adicionar criptografia à chave simétrica. Pode já existir uma criptografia com o mesmo %S_MSG '%.*s'.    |
 |    15580    |    16    |    Não    |    Não é possível descartar %S_MSG porque %S_MSG '%.*s' é criptografado por ele.    |
-|    15581    |    16    |    Não    |    Crie uma chave mestra no banco de dados ou abra a chave mestra na sessão antes de executar esta operação.    |
+|    [15581](mssqlserver-15581-database-engine-error.md)    |    16    |    Não    |    Crie uma chave mestra no banco de dados ou abra a chave mestra na sessão antes de executar esta operação.    |
 |    15583    |    10    |    Não    |    O módulo que está sendo assinado foi marcado para ser executado como proprietário. Se o proprietário for alterado, a assinatura não será válida.    |
 |    15584    |    10    |    Não    |    Erro ao descriptografar %S_MSG '%.*ls' criptografado pela chave mestra antiga. O erro foi ignorado porque a opção FORCE foi especificada.    |
 |    15585    |    10    |    Não    |    A chave mestra atual não pode ser descriptografada. O erro foi ignorado porque a opção FORCE foi especificada.    |
 |    15586    |    16    |    Não    |    Erro ao sincronizar certificados do sistema entre o banco de dados mestre e o de recursos.    |
-|    15587    |    16    |    Não    |    Não é possível alterar o proprietário do Assembly '%. *ls', pois o assembly dependente '%.* ls' não pertence ao novo proprietário.    |
+|    15587    |    16    |    Não    |    Não é possível alterar o proprietário do Assembly '%.*ls', pois o assembly dependente '%.* ls' não pertence ao novo proprietário.    |
 |    15588    |    10    |    Não    |    As chaves mestras antiga e nova são idênticas. Não há necessidade de criptografar novamente os dados.    |
 |    15589    |    16    |    Não    |    Não é possível reverter o contexto de segurança atual, pois o cookie é inválido.    |
 |    15590    |    16    |    Não    |    Só é possível usar as opções 'No Revert' ou 'Cookie' com a instrução 'Execute As' no nível adhoc.    |
@@ -6619,7 +6619,7 @@ ORDER BY message_id
 |    17191    |    16    |    Sim    |    Impossível aceitar uma nova conexão porque a sessão foi encerrada. Esse erro ocorre diante de uma tentativa de nova execução em lotes em uma sessão em processo de logoff ou quando ocorre um erro grave no momento de conexão. Verifique no log de erros se essa sessão foi encerrada por um comando KILL ou devido a erros graves.%.*ls    |
 |    17192    |    10    |    Sim    |    O suporte à conexão dedicada de administrador não foi iniciado devido ao erro 0x%lx, código de status: 0x%lx. Esse erro normalmente indica um erro em soquete; por exemplo, uma porta que já está em uso.    |
 |    17193    |    10    |    Sim    |    O suporte a SOAP nativo do SQL Server está pronto para conexões de clientes. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
-|    [17194](mssqlserver-17194-database-engine-error.md)    |    16    |    Sim    |    O servidor não pôde carregar a biblioteca de provedores de SSL necessária para logon. A conexão foi fechada. O SSL é usado para criptografar a sequência de logon ou todas as comunicações dependendo de como o administrador configurou o servidor. Consulte os manuais online para saber mais sobre esta mensagem de erro: %d %. *ls %.* ls    |
+|    [17194](mssqlserver-17194-database-engine-error.md)    |    16    |    Sim    |    O servidor não pôde carregar a biblioteca de provedores de SSL necessária para logon. A conexão foi fechada. O SSL é usado para criptografar a sequência de logon ou todas as comunicações dependendo de como o administrador configurou o servidor. Consulte os manuais online para saber mais sobre esta mensagem de erro: %d %.*ls %.* ls    |
 |    17195    |    16    |    Sim    |    O servidor não pôde concluir a sequência de inicialização porque as bibliotecas de rede disponíveis não dão suporte ao nível de criptografia necessário. O processo do servidor foi interrompido. Antes de reiniciar o servidor, verifique se os certificados SSL foram instalados. Consulte o tópico "Configurando protocolos do cliente e bibliotecas de rede" nos Manuais Online.    |
 |    17196    |    10    |    Sim    |    Preparando-se para aumento iminente para %d GB com Inclusão de Memória a Quente.    |
 |    17197    |    16    |    Sim    |    Falha de logon devido a tempo limite; a conexão foi fechada. Esse erro pode indicar carga excessiva no servidor. Reduza a carga no servidor e tente novamente o logon.%.*ls    |
@@ -6665,7 +6665,7 @@ ORDER BY message_id
 |    17661    |    10    |    Sim    |    Recuperando todos os bancos de dados, sem limpar tempdb. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    17663    |    10    |    Sim    |    O nome do servidor é '%s'. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    17664    |    10    |    Sim    |    O nome NETBIOS do nó local que está executando o servidor é '%ls'. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
-|    17674    |    10    |    Sim    |    Logon: %. *ls %.* ls, ID de processo do servidor (SPID): %d, ID de processo do núcleo (KPID): %d.    |
+|    17674    |    10    |    Sim    |    Logon: %.*ls %.* ls, ID de processo do servidor (SPID): %d, ID de processo do núcleo (KPID): %d.    |
 |    [17676](mssqlserver-17676-database-engine-error.md)    |    10    |    Sim    |    O SQL Server foi desligado pelo acionamento do comando Ctrl-C ou Ctrl-Break. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    17681    |    10    |    Sim    |    Carregando ordenação padrão %s para esta instância do SQL Server.    |
 |    17750    |    16    |    Sim    |    Não é possível carregar a DLL %ls ou uma das DLLs às quais ela faz referência. Motivo: %ls.    |
@@ -6673,7 +6673,7 @@ ORDER BY message_id
 |    17752    |    16    |    Sim    |    O SQL Server não tem memória suficiente para executar o procedimento armazenado estendido '%ls'. Libere recursos de memória do servidor fechando conexões ou encerrando transações.    |
 |    17753    |    16    |    Não    |    O %.*ls só pode ser executado no banco de dados mestre.    |
 |    17802    |    20    |    Sim    |    A versão do protocolo TDS 0x%x da biblioteca do cliente usada para abrir a conexão não é suportada ou é desconhecida. A conexão foi fechada. %.*ls    |
-|    [17803](mssqlserver-17803-database-engine-error.md)    |    20    |    Sim    |    Ocorreu uma falha de alocação de memória ao estabelecer conexão. Reduce nonessential memory load, or increase system memory. A conexão foi fechada.%.*ls    |
+|    [17803](mssqlserver-17803-database-engine-error.md)    |    20    |    Sim    |    Ocorreu uma falha de alocação de memória ao estabelecer conexão. Reduza a carga de memória não essencial ou aumente a memória do sistema. A conexão foi fechada.%.*ls    |
 |    17805    |    20    |    Sim    |    O valor no campo usertype do registro de logon é inválido. O valor 0x01, usado por clientes Sybase, não é mais suportado pelo SQL Server. Contate o fornecedor da biblioteca cliente que está sendo usada na conexão com o SQL Server.%.*ls    |
 |    17806    |    20    |    Sim    |    Falha no handshake SSPI com código de erro 0x%x ao estabelecer conexão com segurança integrada; a conexão foi fechada.%.*ls    |
 |    17807    |    20    |    Sim    |    O evento '%ld' recebido do cliente não foi reconhecido pelo SQL Server. Contate o fornecedor da biblioteca do cliente que está sendo usada na conexão com o SQL Server e peça que ele corrija o número do evento no protocolo TDS que é enviado.    |
@@ -6700,7 +6700,7 @@ ORDER BY message_id
 |    17889    |    16    |    Sim    |    Uma conexão nova foi rejeitada porque o número máximo de conexões na sessão com ID %d foi alcançado. Feche todas as conexões existentes nessa sessão e tente novamente.%.*ls    |
 |    17890    |    10    |    Sim    |    Uma parte significativa da memória de processo do SQL Server foi transferida para o arquivo de paginação. Isso pode resultar em degradação do desempenho. Duração: %d segundos. Conjunto de trabalho (KB): %I64d, confirmado (KB): %I64d, utilização da memória: %d%%.    |
 |    17891    |    10    |    Sim    |    O Trabalho 0x%p do Monitor de Recursos (0x%lx) parece não estar respondendo no Nó %ld. Memória liberada: %I64d KB. Quant. aprox. de CPU usada: kernel %I64d ms, usuário %I64d ms, Intervalo: %I64d.    |
-|    [17892](mssqlserver-17892-database-engine-error.md)    |    14    |    Sim    |    Falha no logon para '%. *ls' devido à execução do gatilho.%.* ls    |
+|    [17892](mssqlserver-17892-database-engine-error.md)    |    14    |    Sim    |    Falha no logon para '%.*ls' devido à execução do gatilho.%.* ls    |
 |    17894    |    10    |    Sim    |    O distribuidor (0x%lx) do pool de distribuidores '%.*ls' Trabalhador 0x%p parece não estar respondendo no Nó %ld. Quant. aprox. de CPU usada: kernel %I64d ms, usuário %I64d ms, Intervalo: %I64d.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
@@ -6708,7 +6708,7 @@ ORDER BY message_id
 
 | Erro| Severity | Evento registrado | Descrição|
 | :------ | :------| :------| :----------------------------- |
-|    18002    |    20    |    Sim    |    Ocorreu uma exceção ao executar o procedimento armazenado estendido '%. *ls' na biblioteca '%.* ls'. O SQL Server está encerrando o processo %d. Tipo de exceção: %ls; Código de exceção: 0x%lx.    |
+|    18002    |    20    |    Sim    |    Ocorreu uma exceção ao executar o procedimento armazenado estendido '%.*ls' na biblioteca '%.* ls'. O SQL Server está encerrando o processo %d. Tipo de exceção: %ls; Código de exceção: 0x%lx.    |
 |    18052    |    16    |    Não    |    Erro: %d, Gravidade: %d, Estado: %d.    |
 |    18053    |    16    |    Não    |    Erro: %d, Gravidade: %d, Estado: %d. (Params:%ls). O erro foi impresso em modo conciso devido a um erro durante a formatação. Rastreamento, ETW, notificações, etc., foram ignorados.    |
 |    18054    |    16    |    Sim    |    Ocorreu o erro %d, gravidade %d, estado %d, mas não foi encontrada nenhuma mensagem com esse número de erro em sys.messages. Se o erro for superior a 50000, verifique se a mensagem definida pelo usuário foi adicionada através de sp_addmessage.    |
@@ -6802,34 +6802,34 @@ ORDER BY message_id
 |    18356    |    10    |    Não    |    Motivo: ocorreu um erro ao tentar alterar a senha.    |
 |    18357    |    10    |    Não    |    Motivo: falha em uma tentativa de logon com a Autenticação do SQL Server.Razão: falha em uma tentativa de logon com a Autenticação do SQL Server. O servidor está configurado apenas para Autenticação do Windows.    |
 |    18400    |    16    |    Sim    |    O thread do ponto de verificação em segundo plano encontrou um erro irrecuperável. O processo de ponto de verificação está sendo encerrado para que o thread possa limpar seus recursos. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
-|    18401    |    14    |    Sim    |    Falha no logon do usuário '%. *ls'. Motivo: o servidor está no modo de atualização de script. Somente o administrador pode estabelecer conexão no momento.%.* ls    |
-|    18451    |    14    |    Sim    |    Falha no logon do usuário '%. *ls'. Somente os administradores podem conectar-se no momento.%.* ls    |
+|    18401    |    14    |    Sim    |    Falha no logon do usuário '%.*ls'. Motivo: o servidor está no modo de atualização de script. Somente o administrador pode estabelecer conexão no momento.%.* ls    |
+|    18451    |    14    |    Sim    |    Falha no logon do usuário '%.*ls'. Somente os administradores podem conectar-se no momento.%.* ls    |
 |    [18452](mssqlserver-18452-database-engine-error.md)    |    14    |    Sim    |    Falha no logon. O logon é de um domínio não confiável e não pode ser usado com a Autenticação do Windows.%.*ls    |
-|    18453    |    10    |    Sim    |    O logon do usuário '%. *ls' foi bem-sucedido. A conexão foi estabelecida com a Autenticação do Windows.%.* ls    |
-|    18454    |    10    |    Sim    |    O logon do usuário '%. *ls' foi bem-sucedido. Conexão estabelecida com Autenticação do SQL Server.%.* ls    |
-|    18455    |    10    |    Sim    |    O logon do usuário '%. *ls'.%.* ls foi bem-sucedido    |
-|    [18456](mssqlserver-18456-database-engine-error.md)    |    14    |    Sim    |    Falha no logon do usuário '%. *ls'.%.* ls%.*ls    |
+|    18453    |    10    |    Sim    |    O logon do usuário '%.*ls' foi bem-sucedido. A conexão foi estabelecida com a Autenticação do Windows.%.* ls    |
+|    18454    |    10    |    Sim    |    O logon do usuário '%.*ls' foi bem-sucedido. Conexão estabelecida com Autenticação do SQL Server.%.* ls    |
+|    18455    |    10    |    Sim    |    O logon do usuário '%.*ls'.%.* ls foi bem-sucedido    |
+|    [18456](mssqlserver-18456-database-engine-error.md)    |    14    |    Sim    |    Falha no logon do usuário '%.*ls'.%.* ls%.*ls    |
 |    18458    |    14    |    Sim    |    Falha no logon. Já existem %d usuários simultâneos, o número de licenças registradas para este servidor. Para aumentar o número máximo de usuários simultâneos, obtenha licenças adicionais e registre-as pelo item Licenciamento do Painel de Controle.%.*ls    |
 |    18459    |    14    |    Sim    |    Falha no logon. O limite de licenças de estações de trabalho para acesso ao SQL Server já foi atingido.%.*ls    |
 |    18460    |    14    |    Sim    |    Falha no logon. O número de usuários simultâneos já atingiu o limite de %d licenças para este servidor '%ls'. Obtenha e instale licenças adicionais ou atualize para a versão completa.%.*ls    |
-|    18461    |    14    |    Sim    |    Falha no logon do usuário '%. *ls'. Motivo: O servidor está em modo de usuário único. Somente um administrador pode se conectar neste momento.%.* ls    |
-|    18462    |    14    |    Não    |    Falha no logon do usuário "%. *ls". Falha na alteração da senha. A senha do usuário é muito recente e não pode ser alterada. %.* ls    |
-|    18463    |    14    |    Não    |    Falha no logon do usuário "%. *ls". Falha na alteração da senha. A senha não pode ser usada neste momento. %.* ls    |
-|    18464    |    14    |    Não    |    Falha no logon do usuário '%. *ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da política do Windows por ser muito curta.%.* ls    |
-|    18465    |    14    |    Não    |    Falha no logon do usuário '%. *ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da política do Windows por ser muito extensa.%.* ls    |
-|    18466    |    14    |    Não    |    Falha no logon do usuário '%. *ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da política do Windows por não ter a complexidade necessária.%.* ls    |
-|    18467    |    14    |    Não    |    Falha no logon do usuário "%. *ls". Falha na alteração da senha. A senha não atende aos requisitos da DLL de filtragem de senha. %.* ls    |
-|    18468    |    14    |    Não    |    Falha no logon do usuário "%. *ls". Falha na alteração da senha. Ocorreu um erro inesperado durante a validação da senha. %.* ls    |
+|    18461    |    14    |    Sim    |    Falha no logon do usuário '%.*ls'. Motivo: O servidor está em modo de usuário único. Somente um administrador pode se conectar neste momento.%.* ls    |
+|    18462    |    14    |    Não    |    Falha no logon do usuário "%.*ls". Falha na alteração da senha. A senha do usuário é muito recente e não pode ser alterada. %.* ls    |
+|    18463    |    14    |    Não    |    Falha no logon do usuário "%.*ls". Falha na alteração da senha. A senha não pode ser usada neste momento. %.* ls    |
+|    18464    |    14    |    Não    |    Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da política do Windows por ser muito curta.%.* ls    |
+|    18465    |    14    |    Não    |    Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da política do Windows por ser muito extensa.%.* ls    |
+|    18466    |    14    |    Não    |    Falha no logon do usuário '%.*ls'. Motivo: Falha na alteração de senha. A senha não atende aos requisitos da política do Windows por não ter a complexidade necessária.%.* ls    |
+|    18467    |    14    |    Não    |    Falha no logon do usuário "%.*ls". Falha na alteração da senha. A senha não atende aos requisitos da DLL de filtragem de senha. %.* ls    |
+|    18468    |    14    |    Não    |    Falha no logon do usuário "%.*ls". Falha na alteração da senha. Ocorreu um erro inesperado durante a validação da senha. %.* ls    |
 |    18469    |    10    |    Não    |    [CLIENT: %.*hs]    |
-|    18470    |    14    |    Sim    |    Falha no logon do usuário '%. *ls'. Motivo: A conta está desabilitada.%.* ls    |
-|    18471    |    14    |    Não    |    Falha no logon do usuário "%. *ls". Falha na alteração da senha. O usuário não tem permissão para alterar a senha. %.* ls    |
-|    18482    |    16    |    Sim    |    Não foi possível estabelecer conexão com o servidor '%. *ls', pois '%.* ls' não está definido como servidor remoto. Verifique se especificou o nome de servidor correto. %.*ls.    |
-|    18483    |    16    |    Sim    |    Impossível estabelecer conexão com o servidor '%. *ls' porque '%.* ls' não está definido como logon remoto no servidor. Verifique se especificou o nome de logon correto. %.*ls.    |
-|    18485    |    16    |    Sim    |    Não foi possível estabelecer conexão com o servidor '%. *ls', pois ele não está configurado para aceitar logons remotos. Use a opção de configuração de acesso remoto para permitir logons remotos.%.* ls    |
-|    18486    |    14    |    Sim    |    Falha de logon do usuário '%. *ls' porque a conta está bloqueada no momento. O administrador do sistema pode desbloqueá-la. %.* ls    |
-|    18487    |    14    |    Sim    |    Falha no logon do usuário '%. *ls'. Motivo: a senha da conta expirou.%.* ls    |
-|    18488    |    14    |    Sim    |    Falha no logon do usuário '%. *ls'. Motivo: a senha da conta precisa ser alterada.%.* ls    |
-|    18489    |    10    |    Não    |    A conexão dedicada de administrador está em uso por"%. *ls" em "%.* ls".%.*ls    |
+|    18470    |    14    |    Sim    |    Falha no logon do usuário '%.*ls'. Motivo: A conta está desabilitada.%.* ls    |
+|    18471    |    14    |    Não    |    Falha no logon do usuário "%.*ls". Falha na alteração da senha. O usuário não tem permissão para alterar a senha. %.* ls    |
+|    18482    |    16    |    Sim    |    Não foi possível estabelecer conexão com o servidor '%.*ls', pois '%.* ls' não está definido como servidor remoto. Verifique se especificou o nome de servidor correto. %.*ls.    |
+|    18483    |    16    |    Sim    |    Impossível estabelecer conexão com o servidor '%.*ls' porque '%.* ls' não está definido como logon remoto no servidor. Verifique se especificou o nome de logon correto. %.*ls.    |
+|    18485    |    16    |    Sim    |    Não foi possível estabelecer conexão com o servidor '%.*ls', pois ele não está configurado para aceitar logons remotos. Use a opção de configuração de acesso remoto para permitir logons remotos.%.* ls    |
+|    18486    |    14    |    Sim    |    Falha de logon do usuário '%.*ls' porque a conta está bloqueada no momento. O administrador do sistema pode desbloqueá-la. %.* ls    |
+|    18487    |    14    |    Sim    |    Falha no logon do usuário '%.*ls'. Motivo: a senha da conta expirou.%.* ls    |
+|    18488    |    14    |    Sim    |    Falha no logon do usuário '%.*ls'. Motivo: a senha da conta precisa ser alterada.%.* ls    |
+|    18489    |    10    |    Não    |    A conexão dedicada de administrador está em uso por"%.*ls" em "%.* ls".%.*ls    |
 |    18491    |    16    |    Sim    |    O SQL Server não pôde ser iniciado devido a um número de série inválido. A informação de número de série obtida na inicialização parece inválida. Para continuar, reinstale o SQL Server.    |
 |    18492    |    16    |    Sim    |    Não é possível iniciar o SQL Server porque o contrato de licença para esta versão '%ls' do SQL Server é inválido. O servidor está sendo fechado. Para continuar, reinstale o SQL Server com uma licença válida.    |
 |    18493    |    16    |    Sim    |    Não há suporte para o sinalizador de logon da instância de usuário nesta versão do SQL Server. A conexão será fechada.%.*ls    |
@@ -6838,8 +6838,8 @@ ORDER BY message_id
 |    18496    |    10    |    Sim    |    Fabricante do Sistema: '%ls', Modelo do Sistema: '%ls'.    |
 |    18596    |    16    |    Não    |    Não é possível iniciar %.*ls porque o sistema está com memória insuficiente.    |
 |    18597    |    16    |    Não    |    A instalação de %.*ls está corrompida ou foi violada (%hs). Desinstale e execute a instalação novamente para corrigir o problema    |
-|    18598    |    16    |    Não    |    %. *ls não pôde encontrar a instância padrão (%.* ls): erro %d. Especifique o nome de uma instância existente na invocação de sqlservr.exe.\n\nSe você achar que a instalação está corrompida ou foi violada, desinstale e execute a instalação novamente para corrigir o problema.    |
-|    18599    |    16    |    Não    |    %. *ls não pôde encontrar a instância nomeada especificada (%.* ls): erro %d. Especifique o nome de uma instância existente na invocação de sqlservr.exe.\n\nSe você achar que a instalação está corrompida ou foi violada, desinstale e execute a instalação novamente para corrigir o problema.    |
+|    18598    |    16    |    Não    |    %.*ls não pôde encontrar a instância padrão (%.* ls): erro %d. Especifique o nome de uma instância existente na invocação de sqlservr.exe.\n\nSe você achar que a instalação está corrompida ou foi violada, desinstale e execute a instalação novamente para corrigir o problema.    |
+|    18599    |    16    |    Não    |    %.*ls não pôde encontrar a instância nomeada especificada (%.* ls): erro %d. Especifique o nome de uma instância existente na invocação de sqlservr.exe.\n\nSe você achar que a instalação está corrompida ou foi violada, desinstale e execute a instalação novamente para corrigir o problema.    |
 |    18750    |    16    |    Não    |    %ls: o parâmetro '%ls' é inválido.    |
 |    18751    |    16    |    Não    |    O procedimento %ls foi chamado com um número incorreto de parâmetros.    |
 |    [18752](mssqlserver-18752-database-engine-error.md)    |    16    |    Não    |    Somente um Agente de Leitor de Log ou um procedimento relacionado ao log (sp_repldone, sp_replcmds e sp_replshowcmds) pode se conectar ao banco de dados de cada vez. Se você tiver executado um procedimento relacionado ao log, descarte a conexão através da qual o procedimento foi executado ou execute sp_replflush por essa conexão antes de iniciar o Agente de Leitor de Log ou de executar outro procedimento relacionado ao log.    |
@@ -6914,7 +6914,7 @@ ORDER BY message_id
 |    18847    |    16    |    Não    |    Não foi possível recuperar informações de banco de dados ponto a ponto. Contate os Serviços de Atendimento ao Cliente.    |
 |    18849    |    16    |    Não    |    Falha ao avaliar o procedimento de filtro ou a coluna computada. Não é possível localizar informação de deslocamento da ID de coluna %d, rowsetId %I64d. Pare e reinicie o Log Reader Agent. Se o problema persistir, faça backup do banco de dados de publicação e contate os Serviços de Atendimento ao Cliente.    |
 |    18850    |    16    |    Não    |    Encontrado registro de log %s inesperado, último nó FILESTREAMInfo processado: {%d, {{%I64d, %I64d}, %I64d, %I64d, %d, %d}, %d, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %d, {{%I64d, %I64d}, %I64d, %I64d, %d, %d}, {%08lx:%08lx:%04lx}}    |
-|    18851    |    16    |    Não    |    Falha ao %s o contexto de replicação para TxF: {%I64d, %. *ls, %ld, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %I64d, %.* ls, {%08lx:%08lx:%04lx}}. Se o problema persistir, contate a equipe de suporte ao produto.    |
+|    18851    |    16    |    Não    |    Falha ao %s o contexto de replicação para TxF: {%I64d, %.*ls, %ld, %ld, %I64d, %I64d, %I64d, %I64d, {%08lx:%08lx:%04lx}, %I64d, %.* ls, {%08lx:%08lx:%04lx}}. Se o problema persistir, contate a equipe de suporte ao produto.    |
 |    18852    |    16    |    Não    |    Falha ao ler a estrutura TXF_REPLICATION_RECORD_WRITE. O último erro retornou '%ld'. Se o problema persistir, contate os Serviços de Atendimento ao Cliente.    |
 |    18853    |    10    |    Não    |    A replicação está ignorando o registro em log da versão do esquema porque a tabela systranschemas não está presente no banco de dados '%d'. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |    18854    |    16    |    Não    |    Uma ou mais assinaturas foram marcadas como inativas. Descarte e recrie todas as assinaturas do nó que estão apresentando este erro.    |
@@ -8130,7 +8130,7 @@ ORDER BY message_id
 |    22108    |    16    |    Não    |    A cláusula CHANGE_TRACKING_CONTEXT WITH não pode ser usada com uma instrução SELECT.    |
 |    22109    |    16    |    Não    |    O argumento "context" da cláusula CHANGE_TRACKING_CONTEXT WITH deve ser do tipo de dados varbinary com um comprimento máximo de 128.    |
 |    22110    |    16    |    Não    |    O número de colunas especificado na função CHANGETABLE(VERSION ...) não corresponde ao número de colunas de chave primária da tabela '%.*ls'.    |
-|    22111    |    16    |    Não    |    A coluna '%. *ls' especificada na função CHANGETABLE(VERSION ...) não faz parte da chave primária da tabela '%.* ls'.    |
+|    22111    |    16    |    Não    |    A coluna '%.*ls' especificada na função CHANGETABLE(VERSION ...) não faz parte da chave primária da tabela '%.* ls'.    |
 |    22112    |    16    |    Não    |    Cada coluna de chave primária deve ser especificada uma vez na função CHANGETABLE(VERSION ...). A coluna '%.*ls' foi especificada mais de uma vez.    |
 |    22113    |    16    |    Não    |    %S_MSG não é permitido porque as alterações feitas na tabela estão sendo controladas.    |
 |    22114    |    16    |    Não    |    As opções de controle de alterações de ALTER DATABASE não podem ser combinadas com outras opções de ALTER DATABASE.    |
@@ -8527,7 +8527,7 @@ ORDER BY message_id
 |    25710    |    16    |    Sim    |    A sessão de evento "%.*ls" não foi iniciada. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.    |
 |    25711    |    16    |    Não    |    Falha ao analisar um predicado de evento.    |
 |    25712    |    16    |    Não    |    Um operador de comparação inválido foi especificado para um predicado de evento.    |
-|    25713    |    16    |    Não    |    O valor especificado para %S_MSG, "%. *ls", %S_MSG, "%.* ls", é inválido.    |
+|    25713    |    16    |    Não    |    O valor especificado para %S_MSG, "%.*ls", %S_MSG, "%.* ls", é inválido.    |
 |    25715    |    16    |    Não    |    O predicado no evento "%ls" é inválido. O operador '%ls' não foi definido para o tipo "%ls", %S_MSG: "%.*ls".    |
 |    25716    |    16    |    Não    |    O predicado no evento, "%.*ls", excede o comprimento máximo de %d caracteres.    |
 |    25717    |    16    |    Não    |    O sistema operacional retornou o erro %ls ao ler do arquivo '%s'.    |
@@ -8575,7 +8575,7 @@ ORDER BY message_id
 |    26022    |    10    |    Sim    |    Servidor está escutando em [ %hs <%hs> %d].    |
 |    26023    |    16    |    Sim    |    Falha do provedor TCP do servidor ao escutar em [ %hs <%hs> %d]. A porta TCP já está sendo usada.    |
 |    26024    |    16    |    Sim    |    Servidor não escutou em %hs <%hs> %d. Erro: %#x. Para continuar, notifique o administrador do sistema.    |
-|    26025    |    10    |    Sim    |    Autenticação de HTTP bem-sucedida para o usuário '%. *ls'.%.* ls    |
+|    26025    |    10    |    Sim    |    Autenticação de HTTP bem-sucedida para o usuário '%.*ls'.%.* ls    |
 |    26026    |    14    |    Sim    |    Falha na autenticação HTTP.%.*ls    |
 |    26027    |    10    |    Sim    |    Não há suporte para o protocolo Virtual Interface Architecture nesta edição específica do SQL Server.    |
 |    26028    |    10    |    Sim    |    O provedor de pipe nomeado pelo servidor está pronto para aceitar conexão em [ %hs ].    |
@@ -8685,7 +8685,7 @@ ORDER BY message_id
 |    28003    |    16    |    Não    |    Erro interno no agente de serviços. Erro no sistema operacional: %ls.    |
 |    28004    |    16    |    Não    |    Esta mensagem não foi entregue porque a ação '%S_MSG' não pode ser executado no estado '%.*ls'.    |
 |    28005    |    16    |    Não    |    Exceção ao colocar uma mensagem na fila de destino. Erro: %d, Estado: %d. %.*ls    |
-|    28006    |    14    |    Não    |    O usuário não tem permissão para %S_MSG a conversa '%. *ls' no estado '%.* ls'. Somente os membros da função de servidor fixa sysadmin e da função de banco de dados fixa db_owner têm essa permissão.    |
+|    28006    |    14    |    Não    |    O usuário não tem permissão para %S_MSG a conversa '%.*ls' no estado '%.* ls'. Somente os membros da função de servidor fixa sysadmin e da função de banco de dados fixa db_owner têm essa permissão.    |
 |    28007    |    16    |    Não    |    Mensagem corrompida recebida. O número mais alto de mensagens vistas deve ser maior que o número de mensagens confirmadas. Isso ocorreu na mensagem com ID de conversa '%.*ls', Iniciador: %d e Número de sequência de mensagem: %I64d.    |
 |    28008    |    16    |    Não    |    O identificador de conversa'{% .8x -% .4x -% .4x -% .2x% .2x -% .2x% .2x% .2x% .2x% .2x% .2x}' não é válido.    |
 |    28009    |    16    |    Não    |    A API de criptografia detectou dados incorretos ao tentar executar uma operação de descriptografia.    |
@@ -8725,9 +8725,9 @@ ORDER BY message_id
 |    28043    |    16    |    Não    |    Mensagem corrompida recebida. Cabeçalho da resposta de arbitragem inválido.    |
 |    28044    |    16    |    Não    |    Mensagem corrompida recebida. Ela não foi criptografada e assinada usando o algoritmo de ponto de extremidade atualmente configurado. Isso ocorreu na mensagem com ID de conversa '%.*ls', Iniciador: %d e Número de sequência de mensagem: %I64d.    |
 |    28045    |    10    |    Não    |    Falha no handshake de conexão. O certificado usado pelo peer não corresponde ao do banco de dados mestre com mesmo nome de emissor e número de série. Estado %d.    |
-|    28046    |    10    |    Sim    |    O logon %S_MSG do usuário foi bem-sucedido '%. *ls'. Modo de autenticação: %.* ls. %.*ls    |
-|    28047    |    10    |    Sim    |    Falha na tentativa de logon %S_MSG com erro: '%. *ls'. %.* ls    |
-|    28048    |    10    |    Sim    |    Falha na tentativa de logon %S_MSG do usuário '%. *ls' com erro: '%.* ls'. %.*ls    |
+|    28046    |    10    |    Sim    |    O logon %S_MSG do usuário foi bem-sucedido '%.*ls'. Modo de autenticação: %.* ls. %.*ls    |
+|    28047    |    10    |    Sim    |    Falha na tentativa de logon %S_MSG com erro: '%.*ls'. %.* ls    |
+|    28048    |    10    |    Sim    |    Falha na tentativa de logon %S_MSG do usuário '%.*ls' com erro: '%.* ls'. %.*ls    |
 |    28050    |    10    |    Não    |    Não foi possível criar nem acessar as chaves de sessão para esta conversa. A chave mestre do banco de dados deve ser usada nesta operação.    |
 |    28051    |    10    |    Não    |    Impossível salvar uma chave de sessão de diálogo. É preciso uma chave mestre no banco de dados para salvar a chave de sessão.    |
 |    28052    |    16    |    Não    |    Não é possível descriptografar a chave de sessão ao gerar novamente a chave mestre com a opção FORCE.    |
@@ -8769,8 +8769,8 @@ ORDER BY message_id
 |    28089    |    16    |    Não    |    Não é possível usar o principal do banco de dados '%.*ls' em uma associação de serviço remoto porque ele não pode conter certificados. Esse é um usuário especial para compatibilidade com versões anteriores com esquemas de usuário implicitamente conectados.    |
 |    28090    |    16    |    Não    |    Erro ao excluir mensagens enviadas da fila de transmissão. Erro: %i, Estado: %i. Verifique se nenhuma outra operação está bloqueando a fila de transmissão e se o banco de dados está disponível.    |
 |    28098    |    10    |    Não    |    Foi encontrada uma conexão existente com o mesmo peer após a pesquisa de DNS. Essa conexão será fechada. Todo o tráfego será redirecionado para a conexão existente anteriormente. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário. Estado %d.    |
-|    28099    |    10    |    Não    |    Durante o processo de atualização do banco de dados '%. *ls', um objeto de usuário '%S_MSG' denominado '%.* ls' foi detectado como já existente. Esse objeto agora está reservado pelo sistema nesta versão do SQL Server. Como ele já existe no banco de dados, o processo de atualização não pode instalá-lo. Remova ou renomeie o objeto de usuário do banco de dados original (anterior à atualização) em uma versão mais antiga do SQL Server e, em seguida, tente novamente o processo de atualização do banco de dados usando CREATE DATABASE FOR ATTACH. A funcionalidade baseada no objeto reservado poderá não funcionar corretamente se você continuar a usar o banco de dados no estado atual.    |
-|    28101    |    16    |    Não    |    O usuário '%. *ls\%.* ls' não tem permissão para depurar a conexão de cliente solicitada.    |
+|    28099    |    10    |    Não    |    Durante o processo de atualização do banco de dados '%.*ls', um objeto de usuário '%S_MSG' denominado '%.* ls' foi detectado como já existente. Esse objeto agora está reservado pelo sistema nesta versão do SQL Server. Como ele já existe no banco de dados, o processo de atualização não pode instalá-lo. Remova ou renomeie o objeto de usuário do banco de dados original (anterior à atualização) em uma versão mais antiga do SQL Server e, em seguida, tente novamente o processo de atualização do banco de dados usando CREATE DATABASE FOR ATTACH. A funcionalidade baseada no objeto reservado poderá não funcionar corretamente se você continuar a usar o banco de dados no estado atual.    |
+|    28101    |    16    |    Não    |    O usuário '%.*ls\%.* ls' não tem permissão para depurar a conexão de cliente solicitada.    |
 |    28102    |    16    |    Não    |    A execução em lotes foi finalizada por solicitação do depurador.    |
 |    28201    |    10    |    Não    |    O SQLSQM.EXE não pode ser iniciado. Isso pode ocorrer se a informação necessária no Registro estiver ausente ou corrompida ou se o SQLSQM.EXE não for encontrado.    |
 |    28102    |    16    |    Não    |    A execução em lotes foi finalizada por solicitação do depurador.    |
@@ -8792,8 +8792,8 @@ ORDER BY message_id
 |    30028    |    17    |    Não    |    Falha ao obter a interface do pipeline para '%ls', o que resulta no erro: 0x%X. Há um problema de comunicação com o controlador de host ou o host do daemon de filtro.    |
 |    30029    |    17    |    Não    |    Falha do controlador de host de texto completo ao iniciar. Erro: 0x%X.    |
 |    30031    |    17    |    Não    |    Falha em uma mesclagem mestra de texto completo no catálogo de texto completo '%ls' do banco de dados '%.*ls' com o erro 0x%08X.    |
-|    30032    |    16    |    Não    |    A lista de palavras irrelevantes (stoplist) '%. *ls' não contém a palavra irrelevante de texto completo '%.* ls' com ID de localidade %d. Especifique uma palavra irrelevante e um LCID (identificador de localidade) válidos na instrução Transact-SQL.    |
-|    30033    |    16    |    Não    |    A lista de palavras irrelevantes (stoplist) '%. *ls' já contém a palavra irrelevante de texto completo '%.* ls' com ID de localidade %d. Especifique uma palavra irrelevante e um LCID (identificador de localidade) exclusivos na instrução Transact-SQL.    |
+|    30032    |    16    |    Não    |    A lista de palavras irrelevantes (stoplist) '%.*ls' não contém a palavra irrelevante de texto completo '%.* ls' com ID de localidade %d. Especifique uma palavra irrelevante e um LCID (identificador de localidade) válidos na instrução Transact-SQL.    |
+|    30033    |    16    |    Não    |    A lista de palavras irrelevantes (stoplist) '%.*ls' já contém a palavra irrelevante de texto completo '%.* ls' com ID de localidade %d. Especifique uma palavra irrelevante e um LCID (identificador de localidade) exclusivos na instrução Transact-SQL.    |
 |    30034    |    16    |    Não    |    A lista de palavras irrelevantes (stoplist) '%.*ls' não pode ser descartada porque está sendo usada por pelo menos um índice de texto completo. Para identificar qual índice de texto completo está usando uma lista de palavras irrelevantes (stoplist): obtenha a ID da lista na coluna stoplist_id da exibição do catálogo sys.fulltext_indexes e, em seguida, pesquise essa ID na coluna stoplist_id da exibição do catálogo sys.fulltext_stoplists. Descarte o índice de texto completo usando DROP FULLTEXT INDEX ou altere sua configuração de lista de palavras irrelevantes usando ALTER FULLTEXT INDEX. Tente descartar a lista novamente.    |
 |    30037    |    16    |    Não    |    Um argumento passado para uma função de texto completo não é válido.    |
 |    30038    |    17    |    Não    |    Erro do índice de texto completo durante a compactação ou descompactação. O índice de texto completo pode estar corrompido no disco. Execute dbcc checkdatabase e popule novamente o índice.    |
@@ -8802,7 +8802,7 @@ ORDER BY message_id
 |    30044    |    16    |    Não    |    O usuário não tem permissão para alterar a lista de palavras irrelevantes (stoplist) '%.*ls' padrão atual. Para alterar a lista de palavras irrelevantes padrão do banco de dados, é necessário ter a permissão ALTER em ambas as listas, a nova e a antiga.    |
 |    30045    |    17    |    Não    |    Erro do índice de texto completo durante a compactação ou descompactação. O índice de texto completo pode estar corrompido no disco. Execute dbcc checkdatabase e popule novamente o índice.    |
 |    30046    |    16    |    Não    |    O SQL Server encontrou o erro 0x%x ao comunicar-se com o processo do host do daemon de filtro (FDHost) de texto completo. Verifique se o processo FDHost está em execução. Para reiniciar o processo FDHost, execute o comando sp_fulltext_service 'restart_all_fdhosts' ou reinicie a instância do SQL Server.    |
-|    30047    |    16    |    Não    |    O usuário não tem permissão para %. *ls a lista de palavras irrelevantes (stoplist) '%.* ls'.    |
+|    30047    |    16    |    Não    |    O usuário não tem permissão para %.*ls a lista de palavras irrelevantes (stoplist) '%.* ls'.    |
 |    30048    |    10    |    Não    |    Informativo: ignorando regra duplicada do dicionário de sinônimos '%ls' ao carregar o arquivo do dicionário de sinônimos para o LCID %d. Uma frase duplicada do dicionário de sinônimos foi encontrada na seção <sub> da regra de expansão ou na seção <pat> de uma regra substituta. Como causa ambiguidade, essa frase será ignorada."    |
 |    30049    |    17    |    Não    |    Erro interno do dicionário de sinônimos de texto completo (HRESULT = '0x%08x')    |
 |    30050    |    16    |    Não    |    Não foi possível carregar o arquivo de dicionário de sinônimos para o lcid '%d' e o dicionário de sinônimos global.    |
@@ -8823,8 +8823,8 @@ ORDER BY message_id
 |    30069    |    11    |    Não    |    O componente de filtro de texto completo '%ls', usado para popular o catálogo '%.*ls' na versão anterior do SQL Server, não está na versão atual (a versão do componente é '%ls', o caminho completo é '%.*ls'). Isso pode gerar resultados de pesquisa ligeiramente diferentes das versões anteriores. Para evitar o problema, recrie o catálogo de texto completo usando a versão atual do componente de filtro.    |
 |    30070    |    10    |    Não    |    Durante a atualização do banco de dados, o componente separador de palavras de texto completo '%ls' usado pelo catálogo '%ls' foi verificado com êxito. A versão do componente é '%ls'. O caminho completo é '%.*ls'. O idioma solicitado é %d. O idioma usado é %d.    |
 |    30071    |    11    |    Não    |    O componente separador de palavras de texto completo '%ls', usado para popular o catálogo '%ls' na versão anterior do SQL Server, não está na versão atual (a versão do componente é '%.ls', o caminho completo é '%.*ls', o idioma solicitado é %d, o idioma usado é %d). Isso pode gerar resultados de pesquisa ligeiramente diferentes das versões anteriores. Para evitar o problema, recrie o catálogo de texto completo usando a versão atual do componente separador de palavras.    |
-|    30072    |    10    |    Não    |    Durante a atualização do banco de dados, o componente manipulador de protocolo de texto completo '%ls' usado pelo catálogo '%ls' foi verificado com êxito. A versão do componente é '%ls'. O caminho completo é '%. *ls'. A ID do programa é '%.* ls'.    |
-|    30073    |    11    |    Não    |    O componente manipulador de protocolo de texto completo '%ls', usado para popular o catálogo '%ls' em uma versão anterior do SQL Server, não está na versão atual (a versão do componente é '%ls', o caminho completo é '%. *ls', a ID do programa é '%.* ls'). Isso pode gerar resultados de pesquisa ligeiramente diferentes das versões anteriores. Para evitar o problema, recrie o catálogo de texto completo usando a versão atual do componente manipulador de protocolo.    |
+|    30072    |    10    |    Não    |    Durante a atualização do banco de dados, o componente manipulador de protocolo de texto completo '%ls' usado pelo catálogo '%ls' foi verificado com êxito. A versão do componente é '%ls'. O caminho completo é '%.*ls'. A ID do programa é '%.* ls'.    |
+|    30073    |    11    |    Não    |    O componente manipulador de protocolo de texto completo '%ls', usado para popular o catálogo '%ls' em uma versão anterior do SQL Server, não está na versão atual (a versão do componente é '%ls', o caminho completo é '%.*ls', a ID do programa é '%.* ls'). Isso pode gerar resultados de pesquisa ligeiramente diferentes das versões anteriores. Para evitar o problema, recrie o catálogo de texto completo usando a versão atual do componente manipulador de protocolo.    |
 |    30074    |    17    |    Não    |    A mesclagem mestra do catálogo de texto completo '%ls' no banco de dados '%.*ls' foi cancelada.    |
 |    30075    |    10    |    Não    |    Rastreamentos de texto completo para a ID de banco de dados: %d, ID da tabela: %d, ID do catálogo: %d serão interrompidos porque o índice clusterizado na tabela foi alterado ou descartado. Será necessário reiniciar o rastreamento desde o início.    |
 |    30076    |    10    |    Não    |    Informações de progresso de encaminhamento de rastreamento de texto completo para a ID do banco de dados: %d, ID da tabela: %d, ID do catálogo: %d foram redefinidas devido à modificação do índice clusterizado. O rastreamento será reiniciado desde o princípio quando sair da pausa.    |
@@ -8842,14 +8842,14 @@ ORDER BY message_id
 |    30088    |    10    |    Não    |    O processo de host do daemon de filtro de texto completo parou normalmente. O processo será reiniciado automaticamente, se necessário.    |
 |    [30089](mssqlserver-30089-database-engine-error.md)    |    17    |    Não    |    O processo FDHost (host do daemon de filtro de texto completo) foi interrompido de maneira anormal. Isso poderá ocorrer se um componente linguístico configurado incorretamente ou que não está funcionando bem, como um separador de palavras, lematizador ou filtro, gerou um erro irrecuperável durante a indexação de texto completo ou no processamento de uma consulta. O processo será reiniciado automaticamente.    |
 |    30090    |    10    |    Não    |    Uma nova instância do processo de host do daemon de filtro de texto completo foi iniciada com êxito.    |
-|    30091    |    10    |    Não    |    Uma solicitação para iniciar uma população de índice de texto completo na tabela ou exibição indexada '%. *ls' foi ignorada, pois há uma população em pausa no momento. Continue ou interrompa a população em pausa. Para retomá-la, use a seguinte instrução Transact-SQL: ALTER FULLTEXT INDEX ON %.* ls RESUME POPULATION. Para interrompê-la, use a seguinte instrução: ALTER FULLTEXT INDEX ON %.*ls STOP POPULATION.    |
+|    30091    |    10    |    Não    |    Uma solicitação para iniciar uma população de índice de texto completo na tabela ou exibição indexada '%.*ls' foi ignorada, pois há uma população em pausa no momento. Continue ou interrompa a população em pausa. Para retomá-la, use a seguinte instrução Transact-SQL: ALTER FULLTEXT INDEX ON %.* ls RESUME POPULATION. Para interrompê-la, use a seguinte instrução: ALTER FULLTEXT INDEX ON %.*ls STOP POPULATION.    |
 |    30092    |    16    |    Não    |    A ID de lista de palavras irrelevantes (stoplist) '%d' não existe.    |
 |    30093    |    17    |    Não    |    Falha na inicialização do cliente de separação de palavras do SQL Server. Talvez um processo do host do daemon de filtro não esteja em um estado válido. Isso pode impedir que o SQL Server inicialize objetos críticos do sistema. Haverá falha nas consultas de texto completo até que o problema seja resolvido. Tente parar o SQL Server e quaisquer processos do host do daemon de filtro e reiniciar a instância do SQL Server.    |
 |    30094    |    17    |    Não    |    Não foi possível inicializar o pipeline de indexação de texto completo. Os recursos do sistema podem estar insuficientes para alocar memória ou criar tarefas. Tente reiniciar a instância do SQL Server.    |
 |    30095    |    10    |    Não    |    A versão dos componentes de linguagem usados pelo catálogo de texto completo '%ls' no banco de dados '%ls' é diferente da versão dos componentes incluídos nesta versão do SQL Server. O catálogo de texto completo ainda será importado como parte da atualização do banco de dados. Para evitar possíveis inconsistências de resultados de consultas, considere a possibilidade de recriar o catálogo de texto completo.    |
 |    30096    |    10    |    Não    |    Repetição da população de %d de texto completo iniciada para a tabela ou exibição indexada '%ls'. A ID da tabela ou exibição indexada é '%d'. A ID do banco de dados é '%d'.    |
 |    30097    |    10    |    Não    |    Falha na atualização do catálogo de texto completo devido a uma inconsistência nos metadados entre sys.master_files e sys.fulltext_catalogs para a ID de catálogo %d na ID de banco de dados %d. Tente anexar novamente esse banco de dados. Se houver falha, o catálogo deverá ser descartado ou recriado antes da anexação.    |
-|    30098    |    10    |    Não    |    Falha com o código de erro %d em uma consulta interna para carregar dados para um rastreamento no banco de dados '%. *ls' e na tabela '%.* ls'. Verifique o código de erro sql para obter mais informações sobre a condição causadora da falha. O rastreamento precisa ser reiniciado após a remoção dessa condição.    |
+|    30098    |    10    |    Não    |    Falha com o código de erro %d em uma consulta interna para carregar dados para um rastreamento no banco de dados '%.*ls' e na tabela '%.* ls'. Verifique o código de erro sql para obter mais informações sobre a condição causadora da falha. O rastreamento precisa ser reiniciado após a remoção dessa condição.    |
 |    30099    |    17    |    Não    |    Erro interno de texto completo    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
@@ -8923,7 +8923,7 @@ ORDER BY message_id
 |    33006    |    16    |    Não    |    A opção WITH SIGNATURE não pode ser especificada no banco de dados.    |
 |    33007    |    16    |    Não    |    Não é possível criptografar a chave simétrica com ela mesma.    |
 |    33008    |    16    |    Não    |    Não é possível conceder, negar ou revogar a permissão %.*ls INFORMATION_SCHEMA ou SYS %S_MSG.    |
-|    33009    |    16    |    Não    |    O SID do proprietário do banco de dados, gravado no banco de dados principal, difere do SID do proprietário gravado no banco de dados '%. *ls'. Você deve corrigir esta situação redefinindo o proprietário do banco de dados '%.* ls' usando a instrução ALTER AUTHORIZATION.    |
+|    33009    |    16    |    Não    |    O SID do proprietário do banco de dados, gravado no banco de dados principal, difere do SID do proprietário gravado no banco de dados '%.*ls'. Você deve corrigir esta situação redefinindo o proprietário do banco de dados '%.* ls' usando a instrução ALTER AUTHORIZATION.    |
 |    33010    |    16    |    Não    |    Não é possível especificar a opção MUST_CHANGE juntamente com a opção HASHED.    |
 |    33011    |    16    |    Não    |    Não é possível descartar a chave privada %S_MSG porque uma ou mais entidades foram criptografadas por ela.    |
 |    33012    |    10    |    Não    |    Não é possível %S_MSG a assinatura %S_MSG %S_MSG '%.*ls'. A assinatura já existe ou não pode ser adicionada.    |
@@ -8961,7 +8961,7 @@ ORDER BY message_id
 |    33043    |    16    |    Não    |    Não é possível adicionar %S_MSG '%.*ls' porque o %S_MSG já está especificado para o logon.    |
 |    33044    |    16    |    Não    |    Não é possível descartar o %S_MSG porque há referência do %S_MSG a este provedor.    |
 |    33045    |    16    |    Não    |    Não é possível descartar o %S_MSG porque não ele não está mapeado para este logon.    |
-|    33046    |    16    |    Não    |    A entidade do servidor '%. *ls' não tem nenhuma credencial associada a %S_MSG '%.* ls'.    |
+|    33046    |    16    |    Não    |    A entidade do servidor '%.*ls' não tem nenhuma credencial associada a %S_MSG '%.* ls'.    |
 |    33047    |    16    |    Não    |    Falha ao obter ou descriptografar o segredo para %S_MSG '%.*ls'.    |
 |    33048    |    16    |    Não    |    Não é possível usar o %S_MSG sob contexto de segurança não primário.    |
 |    33049    |    16    |    Não    |    A chave com %S_MSG '%.*ls' não existe no provedor ou o acesso foi negado. Código de erro do provedor: %d. (%S_MSG)    |
@@ -8970,8 +8970,8 @@ ORDER BY message_id
 |    33052    |    16    |    Não    |    A chave do provedor de criptografia não pode ser temporária.    |
 |    33053    |    16    |    Não    |    O Gerenciamento Extensível de Chaves está desabilitado ou não tem suporte nesta edição do SQL Server. Use sp_configure 'EKM provider enabled' para habilitá-lo.    |
 |    33054    |    16    |    Não    |    O gerenciamento extensível de chaves não tem suporte nesta edição do SQL Server.    |
-|    33055    |    16    |    Não    |    Exceção ao chamar o provedor de criptografia '%. *ls' na API '%.* ls'. O SQL Server está encerrando o processo %d. Tipo de exceção: %ls; Código de exceção: 0x%lx.    |
-|    33056    |    16    |    Não    |    Não é possível representar o logon '%. *ls' para acessar %S_MSG '%.* ls'.    |
+|    33055    |    16    |    Não    |    Exceção ao chamar o provedor de criptografia '%.*ls' na API '%.* ls'. O SQL Server está encerrando o processo %d. Tipo de exceção: %ls; Código de exceção: 0x%lx.    |
+|    33056    |    16    |    Não    |    Não é possível representar o logon '%.*ls' para acessar %S_MSG '%.* ls'.    |
 |    33057    |    10    |    Não    |    O provedor criptográfico está desabilitado agora. Entretanto, os usuários que tiverem uma sessão criptográfica aberta com o provedor ainda o usarão. Reinicie o servidor para desabilitar o provedor para todos os usuários.    |
 |    33058    |    10    |    Não    |    O provedor criptográfico está descartado agora. Entretanto, os usuários que tiverem uma sessão criptográfica aberta com o provedor ainda o usarão. Reinicie o servidor para descartar o provedor para todos os usuários.    |
 |    33070    |    16    |    Não    |    O limite de tamanho máximo especificado para o arquivo do log de auditoria é inferior ao valor mínimo permitido. O limite de tamanho máximo deve ser pelo menos 2 MB.    |
@@ -9042,7 +9042,7 @@ ORDER BY message_id
 |    33219    |    10    |    Não    |    O servidor parou porque o SQL Server Audit '%.*ls' está configurado para ser desligado em caso de falha. Para solucionar esse problema, use o sinalizador -m (Modo de Usuário Único) para ignorar desligamentos gerados pelo Audit quando o servidor estiver iniciando.    |
 |    33220    |    16    |    Não    |    As ações de auditoria no escopo do servidor só podem ser concedidas quando o banco de dados atual é o mestre.    |
 |    33221    |    16    |    Não    |    É possível criar ações de auditoria somente em objetos do banco de dados atual.    |
-|    33222    |    10    |    Não    |    Falha na auditoria '%. *ls' ao %.* ls. Para obter mais informações, consulte o log de erros do SQL Server. Você também poderá consultar sys.dm_os_ring_buffers onde ring_buffer_type = 'RING_BUFFER_XE_LOG'.    |
+|    33222    |    10    |    Não    |    Falha na auditoria '%.*ls' ao %.* ls. Para obter mais informações, consulte o log de erros do SQL Server. Você também poderá consultar sys.dm_os_ring_buffers onde ring_buffer_type = 'RING_BUFFER_XE_LOG'.    |
 |    33223    |    16    |    Não    |    ALTER SERVER AUDIT requer que a opção STATE seja especificada sem o uso de nenhuma outra opção.    |
 |    33224    |    16    |    Não    |    O padrão especificado não retornou nenhum arquivo ou não representa um compartilhamento de arquivo válido. Verifique o parâmetro do padrão e execute novamente o comando.    |
 |    33225    |    16    |    Não    |    Os valores especificados para initial_file_name e audit_record_offset não representam um local válido no conjunto de arquivos de auditoria. Verifique o nome do arquivo e o local de deslocamento e execute novamente o comando.    |
@@ -9054,7 +9054,7 @@ ORDER BY message_id
 |    33231    |    16    |    Não    |    Você só pode especificar classes protegíveis DATABASE, SCHEMA ou OBJECT em instruções AUDIT SPECIFICATION.    |
 |    33301    |    16    |    Não    |    O %ls especificado para prioridade de conversa '%.*ls' não é válido. O valor deve ter entre 1 e %d caracteres.    |
 |    33302    |    16    |    Não    |    O %ls especificado para prioridade de conversa '%.*ls' não é válido. O valor deve estar entre 1 e 10.    |
-|    33303    |    16    |    Não    |    Já existe uma prioridade de conversa no banco de dados com o nome '%. *ls' ou com as propriedades %ls='%ls', %ls='%ls' e %ls='%.* ls'. Use um nome ou um conjunto de propriedades exclusivo.    |
+|    33303    |    16    |    Não    |    Já existe uma prioridade de conversa no banco de dados com o nome '%.*ls' ou com as propriedades %ls='%ls', %ls='%ls' e %ls='%.* ls'. Use um nome ou um conjunto de propriedades exclusivo.    |
 |    34001    |    16    |    Não    |    A caixa de diálogo com a fila 'syspolicy_event_queue' encontrou um erro: %s.    |
 |    34002    |    16    |    Não    |    A caixa de diálogo com a fila 'syspolicy_event_queue' foi finalizada.    |
 |    34003    |    16    |    Não    |    Número de erro %d encontrado durante o processamento de um evento. A mensagem de erro é: %s.    |
@@ -9101,7 +9101,7 @@ ORDER BY message_id
 |    [41325](mssqlserver-41325-database-engine-error.md)    |        |        |    A transação atual não foi confirmada devido a uma falha de validação serializável.    |
 |    [41332](mssqlserver-41332-database-engine-error.md)    |        |        |    As tabelas com otimização de memória e os procedimentos armazenados compilados originalmente não poderão ser acessados ou criados quando o TRANSACTION ISOLATION LEVEL de sessão estiver definido como SNAPSHOT.    |
 |    [41333](mssqlserver-41333-database-engine-error.md)    |        |        |    As transações a seguir devem acessar tabelas com otimização de memória e procedimentos armazenados em compilados nativamente em isolamento de instantâneo: Transações RepeatableRead, transações Serializable e transações que acessam tabelas não otimizadas para memória em isolamento RepeatableRead ou Serializable.    |
-|    [41342](mssqlserver-41342-database-engine-error.md)    |        |        |    O modelo do processador no sistema não dá suporte à criação de *construct* . Esse erro normalmente ocorre com processadores mais antigos.|
+|    [41342](mssqlserver-41342-database-engine-error.md)    |        |        |    O modelo do processador no sistema não dá suporte à criação de *construct*. Esse erro normalmente ocorre com processadores mais antigos.|
 |    [41349](mssqlserver-41349-database-engine-error.md)    |        |        |    Aviso: a criptografia foi habilitada para um banco de dados que contém uma ou mais tabelas com otimização de memória com durabilidade SCHEMA_AND_DATA. Os dados nessas tabelas com otimização de memória não serão criptografados.    |
 |    [41350](mssqlserver-41350-database-engine-error.md)    |        |        |    Aviso: uma tabela com otimização de memória com durabilidade SCHEMA_AND_DATA foi criada em um banco de dados que foi habilitado para criptografia. Os dados na tabela com otimização de memória não serão criptografados.    |
 |    [41359](mssqlserver-41359-database-engine-error.md)    |        |        |    Uma consulta que acessa as tabelas com otimização de memória usando o nível de isolamento READ COMMITTED não pode acessar as tabelas baseadas em disco quando a opção READ_COMMITTED_SNAPSHOT do banco de dados é definida como ON. Forneça um nível de isolamento com suporte para a tabela com otimização de memória usando uma dica de tabela, como WITH (SNAPSHOT).    |

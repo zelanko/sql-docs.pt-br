@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b422f4c34831c570b3ed6d9d54bcdb90d1d86754
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645916"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482345"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
 
@@ -125,7 +125,7 @@ ms.locfileid: "88645916"
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrições para o uso de colunas esparsas  
  As colunas esparsas podem ser de qualquer tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e podem se comportar como qualquer outra coluna com as seguintes restrições:  
   
--   Uma coluna esparsa deve permitir valor nulo e não deve ter as propriedades ROWGUIDCOL ou IDENTITY. Uma coluna esparsa não pode ser nenhum dos seguintes tipos de dados: **text**, **ntext**, **image**, **timestamp**, tipo de dados definido pelo usuário, **geometry**ou **geography**nem ter o atributo FILESTREAM.  
+-   Uma coluna esparsa deve permitir valor nulo e não deve ter as propriedades ROWGUIDCOL ou IDENTITY. Uma coluna esparsa não pode ser nenhum dos seguintes tipos de dados: **text**, **ntext**, **image**, **timestamp**, tipo de dados definido pelo usuário, **geometry** ou **geography** nem ter o atributo FILESTREAM.  
   
 -   Uma coluna esparsa não pode ter um valor padrão.  
   
