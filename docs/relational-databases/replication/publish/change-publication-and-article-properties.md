@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b11e768bac90b70174c736ae828c39a9a78b3bb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 49a92b0caf261b812e83a4a888930c8533d7cdf9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470146"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432095"
 ---
 # <a name="change-publication-and-article-properties"></a>Alterar propriedades da publicação e do artigo
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

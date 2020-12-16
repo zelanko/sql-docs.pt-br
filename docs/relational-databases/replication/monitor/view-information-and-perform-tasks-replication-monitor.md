@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b359aff3a8164c9d25782b0b10c05f1b68ac5230
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3628c3a508aed473604bcc0b3f1d3d7f2b8e5264
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908784"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432200"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Exibir informações e executar tarefas usando o Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -136,7 +136,7 @@ O Replication Monitor fornece a guia **Agentes** , que inclui informações sobr
 2.  Clique na guia **Todas as Assinaturas** para exibir informações sobre as assinaturas. Você também pode acessar informações mais detalhadas e realizar tarefas nesta guia:   
     -   Para exibir informações detalhadas sobre o agente associado a uma assinatura, clique com o botão direito do mouse na assinatura e então clique em **Exibir Detalhes**. As informações detalhadas incluem: histórico do agente e mensagens de erro, estatísticas de desempenho da replicação transacional e estatísticas no nível de sincronização da replicação de mesclagem.  
   
-         As guias na janela de detalhes aberta dependem do tipo de assinatura: para as assinaturas de instantâneos, a guia é **Histórico do Distribuidor para o Assinante**, para as assinaturas transacionais, as guias são **Histórico do Publicador para o Distribuidor**, **Histórico do Distribuidor para o Assinante**e **Comandos Não Distribuídos**, para as assinaturas de mesclagem, a guia é **Histórico de Sincronização**.  
+         As guias na janela de detalhes aberta dependem do tipo de assinatura: para as assinaturas de instantâneos, a guia é **Histórico do Distribuidor para o Assinante**, para as assinaturas transacionais, as guias são **Histórico do Publicador para o Distribuidor**, **Histórico do Distribuidor para o Assinante** e **Comandos Não Distribuídos**, para as assinaturas de mesclagem, a guia é **Histórico de Sincronização**.  
   
     -   Para sincronizar uma assinatura push, clique com o botão direito do mouse na assinatura, e, depois, clique em **Iniciar Sincronização**.    
     -   Para reinicializar uma assinatura, clique com o botão direito do mouse na assinatura, e, depois, clique em **Reinicializar Assinatura**.    
@@ -148,7 +148,7 @@ O Replication Monitor fornece a guia **Agentes** , que inclui informações sobr
 1.  Expanda um Grupo do publicador no painel esquerdo e clique em um Publicador.    
 2.  Clique na guia **Lista de Observação da Assinatura** , para exibir informações sobre assinaturas. Você também pode acessar informações mais detalhadas e realizar tarefas nesta guia:   
     -   Para exibir informações detalhadas sobre o agente associado a uma assinatura, clique com o botão direito do mouse na assinatura e então clique em **Exibir Detalhes**. As informações detalhadas incluem: histórico do agente e mensagens de erro, estatísticas de desempenho da replicação transacional e estatísticas no nível de sincronização da replicação de mesclagem.    
-         As guias na janela de detalhes aberta dependem do tipo de assinatura: para as assinaturas de instantâneos, a guia é **Histórico do Distribuidor para o Assinante**; para as assinaturas transacionais, as guias são **Histórico do Publicador para o Distribuidor**, **Histórico do Distribuidor para o Assinante**e **Desempenho**; para as assinaturas de mesclagem, a guia é **Histórico de Sincronização**.  
+         As guias na janela de detalhes aberta dependem do tipo de assinatura: para as assinaturas de instantâneos, a guia é **Histórico do Distribuidor para o Assinante**; para as assinaturas transacionais, as guias são **Histórico do Publicador para o Distribuidor**, **Histórico do Distribuidor para o Assinante** e **Desempenho**; para as assinaturas de mesclagem, a guia é **Histórico de Sincronização**.  
   
     -   Para sincronizar uma assinatura push, clique com o botão direito do mouse na assinatura, e, depois, clique em **Iniciar Sincronização**.    
     -   Para reinicializar uma assinatura, clique com o botão direito do mouse na assinatura, e, depois, clique em **Reinicializar Assinatura**.    
