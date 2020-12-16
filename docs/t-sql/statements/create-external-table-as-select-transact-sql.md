@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1085686f4c83198a043855e701ec2ef38d17541f
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 9c97ee3e1f268553a828e035498b203c8fa1e747
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496945"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438941"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -63,9 +63,9 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="arguments"></a>Argumentos
  **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*** é o nome de uma a três partes da tabela a ser criada no banco de dados. Para uma tabela externa, apenas os metadados da tabela são armazenados no banco de dados relacional. 
 
- **LOCATION =  ' *hdfs_folder* '** especifica o local em que serão gravados os resultados da instrução SELECT na fonte de dados externa. O local é um nome de pasta e pode incluir um caminho relativo à pasta raiz do cluster Hadoop ou Armazenamento de Blobs. O PolyBase criará o caminho e a pasta, se estes ainda não existirem.
+ **LOCATION =  '*hdfs_folder*'** especifica o local em que serão gravados os resultados da instrução SELECT na fonte de dados externa. O local é um nome de pasta e pode incluir um caminho relativo à pasta raiz do cluster Hadoop ou Armazenamento de Blobs. O PolyBase criará o caminho e a pasta, se estes ainda não existirem.
 
-Os arquivos externos são gravados em *hdfs_folder* e nomeados *QueryID_date_time_ID.format* , em que *ID* é um identificador incremental e *format* é o formato de dados exportados. Um exemplo é QID776_20160130_182739_0.orc.
+Os arquivos externos são gravados em *hdfs_folder* e nomeados *QueryID_date_time_ID.format*, em que *ID* é um identificador incremental e *format* é o formato de dados exportados. Um exemplo é QID776_20160130_182739_0.orc.
 
  **DATA_SOURCE = *external_data_source_name*** especifica o nome do objeto de fonte de dados externa que contém o local onde os dados externos estão ou serão armazenados. O local é um cluster Hadoop ou um armazenamento de Blob do Azure. Para criar uma fonte de dados externa, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -85,7 +85,7 @@ Os arquivos externos são gravados em *hdfs_folder* e nomeados *QueryID_date_tim
 
    - **REJECT_SAMPLE_VALUE = *reject_sample_value*** é necessário quando REJECT_TYPE = percentage e especifica o número de linhas para tentar importar antes que o banco de dados recalcule o percentual de linhas com falha.
 
-      Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o banco de dados calculará o percentual de linhas com falha depois de tentar importar 1.000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value* , o banco de dados tentará carregar outras 1.000 linhas. O banco de dados continuará calculando novamente o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.
+      Por exemplo, se REJECT_SAMPLE_VALUE = 1000, o banco de dados calculará o percentual de linhas com falha depois de tentar importar 1.000 linhas do arquivo de dados externo. Se o percentual de linhas com falha for menor que *reject_value*, o banco de dados tentará carregar outras 1.000 linhas. O banco de dados continuará calculando novamente o percentual de linhas com falha depois de tentar importar cada 1.000 linhas adicionais.
 
      > [!NOTE]
      >  Como o banco de dados calcula o percentual de linhas com falha em intervalos, o percentual real de linhas com falha pode exceder *reject_value*.
@@ -136,7 +136,7 @@ Os arquivos externos são gravados em *hdfs_folder* e nomeados *QueryID_date_tim
 
  O nome da tabela externa e a definição são armazenados nos metadados do banco de dados. Os dados são armazenados na fonte de dados externa.
 
- Os arquivos externos são nomeados *QueryID_date_time_ID.format* , em que *ID* é um identificador incremental e *formato* é o formato de dados exportados. Um exemplo é QID776_20160130_182739_0.orc.
+ Os arquivos externos são nomeados *QueryID_date_time_ID.format*, em que *ID* é um identificador incremental e *formato* é o formato de dados exportados. Um exemplo é QID776_20160130_182739_0.orc.
 
  A instrução CREATE EXTERNAL TABLE AS SELECT sempre cria uma tabela não particionada, mesmo que a tabela de origem seja particionada.
 

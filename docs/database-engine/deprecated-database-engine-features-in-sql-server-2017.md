@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: 16f81a4ac6265d37cb9e5d50a6500ca68740e394
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670512"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438839"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Recursos preteridos do Mecanismo de Banco de Dados no SQL Server 2017
 
@@ -89,7 +89,7 @@ Atualização da versão 100 (SQL Server 2008 e SQL Server 2008 R2). | Quando um
 
 | Recurso substituído | Substituição | Nome do recurso | ID do Recurso |
 |--------------------|-------------|--------------|------------|
-| **SET ROWCOUNT** para as instruções **INSERT**, **UPDATE**e **DELETE** | Palavra-chave TOP | SET ROWCOUNT | 109 |
+| **SET ROWCOUNT** para as instruções **INSERT**, **UPDATE** e **DELETE** | Palavra-chave TOP | SET ROWCOUNT | 109 |
 | Dica de tabela HOLDLOCK sem parênteses. | Use HOLDLOCK com parênteses. | Dica de tabela HOLDLOCK sem parênteses | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Recursos preteridos em uma versão futura do SQL Server
@@ -124,7 +124,7 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | Recurso substituído | Substituição | Nome do recurso |
 |--------------------|-------------|--------------|
 | sp_addtype <br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE | sp_addtype<br /><br /> sp_droptype |
-| Sintaxe de**timestamp** para o tipo de dados **rowversion** | Sintaxe do tipo de dados**rowversion** | timestamp |
+| Sintaxe de **timestamp** para o tipo de dados **rowversion** | Sintaxe do tipo de dados **rowversion** | timestamp |
 | Capacidade para inserir valores nulos em colunas **timestamp** . | Em vez disso, use um DEFAULT. | INSERT NULL em colunas TIMESTAMP |
 | Opção de tabela 'text in row'|Use os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . Para obter mais informações, veja [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Opção de tabela 'text in row' |
 | Tipos de dados:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **imagem**|Use os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** .|Tipos de dados: **text**, **ntext** ou **image** |
@@ -270,7 +270,7 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 
 | Recurso substituído | Substituição | Nome do recurso |
 |--------------------|-------------|--------------|
-| Notificação**net send**<br /><br />Notificação por pager | Notificação por email<br /><br />Notificação por email | Nenhum |
+| Notificação **net send**<br /><br />Notificação por pager | Notificação por email<br /><br />Notificação por email | Nenhum |
 
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
@@ -329,7 +329,7 @@ Os recursos a seguir do Mecanismo de Banco de Dados do SQL Server terão suporte
 | Referências de coluna de três e quatro partes. | Nomes com duas partes são o comportamento em conformidade com o padrão.|Nome de coluna com mais de duas partes |
 | Uma cadeia de caracteres entre aspas usada como um alias de coluna para uma expressão em uma lista SELECT:<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | Literais de cadeia de caracteres como aliases de coluna |
 | Procedimentos numerados | Nenhum. Não use. | ProcNums |
-| Sintaxe*table_name.index_name* em DROP INDEX|Sintaxe*index_name* ON *table_name* em DROP INDEX.|DROP INDEX com nome de duas partes |
+| Sintaxe *table_name.index_name* em DROP INDEX|Sintaxe *index_name* ON *table_name* em DROP INDEX.|DROP INDEX com nome de duas partes |
 | Não terminar instruções Transact-SQL com um ponto e vírgula.|Terminar instruções Transact-SQL com um ponto e vírgula (;). | Nenhum |
 | GROUP BY ALL|Use solução caso a caso personalizada com UNION ou tabela derivada. | GROUP BY ALL |
 | ROWGUIDCOL como um nome de coluna em instruções DML.|Use $rowguid.|ROWGUIDCOL |

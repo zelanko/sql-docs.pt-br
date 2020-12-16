@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faece054ca8f125e8c3594eb588ffa8cf97ddc16
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e67547c75424708ca0e934175cc0183afb0bd37d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344908"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439071"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92344908"
   
  [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
- [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
+ [ [ORDER BY *order_expression* [ ASC | DESC ]](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
  Os operadores [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT e INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) podem ser usados entre consultas para combinar ou comparar os resultados em um só conjunto de resultados.  
   
@@ -187,10 +187,10 @@ SELECT <select_criteria>
 > [!WARNING]
 > A sequência anterior geralmente é verdadeira. No entanto, há casos incomuns em que a sequência pode ser diferente.
 >
-> Por exemplo, suponha que você tenha um índice clusterizado em uma exibição e a exibição exclui algumas linhas de tabela e lista de colunas SELECT da exibição usa um CONVERT que altera um tipo de dados de *varchar* para *integer* . Nessa situação, CONVERT pode ser executado antes da execução da cláusula WHERE. Isso é um tanto incomum. Geralmente, há uma maneira de modificar a exibição para evitar a sequência diferente, se isso é importante em seu caso. 
+> Por exemplo, suponha que você tenha um índice clusterizado em uma exibição e a exibição exclui algumas linhas de tabela e lista de colunas SELECT da exibição usa um CONVERT que altera um tipo de dados de *varchar* para *integer*. Nessa situação, CONVERT pode ser executado antes da execução da cláusula WHERE. Isso é um tanto incomum. Geralmente, há uma maneira de modificar a exibição para evitar a sequência diferente, se isso é importante em seu caso. 
 
 ## <a name="permissions"></a>Permissões  
- A seleção de dados exige a permissão **SELECT** na tabela ou exibição, que pode ser herdada de um escopo superior, como a permissão **SELECT** no esquema ou a permissão **CONTROL** na tabela. Ou exige a associação à função de banco de dados fixa **db_datareader** ou **db_owner** ou à função de servidor fixa **sysadmin** . A criação de uma nova tabela com **SELECT INTO** também exige a permissão **CREATE TABLE** e a permissão **ALTER SCHEMA** no esquema que tem a nova tabela.  
+ A seleção de dados exige a permissão **SELECT** na tabela ou exibição, que pode ser herdada de um escopo superior, como a permissão **SELECT** no esquema ou a permissão **CONTROL** na tabela. Ou exige a associação à função de banco de dados fixa **db_datareader** ou **db_owner** ou à função de servidor fixa **sysadmin**. A criação de uma nova tabela com **SELECT INTO** também exige a permissão **CREATE TABLE** e a permissão **ALTER SCHEMA** no esquema que tem a nova tabela.  
   
 ## <a name="examples"></a>Exemplos:   
 O exemplo a seguir usa o banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
