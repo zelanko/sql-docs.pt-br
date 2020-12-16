@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e982f8a8a2ee42c1ac2d84529a29842f8c4b4577
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fe0c23f3cd5b087b4e5a14d50d681b983aeac496
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235531"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459978"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guia de arquitetura e design de índices do SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -107,7 +107,7 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
   
 -   Crie índices não clusterizados nas colunas frequentemente usadas em predicados e condições de junção em consultas. Essas são as colunas SARGable<sup>1</sup>. No entanto, evite adicionar colunas desnecessárias. Acrescentar muitas colunas de índice pode afetar adversamente o espaço em disco e o desempenho de manutenção de índice.  
   
--   Cobrindo índices pode melhorar desempenho de consulta porque todos os dados precisaram satisfazer os requisitos da consulta existe dentro do próprio índice. Ou seja, apenas as páginas de índice, e não as páginas de dados da tabela ou do índice clusterizado, são necessárias para recuperar os dados solicitados, portanto reduzindo as operações de E/S gerais do disco. Por exemplo, uma consulta de colunas **a** e **b** em uma tabela que tem um índice composto criado em colunas **a** , **b** e **c** pode recuperar os dados especificados somente do índice.  
+-   Cobrindo índices pode melhorar desempenho de consulta porque todos os dados precisaram satisfazer os requisitos da consulta existe dentro do próprio índice. Ou seja, apenas as páginas de índice, e não as páginas de dados da tabela ou do índice clusterizado, são necessárias para recuperar os dados solicitados, portanto reduzindo as operações de E/S gerais do disco. Por exemplo, uma consulta de colunas **a** e **b** em uma tabela que tem um índice composto criado em colunas **a**, **b** e **c** pode recuperar os dados especificados somente do índice.  
 
     > [!IMPORTANT]
     > Índices abrangentes são a designação para um [índice não clusterizado](#nonclustered-index-architecture) que resolve um ou vários resultados de consulta semelhantes diretamente, sem acesso à tabela base e sem incorrer em pesquisas.
@@ -118,14 +118,14 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
   
 -   Avalie o tipo da consulta e como as colunas são usadas na consulta. Por exemplo, uma coluna usada em uma consulta de correspondência exata seria uma boa candidata para um índice clusterizado ou não clusterizado.
 
-<a name="sargable"></a><sup>1</sup> o termo SARGable em bancos de dados relacionais se refere a um predicado **S** earch **ARG** ument- **able** que pode aproveitar um índice para acelerar a execução da consulta.
+<a name="sargable"></a><sup>1</sup> o termo SARGable em bancos de dados relacionais se refere a um predicado **S** earch **ARG** ument-**able** que pode aproveitar um índice para acelerar a execução da consulta.
   
 ### <a name="column-considerations"></a>Considerações sobre colunas  
  Quando você projeta um índice, considere as seguintes diretrizes para as colunas:  
   
 -   Mantenha o comprimento da chave de índice curto para os índices clusterizados. Além disso, os índices clusterizados se beneficiam de serem criados em colunas exclusivas ou não nulas.  
   
--   Colunas que são dos tipos de dados **ntext** , **text** , **image** , **varchar(max)** , **nvarchar(max)** e **varbinary(max)** não podem ser especificadas como colunas de chave de índice. Entretanto, os tipos de dados **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** podem participar de um índice não clusterizado, como colunas de índice não chave. Para obter mais informações, consulte a seção ['Índice com colunas incluídas](#Included_Columns)' neste guia.  
+-   Colunas que são dos tipos de dados **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** e **varbinary(max)** não podem ser especificadas como colunas de chave de índice. Entretanto, os tipos de dados **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** podem participar de um índice não clusterizado, como colunas de índice não chave. Para obter mais informações, consulte a seção ['Índice com colunas incluídas](#Included_Columns)' neste guia.  
   
 -   Um tipo de dados **xml** só pode ser uma coluna de chave em um índice XML. Para obter mais informações, veja [Índices XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). O SQL Server 2012 SP1 apresenta um novo tipo de índice XML conhecido como um índice XML seletivo. Esse novo índice pode melhorar o desempenho da consulta dos dados armazenados como XML no SQL Server, permitir uma indexação muito mais rápida de cargas de trabalho de dados XML grandes e melhorar a escalabilidade ao reduzir os custos de armazenamento do próprio índice. Para obter mais informações, consulte [Índices XML seletivos &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -476,11 +476,11 @@ Quando você projeta índices não clusterizados com colunas incluídas, conside
   
 -   As colunas não chave só podem ser definidas em índices não clusterizados em tabelas, ou em exibições indexadas.  
   
--   São permitidos todos os tipos de dados, exceto **text** , **ntext** e **image**.  
+-   São permitidos todos os tipos de dados, exceto **text**, **ntext** e **image**.  
   
 -   As colunas computadas que são determinísticas e precisas ou imprecisas podem ser colunas incluídas. Para obter mais informações, consulte [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Assim como com as colunas de chave, as colunas computadas derivadas dos tipos de dados **image** , **ntext** e **text** podem ser colunas não chave (incluídas), desde que o tipo de dados da coluna computada seja permitido como uma coluna de índice não chave.  
+-   Assim como com as colunas de chave, as colunas computadas derivadas dos tipos de dados **image**, **ntext** e **text** podem ser colunas não chave (incluídas), desde que o tipo de dados da coluna computada seja permitido como uma coluna de índice não chave.  
   
 -   Os nomes das colunas não podem ser especificados na lista INCLUDE e na lista de coluna de chave.  
   
@@ -503,7 +503,7 @@ Quando você projeta índices não clusterizados com colunas incluídas, conside
   
     -   Alterar a nulidade da coluna da coluna NOT NULL até NULL.  
   
-    -   Aumente o tamanho das colunas **varchar** , **nvarchar** ou **varbinary** .  
+    -   Aumente o tamanho das colunas **varchar**, **nvarchar** ou **varbinary** .  
   
         > [!NOTE]  
         >  Estas restrições de modificação de coluna também se aplicam para indexar colunas de chave.  
@@ -567,7 +567,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> Diretrizes de criação de índice filtrado  
  Um índice filtrado é um índice não clusterizado otimizado, criado especialmente para consultas que fazem seleções a partir de um subconjunto bem-definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta e reduzir os custos de manutenção e armazenamento do índice em comparação com os índices de tabela completa.  
   
-**Aplica-se a** : do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Aplica-se a**: do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Os índices filtrados podem oferecer as seguintes vantagens com relação aos índices de tabela completa:  
   
@@ -821,7 +821,7 @@ Para obter mais informações, consulte [Índices columnstore – diretrizes de 
 
 Todas as tabelas com otimização de memória devem ter, pelo menos, um índice, porque são os índices que conectam as linhas. Em uma tabela com otimização de memória, cada índice também tem otimização de memória. Índices de hash são um dos tipos de índice possíveis em uma tabela com otimização de memória. Para obter mais informações, consulte [Índices para tabelas com otimização de memória](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Aplica-se a** : do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Aplica-se a**: do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="hash-index-architecture"></a>Arquitetura de índice de hash
 Um índice de hash consiste em uma matriz de ponteiros e cada elemento da matriz é chamado um bucket de hash.
@@ -913,7 +913,7 @@ Posteriormente, quando as versões mais antigas não forem mais necessárias, um
 
 Índices não clusterizados são um dos tipos de índice possíveis em uma tabela com otimização de memória. Para obter mais informações, consulte [Índices para tabelas com otimização de memória](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Aplica-se a** : do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Aplica-se a**: do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Arquitetura de índice não clusterizado na memória
 

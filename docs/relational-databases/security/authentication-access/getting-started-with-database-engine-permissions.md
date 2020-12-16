@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864480"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460066"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Guia de Introdução às permissões do mecanismo de banco de dados
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,15 +81,13 @@ ms.locfileid: "91864480"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>Se a pessoa que está se conectando for se conectar a apenas um bancos de dados  
   
-1.  Crie um logon para os grupos do Windows. (Se você estiver usando a autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignore as etapas do Active Directory e crie os logons de autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aqui.)  
+1.  No banco de dados de usuário, crie um usuário de banco de dados independente para o grupo do Windows. (Se você estiver usando a autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignore as etapas do Active Directory e crie a autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do usuário de banco de dados independente aqui.  
   
-2.  No banco de dados de usuário, crie um usuário de banco de dados independente para o grupo do Windows. (Se você estiver usando a autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignore as etapas do Active Directory e crie a autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do usuário de banco de dados independente aqui.  
+1.  No banco de dados de usuário, crie uma ou mais funções de banco de dados definidas pelo usuário, cada uma representando uma função semelhante. Por exemplo, analista financeiro e analista de vendas.  
   
-3.  No banco de dados de usuário, crie uma ou mais funções de banco de dados definidas pelo usuário, cada uma representando uma função semelhante. Por exemplo, analista financeiro e analista de vendas.  
+1.  Adicione os usuários do banco de dados a uma ou mais funções de banco de dados definidas pelo usuário.  
   
-4.  Adicione os usuários do banco de dados a uma ou mais funções de banco de dados definidas pelo usuário.  
-  
-5.  Conceda permissões às funções de banco de dados definidas pelo usuário.  
+1.  Conceda permissões às funções de banco de dados definidas pelo usuário.  
   
  O resultado mais comum neste ponto é um usuário do Windows membro de um grupo do Windows. O grupo do Windows tem um logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. O logon é mapeado para uma identidade de usuário no banco de dados do usuário. O usuário é membro de uma função de banco de dados. Agora, você precisa adicionar permissões à função.  
   

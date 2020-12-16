@@ -13,13 +13,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 501be7ed93ec7be0edd55d95bf7bd0b5bce229d8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493840"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460089"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,11 +65,11 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
 ### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>Exibir as propriedades de um índice de texto completo com o Management Studio 
 1.  No Management Studio, no Pesquisador de Objetos, expanda o servidor.  
   
-2.  Expanda **Bancos de Dados**e expanda o banco de dados que contém o índice de texto completo.  
+2.  Expanda **Bancos de Dados** e expanda o banco de dados que contém o índice de texto completo.  
   
 3.  Expanda **Tabelas**.  
   
-4.  Clique com o botão direito do mouse na tabela em que o índice de texto completo está definido, selecione **Índice de Texto Completo**e, no menu de contexto **Índice de Texto Completo** , clique em **Propriedades**. Este procedimento abre a caixa de diálogo **Propriedades do Índice de Texto Completo** .  
+4.  Clique com o botão direito do mouse na tabela em que o índice de texto completo está definido, selecione **Índice de Texto Completo** e, no menu de contexto **Índice de Texto Completo** , clique em **Propriedades**. Este procedimento abre a caixa de diálogo **Propriedades do Índice de Texto Completo** .  
   
 5.  No painel **Selecionar uma página** , você pode selecionar qualquer uma das seguintes páginas:  
   
@@ -166,7 +166,7 @@ GO
  Este exemplo retorna um conjunto de resultados chamado `Unique Key Column`, que exibe uma única linha contendo o nome da coluna de chave exclusiva da tabela Document, DocumentNode. Observe que, se esta consulta continha um nome de índice inválido, se o nome de índice não correspondia à tabela, se a tabela não existia etc., será retornado NULL.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Indexar colunas varbinary(max) e xml  
- Se uma coluna **varbinary(max)** , **varbinary**ou **xml** tiver um índice de texto completo, ela poderá ser consultada usando os predicados (CONTAINS e FREETEXT) e as funções (CONTAINSTABLE e FREETEXTTABLE) de texto completo, como qualquer outra coluna indexada de texto completo.
+ Se uma coluna **varbinary(max)** , **varbinary** ou **xml** tiver um índice de texto completo, ela poderá ser consultada usando os predicados (CONTAINS e FREETEXT) e as funções (CONTAINSTABLE e FREETEXTTABLE) de texto completo, como qualquer outra coluna indexada de texto completo.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Indexar dados varbinary(max) ou varbinary  
  Uma única coluna **varbinary (max)** ou **varbinary** pode armazenar vários tipos de documentos. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a qualquer tipo de documento para o qual um filtro está instalado e disponível no sistema operacional. O tipo de cada documento é identificado pela extensão de arquivo do documento. Por exemplo, no caso de uma extensão de arquivo .doc, a pesquisa de texto completo usa o filtro que dá suporte a documentos do Microsoft Word. Para obter uma lista dos tipos de documento disponíveis, veja a exibição de catálogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
@@ -189,11 +189,11 @@ Para criar um índice de texto completo em uma coluna **varbinary(max)** , o Mec
   
  Em uma tabela que tenha um índice de texto completo, é possível desabilitar manualmente ou desabilitar de novo uma tabela para indexação de texto completo usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-1.  Expanda o grupo do servidor, expanda **Bancos de Dados**e expanda o banco de dados que contém a tabela desejada para habilitação da indexação de texto completo.  
+1.  Expanda o grupo do servidor, expanda **Bancos de Dados** e expanda o banco de dados que contém a tabela desejada para habilitação da indexação de texto completo.  
   
-2.  Expanda **Tabelas**e clique com o botão direito do mouse na tabela que você quer desabilitar ou habilitar novamente para indexação de texto completo.  
+2.  Expanda **Tabelas** e clique com o botão direito do mouse na tabela que você quer desabilitar ou habilitar novamente para indexação de texto completo.  
   
-3.  Selecione **Índice de Texto Completo**e clique em **Disable Full-Text index (Desabilitar Índice de Texto Completo)** ou **Enable Full-Text index (Habilitar Índice de Texto Completo)** .  
+3.  Selecione **Índice de Texto Completo** e clique em **Disable Full-Text index (Desabilitar Índice de Texto Completo)** ou **Enable Full-Text index (Habilitar Índice de Texto Completo)** .  
   
 ##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> Remover um índice de texto completo de uma tabela  
   

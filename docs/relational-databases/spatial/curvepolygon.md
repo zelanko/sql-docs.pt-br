@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f117b284799ba4849131254b90a018a397824e7b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 24be57e6e964fea4ddb0f050480dbe79353ddcd2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006328"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459986"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92006328"
 ### <a name="accepted-instances"></a>Instâncias aceitas  
  Para uma instância **CurvePolygon** ser aceita, ela precisa estar vazia ou conter apenas anéis de arco circular que sejam aceitos. Um anel de arco circular aceito atende aos requisitos a seguir.  
   
-1.  É uma instância **LineString**, **CircularString**ou **CompoundCurve** aceita. Para obter mais informações sobre instâncias aceitas, consulte [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)e [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
+1.  É uma instância **LineString**, **CircularString** ou **CompoundCurve** aceita. Para obter mais informações sobre instâncias aceitas, consulte [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)e [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
   
 2.  Tem pelo menos quatro pontos.  
   
@@ -77,7 +77,7 @@ Para que uma instância **CurvePolygon** seja válida, os anéis exterior e inte
 3.  Cada anel deve conter pelo menos quatro pontos.  
 4.  Cada anel deve ser um tipo de curva aceitável.  
   
-As instâncias**CurvePolygon** também deverão atender a critérios específicos se fouem tipos de dados **geometry** ou **geography** .  
+As instâncias **CurvePolygon** também deverão atender a critérios específicos se fouem tipos de dados **geometry** ou **geography** .  
   
 #### <a name="geometry-data-type"></a>Tipo de dados geometry  
 Uma instância **geometryCurvePolygon** válida deve ter os seguintes atributos:  
