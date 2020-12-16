@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 116d2f34bef990cca174117238981bb7e87917b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868771"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481337"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 
@@ -151,7 +151,7 @@ O destino **event_file** grava a saída da sessão de evento do buffer em um arq
 
 - O nome de arquivo escolhido é usado pelo sistema como um prefixo ao qual é acrescentado um inteiro longo baseado em data e hora, seguido da extensão .xel.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
 > O Banco de dados SQL do Azure é compatível apenas com armazenamento de arquivos `xel` no Armazenamento de Blobs do Azure. 
@@ -289,7 +289,7 @@ O parâmetro “slots” padrão é 256. Se você atribuir outro valor, o valor 
 - Por exemplo, slots=59 será arredondado para =64.
 
 
-### <a name="action-example-for-histogram"></a>Exemplo de*ação* para histograma
+### <a name="action-example-for-histogram"></a>Exemplo de *ação* para histograma
 
 
 Na cláusula TARGET...SET, a instrução Transact-SQL CREATE EVENT SESSION a seguir especifica a atribuição de parâmetro de destino **source_type=1**. 1 significa que o destino de histograma acompanha uma ação.

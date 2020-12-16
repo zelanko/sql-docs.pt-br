@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80fbe0c833f9b4ac7f3d0ec1f845dfd230f09e64
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 8f680d2569bd05a5adb922e273378f920830a1ea
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603456"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481487"
 ---
 # <a name="compatibility-certification"></a>Certificação de compatibilidade
 

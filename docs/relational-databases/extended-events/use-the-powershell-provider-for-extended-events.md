@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b89a8841bd679b9100e43b0b8d7d79dc6bb8165
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 034142392069443993c5d987b8aed80231c229fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868586"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481327"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Usar o Provedor do PowerShell para eventos estendidos
 
@@ -28,14 +28,14 @@ ms.locfileid: "91868586"
 
   É possível gerenciar Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do uso do provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. A subpasta XEvent está disponível sob a unidade SQLSERVER. É possível acessar a pasta por meio do uso de um dos métodos a seguir:  
   
--   Em um prompt de comando, digite **sqlps**e pressione ENTER. Digite **cd xevent**e pressione ENTER. A partir daí, você pode usar os comandos **cd** e **dir** (ou os cmdlets **Set-Location** e **Get-Childitem** ) para navegar até o nome do servidor e o nome da instância.  
+-   Em um prompt de comando, digite **sqlps** e pressione ENTER. Digite **cd xevent** e pressione ENTER. A partir daí, você pode usar os comandos **cd** e **dir** (ou os cmdlets **Set-Location** e **Get-Childitem** ) para navegar até o nome do servidor e o nome da instância.  
   
--   No Pesquisador de Objetos, expanda o nome de instância, expanda **Gerenciamento**, clique com o botão direito do mouse em **Eventos Estendidos**e clique em **Iniciar PowerShell**. Isso inicia o PowerShell no seguinte caminho:  
+-   No Pesquisador de Objetos, expanda o nome de instância, expanda **Gerenciamento**, clique com o botão direito do mouse em **Eventos Estendidos** e clique em **Iniciar PowerShell**. Isso inicia o PowerShell no seguinte caminho:  
   
      PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
   
     > [!NOTE]  
-    >  Você pode iniciar o PowerShell em qualquer nó sob **Eventos Estendidos**. Por exemplo, você pode clicar com o botão direito do mouse em **Sessões**e clicar em **Iniciar PowerShell**. Isso inicia o PowerShell um nível mais profundo na pasta de Sessões.  
+    >  Você pode iniciar o PowerShell em qualquer nó sob **Eventos Estendidos**. Por exemplo, você pode clicar com o botão direito do mouse em **Sessões** e clicar em **Iniciar PowerShell**. Isso inicia o PowerShell um nível mais profundo na pasta de Sessões.  
   
  Você pode procurar a árvore de pastas XEvent para exibir sessões existentes de Eventos Estendidos e os eventos, destinos e predicados correspondentes associados. Por exemplo, no caminho PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>, se você digitar **cd sessions** e pressionar ENTER, digitar **dir** e pressionar ENTER, poderá consultar a lista de sessões que estão armazenadas naquela instância. Você também pode exibir se a sessão está em execução (e nesse caso, há quanto tempo), e se a sessão está configurada para ser iniciada quando a instância for iniciada.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91868586"
   
 -   Os scripts devem ser salvos com uma extensão .ps1.  
   
--   A política de execução do PowerShell deve permitir que o script seja executado. Para definir a política de execução, use o cmdlet **Set-Executionpolicy** . (Para obter mais informações, digite **get-help set-executionpolicy -detailed**e pressione ENTER.)  
+-   A política de execução do PowerShell deve permitir que o script seja executado. Para definir a política de execução, use o cmdlet **Set-Executionpolicy** . (Para obter mais informações, digite **get-help set-executionpolicy -detailed** e pressione ENTER.)  
   
  O script a seguir cria uma nova sessão denominada 'TestSession.'  
   
