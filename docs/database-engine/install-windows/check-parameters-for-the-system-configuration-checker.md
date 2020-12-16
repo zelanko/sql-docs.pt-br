@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d309ad83c302062d38a27a6c9738d10bf77234c7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 84b967fa5a84c0aa3da3e73103c068779663aef1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96126022"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483698"
 ---
 # <a name="check-parameters-for-the-system-configuration-checker"></a>Verificar parâmetros do Verificador de Configuração do Sistema
 
