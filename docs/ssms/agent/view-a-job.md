@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f27c6d3fd4b82162d9d00f08b79ba37fe796ab06
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e19cc59a87929a5195424b822b06e2370447910d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038705"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474347"
 ---
 # <a name="view-a-job"></a>View a Job
 
@@ -44,7 +44,7 @@ Você só pode exibir trabalhos de sua propriedade, a não ser que você seja me
   
 1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]e a expanda.  
   
-2.  Expanda o **SQL Server Agent**e, em seguida, **Trabalhos**.  
+2.  Expanda o **SQL Server Agent** e, em seguida, **Trabalhos**.  
   
 3.  Clique com o botão direito do mouse em um trabalho e clique em **Propriedades**.  
   

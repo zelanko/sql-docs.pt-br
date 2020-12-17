@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b788a7f0996eaf8b6321caf9418d660deb08ac9c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: adf3998c70af1f13a4dc12c5a1b7c9b92ced9bb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039052"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466397"
 ---
 # <a name="find-and-replace"></a>Localizar e Substituir
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Use a caixa de diálogo **Localizar e Substituir** para localizar texto dentro de um arquivo e, opcionalmente, substituí-lo. Versões da caixa de diálogo **Localizar e Substituir** com opções ligeiramente diferentes podem aparecer, dependendo da maneira como a caixa de diálogo foi aberta. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Localização Rápida** para abrir a caixa de diálogo com opções de localização, mas sem opções de substituição. No menu **Editar** , aponte para **Localizar e Substituir**e clique em **Substituição Rápida** para abrir a caixa de diálogo com opções de localização e de substituição.  
+  Use a caixa de diálogo **Localizar e Substituir** para localizar texto dentro de um arquivo e, opcionalmente, substituí-lo. Versões da caixa de diálogo **Localizar e Substituir** com opções ligeiramente diferentes podem aparecer, dependendo da maneira como a caixa de diálogo foi aberta. No menu **Editar** , aponte para **Localizar e Substituir** e clique em **Localização Rápida** para abrir a caixa de diálogo com opções de localização, mas sem opções de substituição. No menu **Editar** , aponte para **Localizar e Substituir** e clique em **Substituição Rápida** para abrir a caixa de diálogo com opções de localização e de substituição.  
   
  Também há botões da barra de ferramentas e teclas de atalho disponíveis para abrir a caixa de diálogo **Localizar e Substituir** .  
   
@@ -76,7 +76,7 @@ ms.locfileid: "92039052"
  Você pode expandir ou recolher a seção **Opções de Busca** . As opções seguintes podem ser marcadas ou desmarcadas.  
   
  **Diferenciar maiúsculas de minúsculas**  
- Quando essa caixa é selecionada, as janelas Localizar Resultados só exibem instâncias da cadeia de caracteres especificada em **Localizar** que correspondam tanto no conteúdo como nas letras maiúsculas e minúsculas. Por exemplo, uma pesquisa por**MyObject**com a caixa de seleção **Diferenciar maiúsculas de minúsculas** retornará "MyObject", mas não "myobject" nem "MYOBJECT".  
+ Quando essa caixa é selecionada, as janelas Localizar Resultados só exibem instâncias da cadeia de caracteres especificada em **Localizar** que correspondam tanto no conteúdo como nas letras maiúsculas e minúsculas. Por exemplo, uma pesquisa por **MyObject** com a caixa de seleção **Diferenciar maiúsculas de minúsculas** retornará "MyObject", mas não "myobject" nem "MYOBJECT".  
   
  **Coincidir palavra inteira**  
  Quando essa caixa é selecionada, as janelas Localizar Resultados só exibem instâncias da cadeia de caracteres especificada em **Localizar** que coincidam em palavras completas. Por exemplo, uma pesquisa por **MyObject** retornará "MyObject" mas não "CMyObject" nem "MyObjectC".  
@@ -100,10 +100,10 @@ ms.locfileid: "92039052"
  Começa a procurar pelo texto na caixa **Localizar** .  
   
  **Substituir**  
- Clique nesse botão para substituir a instância atual da cadeia de caracteres especificada em **Localizar** pela cadeia de caracteres especificada em **Substituir por**e localize a próxima instância dentro do escopo especificado em **Examinar**.  
+ Clique nesse botão para substituir a instância atual da cadeia de caracteres especificada em **Localizar** pela cadeia de caracteres especificada em **Substituir por** e localize a próxima instância dentro do escopo especificado em **Examinar**.  
   
  **Replace All**  
- Escolha esse botão para substituir todas as instâncias da cadeia de caracteres especificada em **Localizar** pela cadeia de caracteres especificada em **Substituir por**em todos os arquivos dentro do escopo especificado em **Examinar**.  
+ Escolha esse botão para substituir todas as instâncias da cadeia de caracteres especificada em **Localizar** pela cadeia de caracteres especificada em **Substituir por** em todos os arquivos dentro do escopo especificado em **Examinar**.  
   
 > [!CAUTION]  
 >  Verifique se **Examinar** está definido para incluir somente os arquivos que você deseja modificar.  

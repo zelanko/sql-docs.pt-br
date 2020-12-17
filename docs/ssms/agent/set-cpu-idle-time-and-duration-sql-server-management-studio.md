@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8d7167e81b5a7cdf665f1312b1b414d95d9f7b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0fcfaa029005d9b45be6ce9c6e242e4e7cc0de42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037779"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472287"
 ---
 # <a name="set-cpu-idle-time-and-duration"></a>Definir o momento e a duração da ociosidade de CPU
 
@@ -40,7 +40,7 @@ Este tópico explica como definir a condição de ociosidade de CPU para seu ser
   
 1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]e a expanda.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**, clique em **Propriedades**e selecione a página **Avançado** .  
+2.  Clique com o botão direito do mouse em **SQL Server Agent**, clique em **Propriedades** e selecione a página **Avançado** .  
   
 3.  Em **Condição de CPU ociosa**, siga um destes procedimentos:  
   

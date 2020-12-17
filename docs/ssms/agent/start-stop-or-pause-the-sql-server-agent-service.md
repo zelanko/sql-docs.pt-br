@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02bc27675493e7e8d1b5c5012d7541c0ad295bae
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 9e13e201f6ddac0cad1f63364caca4fa99dfd3d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038747"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408552"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Start, Stop, or Pause the SQL Server Agent Service
 
@@ -63,7 +63,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição para expandir o servidor no qual você deseja gerenciar o Serviço SQL Server Agent.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**e selecione **Iniciar**, **Parar**ou **Reiniciar**.  
+2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Iniciar**, **Parar** ou **Reiniciar**.  
   
 3.  Na caixa de diálogo **Controle de Conta de Usuário**, clique em **Sim**.  
   

@@ -9,13 +9,13 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a23b12f1cd42a1c6f67a09708481134d8d893d4
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a0edb79e6e23f713767da060fc580ac92c3daaee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870461"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471167"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Criar um repositório local de pacotes do R usando o miniCRAN
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -112,7 +112,7 @@ pdb[, c("Package", "Version", "License")]
 
 Depois de ter um repositório local com os pacotes necessários, mova o repositório de pacotes para o computador do SQL Server. O procedimento a seguir descreve como instalar os pacotes usando as ferramentas do R.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > O método recomendado para instalar pacotes está usando **sqlmlutils**. Confira [Instalar novos pacotes de R com sqlmlutils](install-additional-r-packages-on-sql-server.md).
 ::: moniker-end
@@ -125,21 +125,21 @@ Depois de ter um repositório local com os pacotes necessários, mova o reposit�
 
 2. Abra uma ferramenta do R associada à instância (por exemplo, você pode usar Rgui.exe). Clique com o botão direito do mouse e selecione **Executar como administrador** para permitir que a ferramenta faça atualizações em seu sistema.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    - Por exemplo, a localização do arquivo padrão para RGUI é `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    - Por exemplo, a localização do arquivo para RGUI é `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    - Por exemplo, a localização do arquivo para RGUI é `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
 3. Obtenha o caminho para a biblioteca de instâncias e adicione-a à lista de caminhos de biblioteca.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Por exemplo,
 
    ```R
@@ -148,7 +148,7 @@ Depois de ter um repositório local com os pacotes necessários, mova o reposit�
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Por exemplo,
 
    ```R
@@ -157,7 +157,7 @@ Depois de ter um repositório local com os pacotes necessários, mova o reposit�
 
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    Por exemplo,
 
    ```R

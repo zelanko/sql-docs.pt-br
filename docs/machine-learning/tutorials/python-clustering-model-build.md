@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 571943e82ca844339a03a2e2af92199c3df16601
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ef96e0ac95014fad9e479ef039df547dee6b8471
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870420"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470437"
 ---
 # <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Tutorial do Python: Criar um modelo para categorizar os clientes com o aprendizado de máquina do SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Na parte três desta série de tutoriais de quatro partes, você criará um modelo K-means no Python para executar o clustering. Na próxima parte desta série, você implantará esse modelo em um banco de dados com os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Na parte três desta série de tutoriais de quatro partes, você criará um modelo K-means no Python para executar o clustering. Na próxima parte desta série, você implantará esse modelo em um banco de dados com os Serviços de Machine Learning do SQL Server.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Na parte três desta série de tutoriais de quatro partes, você criará um modelo K-means no Python para executar o clustering. Na próxima parte desta série, você implantará esse modelo em um banco de dados SQL com os Serviços do Machine Learning da Instância Gerenciada de SQL do Azure.
 ::: moniker-end
 

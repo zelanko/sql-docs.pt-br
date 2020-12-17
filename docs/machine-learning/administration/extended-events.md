@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12839d5c10e5ba50cc1b57b297ee1afa9569fe15
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 2cd28eaa17a52e0e0ae525f5977dbd5f6a26bf64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115709"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471357"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Monitorar scripts do Python e do R com eventos estendidos nos Serviços de Machine Learning do SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -85,7 +85,7 @@ Para saber mais sobre como fazer isso, confira a seção [Coletar eventos de pro
 
 Os Serviços de Machine Learning do SQL Server iniciam alguns serviços que são executados fora do processo do SQL Server. Para capturar eventos relacionados a esses processos externos, você deve criar um arquivo de configuração de rastreamento de eventos e colocá-lo no mesmo diretório do executável do processo.  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!IMPORTANT]
 > A partir do SQL Server 2019, o mecanismo de isolamento foi alterado. Portanto, você precisa fornecer as permissões apropriadas para o diretório no qual o arquivo de configuração de rastreamento de eventos está armazenado. Para obter mais informações sobre como definir essas permissões, confira [a seção Permissões de arquivo em SQL Server 2019 no Windows: alterações de isolamento nos Serviços de Machine Learning](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end

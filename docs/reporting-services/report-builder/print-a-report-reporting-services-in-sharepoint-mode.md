@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eb3511714f893e4513c8a5ba1c215807003e6534
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 25d400a063d668972092a37d57b9371f74e5d980
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409537"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir um relatório (Reporting Services no modo do SharePoint)
   Para um servidor de relatório que é executado no modo do SharePoint, há três maneiras de imprimir um relatório em um aplicativo Web do SharePoint:  

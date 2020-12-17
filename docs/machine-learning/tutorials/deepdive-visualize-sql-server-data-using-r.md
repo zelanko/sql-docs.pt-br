@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e9158976b1827eb32e807af1cc97279b0866ff97
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196257"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470477"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizar dados do SQL Server usando o R (tutorial de SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,7 +43,7 @@ Com base nas estatísticas de resumo calculadas no tutorial anterior, você desc
   
 2. Use a variável *ccColInfo* que você criou no tutorial anterior para definir as colunas na fonte de dados.
   
-   Adicione novas colunas calculadas (*numTrans*, *numIntlTrans*e *creditLine*) à coleção de colunas que substituem a definição original. O script a seguir adiciona fatores com base nos valores mínimo e máximo obtidos de sumOut, que está armazenando a saída na memória de **rxSummary**. 
+   Adicione novas colunas calculadas (*numTrans*, *numIntlTrans* e *creditLine*) à coleção de colunas que substituem a definição original. O script a seguir adiciona fatores com base nos valores mínimo e máximo obtidos de sumOut, que está armazenando a saída na memória de **rxSummary**. 
   
     ```R 
     ccColInfo <- list(

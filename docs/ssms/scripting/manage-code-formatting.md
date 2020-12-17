@@ -26,13 +26,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d85ba0589e239fc54280f3c418eaf011e69906b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 04adcfacb3a540a9275f445a71ee9813c1702246
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093400"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408311"
 ---
 # <a name="manage-code-formatting"></a>Gerenciar formatação de código
 
@@ -109,13 +109,13 @@ Com o Editor, você pode formatar seu código com recuo, texto oculto, URLs etc.
   
 1.  Selecione o texto cujo espaço em branco que você deseja converter em tabulações.  
   
-2.  No menu **Editar** , aponte para **Avançado**e clique em **Tabular Seleção**.  
+2.  No menu **Editar** , aponte para **Avançado** e clique em **Tabular Seleção**.  
   
 #### <a name="to-convert-tabs-to-spaces"></a>Para converter tabulações em espaços  
   
 1.  Selecione o texto cujas tabulações você deseja converter em espaços.  
   
-2.  No menu **Editar** , aponte para **Avançado**e clique em **Destabular Seleção**.  
+2.  No menu **Editar** , aponte para **Avançado** e clique em **Destabular Seleção**.  
   
  O comportamento desses comandos depende das configurações de tabulação da caixa de diálogo **Opções** . Por exemplo, se a configuração de tabulação for 4, **Tabular Seleção** criará uma tabulação a cada 4 espaços contíguos e **Destabular Seleção** criará 4 espaços a cada tabulação.  
   

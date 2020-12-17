@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6fe6713479c0a9c62c1f56e358c27084dc9bbdc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9d7300acb587dd25c294918fe5ae3a6d6a90ddbc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195158"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470567"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Usar funções RevoScaleR do R com os dados do SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -51,7 +51,7 @@ Normalmente, os desenvolvedores do R usam os IDEs para escrever e depurar o cód
 
 - O **RTVS** (Ferramentas do R para Visual Studio) é um plug-in gratuito que fornece o IntelliSense, depuração e suporte para o Microsoft R. Você pode usá-lo com o R Server e o Serviços de Machine Learning do SQL Server. Para baixar, consulte [R Tools para Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019).
 
-- O**RStudio** é um dos ambientes mais populares para desenvolvimento do R. Para obter mais informações, confira [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
+- O **RStudio** é um dos ambientes mais populares para desenvolvimento do R. Para obter mais informações, confira [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
 
 - As ferramentas básicas do R (R.exe, RTerm.exe, RScripts.exe) também são instaladas por padrão quando você instala o R no SQL Server ou no R Client. Se não desejar instalar um IDE, você poderá usar as ferramentas do R internas para executar o código neste tutorial.
 

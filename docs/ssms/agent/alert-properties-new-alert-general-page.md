@@ -13,13 +13,13 @@ ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c27fa0cc8325a31cc851511375a01210e7f9d9b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 18cbd660ed24526331aed570415eccd314127c73
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036632"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472437"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>Propriedades do alerta – Novo alerta (página Geral)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +40,11 @@ Habilite o alerta. Quando o alerta não está habilitado, as ações especificad
 **Tipo**  
 Selecione o tipo de alerta:  
   
--   O**Alerta de evento do SQL Server** responde às mensagens no log de eventos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
+-   O **Alerta de evento do SQL Server** responde às mensagens no log de eventos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
   
--   O**Alerta de condição de desempenho do SQL Server** responde a uma condição específica em um contador de desempenho.  
+-   O **Alerta de condição de desempenho do SQL Server** responde a uma condição específica em um contador de desempenho.  
   
--   O**Alerta de evento do WMI** responde a um evento WMI (Instrumentação de Gerenciamento do Windows).  
+-   O **Alerta de evento do WMI** responde a um evento WMI (Instrumentação de Gerenciamento do Windows).  
   
 ## <a name="sql-server-event-alert-options"></a>Opções de alerta de evento do SQL Server  
 **Nome do banco de dados**  

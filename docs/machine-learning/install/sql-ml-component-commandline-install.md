@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7c9fb33f32a5807f46136ec1ede69386927621ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96122754"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471137"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Instalar os Serviços de Machine Learning do SQL Server com R e Python na linha de comando
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +41,7 @@ O argumento **/FEATURES** é obrigatório, assim como os contratos de termo de l
 
 Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao modo silencioso completo usando o parâmetro **/Q** ou o modo Silencioso Simples usando o parâmetro **/QS**. A opção **/QS** mostra apenas o andamento, não aceita entradas e não exibe mensagens de erro, se encontrado. O parâmetro **/QS** só tem suporte quando **/Action=install** é especificado.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 | Argumentos | Descrição |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Instala a versão no banco de dados: SQL Server R Services (no banco de dados).  |
@@ -52,7 +52,7 @@ Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../incl
 | MRCACHEDIRECTORY | Para a instalação offline, define a pasta que contém os arquivos CAB do componente de R. |
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 | Argumentos | Descrição |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Instala a versão no banco de dados: Serviços de Machine Learning do SQL Server (no banco de dados).  |
@@ -67,7 +67,7 @@ Quando você instala pelo prompt de comando, o [!INCLUDE[ssNoVersion](../../incl
 | MPYCACHEDIRECTORY | Reservado para uso futuro. Use %TEMP% para armazenar arquivos CAB do componente de Python para instalação em computadores que não têm uma conexão com a Internet. |
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 | Argumentos | Descrição |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Instala a versão no banco de dados: Serviços de Machine Learning do SQL Server (no banco de dados).  |
@@ -92,7 +92,7 @@ Para exibir informações de progresso sem os prompts de tela interativos, use o
 > [!IMPORTANT]
 > Após a instalação, restam duas etapas de configuração adicionais. A integração não é concluída até que essas tarefas sejam executadas. Confira [Tarefas pós-instalação](#post-install) para obter instruções.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>Serviços de Machine Learning do SQL Server: mecanismo de banco de dados, análise avançada com Python e R
 
 Para instalação simultânea da instância do mecanismo de banco de dados, forneça o nome da instância e um logon do administrador (Windows). Inclua os recursos para instalar componentes de núcleo e de linguagem, bem como a aceitação de todos os termos de licenciamento.
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 ### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services: mecanismo de banco de dados e análise avançada com R
 
 Para instalação simultânea da instância do mecanismo de banco de dados, forneça o nome da instância e um logon do administrador (Windows). Inclua os recursos para instalar componentes de núcleo e de linguagem, bem como a aceitação de todos os termos de licenciamento.
@@ -141,13 +141,13 @@ Quando a instalação é concluída, você tem uma instância do mecanismo de ba
 São necessárias mais duas tarefas para concluir a instalação:
 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 1. Reiniciar o serviço do mecanismo de banco de dados.
 
 1. Serviços de Machine Learning do SQL Server: Habilite scripts externos para usar o recurso. Siga as instruções em [Instalar os Serviços de Machine Learning do SQL Server (no Banco de Dados)](sql-machine-learning-services-windows-install.md) como a próxima etapa. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. Reiniciar o serviço do mecanismo de banco de dados.
 
 1. SQL Server R Services: Habilite scripts externos para usar o recurso. Siga as instruções em [Instalar o SQL Server R Services (no Banco de Dados)](sql-r-services-windows-install.md) como a próxima etapa. 
@@ -177,7 +177,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 Um servidor autônomo é um "recurso compartilhado" não associado a uma instância do mecanismo de banco de dados. Os exemplos a seguir mostram uma sintaxe válida para a instalação do servidor autônomo.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 O SQL Server Machine Learning Server dá suporte a Python e R em um servidor autônomo:
 
 ```cmd
@@ -185,7 +185,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL Server R Server é destinado somente ao R:
 
 ```cmd

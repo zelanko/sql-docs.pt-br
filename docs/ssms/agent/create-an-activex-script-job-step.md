@@ -14,13 +14,13 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: <= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a17be8d63b2ecea316819b90ae5cc8051bd0c2a6
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: <= sql-server-2016
+ms.openlocfilehash: 5c4e73f37930c9c2bfc7458b5ec035739c67bf08
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035058"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464397"
 ---
 # <a name="create-an-activex-script-job-step"></a>Criar uma etapa de trabalho de script ActiveX
 
@@ -54,7 +54,7 @@ Para obter informações detalhadas, consulte [Implementar a segurança do SQL S
   
 3.  Na caixa de diálogo **Propriedades do Trabalho** , clique na página **Etapas** e, em seguida, em **Nova**.  
   
-4.  Na caixa de diálogo **Nova Etapa de Trabalho** , digite o **Nome da etapa**de trabalho.  
+4.  Na caixa de diálogo **Nova Etapa de Trabalho** , digite o **Nome da etapa** de trabalho.  
   
 5.  Na lista **Tipo** , clique em **Script ActiveX**.  
   

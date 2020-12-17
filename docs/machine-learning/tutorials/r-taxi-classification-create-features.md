@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 67c8c2c34ff49df4c9be7bea9dc1015d4bcebedd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412568"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470167"
 ---
 # <a name="r-tutorial-create-data-features"></a>Tutorial do R: Criar recursos de dados
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,11 +40,11 @@ Na [parte cinco](./python-taxi-classification-deploy-model.md), você aprenderá
 
 ## <a name="about-feature-engineering"></a>Sobre a engenharia de recursos
 
-Após várias rodadas de exploração de dados, você reuniu algumas ideias sobre os dados e está pronto para passar para a *engenharia de recursos* . Esse processo de criação de recursos significativos com base nos dados brutos é uma etapa crítica para a criação de modelos analíticos.
+Após várias rodadas de exploração de dados, você reuniu algumas ideias sobre os dados e está pronto para passar para a *engenharia de recursos*. Esse processo de criação de recursos significativos com base nos dados brutos é uma etapa crítica para a criação de modelos analíticos.
 
 Neste conjunto de dados, os valores de distância baseiam-se na distância do medidor relatado e não representam necessariamente a distância geográfica nem a distância real percorrida. Portanto, você precisará calcular a distância direta entre os pontos de embarque e desembarque de passageiros, usando as coordenadas disponíveis no conjunto de dados NYC Taxi de origem. Você pode fazer isso usando a [fórmula de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) em uma função personalizada [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
-Você usará uma função personalizada do T-SQL, _fnCalculateDistance_ , para calcular a distância usando a fórmula de Haversine e usará uma segunda função personalizada do T-SQL, _fnEngineerFeatures_ , para criar uma tabela que contém todos os recursos.
+Você usará uma função personalizada do T-SQL, _fnCalculateDistance_, para calcular a distância usando a fórmula de Haversine e usará uma segunda função personalizada do T-SQL, _fnEngineerFeatures_, para criar uma tabela que contém todos os recursos.
 
 Em linhas gerais, o processo é o seguinte:
 
@@ -58,7 +58,7 @@ Em linhas gerais, o processo é o seguinte:
 
 A função _fnCalculateDistance_ deve ter sido baixada e registrada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte da preparação para este tutorial. Reserve um minuto para examinar o código.
   
-1. No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programação** , **Funções** e **Funções de valor escalar** .   
+1. No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programação**, **Funções** e **Funções de valor escalar**.   
 
 2. Clique com o botão direito do mouse em _fnCalculateDistance_ e selecione **Modificar** para abrir o script [!INCLUDE[tsql](../../includes/tsql-md.md)] em uma nova janela de consulta.
   
@@ -92,9 +92,9 @@ A função _fnCalculateDistance_ deve ter sido baixada e registrada no [!INCLUDE
 
 ## <a name="generate-the-features-using-_fnengineerfeatures_"></a>Gere os recursos usando _fnEngineerFeatures_
 
-Para adicionar os valores calculados a uma tabela que pode ser usada para treinar o modelo, você usará outra função, _fnEngineerFeatures_ . A nova função chama a função do T-SQL criada anteriormente, _fnCalculateDistance_ , para obter a distância direta entre os locais de embarque e desembarque de passageiros. 
+Para adicionar os valores calculados a uma tabela que pode ser usada para treinar o modelo, você usará outra função, _fnEngineerFeatures_. A nova função chama a função do T-SQL criada anteriormente, _fnCalculateDistance_, para obter a distância direta entre os locais de embarque e desembarque de passageiros. 
 
-1. Reserve um minuto para examinar a função personalizada do T-SQL no o código, _fnEngineerFeatures_ , que deve ter sido criada como parte da preparação para esse passo a passo.
+1. Reserve um minuto para examinar a função personalizada do T-SQL no o código, _fnEngineerFeatures_, que deve ter sido criada como parte da preparação para esse passo a passo.
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  

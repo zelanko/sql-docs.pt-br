@@ -10,13 +10,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d33b6442ef66a6be4d1ff600fe583947981a017f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036479"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474257"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir um editor (SQL Server Management Studio)
 
@@ -37,7 +37,7 @@ Este tópico descreve como abrir o editor [!INCLUDE[ssDE](../../includes/ssde-md
  Esta seção explica como abrir os vários editores no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Usando o menu Arquivo/novo  
- No menu **Arquivo** , clique em **Novo**e selecione uma das opções do editor de consulta:  
+ No menu **Arquivo** , clique em **Novo** e selecione uma das opções do editor de consulta:  
   
 -   **Consultar com a Conexão Atual** – abre uma nova janela do editor do tipo associado à conexão atual no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. A janela de editor usa as mesmas informações de autenticação que a conexão atual. Por exemplo, se você selecionar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em Pesquisador de Objetos, e usar **Consulta com Conexão Atual**, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abrirá um Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado à mesma instância usando as mesmas informações de autenticação.  
   

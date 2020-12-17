@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 07b2cf5a77199f64d89d8dd61f8ec89268d759c5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e80e3414271d520b5fd74d4a943a173a1ecdbfac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173397"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470397"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Tutorial do Python: Preparar dados para treinar um modelo de regressão linear com o aprendizado de máquina do SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de regressão linear em Python com os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de regressão linear em Python com os Serviços de Machine Learning do SQL Server.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Na parte dois desta série de tutoriais de quatro partes, você preparará os dados de um banco de dados usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de regressão linear em Python com os Serviços de Machine Learning da Instância Gerenciada de SQL do Azure.
 ::: moniker-end
 

@@ -15,13 +15,13 @@ ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6cd2a92ccc47e48493f35ce95c11a0870cd7d4df
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3cf6f420007e367a2c82d85fcb5e257d713fe79c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035074"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464407"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Criar um alerta usando um número de erro
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ Por padrão, somente membros da função de servidor fixa **sysadmin** podem exe
   
 7.  Em **Definição de alerta de evento**, na lista **Nome do banco de dados** , selecione um banco de dados para restringir o alerta a um banco de dados específico.  
   
-8.  Em **Os alertas serão gerados com base em**, clique em **Número de erro**e digite um número de erro válido para o alerta. Opcionalmente, clique em **Severidade** e selecione a severidade específica que irá gerar o alerta.  
+8.  Em **Os alertas serão gerados com base em**, clique em **Número de erro** e digite um número de erro válido para o alerta. Opcionalmente, clique em **Severidade** e selecione a severidade específica que irá gerar o alerta.  
   
 9. Marque a caixa correspondente à caixa de seleção **Gerar alertas quando a mensagem contiver** para restringir o alerta a uma sequência de caracteres específica e digite uma palavra-chave ou uma cadeia de caracteres para o **Texto da mensagem**. O número máximo de caracteres é 100.  
   

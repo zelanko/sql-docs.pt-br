@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c7575152ff23cec3096c9f5e1e22f1f0ea1a8094
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e13935b59d22a6184de14a29910117b9611ad4cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036542"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466467"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriedades da etapa de trabalho – Nova etapa de trabalho (página Geral)
 
@@ -30,7 +30,7 @@ ms.locfileid: "92036542"
 
 Use esta página para ver e alterar as propriedades ou para definir uma nova etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-Para navegar até essa página, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, clique com o botão direito do mouse em **Trabalhos**, clique em **Novos Trabalhos**, selecione a página **Etapas** e clique em **Novo**. Você também pode navegar até essa página. Para isso, clique com o botão direito do mouse em um trabalho no Pesquisador de Objetos, clique em **Propriedades**, selecione a página **Etapas** e clique em **Novo**, **Inserir**ou **Editar**.  
+Para navegar até essa página, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, clique com o botão direito do mouse em **Trabalhos**, clique em **Novos Trabalhos**, selecione a página **Etapas** e clique em **Novo**. Você também pode navegar até essa página. Para isso, clique com o botão direito do mouse em um trabalho no Pesquisador de Objetos, clique em **Propriedades**, selecione a página **Etapas** e clique em **Novo**, **Inserir** ou **Editar**.  
   
 ## <a name="options"></a>Opções  
 **Nome da etapa**  
@@ -228,7 +228,7 @@ Digite o nome do servidor em que o pacote [!INCLUDE[ssIS](../../includes/ssis_md
 Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a autenticação do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
   
 **Usar Autenticação do SQL Server**  
-Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se este método de autenticação for selecionado, digite o **Nome de usuário** e a **Senha**apropriados.  
+Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se este método de autenticação for selecionado, digite o **Nome de usuário** e a **Senha** apropriados.  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A autenticação é fornecida para fins de compatibilidade com versões anteriores. Para maior segurança, use a autenticação do Windows, se possível.  

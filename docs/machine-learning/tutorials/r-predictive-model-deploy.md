@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: bed9217da00b7ca2cdd9bbb43e92d58c8f59b678
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: bc5cb5f0b5a79b7e9ff81171e0a1b7b31ad580db
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870258"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470157"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: implantar um modelo preditivo no R com o aprendizado de máquina do SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de machine learning desenvolvido em R nos Serviços de Machine Learning do SQL Server ou em Clusters de Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de machine learning, desenvolvido em R, em um banco de dados SQL usando os Serviços de Machine Learning do SQL Server.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de machine learning, desenvolvido em R, no SQL Server usando o SQL Server R Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de machine learning desenvolvido em R na Instância Gerenciada de SQL do Azure usando Serviços de Machine Learning.
 ::: moniker-end
 

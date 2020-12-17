@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fce7b2b128920038f20967c72567d2d51db8b48
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 4530aebde58448903015b8f948ad8f005d9134ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038792"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472237"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service"></a>Como definir um alias do SQL Server para o serviço do SQL Server Agent
 
@@ -60,7 +60,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] e expanda-a.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**e então clique em **Propriedades**.  
+2.  Clique com o botão direito do mouse em **SQL Server Agent** e então clique em **Propriedades**.  
   
 3.  Na caixa de diálogo **Propriedades do SQL Server Agent**_server\_name_, em **Selecionar uma página**, selecione **Conexão**, e  
   
