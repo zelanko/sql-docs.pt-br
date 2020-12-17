@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 9bb87af8d580830072dd3a8199958497b8e38a25
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b4e4c686411d40a2c161c670821e6566460db4a4
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440793"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644057"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -36,12 +36,12 @@ Retorna o texto do lote SQL que é identificado pelo *sql_handle* especificado. 
 |**text**|**nvarchar(max)**|Texto da consulta SQL.<br /><br /> É NULL para objetos criptografados.|  
 
 ## <a name="remarks"></a>Comentários  
-Os mesmos comentários em [Sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md?view=sql-server-ver15) se aplicam.  
+Os mesmos comentários em [Sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md) se aplicam.  
   
 ## <a name="permissions"></a>Permissões  
  Exigir a função de servidor **sysadmin** ou `VIEW SERVER STATE` a permissão no servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Exibições de gerenciamento dinâmico do Azure Synapse Analytics e Parallel data warehouse &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## <a name="next-steps"></a>Próximas etapas
