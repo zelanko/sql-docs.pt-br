@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e28ed3ad28a47fba60a703882684a1625523675
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8d355c47a54cc5375b610c5d58ffbcf455d90e24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036402"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466317"
 ---
 # <a name="search-an-active-document-incrementally"></a>Pesquisar um documento ativo de forma incremental
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "92036402"
   
 1.  Abra o arquivo ou a janela que você deseja pesquisar.  
   
-2.  No menu **Editar** , aponte para **Avançado**e clique em **Pesquisa Incremental**.  
+2.  No menu **Editar** , aponte para **Avançado** e clique em **Pesquisa Incremental**.  
   
      O ícone de cursor muda para um binóculo com uma seta, indicando a direção de pesquisa e a barra de status exibe "Pesquisa Incremental".  
   

@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 78d7265398cab553a9378fecc54b25a32d36e84d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891596"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489826"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) e Reporting Services
 
@@ -31,7 +31,7 @@ A web part do Visualizador de Relatórios pode ser usada para inserir relatório
 
 1. Configure sua instância do Reporting Services (Modo Nativo) para autenticação Kerberos determinando a conta de serviço do SSRS, definindo um SPN e atualizando o arquivo rsreportserver.config para usar o tipo de autenticação RSWindowsNegotiate. [Registrar um SPN (Nome da Entidade de Serviço) para um servidor de relatório](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Siga as etapas em [Etapas necessárias para configurar o c2WTS](?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Siga as etapas em [Etapas necessárias para configurar o c2WTS](#steps-needed-to-configure-c2wts)
  
 
 ## <a name="sharepoint-mode-integration"></a>Integração de modo do SharePoint
@@ -84,7 +84,7 @@ Se seu ambiente usar a delegação restrita de Kerberos, o serviço do SharePoin
     * Selecione **Usuários ou Computadores...&#42;** e insira a conta que hospeda o serviço. Por exemplo, se um SQL Server for executado em uma conta chamada *sqlservice*, insira `sqlservice`. 
       Para a **Web part do Visualizador de Relatórios**, essa será a conta de serviço da Instância do Reporting Services (Modo Nativo).
 
-    * Selecione a lista de serviços. Isso mostrará os SPNs que estão disponíveis nessa conta. Se você não vir o serviço listado nessa conta, ele pode estar ausente ou colocado em uma conta diferente. Você pode usar o utilitário SetSPN para ajustar os SPNs. Para a **Web part do Visualizador de Relatórios**, você verá o SPN HTTP configurado em [Configuração de Web part do Visualizador de Relatórios](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Selecione a lista de serviços. Isso mostrará os SPNs que estão disponíveis nessa conta. Se você não vir o serviço listado nessa conta, ele pode estar ausente ou colocado em uma conta diferente. Você pode usar o utilitário SetSPN para ajustar os SPNs. Para a **Web part do Visualizador de Relatórios**, você verá o SPN HTTP configurado em [Configuração de Web part do Visualizador de Relatórios](#report-viewer-native-mode-web-part-configuration).
 
     * Selecione OK para sair das caixas de diálogo.
 

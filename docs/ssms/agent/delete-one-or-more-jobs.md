@@ -17,13 +17,13 @@ ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4eba0199c490bd2d96e202184b055150eed03933
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5f5b2a54dcea75f1f1d9a51a5cef6e29c7eefae7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039164"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423556"
 ---
 # <a name="delete-one-or-more-jobs"></a>Excluir um ou mais trabalhos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ A menos que seja membro da função de servidor fixa **sysadmin** , você só po
   
 2.  Expanda o **SQL Server Agent**.  
   
-3.  Clique com o botão direito do mouse em **Monitor de Atividade do Trabalho**e clique em **Exibir Atividade do Trabalho**.  
+3.  Clique com o botão direito do mouse em **Monitor de Atividade do Trabalho** e clique em **Exibir Atividade do Trabalho**.  
   
 4.  No Monitor de Atividade do Trabalho, selecione os trabalhos que deseja excluir, clique com o botão direito do mouse em sua seleção e escolha **Excluir trabalhos**.  
   

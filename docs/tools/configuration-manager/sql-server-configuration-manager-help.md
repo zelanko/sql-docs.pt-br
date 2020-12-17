@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a881d4e40717fa943f0674d5af7c570e41bf2fcc
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: a9804ef6634a576cbdb8ee32a21b1b1d174d9825
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901793"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483788"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Ajuda do SQL Server Configuration Manager
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "88901793"
   
 #### <a name="to-open-sql-server-configuration-manager"></a>Para abrir o SQL Server Configuration Manager  
   
--   No menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server** (versão), aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
+-   No menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server** (versão), aponte para **Ferramentas de Configuração** e clique em **SQL Server Configuration Manager**.  
   
   
  **Para acessar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager usando o [!INCLUDE[win8](../../includes/win8-md.md)]**  

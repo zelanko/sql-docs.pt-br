@@ -17,13 +17,13 @@ ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a936e1a601401787a36470d3119897ec0c5c5b77
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 63798bf4c5697adabfce39317883792ff73de2c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038880"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423847"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Inscrever um servidor de destino em um servidor mestre
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ A criptografia TLS (protocolo TLS) completa, anteriormente conhecida como SSL (p
   
 1.  No **Pesquisador de Objetos**, expanda um servidor que esteja configurado como servidor mestre.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor**e clique em **Adicionar Servidores de Destino**.  
+2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor** e clique em **Adicionar Servidores de Destino**.  
   
 3.  Complete o Assistente de Servidor de Destino, que o guia nesse processo.  
   

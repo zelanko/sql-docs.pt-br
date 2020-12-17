@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b74b5437eb9df1cd51425929ffb70770595a69
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9b1cecda6c4ec085efe7b18392eb06f06866352b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988384"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466557"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>Configurar propriedades de execução de um relatório
   Você pode definir opções de processamento de relatório para especificar quando os dados são recuperados para um relatório. É útil agendar o processamento de dados de um relatório se a fonte de dados externa for atualizada em horários específicos (por exemplo, um data warehouse que é atualizado diária ou semanalmente) e você desejar evitar a sobrecarga da recuperação dos mesmos dados sempre que um relatório for solicitado. O agendamento do processamento de dados também é útil se você desejar controlar a carga de processamento no servidor de banco de dados externo ou quando você quiser fornecer resultados consistentes para vários usuários que devem trabalhar com conjuntos de dados idênticos. Com dados voláteis, um relatório sob demanda pode produzir resultados diferentes de um minuto para o outro. Por outro lado, um instantâneo de relatório permite fazer comparações válidas com outros relatórios ou ferramentas analíticas que contêm dados do mesmo momento.  
@@ -27,7 +27,7 @@ ms.locfileid: "91988384"
   
  Os instantâneos de relatório não são salvos em um formato de renderização específico. Em vez disso, os instantâneos de relatório são renderizados em um formato de exibição final (como HTML) somente quando solicitado por um usuário ou aplicativo. A renderização adiada deixa o instantâneo portátil. O relatório pode ser renderizado no formato correto para a solicitação do dispositivo ou navegador da Web.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ## <a name="to-configure-report-processing-options"></a>Para configurar opções de processamento de relatório  
   
@@ -39,9 +39,9 @@ ms.locfileid: "91988384"
   
 1.  No menu suspenso, clique em **Gerenciar** e selecione a guia **Opções de Processamento** .  
   
-2.  Clique em **Renderizar este relatório em um instantâneo de execução de relatórios**e selecione uma das seguintes opções:  
+2.  Clique em **Renderizar este relatório em um instantâneo de execução de relatórios** e selecione uma das seguintes opções:  
   
-    -   Se desejar criar um instantâneo, selecione **Use o agendamento a seguir para criar instantâneos de execução de relatórios**e defina uma agenda específica ao relatório ou selecione uma opção na lista **Agenda compartilhada** .  
+    -   Se desejar criar um instantâneo, selecione **Use o agendamento a seguir para criar instantâneos de execução de relatórios** e defina uma agenda específica ao relatório ou selecione uma opção na lista **Agenda compartilhada** .  
   
     -   Se desejar criar um instantâneo imediatamente, selecione **Criar um instantâneo de relatórios ao clicar no botão Aplicar nesta página**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91988384"
   
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
   
 ## <a name="to-configure-report-execution-properties"></a>Para configurar propriedades de execução de relatório  
   

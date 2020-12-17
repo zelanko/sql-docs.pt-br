@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: a8f3cfc9e47cc18df2728e7b6078cc355c488fa0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c5c908d8db988e83d682bbf636de08ef86a8223a
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440791"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644052"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 
@@ -72,12 +72,12 @@ Os contadores retornados são por operador por thread. Os resultados são dinâm
   
 ## <a name="remarks"></a>Comentários
 
-Os mesmos comentários em [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) se aplicam.  
+Os mesmos comentários em [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) se aplicam.  
 
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW SERVER STATE` no servidor.  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
  [Exibições de gerenciamento dinâmico do Azure Synapse Analytics e Parallel data warehouse &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    

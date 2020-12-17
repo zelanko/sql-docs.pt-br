@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6589593d7d040f4e2f9a2bf5a690dbb42d89d142
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c85762cabe7b30c2873e5bbdfef5301f1fcefddf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038096"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482089"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
 
@@ -57,13 +57,13 @@ Para obter informações detalhadas, consulte [Implementar a segurança do SQL S
   
 3.  Selecione a página **Notificações** .  
   
-4.  Marque **Gravar no log de eventos de aplicativos do Windows**e siga um destes procedimentos:  
+4.  Marque **Gravar no log de eventos de aplicativos do Windows** e siga um destes procedimentos:  
   
-    -   Clique em**Quando o trabalho for bem-sucedido**para registrar o status do trabalho quando ele for concluído com êxito.  
+    -   Clique em **Quando o trabalho for bem-sucedido** para registrar o status do trabalho quando ele for concluído com êxito.  
   
-    -   Clique em**Quando o trabalho falhar**para registrar o status do trabalho quando ele não for concluído com êxito.  
+    -   Clique em **Quando o trabalho falhar** para registrar o status do trabalho quando ele não for concluído com êxito.  
   
-    -   Clique em**Quando o trabalho for concluído** para registrar o status do trabalho independentemente do status de conclusão.  
+    -   Clique em **Quando o trabalho for concluído** para registrar o status do trabalho independentemente do status de conclusão.  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usando o SQL Server Management Objects  
 **Para gravar o status do trabalho no log de aplicativos do Windows**  

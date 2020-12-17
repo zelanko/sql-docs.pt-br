@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 82c949647cf670c0e335b2c4446c248fea86581d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e7d7b36c2c19d48fec393e38c741244f6713dcd3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196320"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470627"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Cenários de ciência de dados e modelos de solução
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "92196320"
 Este artigo descreve uma série de modelos de solução de machine learning do SQL Server. Esses modelos demonstram as práticas recomendadas e fornecem os blocos de construção para ajudar você a implementar uma solução de machine learning rapidamente. Cada modelo foi projetado para resolver um problema de ciência de dados específico, para um vertical ou um setor específico.
 As tarefas de cada modelo vão desde a preparação de dados, engenharia de recursos até o treinamento e a pontuação do modelo. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Use esses modelos para saber como funciona o [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Em seguida, sinta-se à vontade para personalizar o modelo de acordo com seu próprio cenário e criar uma solução personalizada.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 Use esses modelos para saber como os serviços de Machine Learning do SQL Server funcionam. Em seguida, sinta-se à vontade para personalizar o modelo de acordo com seu próprio cenário e criar uma solução personalizada.
 ::: moniker-end
 

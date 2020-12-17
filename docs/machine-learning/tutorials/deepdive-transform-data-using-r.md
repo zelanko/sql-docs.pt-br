@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6260905faa886383ea41d913d1645fa47dc8ce7d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8c954d708a6dba6a0caad4122149cfcecdb5a182
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195083"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470507"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Transformar dados usando o R (tutorial do SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ Neste tutorial, você aprenderá sobre as funções do **RevoScaleR** para trans
 > * Use **rxDataStep** para criar e transformar um subconjunto de dados
 > * Use **rxImport** para transformar dados em trânsito de ou para um arquivo XDF ou um quadro de dados na memória durante a importação
 
-Embora não sejam destinadas especificamente à movimentação de dados, as funções **rxSummary**, **rxCube**, **rxLinMod**e **rxLogit** dão suporte a transformações de dados.
+Embora não sejam destinadas especificamente à movimentação de dados, as funções **rxSummary**, **rxCube**, **rxLinMod** e **rxLogit** dão suporte a transformações de dados.
 
 ## <a name="use-rxdatastep-to-transform-variables"></a>Usar o rxDataStep para transformar variáveis
 

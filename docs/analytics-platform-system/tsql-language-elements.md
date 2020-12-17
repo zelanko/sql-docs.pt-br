@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ba4b4992b97cb930005458640215497f0487016f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778405"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641549"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos da linguagem T-SQL para data warehouse paralelos
 Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Server data warehouse paralelo (PDW).
@@ -23,7 +23,7 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [convenções de sintaxe](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [regras de nomenclatura de objeto](../relational-databases/databases/database-identifiers.md)
 * [Palavras-chave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [agrupamentos](../t-sql/statements/collations.md?view=sql-server-ver15)
+* [agrupamentos](../t-sql/statements/collations.md)
 * [feitos](../t-sql/language-elements/comment-transact-sql.md)
 * [:](../t-sql/data-types/constants-transact-sql.md)
 * [tipos de dados](../t-sql/data-types/data-types-transact-sql.md)
@@ -48,7 +48,7 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 ## <a name="operators"></a>Operadores
 * [+ (Somar)](../t-sql/language-elements/add-transact-sql.md)
 * [+ (Concatenação de cadeias de caracteres)](../t-sql/language-elements/string-concatenation-transact-sql.md)
-* [-(Negativo)](../t-sql/language-elements/unary-operators-negative.md)
+* [- (Negativo)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (Subtrair)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (Multiplicar)](../t-sql/language-elements/multiply-transact-sql.md)
 * [/ (dividir)](../t-sql/language-elements/divide-transact-sql.md)

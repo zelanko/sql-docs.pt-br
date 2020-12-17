@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 27248c9a8ef05b8662f56255cab47e47bd2959f4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e6571c92f68412a464b96964be4b02d22a106a0b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257226"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489696"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar as ferramentas de Big Data do SQL Server 2019
 
@@ -33,7 +33,7 @@ A seguinte tabela lista as ferramentas comuns de cluster de Big Data e como inst
 | `kubectl`<sup>1</sup> | Sim | Ferramenta de linha de comando para monitorar o cluster do Kubernetes subjacente ([mais informações](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | Sim | Ferramenta gráfica multiplataforma para consultar o SQL Server. | [Instalar](../azure-data-studio/download-azure-data-studio.md) |
 | **Extensão de Virtualização de Dados** | Sim | Extensão para o Azure Data Studio que fornece um assistente de Virtualização de Dados. | [Instalar](../azure-data-studio/extensions/data-virtualization-extension.md) |
-| **CLI do Azure**<sup>2</sup> | Para o AKS | Interface de linha de comando moderna para gerenciar serviços do Azure. Usada com implantações de cluster de Big Data do AKS ([mais informações](/cli/azure/?view=azure-cli-latest&preserve-view=true)). | [Instalar](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) |
+| **CLI do Azure**<sup>2</sup> | Para o AKS | Interface de linha de comando moderna para gerenciar serviços do Azure. Usada com implantações de cluster de Big Data do AKS ([mais informações](/cli/azure/)). | [Instalar](/cli/azure/install-azure-cli) |
 | **mssql-cli** | Opcional | Interface de linha de comando moderna para consulta do SQL Server ([mais informações](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Para alguns scripts | Ferramenta de linha de comando herdada para consulta do SQL Server ([mais informações](../tools/sqlcmd-utility.md)). Talvez seja necessário instalar o Microsoft ODBC Driver 11 for SQL Server antes de instalar o pacote SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Para alguns scripts | Ferramenta de linha de comando para transferência de dados com URLs. | [Windows](https://curl.haxx.se/windows/) \| Linux: instalar pacote do curl |

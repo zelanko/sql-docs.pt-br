@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c4cdbd3a640e49bc9a43e30d4bf98cff7bf71194
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: d8f4145b85d505ccdf1d0fe26b22f2cdf02d9e90
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523821"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641489"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Instalar os pacotes de gerenciamento do SQL Server Operations Manager (SCOM) para o Analytics Platform System
 Siga estas etapas para baixar e instalar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para SQL Server PDW. Os pacotes de gerenciamento são necessários para monitorar SQL Server PDW do SCOM.  
@@ -29,7 +29,7 @@ Para a carga de trabalho de PDW do APS, baixe o [pacote de gerenciamento do Syst
   
 Para o gerenciamento de dispositivos, baixe o [pacote de gerenciamento básico do dispositivo SQL Server](/previous-versions/system-center/packs/gg602398(v=technet.10)).  
   
-Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do System Center para Microsoft SQL Server dispositivo de data warehouse paralela 2012](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7).  
+Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do System Center para Microsoft SQL Server dispositivo de data warehouse paralela 2012](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7&preserve-view=true).  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -51,7 +51,7 @@ Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do Sy
   
     ![Captura de tela do assistente do instalador do MP de monitoramento base do dispositivo SQL Server na etapa confirmar instalação com a opção de instalação circulada em vermelho.](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
     ![Clique em fechar](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -71,7 +71,7 @@ Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do Sy
   
     ![Captura de tela do assistente do instalador do PDWMP na etapa confirmar instalação com a opção de instalação circulada em vermelho.](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
     ![Instalação concluída](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

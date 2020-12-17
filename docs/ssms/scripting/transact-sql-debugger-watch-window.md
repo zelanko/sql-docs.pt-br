@@ -13,13 +13,13 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0c677071eb146b7d1a0335108a41f168326d0350
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036111"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480587"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Depurador do Transact-SQL – janela Inspeção
 
@@ -33,7 +33,7 @@ A janela **Inspecionar** exibe informações sobre as expressões que você sele
 
 **Para acessar as janelas Inspecionar**  
   
--   No menu **Depurar** , clique em **Janelas**, clique em **Inspecionar**e depois em **Inspecionar 1**, **Inspecionar 2, Inspecionar 3**ou **Inspecionar 4**.  
+-   No menu **Depurar** , clique em **Janelas**, clique em **Inspecionar** e depois em **Inspecionar 1**, **Inspecionar 2, Inspecionar 3** ou **Inspecionar 4**.  
   
  **Para alterar o valor de uma expressão**  
   
@@ -58,7 +58,7 @@ A janela **Inspecionar** exibe informações sobre as expressões que você sele
   
  Se o comprimento de uma expressão for maior do que a largura da coluna **Valor** , uma dica de ferramenta exibe o valor total quando o ponteiro passa sobre a célula **Valor** daquela expressão.  
   
- Um ícone de lupa em uma célula **Valor** indica que o visualizador de depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] está disponível. Na lista, você pode especificar **Visualizador de Texto**, **Visualizador de XML**ou **Visualizador de HTML**. Para iniciar um visualizador de depurador, clique no ícone de lupa. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] abre uma caixa de diálogo que exibe os dados em um formato apropriado para o tipo dos dados.  
+ Um ícone de lupa em uma célula **Valor** indica que o visualizador de depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] está disponível. Na lista, você pode especificar **Visualizador de Texto**, **Visualizador de XML** ou **Visualizador de HTML**. Para iniciar um visualizador de depurador, clique no ícone de lupa. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] abre uma caixa de diálogo que exibe os dados em um formato apropriado para o tipo dos dados.  
   
  **Tipo**  
  Exibe o tipo de dados da expressão.  

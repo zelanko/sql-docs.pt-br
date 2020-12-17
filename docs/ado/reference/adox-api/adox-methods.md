@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6986e0bf160bb5dcdb54d6ae485b3d3879a4800a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b6b0626880ee69e4a35df9bb86c3f07d9c3c0a1d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985697"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641348"
 ---
 # <a name="adox-methods"></a>Métodos do ADOX
 
@@ -35,12 +35,12 @@ ms.locfileid: "88985697"
 |[Acrescentar (exibições)](./append-method-adox-views.md)|Adiciona um novo objeto de **exibição** à coleção **views** .|  
 |[ChangePassword](./changepassword-method-adox.md)|Altera a senha de uma conta de usuário.|  
 |[Criar](./create-method-adox.md)|Cria um novo catálogo.|  
-|[Delete (excluir)](./delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
+|[Excluir](./delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
 |[GetObjectOwner](./getobjectowner-method-adox.md)|Retorna o proprietário de um objeto em um catálogo.|  
 |[GetPermissions](./getpermissions-method-adox.md)|Retorna as permissões para um grupo ou usuário em um objeto.|  
 |[SetObjectOwner](./setobjectowner-method.md)|Especifica o proprietário de um objeto em um catálogo.|  
 |[SetPermissions](./setpermissions-method-adox.md)|Especifica as permissões para o grupo ou usuário em um objeto.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência da API do ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Referência da API do ADOX](./adox-object-model.md)   
  [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 878d189aba259e5b69f5c27dbbc8b80b3f7f880b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196982"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642973"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definição de dados MDX – CREATE MEMBER
 
@@ -115,7 +115,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|A ordem na qual o membro calculado será resolvido quando um membro calculado fizer referência a outro membro calculado (ou seja, quando membros calculados se cruzarem).|  
 |FORMAT_STRING|Uma cadeia de caracteres de formato de estilo do Office que o aplicativo cliente pode usar ao exibir valores de células.|  
 |VISIBLE|Um valor que indica se o membro calculado é visível em um conjunto de linhas de esquema. Membros calculados visíveis podem ser adicionados a um conjunto com a função [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Um valor diferente de zero indica que o membro calculado é visível. O valor padrão dessa propriedade é *visível*.<br /><br /> Membros calculados que não são visíveis (em que o valor é definido como zero) são em geral usados como etapas intermediárias em membros calculados mais complexos. Esses membros calculados também podem ser consultados por outros tipos de membros, como medidas.|  
-|NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado para determinar o comportamento de membros calculados ao resolver células vazias.<br /><br /> Aviso esta propriedade foi preterida. ** \* \* \* \* ** Evite configurá-la. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) para obter detalhes.|  
+|NON_EMPTY_BEHAVIOR|A medida ou o conjunto usado para determinar o comportamento de membros calculados ao resolver células vazias.<br /><br /> Aviso esta propriedade foi preterida. **\* \* \* \*** Evite configurá-la. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014&preserve-view=true) para obter detalhes.|  
 |CAPTION|Uma cadeia de caracteres que o aplicativo cliente usa como legenda para o membro.|  
 |DISPLAY_FOLDER|Uma cadeia de caracteres que identifica o caminho da pasta de exibição que o aplicativo cliente usa para mostrar o membro. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , a barra invertida ( \\ ) é o separador de nível. Para fornecer várias pastas de exibição para um membro definido, use um ponto-e-vírgula (;) para separar as pastas.|  
 |ASSOCIATED_MEASURE_GROUP|O nome do grupo de medidas ao qual esse membro está associado.|  

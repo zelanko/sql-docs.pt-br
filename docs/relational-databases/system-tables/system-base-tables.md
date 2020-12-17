@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 35d75fe78e9631423f6dc9acc48cd89ef41d8d79
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810187"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641889"
 ---
 # <a name="system-base-tables"></a>Tabelas base do sistema
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "91810187"
 |**sys.sysguidrefs**|Existe em todos os bancos de dados. Contém uma linha para cada referência de ID classificada por GUID.|  
   
 ## <a name="updating-system-base-tables"></a>Atualizando tabelas base do sistema    
-Você pode exibir os dados nas tabelas do sistema por meio das exibições do catálogo do sistema. Para atualizar os metadados em uma tabela base do sistema, use a interface TSQL apropriada (por exemplo, instruções DDL). Você não pode atualizar manualmente as tabelas do sistema. SQL Server relata as mensagens a seguir ao executar atualizações diretas em tabelas do sistema.
+Veja os dados nas tabelas do sistema por meio das exibições do catálogo do sistema. Para atualizar os metadados em uma tabela base do sistema, use a interface TSQL apropriada (por exemplo, instruções DDL). Você não pode atualizar manualmente as tabelas do sistema. SQL Server relata as mensagens a seguir ao executar atualizações diretas em tabelas do sistema.
 
 ### <a name="a-system-table-is-manually-updated"></a>Uma tabela do sistema é atualizada manualmente
 Msg 17659: Aviso: a ID da tabela do sistema <id> foi atualizada diretamente na ID do banco de dados <id> e a coerência de cache talvez não tenha sido mantida. O SQL Server deve ser reiniciado.
@@ -100,4 +100,4 @@ MSG 3859: aviso: o catálogo do sistema foi atualizado diretamente na ID de banc
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Executando o comando DBCC_CHECKDB depois que uma tabela do sistema é atualizada manualmente
 MSG 3859: aviso: o catálogo do sistema foi atualizado diretamente na ID de banco de dados 17, mais recentemente em date_time.
 
-Se você executar atualizações manuais em uma tabela do sistema e encontrar um problema, você poderá ser solicitado a restaurar a partir de um backup ou copiar os dados do banco de dado afetado para um novo banco. Saiba mais sobre [mensagens de erro de ação do usuário](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action).
+Se você executar atualizações manuais em uma tabela do sistema e encontrar um problema, você poderá ser solicitado a restaurar a partir de um backup ou copiar os dados do banco de dado afetado para um novo banco. Saiba mais sobre [mensagens de erro de ação do usuário](../errors-events/mssqlserver-8992-database-engine-error.md#user-action).

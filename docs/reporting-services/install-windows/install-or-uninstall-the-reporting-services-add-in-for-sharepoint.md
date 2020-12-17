@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b4c8232909187894df11b7b1198fdb3416fbd1e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890859"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425381"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Instalar ou desinstalar o suplemento SSRS (Reporting Services) para SharePoint
 
@@ -101,7 +101,7 @@ Rssharepoint.msi /?
   
 2.  Execute o executável de ações personalizadas:  
   
-    1.  Navegue até a pasta que contém o arquivo **rsCustomAction.exe**. Esse arquivo é copiado no seu computador através da instalação somente de arquivos do suplemento. O**rsCustomAction.exe** está localizado no diretório **%Temp%** . Para navegar até o arquivo, digite o seguinte no prompt de comando:  
+    1.  Navegue até a pasta que contém o arquivo **rsCustomAction.exe**. Esse arquivo é copiado no seu computador através da instalação somente de arquivos do suplemento. O **rsCustomAction.exe** está localizado no diretório **%Temp%** . Para navegar até o arquivo, digite o seguinte no prompt de comando:  
   
          **CD %temp%** .  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc807900a08869ef46628b8aca2456326e617c87
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d256e9a650359a9fdc961a04ddb3c32216961094
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985817"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641359"
 ---
 # <a name="adox-collections"></a>Coleções ADOX
 
@@ -35,7 +35,7 @@ ms.locfileid: "88985817"
 |[Exibições](./views-collection-adox.md)|Contém todos os objetos de **exibição** de um catálogo.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência da API do ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Referência da API do ADOX](./adox-object-model.md)   
  [Modelo de objeto ADOX](./adox-object-model.md)   
  [Objetos ADOX](./adox-objects.md)   
  [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

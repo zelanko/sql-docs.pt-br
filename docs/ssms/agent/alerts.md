@@ -23,13 +23,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ea3cc85669b31eed9ba2b91d6d4c91c8b59bd603
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 82e633e1a0614882fef7775b9119077d3b9b9e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039216"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424733"
 ---
 # <a name="alerts"></a>Alertas
 
@@ -98,9 +98,9 @@ O tipo do evento determina os parâmetros utilizados para especificar o evento p
   
 -   **Alertar se o contador** e **Valor**  
   
-    O limite do alerta e o comportamento que o alerta produz. O limite é um número. O comportamento é um **dos seguintes: cai abaixo**, **torna-se igual a**ou **sobe acima de um número especificado como Valor**. O **Valor** é um número que descreve o contador de condição de desempenho. Por exemplo, para definir que ocorra um alerta para o objeto de desempenho **SQLServer:Locks** quando **Tempo de Espera de Bloqueio** exceder 30 minutos, você deve escolher **sobe acima** e **especificar 30 como valor**.  
+    O limite do alerta e o comportamento que o alerta produz. O limite é um número. O comportamento é um **dos seguintes: cai abaixo**, **torna-se igual a** ou **sobe acima de um número especificado como Valor**. O **Valor** é um número que descreve o contador de condição de desempenho. Por exemplo, para definir que ocorra um alerta para o objeto de desempenho **SQLServer:Locks** quando **Tempo de Espera de Bloqueio** exceder 30 minutos, você deve escolher **sobe acima** e **especificar 30 como valor**.  
   
-    Outro exemplo: você pode especificar que ocorra um alerta para o objeto de desempenho **SQLServer:Transactions** quando o espaço livre em **tempdb** cair abaixo de 1000 KB. Para definir isso, bastaria escolher o contador **Espaço livre em tempdb (KB)**, **cai abaixo**e um **Valor** de **1000**.  
+    Outro exemplo: você pode especificar que ocorra um alerta para o objeto de desempenho **SQLServer:Transactions** quando o espaço livre em **tempdb** cair abaixo de 1000 KB. Para definir isso, bastaria escolher o contador **Espaço livre em tempdb (KB)**, **cai abaixo** e um **Valor** de **1000**.  
   
     > [!NOTE]  
     > Os dados de desempenho são amostrados periodicamente, o que pode levar a uma pequena demora (alguns segundos) entre o limite a ser atingido e a ocorrência do alerta de desempenho.  
