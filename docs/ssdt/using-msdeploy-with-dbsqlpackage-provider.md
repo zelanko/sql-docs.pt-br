@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 04b814eece5041851b932f19e9e1d4cd1b63e035
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987762"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559188"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usando MSDeploy com o provedor do dbSqlPackage
 
@@ -29,7 +29,7 @@ O **DbSqlPackage** é um provedor do **MSDeploy** que permite interagir com o SQ
   
 -   **Script**: cria um script Transact\-SQL equivalente ao script executado pela ação Publish.  
   
-Para saber mais sobre DACFx, consulte a documentação da API gerenciada DACFx [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) ou [SqlPackage.exe](../tools/sqlpackage.md) (ferramenta de linha de comando do DACFx).  
+Para saber mais sobre DACFx, consulte a documentação da API gerenciada DACFx [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) ou [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) (ferramenta de linha de comando do DACFx).  
   
 > [!IMPORTANT]  
 > O recurso de provedor dbSqlPackage será removido na próxima versão principal do Visual Studio. Para obter informações sobre como fazer a publicação do banco de dados com a Implantação da Web, consulte o [provedor dbDacFx para obter a publicação de banco de dados Incremental](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  

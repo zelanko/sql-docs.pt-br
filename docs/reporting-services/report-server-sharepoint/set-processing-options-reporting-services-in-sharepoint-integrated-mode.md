@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b698f7e3d566cd49a0106c0cdf834be894cb92f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 2f06c967c894092d8d89224948ed1772c9e70ed5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461467"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Definir opções de processamento (Reporting Services no modo integrado do SharePoint)
 
@@ -47,7 +47,7 @@ ms.locfileid: "83764774"
   
 4.  Em **Opções de Instantâneo de Dados**, selecione **Agendar processamento de dados**.  
   
-5.  Selecione **Em uma agenda compartilhada** se você tiver uma agenda compartilhada que deseje usar; caso contrário, clique em **Em uma agenda personalizada**e em **Configurar**.  
+5.  Selecione **Em uma agenda compartilhada** se você tiver uma agenda compartilhada que deseje usar; caso contrário, clique em **Em uma agenda personalizada** e em **Configurar**.  
   
 6.  Selecione a frequência, o agendamento, as datas de início e término e clique em **OK**.  
   

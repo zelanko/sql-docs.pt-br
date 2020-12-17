@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d92479dbc8cc705e263b0828926bc2a5e86312b6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6474b863e5078b94da5dc79c1c1a7f90b3faf761
+ms.sourcegitcommit: e120899c5e72ce3108d1e459703ccd2ea6a84a5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778445"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97353707"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Enviar trabalhos do Spark em clusters de Big Data do SQL Server no Visual Studio Code
 
@@ -28,7 +28,7 @@ As Ferramentas do Spark & Hive podem ser instaladas em plataformas com suporte d
 
 Os itens a seguir são necessários para concluir as etapas neste artigo:
 
-- Um cluster de Big Data do SQL Server. Confira [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+- Um cluster de Big Data do SQL Server. Confira [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). O Mono é necessário apenas para Linux e macOS.
 - [Configurar o ambiente interativo do PySpark para Visual Studio Code](/azure/hdinsight/set-up-pyspark-interactive-environment).
@@ -54,7 +54,7 @@ Após concluir os pré-requisitos, você poderá instalar as Ferramentas do Spar
 
 Conclua as etapas a seguir para abrir uma pasta de trabalho e criar um arquivo no Visual Studio Code:
 
-1. Na barra de menus, navegue até **Arquivo** > **Abrir Pasta...**  > **C:\SQLBDC\SQLBDCexample**e, em seguida, selecione o botão **Selecionar Pasta**. A pasta aparece no modo de exibição do **Explorer** à esquerda.
+1. Na barra de menus, navegue até **Arquivo** > **Abrir Pasta...**  > **C:\SQLBDC\SQLBDCexample** e, em seguida, selecione o botão **Selecionar Pasta**. A pasta aparece no modo de exibição do **Explorer** à esquerda.
 
 2. No modo de exibição do **Explorer**, selecione a pasta **SQLBDCexample** e, em seguida, o ícone **Novo Arquivo** ao lado da pasta de trabalho.
 
@@ -256,4 +256,4 @@ O Spark & Hive para Visual Studio Code tem suporte para os seguintes recursos:
 3. Examine a exibição **SAÍDA** para verificação.  
 
 ## <a name="next-steps"></a>Próximas etapas
-Para obter mais informações sobre os clusters de Big Data do SQL Server e os cenários relacionados, confira [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+Para obter mais informações sobre os clusters de Big Data do SQL Server e os cenários relacionados, confira [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview).

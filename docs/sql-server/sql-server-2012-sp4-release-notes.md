@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0879c9399a21300fdbbfd735685d8a049a52b14f
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 123a1604717fdfb58f7f1e69db353995e6e0a960
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384655"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559288"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de versão do SQL Server 2012 Service Pack
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -149,7 +149,7 @@ Para obter uma lista completa de bugs e problemas conhecidos corrigidos neste se
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Para usar o PowerPivot para Excel com o Excel 2013, você precisa usar o suplemento que é instalado com o Excel  
 **Problema:** com o Office 2010, o PowerPivot para Excel é um suplemento independente baixado em [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Ele também pode ser baixado no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Observe que há duas versões do suplemento PowerPivot disponíveis para download: Uma que acompanha o SQL Server 2008 R2 e outra que acompanha o SQL Server 2012. No entanto, para o Office 2013, o PowerPivot para Excel é fornecido com o Office e é instalado quando você instala o Excel. Embora as versões do SQL Server 2008 R2 e SQL Server 2012 do PowerPivot para Excel 2010 não sejam compatíveis com o Excel 2013, você ainda pode instalar o PowerPivot para Excel 2010 no computador cliente se quiser executar o Excel 2010 lado a lado com o Excel 2013. Em outras palavras, as duas versões do Excel podem coexistir, além dos suplementos correspondentes do PowerPivot.  
   
-**Solução alternativa:** Para usar o PowerPivot para Excel 2013, você deve habilitar o suplemento do COM. No Excel 2013, selecione **Arquivo** | **Opções** | **Suplementos**. Na caixa suspensa **Gerenciar** , selecione **Suplementos do COM** e clique em **Ir**. Em **Suplementos do COM** , selecione **Microsoft Office PowerPivot para Excel 2013** e clique em **OK**.  
+**Solução alternativa:** Para usar o PowerPivot para Excel 2013, você deve habilitar o suplemento do COM. No Excel 2013, selecione **Arquivo** | **Opções** | **Suplementos**. Na caixa suspensa **Gerenciar** , selecione **Suplementos do COM** e clique em **Ir**. Em **Suplementos do COM**, selecione **Microsoft Office PowerPivot para Excel 2013** e clique em **OK**.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
@@ -175,19 +175,19 @@ Os detalhes de erro internos conterão uma mensagem semelhante à seguinte:
   
 -   "O valor 'SharePoint Principal' não tem suporte para a propriedade de cadeia de conexão 'Identidade do usuário'."  
   
-**Solução alternativa:** instalar o pacote do instalador do PowerPivot para SharePoint 2013 ( **spPowerPivot.msi** ) no SharePoint Server 2013. O pacote do instalador está disponível como parte do feature pack do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . O feature pack pode ser baixado do centro de download [!INCLUDE[msCoName](../includes/msconame-md.md)] em [SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)  
+**Solução alternativa:** instalar o pacote do instalador do PowerPivot para SharePoint 2013 (**spPowerPivot.msi**) no SharePoint Server 2013. O pacote do instalador está disponível como parte do feature pack do [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . O feature pack pode ser baixado do centro de download [!INCLUDE[msCoName](../includes/msconame-md.md)] em [SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>As planilhas do Power View em uma pasta de trabalho do PowerPivot são excluídas depois de uma atualização de dados agendada  
-**Problema** : no suplemento PowerPivot para SharePoint, o uso da **Atualização de Dados Agendada** em uma pasta de trabalho com o Power View excluirá as planilhas do Power View.  
+**Problema**: no suplemento PowerPivot para SharePoint, o uso da **Atualização de Dados Agendada** em uma pasta de trabalho com o Power View excluirá as planilhas do Power View.  
   
-**Solução alternativa** : para usar a **Atualização de Dados Agendada** com as pastas de trabalho do Power View, crie uma pasta de trabalho do PowerPivot que seja apenas o modelo de dados. Crie uma pasta de trabalho separada com planilhas do Excel e do Power View que se vinculem à pasta de trabalho PowerPivot com o modelo de dados. Apenas a pasta de trabalho PowerPivot com o modelo de dados deve ser agendada para atualização.  
+**Solução alternativa**: para usar a **Atualização de Dados Agendada** com as pastas de trabalho do Power View, crie uma pasta de trabalho do PowerPivot que seja apenas o modelo de dados. Crie uma pasta de trabalho separada com planilhas do Excel e do Power View que se vinculem à pasta de trabalho PowerPivot com o modelo de dados. Apenas a pasta de trabalho PowerPivot com o modelo de dados deve ser agendada para atualização.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS disponível na edição incorreta do SQL Server 2012  
 **Problema:** na versão RTM do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o recurso DQS (Data Quality Services) está disponível nas edições do SQL Server exceto as edições Enterprise, Business Intelligence e Developer. Depois de instalar o SQL Server 2012 SP1, o DQS não estará disponível em todas as edições exceto as edições Enterprise, Business Intelligence e Developer.  
   
-**Solução alternativa** : se você estiver usando o DQS em uma edição sem suporte, atualize para uma edição com suporte ou remova a dependência desse recurso de seus aplicativos.  
+**Solução alternativa**: se você estiver usando o DQS em uma edição sem suporte, atualize para uma edição com suporte ou remova a dependência desse recurso de seus aplicativos.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -232,7 +232,7 @@ Anteriormente, a DACFx não preservava o estado (WITH CHECK/NOCHECK) das Restri�
   
 -   Importar BACPAC – Importar um arquivo .bacpac para preencher um banco de dados vazio ou criar um Banco de Dados SQL do Azure ou do SQL Server.  
   
-A documentação completa da SqlPackage.exe no MSDN pode ser encontrada [aqui](../tools/sqlpackage.md).  
+A documentação completa da SqlPackage.exe no MSDN pode ser encontrada [aqui](../tools/sqlpackage/sqlpackage.md).  
   
 **Compatibilidade de pacote**  
   

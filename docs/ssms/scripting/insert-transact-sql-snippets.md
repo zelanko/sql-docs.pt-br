@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2998121fff0be71019539a9e40da5a06bbf9133a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 908cfdd1726f7074da28711d82d8f6be9877d503
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039010"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440369"
 ---
 # <a name="insert-transact-sql-snippets"></a>Inserir snippets Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "92039010"
   
     -   Pressione CTRL+K, CTRL+X.  
   
-    -   No menu **Editar** , aponte para **IntelliSense**e clique em **Inserir Snippet**.  
+    -   No menu **Editar** , aponte para **IntelliSense** e clique em **Inserir Snippet**.  
   
     -   Clique com o botão direito do mouse e selecione o comando **Inserir Snippet** no menu de atalho.  
   

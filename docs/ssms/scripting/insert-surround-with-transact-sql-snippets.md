@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7596e6ef216682ad66695b30712b3e77e2aa5ab
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1d9316a8c181c6db8eeec8228229d9f11cf4604b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038990"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440367"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Inserir snippets Transact-SQL com Surround
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "92038990"
   
     -   Digite CTRL+K, CTRL+S.  
   
-    -   No menu **Editar** , aponte para **IntelliSense**e selecione o comando **Surround With** .  
+    -   No menu **Editar** , aponte para **IntelliSense** e selecione o comando **Surround With** .  
   
     -   Clique com o botão direito do mouse no texto selecionado e selecione o comando **Surround With** no menu de contexto.  
   

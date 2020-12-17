@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772157"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559198"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>Recuperar dados por um DataReader
 
@@ -53,7 +53,7 @@ Sempre chame o método **Close** quando terminar de usar o objeto **DataReader**
 > Enquanto um **DataReader** estiver aberto, a **Connection** estará sendo usada exclusivamente por esse **DataReader**. Você não poderá executar nenhum comando usando a **Connection**, incluindo criar um outro **DataReader**, até o **DataReader** original esteja fechado.  
 
 > [!NOTE]
-> Não chame **Close** nem **Dispose** em um **Connection**, um **DataReader** ou qualquer outro objeto gerenciado no método **Finalize** da classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método **Finalize** na definição de classe. Para obter mais informações, confira [Coleta de lixo](/dotnet/standard/garbage-collection/index.md).
+> Não chame **Close** nem **Dispose** em um **Connection**, um **DataReader** ou qualquer outro objeto gerenciado no método **Finalize** da classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método **Finalize** na definição de classe. Para obter mais informações, confira [Coleta de lixo](/dotnet/standard/garbage-collection/index).
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>Recuperar vários conjuntos de resultados usando o NextResult
 

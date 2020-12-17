@@ -11,13 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 668ab3177cb49cfcbafc81500325740c941046d0
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: df6a1e45a31bffd87ea7db06e0569162f7896fc0
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006626"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559298"
 ---
 # <a name="sql-tools-overview"></a>Visão geral das ferramentas do SQL
 
@@ -37,8 +37,8 @@ As ferramentas a seguir fornecem uma GUI (interface gráfica do usuário).
 | Ferramenta | DESCRIÇÃO | Sistema operacional |
 |:--|:--|:--|
 | [ **![Imagem do ADS](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | Um editor leve que pode executar consultas SQL sob demanda, exibir e salvar resultados como texto, JSON ou Excel. Edite dados, organize suas conexões de banco de dados favoritas e procure objetos de banco de dados em uma experiência de navegação de objetos familiar. | **Windows</br>macOS</br>Linux** |
-| [ **![Imagem do SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SSMS (SQL Server Management Studio)** ](../ssms/download-sql-server-management-studio-ssms.md) | Gerencie uma instância do SQL Server ou um banco de dados com compatibilidade total com a GUI. Acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do SQL Server, do Banco de Dados SQL do Azure e do Azure Synapse Analytics. Fornece um utilitário abrangente que combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao SQL para desenvolvedores e administradores de banco de dados de todos os níveis de habilidades. | **Windows** |
-| [ **![Imagem do SSDT](../tools/media/overview-sql-tools/ssdt.svg)</br>SSDT (SQL Server Data Tools)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | Uma moderna ferramenta de desenvolvimento para criar bancos de dados relacionais do SQL Server, bancos de dados SQL do Azure, modelos de dados do AS (Analysis Services), pacotes do IS (Integration Services) e relatórios do RS (Reporting Services). Com o SSDT, você pode projetar e implantar qualquer tipo de conteúdo do SQL Server com a mesma facilidade com que desenvolve um aplicativo no **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** . | **Windows** |
+| [ **![Imagem do SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SSMS (SQL Server Management Studio)**](../ssms/download-sql-server-management-studio-ssms.md) | Gerencie uma instância do SQL Server ou um banco de dados com compatibilidade total com a GUI. Acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do SQL Server, do Banco de Dados SQL do Azure e do Azure Synapse Analytics. Fornece um utilitário abrangente que combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao SQL para desenvolvedores e administradores de banco de dados de todos os níveis de habilidades. | **Windows** |
+| [ **![Imagem do SSDT](../tools/media/overview-sql-tools/ssdt.svg)</br>SSDT (SQL Server Data Tools)**](../ssdt/download-sql-server-data-tools-ssdt.md) | Uma moderna ferramenta de desenvolvimento para criar bancos de dados relacionais do SQL Server, bancos de dados SQL do Azure, modelos de dados do AS (Analysis Services), pacotes do IS (Integration Services) e relatórios do RS (Reporting Services). Com o SSDT, você pode projetar e implantar qualquer tipo de conteúdo do SQL Server com a mesma facilidade com que desenvolve um aplicativo no **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** . | **Windows** |
 | [ **![Imagem do VS Code](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | A **[extensão mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** para Visual Studio Code é a extensão do SQL Server oficial que é compatível com conexões com SQL Server e com a experiência de edição avançada para o T-SQL no Visual Studio Code. Escreva scripts T-SQL em um editor leve. | **Windows</br>macOS</br>Linux** |
 
 ## <a name="command-line-tools"></a>Ferramentas da linha de comando
@@ -47,12 +47,12 @@ As ferramentas a seguir são as principais ferramentas de linha de comando.
 
 | Ferramenta | DESCRIÇÃO | Sistema operacional |
 |:--|:--|:--|
-|[**bcp**](bcp-utility.md)|O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário.| **Windows</br>macOS</br>Linux** |
-|[**mssql-cli (versão prévia)** ](mssql-cli.md)|O **mssql-cli** é uma ferramenta de linha de comando interativa para consultar o SQL Server. Além disso, consulte o SQL Server com uma ferramenta de linha de comando com IntelliSense, realce de sintaxe e muito mais. | **Windows</br>macOS</br>Linux** |
+|[**bcp**](bcp-utility.md)|O utilitário **bcp** (**b** ulk **c** opy **p** rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário.| **Windows</br>macOS</br>Linux** |
+|[**mssql-cli (versão prévia)**](mssql-cli.md)|O **mssql-cli** é uma ferramenta de linha de comando interativa para consultar o SQL Server. Além disso, consulte o SQL Server com uma ferramenta de linha de comando com IntelliSense, realce de sintaxe e muito mais. | **Windows</br>macOS</br>Linux** |
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | O **mssql-conf** configura o SQL Server sendo executado no Linux. | **Linux** |
-|[**mssql-scripter (versão prévia)** ](https://github.com/Microsoft/mssql-scripter) | O **mssql-scripter** é uma experiência de linha de comando de várias plataformas para criar scripts de bancos de dados SQL Server. | **Windows</br>macOS</br>Linux** |
+|[**mssql-scripter (versão prévia)**](https://github.com/Microsoft/mssql-scripter) | O **mssql-scripter** é uma experiência de linha de comando de várias plataformas para criar scripts de bancos de dados SQL Server. | **Windows</br>macOS</br>Linux** |
 | [**sqlcmd**](sqlcmd-utility.md) |O utilitário **sqlcmd** permite que você insira instruções de Transact-SQL, procedimentos do sistema e arquivos de script no prompt de comando. | **Windows</br>macOS</br>Linux** |
-| [**sqlpackage**](sqlpackage.md) |O **sqlpackage** é um utilitário de linha de comando que automatiza diversas tarefas de desenvolvimento de banco de dados. |**Windows</br>macOS</br>Linux** |
+| [**sqlpackage**](sqlpackage/sqlpackage.md) |O **sqlpackage** é um utilitário de linha de comando que automatiza diversas tarefas de desenvolvimento de banco de dados. |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| O **SQL Server PowerShell** fornece cmdlets para trabalhar com o SQL. | **Windows</br>macOS</br>Linux** |
 
 ## <a name="migration-and-other-tools"></a>Migração e outras ferramentas

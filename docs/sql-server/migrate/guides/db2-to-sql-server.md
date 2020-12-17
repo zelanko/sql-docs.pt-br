@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 08/17/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: release-landing
+ms.technology: migration-guide
 ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a4aa024d94908800c020fdc5d2362d48d03becd
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: 81b631c6b5810fc45ce3b14449a458544fdf6200
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734664"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97100352"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>Guia de migração: do DB2 para o SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,26 +48,26 @@ Crie uma avaliação usando o SSMA (Assistente de Migração do SQL Server).
 Para criar uma avaliação, siga estas etapas:
 
 1. Abra o SSMA (Assistente de Migração do SQL Server) para DB2. 
-1. Selecione **Arquivo** e, em seguida, escolha **Novo Projeto** . 
-1. Forneça um nome de projeto, um local para salvar o projeto e, em seguida, selecione um destino de migração do SQL Server na lista suspensa. Selecione **OK** . 
+1. Selecione **Arquivo** e, em seguida, escolha **Novo Projeto**. 
+1. Forneça um nome de projeto, um local para salvar o projeto e, em seguida, selecione um destino de migração do SQL Server na lista suspensa. Selecione **OK**. 
 
    :::image type="content" source="media/db2-to-sql-server/new-project.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
 
 
-1. Insira valores para os detalhes de conexão do DB2 na caixa de diálogo **Conectar ao DB2** . 
+1. Insira valores para os detalhes de conexão do DB2 na caixa de diálogo **Conectar ao DB2**. 
 
-   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="Conectar-se à sua instância do DB2":::
 
 
-1. Clique com o botão direito do mouse no esquema do DB2 que você deseja migrar e escolha **Criar relatório** . Isso vai gerar um relatório HTML. Como alternativa, você pode escolher **Criar relatório** na barra de navegação depois de selecionar o esquema. 
+1. Clique com o botão direito do mouse no esquema do DB2 que você deseja migrar e escolha **Criar relatório**. Isso vai gerar um relatório HTML. Como alternativa, você pode escolher **Criar relatório** na barra de navegação depois de selecionar o esquema. 
 
-   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="Clicar com o botão direito do mouse no esquema e escolher criar relatório":::
 
 1. Examine o relatório HTML para entender as estatísticas de conversão e outros erros ou avisos. Você também pode abrir o relatório no Excel para obter um inventário de objetos do DB2 e o esforço necessário para executar as conversões de esquema. O local padrão do relatório está na pasta de relatório em SSMAProjects.
 
    Por exemplo: `drive:\<username>\Documents\SSMAProjects\MyDB2Migration\report\report_<date>`. 
 
-   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="Examinar o relatório para identificar erros ou avisos":::
 
 
 ### <a name="validate-data-types"></a>Validar tipos de dados
@@ -75,35 +75,35 @@ Para criar uma avaliação, siga estas etapas:
 Valide os mapeamentos de tipo de dados padrão e altere-os com base nos requisitos, se necessário. Para fazer isso, siga estas etapas: 
 
 1. Selecione **Ferramentas** no menu. 
-1. Selecione **Configurações do Projeto** . 
-1. Selecione a guia **Mapeamentos de tipo** . 
+1. Selecione **Configurações do Projeto**. 
+1. Selecione a guia **Mapeamentos de tipo**. 
 
-   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="Selecionar o esquema e o mapeamento de tipo":::
 
-1. Você pode alterar o mapeamento de tipo de cada tabela selecionando a tabela no **Gerenciador de metadados do DB2** . 
+1. Você pode alterar o mapeamento de tipo de cada tabela selecionando a tabela no **Gerenciador de metadados do DB2**. 
 
 ### <a name="convert-schema"></a>Converter esquema 
 
 Para converter o esquema, siga estas etapas:
 
-1. (Opcional) Adicione consultas dinâmicas ou ad hoc a instruções. Clique com o botão direito do mouse no nó e escolha **Adicionar instruções** . 
-1. Selecione **Conectar ao SQL Server** . 
+1. (Opcional) Adicione consultas dinâmicas ou ad hoc a instruções. Clique com o botão direito do mouse no nó e escolha **Adicionar instruções**. 
+1. Selecione **Conectar ao SQL Server**. 
     1. Insira os detalhes da conexão para se conectar à sua Instância do SQL Server. 
     1. Opte por se conectar a um banco de dados existente no servidor de destino ou forneça um novo nome para criar um banco de dados no servidor de destino. 
-    1. Selecione **Conectar** . 
+    1. Selecione **Conectar**. 
 
-   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="Preencher os detalhes para se conectar ao SQL Server":::
 
 
-1. Clique com o botão direito do mouse no esquema e escolha **Converter esquema** . Como alternativa, você pode escolher **Converter esquema** na barra de navegação superior depois de selecionar o esquema. 
+1. Clique com o botão direito do mouse no esquema e escolha **Converter esquema**. Como alternativa, você pode escolher **Converter esquema** na barra de navegação superior depois de selecionar o esquema. 
 
-   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="Clicar com o botão direito do mouse no esquema e escolher converter esquema":::
 
 1. Após a conclusão da conversão, compare e examine a estrutura do esquema para identificar possíveis problemas e solucioná-los com base nas recomendações. 
 
-   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="Comparar e examinar a estrutura do esquema para identificar possíveis problemas e solucioná-los com base nas recomendações.":::
 
-1. Salve o projeto localmente para realizar um exercício de correção de esquema offline. Selecione **Salvar Projeto** no menu **Arquivo** . 
+1. Salve o projeto localmente para realizar um exercício de correção de esquema offline. Selecione **Salvar Projeto** no menu **Arquivo**. 
 
 
 ## <a name="migrate"></a>Migrar
@@ -112,22 +112,22 @@ Depois de concluir a avaliação de seus bancos de dados e resolver quaisquer di
 
 Para publicar o esquema e migrar seus dados, siga estas etapas:
 
-1. Publicar o esquema: Clique com o botão direito do mouse no banco de dados do nó **Bancos de Dados** no **Gerenciador de Metadados do SQL Server** e escolha **Sincronizar com o Banco de Dados** .
+1. Publicar o esquema: Clique com o botão direito do mouse no banco de dados do nó **Bancos de Dados** no **Gerenciador de Metadados do SQL Server** e escolha **Sincronizar com o Banco de Dados**.
 
-   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="Clicar com o botão direito do mouse no banco de dados e escolher sincronizar com o banco de dados":::
 
-1. Migrar os dados: Clique com o botão direito do mouse no esquema do **Gerenciador de Metadados do DB2** e escolha **Migrar Dados** . 
+1. Migrar os dados: Clique com o botão direito do mouse no esquema do **Gerenciador de Metadados do DB2** e escolha **Migrar Dados**. 
 
-   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="Clicar com o botão direito do mouse no esquema e escolher migrar dados":::
 
 1. Forneça os detalhes da conexão das instâncias do DB2 e do SQL Server. 
-1. Veja o **Relatório de migração de dados** . 
+1. Veja o **Relatório de migração de dados**. 
 
-   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="Examinar o relatório de migração de dados":::
 
 1. Conecte-se à sua instância do SQL Server usando o SQL Server Management Studio e valide a migração examinando os dados e o esquema. 
 
-   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="Forneça os detalhes do projeto e selecione OK para salvar.":::
+   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="Comparar o esquema no SSMS":::
 
 ## <a name="post-migration"></a>Após a migração 
 
@@ -141,10 +141,10 @@ Depois que os dados são migrados para o ambiente de destino, todos os aplicativ
 
 A abordagem de teste para a migração de banco de dados consiste nas seguintes atividades:
 
-1. **Desenvolver testes de validação** : Para testar a migração do banco de dados, você precisa usar consultas SQL. Você deve criar as consultas de validação para executar nos bancos de dados de origem e de destino. Suas consultas de validação devem abranger o escopo que você definiu.
-1. **Configurar ambiente de teste** : O ambiente de teste deve conter uma cópia do banco de dados de origem e do banco de dados de destino. Lembre-se de isolar o ambiente de teste.
-1. **Executar testes de validação** : Execute os testes de validação na origem e no destino e, em seguida, analise os resultados.
-1. **Executar testes de desempenho** : Execute o teste de desempenho na origem e no destino e, em seguida, analise e compare os resultados.
+1. **Desenvolver testes de validação**: Para testar a migração do banco de dados, você precisa usar consultas SQL. Você deve criar as consultas de validação para executar nos bancos de dados de origem e de destino. Suas consultas de validação devem abranger o escopo que você definiu.
+1. **Configurar ambiente de teste**: O ambiente de teste deve conter uma cópia do banco de dados de origem e do banco de dados de destino. Lembre-se de isolar o ambiente de teste.
+1. **Executar testes de validação**: Execute os testes de validação na origem e no destino e, em seguida, analise os resultados.
+1. **Executar testes de desempenho**: Execute o teste de desempenho na origem e no destino e, em seguida, analise e compare os resultados.
 
    > [!NOTE]
    > Para obter assistência para desenvolver e executar testes de validação após a migração, considere a Solução de Qualidade de Dados disponibilizada pelo parceiro [QuerySurge](https://www.querysurge.com/company/partners/microsoft). 

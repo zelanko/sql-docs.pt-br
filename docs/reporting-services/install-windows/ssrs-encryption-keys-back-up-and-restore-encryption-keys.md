@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: eb35ae0143b2146d5d5d38ebf0f2ab6d51a94049
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933758"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439321"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Chaves de criptografia do SSRS – Fazer backup e restaurar chaves de criptografia
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91933758"
   
  **Modo Nativo:** o Gerenciador de Configurações do Servidor de Relatório ou o utilitário **rskeymgmt**.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **O modo do SharePoint:** Páginas do PowerShell ou Administração Central do SharePoint.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "91933758"
   
 1.  Inicie o Gerenciador de Configuração do Servidor de Relatório e conecte-se à instância do servidor de relatório que você deseja configurar.  
   
-2.  Clique em **Chaves de Criptografia**e selecione **Fazer Backup**.  
+2.  Clique em **Chaves de Criptografia** e selecione **Fazer Backup**.  
   
 3.  Digite uma senha forte.  
   
