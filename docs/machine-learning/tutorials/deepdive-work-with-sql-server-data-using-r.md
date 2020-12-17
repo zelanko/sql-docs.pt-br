@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ae05adf9876b572bd01c9b7f239ef8aa08e67337
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194498"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489966"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Criar um banco de dados e permissões (tutorial de SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,17 +33,17 @@ Este tutorial requer um banco de dados para o armazenamento de dados e código. 
 
 1. No SQL Server Management Studio, conecte-se a uma instância do banco de dados habilitada para R.
 
-2. Clique com o botão direito do mouse em **Bancos de dados**e selecione **Novo banco de dados**.
+2. Clique com o botão direito do mouse em **Bancos de dados** e selecione **Novo banco de dados**.
   
 2. Digite um nome para o novo banco de dados: RevoDeepDive.
   
 ## <a name="create-a-login"></a>Criar um logon
   
-1. Clique em **Nova Consulta**e altere o contexto do banco de dados mestre.
+1. Clique em **Nova Consulta** e altere o contexto do banco de dados mestre.
   
 2. Na janela **Nova consulta** , execute os comandos a seguir para criar as contas de usuário e atribuí-las ao banco de dados usado neste tutorial. Lembre-se de alterar o nome do banco de dados, se necessário.
 
-3. Para confirmar o logon, selecione o novo banco de dados, expanda **Segurança**e expanda **Usuários**.
+3. Para confirmar o logon, selecione o novo banco de dados, expanda **Segurança** e expanda **Usuários**.
   
 **usuário Windows**
   
@@ -96,7 +96,7 @@ Esta seção lista alguns problemas comuns que podem ocorrer durante a configura
   
     Antes de executar o código do R usando o servidor, é recomendável verificar se o banco de dados pode ser acessado no ambiente de desenvolvimento do R. O [Gerenciador de Servidores no Visual Studio](/previous-versions/x603htbk(v=vs.140)) e o [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) são ferramentas gratuitas com recursos avançados de gerenciamento e conectividade de banco de dados.
   
-    Se você não quiser instalar as ferramentas de gerenciamento de banco de dados adicionais, será possível criar um teste de conexão com a instância do SQL Server usando o [Administrador de Fonte de Dados ODBC](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) no Painel de Controle. Se o banco de dados estiver configurado corretamente e você inserir o nome de usuário correto e a senha, você deverá conseguir ver o banco de dados que acabou de criar e selecioná-lo como o banco de dados padrão.
+    Se você não quiser instalar as ferramentas de gerenciamento de banco de dados adicionais, será possível criar um teste de conexão com a instância do SQL Server usando o [Administrador de Fonte de Dados ODBC](../../odbc/admin/odbc-data-source-administrator.md) no Painel de Controle. Se o banco de dados estiver configurado corretamente e você inserir o nome de usuário correto e a senha, você deverá conseguir ver o banco de dados que acabou de criar e selecioná-lo como o banco de dados padrão.
   
     Os motivos comuns para falhas de conexão incluem conexões remotas não habilitadas para o servidor e o protocolo de Pipes Nomeados não habilitado. Você pode encontrar mais dicas de solução de problemas neste artigo: [Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
   
