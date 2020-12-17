@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c9d971efb90f51562bfa59c73802e577dd8d511
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 60119db288040111668868692eb5f3c6f1ce458c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870384"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470427"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Tutorial do Python: Implantar um modelo para categorizar os clientes com o aprendizado de máquina do SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python, em um banco de dados usando os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python em um banco de dados usando os Serviços de Machine Learning do SQL Server.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python, em um banco de dados usando os Serviços de Machine Learning da Instância Gerenciada de SQL do Azure.
 ::: moniker-end
 

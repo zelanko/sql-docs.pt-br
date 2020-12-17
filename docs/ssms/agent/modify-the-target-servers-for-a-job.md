@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9dd059571a35162cabe462500751331667552e26
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e070d2afa3b26d7c7d0c63f597571a3f526ae1d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035579"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482193"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
 
@@ -53,7 +53,7 @@ Por padrão, os membros da função de servidor fixa sysadmin podem executar ess
   
 2.  Expanda **SQL Server Agent**, expanda **Trabalhos**, clique com o botão direito do mouse em um trabalho e clique em **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do Trabalho** , selecione a página **Destinos**e clique em **Servidor local de destino**ou **Vários servidores de destino**.  
+3.  Na caixa de diálogo **Propriedades do Trabalho** , selecione a página **Destinos** e clique em **Servidor local de destino** ou **Vários servidores de destino**.  
   
     Se optar por **Vários servidores de destino**, designe os servidores a serem destino do trabalho, marcando a caixa à esquerda do nome do servidor. Verifique se as caixas de seleção dos servidores que não devem ser destino do trabalho estão desmarcadas.  
   

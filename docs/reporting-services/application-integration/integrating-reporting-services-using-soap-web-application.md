@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a24b256e6d395b6cfd93773a8cb824fe7ba7ece
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78ebc356c31dcd32c650d0b04e78c20939e1cabb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198187"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466627"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Integrando o Reporting Services usando o SOAP – aplicativo Web
   Você pode acessar a funcionalidade completa do servidor de relatório por meio da API SOAP do Reporting Services. Por ser um serviço Web, a API SOAP pode ser acessada facilmente para fornecer os recursos de relatórios corporativos para seus aplicativos comerciais personalizados. Você acessa o serviço Web do servidor de relatório a partir de um aplicativo Web da mesma forma que acessa a API SOAP de um aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode gerar uma classe proxy que expõe as propriedades e os métodos do serviço Web Servidor de Relatórios e que permite usar uma infraestrutura e ferramentas conhecidas para criar aplicativos de negócios na tecnologia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -43,15 +43,15 @@ ms.locfileid: "79198187"
   
 ## <a name="managing-the-report-server-using-soap-api"></a>Gerenciando do servidor de relatório por meio da API SOAP  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
- Você também pode usar seu aplicativo Web para gerenciar um servidor de relatório e seu conteúdo. O Gerenciador de Relatórios, incluído com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é um exemplo de aplicativo Web criado completamente por meio do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e da API SOAP do Reporting Services. Você pode adicionar a funcionalidade de gerenciamento de relatório do Gerenciador de Relatórios para seus aplicativos Web personalizados. Por exemplo, talvez você queira retornar uma lista de relatórios disponíveis no banco de dados do servidor de relatório e exibi-los em um controle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]Listbox**do** para os usuários escolherem. O código a seguir conecta-se ao banco de dados do servidor de relatório e retorna uma lista de itens no banco de dados do servidor de relatório. Os relatórios disponíveis são, em seguida, adicionados a um controle Listbox que exibe o caminho de cada relatório.  
+ Você também pode usar seu aplicativo Web para gerenciar um servidor de relatório e seu conteúdo. O Gerenciador de Relatórios, incluído com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é um exemplo de aplicativo Web criado completamente por meio do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e da API SOAP do Reporting Services. Você pode adicionar a funcionalidade de gerenciamento de relatório do Gerenciador de Relatórios para seus aplicativos Web personalizados. Por exemplo, talvez você queira retornar uma lista de relatórios disponíveis no banco de dados do servidor de relatório e exibi-los em um controle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]Listbox **do** para os usuários escolherem. O código a seguir conecta-se ao banco de dados do servidor de relatório e retorna uma lista de itens no banco de dados do servidor de relatório. Os relatórios disponíveis são, em seguida, adicionados a um controle Listbox que exibe o caminho de cada relatório.  
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
- Você também pode usar seu aplicativo Web para gerenciar um servidor de relatório e seu conteúdo. O portal da Web, incluído com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é um exemplo de um aplicativo Web que gerencia a maioria das tarefas que você normalmente executaria usando o Reporting Services. Você pode adicionar a funcionalidade de gerenciamento de relatório do portal da Web para seus aplicativos Web personalizados. Por exemplo, talvez você queira retornar uma lista de relatórios disponíveis no banco de dados do servidor de relatório e exibi-los em um controle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]Listbox**do** para os usuários escolherem. O código a seguir conecta-se ao banco de dados do servidor de relatório e retorna uma lista de itens no banco de dados do servidor de relatório. Os relatórios disponíveis são, em seguida, adicionados a um controle Listbox que exibe o caminho de cada relatório.  
+ Você também pode usar seu aplicativo Web para gerenciar um servidor de relatório e seu conteúdo. O portal da Web, incluído com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é um exemplo de um aplicativo Web que gerencia a maioria das tarefas que você normalmente executaria usando o Reporting Services. Você pode adicionar a funcionalidade de gerenciamento de relatório do portal da Web para seus aplicativos Web personalizados. Por exemplo, talvez você queira retornar uma lista de relatórios disponíveis no banco de dados do servidor de relatório e exibi-los em um controle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]Listbox **do** para os usuários escolherem. O código a seguir conecta-se ao banco de dados do servidor de relatório e retorna uma lista de itens no banco de dados do servidor de relatório. Os relatórios disponíveis são, em seguida, adicionados a um controle Listbox que exibe o caminho de cada relatório.  
 
 ::: moniker-end
   

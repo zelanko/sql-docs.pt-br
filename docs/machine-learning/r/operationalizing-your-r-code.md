@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 89643fabf2db39e7006e0efaac87adb991893f67
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 0ed09befa391211f8fc5457036f4362bfbf45894
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098835"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470867"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Colocar o código R em operação usando procedimentos armazenados nos Serviços de Machine Learning do SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,11 +49,11 @@ A pontuação é uma tarefa importante que pode ser facilmente automatizada ou i
 
 O seguinte tutorial fornece um exemplo de pontuação usando um procedimento armazenado nos modos de lote e de linha única:
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [Instruções passo a passo completas da ciência de dados para R no SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 + [Tutorial do R: prever as tarifas de táxi de Nova York com a classificação binária](../tutorials/r-taxi-classification-introduction.md)
 ::: moniker-end
 
@@ -63,7 +63,7 @@ Embora a linguagem R de software livre tenha limitações conhecidas em relaçã
 
 Se a solução R usa agregações complexas ou envolve grandes conjuntos de dados, você pode aproveitar as agregações de memória e os índices columnstore altamente eficientes do SQL Server, deixando o código R tratar do processamento dos cálculos estatísticos e das pontuações.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Adaptar o código R para outras plataformas ou contextos de computação
 

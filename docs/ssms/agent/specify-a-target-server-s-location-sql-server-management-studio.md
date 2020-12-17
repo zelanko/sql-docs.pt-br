@@ -14,13 +14,13 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ec7ed61678519716e84e74e13b9d954628a3ea45
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3e09fbc094ddf75a56b2b4c48eac4ecb23b47b7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035499"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482159"
 ---
 # <a name="specify-a-target-server39s-location"></a>Especificar a localização de um servidor de destino
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ Exige associação à função de servidor fixa **sysadmin** .
   
 1.  No **Pesquisador de Objetos,** clique no sinal de adição para expandir o servidor mestre no qual você deseja especificar o local de um servidor de destino.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor**e selecione **Gerenciar Servidores de Destino**.  
+2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor** e selecione **Gerenciar Servidores de Destino**.  
   
 3.  Clique com o botão direito do mouse em um servidor de destino e selecione **Propriedades**.  
   

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 809d11c82a9b09a23590592ec3f7b433e3c9ca43
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d01a008e00d2effccb109555799bbe6d55baf1e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986652"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466567"
 ---
 # <a name="limit-report-history---reporting-services"></a>Histórico de relatórios – Reporting Services
   O histórico de relatórios é uma coleção de instantâneos de relatórios que você cria. Você pode criar um histórico de relatórios sob demanda ou agendar com que frequência um instantâneo é criado e adicionado ao histórico de relatórios.  
   
  O histórico de relatórios é armazenado no banco de dados do servidor de relatórios. Se os instantâneos de relatório contiverem uma grande quantidade de dados, limite o histórico de relatórios para minimizar o efeito da retenção de instantâneos no tamanho do banco de dados.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ## <a name="to-configure-report-history-for-a-report-server"></a>Para configurar o histórico de relatórios para um servidor de relatório  
   
@@ -53,7 +53,7 @@ ms.locfileid: "91986652"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-configure-report-history-for-a-report-server"></a>Para configurar o histórico de relatórios para um servidor de relatório  
   

@@ -11,13 +11,13 @@ ms.author: maghan
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98d82f71690be9f22cb891d002a315ccfa7c1762
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 76d942c643b510f956f5199920c228e4071795e8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038996"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480647"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Gerar scripts (SQL Server Management Studio)
 
@@ -45,7 +45,7 @@ Use o menu **Gerar Script como do Pesquisador de Objetos** para gerar o script d
 
 1. No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.
 
-2. Expanda **Bancos de Dados**e o banco de dados que contém o objeto do qual será gerado um script.
+2. Expanda **Bancos de Dados** e o banco de dados que contém o objeto do qual será gerado um script.
 
 3. Expanda a categoria do objeto. Por exemplo, expanda o nó **Tabelas** ou **Exibições** .
 
@@ -61,11 +61,11 @@ Use o painel **Detalhes do Pesquisador de Objetos** para gerar um script para v�
 
 1. No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.
 
-2. Expanda **Bancos de Dados**e o banco de dados que contém os objetos dos quais será gerado um script.
+2. Expanda **Bancos de Dados** e o banco de dados que contém os objetos dos quais será gerado um script.
 
 3. Expanda o nó de categoria dos tipos de objeto dos quais você deseja gerar o script, como o nó **Tabelas** .
 
-4. Abra o painel **Detalhes do Pesquisador de Objetos** selecionando **F7**ou abrindo o menu **Exibição** e selecionando **Detalhes do Pesquisador de Objetos**.
+4. Abra o painel **Detalhes do Pesquisador de Objetos** selecionando **F7** ou abrindo o menu **Exibição** e selecionando **Detalhes do Pesquisador de Objetos**.
 
     ![Menu de exibição](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 

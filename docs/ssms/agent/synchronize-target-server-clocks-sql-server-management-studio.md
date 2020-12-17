@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 496a5e901ec802cbd7a7ffbb810a14ee31734dcc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 01294938af5e2d1813a371091e89b03321268637
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037749"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478777"
 ---
 # <a name="synchronize-target-server-clocks"></a>Sincronizar os relógios dos servidores alvo
 
@@ -47,7 +47,7 @@ Exige associação à função de servidor fixa **sysadmin** .
   
 1.  No **Pesquisador de Objetos,** clique no sinal de adição para expandir o servidor onde você deseja sincronizar os relógios dos servidores de destino com o relógio do servidor mestre.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor**e selecione **Gerenciar Servidores de Destino**.  
+2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor** e selecione **Gerenciar Servidores de Destino**.  
   
 3.  Na caixa de diálogo **Gerenciar Servidores de Destino** , clique em **Postar Instruções**.  
   

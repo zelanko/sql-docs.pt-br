@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3badcbfeb967f76cef945bf3ebe108c44825772e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 56a52c3245d364bd1b111dbe5fedbda9da48e493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098865"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470947"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Converter código R para execução em instâncias do SQL Server (no banco de dados)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -103,7 +103,7 @@ O quanto você altera o seu código depende de você pretender enviar o código 
 
 ### <a name="improve-performance-and-security"></a>Melhorar o desempenho e a segurança
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + Evite gravar previsões ou resultados intermediários em arquivo. Em vez disso, grave previsões em uma tabela, a fim de evitar a movimentação de dados.
 ::: moniker-end
 
@@ -117,7 +117,7 @@ O quanto você altera o seu código depende de você pretender enviar o código 
 
 + Procure meios de usar T-SQL em vez de código R para computação baseada em conjunto.
 
-  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
   Por exemplo, esta solução de R mostra como as funções T-SQL definidas pelo usuário e o R podem executar a mesma tarefa de engenharia de recursos: [Passo a passo de ponta a ponta sobre a ciência de dados](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
   ::: moniker-end
 
@@ -169,6 +169,6 @@ Para exibir exemplos de como uma solução de R pode ser implantada no SQL Serve
 
 + [Tutorial do R: prever as tarifas de táxi de Nova York com a classificação binária](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [Solução de ciência de dados de ponta a ponta](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) – inclui uma comparação de engenharia de recursos em R e no T-SQL
 ::: moniker-end

@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2cd244454b78e1199d59dcfe6539498328eac674
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 518406668e890aeddf656394ca9277610bc34f3f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870408"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470407"
 ---
 # <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Tutorial do Python: preparar dados para categorizar clientes com o aprendizado de máquina do SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Na parte dois desta série de tutoriais de quatro partes, você restaurará e preparará os dados de um banco de dados usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de clustering no Python com os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Na parte dois desta série de tutoriais de quatro partes, você restaurará e preparará os dados de um banco de dados usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de clustering em Python com os Serviços de Machine Learning do SQL Server.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Na parte dois desta série de tutoriais de quatro partes, você restaurará e preparará os dados de um banco de dados usando o Python. Posteriormente nesta série, você usará esses dados para treinar e implantar um modelo de clustering em Python com os Serviços de Machine Learning da Instância Gerenciada de SQL do Azure.
 ::: moniker-end
 

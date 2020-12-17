@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f4a350830a4d0672877cb94deb9b4baf8e602944
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036294"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466267"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar um filtro de ponto de interrupção
 
@@ -45,7 +45,7 @@ Filtros de ponto de interrupção não são normalmente usados com o depurador [
   
     -   **MachineName** é o computador que está executando a instância do Mecanismo de Banco de Dados.  
   
-    -   **ProcessID**e **ProcessName** são o processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados.  
+    -   **ProcessID** e **ProcessName** são o processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados.  
   
     -   **ThreadID** e **ThreadName** são o thread do sistema operacional que executa o lote [!INCLUDE[tsql](../../includes/tsql-md.md)] , procedimento ou função na instância do Mecanismo de Banco de Dados.  
   

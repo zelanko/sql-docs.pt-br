@@ -7,13 +7,13 @@ ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 3263723e04834e5b0a6bad86455f281fe643e083
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 7abbcf2297083b8e0bd9f05be12650e1efc1c942
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870443"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471097"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Atualizar os runtimes do Python e do R com a associação nos Serviços de Machine Learning do SQL Server
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -40,7 +40,7 @@ O restante deste artigo explica o mecanismo de associação e como ele funciona 
 > [!NOTE]
 > A associação aplica-se a somente instâncias no banco de dados que estão associadas a instâncias do SQL Server. Nesse caso, a associação não é necessária para uma instalação autônoma.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 **Considerações de associação do SQL Server 2016**
 
 Para clientes do SQL Server 2016 R Services, a associação fornece:
@@ -58,7 +58,7 @@ As tabelas a seguir são mapas de versão. Cada mapa mostra as versões de pacot
 
 A associação não garante a versão mais recente do R ou do Anaconda. Ao associar-se ao Microsoft Machine Learning Server, você obtém a versão do R ou Python disponibilizada por meio da Instalação, que pode não ser a versão mais recente disponível na Web.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
 Componente |Versão inicial | [R Server 9.0.1](/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](/machine-learning-server/install/machine-learning-server-windows-install) | [Machine Learning Server 9.3](/machine-learning-server/install/machine-learning-server-windows-install) |  [Machine Learning Server 9.4.7](/machine-learning-server/install/machine-learning-server-windows-install)
@@ -71,7 +71,7 @@ MRO (Microsoft R Open) pelo R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | 
 [olapR](/machine-learning-server/r-reference/olapr/olapr) | n.d. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 [**Serviços de Machine Learning do SQL Server 2017**](../install/sql-machine-learning-services-windows-install.md)
 
 Componente |Versão inicial | Machine Learning Server 9.3 | Machine Learning Server 9.4.7 |

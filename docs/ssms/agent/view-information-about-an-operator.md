@@ -18,13 +18,13 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e7ee5c9f7a26979891a26ff44c34a5b4502b6026
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: a9fb20b3a5d161c4d69d15740defc3dd10ebe7a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038701"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480707"
 ---
 # <a name="view-information-about-an-operator"></a>Exibir informações sobre um operador
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

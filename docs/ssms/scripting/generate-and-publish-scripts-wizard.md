@@ -43,13 +43,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: df5c82ef6887dba2d261a1517d1d1f9b871d5ec4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478807"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
 
@@ -204,7 +204,7 @@ Use essa página para especificar como você deseja que esse assistente gere scr
 
 - **Controle de alterações de script** – Controle de alterações de scripts se for habilitado no banco de dados de origem ou nas tabelas no banco de dados de origem. O padrão é **False**. Para obter mais informações, veja [Sobre o controle de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).
 
-- **Restrições de Verificação do Script** – adiciona restrições **CHECK** ao script. O padrão é **True**. Restrições**CHECK** exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
+- **Restrições de Verificação do Script** – adiciona restrições **CHECK** ao script. O padrão é **True**. Restrições **CHECK** exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
 
 - **Opções de compactação de dados de script** – Gera scripts de opções de compactação de dados quando elas são configuradas no banco de dados de origem ou em tabelas no banco de dados de origem. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md). O padrão é **False**.
 

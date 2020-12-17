@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dd26583a850cc3734c2201b0640da99ce971fa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036259"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476897"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd – Usar o utilitário
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "92036259"
   
 -   A opção de servidor ( **-S**) identifica a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual o **sqlcmd** se conecta.  
   
--   As opções de autenticação ( **-E**, **-U**e **-P**) especificam as credenciais que o **sqlcmd** usa para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **OBSERVAÇÃO:** a opção **-E** é o padrão e não precisa ser especificada.  
+-   As opções de autenticação ( **-E**, **-U** e **-P**) especificam as credenciais que o **sqlcmd** usa para se conectar à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **OBSERVAÇÃO:** a opção **-E** é o padrão e não precisa ser especificada.  
   
--   As opções de entrada ( **-Q**, **-q**e **-i**) identificam o local da entrada para **sqlcmd**.  
+-   As opções de entrada ( **-Q**, **-q** e **-i**) identificam o local da entrada para **sqlcmd**.  
   
 -   A opção de saída ( **-o**) especifica o arquivo no qual o **sqlcmd** deve colocar a saída.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "92036259"
     > **DICA!** Para consultar uma lista das opções compatíveis com o utilitário **sqlcmd** , execute: `sqlcmd -?`.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Executar instruções Transact-SQL interativamente usando o sqlcmd  
- Você pode usar o utilitário **sqlcmd** interativamente para executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em uma janela de Prompt de Comando. Para executar interativamente instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] usando **sqlcmd**, execute o utilitário sem usar as opções **-Q**, **-q**, **-Z**ou **-i** para especificar qualquer arquivo ou consulta de entrada. Por exemplo:  
+ Você pode usar o utilitário **sqlcmd** interativamente para executar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em uma janela de Prompt de Comando. Para executar interativamente instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] usando **sqlcmd**, execute o utilitário sem usar as opções **-Q**, **-q**, **-Z** ou **-i** para especificar qualquer arquivo ou consulta de entrada. Por exemplo:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -126,7 +126,7 @@ ms.locfileid: "92036259"
  `Length: 5" 7'`  
   
 ## <a name="strings-that-span-multiple-lines"></a>Cadeias de caracteres que abrangem várias linhas  
- O**sqlcmd** é compatível com scripts que têm cadeias de caracteres que abrangem várias linhas. Por exemplo, a seguinte instrução `SELECT` estende diversas linhas, mas é uma única cadeia de caracteres executada ao pressionar a tecla ENTER, depois de digitar `GO`.  
+ O **sqlcmd** é compatível com scripts que têm cadeias de caracteres que abrangem várias linhas. Por exemplo, a seguinte instrução `SELECT` estende diversas linhas, mas é uma única cadeia de caracteres executada ao pressionar a tecla ENTER, depois de digitar `GO`.  
   
  `SELECT First line`  
   
@@ -202,7 +202,7 @@ ms.locfileid: "92036259"
  As linhas depois da linha `3> GO` são a saída de uma instrução `SELECT` . Depois que você gerar a saída, o `sqlcmd` redefine o prompt `sqlcmd` e exibe `1>`. Após digitar `EXIT` na linha `1>`, a janela de prompt de comando exibe a mesma linha, como fez quando você a abriu primeiramente. Isto indica que o `sqlcmd` encerrou sua sessão. Agora você pode fechar a janela de prompt de comando digitando outro comando `EXIT` .  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Executar arquivos de script Transact-SQL usando o sqlcmd  
- Você pode usar **sqlcmd** para executar arquivos de script do banco de dados. Os arquivos de script são arquivos de texto que contêm uma mistura de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , comandos do **sqlcmd** e variáveis de script. Para obter mais informações sobre como usar variáveis de script, veja [Usar sqlcmd com variáveis de script](./sqlcmd-use-with-scripting-variables.md). O**sqlcmd** funciona com instruções, comandos e variáveis de script em um arquivo de script de modo semelhante ao modo como funciona com instruções e comandos inseridos interativamente. A principal diferença é que o **sqlcmd** faz a leitura por meio do arquivo de entrada sem pausa, em vez de esperar que um usuário insira as instruções, os comandos e as variáveis de script.  
+ Você pode usar **sqlcmd** para executar arquivos de script do banco de dados. Os arquivos de script são arquivos de texto que contêm uma mistura de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , comandos do **sqlcmd** e variáveis de script. Para obter mais informações sobre como usar variáveis de script, veja [Usar sqlcmd com variáveis de script](./sqlcmd-use-with-scripting-variables.md). O **sqlcmd** funciona com instruções, comandos e variáveis de script em um arquivo de script de modo semelhante ao modo como funciona com instruções e comandos inseridos interativamente. A principal diferença é que o **sqlcmd** faz a leitura por meio do arquivo de entrada sem pausa, em vez de esperar que um usuário insira as instruções, os comandos e as variáveis de script.  
   
  Existem maneiras diferentes de criar arquivos de script de banco de dados:  
   
@@ -385,7 +385,7 @@ ms.locfileid: "92036259"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. Usando o sqlcmd em um arquivo de script do Windows  
- Um comando **sqlcmd**, como `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` , pode ser executado em um arquivo .bat com o VBScript. Nesse caso, não use opções interativas. O**sqlcmd** deve ser instalado no computador que está executando o arquivo .bat.  
+ Um comando **sqlcmd**, como `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` , pode ser executado em um arquivo .bat com o VBScript. Nesse caso, não use opções interativas. O **sqlcmd** deve ser instalado no computador que está executando o arquivo .bat.  
   
  Primeiro, crie os quatro arquivos a seguir:  
   
@@ -453,7 +453,7 @@ ms.locfileid: "92036259"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. Usar sqlcmd para definir a criptografia no Bancos de Dados SQL do Azure  
- Um **sqlcmd**pode ser executado em uma conexão com os dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] para especificar a criptografia e a confiança do certificado. Duas opções do **sqlcmd**estão disponíveis:  
+ Um **sqlcmd** pode ser executado em uma conexão com os dados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] para especificar a criptografia e a confiança do certificado. Duas opções do **sqlcmd** estão disponíveis:  
   
 -   A opção -N é usada pelo cliente para solicitar uma conexão criptografada. Essa opção é equivalente à opção `ENCRYPT = true`do ADO.net.  
   

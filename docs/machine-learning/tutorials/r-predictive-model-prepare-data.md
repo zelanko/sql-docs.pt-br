@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a4a12d71818ad4b900a7959904c47cb0baad4357
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 55f416890794509f2fd141c2a907222a7d72c47e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870290"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470137"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: preparar os dados para treinar um modelo preditivo no R com o aprendizado de máquina do SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Na parte dois deste tutorial de quatro partes, você preparará os dados de um banco de dados usando o R. Ainda nesta série, você usará esses dados para treinar e implantar um modelo preditivo em R com os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Na parte dois deste tutorial de quatro partes, você preparará os dados de um banco de dados usando o R. Ainda nesta série, você usará esses dados para treinar e implantar um modelo preditivo em R com os Serviços de Machine Learning do SQL Server.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Na parte dois deste tutorial de quatro partes, você preparará os dados de um banco de dados usando o R. Ainda nesta série, você usará esses dados para treinar e implantar um modelo preditivo em R com o SQL Server R Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Na parte dois deste tutorial de quatro partes, você preparará os dados de um banco de dados usando o R. Ainda nesta série, você usará esses dados para treinar e implantar um modelo preditivo em R com os Serviços de Machine Learning da Instância Gerenciada de SQL do Azure.
 ::: moniker-end
 

@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 10/19/2020
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ed31e889e195cffb828f5e04e131ffd2cb71fa84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194270"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466657"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Página Propriedades Avançadas do Servidor – Servidor de Relatórios do Power BI e Reporting Services
 

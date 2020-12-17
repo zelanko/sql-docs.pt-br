@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fcf85aa9657da37d2fc1f64300c5a773d6de63ca
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 85f3fd590ee204cac018cffd59d0ba180831d8df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476517"
 ---
 # <a name="sqlps-utility"></a>Utilitário sqlps
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ada99a4058b2b3657a9064e42f2f2ca1f2aedbb3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196230"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470007"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Criar gráficos e plotagens usando o SQL e o R (instruções passo a passo)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]

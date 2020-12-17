@@ -17,13 +17,13 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f222f011015f4cf23cf4640b7c4bc2136d338583
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f888cc014c5cce3280f572c8a7eeddf194704624
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037251"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482147"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens em etapas de trabalho
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92037251"
 > [!IMPORTANT]  
 > Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Esses tokens são: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(** _propriedade_ **)** . Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
 >   
-> Se tiver que usar esses tokens, garanta, primeiro, que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Depois, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades**e, na página **Sistema de Alerta** , selecione **Substituir tokens de todas as respostas de trabalho aos alertas** para habilitar esses tokens.  
+> Se tiver que usar esses tokens, garanta, primeiro, que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Depois, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades** e, na página **Sistema de Alerta** , selecione **Substituir tokens de todas as respostas de trabalho aos alertas** para habilitar esses tokens.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A substituição de tokens do Agent é simples e eficiente: o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent substitui o token por um valor de cadeia de caracteres literal. Todos os tokens diferenciam maiúsculas de minúsculas. Suas etapas de trabalho devem levar isto em conta e usar aspas corretamente nos tokens utilizados ou converter a cadeia de caracteres de substituição pelo tipo de dados correto.  
   
@@ -97,11 +97,11 @@ As tabelas a seguir listam e descrevem os tokens e macros para os quais há supo
 |**$(ESCAPE_NONE(** _nome\_do token_ **))**|Substitui o token sem ignorar nenhum caractere da cadeia. Esta macro é fornecida para dar suporte a compatibilidade retroativa em ambientes nos quais cadeias de caracteres de substituição de tokens são esperadas apenas de usuários confiáveis. Para obter mais informações, consulte "Atualizando etapas de trabalho para usar macros", mais adiante, neste tópico.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Atualizando etapas de trabalho para usar macros  
-A tabela a seguir descreve como a substituição de tokens é manipulada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para ativar ou desativar a substituição do token de alerta, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades**e, na página **Sistema de Alerta** , marque ou desmarque a caixa de seleção **Substituir tokens de todas as respostas de trabalho aos alertas** .  
+A tabela a seguir descreve como a substituição de tokens é manipulada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para ativar ou desativar a substituição do token de alerta, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades** e, na página **Sistema de Alerta** , marque ou desmarque a caixa de seleção **Substituir tokens de todas as respostas de trabalho aos alertas** .  
   
 |Sintaxe do token|Substituição do token de alerta ativada|Substituição do token de alerta desativada|  
 |----------------|------------------------------|-------------------------------|  
-|Macro ESCAPE usada|Todos os tokens em trabalhos são substituídos com êxito.|Não são substituídos tokens ativados por alertas. São eles: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**e **WMI(** _propriedade_ **)** . Outros tokens estáticos são substituídos com êxito.|  
+|Macro ESCAPE usada|Todos os tokens em trabalhos são substituídos com êxito.|Não são substituídos tokens ativados por alertas. São eles: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(** _propriedade_ **)** . Outros tokens estáticos são substituídos com êxito.|  
 |Nenhuma macro ESCAPE usada|Todo trabalho contendo tokens falha.|Todo trabalho contendo tokens falha.|  
   
 ## <a name="token-syntax-update-examples"></a>Exemplos de atualização de sintaxe de token  

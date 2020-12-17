@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6826e09f85e001e9932e2c6f85c400f722534c2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987182"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409342"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Criar, excluir ou modificar uma pasta – Reporting Services
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="to-create-a-folder"></a>Para criar uma pasta  
   
@@ -69,7 +69,7 @@ ms.locfileid: "91987182"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
  
 ## <a name="to-create-a-folder"></a>Para criar uma pasta  
   

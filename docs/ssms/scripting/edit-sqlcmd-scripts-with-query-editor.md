@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e6c97089feee33f1bbff76f0820ea37de5ae69c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093425"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474307"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Editar scripts SQLCMD com o Editor de Consultas
 
@@ -54,7 +54,7 @@ Com o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!IN
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>Para alternar uma janela do Editor de Consultas do Mecanismo de Banco de Dados para o modo SQLCMD  
   
-1.  No Pesquisador de Objetos, clique com o botão direito do mouse no servidor e clique em **Nova Consulta**para abrir uma nova janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+1.  No Pesquisador de Objetos, clique com o botão direito do mouse no servidor e clique em **Nova Consulta** para abrir uma nova janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 2.  No menu **Consulta** , clique em **Modo SQLCMD**.  
   
@@ -91,7 +91,7 @@ Com o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!IN
  Para obter mais informações sobre como executar o SQLCMD, consulte [sqlcmd Utility](../../tools/sqlcmd-utility.md)ou consulte o tutorial do SQLCMD.  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>Habilitar o script SQLCMD por padrão  
- Para ativar o script de SQLCMD por padrão, no menu **Ferramentas** , selecione **Opções**, expanda **Execução de Consulta**e **SQL Server**, clique na página **Geral** e marque a caixa **Por padrão, abrir novas consultas no modo SQLCMD** .  
+ Para ativar o script de SQLCMD por padrão, no menu **Ferramentas** , selecione **Opções**, expanda **Execução de Consulta** e **SQL Server**, clique na página **Geral** e marque a caixa **Por padrão, abrir novas consultas no modo SQLCMD** .  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>Gravando e editando scripts SQLCMD  
  Depois de habilitar o modo de script, você pode gravar comandos SQLCMD e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . As seguintes regras se aplicam:  

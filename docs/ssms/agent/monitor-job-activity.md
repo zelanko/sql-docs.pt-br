@@ -22,13 +22,13 @@ ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 39ca7d0b175f8627badf168fe5433e32a90aaa30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d5cea1ad802ada770cd5e30c1b6c532741d78e61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472327"
 ---
 # <a name="monitor-job-activity"></a>Monitorar Atividade do Trabalho
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ Usando o Monitor de Atividade do Trabalho, você pode executar as seguintes tare
   
 Use o Monitor de Atividade do Trabalho quando quiser descobrir quais trabalhos estão agendados para execução, o último resultado de trabalhos executados durante a sessão atual e quais trabalhos estão em execução ou ociosos atualmente. Se o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent falhar de forma inesperada, você poderá determinar quais trabalhos estavam no meio de sua execução, examinando a sessão anterior no Monitor de Atividade do Trabalho.  
   
-Para abrir o Monitor de Atividade do Trabalho, expanda **SQL Server Agent** no Pesquisador de Objetos do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , clique com o botão direito do mouse em **Monitor de Atividade do Trabalho**e clique em **Exibir Atividade do Trabalho**.  
+Para abrir o Monitor de Atividade do Trabalho, expanda **SQL Server Agent** no Pesquisador de Objetos do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , clique com o botão direito do mouse em **Monitor de Atividade do Trabalho** e clique em **Exibir Atividade do Trabalho**.  
   
 Você também pode exibir a atividade de trabalhos da sessão atual, usando o procedimento armazenado **sp_help_jobactivity**.  
   

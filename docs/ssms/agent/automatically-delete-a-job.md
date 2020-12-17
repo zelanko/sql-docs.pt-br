@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19e400c410187f369672d12e2ee624e6f2a3d6c4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 7da6affa2c92686c681566a929bb16dc688e9698
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037389"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466587"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
 
@@ -64,7 +64,7 @@ Para obter informações detalhadas, consulte [Implementar a segurança do SQL S
   
 3.  Selecione a página **Notificações** .  
   
-4.  Marque **Excluir trabalho automaticamente**e siga um destes procedimentos:  
+4.  Marque **Excluir trabalho automaticamente** e siga um destes procedimentos:  
   
     -   Clique em **Quando o trabalho for bem-sucedido** para excluir o status do trabalho quando ele for concluído com êxito.  
   

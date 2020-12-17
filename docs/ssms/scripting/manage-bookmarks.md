@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61053e087f572e586bfd37e20a2efa6e659dabfd
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 902b22b19f356b0c59c6550ddeb8bfc6200f367b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093544"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474297"
 ---
 # <a name="manage-bookmarks"></a>Gerenciar indicadores
 
@@ -30,7 +30,7 @@ Quando estiver trabalhando em um editor de códigos, a janela **Indicadores** pe
  Para criar e navegar pelos indicadores, clique nos botões localizados na barra de ferramentas **TextEditor** na parte superior da janela **Indicadores** . Você pode adicionar e remover indicadores, pode ativá-los ou desabilitá-los e organizá-los em pastas. Alguns comandos também estão disponíveis no menu de atalho na janela **Indicadores** . Para adicionar ou remover um indicador, posicione o ponto de inserção na linha desejada do Editor e clique em **Alternar um indicador**. Para ativar um indicador, marque sua caixa de seleção na janela **Indicadores** ; para desabilitar (sem remover) um indicador, desmarque sua caixa de seleção.  
   
 ## <a name="text-editor-toolbar"></a>Barra de ferramentas do Editor de Textos  
- Quando um documento de texto é aberto no Editor, os botões abaixo estão habilitados na barra de ferramentas **Editor de Texto** . Para exibir a barra de ferramentas **Editor de Texto** quando estiver no Editor de Consultas, no menu **Exibir** , aponte para **Barras de Ferramentas**e clique em **Editor de Texto**.  
+ Quando um documento de texto é aberto no Editor, os botões abaixo estão habilitados na barra de ferramentas **Editor de Texto** . Para exibir a barra de ferramentas **Editor de Texto** quando estiver no Editor de Consultas, no menu **Exibir** , aponte para **Barras de Ferramentas** e clique em **Editor de Texto**.  
   
  **Alternar um indicador na linha atual**  
  Adiciona ou remove um indicador na linha selecionada do documento no Editor ativo. Não altera a linha de código com indicador.  

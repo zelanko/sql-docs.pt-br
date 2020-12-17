@@ -9,13 +9,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 03/01/2017
-ms.openlocfilehash: cfddbdca35d24589b3fa87976cbfb547f14a46ee
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.date: 12/13/2020
+ms.openlocfilehash: b99ed7142dece1c256962b21dacf46bc78470967
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891786"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489846"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Adicionar e verificar uma conexão de dados (Construtor de Relatórios e SSRS)
 
@@ -25,7 +25,7 @@ Para adicionar uma fonte de dados compartilhada ao relatório, procure um servid
 
 Para criar uma fonte de dados inserida, você deve ter informações de conexão com a fonte de dados externa e deve saber quais permissões são necessárias para acessar os dados. Em geral, essas informações derivam do proprietário da fonte de dados. Você pode testar a conexão para verificar se as credenciais especificadas são suficientes.
 
-Para saber mais, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Especificar credenciais no Construtor de Relatórios](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017)
+Para saber mais, confira [Criar cadeias de conexão de dados – Construtor de Relatórios e SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) e [Especificar credenciais no Construtor de Relatórios](./specify-credential-and-connection-information-for-report-data-sources.md)
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -57,9 +57,9 @@ A fonte de dados será exibida no painel de dados do relatório.
 
 4. Se a conexão não for bem-sucedida, a seguinte mensagem aparecerá: "Não é possível conectar à fonte de dados".  
 
-5. Clique em **Detalhes**e use as informações para corrigir o problema.
+5. Clique em **Detalhes** e use as informações para corrigir o problema.
 
-    Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017).
+    Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](./specify-credential-and-connection-information-for-report-data-sources.md).
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

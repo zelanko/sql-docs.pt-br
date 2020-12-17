@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9601deea339bbbc8875bbb593a4efef42cdd070d
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92257763"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477147"
 ---
 # <a name="editions-and-supported-features-of-sssqlv15-md"></a>Edições e recursos com suporte do [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 
@@ -336,7 +336,7 @@ A edição Developer continua a dar suporte a apenas um cliente para o [[!INCLUD
 |Integração Básica do Python|Sim|Sim|Sim|Sim|Não|
 |Integração Avançada do Python|Sim|Não|Não|Não|Não|
 |Servidor do Machine Learning (Autônomo)|Sim|Não|Não|Não|Não|
-|Nó de computação do PolyBase|Yes|Sim<sup>3</sup>|Sim<sup>3</sup>|Sim<sup>3</sup>|Sim<sup>3</sup> |
+|Nó de computação do PolyBase|Sim|Sim<sup>3</sup>|Sim<sup>3</sup>|Sim<sup>3</sup>|Sim<sup>3</sup> |
 |Nó de cabeçalho do PolyBase<sup>4</sup>|Sim|Sim|Não|Não|Não|
 |JSON|Sim|Sim|Sim|Sim|Sim|
 |Repositório de Consultas|Sim|Sim|Sim|Sim|Sim|
