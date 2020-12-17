@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 318dfd44b3c931b124372ce5ea60681b8c1e7e99
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 720da25fe19f064c6a6eb3b363832b76113e2c5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235477"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409688"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de Versão do SQL Server 2016.
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -159,7 +159,7 @@ A instalação do SQL Server 2016 SP1 pode exigir a reinicialização após a in
 
  - Instalar a  [KB 3164398 – Atualização crítica para os pré-requisitos MSVCRT do SQL Server 2016](https://support.microsoft.com/kb/3164398).
 
-    Se você usar a **KB 3164398** , é possível instalá-la durante a instalação do SQL Server, por meio do Microsoft Update ou no Centro de Download da Microsoft.
+    Se você usar a **KB 3164398**, é possível instalá-la durante a instalação do SQL Server, por meio do Microsoft Update ou no Centro de Download da Microsoft.
 
     - **Durante a instalação do SQL Server 2016:** se o computador que está executando a instalação do SQL Server tiver acesso à Internet, a instalação do SQL Server verificará a atualização como parte da instalação geral do SQL Server. Se você aceitar a atualização, a instalação baixará e atualizará os binários durante a instalação.
 
@@ -207,7 +207,7 @@ Além disso, execute os seguintes procedimentos armazenados do Repositório de C
 
 
 ###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> Documentação do produto (GA)
- **Problema e impacto ao cliente:** Uma versão para download da documentação do SQL Server 2016 ainda não está disponível. Quando você usa o Gerenciador da Biblioteca da Ajuda para tentar **Instalar o conteúdo online** , a documentação do SQL Server 2012 e do SQL Server 2014 é exibida, mas não existem opções para a documentação do SQL Server 2016.
+ **Problema e impacto ao cliente:** Uma versão para download da documentação do SQL Server 2016 ainda não está disponível. Quando você usa o Gerenciador da Biblioteca da Ajuda para tentar **Instalar o conteúdo online**, a documentação do SQL Server 2012 e do SQL Server 2014 é exibida, mas não existem opções para a documentação do SQL Server 2016.
 
  **Solução alternativa:** use uma das seguintes soluções alternativas:
 

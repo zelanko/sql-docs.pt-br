@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6af7f155edba97ea558c7bc6427bb5ef143eea47
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 7c7f28e92a29dd355d4b74de2121e1c386816116
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245157"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425321"
 ---
 # <a name="data-alert-messages"></a>Mensagens de alertas de dados
 

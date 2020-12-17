@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7215b2bc235b846e67484e19a77ba75cea2f9881
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093558"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480557"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
 
@@ -102,7 +102,7 @@ Para exibir o designer, adicione um conjunto de dados, esquema XML ou arquivo XM
  A exibição XML fornece um editor para edição de XML bruto e, ainda, codificação IntelliSense e de cores. A conclusão de instrução está disponível ao se trabalhar em arquivos .xsd e arquivos .xml que tenham um esquema associado. Digite < para iniciar uma marca e você terá uma lista de elementos válidos naquele local. Depois de digitar o nome do elemento e pressionar SPACEBAR, você terá uma lista de atributos para os quais os elementos oferecem suporte.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense não estão disponíveis na barra de ferramentas. Quando estiver no Editor de XML, clique em **IntelliSense** no menu **Editar**para acessar as opções.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense não estão disponíveis na barra de ferramentas. Quando estiver no Editor de XML, clique em **IntelliSense** no menu **Editar** para acessar as opções.  
   
 ## <a name="showplan-view"></a>Exibição de SHOWPLAN  
  Planos de consulta podem ser salvos em formato XML quando forem criados usando-se a opção SET SHOWPLAN_XML ON. Clique duas vezes em um arquivo com a extensão .showplan para abrir o plano de consulta.  

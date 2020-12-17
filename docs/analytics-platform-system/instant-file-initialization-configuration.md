@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 62b76b616786c593d395ee8720bba4c012390290
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6843efa430fcd43149d048c9d21c5120954ab896
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766885"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637812"
 ---
 # <a name="instant-file-initialization-configuration"></a>Configuração de inicialização de arquivo instantânea
 A inicialização instantânea de arquivo é um recurso SQL Server que permite que as operações de arquivo de dados sejam executadas mais rapidamente. Marcar a caixa para ativar a inicialização instantânea de arquivo no irá melhorar o desempenho de SQL Server PDW. No entanto, se isso representar um risco de segurança para sua empresa, deixe a caixa desmarcada.  
@@ -25,17 +25,17 @@ A inicialização instantânea de arquivo é um recurso SQL Server que permite q
 A inicialização instantânea de arquivo não está disponível quando a TDE está habilitada.  
   
 ## <a name="add-permission-for-the-backup-account"></a>Adicionar permissão para a conta de backup  
-O processo de backup requer uma credencial de rede (conta de usuário do Windows) que possa acessar o local de armazenamento de backup. Você autoriza o PDW a usar a conta usando o procedimento [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Consulte [backup Database](../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15) para todo o processo de backup. Para usar a inicialização instantânea de arquivo, a conta de backup deve receber a `Perform volume maintenance tasks` permissão.  
+O processo de backup requer uma credencial de rede (conta de usuário do Windows) que possa acessar o local de armazenamento de backup. Você autoriza o PDW a usar a conta usando o procedimento [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Consulte [backup Database](../t-sql/statements/backup-transact-sql.md) para todo o processo de backup. Para usar a inicialização instantânea de arquivo, a conta de backup deve receber a `Perform volume maintenance tasks` permissão.  
   
 1.  No servidor de backup, abra o aplicativo de **política de segurança local** ( `secpol.msc` ).  
   
-2.  No painel esquerdo, expanda **Políticas Locais**e, em seguida, clique em **Atribuição de Direitos de Usuário**.  
+2.  No painel esquerdo, expanda **Políticas Locais** e, em seguida, clique em **Atribuição de Direitos de Usuário**.  
   
 3.  No painel direito, clique duas vezes em **Executar tarefas de manutenção de volume**.  
   
 4.  Clique em **Adicionar Usuário ou Grupo** e adicione as contas de usuário que são usadas ​​para backups.  
   
-5.  Clique em **Aplicar**e feche todas as caixas de diálogo **Política de Segurança Local** .  
+5.  Clique em **Aplicar** e feche todas as caixas de diálogo **Política de Segurança Local** .  
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>Para ativar ou desativar a inicialização instantânea de arquivo  
   

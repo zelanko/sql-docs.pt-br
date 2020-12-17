@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 554c3a08cc29cfbc6addef598698c40df31f9990
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870041"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471227"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Instalar um runtime personalizado de R para o SQL Server
 
@@ -26,7 +26,7 @@ Este artigo descreve como instalar um runtime personalizado para executar script
 
 + Uma instalação dos Serviços de Machine Learning com o SQL Server 2019. A extensão de linguagem pode ser usada com os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) após a conclusão de algumas etapas de configuração adicionais.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Este artigo descreve como instalar um runtime personalizado para R no Windows. Para instalar no Linux, confira [Instalar um runtime personalizado de R para o SQL Server em Linux](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
@@ -182,7 +182,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 Você pode instalar o SQL Server no Red Hat Enterprise Linux (RHEL), no SUSE Linux Enterprise Server (SLES) e no Ubuntu. Para obter mais informações, confira [a seção Plataformas com suporte nas Diretrizes de instalação para SQL Server em Linux](../../linux/sql-server-linux-setup.md#supportedplatforms).
 

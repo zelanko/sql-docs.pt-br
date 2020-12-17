@@ -13,13 +13,13 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e30f96de60e6d6bd404ca2b00099b7ac7b01a9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c9e8343d1743d90472d10095e18e66294b9ea99b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036298"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466247"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Especificar uma condição de ponto de interrupção
 
@@ -45,7 +45,7 @@ A expressão especificada deve ser uma expressão Transact-SQL válida que seja 
   
 2. Na caixa de diálogo **Condição de Ponto de Interrupção** , insira uma expressão Booliana válida na caixa **Condição** .  
   
-3. Escolha **Is true** para interromper quando a expressão for avaliada como **true**ou escolha **Has changed** para interromper quando o valor da expressão for alterado.  
+3. Escolha **Is true** para interromper quando a expressão for avaliada como **true** ou escolha **Has changed** para interromper quando o valor da expressão for alterado.  
   
     > [!NOTE]  
     >  O depurador não avalia a expressão Booliana até a primeira vez que o ponto de interrupção é atingido. Se você escolher **Has changed**, o depurador não considerará a primeira avaliação como uma alteração, então o depurador não interromperá na primeira avaliação.  

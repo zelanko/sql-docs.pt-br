@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a7ef1c053dbf22bc1717a47d9a662d1d29fd55f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 28b62c4f3bc15e00337099fd3f954406e3f04122
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247555"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425491"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
 
@@ -82,7 +82,7 @@ Você cria definições de alerta de dados no Designer de Alertas de Dados. Depo
   
      Uma cláusula OR é adicionada sob e na regra AND.  
   
-12. Opcionalmente, clique na seta para baixo, selecione **Modo de Seleção de Campo**e selecione uma coluna na lista.  
+12. Opcionalmente, clique na seta para baixo, selecione **Modo de Seleção de Campo** e selecione uma coluna na lista.  
   
      Você notará que as reticências **(...)** em que clica para adicionar cláusulas OR desapareceram.  
   
@@ -98,7 +98,7 @@ Você cria definições de alerta de dados no Designer de Alertas de Dados. Depo
   
      A data inicial padrão é a data atual.  
   
-17. Opcionalmente, marque a caixa de seleção localizada ao lado de **Parar alerta em**e escolha uma data para parar a mensagem de alerta.  
+17. Opcionalmente, marque a caixa de seleção localizada ao lado de **Parar alerta em** e escolha uma data para parar a mensagem de alerta.  
   
      Por padrão, uma mensagem de alerta não tem nenhuma data de parada.  
   

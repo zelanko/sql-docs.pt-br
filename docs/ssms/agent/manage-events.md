@@ -19,13 +19,13 @@ ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 41519f278ae684c58fabb693d677ad79373a726a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 28b554a05c8ffae76d643b3da3bf6a178691a53c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037327"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466437"
 ---
 # <a name="manage-events"></a>Gerenciar eventos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

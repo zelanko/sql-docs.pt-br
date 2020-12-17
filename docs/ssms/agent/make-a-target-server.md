@@ -20,13 +20,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dcb200c472eb0284af8ef829687b89b5ae0340b7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 20a6fb0b2f32c838290d113529661e34a805e4df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036539"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472347"
 ---
 # <a name="make-a-target-server"></a>Criar um servidor de destino
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ As permissões para executar esse procedimento usam como padrão membros da fun�
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] e a expanda.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor**e clique em **Tornar este de destino**. O **Assistente de Servidor de Destino** o guiará no processo de criação de um servidor de destino.  
+2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor** e clique em **Tornar este de destino**. O **Assistente de Servidor de Destino** o guiará no processo de criação de um servidor de destino.  
   
 3.  Na página **Selecione um Servidor Mestre** , selecione o servidor mestre do qual esse servidor de destino receberá trabalhos.  
   

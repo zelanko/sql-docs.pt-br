@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3afc39516bc50a6a4f1a2fb7ad67d7b0c3602e7e
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 53eacd0177862b81d32b44616dc67cc0beb90f79
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713734"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489142"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lição 3: uso do utilitário de prompt de comando dta
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 - Baixar o [Banco de dados de exemplo do AdventureWorks2017.](../../samples/adventureworks-install-configure.md)
 
 
-Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
+Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 
   >[!NOTE]
   > Este tutorial destina-se a um usuário familiarizado com o uso de SQL Server Management Studio e com as tarefas básicas de administração de banco de dados. 
@@ -56,7 +56,7 @@ Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Rest
 ## <a name="access-dta-command-prompt-utility-help-menu"></a>Acessar o menu de ajuda do utilitário de prompt de comando do DTA
   
   
-1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Acessórios**e clique em **Prompt de Comando**.  
+1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Acessórios** e clique em **Prompt de Comando**.  
   
 2.  No prompt de comando, digite o seguinte e pressione ENTER:  
   

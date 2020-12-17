@@ -16,12 +16,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: cawrites
 ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 54030568192560200dd365bbffaedc33df1959a6
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 837e1c099dba7d19100bdaf2216a2c0cf879c62e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127487"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482314"
 ---
 # <a name="installation-wizard-help"></a>Ajuda do Assistente de Instalação
 
@@ -416,7 +416,7 @@ As seguintes recomendações se aplicam ao servidor de arquivos SMB:
 The MaxDOP setting applies only to SQL Server 2019 and later.
 -->
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Página Configuração do Mecanismo de Banco de Dados – MaxDOP
 

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 11e051a87e0b5d051cf62c702c13f1189a21ca05
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017'
+ms.openlocfilehash: 9df3f0d56e3d210389110cdf155bd79a32c7c978
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870484"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471187"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Instalar Serviços de Machine Learning do SQL Server (R e Python) no Windows
 
@@ -39,7 +39,7 @@ Saiba como instalar os Serviços de Machine Learning do SQL Server no Windows. V
   + Usar uma biblioteca e arquivos executáveis diferentes criará resultados inconsistentes do que o que você está executando no SQL Server.
   + Scripts de R e Python executados em bibliotecas externas não podem ser gerenciados pelo SQL Server, o que leva à contenção de recursos.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 > [!NOTE]
 > Os Serviços de Machine Learning são instalados por padrão nos **Clusters de Big Data do SQL Server**. Caso use um **Cluster de Big Data**, não será preciso seguir as etapas deste artigo. Para obter mais informações, confira [Usar Serviços de Machine Learning (Python e R) em Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
@@ -51,11 +51,11 @@ Saiba como instalar os Serviços de Machine Learning do SQL Server no Windows. V
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Para saber mais sobre quais edições do SQL Server são compatíveis com as integrações de Python e R com os Serviços de Machine Learning, confira [Edições e recursos compatíveis com o SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 Para saber mais sobre quais edições do SQL Server são compatíveis com as integrações de Python e R com os Serviços de Machine Learning, confira [Edições e recursos compatíveis com o SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 ::: moniker-end
 
@@ -67,17 +67,17 @@ Em instalações locais, você deve executar a instalação como um administrado
   
 1. Na guia **Instalação**, selecione **Nova instalação autônoma do SQL Server ou adicionar recursos a uma instalação existente**.
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Nova instalação autônoma do SQL Server](media/2017setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Nova instalação autônoma do SQL Server](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
 1. Na página **Seleção de Recursos** , selecione estas opções:
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
 
    - **Serviços do Mecanismo de Banco de Dados**
      
@@ -89,7 +89,7 @@ Em instalações locais, você deve executar a instalação como um administrado
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
 
    - **Serviços do Mecanismo de Banco de Dados**
      
@@ -109,15 +109,15 @@ Em instalações locais, você deve executar a instalação como um administrado
      
      Marque esta opção para adicionar os pacotes do Microsoft Python e o executável do Python 3.5. Depois, selecione as bibliotecas da distribuição do Anaconda.
      
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    Para saber mais sobre como instalar e usar o Java, confira [Instalar extensões de linguagem do SQL Server no Windows](../../language-extensions/install/windows-java.md).
    ::: moniker-end
    
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Opções de recurso para o R e o Python](media/2017setup-features-page-mls-rpy.PNG "Opções de instalação para R e Python")
    ::: moniker-end
    
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Opções de recurso para o R e o Python](media/2019setup-features-page-mls-rpy.png "Opções de instalação para R e Python")
    ::: moniker-end
    
@@ -125,7 +125,7 @@ Em instalações locais, você deve executar a instalação como um administrado
    > 
    > Não selecione a opção do **Machine Learning Server (Autônomo)** . A opção de instalar o Machine Learning Server em **Recursos Compartilhados** destina-se a ser usada em um computador separado.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 4. Na página **Consentimento para instalar o Microsoft R Open**, selecione **Aceitar** e **Avançar**. 
 
@@ -151,7 +151,7 @@ O contrato de licença abrange:
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 1. Na página **Consentimento para instalar o Microsoft R Open**, selecione **Aceitar** e **Avançar**. Este contrato de licença abrange o Microsoft R Open, que inclui uma distribuição de pacotes e ferramentas base do R de software livre, junto com pacotes avançados do R e provedores de conectividade da equipe de desenvolvimento da Microsoft.
 
@@ -272,7 +272,7 @@ Use as etapas a seguir para verificar se todos os componentes usados para inicia
 >
 > Por exemplo, você pode adicionar a linha a seguir para gerar um nome de coluna arbitrário: `WITH RESULT SETS ((Col1 AS int))`
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 <!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
 
 <a name="apply-cu"></a>
@@ -313,7 +313,7 @@ No nível da instância, a configuração adicional pode incluir:
 * [Criar um logon para SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 * [Gerenciar cotas de disco](/windows/desktop/fileio/managing-disk-quotas) para evitar que scripts externos executem tarefas que esgotam o espaço em disco
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 No SQL Server 2019 no Windows, o mecanismo de isolamento foi alterado. Esse mecanismo afeta **SQLRUserGroup**, regras de firewall, permissão de arquivo e autenticação implícita. Para obter mais informações, confira [Alterações no isolamento para os Serviços de Machine Learning](sql-server-machine-learning-services-2019.md).
 ::: moniker-end
 
@@ -331,7 +331,7 @@ No banco de dados, talvez você precise das seguintes atualizações de configur
 
 Agora que tudo está funcionando, talvez convenha também otimizar o servidor para compatibilidade com aprendizado de máquina ou então instalar um modelo de machine learning pré-treinado.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ### <a name="add-more-worker-accounts"></a>Adicionar mais contas de trabalho
 
 Se você esperar que vários usuários executem scripts simultaneamente, aumente o número de contas de trabalho atribuídas ao serviço Launchpad. Para obter mais informações, confira a [execução simultânea da escala de scripts externos nos Serviços de Machine Learning do SQL Server](../administration/scale-concurrent-execution-external-scripts.md).

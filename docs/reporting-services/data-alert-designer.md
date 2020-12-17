@@ -15,13 +15,13 @@ helpviewer_keywords:
 - creating, alerts
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: e83db2f4ce3a049a6c285b36a2d6a611369ca7bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243292"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484348"
 ---
 # <a name="data-alert-designer"></a>Editar um Alerta de Dados no Designer de Alertas
 
@@ -134,11 +134,11 @@ Você cria e edita definições de alerta de dados no Designer de Alertas de Dad
   
  Dependendo do tipo de dados do campo, o Designer de Alertas de Dados fornece diferentes comparações. O Design de Alertas de Dados fornece comparações de acordo com o tipo de dados do campo ao qual os valores são comparados. O conteúdo a seguir lista as comparações disponíveis para os diferentes tipos de dados. Não há suporte para o tipo de dados **Boolean** nas regras.  
   
--   As comparações do tipo de dados de data/hora são: **é**, **não é**, **é anterior**e **é após**  
+-   As comparações do tipo de dados de data/hora são: **é**, **não é**, **é anterior** e **é após**  
   
--   As comparações do tipo de dados numéricos são: **é**, **não é**, **é menor que**, **é menor que ou igual a**, **é maior que**e **é maior que ou igual a**  
+-   As comparações do tipo de dados numéricos são: **é**, **não é**, **é menor que**, **é menor que ou igual a**, **é maior que** e **é maior que ou igual a**  
   
--   As comparações do tipo de dados de cadeia de caracteres são: **é**, **não é**e **contém**  
+-   As comparações do tipo de dados de cadeia de caracteres são: **é**, **não é** e **contém**  
   
  Quando você criar uma regra, especifique se usará um valor ou campo na comparação escolhendo **Modo de Entrada de Valor** ou **Modo de Seleção de Campo**. Se você escolher **Modo de Entrada de Valor**, fornecerá uma lista de valores para comparar. Uma comparação que inclui várias cláusulas OR é bem parecida com a comparação lógica IN do [!INCLUDE[tsql](../includes/tsql-md.md)], que é uma lista de valores para testar uma correspondência. Para obter mais informações, consulte [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md).  
   

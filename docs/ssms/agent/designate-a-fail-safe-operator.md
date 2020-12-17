@@ -16,13 +16,13 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 139694d124788cc68aec005f3c35b2ee47a39ef4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5e8774eeb1f0c13350e81a6cb5635695c80a3eb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037969"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423341"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar um operador à prova de falhas
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,6 +61,6 @@ Somente membros da função de servidor fixa **sysadmin** podem designar operado
   
 5.  Na lista **Operador** , selecione o operador que você deseja tornar à prova de falhas.  
   
-6.  Marque qualquer uma ou todas as caixas de seleção a seguir para especificar como o operador será notificado: **Email**, **Pager**ou **Net send**.  
+6.  Marque qualquer uma ou todas as caixas de seleção a seguir para especificar como o operador será notificado: **Email**, **Pager** ou **Net send**.  
   
 7.  Quando terminar, clique em **OK**.  

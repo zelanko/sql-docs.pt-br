@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: bd60220151fb8f389ac7c82c1bdb0f10cf46bba1
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: d261cbabe0e5bdb22db537a10ef259b9b9d39e6c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713804"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489906"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lição 2: uso do Orientador de Otimização do Mecanismo de Banco de Dados
 
@@ -32,10 +32,10 @@ Para concluir este tutorial, você precisará do SQL Server Management Studio, b
 
 - Instalar o [SQL Server Management Studio.](../../ssms/download-sql-server-management-studio-ssms.md)
 - Instalar o [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Baixar o [Banco de dados de exemplo do AdventureWorks2017.](../../samples/adventureworks-install-configure.md?view=sql-server-2017)
+- Baixar o [Banco de dados de exemplo do AdventureWorks2017.](../../samples/adventureworks-install-configure.md)
 
 
-Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
+Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 
   >[!NOTE]
   > Este tutorial destina-se a um usuário familiarizado com o uso de SQL Server Management Studio e com as tarefas básicas de administração de banco de dados. 
@@ -114,7 +114,7 @@ O Orientador de Otimização do Mecanismo de Banco de Dados pode ser usado para 
   
 5.  No menu **Ações** , clique em **Avaliar Recomendações**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria uma nova sessão de ajuste em que você pode avaliar um subconjunto das recomendações originais em MySession.  
   
-6.  Digite **EvaluateMySession** para seu novo **Nome da sessão**e clique no botão **Iniciar Análise** na barra de ferramentas. Você pode repetir os passos 2 e 3 para esta nova sessão de ajuste a fim de exibir suas recomendações.  
+6.  Digite **EvaluateMySession** para seu novo **Nome da sessão** e clique no botão **Iniciar Análise** na barra de ferramentas. Você pode repetir os passos 2 e 3 para esta nova sessão de ajuste a fim de exibir suas recomendações.  
   
 ### <a name="summary"></a>Resumo  
 A avaliação de um subconjunto de recomendações de ajuste poderá ser necessária se você descobrir que deve alterar as opções de ajuste depois de executar uma sessão. Por exemplo, se você pedir ao Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para considerar exibições indexadas quando você especificar as opções de ajuste para uma sessão, mas depois que a recomendação for gerada você decidir não usar as exibições indexadas. Você pode usar a opção **Avaliar Recomendações** no menu **Ações** para que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] reavalie a sessão sem considerar as exibições indexadas. Quando você usa a opção **Avaliar Recomendações** , as recomendações geradas previamente são aplicadas hipoteticamente ao design físico atual para chegar ao design físico para a segunda sessão de ajuste.  

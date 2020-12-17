@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 77bcd682aa8d58437421134a697bcb715efe595d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584947"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470467"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dados de demonstração de táxi de Nova York para tutoriais de Python e R do SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -34,12 +34,12 @@ O banco de dados de exemplo é um arquivo BAK do SQL Server 2016 hospedado pela 
 
 O tamanho do arquivo é aproximadamente 90 MB.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 >[!NOTE]
 >Para restaurar o banco de dados de exemplo em [Clusters de Big Data do SQL Server](../../big-data-cluster/big-data-cluster-overview.md), baixe [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) e siga as instruções em [Restaurar um banco de dados para a instância mestra de cluster de Big Data do SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 >[!NOTE]
 >Para restaurar o banco de dados de exemplo nos [Serviços de Machine Learning na Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview), siga as instruções descritas no [Guia de Início Rápido: restaurar um banco de dados na Instância Gerenciada de SQL do Azure](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) usando o arquivo .bak do banco de dados de demonstração de táxi de Nova York: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak).
 ::: moniker-end
