@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 7f7b7a22376cba31a54f5682e041e225cb15760c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194458"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470337"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Tutorial do Python: Treinar e salvar um modelo do Python usando o T-SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -185,7 +185,7 @@ Usando **revoscalepy**, você pode criar contextos de computação remota, mover
    Esse procedimento armazenado executa as seguintes etapas como parte do treinamento do modelo:
 
    + A consulta SELECT aplica a função escalar personalizada _fnCalculateDistance_ para calcular a distância direta entre os locais de embarque e desembarque de passageiros. Os resultados da consulta são armazenados na variável de entrada padrão do Python, `InputDataset`.
-   + A variável binária _tipped_ é usada como a coluna *label* ou de resultado e o modelo é ajustado com o uso destas colunas de recursos: _passenger_count_, _trip_distance_, _trip_time_in_secs_e _direct_distance_.
+   + A variável binária _tipped_ é usada como a coluna *label* ou de resultado e o modelo é ajustado com o uso destas colunas de recursos: _passenger_count_, _trip_distance_, _trip_time_in_secs_ e _direct_distance_.
    + O modelo treinado é serializado e armazenado na variável do Python `logitObj`. Ao adicionar a palavra-chave OUTPUT do T-SQL, você pode adicionar a variável como uma saída do procedimento armazenado. Na próxima etapa, essa variável é usada para inserir o código binário do modelo em uma tabela de banco de dados _nyc_taxi_models_. Esse mecanismo torna mais fácil armazenar e reutilizar modelos.
 
 2. Execute o procedimento armazenado da seguinte maneira para inserir o modelo treinado **revoscalepy** na tabela *nyc_taxi_models*.

@@ -22,13 +22,13 @@ ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f7d4af9a2e2b35ebb2ac10a594141a4fa7ca9a5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 2d135926a87fe6350ace308a6efd44a93accfcd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034902"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408866"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ As permissões para executar esse procedimento usam como padrão membros da fun�
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] e a expanda.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor**e clique em **Tornar este um mestre**. O **Assistente de Servidor Mestre** o guiará no processo de criação de um servidor mestre e de adição de servidores de destino.  
+2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor** e clique em **Tornar este um mestre**. O **Assistente de Servidor Mestre** o guiará no processo de criação de um servidor mestre e de adição de servidores de destino.  
   
 3.  Na página **Operador de Servidor Mestre** , configure um operador para o servidor mestre. Para enviar notificações a operadores usando email ou pagers, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve estar configurado para enviar email. Para enviar notificações aos operadores usando **net send**, o serviço Messenger deve estar sendo executado no servidor no qual está o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

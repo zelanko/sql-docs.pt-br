@@ -6,12 +6,12 @@ metadata:
   title: Documentação do Microsoft SQL | Microsoft Docs
   description: 'Saiba como usar o SQL Server e o SQL do Azure para gerencias suas necessidades de banco de dados, tanto localmente quanto na nuvem. (link rápido: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: 2aceef5d8f718cc0720727e32a53b1986ef16c1a
-  ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+  ms.openlocfilehash: 484438ba00d9a99b5666361536ec2eea59851d4f
+  ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/01/2020
-  ms.locfileid: "96443059"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "97617535"
 highlightedContent:
   items:
   - title: Experimente o SQL Server 2019
@@ -43,7 +43,7 @@ productDirectory:
     - url: https://docs.microsoft.com/azure/azure-sql/database/
       text: Banco de Dados SQL do Azure
     - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
-      text: Instância Gerenciada do Azure SQL
+      text: Instância Gerenciada de SQL do Azure
     - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
       text: SQL do Azure no Edge
     - url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
@@ -63,7 +63,7 @@ conceptualContent:
       url: azure-data-studio/quickstart-sql-server.md
       itemType: quickstart
     - text: Conexão e consulta (SSMS)
-      url: ssms/tutorials/connect-query-sql-server.md
+      url: ssms/quickstarts/ssms-connect-query-sql-server.md
       itemType: quickstart
     - text: Gravando Transact-SQL
       url: t-sql/tutorial-writing-transact-sql-statements.md

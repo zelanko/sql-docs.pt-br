@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 52a3ee78a73e2ba3e600d7dae99019d481da73a7
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987700"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559108"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Passo a passo: Estender a implantação do projeto de banco de dados para modificar o plano de implantação
 
@@ -775,7 +775,7 @@ Depois que você tiver seguido uma destas abordagens, poderá usar MSBuild para 
         > Se você implantar um projeto de banco de dados que seja idêntico ao banco de dados de destino, o relatório resultante não será muito significativo. Para obter mais resultados significativos, implante as alterações em um banco de dados ou implante um novo banco de dados.  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>Implantação de linha de comando usando o arquivo dacpac gerado  
-Uma vez que um projeto SQL tiver sido compilado, um arquivo dacpac é criado que pode ser usado para implantar o esquema da linha de comando, e que pode habilitar a implantação de um computador diferente como um computador de compilação. O SqlPackage é um utilitário de linha de comando que permite a implantação de dacpacs com uma gama completa de opções que permitem que os usuários implantem um dacpac ou gerem um script de implantação, entre outras ações. Para saber mais, confira [SqlPackage.exe](../tools/sqlpackage.md).  
+Uma vez que um projeto SQL tiver sido compilado, um arquivo dacpac é criado que pode ser usado para implantar o esquema da linha de comando, e que pode habilitar a implantação de um computador diferente como um computador de compilação. O SqlPackage é um utilitário de linha de comando que permite a implantação de dacpacs com uma gama completa de opções que permitem que os usuários implantem um dacpac ou gerem um script de implantação, entre outras ações. Para saber mais, confira [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
   
 > [!NOTE]  
 > Para implantar dacpacs com êxito criados de projetos com a propriedade DeploymentContributors definida, os DLL que contêm os colaboradores de implantação devem ser instalados no computador que está sendo usado. Isso ocorre porque eles foram marcados conforme o necessário para que a implantação fosse concluída com êxito.  

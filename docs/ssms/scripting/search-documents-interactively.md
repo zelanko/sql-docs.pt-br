@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bdf33a22b10a5a10dc14f0ecce870ce43fc33aee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036360"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466307"
 ---
 # <a name="search-documents-interactively"></a>Pesquisar documentos interativamente
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "92036360"
   
 #### <a name="to-replace-in-all-active-files-interactively"></a>Para substituir todos os arquivos ativos interativamente  
   
-1.  No menu **Editar** , aponte para **Localizar e Substituir**e clique em **QuickReplace**.  
+1.  No menu **Editar** , aponte para **Localizar e Substituir** e clique em **QuickReplace**.  
   
 2.  Na caixa **Localizar** , digite o texto da pesquisa.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "92036360"
   
 4.  Na lista **Examinar** , selecione **Todos os Documentos Abertos**.  
   
-5.  Clique em **Substituir**e continue clicando em **Substituir** até a última correspondência no último arquivo ser substituída. Clique em **Localizar Próximo** para ignorar uma correspondência que você não deseja substituir.  
+5.  Clique em **Substituir** e continue clicando em **Substituir** até a última correspondência no último arquivo ser substituída. Clique em **Localizar Próximo** para ignorar uma correspondência que você não deseja substituir.  
   
      -ou-  
   
