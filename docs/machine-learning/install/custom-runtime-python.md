@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 15047969fdf25727d324ae577414273cc86769cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674134"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471217"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Instalar um runtime personalizado de Python para o SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -25,7 +25,7 @@ Este artigo descreve como instalar um runtime personalizado para executar script
 
 + Uma instalação dos Serviços de Machine Learning com o SQL Server 2019. A extensão de linguagem pode ser usada com os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) após a conclusão de algumas etapas de configuração adicionais.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Este artigo descreve como instalar um runtime personalizado para Python no Windows. Para instalar no Linux, confira [Instalar um runtime personalizado de Python para o SQL Server em Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
@@ -148,7 +148,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 Você pode instalar o SQL Server no Red Hat Enterprise Linux (RHEL), no SUSE Linux Enterprise Server (SLES) e no Ubuntu. Para obter mais informações, confira [a seção Plataformas com suporte nas Diretrizes de instalação para SQL Server em Linux](../../linux/sql-server-linux-setup.md).
 

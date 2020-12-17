@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b67460528da7cac2e7d3d2d10dfbb4719b08d77f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777715"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638065"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Monitorar cargas em data warehouse paralelos
 Monitore cargas de [dwloader](dwloader.md) ativas e recentes usando o console de administração do APS (sistema de plataforma de análise) ou as [exibições do sistema](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)do PDW (Parallel Data warehouse). 
@@ -49,7 +49,7 @@ Consulte essas exibições do sistema para obter informações sobre os metadado
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -58,7 +58,7 @@ Consulte essas exibições do sistema para obter informações sobre os metadado
 ### <a name="to-monitor-loads-by-using-system-views"></a>Para monitorar cargas usando exibições do sistema  
 Para monitorar as cargas ativas e recentes usando SQL Server PDW exibições, siga as etapas abaixo. Para cada exibição do sistema usada, consulte a documentação dessa exibição para obter informações sobre as colunas e os valores possíveis retornados pela exibição.  
   
-1.  Localize o `request_id` para a carga na exibição [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) encontrando a linha de comando Loader na `command` coluna desta exibição.  
+1.  Localize o `request_id` para a carga na exibição de [Sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) localizando a linha de comando do carregador na `command` coluna para esta exibição.  
   
     Por exemplo, o comando a seguir retorna o texto do comando e o status atual, além do `request_id` .  
   
@@ -66,7 +66,7 @@ Para monitorar as cargas ativas e recentes usando SQL Server PDW exibições, si
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  Use o `request_id` para recuperar informações adicionais para a carga usando as exibições [sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) e [Sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Por exemplo, a consulta a seguir retorna as `run_id` informações e sobre os horários de início, término e duração da carga, além de quaisquer erros e informações sobre o número de linhas processadas:  
+2.  Use o `request_id` para recuperar informações adicionais para a carga usando as exibições [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) e [Sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Por exemplo, a consulta a seguir retorna as `run_id` informações e sobre os horários de início, término e duração da carga, além de quaisquer erros e informações sobre o número de linhas processadas:  
   
     ```sql  
     SELECT lbr.run_id,   

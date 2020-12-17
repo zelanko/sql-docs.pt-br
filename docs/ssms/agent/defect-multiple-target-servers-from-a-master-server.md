@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0397c22a479f911ebe5e070ece2d9cdf1fe6ab07
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f047c57adc1c9cd660b38d7c72bc5dc3a00cc9e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477047"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
 
@@ -41,15 +41,15 @@ Este tópico descreve como remover vários servidores de destino de uma configur
   
 1.  No **Pesquisador de Objetos**, expanda um servidor que esteja configurado como servidor mestre.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor**e clique em **Gerenciar Servidores de Destino**.  
+2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor** e clique em **Gerenciar Servidores de Destino**.  
   
-3.  Clique em **Postar Instruções**e, na lista **Tipo de instrução** , selecione **Remover**.  
+3.  Clique em **Postar Instruções** e, na lista **Tipo de instrução** , selecione **Remover**.  
   
 4.  Em **Destinatários**, siga um destes procedimentos:  
   
     -   Clique em **Todos os servidores de destino** para remover todos os servidores de destino desse servidor mestre. Use esta opção se quiser desinstalar completamente a configuração de administração multisservidor atual.  
   
-    -   Clique em **Estes servidores de destino**e então clique na caixa **Selecionar** correspondente aos servidores de destino que devem ser removidos desse servidor mestre, para remover apenas alguns deles.  
+    -   Clique em **Estes servidores de destino** e então clique na caixa **Selecionar** correspondente aos servidores de destino que devem ser removidos desse servidor mestre, para remover apenas alguns deles.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criar um ambiente multisservidor](../../ssms/agent/create-a-multiserver-environment.md)  

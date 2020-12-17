@@ -17,13 +17,13 @@ ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb9f95cd3621454b6e6b3aa99f1abd08df446acc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 75d6a1419e86a1adc0b469b16dd5f87a525e5102
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035679"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472377"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,13 +44,13 @@ Para obter informações detalhadas, consulte [Implementar a segurança do SQL S
   
 1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]e a expanda.  
   
-2.  Expanda o **SQL Server Agent**e, em seguida, **Trabalhos**.  
+2.  Expanda o **SQL Server Agent** e, em seguida, **Trabalhos**.  
   
 3.  Clique com o botão direito do mouse em um trabalho e em **Exibir histórico**.  
   
 4.  No **Visualizador de Arquivos de Log**, selecione o trabalho cujo histórico você deseja limpar e siga um destes procedimentos:  
   
-    -   Clique em **Excluir**e, em seguida, em **Excluir todo o histórico** , na caixa de diálogo **Excluir Histórico** . Você pode excluir todo o histórico de trabalhos ou apenas históricos anteriores a uma data especificada. Se desejar remover todo o histórico de trabalhos, clique em **Excluir todo o histórico**. Se desejar remover apenas logs de histórico de trabalhos mais antigos, clique em **Excluir histórico antes de**e especifique uma data.  
+    -   Clique em **Excluir** e, em seguida, em **Excluir todo o histórico** , na caixa de diálogo **Excluir Histórico** . Você pode excluir todo o histórico de trabalhos ou apenas históricos anteriores a uma data especificada. Se desejar remover todo o histórico de trabalhos, clique em **Excluir todo o histórico**. Se desejar remover apenas logs de histórico de trabalhos mais antigos, clique em **Excluir histórico antes de** e especifique uma data.  
   
     -   Clique em **Status do trabalho** se desejar limpar o log de histórico de um trabalho multisservidor. Clique em **Trabalho**, clique em um nome de trabalho e, em seguida, em **Exibir Histórico do Trabalho Remoto**.  
   

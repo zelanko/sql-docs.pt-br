@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b9cfce1762ef678e544a2148df4a4d79074e152
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fe50ef2d018f01e0811c5d950f73ae6cb3d3c5f3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991067"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638055"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Visão geral do provedor de persistência da Microsoft OLE DB
 O provedor de persistência da Microsoft OLE DB permite que você salve um objeto [Recordset](../../reference/ado-api/recordset-object-ado.md) em um arquivo e, posteriormente, restaure esse objeto **Recordset** a partir do arquivo. Informações de esquema, dados e alterações pendentes são preservadas.
@@ -37,7 +37,7 @@ O provedor de persistência da Microsoft OLE DB permite que você salve um objet
 ## <a name="errors"></a>Errors
  Os seguintes erros emitidos por esse provedor podem ser detectados em seu aplicativo.
 
-|Constante|DESCRIÇÃO|
+|Constante|Descrição|
 |--------------|-----------------|
 |E_BADSTREAM|O arquivo aberto não tem um formato válido (ou seja, o formato não é ADTG ou XML).|
 |E_CANTPERSISTROWSET|O objeto **Recordset** salvo tem características que impedem que ele seja armazenado.|
@@ -50,6 +50,3 @@ O provedor de persistência da Microsoft OLE DB permite que você salve um objet
  Para obter mais informações sobre o armazenamento persistente de objetos do **conjunto de registros** , consulte persistência do [conjunto de registros](../data/more-about-recordset-persistence.md).
 
  Quando um fluxo é usado para abrir um **conjunto de registros,** não deve haver nenhum parâmetro especificado além do parâmetro de *origem* do método **Open** .
-
-## <a name="see-also"></a>Consulte Também
-[Provedor de persistência do Microsoft OLE DB (provedor de serviços ADO)]()

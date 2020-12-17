@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca718daf11f544120db3a17aed21f73b2e467c54
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96f2987363fd52cc92127b6b54ffcd2a98b9ae10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036243"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476877"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd – Usar com variáveis de script
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "92036243"
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  Para exibir as variáveis ambientais, no **Painel de Controle**, abra **Sistema**e clique na guia **Avançado** .  
+>  Para exibir as variáveis ambientais, no **Painel de Controle**, abra **Sistema** e clique na guia **Avançado** .  
   
 ## <a name="implicitly-setting-scripting-variables"></a>Definindo implicitamente variáveis de script  
  Ao iniciar o **sqlcmd** com uma opção que contém uma variável **sqlcmd** relacionada, a variável **sqlcmd** será implicitamente definida com o valor especificado com a opção. No exemplo a seguir, o `sqlcmd` é iniciado com a opção `-l` . Isto define implicitamente a variável SQLLOGINTIMEOUT.  

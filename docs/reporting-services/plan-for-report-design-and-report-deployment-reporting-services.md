@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247535"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477057"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planejar a criação e implantação de relatórios | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios paginados. Saiba como planejar ambientes de criação de relatório e de servidor de relatório que funcionam juntos.
@@ -53,7 +53,7 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
   
 -   **Portal da Web:** carregue um relatório em um servidor de relatório de modo nativo do [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint:** carregue um relatório em um site do SharePoint configurado com um servidor de relatório do modo do SharePoint.  
 
@@ -73,7 +73,7 @@ Este tópico apresenta uma visão geral do suporte para definição de relatóri
   
  Você pode extrair do servidor de relatório uma cópia somente leitura do arquivo de definição de relatório (.rdl). Em um servidor de relatório de modo nativo, procure o [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selecione o relatório e clique em **Baixar**. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Em uma implantação do modo do SharePoint, vá para a biblioteca de documentos, selecione o relatório e clique em **Baixar uma Cópia**.  
 

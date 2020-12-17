@@ -27,13 +27,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: fcd184e195ce8c81e16ca4ceaaab03a1f156a812
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005952"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471827"
 ---
 # <a name="sqlcmd-utility"></a>Utilitário sqlcmd
 
@@ -270,7 +270,7 @@ Essa opção é usada pelo cliente ao se conectar ao Banco de Dados SQL ou o Azu
 
 Recomendamos usar uma senha forte.
 
-#### <a name="use-a-strong-password"></a>[**Use uma senha forte!** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**Use uma senha forte!**](../relational-databases/security/strong-passwords.md)
 
  A solicitação de senha é exibida no console, como a seguir: `Password:`  
   
@@ -298,7 +298,7 @@ Recomendamos usar uma senha forte.
   
  Especifique *server_name* para conectar-se à instância padrão do SQL Server nesse computador servidor. Especifique *server_name* [ **\\** _instance\_name_ ] para conectar-se a uma instância nomeada do SQL Server nesse computador servidor. Se nenhum servidor for especificado, **sqlcmd** se conectará à instância padrão do SQL Server no computador local. Essa opção é necessária quando você executa o **sqlcmd** em um computador remoto na rede.  
   
- O*protocolo* pode ser **tcp** (TCP/IP), **lpc** (memória compartilhada) ou **np** (pipes nomeados).  
+ O *protocolo* pode ser **tcp** (TCP/IP), **lpc** (memória compartilhada) ou **np** (pipes nomeados).  
   
  Se você não especificar um *server_name* [ **\\** _instance\_name_ ] ao iniciar o **sqlcmd**, o SQL Server verificará se há uma variável de ambiente SQLCMDSERVER e a usará.  
   
@@ -333,7 +333,7 @@ Recomendamos usar uma senha forte.
   
 - Se nenhuma página de código for especificada, o **sqlcmd** usará a página de código atual para arquivos de entrada e de saída, a menos que o arquivo de entrada seja um arquivo Unicode, para o qual nenhuma conversão é necessária.  
   
-- O**sqlcmd** reconhece arquivos de entrada Unicode big endian e little endian automaticamente. Se a opção **-u** tiver sido especificada, a saída sempre será Unicode little endian.  
+- O **sqlcmd** reconhece arquivos de entrada Unicode big endian e little endian automaticamente. Se a opção **-u** tiver sido especificada, a saída sempre será Unicode little endian.  
   
 - Se não for especificado nenhum arquivo de saída, a página de código de saída será a página de código de console. Essa abordagem habilita a saída a ser exibida corretamente no console.  
   
@@ -342,7 +342,7 @@ Recomendamos usar uma senha forte.
  Digite **chcp** no prompt de comando para verificar a página de código de Cmd.exe.  
   
  **-i** _input_file_[ **,** _input\_file2_...]  
- Identifica o arquivo que contém um lote de instruções SQL ou procedimentos armazenados. Poderão ser especificados vários arquivos para serem lidos e processados em ordem. Não use espaço entre nomes de arquivos. O**sqlcmd** verificará primeiramente se todos os arquivos especificados existem. Se um ou mais arquivos não existirem, o **sqlcmd** será encerrado. As opções -i e Q/-q são mutuamente exclusivas.  
+ Identifica o arquivo que contém um lote de instruções SQL ou procedimentos armazenados. Poderão ser especificados vários arquivos para serem lidos e processados em ordem. Não use espaço entre nomes de arquivos. O **sqlcmd** verificará primeiramente se todos os arquivos especificados existem. Se um ou mais arquivos não existirem, o **sqlcmd** será encerrado. As opções -i e Q/-q são mutuamente exclusivas.  
   
  Exemplos de caminho:  
 
@@ -359,7 +359,7 @@ Recomendamos usar uma senha forte.
  **-o** _output_file_  
  Identifica o arquivo que recebe a saída do **sqlcmd**.  
   
- Se **-u** for especificado, *output_file* será armazenado no formato Unicode. Se o nome do arquivo não for válido, uma mensagem de erro será gerada e o **sqlcmd** será encerrado. O**sqlcmd** não permite gravação simultânea de vários processos **sqlcmd** no mesmo arquivo. A saída de arquivo será corrompida ou incorreta. Conferir a opção **-f** também é relevante para formatos de arquivo. Esse arquivo será criado se não existir. Um arquivo com o mesmo nome de uma sessão **sqlcmd** anterior será substituído. O arquivo aqui especificado não é o arquivo **stdout** . Se for especificado um arquivo **stdout**, este arquivo não será usado.  
+ Se **-u** for especificado, *output_file* será armazenado no formato Unicode. Se o nome do arquivo não for válido, uma mensagem de erro será gerada e o **sqlcmd** será encerrado. O **sqlcmd** não permite gravação simultânea de vários processos **sqlcmd** no mesmo arquivo. A saída de arquivo será corrompida ou incorreta. Conferir a opção **-f** também é relevante para formatos de arquivo. Esse arquivo será criado se não existir. Um arquivo com o mesmo nome de uma sessão **sqlcmd** anterior será substituído. O arquivo aqui especificado não é o arquivo **stdout** . Se for especificado um arquivo **stdout**, este arquivo não será usado.  
   
  Exemplos de caminho:  
 
@@ -401,7 +401,7 @@ Recomendamos usar uma senha forte.
  Se **-b** for especificado junto com esta opção, **sqlcmd** será fechado com um erro. **-b** é descrito posteriormente neste artigo.  
   
  **-Q "** _cmdline query_ **"**  
- Executa uma consulta quando o **sqlcmd** é iniciado e fecha o **sqlcmd**imediatamente. Podem ser executadas consultas delimitadas por vários ponto e vírgula.  
+ Executa uma consulta quando o **sqlcmd** é iniciado e fecha o **sqlcmd** imediatamente. Podem ser executadas consultas delimitadas por vários ponto e vírgula.  
   
  Use aspas na consulta, conforme o exemplo a seguir.  
   
@@ -423,7 +423,7 @@ Recomendamos usar uma senha forte.
 >  O valor do tempo limite real poderá variar em relação ao valor *time_out* especificado em vários segundos.  
   
  **-vvar =** _value_[ **var =** _value_...]  
- Cria uma variável de script **sqlcmd**que pode ser usada em um script **sqlcmd** . Se o valor contiver espaços, mantenha-o entre aspas. Você pode especificar vários valores _**var**_= **"** _values_ **"** . Se houver erros em algum dos valores especificados, o **sqlcmd** vai gerar uma mensagem de erro e será encerrado.  
+ Cria uma variável de script **sqlcmd** que pode ser usada em um script **sqlcmd** . Se o valor contiver espaços, mantenha-o entre aspas. Você pode especificar vários valores _**var**_= **"** _values_ **"** . Se houver erros em algum dos valores especificados, o **sqlcmd** vai gerar uma mensagem de erro e será encerrado.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -491,7 +491,7 @@ Recomendamos usar uma senha forte.
   
  **Opções de relatório de erros**  
   **-b**  
- Especifica que o **sqlcmd** é fechado e retorna um valor DOS ERRORLEVEL em caso de erro. O valor retornado à variável DOS ERRORLEVEL será **1** quando a mensagem de erro do SQL Server tiver um nível de gravidade maior que 10. Caso contrário, o valor retornado será **0**. Se a opção **-V** tiver sido definida além de **-b**, o **sqlcmd** não relatará um erro se o nível de severidade for inferior aos valores definidos com **-V**. Arquivos em lote do prompt de comando podem testar o valor de ERRORLEVEL e tratar o erro adequadamente. O**sqlcmd** não relata erros para o nível de severidade 10 (mensagens informativas).  
+ Especifica que o **sqlcmd** é fechado e retorna um valor DOS ERRORLEVEL em caso de erro. O valor retornado à variável DOS ERRORLEVEL será **1** quando a mensagem de erro do SQL Server tiver um nível de gravidade maior que 10. Caso contrário, o valor retornado será **0**. Se a opção **-V** tiver sido definida além de **-b**, o **sqlcmd** não relatará um erro se o nível de severidade for inferior aos valores definidos com **-V**. Arquivos em lote do prompt de comando podem testar o valor de ERRORLEVEL e tratar o erro adequadamente. O **sqlcmd** não relata erros para o nível de severidade 10 (mensagens informativas).  
   
  Se o script **sqlcmd** tiver um comentário incorreto, erro de sintaxe, ou se estiver faltando uma variável de script, ERRORLEVEL retorna 1.  
   
@@ -581,7 +581,7 @@ Para usar o **sqlcmd** interativamente, digite **sqlcmd** no prompt de comando c
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  Para exibir as variáveis ambientais, no **Painel de Controle**, abra **Sistema**e clique na guia **Avançado** .  
+>  Para exibir as variáveis ambientais, no **Painel de Controle**, abra **Sistema** e clique na guia **Avançado** .  
   
 ## <a name="sqlcmd-scripting-variables"></a>Variáveis de script do sqlcmd  
   
@@ -633,7 +633,7 @@ Para usar o **sqlcmd** interativamente, digite **sqlcmd** no prompt de comando c
     > [!IMPORTANT]  
     >  Para manter a compatibilidade com versões anteriores de scripts **osql** existentes, alguns dos comandos serão reconhecidos pelos [ **:** ].
   
-- Os comandos**sqlcmd** serão reconhecidos apenas se aparecerem no início de uma linha.  
+- Os comandos **sqlcmd** serão reconhecidos apenas se aparecerem no início de uma linha.  
   
 - Todos os comandos **sqlcmd** não diferenciam maiúsculas de minúsculas.  
   
@@ -684,12 +684,12 @@ Para usar o **sqlcmd** interativamente, digite **sqlcmd** no prompt de comando c
  Exibe uma lista das variáveis de script definidas atualmente.  
   
 > [!NOTE]  
->  Serão exibidas somente variáveis de script definidas pelo **sqlcmd**e aquelas definidas usando o comando **:Setvar** .  
+>  Serão exibidas somente variáveis de script definidas pelo **sqlcmd** e aquelas definidas usando o comando **:Setvar** .  
   
  **Comandos de Saída**  
   **:Error**   
  _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
- Redireciona toda a saída de erro para o arquivo especificado por *nome do arquivo*para **stderr** ou **stdout**. O comando **Error** pode aparecer várias vezes em um script. Por padrão, saída de erro é enviada para **stderr**.  
+ Redireciona toda a saída de erro para o arquivo especificado por *nome do arquivo* para **stderr** ou **stdout**. O comando **Error** pode aparecer várias vezes em um script. Por padrão, saída de erro é enviada para **stderr**.  
   
  *nome do arquivo*  
  Cria e abre um arquivo que receberá a saída. Se o arquivo já existir, será truncado para zero bytes. Se o arquivo não estiver disponível devido a permissões ou outras razões, a saída não será alternada e será enviada ao último destino especificado ou ao destino padrão.  
@@ -701,10 +701,10 @@ Para usar o **sqlcmd** interativamente, digite **sqlcmd** no prompt de comando c
  Muda a saída de erro para o fluxo **stdout** . Se houver redirecionamento, o destino para o qual o fluxo foi redirecionado receberá a saída de erro.  
   
  **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
- Cria e redireciona todos os resultados da consulta para o arquivo especificado por *nome do arquivo*para **stderr** ou **stdout**. Por padrão, a saída é enviada para **stdout**. Se o arquivo já existir, será truncado para zero bytes. O comando **Out** pode aparecer várias vezes em um script.  
+ Cria e redireciona todos os resultados da consulta para o arquivo especificado por *nome do arquivo* para **stderr** ou **stdout**. Por padrão, a saída é enviada para **stdout**. Se o arquivo já existir, será truncado para zero bytes. O comando **Out** pode aparecer várias vezes em um script.  
   
  **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
- Cria e redireciona todas as informações de rastreamento de desempenho para o arquivo especificado por *nome do arquivo*para **stderr** ou **stdout**. Por padrão a saída de rastreamento de desempenho é enviada para **stdout**. Se o arquivo já existir, será truncado para zero bytes. O comando **Perftrace** pode aparecer várias vezes em um script.  
+ Cria e redireciona todas as informações de rastreamento de desempenho para o arquivo especificado por *nome do arquivo* para **stderr** ou **stdout**. Por padrão a saída de rastreamento de desempenho é enviada para **stdout**. Se o arquivo já existir, será truncado para zero bytes. O comando **Perftrace** pode aparecer várias vezes em um script.  
   
  **Comandos de controle de execução**  
   **:On Error**[ **exit** | **ignore**]  
@@ -823,7 +823,7 @@ Para usar o **sqlcmd** interativamente, digite **sqlcmd** no prompt de comando c
  Lista comandos do **sqlcmd** , juntamente com uma breve descrição de cada comando.  
   
 ### <a name="sqlcmd-file-names"></a>Nomes de arquivos sqlcmd  
- Arquivos de entrada do**sqlcmd** podem ser especificados com a opção **-i** ou o comando **:r** . Arquivos de saída podem ser especificados com a opção **-o** ou os comandos **:Error**, **:Out** e **:Perftrace** . A seguir algumas diretrizes sobre como trabalhar com esses arquivos:  
+ Arquivos de entrada do **sqlcmd** podem ser especificados com a opção **-i** ou o comando **:r** . Arquivos de saída podem ser especificados com a opção **-o** ou os comandos **:Error**, **:Out** e **:Perftrace** . A seguir algumas diretrizes sobre como trabalhar com esses arquivos:  
   
 - **:Error**, **:Out** e **:Perftrace** devem usar **\<**_filename_**>** separados. Se for usado o mesmo **\<**_filename_**>** , as entradas dos comandos poderão ser misturadas.  
   
@@ -850,7 +850,7 @@ No tipo de prompt do sqlcmd:
 Quando você pressiona ENTER, a seguinte mensagem informativa é impressa: "Contexto de banco de dados alterado para 'AdventureWorks2012'."  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Formato de saída do Transact-SQL Queries  
- O**sqlcmd** imprime, em primeiro lugar, um cabeçalho de coluna com os nomes de coluna especificados na lista de seleção. Os nomes de coluna são separados usando-se o caractere SQLCMDCOLSEP. Por padrão, esse é um espaço. Se o nome de coluna for mais curto do que a largura de coluna, a saída será preenchida com espaços até a coluna seguinte.  
+ O **sqlcmd** imprime, em primeiro lugar, um cabeçalho de coluna com os nomes de coluna especificados na lista de seleção. Os nomes de coluna são separados usando-se o caractere SQLCMDCOLSEP. Por padrão, esse é um espaço. Se o nome de coluna for mais curto do que a largura de coluna, a saída será preenchida com espaços até a coluna seguinte.  
   
  Essa linha será seguida por uma linha divisória formada por uma série de tracejados. A saída a seguir mostra um exemplo.  
   
@@ -884,7 +884,7 @@ Quando você pressiona ENTER, a seguinte mensagem informativa é impressa: "Cont
  Quando você esperar uma saída XML, use o seguinte comando: `:XML ON`.  
   
 > [!NOTE]  
->  O**sqlcmd** retorna mensagens de erro no formato habitual. Observe que as mensagens de erro também são produzidas no fluxo de texto XML em formato XML. Usando `:XML ON`, o **sqlcmd** não exibe mensagens informativas.  
+>  O **sqlcmd** retorna mensagens de erro no formato habitual. Observe que as mensagens de erro também são produzidas no fluxo de texto XML em formato XML. Usando `:XML ON`, o **sqlcmd** não exibe mensagens informativas.  
   
  Para definir o modo XML como desativado, use o seguinte comando: `:XML OFF`.  
   

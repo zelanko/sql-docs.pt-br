@@ -9,14 +9,14 @@ ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: a524b238e980ee4b8972a4a8f7b976a34ca17c3e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523846"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420118"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>Virtualizar dados CSV do pool de armazenamento (Clusters de Big Data)
 
@@ -89,9 +89,9 @@ Essa etapa fornece um resumo das suas seleções. Ela fornece o nome do SQL Serv
 
 ![Tela de resumo](media/data-virtualization/150-csv-virtualize-data-summary.png)
 
-Se você clicar em **Criar Tabela** , o SQL Server criará a tabela externa no banco de dados de destino.
+Se você clicar em **Criar Tabela**, o SQL Server criará a tabela externa no banco de dados de destino.
 
-Se você clicar em **Gerar Script** , o Azure Data Studio criará a consulta T-SQL para criar a tabela externa.
+Se você clicar em **Gerar Script**, o Azure Data Studio criará a consulta T-SQL para criar a tabela externa.
 
 Depois de criada, a tabela pode ser consultada diretamente usando o T-SQL na instância do SQL Server.
 

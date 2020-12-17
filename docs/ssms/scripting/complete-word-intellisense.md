@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aac28e32ed0bd1ed71f3582c6cfbfa07ad6cafe5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 83d2d700c0d74624307e2fb9e689a96f0e6367b2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902038"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476917"
 ---
 # <a name="complete-word-intellisense"></a>Completar Palavra (IntelliSense)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88902038"
   
  Há quatro maneiras para invocar o recurso Complete Word:  
   
--   No menu **Editar** , aponte para **IntelliSense**e clique em **Completar Palavra**.  
+-   No menu **Editar** , aponte para **IntelliSense** e clique em **Completar Palavra**.  
   
 -   Pressione ALT+SETA DIREITA.  
   

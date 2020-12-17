@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9916bd14969b7bf9065e98ecb07fc131d8391f30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 32006b2ac6581e4f5bc3a303cc5f6475483708c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035735"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472367"
 ---
 # <a name="autostart-sql-server-agent"></a>Iniciar automaticamente o SQL Server Agent
 
@@ -57,6 +57,6 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 1.  No **Pesquisador de Objetos**, clique no sinal de adição para expandir o servidor no qual você deseja configurar o SQL Server Agent para reiniciar automaticamente.  
   
-2.  Clique com o botão direito do mouse em **SQL Server Agent**e então clique em **Propriedades**.  
+2.  Clique com o botão direito do mouse em **SQL Server Agent** e então clique em **Propriedades**.  
   
 3.  Na página **Geral** , marque **Reiniciar automaticamente o SQL Server Agent se ele parar inesperadamente**.  

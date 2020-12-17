@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1ffc556d5c4138f35b1831a8aebeb15622328d4c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987417"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637856"
 ---
 # <a name="ado-md-properties"></a>Propriedades do ADO MD
 
@@ -30,7 +30,7 @@ ms.locfileid: "88987417"
 |[ChildCount](./childcount-property-ado-md.md)|Indica o número de membros para os quais o objeto de **membro** atual é o pai em uma hierarquia.|  
 |[Filhos](./children-property-ado-md.md)|Retorna uma coleção de **Membros** para os quais o **membro** atual é o pai na hierarquia.|  
 |[Count](../ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
-|[Depth](./depth-property-ado-md.md)|Indica o número de níveis entre o **nível** e a raiz do nível da hierarquia.|  
+|[Profundidade](./depth-property-ado-md.md)|Indica o número de níveis entre o **nível** e a raiz do nível da hierarquia.|  
 |[Descrição](./description-property-ado-md.md)|Retorna uma explicação de texto do objeto atual.|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|Indica o número de dimensões em um eixo.|  
 |[DrilledDown](./drilleddown-property-ado-md.md)|Indica se há filhos logo após o membro do eixo.|  
@@ -52,7 +52,7 @@ ms.locfileid: "88987417"
 |[Valor](./value-property-ado-md.md)|Indica o valor da célula atual.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de API de ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Referência de API de ADO MD](./ado-md-object-model.md)   
  [Exemplos de código de ADO MD](./ado-md-code-examples.md)   
  [ADO MD coleções](./ado-md-collections.md)   
  [ADO MD constantes enumeradas](./ado-md-enumerated-constants.md)   

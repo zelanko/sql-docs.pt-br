@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c7739675f03e5c7d895939a286d4f262c8302586
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935271"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472507"
 ---
 # <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de Configurações do Servidor de Relatório)
 
@@ -42,9 +42,9 @@ O banco de dados do servidor de relatório é um componente interno, acessado so
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa **System.Data.SqlClient** para se conectar ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda o banco de dados do servidor de relatório. Caso esteja usando uma instância local do [!INCLUDE[ssDE](../../includes/ssde-md.md)], o servidor de relatório estabelecerá a conexão usando memória compartilhada. Se você estiver usando um servidor de banco de dados remoto para o banco de dados do servidor de relatório, talvez precise habilitar conexões remotas, dependendo da edição que estiver usando. Se estiver usando a Enterprise Edition, as conexões remotas serão habilitadas para TCP/IP por padrão.  
 
-Para verificar se a instância aceita conexões remotas, clique em **Iniciar**, clique em **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **Ferramentas de Configuração**, clique em **SQL Server Configuration Manager**e verifique se o protocolo TCP/IP está habilitado para cada serviço.  
+Para verificar se a instância aceita conexões remotas, clique em **Iniciar**, clique em **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **Ferramentas de Configuração**, clique em **SQL Server Configuration Manager** e verifique se o protocolo TCP/IP está habilitado para cada serviço.  
 
-Quando você habilitar conexões remotas, os protocolos de cliente e de servidor também serão habilitados. Para verificar se os protocolos estão habilitados, clique em **Iniciar**, clique em **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **Ferramentas de Configuração**, clique em **SQL Server Configuration Manager**, clique em **Configuração de Rede do SQL Server**e clique em **Protocolos para MSSQLSERVER**. Para obter mais informações, confira [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Quando você habilitar conexões remotas, os protocolos de cliente e de servidor também serão habilitados. Para verificar se os protocolos estão habilitados, clique em **Iniciar**, clique em **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **Ferramentas de Configuração**, clique em **SQL Server Configuration Manager**, clique em **Configuração de Rede do SQL Server** e clique em **Protocolos para MSSQLSERVER**. Para obter mais informações, confira [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="defining-a-report-server-database-connection"></a>Definindo uma conexão do banco de dados do servidor de relatório
 
@@ -91,7 +91,7 @@ Há três tipos de credenciais que podem ser usados em uma conexão com um banco
   
 Se a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] for configurada para Autenticação do Windows e estiver no mesmo domínio ou em um domínio confiável com o computador do servidor de relatório, você poderá configurar a conexão para usar a conta de serviço ou uma conta de usuário do domínio que você gerencie como uma propriedade de conexão através da ferramenta de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se o servidor de banco de dados estiver em um domínio diferente ou se você estiver usando a segurança de grupo de trabalho, será necessário configurar a conexão para usar um logon de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nesse caso, certifique-se de criptografar a conexão.  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Ao usar a Instância Gerenciada do SQL do Azure para hospedar bancos de dados do servidor de relatório, a autenticação do SQL Server é o único tipo de credencial compatível. Além disso, a Instância Gerenciada não pode hospedar uma instância do servidor de relatório.
@@ -118,9 +118,9 @@ Você pode especificar um único logon do [!INCLUDE[ssNoVersion](../../includes/
 
 As seguintes funções são concedidas às contas usadas para conexão com o banco de dados do servidor de relatório:  
 
-- Funções**public** e **RSExecRole** para o banco de dados **ReportServer** .  
+- Funções **public** e **RSExecRole** para o banco de dados **ReportServer** .  
 
-- Função**RSExecRole** para os bancos de dados **mestre**, **msdb**e **ReportServerTempdb** .  
+- Função **RSExecRole** para os bancos de dados **mestre**, **msdb** e **ReportServerTempdb** .  
 
 Quando você usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para criar ou modificar a conexão, essas permissões são concedidas automaticamente. Se você usar o utilitário rsconfig e estiver especificando uma conta diferente para a conexão, deverá atualizar o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para essa nova conta. Você pode criar arquivos de script na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que atualizarão o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o servidor de relatório.  
 

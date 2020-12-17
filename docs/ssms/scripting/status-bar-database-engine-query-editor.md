@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 228952530dbf3f4d33c86e0154ef84d1ba928cf4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 14c56abe049649930840ec331a2439a1fa80d94c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036239"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476867"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de status (Editor de Consultas do Mecanismo de Banco de Dados)
 
@@ -73,7 +73,7 @@ A definição de uma cor de barra de status personalizada para um nó de servido
 ##  <a name="open-an-editor-using-a-server-color"></a><a name="OpenServerColor"></a> Abrir um editor usando uma cor de servidor  
  **Para abrir uma janela do editor usando uma cor de servidor**  
   
--   Clique com o botão direito do mouse em um nó de servidor no **Pesquisador de Objetos** ou em **Servidores Registrados**e selecione **Nova Consulta**.  
+-   Clique com o botão direito do mouse em um nó de servidor no **Pesquisador de Objetos** ou em **Servidores Registrados** e selecione **Nova Consulta**.  
   
 -   Opcionalmente, realce um nó de servidor e selecione o botão **Nova Consulta** na barra de ferramentas.  
   
@@ -82,7 +82,7 @@ A definição de uma cor de barra de status personalizada para um nó de servido
 ##  <a name="open-an-editor-specifying-a-status-color"></a><a name="OpenSpecColor"></a> Abrir um editor especificando uma cor de status  
  **Para abrir uma janela do editor especificando uma cor de status**  
   
--   Abra o menu **Arquivo** , selecione **Novo**e, em seguida, selecione **Consulta do Mecanismo de Banco de Dados**.  
+-   Abra o menu **Arquivo** , selecione **Novo** e, em seguida, selecione **Consulta do Mecanismo de Banco de Dados**.  
   
 -   Na caixa de diálogo **Conectar ao Servidor**, selecione **Opções >>** .  
   

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 1dd9f995efad5f8e4209baf5827c7be8ccdd8886
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115278"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471347"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Monitorar a execução de script do Python e do R usando relatórios personalizados no SQL Server Management Studio
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ Para usar esses relatórios, siga estas etapas:
 
 1. Baixe os [Relatórios personalizados do SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) para Serviços de Machine Learning do SQL Server no GitHub.
 
-   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   ::: moniker range="=azuresqldb-mi-current"
    >[!NOTE]
    > O relatório personalizado **Serviços ML – Configurar Instância** não tem suporte na Instância Gerenciada de SQL do Azure.
    ::: moniker-end
@@ -60,11 +60,11 @@ Para usar esses relatórios, siga estas etapas:
 
     1. No Management Studio, clique com botão direito do mouse do nó **Databases** para a instância em que você deseja executar os relatórios.
 
-    2. Clique em **relatórios** e, em seguida, clique em **relatórios personalizados** .
+    2. Clique em **relatórios** e, em seguida, clique em **relatórios personalizados**.
 
     3. Na caixa de diálogo **Abrir arquivo** , localize a pasta de relatórios personalizados.
 
-    4. Selecione um dos arquivos RDL baixados e, em seguida, clique em **Abrir** .
+    4. Selecione um dos arquivos RDL baixados e, em seguida, clique em **Abrir**.
 
 ## <a name="reports"></a>Relatórios
 

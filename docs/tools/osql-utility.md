@@ -25,13 +25,13 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2c3767addadd34aebac1b29ee1b7fbdba189ae43
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 29f495dda754d3456e8d8df8811620548426cd89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002984"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478437"
 ---
 # <a name="osql-utility"></a>Utilitário osql
 
@@ -106,7 +106,7 @@ C:\>osql
  É um nome de estação de trabalho. O nome de estação de trabalho é armazenado em **sysprocesses.hostname** e exibido por **sp_who**. Se essa opção não for especificada, o nome do computador atual será presumido.  
   
  **-d** _db_name_  
- Emite uma instrução USE *db_name* quando **osql**é iniciado.  
+ Emite uma instrução USE *db_name* quando **osql** é iniciado.  
   
  **-l** _time_out_  
  Especifica o número de segundos antes de um logon do **osql** expirar. O tempo limite padrão de logon do **osql** é de oito segundos.  
@@ -158,7 +158,7 @@ osql -E -q "select name, object_id from %table%"
  Remove a numeração e o símbolo de prompt (>) das linhas de entrada.  
   
  **-m** _error_level_  
- Personaliza a exibição de mensagens de erro. São exibidos o número da mensagem, o estado e o nível de erros com o nível de severidade especificado ou superior. Nada é exibido para erros de níveis abaixo do nível especificado. Use **-1** para especificar que todos os cabeçalhos retornem com mensagens, até mesmo mensagens informativas. Se **-1**for usado, não deverá haver espaço entre o parâmetro e a configuração ( **-m-1**, não **-m -1**).  
+ Personaliza a exibição de mensagens de erro. São exibidos o número da mensagem, o estado e o nível de erros com o nível de severidade especificado ou superior. Nada é exibido para erros de níveis abaixo do nível especificado. Use **-1** para especificar que todos os cabeçalhos retornem com mensagens, até mesmo mensagens informativas. Se **-1** for usado, não deverá haver espaço entre o parâmetro e a configuração ( **-m-1**, não **-m -1**).  
   
  **-r** { **0**| **1**}  
  Redireciona a saída da mensagem para a tela (**stderr**). Se você não especificar um parâmetro ou especificar **0**, serão redirecionadas somente mensagens de erro com nível de severidade 11 ou superior. Se você especificar **1**, serão redirecionadas todas as saídas da mensagem, incluindo “print”.  
@@ -198,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 >  As opções **-n**, **-O** e **-D** já não têm suporte do **osql**.  
   
 ## <a name="remarks"></a>Comentários  
- O utilitário **osql** é iniciado diretamente do sistema operacional com as opções que diferenciam maiúsculas de minúsculas listadas aqui. Depois que o **osql**é iniciado, ele aceita instruções SQL e as envia interativamente ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os resultados são formatados e exibidos na tela (**stdout**). Use QUIT ou EXIT para sair do **osql**.  
+ O utilitário **osql** é iniciado diretamente do sistema operacional com as opções que diferenciam maiúsculas de minúsculas listadas aqui. Depois que o **osql** é iniciado, ele aceita instruções SQL e as envia interativamente ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os resultados são formatados e exibidos na tela (**stdout**). Use QUIT ou EXIT para sair do **osql**.  
   
  Se você não especificar um nome de usuário ao iniciar o **osql**, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fará a verificação e usará variáveis de ambiente, como **osqluser=(** _user_ **)** ou **osqlserver=(** _server_ **)** . Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  
   
@@ -235,7 +235,7 @@ SELECT x = 1
 GO 100  
 ```  
   
- Os resultados são impressos após o término de execução. O**osql** não aceita mais de 1.000 caracteres por linha. Instruções grandes devem ser divididas em várias linhas.  
+ Os resultados são impressos após o término de execução. O **osql** não aceita mais de 1.000 caracteres por linha. Instruções grandes devem ser divididas em várias linhas.  
   
  Os recursos de recall de comando do Windows podem ser usados para chamar novamente e modificar instruções **osql** . O buffer de consulta existente pode ser desmarcado digitando RESET.  
   
@@ -331,7 +331,7 @@ RAISERROR(50001, 10, 127)
      Erro de conversão ao selecionar valor de retorno.  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>Exibindo Tipos de Dados money e smallmoney  
- O**osql** exibe os tipos de dados **money** e **smallmoney** com duas casas decimais, embora o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazene o valor internamente com quatro casas decimais. Considere o exemplo:  
+ O **osql** exibe os tipos de dados **money** e **smallmoney** com duas casas decimais, embora o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazene o valor internamente com quatro casas decimais. Considere o exemplo:  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  
