@@ -4,22 +4,30 @@ description: Saiba mais sobre as alterações feitas no Assistente de Migração
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 1482ec079e0410fd7713ac183f6181c2a8793a11
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036052"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665847"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>O que há de novo no SSMA for Access (AccessToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para acessar alterações em cada versão.
+
+## <a name="ssma-v816"></a>8.16 do SSMA v
+
+A versão v 8.16 do SSMA para Access contém as seguintes alterações:
+
+* Mostrar texto SQL para consultas no relatório de conversão de HTML
+* Remover suporte para analisador herdado
+* Correção do problema com objetos que não estão sendo atualizados do banco de dados
 
 ## <a name="ssma-v815"></a>8.15 do SSMA v
 
@@ -87,7 +95,7 @@ A versão v 8.7 do SSMA para Access tem uma conversão aprimorada para `IIF` fun
 
 Além de um conjunto direcionado de correções projetadas para melhorar a usabilidade e o desempenho, a versão do v 8.6 do SSMA para acesso foi aprimorada com a adição de uma configuração que permite aos usuários omitir as propriedades estendidas do SSMA no código convertido.
 
-Para aproveitar essa configuração, no SSMA para acesso, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão** geral e **, em** seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim** .
+Para aproveitar essa configuração, no SSMA para acesso, navegue até **ferramentas**  >  **configurações do projeto**  >    >  **conversão** geral e **, em** seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim**.
 
 ![Omitir a configuração de propriedades estendidas](../access/media/ssma-omit-extended-properties.png)
 

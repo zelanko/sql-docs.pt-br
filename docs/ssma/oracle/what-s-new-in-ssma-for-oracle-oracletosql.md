@@ -4,22 +4,30 @@ description: Saiba mais sobre as alterações feitas no Assistente de Migração
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: d7bcff5c96935dee5b696b0fa828cf3ba33eb56e
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 84a94725df5f3d1d817ed9f6de1048b9a54d6c64
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036012"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665837"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>O que há de novo no SSMA para Oracle (OracleToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para alterações de Oracle em cada versão.
+
+## <a name="ssma-v816"></a>8.16 do SSMA v
+
+A versão v 8.16 do SSMA para Oracle contém as seguintes alterações:
+
+* Adicionar suporte para colunas de identidade
+* Remover suporte para analisador herdado
+* Correção do problema com objetos que não estão sendo atualizados do banco de dados
 
 ## <a name="ssma-v815"></a>8.15 do SSMA v
 
@@ -110,7 +118,7 @@ Além disso, o SSMA para Oracle agora permite filtrar objetos com base no estado
 
 Além de um conjunto direcionado de correções projetadas para melhorar a usabilidade e o desempenho, a versão do v 8.6 do SSMA para Oracle foi aprimorada com a adição de uma configuração que permite aos usuários omitir as propriedades estendidas do SSMA no código convertido.
 
-Para aproveitar essa configuração, no SSMA para Oracle, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão** geral e **, em** seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim** .
+Para aproveitar essa configuração, no SSMA para Oracle, navegue até **ferramentas**  >  **configurações do projeto**  >    >  **conversão** geral e **, em** seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim**.
 
 ![Omitir a configuração de propriedades estendidas](../oracle/media/ssma-omit-extended-properties.png)
 
@@ -233,7 +241,7 @@ A versão v 7.8 do SSMA para Oracle contém as seguintes alterações:
   * Expressão de linha para a `IN` cláusula.
   * Conversões implícitas de tipo.
   * `UID` conversão para o banco de dados SQL do Azure.
-* Alterar o mapeamento de tipo realçado nas **configurações do projeto** .
+* Alterar o mapeamento de tipo realçado nas **configurações do projeto**.
 * A capacidade dos usuários de desabilitar a telemetria.
 
 ## <a name="ssma-v77"></a>7.7 do SSMA v
@@ -243,7 +251,7 @@ A versão v 7.7 do SSMA para Oracle contém as seguintes alterações:
 * O SSMA para Oracle foi aprimorado com correções direcionadas que melhoram a qualidade e a conversão de métricas.
 * Com base na demanda popular, a versão de 32 bits do SSMA para Oracle está de volta. Em comparação com a implementação anterior (antes da v 7.4), há dois pacotes do instalador, mas eles não podem ser instalados lado a lado. Como resultado, você deve escolher a versão mais apropriada com base nos componentes de conectividade que tem. É sempre preferível usar a versão de 64 bits, se possível.
 * SQL Server suporte a 2017 agora é oficial com o pacote de extensão Oracle com suporte no Linux também (nova opção de instalação remota). Observe que a funcionalidade do pacote de extensão é limitada quando instalada no Linux, já que não há suporte para os recursos de migração de dados do servidor e testador.
-* O SSMA para Oracle permite que você migre exibições materializadas como tabelas regulares (configuráveis por meio das configurações em **configurações do projeto**  ->  **sincronização**  ->  **descobrir tabelas para exibições materializadas** ).
+* O SSMA para Oracle permite que você migre exibições materializadas como tabelas regulares (configuráveis por meio das configurações em **configurações do projeto**  ->  **sincronização**  ->  **descobrir tabelas para exibições materializadas**).
 
 ## <a name="ssma-v76"></a>SSMA v 7.6
 

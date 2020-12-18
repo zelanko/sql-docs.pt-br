@@ -4,22 +4,32 @@ description: Saiba mais sobre as alterações feitas no Assistente de Migração
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: b35e5a01f28feb8b5dd42f592cf2c310d6c410f3
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 37d0898d242073c9bc842d0d3cca645acc02a851
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036022"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665817"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>O que há de novo no SSMA para DB2 (DB2ToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para as alterações do DB2 em cada versão.
+
+## <a name="ssma-v816"></a>8.16 do SSMA v
+
+A versão v 8.16 do SSMA para DB2 contém as seguintes alterações:
+
+* Corrigir a conversão de aliases de coluna com caracteres especiais
+* Corrigir conversão para `SELECTIVITY` cláusula
+* Melhorar a conversão para a `WITH ROW MOVEMENT` cláusula
+* Remover suporte para analisador herdado
+* Correção do problema com objetos que não estão sendo atualizados do banco de dados
 
 ## <a name="ssma-v815"></a>8.15 do SSMA v
 
@@ -106,7 +116,7 @@ Além disso, o SSMA para DB2 agora fornece:
 
 Além de um conjunto direcionado de correções projetadas para melhorar a usabilidade e o desempenho, a versão do v 8.6 do SSMA para DB2 foi aprimorada com a adição de uma configuração que permite aos usuários omitir as propriedades estendidas do SSMA no código convertido.
 
-Para aproveitar essa configuração, no SSMA para DB2, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão** geral e **, em** seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim** .
+Para aproveitar essa configuração, no SSMA para DB2, navegue até **ferramentas**  >  **configurações do projeto**  >    >  **conversão** geral e **, em** seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim**.
 
 ![Omitir a configuração de propriedades estendidas](../db2/media/ssma-omit-extended-properties.png)
 
@@ -208,7 +218,7 @@ A versão v 7.9 do SSMA para DB2 contém as seguintes alterações:
 
 A versão v 7.8 do SSMA para DB2 contém as seguintes alterações:
 
-* Alterar o mapeamento de tipo realçado nas *configurações do projeto* .
+* Alterar o mapeamento de tipo realçado nas *configurações do projeto*.
 * A capacidade dos usuários de desabilitar a telemetria.
 
 ## <a name="ssma-v77"></a>7.7 do SSMA v
