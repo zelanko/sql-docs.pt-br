@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
-ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
+ms.openlocfilehash: a585314a26e90b76d18117be2eafe6f78e399dc3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321990"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas sobre a versão do SQL Server 2017 em Linux
 
@@ -28,8 +28,8 @@ As notas sobre a versão a seguir se aplicam ao [!INCLUDE[ssSQL17](../includes/s
 
 | Plataforma | Sistema de Arquivos | Guia de Instalação |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6 ou 8 Server | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-suse.md) |
+| Red Hat Enterprise Linux 7.3 – 7.8 ou 8.0 – 8.3 Server | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 – SP5 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS, 18.04 LTS | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-ubuntu.md) | 
 | Docker Engine 1.8+ no Windows, Mac ou Linux | N/D | [Guia de instalação](quickstart-install-connect-docker.md) | 
 

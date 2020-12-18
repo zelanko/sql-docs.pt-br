@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115669"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471667"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Red Hat
 
@@ -28,7 +28,7 @@ Neste início rápido, você instalará o SQL Server 2017 ou o SQL Server 2019 n
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Neste início rápido, você instala o SQL Server 2019 no Red Hat Enterprise Linux (RHEL) 8. Em seguida, você se conecta ao **sqlcmd** parar criar seu primeiro banco de dados e executar consultas.
 
@@ -40,16 +40,16 @@ Neste início rápido, você instala o SQL Server 2019 no Red Hat Enterprise Lin
 ## <a name="prerequisites"></a>Pré-requisitos
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-É necessário ter um computador RHEL 7.3 a 7.8 ou 8.0 a 8.2 com **pelo menos 2 GB** de memória.
+É necessário ter um computador RHEL 7.3 – 7.8 ou 8.0 – 8.3 com **pelo menos 2 GB** de memória.
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-É necessário ter um computador RHEL 7.3, 7.4, 7.5, 7.6 ou 8.0 com **pelo menos 2 GB** de memória.
+É necessário ter um computador RHEL 7.3 – 7.8 ou 8.0 – 8.3 com **pelo menos 2 GB** de memória.
 
 ::: moniker-end
 
@@ -129,7 +129,7 @@ Neste momento, o SQL Server está em execução no seu computador RHEL e está p
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>Instalar o SQL Server
 

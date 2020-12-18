@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eac4d8a51dabb844ff6f3607383e676ecf0fc16a
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09d3e92d2e181264965a1d4525d13f7d13b4504d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175971"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460479"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabela temporária e variável de tabela mais rápidas usando a otimização de memória
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -411,7 +411,7 @@ Beginning execution loop
 Batch execution completed 5001 times.  
 2016-04-20 00:27:05.440  = End time, _tempdb.  
 ---- Tests done. ----  
-***/
+**_/
 ```
   
   
@@ -423,7 +423,7 @@ Você pode aprender a prever as necessidades de memória ativa de suas tabelas c
 - [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Tamanho da tabela e da linha em tabelas com otimização de memória: Exemplo de cálculo](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-Para variáveis de tabela maiores, índices não clusterizados usam mais memória do que para *tabelas*com otimização de memória. Quanto maior a contagem de linhas e a chave de índice, mais a diferença aumenta.  
+Para variáveis de tabela maiores, índices não clusterizados usam mais memória do que para _tabelas* com otimização de memória. Quanto maior a contagem de linhas e a chave de índice, mais a diferença aumenta.  
   
 Se a variável de tabela com otimização de memória é acessada apenas com um valor de chave exato por acesso, um índice de hash pode ser uma escolha melhor do que um índice não clusterizado. No entanto, se você não puder estimar o BUCKET_COUNT apropriado, um índice NONCLUSTERED é uma boa segunda opção.  
   

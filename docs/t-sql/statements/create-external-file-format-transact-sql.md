@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 363f3a4c17ccef494a9de53864dec05a0194c76a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947921"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439031"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ WITH (
 {  
     FIELD_TERMINATOR = field_terminator  
     | STRING_DELIMITER = string_delimiter 
-    | First_Row = integer -- ONLY AVAILABLE SQL DW
+    | First_Row = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -413,7 +413,7 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### <a name="e-create-a-delimited-text-file-skipping-header-row-azure-sql-dw-only"></a>E. Criar um arquivo de texto delimitado, ignorando a linha de cabeçalho (somente SQL DW do Azure)
+### <a name="e-create-a-delimited-text-file-skipping-header-row-azure-synapse-analytics-only"></a>E. Criar um arquivo de texto delimitado ignorando a linha de cabeçalho (somente Azure Synapse Analytics)
  Este exemplo cria um formato de arquivo externo para o arquivo CSV com uma única linha de cabeçalho. 
   
 ```sql  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0dafe59102083ea1cd5c675819487eb88c9ecbc
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 996650e8552f435240663d61bf3734f875e2210a
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869481"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595155"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,12 +79,14 @@ As informações de erro do sistema operacional impressas nessas mensagens de er
 1. A resolução do erro 17204 envolve a compreensão do código de erro do sistema operacional associado e o diagnóstico desse erro. Depois que a condição de erro do sistema operacional for resolvida, você poderá tentar reiniciar o banco de dados (por exemplo, usando ALTER DATABASE SET ONLINE) ou a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para colocar o banco de dados afetado online. Em alguns casos, talvez você não consiga resolver o erro do sistema operacional. Portanto, precisará realizar ações corretivas específicas. Discutiremos tais ações nesta seção.
 1. Se a mensagem de erro 17204 contiver apenas um código de erro e não uma descrição de erro, você poderá tentar resolver o código de erro usando o comando de shell do sistema operacional: net helpmsg <error code>. Se você receber um código de status de 8 dígitos como o código de erro, poderá consultar as fontes de informações em [Como converter um HRESULT em um código de erro Win32?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133) para decodificar quais são esses códigos de status em erros de sistema operacional.
 1. Se você receber o erro do sistema operacional `Access is Denied` = 5, considere estes métodos:
-   -  Verifique se as permissões estão definidas no arquivo examinando as propriedades dele no Windows Explorer. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa grupos do Windows para provisionar o Controle de Acesso em vários recursos do arquivo. Verifique se o grupo apropriado [com nomes como SQLServerMSSQLUser$ComputerName$MSSQLSERVER ou SQLServerMSSQLUser$ComputerName$InstanceName] tem as permissões necessárias no arquivo de banco de dados mencionado na mensagem de erro. Para obter mais informações, confira [Configurar permissões do sistema de arquivos para acesso ao Mecanismo de Banco de Dados](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014). Verifique se o grupo do Windows realmente inclui a conta de inicialização do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SID do serviço.
+   -  Verifique se as permissões estão definidas no arquivo examinando as propriedades dele no Windows Explorer. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa grupos do Windows para provisionar o Controle de Acesso em vários recursos do arquivo. Verifique se o grupo apropriado [com nomes como SQLServerMSSQLUser$ComputerName$MSSQLSERVER ou SQLServerMSSQLUser$ComputerName$InstanceName] tem as permissões necessárias no arquivo de banco de dados mencionado na mensagem de erro. Para obter mais informações, confira [Configurar permissões do sistema de arquivos para acesso ao Mecanismo de Banco de Dados](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access). Verifique se o grupo do Windows realmente inclui a conta de inicialização do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SID do serviço.
    -  Examine a conta de usuário na qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está atualmente em execução. Você pode usar o Gerenciador de Tarefas do Windows para obter essas informações. Procure o valor de "Nome de Usuário" para o executável "sqlservr.exe". Além disso, se você alterou recentemente a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], saiba que a maneira com suporte para realizar essa operação é por meio do utilitário SQL Server Configuration Manager. Mais informações sobre isso estão disponíveis em [SQL Server Configuration Manager](../sql-server-configuration-manager.md). 
    -  Dependendo do tipo de operação – abrir bancos de dados durante a inicialização do servidor, anexar um banco de dados, restaurar o banco de dados etc. – a conta usada para representação e acesso ao arquivo de banco de dados pode variar. Examine o tópico [Proteger arquivos de log e dados](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) para entender qual operação define qual permissão e de quais contas. Use uma ferramenta como [Monitor do Processo](/sysinternals/downloads/procmon) do SysInternals do Windows para entender se o acesso ao arquivo está acontecendo no contexto de segurança da conta de inicialização do serviço (ou SID do serviço) da instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de uma conta representada.
 
       Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver representando as credenciais do usuário que executa a operação ALTER DATABASE ou CREATE DATABASE, você observará as seguintes informações na ferramenta Monitor do Processo (um exemplo):
-        ```Date & Time:      3/27/2010 8:26:08 PM
+        
+        ```output
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -97,18 +99,19 @@ As informações de erro do sistema operacional impressas nessas mensagens de er
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
-1. If you are getting `The system cannot find the file specified` OS error = 3:
-   - Review the complete path from the error message
-   - Ensure the disk drive and the folder path is visible and accessible from Windows Explorer
-   - Review the Windows Event log to find out if any problems exist with this disk drive
-   - If the path is incorrect and if this database already exists in the system, you can change the database file paths using the methods explained in the topic [Move Database Files](../databases/move-database-files.md). You may have to use this procedure, especially for system database files that encounter 17204 or 17207 and you are working through a disaster recovery scenario where the specified disk drives are unavailable. This topic also explains how you can identify the current location of the various system databases [master, model, tempdb, msdb and mssqlsystemresource].
-   - If you see this error because the database files are missing, you have to restore the database from a valid backup.
-     - If the database file associated with the error belongs to a secondary filegroup, then you can optionally mark that filegroup offline, bring the database online and then perform a restore of that filegroup alone. For more information, refer to the OFFLINE section of the topic [ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
-     - If the file that produced the error is a transaction log file, review the information under the sections "FOR ATTACH" and "FOR ATTACH_REBUILD_LOG" of the topic [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) to understand how you can recreate the missing transaction log files.
-   - Ensure that any disk or network location [like iSCSI drive] is available before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to access the database files on these locations. If needed create the required dependencies in Cluster Administrator or Service Control Manager.
-1. If you're getting the `The process cannot access the file because it is being used by another process` operating system error = 32:
-   - Use a tool like [Process Explorer](/sysinternals/downloads/process-explorer) or [Handle](/sysinternals/downloads/handle) from Windows Sysinternals to find out if another process or service has acquired exclusive lock on this database file
-   - Stop that process from accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database files. Common examples include anti-virus programs (see guidance for file exclusions in the following [KB article](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server) )
-   - In a cluster environment, make sure that the sqlservr.exe process from the previous owning node has actually released the handles to the database files. Normally, this doesn't occur, but misconfigurations of the cluster or I/O paths can lead to such issues.
+1. Se você estiver obtendo o erro de SO `The system cannot find the file specified` = 3:
+   - Examine o caminho completo da mensagem de erro
+   - Verifique se a unidade de disco e o caminho da pasta estão visíveis e acessíveis no Windows Explorer
+   - Examine o log de eventos do Windows para descobrir se existem problemas com essa unidade de disco
+   - Se o caminho estiver incorreto e se esse banco de dados já existir no sistema, você poderá alterar os caminhos do arquivo de banco de dados usando os métodos explicados no tópico [Mover arquivos de banco de dados](../databases/move-database-files.md). Talvez você precise usar este procedimento, especialmente para arquivos de banco de dados do sistema que encontrem 17204 ou 17207 e se você estiver trabalhando em um cenário de recuperação de desastre em que as unidades de disco especificadas não estão disponíveis. Este tópico também explica como você pode identificar a localização atual dos vários bancos de dados do sistema [mestre, modelo, tempdb, msdb e mssqlsystemresource].
+   - Se você vir esse erro porque os arquivos de banco de dados estão ausentes, será necessário restaurar o banco de dados de um backup válido.
+     - Se o arquivo de banco de dados associado ao erro pertencer a um grupo de arquivos secundário, você poderá, opcionalmente, marcar esse grupo de arquivos offline, colocar o banco de dados online e executar uma restauração somente desse grupo de arquivos. Para obter mais informações, confira a seção OFFLINE do tópico [Opções de arquivo e grupo de arquivos ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+     - Se o arquivo que produziu o erro for um arquivo de log de transações, examine as informações nas seções "FOR ATTACH" e "FOR ATTACH_REBUILD_LOG" do tópico [CRIAR BANCO DE DADOS (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) para entender como você pode recriar os arquivos de log de transações ausentes.
+   - Verifique se alguma localização de rede ou disco [como unidade iSCSI] está disponível antes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente acessar os arquivos de banco de dados nesses locais. Se necessário, crie as dependências exigidas no Administrador de Cluster ou no Gerenciador de Controle de Serviço.
+1. Se você estiver recebendo o erro de sistema operacional `The process cannot access the file because it is being used by another process` = 32:
+   - Use uma ferramenta como o [Explorador de Processos](/sysinternals/downloads/process-explorer) ou o [Identificador](/sysinternals/downloads/handle) do Windows Sysinternals para descobrir se outro processo ou serviço adquiriu bloqueio exclusivo nesse arquivo de banco de dados
+   - Interrompa o acesso desse processo aos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Arquivos de banco de dados. Exemplos comuns incluem programas antivírus (confira as diretrizes para exclusões de arquivo no [artigo da base de dados](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server) a seguir)
+   - Em um ambiente de cluster, verifique se o processo sqlservr.exe do nó proprietário anterior realmente liberou os identificadores para os arquivos de banco de dados. Normalmente, isso não ocorre, mas as configurações incorretas do cluster ou dos caminhos de E/S podem levar a esses problemas.

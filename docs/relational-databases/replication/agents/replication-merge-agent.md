@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4053b827b51eda8f238e6cada863773d625d1f59
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394981"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999221"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -292,7 +292,12 @@ replmerg [-?]
  Especifica se a saída deve ser detalhada. Se o nível detalhado for **0**, só mensagens de erro serão impressas. Se o nível detalhado for **1**, todas as mensagens de relatório de progresso serão impressas. Se o nível detalhado for **2** (padrão), todas as mensagens de erro e de relatório de progresso serão impressas, o que é útil na depuração.  
   
  **-ParallelUploadDownload** [**0**\|**1**]  
- Especifica se o Merge Agent deve processar em paralelo as alterações carregadas para o Publicador e as baixadas no Assinante, que são úteis em ambientes de grandes volumes com alta largura de banda de rede. Se **ParallelUploadDownload** for **1**, o processamento paralelo será habilitado.  
+ Especifica se o Agente de Mesclagem deve processar em paralelo as alterações carregadas para o Publicador e as baixadas no Assinante, o que pode ser útil em ambientes de grandes volumes com alta largura de banda de rede. No entanto, observe o aviso abaixo para casos em que **ParallelUploadDownload** está definido como **1**.
+ 
+Esse parâmetro está na lista para possível preterimento em breve. É recomendável definir o parâmetro **ParallelUploadDownload** como 0 e evitar o uso do perfil "Servidor a Servidor de Alto Volume" do Agente de Mesclagem, pois **ParallelUploadDownload** está definido como 1 nesse perfil.
+
+> [!WARNING]
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
   
  **-PacketSize**  
  É o tamanho do pacote, em bytes. O padrão é 4096 (bytes).  

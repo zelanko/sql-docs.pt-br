@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 08bfc658b939520cb7b694d39c3c9bee557172a1
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257968"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934038"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Serviço Change Data Capture para Oracle da Attunity
 
@@ -29,6 +29,7 @@ ms.locfileid: "92257968"
 
 Baixe o Microsoft Change Data Capture Designer e Service para Oracle da Attunity para obter a versão correspondente do SQL Server nos links abaixo:
 
+- [Feature Pack do Microsoft SQL Server 2012 Integration Services para CDC Designer/Service para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Feature Pack do Microsoft SQL Server 2016 Integration Services para CDC Designer/Service para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Feature Pack do Microsoft SQL Server 2017 Integration Services para CDC Designer/Service para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Feature Pack do Microsoft SQL Server 2019 Integration Services](https://www.microsoft.com/download/details.aspx?id=100303)
@@ -57,6 +58,8 @@ Baixe o Microsoft Change Data Capture Designer e Service para Oracle da Attunity
 -   Banco de dados Oracle 10g Versão 2
 -   Banco de dados Oracle 11g Versão 1 e Versão 2
 -   Oracle Database 12c em instalação clássica. (Não há suporte para a instalação multilocatária.)  
+-   Oracle Database 18c em instalação clássica. (Não há suporte para a instalação multilocatária.) 
+-   Oracle Database 19c em instalação clássica. (Não há suporte para a instalação multilocatária.) 
   
 ### <a name="target-sql-server-database"></a>Banco de Dados do SQL Server de destino  
  Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

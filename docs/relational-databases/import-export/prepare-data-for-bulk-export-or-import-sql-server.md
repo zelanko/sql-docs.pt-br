@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866667"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407934"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Preparar dados para exportação ou importação em massa
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866667"
   
 -   Para importar dados de arquivos de dados com campos de comprimento ou de largura fixos, use um arquivo de formato. Para obter mais informações, veja [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
--   Arquivos CSV (valores separados por vírgula) não têm suporte das operações de importação em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No entanto, em alguns casos, um arquivo CSV pode ser usado como o arquivo de dados para uma importação em massa de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Observe que o terminador de campo de um arquivo CSV não tem que ser uma vírgula. Para ser usável como um arquivo de dados para importação em massa, um arquivo de CSV deve obedecer as seguintes restrições:  
+-  Começando no SQL Server 2017, um arquivo CSV pode ser usado como o arquivo de dados para uma importação em massa de dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Observe que o terminador de campo de um arquivo CSV não tem que ser uma vírgula. Para ser usável como um arquivo de dados para importação em massa, um arquivo de CSV deve obedecer as seguintes restrições:  
   
     -   Campos de dados nunca contêm o terminador de campo.  
   

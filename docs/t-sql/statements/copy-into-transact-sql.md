@@ -17,13 +17,13 @@ dev_langs:
 - TSQL
 author: kevinvngo
 ms.author: kevin
-monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96787947"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460779"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -432,6 +432,18 @@ Não há necessidade de dividir arquivos Parquet e ORC, porque o comando COPY di
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Há alguma limitação quanto ao número ou ao tamanho dos arquivos?
 Não há limitações quanto ao número ou tamanho dos arquivos; no entanto, para obter o melhor desempenho, recomendamos que os arquivos tenham pelo menos 4 MB.
+
+### <a name="are-there-any-known-issues-with-the-copy-statement"></a>Há algum problema conhecido com a instrução COPY?
+Se você tiver um workspace do Synapse criado antes de 12/07/2020, poderá encontrar uma mensagem de erro semelhante ao autenticar usando a Identidade Gerenciada:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: Identidade de Serviço Gerenciada não habilitada neste servidor. Habilite a Identidade de Serviço Gerenciada e tente novamente.*
+
+Siga estas etapas para contornar esse problema registrando novamente a identidade gerenciada do workspace:
+
+1. Vá até o workspace do Azure Synapse no portal do Azure
+2. Vá até a folha Identidades gerenciadas 
+3. Se a opção "Permitir Pipelines" já estiver marcada, desmarque essa configuração e salve
+4. Marque a opção "Permitir Pipelines" e salve
 
 
 ## <a name="see-also"></a>Confira também  

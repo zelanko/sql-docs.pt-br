@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 986996ff2ec54ce6a7e43924fb94ede81593c212
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: = azuresqldb-current || >= sql-server-2016
+ms.openlocfilehash: d963a8745d83be039fa2970a24d04a2a882bf7a9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756154"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478357"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimar o tamanho de um índice clusterizado
 
@@ -47,35 +47,35 @@ ms.locfileid: "85756154"
   
 1.  Especifique o número de linhas que estarão presentes na tabela:  
   
-     ***Num_Rows***  = número de linhas na tabela  
+     ***Num_Rows** _ = número de linhas na tabela  
   
 2.  Especifique o número de colunas de comprimento fixo e variável e calcule o espaço necessário para o seu armazenamento:  
   
      Calcule o espaço que cada um desses grupos de colunas ocupa dentro da linha de dados. O tamanho de uma coluna depende do tipo de dados e da especificação de comprimento.  
   
-     ***Num_Cols***  = número total de colunas (comprimento fixo e tamanho variável)  
+     _*_Num_Cols_*_ = número total de colunas (comprimento fixo e tamanho variável)  
   
-     ***Fixed_Data_Size***  = tamanho total em bytes de todas as colunas de tamanho fixo  
+     _*_Fixed_Data_Size_*_  = tamanho total em bytes de todas as colunas de tamanho fixo  
   
-     ***Num_Variable_Cols***  = número de colunas de tamanho variável  
+     _*_Num_Variable_Cols_*_  = número de colunas de tamanho variável  
   
-     ***Max_Var_Size***  = tamanho máximo em bytes de todas as colunas de comprimento variável  
+     _*_Max_Var_Size_*_  = tamanho máximo em bytes de todas as colunas de comprimento variável  
   
-3.  Se o índice clusterizado for do tipo não exclusivo, explique a coluna do *indicador de exclusividade* :  
+3.  Se o índice clusterizado for do tipo não exclusivo, leve em consideração a coluna de _indicador de exclusividade*:  
   
      O identificador de exclusividade é uma coluna de comprimento variável que permite valor nulo. Ele será não nulo e terá 4 bytes de tamanho em linhas com valores de chave não exclusivos. Esse valor faz parte da chave de índice e é necessário para garantir que cada linha tenha um valor de chave exclusivo.  
   
-     ***Num_Cols***  = ***Num_Cols*** + 1  
+     ***Num_Cols** _  = _*_Num_Cols_*_ + 1  
   
-     ***Num_Variable_Cols***  = ***Num_Variable_Cols*** + 1  
+     _*_Num_Variable_Cols_*_  = _*_Num_Variable_Cols_*_ + 1  
   
-     ***Max_Var_Size***  = ***Max_Var_Size*** + 4  
+     _*_Max_Var_Size_*_  = _*_Max_Var_Size_*_ + 4  
   
      Essas modificações assumem que todos os valores serão do tipo não exclusivo.  
   
 4.  Parte da linha, conhecida como bitmap nulo, é reservada para gerenciar a nulabilidade da coluna. Calcule seu tamanho:  
   
-     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
+     _*_Null_Bitmap_*_  = 2 + ((_*_Num_Cols_*_ + 7) / 8)  
   
      Somente a parte de inteiro da expressão anterior deve ser usada; descarte todo o restante.  
   
@@ -83,42 +83,42 @@ ms.locfileid: "85756154"
   
      Se houver colunas de comprimento variável na tabela, determine quanto espaço será usado para armazenar as colunas dentro da linha:  
   
-     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+     _*_Variable_Data_Size_*_  = 2 + (_*_Num_Variable_Cols_*_ x 2) + _*_Max_Var_Size_*_  
   
-     Os bytes adicionados a ***Max_Var_Size*** são para acompanhar cada coluna de variáveis. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você prevê que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usada, poderá ajustar o valor ***Max_Var_Size*** de acordo com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
+     Os bytes adicionados a _*_Max_Var_Size_*_ são para acompanhar cada coluna de variáveis. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você prevê que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usado, pode ajustar o valor _*_Max_Var_Size_*_ de acordo com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
     > [!NOTE]  
-    >  É possível combinar colunas **varchar**, **nvarchar**, **varbinary**ou **sql_variant** que fazem com que a largura total da tabela definida exceda 8.060 bytes. O tamanho de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna **varchar**, **varbinary**ou **sql_variant** e 4.000 bytes para colunas **nvarchar** . Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
+    >  É possível combinar as colunas _*varchar**, **nvarchar**, **varbinary** ou **sql_variant** que fazem com que a largura total da tabela definida exceda 8.060 bytes. O tamanho de cada uma dessas colunas ainda deve ficar dentro do limite de 8.000 bytes para uma coluna **varchar**, **varbinary** ou **sql_variant** e 4.000 bytes para colunas **nvarchar** . Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
   
-     Se não houver colunas de tamanho variável, defina ***Variable_Data_Size*** como 0.  
+     Se não houver colunas de tamanho variável, defina **_Variable_Data_Size_* _ como 0.  
   
 6.  Calcule o tamanho total da linha:  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     _*_Row_Size_*_  = _*_Fixed_Data_Size_*_ + _*_Variable_Data_Size_*_ + _*_Null_Bitmap_*_ + 4  
   
      O valor 4 é a sobrecarga de cabeçalho de uma linha de dados.  
   
 7.  Calcule o número de linhas por página (8.096 bytes livres por página):  
   
-     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
+     _*_Rows_Per_Page_*_  = 8096 / (_*_Row_Size_*_ + 2)  
   
      Como as linhas não se estendem por mais de uma página, o número de linhas por página deve ser arredondado para baixo, para a linha inteira mais próxima. O valor 2 na fórmula é para a entrada da linha na matriz de slot da página.  
   
 8.  Calcule o número de linhas livres reservadas por página, com base no [fator de preenchimento](../../relational-databases/indexes/specify-fill-factor-for-an-index.md) especificado:  
   
-     ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Row_Size*** + 2)  
+     _*_Free_Rows_Per_Page_*_  = 8096 x ((100 - _*_Fill_Factor_*_) / 100) / (_*_Row_Size_*_ + 2)  
   
      O fator de preenchimento usado no cálculo é um valor inteiro, em vez de uma porcentagem. Como as linhas não se estendem por mais de uma página, o número de linhas por página deve ser arredondado para baixo, para a linha inteira mais próxima. À medida que o fator de preenchimento aumenta, mais dados são armazenados em cada página e haverá menos páginas. O valor 2 na fórmula é para a entrada da linha na matriz de slot da página.  
   
 9. Calcule o número de páginas necessário para armazenar todas as linhas:  
   
-     ***Num_Leaf_Pages***  = ***Num_Rows*** / (***Rows_Per_Page*** - ***Free_Rows_Per_Page***)  
+     _*_Num_Leaf_Pages_*_  = _*_Num_Rows_*_ / (_*_Rows_Per_Page_*_ - _*_Free_Rows_Per_Page_*_ )  
   
      O número de páginas estimado deve ser arredondado para cima, até a página inteira mais próxima.  
   
 10. Calcule a quantidade de espaço necessária para armazenar os dados no nível folha (total de 8.192 bytes por página):  
   
-     ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
+     _*_Leaf_space_used_*_  = 8192 x _*_Num_Leaf_Pages_*_  
   
 ## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Etapa 2. Calcular o espaço usado para armazenar as informações de índice  
  Você pode usar as seguintes etapas para estimar a quantidade de espaço necessária para armazenar os níveis superiores do índice:  
@@ -127,23 +127,23 @@ ms.locfileid: "85756154"
   
      As colunas de chave de um índice podem incluir colunas de comprimento fixo e variável. Para estimar o tamanho da linha de índice no nível interior, calcule o espaço que cada um desses grupos de colunas ocupa na linha do índice. O tamanho de uma coluna depende do tipo de dados e da especificação de comprimento.  
   
-     ***Num_Key_Cols***  = número total de colunas de chaves (tamanho fixo e tamanho variável)  
+     _*_Num_Key_Cols_*_  = número total de colunas de chaves (tamanho fixo e tamanho variável)  
   
-     ***Fixed_Key_Size***  = tamanho total em bytes de todas as colunas de chaves de tamanho fixo  
+     _*_Fixed_Key_Size_*_  = tamanho total em bytes de todas as colunas de chaves de tamanho fixo  
   
-     ***Num_Variable_Key_Cols***  = número de colunas de chaves de tamanho variável  
+     _*_Num_Variable_Key_Cols_*_  = número de colunas de chaves de tamanho variável  
   
-     ***Max_Var_Key_Size***  = tamanho máximo em bytes de todas as colunas de chaves de tamanho variável  
+     _*_Max_Var_Key_Size_*_  = tamanho máximo em bytes de todas as colunas de chaves de tamanho variável  
   
 2.  Explique qualquer indicador de exclusividade, caso o índice seja do tipo não exclusivo:  
   
      O identificador de exclusividade é uma coluna de comprimento variável que permite valor nulo. Ele será não nulo e com 4 bytes de tamanho em linhas com valores de chave não exclusivos. Esse valor faz parte da chave de índice e é necessário para garantir que cada linha tenha um valor de chave exclusivo.  
   
-     ***Num_Key_Cols***  = ***Num_Key_Cols*** + 1  
+     _*_Num_Key_Cols_*_  = _*_Num_Key_Cols_*_ + 1  
   
-     ***Num_Variable_Key_Cols***  = ***Num_Variable_Key_Cols*** + 1  
+     _*_Num_Variable_Key_Cols_*_  = _*_Num_Variable_Key_Cols_*_ + 1  
   
-     ***Max_Var_Key_Size***  = ***Max_Var_Key_Size*** + 4  
+     _*_Max_Var_Key_Size_*_  = _*_Max_Var_Key_Size_*_ + 4  
   
      Essas modificações assumem que todos os valores serão do tipo não exclusivo.  
   
@@ -151,58 +151,58 @@ ms.locfileid: "85756154"
   
      Se houver colunas que permitem valor nulo na chave de índice, parte da linha do índice será reservada para o bitmap nulo. Calcule seu tamanho:  
   
-     ***Index_Null_Bitmap***  = 2 + ([número de colunas na linha de índice + 7] / 8)  
+     _*_Index_Null_Bitmap_*_  = 2 + ([número de colunas na linha de índice + 7] / 8)  
   
      Somente a parte do inteiro da expressão anterior deve ser usada. Descarte todo o restante.  
   
-     Se não houver colunas de chave anuláveis, defina ***Index_Null_Bitmap*** como 0.  
+     Se não houver colunas de chave anuláveis, defina _*_Index_Null_Bitmap como_*_ 0.  
   
 4.  Calcule o tamanho dos dados de comprimento variável:  
   
      Se houver colunas de comprimento variável no índice, determine quanto espaço será usado para armazenar as colunas dentro da linha do índice:  
   
-     ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
+     _*_Variable_Key_Size_*_  = 2 + (_*_Num_Variable_Key_Cols_*_ x 2) + _*_Max_Var_Key_Size_*_  
   
-     Os bytes adicionados a ***Max_Var_Key_Size*** são para acompanhamento de cada coluna de comprimento variável. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você se previr que um percentual menor do espaço de armazenamento de coluna de tamanho variável será usado, poderá ajustar o valor ***Max_Var_Key_Size*** com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
+     Os bytes adicionados a _*_Max_Var_Key_Size_*_ são para acompanhamento de cada coluna de comprimento variável. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você se previr que um percentual menor do espaço de armazenamento de coluna de tamanho variável será usado, poderá ajustar o valor _*_Max_Var_Key_Size_*_ com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
-     Se não houver colunas de tamanho variável, defina ***Variable_Key_Size*** como 0.  
+     Se não houver colunas de tamanho variável, defina _*_Variable_Key_Size_*_ como 0.  
   
 5.  Calcule o tamanho da linha de índice:  
   
-     ***Index_Row_Size***  = ***Fixed_Key_Size*** + ***Variable_Key_Size*** + ***Index_Null_Bitmap*** + 1 (para a sobrecarga de cabeçalho de linha de uma linha de índice) + 6 (para o ponteiro de ID da página filho)  
+     _*_Index_Row_Size_*_  = _*_Fixed_Key_Size_*_ + _*_Variable_Key_Size_*_ + _*_Index_Null_Bitmap_*_ + 1 (para a sobrecarga de cabeçalho de linha de uma linha de índice) + 6 (para o ponteiro de ID da página filho)  
   
 6.  Calcule o número de linhas de índice por página (8.096 bytes livres por página):  
   
-     ***Index_Rows_Per_Page***  = 8096 / (***Index_Row_Size*** + 2)  
+     _*_Index_Rows_Per_Page_*_  = 8096 / (_*_Index_Row_Size_*_ + 2)  
   
      Como as linhas de índice não se estendem por mais de uma página, o número de linhas de índice por página deve ser arredondado para baixo, até a linha inteira mais próxima. O 2 na fórmula é para a entrada da linha na matriz de slots da página.  
   
 7.  Calcule o número de níveis no índice:  
   
-     ***Non-leaf_Levels***  = 1 + log (Index_Rows_Per_Page) (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     _*_Non-leaf_Levels_*_  = 1 + log (Index_Rows_Per_Page) (_*_Num_Leaf_Pages_*_ / _*_Index_Rows_Per_Page_*_)  
   
      Arredonde esse valor até o número inteiro mais próximo. Esse valor não inclui o nível folha do índice clusterizado.  
   
 8.  Calcule o número de páginas não folha no índice:  
   
-     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***^Level ***))***  
+     _*_Num_Index_Pages =_*_ ∑Level _*_ (Num_Leaf_Pages / (Index_Rows_Per_Page_ *_^Level_* _))_ *_  
   
-     em que 1 <= Level <= ***Non-leaf_Levels***  
+     em que 1 <= Level <= _*_Non-leaf_Levels_*_  
   
-     Arredonde cada soma até o número inteiro mais próximo. Como um exemplo simples, considere um índice em que ***Num_Leaf_Pages*** = 1000 e ***Index_Rows_Per_Page*** = 25. O primeiro nível de índice acima do nível folha armazena 1.000 linhas de índice que representa uma linha de índice por página de folha, e 25 linhas de índice podem ser ajustadas por página. Isso significa que são necessárias 40 páginas para armazenar essas 1.000 linhas de índice. O próximo nível do índice precisa armazenar 40 linhas. Isso significa que são necessárias 2 páginas. O nível final do índice precisa armazenar 2 linhas. Isso significa que é necessária 1 página. Isso resulta em 43 páginas de índice não folha. Quando esses números são usados nas fórmulas anteriores, o resultado é o seguinte:  
+     Arredonde cada soma até o número inteiro mais próximo. Como um exemplo simples, considere um índice em que _*_Num_Leaf_Pages_*_ = 1000 e _*_Index_Rows_Per_Page_*_ = 25. O primeiro nível de índice acima do nível folha armazena 1.000 linhas de índice que representa uma linha de índice por página de folha, e 25 linhas de índice podem ser ajustadas por página. Isso significa que são necessárias 40 páginas para armazenar essas 1.000 linhas de índice. O próximo nível do índice precisa armazenar 40 linhas. Isso significa que são necessárias 2 páginas. O nível final do índice precisa armazenar 2 linhas. Isso significa que é necessária 1 página. Isso resulta em 43 páginas de índice não folha. Quando esses números são usados nas fórmulas anteriores, o resultado é o seguinte:  
   
-     ***Non-leaf_Levels***  = 1 + log(25) (1000 / 25) = 3  
+     _*_Non-leaf_Levels_*_  = 1 + log(25) (1000 / 25) = 3  
   
-     ***Num_Index_Pages*** = 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43, que é o número de páginas descrito no exemplo.  
+     _*_Num_Index_Pages_*_ = 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43, que é o número de páginas descrito no exemplo.  
   
 9. Calcule o tamanho do índice (total de 8.912 bytes por página):  
   
-     ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
+     _*_Index_Space_Used_*_  = 8192 x _*_Num_Index_Pages_*_  
   
 ## <a name="step-3-total-the-calculated-values"></a>Etapa 3. Some os valores calculados  
  Some os valores obtidos nas duas etapas anteriores:  
   
- Tamanho do índice clusterizado (bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  
+ Tamanho do índice clusterizado (bytes) = _*_Leaf_Space_Used_*_ + _*_Index_Space_used_*_  
   
  Esse cálculo não considera o seguinte:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "85756154"
   
 -   Valores de LOB (Objeto Grande)  
   
-     O algoritmo usado para determinar exatamente quanto espaço será usado para armazenar os valores de tipos de dados LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**e **image** é complexo. É suficiente adicionar o tamanho médio dos valores LOB esperados, multiplicá-lo por ***Num_Rows***e adicioná-lo ao tamanho total de índice clusterizado.  
+     O algoritmo usado para determinar exatamente quanto espaço será usado para armazenar os valores de tipos de dados LOB _*varchar(max)**, **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml** e **image** é complexo. É suficiente adicionar o tamanho médio dos valores LOB esperados, multiplicá-lo por **_Num_Rows_** e adicioná-lo ao tamanho total de índice clusterizado.  
   
 -   Compactação  
   

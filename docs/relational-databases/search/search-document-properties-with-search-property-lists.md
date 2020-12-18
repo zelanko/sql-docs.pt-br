@@ -18,14 +18,14 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37e3914abd99f03fa441a2b6284bd43ea570e269
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868964"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468627"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "91868964"
   
 1.  No Pesquisador de Objetos, expanda o servidor.  
   
-2.  Expanda **Bancos de Dados**e o banco de dados no qual você deseja criar a lista de propriedades de pesquisa.  
+2.  Expanda **Bancos de Dados** e o banco de dados no qual você deseja criar a lista de propriedades de pesquisa.  
   
 3.  Expanda **Armazenamento** e, em seguida, clique com o botão direito do mouse em **Listas de Propriedades de Pesquisa**.  
   
@@ -188,7 +188,7 @@ GO
   
 1.  No Pesquisador de Objetos, expanda o servidor.  
   
-2.  Expanda **Bancos de Dados**e, em seguida, expanda o banco de dados.  
+2.  Expanda **Bancos de Dados** e, em seguida, expanda o banco de dados.  
   
 3.  Expanda **Armazenamento**.  
   
@@ -200,7 +200,7 @@ GO
   
     1.  Para remover uma propriedade de documento, clique no cabeçalho da linha à esquerda da propriedade e pressione DEL.  
   
-    2.  Para adicionar uma propriedade de documento, clique na linha vazia na parte inferior da lista, à direita do **\*** , e insira os valores para a nova propriedade.  
+    2.  Para adicionar uma propriedade de documento, clique na linha vazia na parte inferior da lista, à direita do * *\** _, e insira os valores da nova propriedade.  
   
          Para obter informações sobre esses valores, consulte [Editor da Lista de Pesquisa de Propriedades](../../t-sql/statements/create-search-property-list-transact-sql.md). Para obter informações sobre como obter esses valores de propriedades definidos pela Microsoft, veja [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obter informações sobre propriedades definidas por um ISV (fornecedor independente de software), consulte a documentação daquele fornecedor.  
   
@@ -209,7 +209,7 @@ GO
 ###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> Excluindo uma lista de propriedades de pesquisa  
  Não é possível cancelar uma lista de propriedades de um banco de dados enquanto a lista está associada a um índice de texto completo.  
   
- **Para excluir uma lista de propriedades de pesquisa com Transact-SQL**  
+ _ *Para excluir uma lista de propriedades de pesquisa com Transact-SQL**  
   
  Use a instrução [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md).  
   
@@ -217,7 +217,7 @@ GO
   
 1.  No Pesquisador de Objetos, expanda o servidor.  
   
-2.  Expanda **Bancos de Dados**e, em seguida, expanda o banco de dados.  
+2.  Expanda **Bancos de Dados** e, em seguida, expanda o banco de dados.  
   
 3.  Expanda **Armazenamento** e, em seguida, expanda o nó **Listas de Propriedades de Pesquisa**.  
   

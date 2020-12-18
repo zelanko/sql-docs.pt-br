@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: be7a5c94f5de63f343a8c529f8a824e13177923c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867603"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467297"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Visão geral do gerenciamento de chaves do Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "91867603"
 
 Ao discutir chaves Always Encrypted e o gerenciamento de chaves, é importante compreender a diferença entre as chaves de criptografia reais e os objetos de metadados que *descrevem* as chaves. Usamos os termos **chave de criptografia de coluna** e **chave mestra de coluna** para referir-se às chaves de criptografia reais e usamos os **metadados de chave de criptografia de coluna** e **metadados de chave mestra de coluna** para referir-se às *descrições* da chave Always Encrypted no banco de dados.
 
-- ***Chaves de criptografia de coluna*** são chaves de criptografia de conteúdo usadas para criptografar dados. Como o nome implica, usamos chaves de criptografia de coluna para criptografar dados em colunas de banco de dados. Você pode criptografar uma ou mais colunas com a mesma chave de criptografia de coluna ou pode usar várias chaves de criptografia de coluna dependendo dos requisitos do aplicativo. As chaves de criptografia de coluna são criptografadas elas mesmas e apenas os valores criptografados das chaves de criptografia de coluna são armazenados no banco de dados (como parte dos metadados de chave de criptografia de coluna). Os metadados de chave de criptografia de coluna são armazenados nas exibições de catálogo [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) . As chaves de criptografia de coluna usadas com o algoritmo AES-256 têm 256 bits.
+- ***Chaves de criptografia de coluna** _ são chaves de criptografia de conteúdo usadas para criptografar dados. Como o nome implica, usamos chaves de criptografia de coluna para criptografar dados em colunas de banco de dados. Você pode criptografar uma ou mais colunas com a mesma chave de criptografia de coluna ou pode usar várias chaves de criptografia de coluna dependendo dos requisitos do aplicativo. As chaves de criptografia de coluna são criptografadas elas mesmas e apenas os valores criptografados das chaves de criptografia de coluna são armazenados no banco de dados (como parte dos metadados de chave de criptografia de coluna). Os metadados de chave de criptografia de coluna são armazenados nas exibições de catálogo [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) . As chaves de criptografia de coluna usadas com o algoritmo AES-256 têm 256 bits.
 
 
-- ***Chaves mestras de coluna*** são chaves de proteção usadas para criptografar as chaves de criptografia de coluna. Chaves mestras de coluna devem ser armazenadas em um repositório de chave confiável, como o Repositório de Certificados do Windows, o Cofre de Chaves do Azure ou um módulo de segurança de hardware. O banco de dados só contém metadados sobre chaves mestras de coluna (o tipo e local do repositório de chaves). Os metadados de chave mestra de coluna são armazenados na exibição de catálogo [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
+- _*_Chaves mestras de coluna_*_ são chaves de proteção de chaves usadas para criptografar as chaves de criptografia de coluna. Chaves mestras de coluna devem ser armazenadas em um repositório de chave confiável, como o Repositório de Certificados do Windows, o Cofre de Chaves do Azure ou um módulo de segurança de hardware. O banco de dados só contém metadados sobre chaves mestras de coluna (o tipo e local do repositório de chaves). Os metadados de chave mestra de coluna são armazenados na exibição de catálogo [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
 
 É importante observar que os metadados de chave no sistema de banco de dados não contém chaves mestras de coluna de texto não criptografado ou chaves de criptografia de coluna de texto não criptografado. O banco de dados contém apenas informações sobre o tipo e o local das chaves mestras de coluna e valores criptografados das chaves de criptografia de coluna. Isso significa que chaves com texto não criptografado nunca são expostas no sistema de banco de dados, garantindo que os dados protegidos que usam o Always Encrypted estejam seguros, mesmo se o sistema de banco de dados for comprometido. Para garantir que o sistema de banco de dados não possa obter acesso às chaves de texto não criptografado, execute as ferramentas de gerenciamento de chaves em um computador diferente daquele que hospeda seu banco de dados. Leia a seção [Considerações de segurança para gerenciamento de chaves](#security-considerations-for-key-management) abaixo para ver os detalhes.
 
@@ -42,7 +42,7 @@ Como o banco de dados só contém dados criptografados (em colunas Always Encryp
 
 O processo de gerenciamento de chaves pode ser dividido nas seguintes tarefas de alto nível:
 
-- **Provisionamento de chave** - Criar as chaves físicas em um repositório de chaves confiável (por exemplo, no Repositório de Certificados do Windows, o Cofre de Chaves do Azure ou um módulo de segurança de hardware), chaves de criptografia de coluna de criptografia com chaves mestras de coluna e criar metadados para os dois tipos de chaves no banco de dados.
+- _ *Provisionamento de chave** – criar as chaves físicas em um repositório de chaves confiável (por exemplo, no Repositório de Certificados do Windows, no Azure Key Vault ou em um módulo de segurança de hardware), criptografar chaves de criptografia de coluna com chaves mestras de coluna e criar metadados para os dois tipos de chaves no banco de dados.
 
 - **Rotação de chaves** - Substituir periodicamente uma chave existente por uma nova chave. Poderá ser necessário trocar uma chave caso ela tenha sido comprometida ou para manter a conformidade com as políticas ou os regulamentos da organização que exigem que as chaves de criptografia sejam trocadas. 
 
@@ -54,7 +54,7 @@ Existem duas funções distintas de usuários que gerencia chaves Always Encrypt
 - **Administrador de Segurança** - Gera chaves de criptografia de coluna e chaves mestras de coluna e gerencia repositórios de chaves que contém as chaves mestras de coluna. Para executar essas tarefas, um Administrador de Segurança deve ser capaz de acessar as chaves e o repositório de chaves, mas não precisam de acesso ao banco de dados.
 - **DBA** – gerencia os metadados das chaves no banco de dados. Para executar tarefas de gerenciamento de chaves, um DBA precisa ser capaz de gerenciar metadados de chave no banco de dados, mas não precisam acessar as chaves ou repositório de chaves que contém as chaves mestras de coluna.
 
-Considerando as funções acima, há duas maneiras de executar tarefas de gerenciamento de chaves para Always Encrypted: *com separação de função*e *sem separação de funções*. Dependendo das necessidades da sua organização, você pode selecionar o processo de gerenciamento de chaves que melhor atenda às suas necessidades.
+Considerando as funções acima, há duas maneiras de executar tarefas de gerenciamento de chaves para Always Encrypted: *com separação de função* e *sem separação de funções*. Dependendo das necessidades da sua organização, você pode selecionar o processo de gerenciamento de chaves que melhor atenda às suas necessidades.
 
 ## <a name="managing-keys-with-role-separation"></a>Gerenciamento de chaves com separação de funções
 Quando chaves Always Encrypted forem gerenciadas com separação de funções, pessoas diferentes em uma organização assumem as funções de Administrador de Segurança e de DBA. Um processo de gerenciamento de chaves com separação de funções garante que DBAs não tenham acesso a chaves ou repositórios de chaves que contém chaves reais e os Administradores de Segurança não tenham acesso ao banco de dados que contêm dados confidenciais. É recomendável gerenciar as chaves com separação de funções se sua meta for garantir que os DBAs na sua organização não possam acessar dados confidenciais. 

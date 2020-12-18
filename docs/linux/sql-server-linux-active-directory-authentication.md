@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f1e526621d9ff769094830af5cf312eb8c1f17f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323506"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Usar autenticação do Active Directory com o SQL Server em Linux
 
@@ -64,7 +64,11 @@ Ingresse no host do SQL Server Linux com um controlador de domínio do Active Di
    ```
 
    > [!NOTE]
-   > É uma melhor prática de segurança ter uma conta do AD dedicada para o SQL Server, para que as credenciais do SQL Server não sejam compartilhadas com outros serviços usando a mesma conta. No entanto, opcionalmente, você poderá reutilizar uma conta existente do AD se souber a senha da conta (necessária para gerar um arquivo keytab na próxima etapa). Além disso, a conta deve ser habilitada para dar suporte à criptografia AES Kerberos de 128 bits e 256 bits (atributo **msDS-SupportedEncryptionTypes**) na conta do usuário.
+   > É uma melhor prática de segurança ter uma conta do AD dedicada para o SQL Server, para que as credenciais do SQL Server não sejam compartilhadas com outros serviços usando a mesma conta. No entanto, opcionalmente, você poderá reutilizar uma conta existente do AD se souber a senha da conta (necessária para gerar um arquivo keytab na próxima etapa). Além disso, a conta deve ser habilitada para dar suporte à criptografia AES Kerberos de 128 bits e 256 bits (atributo **msDS-SupportedEncryptionTypes**) na conta do usuário. Para validar se a conta está habilitada para criptografia AES, localize-a no utilitário **Usuários e Computadores do Active Directory** e selecione **Propriedades**. Localize a guia **Contas** nas **Propriedades** e valide se as duas caixas de seleção intituladas da seguinte maneira estão selecionadas. 
+   >
+   > 1. **Esta conta oferece suporte à criptografia Kerberos AES de 128 bits**
+   >
+   > 2. **Esta conta dá suporte à criptografia Kerberos AES de 256 bits**
 
 2. Defina o SPN (ServicePrincipalName) para essa conta usando a ferramenta **setspn.exe**. O SPN deve ser formatado exatamente como especificado no exemplo a seguir. É possível localizar o nome de domínio totalmente qualificado do computador host [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executando `hostname --all-fqdns` no host [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A porta TCP deve ser 1433, a menos que você tenha configurado [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para usar um número da porta diferente.
 
