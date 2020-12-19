@@ -1,6 +1,6 @@
 ---
 description: sys.function_order_columns (Transact-SQL)
-title: sys. function_order_columns (Transact-SQL) | Microsoft Docs
+title: sys.function_order_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c7ac555630f4472e5cf58ad9017cdb03643ae2b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ad217286e8d9f0e3fc6b6a7cc8441cee6787f76c
+ms.sourcegitcommit: a81823f20262227454c0b5ce9c8ac607aaf537e2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546786"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684193"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Retorna uma linha por coluna que faz parte de uma expressão de **ordem** de uma função com valor de tabela de tempo de execução de linguagem Common (CLR).  
+  Retorna uma linha por coluna que faz parte de uma expressão de **ordem** de uma função com valor de tabela Common Language Runtime (CLR).  
 
   
 |Nome da coluna|Tipo de dados|Descrição|  
